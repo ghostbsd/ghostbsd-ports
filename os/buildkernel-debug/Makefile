@@ -5,6 +5,7 @@
 PORTNAME=	buildkernel-debug
 PORTVERSION=	${OS_PORTVERSION}
 CATEGORIES=	os
+PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 
 MAINTAINER=	kris@ixsystems.com
 COMMENT=	Buildkernel portition of os packages with debug enabled
@@ -14,12 +15,13 @@ SRCDIR?=/usr/src
 BUILD_DEPENDS=	${SRCDIR}/Makefile:os/src
 .endif
 
+USES=	os:flavors
 PREFIX=/
 EXTRACT_ONLY=
 DISTFILES=
 WITHOUT_FBSD10_FIX=	yes
 WRKSRC=${SRCDIR}
-PLIST_FILES+=	/usr/dist/kernel-debug.txz
+PLIST_FILES+=	${OS_KERNDIST_DEBUG}
 LOCAL_SDIR?=	/usr/local_source
 NEED_ROOT=	yes
 .if exists(${LOCAL_SDIR}/${PORTNAME})
@@ -73,7 +75,7 @@ do-install:
 	       	DESTDIR=${STAGEDIR}/kernel-debug \
 		installkernel
 	mv ${STAGEDIR}/kernel-debug/boot/kernel ${STAGEDIR}/kernel-debug/boot/kernel-debug
-	tar cvJf ${STAGEDIR}/usr/dist/kernel-debug.txz -C ${STAGEDIR}/kernel-debug .
+	tar cvJf ${STAGEDIR}${OS_KERNDIST_DEBUG} -C ${STAGEDIR}/kernel-debug .
 	chflags -R noschg ${STAGEDIR}/kernel-debug
 	${RM} -rf ${STAGEDIR}/kernel-debug
 

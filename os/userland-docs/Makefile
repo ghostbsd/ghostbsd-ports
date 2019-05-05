@@ -5,12 +5,14 @@
 PORTNAME=	userland-docs
 PORTVERSION=	${OS_PORTVERSION}
 CATEGORIES=	os
+PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 
 MAINTAINER=	kris@ixsystems.com
 COMMENT=	Docs for the BSD system
 
-BUILD_DEPENDS=  /usr/dist/world.txz:os/buildworld
+BUILD_DEPENDS=  ${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR}
 
+USES=	os:flavors
 PREFIX=/
 EXTRACT_ONLY=
 DISTFILES=
@@ -20,8 +22,8 @@ NEED_ROOT=	yes
 
 do-build:
 	@${MKDIR} -p ${STAGEDIR}
-	@${ECHO_MSG} "==> Extracting world.txz..."
-	@${TAR} xpf /usr/dist/world.txz -C ${STAGEDIR}
+	@${ECHO_MSG} "==> ${OS_WORLDDIST}..."
+	@${TAR} xpf ${OS_WORLDDIST} -C ${STAGEDIR}
 
 do-install:
 	@${ECHO_MSG} "==> Generating plist..."

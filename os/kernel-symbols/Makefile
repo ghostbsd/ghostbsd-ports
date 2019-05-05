@@ -6,12 +6,14 @@ PORTNAME=	kernel-symbols
 PORTVERSION=	${OS_PORTVERSION}
 PORTREVISION=	1
 CATEGORIES=	os
+PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 
 MAINTAINER=	kris@ixsystems.com
 COMMENT=	Port for the OS kernel debugging symbols
 
-BUILD_DEPENDS=	/usr/dist/kernel.txz:os/buildkernel
+BUILD_DEPENDS=	${OS_KERNDIST}:os/buildkernel@${OS_FLAVOR}
 
+USES=	os:flavors
 PREFIX=/
 EXTRACT_ONLY=
 DISTFILES=
@@ -25,8 +27,8 @@ NO_OPTIONS_SORT=	yes
 
 do-build:
 	@${MKDIR} -p ${STAGEDIR}
-	@${ECHO_MSG} "==> Extracting kernel.txz..."
-	@${TAR} xpf /usr/dist/kernel.txz -C ${STAGEDIR}
+	@${ECHO_MSG} "==> Extracting ${OS_KERNDIST}..."
+	@${TAR} xpf ${OS_KERNDIST} -C ${STAGEDIR}
 
 do-install:
 	@${ECHO_MSG} "==> Generating plist..."

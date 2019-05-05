@@ -6,6 +6,7 @@ PORTNAME=	buildkernel
 PORTVERSION=	${OS_PORTVERSION}
 PORTREVISION=	1
 CATEGORIES=	os
+PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 
 MAINTAINER=	kris@ixsystems.com
 COMMENT=	Buildkernel portition of os packages
@@ -15,12 +16,13 @@ SRCDIR?=/usr/src
 BUILD_DEPENDS=	${SRCDIR}/Makefile:os/src
 .endif
 
+USES=	os:flavors
 PREFIX=/
 EXTRACT_ONLY=
 DISTFILES=
 WITHOUT_FBSD10_FIX=	yes
 WRKSRC=${SRCDIR}
-PLIST_FILES+=	/usr/dist/kernel.txz
+PLIST_FILES+=	${OS_KERNDIST}
 LOCAL_SDIR?=	/usr/local_source
 NEED_ROOT=	yes
 .if exists(${LOCAL_SDIR}/${PORTNAME})
@@ -75,7 +77,7 @@ do-install:
 		${MFLAGS} \
 	       	DESTDIR=${STAGEDIR}/kernel \
 		installkernel
-	tar cvJf ${STAGEDIR}/usr/dist/kernel.txz -C ${STAGEDIR}/kernel .
+	tar cvJf ${STAGEDIR}${OS_KERNDIST} -C ${STAGEDIR}/kernel .
 	chflags -R noschg ${STAGEDIR}/kernel
 	${RM} -rf ${STAGEDIR}/kernel
 
