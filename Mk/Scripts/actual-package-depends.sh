@@ -71,7 +71,7 @@ find_dep() {
 
 inject_base_dep() {
 	ORIGIN="${1}"
-	NAME=$(make -C ${PORTSDIR}/${ORIGIN} -V PORTNAME)
+	NAME=$(make -C ${PORTSDIR}/${ORIGIN} -V PKGBASE)
 	VERSION=$(make -C ${PORTSDIR}/${ORIGIN} -V PKGVERSION)
 	echo "\"${NAME}\": {origin: \"${ORIGIN}\", version: \"$VERSION\"}"
 }
