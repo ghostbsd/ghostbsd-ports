@@ -35,7 +35,7 @@ RUN_DEPENDS+=	/usr/share/man/man1/sh.1.gz:os/userland-docs@${OS_FLAVOR}
 .endif
 
 .if ${PORT_OPTIONS:MLIB32}
-RUN_DEPENDS+=	/usr/lib32/libalias.so.7:os/userland-lib32@{OS_FLAVOR}
+RUN_DEPENDS+=	/usr/lib32/libalias.so.7:os/userland-lib32@${OS_FLAVOR}
 .endif
 
 .if ${PORT_OPTIONS:MTESTS}
