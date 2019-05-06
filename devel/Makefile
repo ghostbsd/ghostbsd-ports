@@ -6337,6 +6337,7 @@
     SUBDIR += thrift
     SUBDIR += thrift-c_glib
     SUBDIR += thrift-cpp
+    SUBDIR += thrust
     SUBDIR += thunar-vcs-plugin
     SUBDIR += ticcutils
     SUBDIR += tig
@@ -6385,6 +6386,7 @@
     SUBDIR += valgrind-devel
     SUBDIR += varconf
     SUBDIR += vasm
+    SUBDIR += vc
     SUBDIR += vcglib
     SUBDIR += vera++
     SUBDIR += vexcl
