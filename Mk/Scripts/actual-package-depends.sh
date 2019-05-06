@@ -92,7 +92,7 @@ for lookup; do
 			inject_base_dep "os/userland-docs"
 			continue
 			;;
-		/usr/lib32/libalias.so.7)
+		/usr/lib32/libc.a)
 			inject_base_dep "os/userland-lib32"
 			continue
 			;;
