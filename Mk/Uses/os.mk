@@ -4,12 +4,13 @@
 #
 # Feature:	os
 # Usage:	USES=os
-# Valid ARGS:	(none), flavors, noflavors, nozfs
+# Valid ARGS:	(none), flavors, noflavors, zol
 #
 #	- flavors  : Generates flavors for supported versions.
 #	- noflavors: Prevents generation of flavor.
 #	- generic  : Default FreeBSD build options
-#	- nozfs	   : Build setting WITHOUT_ZFS
+#	- minimal  : Build a stripped down version of FreeBSD world
+#	- zol	   : Build without base ZFS and replace with sysutils/zol
 #
 
 .if !defined(_INCLUDE_USES_OS_MK)
@@ -18,7 +19,7 @@ OS_Include_MAINTAINER=	kmoore@FreeBSD.org
 
 _INCLUDE_USES_OS_MK=	yes
 
-_OS_VALID_ARGS=	flavors generic noflavors nozfs
+_OS_VALID_ARGS=	flavors generic noflavors zol
 
 _OS_UNKNOWN_ARGS=
 .for arg in ${os_ARGS}
@@ -34,7 +35,7 @@ IGNORE=	has unknown USES=os arguments: ${_OS_UNKNOWN_ARGS}
 os_ARGS:=	${os_ARGS:Nflavors}
 .  endif
 
-_ALL_OS_FLAVORS=	generic nozfs
+_ALL_OS_FLAVORS=	generic minimal zol
 
 OS_DEFAULT_FLAVOR?=	generic
 
@@ -62,9 +63,29 @@ OS_FLAVOR=	${FLAVOR}
 OS_PKGNAMEPREFIX=	os-${FLAVOR}-
 OS_PKGNAMESUFFIX=	-os-${FLAVOR}
 
-.  if ${FLAVOR} == "nozfs"
+# Options for the ZOL flavor
+.  if ${FLAVOR} == "zol"
 PORT_OPTIONS:=	${PORT_OPTIONS:NZFS}
+PORT_OPTIONS:=	${PORT_OPTIONS:MZOL}
 .  endif
+
+# Options for the minimal flavor
+.  if ${FLAVOR} == "minimal"
+PORT_OPTIONS:=	${PORT_OPTIONS:BSDINSTALL}
+PORT_OPTIONS:=	${PORT_OPTIONS:FTP}
+PORT_OPTIONS:=	${PORT_OPTIONS:GCOV}
+PORT_OPTIONS:=	${PORT_OPTIONS:GDB}
+PORT_OPTIONS:=	${PORT_OPTIONS:LPR}
+PORT_OPTIONS:=	${PORT_OPTIONS:MAIL}
+PORT_OPTIONS:=	${PORT_OPTIONS:NTP}
+PORT_OPTIONS:=	${PORT_OPTIONS:NPC_SYSINSTALL}
+PORT_OPTIONS:=	${PORT_OPTIONS:NPPP}
+PORT_OPTIONS:=	${PORT_OPTIONS:NPORTSNAP}
+PORT_OPTIONS:=	${PORT_OPTIONS:NSENDMAIL}
+PORT_OPTIONS:=	${PORT_OPTIONS:NSVNLITE}
+PORT_OPTIONS:=	${PORT_OPTIONS:NTELNET}
+.  endif
+
 .  if ${FLAVOR} == "generic"
 OS_KERNDIST=	/usr/dist/kernel.txz
 OS_KERNDIST_DEBUG=	/usr/dist/kernel-debug.txz

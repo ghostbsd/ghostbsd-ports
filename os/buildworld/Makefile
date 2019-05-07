@@ -75,7 +75,7 @@ do-install:
 		${MFLAGS} \
 		DESTDIR=${STAGEDIR}/world \
 		distribution
-	if [ -e "${FILESDIR}/trueos-manifest.json" ] ; then \
+	if [ -e "${PORTSDIR}/local_source/trueos-manifest.json" ] ; then \
 		${CP} ${FILESDIR}/trueos-manifest.json ${STAGEDIR}/world/var/db/trueos-manifest.json ; \
 	elif [ -n "${TRUEOS_MANIFEST}" -a -e "${TRUEOS_MANIFEST}" ] ; then \
 		cp ${TRUEOS_MANIFEST} ${STAGEDIR}/world/var/db/trueos-manifest.json ; \
