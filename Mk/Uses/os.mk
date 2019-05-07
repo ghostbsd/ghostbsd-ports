@@ -67,8 +67,8 @@ OS_PKGNAMESUFFIX=	-os-${FLAVOR}
 .  if ${FLAVOR} == "zol"
 PORT_OPTIONS:=	${PORT_OPTIONS:NZFS}
 .    if ${PORTNAME} == "userland"
-PORT_OPTIONS:=	${PORT_OPTIONS:MZOL}
-PORT_OPTIONS:=	${PORT_OPTIONS:MDOCS}
+WITH_ZOL=	yes
+WITH_DOCS=	yes
 .    endif
 .  endif
 
