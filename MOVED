@@ -12212,3 +12212,14 @@ devel/py-jsonschema2|devel/py-jsonschema|2019-05-01|Has expired: Use devel/py-js
 devel/rubygem-msgpack1|devel/rubygem-msgpack|2019-05-01|Has expired: Use devel/rubygem-msgpack instead
 www/p5-CGI.pm|www/p5-CGI|2019-05-01|Has expired: Use www/p5-CGI instead
 math/rpy|math/py-rpy|2019-04-03|Moved to correct directory, this is a python library
+os/buildkernel|os/buildkernel@generic|2019-05-07|Moved to a flavored, generic, version
+os/buildkernel-debug|os/buildkernel-debug@generic|2019-05-07|Moved to a flavored, generic, version
+os/buildworld|os/buildworld@generic|2019-05-07|Moved to a flavored, generic, version
+os/kernel|os/kernel@generic|2019-05-07|Moved to a flavored, generic, version
+os/kernel-debug|os/kernel-debug@generic|2019-05-07|Moved to a flavored, generic, version
+os/userland|os/userland@generic|2019-05-07|Moved to a flavored, generic, version
+os/userland-base|os/userland-base@generic|2019-05-07|Moved to a flavored, generic, version
+os/userland-debug|os/userland-debug@generic|2019-05-07|Moved to a flavored, generic, version
+os/userland-docs|os/userland-docs@generic|2019-05-07|Moved to a flavored, generic, version
+os/userland-lib32|os/userland-lib32@generic|2019-05-07|Moved to a flavored, generic, version
+os/userland-tests|os/userland-tests@generic|2019-05-07|Moved to a flavored, generic, version
