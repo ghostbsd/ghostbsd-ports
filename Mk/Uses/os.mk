@@ -66,7 +66,10 @@ OS_PKGNAMESUFFIX=	-os-${FLAVOR}
 # Options for the ZOL flavor
 .  if ${FLAVOR} == "zol"
 PORT_OPTIONS:=	${PORT_OPTIONS:NZFS}
-os_userland_SET+=ZOL
+.    if ${PORTNAME} == "userland"
+PORT_OPTIONS:=	${PORT_OPTIONS:MZOL}
+PORT_OPTIONS:=	${PORT_OPTIONS:MDOCS}
+.    endif
 .  endif
 
 # Options for the minimal flavor
