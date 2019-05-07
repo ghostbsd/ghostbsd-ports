@@ -42,7 +42,7 @@ RUN_DEPENDS+=	/usr/lib32/libc.a:os/userland-lib32@${OS_FLAVOR}
 RUN_DEPENDS+=	/usr/tests/README:os/userland-tests@${OS_FLAVOR}
 .endif
 
-.if ${PORT_OPTIONS:MZOL}
+.if ${PORT_OPTIONS:MZOL} || ${FLAVOR} == "zol"
 RUN_DEPENDS+=	${LOCALBASE}/sbin/zpool:sysutils/zol
 .endif
 
