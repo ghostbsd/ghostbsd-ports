@@ -70,7 +70,7 @@ check-sanity:
 
 do-build:
 	@if [ ! -d "${KERNWRKSRC}" ] ; then \
-		cp -R ${WRKSRC} ${KERNWRKSRC} \
+		cp -R ${WRKSRC} ${KERNWRKSRC}; \
 	fi
 	cd ${KERNWRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
 		KERNCONF=${KERNCONF} \
