@@ -15,7 +15,7 @@ USES=		kmod
 USE_GITHUB=	yes
 GH_ACCOUNT=	zfsonfreebsd
 GH_PROJECT=	ZoF
-GH_TAGNAME=	d5d058f
+GH_TAGNAME=	52a3f3c
 
 PLIST_FILES=	${KMODDIR}/zfs.ko
 

@@ -489,7 +489,6 @@
     SUBDIR += xscreensaver-gnome
     SUBDIR += xscreensaver-gnome-hacks
     SUBDIR += xscreensaver.app
-    SUBDIR += xsel
     SUBDIR += xsel-conrad
     SUBDIR += xset
     SUBDIR += xsetmode
