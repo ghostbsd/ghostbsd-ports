@@ -6,13 +6,15 @@ PORTNAME=	userland-base
 PORTVERSION=	${OS_PORTVERSION}
 PORTREVISION=	7
 CATEGORIES=	os
+PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 
 MAINTAINER=	kris@ixsystems.com
 COMMENT=	Port for the OS userland binaries
 
-BUILD_DEPENDS=  /usr/dist/world.txz:os/buildworld \
+BUILD_DEPENDS=	${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR} \
 		${LOCALBASE}/bin/jq:textproc/jq
 
+USES=	os:flavors
 PREFIX=/
 EXTRACT_ONLY=
 DISTFILES=
@@ -25,12 +27,13 @@ NO_OPTIONS_SORT=	yes
 
 do-build:
 	@${MKDIR} -p ${STAGEDIR}
-	@${ECHO_MSG} "==> Extracting world.txz..."
-	@${TAR} xpf /usr/dist/world.txz -C ${STAGEDIR}
+	@${ECHO_MSG} "==> Extracting ${OS_WORLDDIST}..."
+	@${TAR} xpf ${OS_WORLDDIST} -C ${STAGEDIR}
 	@${INSTALL_SCRIPT} ${FILESDIR}/pkgbase.setup.in ${STAGEDIR}/etc/pkgbase.setup
 	@if [ -n "${STAGEDIR}/var/db/trueos-manifest.json" ] ; then \
 		sh ${FILESDIR}/mk-pkg-repo.sh ${STAGEDIR}/var/db/trueos-manifest.json ${STAGEDIR} ; \
 	fi
+	@${ECHO} "${_OSVERSION_MAJOR}-${PKGVERSION}" > ${STAGEDIR}/etc/base_version
 
 do-install:
 	@${ECHO_MSG} "==> Generating plist..."

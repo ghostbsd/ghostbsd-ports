@@ -5,12 +5,14 @@
 PORTNAME=	kernel-debug-symbols
 PORTVERSION=	${OS_PORTVERSION}
 CATEGORIES=	os
+PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 
 MAINTAINER=	kris@ixsystems.com
 COMMENT=	Port for the kernel debug symbol files
 
-BUILD_DEPENDS=	/usr/dist/kernel-debug.txz:os/buildkernel-debug
+BUILD_DEPENDS=	${OS_KERNDIST_DEBUG}:os/buildkernel-debug@${OS_FLAVOR}
 
+USES=	os:flavors
 PREFIX=/
 EXTRACT_ONLY=
 DISTFILES=
@@ -21,8 +23,8 @@ NEED_ROOT=	yes
 
 do-build:
 	@${MKDIR} -p ${STAGEDIR}
-	@${ECHO_MSG} "==> Extracting kernel-debug.txz..."
-	@${TAR} xpf /usr/dist/kernel-debug.txz -C ${STAGEDIR}
+	@${ECHO_MSG} "==> Extracting ${OS_KERNDIST_DEBUG}..."
+	@${TAR} xpf ${OS_KERNDIST_DEBUG} -C ${STAGEDIR}
 	@${MV} ${STAGEDIR}/usr/lib/debug/boot/kernel ${STAGEDIR}/usr/lib/debug/boot/kernel-debug
 
 do-install:

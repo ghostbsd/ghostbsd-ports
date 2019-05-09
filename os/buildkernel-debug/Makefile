@@ -5,6 +5,7 @@
 PORTNAME=	buildkernel-debug
 PORTVERSION=	${OS_PORTVERSION}
 CATEGORIES=	os
+PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 
 MAINTAINER=	kris@ixsystems.com
 COMMENT=	Buildkernel portition of os packages with debug enabled
@@ -14,12 +15,13 @@ SRCDIR?=/usr/src
 BUILD_DEPENDS=	${SRCDIR}/Makefile:os/src
 .endif
 
+USES=	os:flavors
 PREFIX=/
 EXTRACT_ONLY=
 DISTFILES=
 WITHOUT_FBSD10_FIX=	yes
 WRKSRC=${SRCDIR}
-PLIST_FILES+=	/usr/dist/kernel-debug.txz
+PLIST_FILES+=	${OS_KERNDIST_DEBUG}
 LOCAL_SDIR?=	/usr/local_source
 NEED_ROOT=	yes
 .if exists(${LOCAL_SDIR}/${PORTNAME})
@@ -30,7 +32,7 @@ WRKSRC=	${LOCAL_SDIR}/${PORTNAME}
 .if defined(${DEBUGKERNCONF})
 KERNCONF=	${DEBUGKERNCONF}
 .else
-KERNCONF?=	GENERIC
+KERNCONF=	GENERIC
 .endif
 
 .if defined(_MAKE_JOBS_NUMBER)
@@ -58,8 +60,19 @@ MFLAGS+=	WITH_${var}=YES
 .endif
 .endfor
 
+# This is utterly stoopid, but don't have a better solution right now
+# Running concurrent builds of buildkernel in poudriere causes some failures
+# where builds are trampling on each other... Something is being done
+# outside of MAKEOBJDIRPREFIX...
+KERNWRKSRC="${WRKDIR}/src"
+
+check-sanity:
+
 do-build:
-	cd ${WRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
+	@if [ ! -d "${KERNWRKSRC}" ] ; then \
+		cp -R ${WRKSRC} ${KERNWRKSRC}; \
+	fi
+	cd ${KERNWRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
 		KERNCONF=${KERNCONF} \
 		${MFLAGS} \
 		buildkernel
@@ -67,13 +80,13 @@ do-build:
 do-install:
 	${MKDIR} -p ${STAGEDIR}/kernel-debug
 	${MKDIR} -p ${STAGEDIR}/usr/dist
-	cd ${WRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
+	cd ${KERNWRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
 		KERNCONF=${KERNCONF} \
 		${MFLAGS} \
 	       	DESTDIR=${STAGEDIR}/kernel-debug \
 		installkernel
 	mv ${STAGEDIR}/kernel-debug/boot/kernel ${STAGEDIR}/kernel-debug/boot/kernel-debug
-	tar cvJf ${STAGEDIR}/usr/dist/kernel-debug.txz -C ${STAGEDIR}/kernel-debug .
+	tar cvJf ${STAGEDIR}${OS_KERNDIST_DEBUG} -C ${STAGEDIR}/kernel-debug .
 	chflags -R noschg ${STAGEDIR}/kernel-debug
 	${RM} -rf ${STAGEDIR}/kernel-debug
 
