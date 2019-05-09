@@ -4,7 +4,7 @@
 #
 # Feature:	os
 # Usage:	USES=os
-# Valid ARGS:	(none), flavors, noflavors, zol
+# Valid ARGS:	(none), flavors, noflavors, generic, minimal, zol
 #
 #	- flavors  : Generates flavors for supported versions.
 #	- noflavors: Prevents generation of flavor.
