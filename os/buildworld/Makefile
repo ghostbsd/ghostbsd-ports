@@ -71,7 +71,7 @@ do-install:
 		${MFLAGS} \
 	       	DESTDIR=${STAGEDIR}/world \
 		installworld
-	cd ${WRKSRC} && env -i make MAKEOBJDIRPREFIX=${WRKDIR} ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
+	cd ${WRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
 		${MFLAGS} \
 		DESTDIR=${STAGEDIR}/world \
 		distribution
