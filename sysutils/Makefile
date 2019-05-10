@@ -77,12 +77,15 @@
     SUBDIR += baloo-widgets
     SUBDIR += bamf
     SUBDIR += bareos-client
-    SUBDIR += bareos-client-static
     SUBDIR += bareos-docs
     SUBDIR += bareos-server
+    SUBDIR += bareos-traymonitor
     SUBDIR += bareos16-client
     SUBDIR += bareos16-client-static
     SUBDIR += bareos16-server
+    SUBDIR += bareos17-client
+    SUBDIR += bareos17-client-static
+    SUBDIR += bareos17-server
     SUBDIR += bastille
     SUBDIR += batmon
     SUBDIR += battmond
@@ -98,7 +101,6 @@
     SUBDIR += biosfont
     SUBDIR += bkpupsd
     SUBDIR += bksh
-    SUBDIR += boxbackup
     SUBDIR += boxbackup-devel
     SUBDIR += brasero
     SUBDIR += bsd-splash-changer
@@ -449,8 +451,6 @@
     SUBDIR += graylog
     SUBDIR += grub2
     SUBDIR += grub2-bhyve
-    SUBDIR += grub2-efi
-    SUBDIR += grub2-pcbsd
     SUBDIR += gsh
     SUBDIR += gsmartcontrol
     SUBDIR += gstopd
@@ -487,10 +487,6 @@
     SUBDIR += hpacucli
     SUBDIR += hploscripts
     SUBDIR += hptcli
-    SUBDIR += hs-cpu
-    SUBDIR += hs-disk-free-space
-    SUBDIR += hs-ekg-core
-    SUBDIR += hs-mountpoints
     SUBDIR += hstr
     SUBDIR += htop
     SUBDIR += httplog
@@ -669,7 +665,6 @@
     SUBDIR += mcollective-shell-client
     SUBDIR += mcron
     SUBDIR += mcweject
-    SUBDIR += mdcp
     SUBDIR += mdf2iso
     SUBDIR += megacli
     SUBDIR += megarc
@@ -1231,7 +1226,6 @@
     SUBDIR += savelogs
     SUBDIR += sb16config
     SUBDIR += sbase
-    SUBDIR += sbsigntool
     SUBDIR += scalpel
     SUBDIR += scan_ffs
     SUBDIR += scanbuttond

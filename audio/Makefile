@@ -324,9 +324,6 @@
     SUBDIR += harp
     SUBDIR += herrie
     SUBDIR += hexter
-    SUBDIR += hs-ALUT
-    SUBDIR += hs-libmpd
-    SUBDIR += hs-OpenAL
     SUBDIR += hts_engine-API
     SUBDIR += hvl2wav
     SUBDIR += hydrogen
