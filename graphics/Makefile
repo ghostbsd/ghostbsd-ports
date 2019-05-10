@@ -52,8 +52,6 @@
     SUBDIR += aoi
     SUBDIR += apngasm
     SUBDIR += apngdis
-    SUBDIR += appleseed
-    SUBDIR += apvlv
     SUBDIR += argyllcms
     SUBDIR += asciio
     SUBDIR += aseprite
@@ -337,12 +335,6 @@
     SUBDIR += hiptext
     SUBDIR += hobbes-icons-xpm
     SUBDIR += hppsmtools
-    SUBDIR += hs-JuicyPixels
-    SUBDIR += hs-cairo
-    SUBDIR += hs-dia-base
-    SUBDIR += hs-dia-functions
-    SUBDIR += hs-graphviz
-    SUBDIR += hs-svgcairo
     SUBDIR += hugin
     SUBDIR += icat
     SUBDIR += icc-profiles-adobe-cs4
@@ -894,7 +886,6 @@
     SUBDIR += qgis
     SUBDIR += qgis-ltr
     SUBDIR += qiv
-    SUBDIR += qslim
     SUBDIR += qt5-3d
     SUBDIR += qt5-graphicaleffects
     SUBDIR += qt5-imageformats
@@ -911,7 +902,6 @@
     SUBDIR += radiance
     SUBDIR += radius-engine
     SUBDIR += raster3d
-    SUBDIR += rawstudio
     SUBDIR += rawtherapee
     SUBDIR += rayshade
     SUBDIR += reactphysics3d
@@ -1023,7 +1013,6 @@
     SUBDIR += tkpng
     SUBDIR += togl
     SUBDIR += ttygif
-    SUBDIR += tulip
     SUBDIR += tumble
     SUBDIR += ufraw
     SUBDIR += uniconvertor
