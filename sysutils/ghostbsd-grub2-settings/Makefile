@@ -19,7 +19,7 @@ GH_ACCOUNT=	GhostBSD
 
 NO_BUILD=	yes
 
-RUN_DEPENDS=	grub-mkconfig:sysutils/grub2-pcbsd
+#RUN_DEPENDS=	grub-mkconfig:sysutils/grub2-pcbsd
 
 do-install:
 	${MKDIR} ${STAGEDIR}/boot/grub/themes/ghostbsd
