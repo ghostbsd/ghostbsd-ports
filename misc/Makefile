@@ -243,6 +243,7 @@
     SUBDIR += lxi-tools
     SUBDIR += magicpoint
     SUBDIR += man.el
+    SUBDIR += mate-user-guide
     SUBDIR += mbuffer
     SUBDIR += mc
     SUBDIR += mc-light
@@ -273,7 +274,6 @@
     SUBDIR += openhmd
     SUBDIR += openmvg
     SUBDIR += openr2
-    SUBDIR += openvdb
     SUBDIR += orange3
     SUBDIR += orion
     SUBDIR += orville-write

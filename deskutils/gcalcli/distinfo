@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 TIMESTAMP = 1546701384
 SHA256 (insanum-gcalcli-v4.0.0a4_GH0.tar.gz) = 0f83f4c3ba9d46d34a412ce8f9311cbe1f1598e5425ec363c6390f0ffcbbd42a
 SIZE (insanum-gcalcli-v4.0.0a4_GH0.tar.gz) = 1675773
+=======
+TIMESTAMP = 1551729455
+SHA256 (insanum-gcalcli-v4.0.4_GH0.tar.gz) = 0ad3a3446e1ac1c5228ea3a2705a292b99f6cb3222fae4a12a004f92ce31037f
+SIZE (insanum-gcalcli-v4.0.4_GH0.tar.gz) = 1699589
+>>>>>>> freebsd/master
