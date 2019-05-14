@@ -170,7 +170,6 @@
     SUBDIR += gnome-osd
     SUBDIR += gnome-user-docs
     SUBDIR += gnu-watch
-    SUBDIR += gnuit
     SUBDIR += gnuls
     SUBDIR += gnustep-examples
     SUBDIR += gone
