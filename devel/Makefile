@@ -56,6 +56,8 @@
     SUBDIR += R-cran-plogr
     SUBDIR += R-cran-plyr
     SUBDIR += R-cran-praise
+    SUBDIR += R-cran-prettyunits
+    SUBDIR += R-cran-progress
     SUBDIR += R-cran-promises
     SUBDIR += R-cran-proto
     SUBDIR += R-cran-purrr
@@ -124,6 +126,7 @@
     SUBDIR += apr2
     SUBDIR += arachne-pnr
     SUBDIR += arcanist
+    SUBDIR += arcanist-lib
     SUBDIR += arduino
     SUBDIR += arduino-avrdude
     SUBDIR += arduino-bsd-mk
@@ -1521,7 +1524,6 @@
     SUBDIR += mk-configure
     SUBDIR += mm
     SUBDIR += mm-common
-    SUBDIR += modules2tuple
     SUBDIR += mongo-c-driver
     SUBDIR += mongo-cxx-driver
     SUBDIR += mono-addins
@@ -4781,6 +4783,7 @@
     SUBDIR += py-pytest-django
     SUBDIR += py-pytest-flake8
     SUBDIR += py-pytest-flakes
+    SUBDIR += py-pytest-forked
     SUBDIR += py-pytest-helpers-namespace
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-mock
