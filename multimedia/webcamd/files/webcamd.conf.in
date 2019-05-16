@@ -7,6 +7,14 @@ notify 100 {
 	action "sh /etc/rc.devd webcamd.$cdev start $interface";
 };
 
+notify 100 {
+	match "system"		"USB";
+	match "subsystem"	"INTERFACE";
+	match "type"		"DETACH";
+	match "intclass"	"0x0e";
+	action "sh /etc/rc.devd webcamd.$cdev stop $interface";
+};
+
 # Vendor specific USB webcams and DVB devices.
 notify 100 {
 	match "system"		"USB";
