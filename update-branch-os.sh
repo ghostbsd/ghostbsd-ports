@@ -5,7 +5,7 @@
 
 # List of ports to update
 # Usage: <portname>::<project>::<repo>::<defaultbranch>
-PLIST="os::trueos::trueos::trueos-master"
+PLIST="os::trueos::trueos::trueos/master"
 PLIST="${PLIST} sysutils/pc-sysinstall::trueos::pc-sysinstall::master"
 PLIST="${PLIST} sysutils/pc-installdialog::trueos::pc-installdialog::master"
 
