@@ -26,7 +26,7 @@ NO_OPTIONS_SORT=	yes
 do-build:
 	@${MKDIR} -p ${STAGEDIR}
 	@${ECHO_MSG} "==> Extracting ${OS_WORLDDIST}..."
-	@${TAR} xpf ${OS_WORLDDIST} -C ${STAGEDIR} ./libexec ./lib ./usr/lib
+	@${TAR} xpf ${OS_WORLDDIST} -C ${STAGEDIR}
 
 do-install:
 	@${ECHO_MSG} "==> Generating plist..."
@@ -37,7 +37,7 @@ do-install:
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
 		>> ${TMPPLIST})
-	@(cd ${STAGEDIR}; ${FIND} ./ \( -type d \) \
+	@(cd ${STAGEDIR}; ${FIND} ./libexec ./lib ./usr/lib \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
