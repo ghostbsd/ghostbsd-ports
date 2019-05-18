@@ -4,7 +4,6 @@
 
 PORTNAME=	userland-base-bootstrap
 PORTVERSION=	${OS_PORTVERSION}
-PORTREVISION=	1
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 
@@ -27,11 +26,13 @@ NO_OPTIONS_SORT=	yes
 do-build:
 	@${MKDIR} -p ${STAGEDIR}
 	@${ECHO_MSG} "==> Extracting ${OS_WORLDDIST}..."
-	@${TAR} xpf ${OS_WORLDDIST} -C ${STAGEDIR} ./libexec ./lib
+	@${TAR} xpf ${OS_WORLDDIST} -C ${STAGEDIR} ./libexec ./lib ./usr/lib
 
 do-install:
 	@${ECHO_MSG} "==> Generating plist..."
-	@(cd ${STAGEDIR}; ${FIND} ./libexec ./lib/libc.* ./lib/libthr.* ./lib/libm.* \( -type f -o -type l \) \
+	@(cd ${STAGEDIR}; ${FIND} ./libexec/ld-elf* ./lib/libc.* ./lib/libthr.* ./lib/libm.* \
+		./usr/lib/libthr.so ./usr/lib/libm.so ./usr/lib/libc.so \
+		\( -type f -o -type l \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \

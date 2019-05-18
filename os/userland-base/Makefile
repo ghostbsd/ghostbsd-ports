@@ -4,7 +4,7 @@
 
 PORTNAME=	userland-base
 PORTVERSION=	${OS_PORTVERSION}
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 
@@ -29,10 +29,15 @@ NO_OPTIONS_SORT=	yes
 do-build:
 	@${MKDIR} -p ${STAGEDIR}
 	@${ECHO_MSG} "==> Extracting ${OS_WORLDDIST}..."
-	@${TAR} xpf ${OS_WORLDDIST} --exclude ./libexec \
-		--exclude ./lib/libc. \
-		--exclude ./lib/libthr. \
-		--exclude ./lib/libm. \
+	@${TAR} xpf ${OS_WORLDDIST} \
+		--exclude ./libexec/ld-elf.so.1 \
+		--exclude ./libexec/ld-elf32.so.1 \
+		--exclude ./lib/libc.* \
+		--exclude ./lib/libthr.* \
+		--exclude ./lib/libm.* \
+		--exclude ./usr/lib/libc.so \
+		--exclude ./usr/lib/libthr.so \
+		--exclude ./usr/lib/libm.so \
 		-C ${STAGEDIR}
 	@${INSTALL_SCRIPT} ${FILESDIR}/pkgbase.setup.in ${STAGEDIR}/etc/pkgbase.setup
 	@if [ -n "${STAGEDIR}/var/db/trueos-manifest.json" ] ; then \
