@@ -51,7 +51,14 @@ do-install:
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
-		| ${GREP} -v -e 'usr/lib/debug' -e 'usr/tests' -e 'usr/lib32' -e 'usr/share/doc' -e 'usr/share/man' \
+		| ${GREP} -v \
+			-e 'etc/pwd.db' \
+			-e 'etc/spwd.db' \
+			-e 'usr/lib/debug' \
+			-e 'usr/tests' \
+			-e 'usr/lib32' \
+			-e 'usr/share/doc' \
+			-e 'usr/share/man' \
 		>> ${TMPPLIST})
 	@(cd ${STAGEDIR}; ${FIND} ./ \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
