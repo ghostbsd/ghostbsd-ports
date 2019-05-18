@@ -52,6 +52,7 @@ do-install:
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
 		| ${GREP} -v \
+			-e 'etc/login.conf.db' \
 			-e 'etc/pwd.db' \
 			-e 'etc/spwd.db' \
 			-e 'usr/lib/debug' \
@@ -59,6 +60,7 @@ do-install:
 			-e 'usr/lib32' \
 			-e 'usr/share/doc' \
 			-e 'usr/share/man' \
+			-e 'var/db/services.db' \
 		>> ${TMPPLIST})
 	@(cd ${STAGEDIR}; ${FIND} ./ \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
