@@ -31,7 +31,7 @@ do-build:
 do-install:
 	@${ECHO_MSG} "==> Generating plist..."
 	@(cd ${STAGEDIR}; ${FIND} ./libexec/ld-elf* ./lib/libc.* ./lib/libthr.* ./lib/libm.* \
-		./usr/lib/libthr.so ./usr/lib/libm.so ./usr/lib/libc.so \
+		./usr/lib/libthr.* ./usr/lib/libm.* ./usr/lib/libc.* \
 		\( -type f -o -type l \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
