@@ -12,4 +12,4 @@ COMMENT=	Metaport for ports kmod to ensure updates with kernel
 
 USES=	metaport
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
