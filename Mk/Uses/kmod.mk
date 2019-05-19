@@ -34,6 +34,11 @@ KMODDIR?=	/boot/modules
 KMODDIR=	/boot/modules
 .endif
 
+# Track our kernel trigger meta-package, this ensures that kmods are updated
+# at same time as os/kernel@${FLAVOR} to prevent possible boot issues
+.include "../../os/Makefile.common"
+RUN_DEPENDS+=	kernel-kmod-sentinel=${OS_PORTVERSION}:os/kernel-kmod-sentinel
+
 _DEBUG_KMOD_SH= \
 ${ECHO_CMD} -n "\"@dir /%%KERN_DEBUGDIR%%/%%KMODDIR%%\"" ; \
 skd=`${ECHO_CMD} ${KMODDIR} | ${SED} "s,/, ,g"` ; \

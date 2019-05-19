@@ -12,6 +12,7 @@ MAINTAINER=	kris@ixsystems.com
 COMMENT=	Port for the OS kernel
 
 BUILD_DEPENDS=	${OS_KERNDIST}:os/buildkernel@${OS_FLAVOR}
+RUN_DEPENDS+=	kernel-kmod-sentinel=${OS_PORTVERSION}:os/kernel-kmod-sentinel
 
 USES=	os:flavors
 PREFIX=/
