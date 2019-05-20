@@ -178,6 +178,7 @@
     SUBDIR += granulate
     SUBDIR += grc
     SUBDIR += gwhich
+    SUBDIR += hashdb
     SUBDIR += hb
     SUBDIR += hello
     SUBDIR += help2man
@@ -445,7 +446,6 @@
     SUBDIR += rubygem-rabbit
     SUBDIR += rubygem-vpim
     SUBDIR += rump
-    SUBDIR += rumprun
     SUBDIR += sdformat
     SUBDIR += seabios
     SUBDIR += sent
