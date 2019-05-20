@@ -219,6 +219,7 @@
     SUBDIR += lazyread
     SUBDIR += lc
     SUBDIR += lesspipe
+    SUBDIR += lf
     SUBDIR += libeatmydata
     SUBDIR += libemos
     SUBDIR += libiio
