@@ -4,7 +4,7 @@
 
 PORTNAME=	userland-base
 PORTVERSION=	${OS_PORTVERSION}
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 
@@ -13,6 +13,7 @@ COMMENT=	Port for the OS userland binaries
 
 BUILD_DEPENDS=	${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR} \
 		${LOCALBASE}/bin/jq:textproc/jq
+RUN_DEPENDS=	/libexec/ld-elf.so.1:os/userland-base-bootstrap@${OS_FLAVOR}
 
 USES=	os:flavors
 PREFIX=/
@@ -28,7 +29,16 @@ NO_OPTIONS_SORT=	yes
 do-build:
 	@${MKDIR} -p ${STAGEDIR}
 	@${ECHO_MSG} "==> Extracting ${OS_WORLDDIST}..."
-	@${TAR} xpf ${OS_WORLDDIST} -C ${STAGEDIR}
+	@${TAR} xpf ${OS_WORLDDIST} \
+		--exclude ./libexec/ld-elf.so.1 \
+		--exclude ./libexec/ld-elf32.so.1 \
+		--exclude ./lib/libc.* \
+		--exclude ./lib/libthr.* \
+		--exclude ./lib/libm.* \
+		--exclude ./usr/lib/libc.so \
+		--exclude ./usr/lib/libthr.so \
+		--exclude ./usr/lib/libm.so \
+		-C ${STAGEDIR}
 	@${INSTALL_SCRIPT} ${FILESDIR}/pkgbase.setup.in ${STAGEDIR}/etc/pkgbase.setup
 	@if [ -n "${STAGEDIR}/var/db/trueos-manifest.json" ] ; then \
 		sh ${FILESDIR}/mk-pkg-repo.sh ${STAGEDIR}/var/db/trueos-manifest.json ${STAGEDIR} ; \
@@ -42,6 +52,7 @@ do-install:
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
 		| ${GREP} -v \
+			-e 'etc/login.conf.db' \
 			-e 'etc/pwd.db' \
 			-e 'etc/spwd.db' \
 			-e 'usr/lib/debug' \
@@ -49,6 +60,7 @@ do-install:
 			-e 'usr/lib32' \
 			-e 'usr/share/doc' \
 			-e 'usr/share/man' \
+			-e 'var/db/services.db' \
 		>> ${TMPPLIST})
 	@(cd ${STAGEDIR}; ${FIND} ./ \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \

@@ -84,6 +84,10 @@ for lookup; do
 			inject_base_dep "os/userland-base"
 			continue
 			;;
+		/libexec/ld-elf.so.1)
+			inject_base_dep "os/userland-base-bootstrap"
+			continue
+			;;
 		/usr/lib/debug/bin/sh.debug)
 			inject_base_dep "os/userland-debug"
 			continue
