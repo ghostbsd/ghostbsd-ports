@@ -1,6 +1,12 @@
+.if defined(OS_SRCDIR)
+# Get the version from OS_SRCDIR dynamically
+OS_PORTVERSION!=	stat -f %Sm -t "%Y%m%d%H%M%S" ${OS_SRCDIR}
+.else
 OS_PORTVERSION=	20190522191137
+.endif
+
 .if defined(BASEPKG_ABISTRING)
 PKG_ABISTRING=	${BASEPKG_ABISTRING}
 .else
-PKG_ABISTRING=	FreeBSD:13:${ARCH}
+PKG_ABISTRING!=	pkg config abi
 .endif

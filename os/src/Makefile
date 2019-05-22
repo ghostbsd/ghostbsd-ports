@@ -19,9 +19,8 @@ PREFIX=/
 SRCDIR?=/usr/src
 NO_BUILD=	yes
 WITHOUT_FBSD10_FIX=	yes
-LOCAL_SDIR?=	/usr/local_source
-.if exists(${LOCAL_SDIR}/${PORTNAME})
-WRKSRC=	${LOCAL_SDIR}/${PORTNAME}
+.if defined(${OS_SRCDIR}) && exists(${OS_SRCDIR})
+WRKSRC=	${OS_SRCDIR}
 .endif
 
 .include <bsd.port.pre.mk>
