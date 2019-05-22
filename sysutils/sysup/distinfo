@@ -1,5 +1,5 @@
-TIMESTAMP = 1558456036
-SHA256 (trueos-sysup-v0.8_GH0.tar.gz) = f0232b196ebd7053c7270c0eeeb07a5b69b256f30ff0a4cfd4257ce55a2c66c4
-SIZE (trueos-sysup-v0.8_GH0.tar.gz) = 54317
+TIMESTAMP = 1558554532
+SHA256 (trueos-sysup-v0.8.1_GH0.tar.gz) = 6be574e2ce77894f1bfde0ed1e50a5425d3b84a2c39ad05815ef7a5116e1228d
+SIZE (trueos-sysup-v0.8.1_GH0.tar.gz) = 54354
 SHA256 (gorilla-websocket-v1.4.0_GH0.tar.gz) = 2b5743c72bd0930c5a80e49c0138b5b7d27fa7c085efd0c86805cccfa7220c9d
 SIZE (gorilla-websocket-v1.4.0_GH0.tar.gz) = 50228
