@@ -1,8 +1,11 @@
 BASEPKG_SRCDIR?=	/usr/src
+NEWVERS=	${BASEPKG_SRCDIR}/sys/conf/newvers.sh
 
 .if exists(${BASEPKG_SRCDIR}/Makefile)
 # Get the version from BASEPKG_SRCDIR dynamically
-BASEPKG_PORTVERSION!=	stat -f %Sm -t "%Y%m%d%H%M%S" ${BASEPKG_SRCDIR}
+SRCVERSION!=	eval $$(egrep '^(REVISION)=' ${NEWVERS}) && echo $${REVISION}
+SRCDATE!=	stat -f %Sm -t "%Y%m%d%H%M%S" ${BASEPKG_SRCDIR}
+BASEPKG_PORTVERSION=	${SRCVERSION}.${SRCDATE}
 .else
 IGNORE=	Missing system sources in ${BASEPKG_SRCDIR}
 .endif
