@@ -3,7 +3,7 @@
 .include "../Makefile.common"
 
 PORTNAME=	kernel
-PORTVERSION=	${OS_PORTVERSION}
+PORTVERSION=	${BASEPKG_PORTVERSION}
 PORTREVISION=	1
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
@@ -12,7 +12,7 @@ MAINTAINER=	kris@ixsystems.com
 COMMENT=	Port for the OS kernel
 
 BUILD_DEPENDS=	${OS_KERNDIST}:os/buildkernel@${OS_FLAVOR}
-RUN_DEPENDS+=	kernel-kmod-sentinel=${OS_PORTVERSION}:os/kernel-kmod-sentinel
+RUN_DEPENDS+=	kernel-kmod-sentinel=${BASEPKG_PORTVERSION}:os/kernel-kmod-sentinel
 
 USES=	os:flavors
 PREFIX=/
@@ -31,7 +31,7 @@ OPTIONS_SUB=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
-RUN_DEPENDS+=	kernel-symbols=${OS_PORTVERSION}:os/kernel-symbols@${OS_FLAVOR}
+RUN_DEPENDS+=	kernel-symbols=${BASEPKG_PORTVERSION}:os/kernel-symbols@${OS_FLAVOR}
 .endif
 
 do-build:

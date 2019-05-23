@@ -1,12 +1,12 @@
-.if defined(OS_SRCDIR)
-# Get the version from OS_SRCDIR dynamically
-OS_PORTVERSION!=	stat -f %Sm -t "%Y%m%d%H%M%S" ${OS_SRCDIR}
+BASEPKG_SRCDIR?=	/usr/src
+
+.if exists(${BASEPKG_SRCDIR}/Makefile)
+# Get the version from BASEPKG_SRCDIR dynamically
+BASEPKG_PORTVERSION!=	stat -f %Sm -t "%Y%m%d%H%M%S" ${BASEPKG_SRCDIR}
 .else
-OS_PORTVERSION=	20190522191137
+IGNORE=	Missing system sources in ${BASEPKG_SRCDIR}
 .endif
 
 .if defined(BASEPKG_ABISTRING)
 PKG_ABISTRING=	${BASEPKG_ABISTRING}
-.else
-PKG_ABISTRING!=	pkg config abi
 .endif

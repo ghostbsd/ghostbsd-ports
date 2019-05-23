@@ -3,7 +3,7 @@
 .include "../Makefile.common"
 
 PORTNAME=	src
-PORTVERSION=	${OS_PORTVERSION}
+PORTVERSION=	${BASEPKG_PORTVERSION}
 PORTREVISION=	2
 CATEGORIES=	os
 
@@ -19,14 +19,14 @@ PREFIX=/
 SRCDIR?=/usr/src
 NO_BUILD=	yes
 WITHOUT_FBSD10_FIX=	yes
-.if defined(${OS_SRCDIR}) && exists(${OS_SRCDIR})
-WRKSRC=	${OS_SRCDIR}
+.if defined(BASEPKG_SRCDIR) && exists(${BASEPKG_SRCDIR}/Makefile)
+WRKSRC=	${BASEPKG_SRCDIR}
 .endif
 
 .include <bsd.port.pre.mk>
 
-.if exists(${LOCAL_SDIR}/${PORTNAME})
-checksum fetch:
+.if defined(BASEPKG_SRCDIR) && exists(${BASEPKG_SRCDIR}/Makefile)
+checksum fetch extract:
 	${ECHO_MSG} ${.TARGET} not needed because building direct
 .endif
 
