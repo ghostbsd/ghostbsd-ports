@@ -12,7 +12,7 @@ BASEPKG_PORTVERSION=	${SRCVERSION}.${MANUALVER}
 # Get the version from BASEPKG_SRCDIR dynamically
 SRCDATE!=	stat -f %Sm -t "%Y%m%d%H%M%S" ${BASEPKG_SRCDIR}
 BASEPKG_PORTVERSION=	${SRCVERSION}.${SRCDATE}
-.	fi
+.	endif
 .else
 IGNORE=	Missing system sources in ${BASEPKG_SRCDIR}
 .endif

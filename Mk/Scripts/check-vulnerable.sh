@@ -26,7 +26,8 @@ fi
 
 vlist=$(${dp_PKG_BIN} audit "${dp_PKGNAME}" || :)
 
-if [ "${vlist}" != "0 problem(s) in the installed packages found." ]; then
+if [ "${vlist}" != "0 problem(s) in the installed packages found." -a \
+	"${vlist}" != "0 problem(s) in 0 installed package(s) found." ]; then
 	${dp_ECHO_MSG} "===>  ${dp_PKGNAME} has known vulnerabilities:"
 	${dp_ECHO_MSG} "$vlist"
 	${dp_ECHO_MSG} "=> Please update your ports tree and try again."
