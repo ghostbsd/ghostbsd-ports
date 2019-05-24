@@ -12,6 +12,9 @@ IGNORE=	Missing system sources in ${BASEPKG_SRCDIR}
 
 .if defined(BASEPKG_ABISTRING)
 PKG_ABISTRING=	${BASEPKG_ABISTRING}
+.else
+ABIVERSION!=	eval $$(egrep '^(REVISION)=' ${NEWVERS}) && echo $${REVISION} | cut -d '.' -f 1
+PKG_ABISTRING=	FreeBSD:${ABIVERSION}:${ARCH}
 .endif
 
 # After moving from <date> to <ver>.<date>
