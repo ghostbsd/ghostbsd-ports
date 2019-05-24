@@ -24,5 +24,3 @@ ABIVERSION!=	eval $$(egrep '^(REVISION)=' ${NEWVERS}) && echo $${REVISION} | cut
 PKG_ABISTRING=	FreeBSD:${ABIVERSION}:${ARCH}
 .endif
 
-# After moving from <date> to <ver>.<date>
-PORTEPOCH=1
