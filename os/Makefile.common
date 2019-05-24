@@ -13,3 +13,6 @@ IGNORE=	Missing system sources in ${BASEPKG_SRCDIR}
 .if defined(BASEPKG_ABISTRING)
 PKG_ABISTRING=	${BASEPKG_ABISTRING}
 .endif
+
+# After moving from <date> to <ver>.<date>
+PORTEPOCH=1
