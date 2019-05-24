@@ -5,7 +5,6 @@
 
 # List of ports to update
 # Usage: <portname>::<project>::<repo>::<defaultbranch>
-PLIST="os::trueos::trueos::trueos/master"
 PLIST="${PLIST} sysutils/pc-sysinstall::trueos::pc-sysinstall::master"
 PLIST="${PLIST} sysutils/pc-installdialog::trueos::pc-installdialog::master"
 
@@ -18,8 +17,8 @@ usage()
 	echo "Example: $0 all"
 	echo "This will update *all* the ports to their latest versions"
 	echo ""
-	echo "Example: $0 os/src 18.12"
-	echo "This will update the os/src to the version in GitHub tagged 18.12"
+	echo "Example: $0 sysutils/pc-installdialog 18.12"
+	echo "This will update the sysutils/pc-installdialog to the version in GitHub tagged 18.12"
 	exit 1
 }
 
@@ -55,15 +54,9 @@ update_port()
 
 	#echo "$TSTAMP"
 
-	if [ "$port" = "os" ] ; then
-		sed -i '' "s/.*OS_PORTVERSION=.*/OS_PORTVERSION=	$TSTAMP/" ${port}/Makefile.common
-		sed -i '' "s/.*GH_TAGNAME=.*/GH_TAGNAME=	$GH_HASH/" ${port}/src/Makefile
-		make -C ${port}/src OSVERSION=1200000 makesum
-	else
-		sed -i '' "s/.*PORTVERSION=.*/PORTVERSION=	$TSTAMP/" ${port}/Makefile
-		sed -i '' "s/.*GH_TAGNAME=.*/GH_TAGNAME=	$GH_HASH/" ${port}/Makefile
-		make -C ${port} OSVERSION=1200000 makesum
-	fi
+	sed -i '' "s/.*PORTVERSION=.*/PORTVERSION=	$TSTAMP/" ${port}/Makefile
+	sed -i '' "s/.*GH_TAGNAME=.*/GH_TAGNAME=	$GH_HASH/" ${port}/Makefile
+	make -C ${port} OSVERSION=1200000 makesum
 
 }
 
