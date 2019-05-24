@@ -1,14 +1,13 @@
 # $FreeBSD$
 
-.include "../Makefile.common"
-
 PORTNAME=	userland-base
 PORTVERSION=	${BASEPKG_PORTVERSION}
-PORTREVISION=	8
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
+DISTFILES=
+EXTRACT_ONLY=
 
-MAINTAINER=	kris@ixsystems.com
+MAINTAINER=	kmoore@FreeBSD.org
 COMMENT=	Port for the OS userland binaries
 
 BUILD_DEPENDS=	${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR} \
@@ -16,9 +15,8 @@ BUILD_DEPENDS=	${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR} \
 RUN_DEPENDS=	/libexec/ld-elf.so.1:os/userland-base-bootstrap@${OS_FLAVOR}
 
 USES=	os:flavors
+
 PREFIX=/
-EXTRACT_ONLY=
-DISTFILES=
 NEED_ROOT=	yes
 PKGVITAL=	yes
 
@@ -27,7 +25,7 @@ NO_OPTIONS_SORT=	yes
 .include <bsd.port.pre.mk>
 
 do-build:
-	@${MKDIR} -p ${STAGEDIR}
+	@${MKDIR} ${STAGEDIR}
 	@${ECHO_MSG} "==> Extracting ${OS_WORLDDIST}..."
 	@${TAR} xpf ${OS_WORLDDIST} \
 		--exclude ./libexec/ld-elf.so.1 \
@@ -39,9 +37,9 @@ do-build:
 		--exclude ./usr/lib/libthr.so \
 		--exclude ./usr/lib/libm.so \
 		-C ${STAGEDIR}
-	@${INSTALL_SCRIPT} ${FILESDIR}/pkgbase.setup.in ${STAGEDIR}/etc/pkgbase.setup
+	${INSTALL_SCRIPT} ${FILESDIR}/pkgbase.setup.in ${STAGEDIR}/etc/pkgbase.setup
 	@if [ -n "${STAGEDIR}/var/db/trueos-manifest.json" ] ; then \
-		sh ${FILESDIR}/mk-pkg-repo.sh ${STAGEDIR}/var/db/trueos-manifest.json ${STAGEDIR} ; \
+		${SH} ${FILESDIR}/mk-pkg-repo.sh ${STAGEDIR}/var/db/trueos-manifest.json ${STAGEDIR} ; \
 	fi
 	@${ECHO} "${_OSVERSION_MAJOR}-${PKGVERSION}" > ${STAGEDIR}/etc/base_version
 
@@ -71,7 +69,7 @@ do-install:
 		| ${XARGS} -I '{}' echo "@dir {}" \
 		| ${GREP} -v -w '@dir ' \
 		| ${CAT} >> ${TMPPLIST})
-	@sh ${FILESDIR}/scrubplist.sh ${FILESDIR}/configs ${TMPPLIST} ${STAGEDIR}
+	@${SH} ${FILESDIR}/scrubplist.sh ${FILESDIR}/configs ${TMPPLIST} ${STAGEDIR}
 
 clean:
 	@if [ -d ${WRKDIR} ]; then \
@@ -84,4 +82,5 @@ clean:
 		fi; \
 	fi
 
+.include "../Makefile.common"
 .include <bsd.port.post.mk>
