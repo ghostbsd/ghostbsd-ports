@@ -7,7 +7,7 @@ PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 DISTFILES=
 EXTRACT_ONLY=
 
-MAINTAINER=	kris@ixsystems.com
+MAINTAINER=	kmoore@FreeBSD.org
 COMMENT=	Userland tests
 
 BUILD_DEPENDS=  ${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR}
