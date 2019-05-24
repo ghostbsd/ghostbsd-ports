@@ -1,22 +1,20 @@
 # $FreeBSD$
 
-.include "../Makefile.common"
-
 PORTNAME=	userland-base-bootstrap
-PORTVERSION=	${OS_PORTVERSION}
-PORTREVISION=	1
+PORTVERSION=	${BASEPKG_PORTVERSION}
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
+DISTFILES=
+EXTRACT_ONLY=
 
-MAINTAINER=	kris@ixsystems.com
+MAINTAINER=	kmoore@FreeBSD.org
 COMMENT=	Port for libelf, rtld and other critical early libraries
 
 BUILD_DEPENDS=	${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR}
 
 USES=	os:flavors
+
 PREFIX=/
-EXTRACT_ONLY=
-DISTFILES=
 NEED_ROOT=	yes
 PKGVITAL=	yes
 
@@ -25,7 +23,7 @@ NO_OPTIONS_SORT=	yes
 .include <bsd.port.pre.mk>
 
 do-build:
-	@${MKDIR} -p ${STAGEDIR}
+	@${MKDIR} ${STAGEDIR}
 	@${ECHO_MSG} "==> Extracting ${OS_WORLDDIST}..."
 	@${TAR} xpf ${OS_WORLDDIST} -C ${STAGEDIR}
 
@@ -58,4 +56,5 @@ clean:
 		fi; \
 	fi
 
+.include "../Makefile.common"
 .include <bsd.port.post.mk>

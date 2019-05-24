@@ -1,6 +1,6 @@
 #!/bin/sh
 # License: 2CLAUSEBSD
-# Author: Kris Moore <kris@ixsystems.com>
+# Author: Kris Moore <kmoore@FreeBSD.org>
 #
 # Setup script called by userland package during
 # installation / upgrade

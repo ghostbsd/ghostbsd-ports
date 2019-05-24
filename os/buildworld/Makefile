@@ -1,24 +1,21 @@
 # $FreeBSD$
 
-.include "../Makefile.common"
-
 PORTNAME=	buildworld
-PORTVERSION=	${OS_PORTVERSION}
-PORTREVISION=	1
+PORTVERSION=	${BASEPKG_PORTVERSION}
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
+DISTFILES=
+EXTRACT_ONLY=
 
-MAINTAINER=	kris@ixsystems.com
+MAINTAINER=	kmoore@FreeBSD.org
 COMMENT=	Port for the buildworld phase of OS
 
-SRCDIR?=	/usr/src
 BUILD_DEPENDS=	${SRCDIR}/Makefile:os/src
 
 USES=	os:flavors
+
 PREFIX=/
-EXTRACT_ONLY=
-DISTFILES=
-SRCDIR?=/usr/src
+SRCDIR?=	/usr/src
 WRKSRC=${SRCDIR}
 WITHOUT_FBSD10_FIX=	yes
 LOCAL_SDIR?=	/usr/local_source
@@ -60,29 +57,29 @@ PLIST_FILES+=	${OS_WORLDDIST}
 check-sanity:
 
 do-build:
-	cd ${WRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
+	cd ${WRKSRC} && ${SETENV} -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
 		${MFLAGS} \
 		buildworld
 
 do-install:
-	${MKDIR} -p ${STAGEDIR}/world
-	${MKDIR} -p ${STAGEDIR}/usr/dist
-	cd ${WRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
+	${MKDIR} ${STAGEDIR}/world
+	${MKDIR} ${STAGEDIR}/usr/dist
+	cd ${WRKSRC} && ${SETENV} -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
 		${MFLAGS} \
 	       	DESTDIR=${STAGEDIR}/world \
 		installworld
-	cd ${WRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
+	cd ${WRKSRC} && ${SETENV} -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
 		${MFLAGS} \
 		DESTDIR=${STAGEDIR}/world \
 		distribution
 	if [ -e "${PORTSDIR}/local_source/trueos-manifest.json" ] ; then \
 		${CP} ${FILESDIR}/trueos-manifest.json ${STAGEDIR}/world/var/db/trueos-manifest.json ; \
 	elif [ -n "${TRUEOS_MANIFEST}" -a -e "${TRUEOS_MANIFEST}" ] ; then \
-		cp ${TRUEOS_MANIFEST} ${STAGEDIR}/world/var/db/trueos-manifest.json ; \
+		${CP} ${TRUEOS_MANIFEST} ${STAGEDIR}/world/var/db/trueos-manifest.json ; \
 	fi
 	tar cvJf ${STAGEDIR}${OS_WORLDDIST} -C ${STAGEDIR}/world .
 	chflags -R noschg ${STAGEDIR}/world
-	rm -rf ${STAGEDIR}/world
+	${RM} -rf ${STAGEDIR}/world
 
 clean:
 	@if [ -d ${WRKDIR} ]; then \
@@ -95,4 +92,5 @@ clean:
 		fi; \
 	fi
 
+.include "../Makefile.common"
 .include <bsd.port.post.mk>

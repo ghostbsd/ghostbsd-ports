@@ -1,27 +1,26 @@
 # $FreeBSD$
 
-.include "../Makefile.common"
-
 PORTNAME=	userland-debug
-PORTVERSION=	${OS_PORTVERSION}
+PORTVERSION=	${BASEPKG_PORTVERSION}
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
+DISTFILES=
+EXTRACT_ONLY=
 
-MAINTAINER=	kris@ixsystems.com
+MAINTAINER=	kmoore@FreeBSD.org
 COMMENT=	Userland debuging symbols
 
 BUILD_DEPENDS=  ${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR}
 
 USES=	os:flavors
+
 PREFIX=/
-EXTRACT_ONLY=
-DISTFILES=
 NEED_ROOT=	yes
 
 .include <bsd.port.pre.mk>
 
 do-build:
-	@${MKDIR} -p ${STAGEDIR}
+	@${MKDIR} ${STAGEDIR}
 	@${ECHO_MSG} "==> Extracting ${OS_WORLDDIST}..."
 	@${TAR} xpf ${OS_WORLDDIST} -C ${STAGEDIR}
 
@@ -52,4 +51,5 @@ clean:
 		fi; \
 	fi
 
+.include "../Makefile.common"
 .include <bsd.port.post.mk>

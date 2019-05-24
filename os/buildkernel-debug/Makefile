@@ -1,13 +1,13 @@
 # $FreeBSD$
 
-.include "../Makefile.common"
-
 PORTNAME=	buildkernel-debug
-PORTVERSION=	${OS_PORTVERSION}
+PORTVERSION=	${BASEPKG_PORTVERSION}
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
+DISTFILES=
+EXTRACT_ONLY=
 
-MAINTAINER=	kris@ixsystems.com
+MAINTAINER=	kmoore@FreeBSD.org
 COMMENT=	Buildkernel portition of os packages with debug enabled
 
 SRCDIR?=/usr/src
@@ -16,9 +16,8 @@ BUILD_DEPENDS=	${SRCDIR}/Makefile:os/src
 .endif
 
 USES=	os:flavors
+
 PREFIX=/
-EXTRACT_ONLY=
-DISTFILES=
 WITHOUT_FBSD10_FIX=	yes
 WRKSRC=${SRCDIR}
 PLIST_FILES+=	${OS_KERNDIST_DEBUG}
@@ -60,34 +59,26 @@ MFLAGS+=	WITH_${var}=YES
 .endif
 .endfor
 
-# This is utterly stoopid, but don't have a better solution right now
-# Running concurrent builds of buildkernel in poudriere causes some failures
-# where builds are trampling on each other... Something is being done
-# outside of MAKEOBJDIRPREFIX...
-KERNWRKSRC="${WRKDIR}/src"
-
 check-sanity:
 
 do-build:
-	@if [ ! -d "${KERNWRKSRC}" ] ; then \
-		cp -R ${WRKSRC} ${KERNWRKSRC}; \
-	fi
-	cd ${KERNWRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
+	cd ${WRKSRC} && ${SETENV} -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
 		KERNCONF=${KERNCONF} \
 		${MFLAGS} \
 		buildkernel
 
 do-install:
-	${MKDIR} -p ${STAGEDIR}/kernel-debug
-	${MKDIR} -p ${STAGEDIR}/usr/dist
-	cd ${KERNWRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
+	${MKDIR} ${STAGEDIR}/kernel-debug
+	${MKDIR} ${STAGEDIR}/usr/dist
+	cd ${WRKSRC} && ${SETENV} -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
 		KERNCONF=${KERNCONF} \
 		${MFLAGS} \
-	       	DESTDIR=${STAGEDIR}/kernel-debug \
+		DESTDIR=${STAGEDIR}/kernel-debug \
 		installkernel
-	mv ${STAGEDIR}/kernel-debug/boot/kernel ${STAGEDIR}/kernel-debug/boot/kernel-debug
+	${MV} ${STAGEDIR}/kernel-debug/boot/kernel ${STAGEDIR}/kernel-debug/boot/kernel-debug
 	tar cvJf ${STAGEDIR}${OS_KERNDIST_DEBUG} -C ${STAGEDIR}/kernel-debug .
 	chflags -R noschg ${STAGEDIR}/kernel-debug
 	${RM} -rf ${STAGEDIR}/kernel-debug
 
+.include "../Makefile.common"
 .include <bsd.port.post.mk>

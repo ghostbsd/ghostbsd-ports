@@ -1,9 +1,7 @@
 # $FreeBSD$
 
-.include "../Makefile.common"
-
 PORTNAME=	kernel-kmod-sentinel
-PORTVERSION=	${OS_PORTVERSION}
+PORTVERSION=	${BASEPKG_PORTVERSION}
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 
@@ -12,4 +10,5 @@ COMMENT=	Metaport for ports kmod to ensure updates with kernel
 
 USES=	metaport
 
+.include "../Makefile.common"
 .include <bsd.port.mk>

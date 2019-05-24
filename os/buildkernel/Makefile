@@ -1,14 +1,13 @@
 # $FreeBSD$
 
-.include "../Makefile.common"
-
 PORTNAME=	buildkernel
-PORTVERSION=	${OS_PORTVERSION}
-PORTREVISION=	1
+PORTVERSION=	${BASEPKG_PORTVERSION}
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
+DISTFILES=
+EXTRACT_ONLY=
 
-MAINTAINER=	kris@ixsystems.com
+MAINTAINER=	kmoore@FreeBSD.org
 COMMENT=	Buildkernel portition of os packages
 
 SRCDIR?=/usr/src
@@ -17,9 +16,8 @@ BUILD_DEPENDS=	${SRCDIR}/Makefile:os/src
 .endif
 
 USES=	os:flavors
+
 PREFIX=/
-EXTRACT_ONLY=
-DISTFILES=
 WITHOUT_FBSD10_FIX=	yes
 WRKSRC=${SRCDIR}
 PLIST_FILES+=	${OS_KERNDIST}
@@ -61,33 +59,25 @@ MFLAGS+=	WITH_${var}=YES
 .endif
 .endfor
 
-# This is utterly stoopid, but don't have a better solution right now
-# Running concurrent builds of buildkernel in poudriere causes some failures
-# where builds are trampling on each other... Something is being done
-# outside of MAKEOBJDIRPREFIX...
-KERNWRKSRC="${WRKDIR}/src"
-
 check-sanity:
 
 do-build:
-	@if [ ! -d "${KERNWRKSRC}" ]; then \
-		cp -R ${WRKSRC} ${KERNWRKSRC}; \
-	fi
-	cd ${KERNWRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
+	cd ${WRKSRC} && ${SETENV} -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
 		KERNCONF=${KERNCONF} \
 		${MFLAGS} \
 		buildkernel
 
 do-install:
-	${MKDIR} -p ${STAGEDIR}/kernel
-	${MKDIR} -p ${STAGEDIR}/usr/dist
-	cd ${KERNWRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
+	${MKDIR} ${STAGEDIR}/kernel
+	${MKDIR} ${STAGEDIR}/usr/dist
+	cd ${WRKSRC} && ${SETENV} -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
 		KERNCONF=${KERNCONF} \
 		${MFLAGS} \
-	       	DESTDIR=${STAGEDIR}/kernel \
+		DESTDIR=${STAGEDIR}/kernel \
 		installkernel
 	tar cvJf ${STAGEDIR}${OS_KERNDIST} -C ${STAGEDIR}/kernel .
 	chflags -R noschg ${STAGEDIR}/kernel
 	${RM} -rf ${STAGEDIR}/kernel
 
+.include "../Makefile.common"
 .include <bsd.port.post.mk>
