@@ -61,19 +61,10 @@ MFLAGS+=	WITH_${var}=YES
 .endif
 .endfor
 
-# This is utterly stoopid, but don't have a better solution right now
-# Running concurrent builds of buildkernel in poudriere causes some failures
-# where builds are trampling on each other... Something is being done
-# outside of MAKEOBJDIRPREFIX...
-KERNWRKSRC="${WRKDIR}/src"
-
 check-sanity:
 
 do-build:
-	@if [ ! -d "${KERNWRKSRC}" ]; then \
-		cp -R ${WRKSRC} ${KERNWRKSRC}; \
-	fi
-	cd ${KERNWRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
+	cd ${WRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
 		KERNCONF=${KERNCONF} \
 		${MFLAGS} \
 		buildkernel
@@ -81,10 +72,10 @@ do-build:
 do-install:
 	${MKDIR} -p ${STAGEDIR}/kernel
 	${MKDIR} -p ${STAGEDIR}/usr/dist
-	cd ${KERNWRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
+	cd ${WRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
 		KERNCONF=${KERNCONF} \
 		${MFLAGS} \
-	       	DESTDIR=${STAGEDIR}/kernel \
+		DESTDIR=${STAGEDIR}/kernel \
 		installkernel
 	tar cvJf ${STAGEDIR}${OS_KERNDIST} -C ${STAGEDIR}/kernel .
 	chflags -R noschg ${STAGEDIR}/kernel
