@@ -17,7 +17,7 @@ WRKSRC=	${BASEPKG_SRCDIR}
 
 .include <bsd.port.pre.mk>
 
-checksum fetch extract:
+checksum fetch extract patch:
 	${ECHO_MSG} ${.TARGET} not needed because building direct
 
 stage-qa: stage
