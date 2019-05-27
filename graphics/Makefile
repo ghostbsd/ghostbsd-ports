@@ -138,6 +138,7 @@
     SUBDIR += drawpile
     SUBDIR += driconf
     SUBDIR += drm-current-kmod
+    SUBDIR += drm-devel-kmod
     SUBDIR += drm-fbsd11.2-kmod
     SUBDIR += drm-fbsd12.0-kmod
     SUBDIR += drm-kmod
@@ -403,9 +404,11 @@
     SUBDIR += klatexformula
     SUBDIR += kludge3d
     SUBDIR += kolourpaint
+    SUBDIR += kooka
     SUBDIR += kphotoalbum
     SUBDIR += krita
     SUBDIR += kudu
+    SUBDIR += kxstitch
     SUBDIR += l2p
     SUBDIR += largetifftools
     SUBDIR += laternamagica
@@ -732,6 +735,7 @@
     SUBDIR += pencil2d
     SUBDIR += peps
     SUBDIR += perceptualdiff
+    SUBDIR += peruse
     SUBDIR += pfstools
     SUBDIR += pgplot
     SUBDIR += pho

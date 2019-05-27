@@ -321,6 +321,7 @@
     SUBDIR += cl-trivial-gray-streams-sbcl
     SUBDIR += clanlib
     SUBDIR += clanlib1
+    SUBDIR += clazy
     SUBDIR += cld2
     SUBDIR += clewn
     SUBDIR += clig
@@ -787,6 +788,7 @@
     SUBDIR += git-modes
     SUBDIR += git-remote-hg
     SUBDIR += git-review
+    SUBDIR += git-subrepo
     SUBDIR += git-subversion
     SUBDIR += git-town
     SUBDIR += gitaly
@@ -898,6 +900,7 @@
     SUBDIR += hadoop2
     SUBDIR += hapy
     SUBDIR += hcs12mem
+    SUBDIR += heaptrack
     SUBDIR += heimdall
     SUBDIR += hexcompare
     SUBDIR += hexd
@@ -1005,6 +1008,7 @@
     SUBDIR += jech-dht
     SUBDIR += jenkins
     SUBDIR += jenkins-lts
+    SUBDIR += jetbrains-clion
     SUBDIR += jetbrains-phpstorm
     SUBDIR += jfrog-cli
     SUBDIR += jiic
@@ -1113,10 +1117,12 @@
     SUBDIR += libbinio
     SUBDIR += libbonobo
     SUBDIR += libbonobo-reference
+    SUBDIR += libbpfjit
     SUBDIR += libbson
     SUBDIR += libburn
     SUBDIR += libcbor
     SUBDIR += libccid
+    SUBDIR += libcdb
     SUBDIR += libcfg
     SUBDIR += libcfu
     SUBDIR += libchipcard
@@ -1226,6 +1232,7 @@
     SUBDIR += liblangtag
     SUBDIR += liblas
     SUBDIR += liblas12
+    SUBDIR += liblpm
     SUBDIR += liblnk
     SUBDIR += liblockfile
     SUBDIR += liblogging
@@ -1288,6 +1295,7 @@
     SUBDIR += libpthread-stubs
     SUBDIR += libqb
     SUBDIR += libqcow
+    SUBDIR += libqsbr
     SUBDIR += libqtxdg
     SUBDIR += libr3
     SUBDIR += librcc
@@ -1338,6 +1346,7 @@
     SUBDIR += libtecla
     SUBDIR += libtermkey
     SUBDIR += libthai
+    SUBDIR += libthmap
     SUBDIR += libtifiles2
     SUBDIR += libtool
     SUBDIR += libtpl
@@ -4700,7 +4709,6 @@
     SUBDIR += py-promise
     SUBDIR += py-prompt_toolkit
     SUBDIR += py-prompt_toolkit1
-    SUBDIR += py-prompt_toolkit2
     SUBDIR += py-protobuf
     SUBDIR += py-protocols
     SUBDIR += py-ptable
@@ -4823,12 +4831,14 @@
     SUBDIR += py-pytvmaze
     SUBDIR += py-pytz
     SUBDIR += py-pyudev
+    SUBDIR += py-pyupgrade
     SUBDIR += py-pyutil
     SUBDIR += py-pyvalid
     SUBDIR += py-pyvisa
     SUBDIR += py-pyvisa-py
     SUBDIR += py-pyxb
     SUBDIR += py-pyxml2obj
+    SUBDIR += py-q
     SUBDIR += py-qpid
     SUBDIR += py-qserve
     SUBDIR += py-qt5
@@ -4979,6 +4989,7 @@
     SUBDIR += py-tinyarray
     SUBDIR += py-tinyrpc
     SUBDIR += py-tipper
+    SUBDIR += py-tokenize-rt
     SUBDIR += py-toolz
     SUBDIR += py-tooz
     SUBDIR += py-toposort

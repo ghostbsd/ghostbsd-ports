@@ -1,5 +1,4 @@
 # $FreeBSD$
-PORTREVISION=	1
 #
 
     COMMENT = Instant messaging
@@ -147,7 +146,6 @@ PORTREVISION=	1
     SUBDIR += py-xmpppy-irc
     SUBDIR += qmlryver
     SUBDIR += qTox
-    SUBDIR += qq
     SUBDIR += quaternion
     SUBDIR += qxmpp-qt5
     SUBDIR += ricochet

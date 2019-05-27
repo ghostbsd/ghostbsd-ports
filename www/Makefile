@@ -29,6 +29,7 @@
     SUBDIR += apache24
     SUBDIR += apercu
     SUBDIR += apt-cacher-ng
+    SUBDIR += aquatone
     SUBDIR += archiva
     SUBDIR += aria2
     SUBDIR += asql
@@ -468,7 +469,6 @@
     SUBDIR += npc
     SUBDIR += npm
     SUBDIR += npm-node10
-    SUBDIR += npm-node6
     SUBDIR += npm-node8
     SUBDIR += npm5
     SUBDIR += nspluginwrapper
@@ -1485,9 +1485,19 @@
     SUBDIR += py-dj21-djangoql
     SUBDIR += py-dj21-djangorestframework
     SUBDIR += py-dj21-drf-yasg
+    SUBDIR += py-dj22-django-auth-ldap
+    SUBDIR += py-dj22-django-cors-headers
+    SUBDIR += py-dj22-django-debug-toolbar
+    SUBDIR += py-dj22-django-filter
+    SUBDIR += py-dj22-django-js-asset
+    SUBDIR += py-dj22-django-mptt
+    SUBDIR += py-dj22-django-tables2
     SUBDIR += py-dj22-django-taggit
+    SUBDIR += py-dj22-django-taggit-serializer
+    SUBDIR += py-dj22-django-timezone-field
     SUBDIR += py-dj22-django-treebeard
     SUBDIR += py-dj22-djangorestframework
+    SUBDIR += py-dj22-drf-yasg
     SUBDIR += py-django
     SUBDIR += py-django-allauth
     SUBDIR += py-django-annotations
@@ -1850,6 +1860,7 @@
     SUBDIR += py-url
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlobject
+    SUBDIR += py-urlwatch
     SUBDIR += py-user_agent
     SUBDIR += py-utidylib
     SUBDIR += py-w3lib
@@ -2029,6 +2040,7 @@
     SUBDIR += rubygem-jsobfu
     SUBDIR += rubygem-json-jwt
     SUBDIR += rubygem-jwt
+    SUBDIR += rubygem-jwt21
     SUBDIR += rubygem-kaminari
     SUBDIR += rubygem-kaminari-actionview
     SUBDIR += rubygem-kaminari-actionview-rails5
