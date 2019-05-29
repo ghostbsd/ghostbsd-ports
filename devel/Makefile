@@ -512,6 +512,7 @@
     SUBDIR += efl
     SUBDIR += egypt
     SUBDIR += eiffelstudio
+    SUBDIR += electron4
     SUBDIR += elf
     SUBDIR += elfio
     SUBDIR += elfkickers
@@ -4087,6 +4088,7 @@
     SUBDIR += py-asciimatics
     SUBDIR += py-asn1crypto
     SUBDIR += py-aspects
+    SUBDIR += py-aspy.yaml
     SUBDIR += py-aspyct
     SUBDIR += py-astor
     SUBDIR += py-astroid
@@ -4218,6 +4220,7 @@
     SUBDIR += py-certsrv
     SUBDIR += py-cffi
     SUBDIR += py-cfgparse
+    SUBDIR += py-cfgv
     SUBDIR += py-cftime
     SUBDIR += py-chainmap
     SUBDIR += py-characteristic
@@ -4438,8 +4441,11 @@
     SUBDIR += py-icalendar
     SUBDIR += py-ice
     SUBDIR += py-ice37
+    SUBDIR += py-identify
     SUBDIR += py-ijson
     SUBDIR += py-imgkit
+    SUBDIR += py-importlib-metadata
+    SUBDIR += py-importlib-resources
     SUBDIR += py-incremental
     SUBDIR += py-inflect
     SUBDIR += py-inflection
@@ -4597,6 +4603,7 @@
     SUBDIR += py-nbconvert
     SUBDIR += py-nbformat
     SUBDIR += py-ncurses
+    SUBDIR += py-nodeenv
     SUBDIR += py-nose
     SUBDIR += py-nose-cov
     SUBDIR += py-nose-timer
@@ -4701,6 +4708,7 @@
     SUBDIR += py-poyo
     SUBDIR += py-pp
     SUBDIR += py-pqueue
+    SUBDIR += py-pre-commit
     SUBDIR += py-pretend
     SUBDIR += py-prettytable
     SUBDIR += py-prioritized_methods
@@ -5098,6 +5106,7 @@
     SUBDIR += py-zc.buildout
     SUBDIR += py-zclockfile
     SUBDIR += py-zconfig
+    SUBDIR += py-zipp
     SUBDIR += py-zkpython
     SUBDIR += py-zope.annotation
     SUBDIR += py-zope.app.applicationcontrol
@@ -5509,6 +5518,7 @@
     SUBDIR += rubygem-gettext
     SUBDIR += rubygem-gettext-setup
     SUBDIR += rubygem-gettext_i18n_rails
+    SUBDIR += rubygem-gettext_i18n_rails_js-rails5
     SUBDIR += rubygem-gettext_i18n_rails_js-rails50
     SUBDIR += rubygem-gh
     SUBDIR += rubygem-gibbler
@@ -5548,7 +5558,7 @@
     SUBDIR += rubygem-hashie-forbidden_attributes
     SUBDIR += rubygem-hashie2
     SUBDIR += rubygem-health_check
-    SUBDIR += rubygem-health_check26-rails50
+    SUBDIR += rubygem-health_check26-rails5
     SUBDIR += rubygem-highline
     SUBDIR += rubygem-hike
     SUBDIR += rubygem-hike1
@@ -5699,13 +5709,13 @@
     SUBDIR += rubygem-pathutil
     SUBDIR += rubygem-pdk
     SUBDIR += rubygem-peek
-    SUBDIR += rubygem-peek-gc-rails50
+    SUBDIR += rubygem-peek-gc-rails5
     SUBDIR += rubygem-peek-host
     SUBDIR += rubygem-peek-performance_bar
     SUBDIR += rubygem-peek-rails4
-    SUBDIR += rubygem-peek-rails50
-    SUBDIR += rubygem-peek-rblineprof-rails50
-    SUBDIR += rubygem-peek-redis-rails50
+    SUBDIR += rubygem-peek-rails5
+    SUBDIR += rubygem-peek-rblineprof-rails5
+    SUBDIR += rubygem-peek-redis-rails5
     SUBDIR += rubygem-pkg-config
     SUBDIR += rubygem-platform
     SUBDIR += rubygem-pleaserun
@@ -5741,6 +5751,7 @@
     SUBDIR += rubygem-rails-deprecated_sanitizer-rails50
     SUBDIR += rubygem-rails-i18n
     SUBDIR += rubygem-rails-i18n-4
+    SUBDIR += rubygem-rails-i18n-rails5
     SUBDIR += rubygem-rails-i18n-rails50
     SUBDIR += rubygem-rails-observers
     SUBDIR += rubygem-rainbow
