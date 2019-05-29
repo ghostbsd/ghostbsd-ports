@@ -1038,6 +1038,7 @@
     SUBDIR += py-iowait
     SUBDIR += py-ixautomation
     SUBDIR += py-leviathan
+    SUBDIR += py-mitogen
     SUBDIR += py-mqttwarn
     SUBDIR += py-nagiosplugin
     SUBDIR += py-packet-python
