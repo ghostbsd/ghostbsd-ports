@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	zol
-PORTVERSION=	201905240000
+PORTVERSION=	2019053000
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-src
 
@@ -11,7 +11,7 @@ COMMENT=	Port for ZoL sources
 USE_GITHUB=	yes
 GH_ACCOUNT=	zfsonfreebsd
 GH_PROJECT=	ZoF
-GH_TAGNAME=	400b361
+GH_TAGNAME=	a67416d
 
 PREFIX=/
 SRCDIR?=/usr/local/share/zol-src
