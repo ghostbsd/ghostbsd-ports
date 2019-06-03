@@ -710,6 +710,7 @@
     SUBDIR += p5-Tie-EncryptedHash
     SUBDIR += p5-Tree-Authz
     SUBDIR += p5-Unix-Passwd-File
+    SUBDIR += p5-Unix-setuid
     SUBDIR += p5-Yahoo-BBAuth
     SUBDIR += p5-dicewaregen
     SUBDIR += p5-openxpki
@@ -853,6 +854,7 @@
     SUBDIR += py-YubiOTP
     SUBDIR += py-acme
     SUBDIR += py-acme-tiny
+    SUBDIR += py-argon2-cffi
     SUBDIR += py-artifacts
     SUBDIR += py-asyncssh
     SUBDIR += py-backports.ssl_match_hostname
@@ -1033,7 +1035,6 @@
     SUBDIR += qtkeychain
     SUBDIR += quantis-kmod
     SUBDIR += racoon2
-    SUBDIR += racoon2-legacy
     SUBDIR += radamsa
     SUBDIR += ranpwd
     SUBDIR += ratproxy
@@ -1067,6 +1068,7 @@
     SUBDIR += rndpassw
     SUBDIR += ruby-bitwarden
     SUBDIR += ruby-camellia
+    SUBDIR += rubygem-acme-client
     SUBDIR += rubygem-aes_key_wrap
     SUBDIR += rubygem-airbrussh
     SUBDIR += rubygem-attr_encrypted
