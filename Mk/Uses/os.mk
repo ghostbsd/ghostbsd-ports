@@ -4,13 +4,13 @@
 #
 # Feature:	os
 # Usage:	USES=os
-# Valid ARGS:	(none), flavors, noflavors, generic, minimal, zol
+# Valid ARGS:	(none), flavors, noflavors, generic, minimal, nozfs
 #
 #	- flavors  : Generates flavors for supported versions.
 #	- noflavors: Prevents generation of flavor.
 #	- generic  : Default FreeBSD build options
 #	- minimal  : Build a stripped down version of FreeBSD world
-#	- zol	   : Build without base ZFS and replace with sysutils/zol
+#	- nozfs	   : Build without base ZFS
 #
 
 .if !defined(_INCLUDE_USES_OS_MK)
@@ -19,7 +19,7 @@ OS_Include_MAINTAINER=	kmoore@FreeBSD.org
 
 _INCLUDE_USES_OS_MK=	yes
 
-_OS_VALID_ARGS=	flavors generic noflavors zol
+_OS_VALID_ARGS=	flavors generic noflavors nozfs
 
 _OS_UNKNOWN_ARGS=
 .for arg in ${os_ARGS}
@@ -35,7 +35,7 @@ IGNORE=	has unknown USES=os arguments: ${_OS_UNKNOWN_ARGS}
 os_ARGS:=	${os_ARGS:Nflavors}
 .  endif
 
-_ALL_OS_FLAVORS=	generic minimal zol
+_ALL_OS_FLAVORS=	generic minimal nozfs
 
 OS_DEFAULT_FLAVOR?=	generic
 
@@ -64,7 +64,7 @@ OS_PKGNAMEPREFIX=	os-${FLAVOR}-
 OS_PKGNAMESUFFIX=	-os-${FLAVOR}
 
 # Options for the ZOL flavor
-.  if ${FLAVOR} == "zol"
+.  if ${FLAVOR} == "nozfs"
 PORT_OPTIONS:=	${PORT_OPTIONS:NZFS}
 .  endif
 

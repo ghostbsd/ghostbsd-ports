@@ -13,13 +13,13 @@ USES=	metaport os:flavors
 
 NO_OPTIONS_SORT=	yes
 
-OPTIONS_DEFINE=	DEBUG DOCS LIB32 TESTS ZOL
+OPTIONS_DEFINE=	DEBUG DOCS LIB32 TESTS OPENZFS
 OPTIONS_DEFAULT= DOCS
 OPTIONS_SUB=	yes
 DOCS_DESC=	Include manpages and other documentation
 LIB32_DESC=	Support for execution of i386 applications
 TESTS_DESC=	Optional test framework scripts and tools
-ZOL_DESC=	ZFS on Linux userland and kernel support
+OPENZFS_DESC=	OpenZFS userland and kernel support
 
 RUN_DEPENDS+=	/bin/sh:os/userland-base@${OS_FLAVOR}
 
@@ -41,8 +41,10 @@ RUN_DEPENDS+=	/usr/lib32/libc.a:os/userland-lib32@${OS_FLAVOR}
 RUN_DEPENDS+=	/usr/tests/README:os/userland-tests@${OS_FLAVOR}
 .endif
 
-.if ${PORT_OPTIONS:MZOL} || ${FLAVOR} == "zol"
-RUN_DEPENDS+=	${LOCALBASE}/sbin/zpool:sysutils/zol
+.if ${PORT_OPTIONS:MOPENZFS} || ${FLAVOR} == "nozfs"
+WITH_OPENZFS=	YES
+OPTIONS_SET+=	OPENZFS
+RUN_DEPENDS+=	${LOCALBASE}/sbin/zpool:sysutils/openzfs
 .endif
 
 .include "../Makefile.common"
