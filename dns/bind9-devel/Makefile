@@ -41,13 +41,13 @@ RUN_DEPENDS=	bind-tools>0:dns/bind-tools
 # XXX: remove tar:bz2
 USES=	compiler:c11 cpe libedit ssl tar:bz2
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.15.0a0.2019.06.03
+ISCVERSION=	9.15.0a0.2019.06.10
 # XXX: Remove gitlab
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.isc.org
 GL_ACCOUNT=	isc-projects
 GL_PROJECT=	bind9
-GL_COMMIT=	bae12f569d19ce02e32718c5f7e55be93bef1f21
+GL_COMMIT=	32c86e29e23c6829290086f919fed3cf124fe348
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
@@ -175,6 +175,7 @@ IDN_USES=		iconv
 
 JSON_CONFIGURE_WITH=	json-c
 JSON_LIB_DEPENDS=	libjson-c.so:devel/json-c
+JSON_LDFLAGS=		-L${LOCALBASE}/lib -ljson-c
 
 LARGE_FILE_CONFIGURE_ENABLE=	largefile
 

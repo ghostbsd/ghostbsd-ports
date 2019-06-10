@@ -2,7 +2,7 @@
 
 PORTNAME=	rumur
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2019.06.01
+DISTVERSION=	2019.06.05
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,6 +10,8 @@ COMMENT=	Model checker, a formal verification tool for state machines
 
 LICENSE=	PD
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	no matching function for call to 'make_ul', see https://github.com/Smattr/rumur/issues/136
 
 LIB_DEPENDS=	libgmpxx.so:math/gmp
 
@@ -24,7 +26,7 @@ CMAKE_ARGS=	BISON_EXECUTABLE:STRING=${LOCALBASE}/bin/bison
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
-do-test: # tests are broken: https://github.com/Smattr/rumur/issues/134
+do-test:
 	@cd ${BUILD_WRKSRC} && \
 		${WRKSRC}/tests/integration-tests.py --verbose
 
