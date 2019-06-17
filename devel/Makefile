@@ -654,6 +654,7 @@
     SUBDIR += fmake
     SUBDIR += fnccheck
     SUBDIR += fnorb
+    SUBDIR += folly
     SUBDIR += fortran-utils
     SUBDIR += fortytwo-encore
     SUBDIR += fossil
@@ -765,6 +766,7 @@
     SUBDIR += gecode
     SUBDIR += generate
     SUBDIR += gengetopt
+    SUBDIR += genie
     SUBDIR += genproto
     SUBDIR += gettext
     SUBDIR += gettext-lint
@@ -1541,6 +1543,7 @@
     SUBDIR += mk-configure
     SUBDIR += mm
     SUBDIR += mm-common
+    SUBDIR += modd
     SUBDIR += mongo-c-driver
     SUBDIR += mongo-cxx-driver
     SUBDIR += mono-addins
@@ -1557,6 +1560,7 @@
     SUBDIR += msgpuck
     SUBDIR += msp430-debug-stack
     SUBDIR += mspdebug
+    SUBDIR += mstch
     SUBDIR += mtbl
     SUBDIR += mutagen
     SUBDIR += myrepos
@@ -4109,6 +4113,7 @@
     SUBDIR += py-attrs
     SUBDIR += py-automaton
     SUBDIR += py-avro
+    SUBDIR += py-aws-sam-translator
     SUBDIR += py-aws-xray-sdk
     SUBDIR += py-azure-batch
     SUBDIR += py-azure-datalake-store
@@ -4226,6 +4231,7 @@
     SUBDIR += py-cffi
     SUBDIR += py-cfgparse
     SUBDIR += py-cfgv
+    SUBDIR += py-cfn-lint
     SUBDIR += py-cftime
     SUBDIR += py-chainmap
     SUBDIR += py-characteristic
@@ -4284,6 +4290,8 @@
     SUBDIR += py-curtsies
     SUBDIR += py-cxx
     SUBDIR += py-cycler
+    SUBDIR += py-cymem
+    SUBDIR += py-cytoolz
     SUBDIR += py-d2to1
     SUBDIR += py-daemon
     SUBDIR += py-daemon-runner
@@ -4595,6 +4603,7 @@
     SUBDIR += py-multipledispatch
     SUBDIR += py-multiprocess
     SUBDIR += py-munch
+    SUBDIR += py-murmurhash
     SUBDIR += py-mwlib
     SUBDIR += py-mwlib.ext
     SUBDIR += py-mwlib.rl
@@ -4702,6 +4711,7 @@
     SUBDIR += py-pip-tools2
     SUBDIR += py-pipenv
     SUBDIR += py-pkgconfig
+    SUBDIR += py-plac
     SUBDIR += py-plan
     SUBDIR += py-plex
     SUBDIR += py-pluggy
@@ -4717,6 +4727,7 @@
     SUBDIR += py-pp
     SUBDIR += py-pqueue
     SUBDIR += py-pre-commit
+    SUBDIR += py-preshed
     SUBDIR += py-pretend
     SUBDIR += py-prettyprinter
     SUBDIR += py-prettytable
