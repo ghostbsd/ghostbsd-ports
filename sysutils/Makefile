@@ -291,6 +291,7 @@
     SUBDIR += dwatch-pwsnoop
     SUBDIR += e2fsprogs
     SUBDIR += ec2-scripts
+    SUBDIR += eclat
     SUBDIR += edid-decode
     SUBDIR += eject
     SUBDIR += eksctl

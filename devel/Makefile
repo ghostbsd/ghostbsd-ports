@@ -80,6 +80,7 @@
     SUBDIR += R-cran-vcd
     SUBDIR += R-cran-vctrs
     SUBDIR += R-cran-withr
+    SUBDIR += R-cran-zeallot
     SUBDIR += RStudio
     SUBDIR += SpecTcl
     SUBDIR += aap
@@ -1237,12 +1238,12 @@
     SUBDIR += liblangtag
     SUBDIR += liblas
     SUBDIR += liblas12
-    SUBDIR += liblpm
     SUBDIR += liblnk
     SUBDIR += liblockfile
     SUBDIR += liblogging
     SUBDIR += liblognorm
     SUBDIR += liblouis
+    SUBDIR += liblpm
     SUBDIR += libltdl
     SUBDIR += liblxqt
     SUBDIR += libmaa
@@ -2615,6 +2616,7 @@
     SUBDIR += p5-Locale-Msgfmt
     SUBDIR += p5-Locale-PGetText
     SUBDIR += p5-Locale-PO
+    SUBDIR += p5-Locale-XGettext
     SUBDIR += p5-Locale-gettext
     SUBDIR += p5-Locale-libintl
     SUBDIR += p5-LockFile-Simple
@@ -4828,6 +4830,7 @@
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-mock
     SUBDIR += py-pytest-pycodestyle
+    SUBDIR += py-pytest-relaxed
     SUBDIR += py-pytest-runner
     SUBDIR += py-pytest-sugar
     SUBDIR += py-pytest-timeout
@@ -5260,7 +5263,6 @@
     SUBDIR += qtcreator
     SUBDIR += quickcheck++
     SUBDIR += quilt
-    SUBDIR += R-cran-zeallot
     SUBDIR += rabs
     SUBDIR += racer
     SUBDIR += racerd
