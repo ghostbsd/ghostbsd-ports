@@ -41,7 +41,7 @@ RUN_DEPENDS+=	/usr/lib32/libc.a:os/userland-lib32@${OS_FLAVOR}
 RUN_DEPENDS+=	/usr/tests/README:os/userland-tests@${OS_FLAVOR}
 .endif
 
-.if ${PORT_OPTIONS:MOPENZFS} || ${FLAVOR} == "nozfs"
+.if ${PORT_OPTIONS:MOPENZFS}
 WITH_OPENZFS=	YES
 OPTIONS_SET+=	OPENZFS
 RUN_DEPENDS+=	${LOCALBASE}/sbin/zpool:sysutils/openzfs
