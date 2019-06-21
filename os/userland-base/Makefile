@@ -2,6 +2,7 @@
 
 PORTNAME=	userland-base
 PORTVERSION=	${BASEPKG_PORTVERSION}
+PORTREVISION=	1
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 DISTFILES=
@@ -37,6 +38,7 @@ do-build:
 		--exclude ./usr/lib/libthr.so \
 		--exclude ./usr/lib/libm.so \
 		-C ${STAGEDIR}
+	${INSTALL_SCRIPT} ${FILESDIR}/base-update.in ${STAGEDIR}/usr/sbin/base-update
 	${INSTALL_SCRIPT} ${FILESDIR}/pkgbase.setup.in ${STAGEDIR}/etc/pkgbase.setup
 	@if [ -n "${STAGEDIR}/var/db/trueos-manifest.json" ] ; then \
 		${SH} ${FILESDIR}/mk-pkg-repo.sh ${STAGEDIR}/var/db/trueos-manifest.json ${STAGEDIR} ; \

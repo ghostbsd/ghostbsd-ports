@@ -1,0 +1,186 @@
+#!/bin/sh
+
+# Copyright 2019 Kris Moore
+# All rights reserved
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted providing that the following conditions 
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+# IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+# DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+# OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+# STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+# IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
+
+PKG="pkg-static"
+
+exit_err()
+{
+	echo "ERROR: $@" >&2
+	exit 1
+}
+
+get_userland_bootstrap_pkgs()
+{
+	# Get which world is in play
+	USERLANDPKGNAME=$(${PKG} query '%n' os/userland-base-bootstrap)
+	if [ -z "$USERLANDPKGNAME" ] ; then
+		exit_err "Could not determine userland-base-bootstrap package, is this using base packages?"
+	fi
+	echo $USERLANDPKGNAME
+}
+
+get_userland_pkgs()
+{
+	# Get which world is in play
+	USERLANDPKGNAME=$(${PKG} query '%n' os/userland)
+	if [ -z "$USERLANDPKGNAME" ] ; then
+		exit_err "Could not determine userland package, is this using base packages?"
+	fi
+	echo $USERLANDPKGNAME
+}
+
+do_userland_updates()
+{
+
+	check_userland_updates >/dev/null
+	case $? in
+		0)
+			echo "Your system is up to date!"
+			return
+			;;
+		1)
+			;;
+		*)
+			exit_err "Failed to check for userland updates"
+			;;
+	esac
+
+	# Check and do upgrade to bootstrap pkg first
+	${PKG} upgrade -y $(get_userland_bootstrap_pkgs)
+	if [ $? -ne 0 ] ; then
+		exit_err "Failed upgrading userland base bootstrap package"
+	fi
+
+	${PKG} upgrade -y $(get_userland_pkgs)
+	if [ $? -ne 0 ] ; then
+		exit_err "Failed upgrading userland"
+	fi
+
+	echo "Userland update complete!"
+	exit 0
+
+}
+
+check_updates()
+{
+	${PKG} upgrade -n $@
+	return $?
+}
+
+
+get_kernel_pkgs()
+{
+	# Get which kernel is booted
+	CURKERN=$(sysctl -n kern.bootfile)
+	if [ -z "$CURKERN" ] ; then
+		exit_err "Could not determine booted kernel via: kern.bootfile"
+	fi
+
+	KERNPKG=$(${PKG} which -q ${CURKERN})
+	if [ -z "$KERNPKG" ] ; then
+		exit_err "Could not determine kernel package, is this using base packages?"
+	fi
+
+	KERNPKGNAME=$(${PKG} query '%n' ${KERNPKG})
+	if [ -z "$KERNPKGNAME" ] ; then
+		exit_err "Could not determine kernel package, is this using base packages?"
+	fi
+
+	# Update kmod packages at same time
+	KERNKMODS=$(${PKG} query -g '%n' \*-kmod | tr -s '\n' ' ')
+
+	echo "$KERNPKGNAME $KERNKMODS"
+}
+
+check_userland_updates()
+{
+	check_updates $(get_userland_pkgs) $(get_userland_bootstrap_pkgs)
+	return $?
+}
+
+check_kernel_updates()
+{
+	check_updates $(get_kernel_pkgs)
+	return $?
+}
+
+do_kernel_updates()
+{
+	check_kernel_updates >/dev/null
+	case $? in
+		0)
+			return
+			;;
+		1)
+			;;
+		*)
+			exit_err "Failed to check for kernel updates"
+			;;
+	esac
+
+	${PKG} upgrade -y $(get_kernel_pkgs)
+	if [ $? -ne 0 ] ; then
+		exit_err "Failed updating kernel"
+	fi
+
+	echo "Kernel update complete!"
+	echo "Please reboot before running $0 again to continue the base update."
+	exit 0
+
+}
+
+usage()
+{
+	cat << EOF
+
+$0 - Keep your base packages up to date
+----------------------------------------------
+Arguments (Requires one)
+
+	check	- Check if updates exist for kernel/userland
+
+	update	- Perform updates to kernel/userland packages
+EOF
+	exit 1
+}
+
+if [ -z "$1" ] ; then
+	usage
+fi
+
+case $1 in
+	check)	
+		check_updates $(get_kernel_pkgs) $(get_userland_pkgs) $(get_userland_bootstrap_pkgs)
+		;;
+	update) 
+		do_kernel_updates
+		do_userland_updates
+		;;
+	*)
+		usage
+		;;
+esac
