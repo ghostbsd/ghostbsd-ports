@@ -2662,6 +2662,7 @@ MANNPREFIX?=	${MANPREFIX}
 INFO_PATH?=	share/info
 
 .if defined(INFO)
+BUILD_DEPENDS+= indexinfo:print/indexinfo
 RUN_DEPENDS+=	indexinfo:print/indexinfo
 
 . for D in ${INFO:H}
