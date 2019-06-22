@@ -153,6 +153,23 @@ do_kernel_updates()
 
 }
 
+check_skip_file()
+{
+	case $1 in
+		/etc/login.conf.db)
+				return 1
+				;;
+		/etc/pwd.db)
+				return 1
+				;;
+		/etc/spwd.db)
+				return 1
+				;;
+	esac
+
+	return 0
+}
+
 # Look for pkgnew files and attempt to merge
 do_etcmerge()
 {
@@ -164,6 +181,13 @@ do_etcmerge()
 		# Stale file from a previous merge conflict
 		if [ ! -e "${ofile}" ] ; then
 			echo "Removing stale ${nfile}"
+			rm "${nfile}"
+			continue
+		fi
+
+		# Skip some files always
+		check_skip_file "${ofile}"
+		if [ $? -ne 0 ] ; then
 			rm "${nfile}"
 			continue
 		fi
