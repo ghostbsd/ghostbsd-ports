@@ -12,7 +12,6 @@ MAINTAINER=	kmoore@FreeBSD.org
 COMMENT=	Port for the OS kernel
 
 BUILD_DEPENDS=	${OS_KERNDIST}:os/buildkernel@${OS_FLAVOR}
-RUN_DEPENDS+=	kernel-kmod-sentinel=${BASEPKG_PORTVERSION}:os/kernel-kmod-sentinel
 
 USES=	os:flavors
 
