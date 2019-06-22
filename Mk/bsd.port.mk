@@ -1823,7 +1823,7 @@ PLIST_SUB+=	LIB32DIR=${LIB32DIR}
 PKG_ORIGIN=		ports-mgmt/pkg-devel
 .endif
 
-.if !defined(PKG_DEPENDS) && !defined(CLEAN_FETCH_ENV) && !exists(/usr/sbin/pkg-static)
+.if !defined(PKG_DEPENDS) && !defined(CLEAN_FETCH_ENV)
 PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
 .endif
 
@@ -1831,10 +1831,7 @@ PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
 .include "${PORTSDIR}/Mk/bsd.gcc.mk"
 .endif
 
-# KPM 9/24/2018 - When using clang from ports this sym-link check will
-# not function properly
-#.if defined(LLD_UNSAFE) && ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
-.if defined(LLD_UNSAFE)
+.if defined(LLD_UNSAFE) && ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
 LDFLAGS+=	-fuse-ld=bfd
 BINARY_ALIAS+=	ld=${LD}
 .  if !defined(USE_BINUTILS)
