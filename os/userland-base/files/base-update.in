@@ -254,6 +254,11 @@ merge_file()
 	done
 }
 
+update_pkg()
+{
+	${PKG} upgrade -y ports-mgmt/pkg
+}
+
 usage()
 {
 	cat << EOF
@@ -277,9 +282,11 @@ fi
 
 case $1 in
 	check)	
+		update_pkg
 		check_updates $(get_kernel_pkgs) $(get_userland_pkgs) $(get_userland_bootstrap_pkgs)
 		;;
 	update) 
+		update_pkg
 		do_kernel_updates
 		do_userland_updates
 		;;
