@@ -153,6 +153,107 @@ do_kernel_updates()
 
 }
 
+# Look for pkgnew files and attempt to merge
+do_etcmerge()
+{
+
+	for nfile in $(find /etc | grep '\.pkgnew$' | tr '\n' ' ')
+	do
+		ofile=$(echo $nfile | sed 's|.pkgnew||g')
+
+		# Stale file from a previous merge conflict
+		if [ ! -e "${ofile}" ] ; then
+			echo "Removing stale ${nfile}"
+			rm "${nfile}"
+			continue
+		fi
+
+		# Yes, sometimes we've seen this
+		if [ "$(sha256 -q $nfile)" = "$(sha256 -q $ofile)" ] ; then
+			echo "Moving identical ${nfile} -> ${ofile}"
+			cp "${nfile}" "${ofile}"
+			if [ $? -ne 0 ] ; then
+				echo "ERROR: Failed to copy $nfile -> $ofile"
+			fi
+			rm "${nfile}"
+			continue
+		fi
+
+		# Need to merge the files, lets instruct the user on howto
+		echo "The File: ${ofile}"
+		echo "Needs manual updating. Do you wish to:"
+		echo ""
+		echo "m) Merge"
+		echo "d) Delete the new file"
+		echo "s) Skip (Default)"
+		echo -e ">\c"
+		read response
+		case $response in
+			m)
+				merge_file "$ofile" "$nfile"
+				check_db_gen "$ofile"
+				;;
+			d)
+				echo "Removing ${nfile}"
+				rm "${nfile}"
+				;;
+			*)
+				continue
+				;;
+		esac
+
+	done
+}
+
+check_db_gen()
+{
+	if [ "$1" = "/etc/login.conf" ] ; then
+		cap_mkdb /etc/login.conf
+	fi
+	if [ "$1" = "/etc/services" ] ; then
+		services_mkdb -q -o /var/db/services.db /etc/services
+	fi
+	if [ "$1" = "/etc/master.passwd" ] ; then
+		pwd_mkdb -p /etc/master.passwd
+	fi
+	if [ "$1" = "/etc/mail/aliases" ] ; then
+		newaliases
+	fi
+}
+
+merge_file()
+{
+	echo "Starting merge of $1"
+	echo "-----------------------"
+	echo "Old contents are on left, new contents on right."
+	echo "Enter 'l' select the left or 'r' to select the right side to merge"
+	echo "Use 'q' to quit"
+	cp -p ${2} ${1}.merged
+	sdiff -o "${1}.merged" --text --suppress-common-lines \
+		--width=80 "${1}" "${2}"
+	while :
+	do
+		echo "Editing finshed. Do you wish to:"
+		echo "v) View merged file"
+		echo "i) Install merged file"
+		echo "s) Skip (Default)"
+		echo -e ">\c"
+		read response
+		case $response in
+			v|V)
+				${PAGER} ${1}.merged
+				;;
+			i|I)	cp "${1}.merged" "${1}"
+				rm "${1}.merged"
+				rm "${2}"
+				break
+				;;
+			*)	break
+				;;
+		esac
+	done
+}
+
 usage()
 {
 	cat << EOF
@@ -164,6 +265,8 @@ Arguments (Requires one)
 	check	- Check if updates exist for kernel/userland
 
 	update	- Perform updates to kernel/userland packages
+
+	merge	- Merge updates to /etc files that did not automatically update
 EOF
 	exit 1
 }
@@ -179,6 +282,9 @@ case $1 in
 	update) 
 		do_kernel_updates
 		do_userland_updates
+		;;
+	merge)
+		do_etcmerge
 		;;
 	*)
 		usage
