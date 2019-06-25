@@ -11,8 +11,6 @@ COMMENT=	Metaport for the OS userland
 
 USES=	metaport os:flavors
 
-NO_OPTIONS_SORT=	yes
-
 OPTIONS_DEFINE=	DEBUG DOCS LIB32 TESTS OPENZFS
 OPTIONS_DEFAULT= DOCS
 OPTIONS_SUB=	yes

@@ -18,8 +18,6 @@ PREFIX=/
 NEED_ROOT=	yes
 PKGVITAL=	yes
 
-NO_OPTIONS_SORT=	yes
-
 .include <bsd.port.pre.mk>
 
 do-build:

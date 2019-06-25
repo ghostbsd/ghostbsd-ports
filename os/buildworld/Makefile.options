@@ -1,6 +1,4 @@
 
-NO_OPTIONS_SORT=	yes
-
 OPTIONS_DEFINE=	ACCT \
     ACPI \
     AMD \
