@@ -20,17 +20,17 @@ NEED_ROOT=	yes
 
 do-build:
 	@${MKDIR} ${STAGEDIR}
-	@${ECHO_MSG} "==> ${OS_WORLDDIST}..."
-	@${TAR} xpf ${OS_WORLDDIST} -C ${STAGEDIR}
+	${ECHO_MSG} "==> ${OS_WORLDDIST}..."
+	${TAR} xpf ${OS_WORLDDIST} -C ${STAGEDIR}
 
 do-install:
-	@${ECHO_MSG} "==> Generating plist..."
-	@(cd ${STAGEDIR}; ${FIND} ./usr/share/doc ./usr/share/man \( -type f -o -type l \) \
+	${ECHO_MSG} "==> Generating plist..."
+	(cd ${STAGEDIR}; ${FIND} ./usr/share/doc ./usr/share/man \( -type f -o -type l \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
 		>> ${TMPPLIST})
-	@(cd ${STAGEDIR}; ${FIND} ./usr/share/doc ./usr/share/man \( -type d \) \
+	(cd ${STAGEDIR}; ${FIND} ./usr/share/doc ./usr/share/man \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
@@ -38,15 +38,15 @@ do-install:
 		| ${XARGS} -I '{}' echo "@dir {}" \
 		| ${GREP} -v -x '@dir ' \
 		| ${CAT} >> ${TMPPLIST})
-	@${SH} ${PORTSDIR}/os/userland-base/files/scrubplist.sh \
+	${SH} ${PORTSDIR}/os/userland-base/files/scrubplist.sh \
 		${PORTSDIR}/os/userland-base/files/configs \
 		${TMPPLIST} ${STAGEDIR}
 
 clean:
-	@if [ -d ${WRKDIR} ]; then \
+	if [ -d ${WRKDIR} ]; then \
 		if [ -w ${WRKDIR} ]; then \
 			${ECHO_MSG} "===> Cleaning for ${PKGNAME}"; \
-			chflags -R noschg ${WRKDIR} ; \
+			${CHFLAGS} -R noschg ${WRKDIR} ; \
 			${RM} -r ${WRKDIR}; \
 		else \
 			${ECHO_MSG} "===>   ${WRKDIR} not writable, skipping"; \

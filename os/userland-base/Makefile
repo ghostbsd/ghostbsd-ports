@@ -12,7 +12,7 @@ MAINTAINER=	kmoore@FreeBSD.org
 COMMENT=	Port for the OS userland binaries
 
 BUILD_DEPENDS=	${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR} \
-		${LOCALBASE}/bin/jq:textproc/jq
+				jq:textproc/jq
 RUN_DEPENDS=	/libexec/ld-elf.so.1:os/userland-base-bootstrap@${OS_FLAVOR}
 
 USES=	os:flavors
@@ -27,8 +27,8 @@ NO_OPTIONS_SORT=	yes
 
 do-build:
 	@${MKDIR} ${STAGEDIR}
-	@${ECHO_MSG} "==> Extracting ${OS_WORLDDIST}..."
-	@${TAR} xpf ${OS_WORLDDIST} \
+	${ECHO_MSG} "==> Extracting ${OS_WORLDDIST}..."
+	${TAR} xpf ${OS_WORLDDIST} \
 		--exclude ./libexec/ld-elf.so.1 \
 		--exclude ./libexec/ld-elf32.so.1 \
 		--exclude ./lib/libc.* \
@@ -40,14 +40,14 @@ do-build:
 		-C ${STAGEDIR}
 	${INSTALL_SCRIPT} ${FILESDIR}/base-update.in ${STAGEDIR}/usr/sbin/base-update
 	${INSTALL_SCRIPT} ${FILESDIR}/pkgbase.setup.in ${STAGEDIR}/etc/pkgbase.setup
-	@if [ -n "${STAGEDIR}/var/db/trueos-manifest.json" ] ; then \
+	if [ -n "${STAGEDIR}/var/db/trueos-manifest.json" ] ; then \
 		${SH} ${FILESDIR}/mk-pkg-repo.sh ${STAGEDIR}/var/db/trueos-manifest.json ${STAGEDIR} ; \
 	fi
-	@${ECHO} "${_OSVERSION_MAJOR}-${PKGVERSION}" > ${STAGEDIR}/etc/base_version
+	${ECHO} "${_OSVERSION_MAJOR}-${PKGVERSION}" > ${STAGEDIR}/etc/base_version
 
 do-install:
-	@${ECHO_MSG} "==> Generating plist..."
-	@(cd ${STAGEDIR}; ${FIND} . \( -type f -o -type l \) \
+	${ECHO_MSG} "==> Generating plist..."
+	(cd ${STAGEDIR}; ${FIND} . \( -type f -o -type l \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
@@ -62,7 +62,7 @@ do-install:
 			-e 'usr/share/man' \
 			-e 'var/db/services.db' \
 		>> ${TMPPLIST})
-	@(cd ${STAGEDIR}; ${FIND} ./ \( -type d \) \
+	(cd ${STAGEDIR}; ${FIND} ./ \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
@@ -71,13 +71,13 @@ do-install:
 		| ${XARGS} -I '{}' echo "@dir {}" \
 		| ${GREP} -v -w '@dir ' \
 		| ${CAT} >> ${TMPPLIST})
-	@${SH} ${FILESDIR}/scrubplist.sh ${FILESDIR}/configs ${TMPPLIST} ${STAGEDIR}
+	${SH} ${FILESDIR}/scrubplist.sh ${FILESDIR}/configs ${TMPPLIST} ${STAGEDIR}
 
 clean:
-	@if [ -d ${WRKDIR} ]; then \
+	if [ -d ${WRKDIR} ]; then \
 		if [ -w ${WRKDIR} ]; then \
 			${ECHO_MSG} "===> Cleaning for ${PKGNAME}"; \
-			chflags -R noschg ${WRKDIR} ; \
+			${CHFLAGS} -R noschg ${WRKDIR} ; \
 			${RM} -r ${WRKDIR}; \
 		else \
 			${ECHO_MSG} "===>   ${WRKDIR} not writable, skipping"; \

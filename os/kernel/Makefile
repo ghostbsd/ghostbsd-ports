@@ -33,17 +33,17 @@ RUN_DEPENDS+=	kernel-symbols=${BASEPKG_PORTVERSION}:os/kernel-symbols@${OS_FLAVO
 
 do-build:
 	@${MKDIR} ${STAGEDIR}
-	@${ECHO_MSG} "==> Extracting ${OS_KERNDIST}..."
-	@${TAR} xpf ${OS_KERNDIST} -C ${STAGEDIR}
+	${ECHO_MSG} "==> Extracting ${OS_KERNDIST}..."
+	${TAR} xpf ${OS_KERNDIST} -C ${STAGEDIR}
 
 do-install:
-	@${ECHO_MSG} "==> Generating plist..."
+	${ECHO_MSG} "==> Generating plist..."
 	@${MKDIR} ${STAGEDIR}
-	@(cd ${STAGEDIR}; ${FIND} ./boot/kernel \( -type f -o -type l \) \
+	(cd ${STAGEDIR}; ${FIND} ./boot/kernel \( -type f -o -type l \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' >> ${TMPPLIST})
-	@(cd ${STAGEDIR}; ${FIND} ./boot/kernel \( -type d \) \
+	(cd ${STAGEDIR}; ${FIND} ./boot/kernel \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \

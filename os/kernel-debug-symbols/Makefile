@@ -21,17 +21,17 @@ NEED_ROOT=	yes
 
 do-build:
 	@${MKDIR} ${STAGEDIR}
-	@${ECHO_MSG} "==> Extracting ${OS_KERNDIST_DEBUG}..."
-	@${TAR} xpf ${OS_KERNDIST_DEBUG} -C ${STAGEDIR}
-	@${MV} ${STAGEDIR}/usr/lib/debug/boot/kernel ${STAGEDIR}/usr/lib/debug/boot/kernel-debug
+	${ECHO_MSG} "==> Extracting ${OS_KERNDIST_DEBUG}..."
+	${TAR} xpf ${OS_KERNDIST_DEBUG} -C ${STAGEDIR}
+	${MV} ${STAGEDIR}/usr/lib/debug/boot/kernel ${STAGEDIR}/usr/lib/debug/boot/kernel-debug
 
 do-install:
-	@${ECHO_MSG} "==> Generating plist..."
-	@(cd ${STAGEDIR}; ${FIND} ./usr/lib/debug/boot/kernel-debug \( -type f -o -type l \) \
+	${ECHO_MSG} "==> Generating plist..."
+	(cd ${STAGEDIR}; ${FIND} ./usr/lib/debug/boot/kernel-debug \( -type f -o -type l \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' >> ${TMPPLIST})
-	@(cd ${STAGEDIR}; ${FIND} ./usr/lib/debug/boot/kernel-debug \( -type d \) \
+	(cd ${STAGEDIR}; ${FIND} ./usr/lib/debug/boot/kernel-debug \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
