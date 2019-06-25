@@ -90,6 +90,7 @@
     SUBDIR += cntlm
     SUBDIR += codeigniter
     SUBDIR += coppermine
+    SUBDIR += colly
     SUBDIR += cplanet
     SUBDIR += cppcms
     SUBDIR += cpr
@@ -160,6 +161,7 @@
     SUBDIR += ffproxy
     SUBDIR += ffsend
     SUBDIR += fgallery
+    SUBDIR += filtron
     SUBDIR += firefox
     SUBDIR += firefox-esr
     SUBDIR += flashplayer
@@ -432,6 +434,7 @@
     SUBDIR += moodle35
     SUBDIR += moodle36
     SUBDIR += moodle37
+    SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort
     SUBDIR += multiwatch
@@ -1488,11 +1491,13 @@
     SUBDIR += py-dj21-djangorestframework
     SUBDIR += py-dj21-drf-yasg
     SUBDIR += py-dj22-django-auth-ldap
+    SUBDIR += py-dj22-django-cacheops
     SUBDIR += py-dj22-django-cors-headers
     SUBDIR += py-dj22-django-debug-toolbar
     SUBDIR += py-dj22-django-filter
     SUBDIR += py-dj22-django-js-asset
     SUBDIR += py-dj22-django-mptt
+    SUBDIR += py-dj22-django-prometheus
     SUBDIR += py-dj22-django-tables2
     SUBDIR += py-dj22-django-taggit
     SUBDIR += py-dj22-django-taggit-serializer
