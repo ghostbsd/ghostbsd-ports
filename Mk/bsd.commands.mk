@@ -22,6 +22,7 @@ BSDMAKE?=		/usr/bin/make
 BZCAT?=			/usr/bin/bzcat
 BZIP2_CMD?=		/usr/bin/bzip2
 CAT?=			/bin/cat
+CHFLAGS?=		/bin/chflags
 CHGRP?=			/usr/bin/chgrp
 CHMOD?=			/bin/chmod
 CHOWN?=			/usr/sbin/chown
