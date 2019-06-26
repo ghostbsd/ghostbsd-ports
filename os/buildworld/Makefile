@@ -73,9 +73,9 @@ do-install:
 		DESTDIR=${STAGEDIR}/world \
 		distribution
 	if [ -e "${PORTSDIR}/local_source/trueos-manifest.json" ] ; then \
-		${CP} ${FILESDIR}/trueos-manifest.json ${STAGEDIR}/world/var/db/trueos-manifest.json ; \
+		${INSTALL_SCRIPT} ${FILESDIR}/trueos-manifest.json ${STAGEDIR}/world/var/db/trueos-manifest.json ; \
 	elif [ -n "${TRUEOS_MANIFEST}" -a -e "${TRUEOS_MANIFEST}" ] ; then \
-		${CP} ${TRUEOS_MANIFEST} ${STAGEDIR}/world/var/db/trueos-manifest.json ; \
+		${INSTALL_SCRIPT} ${TRUEOS_MANIFEST} ${STAGEDIR}/world/var/db/trueos-manifest.json ; \
 	fi
 	${TAR} cvJf ${STAGEDIR}${OS_WORLDDIST} -C ${STAGEDIR}/world .
 	${CHFLAGS} -R noschg ${STAGEDIR}/world
