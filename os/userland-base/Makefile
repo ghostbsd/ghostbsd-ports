@@ -36,12 +36,12 @@ do-build:
 		--exclude ./usr/lib/libthr.so \
 		--exclude ./usr/lib/libm.so \
 		-C ${STAGEDIR}
-	${INSTALL_SCRIPT} ${FILESDIR}/base-update.in ${STAGEDIR}/usr/sbin/base-update
-	${INSTALL_SCRIPT} ${FILESDIR}/pkgbase.setup.in ${STAGEDIR}/etc/pkgbase.setup
-	if [ -n "${STAGEDIR}/var/db/trueos-manifest.json" ] ; then \
-		${SH} ${FILESDIR}/mk-pkg-repo.sh ${STAGEDIR}/var/db/trueos-manifest.json ${STAGEDIR} ; \
+	${INSTALL_SCRIPT} ${FILESDIR}/base-update.in ${STAGEDIR}usr/sbin/base-update
+	${INSTALL_SCRIPT} ${FILESDIR}/pkgbase.setup.in ${STAGEDIR}etc/pkgbase.setup
+	if [ -n "${STAGEDIR}var/db/trueos-manifest.json" ] ; then \
+		${SH} ${FILESDIR}/mk-pkg-repo.sh ${STAGEDIR}var/db/trueos-manifest.json ${STAGEDIR} ; \
 	fi
-	${ECHO} "${_OSVERSION_MAJOR}-${PKGVERSION}" > ${STAGEDIR}/etc/base_version
+	${ECHO} "${_OSVERSION_MAJOR}-${PKGVERSION}" > ${STAGEDIR}etc/base_version
 
 do-install:
 	${ECHO_MSG} "==> Generating plist..."

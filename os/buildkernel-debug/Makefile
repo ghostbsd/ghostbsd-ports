@@ -68,17 +68,17 @@ do-build:
 		buildkernel
 
 do-install:
-	@${MKDIR} ${STAGEDIR}/kernel-debug
-	@${MKDIR} ${STAGEDIR}/usr/dist
+	@${MKDIR} ${STAGEDIR}kernel-debug
+	@${MKDIR} ${STAGEDIR}usr/dist
 	cd ${WRKSRC} && ${SETENV} -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
 		KERNCONF=${KERNCONF} \
 		${MFLAGS} \
-		DESTDIR=${STAGEDIR}/kernel-debug \
+		DESTDIR=${STAGEDIR}kernel-debug \
 		installkernel
-	${MV} ${STAGEDIR}/kernel-debug/boot/kernel ${STAGEDIR}/kernel-debug/boot/kernel-debug
-	${TAR} cvJf ${STAGEDIR}${OS_KERNDIST_DEBUG} -C ${STAGEDIR}/kernel-debug .
-	${CHFLAGS} -R noschg ${STAGEDIR}/kernel-debug
-	${RM} -rf ${STAGEDIR}/kernel-debug
+	${MV} ${STAGEDIR}kernel-debug/boot/kernel ${STAGEDIR}kernel-debug/boot/kernel-debug
+	${TAR} cvJf ${STAGEDIR}${OS_KERNDIST_DEBUG} -C ${STAGEDIR}kernel-debug .
+	${CHFLAGS} -R noschg ${STAGEDIR}kernel-debug
+	${RM} -rf ${STAGEDIR}kernel-debug
 
 .include "../Makefile.common"
 .include <bsd.port.post.mk>
