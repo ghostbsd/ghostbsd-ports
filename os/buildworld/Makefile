@@ -63,7 +63,7 @@ do-install:
 	@${MKDIR} ${STAGEDIR}/usr/dist
 	cd ${WRKSRC} && ${SETENV} -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
 		${MFLAGS} \
-		DESTDIR=${STAGEDIR}world \
+		DESTDIR=${STAGEDIR}/world \
 		installworld
 	cd ${WRKSRC} && ${SETENV} -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
 		${MFLAGS} \
