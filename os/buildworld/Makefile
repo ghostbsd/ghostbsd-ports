@@ -51,9 +51,6 @@ MCONF=
 
 PLIST_FILES+=	${OS_WORLDDIST}
 
-# This is broken right now
-#MFLAGS+=	MAKEOBJDIRPREFIX=${WRKDIR}/obj
-
 check-sanity:
 
 do-build:
