@@ -26,8 +26,8 @@ checksum fetch extract:
 stage-qa: stage
 
 do-install:
-	@${MKDIR} ${STAGEDIR}${SRCDIR}
-	${TAR} cf - -C ${WRKSRC} --exclude .git --exclude .svn . | ${TAR} xpf - -C ${STAGEDIR}${SRCDIR}
+	@${MKDIR} ${STAGEDIR}/${SRCDIR}
+	${TAR} cf - -C ${WRKSRC} --exclude .git --exclude .svn . | ${TAR} xpf - -C ${STAGEDIR}/${SRCDIR}
 	(cd ${STAGEDIR}; ${FIND} . \( -type f -o -type l \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \

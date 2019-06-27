@@ -59,24 +59,24 @@ do-build:
 		buildworld
 
 do-install:
-	@${MKDIR} ${STAGEDIR}world
-	@${MKDIR} ${STAGEDIR}usr/dist
+	@${MKDIR} ${STAGEDIR}/world
+	@${MKDIR} ${STAGEDIR}/usr/dist
 	cd ${WRKSRC} && ${SETENV} -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
 		${MFLAGS} \
 		DESTDIR=${STAGEDIR}world \
 		installworld
 	cd ${WRKSRC} && ${SETENV} -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
 		${MFLAGS} \
-		DESTDIR=${STAGEDIR}world \
+		DESTDIR=${STAGEDIR}/world \
 		distribution
 	if [ -e "${PORTSDIR}/local_source/trueos-manifest.json" ] ; then \
-		${INSTALL_SCRIPT} ${FILESDIR}/trueos-manifest.json ${STAGEDIR}world/var/db/trueos-manifest.json ; \
+		${INSTALL_SCRIPT} ${FILESDIR}/trueos-manifest.json ${STAGEDIR}/world/var/db/trueos-manifest.json ; \
 	elif [ -n "${TRUEOS_MANIFEST}" -a -e "${TRUEOS_MANIFEST}" ] ; then \
-		${INSTALL_SCRIPT} ${TRUEOS_MANIFEST} ${STAGEDIR}world/var/db/trueos-manifest.json ; \
+		${INSTALL_SCRIPT} ${TRUEOS_MANIFEST} ${STAGEDIR}/world/var/db/trueos-manifest.json ; \
 	fi
-	${TAR} cvJf ${STAGEDIR}${OS_WORLDDIST} -C ${STAGEDIR}world .
-	${CHFLAGS} -R noschg ${STAGEDIR}world
-	${RM} -rf ${STAGEDIR}world
+	${TAR} cvJf ${STAGEDIR}/${OS_WORLDDIST} -C ${STAGEDIR}/world .
+	${CHFLAGS} -R noschg ${STAGEDIR}/world
+	${RM} -rf ${STAGEDIR}/world
 
 clean:
 	@if [ -d ${WRKDIR} ]; then \

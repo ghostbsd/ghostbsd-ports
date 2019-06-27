@@ -23,7 +23,7 @@ do-build:
 	@${MKDIR} ${STAGEDIR}
 	${ECHO_MSG} "==> Extracting ${OS_KERNDIST_DEBUG}..."
 	${TAR} xpf ${OS_KERNDIST_DEBUG} -C ${STAGEDIR}
-	${MV} ${STAGEDIR}usr/lib/debug/boot/kernel ${STAGEDIR}usr/lib/debug/boot/kernel-debug
+	${MV} ${STAGEDIR}/usr/lib/debug/boot/kernel ${STAGEDIR}/usr/lib/debug/boot/kernel-debug
 
 do-install:
 	${ECHO_MSG} "==> Generating plist..."
