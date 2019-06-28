@@ -39,6 +39,11 @@ start() {
 	einfo "Done."
 }
 
+stop(){
+  #This is just a one-shot service without any daemon - nothing to stop.
+  return 0
+}
+
 depend() {
 	need localmount
 	keyword -jail
