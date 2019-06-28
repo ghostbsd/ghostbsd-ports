@@ -23,6 +23,7 @@ RUN_DEPENDS+=	/COPYRIGHT:os/userland-base@${OS_FLAVOR} \
 		/bin/sh:os/userland-bin@${OS_FLAVOR} \
 		/boot/defaults/loader.conf:os/userland-boot@${OS_FLAVOR} \
 		/etc/rc:os/userland-conf@${OS_FLAVOR}
+		/usr/lib/libelf.so:os/userland-lib@${OS_FLAVOR}
 		/rescue/sh:os/userland-rescue@${OS_FLAVOR}
 		/sbin/init:os/userland-sbin@${OS_FLAVOR}
 

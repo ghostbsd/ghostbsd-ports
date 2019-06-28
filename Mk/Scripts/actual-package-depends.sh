@@ -108,6 +108,10 @@ for lookup; do
 			inject_base_dep "os/userland-docs"
 			continue
 			;;
+		/usr/lib/libelf.so)
+			inject_base_dep "os/userland-lib"
+			continue
+			;;
 		/usr/lib32/libc.so)
 			inject_base_dep "os/userland-lib32"
 			continue
