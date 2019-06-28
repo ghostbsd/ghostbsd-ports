@@ -18,5 +18,6 @@ usr/sbin
 usr/share/doc
 usr/share/man
 usr/tests
+rescue/
 sbin/
 var/db/services.db

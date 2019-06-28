@@ -108,6 +108,10 @@ for lookup; do
 			inject_base_dep "os/userland-lib32"
 			continue
 			;;
+		/rescue/sh)
+			inject_base_dep "os/userland-rescue"
+			continue
+			;;
 		/sbin/init)
 			inject_base_dep "os/userland-sbin"
 			continue

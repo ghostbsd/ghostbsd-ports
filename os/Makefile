@@ -19,6 +19,7 @@
     SUBDIR += userland-debug
     SUBDIR += userland-docs
     SUBDIR += userland-lib32
+    SUBDIR += userland-rescue
     SUBDIR += userland-sbin
     SUBDIR += userland-tests
 
