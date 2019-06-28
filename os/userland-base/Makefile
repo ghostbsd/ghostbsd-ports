@@ -14,7 +14,12 @@ COMMENT=	Port for the OS userland binaries
 BUILD_DEPENDS=	${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR} \
 				jq:textproc/jq
 RUN_DEPENDS=	/libexec/ld-elf.so.1:os/userland-base-bootstrap@${OS_FLAVOR} \
-		/etc/rc:os/userland-conf@${OS_FLAVOR}
+		/bin/sh:os/userland-bin@${OS_FLAVOR} \
+		/boot/defaults/loader.conf:os/userland-boot@${OS_FLAVOR} \
+		/etc/rc:os/userland-conf@${OS_FLAVOR} \
+		/usr/lib/libelf.so:os/userland-lib@${OS_FLAVOR} \
+		/rescue/sh:os/userland-rescue@${OS_FLAVOR} \
+		/sbin/init:os/userland-sbin@${OS_FLAVOR}
 
 USES=	os:flavors
 
