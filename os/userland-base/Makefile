@@ -13,7 +13,8 @@ COMMENT=	Port for the OS userland binaries
 
 BUILD_DEPENDS=	${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR} \
 				jq:textproc/jq
-RUN_DEPENDS=	/libexec/ld-elf.so.1:os/userland-base-bootstrap@${OS_FLAVOR}
+RUN_DEPENDS=	/libexec/ld-elf.so.1:os/userland-base-bootstrap@${OS_FLAVOR} \
+		/etc/rc:os/userland-conf@${OS_FLAVOR}
 
 USES=	os:flavors
 
