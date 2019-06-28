@@ -30,7 +30,7 @@ do-install:
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
-		| ${GREP} -v -e 'usr/lib/*.a' \
+		| ${GREP} -v -e '\.a' \
 		| ${GREP} -v -e 'usr/lib/debug' \
 		| ${GREP} -v -e 'lib/libc.*' \
 		| ${GREP} -v -e 'lib/libthr.*' \
