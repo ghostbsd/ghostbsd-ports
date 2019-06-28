@@ -37,6 +37,8 @@ do-build:
 
 do-install:
 	${ECHO_MSG} "==> Generating plist..."
+	${ECHO} "usr/sbin/base-update" >> ${TMPPLIST}
+	${ECHO} "etc/pkgbase.setup" >> ${TMPPLIST}
 	(cd ${STAGEDIR}; ${FIND} . \( -type f -o -type l \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
