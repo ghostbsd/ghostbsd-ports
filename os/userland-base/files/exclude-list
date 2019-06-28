@@ -7,11 +7,13 @@ lib/libm.*
 libexec/ld-elf.so.1
 libexec/ld-elf32.so.1
 usr/bin
+usr/lib/*.a
 usr/lib/debug
 usr/lib/libc.so
 usr/lib/libthr.so
 usr/lib/libm.so
 usr/lib32
+usr/include
 usr/sbin
 usr/share/doc
 usr/share/man
