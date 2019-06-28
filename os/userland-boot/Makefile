@@ -1,25 +1,21 @@
 # $FreeBSD$
 
-PORTNAME=	userland-base
+PORTNAME=	userland-boot
 PORTVERSION=	${BASEPKG_PORTVERSION}
-PORTREVISION=	2
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Port for the OS userland binaries
+COMMENT=	Userland boot files
 
-BUILD_DEPENDS=	${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR} \
-				jq:textproc/jq
-RUN_DEPENDS=	/libexec/ld-elf.so.1:os/userland-base-bootstrap@${OS_FLAVOR}
+BUILD_DEPENDS=  ${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR}
 
 USES=	os:flavors
 
 PREFIX=/
 NEED_ROOT=	yes
-PKGVITAL=	yes
 
 .include <bsd.port.pre.mk>
 
@@ -27,31 +23,22 @@ do-build:
 	@${MKDIR} ${STAGEDIR}
 	${ECHO_MSG} "==> Extracting ${OS_WORLDDIST}..."
 	${TAR} xpf ${OS_WORLDDIST} -C ${STAGEDIR}
-	${INSTALL_SCRIPT} ${FILESDIR}/base-update.in ${STAGEDIR}/usr/sbin/base-update
-	${INSTALL_SCRIPT} ${FILESDIR}/pkgbase.setup.in ${STAGEDIR}/etc/pkgbase.setup
-	if [ -n "${STAGEDIR}/var/db/trueos-manifest.json" ] ; then \
-		${SH} ${FILESDIR}/mk-pkg-repo.sh ${STAGEDIR}/var/db/trueos-manifest.json ${STAGEDIR} ; \
-	fi
-	${ECHO} "${_OSVERSION_MAJOR}-${PKGVERSION}" > ${STAGEDIR}/etc/base_version
 
 do-install:
 	${ECHO_MSG} "==> Generating plist..."
-	(cd ${STAGEDIR}; ${FIND} . \( -type f -o -type l \) \
+	(cd ${STAGEDIR}; ${FIND} ./boot \( -type f -o -type l \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
-		| ${GREP} -v -f ${FILESDIR}/exclude-list \
 		>> ${TMPPLIST})
-	(cd ${STAGEDIR}; ${FIND} ./ \( -type d \) \
+	(cd ${STAGEDIR}; ${FIND} ./boot \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
-		| ${GREP} -v -e '/' \
-		| ${GREP} -v -f ${FILESDIR}/exclude-list \
+		| ${GREP} -v -x '/' \
 		| ${XARGS} -I '{}' echo "@dir {}" \
-		| ${GREP} -v -w '@dir ' \
+		| ${GREP} -v -x '@dir ' \
 		| ${CAT} >> ${TMPPLIST})
-	${SH} ${FILESDIR}/scrubplist.sh ${FILESDIR}/configs ${TMPPLIST} ${STAGEDIR}
 
 clean:
 	if [ -d ${WRKDIR} ]; then \

@@ -14,6 +14,8 @@
     SUBDIR += userland
     SUBDIR += userland-base
     SUBDIR += userland-base-bootstrap
+    SUBDIR += userland-bin
+    SUBDIR += userland-boot
     SUBDIR += userland-debug
     SUBDIR += userland-docs
     SUBDIR += userland-lib32

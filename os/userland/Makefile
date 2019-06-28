@@ -19,7 +19,9 @@ LIB32_DESC=	Support for execution of i386 applications
 TESTS_DESC=	Optional test framework scripts and tools
 OPENZFS_DESC=	OpenZFS userland and kernel support
 
-RUN_DEPENDS+=	/bin/sh:os/userland-base@${OS_FLAVOR}
+RUN_DEPENDS+=	/COPYRIGHT:os/userland-base@${OS_FLAVOR} \
+		/bin/sh:os/userland-bin@${OS_FLAVOR} \
+		/boot/defaults/loader.conf:os/userland-boot@${OS_FLAVOR}
 
 .include <bsd.port.pre.mk>
 

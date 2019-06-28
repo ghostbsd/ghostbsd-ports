@@ -80,8 +80,16 @@ for lookup; do
 	# Ugly, but currently we cannot install BASE packages into read-only poudriere base
 	# This allows us to still inject depends on os/* packages
 	case ${lookup} in
-		/bin/sh)
+		/COPYRIGHT)
 			inject_base_dep "os/userland-base"
+			continue
+			;;
+		/bin/sh)
+			inject_base_dep "os/userland-bin"
+			continue
+			;;
+		/boot/defaults/loader.conf)
+			inject_base_dep "os/userland-boot"
 			continue
 			;;
 		/libexec/ld-elf.so.1)
