@@ -32,9 +32,9 @@ do-install:
 		| ${AWK} '{print $$2 }' \
 		| ${GREP} -v -e '\.a' \
 		| ${GREP} -v -e 'usr/lib/debug' \
-		| ${GREP} -v -e 'lib/libc.*' \
-		| ${GREP} -v -e 'lib/libthr.*' \
-		| ${GREP} -v -e 'lib/libm.*' \
+		| ${GREP} -v -e 'lib/libc.so*' \
+		| ${GREP} -v -e 'lib/libthr.so*' \
+		| ${GREP} -v -e 'lib/libm.so*' \
 		| ${GREP} -v -e 'usr/lib/clang' \
 		>> ${TMPPLIST})
 	(cd ${STAGEDIR}; ${FIND} ./lib ./usr/lib \( -type d \) \
