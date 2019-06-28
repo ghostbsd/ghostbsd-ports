@@ -30,8 +30,8 @@ do-install:
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
-		| ${GREP} -e 'usr/include' -e 'usr/lib/*.a' -e 'usr/bin/llvm*' \
-			-e 'usr/bin/ld.lld' -e 'usr/bin/c++*' -e 'usr/bin/cc' \
+		| ${GREP} -e 'usr/include' -e 'usr/lib/*.a' -e 'usr/bin/lldb' -e 'usr/bin/llvm*' \
+			-e 'usr/bin/ld.*' -e 'usr/bin/c++*' -e 'usr/bin/cc' -e 'usr/bin/clang*' \
 		>> ${TMPPLIST})
 	(cd ${STAGEDIR}; ${FIND} ./usr/include ./usr/lib \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
