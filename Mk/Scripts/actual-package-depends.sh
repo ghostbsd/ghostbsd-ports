@@ -96,6 +96,10 @@ for lookup; do
 			inject_base_dep "os/userland-base-bootstrap"
 			continue
 			;;
+		/etc/rc)
+			inject_base_dep "os/userland-conf"
+			continue
+			;;
 		/usr/lib/debug/bin/sh.debug)
 			inject_base_dep "os/userland-debug"
 			continue

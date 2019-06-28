@@ -1,8 +1,6 @@
 bin/
 boot/
-etc/login.conf.db
-etc/pwd.db
-etc/spwd.db
+etc/
 lib/libc.*
 lib/libthr.*
 lib/libm.*
