@@ -30,7 +30,7 @@ do-install:
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
-		| ${GREP} -e 'usr/lib32/*.a' \
+		| ${GREP} -e '\.a' \
 		>> ${TMPPLIST})
 	(cd ${STAGEDIR}; ${FIND} ./usr/lib32 \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
