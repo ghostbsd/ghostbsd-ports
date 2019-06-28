@@ -104,8 +104,12 @@ for lookup; do
 			inject_base_dep "os/userland-docs"
 			continue
 			;;
-		/usr/lib32/libc.a)
+		/usr/lib32/libc.so)
 			inject_base_dep "os/userland-lib32"
+			continue
+			;;
+		/sbin/init)
+			inject_base_dep "os/userland-sbin"
 			continue
 			;;
 		/usr/tests/README)

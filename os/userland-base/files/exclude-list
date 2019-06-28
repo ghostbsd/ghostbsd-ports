@@ -14,7 +14,9 @@ usr/lib/libc.so
 usr/lib/libthr.so
 usr/lib/libm.so
 usr/lib32
+usr/sbin
 usr/share/doc
 usr/share/man
 usr/tests
+sbin/
 var/db/services.db

@@ -21,7 +21,8 @@ OPENZFS_DESC=	OpenZFS userland and kernel support
 
 RUN_DEPENDS+=	/COPYRIGHT:os/userland-base@${OS_FLAVOR} \
 		/bin/sh:os/userland-bin@${OS_FLAVOR} \
-		/boot/defaults/loader.conf:os/userland-boot@${OS_FLAVOR}
+		/boot/defaults/loader.conf:os/userland-boot@${OS_FLAVOR} \
+		/sbin/init:os/userland-sbin@${OS_FLAVOR}
 
 .include <bsd.port.pre.mk>
 
@@ -34,7 +35,7 @@ RUN_DEPENDS+=	/usr/share/man/man1/sh.1.gz:os/userland-docs@${OS_FLAVOR}
 .endif
 
 .if ${PORT_OPTIONS:MLIB32}
-RUN_DEPENDS+=	/usr/lib32/libc.a:os/userland-lib32@${OS_FLAVOR}
+RUN_DEPENDS+=	/usr/lib32/libc.so:os/userland-lib32@${OS_FLAVOR}
 .endif
 
 .if ${PORT_OPTIONS:MTESTS}
