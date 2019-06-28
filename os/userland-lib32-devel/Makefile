@@ -1,6 +1,6 @@
 # $FreeBSD$
 
-PORTNAME=	userland-lib32
+PORTNAME=	userland-lib32-devel
 PORTVERSION=	${BASEPKG_PORTVERSION}
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
@@ -8,7 +8,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Userland lib32 support
+COMMENT=	Userland lib32 development support
 
 BUILD_DEPENDS=  ${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR}
 
@@ -30,7 +30,7 @@ do-install:
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
-		| ${GREP} -v -e 'usr/lib32/*.a' \
+		| ${GREP} -e 'usr/lib32/*.a' \
 		>> ${TMPPLIST})
 	(cd ${STAGEDIR}; ${FIND} ./usr/lib32 \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
