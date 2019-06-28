@@ -33,6 +33,7 @@ do-install:
 		| ${GREP} -e 'usr/include' -e '\.a' -e 'usr/bin/lldb' -e 'usr/bin/llvm*' \
 			-e 'usr/bin/ld.*' -e 'usr/bin/c++*' -e 'usr/bin/cc' -e 'usr/bin/clang*' \
 			-e 'usr/lib/clang' \
+		| grep -v -e 'usr/lib/debug' \
 		>> ${TMPPLIST})
 	(cd ${STAGEDIR}; ${FIND} ./usr/include ./usr/lib \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
