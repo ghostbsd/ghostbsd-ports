@@ -35,6 +35,7 @@ do-install:
 		| ${GREP} -v -e 'lib/libc.*' \
 		| ${GREP} -v -e 'lib/libthr.*' \
 		| ${GREP} -v -e 'lib/libm.*' \
+		| ${GREP} -v -e 'usr/lib/clang' \
 		>> ${TMPPLIST})
 	(cd ${STAGEDIR}; ${FIND} ./lib ./usr/lib \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
@@ -42,6 +43,7 @@ do-install:
 		| ${AWK} '{print $$2 }' \
 		| ${GREP} -v -x '/' \
 		| ${GREP} -v -e 'usr/lib/debug' \
+		| ${GREP} -v -e 'usr/lib/clang' \
 		| ${XARGS} -I '{}' echo "@dir {}" \
 		| ${GREP} -v -x '@dir ' \
 		| ${CAT} >> ${TMPPLIST})
