@@ -33,6 +33,7 @@ do-install:
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
+		| ${GREP} -v -e '\.a' \
 		>> ${TMPPLIST})
 	(cd ${STAGEDIR}; ${FIND} ./libexec ./lib ./usr/lib \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \

@@ -13,7 +13,13 @@ COMMENT=	Port for the OS userland binaries
 
 BUILD_DEPENDS=	${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR} \
 				jq:textproc/jq
-RUN_DEPENDS=	/libexec/ld-elf.so.1:os/userland-base-bootstrap@${OS_FLAVOR}
+RUN_DEPENDS=	/libexec/ld-elf.so.1:os/userland-base-bootstrap@${OS_FLAVOR} \
+		/bin/sh:os/userland-bin@${OS_FLAVOR} \
+		/boot/defaults/loader.conf:os/userland-boot@${OS_FLAVOR} \
+		/etc/rc:os/userland-conf@${OS_FLAVOR} \
+		/usr/lib/libelf.so:os/userland-lib@${OS_FLAVOR} \
+		/rescue/sh:os/userland-rescue@${OS_FLAVOR} \
+		/sbin/init:os/userland-sbin@${OS_FLAVOR}
 
 USES=	os:flavors
 
@@ -26,16 +32,7 @@ PKGVITAL=	yes
 do-build:
 	@${MKDIR} ${STAGEDIR}
 	${ECHO_MSG} "==> Extracting ${OS_WORLDDIST}..."
-	${TAR} xpf ${OS_WORLDDIST} \
-		--exclude ./libexec/ld-elf.so.1 \
-		--exclude ./libexec/ld-elf32.so.1 \
-		--exclude ./lib/libc.* \
-		--exclude ./lib/libthr.* \
-		--exclude ./lib/libm.* \
-		--exclude ./usr/lib/libc.so \
-		--exclude ./usr/lib/libthr.so \
-		--exclude ./usr/lib/libm.so \
-		-C ${STAGEDIR}
+	${TAR} xpf ${OS_WORLDDIST} -C ${STAGEDIR}
 	${INSTALL_SCRIPT} ${FILESDIR}/base-update.in ${STAGEDIR}/usr/sbin/base-update
 	${INSTALL_SCRIPT} ${FILESDIR}/pkgbase.setup.in ${STAGEDIR}/etc/pkgbase.setup
 	if [ -n "${STAGEDIR}/var/db/trueos-manifest.json" ] ; then \
@@ -45,27 +42,20 @@ do-build:
 
 do-install:
 	${ECHO_MSG} "==> Generating plist..."
+	${ECHO} "usr/sbin/base-update" >> ${TMPPLIST}
+	${ECHO} "etc/pkgbase.setup" >> ${TMPPLIST}
 	(cd ${STAGEDIR}; ${FIND} . \( -type f -o -type l \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
-		| ${GREP} -v \
-			-e 'etc/login.conf.db' \
-			-e 'etc/pwd.db' \
-			-e 'etc/spwd.db' \
-			-e 'usr/lib/debug' \
-			-e 'usr/tests' \
-			-e 'usr/lib32' \
-			-e 'usr/share/doc' \
-			-e 'usr/share/man' \
-			-e 'var/db/services.db' \
+		| ${GREP} -v -f ${FILESDIR}/exclude-list \
 		>> ${TMPPLIST})
 	(cd ${STAGEDIR}; ${FIND} ./ \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \
 		| ${GREP} -v -e '/' \
-		| ${GREP} -v -e 'usr/lib/debug' -e 'usr/tests' -e 'usr/lib32' -e 'usr/share/doc' -e 'usr/share/man' \
+		| ${GREP} -v -f ${FILESDIR}/exclude-list \
 		| ${XARGS} -I '{}' echo "@dir {}" \
 		| ${GREP} -v -w '@dir ' \
 		| ${CAT} >> ${TMPPLIST})

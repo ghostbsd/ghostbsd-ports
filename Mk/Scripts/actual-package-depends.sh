@@ -80,12 +80,24 @@ for lookup; do
 	# Ugly, but currently we cannot install BASE packages into read-only poudriere base
 	# This allows us to still inject depends on os/* packages
 	case ${lookup} in
-		/bin/sh)
+		/COPYRIGHT)
 			inject_base_dep "os/userland-base"
+			continue
+			;;
+		/bin/sh)
+			inject_base_dep "os/userland-bin"
+			continue
+			;;
+		/boot/defaults/loader.conf)
+			inject_base_dep "os/userland-boot"
 			continue
 			;;
 		/libexec/ld-elf.so.1)
 			inject_base_dep "os/userland-base-bootstrap"
+			continue
+			;;
+		/etc/rc)
+			inject_base_dep "os/userland-conf"
 			continue
 			;;
 		/usr/lib/debug/bin/sh.debug)
@@ -96,8 +108,20 @@ for lookup; do
 			inject_base_dep "os/userland-docs"
 			continue
 			;;
-		/usr/lib32/libc.a)
+		/usr/lib/libelf.so)
+			inject_base_dep "os/userland-lib"
+			continue
+			;;
+		/usr/lib32/libc.so)
 			inject_base_dep "os/userland-lib32"
+			continue
+			;;
+		/rescue/sh)
+			inject_base_dep "os/userland-rescue"
+			continue
+			;;
+		/sbin/init)
+			inject_base_dep "os/userland-sbin"
 			continue
 			;;
 		/usr/tests/README)

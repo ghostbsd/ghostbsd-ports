@@ -14,9 +14,17 @@
     SUBDIR += userland
     SUBDIR += userland-base
     SUBDIR += userland-base-bootstrap
+    SUBDIR += userland-bin
+    SUBDIR += userland-boot
+    SUBDIR += userland-conf
     SUBDIR += userland-debug
+    SUBDIR += userland-devel
     SUBDIR += userland-docs
+    SUBDIR += userland-lib
     SUBDIR += userland-lib32
+    SUBDIR += userland-lib32-devel
+    SUBDIR += userland-rescue
+    SUBDIR += userland-sbin
     SUBDIR += userland-tests
 
 .include <bsd.port.subdir.mk>
