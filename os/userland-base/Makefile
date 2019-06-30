@@ -2,7 +2,7 @@
 
 PORTNAME=	userland-base
 PORTVERSION=	${BASEPKG_PORTVERSION}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 DISTFILES=
@@ -35,7 +35,7 @@ do-build:
 	${TAR} xpf ${OS_WORLDDIST} -C ${STAGEDIR}
 	${INSTALL_SCRIPT} ${FILESDIR}/base-update.in ${STAGEDIR}/usr/sbin/base-update
 	${INSTALL_SCRIPT} ${FILESDIR}/pkgbase.setup.in ${STAGEDIR}/etc/pkgbase.setup
-	if [ -n "${STAGEDIR}/var/db/trueos-manifest.json" ] ; then \
+	if [ -e "${STAGEDIR}/var/db/trueos-manifest.json" ] ; then \
 		${SH} ${FILESDIR}/mk-pkg-repo.sh ${STAGEDIR}/var/db/trueos-manifest.json ${STAGEDIR} ; \
 	fi
 	${ECHO} "${_OSVERSION_MAJOR}-${PKGVERSION}" > ${STAGEDIR}/etc/base_version
@@ -44,6 +44,9 @@ do-install:
 	${ECHO_MSG} "==> Generating plist..."
 	${ECHO} "usr/sbin/base-update" >> ${TMPPLIST}
 	${ECHO} "etc/pkgbase.setup" >> ${TMPPLIST}
+	if [ -e "${STAGEDIR}/etc/pkg/Train.conf" ] ; then \
+		${ECHO} "etc/pkg/Train.conf" >> ${TMPPLIST} ; \
+	fi
 	(cd ${STAGEDIR}; ${FIND} . \( -type f -o -type l \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
