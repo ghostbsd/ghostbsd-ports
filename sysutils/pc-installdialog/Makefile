@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	pc-installdialog
-PORTVERSION=	2019062111
+PORTVERSION=	2019070100
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 
@@ -21,6 +21,6 @@ PLIST_FILES+=	sbin/pc-installdialog
 USE_GITHUB=	yes
 GH_ACCOUNT=	trueos
 GH_PROJECT=	pc-installdialog
-GH_TAGNAME=	fd11f1b
+GH_TAGNAME=	61c206ce5a8b173997c1572461a9b134ef35b11d
 
 .include <bsd.port.mk>
