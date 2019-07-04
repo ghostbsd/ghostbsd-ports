@@ -802,6 +802,7 @@
     SUBDIR += price
     SUBDIR += processing
     SUBDIR += proj
+    SUBDIR += proj5
     SUBDIR += pstoedit
     SUBDIR += pstoepsi
     SUBDIR += ptex
@@ -842,6 +843,7 @@
     SUBDIR += py-imageio-ffmpeg
     SUBDIR += py-imageio24
     SUBDIR += py-imagesize
+    SUBDIR += py-img2pdf
     SUBDIR += py-imgurpython
     SUBDIR += py-leather
     SUBDIR += py-mapclassify

@@ -972,6 +972,7 @@
     SUBDIR += py-pysaml2
     SUBDIR += py-pyscard
     SUBDIR += py-pysha3
+    SUBDIR += py-pysodium
     SUBDIR += py-python-axolotl
     SUBDIR += py-python-axolotl-curve25519
     SUBDIR += py-python-gnupg
@@ -1079,7 +1080,6 @@
     SUBDIR += rubygem-bcrypt_pbkdf
     SUBDIR += rubygem-devise-two-factor
     SUBDIR += rubygem-devise-two-factor-rails5
-    SUBDIR += rubygem-devise-two-factor-rails50
     SUBDIR += rubygem-devise_pam_authenticatable2
     SUBDIR += rubygem-digest-crc
     SUBDIR += rubygem-doorkeeper
