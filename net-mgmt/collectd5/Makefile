@@ -1,11 +1,10 @@
 # Created by: Matt Peterson <matt@peterson.org>
-# $FreeBSD: head/net-mgmt/collectd5/Makefile 436572 2017-03-21 08:26:58Z glebius $
+# $FreeBSD$
 
 PORTNAME=	collectd
 PORTVERSION=	5.9.0
 CATEGORIES=	net-mgmt
-MASTER_SITES=	https://collectd.org/files/ \
-		http://collectd.org/files/
+MASTER_SITES=	https://storage.googleapis.com/collectd-tarballs/
 PKGNAMESUFFIX=	5
 
 MAINTAINER=	ports@bsdserwis.com
@@ -18,11 +17,7 @@ USES=		autoreconf gmake libtool pkgconfig shebangfix tar:bzip2
 
 GNU_CONFIGURE=	yes
 
-<<<<<<< HEAD
-OPTIONS_DEFINE=		CGI DEBUG GCRYPT LIBDTRACE LIBZFS LOGSTASH VIRT
-=======
 OPTIONS_DEFINE=		CGI GCRYPT JAVA LOGGING LOGSTASH VIRT
->>>>>>> freebsd/master
 OPTIONS_GROUP=		INPUT OUTPUT
 OPTIONS_GROUP_OUTPUT=	KAFKA MONGODB NOTIFYDESKTOP NOTIFYEMAIL PROMETHEUS \
 			RIEMANN RRDTOOL TSDB
@@ -31,11 +26,8 @@ OPTIONS_GROUP_INPUT=	CHRONY CURL CURL_JSON CURL_XML DBI IPMI JSON MEMCACHEC \
 			PGSQL PINBA PING PYTHON RABBITMQ REDIS ROUTEROS SIGROK \
 			SNMP STATSD TOKYOTYRANT VARNISH XML ZOOKEEPER
 
-<<<<<<< HEAD
-=======
 OPTIONS_DEFAULT=	GCRYPT LOGGING PING
 
->>>>>>> freebsd/master
 CGI_DESC=		Install collection.cgi (requires rrdtool)
 CHRONY_DESC=		Enable chronyd plugin
 CURL_DESC=		Enable curl-based plugins (apache, nginx, etc)
@@ -46,8 +38,7 @@ GCRYPT_DESC=		Build with libgcrypt
 IPMI_DESC=		Enable OpenIPMI plugin
 JSON_DESC=		Enable JSON plugins
 KAFKA_DESC=		Enable write_kafka plugin
-LIBDTRACE_DESC=	Build with LibDTrace
-LIBZFS_DESC=	Build with LibZFS
+LOGGING_DESC=		Enable debug logging
 LOGSTASH_DESC=		Enable log_logstash plugin (requires json)
 MEMCACHEC_DESC=		Enable memcachec plugin
 MODBUS_DESC=		Enable modbus plugin
@@ -95,14 +86,6 @@ CONFIGURE_ARGS=	--disable-all-plugins \
 		--disable-ceph \
 		--disable-cgroups \
 		--disable-fhcount \
-<<<<<<< HEAD
-		--without-java \
-		--without-libaquaero5 \
-		--without-libganglia \
-		--without-libiptc \
-		--without-libjvm \
-		--without-liblvm2app \
-=======
 		--disable-static \
 		--disable-turbostat \
 		--enable-disk \
@@ -111,7 +94,6 @@ CONFIGURE_ARGS=	--disable-all-plugins \
 		--without-libaquaero5 \
 		--without-libganglia \
 		--without-libiptc \
->>>>>>> freebsd/master
 		--without-libkstat \
 		--without-libldap \
 		--without-liblvm2app \
@@ -142,13 +124,9 @@ CURL_JSON_CONFIGURE_ENABLE=	curl_json
 CURL_XML_IMPLIES=		CURL XML
 CURL_XML_CONFIGURE_ENABLE=	ascent bind curl_xml
 
-<<<<<<< HEAD
-DEBUG_CONFIGURE_ENABLE=		debug
-=======
 JAVA_USE=		java
 JAVA_CONFIGURE_ENABLE=	java
 JAVA_CONFIGURE_WITH=	java=${LOCALBASE} libjvm
->>>>>>> freebsd/master
 
 DBI_LIB_DEPENDS=	libdbi.so:databases/libdbi
 DBI_CONFIGURE_WITH=	libdbi=${LOCALBASE}
@@ -168,6 +146,8 @@ JSON_CONFIGURE_WITH=	libyajl=${LOCALBASE}
 
 KAFKA_LIB_DEPENDS=	librdkafka.so:net/librdkafka
 KAFKA_CONFIGURE_ENABLE=	write_kafka
+
+LOGGING_CONFIGURE_ENABLE=	debug
 
 LOGSTASH_CONFIGURE_ENABLE=	log_logstash
 LOGSTASH_IMPLIES=		JSON
@@ -238,10 +218,10 @@ PROMETHEUS_LIB_DEPENDS+=	libmicrohttpd.so:www/libmicrohttpd \
 				libprotoc.so:devel/protobuf
 PROMETHEUS_CONFIGURE_ENABLE=	write_prometheus
 
-PYTHON_USES=			python:3.6
+PYTHON_USES=			python
 PYTHON_CONFIGURE_ENABLE=	python
 PYTHON_CONFIGURE_WITH=		python=${PYTHON_CMD}
-PYTHON_BUILD_DEPENDS=		python3:lang/python3
+PYTHON_CONFIGURE_ENV=		PYTHON_CONFIG=${PYTHON_CMD}-config
 
 RABBITMQ_LIB_DEPENDS=		librabbitmq.so:net/rabbitmq-c
 RABBITMQ_CONFIGURE_ENABLE=	rabbitmq
@@ -287,7 +267,6 @@ TSDB_CONFIGURE_ENABLE=	write_tsdb
 
 VARNISH_LIB_DEPENDS=		libvarnishapi.so:www/varnish4
 VARNISH_CONFIGURE_ENABLE=	varnish
-VARNISH_CONFIGURE_WITH=		libvarnish=${LOCALBASE}
 
 VIRT_IMPLIES=		XML
 VIRT_LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
@@ -304,73 +283,6 @@ ZOOKEEPER_CONFIGURE_ENABLE=	zookeeper
 ZOOKEEPER_CONFIGURE_WITH=	libzookeeper=${LOCALBASE}
 
 # NOTE: Plugins without external dependencies
-<<<<<<< HEAD
-CONFIGURE_ARGS+=--enable-aggregation \
-		--enable-apcups \
-		--enable-contextswitch \
-		--enable-cpu \
-		--enable-cputemp \
-		--enable-csv \
-		--enable-ctl \
-		--enable-df \
-		--enable-dns \
-		--enable-email \
-		--enable-exec \
-		--enable-filecount \
-		--enable-geom-stat \
-		--enable-interface \
-		--enable-load \
-		--enable-logfile \
-		--enable-match_empty_counter \
-		--enable-match_hashed \
-		--enable-match_regex \
-		--enable-match_timediff \
-		--enable-match_value \
-		--enable-mbmon \
-		--enable-memcached \
-		--enable-memory \
-		--enable-network \
-		--enable-nfsstat \
-		--enable-ntpd \
-		--enable-openvpn \
-		--enable-powerdns \
-		--enable-pf \
-		--enable-processes \
-		--enable-statsd \
-		--enable-swap \
-		--enable-syslog \
-		--enable-table \
-		--enable-tail \
-		--enable-tail_csv \
-		--enable-target_notification \
-		--enable-target_replace \
-		--enable-target_scale \
-		--enable-target_set \
-		--enable-target_v5upgrade \
-		--enable-tcpconns \
-		--enable-teamspeak2 \
-		--enable-ted \
-		--enable-threshold \
-		--enable-unixsock \
-		--enable-uptime \
-		--enable-users \
-		--enable-uuid \
-		--enable-write_graphite \
-		--enable-write_log \
-		--enable-zfs_arc \
-		--enable-zfs_arc_v2 \
-
-INSTALL_TARGET=	install-strip
-SHEBANG_FILES=	contrib/collection.cgi
-
-INSTALL_TARGET=	install-strip
-SHEBANG_FILES=	contrib/collection.cgi
-
-post-patch:
-	@${REINPLACE_CMD} 's/-Werror//' \
-		${WRKSRC}/configure.ac ${WRKSRC}/src/Makefile.am \
-		${WRKSRC}/src/libcollectdclient/Makefile.am
-=======
 CONFIGURE_ARGS+=	--enable-aggregation \
 			--enable-apcups \
 			--enable-contextswitch \
@@ -426,13 +338,13 @@ SHEBANG_FILES=		contrib/collection.cgi
 post-patch:
 	@${REINPLACE_CMD} 's/-Werror//' \
 		${WRKSRC}/configure.ac
->>>>>>> freebsd/master
 	@${REINPLACE_CMD} \
 		-e 's;@prefix@/var/;/var/;' \
 		-e 's;/var/lib/;/var/db/;' \
 		-e 's;@localstatedir@/lib/;/var/db/;' \
 		${WRKSRC}/src/collectd.conf.in \
-		${WRKSRC}/src/collectd.conf.5
+		${WRKSRC}/src/collectd.conf.5 \
+		${WRKSRC}/src/collectd.conf.pod
 	@${REINPLACE_CMD} \
 		-e 's;/etc/collection\.conf;${WWWDIR}/collection.conf;' \
 		${WRKSRC}/contrib/collection.cgi
