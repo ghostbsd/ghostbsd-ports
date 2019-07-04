@@ -1,3 +1,4 @@
-System Sources for TrueOS
+This FreeBSD OS port installs the system sources into /usr/src that
+were used to create the other OS packages.
 
 WWW: https://www.freebsd.org

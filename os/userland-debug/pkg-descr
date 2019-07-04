@@ -1,3 +1,4 @@
-Userland debug support files
+This FreeBSD OS port installs the userland debug files normally found in
+/usr/lib/debug.
 
 WWW: https://www.freebsd.org
