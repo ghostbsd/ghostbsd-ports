@@ -8,7 +8,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Buildkernel portition of os packages
+COMMENT=	Distribution tarball of kernel for packaging
 
 SRCDIR?=/usr/src
 .if !exists(${SRCDIR}/Makefile)

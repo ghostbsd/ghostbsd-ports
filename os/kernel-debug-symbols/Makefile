@@ -8,7 +8,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Port for the kernel debug symbol files
+COMMENT=	FreeBSD kernel debugging symbols
 
 BUILD_DEPENDS=	${OS_KERNDIST_DEBUG}:os/buildkernel-debug@${OS_FLAVOR}
 

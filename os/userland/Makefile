@@ -7,7 +7,7 @@ CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Metaport for the OS userland
+COMMENT=	Metaport for the FreeBSD userland
 
 USES=	metaport os:flavors
 

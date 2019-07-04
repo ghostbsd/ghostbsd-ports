@@ -8,7 +8,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Userland rescue files
+COMMENT=	FreeBSD userland rescue directory and binaries
 
 BUILD_DEPENDS=  ${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR}
 

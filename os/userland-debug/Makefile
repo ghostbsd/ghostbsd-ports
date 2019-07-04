@@ -8,7 +8,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Userland debuging symbols
+COMMENT=	FreeBSD userland debugging symbols
 
 BUILD_DEPENDS=  ${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR}
 

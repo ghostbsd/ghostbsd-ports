@@ -8,7 +8,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Userland boot files
+COMMENT=	FreeBSD Userland boot directories and files
 
 BUILD_DEPENDS=  ${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR}
 

@@ -9,7 +9,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Port for the OS userland binaries
+COMMENT=	FreeBSD base system share and libexec dirs
 
 BUILD_DEPENDS=	${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR} \
 				jq:textproc/jq

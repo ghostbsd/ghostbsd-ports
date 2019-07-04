@@ -8,7 +8,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Port for the kernel compiled with debugging enabled
+COMMENT=	FreeBSD kernel with debug enabled
 
 BUILD_DEPENDS=	${OS_KERNDIST_DEBUG}:os/buildkernel-debug@${OS_FLAVOR}
 

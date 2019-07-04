@@ -9,7 +9,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Port for libelf, rtld and other critical early libraries
+COMMENT=	FreeBSD userland libelf, rtld and other critical early libraries
 
 BUILD_DEPENDS=	${OS_WORLDDIST}:os/buildworld@${OS_FLAVOR}
 

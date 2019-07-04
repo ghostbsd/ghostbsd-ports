@@ -7,7 +7,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Port for the OS base sources
+COMMENT=	FreeBSD base system source
 
 PREFIX=/
 SRCDIR?=/usr/src

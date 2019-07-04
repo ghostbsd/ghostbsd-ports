@@ -9,7 +9,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Port for the OS kernel
+COMMENT=	FreeBSD kernel without debug enabled
 
 BUILD_DEPENDS=	${OS_KERNDIST}:os/buildkernel@${OS_FLAVOR}
 

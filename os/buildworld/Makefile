@@ -8,7 +8,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Port for the buildworld phase of OS
+COMMENT=	Distribution tarball of world for packaging
 
 BUILD_DEPENDS=	${SRCDIR}/Makefile:os/src
 

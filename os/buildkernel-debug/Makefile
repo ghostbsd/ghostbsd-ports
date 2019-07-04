@@ -8,7 +8,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Buildkernel portition of os packages with debug enabled
+COMMENT=	Distribution tarball of debug kernel for packaging
 
 SRCDIR?=/usr/src
 .if !exists(${SRCDIR}/Makefile)
