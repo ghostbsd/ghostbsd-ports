@@ -38,7 +38,6 @@
     SUBDIR += aws
     SUBDIR += aws-demos
     SUBDIR += awstats
-    SUBDIR += axis
     SUBDIR += axis2
     SUBDIR += bacula-web
     SUBDIR += baikal
@@ -89,8 +88,8 @@
     SUBDIR += closure-compiler
     SUBDIR += cntlm
     SUBDIR += codeigniter
-    SUBDIR += coppermine
     SUBDIR += colly
+    SUBDIR += coppermine
     SUBDIR += cplanet
     SUBDIR += cppcms
     SUBDIR += cpr
@@ -218,6 +217,7 @@
     SUBDIR += grafana3
     SUBDIR += grafana4
     SUBDIR += grafana5
+    SUBDIR += grafana6
     SUBDIR += grails
     SUBDIR += gregarius
     SUBDIR += groupoffice
@@ -1324,7 +1324,6 @@
     SUBDIR += p5-pQuery
     SUBDIR += p5-webservice-validator-css-w3c
     SUBDIR += p5-webservice-validator-html-w3c
-    SUBDIR += palemoon
     SUBDIR += paros
     SUBDIR += payara
     SUBDIR += pc-webkitviewer
@@ -2140,7 +2139,6 @@
     SUBDIR += rubygem-redmine_acts_as_taggable_on
     SUBDIR += rubygem-responders
     SUBDIR += rubygem-responders-rails5
-    SUBDIR += rubygem-responders-rails50
     SUBDIR += rubygem-rest-client
     SUBDIR += rubygem-rfacebook
     SUBDIR += rubygem-rfeedfinder
@@ -2206,7 +2204,6 @@
     SUBDIR += scloader
     SUBDIR += script4rss
     SUBDIR += seahub
-    SUBDIR += seamonkey
     SUBDIR += searx
     SUBDIR += selenium
     SUBDIR += serendipity

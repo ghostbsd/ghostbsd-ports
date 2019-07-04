@@ -451,7 +451,6 @@
     SUBDIR += mod_amd
     SUBDIR += mono-zeroconf
     SUBDIR += mopd
-    SUBDIR += morebalance
     SUBDIR += mosh
     SUBDIR += mosquitto
     SUBDIR += motsognir
@@ -516,6 +515,7 @@
     SUBDIR += ntp
     SUBDIR += ntp-devel
     SUBDIR += ntpa
+    SUBDIR += ntpsec
     SUBDIR += ntraceroute
     SUBDIR += nusoap
     SUBDIR += nuster
@@ -1330,6 +1330,7 @@
     SUBDIR += samba46
     SUBDIR += samba47
     SUBDIR += samba48
+    SUBDIR += samba410
     SUBDIR += samplicator
     SUBDIR += sbd
     SUBDIR += sbm
@@ -1428,7 +1429,6 @@
     SUBDIR += tftpgrab
     SUBDIR += thcrut
     SUBDIR += throttled
-    SUBDIR += tigervnc
     SUBDIR += tigervnc-server
     SUBDIR += tigervnc-viewer
     SUBDIR += tightvnc
@@ -1490,6 +1490,7 @@
     SUBDIR += wackamole
     SUBDIR += wackford-squeers
     SUBDIR += wakeonlan
+    SUBDIR += waypipe
     SUBDIR += whois
     SUBDIR += widentd
     SUBDIR += wireguard
