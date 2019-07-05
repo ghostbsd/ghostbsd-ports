@@ -10,6 +10,7 @@
     SUBDIR += kernel-symbols
     SUBDIR += kernel-debug
     SUBDIR += kernel-debug-symbols
+    SUBDIR += ports
     SUBDIR += src
     SUBDIR += userland
     SUBDIR += userland-base

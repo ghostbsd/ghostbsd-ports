@@ -1,0 +1,6 @@
+This FreeBSD OS port installs the complete ports tree into /usr/ports.
+
+This can be used to rebuild software, in a consistent manner, with the rest
+of the packages installed on your local system.
+
+WWW: https://www.freebsd.org
