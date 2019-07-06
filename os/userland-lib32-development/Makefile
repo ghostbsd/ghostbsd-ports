@@ -1,6 +1,6 @@
 # $FreeBSD$
 
-PORTNAME=	userland-lib32-devel
+PORTNAME=	userland-lib32-development
 PORTVERSION=	${BASEPKG_PORTVERSION}
 CATEGORIES=	os
 PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
