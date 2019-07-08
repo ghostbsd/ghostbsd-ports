@@ -2,7 +2,7 @@
 # $FreeBSD: head/mail/postfix/Makefile 430486 2017-01-03 17:14:09Z ohauer $
 
 PORTNAME=	postfix
-DISTVERSION=	3.4.5
+DISTVERSION=	3.4.6
 PORTREVISION?=	0
 PORTEPOCH=	1
 CATEGORIES=	mail ipv6

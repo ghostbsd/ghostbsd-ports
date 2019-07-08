@@ -32,6 +32,7 @@
     SUBDIR += R-cran-crayon
     SUBDIR += R-cran-data.table
     SUBDIR += R-cran-doParallel
+    SUBDIR += R-cran-ellipsis
     SUBDIR += R-cran-evaluate
     SUBDIR += R-cran-fansi
     SUBDIR += R-cran-foreach
@@ -92,6 +93,7 @@
     SUBDIR += aarch64-none-elf-gcc
     SUBDIR += aarch64-xtoolchain-gcc
     SUBDIR += abi-compliance-checker
+    SUBDIR += abseil
     SUBDIR += ace
     SUBDIR += ace+tao-doc
     SUBDIR += acsccid
@@ -955,6 +957,7 @@
     SUBDIR += hs-mueval
     SUBDIR += hs-old-locale
     SUBDIR += hs-old-time
+    SUBDIR += hs-profiteur
     SUBDIR += hs-random
     SUBDIR += hs-setlocale
     SUBDIR += hs-shake
@@ -1141,6 +1144,7 @@
     SUBDIR += libchipcard
     SUBDIR += libcidr
     SUBDIR += libcii
+    SUBDIR += libcircllhist
     SUBDIR += libcjson
     SUBDIR += libclc
     SUBDIR += libcli
@@ -2679,6 +2683,7 @@
     SUBDIR += p5-Luka
     SUBDIR += p5-Lvalue
     SUBDIR += p5-MCE
+    SUBDIR += p5-MCE-Shared
     SUBDIR += p5-MRO-Compat
     SUBDIR += p5-MRO-Define
     SUBDIR += p5-Mac-FileSpec-Unixish
@@ -5666,6 +5671,7 @@
     SUBDIR += rubygem-memoist
     SUBDIR += rubygem-memoizable
     SUBDIR += rubygem-memoize
+    SUBDIR += rubygem-memory_profiler
     SUBDIR += rubygem-mercenary
     SUBDIR += rubygem-message_bus
     SUBDIR += rubygem-metaclass
