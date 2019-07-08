@@ -38,6 +38,7 @@
     SUBDIR += ansible24
     SUBDIR += ansible25
     SUBDIR += ansible26
+    SUBDIR += ansible27
     SUBDIR += anvil
     SUBDIR += apachetop
     SUBDIR += apcpwr
@@ -732,6 +733,7 @@
     SUBDIR += ncdu
     SUBDIR += ndmpd
     SUBDIR += neofetch
+    SUBDIR += netevent
     SUBDIR += nfcutils
     SUBDIR += nfsping
     SUBDIR += nitrogen
