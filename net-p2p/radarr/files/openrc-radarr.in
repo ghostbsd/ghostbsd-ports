@@ -7,7 +7,7 @@ name="radarr"
 : ${radarr_user:="radarr"}
 : ${radarr_data_dir:="%%PREFIX%%/radarr"}
 
-pidfile="${radarr_data_dir}/nzbdrone.pid"
+pidfile="${radarr_data_dir}/radarr.pid"
 command="%%PREFIX%%/bin/mono"
 command_args="%%DATADIR%%/Radarr.exe --nobrowser --data=${radarr_data_dir}"
 supervisor=supervise-daemon
