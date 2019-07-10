@@ -413,11 +413,6 @@ sbin/zinject
 sbin/zpool
 sbin/zstreamdump
 sbin/ztest
-share/initramfs-tools/conf-hooks.d/zfs
-share/initramfs-tools/conf.d/zfs
-share/initramfs-tools/hooks/zfs
-share/initramfs-tools/scripts/local-top/zfs
-share/initramfs-tools/scripts/zfs
 share/pkgconfig/libzfs.pc
 share/pkgconfig/libzfs_core.pc
 share/zfs/common.sh
