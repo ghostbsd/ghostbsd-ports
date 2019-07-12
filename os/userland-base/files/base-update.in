@@ -283,6 +283,57 @@ update_pkg()
 	${PKG} upgrade -y ports-mgmt/pkg
 }
 
+list_flavors()
+{
+	echo "Current: $(current_flavor)"
+	echo "Available:"
+	echo "-----------------------------------"
+	${PKG} rquery '%n' os/userland | cut -d '-' -f 2
+	echo "-----------------------------------"
+	echo "Use \"${0} flavor <name>\" to change to a new flavor"
+}
+
+current_flavor()
+{
+	# Get the current FLAVOR
+	KERNPKG=$(${PKG} which -q /boot/kernel/kernel)
+	if [ -z "${KERNPKG}" ] ; then
+		exit_err "Unable to determine current OS flavor"
+	fi
+	${PKG} query '%n' ${KERNPKG} | cut -d '-' -f 2
+}
+
+change_flavor()
+{
+	CFLAV=$(current_flavor)
+	if [ "$1" = "${CFLAV}" ] ; then
+		exit_err "The flavor \"${CFLAV}\" is already installed."
+	fi
+
+	# Get list of packages to change
+	for pkg in $(${PKG} query -g '%n' os-${CFLAV}-* | tr -s '\n' ' ')
+	do
+		pkgname=$(echo ${pkg} | cut -d '-' -f 3-)
+		echo "${PKG} set --change-name ${pkg}:os-${1}-${pkgname} -y ${pkg}"
+		${PKG} set --change-name ${pkg}:os-${1}-${pkgname} -y ${pkg}
+		if [ $? -ne 0 ] ; then
+			exit_err "Failed renaming: ${pkg}"
+		fi
+	done
+
+	echo "Package renaming complete!"
+	echo "On next upgrade, you will be migrated too the new OS flavor"
+}
+
+do_flavor()
+{
+	if [ -z "$1" ] ; then
+		list_flavors
+	else
+		change_flavor "$1"
+	fi
+}
+
 usage()
 {
 	cat << EOF
@@ -293,9 +344,12 @@ Arguments (Requires one)
 
 	check	- Check if updates exist for kernel/userland
 
-	update	- Perform updates to kernel/userland packages
+	flavor  - Manage which OS flavor is installed
 
 	merge	- Merge updates to /etc files that did not automatically update
+
+	update	- Perform updates to kernel/userland packages
+
 EOF
 	exit 1
 }
@@ -316,6 +370,9 @@ case $1 in
 		;;
 	merge)
 		do_etcmerge
+		;;
+	flavor)
+		do_flavor "$2"
 		;;
 	*)
 		usage
