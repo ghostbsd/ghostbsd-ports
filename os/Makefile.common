@@ -24,3 +24,7 @@ ABIVERSION!=	eval $$(egrep '^(REVISION)=' ${NEWVERS}) && echo $${REVISION} | cut
 PKG_ABISTRING=	FreeBSD:${ABIVERSION}:${ARCH}
 .endif
 
+# Allow RelEng to trigger rebuilds of specific ports after pulling in updates
+.if defined(os_${PORTNAME}_PORTREVISION)
+PORTREVISION=	${os_${PORTNAME}_PORTREVISION}
+.endif
