@@ -75,7 +75,7 @@ do_userland_updates()
 		exit_err "Failed upgrading userland base bootstrap package"
 	fi
 
-	${PKG} upgrade -y $(get_userland_pkgs)
+	${PKG} upgrade -y $(get_userland_pkgs)-*
 	if [ $? -ne 0 ] ; then
 		exit_err "Failed upgrading userland"
 	fi
