@@ -475,7 +475,6 @@
     SUBDIR += sword
     SUBDIR += table.el
     SUBDIR += talkfilters
-    SUBDIR += tcb
     SUBDIR += tdfiglet
     SUBDIR += team
     SUBDIR += telbook
