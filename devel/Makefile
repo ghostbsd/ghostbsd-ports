@@ -884,6 +884,7 @@
     SUBDIR += gputils
     SUBDIR += gradle
     SUBDIR += gradle4
+    SUBDIR += gradle46
     SUBDIR += grantlee5
     SUBDIR += graphql.el
     SUBDIR += grpc
@@ -957,6 +958,7 @@
     SUBDIR += hs-hasktags
     SUBDIR += hs-hlint
     SUBDIR += hs-hoogle
+    SUBDIR += hs-hpack
     SUBDIR += hs-hspec-discover
     SUBDIR += hs-mtl
     SUBDIR += hs-mueval
@@ -5554,6 +5556,7 @@
     SUBDIR += rubygem-formatador
     SUBDIR += rubygem-forwardable-extended
     SUBDIR += rubygem-fugit
+    SUBDIR += rubygem-fugit12
     SUBDIR += rubygem-gdata
     SUBDIR += rubygem-gem-compare
     SUBDIR += rubygem-gem_plugin
