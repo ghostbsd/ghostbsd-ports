@@ -68,6 +68,7 @@ CONFIGURE_ARGS+=--without-xsl-stylesheetsdir
 .endif
 
 post-patch:
+.if exists(/usr/lib/libstdc++.so)
 	${REINPLACE_CMD} -e '/-Wno-unused-but-set-variable/d' \
 		${WRKSRC}/src/tools/Makefile.am
 .endif
