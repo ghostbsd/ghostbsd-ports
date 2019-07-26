@@ -27,13 +27,15 @@ LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libpng.so:graphics/png
 
 USES=		compiler:features gmake iconv jpeg pkgconfig
-USE_XORG=	x11 xext xi xrender xt xtst
+USE_XORG=	x11 xext xi xrandr xrender xt xtst
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	battleblow
 GH_PROJECT=	openjdk-jdk11u
 
 BINARY_ALIAS=	grep=${LOCALBASE}/bin/grep
+NO_CCACHE=	yes
+
 _MAKE_JOBS=	#
 MAKE_ENV=	LANG="C" \
 		LC_ALL="C" \

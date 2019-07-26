@@ -34,6 +34,8 @@ GH_ACCOUNT=	battleblow
 GH_PROJECT=	openjdk-jdk12u
 
 BINARY_ALIAS=	grep=${LOCALBASE}/bin/grep
+NO_CCACHE=	yes
+
 _MAKE_JOBS=	#
 MAKE_ENV=	LANG="C" \
 		LC_ALL="C" \
