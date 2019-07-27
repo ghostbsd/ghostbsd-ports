@@ -2,8 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	javavmwrapper
+<<<<<<< HEAD
 PORTVERSION=	2.6
 PORTREVISION=	1
+=======
+PORTVERSION=	2.7.2
+>>>>>>> freebsd/master
 CATEGORIES=	java
 MASTER_SITES=	# none
 DISTFILES=	# none

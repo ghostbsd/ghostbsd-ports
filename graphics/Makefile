@@ -868,6 +868,7 @@
     SUBDIR += py-pycollada
     SUBDIR += py-pydot
     SUBDIR += py-pyembree
+    SUBDIR += py-pyepsg
     SUBDIR += py-pygal
     SUBDIR += py-pyganim
     SUBDIR += py-pyglet
