@@ -2,12 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	pcdm
-<<<<<<< HEAD
 PORTVERSION=	201803101421
-=======
-PORTVERSION=	201710031254
-PORTREVISION=	2
->>>>>>> freebsd/master
 CATEGORIES=	x11
 
 MAINTAINER=	jmaloney@ixsystems.com
