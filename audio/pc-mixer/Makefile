@@ -31,4 +31,4 @@ GH_ACCOUNT=	trueos
 GH_PROJECT=	pc-mixer
 GH_TAGNAME=	dbbddfbe318db719dcfea337676e758efaa56ea2
 
-include <bsd.port.mk>
+.include <bsd.port.mk>
