@@ -5,7 +5,6 @@ PORTNAME=	screenFetch
 PORTVERSION=	3.8.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
-MASTER_SITES=	LOCAL/jgh/sysutils/${PORTNAME:tl}/
 
 MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Bash Screenshot Information Tool

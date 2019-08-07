@@ -4,7 +4,7 @@
 PORTNAME=	xvkbd
 PORTVERSION=	3.7
 CATEGORIES=	x11
-MASTER_SITES=	http://homepage3.nifty.com/tsato/xvkbd/
+MASTER_SITES=	http://t-sato.in.coocan.jp/xvkbd/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Virtual keyboard for X applications
