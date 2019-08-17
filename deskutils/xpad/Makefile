@@ -2,23 +2,23 @@
 # $FreeBSD$
 
 PORTNAME=	xpad
-PORTVERSION=	5.0.0
-PORTREVISION=	2
+PORTVERSION=	5.4.0
 CATEGORIES=	deskutils
 MASTER_SITES=	https://launchpad.net/${PORTNAME}/trunk/${PORTVERSION}/+download/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Virtual note-pad system for your X11 desktop
 
 LICENSE=	GPLv3
 
 RUN_DEPENDS=	gnome-icon-theme>=0:misc/gnome-icon-theme
 
+USES=		autoreconf compiler:c++11-lang gmake pkgconfig tar:bzip2 gnome
+
 OPTIONS_DEFINE=	NLS DOCS
 OPTIONS_SUB=	yes
 
 CONFLICTS_INSTALL=	xpad3-[0-9]*
-USES=		autoreconf compiler:c++11-lang gmake pkgconfig tar:bzip2
 USE_XORG=	x11 sm ice
 USE_GNOME=	gtk30 intltool gtksourceview3 cairo
 INSTALLS_ICONS=	yes

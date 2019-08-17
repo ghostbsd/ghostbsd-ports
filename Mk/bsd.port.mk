@@ -2549,7 +2549,7 @@ VALID_CATEGORIES+= accessibility afterstep arabic archivers astro audio \
 	deskutils devel docs dns editors elisp emulators enlightenment finance french freenas ftp \
 	games geography german gnome gnustep graphics hamradio haskell hebrew hungarian \
 	ipv6 irc japanese java kde ${_KDE_CATEGORIES_SUPPORTED} kld korean lang linux lisp \
-	mail mate math mbone misc multimedia net net-im net-mgmt net-p2p news os \
+	mail mate math mbone misc multimedia net net-im net-mgmt net-p2p net-vpn news os \
 	palm parallel pear perl5 plan9 polish portuguese ports-mgmt \
 	print python ruby rubygems russian \
 	scheme science security shells spanish sysutils \

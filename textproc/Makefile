@@ -1112,6 +1112,7 @@
     SUBDIR += p5-XML-XQL
     SUBDIR += p5-XML-XSLT
     SUBDIR += p5-XML-XUpdate-LibXML
+    SUBDIR += p5-XString
     SUBDIR += p5-YAML
     SUBDIR += p5-YAML-LibYAML
     SUBDIR += p5-YAML-PP
@@ -1667,7 +1668,6 @@
     SUBDIR += scdoc
     SUBDIR += scew
     SUBDIR += scim
-    SUBDIR += scim-bridge
     SUBDIR += scim-input-pad
     SUBDIR += scim-kmfl-imengine
     SUBDIR += scim-m17n
@@ -1708,7 +1708,6 @@
     SUBDIR += sowing
     SUBDIR += spellutils
     SUBDIR += sphinxsearch
-    SUBDIR += sphinxsearch-devel
     SUBDIR += spiff
     SUBDIR += splitpatch
     SUBDIR += sq-hunspell
