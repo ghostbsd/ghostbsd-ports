@@ -1963,6 +1963,8 @@
     SUBDIR += rubygem-amazon-ecs
     SUBDIR += rubygem-anemone
     SUBDIR += rubygem-asana
+    SUBDIR += rubygem-async-http
+    SUBDIR += rubygem-async-rest
     SUBDIR += rubygem-async_sinatra
     SUBDIR += rubygem-atlassian-jwt
     SUBDIR += rubygem-best_in_place
@@ -2102,6 +2104,10 @@
     SUBDIR += rubygem-pagerduty
     SUBDIR += rubygem-passenger
     SUBDIR += rubygem-platform-api
+    SUBDIR += rubygem-protocol-hpack
+    SUBDIR += rubygem-protocol-http
+    SUBDIR += rubygem-protocol-http1
+    SUBDIR += rubygem-protocol-http2
     SUBDIR += rubygem-puma
     SUBDIR += rubygem-puma_worker_killer
     SUBDIR += rubygem-pusher-client
@@ -2445,6 +2451,7 @@
     SUBDIR += wsdlpull
     SUBDIR += wsmake
     SUBDIR += wt
+    SUBDIR += wt3
     SUBDIR += wuzz
     SUBDIR += www6to4
     SUBDIR += wwwoffle
