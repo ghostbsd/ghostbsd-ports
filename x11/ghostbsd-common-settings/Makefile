@@ -5,11 +5,11 @@
 # $FreeBSD$
 #
 
-PORTNAME=	ghostbsd-installed-common-settings
-PORTVERSION=	4.5
+PORTNAME=	ghostbsd-common-settings
+PORTVERSION=	4.6
 CATEGORIES=	x11
 
-MAINTAINER=	angelescuo@yahoo.com
+MAINTAINER=	eriturgeon@ghostbsd.org
 COMMENT=	GhostBSD common settings in installed mode
 
 LICENSE=	BSD
