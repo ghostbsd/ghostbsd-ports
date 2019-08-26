@@ -1,7 +1,7 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	ghosbsd-mate
+PORTNAME=	ghostbsd-mate
 PORTVERSION=	1.22.1
 CATEGORIES=	x11 mate
 
