@@ -6,11 +6,11 @@
 #
 
 PORTNAME=	ghostbsd-wallpapers
-PORTVERSION=	19.02
+PORTVERSION=	19.09
 CATEGORIES=	x11-themes
 
 MAINTAINER=	ericturgeon@ghostbsd.org
-COMMENT=	GhostBSD 18 wallpaper colection
+COMMENT=	GhostBSD wallpaper colection
 
 LICENSE=	BSD
 
@@ -22,7 +22,7 @@ NO_BUILD=	yes
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/backgrounds/ghostbsd
 	${CP} -PR ${WRKSRC}/*.jpg ${STAGEDIR}${PREFIX}/share/backgrounds/ghostbsd
-	${CP} -PR ${WRKSRC}/*.png ${STAGEDIR}${PREFIX}/share/backgrounds/ghostbsd
+	# ${CP} -PR ${WRKSRC}/*.png ${STAGEDIR}${PREFIX}/share/backgrounds/ghostbsd
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/mate-background-properties
 	${CP} -PR ${WRKSRC}/ghostbsd.xml ${STAGEDIR}${PREFIX}/share/mate-background-properties/ghostbsd.xml
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/gnome-background-properties
