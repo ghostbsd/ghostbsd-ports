@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ghostbsd-xfce-settings
-PORTVERSION=	2.8
+PORTVERSION=	2.9
 CATEGORIES=	x11
 
 MAINTAINER=	eturgeon@ixsystems.com
