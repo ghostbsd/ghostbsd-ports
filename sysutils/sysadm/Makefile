@@ -21,4 +21,7 @@ GH_ACCOUNT=	trueos
 GH_PROJECT=	sysadm
 GH_TAGNAME=	aab6f484ef01c893ae1701f64732254855eb3cdd
 
+DEPRECATED=	No longer maintained upstream
+EXPIRATION_DATE=	2019-11-01
+
 .include <bsd.port.mk>

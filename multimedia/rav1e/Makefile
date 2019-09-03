@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	rav1e
-PORTVERSION=	s20190821
+PORTVERSION=	s20190902
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -16,7 +16,7 @@ BUILD_DEPENDS_amd64=	nasm:devel/nasm
 USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	xiph
-GH_TAGNAME=	2b20894d
+GH_TAGNAME=	b9975f82
 PLIST_FILES=	bin/${PORTNAME}
 
 CARGO_CRATES=	adler32-1.0.3 \
@@ -24,7 +24,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		ansi_term-0.11.0 \
 		aom-sys-0.1.2 \
 		arc-swap-0.4.2 \
-		arg_enum_proc_macro-0.2.0 \
+		arg_enum_proc_macro-0.3.0 \
 		arrayvec-0.4.11 \
 		atty-0.2.13 \
 		autocfg-0.1.6 \
@@ -35,24 +35,25 @@ CARGO_CRATES=	adler32-1.0.3 \
 		bindgen-0.49.2 \
 		bitflags-1.1.0 \
 		bitstream-io-0.8.4 \
-		bstr-0.2.7 \
+		bstr-0.2.8 \
+		bumpalo-2.6.0 \
 		byteorder-1.3.2 \
 		c2-chacha-0.2.2 \
 		cast-0.2.2 \
-		cc-1.0.40 \
+		cc-1.0.41 \
 		cexpr-0.3.5 \
 		cfg-if-0.1.9 \
-		chrono-0.4.7 \
+		chrono-0.4.8 \
 		clang-sys-0.28.1 \
 		clap-2.33.0 \
-		clicolors-control-1.0.0 \
+		clicolors-control-1.0.1 \
 		cloudabi-0.0.3 \
 		color_quant-1.0.1 \
 		console-0.7.7 \
 		crc32fast-1.2.0 \
 		criterion-0.2.11 \
 		criterion-plot-0.3.1 \
-		crossbeam-deque-0.6.3 \
+		crossbeam-deque-0.7.1 \
 		crossbeam-epoch-0.7.2 \
 		crossbeam-queue-0.1.2 \
 		crossbeam-utils-0.6.6 \
@@ -63,7 +64,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		deflate-0.7.20 \
 		difference-2.0.0 \
 		either-1.5.2 \
-		encode_unicode-0.3.5 \
+		encode_unicode-0.3.6 \
 		env_logger-0.6.2 \
 		err-derive-0.1.5 \
 		error-chain-0.10.0 \
@@ -71,17 +72,18 @@ CARGO_CRATES=	adler32-1.0.3 \
 		failure_derive-0.1.5 \
 		fuchsia-cprng-0.1.1 \
 		fxhash-0.2.1 \
-		getrandom-0.1.10 \
+		getrandom-0.1.11 \
 		gif-0.10.2 \
 		glob-0.3.0 \
 		humantime-1.2.0 \
 		image-0.22.1 \
 		inflate-0.4.5 \
-		interpolate_name-0.2.2 \
+		interpolate_name-0.2.3 \
 		itertools-0.8.0 \
 		itoa-0.4.4 \
-		jpeg-decoder-0.1.15 \
-		lazy_static-1.3.0 \
+		jpeg-decoder-0.1.16 \
+		js-sys-0.3.27 \
+		lazy_static-1.4.0 \
 		libc-0.2.62 \
 		libloading-0.5.2 \
 		lock_api-0.3.1 \
@@ -108,9 +110,10 @@ CARGO_CRATES=	adler32-1.0.3 \
 		png-0.15.0 \
 		ppv-lite86-0.2.5 \
 		pretty_assertions-0.6.1 \
+		pretty_env_logger-0.3.1 \
 		proc-macro-hack-0.5.9 \
 		proc-macro2-0.4.30 \
-		proc-macro2-1.0.1 \
+		proc-macro2-1.0.2 \
 		quick-error-1.2.2 \
 		quote-0.6.13 \
 		quote-1.0.2 \
@@ -118,12 +121,12 @@ CARGO_CRATES=	adler32-1.0.3 \
 		rand_chacha-0.2.1 \
 		rand_core-0.3.1 \
 		rand_core-0.4.2 \
-		rand_core-0.5.0 \
+		rand_core-0.5.1 \
 		rand_hc-0.2.0 \
 		rand_os-0.1.3 \
 		rand_xoshiro-0.1.0 \
-		rayon-1.1.0 \
-		rayon-core-1.5.0 \
+		rayon-1.2.0 \
+		rayon-core-1.6.0 \
 		rdrand-0.4.0 \
 		redox_syscall-0.1.56 \
 		regex-1.1.9 \
@@ -147,7 +150,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		smallvec-0.6.10 \
 		strsim-0.8.0 \
 		syn-0.15.44 \
-		syn-1.0.3 \
+		syn-1.0.5 \
 		synstructure-0.10.2 \
 		termcolor-1.0.5 \
 		termios-0.3.1 \
@@ -166,13 +169,18 @@ CARGO_CRATES=	adler32-1.0.3 \
 		version_check-0.1.5 \
 		walkdir-2.2.9 \
 		wasi-0.5.0 \
+		wasm-bindgen-0.2.50 \
+		wasm-bindgen-backend-0.2.50 \
+		wasm-bindgen-macro-0.2.50 \
+		wasm-bindgen-macro-support-0.2.50 \
+		wasm-bindgen-shared-0.2.50 \
 		which-2.0.1 \
-		winapi-0.3.7 \
+		winapi-0.3.8 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
 		winapi-util-0.1.2 \
 		winapi-x86_64-pc-windows-gnu-0.4.0 \
 		wincolor-1.0.2 \
-		y4m-0.3.3
+		y4m-0.3.5
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}

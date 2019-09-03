@@ -747,7 +747,6 @@
     SUBDIR += puppetdb-terminus6
     SUBDIR += puppetdb5
     SUBDIR += puppetdb6
-    SUBDIR += pure-sql3
     SUBDIR += puredb
     SUBDIR += pxlib
     SUBDIR += pxtools
@@ -898,6 +897,7 @@
     SUBDIR += rubygem-activemodel4
     SUBDIR += rubygem-activemodel5
     SUBDIR += rubygem-activemodel50
+    SUBDIR += rubygem-activemodel52
     SUBDIR += rubygem-activerecord-explain-analyze
     SUBDIR += rubygem-activerecord-import
     SUBDIR += rubygem-activerecord-jdbc-adapter
@@ -906,6 +906,7 @@
     SUBDIR += rubygem-activerecord4
     SUBDIR += rubygem-activerecord5
     SUBDIR += rubygem-activerecord50
+    SUBDIR += rubygem-activerecord52
     SUBDIR += rubygem-after_commit_queue
     SUBDIR += rubygem-amalgalite
     SUBDIR += rubygem-arel
@@ -953,6 +954,7 @@
     SUBDIR += rubygem-globalid
     SUBDIR += rubygem-globalid-rails5
     SUBDIR += rubygem-globalid-rails50
+    SUBDIR += rubygem-globalid-rails52
     SUBDIR += rubygem-her
     SUBDIR += rubygem-hiredis
     SUBDIR += rubygem-influxdb
@@ -967,6 +969,7 @@
     SUBDIR += rubygem-paranoia
     SUBDIR += rubygem-peek-mysql2-rails5
     SUBDIR += rubygem-peek-pg-rails5
+    SUBDIR += rubygem-peek-pg-rails52
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-pg0
     SUBDIR += rubygem-pg018
@@ -982,6 +985,7 @@
     SUBDIR += rubygem-redis-actionpack
     SUBDIR += rubygem-redis-actionpack-rails5
     SUBDIR += rubygem-redis-actionpack-rails50
+    SUBDIR += rubygem-redis-actionpack-rails52
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis3
     SUBDIR += rubygem-seed-fu

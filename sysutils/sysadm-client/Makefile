@@ -22,10 +22,7 @@ GH_ACCOUNT=	trueos
 GH_PROJECT=	sysadm-ui-qt
 GH_TAGNAME=	e472d2ead74b3ea1774ae53ba486becc2fd0ba8c
 
-.include <bsd.port.pre.mk>
+DEPRECATED=	No longer maintained upstream
+EXPIRATION_DATE=	2019-11-01
 
-.if ${OSVERSION} < 1000000
-IGNORE=		requires FreeBSD 10 or later
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
