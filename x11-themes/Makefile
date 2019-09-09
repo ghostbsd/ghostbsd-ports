@@ -39,6 +39,7 @@
     SUBDIR += fvwm-themes
     SUBDIR += ghostbsd-icons
     SUBDIR += ghostbsd-mate-themes
+    SUBDIR += ghostbsd-xfce-themes
     SUBDIR += ghostbsd-wallpapers
     SUBDIR += gnome-backgrounds
     SUBDIR += gnome-icon-theme-symbolic
