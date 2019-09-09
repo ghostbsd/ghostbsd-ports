@@ -6,10 +6,10 @@
 #
 
 PORTNAME=	ghostbsd-mate-themes
-PORTVERSION=	1.6
+PORTVERSION=	1.7
 CATEGORIES=	x11-themes
 
-MAINTAINER=	angelescuo@yahoo.com
+MAINTAINER=	ericturgeon@ghostbsd.org
 COMMENT=	GhostBSD themes for mate flavour
 
 LICENSE=	BSD
