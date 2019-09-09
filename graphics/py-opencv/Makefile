@@ -10,7 +10,7 @@ COMMENT=	OpenCV Python library
 BROKEN_aarch64=		fails to build: make[1]: cannot open Makefile
 BROKEN_armv7=		fails to build: make[1]: cannot open Makefile
 
-OCV_SLAVE=	python
+OCV_SLAVE=	python:2.7
 OCV_PYTHON=	yes
 MASTERDIR=	${.CURDIR:H}/opencv
 PLIST=		${.CURDIR}/pkg-plist
