@@ -350,7 +350,6 @@
     SUBDIR += freebsd-snapshot
     SUBDIR += freecolor
     SUBDIR += freedt
-    SUBDIR += freefilesync
     SUBDIR += freeipmi
     SUBDIR += freesbie
     SUBDIR += froxlor
@@ -586,7 +585,6 @@
     SUBDIR += libsunacl
     SUBDIR += libsysstat
     SUBDIR += liburcu
-    SUBDIR += libutempter
     SUBDIR += life-preserver
     SUBDIR += lineak-defaultplugin
     SUBDIR += lineak-xosdplugin
@@ -1320,11 +1318,7 @@
     SUBDIR += sysinfo
     SUBDIR += syslinux
     SUBDIR += syslog-ng
-    SUBDIR += syslog-ng310
     SUBDIR += syslog-ng311
-    SUBDIR += syslog-ng312
-    SUBDIR += syslog-ng313
-    SUBDIR += syslog-ng314
     SUBDIR += syslog-ng315
     SUBDIR += syslog-ng317
     SUBDIR += syslog-ng318
@@ -1333,7 +1327,6 @@
     SUBDIR += syslog-ng321
     SUBDIR += syslog-ng322
     SUBDIR += syslog-ng323
-    SUBDIR += syslog-ng39
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += system-tools-backends

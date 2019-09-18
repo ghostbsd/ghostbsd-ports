@@ -1,10 +1,10 @@
 # $FreeBSD$
 
 PORTNAME=	pspg
-DISTVERSION=	1.7.2
+DISTVERSION=	2.0.3
 CATEGORIES=	databases
 
-MAINTAINER=	dg@syrec.org
+MAINTAINER=	dmgk@FreeBSD.org
 COMMENT=	Tabular data pager designed to be used with psql
 
 LICENSE=	BSD2CLAUSE

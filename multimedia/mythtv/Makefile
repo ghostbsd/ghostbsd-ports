@@ -4,7 +4,7 @@
 PORTNAME=	mythtv
 DISTVERSIONPREFIX=	v
 DISTVERSION=	30.0
-PORTREVISION?=	3
+PORTREVISION?=	4
 PORTEPOCH=	1
 CATEGORIES=	multimedia
 
@@ -15,6 +15,9 @@ LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 ONLY_FOR_ARCHS=	amd64 i386
+.if ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
+BROKEN_i386=	ld: error: can't create dynamic relocation R_386_32 against local symbol in readonly segment
+.endif
 
 LIB_DEPENDS=	liblzo2.so:archivers/lzo2 \
 		libmp3lame.so:audio/lame \
@@ -101,8 +104,8 @@ DATADIR=	${PREFIX}/share/mythtv
 SUB_FILES=	pkg-message
 .endif
 
-OPTIONS_DEFINE=		BINDINGS JACK LIRC MYSQL PULSEAUDIO VDPAU
-OPTIONS_DEFAULT=	BINDINGS VDPAU
+OPTIONS_DEFINE=		BINDINGS HDHOMERUN JACK LIRC MYSQL PULSEAUDIO VDPAU
+OPTIONS_DEFAULT=	BINDINGS HDHOMERUN VDPAU
 OPTIONS_SUB=		yes
 
 BINDINGS_DESC=		Perl and Python bindings
@@ -132,6 +135,10 @@ BINDINGS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}MySQLdb>=1.2.2:databases/py-MySQLdb
 			p5-LWP-UserAgent-Determined>=0:www/p5-LWP-UserAgent-Determined
 BINDINGS_CONFIGURE_ON=	--python=${PYTHON_CMD}
 BINDINGS_CONFIGURE_OFF=	--without-bindings=perl,python
+
+HDHOMERUN_DESC=		Native support for HDHomeRun network tuners
+HDHOMERUN_LIB_DEPENDS=	libhdhomerun.so:multimedia/libhdhomerun
+HDHOMERUN_CONFIGURE_OFF=	--disable-hdhomerun
 
 JACK_LIB_DEPENDS=	libjack.so:audio/jack
 JACK_CONFIGURE_ON=	--enable-audio-jack --enable-indev=jack
