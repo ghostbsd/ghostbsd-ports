@@ -805,6 +805,9 @@
     SUBDIR += php73-hash
     SUBDIR += php73-openssl
     SUBDIR += php73-sodium
+    SUBDIR += php74-filter
+    SUBDIR += php74-openssl
+    SUBDIR += php74-sodium
     SUBDIR += phpsecinfo
     SUBDIR += picosha2
     SUBDIR += pidentd
@@ -1281,6 +1284,9 @@
     SUBDIR += tor-devel
     SUBDIR += totp-cli
     SUBDIR += tpm-tools
+    SUBDIR += tpm2-abrmd
+    SUBDIR += tpm2-tools
+    SUBDIR += tpm2-tss
     SUBDIR += trezord
     SUBDIR += trinokiller
     SUBDIR += tripwire

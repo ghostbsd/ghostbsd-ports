@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	pspg
-DISTVERSION=	2.0.3
+DISTVERSION=	2.0.4
 CATEGORIES=	databases
 
 MAINTAINER=	dmgk@FreeBSD.org
@@ -10,7 +10,8 @@ COMMENT=	Tabular data pager designed to be used with psql
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		autoreconf gmake localbase ncurses pkgconfig readline
+USES=		autoreconf compiler:c11 gmake localbase ncurses pkgconfig \
+		readline
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	okbob

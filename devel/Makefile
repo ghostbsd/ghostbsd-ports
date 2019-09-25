@@ -77,6 +77,7 @@
     SUBDIR += R-cran-rstudioapi
     SUBDIR += R-cran-sfsmisc
     SUBDIR += R-cran-sourcetools
+    SUBDIR += R-cran-sys
     SUBDIR += R-cran-testthat
     SUBDIR += R-cran-tibble
     SUBDIR += R-cran-tidyr
@@ -361,6 +362,7 @@
     SUBDIR += codesearch-py
     SUBDIR += codeville
     SUBDIR += codeworker
+    SUBDIR += collada-dom
     SUBDIR += colorgcc
     SUBDIR += colormake
     SUBDIR += commit-patch
@@ -654,6 +656,7 @@
     SUBDIR += flang
     SUBDIR += flang-clang
     SUBDIR += flatbuffers
+    SUBDIR += flatcc
     SUBDIR += flatzebra
     SUBDIR += flex-sdk
     SUBDIR += flex-sdk35
@@ -832,6 +835,7 @@
     SUBDIR += glib20-reference
     SUBDIR += glibmm
     SUBDIR += glibmm-reference
+    SUBDIR += gllvm
     SUBDIR += global
     SUBDIR += glog
     SUBDIR += glrparser
@@ -1189,7 +1193,6 @@
     SUBDIR += libdwarf
     SUBDIR += libe
     SUBDIR += libedit
-    SUBDIR += libee
     SUBDIR += libeio
     SUBDIR += libelf
     SUBDIR += libepoll-shim
@@ -1269,7 +1272,6 @@
     SUBDIR += libltdl
     SUBDIR += liblxqt
     SUBDIR += libmaa
-    SUBDIR += libmal
     SUBDIR += libmatheval
     SUBDIR += libmba
     SUBDIR += libmill
@@ -3934,6 +3936,17 @@
     SUBDIR += php73-sysvsem
     SUBDIR += php73-sysvshm
     SUBDIR += php73-tokenizer
+    SUBDIR += php74-ffi
+    SUBDIR += php74-gettext
+    SUBDIR += php74-intl
+    SUBDIR += php74-json
+    SUBDIR += php74-pcntl
+    SUBDIR += php74-readline
+    SUBDIR += php74-shmop
+    SUBDIR += php74-sysvmsg
+    SUBDIR += php74-sysvsem
+    SUBDIR += php74-sysvshm
+    SUBDIR += php74-tokenizer
     SUBDIR += phpbt
     SUBDIR += phpsh
     SUBDIR += phpunit6
@@ -4370,6 +4383,7 @@
     SUBDIR += py-deprecation
     SUBDIR += py-dexml
     SUBDIR += py-dialog
+    SUBDIR += py-dialog3
     SUBDIR += py-diazo
     SUBDIR += py-dill
     SUBDIR += py-dirspec
@@ -4693,6 +4707,7 @@
     SUBDIR += py-num2words
     SUBDIR += py-numba
     SUBDIR += py-ocempgui
+    SUBDIR += py-oci
     SUBDIR += py-odfpy
     SUBDIR += py-offtrac
     SUBDIR += py-olefile
@@ -5379,6 +5394,14 @@
     SUBDIR += roboctl
     SUBDIR += robodoc
     SUBDIR += root-doc
+    SUBDIR += ros-catkin_pkg
+    SUBDIR += ros-rosdep
+    SUBDIR += ros-rosdistro
+    SUBDIR += ros-rosinstall
+    SUBDIR += ros-rosinstall_generator
+    SUBDIR += ros-rospkg
+    SUBDIR += ros-vcstools
+    SUBDIR += ros-wstool
     SUBDIR += rote
     SUBDIR += rpc2
     SUBDIR += rpclib
@@ -6540,7 +6563,6 @@
     SUBDIR += xeus
     SUBDIR += xeus-cling
     SUBDIR += xfce4-dev-tools
-    SUBDIR += xfce4-vala
     SUBDIR += xmake
     SUBDIR += xmltooling
     SUBDIR += xorg-macros

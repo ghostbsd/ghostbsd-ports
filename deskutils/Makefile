@@ -154,6 +154,7 @@
     SUBDIR += lumina-fm
     SUBDIR += lumina-mediaplayer
     SUBDIR += lumina-pdf
+    SUBDIR += lumina-photo
     SUBDIR += lumina-screenshot
     SUBDIR += lumina-textedit
     SUBDIR += lxqt-notificationd

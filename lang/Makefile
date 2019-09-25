@@ -285,6 +285,8 @@
     SUBDIR += php72-extensions
     SUBDIR += php73
     SUBDIR += php73-extensions
+    SUBDIR += php74
+    SUBDIR += php74-extensions
     SUBDIR += picoc
     SUBDIR += plexil
     SUBDIR += pocl
@@ -313,6 +315,7 @@
     SUBDIR += qmasm
     SUBDIR += qscheme
     SUBDIR += quack
+    SUBDIR += quickjs
     SUBDIR += racket
     SUBDIR += racket-minimal
     SUBDIR += ratfor
@@ -385,5 +388,6 @@
     SUBDIR += yap-devel
     SUBDIR += yorick
     SUBDIR += ypsilon
+    SUBDIR += zig
 
 .include <bsd.port.subdir.mk>

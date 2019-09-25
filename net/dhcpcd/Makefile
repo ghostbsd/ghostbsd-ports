@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	dhcpcd
-PORTVERSION=	7.2.2
+PORTVERSION=	8.0.6
 CATEGORIES=	net
 
 MAINTAINER=	roy@marples.name
