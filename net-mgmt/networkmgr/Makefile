@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	networkmgr
-DISTVERSION=	3.4
+DISTVERSION=	3.5
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	ericbsd@FreeBSD.org
