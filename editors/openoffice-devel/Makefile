@@ -3,7 +3,7 @@
 
 PORTNAME=	apache-openoffice
 PORTVERSION=	${AOOVERSION1}.${AOOVERSION2}.${TIMESTAMP}
-PORTREVISION=	0
+PORTREVISION=	2
 PORTEPOCH=	4
 CATEGORIES=	editors java
 MASTER_SITES=	https://dist.apache.org/repos/dist/dev/openoffice/${AOOVERSION}-${AOORC}-${TIMESTAMP}/source/ \
@@ -64,7 +64,7 @@ BUILD_DEPENDS=								\
 		gpatch:devel/patch					\
 		${LOCALBASE}/include/sane/sane.h:graphics/sane-backends	\
 		${LOCALBASE}/bin/vigra-config:graphics/vigra		\
-		${JAVALIBDIR}/commons-lang3.jar:java/jakarta-commons-lang3 \
+		${JAVALIBDIR}/commons-lang3.jar:java/apache-commons-lang3 \
 		${JAVALIBDIR}/junit.jar:java/junit			\
 		${JAVALIBDIR}/bsh.jar:lang/bsh				\
 		bash:shells/bash					\
@@ -92,7 +92,7 @@ LIB_DEPENDS=								\
 		libfontconfig.so:x11-fonts/fontconfig
 RUN_DEPENDS=								\
 		${LOCALBASE}/share/icons/hicolor/index.theme:misc/hicolor-icon-theme \
-		${JAVALIBDIR}/commons-lang3.jar:java/jakarta-commons-lang3 \
+		${JAVALIBDIR}/commons-lang3.jar:java/apache-commons-lang3 \
 		${JAVALIBDIR}/bsh.jar:lang/bsh				\
 		${LOCALBASE}/share/fonts/Caladea/Caladea-Bold.ttf:x11-fonts/crosextrafonts-caladea-ttf \
 		${LOCALBASE}/share/fonts/Carlito/Carlito-Bold.ttf:x11-fonts/crosextrafonts-carlito-ttf \
@@ -232,8 +232,8 @@ CONFIGURE_ARGS+=	--enable-symbols
 .endif
 
 .if ${PORT_OPTIONS:MREPORT_BUILDER} || ${PORT_OPTIONS:MWIKI_PUBLISHER}
-BUILD_DEPENDS+=	${JAVALIBDIR}/commons-logging.jar:java/jakarta-commons-logging
-RUN_DEPENDS+=	${JAVALIBDIR}/commons-logging.jar:java/jakarta-commons-logging
+BUILD_DEPENDS+=	${JAVALIBDIR}/commons-logging.jar:java/apache-commons-logging
+RUN_DEPENDS+=	${JAVALIBDIR}/commons-logging.jar:java/apache-commons-logging
 CONFIGURE_ARGS+=	--with-commons-logging-jar=${JAVALIBDIR}/commons-logging.jar
 .else
 CONFIGURE_ARGS+=	--without-commons-logging

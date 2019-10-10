@@ -358,7 +358,6 @@
     SUBDIR += imc
     SUBDIR += imgtops
     SUBDIR += imgv
-    SUBDIR += imgvtopgm
     SUBDIR += imlib2
     SUBDIR += imlib2-webp
     SUBDIR += imlib2_loaders
@@ -657,8 +656,6 @@
     SUBDIR += p5-Geo-GDAL
     SUBDIR += p5-Geo-GML
     SUBDIR += p5-Geo-Gpx
-    SUBDIR += p5-Geo-Point
-    SUBDIR += p5-Geo-Proj4
     SUBDIR += p5-Geometry-Primitive
     SUBDIR += p5-Gimp
     SUBDIR += p5-Google-Chart
@@ -810,7 +807,6 @@
     SUBDIR += price
     SUBDIR += processing
     SUBDIR += proj
-    SUBDIR += proj5
     SUBDIR += pstoedit
     SUBDIR += pstoepsi
     SUBDIR += ptex
@@ -1066,6 +1062,7 @@
     SUBDIR += vv
     SUBDIR += waffle
     SUBDIR += waifu2x-converter-cpp
+    SUBDIR += waifu2x-ncnn-vulkan
     SUBDIR += wayland
     SUBDIR += wayland-protocols
     SUBDIR += waylandpp

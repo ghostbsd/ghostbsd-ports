@@ -10668,7 +10668,6 @@ deskutils/drivel||2018-12-11|Has expired: GNOME 2 application
 deskutils/notecase||2018-12-11|Has expired: GNOME 2 application
 deskutils/gtodo||2018-12-11|Has expired: GNOME 2 application
 deskutils/gtweakui||2018-12-11|Has expired: GNOME 2 application
-deskutils/gnotime||2018-12-11|Has expired: GNOME 2 application
 deskutils/gruler||2018-12-11|Has expired: GNOME 2 application
 japanese/gjiten||2018-12-11|Has expired: GNOME 2 application
 graphics/truevision||2018-12-11|Has expired: GNOME 2 application
@@ -10963,7 +10962,6 @@ devel/pecl-msgpack0|devel/pecl-msgpack|2018-12-30|Has expired: Works only with E
 devel/pecl-svn||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/php-uprofiler||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/pecl-statgrab||2018-12-30|Has expired: Works only with EOL php 5.6
-devel/pecl-uploadprogress||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/pecl-qb||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/php-memoize||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/php5-blitz-devel||2018-12-30|Has expired: Works only with EOL php 5.6
@@ -12849,7 +12847,7 @@ devel/py-pip-tools2|devel/py-pip-tools|2019-07-31|Has expired: Use devel/py-pip-
 lang/cint|lang/cling|2019-07-31|Has expired: Abandonware; superseded by lang/cling
 emulators/pearpc||2019-08-01|Has expired: Abandonware
 sysutils/bbcp||2019-08-03|Has expired: the port is broken for more than a year
-multimedia/gnome-mpv|multimedia/celluloid|2019-08-08|Renamed upstream
+multimedia/gnome-mpv|multimedia/celluloid|2019-08-03|Renamed upstream
 net/remmina-plugin-telepathy||2019-08-04|Disabled upstream for build Issues
 devel/py-mimeparse|devel/py-python-mimeparse|2019-08-11|Rename to match upstream naming
 devel/rubygem-web-console|devel/rubygem-web-console-rails5|2019-08-11|Rename to match our rubygem- port naming
@@ -12902,7 +12900,7 @@ x11-toolkits/pure-gtk||2019-09-01|Has expired: Depends on expiring devel/llvm35
 lang/pure||2019-09-01|Has expired: Depends on expiring devel/llvm35
 devel/pure-ffi||2019-09-01|Has expired: Depends on expiring devel/llvm35
 devel/llvm35||2019-09-01|Has expired: Obsolete and unmaintained
-archivers/py-attic|archivers/py-borg|2019-09-02|Has expired: Unsupported by upstream, please migrate to archivers/py-borg.  See https://borgbackup.readthedocs.io/en/stable/usage/upgrade.html#borg-upgrade
+archivers/py-attic|archivers/py-borgbackup|2019-09-02|Has expired: Unsupported by upstream, please migrate to archivers/py-borgbackup.  See https://borgbackup.readthedocs.io/en/stable/usage/upgrade.html#borg-upgrade
 sysutils/syslog-ng39|sysutils/syslog-ng|2019-09-04|Has expired: No longer supported by Balabit
 sysutils/syslog-ng312|sysutils/syslog-ng|2019-09-04|Has expired: No longer officially supported by Balabit
 sysutils/syslog-ng310|sysutils/syslog-ng|2019-09-04|Has expired: No longer supported by Balabit
@@ -12911,7 +12909,6 @@ sysutils/syslog-ng314|sysutils/syslog-ng|2019-09-04|Has expired: No longer suppo
 devel/ace+tao-doc||2019-09-05|Has expired: Broken for more than 6 months
 devel/dfmt||2019-09-05|Has expired: Broken for more than 6 months
 devel/ignition-transport||2019-09-05|Has expired: Broken for more than 6 months
-devel/spin||2019-09-05|Has expired: Broken for more than 6 months
 editors/dexed||2019-09-05|Has expired: Depends on expiring devel/dfmt
 editors/p5-Padre||2019-09-05|Has expired: Depends on expiring x11-toolkits/p5-Wx
 emulators/qemu2||2019-09-05|Has expired: Latest 3.X branch is in ports tree
@@ -12955,8 +12952,8 @@ devel/xfce4-vala||2019-09-20|Deprecated, functionality moved to xfce libraries w
 irc/iroffer-lamm||2019-09-23|obsolete
 java/openjdk6|java/openjdk8|2019-09-23|Has expired: EOLed upstream since December 2018
 java/openjdk6-jre|java/openjdk8-jre|2019-09-23|Has expired: EOLed upstream since December 2018
-deskutils/lumina-xdg-entry||2019-09-22|Deprecated, merged upstream with deskutils/lumina-fileinfo
-deskutils/lumina-notify||2019-09-22|Deprecated, removed upstream
+deskutils/lumina-xdg-entry||2019-09-23|Deprecated, merged upstream with deskutils/lumina-fileinfo
+deskutils/lumina-notify||2019-09-23|Deprecated, removed upstream
 palm/pilot-link||2019-09-24|Has expired: obsolete technology
 graphics/pixmap||2019-09-24|Has expired: No longer maintained
 japanese/jpilot||2019-09-24|Has expired: obsolete technology
@@ -12970,3 +12967,111 @@ databases/palm-db-tools||2019-09-24|Has expired: obsolete technology
 comms/jpilot-picsnvideos||2019-09-24|Has expired: obsolete technology
 devel/libee||2019-09-24|Has expired: No longer required by rsyslog, which was its only consumer.  No longer maintained upstream
 devel/libmal||2019-09-24|Has expired: obsolete technology
+print/py-fonttools-lxml-ufo|print/py-fonttools|2019-09-25|Changed for new way for optional dependencies
+misc/zygrib||2019-09-28|Has expired: Can not build with graphics/proj
+misc/survex||2019-09-28|Has expired: Can not build with graphics/proj
+graphics/proj5||2019-09-28|Has expired: Please use graphics/proj instead
+graphics/p5-Geo-Proj4||2019-09-28|Has expired: Can not build with graphics/proj
+misc/zygrib-maps||2019-09-28|Removed, depends on expired misc/zygrib
+graphics/p5-Geo-Point||2019-09-28|Removed, depends on expired graphics/p5-Geo-Proj4
+x11/rubygem-gnome2|x11/rubygem-gnome|2019-09-28|Upstream changed the project name from Ruby-GNOME2 to Ruby-GNOME
+mail/fetchmail64|mail/fetchmail|2019-09-28|mail/fetchmail now provides the same version
+devel/rubygem-grape_logging181|devel/rubygem-grape_logging|2019-09-29|Obsolete, please use devel/rubygem-grape_logging
+devel/py-pip-tools3|devel/py-pip-tools|2019-09-30|Use devel/py-pip-tools instead
+textproc/py-openpyxl24|textproc/py-openpyxl|2019-09-30|Has expired: Use textproc/py-openpyxl instead
+textproc/rubygem-elasticsearch-api6|textproc/rubygem-elasticsearch-api|2019-09-30|Has expired: Usetextproc/rubygem-elasticsearch-api instead
+textproc/rubygem-elasticsearch-transport6|textproc/rubygem-elasticsearch-transport|2019-09-30|Has expired: Usetextproc/rubygem-elasticsearch-transport instead
+textproc/rubygem-elasticsearch-xpack6|textproc/rubygem-elasticsearch-xpack|2019-09-30|Has expired: Usetextproc/rubygem-elasticsearch-xpack instead
+textproc/rubygem-elasticsearch6|textproc/rubygem-elasticsearch|2019-09-30|Has expired: Usetextproc/rubygem-elasticsearch instead
+devel/rubygem-sprockets-rails|devel/rubygem-sprockets-rails-rails4|2019-09-30|Rename to match our rubygem- port naming
+java/linux-oracle-jdk9|java/openjdk11|2019-09-30|Has expired: No longer maintained upstream, please migrate to openjdk11
+java/linux-oracle-jdk10|java/openjdk11|2019-09-30|Has expired: No longer maintained upstream, please migrate to openjdk11
+graphics/imgvtopgm||2019-09-30|Has expired: obsolete technology
+sysutils/py-azure-cli-acs|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-advisor|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-ams|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-appservice|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-backup|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-batch|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-batchai|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-billing|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-botservice|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-cdn|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-cloud|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-cognitiveservices|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-configure|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-consumption|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-container|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-cosmosdb|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-dla|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-dls|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-dms|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-eventgrid|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-eventhubs|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-extension|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-feedback|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-find|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-hdinsight|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-interactive|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-iot|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-iotcentral|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-keyvault|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-kusto|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-lab|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-maps|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-monitor|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-network|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-policyinsights|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-profile|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-rdbms|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-redis|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-relay|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-reservations|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-resource|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-role|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-search|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-security|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-servicebus|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-servicefabric|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-signalr|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-sql|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-sqlvm|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-storage|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+sysutils/py-azure-cli-vm|sysutils/py-azure-cli|2019-09-30|Has expired: Incorporated into azure-cli package
+x11-toolkits/qt5-canvas3d||2019-10-01|Has been deprecated upstream
+x11/libXTrap||2019-10-01|Deprecated upstream
+x11/libXprintAppUtil||2019-10-01|Deprecated upstream
+x11/libXprintUtil||2019-10-01|Deprecated upstream
+x11/rstart||2019-10-01|Deprecated in favor of X11 forwarding over SSH
+x11/xdbedizzy||2019-10-01|Deprecated upstream
+x11/xplsprinters||2019-10-01|Deprecated upstream
+x11/xprehashprinterlist||2019-10-01|Deprecated upstream
+x11/xtrap||2019-10-01|Deprecated upstream
+security/softhsm|security/softhsm2|2019-10-04|Has expired: End-of-life announced, update to softhsm2 ASAP
+net/asterisk15|net/asterisk16|2019-10-04|Has expired: Asterisk 15.x will reach EOL on 2019-10-03. Please migrate to net/asterisk16
+x11-wm/fvwm|x11-wm/fvwm2|2019-10-06|Has expired: Unfetchable, unmaintained, unsupported upstream
+databases/jakarta-commons-dbutils|databases/apache-commons-dbutils|2019-10-06|Renamed upstream
+devel/jakarta-commons-configuration|devel/apache-commons-configuration|2019-10-06|Renamed upstream
+devel/jakarta-commons-io|devel/apache-commons-io|2019-10-06|Renamed upstream
+devel/jakarta-commons-jxpath|devel/apache-commons-jxpath|2019-10-06|Renamed upstream
+devel/jakarta-commons-modeler|devel/apache-commons-modeler|2019-10-06|Renamed upstream
+java/jakarta-commons-cli|java/apache-commons-cli|2019-10-06|Renamed upstream
+java/jakarta-commons-collections|java/apache-commons-collections|2019-10-06|Renamed upstream
+java/jakarta-commons-lang|java/apache-commons-lang|2019-10-06|Renamed upstream
+java/jakarta-commons-logging|java/apache-commons-logging|2019-10-06|Renamed upstream
+java/jakarta-commons-primitives|java/apache-commons-primitives|2019-10-06|Renamed upstream
+lang/jakarta-commons-jelly|lang/apache-commons-jelly|2019-10-06|Renamed upstream
+net/jakarta-commons-net|net/apache-commons-net|2019-10-06|Renamed upstream
+textproc/jakarta-commons-digester|textproc/apache-commons-digester|2019-10-06|Renamed upstream
+devel/jakarta-commons-daemon|devel/apache-commons-daemon|2019-10-07|Renamed upstream
+print/py-fonttools-graphite|print/py-fonttools|2019-10-07|Folded back into main port
+print/py-fonttools-interpolatable|print/py-fonttools|2019-10-07|Folded back into main port
+print/py-fonttools-lxml|print/py-fonttools|2019-10-07|Folded back into main port
+print/py-fonttools-plot|print/py-fonttools|2019-10-07|Folded back into main port
+print/py-fonttools-symfont|print/py-fonttools|2019-10-07|Folded back into main port
+print/py-fonttools-ufo|print/py-fonttools|2019-10-07|Folded back into main port
+print/py-fonttools-unicode|print/py-fonttools|2019-10-07|Folded back into main port
+print/py-fonttools-woff|print/py-fonttools|2019-10-07|Folded back into main port
+java/jakarta-commons-lang3|java/apache-commons-lang3|2019-10-07|Renamed upstream
+x11-clocks/xfce4-timer-out-plugin|x11-clocks/xfce4-time-out-plugin|2019-10-09|Port was incorrectly named different to upstream
+x11-toolkits/gai||2019-10-10|Abandonware since 2005

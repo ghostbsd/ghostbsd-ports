@@ -3,8 +3,8 @@
 
 PORTNAME=	tin
 PORTVERSION=	2.4.2
-PORTREVISION=	5
-CATEGORIES+=	news ipv6
+PORTREVISION=	6
+CATEGORIES+=	news
 MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/v${PORTVERSION:R}/ \
 		ftp://ftp.sunet.se/pub/news/readers/tin/v${PORTVERSION:R}/ \
 		ftp://sunsite.icm.edu.pl/pub/unix/news/tin/v${PORTVERSION:R}/ \

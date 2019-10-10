@@ -3,7 +3,7 @@
 PORTNAME=	kea
 PORTVERSION=	${ISCVERSION:S/-P/P/:S/-beta/b/:S/a/.a/:S/rc/.rc/}
 PORTREVISION=	0
-CATEGORIES=	net ipv6
+CATEGORIES=	net
 MASTER_SITES=	ISC/kea/${ISCVERSION}
 DISTNAME=	${PORTNAME}-${ISCVERSION}
 
@@ -42,14 +42,6 @@ PORTDOCS=	AUTHORS COPYING ChangeLog README \
 
 OPTIONS_DEFINE=	DOCS MYSQL PGSQL
 OPTIONS_SUB=	yes
-DOCS_MAKE_ARGS_OFF=	\
-		INSTALL_STRIP_PROGRAM="${WRKSRC}/install-sh -c -s" \
-		INSTALL_STRIP_FLAG="-s" \
-		INSTALL_PROGRAM_ENV="STRIPPROG=${STRIP}"
-DOCS_INSTALL_TARGET_OFF=	\
-		install-exec-am \
-		install-pkgconfigDATA \
-		install-pkgincludeHEADERS
 MYSQL_USE=	MYSQL=client
 MYSQL_CONFIGURE_ON=	--with-dhcp-mysql=${LOCALBASE}/bin/mysql_config
 MYSQL_CONFIGURE_OFF=	--without-dhcp-mysql

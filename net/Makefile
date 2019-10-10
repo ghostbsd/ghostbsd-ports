@@ -20,6 +20,7 @@
     SUBDIR += aluminum
     SUBDIR += anet
     SUBDIR += aoe
+    SUBDIR += apache-commons-net
     SUBDIR += apinger
     SUBDIR += appkonference
     SUBDIR += aprsc
@@ -35,7 +36,6 @@
     SUBDIR += asterisk-chan_sccp
     SUBDIR += asterisk-g72x
     SUBDIR += asterisk13
-    SUBDIR += asterisk15
     SUBDIR += asterisk16
     SUBDIR += avahi
     SUBDIR += avahi-app
@@ -136,6 +136,7 @@
     SUBDIR += dtcp
     SUBDIR += dtcpclient
     SUBDIR += dual-dhclient
+    SUBDIR += dual-dhclient-daemon
     SUBDIR += easysoap
     SUBDIR += echoping
     SUBDIR += elixir-kafka_ex
@@ -283,7 +284,6 @@
     SUBDIR += isc-dhcp44-relay
     SUBDIR += isc-dhcp44-server
     SUBDIR += istgt
-    SUBDIR += jakarta-commons-net
     SUBDIR += java-beepcore
     SUBDIR += jcifs
     SUBDIR += jgroups
@@ -340,6 +340,7 @@
     SUBDIR += ldapscripts
     SUBDIR += ldapsdk
     SUBDIR += ldapsh
+    SUBDIR += leproxy
     SUBDIR += lft
     SUBDIR += libarms
     SUBDIR += libbgpdump
@@ -1282,6 +1283,7 @@
     SUBDIR += rubygem-mqtt
     SUBDIR += rubygem-net-ldap
     SUBDIR += rubygem-net-netrc
+    SUBDIR += rubygem-net-ntp
     SUBDIR += rubygem-net-ping
     SUBDIR += rubygem-netrc
     SUBDIR += rubygem-network_interface

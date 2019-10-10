@@ -19,7 +19,6 @@
     SUBDIR += fpc-gtk2
     SUBDIR += fpc-xforms
     SUBDIR += fxscintilla
-    SUBDIR += gai
     SUBDIR += gdl
     SUBDIR += girara
     SUBDIR += gnocl
@@ -32,6 +31,7 @@
     SUBDIR += gstreamer-plugins-pango
     SUBDIR += gstreamer1-plugins-gtk
     SUBDIR += gstreamer1-plugins-pango
+    SUBDIR += gtk-layer-shell
     SUBDIR += gtk-sharp-beans
     SUBDIR += gtk-sharp20
     SUBDIR += gtk-sharp30
@@ -204,7 +204,6 @@
     SUBDIR += py-xlib
     SUBDIR += pypy-tkinter
     SUBDIR += qml-box2d
-    SUBDIR += qt5-canvas3d
     SUBDIR += qt5-charts
     SUBDIR += qt5-datavis3d
     SUBDIR += qt5-declarative

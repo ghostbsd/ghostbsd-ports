@@ -3,6 +3,12 @@
 
     COMMENT = Java language support
 
+    SUBDIR += apache-commons-cli
+    SUBDIR += apache-commons-collections
+    SUBDIR += apache-commons-lang
+    SUBDIR += apache-commons-lang3
+    SUBDIR += apache-commons-logging
+    SUBDIR += apache-commons-primitives
     SUBDIR += aparapi
     SUBDIR += avis
     SUBDIR += berkeley-db
@@ -39,17 +45,11 @@
     SUBDIR += jai
     SUBDIR += jakarta-bcel
     SUBDIR += jakarta-commons-beanutils
-    SUBDIR += jakarta-commons-cli
     SUBDIR += jakarta-commons-codec
-    SUBDIR += jakarta-commons-collections
     SUBDIR += jakarta-commons-dbcp
     SUBDIR += jakarta-commons-discovery
     SUBDIR += jakarta-commons-httpclient
-    SUBDIR += jakarta-commons-lang
-    SUBDIR += jakarta-commons-lang3
-    SUBDIR += jakarta-commons-logging
     SUBDIR += jakarta-commons-pool
-    SUBDIR += jakarta-commons-primitives
     SUBDIR += jakarta-oro
     SUBDIR += jakarta-regexp
     SUBDIR += jasmin
@@ -93,9 +93,7 @@
     SUBDIR += jxgrabkey
     SUBDIR += langspec
     SUBDIR += lightweight-java-profiler
-    SUBDIR += linux-oracle-jdk10
     SUBDIR += linux-oracle-jdk18
-    SUBDIR += linux-oracle-jdk9
     SUBDIR += linux-oracle-jre10
     SUBDIR += linux-oracle-jre18
     SUBDIR += linux-oracle-jre9

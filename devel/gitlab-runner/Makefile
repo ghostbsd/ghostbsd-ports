@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab-runner
-PORTVERSION=	12.1.0
+PORTVERSION=	12.3.0
 CATEGORIES=	devel
 MASTER_SITES=	\
 		https://gitlab-runner-downloads.s3.amazonaws.com/master/docker/:dockerx64 \
@@ -30,16 +30,18 @@ USE_GITLAB=	yes
 # Find tags here:
 # https://gitlab.com/gitlab-org/gitlab-runner/tags
 GL_ACCOUNT=	gitlab-org
-GL_COMMIT=	de7731dd40f8e65738ac1452c13e8636dc3453c6
-GITBRANCH=	12-1-stable
+GL_COMMIT=	a8a019e0a8f4f4c4d9d699f0295bb8679bb13bcf
+GITBRANCH=	12-3-stable
 # https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-freebsd-amd64
-BUILT=		2019-07-19T13:53:05+0000
+BUILT=		2019-09-20T08:27:17+0000
 
-GO_LDFLAGS=	-X gitlab.com/gitlab-org/gitlab-runner/common.VERSION=${PORTVERSION} \
+GO_PKGNAME=	gitlab.com/${GL_ACCOUNT}/${GL_PROJECT}
+GO_BUILDFLAGS=	-ldflags="\
+		-X gitlab.com/gitlab-org/gitlab-runner/common.VERSION=${PORTVERSION} \
 		-X gitlab.com/gitlab-org/gitlab-runner/common.REVISION=${GL_COMMIT:C/^(........).*/\1/} \
 		-X gitlab.com/gitlab-org/gitlab-runner/common.BUILT=${BUILT} \
 		-X gitlab.com/gitlab-org/gitlab-runner/common.BRANCH=${GITBRANCH} \
-		-s -w
+		-s -w"
 
 PLIST_FILES=	bin/gitlab-runner
 
@@ -48,13 +50,12 @@ USE_RC_SUBR=	gitlab_runner
 USERS=		gitlab-runner
 GROUPS=		gitlab-runner
 
-post-extract:
+post-patch:
 	@${MKDIR} ${WRKSRC}/out/docker/
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/prebuilt-x86_64.tar.xz ${WRKSRC}/out/docker/
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/prebuilt-arm.tar.xz ${WRKSRC}/out/docker/
-	@${MV} ${WRKSRC}/vendor ${WRKSRC}/src
 
-do-build:
+pre-build:
 	@cd ${WRKSRC} && go-bindata \
 		-pkg docker \
 		-nocompress \
@@ -64,15 +65,5 @@ do-build:
 		-o executors/docker/bindata.go \
 		out/docker/prebuilt-x86_64.tar.xz \
 		out/docker/prebuilt-arm.tar.xz
-	@cd ${WRKSRC} && go fmt executors/docker/bindata.go
-	@${MKDIR} ${WRKSRC}/src/gitlab.com/gitlab-org
-	@${LN} -s ${WRKSRC} ${WRKSRC}/src/gitlab.com/gitlab-org/gitlab-runner
-	@cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} CGO_ENABLED=0 GOPATH=${WRKSRC} go build \
-			-ldflags="${GO_LDFLAGS}" \
-			-o gitlab-runner
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gitlab-runner ${STAGEDIR}${PREFIX}/bin/gitlab-runner
 
 .include <bsd.port.mk>

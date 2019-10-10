@@ -9,6 +9,7 @@
     SUBDIR += ADMsmb
     SUBDIR += ADMsnmp
     SUBDIR += R-cran-ROAuth
+    SUBDIR += R-cran-askpass
     SUBDIR += R-cran-digest
     SUBDIR += R-cran-openssl
     SUBDIR += acme.sh
@@ -35,6 +36,7 @@
     SUBDIR += autossh
     SUBDIR += avcheck
     SUBDIR += aws-iam-authenticator
+    SUBDIR += aws-vault
     SUBDIR += axTLS
     SUBDIR += barnyard2
     SUBDIR += barnyard2-sguil
@@ -272,6 +274,7 @@
     SUBDIR += krb5-devel
     SUBDIR += kripp
     SUBDIR += kstart
+    SUBDIR += ktls_isa-l_crypto-kmod
     SUBDIR += kwalletmanager
     SUBDIR += l0pht-watch
     SUBDIR += l0phtcrack
@@ -738,6 +741,7 @@
     SUBDIR += pam_pseudo
     SUBDIR += pam_pwdfile
     SUBDIR += pam_require
+    SUBDIR += pam_script
     SUBDIR += pam_search_list
     SUBDIR += pam_ssh_agent_auth
     SUBDIR += pam_yubico
@@ -836,6 +840,7 @@
     SUBDIR += portsentry
     SUBDIR += ppars
     SUBDIR += proftpd-mod_clamav
+    SUBDIR += protonvpn-cli
     SUBDIR += proxycheck
     SUBDIR += proxytunnel
     SUBDIR += pscan
@@ -1225,7 +1230,6 @@
     SUBDIR += softether
     SUBDIR += softether-devel
     SUBDIR += softether5
-    SUBDIR += softhsm
     SUBDIR += softhsm2
     SUBDIR += sops
     SUBDIR += spass

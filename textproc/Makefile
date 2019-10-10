@@ -41,6 +41,7 @@
     SUBDIR += amberfish
     SUBDIR += ansifilter
     SUBDIR += antiword
+    SUBDIR += apache-commons-digester
     SUBDIR += apache-poi
     SUBDIR += apache-solr
     SUBDIR += apertium
@@ -304,7 +305,6 @@
     SUBDIR += itstool
     SUBDIR += itstool22
     SUBDIR += jade
-    SUBDIR += jakarta-commons-digester
     SUBDIR += jalingo
     SUBDIR += jarnal
     SUBDIR += java2html
@@ -491,6 +491,7 @@
     SUBDIR += p5-Apache-ParseLog
     SUBDIR += p5-Apache-Solr
     SUBDIR += p5-BibTeX-Parser
+    SUBDIR += p5-BigIP-ParseConfig
     SUBDIR += p5-Bloom-Filter
     SUBDIR += p5-CAM-PDF
     SUBDIR += p5-CQL-Parser
@@ -872,6 +873,7 @@
     SUBDIR += p5-Text-Hyphen
     SUBDIR += p5-Text-LTSV
     SUBDIR += p5-Text-Language-Guess
+    SUBDIR += p5-Text-Locus
     SUBDIR += p5-Text-Lorem
     SUBDIR += p5-Text-Markdown
     SUBDIR += p5-Text-MarkdownTable
@@ -1319,7 +1321,6 @@
     SUBDIR += py-numpydoc
     SUBDIR += py-ocrmypdf
     SUBDIR += py-openpyxl
-    SUBDIR += py-openpyxl24
     SUBDIR += py-openstackdocstheme
     SUBDIR += py-os-api-ref
     SUBDIR += py-packageurl-python
@@ -1526,17 +1527,18 @@
     SUBDIR += rubygem-diffy31
     SUBDIR += rubygem-docdiff
     SUBDIR += rubygem-elasticsearch
+    SUBDIR += rubygem-elasticsearch503
     SUBDIR += rubygem-elasticsearch-api
-    SUBDIR += rubygem-elasticsearch-api6
+    SUBDIR += rubygem-elasticsearch-api503
     SUBDIR += rubygem-elasticsearch-dsl
     SUBDIR += rubygem-elasticsearch-model
+    SUBDIR += rubygem-elasticsearch-model019
     SUBDIR += rubygem-elasticsearch-persistence
     SUBDIR += rubygem-elasticsearch-rails
+    SUBDIR += rubygem-elasticsearch-rails019
     SUBDIR += rubygem-elasticsearch-transport
-    SUBDIR += rubygem-elasticsearch-transport6
+    SUBDIR += rubygem-elasticsearch-transport503
     SUBDIR += rubygem-elasticsearch-xpack
-    SUBDIR += rubygem-elasticsearch-xpack6
-    SUBDIR += rubygem-elasticsearch6
     SUBDIR += rubygem-emot
     SUBDIR += rubygem-escape_utils
     SUBDIR += rubygem-escape_utils11
@@ -1638,7 +1640,10 @@
     SUBDIR += rubygem-sass32
     SUBDIR += rubygem-sass34
     SUBDIR += rubygem-sassc
-    SUBDIR += rubygem-sassc-rails
+    SUBDIR += rubygem-sassc-rails-rails4
+    SUBDIR += rubygem-sassc-rails-rails5
+    SUBDIR += rubygem-sassc-rails-rails50
+    SUBDIR += rubygem-sassc-rails-rails52
     SUBDIR += rubygem-sax-machine
     SUBDIR += rubygem-scss_lint
     SUBDIR += rubygem-shell2html

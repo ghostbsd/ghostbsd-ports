@@ -2,8 +2,9 @@
 
 PORTNAME=	cyrus-imapd
 PORTVERSION=	3.0.11
+PORTREVISION=	1
 #PORTREVISION=	0
-CATEGORIES=	mail ipv6
+CATEGORIES=	mail
 MASTER_SITES=	https://www.cyrusimap.org/releases/
 PKGNAMESUFFIX=	30
 
