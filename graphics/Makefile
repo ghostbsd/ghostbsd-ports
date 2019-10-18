@@ -40,8 +40,6 @@
     SUBDIR += aalib
     SUBDIR += aaphoto
     SUBDIR += acidwarp
-    SUBDIR += aeskulap
-    SUBDIR += agave
     SUBDIR += agg
     SUBDIR += alembic
     SUBDIR += alpng
@@ -60,6 +58,7 @@
     SUBDIR += autopano-sift-c
     SUBDIR += autotrace
     SUBDIR += aview
+    SUBDIR += avir
     SUBDIR += azpainter
     SUBDIR += backfract
     SUBDIR += barbecue
@@ -82,7 +81,6 @@
     SUBDIR += cal3d
     SUBDIR += camera
     SUBDIR += camerakit
-    SUBDIR += cbview
     SUBDIR += cbviewer
     SUBDIR += cegui
     SUBDIR += cenon
@@ -101,11 +99,9 @@
     SUBDIR += commons-utilities
     SUBDIR += compupic
     SUBDIR += converseen
-    SUBDIR += copperspice
     SUBDIR += cosmoplayer
     SUBDIR += cptutils
     SUBDIR += crw
-    SUBDIR += cthumb
     SUBDIR += curator
     SUBDIR += cuttlefish
     SUBDIR += darktable
@@ -147,6 +143,7 @@
     SUBDIR += dspdfviewer
     SUBDIR += duhdraw
     SUBDIR += dynamechs
+    SUBDIR += ebsynth
     SUBDIR += edje_viewer
     SUBDIR += electricsheep
     SUBDIR += electrix
@@ -209,7 +206,6 @@
     SUBDIR += frei0r-plugins-opencv
     SUBDIR += frogr
     SUBDIR += ftgl
-    SUBDIR += fujiplay
     SUBDIR += fusefs-gphotofs
     SUBDIR += fv
     SUBDIR += fyre
@@ -243,20 +239,12 @@
     SUBDIR += gimp-app
     SUBDIR += gimp-beautify-plugin
     SUBDIR += gimp-data-extras
-    SUBDIR += gimp-ez-perspective-plugin
-    SUBDIR += gimp-focusblur-plugin
     SUBDIR += gimp-gmic-plugin
     SUBDIR += gimp-help
-    SUBDIR += gimp-jagged-border-script
     SUBDIR += gimp-lensfun-plugin
     SUBDIR += gimp-lqr-plugin
-    SUBDIR += gimp-manual-html
     SUBDIR += gimp-refocus-plugin
     SUBDIR += gimp-resynthesizer
-    SUBDIR += gimp-save-for-web
-    SUBDIR += gimp-wavelet-denoise-plugin
-    SUBDIR += gimp-wavelet-sharpen-plugin
-    SUBDIR += giram
     SUBDIR += gkrellkam2
     SUBDIR += glad
     SUBDIR += gle
@@ -367,7 +355,6 @@
     SUBDIR += instant-meshes
     SUBDIR += intel-backlight
     SUBDIR += intergif
-    SUBDIR += inventor
     SUBDIR += ipe
     SUBDIR += jalbum
     SUBDIR += jasper
@@ -386,8 +373,6 @@
     SUBDIR += jpeg-turbo
     SUBDIR += jpeginfo
     SUBDIR += jpegoptim
-    SUBDIR += jpg2pdf
-    SUBDIR += jpgraph2
     SUBDIR += jpgtn
     SUBDIR += jslice
     SUBDIR += kamera
@@ -543,7 +528,6 @@
     SUBDIR += magnum-plugins
     SUBDIR += mahotas
     SUBDIR += maim
-    SUBDIR += makehuman
     SUBDIR += mandelbulber
     SUBDIR += mapcache
     SUBDIR += mapnik
@@ -808,7 +792,6 @@
     SUBDIR += processing
     SUBDIR += proj
     SUBDIR += pstoedit
-    SUBDIR += pstoepsi
     SUBDIR += ptex
     SUBDIR += py-OWSLib
     SUBDIR += py-PyOpenGL
@@ -1083,7 +1066,6 @@
     SUBDIR += xglurbules
     SUBDIR += xgrasp
     SUBDIR += xli
-    SUBDIR += xmandel
     SUBDIR += xmedcon
     SUBDIR += xmlgraphics-commons
     SUBDIR += xmountains

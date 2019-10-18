@@ -5,8 +5,31 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20191016:
+  AFFECTS: users of KDE Plasma Desktop
+  AUTHOR: kde@FreeBSD.org
+
+  With Plasma 5.17 the startup script has been renamed. People who use the
+  .xinitrc method to start Plasma have to call the new binary.
+
+  Previously:
+  	exec ck-launch-session startkde
+  Change to:
+  	exec ck-launch-session startplasma-x11
+
+20191014:
+  AFFECTS: users of mail/rspamd, mail/rspamd-devel
+  AUTHOR: vsevolod@FreeBSD.org
+
+  Sample configuration files has been removed as default configuration files
+  are NOT intended for modification by users and SHOULD be overwritten on
+  port upgrade.
+
+  Make sure the default configuration files are unmodified and migrate all
+  configuration changes to the proper places, before you continue.
+
 20191002:
-  AFFECTS: users of groff
+  AFFECTS: users of textproc/groff
   AUTHOR: bapt@FreeBSD.org
 
   with groff 1.2.4_3, groff does not depends anymore on ghostscript and
@@ -17,7 +40,7 @@ you update your ports collection, before attempting any port upgrades.
   Also note that the X11 option has been removed.
 
 20190930:
-  AFFECTS: users of NetBox
+  AFFECTS: users of net-mgmt/netbox
   AUTHOR: kai@FreeBSD.org
 
   Since the 2.6 release a running Redis server instance is required for
@@ -56,7 +79,7 @@ you update your ports collection, before attempting any port upgrades.
   # portmaster -o emulators/qemu-devel emulators/qemu40
 
 20190927:
-  AFFECTS: users of XFCE desktop
+  AFFECTS: users of XFCE desktop (x11-wm/xfce4)
   AUTHOR: madpilot@FreeBSD.org
 
   Due to changes in the XFCE 4.14 metaport, systems could end up with
@@ -70,7 +93,7 @@ you update your ports collection, before attempting any port upgrades.
   settings applet and enable only one Screensaver there.
 
   Some further information can be found in the xfce4-session
-  pkg-message dispolayed on installation and upgrade.
+  pkg-message displayed on installation and upgrade.
 
 20190920:
   AFFECTS: users of net-mgmt/pushgateway
@@ -454,7 +477,7 @@ you update your ports collection, before attempting any port upgrades.
   are more intuitive and logical.
 
 20190604:
-  AFFECTS: users of samba47
+  AFFECTS: users of net/samba47
   AUTHOR: antoine@FreeBSD.org
 
   The default version of samba has been switched from 4.7 to 4.8.

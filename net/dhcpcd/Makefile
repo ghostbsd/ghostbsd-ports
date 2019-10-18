@@ -2,10 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	dhcpcd
-PORTVERSION=	8.0.6
+PORTVERSION=	8.1.1
 CATEGORIES=	net
+MASTER_SITES=	https://roy.marples.name/downloads/dhcpcd/ \
+		https://cflags.cc/roy/dhcpcd/
 
-MAINTAINER=	roy@marples.name
+MAINTAINER=	woodsb02@FreeBSD.org
 COMMENT=	DHCP/IPv4LL/IPv6RS/DHCPv6 client
 
 LICENSE=	BSD2CLAUSE

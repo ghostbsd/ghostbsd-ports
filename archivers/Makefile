@@ -30,7 +30,6 @@
     SUBDIR += file-roller
     SUBDIR += fpc-bzip2
     SUBDIR += fpc-unzip
-    SUBDIR += freetar
     SUBDIR += gcab
     SUBDIR += gcpio
     SUBDIR += gnome-autoar
@@ -39,9 +38,7 @@
     SUBDIR += gzip
     SUBDIR += gzrecover
     SUBDIR += ha
-    SUBDIR += hffzip
     SUBDIR += hlextract
-    SUBDIR += hpack.non-usa.only
     SUBDIR += innoextract
     SUBDIR += javatar
     SUBDIR += jzlib
@@ -64,7 +61,6 @@
     SUBDIR += liblz4
     SUBDIR += liblzxcomp
     SUBDIR += libmspack
-    SUBDIR += liborange
     SUBDIR += libpar2
     SUBDIR += librtfcomp
     SUBDIR += libunrar
@@ -245,7 +241,6 @@
     SUBDIR += unrar
     SUBDIR += unrar-iconv
     SUBDIR += unshield
-    SUBDIR += untar
     SUBDIR += unzip
     SUBDIR += unzoo
     SUBDIR += upx

@@ -10,7 +10,6 @@
     SUBDIR += dialog4ports
     SUBDIR += dialog4ports-static
     SUBDIR += distilator
-    SUBDIR += fastest_sites
     SUBDIR += fbsdpkgupdate
     SUBDIR += freebsd-bugzilla-cli
     SUBDIR += genpatch
@@ -28,7 +27,6 @@
     SUBDIR += pchecker
     SUBDIR += pkg
     SUBDIR += pkg-devel
-    SUBDIR += pkg-plist
     SUBDIR += pkg-provides
     SUBDIR += pkg-rmleaf
     SUBDIR += pkg_cleanup
@@ -74,7 +72,6 @@
     SUBDIR += py-pytoport
     SUBDIR += py-skog
     SUBDIR += software-station
-    SUBDIR += symports
     SUBDIR += synth
     SUBDIR += update-station
     SUBDIR += wanted-ports
