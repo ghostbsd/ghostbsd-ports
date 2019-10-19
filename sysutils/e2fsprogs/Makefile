@@ -181,9 +181,9 @@ post-patch::
 .if ${MASTERDIR} == ${.CURDIR}
 # NOTE: The previous .if block goes all the way to the end of the file.
 
-.if !empty(PORT_OPTIONS:MNOTESTS) && (${OPSYS} == FreeBSD) && (${OSVERSION} >= 1200000 || ((${ARCH} != i386) && (${ARCH} != amd64)))
-BROKEN=	it was not tested on your system by the maintainer; you must run self-tests
-.endif
+#.if !empty(PORT_OPTIONS:MNOTESTS) && (${OPSYS} == FreeBSD) && (${OSVERSION} >= 1200000 || ((${ARCH} != i386) && (${ARCH} != amd64)))
+#BROKEN=	it was not tested on your system by the maintainer; you must run self-tests
+#.endif
 
 pre-build:
 # fix up Makefile ordering for parallel builds
