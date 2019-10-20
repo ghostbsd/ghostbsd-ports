@@ -33,9 +33,9 @@ doas_settings()
     if [ $? -ne 0 ] ; then
         echo 'permit nopass keepenv :wheel cmd wpa_supplicant' >> ${PKG_PREFIX}/etc/doas.conf
     fi
-    grep -q 'permit nopass keepenv :wheel cmd killall wpa_supplicant' ${PKG_PREFIX}/etc/doas.conf 2>/dev/null
+    grep -q 'permit nopass keepenv :wheel cmd killall args wpa_supplicant' ${PKG_PREFIX}/etc/doas.conf 2>/dev/null
     if [ $? -ne 0 ] ; then
-        echo 'permit nopass keepenv :wheel cmd killall wpa_supplicant' >> ${PKG_PREFIX}/etc/doas.conf
+        echo 'permit nopass keepenv :wheel cmd killall args wpa_supplicant' >> ${PKG_PREFIX}/etc/doas.conf
     fi
 }
 
