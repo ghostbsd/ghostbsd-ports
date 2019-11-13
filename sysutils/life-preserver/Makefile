@@ -9,6 +9,8 @@ CATEGORIES=	sysutils
 MAINTAINER=	kmoore@FreeBSD.org
 COMMENT=	PC-BSD Life Preserver Utility
 
+BROKEN=		unfetchable
+
 LICENSE=	BSD3CLAUSE
 
 RUN_DEPENDS=	${LOCALBASE}/share/trueos/scripts/functions.sh:sysutils/trueos-libsh \

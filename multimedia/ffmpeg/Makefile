@@ -3,7 +3,7 @@
 
 PORTNAME=	ffmpeg
 PORTVERSION=	4.2.1
-PORTREVISION=	6
+PORTREVISION=	14
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio net
 MASTER_SITES=	https://ffmpeg.org/releases/
@@ -40,7 +40,7 @@ OPTIONS_DEFINE=	ALSA AMR_NB AMR_WB AOM ARIBB24 ASS BEIGNET BS2B CACA CDIO CELT C
 		FREETYPE FREI0R FRIBIDI GME GSM ICONV ILBC JACK KLVANC KVAZAAR LADSPA \
 		LAME LENSFUN LIBBLURAY LIBRSVG2 LIBXML2 LV2 MODPLUG MYSOFA OPENAL OPENCL OPENCV OPENGL \
 		OPENH264 OPENJPEG OPENMPT OPTIMIZED_CFLAGS OPUS POCKETSPHINX PULSEAUDIO \
-		RUBBERBAND RTCPU SDL SMB SNAPPY SNDIO SOXR SPEEX SRT SSH TENSORFLOW \
+		RAV1E RUBBERBAND RTCPU SDL SMB SNAPPY SNDIO SOXR SPEEX SRT SSH TENSORFLOW \
 		TESSERACT THEORA TWOLAME V4L VAAPI VAPOURSYNTH VDPAU VIDSTAB VMAF VORBIS \
 		VO_AMRWBENC VPX WAVPACK WEBP X264 X265 XAVS2 XCB XVID \
 		XVIDEO ZIMG ZMQ ZVBI
@@ -117,6 +117,7 @@ NONFREE_DESC=	Allow use of nonfree code
 OPENMPT_DESC=	Decoding tracked files via libopenmpt
 OPENH264_DESC=	H.264 video codec support via OpenH264
 POCKETSPHINX_DESC=	Automatic Speech Recognition via PocketSphinx
+RAV1E_DESC=	AV1 encoding via librav1e
 RUBBERBAND_DESC=Time-stretching and pitch-shifting with librubberband
 RTCPU_DESC=	Detect CPU capabilities at runtime
 RTMP_DESC=	RTMP(T)E protocol support
@@ -391,6 +392,10 @@ POCKETSPHINX_BROKEN=	pocketsphinx < 5prealpha is not supported
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 PULSEAUDIO_CONFIGURE_ENABLE=	libpulse
 
+# rav1e
+RAV1E_LIB_DEPENDS=	librav1e.so:multimedia/librav1e
+RAV1E_CONFIGURE_ENABLE=	librav1e
+
 # rubberband
 RUBBERBAND_LIB_DEPENDS=	librubberband.so:audio/rubberband
 RUBBERBAND_CONFIGURE_ENABLE=	librubberband
@@ -501,6 +506,7 @@ VAPOURSYNTH_LIB_DEPENDS=	libvapoursynth-script.so:multimedia/vapoursynth
 VAPOURSYNTH_CONFIGURE_ENABLE=	vapoursynth
 
 # vdpau
+VDPAU_USES=		xorg
 VDPAU_USE=		XORG=x11
 VDPAU_LIB_DEPENDS=	libvdpau.so:multimedia/libvdpau
 VDPAU_CONFIGURE_ENABLE=	vdpau
@@ -554,6 +560,7 @@ XAVS2_LIB_DEPENDS=	libxavs2.so:multimedia/xavs2
 XAVS2_CONFIGURE_ENABLE=	libxavs2
 
 # xcb
+XCB_USES=		xorg
 XCB_USE=		XORG=xcb
 XCB_CONFIGURE_ENABLE=	libxcb
 
@@ -562,6 +569,7 @@ XVID_LIB_DEPENDS=	libxvidcore.so:multimedia/xvid
 XVID_CONFIGURE_ENABLE=	libxvid
 
 # xv
+XVIDEO_USES=		xorg
 XVIDEO_USE=		XORG=x11,xext,xv
 XVIDEO_CONFIGURE_OFF=	--disable-outdev=xv
 

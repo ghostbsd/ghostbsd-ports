@@ -13,6 +13,7 @@
     SUBDIR += atlc
     SUBDIR += basicdsp
     SUBDIR += brickutils
+    SUBDIR += brlcad
     SUBDIR += calculix
     SUBDIR += calculix-ccx
     SUBDIR += cascade
@@ -22,6 +23,8 @@
     SUBDIR += dinotrace
     SUBDIR += electric
     SUBDIR += electric-ng
+    SUBDIR += elmerfem
+    SUBDIR += fasm
     SUBDIR += feappv
     SUBDIR += fidocadj
     SUBDIR += freecad
@@ -30,6 +33,7 @@
     SUBDIR += gdsreader
     SUBDIR += gdt
     SUBDIR += geda
+    SUBDIR += ghdl
     SUBDIR += gmsh
     SUBDIR += gnucap
     SUBDIR += gplcver
@@ -65,6 +69,7 @@
     SUBDIR += meshdev
     SUBDIR += netgen
     SUBDIR += ngspice_rework
+    SUBDIR += nvc
     SUBDIR += opencascade
     SUBDIR += openscad
     SUBDIR += openscad-devel

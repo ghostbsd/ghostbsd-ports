@@ -284,6 +284,7 @@
     SUBDIR += hpipm
     SUBDIR += hs-Agda
     SUBDIR += hs-semigroups
+    SUBDIR += ideep
     SUBDIR += ignition-math
     SUBDIR += igraph
     SUBDIR += intervaltree
@@ -370,6 +371,7 @@
     SUBDIR += mpc
     SUBDIR += mpexpr
     SUBDIR += mpfr
+    SUBDIR += mpfrc++
     SUBDIR += mpir
     SUBDIR += mppp
     SUBDIR += mprime
@@ -407,8 +409,10 @@
     SUBDIR += octave-forge-dicom
     SUBDIR += octave-forge-divand
     SUBDIR += octave-forge-doctest
+    SUBDIR += octave-forge-econometrics
     SUBDIR += octave-forge-fenv
     SUBDIR += octave-forge-financial
+    SUBDIR += octave-forge-fits
     SUBDIR += octave-forge-fpl
     SUBDIR += octave-forge-fuzzy-logic-toolkit
     SUBDIR += octave-forge-ga
@@ -732,6 +736,7 @@
     SUBDIR += py-numpy
     SUBDIR += py-nzmath
     SUBDIR += py-onnx
+    SUBDIR += py-onnx-tf
     SUBDIR += py-osqp
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
@@ -758,8 +763,8 @@
     SUBDIR += py-pyodeint
     SUBDIR += py-pyodesys
     SUBDIR += py-pysparse
-    SUBDIR += py-pysym
     SUBDIR += py-pystan
+    SUBDIR += py-pysym
     SUBDIR += py-python-louvain
     SUBDIR += py-pyvtk
     SUBDIR += py-quadprog

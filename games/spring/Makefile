@@ -33,7 +33,8 @@ USE_LDCONFIG=	yes
 LLD_UNSAFE=	yes
 DOS2UNIX_GLOB=	*.h *.hpp *.cpp
 
-USES=		cmake:insource compiler:c++11-lib dos2unix openal:al tar:lzma
+USES=		cmake:insource compiler:c++11-lib dos2unix gl openal:al sdl \
+		tar:lzma xorg
 USES+=		desktop-file-utils shared-mime-info
 CMAKE_ARGS=	-DDATADIR:STRING="share/${PORTNAME}" \
 		-DAI_TYPES:STRING="NATIVE" \
@@ -58,7 +59,6 @@ OPTIONS_DEFINE=	MANPAGES PR_DOWNLOADER DOCS
 OPTIONS_DEFAULT=MANPAGES PR_DOWNLOADER
 OPTIONS_SUB=	yes
 
-HTMLDOCS_DESC=	Build and install HTML documentation
 PR_DOWNLOADER_DESC=	Map and game downloader
 
 MANPAGES_CMAKE_ON=	-DCREATE_MAN_PAGES:BOOL=true -DMANDIR:STRING="man"

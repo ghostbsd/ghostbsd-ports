@@ -26,7 +26,7 @@ HAS_CONFIGURE=	yes
 USES=		python
 USE_PYTHON=	autoplist distutils cython
 
-SRC_BASE?=	/usr/src
+CONFIGURE_ENV=	FREEBSD_SRC=${SRC_BASE}
 MAKE_ENV=	FREEBSD_SRC=${SRC_BASE}
 
 .include <bsd.port.options.mk>

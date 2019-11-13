@@ -3,7 +3,7 @@
 
 PORTNAME=	vlc
 DISTVERSION=	3.0.8
-PORTREVISION=	6
+PORTREVISION=	11
 PORTEPOCH=	4
 CATEGORIES=	multimedia audio net www
 MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
@@ -124,7 +124,7 @@ CACA_LIB_DEPENDS=	libcaca.so:graphics/libcaca
 CACA_CONFIGURE_ENABLE=	caca
 
 CHROMECAST_LIB_DEPENDS=	libprotobuf-lite.so:devel/protobuf
-CHROMECASE_CONFIGURE_ENABLE=	chromecast
+CHROMECAST_CONFIGURE_ENABLE=	chromecast
 
 DAV1D_LIB_DEPENDS=	libdav1d.so:multimedia/dav1d
 DAV1D_CONFIGURE_ENABLE=	dav1d
@@ -345,7 +345,7 @@ WAYLAND_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
 WAYLAND_CONFIGURE_ENABLE=	wayland
 
 X11_USE=		GL=gl XORG=xcb,xorgproto,sm,ice,x11
-X11_USES=		gl
+X11_USES=		gl xorg
 X11_LIB_DEPENDS=	libxcb-keysyms.so:x11/xcb-util-keysyms
 X11_CONFIGURE_ENABLE=	xcb xvideo
 X11_CONFIGURE_WITH=	x

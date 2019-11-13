@@ -214,6 +214,7 @@
     SUBDIR += libquvi-scripts
     SUBDIR += libquvi-scripts09
     SUBDIR += libquvi09
+    SUBDIR += librav1e
     SUBDIR += librtmp
     SUBDIR += libsmacker
     SUBDIR += libtheora
@@ -413,6 +414,7 @@
     SUBDIR += vamps
     SUBDIR += vapoursynth
     SUBDIR += vapoursynth-l-smash-works
+    SUBDIR += vapoursynth-vmaf
     SUBDIR += vcdgear
     SUBDIR += vcdimager
     SUBDIR += vcdpad

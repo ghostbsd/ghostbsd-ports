@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	etcd
-PORTVERSION=	3.2.26
+PORTVERSION=	3.2.28
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 PKGNAMEPREFIX=	coreos-
@@ -13,12 +13,13 @@ COMMENT=	Highly-available key value store and service discovery
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-CONFLICTS_INSTALL=coreos-etcdctl-0.* coreos-etcd-* coreos-etcd31-* coreos-etcd33-*
-
 USES=		go
+
+CONFLICTS_INSTALL=	coreos-etcd-* coreos-etcd31-* coreos-etcd33-* \
+			coreos-etcd34-* coreos-etcdctl-0.*
+
 GO_PKGNAME=	github.com/coreos/etcd
-GO_TARGET=	./cmd/etcd \
-		./cmd/etcdctl
+GO_TARGET=	./cmd/etcd ./cmd/etcdctl
 USE_GITHUB=	yes
 GH_ACCOUNT=	coreos
 

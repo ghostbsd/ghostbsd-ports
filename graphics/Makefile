@@ -413,7 +413,6 @@
     SUBDIR += lfview
     SUBDIR += lib3ds
     SUBDIR += libGLU
-    SUBDIR += libGLw
     SUBDIR += libQGLViewer
     SUBDIR += libafterimage
     SUBDIR += libansilove
@@ -882,9 +881,11 @@
     SUBDIR += py-termtosvg
     SUBDIR += py-toyplot
     SUBDIR += py-traitsui
+    SUBDIR += py-pyvips
     SUBDIR += py-wand
     SUBDIR += py-webcolors
     SUBDIR += py-willow
+    SUBDIR += py-willow11
     SUBDIR += py-yaswfp
     SUBDIR += pygts
     SUBDIR += pymorph

@@ -40,8 +40,11 @@ SUBDIR += net-im
 SUBDIR += net-mgmt
 SUBDIR += net-p2p
 SUBDIR += news
+<<<<<<< HEAD
 SUBDIR += os
 SUBDIR += palm
+=======
+>>>>>>> freebsd/master
 SUBDIR += polish
 SUBDIR += ports-mgmt
 SUBDIR += portuguese

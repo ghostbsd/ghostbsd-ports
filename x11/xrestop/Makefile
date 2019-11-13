@@ -10,7 +10,9 @@ MASTER_SITES=	http://projects.o-hand.com/sources/${PORTNAME}/
 MAINTAINER=	bland@FreeBSD.org
 COMMENT=	X11 server side resource usage statistics monitor
 
-USES=		gmake pkgconfig ncurses
+BROKEN=		unfetchable
+
+USES=		gmake pkgconfig ncurses xorg
 USE_XORG=	x11 xext xrender xt xres xorgproto
 GNU_CONFIGURE=	yes
 

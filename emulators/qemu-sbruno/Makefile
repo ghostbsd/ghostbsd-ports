@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	qemu
-PORTVERSION=	2.11.50.g20190730
+PORTVERSION=	2.11.50.g20191112
 CATEGORIES=	emulators
 PKGNAMESUFFIX?=	-sbruno
 DIST_SUBDIR=	qemu/${PORTVERSION}
@@ -12,7 +12,7 @@ COMMENT?=	QEMU CPU Emulator - github bsd-user branch
 
 LICENSE=	GPLv2
 USE_GITHUB=	yes
-GH_TUPLE=	seanbruno:qemu-bsd-user:7b21781 \
+GH_TUPLE=	seanbruno:qemu-bsd-user:b581800	\
 		qemu:keycodemapdb:10739aa:keycodemapdb/ui/keycodemapdb
 HAS_CONFIGURE=	yes
 USES=		bison compiler:c11 gmake perl5 pkgconfig python:2.7,build
@@ -50,6 +50,7 @@ CONFIGURE_ARGS+=	--disable-tools
 .endif
 .else
 # qemu-system-* targets require pixman to build, add an explicit dependency.
+USES+=		xorg
 USE_XORG=	pixman
 .endif
 
@@ -58,6 +59,7 @@ USE_XORG=	pixman
 .if defined(QEMU_USER_STATIC)
 BUILD_DEPENDS+=	${LOCALBASE}/lib/libglib-2.0.a:devel/glib20
 .else
+USES+=		gnome
 USE_GNOME+=	glib20
 BUILD_DEPENDS+=	${LOCALBASE}/lib/libfdt.so:sysutils/dtc
 .endif
@@ -143,6 +145,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} --cc=${CC} --enable-docs \
 CONFIGURE_ARGS+=	--disable-sdl
 .else
 CONFIGURE_ARGS+=	--enable-sdl
+USES+=		sdl
 USE_SDL=	sdl
 .endif
 
@@ -151,12 +154,15 @@ CONFIGURE_ARGS+=	--disable-gtk --disable-vte
 PLIST_SUB+=	GTK2="@comment "
 .else
 USE_GNOME+=	gtk20 vte
-USES+=		gettext
+USES+=		gettext gnome
 PLIST_SUB+=	GTK2=""
 .endif
 
 .if ${PORT_OPTIONS:MGNUTLS}
 LIB_DEPENDS+=	libgnutls.so:security/gnutls
+CONFIGURE_ARGS+=	--enable-gnutls
+.else
+CONFIGURE_ARGS+=	--disable-gnutls
 .endif
 
 .if empty(PORT_OPTIONS:MSASL)
@@ -186,7 +192,8 @@ LIB_DEPENDS+=	libcurl.so:ftp/curl
 .if empty(PORT_OPTIONS:MOPENGL)
 CONFIGURE_ARGS+=	--disable-opengl
 .else
-USE_GL=		yes
+USES+=		gl
+USE_GL=		glu
 .endif
 
 .if empty(PORT_OPTIONS:MUSBREDIR)

@@ -47,10 +47,9 @@ CLIENTS_DESC=		Clients
 CLIENTS_BUILD_DEPENDS=	icotool:graphics/icoutils
 CLIENTS_LIB_DEPENDS=	libsamplerate.so:audio/libsamplerate \
 			libcurl.so:ftp/curl
-CLIENTS_USES=		pkgconfig
+CLIENTS_USES=		gl pkgconfig xorg
 CLIENTS_USE=		gl=glu xorg=xext
 CLIENTS_CONFIGURE_OFF=	--with-clients=""
-CLIENTS_VERS=		INSTALLS_ICONS=yes
 FLAC_LIB_DEPENDS=	libFLAC.so:audio/flac
 FLAC_CONFIGURE_ON=	--with-libFLAC=${LOCALBASE}
 FLAC_CONFIGURE_OFF=	--disable-flac
@@ -76,10 +75,12 @@ VORBIS_CONFIGURE_ON=	--with-ogg=${LOCALBASE} --with-vorbis=${LOCALBASE}
 VORBIS_CONFIGURE_OFF=	--disable-vorbis
 VORBIS_IMPLIES=		CLIENTS
 XXF86DGA_DESC=		XFree86 DGA Extension support
+XXF86DGA_USES=		xorg
 XXF86DGA_USE=		xorg=xxf86dga
 XXF86DGA_CONFIGURE_OFF=	--disable-dga
 XXF86DGA_IMPLIES=	CLIENTS
 XXF86VM_DESC=		XFree86 Vidmode Extension support
+XXF86VM_USES=		xorg
 XXF86VM_USE=		xorg=xxf86vm
 XXF86VM_CONFIGURE_OFF=	--disable-vidmode
 XXF86VM_IMPLIES=	CLIENTS

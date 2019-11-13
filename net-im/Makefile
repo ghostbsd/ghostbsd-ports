@@ -3,6 +3,8 @@
 
     COMMENT = Instant messaging
 
+    SUBDIR += 6cord
+    SUBDIR += beebeep
     SUBDIR += centerim
     SUBDIR += centerim-devel
     SUBDIR += chattahoochie
@@ -72,6 +74,7 @@
     SUBDIR += linux-telegram-desktop
     SUBDIR += loudmouth
     SUBDIR += matterbridge
+    SUBDIR += matterhorn
     SUBDIR += matterircd
     SUBDIR += mbpurple
     SUBDIR += mcabber

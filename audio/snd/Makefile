@@ -3,7 +3,7 @@
 
 PORTNAME=	snd
 PORTVERSION=	15.7
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ccrma-ftp.stanford.edu/pub/Lisp/ \
 		SF
@@ -44,7 +44,8 @@ LADSPA_BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:audio/ladspa
 LADSPA_RUN_DEPENDS=	${LOCALBASE}/include/ladspa.h:audio/ladspa
 LADSPA_CONFIGURE_WITH=	ladspa
 
-GTK2_USE=	GNOME=gtk20
+GTK2_USES=		gnome
+GTK2_USE=		GNOME=gtk20
 GTK2_CONFIGURE_WITH=	gtk
 
 MOTIF_USES=	motif

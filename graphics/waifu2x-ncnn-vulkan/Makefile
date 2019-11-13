@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	waifu2x-ncnn-vulkan
-DISTVERSION=	20190712-5
-DISTVERSIONSUFFIX=	-g1c705b3
+DISTVERSION=	20190712-6
+DISTVERSIONSUFFIX=	-gb373ce2
 CATEGORIES=	graphics
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -10,8 +10,6 @@ COMMENT=	Scale and denoise images using convolutional neural networks
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-BROKEN=		https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=241114
 
 BUILD_DEPENDS=	glslangValidator:devel/glslang \
 		${LOCALBASE}/include/vulkan/vulkan.h:devel/vulkan-headers \

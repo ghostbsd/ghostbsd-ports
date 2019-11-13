@@ -11,6 +11,8 @@ DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
 MAINTAINER=	jhixson@FreeBSD.org
 COMMENT=	Secure tunnels to localhost
 
+BROKEN=		unfetchable
+
 # run 'ngrok credits' for details
 LICENSE=	APACHE20
 

@@ -19,6 +19,8 @@ COMMENT=	Build cross-platform desktop apps with JavaScript, HTML, and CSS
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/electron/LICENSE
 
+BROKEN=		fails to build
+
 FETCH_DEPENDS=	npm:www/npm-node10
 PATCH_DEPENDS=	git:devel/git
 BUILD_DEPENDS=	${LOCALBASE}/bin/ar:devel/binutils \
@@ -50,7 +52,7 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils
 TEST_DEPENDS=	npm:www/npm-node10
 
 USES=		bison dos2unix gettext-tools gl gnome jpeg localbase:ldflags \
-		ninja pkgconfig python:2.7,build tar:xz
+		ninja pkgconfig python:2.7,build tar:xz xorg
 
 CONFLICTS_INSTALL=	electron5
 

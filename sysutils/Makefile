@@ -23,6 +23,7 @@
     SUBDIR += ah-tty
     SUBDIR += aimage
     SUBDIR += aird
+    SUBDIR += alfio
     SUBDIR += am-utils
     SUBDIR += amazon-ssm-agent
     SUBDIR += amdmsrtweaker
@@ -33,6 +34,7 @@
     SUBDIR += android-file-transfer
     SUBDIR += android-file-transfer-qt5
     SUBDIR += ansible
+    SUBDIR += ansible-sysrc
     SUBDIR += ansible1
     SUBDIR += ansible23
     SUBDIR += ansible24
@@ -40,7 +42,9 @@
     SUBDIR += ansible26
     SUBDIR += ansible27
     SUBDIR += anvil
+    SUBDIR += apache-mesos
     SUBDIR += apachetop
+    SUBDIR += apcctrl
     SUBDIR += apcpwr
     SUBDIR += apcupsd
     SUBDIR += aptly
@@ -374,6 +378,7 @@
     SUBDIR += fusefs-hfsfuse
     SUBDIR += fusefs-httpfs
     SUBDIR += fusefs-ifuse
+    SUBDIR += fusefs-jmtpfs
     SUBDIR += fusefs-libs
     SUBDIR += fusefs-libs3
     SUBDIR += fusefs-lkl
@@ -462,6 +467,7 @@
     SUBDIR += hare
     SUBDIR += hared
     SUBDIR += hatop
+    SUBDIR += hcloud
     SUBDIR += hdrecover
     SUBDIR += healthd
     SUBDIR += heartbeat
@@ -762,6 +768,7 @@
     SUBDIR += open
     SUBDIR += opencorsairlink
     SUBDIR += openipmi
+    SUBDIR += opensbi
     SUBDIR += openupsd
     SUBDIR += openzfs
     SUBDIR += openzfs-kmod
@@ -854,6 +861,7 @@
     SUBDIR += parafly
     SUBDIR += parallel
     SUBDIR += pass-otp
+    SUBDIR += pass-update
     SUBDIR += password-store
     SUBDIR += passwordsafe
     SUBDIR += patchelf
@@ -870,6 +878,7 @@
     SUBDIR += pcbsd-appweb
     SUBDIR += pcbsd-libsh
     SUBDIR += pcbsd-syscache
+    SUBDIR += pcbsd-utils
     SUBDIR += pciutils
     SUBDIR += pcpustat
     SUBDIR += pdixtract
@@ -1078,8 +1087,8 @@
     SUBDIR += roct
     SUBDIR += roottail
     SUBDIR += rovclock
-    SUBDIR += rshim-user-space
     SUBDIR += rpi-firmware
+    SUBDIR += rshim-user-space
     SUBDIR += rsnapshot
     SUBDIR += rsyncbackup
     SUBDIR += rsyncrypto
@@ -1263,8 +1272,6 @@
     SUBDIR += symon
     SUBDIR += synergy
     SUBDIR += synergy-1
-    SUBDIR += sysadm
-    SUBDIR += sysadm-client
     SUBDIR += sysctlinfo-kmod
     SUBDIR += sysgather
     SUBDIR += sysinfo
@@ -1377,6 +1384,7 @@
     SUBDIR += u-boot-rpi-0-w
     SUBDIR += u-boot-rpi2
     SUBDIR += u-boot-rpi3
+    SUBDIR += u-boot-rpi4
     SUBDIR += u-boot-sinovoip-bpi-m3
     SUBDIR += u-boot-sopine
     SUBDIR += u-boot-tools
