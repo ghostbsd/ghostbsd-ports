@@ -868,6 +868,7 @@
     SUBDIR += py-pyqrcode
     SUBDIR += py-pyqtgraph
     SUBDIR += py-python-poppler-qt5
+    SUBDIR += py-pyvips
     SUBDIR += py-qt5-svg
     SUBDIR += py-rawkit
     SUBDIR += py-sane
@@ -881,7 +882,6 @@
     SUBDIR += py-termtosvg
     SUBDIR += py-toyplot
     SUBDIR += py-traitsui
-    SUBDIR += py-pyvips
     SUBDIR += py-wand
     SUBDIR += py-webcolors
     SUBDIR += py-willow
