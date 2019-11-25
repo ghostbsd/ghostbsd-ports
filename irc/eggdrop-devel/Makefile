@@ -27,7 +27,7 @@ LLD_UNSAFE=	yes
 
 SUB_FILES=	pkg-message
 
-CONFLICTS=	eggdrop
+CONFLICTS=	eggdrop eggdrop16
 
 OPTIONS_DEFINE=	DOCS
 
