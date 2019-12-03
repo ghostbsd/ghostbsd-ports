@@ -40,7 +40,6 @@
     SUBDIR += clutter-gst3
     SUBDIR += cmrt
     SUBDIR += cmrtlib
-    SUBDIR += cuse4bsd-kmod
     SUBDIR += cx88
     SUBDIR += dav1d
     SUBDIR += deforaos-player
@@ -176,6 +175,7 @@
     SUBDIR += kodi
     SUBDIR += kodi-addon-inputstream.adaptive-devel
     SUBDIR += kodi-addon-peripheral-joystick
+    SUBDIR += kodi-addon-peripheral.joystick-devel
     SUBDIR += kodi-addon-pvr-hts
     SUBDIR += kodi-addon-pvr-iptvsimple
     SUBDIR += kodi-addon-vfs.libarchive-devel

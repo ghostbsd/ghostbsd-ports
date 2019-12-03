@@ -397,6 +397,7 @@
     SUBDIR += kolourpaint
     SUBDIR += kooka
     SUBDIR += kphotoalbum
+    SUBDIR += kqtquickcharts
     SUBDIR += krita
     SUBDIR += kudu
     SUBDIR += kxstitch
@@ -1029,6 +1030,7 @@
     SUBDIR += togl
     SUBDIR += ttygif
     SUBDIR += tumble
+    SUBDIR += tweeny
     SUBDIR += ufraw
     SUBDIR += uniconvertor
     SUBDIR += uniconvw
@@ -1090,6 +1092,7 @@
     SUBDIR += xv-m17n
     SUBDIR += xwpick
     SUBDIR += xzgv
+    SUBDIR += yacreader
     SUBDIR += yafaray
     SUBDIR += yed
     SUBDIR += yukon

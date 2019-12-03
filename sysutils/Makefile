@@ -369,7 +369,6 @@
     SUBDIR += fusefs-encfs
     SUBDIR += fusefs-exfat
     SUBDIR += fusefs-ext2
-    SUBDIR += fusefs-ext4fuse
     SUBDIR += fusefs-funionfs
     SUBDIR += fusefs-fusepak
     SUBDIR += fusefs-fusexmp_fh
@@ -549,6 +548,7 @@
     SUBDIR += jvmtop
     SUBDIR += jx
     SUBDIR += k3b
+    SUBDIR += k4dirstat
     SUBDIR += k8temp
     SUBDIR += kbackup
     SUBDIR += kcron
@@ -556,7 +556,6 @@
     SUBDIR += kdebugsettings
     SUBDIR += kdf
     SUBDIR += kdialog
-    SUBDIR += kdirstat
     SUBDIR += keyboard-daemon
     SUBDIR += kf5-baloo
     SUBDIR += kf5-kwallet
@@ -614,6 +613,7 @@
     SUBDIR += logstash-forwarder
     SUBDIR += logstash5
     SUBDIR += logstash6
+    SUBDIR += logstash7
     SUBDIR += logtool
     SUBDIR += logwatch
     SUBDIR += lookat

@@ -35,8 +35,7 @@ IGNORE_FreeBSD_11_powerpc64=	is missing a bootstrap for FreeBSD 11.x powerpc64
 ONLY_FOR_ARCHS?=	aarch64 amd64 armv6 armv7 i386 powerpc64
 ONLY_FOR_ARCHS_REASON=	requires prebuilt bootstrap compiler
 
-BUILD_DEPENDS=	cmake:devel/cmake \
-		gmake:devel/gmake
+BUILD_DEPENDS=	cmake:devel/cmake
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libgit2.so:devel/libgit2 \
 		libssh2.so:security/libssh2
@@ -78,9 +77,6 @@ _RUST_STD_BOOTSTRAP=	${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}}/rust-std-${R
 _CARGO_BOOTSTRAP=	${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}}/cargo-${CARGO_BOOTSTRAP_VERSION_${ARCH}:U${CARGO_BOOTSTRAP_VERSION}}-${_RUST_TARGET}
 
 .include <bsd.port.pre.mk>
-
-# Drop after D22039 lands
-PPC_ABI?=	ELFv1
 
 .if exists(${PATCHDIR}/${ARCH}${BOOTSTRAPS_SUFFIX})
 EXTRA_PATCHES+=	${PATCHDIR}/${ARCH}${BOOTSTRAPS_SUFFIX}
@@ -258,9 +254,11 @@ makesum:
 .endfor
 	${RM} ${DISTINFO_FILE}.${arch}
 .endfor
+.if ${ONLY_FOR_ARCHS:Mpowerpc64}
 	${MAKE} -D_RUST_MAKESUM_GUARD makesum PPC_ABI=ELFv2 ARCH=powerpc64 DISTINFO_FILE=${DISTINFO_FILE}.powerpc64-elfv2
 	${GREP} ${_RUST_ARCH_powerpc64:Upowerpc64} ${DISTINFO_FILE}.powerpc64-elfv2 >> ${DISTINFO_FILE}.tmp
 	${RM} ${DISTINFO_FILE}.powerpc64-elfv2
+.endif
 	${AWK} '!seen[$$0]++' ${DISTINFO_FILE}.tmp > ${DISTINFO_FILE}
 	${RM} ${DISTINFO_FILE}.tmp
 .endif

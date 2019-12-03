@@ -74,7 +74,7 @@ RUSTFLAGS+=	${CFLAGS:M-march=*:S/-march=/-C target-cpu=/}
 RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/}
 .endif
 
-.if ${ARCH} == powerpc64
+.if defined(PPC_ABI) && ${PPC_ABI} == ELFv1
 USE_GCC?=	yes
 .endif
 
@@ -117,10 +117,6 @@ CARGO_BUILD_ARGS+=	--release
 CARGO_TEST_ARGS+=	--release
 .else
 CARGO_INSTALL_ARGS+=	--debug
-.endif
-
-.if ${CARGO_CRATES:Mbacktrace-sys-[0-9]*}
-BUILD_DEPENDS+=	gmake:devel/gmake
 .endif
 
 .if ${CARGO_CRATES:Mcmake-[0-9]*}
@@ -245,10 +241,12 @@ cargo-patch-git:
 		${SED} -i.dist -E ${_CARGO_GIT_PATCH_CARGOTOML} {} +
 .endif
 
-.if !target(do-configure) && ${CARGO_CONFIGURE:tl} == "yes"
+.if ${CARGO_CONFIGURE:tl} == "yes"
+_USES_configure+=	250:cargo-configure
+
 # configure hook.  Place a config file for overriding crates-io index
 # by local source directory.
-do-configure:
+cargo-configure:
 	@${MKDIR} ${WRKDIR}/.cargo
 	@${ECHO_CMD} "[source.cargo]" > ${WRKDIR}/.cargo/config
 	@${ECHO_CMD} "directory = '${CARGO_VENDOR_DIR}'" >> ${WRKDIR}/.cargo/config

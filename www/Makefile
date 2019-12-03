@@ -208,7 +208,6 @@
     SUBDIR += gpx2map
     SUBDIR += grafana
     SUBDIR += grafana2
-    SUBDIR += grafana3
     SUBDIR += grafana4
     SUBDIR += grafana5
     SUBDIR += grafana6
@@ -339,7 +338,6 @@
     SUBDIR += mimetex
     SUBDIR += mini_httpd
     SUBDIR += miniflux
-    SUBDIR += miniminiweb
     SUBDIR += minio
     SUBDIR += minio-client
     SUBDIR += miniserve
@@ -1601,6 +1599,7 @@
     SUBDIR += py-django111
     SUBDIR += py-django21
     SUBDIR += py-django22
+    SUBDIR += py-django30
     SUBDIR += py-django_compressor
     SUBDIR += py-django_openstack_auth
     SUBDIR += py-django_polymorphic
@@ -1930,6 +1929,7 @@
     SUBDIR += retawq
     SUBDIR += riot-web
     SUBDIR += roundup
+    SUBDIR += rss-bridge
     SUBDIR += rsskit
     SUBDIR += rssowl
     SUBDIR += rssroll
@@ -2277,6 +2277,7 @@
     SUBDIR += tdom
     SUBDIR += template_
     SUBDIR += templatelite
+    SUBDIR += thirtybees
     SUBDIR += thttpd
     SUBDIR += thumbnail_index
     SUBDIR += thundercache

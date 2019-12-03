@@ -528,6 +528,7 @@
     SUBDIR += egypt
     SUBDIR += eiffelstudio
     SUBDIR += electron4
+    SUBDIR += electron6
     SUBDIR += elf
     SUBDIR += elfio
     SUBDIR += elfkickers
@@ -3885,6 +3886,7 @@
     SUBDIR += pecl-yac
     SUBDIR += pecl-yaconf
     SUBDIR += pecl-zookeeper
+    SUBDIR += pegtl
     SUBDIR += pep8
     SUBDIR += performance
     SUBDIR += perlconsole
@@ -5394,6 +5396,7 @@
     SUBDIR += robin-map
     SUBDIR += roboctl
     SUBDIR += robodoc
+    SUBDIR += ros-catkin
     SUBDIR += ros-catkin_pkg
     SUBDIR += ros-console_bridge
     SUBDIR += ros-rosdep

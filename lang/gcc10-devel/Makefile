@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gcc
-PORTVERSION=	10.0.0.s20191117
+PORTVERSION=	10.0.0.s20191124
 CATEGORIES=	lang
 MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
@@ -68,7 +68,11 @@ CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 
 .elif ${ARCH} == powerpc64
 CONFIGURE_ENV+=	UNAME_m="powerpc64"
+. if defined(PPC_ABI) && ${PPC_ABI} == ELFv2
+CONFIGURE_ARGS+=	--with-abi=elfv2
+. else
 USE_GCC=	yes
+. endif
 .endif
 
 LANGUAGES:=	c,c++,objc,fortran
