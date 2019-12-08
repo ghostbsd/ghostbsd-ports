@@ -2,7 +2,7 @@
 
 PORTNAME=	parity-ethereum
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.5.10
+DISTVERSION=	2.5.11
 CATEGORIES=	net-p2p
 
 MAINTAINER=	ale@FreeBSD.org
@@ -10,6 +10,9 @@ COMMENT=	Fast and advanced Ethereum client
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=		fails to build
+BROKEN_FreeBSD_11=	fails to build
 
 USES=		cargo
 

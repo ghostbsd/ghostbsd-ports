@@ -45,6 +45,7 @@
     SUBDIR += cmucl-extra
     SUBDIR += cocor
     SUBDIR += coffeescript
+    SUBDIR += compute-runtime
     SUBDIR += cparser
     SUBDIR += crystal
     SUBDIR += csharp-mode.el
@@ -375,6 +376,7 @@
     SUBDIR += twelf
     SUBDIR += ucc
     SUBDIR += urweb
+    SUBDIR += v
     SUBDIR += v8
     SUBDIR += vala
     SUBDIR += visualworks

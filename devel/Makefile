@@ -15,6 +15,7 @@
     SUBDIR += R-cran-R6
     SUBDIR += R-cran-RUnit
     SUBDIR += R-cran-Rcpp
+    SUBDIR += R-cran-RcppProgress
     SUBDIR += R-cran-Rdpack
     SUBDIR += R-cran-abind
     SUBDIR += R-cran-bindr
@@ -1010,6 +1011,7 @@
     SUBDIR += iniparser
     SUBDIR += initutil
     SUBDIR += injeqt
+    SUBDIR += intel-graphics-compiler
     SUBDIR += interactive_rebase_tool
     SUBDIR += ioncube
     SUBDIR += ipython
@@ -1663,6 +1665,7 @@
     SUBDIR += open-beagle
     SUBDIR += open-usp-tukubai
     SUBDIR += opencl
+    SUBDIR += opencl-clang
     SUBDIR += opencvs
     SUBDIR += opendht
     SUBDIR += opengrok
@@ -5601,6 +5604,7 @@
     SUBDIR += rubygem-aws-sdk-mediastoredata
     SUBDIR += rubygem-aws-sdk-mediatailor
     SUBDIR += rubygem-aws-sdk-migrationhub
+    SUBDIR += rubygem-aws-sdk-migrationhubconfig
     SUBDIR += rubygem-aws-sdk-mobile
     SUBDIR += rubygem-aws-sdk-mq
     SUBDIR += rubygem-aws-sdk-mturk
@@ -6150,6 +6154,7 @@
     SUBDIR += rubygem-resque
     SUBDIR += rubygem-retriable
     SUBDIR += rubygem-retryable
+    SUBDIR += rubygem-rgen
     SUBDIR += rubygem-rgl
     SUBDIR += rubygem-rice
     SUBDIR += rubygem-rodzilla
@@ -6427,6 +6432,7 @@
     SUBDIR += spdlog
     SUBDIR += spice-protocol
     SUBDIR += spin
+    SUBDIR += spirv-llvm-translator
     SUBDIR += spirv-tools
     SUBDIR += splint
     SUBDIR += spread-sheet-widget

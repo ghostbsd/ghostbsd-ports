@@ -453,6 +453,7 @@
     SUBDIR += nginx-lite
     SUBDIR += nginx-naxsi
     SUBDIR += nginx-prometheus-exporter
+    SUBDIR += nginx-vts-exporter
     SUBDIR += nibbleblog
     SUBDIR += nift
     SUBDIR += node
@@ -1459,7 +1460,6 @@
     SUBDIR += py-dj21-django-cors-headers
     SUBDIR += py-dj21-django-crispy-forms
     SUBDIR += py-dj21-django-debug-toolbar
-    SUBDIR += py-dj21-django-extensions
     SUBDIR += py-dj21-django-filter
     SUBDIR += py-dj21-django-js-asset
     SUBDIR += py-dj21-django-mptt
@@ -1467,7 +1467,6 @@
     SUBDIR += py-dj21-django-taggit
     SUBDIR += py-dj21-django-taggit-serializer
     SUBDIR += py-dj21-django-timezone-field
-    SUBDIR += py-dj21-djangoql
     SUBDIR += py-dj21-djangorestframework
     SUBDIR += py-dj21-drf-yasg
     SUBDIR += py-dj22-django-auth-ldap
@@ -1475,6 +1474,7 @@
     SUBDIR += py-dj22-django-cors-headers
     SUBDIR += py-dj22-django-crispy-forms
     SUBDIR += py-dj22-django-debug-toolbar
+    SUBDIR += py-dj22-django-extensions
     SUBDIR += py-dj22-django-filter
     SUBDIR += py-dj22-django-formset-js-improved
     SUBDIR += py-dj22-django-jquery-js
@@ -1488,6 +1488,7 @@
     SUBDIR += py-dj22-django-timezone-field
     SUBDIR += py-dj22-django-treebeard
     SUBDIR += py-dj22-django_csp
+    SUBDIR += py-dj22-djangoql
     SUBDIR += py-dj22-djangorestframework
     SUBDIR += py-dj22-drf-yasg
     SUBDIR += py-dj22-swapper
