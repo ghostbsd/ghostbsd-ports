@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ghostbsd-pkg-conf
-PORTVERSION=	19.09
+PORTVERSION=	19.12
 CATEGORIES=	misc
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
