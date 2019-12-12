@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	yuzu
-PORTVERSION=	s20191207
-PORTREVISION?=	0
+PORTVERSION=	s20191209
+PORTREVISION?=	2
 CATEGORIES=	emulators
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -28,11 +28,11 @@ BUILD_DEPENDS=	boost-libs>=1.66:devel/boost-libs \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	4bbb22a47
+GH_TAGNAME=	faf5ae6a5
 GH_TUPLE=	yuzu-emu:unicorn:1.0.1-153-g73f45735:unicorn/externals/unicorn \
 		DarkLordZach:mbedtls:a280e60:mbedtls/externals/mbedtls \
 		KhronosGroup:SPIRV-Headers:2c51218:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
-		KhronosGroup:Vulkan-Headers:v1.1.117:Vulkan_Headers/externals/Vulkan-Headers \
+		KhronosGroup:Vulkan-Headers:v1.1.127-2-gd42d074:Vulkan_Headers/externals/Vulkan-Headers \
 		MerryMage:dynarmic:r1-1436-g087a7441:dynarmic/externals/dynarmic \
 		ReinUsesLisp:sirit:f7c4b07:sirit/externals/sirit \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
@@ -54,6 +54,14 @@ USES=		cmake compiler:c++17-lang iconv localbase:ldflags \
 USE_SDL=	sdl2
 LDFLAGS+=	-Wl,--as-needed # Qt5Network
 TEST_TARGET=	test
+
+# XXX Remove after FreeBSD 11.2/12.0 reach EOL i.e., around 2020-02-01
+#.if make(makesum) || (!exists(/usr/include/c++/v1/charconv) && exists(/usr/lib/libc++.so))
+MASTER_SITES+=	https://releases.llvm.org/${LLVM_VER}/:libcxx
+DISTFILES+=	libcxx-${LLVM_VER}.src.tar.xz:libcxx
+CXXFLAGS+=	-nostdinc++ -isystem${WRKDIR}/libcxx-${LLVM_VER}.src/include
+LLVM_VER=	8.0.0 # same as FreeBSD 11.3
+#.endif
 
 OPTIONS_DEFINE=	ALSA PULSEAUDIO JACK SNDIO
 OPTIONS_DEFAULT=ALSA PULSEAUDIO JACK SNDIO
