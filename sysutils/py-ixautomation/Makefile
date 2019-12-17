@@ -24,7 +24,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pip>0:devel/py-pip@${PY_FLAVOR} \
 		dnsmasq>=0:dns/dnsmasq
 
 WRKSRC_SUBDIR=  src
-USES=		python:3.6
+USES=		python:3.6+
 USE_PYTHON=	distutils noflavors
 MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}
 

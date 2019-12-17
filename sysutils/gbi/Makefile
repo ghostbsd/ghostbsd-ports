@@ -16,7 +16,7 @@ LICENSE=	BSD
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
-USES =		python:3.6
+USES =		python:3.6+
 USE_PYTHON=	distutils noflavors
 USE_GNOME=	pygobject3
 

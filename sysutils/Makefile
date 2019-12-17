@@ -590,7 +590,6 @@
     SUBDIR += libsysstat
     SUBDIR += libudisks
     SUBDIR += liburcu
-    SUBDIR += life-preserver
     SUBDIR += lineak-defaultplugin
     SUBDIR += lineak-xosdplugin
     SUBDIR += lineakd

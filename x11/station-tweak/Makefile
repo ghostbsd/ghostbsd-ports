@@ -20,8 +20,8 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}python-distutils-extra>=2.15:devel/py-pyth
 
 RUN_DEPENDS=	wmctrl:x11/wmctrl
 
-USES = python:3.6 gettext-tools
-USE_PYTHON=	distutils
+USES = python:3.6+ gettext-tools
+USE_PYTHON=	distutils noflavors
 USE_GNOME=	pygobject3 intltool
 
 .include <bsd.port.mk>
