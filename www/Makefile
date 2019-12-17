@@ -1367,6 +1367,7 @@
     SUBDIR += perlbal
     SUBDIR += pglogd
     SUBDIR += phalcon
+    SUBDIR += phalcon4
     SUBDIR += photo_gallery
     SUBDIR += php71-opcache
     SUBDIR += php71-session
@@ -1398,6 +1399,7 @@
     SUBDIR += pnews
     SUBDIR += podcastamatic
     SUBDIR += polipo
+    SUBDIR += pomerium
     SUBDIR += pound
     SUBDIR += privatebin
     SUBDIR += privoxy
@@ -1709,6 +1711,7 @@
     SUBDIR += py-pastedeploy
     SUBDIR += py-pastescript
     SUBDIR += py-path-and-address
+    SUBDIR += py-pecan
     SUBDIR += py-pelican
     SUBDIR += py-planet
     SUBDIR += py-plone.alterego

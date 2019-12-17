@@ -828,8 +828,6 @@
     SUBDIR += gitolite2
     SUBDIR += gittrac
     SUBDIR += glade
-    SUBDIR += glade2
-    SUBDIR += glade3
     SUBDIR += glademm
     SUBDIR += glib20
     SUBDIR += glib20-reference
@@ -872,7 +870,6 @@
     SUBDIR += godot2
     SUBDIR += godot2-tools
     SUBDIR += goffice
-    SUBDIR += goffice010
     SUBDIR += gogland-eap
     SUBDIR += gogs
     SUBDIR += golint

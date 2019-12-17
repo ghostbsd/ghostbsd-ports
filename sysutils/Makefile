@@ -590,7 +590,6 @@
     SUBDIR += libsysstat
     SUBDIR += libudisks
     SUBDIR += liburcu
-    SUBDIR += life-preserver
     SUBDIR += lineak-defaultplugin
     SUBDIR += lineak-xosdplugin
     SUBDIR += lineakd
@@ -869,7 +868,6 @@
     SUBDIR += passwordsafe
     SUBDIR += patchelf
     SUBDIR += pax-utils
-    SUBDIR += pbi-manager
     SUBDIR += pbimaker
     SUBDIR += pc-diskmanager
     SUBDIR += pc-firewall
@@ -878,10 +876,6 @@
     SUBDIR += pc-sysinstall
     SUBDIR += pc-updatemanager
     SUBDIR += pcapfix
-    SUBDIR += pcbsd-appweb
-    SUBDIR += pcbsd-libsh
-    SUBDIR += pcbsd-syscache
-    SUBDIR += pcbsd-utils
     SUBDIR += pciutils
     SUBDIR += pcpustat
     SUBDIR += pdixtract
@@ -1458,7 +1452,6 @@
     SUBDIR += vttest
     SUBDIR += vzvol
     SUBDIR += wait_on
-    SUBDIR += warden
     SUBDIR += watchdog
     SUBDIR += watchfolder
     SUBDIR += watchman
