@@ -17,7 +17,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
 USES =		python:3.6
-USE_PYTHON=	distutils
+USE_PYTHON=	distutils noflavors
 USE_GNOME=	pygobject3
 
 .include <bsd.port.mk>

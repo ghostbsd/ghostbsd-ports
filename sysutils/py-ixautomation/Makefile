@@ -25,7 +25,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pip>0:devel/py-pip@${PY_FLAVOR} \
 
 WRKSRC_SUBDIR=  src
 USES=		python:3.6
-USE_PYTHON=	distutils
+USE_PYTHON=	distutils noflavors
 MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}
 
 USE_GITHUB=	yes
