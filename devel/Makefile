@@ -708,6 +708,7 @@
     SUBDIR += fpp
     SUBDIR += frama-c
     SUBDIR += freebsd-gcc6
+    SUBDIR += freebsd-gcc9
     SUBDIR += frink
     SUBDIR += fsmtrie
     SUBDIR += fstrcmp
@@ -877,7 +878,6 @@
     SUBDIR += google-gdata
     SUBDIR += google-perftools
     SUBDIR += google-styleguide
-    SUBDIR += googlemock
     SUBDIR += googletest
     SUBDIR += goprotobuf
     SUBDIR += gorm
@@ -3179,6 +3179,7 @@
     SUBDIR += p5-Shell-Base
     SUBDIR += p5-Shell-Config-Generate
     SUBDIR += p5-Shell-EnvImporter
+    SUBDIR += p5-Shell-GetEnv
     SUBDIR += p5-Shell-Guess
     SUBDIR += p5-Shell-Parser
     SUBDIR += p5-Shell-Source
@@ -3878,7 +3879,6 @@
     SUBDIR += pecl-protobuf
     SUBDIR += pecl-psr
     SUBDIR += pecl-raphf2
-    SUBDIR += pecl-request
     SUBDIR += pecl-swoole
     SUBDIR += pecl-sync
     SUBDIR += pecl-uploadprogress
@@ -3901,16 +3901,6 @@
     SUBDIR += php-ice37
     SUBDIR += php-libawl
     SUBDIR += php-maxminddb
-    SUBDIR += php71-gettext
-    SUBDIR += php71-intl
-    SUBDIR += php71-json
-    SUBDIR += php71-pcntl
-    SUBDIR += php71-readline
-    SUBDIR += php71-shmop
-    SUBDIR += php71-sysvmsg
-    SUBDIR += php71-sysvsem
-    SUBDIR += php71-sysvshm
-    SUBDIR += php71-tokenizer
     SUBDIR += php72-gettext
     SUBDIR += php72-intl
     SUBDIR += php72-json

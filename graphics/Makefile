@@ -387,6 +387,7 @@
     SUBDIR += kdiagram
     SUBDIR += kf5-kimageformats
     SUBDIR += kf5-kplotting
+    SUBDIR += kf5-kquickcharts
     SUBDIR += kf5-prison
     SUBDIR += kgraphviewer
     SUBDIR += kimagemapeditor
@@ -743,8 +744,6 @@
     SUBDIR += phototonic
     SUBDIR += php-facedetect
     SUBDIR += php-geos
-    SUBDIR += php71-exif
-    SUBDIR += php71-gd
     SUBDIR += php72-exif
     SUBDIR += php72-gd
     SUBDIR += php73-exif
@@ -757,6 +756,7 @@
     SUBDIR += piglit
     SUBDIR += pikopixel
     SUBDIR += pinpoint
+    SUBDIR += pinta
     SUBDIR += pixd
     SUBDIR += pixelize
     SUBDIR += pixen

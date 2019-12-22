@@ -197,6 +197,7 @@
     SUBDIR += cppad
     SUBDIR += crlibm
     SUBDIR += cryptominisat
+    SUBDIR += csdp
     SUBDIR += curv
     SUBDIR += cvc3
     SUBDIR += cvc4
@@ -654,8 +655,6 @@
     SUBDIR += pecl-bitset
     SUBDIR += pecl-stats2
     SUBDIR += petiga
-    SUBDIR += php71-bcmath
-    SUBDIR += php71-gmp
     SUBDIR += php72-bcmath
     SUBDIR += php72-gmp
     SUBDIR += php73-bcmath
@@ -815,6 +814,7 @@
     SUBDIR += reduce
     SUBDIR += reduce-psl
     SUBDIR += reed-solomon
+    SUBDIR += rehearse
     SUBDIR += rexx-regmath
     SUBDIR += rkward-kde
     SUBDIR += rngstreams

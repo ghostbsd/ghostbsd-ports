@@ -392,7 +392,6 @@
     SUBDIR += mod_mpm_itk
     SUBDIR += mod_pagespeed
     SUBDIR += mod_perl2
-    SUBDIR += mod_php71
     SUBDIR += mod_php72
     SUBDIR += mod_php73
     SUBDIR += mod_php74
@@ -504,10 +503,12 @@
     SUBDIR += p5-Apache-AuthCookie
     SUBDIR += p5-Apache-AuthTicket
     SUBDIR += p5-Apache-Clean2
+    SUBDIR += p5-Apache-Config-Preproc
     SUBDIR += p5-Apache-ConfigFile
     SUBDIR += p5-Apache-ConfigParser
     SUBDIR += p5-Apache-DB
     SUBDIR += p5-Apache-DBI
+    SUBDIR += p5-Apache-Defaults
     SUBDIR += p5-Apache-Gallery
     SUBDIR += p5-Apache-Htgroup
     SUBDIR += p5-Apache-LogFormat-Compiler
@@ -1369,9 +1370,6 @@
     SUBDIR += phalcon
     SUBDIR += phalcon4
     SUBDIR += photo_gallery
-    SUBDIR += php71-opcache
-    SUBDIR += php71-session
-    SUBDIR += php71-tidy
     SUBDIR += php72-opcache
     SUBDIR += php72-session
     SUBDIR += php72-tidy
@@ -1876,6 +1874,7 @@
     SUBDIR += py-w3lib
     SUBDIR += py-wagtail
     SUBDIR += py-waitress
+    SUBDIR += py-webargs
     SUBDIR += py-webassets
     SUBDIR += py-webhelpers
     SUBDIR += py-webob
