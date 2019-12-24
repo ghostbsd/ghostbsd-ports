@@ -330,6 +330,7 @@
     SUBDIR += mediawiki131
     SUBDIR += mediawiki132
     SUBDIR += mediawiki133
+    SUBDIR += mediawiki134
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -1629,6 +1630,7 @@
     SUBDIR += py-flask-assets
     SUBDIR += py-flask-bootstrap
     SUBDIR += py-flask-cache
+    SUBDIR += py-flask-collect
     SUBDIR += py-flask-compress
     SUBDIR += py-flask-cors
     SUBDIR += py-flask-flatpages
@@ -1636,7 +1638,9 @@
     SUBDIR += py-flask-marshmallow
     SUBDIR += py-flask-migrate
     SUBDIR += py-flask-moment
+    SUBDIR += py-flask-mongoengine
     SUBDIR += py-flask-oauthlib
+    SUBDIR += py-flask-peewee
     SUBDIR += py-flask-principal
     SUBDIR += py-flask-restful
     SUBDIR += py-flask-restplus
