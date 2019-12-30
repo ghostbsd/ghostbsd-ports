@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	aws-sdk-resources
-PORTVERSION=	3.63.0
+PORTVERSION=	3.66.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -10,7 +10,8 @@ COMMENT=	AWS SDK for Ruby Resources
 
 LICENSE=	APACHE20
 
-RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
+RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessanalyzer \
+		rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-acmpca>=1<2:devel/rubygem-aws-sdk-acmpca \
 		rubygem-aws-sdk-alexaforbusiness>=1<2:devel/rubygem-aws-sdk-alexaforbusiness \
 		rubygem-aws-sdk-amplify>=1<2:devel/rubygem-aws-sdk-amplify \
@@ -25,6 +26,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-appstream>=1<2:devel/rubygem-aws-sdk-appstream \
 		rubygem-aws-sdk-appsync>=1<2:devel/rubygem-aws-sdk-appsync \
 		rubygem-aws-sdk-athena>=1<2:devel/rubygem-aws-sdk-athena \
+		rubygem-aws-sdk-augmentedairuntime>=1<2:devel/rubygem-aws-sdk-augmentedairuntime \
 		rubygem-aws-sdk-autoscaling>=1<2:devel/rubygem-aws-sdk-autoscaling \
 		rubygem-aws-sdk-autoscalingplans>=1<2:devel/rubygem-aws-sdk-autoscalingplans \
 		rubygem-aws-sdk-backup>=1<2:devel/rubygem-aws-sdk-backup \
@@ -46,6 +48,8 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-codebuild>=1<2:devel/rubygem-aws-sdk-codebuild \
 		rubygem-aws-sdk-codecommit>=1<2:devel/rubygem-aws-sdk-codecommit \
 		rubygem-aws-sdk-codedeploy>=1<2:devel/rubygem-aws-sdk-codedeploy \
+		rubygem-aws-sdk-codeguruprofiler>=1<2:devel/rubygem-aws-sdk-codeguruprofiler \
+		rubygem-aws-sdk-codegurureviewer>=1<2:devel/rubygem-aws-sdk-codegurureviewer \
 		rubygem-aws-sdk-codepipeline>=1<2:devel/rubygem-aws-sdk-codepipeline \
 		rubygem-aws-sdk-codestar>=1<2:devel/rubygem-aws-sdk-codestar \
 		rubygem-aws-sdk-codestarnotifications>=1<2:devel/rubygem-aws-sdk-codestarnotifications \
@@ -54,6 +58,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-cognitosync>=1<2:devel/rubygem-aws-sdk-cognitosync \
 		rubygem-aws-sdk-comprehend>=1<2:devel/rubygem-aws-sdk-comprehend \
 		rubygem-aws-sdk-comprehendmedical>=1<2:devel/rubygem-aws-sdk-comprehendmedical \
+		rubygem-aws-sdk-computeoptimizer>=1<2:devel/rubygem-aws-sdk-computeoptimizer \
 		rubygem-aws-sdk-configservice>=1<2:devel/rubygem-aws-sdk-configservice \
 		rubygem-aws-sdk-connect>=1<2:devel/rubygem-aws-sdk-connect \
 		rubygem-aws-sdk-connectparticipant>=1<2:devel/rubygem-aws-sdk-connectparticipant \
@@ -90,6 +95,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-fms>=1<2:devel/rubygem-aws-sdk-fms \
 		rubygem-aws-sdk-forecastqueryservice>=1<2:devel/rubygem-aws-sdk-forecastqueryservice \
 		rubygem-aws-sdk-forecastservice>=1<2:devel/rubygem-aws-sdk-forecastservice \
+		rubygem-aws-sdk-frauddetector>=1<2:devel/rubygem-aws-sdk-frauddetector \
 		rubygem-aws-sdk-fsx>=1<2:devel/rubygem-aws-sdk-fsx \
 		rubygem-aws-sdk-gamelift>=1<2:devel/rubygem-aws-sdk-gamelift \
 		rubygem-aws-sdk-glacier>=1<2:devel/rubygem-aws-sdk-glacier \
@@ -100,6 +106,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-guardduty>=1<2:devel/rubygem-aws-sdk-guardduty \
 		rubygem-aws-sdk-health>=1<2:devel/rubygem-aws-sdk-health \
 		rubygem-aws-sdk-iam>=1<2:devel/rubygem-aws-sdk-iam \
+		rubygem-aws-sdk-imagebuilder>=1<2:devel/rubygem-aws-sdk-imagebuilder \
 		rubygem-aws-sdk-importexport>=1<2:devel/rubygem-aws-sdk-importexport \
 		rubygem-aws-sdk-inspector>=1<2:devel/rubygem-aws-sdk-inspector \
 		rubygem-aws-sdk-iot1clickdevicesservice>=1<2:devel/rubygem-aws-sdk-iot1clickdevicesservice \
@@ -113,6 +120,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-iotsecuretunneling>=1<2:devel/rubygem-aws-sdk-iotsecuretunneling \
 		rubygem-aws-sdk-iotthingsgraph>=1<2:devel/rubygem-aws-sdk-iotthingsgraph \
 		rubygem-aws-sdk-kafka>=1<2:devel/rubygem-aws-sdk-kafka \
+		rubygem-aws-sdk-kendra>=1<2:devel/rubygem-aws-sdk-kendra \
 		rubygem-aws-sdk-kinesis>=1<2:devel/rubygem-aws-sdk-kinesis \
 		rubygem-aws-sdk-kinesisanalytics>=1<2:devel/rubygem-aws-sdk-kinesisanalytics \
 		rubygem-aws-sdk-kinesisanalyticsv2>=1<2:devel/rubygem-aws-sdk-kinesisanalyticsv2 \
@@ -148,9 +156,11 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-mq>=1<2:devel/rubygem-aws-sdk-mq \
 		rubygem-aws-sdk-mturk>=1<2:devel/rubygem-aws-sdk-mturk \
 		rubygem-aws-sdk-neptune>=1<2:devel/rubygem-aws-sdk-neptune \
+		rubygem-aws-sdk-networkmanager>=1<2:devel/rubygem-aws-sdk-networkmanager \
 		rubygem-aws-sdk-opsworks>=1<2:devel/rubygem-aws-sdk-opsworks \
 		rubygem-aws-sdk-opsworkscm>=1<2:devel/rubygem-aws-sdk-opsworkscm \
 		rubygem-aws-sdk-organizations>=1<2:devel/rubygem-aws-sdk-organizations \
+		rubygem-aws-sdk-outposts>=1<2:devel/rubygem-aws-sdk-outposts \
 		rubygem-aws-sdk-personalize>=1<2:devel/rubygem-aws-sdk-personalize \
 		rubygem-aws-sdk-personalizeevents>=1<2:devel/rubygem-aws-sdk-personalizeevents \
 		rubygem-aws-sdk-personalizeruntime>=1<2:devel/rubygem-aws-sdk-personalizeruntime \
@@ -179,6 +189,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-sagemaker>=1<2:devel/rubygem-aws-sdk-sagemaker \
 		rubygem-aws-sdk-sagemakerruntime>=1<2:devel/rubygem-aws-sdk-sagemakerruntime \
 		rubygem-aws-sdk-savingsplans>=1<2:devel/rubygem-aws-sdk-savingsplans \
+		rubygem-aws-sdk-schemas>=1<2:devel/rubygem-aws-sdk-schemas \
 		rubygem-aws-sdk-secretsmanager>=1<2:devel/rubygem-aws-sdk-secretsmanager \
 		rubygem-aws-sdk-securityhub>=1<2:devel/rubygem-aws-sdk-securityhub \
 		rubygem-aws-sdk-serverlessapplicationrepository>=1<2:devel/rubygem-aws-sdk-serverlessapplicationrepository \

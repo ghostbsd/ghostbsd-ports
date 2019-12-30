@@ -1,9 +1,13 @@
 # $FreeBSD$
 
 PORTNAME=	yuzu
-PORTVERSION=	s20191222
+PORTVERSION=	s20191228
 PORTREVISION?=	0
 CATEGORIES=	emulators
+
+PATCH_SITES=	https://github.com/kinetiknz/cubeb/commit/:cubeb
+PATCHFILES+=	c0a9ea4cc6e2.patch:-p1:cubeb
+PATCH_DIST_STRIP=	-d ${WRKSRC_cubeb}
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo Switch emulator/debugger
@@ -28,7 +32,7 @@ BUILD_DEPENDS=	boost-libs>=1.66:devel/boost-libs \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	e976d0e92
+GH_TAGNAME=	f846e3d6d
 GH_TUPLE=	yuzu-emu:unicorn:1.0.1-153-g73f45735:unicorn/externals/unicorn \
 		DarkLordZach:mbedtls:a280e60:mbedtls/externals/mbedtls \
 		KhronosGroup:SPIRV-Headers:2c51218:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
@@ -41,7 +45,7 @@ GH_TUPLE=	yuzu-emu:unicorn:1.0.1-153-g73f45735:unicorn/externals/unicorn \
 		citra-emu:ext-soundtouch:060181e:soundtouch/externals/soundtouch \
 		facebook:zstd:v1.3.8:zstd/externals/zstd \
 		fmtlib:fmt:6.0.0-56-g4b8f8fac:fmt/externals/fmt \
-		kinetiknz:cubeb:cubeb-0.2-1151-g9eb4c89:cubeb/externals/cubeb \
+		kinetiknz:cubeb:cubeb-0.2-1171-gaa63601:cubeb/externals/cubeb \
 		lz4:lz4:v1.8.0-8-g4db65c1:lz4/externals/lz4 \
 		madler:zlib:v1.2.11:zlib/externals/zlib/zlib \
 		nih-at:libzip:rel-1-5-2-93-g89bd6d63:libzip/externals/libzip/libzip \
@@ -50,7 +54,7 @@ GH_TUPLE=	yuzu-emu:unicorn:1.0.1-153-g73f45735:unicorn/externals/unicorn \
 		xiph:opus:v1.3.1-4-gad8fe90d:opus/externals/opus/opus
 
 USES=		cmake compiler:c++17-lang iconv localbase:ldflags \
-		python:2.7,build sdl
+		python:build sdl
 USE_SDL=	sdl2
 LDFLAGS+=	-Wl,--as-needed # Qt5Network
 TEST_TARGET=	test

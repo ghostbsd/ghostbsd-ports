@@ -1484,6 +1484,7 @@
     SUBDIR += py-dj22-django-model-utils
     SUBDIR += py-dj22-django-mptt
     SUBDIR += py-dj22-django-prometheus
+    SUBDIR += py-dj22-django-redis
     SUBDIR += py-dj22-django-tables2
     SUBDIR += py-dj22-django-taggit
     SUBDIR += py-dj22-django-taggit-serializer
@@ -1634,6 +1635,7 @@
     SUBDIR += py-flask-compress
     SUBDIR += py-flask-cors
     SUBDIR += py-flask-flatpages
+    SUBDIR += py-flask-json
     SUBDIR += py-flask-login
     SUBDIR += py-flask-marshmallow
     SUBDIR += py-flask-migrate
@@ -1828,6 +1830,7 @@
     SUBDIR += py-requests-cache
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
+    SUBDIR += py-requests-futures097
     SUBDIR += py-requests-mock
     SUBDIR += py-requests-oauthlib
     SUBDIR += py-requests-toolbelt
@@ -1969,6 +1972,7 @@
     SUBDIR += rubygem-anemone
     SUBDIR += rubygem-asana
     SUBDIR += rubygem-async-http
+    SUBDIR += rubygem-async-pool
     SUBDIR += rubygem-async-rest
     SUBDIR += rubygem-async_sinatra
     SUBDIR += rubygem-atlassian-jwt
@@ -2016,6 +2020,8 @@
     SUBDIR += rubygem-gitlab-gollum-lib
     SUBDIR += rubygem-gitlab-gollum-rugged_adapter
     SUBDIR += rubygem-gitlab-grack
+    SUBDIR += rubygem-gitlab-puma
+    SUBDIR += rubygem-gitlab-puma_worker_killer
     SUBDIR += rubygem-gitlab-turbolinks-classic
     SUBDIR += rubygem-goldfinger
     SUBDIR += rubygem-gollum

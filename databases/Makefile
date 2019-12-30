@@ -615,7 +615,6 @@
     SUBDIR += pgtune
     SUBDIR += pguri
     SUBDIR += pgworksheet
-    SUBDIR += php-memcache
     SUBDIR += php-tarantool
     SUBDIR += php-xapian
     SUBDIR += php72-dba
@@ -659,7 +658,7 @@
     SUBDIR += phpliteadmin
     SUBDIR += phpminiadmin
     SUBDIR += phpmyadmin
-    SUBDIR += phpmyadmin-devel
+    SUBDIR += phpmyadmin5
     SUBDIR += phppgadmin
     SUBDIR += pldebugger
     SUBDIR += plpgsql_check
@@ -964,6 +963,7 @@
     SUBDIR += rubygem-influxdb
     SUBDIR += rubygem-jdbc-mysql
     SUBDIR += rubygem-leo_manager_client
+    SUBDIR += rubygem-marginalia
     SUBDIR += rubygem-mario-redis-lock
     SUBDIR += rubygem-memcache
     SUBDIR += rubygem-memcache-client
