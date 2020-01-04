@@ -306,7 +306,6 @@
     SUBDIR += linklint
     SUBDIR += links
     SUBDIR += links1
-    SUBDIR += linux-c6-qt47-webkit
     SUBDIR += linux-c7-qtwebkit
     SUBDIR += linux-flashplayer
     SUBDIR += linux-opera
@@ -1665,9 +1664,12 @@
     SUBDIR += py-google
     SUBDIR += py-google-api-core
     SUBDIR += py-google-api-python-client
+    SUBDIR += py-google-cloud-bigtable
     SUBDIR += py-google-cloud-core
+    SUBDIR += py-google-cloud-datastore
     SUBDIR += py-google-cloud-dlp
     SUBDIR += py-google-cloud-logging
+    SUBDIR += py-google-cloud-speech
     SUBDIR += py-google-cloud-storage
     SUBDIR += py-google-cloud-translate
     SUBDIR += py-google-cloud-vision

@@ -261,6 +261,7 @@
     SUBDIR += najitool
     SUBDIR += netron
     SUBDIR += nms
+    SUBDIR += nn-insight
     SUBDIR += nnn
     SUBDIR += nsf
     SUBDIR += numchar

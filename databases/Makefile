@@ -39,7 +39,6 @@
     SUBDIR += cegobridge
     SUBDIR += clickhouse
     SUBDIR += cockroach
-    SUBDIR += couchdb
     SUBDIR += couchdb2
     SUBDIR += courier-authlib-mysql
     SUBDIR += courier-authlib-pgsql
@@ -159,11 +158,9 @@
     SUBDIR += libpqtypes
     SUBDIR += libsdb
     SUBDIR += libzdb
-    SUBDIR += linux-c6-sqlite3
     SUBDIR += linux-c7-sqlite3
     SUBDIR += linux-oracle-instantclient-basic
     SUBDIR += linux-oracle-instantclient-sdk
-    SUBDIR += linux-oracle-instantclient-sqlplus
     SUBDIR += liquibase
     SUBDIR += lmdb
     SUBDIR += lua-lsqlite3
@@ -884,7 +881,6 @@
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += retcl
-    SUBDIR += riak
     SUBDIR += rocksdb
     SUBDIR += rocksdb-lite
     SUBDIR += rrdman

@@ -64,11 +64,6 @@
     SUBDIR += erlang-java
     SUBDIR += erlang-man
     SUBDIR += erlang-riak
-    SUBDIR += erlang-runtime15
-    SUBDIR += erlang-runtime16
-    SUBDIR += erlang-runtime17
-    SUBDIR += erlang-runtime18
-    SUBDIR += erlang-runtime19
     SUBDIR += erlang-runtime20
     SUBDIR += erlang-runtime21
     SUBDIR += erlang-runtime22
@@ -119,7 +114,6 @@
     SUBDIR += gnatdroid-binutils-x86
     SUBDIR += gnatdroid-sysroot
     SUBDIR += gnatdroid-sysroot-x86
-    SUBDIR += gnatdroid-x86
     SUBDIR += gnu-apl
     SUBDIR += gnu-cobol
     SUBDIR += gnustep-base
@@ -172,7 +166,6 @@
     SUBDIR += libobjc2
     SUBDIR += librep
     SUBDIR += libstdc++_stldoc_4.2.2
-    SUBDIR += linux-c6-tcl85
     SUBDIR += linux-c7-tcl85
     SUBDIR += linux-dotnet-cli
     SUBDIR += linux-dotnet-runtime

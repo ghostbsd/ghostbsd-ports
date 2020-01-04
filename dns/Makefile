@@ -103,7 +103,6 @@
     SUBDIR += libidn2
     SUBDIR += libnspsl
     SUBDIR += libpsl
-    SUBDIR += linux-c6-libasyncns
     SUBDIR += linux-c7-libasyncns
     SUBDIR += mDNSResponder_nss
     SUBDIR += maradns

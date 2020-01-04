@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	aws-sdk-resources
-PORTVERSION=	3.66.0
+PORTVERSION=	3.70.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -52,6 +52,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-codegurureviewer>=1<2:devel/rubygem-aws-sdk-codegurureviewer \
 		rubygem-aws-sdk-codepipeline>=1<2:devel/rubygem-aws-sdk-codepipeline \
 		rubygem-aws-sdk-codestar>=1<2:devel/rubygem-aws-sdk-codestar \
+		rubygem-aws-sdk-codestarconnections>=1<2:devel/rubygem-aws-sdk-codestarconnections \
 		rubygem-aws-sdk-codestarnotifications>=1<2:devel/rubygem-aws-sdk-codestarnotifications \
 		rubygem-aws-sdk-cognitoidentity>=1<2:devel/rubygem-aws-sdk-cognitoidentity \
 		rubygem-aws-sdk-cognitoidentityprovider>=1<2:devel/rubygem-aws-sdk-cognitoidentityprovider \
@@ -69,6 +70,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-datapipeline>=1<2:devel/rubygem-aws-sdk-datapipeline \
 		rubygem-aws-sdk-datasync>=1<2:devel/rubygem-aws-sdk-datasync \
 		rubygem-aws-sdk-dax>=1<2:devel/rubygem-aws-sdk-dax \
+		rubygem-aws-sdk-detective>=1<2:devel/rubygem-aws-sdk-detective \
 		rubygem-aws-sdk-devicefarm>=1<2:devel/rubygem-aws-sdk-devicefarm \
 		rubygem-aws-sdk-directconnect>=1<2:devel/rubygem-aws-sdk-directconnect \
 		rubygem-aws-sdk-directoryservice>=1<2:devel/rubygem-aws-sdk-directoryservice \
@@ -76,6 +78,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-docdb>=1<2:devel/rubygem-aws-sdk-docdb \
 		rubygem-aws-sdk-dynamodb>=1<2:devel/rubygem-aws-sdk-dynamodb \
 		rubygem-aws-sdk-dynamodbstreams>=1<2:devel/rubygem-aws-sdk-dynamodbstreams \
+		rubygem-aws-sdk-ebs>=1<2:devel/rubygem-aws-sdk-ebs \
 		rubygem-aws-sdk-ec2>=1<2:devel/rubygem-aws-sdk-ec2 \
 		rubygem-aws-sdk-ec2instanceconnect>=1<2:devel/rubygem-aws-sdk-ec2instanceconnect \
 		rubygem-aws-sdk-ecr>=1<2:devel/rubygem-aws-sdk-ecr \
@@ -127,6 +130,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-kinesisvideo>=1<2:devel/rubygem-aws-sdk-kinesisvideo \
 		rubygem-aws-sdk-kinesisvideoarchivedmedia>=1<2:devel/rubygem-aws-sdk-kinesisvideoarchivedmedia \
 		rubygem-aws-sdk-kinesisvideomedia>=1<2:devel/rubygem-aws-sdk-kinesisvideomedia \
+		rubygem-aws-sdk-kinesisvideosignalingchannels>=1<2:devel/rubygem-aws-sdk-kinesisvideosignalingchannels \
 		rubygem-aws-sdk-kms>=1<2:devel/rubygem-aws-sdk-kms \
 		rubygem-aws-sdk-lakeformation>=1<2:devel/rubygem-aws-sdk-lakeformation \
 		rubygem-aws-sdk-lambda>=1<2:devel/rubygem-aws-sdk-lambda \

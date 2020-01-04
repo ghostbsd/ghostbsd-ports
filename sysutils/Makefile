@@ -35,7 +35,6 @@
     SUBDIR += android-file-transfer-qt5
     SUBDIR += ansible
     SUBDIR += ansible-sysrc
-    SUBDIR += ansible1
     SUBDIR += ansible23
     SUBDIR += ansible24
     SUBDIR += ansible25
@@ -115,7 +114,6 @@
     SUBDIR += bsdhwmon
     SUBDIR += bsdinfo
     SUBDIR += bsdisks
-    SUBDIR += bsdploy
     SUBDIR += bsdstats
     SUBDIR += bstack
     SUBDIR += btsixad
@@ -304,7 +302,6 @@
     SUBDIR += etc_os-release
     SUBDIR += etcmerge
     SUBDIR += etcupdate
-    SUBDIR += eventlog
     SUBDIR += evhz
     SUBDIR += evtviewer
     SUBDIR += exa
@@ -597,8 +594,6 @@
     SUBDIR += lineak-xosdplugin
     SUBDIR += lineakd
     SUBDIR += linrename
-    SUBDIR += linux-c6-lttng-ust
-    SUBDIR += linux-c6-userspace-rcu
     SUBDIR += linux-c7-lttng-ust
     SUBDIR += linux-c7-userspace-rcu
     SUBDIR += linux-crashplan
@@ -689,7 +684,6 @@
     SUBDIR += minipro
     SUBDIR += minirsyslogd
     SUBDIR += mixer
-    SUBDIR += mkdesktop
     SUBDIR += mkfile
     SUBDIR += mkfwimage
     SUBDIR += mkntpwd
@@ -1008,7 +1002,6 @@
     SUBDIR += py-packet-python
     SUBDIR += py-pkginfo
     SUBDIR += py-ploy
-    SUBDIR += py-ploy_ansible
     SUBDIR += py-ploy_ec2
     SUBDIR += py-ploy_ezjail
     SUBDIR += py-ploy_fabric
@@ -1282,11 +1275,6 @@
     SUBDIR += sysinfo
     SUBDIR += syslinux
     SUBDIR += syslog-ng
-    SUBDIR += syslog-ng311
-    SUBDIR += syslog-ng315
-    SUBDIR += syslog-ng317
-    SUBDIR += syslog-ng318
-    SUBDIR += syslog-ng319
     SUBDIR += syslog-ng320
     SUBDIR += syslog-ng321
     SUBDIR += syslog-ng322
