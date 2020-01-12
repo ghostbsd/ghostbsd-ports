@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	emscripten
-DISTVERSION=	1.39.4
+DISTVERSION=	1.39.5
 CATEGORIES=	devel www
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -26,7 +26,7 @@ PYSCRIPTS=	em++ emar emcc em-config emconfigure emmake emranlib emrun emscons
 NO_BUILD=	yes
 NO_ARCH=	yes
 
-PORTSCOUT=	skipv:i64
+PORTSCOUT=	limit:^[0-9\.]*$$
 
 post-patch:
 	@${REINPLACE_CMD} -i '' -E " \
@@ -49,5 +49,6 @@ do-install:
 	${RLN} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/${s} ${STAGEDIR}${PREFIX}/bin/${s}
 .endfor
 	${RM} -rf ${STAGEDIR}${PREFIX}/lib/emscripten/system/lib/pkgconfig
+	${RM} -rf ${STAGEDIR}${PREFIX}/lib/emscripten/tools/websocket_to_posix_proxy
 
 .include <bsd.port.mk>

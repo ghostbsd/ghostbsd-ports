@@ -99,6 +99,7 @@
     SUBDIR += gnats4
     SUBDIR += gnatsweb4
     SUBDIR += go-carbon
+    SUBDIR += go-pgweb
     SUBDIR += gom
     SUBDIR += gqlplus
     SUBDIR += grass7
@@ -756,6 +757,7 @@
     SUBDIR += py-agate-sql
     SUBDIR += py-aiopg
     SUBDIR += py-aioredis
+    SUBDIR += py-aiosqlite
     SUBDIR += py-alembic
     SUBDIR += py-apsw
     SUBDIR += py-asyncpg

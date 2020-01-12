@@ -3,12 +3,14 @@
 PORTNAME=	cinelerra-gg
 DISTVERSION=	5.1-20180714
 DISTVERSIONSUFFIX=	-${REV:C/(.......).*/\1/}
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	multimedia
 MASTER_SITES=	https://git.cinelerra-gg.org/git?p=goodguy/cinelerra.git;a=snapshot;h=${REV};sf=tgz;dummy=/ 
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Professional video editing and compositing environment
+
+BROKEN=		unfetchable
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${BUILD_WRKSRC}/COPYING

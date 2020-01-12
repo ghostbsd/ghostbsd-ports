@@ -39,6 +39,7 @@
     SUBDIR += buddy
     SUBDIR += cdcl
     SUBDIR += cdf
+    SUBDIR += cdk
     SUBDIR += cdo
     SUBDIR += cgnslib
     SUBDIR += cgribex
@@ -149,7 +150,6 @@
     SUBDIR += mcxtrace-comps
     SUBDIR += mdynamix
     SUBDIR += medit
-    SUBDIR += meep
     SUBDIR += metaphysicl
     SUBDIR += minc2
     SUBDIR += mmdb2

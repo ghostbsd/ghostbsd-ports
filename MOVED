@@ -10403,7 +10403,6 @@ games/crafty-open-enormous||2018-08-21|Has expired: Broken for more than 5 month
 games/crafty-open-medium||2018-08-21|Has expired: Broken for more than 5 months
 math/jakarta-commons-math||2018-08-21|Has expired: Broken for more than 5 months
 math/hfst||2018-08-21|Has expired: Broken for more than 5 months
-math/octave-forge-communications||2018-08-21|Has expired: Broken for more than 5 months
 lang/v8-devel||2018-08-21|Has expired: Broken for more than 5 months
 sysutils/rubygem-fluentd010||2018-08-21|Has expired: Broken for more than 5 months
 mail/mutt14-lite||2018-08-21|Remove expired slave port
@@ -12911,7 +12910,6 @@ irc/irssi-otr||2019-09-05|Has expired: Broken for more than 6 months
 mail/p5-Mail-ClamAV||2019-09-05|Has expired: Broken for more than 6 months
 mail/qmail-ldap||2019-09-05|Has expired: Broken for more than 6 months
 math/fityk||2019-09-05|Has expired: Broken for more than 6 months
-math/octave-forge-mechanics||2019-09-05|Has expired: Broken for more than 6 months
 math/octave-forge-parallel||2019-09-05|Has expired: Broken for more than 6 months
 math/octave-forge-strings||2019-09-05|Has expired: Broken for more than 6 months
 math/octave-forge-tisean||2019-09-05|Has expired: Broken for more than 6 months
@@ -13103,7 +13101,6 @@ benchmarks/filebench||2019-10-16|Has expired: Unfetchable, unmaintained
 biology/chemeq||2019-10-16|Has expired: Unfetchable, unmaintained
 biology/linux-foldingathome||2019-10-16|Has expired: Unfetchable, unmaintained
 cad/dxf2fig||2019-10-16|Has expired: Unfetchable, unmaintained
-cad/gerbv||2019-10-16|Has expired: Unfetchable, unmaintained
 comms/gsmlib||2019-10-16|Has expired: Unfetchable, unmaintained
 comms/nokryptia||2019-10-16|Has expired: Unfetchable, unmaintained
 databases/mrtg-mysql-load||2019-10-16|Has expired: Unfetchable, unmaintained
@@ -13288,7 +13285,6 @@ net-mgmt/pixilate||2019-10-16|Has expired: Unfetchable, unmaintained
 net-mgmt/slate||2019-10-16|Has expired: Unfetchable, unmaintained
 net-mgmt/weplab||2019-10-16|Has expired: Unfetchable, unmaintained
 net-p2p/bnbt||2019-10-16|Has expired: Unfetchable, unmaintained
-net-p2p/btpd||2019-10-16|Has expired: Unfetchable, unmaintained
 net-p2p/gkremldk||2019-10-16|Has expired: Unfetchable, unmaintained
 news/newscache||2019-10-16|Has expired: Unfetchable, unmaintained
 news/nntpbtr||2019-10-16|Has expired: Unfetchable, unmaintained
@@ -13656,7 +13652,6 @@ devel/linux-c6-sdl12|devel/linux-c7-sdl12|2019-12-31|Has expired: Superseded by 
 dns/linux-c6-libasyncns|dns/linux-c7-libasyncns|2019-12-31|Has expired: Superseded by CentOS 7
 emulators/linux_base-c6|emulators/linux_base-c7|2019-12-31|Has expired: Superseded by CentOS 7
 ftp/linux-c6-curl|ftp/linux-c7-curl|2019-12-31|Has expired: Superseded by CentOS 7
-graphics/cptutils||2019-12-31|Has expired: depends on expired textproc/xml2
 graphics/linux-c6-cairo|graphics/linux-c7-cairo|2019-12-31|Has expired: Superseded by CentOS 7
 graphics/linux-c6-dri|graphics/linux-c7-dri|2019-12-31|Has expired: Superseded by CentOS 7
 graphics/linux-c6-gdk-pixbuf2|graphics/linux-c7-gdk-pixbuf2|2019-12-31|Has expired: Superseded by CentOS 7
@@ -13724,3 +13719,28 @@ lang/erlang-runtime19|lang/erlang-runtime21|2020-01-01|Has expired: No longer su
 security/openssl111|security/openssl|2020-01-01|Upgrade security/openssl to 1.1.1 as promised in deprecation message
 devel/gperf31|devel/gperf|2020-01-04|No longer needed as devel/gperf has been updated to 3.1
 devel/yosys|cad/yosys|2020-01-04|Move to a proper category
+cad/ujprog|comms/ujprog|2020-01-05|Move to a proper category
+net/gnatsd|net/nats-server|2020-01-06|Renamed upstream
+astro/viking||2020-01-10|Has expired: Depends on broken and expiring graphics/mapnik
+audio/slv2||2020-01-10|Has expired: Broken for more than 5 months (last version 0.6.6 released in 2009, replaced by lilv)
+cad/brickutils||2020-01-10|Has expired: Broken for more than 3 months, unmaintained
+devel/elixir-gen_state_machine||2020-01-10|Has expired: Broken for more than 6 months
+devel/elixir-swarm||2020-01-10|Has expired: Depends on broken and expiring devel/elixir-gen_state_machine
+devel/erlang-clique||2020-01-10|Has expired: Depends on broken and expiring devel/erlang-cuttlefish
+devel/erlang-gen_rpc||2020-01-10|Has expired: Broken for more than 6 months
+devel/erlang-msgpack||2020-01-10|Has expired: Broken for more than 6 months
+devel/ocaml-deriving-ocsigen||2020-01-10|Has expired: Broken for more than 6 months
+devel/p5-rpm-build-perl||2020-01-10|Has expired: Broken for more than 7 months
+devel/shedskin||2020-01-10|Has expired: Broken for more than 3 months, unmaintained
+games/stonesoup-sdl||2020-01-10|Has expired: Broken for more than 8 months
+games/xtris||2020-01-10|Has expired: Broken for more than 3 months
+graphics/mapnik||2020-01-10|Has expired: Broken for more than 8 months
+lang/js_of_ocaml||2020-01-10|Has expired: Depends on broken and expiring devel/ocaml-deriving-ocsigen
+lang/rubinius||2020-01-10|Has expired: Broken for more than 7 months
+math/dynare||2020-01-10|Has expired: Broken for more than 9 months
+science/meep||2020-01-10|Has expired: Broken for more than 6 months
+sysutils/hfm||2020-01-10|Has expired: Broken for more than 4 months
+sysutils/u-boot-zedboard||2020-01-10|Has expired: Broken for more than 6 months
+sysutils/u-boot-zybo||2020-01-10|Has expired: Broken for more than 6 months
+x11-themes/kde-icons-kool-gorilla||2020-01-10|Has expired: Broken for more than 3 months, unmaintained
+sysutils/docker-freebsd||2020-01-11|Has expired: Broken for more than 9 months

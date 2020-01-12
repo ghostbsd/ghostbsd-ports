@@ -26,6 +26,7 @@
     SUBDIR += R-cran-gridBase
     SUBDIR += R-cran-gridExtra
     SUBDIR += R-cran-munsell
+    SUBDIR += R-cran-pROC
     SUBDIR += R-cran-pixmap
     SUBDIR += R-cran-png
     SUBDIR += R-cran-qcc
@@ -66,6 +67,7 @@
     SUBDIR += barcode
     SUBDIR += batik
     SUBDIR += bitmap
+    SUBDIR += blend2d
     SUBDIR += blender
     SUBDIR += blender-doc
     SUBDIR += bmeps
@@ -101,6 +103,7 @@
     SUBDIR += compupic
     SUBDIR += converseen
     SUBDIR += cosmoplayer
+    SUBDIR += cptutils
     SUBDIR += crw
     SUBDIR += curator
     SUBDIR += cuttlefish
@@ -522,7 +525,6 @@
     SUBDIR += maim
     SUBDIR += mandelbulber
     SUBDIR += mapcache
-    SUBDIR += mapnik
     SUBDIR += mapserver
     SUBDIR += mapyrus
     SUBDIR += megapov
@@ -1040,6 +1042,7 @@
     SUBDIR += vkd3d
     SUBDIR += volpack
     SUBDIR += vp
+    SUBDIR += vpaint
     SUBDIR += vulkan-loader
     SUBDIR += vv
     SUBDIR += waffle
