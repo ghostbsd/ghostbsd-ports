@@ -892,6 +892,7 @@
     SUBDIR += pefs-kmod
     SUBDIR += personacrypt
     SUBDIR += personality
+    SUBDIR += perp
     SUBDIR += pesign
     SUBDIR += pfetch
     SUBDIR += pflogx

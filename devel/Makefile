@@ -517,6 +517,7 @@
     SUBDIR += dulwich
     SUBDIR += dupl
     SUBDIR += duplo
+    SUBDIR += dwarf2json
     SUBDIR += dwarfdump
     SUBDIR += dxa65
     SUBDIR += dyncall
@@ -1306,6 +1307,7 @@
     SUBDIR += libpeas
     SUBDIR += libpff
     SUBDIR += libphk
+    SUBDIR += libphonenumber
     SUBDIR += libphutil
     SUBDIR += libplist
     SUBDIR += libpo6
@@ -3848,6 +3850,7 @@
     SUBDIR += pecl-eio
     SUBDIR += pecl-ev
     SUBDIR += pecl-event
+    SUBDIR += pecl-expect
     SUBDIR += pecl-grpc
     SUBDIR += pecl-hrtime
     SUBDIR += pecl-inotify
@@ -4818,6 +4821,7 @@
     SUBDIR += py-pyasn1
     SUBDIR += py-pyasn1-modules
     SUBDIR += py-pybind11
+    SUBDIR += py-pybix
     SUBDIR += py-pybloomfiltermmap
     SUBDIR += py-pycadf
     SUBDIR += py-pycalendar

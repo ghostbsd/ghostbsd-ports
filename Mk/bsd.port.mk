@@ -2697,6 +2697,7 @@ SCRIPTS_ENV+=	BATCH=yes
 MANPREFIX?=	/usr/share
 .else
 MANPREFIX?=	${PREFIX}
+MANDIRS+=	${PREFIX}/share/man
 .endif
 
 MANDIRS+=	${MANPREFIX}/man
