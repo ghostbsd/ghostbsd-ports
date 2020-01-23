@@ -1259,6 +1259,7 @@
     SUBDIR += py-excelerator
     SUBDIR += py-feedparser
     SUBDIR += py-fingerprints
+    SUBDIR += py-ftfy
     SUBDIR += py-gambit-elasticsearch
     SUBDIR += py-genshi
     SUBDIR += py-gensim
@@ -1267,10 +1268,13 @@
     SUBDIR += py-guess-language
     SUBDIR += py-hexdump
     SUBDIR += py-html2text
+    SUBDIR += py-html2text2018
     SUBDIR += py-humanfriendly
     SUBDIR += py-hunspell
     SUBDIR += py-hyperestraier-python
     SUBDIR += py-hypua2jamo
+    SUBDIR += py-isbnlib
+    SUBDIR += py-isbntools
     SUBDIR += py-jaxml
     SUBDIR += py-jsonslicer
     SUBDIR += py-jsx-lexer

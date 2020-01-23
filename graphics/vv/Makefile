@@ -12,6 +12,7 @@ COMMENT=	Fast and simple 4D image viewer
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
+BUILD_DEPENDS=	googletest>0:devel/googletest # error: unable to find library -lGTest::GTest, see https://github.com/open-vv/vv/issues/74
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libfreetype.so:print/freetype2 \
 		libgdcmCommon.so:devel/gdcm \
@@ -31,7 +32,7 @@ USE_CXXSTD=	c++11
 
 PLIST_FILES=	bin/vv
 
-post-configure: # need to investigate where these strings come from
-	@${REINPLACE_CMD} 's| -lGTest::GTest -lGTest::Main | |' ${BUILD_WRKSRC}/build.ninja
+post-configure: # workaround for "error: unable to find library -lGTest::GTest", see https://github.com/open-vv/vv/issues/74
+	@${REINPLACE_CMD} -E 's/ -lGTest::(GTest|Main) / /g' ${BUILD_WRKSRC}/build.ninja
 
 .include <bsd.port.mk>

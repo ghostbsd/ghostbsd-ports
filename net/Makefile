@@ -421,6 +421,7 @@
     SUBDIR += lla
     SUBDIR += ltm
     SUBDIR += lualdap
+    SUBDIR += lualdap-51
     SUBDIR += luasocket
     SUBDIR += luasocket-51
     SUBDIR += luasocket-53
@@ -1018,7 +1019,6 @@
     SUBDIR += py-cloudflare-scrape
     SUBDIR += py-cloudflare-scrape-js2py
     SUBDIR += py-cloudscraper
-    SUBDIR += py-coherence
     SUBDIR += py-confluent-kafka
     SUBDIR += py-cymruwhois
     SUBDIR += py-dpkt
@@ -1129,7 +1129,6 @@
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
     SUBDIR += py-txrestapi
-    SUBDIR += py-upnp-inspector
     SUBDIR += py-uritemplate
     SUBDIR += py-uritools
     SUBDIR += py-urlextract
@@ -1201,6 +1200,7 @@
     SUBDIR += rtg
     SUBDIR += rtpbreak
     SUBDIR += rtpproxy
+    SUBDIR += rtptools
     SUBDIR += rubygem-activestorage52
     SUBDIR += rubygem-amazon-ec2
     SUBDIR += rubygem-amq-protocol
@@ -1447,6 +1447,7 @@
     SUBDIR += tcpsplit
     SUBDIR += tcpstat
     SUBDIR += tcptestsuite
+    SUBDIR += tcptrace
     SUBDIR += tcptraceroute
     SUBDIR += tcpview
     SUBDIR += tcpwatch
