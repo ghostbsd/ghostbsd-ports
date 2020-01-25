@@ -1,0 +1,24 @@
+#!/sbin/openrc-run
+
+: ${wireguard_interfaces=""}
+: ${wireguard_impl="wireguard-go"}
+
+depend() {
+	need localmount net
+	before netmount
+	after bootmisc
+}
+
+start() {
+	export WG_QUICK_USERSPACE_IMPLEMENTATION=${wireguard_impl}
+
+	for interface in ${wireguard_interfaces}; do
+		/usr/local/bin/wg-quick up ${interface}
+	done
+}
+
+stop() {
+	for interface in ${wireguard_interfaces}; do
+		/usr/local/bin/wg-quick down ${interface}
+	done
+}
