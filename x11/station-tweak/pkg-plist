@@ -157,7 +157,7 @@ share/locale/zh_CN/LC_MESSAGES/station-tweak.mo
 share/locale/zh_HK/LC_MESSAGES/station-tweak.mo
 share/locale/zh_TW/LC_MESSAGES/station-tweak.mo
 share/locale/zu/LC_MESSAGES/station-tweak.mo
-share/man/man1/station-tweak.1
+share/man/man1/station-tweak.1.gz
 share/mate-panel/layouts/classy.layout
 share/mate-panel/layouts/element.layout
 share/mate-panel/layouts/netbook.layout
