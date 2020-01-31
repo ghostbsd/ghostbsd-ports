@@ -8,6 +8,7 @@
     SUBDIR += 9menu
     SUBDIR += admiral
     SUBDIR += alacritty
+    SUBDIR += albert
     SUBDIR += alltray
     SUBDIR += alttab
     SUBDIR += aminal
@@ -223,7 +224,6 @@
     SUBDIR += menu-cache
     SUBDIR += menulibre
     SUBDIR += metalock
-    SUBDIR += metisse
     SUBDIR += mkcomposecache
     SUBDIR += mlterm
     SUBDIR += mons
@@ -239,7 +239,6 @@
     SUBDIR += nvidia-settings
     SUBDIR += nvidia-xconfig
     SUBDIR += nxcomp
-    SUBDIR += ooxcb
     SUBDIR += p5-Clipboard
     SUBDIR += p5-X11-GUITest
     SUBDIR += p5-X11-IdleTime
@@ -365,6 +364,7 @@
     SUBDIR += x3270
     SUBDIR += xaniroc
     SUBDIR += xantfarm
+    SUBDIR += xapps
     SUBDIR += xascii
     SUBDIR += xauth
     SUBDIR += xautolock
