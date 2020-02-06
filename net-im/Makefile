@@ -139,7 +139,6 @@
     SUBDIR += py-toxcore-c
     SUBDIR += py-unmessage
     SUBDIR += py-xmpppy
-    SUBDIR += py-xmpppy-irc
     SUBDIR += qmlryver
     SUBDIR += qTox
     SUBDIR += quaternion
