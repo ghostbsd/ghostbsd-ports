@@ -178,6 +178,7 @@
     SUBDIR += gnome-ssh-askpass
     SUBDIR += gnomint
     SUBDIR += gnupg
+    SUBDIR += gnupg-pkcs11-scd
     SUBDIR += gnupg1
     SUBDIR += gnutls
     SUBDIR += go-cve-dictionary
@@ -831,10 +832,7 @@
     SUBDIR += pwman3
     SUBDIR += pwned-check
     SUBDIR += pxytest
-    SUBDIR += py-AccessControl
     SUBDIR += py-PF
-    SUBDIR += py-Products.PlonePAS
-    SUBDIR += py-Products.PluggableAuthService
     SUBDIR += py-RestrictedPython
     SUBDIR += py-SecretStorage
     SUBDIR += py-YubiOTP
@@ -845,7 +843,6 @@
     SUBDIR += py-asyncssh
     SUBDIR += py-backports.ssl_match_hostname
     SUBDIR += py-bcrypt
-    SUBDIR += py-borg.localrole
     SUBDIR += py-btchip-python
     SUBDIR += py-cerealizer
     SUBDIR += py-certbot
@@ -931,11 +928,6 @@
     SUBDIR += py-pbkdf2
     SUBDIR += py-pgpdump
     SUBDIR += py-plaso
-    SUBDIR += py-plone.app.openid
-    SUBDIR += py-plone.keyring
-    SUBDIR += py-plone.openid
-    SUBDIR += py-plone.protect
-    SUBDIR += py-plone.session
     SUBDIR += py-potr
     SUBDIR += py-pyaes
     SUBDIR += py-pyaff4
@@ -1202,6 +1194,7 @@
     SUBDIR += sops
     SUBDIR += spass
     SUBDIR += spass-qt5
+    SUBDIR += spm
     SUBDIR += spybye
     SUBDIR += sqlmap
     SUBDIR += sqlninja

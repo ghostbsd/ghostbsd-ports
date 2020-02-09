@@ -197,6 +197,7 @@
     SUBDIR += py-namebench
     SUBDIR += py-ns1-python
     SUBDIR += py-publicsuffix
+    SUBDIR += py-publicsuffix2
     SUBDIR += py-publicsuffixlist
     SUBDIR += py-py3dns
     SUBDIR += py-pybonjour

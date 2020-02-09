@@ -193,6 +193,7 @@
     SUBDIR += iso-codes
     SUBDIR += jargon
     SUBDIR += jbidwatcher
+    SUBDIR += jojodiff
     SUBDIR += kbdscan
     SUBDIR += kcd
     SUBDIR += kde-thumbnailer-chm
@@ -387,7 +388,6 @@
     SUBDIR += py-fast-histogram
     SUBDIR += py-fleep
     SUBDIR += py-fuzzy
-    SUBDIR += py-glance
     SUBDIR += py-gluoncv
     SUBDIR += py-gluonnlp
     SUBDIR += py-huepy
