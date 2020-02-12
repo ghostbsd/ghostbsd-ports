@@ -897,9 +897,6 @@
     SUBDIR += gwenhywfar-gtk3
     SUBDIR += gwenhywfar-qt5
     SUBDIR += gzstream
-    SUBDIR += hachoir-core
-    SUBDIR += hachoir-parser
-    SUBDIR += hachoir-regex
     SUBDIR += hadoop
     SUBDIR += hadoop2
     SUBDIR += hapy
@@ -4950,6 +4947,7 @@
     SUBDIR += py-roxlib
     SUBDIR += py-rply
     SUBDIR += py-rq
+    SUBDIR += py-rq-scheduler
     SUBDIR += py-rtree
     SUBDIR += py-rtslib-fb
     SUBDIR += py-ruamel.ordereddict
