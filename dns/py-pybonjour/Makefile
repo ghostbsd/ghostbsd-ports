@@ -5,9 +5,7 @@ PORTVERSION=	1.1.1
 CATEGORIES=	dns python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-LIB_DEPENDS=	libdns_sd.so.1:net/mDNSResponder
-
-MAINTAINER=	jhixson@freebsd.org
+MAINTAINER=	jhixson@FreeBSD.org
 COMMENT=	Pure-Python interface to Apple Bonjour
 
 LICENSE=	MIT

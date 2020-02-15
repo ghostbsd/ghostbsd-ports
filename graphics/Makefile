@@ -146,6 +146,8 @@
     SUBDIR += dynamechs
     SUBDIR += ebsynth
     SUBDIR += edje_viewer
+    SUBDIR += egl-wayland
+    SUBDIR += eglexternalplatform
     SUBDIR += electricsheep
     SUBDIR += embree
     SUBDIR += enblend
@@ -967,6 +969,7 @@
     SUBDIR += sdl_ttf
     SUBDIR += sdump
     SUBDIR += seejpeg
+    SUBDIR += seexpr
     SUBDIR += sekrit-twc-zimg
     SUBDIR += seom
     SUBDIR += separate
