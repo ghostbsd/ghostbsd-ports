@@ -492,6 +492,7 @@
     SUBDIR += i2c-tools
     SUBDIR += i7z
     SUBDIR += iat
+    SUBDIR += iichid
     SUBDIR += immortal
     SUBDIR += incron
     SUBDIR += inotify-tools

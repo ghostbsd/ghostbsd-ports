@@ -145,7 +145,10 @@ _EXECUTABLES+=	${GHC_LIBDIR}/bin/ghc-iserv-dyn
 .if empty(PORT_OPTIONS:MBOOT)
 BOOTSTRAPS_SUFFIX?=		${BOOTSTRAPS_SUFFIX_${ARCH}}
 BOOTSTRAPS_SUFFIX_powerpc64?=	-${PPC_ABI:tl}
-DISTFILES+=		ghc-${BOOT_GHC_VERSION}-boot-${ARCH}-freebsd${BOOTSTRAPS_SUFFIX}${EXTRACT_SUFX}:boot
+.  if ${OSVERSION} < 1200000 && (${ARCH} == amd64 || ${ARCH} == i386)
+ELEVEN_SUFX=		11
+.  endif
+DISTFILES+=		ghc-${BOOT_GHC_VERSION}-boot-${ARCH}-freebsd${BOOTSTRAPS_SUFFIX}${ELEVEN_SUFX}${EXTRACT_SUFX}:boot
 .endif # MBOOT
 
 .if ${ARCH} == aarch64 || ${ARCH} == armv6 || ${ARCH} == armv7
@@ -202,13 +205,6 @@ CONFIGURE_ARGS+=	--with-ghc=${LOCALBASE}/bin/ghc
 SLAVES_PREFIX=		${WRKDIR}/slaves_prefix
 SLAVES_WRKDIRPREFIX=	${WRKDIR}/slaves_wrkdirprefix
 
-post-extract:
-# Use the "wrap" trick on arches that have to use pre-ino64 bootstrap binaries
-.if empty(PORT_OPTIONS:MBOOT) && ${OPSYS} == FreeBSD && ${OSVERSION} >= 1200031 && \
-    (${ARCH} == amd64 || ${ARCH} == i386)
-	@${REINPLACE_CMD} -e 's|@SettingsCCompilerLinkFlags@|& -Wl,--wrap=readdir_r,--wrap=stat,--wrap=lstat,--wrap=fstat,--wrap=mknod|' ${BOOT_DIR}/settings.in
-.endif
-
 # %%PORTDOCS%%%%DOCSDIR%%/html/libraries/doc-index-V.html
 post-install-script:
 	${FIND} -ds ${GHC_LIBDIR} -type f -print | ${SED} -E \
@@ -259,16 +255,6 @@ pre-configure: apply-slist
 	# Copy the subbed build.mk to the proper position
 	${CP} ${WRKDIR}/build.mk ${WRKSRC}/mk/build.mk
 
-# Use the "wrap" trick on arches that have to use pre-ino64 bootstrap binaries
-.if empty(PORT_OPTIONS:MBOOT) && ${OPSYS} == FreeBSD && \
-    ${OSVERSION} >= 1200031 && \
-    (${ARCH} == amd64 || ${ARCH} == i386)
-	${CC} ${CFLAGS} -c -o ${BOOT_DIR}/wrap.o ${PATCHDIR}/wrap.c
-	for x in ${BOOT_DIR}/rts/dist/build/libCffi*.a; do \
-	    ${AR} q $$x ${BOOT_DIR}/wrap.o; ${RANLIB} $$x; \
-	done
-	${RM} ${BOOT_DIR}/wrap.o
-.endif
 # If we are using bootstrap compiler, configure and install it into ${BOOT_DIR}
 .if empty(PORT_OPTIONS:MBOOT)
 	cd ${BOOT_DIR} && ${CONFIGURE_ENV} ${CONFIGURE_CMD} --prefix=${BOOT_DIR}

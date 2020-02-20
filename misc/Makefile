@@ -22,6 +22,7 @@
     SUBDIR += bbjd
     SUBDIR += bdelta
     SUBDIR += bestfit
+    SUBDIR += bible-kjv
     SUBDIR += bibletime
     SUBDIR += biblical-curse
     SUBDIR += binclock
@@ -32,7 +33,6 @@
     SUBDIR += box2d
     SUBDIR += boxes
     SUBDIR += broot
-    SUBDIR += brs
     SUBDIR += bsod
     SUBDIR += buffer
     SUBDIR += cave
@@ -50,6 +50,7 @@
     SUBDIR += colwide
     SUBDIR += compat10x
     SUBDIR += compat11x
+    SUBDIR += compat12x
     SUBDIR += compat4x
     SUBDIR += compat5x
     SUBDIR += compat6x

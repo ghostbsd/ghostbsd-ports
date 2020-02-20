@@ -4354,6 +4354,7 @@
     SUBDIR += py-fastimport
     SUBDIR += py-fastnumbers
     SUBDIR += py-fbprophet
+    SUBDIR += py-filebytes
     SUBDIR += py-filemagic
     SUBDIR += py-first
     SUBDIR += py-five.formlib
@@ -4848,6 +4849,7 @@
     SUBDIR += py-pytest-fixture-config
     SUBDIR += py-pytest-flake8
     SUBDIR += py-pytest-flakes
+    SUBDIR += py-pytest-flask
     SUBDIR += py-pytest-forked
     SUBDIR += py-pytest-helpers-namespace
     SUBDIR += py-pytest-isort
@@ -4950,7 +4952,6 @@
     SUBDIR += py-robotremoteserver
     SUBDIR += py-rope
     SUBDIR += py-rose
-    SUBDIR += py-roxlib
     SUBDIR += py-rply
     SUBDIR += py-rq
     SUBDIR += py-rq-scheduler
@@ -6613,7 +6614,6 @@
     SUBDIR += tablist
     SUBDIR += tailor
     SUBDIR += talloc
-    SUBDIR += talloc1
     SUBDIR += tass64
     SUBDIR += tbb
     SUBDIR += tcl-memchan
@@ -6638,7 +6638,6 @@
     SUBDIR += termcolor
     SUBDIR += terminality
     SUBDIR += tevent
-    SUBDIR += tevent1
     SUBDIR += tex-kpathsea
     SUBDIR += tex-libtexlua
     SUBDIR += tex-libtexluajit

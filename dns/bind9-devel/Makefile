@@ -18,6 +18,7 @@ MASTER_SITES=	LOCAL/mat/bind
 .if defined(BIND_TOOLS_SLAVE)
 PKGNAMESUFFIX=	-tools
 .else
+# XXX: correct SUFFIX.
 PKGNAMESUFFIX=	9-devel
 .endif
 # XXX: correct DISTNAME.
@@ -29,6 +30,11 @@ COMMENT=	Command line tools from BIND: delv, dig, host, nslookup...
 .else
 COMMENT=	BIND DNS suite with updated DNSSEC and DNS64
 .endif
+
+# Uncomment when bind9xx comes of age. +3 years if ESV, +1year otherwise, see
+# https://kb.isc.org/docs/aa-00896
+# DEPRECATED=	End of life, please migrate to a newer version of BIND9
+# EXPIRATION_DATE=	XXX-12-31
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
@@ -42,13 +48,13 @@ RUN_DEPENDS=	bind-tools>0:dns/bind-tools
 # XXX: remove tar:bz2
 USES=		compiler:c11 cpe libedit pkgconfig ssl tar:bz2
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.15.8a0.2020.02.11
+ISCVERSION=	9.15.8a0.2020.02.16
 # XXX: Remove gitlab
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.isc.org
 GL_ACCOUNT=	isc-projects
 GL_PROJECT=	bind9
-GL_COMMIT=	d3843161ab45a87ded170c7a4cdc1319b3d21e33
+GL_COMMIT=	e4671ef2fa4f9764ddc11e95ed5f1bfa56a9e0d7
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
@@ -77,7 +83,7 @@ EXTRA_PATCHES=		${PATCHDIR}/extrapatch-no-bind-tools
 PORTDOCS=	*
 
 # XXX: Add -devel
-CONFLICTS=	bind911 bind912 bind913 bind914
+CONFLICTS=	bind911 bind912 bind913 bind914 bind916
 .endif	# BIND_TOOLS_SLAVE
 
 MAKE_JOBS_UNSAFE=	yes
