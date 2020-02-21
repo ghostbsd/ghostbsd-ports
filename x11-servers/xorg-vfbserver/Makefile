@@ -2,7 +2,6 @@
 # $FreeBSD$
 
 PORTNAME=	xorg-vfbserver
-PORTVERSION=	1.19.1
 PORTEPOCH=	1
 
 COMMENT=	X virtual framebuffer server from X.Org
@@ -11,13 +10,8 @@ LICENSE=	MIT
 
 MASTERDIR=	${.CURDIR}/../xorg-server
 DESCR=		${.CURDIR}/pkg-descr
-DISTINFO_FILE=	${.CURDIR}/distinfo
-PATCHDIR=	${.CURDIR}/files
 
 SLAVE_PORT=	yes
-OPTIONS_EXCLUDE=DEVD HAL SUID UDEV
-
-USE_XORG=	xfont2
 
 CONFIGURE_ARGS+=--enable-xvfb --disable-dmx --disable-xephyr --disable-xnest \
 		--disable-xwayland
