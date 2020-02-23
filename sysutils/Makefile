@@ -434,7 +434,6 @@
     SUBDIR += gnome-control-center
     SUBDIR += gnome-mount
     SUBDIR += gnome-power-manager
-    SUBDIR += gnome-schedule
     SUBDIR += gnome-settings-daemon
     SUBDIR += gnome-system-monitor
     SUBDIR += gnome_subr
@@ -986,7 +985,6 @@
     SUBDIR += py-ezjailremote
     SUBDIR += py-filelike
     SUBDIR += py-filelock
-    SUBDIR += py-freenas.cli
     SUBDIR += py-glances
     SUBDIR += py-gmailfs-fuse
     SUBDIR += py-google-compute-engine

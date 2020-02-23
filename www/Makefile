@@ -272,6 +272,7 @@
     SUBDIR += kannel
     SUBDIR += kannel-sqlbox
     SUBDIR += kcgi
+    SUBDIR += kdsoap
     SUBDIR += kf5-kdewebkit
     SUBDIR += kf5-khtml
     SUBDIR += kf5-kjs
@@ -1386,7 +1387,6 @@
     SUBDIR += phpsysinfo
     SUBDIR += phpvirtualbox
     SUBDIR += piwigo
-    SUBDIR += planet
     SUBDIR += plasma5-plasma-browser-integration
     SUBDIR += plugger
     SUBDIR += pmwiki
@@ -1803,7 +1803,6 @@
     SUBDIR += py-wsgiauth
     SUBDIR += py-wsgidav
     SUBDIR += py-yarl
-    SUBDIR += py-zope.app.wsgi
     SUBDIR += pyblosxom
     SUBDIR += pycarddav
     SUBDIR += pyjamas
@@ -2227,11 +2226,8 @@
     SUBDIR += trac-TracGoogleAnalytics
     SUBDIR += trac-accountmanager
     SUBDIR += trac-advancedticketworkflow
-    SUBDIR += trac-attachmentpolicy
     SUBDIR += trac-autocomplete
-    SUBDIR += trac-bzr
     SUBDIR += trac-ccselector
-    SUBDIR += trac-childtickets
     SUBDIR += trac-customfieldadmin
     SUBDIR += trac-datefield
     SUBDIR += trac-defaultcc
@@ -2244,7 +2240,6 @@
     SUBDIR += trac-fivestarvote
     SUBDIR += trac-fullblog
     SUBDIR += trac-fullblognotification
-    SUBDIR += trac-gantt
     SUBDIR += trac-graphviz
     SUBDIR += trac-iniadmin
     SUBDIR += trac-keywords
@@ -2266,10 +2261,8 @@
     SUBDIR += trac-tickettemplate
     SUBDIR += trac-timingandestimation
     SUBDIR += trac-tocmacro
-    SUBDIR += trac-tracdragdrop
     SUBDIR += trac-tweakui
     SUBDIR += trac-vote
-    SUBDIR += trac-watchlist
     SUBDIR += trac-wikigoodies
     SUBDIR += trac-wikinotification
     SUBDIR += trac-wikitemplates
@@ -2315,7 +2308,6 @@
     SUBDIR += twiki-TwistyContrib
     SUBDIR += twiki-TwistyPlugin
     SUBDIR += twiki-WysiwygPlugin
-    SUBDIR += twill
     SUBDIR += twms
     SUBDIR += typo3-8
     SUBDIR += typo3-9
