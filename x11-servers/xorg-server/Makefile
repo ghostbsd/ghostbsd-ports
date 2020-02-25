@@ -3,7 +3,7 @@
 
 PORTNAME?=	xorg-server
 PORTVERSION?=	1.20.7
-PORTREVISION?=	0
+PORTREVISION?=	1
 PORTEPOCH?=	1
 CATEGORIES=	x11-servers
 MASTER_SITES=	XORG/individual/xserver
@@ -20,10 +20,10 @@ RUN_DEPENDS+=	xkeyboard-config>=2.5:x11/xkeyboard-config \
 SLAVE_PORT?=	no
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	SUID
+OPTIONS_DEFINE=	SUID FIXDRM
 OPTIONS_RADIO=	CONF
 OPTIONS_RADIO_CONF=	DEVD UDEV
-OPTIONS_DEFAULT=	SUID
+OPTIONS_DEFAULT=	SUID FIXDRM
 OPTIONS_DEFAULT_FreeBSD_11=	DEVD
 OPTIONS_DEFAULT_FreeBSD_12=	UDEV
 OPTIONS_DEFAULT_FreeBSD_13=	UDEV
@@ -33,6 +33,7 @@ SUID_DESC=	Install setuid wrapper to allow startx as non-root
 CONF_DESC=	Backend to use for input device configuration
 DEVD_DESC=	Use devd for autoconfiguration of input devices
 UDEV_DESC=	Use udev via libudev-devd for autoconfiguration of input devices
+FIXDRM_DESC=	Enable glamor workaround for drm-devel-kmod bug
 
 DEVD_CONFIGURE_ENABLE=	config-devd
 SUID_CONFIGURE_ENABLE=	suid-wrapper
@@ -81,7 +82,7 @@ CONFIGURE_ARGS+=--disable-dmx --disable-xephyr --disable-xnest --disable-xvfb \
 SUB_FILES=	pkg-install pkg-deinstall
 .else
 CONFIGURE_ARGS+=	--disable-xorg
-OPTIONS_EXCLUDE=	DEVD UDEV SUID
+OPTIONS_EXCLUDE=	DEVD UDEV SUID FIXDRM
 # Set PLIST for slave ports so they only need to set PLIST_FILES
 PLIST=		${.CURDIR}/pkg-plist
 .endif
@@ -104,6 +105,12 @@ PLIST_SUB+=	SPARC64=""
 .else
 PLIST_SUB+=	SPARC64="@comment "
 .endif
+
+post-patch-FIXDRM-on:
+# Workaround xfwm-4.12 lockups with modesetting driver on drm-kmod 4.16+
+# with partial revert of commit 86b2d8740a330deafe8a9bbf0402705a43efbb42
+	@${REINPLACE_CMD} '/glamor_make_pixmap_exportable/ s/FALSE/TRUE/' \
+		${WRKSRC}/glamor/glamor_egl.c
 
 post-patch:
 	@${REINPLACE_CMD} 's/test.*-traditional.*;/true;/' \
