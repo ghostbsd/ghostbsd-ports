@@ -217,6 +217,7 @@
     SUBDIR += horcrux
     SUBDIR += hotssh
     SUBDIR += hpenc
+    SUBDIR += hs-cryptol
     SUBDIR += hydra
     SUBDIR += i2p
     SUBDIR += i2pd
@@ -288,6 +289,7 @@
     SUBDIR += libgnome-keyring
     SUBDIR += libgpg-error
     SUBDIR += libgringotts
+    SUBDIR += libgsasl
     SUBDIR += libhijack
     SUBDIR += libident
     SUBDIR += libkleo

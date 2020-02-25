@@ -25,6 +25,7 @@
     SUBDIR += bible-kjv
     SUBDIR += bibletime
     SUBDIR += biblical-curse
+    SUBDIR += biblesync
     SUBDIR += binclock
     SUBDIR += biosfont-demos
     SUBDIR += birthday
@@ -79,6 +80,7 @@
     SUBDIR += dnetc
     SUBDIR += dtach
     SUBDIR += dvorak7min
+    SUBDIR += dynomite
     SUBDIR += e2fsprogs-libblkid
     SUBDIR += e2fsprogs-libuuid
     SUBDIR += elixir-mime
