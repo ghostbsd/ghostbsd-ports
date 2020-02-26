@@ -20,7 +20,7 @@ RUN_DEPENDS+=	xkeyboard-config>=2.5:x11/xkeyboard-config \
 SLAVE_PORT?=	no
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	SUID FIXDRM
+OPTIONS_DEFINE=	FIXDRM SUID
 OPTIONS_RADIO=	CONF
 OPTIONS_RADIO_CONF=	DEVD UDEV
 OPTIONS_DEFAULT=	SUID FIXDRM
@@ -32,6 +32,7 @@ OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
 SUID_DESC=	Install setuid wrapper to allow startx as non-root
 CONF_DESC=	Backend to use for input device configuration
 DEVD_DESC=	Use devd for autoconfiguration of input devices
+FIXDRM_DESC=	Enable glamor workaround for drm-kmod bug
 UDEV_DESC=	Use udev via libudev-devd for autoconfiguration of input devices
 FIXDRM_DESC=	Enable glamor workaround for drm-devel-kmod bug
 
@@ -82,7 +83,7 @@ CONFIGURE_ARGS+=--disable-dmx --disable-xephyr --disable-xnest --disable-xvfb \
 SUB_FILES=	pkg-install pkg-deinstall
 .else
 CONFIGURE_ARGS+=	--disable-xorg
-OPTIONS_EXCLUDE=	DEVD UDEV SUID FIXDRM
+OPTIONS_EXCLUDE=	DEVD FIXDRM UDEV SUID
 # Set PLIST for slave ports so they only need to set PLIST_FILES
 PLIST=		${.CURDIR}/pkg-plist
 .endif
@@ -107,8 +108,8 @@ PLIST_SUB+=	SPARC64="@comment "
 .endif
 
 post-patch-FIXDRM-on:
-# Workaround xfwm-4.12 lockups with modesetting driver on drm-kmod 4.16+
-# with partial revert of commit 86b2d8740a330deafe8a9bbf0402705a43efbb42
+# Workaround lockups with modesetting driver using drm-kmod 4.16+ with partial
+# revert of commit 86b2d8740a330deafe8a9bbf0402705a43efbb42
 	@${REINPLACE_CMD} '/glamor_make_pixmap_exportable/ s/FALSE/TRUE/' \
 		${WRKSRC}/glamor/glamor_egl.c
 
