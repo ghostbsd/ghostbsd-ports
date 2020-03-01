@@ -24,7 +24,6 @@
     SUBDIR += dxirc
     SUBDIR += eggdrop
     SUBDIR += eggdrop-devel
-    SUBDIR += eggdrop16
     SUBDIR += epic4
     SUBDIR += epic5
     SUBDIR += evangeline
@@ -32,7 +31,6 @@
     SUBDIR += fisg
     SUBDIR += ghostbsd-irc
     SUBDIR += gruftistats
-    SUBDIR += gseen.mod
     SUBDIR += hexchat
     SUBDIR += hexchat-fish
     SUBDIR += hybserv
