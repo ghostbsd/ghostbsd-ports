@@ -168,21 +168,21 @@ echo "=> Detected nvidia-driver: ${NV}"
 NVIDIA=${NV}
 NV=`echo ${NV} | cut -f 1 -d _ | cut -f 1 -d ,`
 
-if [ ! -f NVIDIA-FreeBSD-x86-${NV}.tar.gz ] || !(tar -tf NVIDIA-FreeBSD-x86-${NV}.tar.gz > /dev/null 2>&1)
+if [ ! -f NVIDIA-FreeBSD-x86_64-${NV}.tar.gz ] || !(tar -tf NVIDIA-FreeBSD-x86_64-${NV}.tar.gz > /dev/null 2>&1)
 then
   [ -n "$NO_FETCH" ] \
     && terminate 8 "NVIDIA-FreeBSD-x86-${NV}.tar.gz unavailable"
   echo "=> Downloading NVIDIA-FreeBSD-x86-${NV}.tar.gz from https://download.nvidia.com..."
-  rm -f NVIDIA-FreeBSD-x86-${NV}.tar.gz
-  fetch -aRr https://download.nvidia.com/XFree86/FreeBSD-x86/${NV}/NVIDIA-FreeBSD-x86-${NV}.tar.gz \
-    || terminate 2 "Failed to download NVIDIA-FreeBSD-x86-${NV}.tar.gz"
-  echo "=> Downloaded NVIDIA-FreeBSD-x86-${NV}.tar.gz"
+  rm -f NVIDIA-FreeBSD-x86_64-${NV}.tar.gz
+  fetch -aRr https://download.nvidia.com/XFree86/FreeBSD-x86_64/${NV}/NVIDIA-FreeBSD-x86_64-${NV}.tar.gz \
+    || terminate 2 "Failed to download NVIDIA-FreeBSD-x86_64-${NV}.tar.gz"
+  echo "=> Downloaded NVIDIA-FreeBSD-x86_64-${NV}.tar.gz"
   echo "Please check the following information against /usr/ports/x11/nvidia-driver/distinfo"
-  sha256 NVIDIA-FreeBSD-x86-${NV}.tar.gz
-  echo "SIZE (NVIDIA-FreeBSD-x86-${NV}.tar.gz) = `stat -f "%z" NVIDIA-FreeBSD-x86-${NV}.tar.gz`"
+  sha256 NVIDIA-FreeBSD-x86_64-${NV}.tar.gz
+  echo "SIZE (NVIDIA-FreeBSD-x86_64-${NV}.tar.gz) = `stat -f "%z" NVIDIA-FreeBSD-x86_64-${NV}.tar.gz`"
 fi
 
-echo "=> Extracting NVIDIA-FreeBSD-x86-${NV}.tar.gz to $PREFIX/lib32..."
+echo "=> Extracting NVIDIA-FreeBSD-x86_64-${NV}.tar.gz to $PREFIX/lib32..."
 EXTRACT_LIST="libGL.so.1"
 case $NV in
   195*|173*|96*|71*)
@@ -196,20 +196,24 @@ esac
 EXTRACT_ARGS="--no-same-owner --no-same-permissions --strip-components 2 -C $PREFIX/lib32"
 for i in $EXTRACT_LIST
 do
-  EXTRACT_ARGS="$EXTRACT_ARGS --include NVIDIA-FreeBSD-x86-${NV}/obj/$i"
+  if [ $i == "libGL.so.1" ] ; then	
+     EXTRACT_ARGS="$EXTRACT_ARGS --include NVIDIA-FreeBSD-x86_64-${NV}/obj/libglvnd/32/$i"
+  else   
+     EXTRACT_ARGS="$EXTRACT_ARGS --include NVIDIA-FreeBSD-x86_64-${NV}/obj/32/$i"
+  fi   
 done
 umask 0333
-tar $EXTRACT_ARGS -xvf NVIDIA-FreeBSD-x86-${NV}.tar.gz \
+tar $EXTRACT_ARGS -xvf NVIDIA-FreeBSD-x86_64-${NV}.tar.gz \
   || terminate 3 "Failed to extract NVIDIA-FreeBSD-x86-${NV}.tar.gz"
 mkdir -m 0755 -p ${PREFIX}/lib32/.nvidia \
   || terminate 9 "Failed to create .nvidia shadow directory"
 mv ${PREFIX}/lib32/libGL.so.1 ${PREFIX}/lib32/.nvidia/ \
   || terminate 10 "Failed to move libGL.so.1 to .nvidia/ shadow directory"
 ln -s .nvidia/libGL.so.1 ${PREFIX}/lib32/libGL.so.1 \
-  || terminate 11 "Failed to link to .nvidia/libGL.so.1 in the shadow directory"
+  || terminate 11 "Failed to link to .nvidia/libGL.so.1 in the shadow directory" 
 
 echo "=> Cleaning up..."
-[ -n "$NO_REMOVE_NVIDIA" ] || rm -vf NVIDIA-FreeBSD-x86-${NV}.tar.gz \
+[ -n "$NO_REMOVE_NVIDIA" ] || rm -vf NVIDIA-FreeBSD-x86_64-${NV}.tar.gz \
   || terminate 6 "Failed to remove files"
 
 echo "===> i386-wine-${WINE} successfully patched for nvidia-driver-${NVIDIA}"
