@@ -273,6 +273,7 @@
     SUBDIR += dtpstree
     SUBDIR += DTraceToolkit
     SUBDIR += du2ps
+    SUBDIR += dua-cli
     SUBDIR += duff
     SUBDIR += dunst
     SUBDIR += dupd
