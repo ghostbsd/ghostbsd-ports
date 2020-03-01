@@ -141,17 +141,7 @@
     SUBDIR += getopt
     SUBDIR += ghostbsd-pkg-conf
     SUBDIR += gxconfig
-    SUBDIR += gimp-help-ca
-    SUBDIR += gimp-help-da
-    SUBDIR += gimp-help-el
     SUBDIR += gimp-help-en
-    SUBDIR += gimp-help-en_GB
-    SUBDIR += gimp-help-es
-    SUBDIR += gimp-help-it
-    SUBDIR += gimp-help-nl
-    SUBDIR += gimp-help-nn
-    SUBDIR += gimp-help-sl
-    SUBDIR += gimp-help-sv
     SUBDIR += gkrellm-gamma
     SUBDIR += gkrellm-xkb
     SUBDIR += gkrellmbgchg2
@@ -250,7 +240,6 @@
     SUBDIR += mdp
     SUBDIR += metalink-checker
     SUBDIR += metalink-tools
-    SUBDIR += metromap
     SUBDIR += mime-support
     SUBDIR += mirmon
     SUBDIR += mmdnn
@@ -503,7 +492,6 @@
     SUBDIR += tudu
     SUBDIR += tvbrowser
     SUBDIR += tvm
-    SUBDIR += typetrainer
     SUBDIR += tzdiff
     SUBDIR += uk-phone
     SUBDIR += uk-postcodes
