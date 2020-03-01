@@ -696,6 +696,7 @@
     SUBDIR += panoglview
     SUBDIR += panomatic
     SUBDIR += pc-pdfviewer
+    SUBDIR += pastel
     SUBDIR += pcl-pointclouds
     SUBDIR += pdf2svg
     SUBDIR += pdfpc
