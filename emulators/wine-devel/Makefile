@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	5.3
+DISTVERSION=	5.2
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -128,11 +128,7 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 			liblcms2.so:graphics/lcms2 \
 			libpng.so:graphics/png
 
-# Include this only if it has not already been included by the
-# i386-wine-devel slave port.
-.ifndef PKGNAMEPREFIX
 .include <bsd.port.pre.mk>
-.endif
 
 # Using LLD with OPENAL fails due to preemption of symbols with protected visibility in a shared object
 # See PR 226980 
@@ -191,6 +187,4 @@ check-wine-devel-vs-staging:
 	  fi \
 	done
 
-.ifndef PKGNAMEPREFIX
 .include <bsd.port.post.mk>
-.endif
