@@ -1034,7 +1034,6 @@
     SUBDIR += py-upt-pypi
     SUBDIR += py-upt-rubygems
     SUBDIR += py-uptime
-    SUBDIR += py-XenAPI
     SUBDIR += py-zdaemon
     SUBDIR += pydf
     SUBDIR += qchroot
