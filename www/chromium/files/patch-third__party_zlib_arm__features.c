@@ -1,4 +1,4 @@
---- third_party/zlib/arm_features.c.orig	2020-01-16 22:51:11 UTC
+--- third_party/zlib/arm_features.c.orig	2020-03-03 18:54:06 UTC
 +++ third_party/zlib/arm_features.c
 @@ -16,6 +16,15 @@ int ZLIB_INTERNAL arm_cpu_enable_pmull = 0;
  #include <pthread.h>

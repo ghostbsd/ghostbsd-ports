@@ -360,6 +360,7 @@
     SUBDIR += froxlor
     SUBDIR += fsbackup
     SUBDIR += fsc
+    SUBDIR += fselect
     SUBDIR += fsearch
     SUBDIR += fstyp
     SUBDIR += fswatch-mon
@@ -1283,6 +1284,7 @@
     SUBDIR += syslog-ng323
     SUBDIR += syslog-ng324
     SUBDIR += syslog-ng325
+    SUBDIR += syslog-ng326
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += system-tools-backends
