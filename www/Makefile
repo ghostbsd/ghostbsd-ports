@@ -17,6 +17,7 @@
     SUBDIR += Stikked
     SUBDIR += UniversalFeedCreator
     SUBDIR += ach
+    SUBDIR += adguardhome
     SUBDIR += adzap
     SUBDIR += alef-webfont
     SUBDIR += amphetadesk
@@ -32,6 +33,7 @@
     SUBDIR += archiva
     SUBDIR += aria2
     SUBDIR += asql
+    SUBDIR += authelia
     SUBDIR += awffull
     SUBDIR += aws
     SUBDIR += aws-demos

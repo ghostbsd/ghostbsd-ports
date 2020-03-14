@@ -128,7 +128,11 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 			liblcms2.so:graphics/lcms2 \
 			libpng.so:graphics/png
 
+# Include this only if it has not been already included by the
+# i386-wine-devel slave port.
+.ifndef PKGNAMEPREFIX
 .include <bsd.port.pre.mk>
+.endif
 
 # Using LLD with OPENAL fails due to preemption of symbols with protected visibility in a shared object
 # See PR 226980 
@@ -181,10 +185,12 @@ post-install:
 
 check-wine-devel-vs-staging:
 	@${GREP} %%STAGING%% pkg-plist | while read f; do \
-	  f=`echo $$f | ${SED} -e 's/%%STAGING%%//'`; \
-	  if [ -f "$$STAGEDIR/$$PREFIX/$$f" ]; then \
+	  f=`echo $$f | ${SED} -e 's:%%STAGING%%::' -e "s:%%DATADIR%%:${DATADIR}:"`; \
+	  if [ -f "$$STAGEDIR/$$PREFIX/$$f" ] || [ -f "$$STAGEDIR/$$f" ]; then \
 	    ${PRINTF} "%s no longer contingent on %%STAGING%%?\n" "$$f"; \
 	  fi \
 	done
 
+.ifndef PKGNAMEPREFIX
 .include <bsd.port.post.mk>
+.endif

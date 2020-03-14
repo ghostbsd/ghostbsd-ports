@@ -9,7 +9,7 @@
  #include <cstddef>
  #include <cstdint>
  
-@@ -16,30 +14,26 @@
+@@ -16,30 +14,25 @@
  
  #if HAVE_ARM64_CRC32C
  
@@ -19,6 +19,7 @@
 -// getauxval() is not available on Android until API level 20. Link it as a weak
 -// symbol.
 -extern "C" unsigned long getauxval(unsigned long type) __attribute__((weak));
++#include <sys/types.h>
 +#include <machine/armreg.h>
  
 -#define AT_HWCAP 16
@@ -48,10 +49,8 @@
 +    uint64_t id_aa64isar0;
 +  
 +    id_aa64isar0 = READ_SPECIALREG(id_aa64isar0_el1);
-+    if ((ID_AA64ISAR0_AES_VAL(id_aa64isar0) == ID_AA64ISAR0_AES_PMULL) && \
-+       (ID_AA64ISAR0_CRC32_VAL(id_aa64isar0) == ID_AA64ISAR0_CRC32_BASE))
-+      return true;
-+    return false;
++    return ((ID_AA64ISAR0_AES_VAL(id_aa64isar0) == ID_AA64ISAR0_AES_PMULL) &&
++      (ID_AA64ISAR0_CRC32_VAL(id_aa64isar0) == ID_AA64ISAR0_CRC32_BASE));
 +  }
  
  }  // namespace crc32c

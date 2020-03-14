@@ -1,6 +1,6 @@
 --- third_party/boringssl/src/crypto/cpu-aarch64-linux.c.orig	2020-03-03 18:55:22 UTC
 +++ third_party/boringssl/src/crypto/cpu-aarch64-linux.c
-@@ -14,49 +14,44 @@
+@@ -14,49 +14,45 @@
  
  #include <openssl/cpu.h>
  
@@ -19,6 +19,7 @@
  
 -void OPENSSL_cpuid_setup(void) {
 -  unsigned long hwcap = getauxval(AT_HWCAP);
++#include <sys/types.h>
 +#include <machine/armreg.h>
  
 -  // See /usr/include/asm/hwcap.h on an aarch64 installation for the source of
