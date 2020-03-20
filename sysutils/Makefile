@@ -855,6 +855,7 @@
     SUBDIR += p5-Unix-Syslog
     SUBDIR += p5-User
     SUBDIR += packer
+    SUBDIR += packmule
     SUBDIR += pacman
     SUBDIR += paicc
     SUBDIR += paladin
@@ -1085,6 +1086,7 @@
     SUBDIR += roottail
     SUBDIR += rovclock
     SUBDIR += rpi-firmware
+    SUBDIR += rsfetch
     SUBDIR += rshim-user-space
     SUBDIR += rsnapshot
     SUBDIR += rsyncbackup
