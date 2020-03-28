@@ -153,6 +153,7 @@
     SUBDIR += sayaka
     SUBDIR += scudcloud
     SUBDIR += sendxmpp
+    SUBDIR += signal-cli
     SUBDIR += slack-term
     SUBDIR += spectral
     SUBDIR += ssh-chat

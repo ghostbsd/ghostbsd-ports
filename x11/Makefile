@@ -37,6 +37,7 @@
     SUBDIR += cinnamon-session
     SUBDIR += cl-clx
     SUBDIR += cl-clx-sbcl
+    SUBDIR += clipman
     SUBDIR += compton-conf
     SUBDIR += conlecterm
     SUBDIR += controllermap
@@ -287,7 +288,6 @@
     SUBDIR += roxterm
     SUBDIR += rsibreak
     SUBDIR += rubygem-gnome
-    SUBDIR += rxvt
     SUBDIR += rxvt-unicode
     SUBDIR += sakura
     SUBDIR += sbxkb
@@ -297,6 +297,7 @@
     SUBDIR += sessreg
     SUBDIR += setlayout
     SUBDIR += setxkbmap
+    SUBDIR += showkeys
     SUBDIR += simdock
     SUBDIR += simplestroke
     SUBDIR += sisctrl
@@ -344,6 +345,7 @@
     SUBDIR += wev
     SUBDIR += wf-shell
     SUBDIR += wl-clipboard
+    SUBDIR += wlogout
     SUBDIR += wmappl
     SUBDIR += wmblob
     SUBDIR += wmbutton
@@ -355,6 +357,7 @@
     SUBDIR += wmutils-core
     SUBDIR += wmutils-opt
     SUBDIR += wmxss
+    SUBDIR += wofi
     SUBDIR += workrave
     SUBDIR += x11perf
     SUBDIR += x3270
@@ -473,6 +476,7 @@
     SUBDIR += xorg-minimal
     SUBDIR += xorgproto
     SUBDIR += xpr
+    SUBDIR += xpra
     SUBDIR += xprintidle
     SUBDIR += xprompt
     SUBDIR += xprop

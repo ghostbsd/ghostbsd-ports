@@ -279,6 +279,7 @@
     SUBDIR += dupd
     SUBDIR += duplicity
     SUBDIR += duplicity-devel
+    SUBDIR += duplicity07
     SUBDIR += duply
     SUBDIR += dupmerge
     SUBDIR += dvd+rw-tools
@@ -757,6 +758,7 @@
     SUBDIR += nsysctl
     SUBDIR += ntfy
     SUBDIR += nut
+    SUBDIR += nut-devel
     SUBDIR += nvclock
     SUBDIR += nvme-cli
     SUBDIR += nvramtool
