@@ -1,4 +1,5 @@
 etc/pkg/repos/FreeBSD.conf
+etc/pkg/repos/GhostBSD.conf
 etc/pkg/repos/GhostBSD.conf.ca
 etc/pkg/repos/GhostBSD.conf.fr
 etc/pkg/repos/GhostBSD.conf.us
