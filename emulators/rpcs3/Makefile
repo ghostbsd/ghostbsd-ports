@@ -2,14 +2,10 @@
 
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.9-10053 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-gf5a51599d
+DISTVERSION=	0.0.9-10152 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-gcce946f10
+PORTREVISION=	1
 CATEGORIES=	emulators
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	713df966dd52.patch:-p1 # https://github.com/RPCS3/rpcs3/pull/7878
-PATCHFILES+=	7a198b85b8b2.patch:-p1 # https://github.com/RPCS3/rpcs3/pull/7880
-PATCHFILES+=	f567ebcf74d1.patch:-p1 # https://github.com/RPCS3/rpcs3/pull/7882
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	PS3 emulator/debugger
@@ -33,7 +29,7 @@ GH_ACCOUNT=	RPCS3
 GH_TUPLE=	RPCS3:hidapi:hidapi-0.8.0-rc1-27-g9220f5e:hidapi/3rdparty/hidapi \
 		RPCS3:llvm-mirror:f5679565d348:llvm/llvm \
 		Cyan4973:xxHash:v0.6.5:xxHash/3rdparty/xxHash \
-		FNA-XNA:FAudio:20.03:FAudio/3rdparty/FAudio \
+		FNA-XNA:FAudio:20.04:FAudio/3rdparty/FAudio \
 		jbeder:yaml-cpp:yaml-cpp-0.6.3-30-g6a211f0:yamlcpp/3rdparty/yaml-cpp \
 		kobalicek:asmjit:fc251c9:asmjit/asmjit \
 		KhronosGroup:glslang:8.13.3559-55-gae594356:glslang/Vulkan/glslang \
@@ -50,8 +46,8 @@ CMAKE_ON=	CMAKE_SKIP_RPATH USE_SYSTEM_CURL USE_SYSTEM_FFMPEG USE_SYSTEM_LIBPNG
 CMAKE_OFF=	USE_NATIVE_INSTRUCTIONS
 LDFLAGS+=	-Wl,--as-needed # GLU
 
-OPTIONS_DEFINE=	ALSA EVDEV FAUDIO LLVM PULSEAUDIO VULKAN
-OPTIONS_DEFAULT=EVDEV FAUDIO LLVM VULKAN
+OPTIONS_DEFINE=	ALSA EVDEV FAUDIO PULSEAUDIO VULKAN
+OPTIONS_DEFAULT=EVDEV FAUDIO VULKAN
 
 ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
 ALSA_RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins
@@ -63,11 +59,9 @@ EVDEV_BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto
 EVDEV_LIB_DEPENDS=	libevdev.so:devel/libevdev
 
 FAUDIO_DESC=		FAudio audio support
-FAUDIO_LIB_DEPENDS=	libFAudio.so:audio/faudio
+FAUDIO_USES=		sdl
+FAUDIO_USE=		SDL=sdl2
 FAUDIO_CMAKE_BOOL=	USE_FAUDIO
-
-LLVM_DESC=		LLVM-based PPU recompiler
-LLVM_CMAKE_BOOL_OFF=	WITHOUT_LLVM
 
 PULSEAUDIO_LIB_DEPENDS=	libpulse-simple.so:audio/pulseaudio
 PULSEAUDIO_CMAKE_BOOL=	USE_PULSE

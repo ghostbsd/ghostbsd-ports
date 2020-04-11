@@ -278,7 +278,6 @@
     SUBDIR += dunst
     SUBDIR += dupd
     SUBDIR += duplicity
-    SUBDIR += duplicity-devel
     SUBDIR += duplicity07
     SUBDIR += duply
     SUBDIR += dupmerge
@@ -361,8 +360,8 @@
     SUBDIR += froxlor
     SUBDIR += fsbackup
     SUBDIR += fsc
-    SUBDIR += fselect
     SUBDIR += fsearch
+    SUBDIR += fselect
     SUBDIR += fstyp
     SUBDIR += fswatch-mon
     SUBDIR += ftwin
@@ -980,7 +979,6 @@
     SUBDIR += py-cpuinfo
     SUBDIR += py-cron-descriptor
     SUBDIR += py-croniter
-    SUBDIR += py-crontab
     SUBDIR += py-diffoscope
     SUBDIR += py-dirsync
     SUBDIR += py-distro
@@ -1017,6 +1015,7 @@
     SUBDIR += py-psutil121
     SUBDIR += py-ptyprocess
     SUBDIR += py-python-consul
+    SUBDIR += py-python-crontab
     SUBDIR += py-python-nomad
     SUBDIR += py-pytsk
     SUBDIR += py-pywatchman
@@ -1381,6 +1380,7 @@
     SUBDIR += u-boot-pine64
     SUBDIR += u-boot-pine64-lts
     SUBDIR += u-boot-pinebook
+    SUBDIR += u-boot-qemu-arm
     SUBDIR += u-boot-riotboard
     SUBDIR += u-boot-rock64
     SUBDIR += u-boot-rockpro64

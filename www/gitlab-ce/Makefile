@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab-ce
-PORTVERSION=	12.9.1
+PORTVERSION=	12.9.2
 PORTREVISION=	0
 CATEGORIES=	www devel
 
@@ -21,7 +21,7 @@ MY_DEPENDS=	git>=2.22.2:devel/git \
 	gitlab-pages>=1.17.0:www/gitlab-pages \
 	redis>=3.2.12:databases/redis \
 	yarn>=1.10.0:www/yarn \
-	rubygem-rails60>=6.0.2<6.0.3:www/rubygem-rails60 \
+	rubygem-rails60>=6.0.2.2<6.0.2.3:www/rubygem-rails60 \
 	rubygem-bootsnap>=1.4.6<2.0:devel/rubygem-bootsnap \
 	rubygem-nakayoshi_fork>=0.0.4<0.1.0:devel/rubygem-nakayoshi_fork \
 	rubygem-responders-rails60>=3.0<4.0:www/rubygem-responders-rails60 \
@@ -144,7 +144,7 @@ MY_DEPENDS=	git>=2.22.2:devel/git \
 	rubygem-redis-rails-rails60>=5.0.2<5.1:www/rubygem-redis-rails-rails60 \
 	rubygem-discordrb-webhooks-blackst0ne>=3.3<4.0:net-im/rubygem-discordrb-webhooks-blackst0ne \
 	rubygem-hipchat>=1.6.0<1.7.0:net-im/rubygem-hipchat \
-	rubygem-jira-ruby>=1.7<2.0:devel/rubygem-jira-ruby \
+	rubygem-jira-ruby1>=1.7<2.0:devel/rubygem-jira-ruby1 \
 	rubygem-atlassian-jwt>=0.2.0<0.3.0:www/rubygem-atlassian-jwt \
 	rubygem-flowdock>=0.7<1.0:www/rubygem-flowdock \
 	rubygem-slack-messenger>=2.3.3<2.4.0:devel/rubygem-slack-messenger \
@@ -186,7 +186,7 @@ MY_DEPENDS=	git>=2.22.2:devel/git \
 	rubygem-peek-rails60>=1.1.0<2.0:devel/rubygem-peek-rails60 \
 	rubygem-snowplow-tracker>=0.6.1<0.7.0:devel/rubygem-snowplow-tracker \
 	rubygem-gitlab-derailed_benchmarks>0:benchmarks/rubygem-gitlab-derailed_benchmarks \
-	rubygem-method_source>=0.8<1.0:devel/rubygem-method_source \
+	rubygem-method_source0>=0.8<1.0:devel/rubygem-method_source0 \
 	rubygem-influxdb>=0.2<1.0:databases/rubygem-influxdb \
 	rubygem-prometheus-client-mmap>=0.10.0<0.11.0:devel/rubygem-prometheus-client-mmap \
 	rubygem-raindrops>=0.18<1.0:www/rubygem-raindrops \
@@ -245,7 +245,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 GL_PROJECT=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT=	63745c932cc8bc81fc2b2d30e9a171e346f4b969
+GL_COMMIT=	ac5568eb5d8cef68ced7c70729cc47f20d0a84b9
 
 USERS=	git
 GROUPS=	git

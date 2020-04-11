@@ -480,7 +480,6 @@
     SUBDIR += p5-Algorithm-RabinKarp
     SUBDIR += p5-Apache-ParseLog
     SUBDIR += p5-Apache-Solr
-    SUBDIR += p5-Template-AutoFilter
     SUBDIR += p5-BibTeX-Parser
     SUBDIR += p5-BigIP-ParseConfig
     SUBDIR += p5-Bloom-Filter
@@ -779,6 +778,7 @@
     SUBDIR += p5-TOML-Parser
     SUBDIR += p5-TeX-Encode
     SUBDIR += p5-TeX-Hyphen
+    SUBDIR += p5-Template-AutoFilter
     SUBDIR += p5-Template-Declare
     SUBDIR += p5-Template-Extract
     SUBDIR += p5-Template-Magic
@@ -1278,6 +1278,7 @@
     SUBDIR += py-hypua2jamo
     SUBDIR += py-isbnlib
     SUBDIR += py-isbntools
+    SUBDIR += py-jinja2-cli
     SUBDIR += py-jsonslicer
     SUBDIR += py-jsx-lexer
     SUBDIR += py-jtextfsm
@@ -1501,7 +1502,6 @@
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
-    SUBDIR += rubygem-diffy31
     SUBDIR += rubygem-docdiff
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api
@@ -1561,6 +1561,7 @@
     SUBDIR += rubygem-linguistics
     SUBDIR += rubygem-liquid
     SUBDIR += rubygem-liquid-tag-parser
+    SUBDIR += rubygem-liquid-tag-parser1
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
     SUBDIR += rubygem-ltsv

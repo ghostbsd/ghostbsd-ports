@@ -2,7 +2,7 @@
 
 PORTNAME=	dua-cli
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.3.7
+DISTVERSION=	2.5.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	vulcan@wired.sh
@@ -18,8 +18,8 @@ GH_ACCOUNT=	Byron
 CARGO_CRATES=	ansi_term-0.11.0 \
 		atty-0.2.14 \
 		autocfg-1.0.0 \
-		backtrace-0.3.45 \
-		backtrace-sys-0.1.34 \
+		backtrace-0.3.46 \
+		backtrace-sys-0.1.35 \
 		bitflags-1.2.1 \
 		byte-unit-3.0.3 \
 		cassowary-0.3.0 \
@@ -40,8 +40,9 @@ CARGO_CRATES=	ansi_term-0.11.0 \
 		failure_derive-0.1.7 \
 		filesize-0.2.0 \
 		fixedbitset-0.2.0 \
+		flume-0.7.1 \
 		heck-0.3.1 \
-		hermit-abi-0.1.8 \
+		hermit-abi-0.1.10 \
 		indexmap-1.3.2 \
 		itertools-0.8.2 \
 		itertools-0.9.0 \
@@ -59,7 +60,7 @@ CARGO_CRATES=	ansi_term-0.11.0 \
 		pretty_assertions-0.6.1 \
 		proc-macro-error-0.4.12 \
 		proc-macro-error-attr-0.4.12 \
-		proc-macro2-1.0.9 \
+		proc-macro2-1.0.10 \
 		quote-1.0.3 \
 		rayon-1.3.0 \
 		rayon-core-1.7.0 \
@@ -67,6 +68,7 @@ CARGO_CRATES=	ansi_term-0.11.0 \
 		redox_termios-0.1.1 \
 		rustc-demangle-0.1.16 \
 		scopeguard-1.1.0 \
+		spin-0.5.2 \
 		strsim-0.8.0 \
 		structopt-0.3.12 \
 		structopt-derive-0.4.5 \

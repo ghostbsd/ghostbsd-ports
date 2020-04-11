@@ -322,6 +322,7 @@
     SUBDIR += gtkam
     SUBDIR += gts
     SUBDIR += guetzli
+    SUBDIR += guile-cairo
     SUBDIR += guilib
     SUBDIR += gwenview
     SUBDIR += hdr_tools
@@ -847,6 +848,7 @@
     SUBDIR += py-pyganim
     SUBDIR += py-pygeoapi
     SUBDIR += py-pyglet
+    SUBDIR += py-pyglet150
     SUBDIR += py-pygooglechart
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
@@ -956,7 +958,6 @@
     SUBDIR += sampleicc
     SUBDIR += sane-backends
     SUBDIR += sane-epkowa
-    SUBDIR += sane-frontends
     SUBDIR += scale2x
     SUBDIR += scantailor
     SUBDIR += scr2png
@@ -1002,6 +1003,7 @@
     SUBDIR += sxiv
     SUBDIR += synaesthesia
     SUBDIR += synfigstudio
+    SUBDIR += tachyon
     SUBDIR += telak
     SUBDIR += tesseract
     SUBDIR += tesseract-data
@@ -1019,6 +1021,7 @@
     SUBDIR += tkpng
     SUBDIR += togl
     SUBDIR += ttygif
+    SUBDIR += ttyplot
     SUBDIR += tumble
     SUBDIR += tweeny
     SUBDIR += ufraw

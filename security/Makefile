@@ -1160,6 +1160,7 @@
     SUBDIR += secpanel
     SUBDIR += sectok
     SUBDIR += secure_delete
+    SUBDIR += sedutil
     SUBDIR += setaudit
     SUBDIR += sha
     SUBDIR += sha1collisiondetection
@@ -1274,7 +1275,6 @@
     SUBDIR += vuls
     SUBDIR += vuxml
     SUBDIR += vxquery
-    SUBDIR += w3af
     SUBDIR += wapiti
     SUBDIR += wazuh-agent
     SUBDIR += webfwlog

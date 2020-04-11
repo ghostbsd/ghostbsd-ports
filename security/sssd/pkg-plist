@@ -188,7 +188,7 @@ sbin/sssd
 %%PORTDOCS%%@dir %%DOCSDIR%%/idmap_doc
 %%PORTDOCS%%@dir %%DOCSDIR%%/libsss_sudo_doc
 %%PORTDOCS%%@dir %%DOCSDIR%%/nss_idmap_doc
-@unexec if [ -d %%ETCDIR%% ]; then echo "==> If you are permanently removing this port, you should do a ``rm -rf %%ETCDIR%%`` to remove any configuration files."; fi
-@unexec if [ -d /var/db/sss ]; then echo "==> If you are permanently removing this port, you should do a ``rm -rf /var/db/sss`` to remove any additional files."; fi
-@unexec if [ -d /var/db/sss_mc ]; then echo "==> If you are permanently removing this port, you should do a ``rm -rf /var/db/sss_mc`` to remove any additional files."; fi
-@unexec if [ -d /var/run/sss ]; then echo "==> If you are permanently removing this port, you should do a ``rm -rf /var/run/sss`` to remove any additional files."; fi
+@postexec if [ -d %%ETCDIR%% ]; then echo "==> If you are permanently removing this port, you should do a ``rm -rf %%ETCDIR%%`` to remove any configuration files."; fi
+@postexec if [ -d /var/db/sss ]; then echo "==> If you are permanently removing this port, you should do a ``rm -rf /var/db/sss`` to remove any additional files."; fi
+@postexec if [ -d /var/db/sss_mc ]; then echo "==> If you are permanently removing this port, you should do a ``rm -rf /var/db/sss_mc`` to remove any additional files."; fi
+@postexec if [ -d /var/run/sss ]; then echo "==> If you are permanently removing this port, you should do a ``rm -rf /var/run/sss`` to remove any additional files."; fi

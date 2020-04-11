@@ -17,6 +17,9 @@ GH_ACCOUNT=     networkupstools
 GH_TAGNAME=     e27f1f9
 NUT_COMMIT_DATE=	2020.02.09
 
+BROKEN_powerpc64=	Poudriere builds fail.
+BROKEN_powerpc=		Poudriere builds fail.
+
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USES=		autoreconf:build gmake libtool pkgconfig python:build
@@ -67,6 +70,8 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc/nut \
 		--with-user=${NUT_USER} \
 		--with-group=${NUT_GROUP} \
 		--with-dev
+
+BUILD_DEPENDS=	asciidoc:textproc/asciidoc
 
 .if ${PORT_OPTIONS:MCGI}
 LIB_DEPENDS+=	libgd.so:graphics/gd
@@ -173,6 +178,10 @@ CONFIGURE_ARGS+=	--with-nss
 .else
 CONFIGURE_ARGS+=	--without-openssl --without-ssl
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -i '' -e 's|python|${PYTHON_CMD}|' ${WRKSRC}/autogen.sh
+	@${FIND} ${WRKSRC} -type f | ${XARGS} ${REINPLACE_CMD} -i '' -e 's|/usr/bin/env python|${PYTHON_CMD}|'
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh

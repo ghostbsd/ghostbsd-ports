@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	5.5
+DISTVERSION=	5.6
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -43,7 +43,8 @@ CONFIGURE_ARGS+=--verbose \
 		--without-sane \
 		--without-sdl \
 		--without-tiff \
-		--without-udev
+		--without-udev \
+		--without-unwind 
 CONFIGURE_ENV=	CPPBIN="${CPP}" FLEX="${LOCALBASE}/bin/flex"
 WINELIBDIR?=	${PREFIX}/lib
 .if !defined(USE_LDCONFIG32)
