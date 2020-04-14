@@ -252,6 +252,7 @@
     SUBDIR += mtx
     SUBDIR += mxnet
     SUBDIR += najitool
+    SUBDIR += ncnn
     SUBDIR += netron
     SUBDIR += nms
     SUBDIR += nn-insight
