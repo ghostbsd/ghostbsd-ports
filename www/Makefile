@@ -1520,6 +1520,7 @@
     SUBDIR += py-django-formtools
     SUBDIR += py-django-guardian
     SUBDIR += py-django-happenings
+    SUBDIR += py-django-happenings-update
     SUBDIR += py-django-haystack
     SUBDIR += py-django-hierarkey
     SUBDIR += py-django-hijack
