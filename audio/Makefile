@@ -724,7 +724,7 @@
     SUBDIR += screcord-lv2
     SUBDIR += sdl_mixer
     SUBDIR += sdl_sound
-    SUBDIR += sdl2_mixer
+    SUBDIR += sfizz
     SUBDIR += sfront
     SUBDIR += shairplay
     SUBDIR += shairport-sync
