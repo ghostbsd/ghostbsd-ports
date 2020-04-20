@@ -640,6 +640,7 @@
     SUBDIR += lxterminal
     SUBDIR += mac_nonet
     SUBDIR += mac_rtprio
+    SUBDIR += mackerel-agent
     SUBDIR += magicrescue
     SUBDIR += manck
     SUBDIR += mapchan
