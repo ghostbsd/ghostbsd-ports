@@ -752,6 +752,7 @@
     SUBDIR += soundtouch
     SUBDIR += sox
     SUBDIR += spc2it
+    SUBDIR += spectacle-lv2
     SUBDIR += spectrogram
     SUBDIR += speech-denoiser-lv2
     SUBDIR += speex
