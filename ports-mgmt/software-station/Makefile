@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	software-station
-PORTVERSION=	0.5
+PORTVERSION=	0.6
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
@@ -16,7 +16,7 @@ RUN_DEPENDS=	sudo:security/sudo \
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
-USES =		python:3.6+
+USES =		python:3.7+
 USE_PYTHON=	distutils
 USE_GNOME=	pygobject3
 
