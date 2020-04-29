@@ -3,6 +3,10 @@
 case ${2} in
   (POST-INSTALL)
     service devd restart
+    if [ ! -f "%%PREFIX%%/etc/automount.conf" ]; then
+      echo "USERUMOUNT=YES" > %%PREFIX%%/etc/automount.conf
+      echo "REMOVEDIRS=YES" >> %%PREFIX%%/etc/automount.conf
+    fi
     echo
     echo
     echo "Check %%PREFIX%%/bin/automount --help for available options."

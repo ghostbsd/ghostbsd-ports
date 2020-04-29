@@ -3,6 +3,7 @@
 
 PORTNAME=	automount
 PORTVERSION=	1.7.1
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://raw.github.com/vermaden/automount/master/
 
@@ -29,6 +30,8 @@ EXFAT_RUN_DEPENDS=	fusefs-exfat>=0:sysutils/fusefs-exfat
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/automount             ${STAGEDIR}${PREFIX}/sbin
 	${INSTALL_DATA}   ${WRKDIR}/automount_devd.conf   ${STAGEDIR}${PREFIX}/etc/devd/automount_devd.conf
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/devd-openrc
+	${INSTALL_DATA}   ${WRKDIR}/automount_devd.conf   ${STAGEDIR}${PREFIX}/etc/devd-openrc/automount_devd.conf
 	${INSTALL_DATA}   ${WRKDIR}/automount.conf	  ${STAGEDIR}${PREFIX}/etc/automount.conf.sample
 
 .include <bsd.port.mk>
