@@ -2,21 +2,21 @@
 # $FreeBSD$
 
 PORTNAME=	automount
-PORTVERSION=	1.7.1
-PORTREVISION=	2
+DISTVERSION=	1.7.3
 CATEGORIES=	sysutils
-MASTER_SITES=	https://raw.github.com/vermaden/automount/master/
 
 MAINTAINER=	vermaden@interia.pl
 COMMENT=	FreeBSD's devd(8) based automount solution
 
 LICENSE=	BSD2CLAUSE
 
+USE_GITHUB=     yes
+GH_ACCOUNT=     GhostBSD
+
 PLIST_FILES=	sbin/automount etc/devd/automount_devd.conf etc/automount.conf.sample
 
 SUB_FILES=	pkg-install
 NO_BUILD=	yes
-NO_ARCH=	yes
 
 OPTIONS_DEFINE=		NTFS3G EXT4 EXFAT
 OPTIONS_DEFAULT=	NTFS3G EXT4
@@ -28,10 +28,10 @@ EXFAT_DESC=		Support Microsoft exFAT filesystem
 EXFAT_RUN_DEPENDS=	fusefs-exfat>=0:sysutils/fusefs-exfat
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/automount             ${STAGEDIR}${PREFIX}/sbin
-	${INSTALL_DATA}   ${WRKDIR}/automount_devd.conf   ${STAGEDIR}${PREFIX}/etc/devd/automount_devd.conf
+	${INSTALL_SCRIPT} ${WRKSRC}/automount             ${STAGEDIR}${PREFIX}/sbin
+	${INSTALL_DATA}   ${WRKSRC}/automount_devd.conf   ${STAGEDIR}${PREFIX}/etc/devd/automount_devd.conf
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/devd-openrc
-	${INSTALL_DATA}   ${WRKDIR}/automount_devd.conf   ${STAGEDIR}${PREFIX}/etc/devd-openrc/automount_devd.conf
-	${INSTALL_DATA}   ${WRKDIR}/automount.conf	  ${STAGEDIR}${PREFIX}/etc/automount.conf.sample
+	${INSTALL_DATA}   ${WRKSRC}/automount_devd.conf   ${STAGEDIR}${PREFIX}/etc/devd-openrc/automount_devd.conf
+	${INSTALL_DATA}   ${WRKSRC}/automount.conf	  ${STAGEDIR}${PREFIX}/etc/automount.conf.sample
 
 .include <bsd.port.mk>

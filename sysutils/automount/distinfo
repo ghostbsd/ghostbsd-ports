@@ -1,3 +1,3 @@
-TIMESTAMP = 1567078461
-SHA256 (automount-1.7.1.tar.gz) = e6c2110b8c6099f9924a6f4c49be6aa93f65b69ba1ee98576d8fb60846f1a5c2
-SIZE (automount-1.7.1.tar.gz) = 6532
+TIMESTAMP = 1588798059
+SHA256 (GhostBSD-automount-1.7.3_GH0.tar.gz) = c3d6697666df1de49f2b73043c547b9f0b19f0fd8aa909c4c42eea1d29d8c00f
+SIZE (GhostBSD-automount-1.7.3_GH0.tar.gz) = 97986
