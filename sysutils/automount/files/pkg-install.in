@@ -11,7 +11,7 @@ case ${2} in
     service devd restart
     echo
     echo
-    echo "Check %%PREFIX%%/bin/automount --help for available options."
+    echo "Check %%PREFIX%%/sbin/automount --help for available options."
     echo
     echo
     ;;
