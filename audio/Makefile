@@ -169,7 +169,6 @@
     SUBDIR += festvox-cmu_us_ksp_arctic
     SUBDIR += festvox-cmu_us_rms_arctic
     SUBDIR += festvox-cmu_us_slt_arctic
-    SUBDIR += festvox-czech
     SUBDIR += festvox-don
     SUBDIR += festvox-el11
     SUBDIR += festvox-kal16
@@ -211,7 +210,6 @@
     SUBDIR += ghostess
     SUBDIR += giada
     SUBDIR += gimmix
-    SUBDIR += gkrellmvolume2
     SUBDIR += glurp
     SUBDIR += gmpc
     SUBDIR += gmpc-alarm
@@ -495,11 +493,9 @@
     SUBDIR += mio2jack
     SUBDIR += mixer.app
     SUBDIR += mixertui
-    SUBDIR += mixmos
     SUBDIR += mixxx
     SUBDIR += mixxx21
     SUBDIR += mkcue
-    SUBDIR += mma
     SUBDIR += moc
     SUBDIR += modplugplay
     SUBDIR += moodbar
@@ -619,7 +615,6 @@
     SUBDIR += pavumeter
     SUBDIR += pc-mixer
     SUBDIR += pd
-    SUBDIR += pd-cyclone
     SUBDIR += pear-Text_Spell_Audio
     SUBDIR += penguinsap
     SUBDIR += pianobar
@@ -632,6 +627,7 @@
     SUBDIR += play
     SUBDIR += playgsf
     SUBDIR += playmidi
+    SUBDIR += playumidi
     SUBDIR += pm3umpdl
     SUBDIR += pms
     SUBDIR += pms-devel
@@ -732,7 +728,6 @@
     SUBDIR += shairport-sync
     SUBDIR += sherlock-lv2
     SUBDIR += shntool
-    SUBDIR += shorten
     SUBDIR += shout
     SUBDIR += sidplay
     SUBDIR += sidplay2
@@ -788,7 +783,6 @@
     SUBDIR += synthv1-lv2
     SUBDIR += taglib
     SUBDIR += taglib-extras
-    SUBDIR += taglib-sharp
     SUBDIR += taglookup
     SUBDIR += tagtool
     SUBDIR += tagutil
@@ -851,6 +845,7 @@
     SUBDIR += wmix
     SUBDIR += wmmp
     SUBDIR += wmrecord
+    SUBDIR += wmsmixer
     SUBDIR += workman
     SUBDIR += wxguitar
     SUBDIR += x42-plugins-lv2
@@ -861,7 +856,6 @@
     SUBDIR += xfce4-mpc-plugin
     SUBDIR += xfce4-pulseaudio-plugin
     SUBDIR += xfmpc
-    SUBDIR += xhippo
     SUBDIR += ximp3
     SUBDIR += xmcd
     SUBDIR += xmix

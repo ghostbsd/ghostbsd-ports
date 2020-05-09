@@ -16,7 +16,6 @@
     SUBDIR += genplist
     SUBDIR += jailaudit
     SUBDIR += lsknobs
-    SUBDIR += managepkg
     SUBDIR += mkreadmes
     SUBDIR += modules2tuple
     SUBDIR += octopkg

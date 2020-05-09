@@ -7,7 +7,6 @@
     SUBDIR += beebeep
     SUBDIR += centerim
     SUBDIR += centerim-devel
-    SUBDIR += chattahoochie
     SUBDIR += climm
     SUBDIR += coccinella
     SUBDIR += convey
@@ -36,7 +35,8 @@
     SUBDIR += jabberd
     SUBDIR += jarl
     SUBDIR += jggtrans
-    SUBDIR += jitsi
+    SUBDIR += jicofo
+    SUBDIR += jitsi-videobridge
     SUBDIR += kaccounts-integration
     SUBDIR += kaccounts-providers
     SUBDIR += kaidan
@@ -81,19 +81,16 @@
     SUBDIR += meanwhile
     SUBDIR += mikutter
     SUBDIR += mtxclient
-    SUBDIR += mu-conference
     SUBDIR += nextcloud-talk
     SUBDIR += nheko
     SUBDIR += openfire
     SUBDIR += oysttyer
     SUBDIR += p5-AnyEvent-XMPP
     SUBDIR += p5-DJabberd
-    SUBDIR += p5-Jabber-Connection
     SUBDIR += p5-Jabber-Lite
     SUBDIR += p5-Jabber-SimpleSend
     SUBDIR += p5-Net-AOLIM
     SUBDIR += p5-Net-Async-XMPP
-    SUBDIR += p5-Net-ICQ2000
     SUBDIR += p5-Net-Jabber
     SUBDIR += p5-Net-NetSend
     SUBDIR += p5-Net-OSCAR
@@ -106,14 +103,11 @@
     SUBDIR += pidgin
     SUBDIR += pidgin-bs
     SUBDIR += pidgin-fetion
-    SUBDIR += pidgin-guifications
     SUBDIR += pidgin-hotkeys
     SUBDIR += pidgin-icyque
     SUBDIR += pidgin-latex
     SUBDIR += pidgin-libnotify
     SUBDIR += pidgin-manualsize
-    SUBDIR += pidgin-osd
-    SUBDIR += pidgin-rocketchat
     SUBDIR += pidgin-sipe
     SUBDIR += pidgin-skypeweb
     SUBDIR += pidgin-twitter
@@ -126,6 +120,7 @@
     SUBDIR += purple-discord
     SUBDIR += purple-facebook
     SUBDIR += purple-hangouts
+    SUBDIR += purple-rocketchat
     SUBDIR += purple-slack
     SUBDIR += py-fbmq
     SUBDIR += py-matrix-synapse
@@ -193,7 +188,6 @@
     SUBDIR += uTox
     SUBDIR += vqcc-gtk
     SUBDIR += xmpp-client
-    SUBDIR += yoono
     SUBDIR += zephyr
 
 .include <bsd.port.subdir.mk>

@@ -15,7 +15,6 @@ GH_ACCOUNT=     GhostBSD
 
 PLIST_FILES=	sbin/automount etc/devd/automount_devd.conf etc/automount.conf.sample
 
-SUB_FILES=	pkg-install
 NO_BUILD=	yes
 
 OPTIONS_DEFINE=		NTFS3G EXT4 EXFAT
@@ -23,9 +22,11 @@ OPTIONS_DEFAULT=	NTFS3G EXT4
 NTFS3G_DESC=		Enable NTFS write support with ntfs-3g over FUSE
 NTFS3G_RUN_DEPENDS=	fusefs-ntfs>=0:sysutils/fusefs-ntfs
 EXT4_DESC=		Support EXT2/3/4 filesystem
-EXT4_RUN_DEPENDS=	fusefs-ext2>=0:sysutils/fusefs-ext2
+EXT4_RUN_DEPENDS=	fusefs-ext2>=0:sysutils/fusefs-ext2 \
+			fusefs-lkl>=0:sysutils/fusefs-lkl
 EXFAT_DESC=		Support Microsoft exFAT filesystem
-EXFAT_RUN_DEPENDS=	fusefs-exfat>=0:sysutils/fusefs-exfat
+EXFAT_RUN_DEPENDS=	fusefs-exfat>=0:sysutils/fusefs-exfat \
+			exfat-utils>=0:sysutils/exfat-utils
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/automount             ${STAGEDIR}${PREFIX}/sbin
