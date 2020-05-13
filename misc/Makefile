@@ -284,7 +284,6 @@
     SUBDIR += p5-Array-RefElem
     SUBDIR += p5-Array-Utils
     SUBDIR += p5-Asterisk-FastAGI
-    SUBDIR += p5-asterisk-perl
     SUBDIR += p5-Bot-Training
     SUBDIR += p5-Bot-Training-MegaHAL
     SUBDIR += p5-Bot-Training-StarCraft

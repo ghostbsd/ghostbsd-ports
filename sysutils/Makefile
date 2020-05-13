@@ -601,8 +601,6 @@
     SUBDIR += logtool
     SUBDIR += logwatch
     SUBDIR += lookat
-    SUBDIR += LPRng
-    SUBDIR += LPRngTool
     SUBDIR += lr
     SUBDIR += lsblk
     SUBDIR += lscpu
@@ -1380,7 +1378,6 @@
     SUBDIR += udfclient
     SUBDIR += uefi-edk2-bhyve
     SUBDIR += uefi-edk2-bhyve-csm
-    SUBDIR += UEFITool
     SUBDIR += uefi-edk2-bhyve-devel
     SUBDIR += uefi-edk2-qemu
     SUBDIR += ufetch
