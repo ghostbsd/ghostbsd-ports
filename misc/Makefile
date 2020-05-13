@@ -425,6 +425,7 @@
     SUBDIR += raspberrypi-userland
     SUBDIR += raspbsd-led
     SUBDIR += ree
+    SUBDIR += rfc
     SUBDIR += ringtonetools
     SUBDIR += rname
     SUBDIR += rpl
