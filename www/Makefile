@@ -347,6 +347,7 @@
     SUBDIR += mod_auth_cookie_mysql2
     SUBDIR += mod_auth_gssapi
     SUBDIR += mod_auth_kerb2
+    SUBDIR += mod_auth_mellon
     SUBDIR += mod_auth_mysql2
     SUBDIR += mod_auth_mysql_another
     SUBDIR += mod_auth_openid
@@ -1495,7 +1496,6 @@
     SUBDIR += py-django-filter
     SUBDIR += py-django-formtools
     SUBDIR += py-django-guardian
-    SUBDIR += py-django-happenings
     SUBDIR += py-django-happenings-update
     SUBDIR += py-django-haystack
     SUBDIR += py-django-hierarkey

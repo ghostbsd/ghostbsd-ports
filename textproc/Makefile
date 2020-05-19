@@ -213,6 +213,7 @@
     SUBDIR += gastex
     SUBDIR += gd-aspell
     SUBDIR += gdome2
+    SUBDIR += gitlab-elasticsearch-indexer
     SUBDIR += gl-aspell
     SUBDIR += gladtex
     SUBDIR += gmetadom
@@ -1242,6 +1243,7 @@
     SUBDIR += py-errorhandler
     SUBDIR += py-esmre
     SUBDIR += py-et_xmlfile
+    SUBDIR += py-fastavro
     SUBDIR += py-feedparser
     SUBDIR += py-fingerprints
     SUBDIR += py-ftfy
@@ -1271,6 +1273,7 @@
     SUBDIR += py-libxml2
     SUBDIR += py-libxslt
     SUBDIR += py-license-expression
+    SUBDIR += py-line-protocol-parser
     SUBDIR += py-m2r
     SUBDIR += py-mako
     SUBDIR += py-markdown
@@ -1367,6 +1370,7 @@
     SUBDIR += py-sphinxcontrib-htmlhelp
     SUBDIR += py-sphinxcontrib-httpdomain
     SUBDIR += py-sphinxcontrib-jsmath
+    SUBDIR += py-sphinxcontrib-napoleon
     SUBDIR += py-sphinxcontrib-newsfeed
     SUBDIR += py-sphinxcontrib-programoutput
     SUBDIR += py-sphinxcontrib-qthelp
@@ -1594,6 +1598,7 @@
     SUBDIR += rubygem-rouge2
     SUBDIR += rubygem-rouge312
     SUBDIR += rubygem-rouge317
+    SUBDIR += rubygem-rouge318
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
@@ -1617,6 +1622,7 @@
     SUBDIR += rubygem-sassc-rails-rails50
     SUBDIR += rubygem-sassc-rails-rails52
     SUBDIR += rubygem-sassc-rails-rails60
+    SUBDIR += rubygem-sassc22
     SUBDIR += rubygem-sax-machine
     SUBDIR += rubygem-scss_lint
     SUBDIR += rubygem-shell2html
@@ -1636,6 +1642,7 @@
     SUBDIR += rubygem-twitter-text1
     SUBDIR += rubygem-unf
     SUBDIR += rubygem-unf_ext
+    SUBDIR += rubygem-unicode_plot
     SUBDIR += rubygem-version_sorter
     SUBDIR += rubygem-whatlanguage
     SUBDIR += rubygem-wikicloth
