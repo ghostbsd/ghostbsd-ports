@@ -495,6 +495,7 @@
     SUBDIR += intel-pcm
     SUBDIR += intel-pcm-devel
     SUBDIR += intel-undervolt
+    SUBDIR += inxi
     SUBDIR += ioc
     SUBDIR += iocage
     SUBDIR += iocage-devel
