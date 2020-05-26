@@ -1,11 +1,7 @@
 bin/xconfig
-etc/X11/cardDetect/XF86Config.intel
-etc/X11/cardDetect/XF86Config.modesetting
-etc/X11/cardDetect/XF86Config.nvidia
 etc/X11/cardDetect/XF86Config.qemu
 etc/X11/cardDetect/XF86Config.scfb
 etc/X11/cardDetect/XF86Config.vesa
 etc/X11/cardDetect/XF86Config.virtualbox
 etc/X11/cardDetect/XF86Config.vmware
 etc/init.d/xconfig
-etc/rc.d/xconfig

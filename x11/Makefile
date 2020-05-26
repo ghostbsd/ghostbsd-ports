@@ -393,6 +393,7 @@
     SUBDIR += xcoloredit
     SUBDIR += xcolors
     SUBDIR += xcolorsel
+    SUBDIR += xconfig
     SUBDIR += xconsole
     SUBDIR += xcursorgen
     SUBDIR += xcut
