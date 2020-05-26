@@ -3,7 +3,7 @@
 
 PORTNAME=	xconfig
 PORTVERSION=	0.2
-CATEGORIES=	misc
+CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
 COMMENT=	GhostBSD X configuration tool
