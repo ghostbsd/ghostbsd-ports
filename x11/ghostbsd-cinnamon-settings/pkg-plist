@@ -9,3 +9,4 @@ share/glib-2.0/schemas/91_org.gnome.shell.overrides.gschema.override
 share/glib-2.0/schemas/91_org.gnome.terminal.legacy.settings.gschema.override
 share/glib-2.0/schemas/91_org.gnome.totem.settings.gschema.override
 share/glib-2.0/schemas/91_org.nemo.desktop.gschema.override
+share/cinnamon-background-properties/ghostbsd.xml

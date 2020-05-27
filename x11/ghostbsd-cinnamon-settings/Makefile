@@ -6,7 +6,7 @@
 #
 
 PORTNAME= 	ghostbsd-cinnamon-settings
-PORTVERSION=	1.5
+PORTVERSION=	1.6
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
@@ -17,7 +17,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
 RUN_DEPENDS=	glib-compile-schemas:${PORTSDIR}/devel/glib-2.0 \
-		 dpkg:${PORTSDIR}/archivers/dpkg
+		 dpkg:${PORTSDIR}/archivers/dpkg \
+		 ghostbsd.xml:${PORTSDIR}/x11-themes/ghostbsd-wallpapers
 
 NO_BUILD=	yes
 
