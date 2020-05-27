@@ -1,0 +1,24 @@
+#!/bin/sh
+
+abort_install()
+{
+echo "Install of this package is prohibited."
+kill  $PPID
+}
+
+case "$2" in
+    PRE-INSTALL)
+    if [ -z ${buildenv} ] ;then
+      abort_install
+    fi
+
+    if [ ! -d /usr/local/share/glib-2.0/schemas ] ; then
+        mkdir -p /usr/local/share/glib-2.0/schemas
+    fi
+    ;;
+    POST-INSTALL)
+    glib-compile-schemas /usr/local/share/glib-2.0/schemas
+    ;;
+esac
+
+
