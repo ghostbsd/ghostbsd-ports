@@ -1,12 +1,12 @@
 # New ports collection makefile for: cinnamon settings in installed mode
-# Date created:        17 may 2015
+# Date created:        77 may 2020
 # Whom:                angelescuo@yahoo.com
 #
 # $FreeBSD$
 #
 
-PORTNAME=	cinnamon-installed-settings
-PORTVERSION=	1.3
+PORTNAME=	ghostbsd-cinnamon-settings
+PORTVERSION=	1.4
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
@@ -25,8 +25,6 @@ NO_BUILD=	yes
 do-install:
 	${MKDIR} ${STAGEDIR}/${PREFIX}/share/ghostbsd/cinnamon-installed-settings
 	${CP} -R   ${WRKSRC}/ghostbsd/* ${STAGEDIR}/${PREFIX}/share/ghostbsd/cinnamon-installed-settings
-	${MKDIR} ${STAGEDIR}/${PREFIX}/share/cinnamon-background-properties
-	${CP} ${WRKSRC}/cinnamon-background-properties/ghostbsd.xml ${STAGEDIR}/${PREFIX}/share/cinnamon-background-properties
 	${MKDIR} ${STAGEDIR}/${PREFIX}/share/glib-2.0/schemas
 	${CP} -R   ${WRKSRC}/schemas/* ${STAGEDIR}/${PREFIX}/share/glib-2.0/schemas
 .include <bsd.port.mk>
