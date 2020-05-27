@@ -72,6 +72,7 @@
     SUBDIR += fstobdf
     SUBDIR += gdm
     SUBDIR += ghostbsd-common-settings
+    SUBDIR += ghostbsd-cinnamon-settings
     SUBDIR += ghostbsd-mate
     SUBDIR += ghostbsd-mate-settings
     SUBDIR += ghostbsd-slim-theme

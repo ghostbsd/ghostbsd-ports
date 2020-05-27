@@ -1,5 +1,5 @@
 # New ports collection makefile for: cinnamon settings in installed mode
-# Date created:        77 may 2020
+# Date created:        27 may 2020
 # Whom:                angelescuo@yahoo.com
 #
 # $FreeBSD$
