@@ -18,7 +18,7 @@ GH_ACCOUNT=	GhostBSD
 
 RUN_DEPENDS=	glib-compile-schemas:${PORTSDIR}/devel/glib-2.0 \
 		 dpkg:${PORTSDIR}/archivers/dpkg \
-		 ghostbsd.xml:${PORTSDIR}/x11-themes/ghostbsd-wallpapers
+		 ${LOCALBASE}/share/gnome-background-properties/ghostbsd.xml:x11-themes/ghostbsd-wallpapers
 
 NO_BUILD=	yes
 
