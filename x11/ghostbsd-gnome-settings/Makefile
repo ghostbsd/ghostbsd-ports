@@ -7,6 +7,7 @@
 
 PORTNAME=	ghostbsd-gnome-settings
 PORTVERSION=	1.1
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
@@ -19,7 +20,7 @@ GH_ACCOUNT=	GhostBSD
 
 RUN_DEPENDS=	glib-compile-schemas:devel/glib20 \
 		dpkg:archivers/dpkg \
-		${LOCALBASE}/share/gnome-background-properties/ghostbsd.xml:x11-themes/ghostbsd-wallpapers
+		${LOCALBASE}/share/mate-background-properties/ghostbsd.xml:x11-themes/ghostbsd-wallpapers
 NO_BUILD=	
 
 do-install:

@@ -1,5 +1,5 @@
 # New ports collection makefile for: cinnamon settings in installed mode
-# Date created:        27 may 2020
+# Date created:        17 may 2015
 # Whom:                angelescuo@yahoo.com
 #
 # $FreeBSD$
@@ -7,6 +7,7 @@
 
 PORTNAME= 	ghostbsd-cinnamon-settings
 PORTVERSION=	1.6
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
@@ -18,7 +19,7 @@ GH_ACCOUNT=	GhostBSD
 
 RUN_DEPENDS=	glib-compile-schemas:${PORTSDIR}/devel/glib-2.0 \
 		 dpkg:${PORTSDIR}/archivers/dpkg \
-		 ${LOCALBASE}/share/gnome-background-properties/ghostbsd.xml:x11-themes/ghostbsd-wallpapers
+		 ${LOCALBASE}/share/mate-background-properties/ghostbsd.xml:x11-themes/ghostbsd-wallpapers
 
 NO_BUILD=	yes
 
