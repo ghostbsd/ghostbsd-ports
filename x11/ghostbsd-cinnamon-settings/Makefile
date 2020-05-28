@@ -17,7 +17,7 @@ LICENSE =	BSD
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
-RUN_DEPENDS=	glib-compile-schemas:${PORTSDIR}/devel/glib-2.0 \
+RUN_DEPENDS=	glib-compile-schemas:${PORTSDIR}/devel/glib20 \
 		 dpkg:${PORTSDIR}/archivers/dpkg \
 		 ${LOCALBASE}/share/mate-background-properties/ghostbsd.xml:x11-themes/ghostbsd-wallpapers
 

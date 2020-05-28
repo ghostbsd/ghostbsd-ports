@@ -16,7 +16,7 @@ LICENSE =	BSD
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
-RUN_DEPENDS=	glib-compile-schemas:${PORTSDIR}/devel/glib-2.0
+RUN_DEPENDS=	glib-compile-schemas:${PORTSDIR}/devel/glib20
 
 NO_BUILD=	yes
 
