@@ -105,6 +105,7 @@ etc/nsswitch.conf
 etc/ntp.conf
 etc/ntp/leap-seconds
 etc/opieaccess
+etc/pkg/GhostBSD.conf
 etc/pam.d/atrun
 etc/pam.d/cron
 etc/pam.d/ftp
