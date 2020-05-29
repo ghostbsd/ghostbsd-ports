@@ -148,6 +148,7 @@ etc/ssh/moduli
 etc/ssh/ssh_config
 etc/ssh/sshd_config
 etc/ssl/openssl.cnf
+etc/sysctl.conf
 etc/sysctl.d/README
 etc/syslog.conf
 etc/syslog.d/ftp.conf
