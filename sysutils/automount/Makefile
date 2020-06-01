@@ -3,6 +3,7 @@
 
 PORTNAME=	automount
 DISTVERSION=	1.7.3
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	vermaden@interia.pl
@@ -15,6 +16,7 @@ GH_ACCOUNT=     GhostBSD
 
 PLIST_FILES=	sbin/automount etc/devd/automount_devd.conf etc/automount.conf.sample
 
+SUB_FILES=	pkg-install
 NO_BUILD=	yes
 
 OPTIONS_DEFINE=		NTFS3G EXT4 EXFAT
