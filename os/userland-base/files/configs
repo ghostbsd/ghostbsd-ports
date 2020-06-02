@@ -157,4 +157,4 @@ etc/syslog.d/lpr.conf
 etc/syslog.d/ppp.conf
 etc/termcap.small
 etc/ttys
-usr/local/etc/pkg/repos/FreeBSD.conf
+usr/share/skel/dot.profile
