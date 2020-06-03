@@ -182,7 +182,6 @@
     SUBDIR += geoclue
     SUBDIR += geocode-glib
     SUBDIR += geoipupdate
-    SUBDIR += get_iplayer
     SUBDIR += gfbgraph
     SUBDIR += glflow
     SUBDIR += glib-networking
@@ -214,6 +213,7 @@
     SUBDIR += grpcui
     SUBDIR += grpcurl
     SUBDIR += grsync
+    SUBDIR += gscloud
     SUBDIR += gsk
     SUBDIR += gspoof
     SUBDIR += gssdp
@@ -245,7 +245,6 @@
     SUBDIR += hostapd
     SUBDIR += hping
     SUBDIR += hping3
-    SUBDIR += hs-network
     SUBDIR += hsflowd
     SUBDIR += htpdate
     SUBDIR += http_ping
@@ -362,6 +361,7 @@
     SUBDIR += libgrss
     SUBDIR += libgweather
     SUBDIR += libilbc
+    SUBDIR += libiscsi
     SUBDIR += libjson-rpc-cpp
     SUBDIR += libkgapi
     SUBDIR += libksieve
@@ -989,6 +989,7 @@
     SUBDIR += ptpd2
     SUBDIR += ptunnel
     SUBDIR += pvm
+    SUBDIR += pwnat
     SUBDIR += pwhois
     SUBDIR += pxe
     SUBDIR += pxe-pdhcp
@@ -1075,6 +1076,7 @@
     SUBDIR += py-python-cinderclient5
     SUBDIR += py-python-designateclient
     SUBDIR += py-python-glanceclient
+    SUBDIR += py-python-glanceclient2
     SUBDIR += py-python-heatclient
     SUBDIR += py-python-keystoneclient
     SUBDIR += py-python-keystoneclient3

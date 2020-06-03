@@ -91,6 +91,7 @@
     SUBDIR += gawk
     SUBDIR += gcc
     SUBDIR += gcc-ecj45
+    SUBDIR += gcc10
     SUBDIR += gcc10-devel
     SUBDIR += gcc11-devel
     SUBDIR += gcc48
@@ -106,7 +107,6 @@
     SUBDIR += gnat_util
     SUBDIR += gnatcross-binutils-aarch64
     SUBDIR += gnatcross-sysroot-aarch64
-    SUBDIR += gnatdroid-armv7
     SUBDIR += gnatdroid-binutils
     SUBDIR += gnatdroid-binutils-x86
     SUBDIR += gnatdroid-sysroot
@@ -123,6 +123,7 @@
     SUBDIR += guile
     SUBDIR += guile1
     SUBDIR += guile2
+    SUBDIR += halide
     SUBDIR += harbour
     SUBDIR += haskell-mode.el
     SUBDIR += hla
@@ -246,7 +247,6 @@
     SUBDIR += pbasic
     SUBDIR += pcc
     SUBDIR += perl5-devel
-    SUBDIR += perl5.26
     SUBDIR += perl5.28
     SUBDIR += perl5.30
     SUBDIR += petite-chez
@@ -315,6 +315,7 @@
     SUBDIR += scala-docs
     SUBDIR += scheme48
     SUBDIR += scm
+    SUBDIR += sdcc
     SUBDIR += see
     SUBDIR += seed7
     SUBDIR += siod

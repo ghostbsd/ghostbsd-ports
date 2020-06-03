@@ -72,6 +72,7 @@ USE_XORG=	x11 xcb xcomposite xdamage xext xfixes xrender xt
 HAS_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
 LDFLAGS+=		-Wl,--as-needed
+BINARY_ALIAS+=	python3=python${PYTHON3_DEFAULT}
 
 BUNDLE_LIBS=	yes
 
@@ -80,6 +81,7 @@ BUILD_DEPENDS+=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT} \
 				${RUST_DEFAULT}>=1.41:lang/${RUST_DEFAULT} \
 				${LOCALBASE}/bin/python${PYTHON3_DEFAULT}:lang/python${PYTHON3_DEFAULT:S/.//g} \
 				node:www/node
+LIB_DEPENDS+=	libdrm.so:graphics/libdrm
 MOZ_EXPORT+=	${CONFIGURE_ENV} \
 				LLVM_CONFIG=llvm-config${LLVM_DEFAULT} \
 				PERL="${PERL}" \

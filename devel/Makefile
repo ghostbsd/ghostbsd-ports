@@ -248,7 +248,6 @@
     SUBDIR += boost_build
     SUBDIR += bossa
     SUBDIR += bpython
-    SUBDIR += breakpad
     SUBDIR += brz
     SUBDIR += bsdbuild
     SUBDIR += bsdcflow
@@ -488,6 +487,7 @@
     SUBDIR += dmlc-core
     SUBDIR += dmucs
     SUBDIR += docopt.cpp
+    SUBDIR += doctest
     SUBDIR += doctorj
     SUBDIR += dolphin-plugins
     SUBDIR += dotconf
@@ -520,6 +520,7 @@
     SUBDIR += egypt
     SUBDIR += eiffelstudio
     SUBDIR += electron4
+    SUBDIR += electron5
     SUBDIR += electron6
     SUBDIR += electron7
     SUBDIR += elf
@@ -657,6 +658,7 @@
     SUBDIR += fortytwo-encore
     SUBDIR += fossil
     SUBDIR += fossology-nomos-standalone
+    SUBDIR += frink
     SUBDIR += fp16
     SUBDIR += fpc-bfd
     SUBDIR += fpc-dbus
@@ -854,6 +856,7 @@
     SUBDIR += godot2-tools
     SUBDIR += goffice
     SUBDIR += gogs
+    SUBDIR += golangci-lint
     SUBDIR += golint
     SUBDIR += google-cloud-cpp
     SUBDIR += google-gdata
@@ -873,7 +876,6 @@
     SUBDIR += gradle5
     SUBDIR += gradle62
     SUBDIR += grantlee5
-    SUBDIR += graphql.el
     SUBDIR += grpc
     SUBDIR += grumpy
     SUBDIR += grv
@@ -923,38 +925,21 @@
     SUBDIR += hs-cabal-install
     SUBDIR += hs-cpphs
     SUBDIR += hs-darcs
-    SUBDIR += hs-data-default
-    SUBDIR += hs-data-default-class
-    SUBDIR += hs-data-default-instances-base
-    SUBDIR += hs-data-default-instances-containers
-    SUBDIR += hs-data-default-instances-dlist
-    SUBDIR += hs-data-default-instances-old-locale
-    SUBDIR += hs-dlist
-    SUBDIR += hs-extensible-exceptions
     SUBDIR += hs-ghc-events
     SUBDIR += hs-ghcprofview
     SUBDIR += hs-git-annex
     SUBDIR += hs-haddock
     SUBDIR += hs-happy
-    SUBDIR += hs-hashable
     SUBDIR += hs-hasktags
     SUBDIR += hs-hlint
     SUBDIR += hs-hoogle
     SUBDIR += hs-hpack
     SUBDIR += hs-hspec-discover
-    SUBDIR += hs-mtl
     SUBDIR += hs-mueval
-    SUBDIR += hs-old-locale
-    SUBDIR += hs-old-time
     SUBDIR += hs-profiteur
-    SUBDIR += hs-random
-    SUBDIR += hs-setlocale
     SUBDIR += hs-shake
     SUBDIR += hs-spago
     SUBDIR += hs-threadscope
-    SUBDIR += hs-transformers-compat
-    SUBDIR += hs-unordered-containers
-    SUBDIR += hs-utf8-string
     SUBDIR += htable
     SUBDIR += hub
     SUBDIR += hwloc
@@ -1097,6 +1082,7 @@
     SUBDIR += libafterbase
     SUBDIR += liballium
     SUBDIR += libantlr3c
+    SUBDIR += libantlr4
     SUBDIR += libappindicator
     SUBDIR += libaravis
     SUBDIR += libarea
@@ -4097,6 +4083,7 @@
     SUBDIR += py-azure-functions-devops-build
     SUBDIR += py-azure-graphrbac
     SUBDIR += py-azure-keyvault
+    SUBDIR += py-azure-loganalytics
     SUBDIR += py-azure-mgmt-advisor
     SUBDIR += py-azure-mgmt-apimanagement
     SUBDIR += py-azure-mgmt-appconfiguration
@@ -4340,7 +4327,6 @@
     SUBDIR += py-distributed
     SUBDIR += py-dj22-django-rq
     SUBDIR += py-django-rq
-    SUBDIR += py-django-rq-dashboard
     SUBDIR += py-docker-py
     SUBDIR += py-dockerpty
     SUBDIR += py-docopt
@@ -4471,6 +4457,7 @@
     SUBDIR += py-grpcio
     SUBDIR += py-grpcio-gcp
     SUBDIR += py-grpcio-tools
+    SUBDIR += py-gs_api_client
     SUBDIR += py-gtfslib
     SUBDIR += py-gyp
     SUBDIR += py-hash_ring
@@ -4481,7 +4468,9 @@
     SUBDIR += py-holidays
     SUBDIR += py-http-prompt
     SUBDIR += py-humanize
+    SUBDIR += py-hvac
     SUBDIR += py-hypothesis
+    SUBDIR += py-hypothesmith
     SUBDIR += py-icalendar
     SUBDIR += py-ice
     SUBDIR += py-ice37
@@ -4565,8 +4554,8 @@
     SUBDIR += py-jupyter_console
     SUBDIR += py-jupyter_core
     SUBDIR += py-jupyterlab
+    SUBDIR += py-jupyterlab-server
     SUBDIR += py-jupyterlab_launcher
-    SUBDIR += py-jupyterlab_server
     SUBDIR += py-kaitaistruct
     SUBDIR += py-kaptan
     SUBDIR += py-kayako
@@ -4610,6 +4599,7 @@
     SUBDIR += py-logbook
     SUBDIR += py-logfury
     SUBDIR += py-logilab-common
+    SUBDIR += py-loguru
     SUBDIR += py-logutils
     SUBDIR += py-louie
     SUBDIR += py-lunardate
@@ -5284,6 +5274,7 @@
     SUBDIR += py-zope.traversing
     SUBDIR += py-zsm-lib
     SUBDIR += py_static_check
+    SUBDIR += py3c
     SUBDIR += pybind11
     SUBDIR += pybugz
     SUBDIR += pycanberra
@@ -5430,6 +5421,7 @@
     SUBDIR += rubygem-akismet
     SUBDIR += rubygem-algebrick
     SUBDIR += rubygem-algorithms
+    SUBDIR += rubygem-aliyun-sdk
     SUBDIR += rubygem-allison
     SUBDIR += rubygem-analogger
     SUBDIR += rubygem-annoy
@@ -6256,9 +6248,7 @@
     SUBDIR += rubygem-peek-rails5
     SUBDIR += rubygem-peek-rails52
     SUBDIR += rubygem-peek-rails60
-    SUBDIR += rubygem-peek-rblineprof-rails5
     SUBDIR += rubygem-peek-rblineprof-rails52
-    SUBDIR += rubygem-peek-redis-rails5
     SUBDIR += rubygem-peek-redis-rails52
     SUBDIR += rubygem-pkg-config
     SUBDIR += rubygem-platform
@@ -6334,6 +6324,7 @@
     SUBDIR += rubygem-ref
     SUBDIR += rubygem-reline
     SUBDIR += rubygem-request_store
+    SUBDIR += rubygem-request_store14
     SUBDIR += rubygem-require_all
     SUBDIR += rubygem-resque
     SUBDIR += rubygem-retriable
@@ -6721,6 +6712,7 @@
     SUBDIR += tkp4
     SUBDIR += tl-expected
     SUBDIR += tla
+    SUBDIR += tllist
     SUBDIR += tmake
     SUBDIR += tnt
     SUBDIR += tokamak

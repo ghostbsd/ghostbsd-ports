@@ -33,6 +33,17 @@ notify 100 {
 	action "sh /etc/rc.devd webcamd.$cdev start $interface";
 };
 
+# Logitech webcams
+notify 100 {
+	match "system"	       "USB";
+	match "subsystem"      "INTERFACE";
+	match "type"	       "ATTACH";
+	match "vendor"	       "0x046d";
+	match "intclass"       "0x0a";
+	match "intsubclass"    "0xff";
+	action "%%PREFIX%%/etc/rc.d/webcamd start $cdev";
+};
+
 # Generic USB input devices.
 notify 100 {
 	match "system"		"USB";
