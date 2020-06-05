@@ -24,6 +24,5 @@ stop_pre() {
 
 depend() {
 	provide postfix mail
-	need dovecot
 	keyword -shutdown
 }
