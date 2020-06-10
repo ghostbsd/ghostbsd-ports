@@ -1,4 +1,7 @@
+bin/msd-background-helper
+etc/xdg/autostart/msd-background-helper.desktop
 share/glib-2.0/schemas/92_org.gnome.desktop.screensaver.wallpaper.gschema.override
+share/glib-2.0/schemas/92_org.mate.NotificationDaemon.gschema.override
 share/glib-2.0/schemas/92_org.mate.caja.gschema.override
 share/glib-2.0/schemas/92_org.mate.desktop.background.gschema.override
 share/glib-2.0/schemas/92_org.mate.desktop.interface.gschema.override
@@ -9,3 +12,4 @@ share/glib-2.0/schemas/92_org.mate.peripherals-keyboard-xkb.kbd.gschema.override
 share/glib-2.0/schemas/92_org.mate.peripherals-touchpad.gschema.override
 share/glib-2.0/schemas/92_org.mate.session.gschema.override
 share/glib-2.0/schemas/92_org.mate.terminal.gschema.override
+share/skel/dot.dmrc

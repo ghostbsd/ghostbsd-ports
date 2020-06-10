@@ -13,7 +13,11 @@ case "$2" in
     if [ -e /usr/local/bin/mate-terminal ] ; then
         update-alternatives --altdir /usr/local/etc/alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/mate-terminal 50
     fi
-    
+    # copy .dmrc file for display manager default session and save original .dmrc
+    if [ -f /usr/share/skel/dot.dmrc ] ; then
+        cp /usr/share/skel/dot.dmrc /usr/local/share/skel/dot.dmrc.ini
+    fi
+    cp -f /usr/local/share/skel/dot.dmrc /usr/share/skel
     ;;
 esac
 
