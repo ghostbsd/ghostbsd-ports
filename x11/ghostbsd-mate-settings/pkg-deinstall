@@ -12,11 +12,4 @@ if [ -e /usr/local/bin/mate-terminal ] ; then
     update-alternatives --altdir /usr/local/etc/alternatives --remove x-terminal-emulator /usr/local/bin/mate-terminal
 fi
 
-# revert original dmrc
-if [ -f /usr/local/share/skel/dot.dmrc.ini ] ; then
-    mv -f /usr/local/share/skel/dot.dmrc.ini /usr/share/skel/dot.dmrc
-    else
-    rm -f /usr/share/skel/dot.dmrc
-fi
-
 exit 0

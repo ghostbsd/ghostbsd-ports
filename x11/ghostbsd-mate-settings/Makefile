@@ -3,7 +3,7 @@
 #
 
 PORTNAME=	ghostbsd-mate-settings
-PORTVERSION=	3.8
+PORTVERSION=	3.9
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
@@ -24,8 +24,6 @@ do-install:
 	${CP}    ${WRKSRC}/bin/* ${STAGEDIR}/${PREFIX}/bin
 	${MKDIR} ${STAGEDIR}/${PREFIX}/etc
 	${CP} -R   ${WRKSRC}/etc/* ${STAGEDIR}/${PREFIX}/etc
-	${MKDIR} ${STAGEDIR}/${PREFIX}/share/skel
-	${CP}    ${WRKSRC}/skel/dot.dmrc ${STAGEDIR}/${PREFIX}/share/skel
 	${MKDIR} ${STAGEDIR}/${PREFIX}/share/glib-2.0/schemas
 	${CP} -R   ${WRKSRC}/schemas/* ${STAGEDIR}/${PREFIX}/share/glib-2.0/schemas
 .include <bsd.port.mk>

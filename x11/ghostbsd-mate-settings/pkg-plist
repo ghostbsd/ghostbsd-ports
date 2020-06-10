@@ -12,4 +12,4 @@ share/glib-2.0/schemas/92_org.mate.peripherals-keyboard-xkb.kbd.gschema.override
 share/glib-2.0/schemas/92_org.mate.peripherals-touchpad.gschema.override
 share/glib-2.0/schemas/92_org.mate.session.gschema.override
 share/glib-2.0/schemas/92_org.mate.terminal.gschema.override
-share/skel/dot.dmrc
+
