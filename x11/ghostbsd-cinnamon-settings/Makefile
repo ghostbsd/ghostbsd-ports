@@ -1,13 +1,9 @@
-# New ports collection makefile for: cinnamon settings in installed mode
-# Date created:        17 may 2015
-# Whom:                angelescuo@yahoo.com
-#
+# Created by:  Angelescu Ovidiu  <angelescuo@yahoo.com>
 # $FreeBSD$
-#
+
 
 PORTNAME= 	ghostbsd-cinnamon-settings
-PORTVERSION=	1.6
-PORTREVISION=	1
+PORTVERSION=	1.10
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
@@ -24,8 +20,12 @@ RUN_DEPENDS=	glib-compile-schemas:${PORTSDIR}/devel/glib20 \
 NO_BUILD=	yes
 
 do-install:
-	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/ghostbsd/cinnamon-installed-settings
-	@${CP} -R   ${WRKSRC}/ghostbsd/* ${STAGEDIR}/${PREFIX}/share/ghostbsd/cinnamon-installed-settings
+	@${MKDIR} -p ${STAGEDIR}/usr/share/skel
+	@${CP} -R   ${WRKSRC}/skel/* ${STAGEDIR}/usr/share/skel
+	${MKDIR} -p ${STAGEDIR}/${PREFIX}/etc
+	${CP} -R   ${WRKSRC}/etc/* ${STAGEDIR}/${PREFIX}/etc
+	${MKDIR} -p ${STAGEDIR}/${PREFIX}/bin
+	${CP} -R   ${WRKSRC}/bin/* ${STAGEDIR}/${PREFIX}/bin
 	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/cinnamon-background-properties
 	@${CP} ${WRKSRC}/cinnamon-background-properties/ghostbsd.xml ${STAGEDIR}/${PREFIX}/share/cinnamon-background-properties
 	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/glib-2.0/schemas
