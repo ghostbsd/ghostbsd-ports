@@ -1,9 +1,5 @@
-# New ports collection makefile for: ghostbsd common settings in installed mode
-# Date created:        17 may 2015
-# Whom:                angelescuo@yahoo.com
-#
+# Created by: Angelescu Ovidiu  <angelescuo@yahoo.com>
 # $FreeBSD$
-#
 
 PORTNAME=	ghostbsd-common-settings
 PORTVERSION=	4.6

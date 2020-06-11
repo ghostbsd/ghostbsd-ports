@@ -1,9 +1,6 @@
-# New ports collection makefile for: ghostbsd lightdm  settings 
-# Date created:        27 may 2020
-# Whom:                angelescuo@yahoo.com
-#
+# Created by: Angelescu Ovidiu <angelescuo@yahoo.com>
 # $FreeBSD$
-#
+
 
 PORTNAME=	ghostbsd-lightdm-gtk-greeter-settings
 PORTVERSION=	1.0

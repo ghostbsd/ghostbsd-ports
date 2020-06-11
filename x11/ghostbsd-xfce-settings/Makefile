@@ -1,9 +1,5 @@
-# New ports collection makefile for: xfce settings in installed mode
-# Date created:        17 may 2015
-# Whom:                angelescuo@yahoo.com
-#
+# Created by: Angelescu Ovidiu  <angelescuo@yahoo.com>
 # $FreeBSD$
-#
 
 PORTNAME=	ghostbsd-xfce-settings
 PORTVERSION=	3.0

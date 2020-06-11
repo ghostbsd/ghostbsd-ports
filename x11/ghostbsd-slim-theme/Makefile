@@ -1,9 +1,6 @@
-# New ports collection makefile for: gnome settings in live mode
-# Date created:        11 may 2015
-# Whom:                angelescuo@yahoo.com
-#
+# Created by: Angelescu Ovidiu  <angelescuo@yahoo.com>
 # $FreeBSD$
-#
+
 
 PORTNAME=	ghostbsd-slim-theme
 PORTVERSION=	1.4
