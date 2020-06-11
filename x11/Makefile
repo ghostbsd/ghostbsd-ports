@@ -79,6 +79,7 @@
     SUBDIR += ghostbsd-lightdm-gtk-greeter-settings
     SUBDIR += ghostbsd-mate
     SUBDIR += ghostbsd-mate-settings
+    SUBDIR += ghostbsd-slick-greeter-settings
     SUBDIR += ghostbsd-slim-theme
     SUBDIR += ghostbsd-xfce-settings
     SUBDIR += gmrun

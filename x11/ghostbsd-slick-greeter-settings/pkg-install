@@ -1,0 +1,27 @@
+#!/bin/sh
+
+
+case "$2" in
+    PRE-INSTALL)
+    if [ -f /usr/local/share/ghostbsd/desktop ] ; then
+        desktop=`cat /usr/local/share/ghostbsd/desktop`
+    fi
+        case ${desktop} in
+            kde)
+            sed -i '' "s@#user-session=default@user-session=plasma@" /usr/local/etc/lightdm/lightdm.conf
+            ;;
+            gnome)
+            sed -i '' "s@#user-session=default@user-session=gnome-session@" /usr/local/etc/lightdm/lightdm.conf
+            ;;
+            *)
+            sed -i '' "s@#user-session=default@user-session=${desktop}@" /usr/local/etc/lightdm/lightdm.conf
+            ;;
+        esac 
+    sed -i '' "s@#greeter-session=example-gtk-gnome@greeter-session=slick-greeter@" /usr/local/etc/lightdm/lightdm.conf
+    ;;
+    POST-INSTALL)
+    echo "GhostBSD slick greeter settings configured !"
+    ;;
+esac
+
+exit 0

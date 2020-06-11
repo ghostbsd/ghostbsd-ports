@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+[ "$2" = 'POST-DEINSTALL' ] || exit 0
+
+# revert to original state
+if [ -f /usr/local/etc/lightdm/lightdm.conf.sample ] ; then
+    cp -f /usr/local/etc/lightdm/lightdm.conf.sample /usr/local/etc/lightdm/lightdm.conf
+fi
+
+exit 0
