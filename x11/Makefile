@@ -76,6 +76,7 @@
     SUBDIR += ghostbsd-common-settings
     SUBDIR += ghostbsd-gnome-live-settings
     SUBDIR += ghostbsd-gnome-settings
+    SUBDIR += ghostbsd-lightdm-gtk-greeter-settings
     SUBDIR += ghostbsd-mate
     SUBDIR += ghostbsd-mate-settings
     SUBDIR += ghostbsd-slim-theme
