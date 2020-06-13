@@ -3,21 +3,23 @@
 
 case "$2" in
     PRE-INSTALL)
-    if [ -f /usr/local/share/ghostbsd/desktop ] ; then
-        desktop=`cat /usr/local/share/ghostbsd/desktop`
+    if [ -f ${PKG_PREFIX}/share/ghostbsd/desktop ] ; then
+        desktop=`cat ${PKG_PREFIX}/share/ghostbsd/desktop`
     fi
+# edit lightdm.conf only if it wasn't already configured by user
+# if lightdm.conf is the same with lightdm.conf.sample
         case ${desktop} in
             kde)
-            sed -i '' "s@#user-session=default@user-session=plasma@" /usr/local/etc/lightdm/lightdm.conf
+            sed -i '' "s@#user-session=default@user-session=plasma@" ${PKG_PREFIX}/etc/lightdm/lightdm.conf
             ;;
             gnome)
-            sed -i '' "s@#user-session=default@user-session=gnome-session@" /usr/local/etc/lightdm/lightdm.conf
+            sed -i '' "s@#user-session=default@user-session=gnome-session@" ${PKG_PREFIX}/etc/lightdm/lightdm.conf
             ;;
             *)
-            sed -i '' "s@#user-session=default@user-session=${desktop}@" /usr/local/etc/lightdm/lightdm.conf
+            sed -i '' "s@#user-session=default@user-session=${desktop}@" ${PKG_PREFIX}/etc/lightdm/lightdm.conf
             ;;
         esac 
-    sed -i '' "s@#greeter-session=example-gtk-gnome@greeter-session=slick-greeter@" /usr/local/etc/lightdm/lightdm.conf
+    sed -i '' "s@#greeter-session=example-gtk-gnome@greeter-session=slick-greeter@" ${PKG_PREFIX}/etc/lightdm/lightdm.conf
     ;;
     POST-INSTALL)
     echo "GhostBSD slick greeter settings configured !"
