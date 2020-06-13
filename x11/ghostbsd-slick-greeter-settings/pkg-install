@@ -12,9 +12,6 @@ case "$2" in
             kde)
             sed -i '' "s@#user-session=default@user-session=plasma@" ${PKG_PREFIX}/etc/lightdm/lightdm.conf
             ;;
-            gnome)
-            sed -i '' "s@#user-session=default@user-session=gnome-session@" ${PKG_PREFIX}/etc/lightdm/lightdm.conf
-            ;;
             *)
             sed -i '' "s@#user-session=default@user-session=${desktop}@" ${PKG_PREFIX}/etc/lightdm/lightdm.conf
             ;;
