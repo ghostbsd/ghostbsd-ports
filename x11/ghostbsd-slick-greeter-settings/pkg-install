@@ -19,6 +19,13 @@ case "$2" in
     sed -i '' "s@#greeter-session=example-gtk-gnome@greeter-session=slick-greeter@" ${PKG_PREFIX}/etc/lightdm/lightdm.conf
     ;;
     POST-INSTALL)
+# edit slick-greeter.conf only if it wasn't already configured by user
+# edit only if slick-greeter.conf is the same with slick-greeter.conf.sample
+    sed -i '' "s@#background=example.jpg@background=/usr/local/share/backgrounds/ghostbsd/Arizona_Desert_Monument.jpg@" ${PKG_PREFIX}/etc/lightdm/slick-greeter.conf
+    sed -i '' "s@#draw-user-backgrounds=false@draw-user-backgrounds=true@" ${PKG_PREFIX}/etc/lightdm/slick-greeter.conf
+    sed -i '' "s@#draw-grid=false@draw-grid=true@" ${PKG_PREFIX}/etc/lightdm/slick-greeter.conf
+    sed -i '' "s@#theme-name=@theme-name=Vimix-Dark@" ${PKG_PREFIX}/etc/lightdm/slick-greeter.conf
+    sed -i '' "s@#icon-theme-name=@icon-theme-name=Vivacious-Colors-Full-Dark@" ${PKG_PREFIX}/etc/lightdm/slick-greeter.conf
     echo "GhostBSD slick greeter settings configured !"
     ;;
 esac
