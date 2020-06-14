@@ -3,6 +3,7 @@
 
 PORTNAME=	ghostbsd-slick-greeter-settings
 PORTVERSION=	1.1
+PORTREVISION=	1
 
 CATEGORIES=	x11
 
@@ -11,8 +12,7 @@ COMMENT=	GhostBSD lightdm slick greeter settings
 
 LICENSE=	BSD
 
-RUN_DEPENDS=	lightdm:x11/lightdm \
-		slick-greeter:x11/slick-greeter
+RUN_DEPENDS=	slick-greeter:x11/slick-greeter
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
