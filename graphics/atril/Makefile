@@ -4,8 +4,8 @@
 # Please update update atril-lite also
 
 PORTNAME=	atril
-PORTVERSION=	1.22.3
-PORTREVISION=	6
+PORTVERSION=   1.22.3
+PORTREVISION=  6
 CATEGORIES=	graphics print mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
