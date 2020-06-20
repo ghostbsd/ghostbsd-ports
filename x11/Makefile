@@ -192,6 +192,9 @@
     SUBDIR += lilyterm
     SUBDIR += linux-c7-libxkbcommon
     SUBDIR += linux-c7-pixman
+    SUBDIR += linux-c7-xcb-util
+    SUBDIR += linux-c7-xcb-util-image
+    SUBDIR += linux-c7-xcb-util-keysyms
     SUBDIR += linux-c7-xorg-libs
     SUBDIR += linux-nvidia-libs
     SUBDIR += linux-nvidia-libs-304
@@ -259,6 +262,7 @@
     SUBDIR += plasma5-kgamma5
     SUBDIR += plasma5-kscreen
     SUBDIR += plasma5-kwayland-integration
+    SUBDIR += plasma5-kwayland-server
     SUBDIR += plasma5-libkscreen
     SUBDIR += plasma5-plasma
     SUBDIR += plasma5-plasma-desktop

@@ -42,7 +42,6 @@
     SUBDIR += cx88
     SUBDIR += dav1d
     SUBDIR += deforaos-player
-    SUBDIR += din
     SUBDIR += dirac
     SUBDIR += dragon
     SUBDIR += dtv-scan-tables
@@ -319,6 +318,7 @@
     SUBDIR += php-pHash
     SUBDIR += pipewire
     SUBDIR += pitivi
+    SUBDIR += playerctl
     SUBDIR += plexmediaserver
     SUBDIR += plexmediaserver-plexpass
     SUBDIR += podcastdl

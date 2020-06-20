@@ -10,6 +10,7 @@
     SUBDIR += bamtools
     SUBDIR += bcftools
     SUBDIR += bedtools
+    SUBDIR += bioawk
     SUBDIR += biococoa
     SUBDIR += bolt-lmm
     SUBDIR += bowtie
@@ -113,6 +114,7 @@
     SUBDIR += phred
     SUBDIR += phylip
     SUBDIR += phyml
+    SUBDIR += picard-tools
     SUBDIR += plink
     SUBDIR += primer3
     SUBDIR += prodigal
@@ -160,6 +162,7 @@
     SUBDIR += stacks
     SUBDIR += star
     SUBDIR += stringtie
+    SUBDIR += subread
     SUBDIR += tRNAscan-SE
     SUBDIR += tabixpp
     SUBDIR += tophat
@@ -173,6 +176,7 @@
     SUBDIR += velvet
     SUBDIR += viennarna
     SUBDIR += vsearch
+    SUBDIR += vt
     SUBDIR += wise
 
 .include <bsd.port.subdir.mk>

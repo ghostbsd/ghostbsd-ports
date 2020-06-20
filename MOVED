@@ -14465,7 +14465,6 @@ devel/py-Products.LDAPUserFolder||2020-03-20|Has expired: Old, uses EOLed python
 devel/py-zLOG||2020-03-20|Has expired: Old, uses EOLed python27
 textproc/py-ltxml||2020-03-20|Has expired: Unmaintained, uses EOLed python27
 x11-toolkits/flowcanvas||2020-03-20|Has expired: Unmaintained, uses EOLed python27
-audio/raul||2020-03-20|Has expired: Unmaintained, uses EOLed python27
 audio/py-vorbis||2020-03-20|Has expired: Unmaintained, uses EOLed python27
 databases/py-cdb||2020-03-20|Has expired: Unmaintained, uses EOLed python27
 devel/py-libplist||2020-03-20|Has expired: Unmaintained, uses EOLed python27
@@ -14609,7 +14608,6 @@ devel/mime||2020-05-05|Has expired: Broken for more than 6 months
 devel/motor||2020-05-05|Has expired: Broken for more than 6 months
 devel/mq4cpp||2020-05-05|Has expired: Broken for more than 6 months
 devel/myrepos||2020-05-05|Has expired: Broken for more than 6 months
-devel/notify-sharp||2020-05-05|Has expired: Broken for more than 6 months
 devel/oozie||2020-05-05|Has expired: Broken for more than 6 months
 devel/p5-Cdk||2020-05-05|Has expired: Broken for more than 6 months
 devel/p5-Data-Average||2020-05-05|Has expired: Broken for more than 6 months
@@ -14993,7 +14991,6 @@ devel/libopensync||2020-05-06|Abandonware, website disappeared
 deskutils/libopensync-plugin-vformat-devel||2020-05-06|Abandonware, website disappeared
 devel/py-ipykernel|devel/py-ipykernel5|2020-05-07|Has expired: Old version, use devel/py-ipykernel5 instead
 sysutils/rundeck|sysutils/rundeck2|2020-05-07|Rename to avoid confusion with sysutils/rundeck3
-x11-wm/compiz-plugins-unsupported||2020-05-07|Has expired: Broken for more than 6 months
 math/darknet|misc/darknet|2020-05-07|DarkNet is a machine learning project, not a math project
 www/rubygem-activeresource5|www/rubygem-activeresource|2020-05-08|Remove PKGNAMESUFFIX 3 years and 4 months after rubygem-activeresource removal
 finance/bitcoinnodestats||2020-05-12|Has expired: No longer maintained and not compatible with Django 2.2+
@@ -15053,3 +15050,39 @@ devel/graphql.el||2020-05-31|Has expired: No longer required by anything
 lang/perl5.26|lang/perl5.28|2020-05-31|Has expired: Support ends three years after .0 release, please upgrade to a more recent version of Perl
 www/py-beautifulsoup460|www/py-beautifulsoup448|2020-05-31|Has expired: Use www/py-beautifulsoup448 instead
 databases/db48|databases/db5|2020-06-02|Has expired. Use databases/db5 instead
+security/bro||2020-06-02|Has expired: Please migrate to security/zeek
+www/py-djangotoolbox||2020-06-03|Has expired: No longer maintained, not compatible with Django 1.11+
+www/py-dojango||2020-06-03|Has expired: No longer maintained, not compatible with Django 2.2+
+www/py-django-json-rpc||2020-06-03|Has expired: No longer maintained, not compatible with Django 2.0+
+www/mediawiki132|www/mediawiki133|2020-06-03|Has expired: EOLed upstream
+devel/cargo-tree|lang/rust|2020-06-04|Integrated into cargo
+databases/rubygem-peek-mysql2-rails5||2020-06-05|Removed: not required by gitlab-ce anymore
+audio/workman||2020-06-05|Has expired: Depends on expired x11-toolkits/xview
+x11-toolkits/xview||2020-06-05|Has expired: 64-bit unsupported
+math/p5-Algorithm-KMeans||2020-06-05|Has expired: Depends on expired math/p5-Math-GSL
+math/p5-Math-GSL||2020-06-05|Has expired: Broken for more than 6 months
+net/openbsc||2020-06-05|Has expired: Depends on expired devel/libosmo-netif
+devel/libosmo-netif||2020-06-05|Has expired: Broken for more than 6 months
+audio/xvmixer||2020-06-05|Has expired: Depends on expired x11-toolkits/xview
+devel/libosmo-sccp||2020-06-05|Has expired: Depends on expired devel/libosmo-netif
+audio/p5-Audio||2020-06-05|Has expired: Depends on expired math/p5-Math-GSL
+databases/rubygem-peek-pg-rails5||2020-06-05|Removed: not required by gitlab-ce anymore
+devel/rubygem-peek-gc-rails5|devel/rubygem-peek-gc-rails52|2020-06-05|Removed: please use devel/rubygem-peek-gc-rails52 instead
+devel/rubygem-peek-rails5|devel/rubygem-peek-rails60|2020-06-05|Removed: please use devel/rubygem-peek-rails60 instead
+net/freerdp1|net/freerdp|2020-06-06|Has expired: Superseded by the freerdp port/package
+irc/psybnc||2020-06-06|Has expired: Broken for more than 6 months
+www/py-dj22-djangoql|www/py-djangoql|2020-06-06|Renamed to match the naming of other Django ports since Django 2.2 became default
+sysutils/beats|sysutils/beats6|2020-06-07|Renamed to match the naming of other ELK ports
+security/pam_pseudo||2020-06-07|Has expired: Broken for more than 6 months
+multimedia/din|audio/din|2020-06-09|Moved to a better category
+www/py-dj22-django_csp|www/py-django-csp|2020-06-10|Renamed to match upstream naming and to be in sync with other Django ports since Django 2.2 became default
+www/py-dj22-django-jquery-js|www/py-django-jquery-js|2020-06-11|Renamed to match the naming of other Django ports since Django 2.2 became default
+www/py-dj22-django-formset-js-improved|www/py-django-formset-js-improved|2020-06-11|Renamed to match the naming of other Django ports since Django 2.2 became default
+mail/claws-mail-archiver|mail/claws-mail-archive|2020-06-11|Renamed to align port name to plugin name
+mail/claws-mail-attach_warner|mail/claws-mail-attachwarner|2020-06-11|Renamed to align port name to plugin name
+mail/claws-mail-spamreport|mail/claws-mail-spam_report|2020-06-11|Renamed to align port name to plugin name
+mail/claws-mail-tnef|mail/claws-mail-tnef_parse|2020-06-11|Renamed to align port name to plugin name
+x11-themes/numix-theme|x11-themes/numix-gtk-theme|2020-06-15|Renamed to match upstream naming
+www/py-djangorestframework36|www/py-djangorestframework|2020-06-15|Has expired: Not compatible with Django 2.0+, please use www/py-djangorestframework instead
+www/py-flask-restplus|www/py-flask-restx|2020-06-17|No longer maintained upstream, use www/py-flask-restx instead
+devel/swig30|devel/swig|2020-06-17|Remove PKGNAMESUFFIX since it is the only version in ports tree

@@ -23,6 +23,7 @@
     SUBDIR += apq-pgsql
     SUBDIR += arangodb32
     SUBDIR += arangodb33
+    SUBDIR += arrow
     SUBDIR += ateam_mysql_ldap_auth
     SUBDIR += autobackupmysql
     SUBDIR += automysqlbackup
@@ -188,6 +189,8 @@
     SUBDIR += mongodb36-tools
     SUBDIR += mongodb40
     SUBDIR += mongodb40-tools
+    SUBDIR += mongodb42
+    SUBDIR += mongodb42-tools
     SUBDIR += mroonga
     SUBDIR += mtools-mongodb
     SUBDIR += mtop
@@ -555,6 +558,7 @@
     SUBDIR += pg_activity
     SUBDIR += pg_citus
     SUBDIR += pg_dirtyread
+    SUBDIR += pg_ed25519
     SUBDIR += pg_partman
     SUBDIR += pg_qualstats
     SUBDIR += pg_reorg
@@ -826,6 +830,7 @@
     SUBDIR += py-tableschema
     SUBDIR += py-tarantool
     SUBDIR += py-tiledb
+    SUBDIR += py-txredisapi
     SUBDIR += py-umemcache
     SUBDIR += py-unqlite
     SUBDIR += py-varstack
@@ -945,8 +950,6 @@
     SUBDIR += rubygem-mysql204
     SUBDIR += rubygem-openid-redis-store
     SUBDIR += rubygem-paranoia
-    SUBDIR += rubygem-peek-mysql2-rails5
-    SUBDIR += rubygem-peek-pg-rails5
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-pg0
     SUBDIR += rubygem-pg018

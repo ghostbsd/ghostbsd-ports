@@ -111,7 +111,7 @@ EXTRAS_DESC=		Extra clang tools
 EXTRAS_IMPLIES=		CLANG
 LIT_DESC=		Install lit and FileCheck test tools
 LLD_DESC=		Install lld, the LLVM linker
-LLDB_BUILD_DEPENDS=	swig3.0:devel/swig30
+LLDB_BUILD_DEPENDS=	swig:devel/swig
 LLDB_DESC=		Install lldb, the LLVM debugger
 LLDB_IMPLIES=		CLANG
 LLDB_PORTDOCS=		lldb
@@ -372,7 +372,7 @@ post-patch-CLANG-on:
 	    ${PATCH_WRKSRC}/clang/tools/clang-format/git-clang-format
 
 post-patch-LLD-on:
-		${REINPLACE_CMD} -e "s|\'indexsidebar.html\'|[\'indexsidebar.html\']|" \
+		${REINPLACE_CMD} -e "s|'indexsidebar.html'|['indexsidebar.html']|" \
 			${PATCH_WRKSRC}/lld/docs/conf.py
 
 post-install:

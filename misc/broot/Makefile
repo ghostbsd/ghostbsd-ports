@@ -2,8 +2,7 @@
 
 PORTNAME=	broot
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.13.6
-PORTREVISION=	2
+DISTVERSION=	0.15.1
 CATEGORIES=	misc
 
 MAINTAINER=	vulcan@wired.sh
@@ -52,7 +51,7 @@ CARGO_CRATES=	aho-corasick-0.7.6 \
 		crossbeam-queue-0.2.0 \
 		crossbeam-utils-0.6.6 \
 		crossbeam-utils-0.7.0 \
-		crossterm-0.16.0 \
+		crossterm-0.17.5 \
 		crossterm_winapi-0.6.1 \
 		csv-1.1.1 \
 		csv-core-0.1.6 \
@@ -66,6 +65,7 @@ CARGO_CRATES=	aho-corasick-0.7.6 \
 		fuchsia-cprng-0.1.1 \
 		fuchsia-zircon-0.3.3 \
 		fuchsia-zircon-sys-0.3.3 \
+		getrandom-0.1.14 \
 		git2-0.11.0 \
 		glob-0.3.0 \
 		hermit-abi-0.1.3 \
@@ -78,7 +78,7 @@ CARGO_CRATES=	aho-corasick-0.7.6 \
 		jobserver-0.1.19 \
 		js-sys-0.3.37 \
 		kernel32-sys-0.2.2 \
-		lazy-regex-0.1.2 \
+		lazy-regex-0.1.3 \
 		lazy_static-1.4.0 \
 		libc-0.2.65 \
 		libgit2-sys-0.10.0 \
@@ -87,6 +87,7 @@ CARGO_CRATES=	aho-corasick-0.7.6 \
 		log-0.4.8 \
 		matches-0.1.8 \
 		memchr-2.2.1 \
+		memmap-0.7.0 \
 		memoffset-0.5.2 \
 		minimad-0.6.4 \
 		mio-0.6.21 \
@@ -102,13 +103,24 @@ CARGO_CRATES=	aho-corasick-0.7.6 \
 		parking_lot_core-0.7.0 \
 		pathdiff-0.1.0 \
 		percent-encoding-2.1.0 \
+		phf-0.8.0 \
+		phf_generator-0.8.0 \
+		phf_macros-0.8.0 \
+		phf_shared-0.8.0 \
 		pkg-config-0.3.17 \
 		plotters-0.2.12 \
-		proc-macro2-1.0.6 \
+		ppv-lite86-0.2.8 \
+		proc-macro-hack-0.5.16 \
+		proc-macro2-1.0.10 \
 		quote-1.0.2 \
+		rand-0.7.3 \
+		rand_chacha-0.2.2 \
 		rand_core-0.3.1 \
 		rand_core-0.4.2 \
+		rand_core-0.5.1 \
+		rand_hc-0.2.0 \
 		rand_os-0.1.3 \
+		rand_pcg-0.2.1 \
 		rayon-1.3.0 \
 		rayon-core-1.7.0 \
 		rdrand-0.4.0 \
@@ -129,24 +141,26 @@ CARGO_CRATES=	aho-corasick-0.7.6 \
 		serde-1.0.102 \
 		serde_derive-1.0.103 \
 		serde_json-1.0.42 \
-		signal-hook-0.1.13 \
+		signal-hook-0.1.15 \
 		signal-hook-registry-1.2.0 \
 		simplelog-0.7.4 \
+		siphasher-0.3.3 \
 		slab-0.4.2 \
 		smallvec-1.0.0 \
+		strict-0.1.3 \
 		strsim-0.8.0 \
-		syn-1.0.7 \
+		syn-1.0.17 \
 		synstructure-0.12.1 \
 		term-0.6.1 \
-		termimad-0.8.16 \
+		termimad-0.8.23 \
 		textwrap-0.11.0 \
-		thiserror-1.0.4 \
-		thiserror-impl-1.0.4 \
+		thiserror-1.0.19 \
+		thiserror-impl-1.0.19 \
 		thread_local-0.3.6 \
 		time-0.1.42 \
 		tinytemplate-1.0.2 \
 		toml-0.5.5 \
-		umask-0.1.7 \
+		umask-1.0.0 \
 		unicode-bidi-0.3.4 \
 		unicode-normalization-0.1.11 \
 		unicode-width-0.1.6 \
@@ -156,6 +170,7 @@ CARGO_CRATES=	aho-corasick-0.7.6 \
 		vcpkg-0.2.8 \
 		vec_map-0.8.1 \
 		walkdir-2.3.1 \
+		wasi-0.9.0+wasi-snapshot-preview1 \
 		wasm-bindgen-0.2.60 \
 		wasm-bindgen-backend-0.2.60 \
 		wasm-bindgen-macro-0.2.60 \
