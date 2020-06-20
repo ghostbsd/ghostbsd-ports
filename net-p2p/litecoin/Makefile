@@ -1,9 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	litecoin
-PORTVERSION=	0.17.1
+PORTVERSION=	0.18.1
 DISTVERSIONPREFIX=	v
-PORTREVISION?=	2
 CATEGORIES=	net-p2p finance
 
 MAINTAINER=	hsw@bitmark.com
@@ -41,7 +40,6 @@ OPTIONS_SUB=		yes
 HARDENING_DESC=	Attempt to harden binaries (PIE for ASLR, NX Stack)
 QRCODES_DESC=	Display QR Codes
 TESTS_DESC=	Build test binary and unit tests
-WALLET_DESC=	Wallet Management Support
 WALLET_BDBMODERN_DESC=	Wallet using modern BDB 5.x or 6.x
 ZMQ_DESC=	Block and transaction broadcasting with ZeroMQ
 

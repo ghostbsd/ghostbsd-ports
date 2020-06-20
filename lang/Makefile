@@ -249,6 +249,7 @@
     SUBDIR += perl5-devel
     SUBDIR += perl5.28
     SUBDIR += perl5.30
+    SUBDIR += perl5.32
     SUBDIR += petite-chez
     SUBDIR += pfe
     SUBDIR += pharo
@@ -318,6 +319,7 @@
     SUBDIR += sdcc
     SUBDIR += see
     SUBDIR += seed7
+    SUBDIR += silq
     SUBDIR += siod
     SUBDIR += sisc
     SUBDIR += sketchy

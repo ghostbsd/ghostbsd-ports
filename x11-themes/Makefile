@@ -107,6 +107,7 @@
     SUBDIR += lxappearance
     SUBDIR += lxde-icon-theme
     SUBDIR += lxqt-themes
+    SUBDIR += matcha-gtk-themes
     SUBDIR += mate-backgrounds
     SUBDIR += mate-icon-theme
     SUBDIR += mate-icon-theme-faenza
@@ -125,7 +126,7 @@
     SUBDIR += metacity-themes
     SUBDIR += mint-themes
     SUBDIR += numix-icon-theme
-    SUBDIR += numix-theme
+    SUBDIR += numix-gtk-theme
     SUBDIR += openbox-arc-theme
     SUBDIR += papirus-icon-theme
     SUBDIR += plasma5-breeze
@@ -142,6 +143,7 @@
     SUBDIR += qtcurve-utils
     SUBDIR += sawfish-themes
     SUBDIR += sddm-freebsd-black-theme
+    SUBDIR += sierra-gtk-themes
     SUBDIR += slim-freebsd-black-theme
     SUBDIR += slim-freebsd-themes
     SUBDIR += slim-themes

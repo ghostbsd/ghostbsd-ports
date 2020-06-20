@@ -22,6 +22,7 @@
     SUBDIR += alef-webfont
     SUBDIR += amphetadesk
     SUBDIR += analog
+    SUBDIR += annie
     SUBDIR += anyremote2html
     SUBDIR += anyterm
     SUBDIR += apache-mode.el
@@ -311,6 +312,7 @@
     SUBDIR += linux-opera
     SUBDIR += litmus
     SUBDIR += ljdeps
+    SUBDIR += logswan
     SUBDIR += logtools
     SUBDIR += lua-resty-core
     SUBDIR += lua-resty-lrucache
@@ -326,7 +328,6 @@
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
     SUBDIR += mediawiki131
-    SUBDIR += mediawiki132
     SUBDIR += mediawiki133
     SUBDIR += mediawiki134
     SUBDIR += mergelog
@@ -409,9 +410,11 @@
     SUBDIR += moinmoincli
     SUBDIR += mongoose
     SUBDIR += mongrel2
+    SUBDIR += monolith
     SUBDIR += moodle35
     SUBDIR += moodle37
     SUBDIR += moodle38
+    SUBDIR += moodle39
     SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort
@@ -429,6 +432,7 @@
     SUBDIR += newsboat
     SUBDIR += nextcloud
     SUBDIR += nextcloud-calendar
+    SUBDIR += nextcloud-circles
     SUBDIR += nextcloud-contacts
     SUBDIR += nextcloud-deck
     SUBDIR += nextcloud-notes
@@ -1439,8 +1443,6 @@
     SUBDIR += py-dj22-django-debug-toolbar
     SUBDIR += py-dj22-django-extensions
     SUBDIR += py-dj22-django-filter
-    SUBDIR += py-dj22-django-formset-js-improved
-    SUBDIR += py-dj22-django-jquery-js
     SUBDIR += py-dj22-django-js-asset
     SUBDIR += py-dj22-django-model-utils
     SUBDIR += py-dj22-django-mptt
@@ -1451,8 +1453,6 @@
     SUBDIR += py-dj22-django-taggit-serializer
     SUBDIR += py-dj22-django-timezone-field
     SUBDIR += py-dj22-django-treebeard
-    SUBDIR += py-dj22-django_csp
-    SUBDIR += py-dj22-djangoql
     SUBDIR += py-dj22-djangorestframework
     SUBDIR += py-dj22-drf-yasg
     SUBDIR += py-dj22-jsonfield
@@ -1487,6 +1487,7 @@
     SUBDIR += py-django-countries
     SUBDIR += py-django-crispy-forms
     SUBDIR += py-django-cron
+    SUBDIR += py-django-csp
     SUBDIR += py-django-datetime-widget
     SUBDIR += py-django-debreach
     SUBDIR += py-django-debug-toolbar
@@ -1495,6 +1496,7 @@
     SUBDIR += py-django-extensions
     SUBDIR += py-django-filer
     SUBDIR += py-django-filter
+    SUBDIR += py-django-formset-js-improved
     SUBDIR += py-django-formtools
     SUBDIR += py-django-guardian
     SUBDIR += py-django-happenings-update
@@ -1503,8 +1505,8 @@
     SUBDIR += py-django-hijack
     SUBDIR += py-django-htmlmin
     SUBDIR += py-django-i18nfield
+    SUBDIR += py-django-jquery-js
     SUBDIR += py-django-js-asset
-    SUBDIR += py-django-json-rpc
     SUBDIR += py-django-jsonfield
     SUBDIR += py-django-ldapdb
     SUBDIR += py-django-libsass
@@ -1565,14 +1567,12 @@
     SUBDIR += py-django30
     SUBDIR += py-django_compressor
     SUBDIR += py-djangocms-admin-style
+    SUBDIR += py-djangoql
     SUBDIR += py-djangorestframework
     SUBDIR += py-djangorestframework-csv
     SUBDIR += py-djangorestframework-filters
     SUBDIR += py-djangorestframework-xml
     SUBDIR += py-djangorestframework311
-    SUBDIR += py-djangorestframework36
-    SUBDIR += py-djangotoolbox
-    SUBDIR += py-dojango
     SUBDIR += py-draftjs_exporter
     SUBDIR += py-drf-yasg
     SUBDIR += py-dtflickr
@@ -1604,7 +1604,7 @@
     SUBDIR += py-flask-peewee
     SUBDIR += py-flask-principal
     SUBDIR += py-flask-restful
-    SUBDIR += py-flask-restplus
+    SUBDIR += py-flask-restx
     SUBDIR += py-flask-script
     SUBDIR += py-flask-security
     SUBDIR += py-flask-smorest
@@ -1755,6 +1755,7 @@
     SUBDIR += py-tornado6
     SUBDIR += py-trello
     SUBDIR += py-treq
+    SUBDIR += py-tuir
     SUBDIR += py-turbogears2
     SUBDIR += py-tvdb_api
     SUBDIR += py-txrequests
@@ -2060,6 +2061,7 @@
     SUBDIR += rubygem-raindrops
     SUBDIR += rubygem-ramaze
     SUBDIR += rubygem-raphael-rails
+    SUBDIR += rubygem-rate_throttle_client
     SUBDIR += rubygem-rbovirt
     SUBDIR += rubygem-rdf
     SUBDIR += rubygem-rdf-normalize

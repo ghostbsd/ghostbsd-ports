@@ -169,7 +169,6 @@
     SUBDIR += freeradius-client
     SUBDIR += freeradius3
     SUBDIR += freerdp
-    SUBDIR += freerdp1
     SUBDIR += freeswitch
     SUBDIR += freevrrpd
     SUBDIR += frr5
@@ -396,6 +395,8 @@
     SUBDIR += libproxy-python
     SUBDIR += libproxy-webkit3
     SUBDIR += librdkafka
+    SUBDIR += librespeed-cli
+    SUBDIR += librespeed-go
     SUBDIR += librsync
     SUBDIR += libsignal
     SUBDIR += libsrtp2
@@ -475,6 +476,7 @@
     SUBDIR += nats-streaming-server
     SUBDIR += nats-top
     SUBDIR += nbd-server
+    SUBDIR += nbdkit
     SUBDIR += nc
     SUBDIR += ncp
     SUBDIR += ndisc6
@@ -530,11 +532,12 @@
     SUBDIR += onedrive
     SUBDIR += onenetd
     SUBDIR += onioncat
+    SUBDIR += ooni-mini
+    SUBDIR += ooni-probe-cli
     SUBDIR += opal
     SUBDIR += open-isns
     SUBDIR += openbgpd
     SUBDIR += openbgpd6
-    SUBDIR += openbsc
     SUBDIR += openggsn
     SUBDIR += openldap24-client
     SUBDIR += openldap24-sasl-client
@@ -852,6 +855,7 @@
     SUBDIR += p5-Text-Authinfo
     SUBDIR += p5-Twitter-API
     SUBDIR += p5-URI
+    SUBDIR += p5-URI-Based
     SUBDIR += p5-URI-Encode-XS
     SUBDIR += p5-URI-Fast
     SUBDIR += p5-URI-FromHash
@@ -989,8 +993,8 @@
     SUBDIR += ptpd2
     SUBDIR += ptunnel
     SUBDIR += pvm
-    SUBDIR += pwnat
     SUBDIR += pwhois
+    SUBDIR += pwnat
     SUBDIR += pxe
     SUBDIR += pxe-pdhcp
     SUBDIR += py-DTLSSocket

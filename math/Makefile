@@ -177,6 +177,7 @@
     SUBDIR += ceres-solver
     SUBDIR += cgal
     SUBDIR += cgl
+    SUBDIR += cglm
     SUBDIR += chaco
     SUBDIR += chryzodus
     SUBDIR += clasp
@@ -408,6 +409,7 @@
     SUBDIR += mpir
     SUBDIR += mppp
     SUBDIR += mprime
+    SUBDIR += mpsolve
     SUBDIR += mtrxmath
     SUBDIR += multichoose
     SUBDIR += mumps
@@ -529,7 +531,6 @@
     SUBDIR += p5-AI-Perceptron
     SUBDIR += p5-Algorithm-Combinatorics
     SUBDIR += p5-Algorithm-CurveFit
-    SUBDIR += p5-Algorithm-KMeans
     SUBDIR += p5-Algorithm-Munkres
     SUBDIR += p5-Bit-ShiftReg
     SUBDIR += p5-Bit-Vector
@@ -575,7 +576,6 @@
     SUBDIR += p5-Math-GMPf
     SUBDIR += p5-Math-GMPq
     SUBDIR += p5-Math-GMPz
-    SUBDIR += p5-Math-GSL
     SUBDIR += p5-Math-Geometry
     SUBDIR += p5-Math-Geometry-Planar
     SUBDIR += p5-Math-Geometry-Planar-GPC
@@ -907,6 +907,7 @@
     SUBDIR += suitesparse
     SUBDIR += sundials
     SUBDIR += superlu
+    SUBDIR += symengine
     SUBDIR += symmetrica
     SUBDIR += symphony
     SUBDIR += sympow

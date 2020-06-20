@@ -5,6 +5,53 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+
+20200616:
+  AFFECTS: users of www/baikal
+  AUTHOR: gahr@FreeBSD.org
+
+  The www/baikal has been upated to 0.7.1. With the 0.7.0 release, our
+  configuration format was updated to use YAML files. You need to go through
+  the installer again but we pre-fill most values with the ones from your old
+  installation. We recommend that you make a full backup of your data, as a
+  safety measure. Starting with 0.7.0, Baikal stores data in both the Specific
+  and the config folders. Keep this in mind when upgrading!
+
+  Known issue:: Upgrading from versions older than 0.6.1 does not work.
+
+20200613:
+  AFFECTS: users of editors/libreoffice
+  AUTHOR: fluffy@FreeBSD.org
+
+  LibreOffice was updated to 6.4 branch with some critical changes:
+  - GTK2 option is obsolete by upstream
+  - GTK3 option is not more set by default because of unstable yet and have visual glitches
+  - QT5 option is set by default to provide comfy visual style for every user
+  - KDE option was renamed to KF5 follows upstream
+
+  Please re-run "make config" to pick up the new defaults
+
+20200610:
+  AFFECTS: users of www/node
+  AUTHOR: bhughes@FreeBSD.org
+
+  The www/node port has been updated to Node.js v14.0.0, the latest
+  upstream release. This is a major release, including many significant
+  changes. Users are encouraged to read the release announcements before
+  upgrading:
+
+  https://nodejs.org/en/blog/release/v14.0.0/
+
+20200602:
+  AFFECTS: users of www/radicale
+  AUTHOR: decke@FreeBSD.org
+
+  Migration from radicale 1.x to 2.x requires that you export the storage
+  with radicale 1.1.6 before updating.
+
+  Migration instructions are available at:
+  https://web.archive.org/web/20190314225402/https://radicale.org/1to2/
+
 20200602:
   AFFECTS: users of sysutils/py-salt
   AUTHOR: krion@FreeBSD.org

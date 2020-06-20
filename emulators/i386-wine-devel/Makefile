@@ -9,6 +9,9 @@ PORTNAME=	wine
 # define a dummy DISTVERSION to avoid errors with poudriere bulk -a
 # on architectures unsupported by this port
 DISTVERSION?=	0
+# define PORTREVISION with ?= to allow it to be overriden by
+# wine-devel's PORTREVISION when cross building
+PORTREVISION?=	1
 PKGNAMEPREFIX=	i386-
 PKGNAMESUFFIX=	-devel
 CATEGORIES=	emulators
@@ -24,12 +27,10 @@ PKGINSTALL=	${.CURDIR}/files/pkg-install
 PKGDEINSTALL=	${PKGINSTALL}
 
 distinfo-update:
-	${RM} ${.CURDIR}/distinfo ${.CURDIR}/distinfo~
+	${RM} ${.CURDIR}/distinfo~
 .for osrel in 11 12 13
-	${MAKE} fetch OSREL=${osrel} OSVERSION=${osrel}99999 _OSRELEASE=${osrel}
 	${MAKE} makesum OSREL=${osrel} OSVERSION=${osrel}99999 _OSRELEASE=${osrel}
 	${CAT} ${.CURDIR}/distinfo >> ${.CURDIR}/distinfo~
-	${RM} ${.CURDIR}/distinfo
 .endfor
 	${SED} -e '2,$${' -e '/^TIMESTAMP/d' -e '}' distinfo~ > ${.CURDIR}/distinfo
 	${RM} ${.CURDIR}/distinfo~
