@@ -1,11 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	synctex
-PORTVERSION=	1.23
+PORTVERSION=	1.15
 CATEGORIES=	devel
 MASTER_SITES=	TEX_CTAN/systems/texlive/Source/
 PKGNAMEPREFIX=	tex-
-DISTNAME=	texlive-20200327-source
+DISTNAME=	texlive-20150521-source
 DIST_SUBDIR=	TeX
 
 MAINTAINER=	hrs@FreeBSD.org
