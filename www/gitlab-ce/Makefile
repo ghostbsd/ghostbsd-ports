@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab-ce
-PORTVERSION=	13.1.2
+PORTVERSION=	13.1.4
 PORTREVISION=	0
 CATEGORIES=	www devel
 
@@ -148,7 +148,7 @@ MY_DEPENDS=	git>=2.25:devel/git \
 	rubygem-redis-rails-rails60>=5.0.2<5.1:www/rubygem-redis-rails-rails60 \
 	rubygem-discordrb-webhooks-blackst0ne>=3.3<4.0:net-im/rubygem-discordrb-webhooks-blackst0ne \
 	rubygem-hipchat>=1.6.0<1.7.0:net-im/rubygem-hipchat \
-	rubygem-jira-ruby>=2.0.0<2.1:devel/rubygem-jira-ruby \
+	rubygem-jira-ruby20>=2.0.0<2.1:devel/rubygem-jira-ruby20 \
 	rubygem-atlassian-jwt>=0.2.0<0.3.0:www/rubygem-atlassian-jwt \
 	rubygem-flowdock>=0.7<1.0:www/rubygem-flowdock \
 	rubygem-slack-messenger>=2.3.3<2.4.0:devel/rubygem-slack-messenger \
@@ -251,7 +251,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 GL_PROJECT=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT=	2e7a6f64b07d018acbf2d42e5cc4c5224e4e8b42
+GL_COMMIT=	18c5ab32b738c0b6ecb4d0df3994000482f34bd8
 SHEBANG_FILES=	bin/background_* scripts/build_assets_image scripts/clean-old-cached-assets scripts/create_postgres_user.sh scripts/prepare_postgres_fdw.sh scripts/review_apps/gcp_cleanup.sh scripts/rspec_helpers.sh scripts/security-harness
 
 USERS=	git

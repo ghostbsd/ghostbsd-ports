@@ -116,6 +116,7 @@
     SUBDIR += bsd-splash-changer
     SUBDIR += bsdconfig
     SUBDIR += bsdcrashtar
+    SUBDIR += bsdfan
     SUBDIR += bsdhwmon
     SUBDIR += bsdinfo
     SUBDIR += bsdisks
@@ -1196,6 +1197,7 @@
     SUBDIR += scalpel
     SUBDIR += scan_ffs
     SUBDIR += scanbuttond
+    SUBDIR += scanmem
     SUBDIR += scct
     SUBDIR += schedutils
     SUBDIR += screen

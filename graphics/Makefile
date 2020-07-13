@@ -173,6 +173,7 @@
     SUBDIR += exiftran
     SUBDIR += exiv2
     SUBDIR += exrtools
+    SUBDIR += f3d
     SUBDIR += facedetect
     SUBDIR += farbfeld
     SUBDIR += feh
@@ -1063,6 +1064,7 @@
     SUBDIR += waifu2x-converter-cpp
     SUBDIR += waifu2x-ncnn-vulkan
     SUBDIR += wayland
+    SUBDIR += wayland-info
     SUBDIR += wayland-protocols
     SUBDIR += waylandpp
     SUBDIR += webp

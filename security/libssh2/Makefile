@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	libssh2
-PORTVERSION=	1.8.2
+PORTVERSION=	1.9.0
+PORTREVISION=	1
 PORTEPOCH=	3
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.libssh2.org/download/ \
@@ -40,7 +41,7 @@ post-patch:
 		${WRKSRC}/libssh2.pc.in
 .if ! ${PORT_OPTIONS:MGCRYPT}
 .  if ${SSL_DEFAULT} == base
-	@${REINPLACE_CMD} -e 's/LIBSREQUIRED=libssl,libcrypto/LIBS="$$LIBS -lssl -lcrypto"/' \
+	@${REINPLACE_CMD} -e 's/LIBSREQUIRED="$$LIBSREQUIRED$${LIBSREQUIRED:+ }libssl libcrypto"/LIBS="$$LIBS -lssl -lcrypto"/' \
 		${WRKSRC}/configure
 .  endif
 .endif

@@ -2,6 +2,7 @@
 
 PORTNAME=	kodi
 DISTVERSION=	19.0.a20200630
+PORTREVISION=	2
 CATEGORIES=	multimedia
 PKGNAMESUFFIX=	-devel
 
@@ -50,7 +51,7 @@ LIB_DEPENDS=	libass.so:multimedia/libass \
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR}
 
 USES=		cmake compiler:c++14-lang gettext gl gnome iconv:wchar_t jpeg \
-		libtool pkgconfig python:3.5+ sqlite ssl
+		pkgconfig python:3.5+ sqlite ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	xbmc
 GH_PROJECT=	xbmc

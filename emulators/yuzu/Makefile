@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	yuzu
-PORTVERSION=	s20200702
+PORTVERSION=	s20200710
 PORTREVISION?=	0
 CATEGORIES=	emulators
 
@@ -9,7 +9,6 @@ PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	905e8016a04e.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/1340
 PATCHFILES+=	34635a42c0b3.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/1703
 PATCHFILES+=	1adf640d3725.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/1703
-PATCHFILES+=	b1b1ed7597cb.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/4221
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo Switch emulator/debugger
@@ -38,11 +37,11 @@ LIB_DEPENDS=	liblz4.so:archivers/liblz4 \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	41a333321
+GH_TAGNAME=	995067538
 GH_TUPLE=	yuzu-emu:unicorn:1.0.1-153-g73f45735:unicorn/externals/unicorn \
 		DarkLordZach:mbedtls:a280e60:mbedtls/externals/mbedtls \
 		KhronosGroup:SPIRV-Headers:2c51218:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
-		KhronosGroup:Vulkan-Headers:v1.2.140:Vulkan_Headers/externals/Vulkan-Headers \
+		KhronosGroup:Vulkan-Headers:v1.2.145:Vulkan_Headers/externals/Vulkan-Headers \
 		MerryMage:dynarmic:r3-220-g4f967387:dynarmic/externals/dynarmic \
 		ReinUsesLisp:sirit:eefca56:sirit/externals/sirit \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \

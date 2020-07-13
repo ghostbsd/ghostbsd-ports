@@ -24,6 +24,7 @@
     SUBDIR += arangodb32
     SUBDIR += arangodb33
     SUBDIR += arrow
+    SUBDIR += ateam_mysql57_ldap_auth
     SUBDIR += ateam_mysql_ldap_auth
     SUBDIR += autobackupmysql
     SUBDIR += automysqlbackup
@@ -178,6 +179,8 @@
     SUBDIR += mariadb103-server
     SUBDIR += mariadb104-client
     SUBDIR += mariadb104-server
+    SUBDIR += mariadb105-client
+    SUBDIR += mariadb105-server
     SUBDIR += mdbtools
     SUBDIR += mdcached
     SUBDIR += memcached
@@ -756,6 +759,7 @@
     SUBDIR += py-influxdb
     SUBDIR += py-kyotocabinet
     SUBDIR += py-leveldb
+    SUBDIR += py-litecli
     SUBDIR += py-lmdb
     SUBDIR += py-marshmallow-sqlalchemy
     SUBDIR += py-minidb

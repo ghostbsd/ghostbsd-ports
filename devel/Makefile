@@ -3832,7 +3832,6 @@
     SUBDIR += pear-channel-phing
     SUBDIR += pear-channel-phpdoc
     SUBDIR += pear-channel-phpmd
-    SUBDIR += pear-channel-phpunit
     SUBDIR += pear-channel-pirum
     SUBDIR += pear-channel-symfony
     SUBDIR += pear-channel-symfony2
@@ -3995,7 +3994,6 @@
     SUBDIR += py-Js2Py
     SUBDIR += py-PEAK-Rules
     SUBDIR += py-PeachPy
-    SUBDIR += py-Pint
     SUBDIR += py-Products.ExternalEditor
     SUBDIR += py-Products.PloneLanguageTool
     SUBDIR += py-PyExecJS
@@ -4036,6 +4034,7 @@
     SUBDIR += py-XStatic-tv4
     SUBDIR += py-ZopeUndo
     SUBDIR += py-absl
+    SUBDIR += py-absl-py
     SUBDIR += py-adb
     SUBDIR += py-addict
     SUBDIR += py-aenum
@@ -4783,6 +4782,7 @@
     SUBDIR += py-pika
     SUBDIR += py-pika-pool
     SUBDIR += py-pinocchio
+    SUBDIR += py-pint
     SUBDIR += py-pip
     SUBDIR += py-pip-api
     SUBDIR += py-pip-licenses
@@ -4820,6 +4820,7 @@
     SUBDIR += py-promise
     SUBDIR += py-prompt_toolkit
     SUBDIR += py-prompt_toolkit1
+    SUBDIR += py-prompt_toolkit2
     SUBDIR += py-protobuf
     SUBDIR += py-protocols
     SUBDIR += py-ptable
@@ -5297,6 +5298,7 @@
     SUBDIR += pybugz
     SUBDIR += pycanberra
     SUBDIR += pycharm-ce
+    SUBDIR += pycharm-pro
     SUBDIR += pycos
     SUBDIR += pycount
     SUBDIR += pydbus-common
@@ -5922,6 +5924,7 @@
     SUBDIR += rubygem-csv
     SUBDIR += rubygem-cucumber
     SUBDIR += rubygem-cucumber-core
+    SUBDIR += rubygem-cucumber-create-meta
     SUBDIR += rubygem-cucumber-cucumber-expressions
     SUBDIR += rubygem-cucumber-formatter-dots
     SUBDIR += rubygem-cucumber-messages
@@ -6137,6 +6140,7 @@
     SUBDIR += rubygem-jeweler
     SUBDIR += rubygem-jira-ruby
     SUBDIR += rubygem-jira-ruby1
+    SUBDIR += rubygem-jira-ruby20
     SUBDIR += rubygem-jmespath
     SUBDIR += rubygem-jquery-ui-themes
     SUBDIR += rubygem-jruby-jars
