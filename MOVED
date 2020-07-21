@@ -8320,7 +8320,6 @@ japanese/jyuroku||2016-07-04|Has expired: Broken for more than 6 months
 japanese/mtools||2016-07-04|Has expired: Broken for more than 6 months
 palm/pdbar||2016-07-04|Has expired: Broken for more than 6 months
 graphics/gplot||2016-07-04|Has expired: Broken for more than 6 months
-graphics/white_dune||2016-07-04|Has expired: Broken for more than 6 months
 graphics/whirlgif||2016-07-04|Has expired: Broken for more than 6 months
 graphics/libaux||2016-07-04|Has expired: Broken for more than 6 months
 graphics/import-pictures||2016-07-04|Has expired: Broken for more than 6 months
@@ -11659,7 +11658,6 @@ audio/qmpdclient||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 audio/skype-call-recorder||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 biology/clustalx||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 cad/layouteditor||2019-03-16|Has expired: Qt4 has been EOL since december 2015
-cad/meshlab||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 cad/qfsm||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 cad/qucs||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 chinese/gcin-qt4||2019-03-16|Has expired: Qt4 has been EOL since december 2015
@@ -14429,7 +14427,7 @@ textproc/rubygem-actionpack-xml_parser|textproc/rubygem-actionpack-xml_parser-ra
 textproc/rubygem-actionpack-xml_parser1|textproc/rubygem-actionpack-xml_parser1-rails4|2020-03-02|Renamed to match rubygem name convention
 textproc/rubygem-actionpack-xml_parser52|textproc/rubygem-actionpack-xml_parser-rails52|2020-03-02|Renamed to match rubygem name convention
 x11-toolkits/py-kivy||2020-03-02|Has expired: Old, uses EOLed python27
-lang/gcc6|lang/gcc|2020-03-07|Has expired: Unsupported by upstream. Use GCC 9 or newer instead.
+lang/gcc6|lang/gcc|2020-03-07|Has expired: Unsupported by upstream. Use GCC 9 or newer instead
 www/pycarddav|deskutils/py-khard|2020-03-07|Has expired: Deprecated by upstream, please migrate to deskutils/py-khard
 x11-wm/ccsm||2020-03-07|Has expired: Old, uses EOLed python27
 x11-toolkits/py-gtkglext||2020-03-07|Has expired: Old, uses EOLed python27
@@ -14498,7 +14496,6 @@ math/mkl-dnn|math/onednn|2020-04-04|Project renamed
 devel/p5-Glib2|devel/p5-Glib|2020-04-07|Rename to match our p5- port naming
 devel/jucipp|editors/jucipp|2020-04-07|Remove duplicate
 www/py-django_polymorphic|www/py-django-polymorphic|2020-04-11|Match canonical/registered (PyPI/CHEESESHOP) name
-dns/dnsmasq-devel|dns/dnsmasq|2020-04-12|dnsmasq is newer than dnsmasq-devel
 databases/mariadb55-server|databases/mariadb102-server|2020-04-12|Has expired: Upstream end-of-life 2020-04-11, switch to a newer version
 databases/mariadb55-client|databases/mariadb102-client|2020-04-12|Has expired: Upstream end-of-life 2020-04-11, switch to a newer version
 devel/aws-c-commons|devel/aws-c-common|2020-04-12|Renamed to the correct name
@@ -14950,7 +14947,6 @@ x11/keylaunch||2020-05-05|Has expired: Broken for more than 6 months
 x11/props||2020-05-05|Has expired: 64-bit unsupported
 x11/roxbg||2020-05-05|Has expired: Broken for more than 6 months
 x11/sisctrl||2020-05-05|Has expired: Broken for more than 6 months
-x11/wdm||2020-05-05|Has expired: Broken for more than 6 months
 x11/xaniroc||2020-05-05|Has expired: Broken for more than 6 months
 x11/xmove||2020-05-05|Has expired: Broken for more than 6 months
 x11/xnodecor||2020-05-05|Has expired: Broken for more than 6 months
@@ -14992,7 +14988,7 @@ devel/rubygem-webpacker-rails5|devel/rubygem-webpacker4-rails5|2020-05-12|Rename
 devel/rubygem-webpacker-rails50|devel/rubygem-webpacker4-rails50|2020-05-12|Rename when rubygem-webpacker is 5.x now
 net-p2p/parity-ethereum|net-p2p/openethereum|2020-05-13|Renamed upstream for transition to a DAO ownership and maintainer model
 net-im/linux-telegram-desktop|net-im/telegram-desktop|2020-05-13|Has expired: Broken for more than 6 months, use native version
-devel/libphutil||2020-05-15|Has expired: Upstream merged functionality into downstream projects.
+devel/libphutil||2020-05-15|Has expired: Upstream merged functionality into downstream projects
 print/frescobaldi|print/py-frescobaldi|2020-05-16|Renamed to comply with Python Ports Policy
 sysutils/rdiff-backup|sysutils/py-rdiff-backup@py37|2020-05-16|Renamed comply with Python Ports Policy and flavored
 www/py-django-happenings|www/py-django-happenings-update|2020-05-17|Has expired: Doesn't work with Django 2.2+, please use www/py-django-happenings-update instead
@@ -15054,7 +15050,6 @@ databases/rubygem-peek-mysql2-rails5||2020-06-05|Removed: not required by gitlab
 audio/workman||2020-06-05|Has expired: Depends on expired x11-toolkits/xview
 x11-toolkits/xview||2020-06-05|Has expired: 64-bit unsupported
 math/p5-Algorithm-KMeans||2020-06-05|Has expired: Depends on expired math/p5-Math-GSL
-math/p5-Math-GSL||2020-06-05|Has expired: Broken for more than 6 months
 net/openbsc||2020-06-05|Has expired: Depends on expired devel/libosmo-netif
 devel/libosmo-netif||2020-06-05|Has expired: Broken for more than 6 months
 audio/xvmixer||2020-06-05|Has expired: Depends on expired x11-toolkits/xview
@@ -15108,10 +15103,10 @@ math/py-igraph|math/py-python-igraph|2020-06-27|Rename to match upstream naming
 net/bnxt-kmod||2020-06-28|Has expired: Unsupported on all supported FreeBSD versions
 databases/p5-Search-Xapian10|databases/p5-Search-Xapian|2020-06-30|Has expired: Depend on unsupported xapian-core. Use databases/p5-Search-Xapian instead
 databases/xapian-core10|databases/xapian-core|2020-06-30|Has expired: Unsupported by upstream. Use databases/xapian-core instead
-devel/py-dj22-django-rq|www/py-django-rq|2020-06-30|Has expired: Obsolete, please use www/py-django-rq instead
+devel/py-dj22-django-rq|devel/py-django-rq|2020-06-30|Has expired: Obsolete, please use www/py-django-rq instead
 devel/rubygem-cucumber-expressions|devel/rubygem-cucumber-cucumber-expressions|2020-06-30|Has expired: Use devel/rubygem-cucumber-cucumber-expressions instead
 devel/rubygem-cucumber-expressions6|devel/rubygem-cucumber-cucumber-expressions|2020-06-30|Has expired: Use devel/rubygem-cucumber-cucumber-expressions instead
-devel/rubygem-cucumber-tag_expressions1|devel/rubygem-cucumber-tag_expressions|2020-06-30|Has expired: Use devel/rubygem-cucumber-tag_expressions instead
+devel/rubygem-cucumber-tag_expressions1|devel/rubygem-cucumber-tag-expressions|2020-06-30|Has expired: Use devel/rubygem-cucumber-tag_expressions instead
 print/xpp||2020-06-30|Has expired: Last update as 2004-12-09, unsupported by upstream
 textproc/rubygem-gherkin|textproc/rubygem-cucumber-gherkin|2020-06-30|Has expired: Use textproc/rubygem-cucumber-gherkin instead
 www/p5-Catalyst-Model-Xapian10|www/p5-Catalyst-Model-Xapian|2020-06-30|Has expired: Depend on unsupported xapian-core. Use www/p5-Catalyst-Model-Xapian instead
@@ -15151,3 +15146,13 @@ multimedia/f3d|graphics/f3d|2020-07-09|Move to a proper category
 textproc/py-sphinx-hieroglyph|textproc/py-hieroglyph|2020-07-11|Renamed to reflect official name at PyPI
 devel/py-Pint|devel/py-pint|2020-07-11|Rename to match our py- port naming
 audio/aucatctl|audio/sndio|2020-07-12|Use sndioctl from audio/sndio instead
+devel/py-freenas.dispatcher||2020-07-14|Uses deprecated version of python
+textproc/scancode-toolkit||2020-07-14|Uses deprecated version of python
+www/py-kallithea||2020-07-14|Uses deprecated version of python
+graphics/white_dune|graphics/wdune|2020-07-18|Expired in 2016, brought back under new name
+www/py-django-subdomains||2020-07-18|Has expired: No longer maintained, not compatible with Django 2.0+
+www/py-django-datetime-widget||2020-07-18|Has expired: No longer maintained, not compatible with Django 2.1
+www/py-django-openid-auth|www/py-django-allauth|2020-07-18|Has expired: No longer maintained, not compatible with Django 2.0+, please use www/py-django-allauth instead
+www/py-django-overextends||2020-07-18|Has expired: No longer maintained, not compatible with Django 2.0+
+net/kdav|net/kf5-kdav|2020-07-21|Has become a proper KDE framework
+devel/py-trio|net/py-trio|2020-07-21|Remove duplicate port

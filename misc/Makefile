@@ -93,6 +93,7 @@
     SUBDIR += exercism
     SUBDIR += explosions
     SUBDIR += ezc3d
+    SUBDIR += far2l
     SUBDIR += felis
     SUBDIR += figlet
     SUBDIR += figlet-fonts
@@ -443,6 +444,7 @@
     SUBDIR += rubygem-rabbit
     SUBDIR += rubygem-vpim
     SUBDIR += rump
+    SUBDIR += ruut
     SUBDIR += sdformat
     SUBDIR += seabios
     SUBDIR += sent
