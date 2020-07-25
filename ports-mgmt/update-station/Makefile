@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	update-station
-PORTVERSION=	3.2
+PORTVERSION=	3.3
 PORTREVISION=	0
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
@@ -16,7 +16,8 @@ COMMENT=	Tool to update FreeBSD/GhostBSD software and system.
 LICENSE =	BSD
 
 RUN_DEPENDS=	sudo:security/sudo \
-		${LOCALBASE}/etc/pkg/repos/GhostBSD.conf.ca:misc/ghostbsd-pkg-conf
+		${LOCALBASE}/etc/pkg/repos/GhostBSD.conf.ca:misc/ghostbsd-pkg-conf \
+		${PYTHON_PKGNAMEPREFIX}bectl>=0.1:sysutils/py-bectl@${PY_FLAVOR} \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD

@@ -1,9 +1,9 @@
 # Created by: Joe Maloney <jmaloney@ixsystems.com>
 # $FreeBSD$
 
-PORTNAME=	pybectl
+PORTNAME=	bectl
 PORTVERSION=	0.1
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
