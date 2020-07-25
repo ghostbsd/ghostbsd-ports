@@ -969,6 +969,7 @@
     SUBDIR += py-azure-cli-base
     SUBDIR += py-azure-cli-core
     SUBDIR += py-azure-cli-telemetry
+    SUBDIR += py-bectl
     SUBDIR += py-bitrot
     SUBDIR += py-borgmatic
     SUBDIR += py-cdmi
