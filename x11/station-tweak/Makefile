@@ -3,7 +3,7 @@
 
 
 PORTNAME=	station-tweak
-PORTVERSION=	0.6
+PORTVERSION=	0.7
 PORTREVISION=	0
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
