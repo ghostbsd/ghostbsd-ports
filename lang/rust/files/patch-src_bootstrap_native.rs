@@ -1,11 +1,31 @@
-There seems to be some kind of race when using llvm-config-wrapper
-for building rust-lld.  Attempt to improve reliability of the build
-by not using it.  llvm-config-wrapper is a hack in the first place
-that is only really needed on Windows.
+From 9741fbd202b2b55de95abe1eb7f3d8185e312444 Mon Sep 17 00:00:00 2001
+From: Jake Goulding <jake.goulding@gmail.com>
+Date: Sat, 11 Jul 2020 09:38:01 -0400
+Subject: [PATCH] Don't allow `DESTDIR` to influence LLVM builds
 
---- src/bootstrap/native.rs.orig	2020-05-03 19:47:59 UTC
+When running a command like `DESTDIR=foo x.py install` in a completely
+clean build directory, this will cause LLVM to be installed into
+`DESTDIR`, which then causes the build to fail later when it attempts
+to *use* those LLVM files.
+---
+ src/bootstrap/native.rs | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+--- src/bootstrap/native.rs.orig	2020-07-31 20:16:28 UTC
 +++ src/bootstrap/native.rs
-@@ -488,25 +488,9 @@ impl Step for Lld {
+@@ -324,6 +324,11 @@ fn configure_cmake(
+     // LLVM and LLD builds can produce a lot of those and hit CI limits on log size.
+     cfg.define("CMAKE_INSTALL_MESSAGE", "LAZY");
+ 
++    // Do not allow the user's value of DESTDIR to influence where
++    // LLVM will install itself. LLVM must always be installed in our
++    // own build directories.
++    cfg.env("DESTDIR", "");
++
+     if builder.config.ninja {
+         cfg.generator("Ninja");
+     }
+@@ -480,25 +485,9 @@ impl Step for Lld {
          let mut cfg = cmake::Config::new(builder.src.join("src/llvm-project/lld"));
          configure_cmake(builder, target, &mut cfg, true);
  

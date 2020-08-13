@@ -400,6 +400,8 @@
     SUBDIR += mfem
     SUBDIR += mingw32-libgmp
     SUBDIR += minisat
+    SUBDIR += minizinc
+    SUBDIR += minizinc-ide
     SUBDIR += miracl
     SUBDIR += mlpack
     SUBDIR += moab
@@ -777,6 +779,7 @@
     SUBDIR += py-luminol
     SUBDIR += py-matplotlib
     SUBDIR += py-matplotlib-scalebar
+    SUBDIR += py-mip
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
     SUBDIR += py-munkres10
@@ -785,13 +788,16 @@
     SUBDIR += py-nevergrad
     SUBDIR += py-numeric
     SUBDIR += py-numexpr
+    SUBDIR += py-numpoly
     SUBDIR += py-numpy
     SUBDIR += py-nzmath
     SUBDIR += py-opt-einsum
+    SUBDIR += py-or-tools
     SUBDIR += py-osqp
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
     SUBDIR += py-patsy
+    SUBDIR += py-pdal
     SUBDIR += py-permutation
     SUBDIR += py-petsc4py
     SUBDIR += py-piranha
@@ -831,6 +837,7 @@
     SUBDIR += py-scs
     SUBDIR += py-seaborn
     SUBDIR += py-secp256k1
+    SUBDIR += py-seriate
     SUBDIR += py-simhash
     SUBDIR += py-slepc4py
     SUBDIR += py-snuggs

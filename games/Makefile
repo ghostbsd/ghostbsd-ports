@@ -86,6 +86,7 @@
     SUBDIR += biorythm
     SUBDIR += bitefusion
     SUBDIR += black-box
+    SUBDIR += black-hole-solver
     SUBDIR += blackjackclient
     SUBDIR += blackshadeselite
     SUBDIR += blinken
@@ -772,6 +773,7 @@
     SUBDIR += py-fife
     SUBDIR += py-mnemosyne
     SUBDIR += py-pychess
+    SUBDIR += py-pysol-cards
     SUBDIR += py-sgflib
     SUBDIR += py-sgfsummary
     SUBDIR += pyfa

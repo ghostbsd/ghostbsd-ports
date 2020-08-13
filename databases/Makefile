@@ -472,6 +472,7 @@
     SUBDIR += p5-Rose-DBx-Object-MoreHelpers
     SUBDIR += p5-Rose-DBx-Object-Renderer
     SUBDIR += p5-SQL-Abstract
+    SUBDIR += p5-SQL-Abstract-Classic
     SUBDIR += p5-SQL-Abstract-Limit
     SUBDIR += p5-SQL-Abstract-More
     SUBDIR += p5-SQL-Abstract-Plugin-InsertMulti
@@ -686,14 +687,6 @@
     SUBDIR += postgresql12-plpython
     SUBDIR += postgresql12-pltcl
     SUBDIR += postgresql12-server
-    SUBDIR += postgresql94-client
-    SUBDIR += postgresql94-contrib
-    SUBDIR += postgresql94-docs
-    SUBDIR += postgresql94-pgtcl
-    SUBDIR += postgresql94-plperl
-    SUBDIR += postgresql94-plpython
-    SUBDIR += postgresql94-pltcl
-    SUBDIR += postgresql94-server
     SUBDIR += postgresql95-client
     SUBDIR += postgresql95-contrib
     SUBDIR += postgresql95-docs
@@ -998,7 +991,6 @@
     SUBDIR += sqliteconvert
     SUBDIR += sqlitemanager
     SUBDIR += sqliteodbc
-    SUBDIR += sqliteodbc-sqlite2
     SUBDIR += sqlitestudio
     SUBDIR += sqlrelay
     SUBDIR += sqsh

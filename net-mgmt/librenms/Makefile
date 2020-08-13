@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	librenms
-PORTVERSION=	1.65.1
+PORTVERSION=	1.66
 PORTEPOCH=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	LOCAL/dvl:vendor
@@ -18,7 +18,7 @@ USES=		shebangfix python
 # RELEASE_TIMESTAMP is used for a patch inside the vendor code
 # it represents the release date via: git show --pretty='%H|%ct' -s 1.42.01
 # It sits here so you remember to update it with each release
-RELEASE_TIMESTAMP=	1594410976
+RELEASE_TIMESTAMP=	1596087334
 
 # perhaps we also need python-memcache python-mysqldb
 RUN_DEPENDS+=	rrdtool:databases/rrdtool \
@@ -78,19 +78,6 @@ SHEBANG_FILES=	scripts/auth_test.php \
 		scripts/Migration/XML_Conversion/mkdir.sh \
 		scripts/removespikes.pl scripts/removespikes.php scripts/watchmaillog/watchmaillog.pl \
 		poller.php poller-wrapper.py \
-		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/generate-includes.php \
-		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/flush-definition-cache.php \
-		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/old-remove-require-once.php \
-		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/config-scanner.php \
-		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/add-vimline.php \
-		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/remove-trailing-whitespace.php \
-		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/merge-library.php \
-		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/old-extract-schema.php \
-		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/rename-config.php \
-		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/generate-standalone.php \
-		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/generate-schema-cache.php \
-		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/old-remove-schema-def.php \
-		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/generate-entity-file.php \
 		../${PORTNAME}-vendor-${PORTVERSION}/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php \
 		../${PORTNAME}-vendor-${PORTVERSION}/tecnickcom/tcpdf/tools/tcpdf_addfont.php
 
@@ -108,7 +95,7 @@ ROOT_FILES=	addhost.php adduser.php alerts.php artisan billing-calculate.php \
 
 SCRIPT_FILES=	daily.sh lnms
 
-ROOT_DIRS=	LibreNMS app bootstrap config contrib database doc html includes licenses logs mibs misc resources routes scripts sql-schema storage tests
+ROOT_DIRS=	LibreNMS app bootstrap config contrib database doc html includes licenses mibs misc resources routes scripts sql-schema storage tests
 
 # these are directories which require a generic @DIR entry in pkg-plist
 OTHER_DIRS=	html/js/lang \
@@ -133,6 +120,7 @@ post-patch:
 	@${REINPLACE_CMD}    's|%%PORTVERSION%%|${PORTVERSION}|g'             ${WRKSRC}/includes/common.php
 	@${REINPLACE_CMD}    's|%%RELEASE_TIMESTAMP%%|${RELEASE_TIMESTAMP}|g' ${WRKSRC}/includes/common.php
 	@${RM} ${WRKSRC}/LibreNMS/Validations/Updates.php
+	@${RM} -rf ${WRKSRC}/logs
 
 do-install:
 	${MKDIR} ${STAGEDIR}/${WWWDIR}
@@ -148,6 +136,17 @@ do-install:
 .endfor
 	${MKDIR} ${STAGEDIR}/${WWWDIR}/vendor
 	(cd ${WRKDIR}/${PORTNAME}-vendor-${PORTVERSION} && ${COPYTREE_SHARE} . ${STAGEDIR}/${WWWDIR}/vendor)
+	
+	# As of 1.66_1, the package installs bootstrap/cache
+	# This was previously left to the code to populate.
+	# That causese problems when the code doesn't do that update.
+	${MV} ${STAGEDIR}/${WWWDIR}/vendor/bootstrap-cache/* ${STAGEDIR}/${WWWDIR}/bootstrap/cache/
+	${RM} -rf ${STAGEDIR}/${WWWDIR}/vendor/bootstrap-cache
+
+	# similarly with html/js/lang
+	${MV} ${STAGEDIR}/${WWWDIR}/vendor/html-js-lang/* ${STAGEDIR}/${WWWDIR}/html/js/lang/
+	${RM} -rf ${STAGEDIR}/${WWWDIR}/vendor/html-js-lang
+
 # Make daily.sh executable
 #	${CHMOD} 0755 ${STAGEDIR}/${WWWDIR}/daily.sh
 # lnms does not fall into any other +x category
@@ -185,7 +184,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/.env.example ${STAGEDIR}/${WWWDIR}
 	@${ECHO_CMD} "@(root,www,0750) ${WWWDIR}/.env.example" >> ${TMPPLIST}
 
-	@${ECHO_CMD} "@dir(www,www,0775) ${WWWDIR}/logs" >> ${TMPPLIST}
 	@${ECHO_CMD} "@dir(www,www,0775) ${WWWDIR}/bootstrap/cache" >> ${TMPPLIST}
 	@${ECHO_CMD} "@dir(www,www,0775) ${WWWDIR}/storage" >> ${TMPPLIST}
 	@${ECHO_CMD} "@dir(www,www,0775) ${WWWDIR}/storage/framework/cache" >> ${TMPPLIST}

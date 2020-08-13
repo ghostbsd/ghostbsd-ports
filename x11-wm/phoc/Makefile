@@ -2,12 +2,8 @@
 
 PORTNAME=	phoc
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.0
+DISTVERSION=	0.4.2
 CATEGORIES=	x11-wm
-
-PATCH_SITES=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
-PATCHFILES+=	a40585b442c3.diff:-p1 # https://source.puri.sm/Librem5/phoc/-/merge_requests/153
-PATCHFILES+=	70ddc4d677fd.diff:-p1 # https://source.puri.sm/Librem5/phoc/-/merge_requests/153
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Phone compositor
@@ -29,7 +25,7 @@ USE_GNOME=	gnomedesktop3
 USE_XORG=	pixman
 GL_SITE=	https://source.puri.sm
 GL_ACCOUNT=	Librem5
-GL_COMMIT=	cfc76a129d0b51c1f04f8eee73ef82a37ef9d769
+GL_COMMIT=	0be2173791e709e8d07d5916ad12adbba614a799
 CFLAGS+=	-Wno-error=format-nonliteral # clang
 PLIST_FILES=	bin/${PORTNAME}
 GLIB_SCHEMAS=	sm.puri.phoc.gschema.xml

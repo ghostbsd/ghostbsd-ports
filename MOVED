@@ -3016,7 +3016,6 @@ www/mod_index_rss||2012-01-01|Has expired: Depends on expired www/apache13
 www/mod_layout|www/mod_layout22|2012-01-01|Has expired: Depends on expired www/apache13
 www/mod_limitipconn|www/mod_limitipconn2|2012-01-01|Has expired: Depends on expired www/apache13
 www/mod_log_spread||2012-01-01|Has expired: Depends on expired www/apache13
-www/mod_log_sql|www/mod_log_sql2|2012-01-01|Has expired: Depends on expired www/apache13
 www/mod_macro|www/mod_macro22|2012-01-01|Has expired: Depends on expired www/apache13
 www/mod_mp3||2012-01-01|Has expired: Depends on expired www/apache13
 www/mod_mylo||2012-01-01|Has expired: Depends on expired www/apache13
@@ -14827,7 +14826,6 @@ security/xspy||2020-05-05|Has expired: Broken for more than 6 months
 shells/osh||2020-05-05|Has expired: Broken for more than 6 months
 shells/shell-include||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/abgx360gui||2020-05-05|Has expired: Broken for more than 6 months
-sysutils/autojump||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/backupchecker||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/cdf||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/cdls||2020-05-05|Has expired: Broken for more than 6 months
@@ -14914,7 +14912,6 @@ www/mod_encoding||2020-05-05|Has expired: Broken for more than 6 months
 www/mod_flickr||2020-05-05|Has expired: Broken for more than 6 months
 www/mod_gzip2||2020-05-05|Has expired: Broken for more than 6 months
 www/mod_layout22||2020-05-05|Has expired: Broken for more than 6 months
-www/mod_proctitle||2020-05-05|Has expired: Broken for more than 6 months
 www/mod_tsa||2020-05-05|Has expired: Broken for more than 6 months
 www/mod_vhs||2020-05-05|Has expired: Broken for more than 6 months
 www/p5-AnyEvent-Mojo||2020-05-05|Has expired: Broken for more than 6 months
@@ -15156,3 +15153,19 @@ www/py-django-openid-auth|www/py-django-allauth|2020-07-18|Has expired: No longe
 www/py-django-overextends||2020-07-18|Has expired: No longer maintained, not compatible with Django 2.0+
 net/kdav|net/kf5-kdav|2020-07-21|Has become a proper KDE framework
 devel/py-trio|net/py-trio|2020-07-21|Remove duplicate port
+databases/postgresql94-client|databases/postgresql95-client|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+databases/postgresql94-contrib|databases/postgresql95-contrib|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+databases/postgresql94-docs|databases/postgresql95-docs|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+databases/postgresql94-pgtcl|databases/postgresql95-pgtcl|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+databases/postgresql94-plpython|databases/postgresql95-plpython|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+databases/postgresql94-server|databases/postgresql95-server|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+databases/postgresql94-pltcl|databases/postgresql95-pltcl|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+databases/postgresql94-plperl|databases/postgresql95-plperl|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+net/dshell||2020-07-24|Uses deprecated version of python
+sysutils/openshift-install|sysutils/openshift-install45|2020-07-25|Duplicate port
+databases/sqliteodbc-sqlite2|databases/sqliteodbc|2020-07-27|Has expired: SQLite2 has stopped development in 2005, please move to SQLite3
+graphics/wayland-info|graphics/wayland-utils|2020-08-02|Project renamed
+devel/rubygem-grape11|devel/rubygem-grape|2020-08-03|Has expired: use devel/rubygem-grape instead
+astro/pyephem|astro/py-ephem|2020-08-04|Has expired: Use py-ephem instead.
+www/mod_log_sql2|www/mod_log_sql|2020-08-06|Remove Apache major version suffix since it is the only version in ports tree
+editors/nvi2-ports|editors/nvi2|2020-07-26|Rename to editors/nvi2

@@ -11,6 +11,7 @@
     SUBDIR += R-cran-bibtex
     SUBDIR += R-cran-brew
     SUBDIR += R-cran-cellranger
+    SUBDIR += R-cran-commonmark
     SUBDIR += R-cran-formatR
     SUBDIR += R-cran-highr
     SUBDIR += R-cran-htmltools
@@ -42,6 +43,7 @@
     SUBDIR += amberfish
     SUBDIR += ansifilter
     SUBDIR += antiword
+    SUBDIR += apache-commons-csv
     SUBDIR += apache-commons-digester
     SUBDIR += apache-poi
     SUBDIR += apache-solr
@@ -1259,6 +1261,7 @@
     SUBDIR += py-genshi
     SUBDIR += py-gensim
     SUBDIR += py-gfm
+    SUBDIR += py-googletrans
     SUBDIR += py-grako
     SUBDIR += py-guess-language
     SUBDIR += py-hexdump
@@ -1273,6 +1276,7 @@
     SUBDIR += py-isbntools
     SUBDIR += py-iso-639
     SUBDIR += py-iso3166
+    SUBDIR += py-j2cli
     SUBDIR += py-jc
     SUBDIR += py-jinja2-cli
     SUBDIR += py-jsonslicer
@@ -1562,6 +1566,7 @@
     SUBDIR += rubygem-kramdown
     SUBDIR += rubygem-kramdown-parser-gfm
     SUBDIR += rubygem-kramdown1
+    SUBDIR += rubygem-kramdown22
     SUBDIR += rubygem-kwalify
     SUBDIR += rubygem-libxml-ruby
     SUBDIR += rubygem-linguistics
@@ -1781,6 +1786,7 @@
     SUBDIR += uchardet
     SUBDIR += ucto
     SUBDIR += uctodata
+    SUBDIR += ugrep
     SUBDIR += uim
     SUBDIR += uim-el
     SUBDIR += uim-gtk

@@ -149,6 +149,7 @@
     SUBDIR += ruqola
     SUBDIR += sayaka
     SUBDIR += scudcloud
+    SUBDIR += scli
     SUBDIR += sendxmpp
     SUBDIR += signal-cli
     SUBDIR += slack-term

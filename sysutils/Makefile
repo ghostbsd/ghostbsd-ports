@@ -65,6 +65,7 @@
     SUBDIR += atitvout
     SUBDIR += atop
     SUBDIR += auto-admin
+    SUBDIR += autojump
     SUBDIR += automount
     SUBDIR += automounter
     SUBDIR += autopsy
@@ -95,6 +96,7 @@
     SUBDIR += bareos18-server
     SUBDIR += bareos18-traymonitor
     SUBDIR += barrier
+    SUBDIR += bashtop
     SUBDIR += bastille
     SUBDIR += batmon
     SUBDIR += battmond
@@ -112,6 +114,7 @@
     SUBDIR += bksh
     SUBDIR += boot-extract
     SUBDIR += boxbackup-devel
+    SUBDIR += bpytop
     SUBDIR += brasero
     SUBDIR += bsd-splash-changer
     SUBDIR += bsdconfig
@@ -292,6 +295,7 @@
     SUBDIR += ec2-scripts
     SUBDIR += eclat
     SUBDIR += edid-decode
+    SUBDIR += edk2
     SUBDIR += eject
     SUBDIR += eksctl
     SUBDIR += endian
@@ -714,6 +718,7 @@
     SUBDIR += msiklm
     SUBDIR += msktutil
     SUBDIR += mstflint
+    SUBDIR += mstflint-lite
     SUBDIR += msyslog
     SUBDIR += mtm
     SUBDIR += mtpfs
@@ -764,7 +769,9 @@
     SUBDIR += openipmi
     SUBDIR += opensbi
     SUBDIR += openseachest
-    SUBDIR += openshift-install
+    SUBDIR += openshift-install-devel
+    SUBDIR += openshift-install45
+    SUBDIR += openshift-install46
     SUBDIR += openupsd
     SUBDIR += openzfs
     SUBDIR += openzfs-kmod
@@ -1050,6 +1057,7 @@
     SUBDIR += qt5-qtpaths
     SUBDIR += qt5-qtplugininfo
     SUBDIR += qtpass
+    SUBDIR += quickjail
     SUBDIR += quicksynergy
     SUBDIR += racktables
     SUBDIR += radeontool
@@ -1106,6 +1114,8 @@
     SUBDIR += rubygem-chef-config
     SUBDIR += rubygem-chef-config12
     SUBDIR += rubygem-chef-dk
+    SUBDIR += rubygem-chef-utils
+    SUBDIR += rubygem-chef-vault
     SUBDIR += rubygem-chef-zero
     SUBDIR += rubygem-chef-zero5
     SUBDIR += rubygem-chef12
@@ -1212,6 +1222,7 @@
     SUBDIR += scterc
     SUBDIR += sd-agent
     SUBDIR += sdparm
+    SUBDIR += seatd
     SUBDIR += seatools
     SUBDIR += sec
     SUBDIR += sedutil
@@ -1380,6 +1391,7 @@
     SUBDIR += u-boot-pinebookpro
     SUBDIR += u-boot-qemu-arm
     SUBDIR += u-boot-qemu-arm64
+    SUBDIR += u-boot-qemu-riscv64
     SUBDIR += u-boot-riotboard
     SUBDIR += u-boot-rock64
     SUBDIR += u-boot-rockpro64
@@ -1454,6 +1466,7 @@
     SUBDIR += wait_on
     SUBDIR += watchfolder
     SUBDIR += watchman
+    SUBDIR += watchman450
     SUBDIR += watchmen
     SUBDIR += webjob
     SUBDIR += webmin

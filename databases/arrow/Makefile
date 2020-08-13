@@ -1,9 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	arrow
-DISTVERSIONPREFIX=	${GH_ACCOUNT}-${PORTNAME}-
 DISTVERSION=	1.0.0
+PORTREVISION=	1
 CATEGORIES=	databases
+MASTER_SITES=	https://mirrors.advancedhosters.com/apache/${PORTNAME}/${PORTNAME}-${DISTVERSION}/
+DISTNAME=	apache-${PORTNAME}-${DISTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Columnar in-memory analytics layer for big data
@@ -14,8 +16,6 @@ LICENSE_FILE=	${WRKSRC}/../LICENSE.txt
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs
 
 USES=		cmake compiler:c++11-lang pkgconfig
-USE_GITHUB=	yes
-GH_ACCOUNT=	apache
 USE_LDCONFIG=	yes
 
 WRKSRC_SUBDIR=	cpp

@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	mesa
-DISTVERSION=	20.1-branchpoint-3199
-DISTVERSIONSUFFIX=	-g7b7917a4241
+DISTVERSION=	20.2-branchpoint-155
+DISTVERSIONSUFFIX=	-g6723addd8a7
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -12,7 +12,7 @@ PATCHFILES+=	9f52b5177728.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-
 PATCHFILES+=	2b9168cf579b.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
 PATCHFILES+=	55822330540d.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
 PATCHFILES+=	f6c7569ad9ea.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
-PATCHFILES+=	ede85c32576e.patch:-p1
+PATCHFILES+=	ba7629156d4e.patch:-p1
 PATCHFILES+=	807ae077ab19.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/3568
 PATCHFILES+=	fb7a3759f761.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1619
 PATCHFILES+=	700efacda59c.patch:-p1
@@ -96,7 +96,7 @@ COINST_SUB_LIST=	SUFFIX=${PKGNAMESUFFIX}
 COINST_PLIST_SUB_OFF=	SUFFIX=
 
 GLVND_DESC=		GL Vendor-Neutral Dispatch support
-GLVND_BUILD_DEPENDS=	libglvnd>0:graphics/libglvnd
+GLVND_BUILD_DEPENDS=	libglvnd>=1.3.2:graphics/libglvnd
 GLVND_MESON_TRUE=	glvnd
 
 LIBUNWIND_DESC=		Use libunwind for stacktraces

@@ -22,6 +22,7 @@
     SUBDIR += chexedit
     SUBDIR += codelite
     SUBDIR += cooledit
+    SUBDIR += cpeditor
     SUBDIR += cream
     SUBDIR += cudatext
     SUBDIR += deforaos-editor
@@ -201,6 +202,7 @@
     SUBDIR += neovim-qt
     SUBDIR += nvi-devel
     SUBDIR += nvi-m17n
+    SUBDIR += nvi2
     SUBDIR += o
     SUBDIR += openoffice-4
     SUBDIR += openoffice-devel

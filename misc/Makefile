@@ -170,6 +170,7 @@
     SUBDIR += histring
     SUBDIR += hotkeys
     SUBDIR += hulgalugha
+    SUBDIR += hxtools
     SUBDIR += ignition-fuel-tools
     SUBDIR += iio-oscilloscope
     SUBDIR += imerge
