@@ -34,7 +34,6 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	battleblow
 GH_PROJECT=	openjdk-jdk12u
 
-BINARY_ALIAS=	grep=${LOCALBASE}/bin/grep
 NO_CCACHE=	yes
 
 _MAKE_JOBS=	#
@@ -183,3 +182,4 @@ do-install:
 		${SED} -e 's|^${STAGEDIR}${PREFIX}/||' >> ${TMPPLIST}
 
 .include <bsd.port.post.mk>
+

@@ -34,7 +34,6 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	battleblow
 GH_PROJECT=	openjdk-jdk11u
 
-BINARY_ALIAS=	grep=${LOCALBASE}/bin/grep
 NO_CCACHE=	yes
 
 _MAKE_JOBS=	#
