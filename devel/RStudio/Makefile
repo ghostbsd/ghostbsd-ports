@@ -35,7 +35,7 @@ USES=		cmake desktop-file-utils fortran localbase:ldflags pkgconfig qt:5 shared-
 USE_QT=		core dbus declarative gui location network opengl printsupport quickcontrols sensors \
 		sql svg webchannel webengine webkit widgets xml xmlpatterns buildtools_build qmake_build
 USE_JAVA=	yes
-JAVA_VERSION=	8
+JAVA_VERSION=	14
 JAVA_BUILD=	yes
 USE_GITHUB=	yes
 GH_PROJECT=	${PORTNAME:tl}
