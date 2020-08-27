@@ -56,6 +56,8 @@ DYNAMIC_CONFIGURE_WITH=	system-libffi \
 DYNAMIC_LIB_DEPENDS=	libffi.so:devel/libffi
 DYNAMIC_SUB_LIST=	WITH_DYNAMIC="YES"
 DYNAMIC_SUB_LIST_OFF=	WITH_DYNAMIC="NO"
+DYNAMIC_PLIST_SUB=	NODYNAMIC="@comment "
+DYNAMIC_PLIST_SUB_OFF=	NODYNAMIC=""
 
 GMP_CONFIGURE_WITH=	gmp-includes=${LOCALBASE}/include \
 			gmp-libraries=${LOCALBASE}/lib
@@ -72,9 +74,7 @@ BOOT_SUB_LIST_OFF=	HSC2HS=${BOOT_HSC2HS}
 PROFILE_SUB_LIST=	WITH_PROFILE="YES"
 PROFILE_SUB_LIST_OFF=	WITH_PROFILE="NO"
 
-PLIST_SUB=		GHC_VERSION=${GHC_VERSION} GHC_LIBDIR=${GHC_LIBDIR_REL}
-
-GHC_VERSION=		8.10.1
+GHC_VERSION=		8.10.2
 HSCOLOUR_VERSION=	1.24.4
 LLVM_VERSION=		90
 # LLVM version that bootstrap compiler uses
@@ -92,7 +92,8 @@ CONFIGURE_ARGS+=	--enable-dtrace=0
 .endif
 
 .if ${ARCH} == i386
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-libraries_ghc-prim_cbits_atomic.c
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-libraries_ghc-prim_cbits_atomic.c \
+		${PATCHDIR}/extra-patch-rts_posix_TTY.c
 .endif
 
 .if defined(PPC_ABI) && ${PPC_ABI} == ELFv1
@@ -179,14 +180,6 @@ CONFIGURE_ARGS+=	GHC=${LOCALBASE}/bin/ghc
 SLAVES_PREFIX=		${WRKDIR}/slaves_prefix
 SLAVES_WRKDIRPREFIX=	${WRKDIR}/slaves_wrkdirprefix
 
-# %%PORTDOCS%%%%DOCSDIR%%/html/libraries/doc-index-V.html
-post-install-script:
-	${FIND} -ds ${GHC_LIBDIR} -type f -print | ${SED} -E \
-		-e 's,^${STAGEDIR}${PREFIX}/?,,' \
-		-e '/^${GHC_LIBDIR:C/\//\\\//g}\/package.conf.d\/package\.cache/s|^|@comment |g' \
-		>> ${TMPPLIST}
-	${ECHO} '@postunexec ${RM} %D/${GHC_LIBDIR_REL}/package.conf.d/package.cache' >>${TMPPLIST}
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%CC%%|${CC}|; \
 		s|%%AR%%|${AR}|; \
@@ -236,7 +229,12 @@ pre-configure: apply-slist
 post-install:
 	(for f in ${_EXECUTABLES} $$(${FIND} ${GHC_LIBDIR} -name '*.so*'); do \
 		${STRIP_CMD} $$f; done)
+	${RM} -r ${STAGEDIR}${DOCSDIR}/html/haddock/.build-html
 	${RM} ${STAGEDIR}${PREFIX}/bin/haddock
+
+.PHONY: fixup-plist
+fixup-plist:
+	${BOOT_DIR}/bin/runhaskell ${PATCHDIR}/fixup-plist.hs ${.CURDIR}/pkg-plist
 
 # Create a bootstrap compiler tar ball: run this in an interactive poudriere jail
 .PHONY: create-bootstrap

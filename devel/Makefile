@@ -355,7 +355,6 @@
     SUBDIR += cmunge
     SUBDIR += coccinelle
     SUBDIR += codeblocks
-    SUBDIR += codeblocks-devel
     SUBDIR += codequery
     SUBDIR += codesearch-py
     SUBDIR += codeville
@@ -4849,6 +4848,7 @@
     SUBDIR += py-pyhcl
     SUBDIR += py-pyicu
     SUBDIR += py-pyinotify
+    SUBDIR += py-pyinquirer
     SUBDIR += py-pyinstaller
     SUBDIR += py-pyjq
     SUBDIR += py-pyjsparser
@@ -5453,6 +5453,7 @@
     SUBDIR += rubygem-aws-sdk-autoscalingplans
     SUBDIR += rubygem-aws-sdk-backup
     SUBDIR += rubygem-aws-sdk-batch
+    SUBDIR += rubygem-aws-sdk-braket
     SUBDIR += rubygem-aws-sdk-budgets
     SUBDIR += rubygem-aws-sdk-chime
     SUBDIR += rubygem-aws-sdk-cloud9
@@ -5535,6 +5536,7 @@
     SUBDIR += rubygem-aws-sdk-health
     SUBDIR += rubygem-aws-sdk-honeycode
     SUBDIR += rubygem-aws-sdk-iam
+    SUBDIR += rubygem-aws-sdk-identitystore
     SUBDIR += rubygem-aws-sdk-imagebuilder
     SUBDIR += rubygem-aws-sdk-importexport
     SUBDIR += rubygem-aws-sdk-inspector
@@ -5941,6 +5943,7 @@
     SUBDIR += rubygem-drydock
     SUBDIR += rubygem-dynflow
     SUBDIR += rubygem-e2mmap
+    SUBDIR += rubygem-ecma-re-validator
     SUBDIR += rubygem-edavis10-object_daddy
     SUBDIR += rubygem-elif
     SUBDIR += rubygem-english
@@ -6063,6 +6066,7 @@
     SUBDIR += rubygem-guess_html_encoding
     SUBDIR += rubygem-gyoku
     SUBDIR += rubygem-hamster
+    SUBDIR += rubygem-hana
     SUBDIR += rubygem-hashdiff
     SUBDIR += rubygem-hashery
     SUBDIR += rubygem-hashie
@@ -6070,9 +6074,9 @@
     SUBDIR += rubygem-hashie2
     SUBDIR += rubygem-hashie3
     SUBDIR += rubygem-health_check
-    SUBDIR += rubygem-health_check26-rails60
     SUBDIR += rubygem-heapy
     SUBDIR += rubygem-highline
+    SUBDIR += rubygem-highline1
     SUBDIR += rubygem-hike
     SUBDIR += rubygem-hike1
     SUBDIR += rubygem-hitimes
@@ -6119,6 +6123,7 @@
     SUBDIR += rubygem-json1
     SUBDIR += rubygem-json_pure
     SUBDIR += rubygem-json_pure1
+    SUBDIR += rubygem-json_schemer
     SUBDIR += rubygem-jsonapi-renderer
     SUBDIR += rubygem-kafo
     SUBDIR += rubygem-kafo_parsers
@@ -6216,7 +6221,6 @@
     SUBDIR += rubygem-octopress-hooks
     SUBDIR += rubygem-oj
     SUBDIR += rubygem-omniauth_crowd
-    SUBDIR += rubygem-omniauth_crowd22
     SUBDIR += rubygem-open3_backport
     SUBDIR += rubygem-open4
     SUBDIR += rubygem-opentracing
@@ -6467,6 +6471,7 @@
     SUBDIR += rubygem-terrapin
     SUBDIR += rubygem-test-unit
     SUBDIR += rubygem-thor
+    SUBDIR += rubygem-thor0
     SUBDIR += rubygem-thread_safe
     SUBDIR += rubygem-thread_safe1
     SUBDIR += rubygem-thrift
@@ -6648,6 +6653,7 @@
     SUBDIR += storm
     SUBDIR += str
     SUBDIR += strace
+    SUBDIR += string_theory
     SUBDIR += stringencoders
     SUBDIR += stxxl
     SUBDIR += subversion

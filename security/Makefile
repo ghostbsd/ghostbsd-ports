@@ -295,6 +295,7 @@
     SUBDIR += libkpass
     SUBDIR += libksba
     SUBDIR += libmcrypt
+    SUBDIR += libnitrokey
     SUBDIR += libntlm
     SUBDIR += libotr
     SUBDIR += libotr3
@@ -365,6 +366,7 @@
     SUBDIR += ncrypt
     SUBDIR += netpgp
     SUBDIR += nettle
+    SUBDIR += nextcloud-end_to_end_encryption
     SUBDIR += nextcloud-passman
     SUBDIR += nextcloud-twofactor_totp
     SUBDIR += nextcloud-twofactor_u2f
@@ -372,6 +374,7 @@
     SUBDIR += ngrok
     SUBDIR += nikto
     SUBDIR += nist-kat
+    SUBDIR += nitrokey-app
     SUBDIR += nmap
     SUBDIR += nss
     SUBDIR += nss_compat_ossl

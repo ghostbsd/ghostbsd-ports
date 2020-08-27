@@ -1562,7 +1562,6 @@
     SUBDIR += rubygem-kramdown
     SUBDIR += rubygem-kramdown-parser-gfm
     SUBDIR += rubygem-kramdown1
-    SUBDIR += rubygem-kramdown22
     SUBDIR += rubygem-kwalify
     SUBDIR += rubygem-libxml-ruby
     SUBDIR += rubygem-linguistics
@@ -1617,6 +1616,7 @@
     SUBDIR += rubygem-rouge317
     SUBDIR += rubygem-rouge318
     SUBDIR += rubygem-rouge319
+    SUBDIR += rubygem-rouge321
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt

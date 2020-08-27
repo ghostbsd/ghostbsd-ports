@@ -169,6 +169,7 @@
     SUBDIR += hicolor-icon-theme
     SUBDIR += histring
     SUBDIR += hotkeys
+    SUBDIR += hs-hascard
     SUBDIR += hulgalugha
     SUBDIR += hxtools
     SUBDIR += ignition-fuel-tools

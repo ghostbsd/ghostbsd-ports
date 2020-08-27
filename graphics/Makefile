@@ -1022,6 +1022,7 @@
     SUBDIR += tiff
     SUBDIR += tiffgt
     SUBDIR += tifmerge
+    SUBDIR += tikzit
     SUBDIR += tilecache
     SUBDIR += tiled
     SUBDIR += timeless
