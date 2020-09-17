@@ -301,6 +301,7 @@
     SUBDIR += p5-DBD-Google
     SUBDIR += p5-DBD-InterBase
     SUBDIR += p5-DBD-LDAP
+    SUBDIR += p5-DBD-MariaDB
     SUBDIR += p5-DBD-Mock
     SUBDIR += p5-DBD-Multi
     SUBDIR += p5-DBD-ODBC
@@ -462,6 +463,7 @@
     SUBDIR += p5-Redis-Fast
     SUBDIR += p5-Redis-JobQueue
     SUBDIR += p5-Redis-hiredis
+    SUBDIR += p5-Redis-RateLimit
     SUBDIR += p5-RedisDB
     SUBDIR += p5-RedisDB-Parser
     SUBDIR += p5-Relations
@@ -785,6 +787,7 @@
     SUBDIR += py-pyodbc
     SUBDIR += py-pypuppetdb
     SUBDIR += py-python-arango
+    SUBDIR += py-python-binary-memcached
     SUBDIR += py-python-memcached
     SUBDIR += py-python-rrdtool
     SUBDIR += py-python-sql

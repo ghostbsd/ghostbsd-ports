@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	rust
-PORTVERSION=	1.45.2
+PORTVERSION=	1.46.0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:rust \
 		LOCAL/tobik:armbase \
@@ -146,6 +146,8 @@ do-configure:
 .else
 	@${ECHO_CMD} 'ccache=false' >> ${WRKSRC}/config.toml
 .endif
+# https://github.com/rust-lang/rust/pull/72696#issuecomment-641517185
+	@${ECHO_CMD} 'ldflags="-lz"' >> ${WRKSRC}/config.toml
 # we need to make sure to always build llvm with X86 support to get a
 # host compiler that can build the host->target compiler
 	@${ECHO_CMD} 'targets="${_RUST_LLVM_TARGET};X86"' >> ${WRKSRC}/config.toml

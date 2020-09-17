@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	hledger-web
-DISTVERSION=	1.18.1
+DISTVERSION=	1.19
 CATEGORIES=	finance haskell
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,7 +11,7 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cabal
-USE_LOCALE=	C.UTF-8
+USE_LOCALE=	en_US.UTF-8
 USE_CABAL=	\
 		Decimal-0.5.1 \
 		Diff-0.4.0 \
@@ -53,7 +53,7 @@ USE_CABAL=	\
 		clock-0.8 \
 		cmdargs-0.10.20 \
 		colour-2.3.5 \
-		conduit-1.3.2 \
+		conduit-1.3.2.1 \
 		conduit-extra-1.3.5 \
 		connection-0.3.1_1 \
 		control-monad-free-0.6.2 \
@@ -75,23 +75,22 @@ USE_CABAL=	\
 		easy-file-0.2.2 \
 		email-validate-2.3.2.13 \
 		entropy-0.4.1.6 \
-		exceptions-0.10.4_1 \
-		extra-1.7.6 \
+		extra-1.7.7 \
 		fast-logger-3.0.1 \
 		fgl-5.7.0.3 \
 		file-embed-0.0.13.0 \
-		happy-1.19.12 \
+		happy-1.20.0 \
 		hashable-1.3.0.0_1 \
 		hashtables-1.2.3.4 \
 		haskell-lexer-1.1 \
 		hjsmin-0.2.0.4 \
-		hledger-1.18.1_1 \
-		hledger-lib-1.18.1_1 \
+		hledger-1.19 \
+		hledger-lib-1.19 \
 		hourglass-0.2.12 \
 		hsc2hs-0.68.7 \
 		html-1.0.1.2 \
-		http-api-data-0.4.1.1_1 \
-		http-client-0.7.2 \
+		http-api-data-0.4.2 \
+		http-client-0.7.2.1 \
 		http-client-tls-0.3.5.3_1 \
 		http-conduit-2.3.7.3_1 \
 		http-date-0.0.8 \
@@ -126,7 +125,7 @@ USE_CABAL=	\
 		pretty-show-1.10 \
 		primitive-0.7.1.0 \
 		psqueues-0.2.7.2_1 \
-		random-1.2.0 \
+		random-1.2.0_2 \
 		regex-base-0.94.0.0_1 \
 		regex-tdfa-1.3.1.0_1 \
 		resource-pool-0.2.3.2 \
@@ -136,7 +135,7 @@ USE_CABAL=	\
 		securemem-0.1.10 \
 		semigroups-0.19.1 \
 		setenv-0.1.1.3_1 \
-		shakespeare-2.0.24.1 \
+		shakespeare-2.0.25 \
 		silently-1.2.5.1 \
 		simple-sendfile-0.2.30 \
 		skein-1.0.9.4 \
@@ -145,7 +144,7 @@ USE_CABAL=	\
 		splitmix-0.1.0.1 \
 		stm-chans-3.0.0.4_1 \
 		streaming-commons-0.2.2.1 \
-		tabular-0.2.2.7 \
+		tabular-0.2.2.8 \
 		tagged-0.8.6_2 \
 		tagsoup-0.14.8 \
 		tasty-1.3.1 \

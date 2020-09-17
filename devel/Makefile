@@ -99,7 +99,6 @@
     SUBDIR += aarch64-xtoolchain-gcc
     SUBDIR += abi-compliance-checker
     SUBDIR += abseil
-    SUBDIR += ace
     SUBDIR += acsccid
     SUBDIR += activitymail
     SUBDIR += ada-util
@@ -230,7 +229,6 @@
     SUBDIR += bennugd-modules
     SUBDIR += bglibs
     SUBDIR += bicyclerepair
-    SUBDIR += bin86
     SUBDIR += binaryen
     SUBDIR += bingrep
     SUBDIR += binutils
@@ -277,6 +275,7 @@
     SUBDIR += capstone3
     SUBDIR += capstone4
     SUBDIR += cargo-c
+    SUBDIR += cargo-generate
     SUBDIR += cask
     SUBDIR += catch
     SUBDIR += cbrowser
@@ -609,7 +608,6 @@
     SUBDIR += erlang-meck
     SUBDIR += erlang-metrics
     SUBDIR += erlang-neotoma
-    SUBDIR += erlang-oserl
     SUBDIR += erlang-parse_trans
     SUBDIR += erlang-poolboy
     SUBDIR += erlang-pooler
@@ -638,7 +636,9 @@
     SUBDIR += f77flow
     SUBDIR += fam
     SUBDIR += fastcrc
+    SUBDIR += fatal
     SUBDIR += fb-adb
+    SUBDIR += fbthrift
     SUBDIR += fc++
     SUBDIR += fhist
     SUBDIR += fifechan
@@ -716,6 +716,7 @@
     SUBDIR += gcc-arm-embedded
     SUBDIR += gcc-msp430-ti-toolchain
     SUBDIR += gccmakedep
+    SUBDIR += gcem
     SUBDIR += gconf2
     SUBDIR += gconf2-reference
     SUBDIR += gconfmm26
@@ -814,6 +815,7 @@
     SUBDIR += gitinspector
     SUBDIR += gitlab-runner
     SUBDIR += gitlab-shell
+    SUBDIR += gitleaks
     SUBDIR += gitlist
     SUBDIR += gitolite
     SUBDIR += gitolite2
@@ -1059,6 +1061,7 @@
     SUBDIR += kf5-solid
     SUBDIR += kf5-threadweaver
     SUBDIR += kio-extras
+    SUBDIR += kirigami-gallery
     SUBDIR += kiwix-lib
     SUBDIR += kms-cmake-utils
     SUBDIR += kodi-platform
@@ -1914,6 +1917,8 @@
     SUBDIR += p5-Color-ANSI-Util
     SUBDIR += p5-Color-RGB-Util
     SUBDIR += p5-Color-Theme-Role
+    SUBDIR += p5-ColorThemeBase-Static
+    SUBDIR += p5-ColorThemeUtil-ANSI
     SUBDIR += p5-Commandable
     SUBDIR += p5-Commands-Guarded
     SUBDIR += p5-CommitBit
@@ -2741,6 +2746,7 @@
     SUBDIR += p5-Module-List
     SUBDIR += p5-Module-Load
     SUBDIR += p5-Module-Load-Conditional
+    SUBDIR += p5-Module-Load-Util
     SUBDIR += p5-Module-Loaded
     SUBDIR += p5-Module-Loader
     SUBDIR += p5-Module-Manifest
@@ -3069,6 +3075,7 @@
     SUBDIR += p5-Proc-Simple
     SUBDIR += p5-Proc-Wait3
     SUBDIR += p5-Proc-WaitStat
+    SUBDIR += p5-Process-Status
     SUBDIR += p5-Progress-Any
     SUBDIR += p5-Project-Gantt
     SUBDIR += p5-Project-Libs
@@ -3091,6 +3098,7 @@
     SUBDIR += p5-Regexp-Compare
     SUBDIR += p5-Regexp-Grammars
     SUBDIR += p5-Regexp-Lexer
+    SUBDIR += p5-Regexp-Pattern-Perl
     SUBDIR += p5-Regexp-RegGrp
     SUBDIR += p5-Regexp-Shellish
     SUBDIR += p5-Regexp-Subst-Parallel
@@ -4053,6 +4061,7 @@
     SUBDIR += py-aiortc
     SUBDIR += py-amalgamate
     SUBDIR += py-aniso8601
+    SUBDIR += py-ansi
     SUBDIR += py-antlr4-python3-runtime
     SUBDIR += py-anyconfig
     SUBDIR += py-anyjson
@@ -4080,6 +4089,7 @@
     SUBDIR += py-astroid
     SUBDIR += py-astroid1
     SUBDIR += py-asttokens
+    SUBDIR += py-astunparse
     SUBDIR += py-async_generator
     SUBDIR += py-async_timeout
     SUBDIR += py-asyncio
@@ -4164,11 +4174,14 @@
     SUBDIR += py-azure-mgmt-sql
     SUBDIR += py-azure-mgmt-sqlvirtualmachine
     SUBDIR += py-azure-mgmt-storage
+    SUBDIR += py-azure-mgmt-synapse
     SUBDIR += py-azure-mgmt-trafficmanager
     SUBDIR += py-azure-mgmt-web
     SUBDIR += py-azure-multiapi-storage
     SUBDIR += py-azure-storage-blob
     SUBDIR += py-azure-storage-common
+    SUBDIR += py-azure-synapse-accesscontrol
+    SUBDIR += py-azure-synapse-spark
     SUBDIR += py-b2sdk
     SUBDIR += py-babel
     SUBDIR += py-babelfish
@@ -4291,6 +4304,7 @@
     SUBDIR += py-crashtest
     SUBDIR += py-crc32c
     SUBDIR += py-crcmod
+    SUBDIR += py-csv23
     SUBDIR += py-ctags
     SUBDIR += py-curio
     SUBDIR += py-cursive
@@ -4652,6 +4666,7 @@
     SUBDIR += py-nose-timer
     SUBDIR += py-nose2
     SUBDIR += py-noseofyeti
+    SUBDIR += py-nosexcover
     SUBDIR += py-notify
     SUBDIR += py-notify2
     SUBDIR += py-num2words
@@ -4769,6 +4784,7 @@
     SUBDIR += py-pip-licenses
     SUBDIR += py-pip-run
     SUBDIR += py-pip-tools
+    SUBDIR += py-pip-tools4
     SUBDIR += py-pipdeptree
     SUBDIR += py-pipenv
     SUBDIR += py-pipreqs
@@ -4903,6 +4919,7 @@
     SUBDIR += py-pytest-lazy-fixture
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-mock
+    SUBDIR += py-pytest-mutagen
     SUBDIR += py-pytest-pep8
     SUBDIR += py-pytest-pycodestyle
     SUBDIR += py-pytest-randomly
@@ -4947,6 +4964,7 @@
     SUBDIR += py-pytrie
     SUBDIR += py-pytvmaze
     SUBDIR += py-pytz
+    SUBDIR += py-pytzdata
     SUBDIR += py-pyudev
     SUBDIR += py-pyupgrade
     SUBDIR += py-pyusb
@@ -5340,6 +5358,7 @@
     SUBDIR += remotery
     SUBDIR += replay
     SUBDIR += replxx
+    SUBDIR += reproc
     SUBDIR += resolv_wrapper
     SUBDIR += revive
     SUBDIR += rhtvision
@@ -5441,6 +5460,7 @@
     SUBDIR += rubygem-aws-sdk-apigatewaymanagementapi
     SUBDIR += rubygem-aws-sdk-apigatewayv2
     SUBDIR += rubygem-aws-sdk-appconfig
+    SUBDIR += rubygem-aws-sdk-appflow
     SUBDIR += rubygem-aws-sdk-applicationautoscaling
     SUBDIR += rubygem-aws-sdk-applicationdiscoveryservice
     SUBDIR += rubygem-aws-sdk-applicationinsights
@@ -5612,6 +5632,7 @@
     SUBDIR += rubygem-aws-sdk-rds
     SUBDIR += rubygem-aws-sdk-rdsdataservice
     SUBDIR += rubygem-aws-sdk-redshift
+    SUBDIR += rubygem-aws-sdk-redshiftdataapiservice
     SUBDIR += rubygem-aws-sdk-rekognition
     SUBDIR += rubygem-aws-sdk-resourcegroups
     SUBDIR += rubygem-aws-sdk-resourcegroupstaggingapi
@@ -5644,6 +5665,7 @@
     SUBDIR += rubygem-aws-sdk-sqs
     SUBDIR += rubygem-aws-sdk-ssm
     SUBDIR += rubygem-aws-sdk-sso
+    SUBDIR += rubygem-aws-sdk-ssoadmin
     SUBDIR += rubygem-aws-sdk-ssooidc
     SUBDIR += rubygem-aws-sdk-states
     SUBDIR += rubygem-aws-sdk-storagegateway
@@ -5712,6 +5734,7 @@
     SUBDIR += rubygem-azure_mgmt_authorization
     SUBDIR += rubygem-azure_mgmt_automation
     SUBDIR += rubygem-azure_mgmt_azurestack
+    SUBDIR += rubygem-azure_mgmt_azurestack_hci
     SUBDIR += rubygem-azure_mgmt_batch
     SUBDIR += rubygem-azure_mgmt_batchai
     SUBDIR += rubygem-azure_mgmt_billing
@@ -5743,6 +5766,7 @@
     SUBDIR += rubygem-azure_mgmt_features
     SUBDIR += rubygem-azure_mgmt_hanaonazure
     SUBDIR += rubygem-azure_mgmt_hdinsight
+    SUBDIR += rubygem-azure_mgmt_hybrid_compute
     SUBDIR += rubygem-azure_mgmt_import_export
     SUBDIR += rubygem-azure_mgmt_iot_central
     SUBDIR += rubygem-azure_mgmt_iot_hub
@@ -6054,6 +6078,7 @@
     SUBDIR += rubygem-graf
     SUBDIR += rubygem-grape
     SUBDIR += rubygem-grape-entity
+    SUBDIR += rubygem-grape-entity07
     SUBDIR += rubygem-grape-path-helpers
     SUBDIR += rubygem-grape-route-helpers
     SUBDIR += rubygem-grape-swagger
@@ -6675,6 +6700,7 @@
     SUBDIR += tablist
     SUBDIR += tailor
     SUBDIR += talloc
+    SUBDIR += taskflow
     SUBDIR += tass64
     SUBDIR += tbb
     SUBDIR += tcl-memchan
@@ -6796,8 +6822,6 @@
     SUBDIR += xtl
     SUBDIR += xtl-quant-stack
     SUBDIR += xtoolchain-llvm-devel
-    SUBDIR += xtoolchain-llvm60
-    SUBDIR += xtoolchain-llvm70
     SUBDIR += xtoolchain-llvm80
     SUBDIR += xtoolchain-llvm90
     SUBDIR += xwpe

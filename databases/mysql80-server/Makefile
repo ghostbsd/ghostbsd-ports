@@ -3,7 +3,7 @@
 
 PORTNAME?=		mysql
 PORTVERSION=		8.0.21
-PORTREVISION?=		0
+PORTREVISION?=		2
 CATEGORIES=		databases
 MASTER_SITES=		MYSQL/MySQL-8.0
 PKGNAMESUFFIX?=		80-server
@@ -37,12 +37,14 @@ LIB_DEPENDS+=	libcurl.so:ftp/curl \
 LIB_DEPENDS_aarch64=	libunwind.so:devel/libunwind
 LIB_DEPENDS_amd64=	libunwind.so:devel/libunwind
 LIB_DEPENDS_i386=	libunwind.so:devel/libunwind
+LIB_DEPENDS_powerpc64=	libunwind.so:devel/libunwind
 
 BUILD_DEPENDS=	liblz4>0:archivers/liblz4 \
 		${BUILD_DEPENDS_${ARCH}}
 BUILD_DEPENDS_aarch64=	libunwind>0:devel/libunwind
 BUILD_DEPENDS_amd64=	libunwind>0:devel/libunwind
 BUILD_DEPENDS_i386=	libunwind>0:devel/libunwind
+BUILD_DEPENDS_powerpc64=	libunwind>0:devel/libunwind
 
 CMAKE_BUILD_TYPE=	Release
 CFLAGS+=		-fPIC
@@ -180,6 +182,12 @@ SUB_LIST+=	LEGACY_LIMITS="" MODERN_LIMITS="@comment "
 .endif
 
 .include <bsd.port.pre.mk>
+
+.if ${CHOSEN_COMPILER_TYPE} == clang && ${OPSYS} == FreeBSD && ${OSVERSION} >= 1300109
+BUILD_DEPENDS+=		clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
+CC=			${LOCALBASE}/bin/clang${LLVM_DEFAULT}
+CXX=		${LOCALBASE}/bin/clang++${LLVM_DEFAULT}
+.endif
 
 post-extract:
 	@${RM} -rv ${WRKSRC}/sql/sql_hints.yy.cc ${WRKSRC}/sql/sql_hints.yy.h

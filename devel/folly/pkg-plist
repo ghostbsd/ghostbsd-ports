@@ -6,6 +6,7 @@ include/folly/AtomicIntrusiveLinkedList.h
 include/folly/AtomicLinkedList.h
 include/folly/AtomicUnorderedMap.h
 include/folly/Benchmark.h
+include/folly/BenchmarkUtil.h
 include/folly/Bits.h
 include/folly/CPortability.h
 include/folly/CancellationToken-inl.h
@@ -334,6 +335,16 @@ include/folly/experimental/observer/detail/ObserverManager.h
 include/folly/experimental/settings/Settings.h
 include/folly/experimental/settings/SettingsMetadata.h
 include/folly/experimental/settings/detail/SettingsImpl.h
+include/folly/experimental/symbolizer/Dwarf.h
+include/folly/experimental/symbolizer/Elf-inl.h
+include/folly/experimental/symbolizer/Elf.h
+include/folly/experimental/symbolizer/ElfCache.h
+include/folly/experimental/symbolizer/LineReader.h
+include/folly/experimental/symbolizer/SignalHandler.h
+include/folly/experimental/symbolizer/StackTrace.h
+include/folly/experimental/symbolizer/SymbolizePrinter.h
+include/folly/experimental/symbolizer/SymbolizedFrame.h
+include/folly/experimental/symbolizer/Symbolizer.h
 include/folly/external/farmhash/farmhash.h
 include/folly/fibers/AddTasks-inl.h
 include/folly/fibers/AddTasks.h
@@ -499,6 +510,7 @@ include/folly/lang/Aligned.h
 include/folly/lang/Assume-inl.h
 include/folly/lang/Assume.h
 include/folly/lang/Bits.h
+include/folly/lang/Byte.h
 include/folly/lang/CArray.h
 include/folly/lang/CString.h
 include/folly/lang/Cast.h
@@ -688,6 +700,7 @@ include/folly/synchronization/example/HazptrWideCAS.h
 include/folly/synchronization/test/Semaphore.h
 include/folly/system/HardwareConcurrency.h
 include/folly/system/MemoryMapping.h
+include/folly/system/Pid.h
 include/folly/system/Shell.h
 include/folly/system/ThreadId.h
 include/folly/system/ThreadName.h

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab-ce
-PORTVERSION=	13.3.0
+PORTVERSION=	13.3.6
 PORTREVISION=	0
 CATEGORIES=	www devel
 
@@ -75,11 +75,11 @@ MY_DEPENDS=	git>=2.26:devel/git \
 	rubygem-gitlab_omniauth-ldap>=2.1.1<2.2.0:net/rubygem-gitlab_omniauth-ldap \
 	rubygem-net-ldap>0:net/rubygem-net-ldap \
 	rubygem-grape>=1.4.0<1.4.1:devel/rubygem-grape \
-	rubygem-grape-entity>=0.7.1<0.8.0,1:devel/rubygem-grape-entity \
+	rubygem-grape-entity07>=0.7.1<0.8.0,1:devel/rubygem-grape-entity07 \
 	rubygem-rack-cors>=1.0.6<1.1.0:www/rubygem-rack-cors \
 	rubygem-graphql>=1.10.5<1.11.0:devel/rubygem-graphql \
 	rubygem-graphiql-rails>=1.4.10<1.5.0:devel/rubygem-graphiql-rails \
-	rubygem-apollo_upload_server>=2.0.0.b.3<2.1.0:net/rubygem-apollo_upload_server \
+	rubygem-apollo_upload_server>=2.0.0.beta.3<2.1.0:net/rubygem-apollo_upload_server \
 	rubygem-graphql-docs>=1.6.0<1.7.0:devel/rubygem-graphql-docs \
 	rubygem-hashie-forbidden_attributes>0:devel/rubygem-hashie-forbidden_attributes \
 	rubygem-kaminari-rails60>=1.2.1<2.0:www/rubygem-kaminari-rails60 \
@@ -130,8 +130,8 @@ MY_DEPENDS=	git>=2.26:devel/git \
 	rubygem-rack-timeout>=0.5.1<0.6:www/rubygem-rack-timeout \
 	rubygem-unicorn>=5.5<6:www/rubygem-unicorn \
 	rubygem-unicorn-worker-killer>=0.4.4<0.5.0:www/rubygem-unicorn-worker-killer \
-	rubygem-gitlab-puma>=4.3.3.g.2:www/rubygem-gitlab-puma \
-	rubygem-gitlab-puma_worker_killer>=0.1.1.g.1:www/rubygem-gitlab-puma_worker_killer \
+	rubygem-gitlab-puma>=4.3.3.gitlab.2:www/rubygem-gitlab-puma \
+	rubygem-gitlab-puma_worker_killer>=0.1.1.gitlab.1:www/rubygem-gitlab-puma_worker_killer \
 	rubygem-state_machines-activerecord>=0.6.0<0.7.0:databases/rubygem-state_machines-activerecord \
 	rubygem-acts-as-taggable-on>=6.0<7.0:www/rubygem-acts-as-taggable-on \
 	rubygem-sidekiq5>=5.2.9<5.3.0:devel/rubygem-sidekiq5 \
@@ -259,7 +259,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 GL_PROJECT=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT=	9119206b6e8aefc4ae25a0d366e7a9788c0a2abd
+GL_COMMIT=	15c2c8c66dbe422588e5411eee7e68f1fa440bb8
 
 USERS=	git
 GROUPS=	git

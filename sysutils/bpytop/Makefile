@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	bpytop
-PORTVERSION=	1.0.21
+PORTVERSION=	1.0.33
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 
@@ -19,6 +19,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	aristocratos
 
 SHEBANG_FILES=	${WRKSRC}/bpytop.py
+
+NO_ARCH=	yes
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bpytop.py ${STAGEDIR}${PREFIX}/bin/bpytop

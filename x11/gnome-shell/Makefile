@@ -3,7 +3,7 @@
 
 PORTNAME=	gnome-shell
 PORTVERSION=	3.28.3
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -61,6 +61,11 @@ MESON_ARGS=	-Dsystemd=false \
 CPE_VENDOR=	gnome
 
 GLIB_SCHEMAS=	org.gnome.shell.gschema.xml
+
+.if exists(/usr/bin/ld.lld) && ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
+# Work around "New rpath must not be longer than the old one."
+LDFLAGS+=	-fuse-ld=lld
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|python3|${PYTHON_VERSION}|g' \

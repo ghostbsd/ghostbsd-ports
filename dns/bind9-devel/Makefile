@@ -9,7 +9,7 @@ PORTREVISION=	0
 .else
 # XXX: correct version
 # dns/bind9xx here
-PORTREVISION=	2
+PORTREVISION=	0
 .endif
 CATEGORIES=	dns net
 # XXX: put the ISC master_site
@@ -48,13 +48,13 @@ RUN_DEPENDS=	bind-tools>0:dns/bind-tools
 # XXX: remove tar:bz2
 USES=		autoreconf compiler:c11 cpe libedit libtool pkgconfig ssl tar:bz2
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.17.4a0.2020.08.24
+ISCVERSION=	9.17.4a0.2020.09.14
 # XXX: Remove gitlab
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.isc.org
 GL_ACCOUNT=	isc-projects
 GL_PROJECT=	bind9
-GL_COMMIT=	62971d4a3cade07505e28b6e5da989e02e8f7b6d
+GL_COMMIT=	00c3533a7046cda366151da68fb70ff4d0134fd8
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
@@ -91,10 +91,10 @@ CONFLICTS=	bind911 bind912 bind913 bind914 bind916
 MAKE_JOBS_UNSAFE=	yes
 
 OPTIONS_DEFAULT=	DLZ_FILESYSTEM GSSAPI_NONE IDN JSON LMDB MANPAGES \
-			SIGCHASE TCP_FASTOPEN DNSTAP
+			TCP_FASTOPEN DNSTAP
 OPTIONS_DEFINE=		DNSTAP DOCS FIXED_RRSET GEOIP IDN JSON LARGE_FILE LMDB \
 			MANPAGES OVERRIDECACHE PORTREVISION QUERYTRACE \
-			SIGCHASE START_LATE TCP_FASTOPEN
+			START_LATE TCP_FASTOPEN
 
 OPTIONS_RADIO=		CRYPTO
 OPTIONS_RADIO_CRYPTO=	NATIVE_PKCS11
@@ -134,7 +134,6 @@ OVERRIDECACHE_DESC=	Use the override-cache patch
 NATIVE_PKCS11_DESC=	Use PKCS\#11 native API (**READ HELP**)
 PORTREVISION_DESC=	Show PORTREVISION in the version string
 QUERYTRACE_DESC=	Enable the very verbose query tracelogging
-SIGCHASE_DESC=		dig/host/nslookup will do DNSSEC validation
 START_LATE_DESC=	Start BIND late in the boot process (see help)
 TCP_FASTOPEN_DESC=	RFC 7413 support
 
@@ -200,8 +199,6 @@ OVERRIDECACHE_EXTRA_PATCHES=	${FILESDIR}/extrapatch-bind-min-override-ttl
 NATIVE_PKCS11_CONFIGURE_ENABLE=	native-pkcs11
 
 QUERYTRACE_CONFIGURE_ENABLE=	querytrace
-
-SIGCHASE_CONFIGURE_ON=	STD_CDEFINES="-DDIG_SIGCHASE=1"
 
 START_LATE_SUB_LIST=		NAMED_BEFORE="LOGIN" \
 				NAMED_REQUIRE="SERVERS cleanvar"

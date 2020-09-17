@@ -196,6 +196,7 @@
     SUBDIR += libdvdnav
     SUBDIR += libdvdread
     SUBDIR += libfame
+    SUBDIR += libgav1
     SUBDIR += libhdhomerun
     SUBDIR += libkate
     SUBDIR += libmatroska
@@ -444,7 +445,6 @@
     SUBDIR += vlc
     SUBDIR += vmaf
     SUBDIR += vtkmpeg2encode
-    SUBDIR += w_scan
     SUBDIR += w_scan2
     SUBDIR += webcamd
     SUBDIR += webcamoid

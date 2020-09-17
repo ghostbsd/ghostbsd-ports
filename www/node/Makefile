@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	node
-PORTVERSION=	14.8.0
+PORTVERSION=	14.11.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
@@ -52,6 +52,7 @@ CONFLICTS_INSTALL=	node[68]-[0-9]* node10-[0-9]* node12-[0-9]*
 
 CONFIGURE_ARGS=	--prefix=${PREFIX_RELDEST} \
 		--without-npm \
+		--shared-brotli \
 		--shared-cares \
 		--shared-libuv \
 		--shared-nghttp2 \
@@ -68,11 +69,13 @@ MAKE_ENV+=	CC.host=${CC} CFLAGS.host="${CFLAGS}" \
 		CXX.host=${CXX} CXXFLAGS.host="${CXXFLAGS}" \
 		LINK.host=${CXX} LDFLAGS.host="${LDFLAGS}"
 
-BUILD_DEPENDS+=	c-ares>=1.16.0:dns/c-ares\
-		libuv>=1.38.1:devel/libuv \
+BUILD_DEPENDS+=	brotli>=1.0.9,1:archivers/brotli \
+		c-ares>=1.16.0:dns/c-ares \
+		libuv>=1.39.0:devel/libuv \
 		libnghttp2>=1.41.0:www/libnghttp2 \
 		objdump:devel/binutils
-LIB_DEPENDS+=	libcares.so:dns/c-ares\
+LIB_DEPENDS+=	libbrotlidec.so:archivers/brotli \
+		libcares.so:dns/c-ares\
 		libuv.so:devel/libuv \
 		libnghttp2.so:www/libnghttp2
 

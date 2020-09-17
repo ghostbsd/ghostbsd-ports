@@ -126,6 +126,7 @@
     SUBDIR += halide
     SUBDIR += harbour
     SUBDIR += haskell-mode.el
+    SUBDIR += hermes
     SUBDIR += hla
     SUBDIR += hs-brainfuck
     SUBDIR += hs-unlambda
@@ -336,6 +337,7 @@
     SUBDIR += spidermonkey52
     SUBDIR += spidermonkey60
     SUBDIR += spidermonkey68
+    SUBDIR += spidermonkey78
     SUBDIR += spl
     SUBDIR += squeak
     SUBDIR += squirrel

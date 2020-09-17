@@ -4,6 +4,7 @@
 PORTNAME=	qgis
 DISTVERSIONPREFIX=	final-
 DISTVERSION=	3_14_15
+PORTREVISION=	1
 CATEGORIES=	graphics geography
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -11,7 +12,7 @@ PATCHFILES=	33192f38bc7d.patch:-p1 \
 		12203f0ce527.patch:-p1 \
 		6e9d42d70099.patch:-p1
 
-MAINTAINER=	rhurlin@gwdg.de
+MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Free and Open Source Geographic Information System
 
 LICENSE=	GPLv2

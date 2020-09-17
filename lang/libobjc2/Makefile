@@ -21,6 +21,10 @@ GH_TUPLE=	Tessil:robin-map:757de82:robin_map/third_party/robin-map
 
 USE_LDCONFIG=	yes
 
+LDFLAGS+=	-lm
+
+TEST_TARGET=	test
+
 CMAKE_ARGS+=	-DLIB_INSTALL_PATH=lib
 
 LDFLAGS_armv7=	-Wl,-znotext

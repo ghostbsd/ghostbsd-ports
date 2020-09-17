@@ -11,7 +11,7 @@ DIST_SUBDIR=	gnome
 PATCH_SITES=	https://gitlab.gnome.org/GNOME/glib/commit/
 PATCHFILES+=	5f38ae5ffca3213addc5b279a46d537792d031db.diff:-p1
 
-MAINTAINER=	gnome@FreeBSD.org
+MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Some useful routines of C programming (current stable version)
 
 LICENSE=	LGPL20

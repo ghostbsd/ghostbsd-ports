@@ -40,6 +40,8 @@
     SUBDIR += android-file-transfer-qt5
     SUBDIR += angrysearch
     SUBDIR += ansible
+    SUBDIR += ansible-iocage
+    SUBDIR += ansible-kld
     SUBDIR += ansible-sysrc
     SUBDIR += ansible27
     SUBDIR += ansible28
@@ -248,6 +250,7 @@
     SUBDIR += dirvish
     SUBDIR += diskcheckd
     SUBDIR += diskimage-tools
+    SUBDIR += diskonaut
     SUBDIR += diskscrub
     SUBDIR += disktype
     SUBDIR += dmg2img
@@ -308,6 +311,7 @@
     SUBDIR += etcmerge
     SUBDIR += etcupdate
     SUBDIR += evhz
+    SUBDIR += evisum
     SUBDIR += evtviewer
     SUBDIR += exa
     SUBDIR += exfat-utils
@@ -602,6 +606,7 @@
     SUBDIR += lmon
     SUBDIR += lnav
     SUBDIR += lockfile-progs
+    SUBDIR += loganalyzer
     SUBDIR += logrotate
     SUBDIR += logstalgia
     SUBDIR += logstash-forwarder
@@ -693,7 +698,6 @@
     SUBDIR += monit
     SUBDIR += monitord
     SUBDIR += monitorix
-    SUBDIR += mono-kmod
     SUBDIR += moosefs2-cgi
     SUBDIR += moosefs2-cgiserv
     SUBDIR += moosefs2-chunkserver
@@ -1292,6 +1296,7 @@
     SUBDIR += syslog-ng326
     SUBDIR += syslog-ng327
     SUBDIR += syslog-ng328
+    SUBDIR += syslog-ng329
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += system-tools-backends

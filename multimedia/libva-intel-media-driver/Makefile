@@ -2,12 +2,11 @@
 
 PORTNAME=	media-driver
 DISTVERSIONPREFIX=	intel-media-
-DISTVERSION=	20.3.pre6
+DISTVERSION=	20.3.pre8
 CATEGORIES=	multimedia
 PKGNAMEPREFIX=	libva-intel-
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	b828bdc8ea40.patch:-p1 # libva < 2.9
 PATCHFILES+=	2bd42cddbe7c.patch:-p1 # https://github.com/intel/media-driver/pull/819
 PATCHFILES+=	0ef9d7bd97ac.patch:-p1 # https://github.com/intel/media-driver/pull/819
 PATCHFILES+=	b7b1ffbc5323.patch:-p1 # https://github.com/intel/media-driver/pull/819

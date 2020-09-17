@@ -2,11 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	harfbuzz
-DISTVERSION=	2.7.1
+DISTVERSION=	2.7.2
 PORTREVISION?=	0
 CATEGORIES=	print
 
-MAINTAINER=	gnome@FreeBSD.org
+MAINTAINER=	desktop@FreeBSD.org
 COMMENT?=	OpenType text shaping engine
 
 LICENSE=	MIT
@@ -24,7 +24,7 @@ SHEBANG_GLOB=	*.py
 MESON_ARGS=	-Dglib=enabled -Dgobject=enabled -Dgraphite=enabled \
 		-Dfreetype=enabled -Dbenchmark=disabled
 
-PLIST_SUB+=	LIBVER=0.20701.0
+PLIST_SUB+=	LIBVER=0.20702.0
 
 HARFBUZZ_SLAVE?=	no
 
