@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	caja-extensions
-PORTVERSION=	1.24.0
+PORTVERSION=	1.24.1
 CATEGORIES=	deskutils mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate

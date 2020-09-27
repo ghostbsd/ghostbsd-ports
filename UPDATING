@@ -5,6 +5,91 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20200924:
+  AFFECTS: users of net/freeradius3, who need python support
+  AUTHOR: zi@FreeBSD.org
+
+  FreeRADIUS 3.x currently uses python 2.7 for rlm_python support, which has
+  been deprecated and will be removed from the tree at the end of this year.
+
+  Starting in 3.0.21_2, the PYTHON option has been converted to use python 3.x.
+
+  Users should verify their python scripts are 3.x compatible and upgrade to
+  3.0.21_2 (or higher) to bring in python 3.x support.
+
+20200921:
+  AFFECTS: users of databases/postgresql* and other software using PostgreSQL to run
+  AUTHOR: kbowling@FreeBSD.org
+
+  The default version of PostgreSQL has been switched from 11 to 12.
+  The upgrade procedure can use up twice the space the databases
+  currently needs. If you have a big amount of stored data take a
+  closer look at the manpage of pg_upgrade for avoidance and/or
+  speedup of the upgrade.
+
+  The upgrade instructions consider a basic usage and do not match
+  complex scenarios like replication, sharding, or similar.
+
+  Upgrade instructions:
+
+  First stop your PostgreSQL, create PostgreSQL-binaries and backup your data.
+  If you have another Version of PostgreSQL installed, for example 11.9, your
+  files are named according to this.
+
+  # service postgresql stop
+  # pkg create postgresql11-server postgresql11-contrib
+  # mkdir /tmp/pg-upgrade
+  # tar xf postgresql11-server-11.9.txz -C /tmp/pg-upgrade
+  # tar xf postgresql11-contrib-11.9.txz -C /tmp/pg-upgrade
+  # pkg delete -f databases/postgresql11-server databases/postgresql11-contrib databases/postgresql11-client
+
+  Now update PostgreSQL:
+
+    pkg user:
+    # pkg install databases/postgresql12-server databases/postgresql12-contrib
+    # pkg upgrade
+
+    Portmaster users:
+    # portmaster databases/postgresql12-server databases/postgresql12-contrib
+    # portmaster -a
+
+    Portupgrade users:
+    # portinstall databases/postgresql12-server databases/postgresql12-contrib
+    # portupgrade -a
+
+  After installing the new PostgreSQL version you need to convert
+  all your databases to new version:
+
+  # su -l postgres -c "/usr/local/bin/initdb --encoding=utf-8 --lc-collate=C -D /var/db/postgres/data12 -U postgres"
+  # su -l postgres -c "pg_upgrade -b /tmp/pg-upgrade/usr/local/bin/ -d /var/db/postgres/data11/ -B /usr/local/bin/ -D /var/db/postgres/data12/ -U postgres "
+
+  Now the migration is finished. You can start PostgreSQL again with:
+
+  # service postgresql start
+
+  ATTENTION:
+  1) The default user changed from "pgsql" to "postgres" in 11. The migration steps above now assume
+     the "postgres" database user and FreeBSD user.
+  2) See the updating entry 20190829 if you are updating from a release prior to 11.
+  3) If you use non-default initdb options, you have to adjust the initdb-command accordingly
+
+20200918:
+  AFFECTS: users of mail/thunderbird
+  AUTHOR: cmt@FreeBSD.org
+
+  Thunderbird has been updated to the 78esr series. Thunderbird will
+  try to convert old profiles on first start, but conversion may fail
+  especially on old profiles. Also, older versions of Thunderbird will
+  not be able to use a profile once it has been converted. It is
+  strongly recommended to move any ~/.thunderbird folder away before
+  starting Thunderbird 78 for the first time, thus creating a new and
+  empty profile.
+  Also note that OpenPGP functionality has been integrated into Thunderbird,
+  obsoleting the Enigmail extension.
+  Check https://wiki.mozilla.org/Thunderbird:OpenPGP for details, and
+  especially https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards
+  if your private key lives on a smartcard.
+
 20200914:
   AFFECTS: users of lang/php72
   AUTHOR: tz@FreeBSD.org
@@ -1084,7 +1169,7 @@ leave you without networking.
   https://gitlab.fechner.net/mfechner/Gitlab-docu/blob/master/update/12.0-12.1-freebsd.md
 
 20190829:
-  AFFECTS: users of database/postgresql* and other software using PostgreSQL to run
+  AFFECTS: users of databases/postgresql* and other software using PostgreSQL to run
   AUTHOR: tz@FreeBSD.org
 
   The default version of PostgreSQL has been switched from 9.5 to 11.
@@ -3787,7 +3872,7 @@ leave you without networking.
   they can lead to data corruption due to changes in Erlang 20.
 
 20170622:
-  AFFECTS: users of database/postgresql* and other software using PostgreSQL to run
+  AFFECTS: users of databases/postgresql* and other software using PostgreSQL to run
   AUTHOR: tz@FreeBSD.org
 
   The default version of PostgreSQL has been switched from 9.3 to 9.5.
@@ -4678,7 +4763,7 @@ leave you without networking.
   # chown 0600 /var/heimdal/heimdal.db.new
   # mv /var/heimdal/heimdal.db.new /var/heimdal/heimdal.db
 
-  db_dump and db_load utilitites are installed by database/db5 as
+  db_dump and db_load utilitites are installed by databases/db5 as
   dependency of security/heimdal.
 
   If you want to switch from security/heimdal to Heimdal in the base
@@ -6061,7 +6146,7 @@ leave you without networking.
   AFFECTS: users of net/samba4, net/samba41, net/samba42
   AUTHOR: timur@FreeBSD.org
 
-  Recent versions of devel/talloc, devel/tevent, database/tdb, database/ldb
+  Recent versions of devel/talloc, devel/tevent, databases/tdb, databases/ldb
   contained infinit recursive call to the strtol* set of replacement functions,
   which lead to coredumps. Unofficial patch was added meanwhile, but now
   official version of the fixed libs were released. If your version of
@@ -9007,7 +9092,7 @@ leave you without networking.
       perl5.12-.
 
 20140211:
-  AFFECTS: users of lang/php* database/postgresql* database/mysql* www/apache*
+  AFFECTS: users of lang/php* databases/postgresql* databases/mysql* www/apache*
   AUTHOR: mat@FreeBSD.org
 
   The default versions of lang/php*, databases/postgresql*,

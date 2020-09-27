@@ -71,7 +71,6 @@
     SUBDIR += fpc-x11
     SUBDIR += fstobdf
     SUBDIR += gdm
-<<<<<<< HEAD
     SUBDIR += ghostbsd-cinnamon-live-settings
     SUBDIR += ghostbsd-cinnamon-settings
     SUBDIR += ghostbsd-common-settings
@@ -82,9 +81,7 @@
     SUBDIR += ghostbsd-slick-greeter-settings
     SUBDIR += ghostbsd-slim-theme
     SUBDIR += ghostbsd-xfce-settings
-=======
     SUBDIR += glcapsviewer
->>>>>>> freebsd/master
     SUBDIR += gmrun
     SUBDIR += gnome-clipboard-daemon
     SUBDIR += gnome-desktop
@@ -177,9 +174,7 @@
     SUBDIR += libfm-extra
     SUBDIR += libfm-qt
     SUBDIR += libgnome
-    SUBDIR += libgnome-reference
     SUBDIR += libgnomekbd
-    SUBDIR += libgnomemm26
     SUBDIR += libinput
     SUBDIR += libmatekbd
     SUBDIR += libsx
