@@ -1773,6 +1773,7 @@
     SUBDIR += tokyodystopia
     SUBDIR += tr-aspell
     SUBDIR += trang
+    SUBDIR += translate-toolkit
     SUBDIR += trdsql
     SUBDIR += ts-hunspell
     SUBDIR += tth
@@ -1813,6 +1814,7 @@
     SUBDIR += website
     SUBDIR += weka
     SUBDIR += wiggle
+    SUBDIR += wikiman
     SUBDIR += word2x
     SUBDIR += wordnet
     SUBDIR += words

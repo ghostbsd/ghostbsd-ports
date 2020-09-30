@@ -3,6 +3,7 @@
 
 PORTNAME=	evince
 PORTVERSION=	3.36.7
+PORTREVISION=	1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -30,7 +31,7 @@ PORTSCOUT=	limitw:1,even
 SLAVEPORT?=	no
 
 USES=		compiler:c++11-lib desktop-file-utils gettext \
-		gnome libarchive localbase meson pkgconfig tar:xz xorg
+		gnome libarchive localbase:ldflags meson pkgconfig tar:xz xorg
 USE_GNOME=	cairo gtk30
 USE_GSTREAMER1=	yes
 USE_LDCONFIG=	yes

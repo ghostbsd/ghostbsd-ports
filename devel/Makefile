@@ -4079,6 +4079,7 @@
     SUBDIR += py-avro
     SUBDIR += py-aws-sam-translator
     SUBDIR += py-aws-xray-sdk
+    SUBDIR += py-azure-appconfiguration
     SUBDIR += py-azure-batch
     SUBDIR += py-azure-core
     SUBDIR += py-azure-cosmos
@@ -4086,6 +4087,7 @@
     SUBDIR += py-azure-functions-devops-build
     SUBDIR += py-azure-graphrbac
     SUBDIR += py-azure-keyvault
+    SUBDIR += py-azure-keyvault-administration
     SUBDIR += py-azure-loganalytics
     SUBDIR += py-azure-mgmt-advisor
     SUBDIR += py-azure-mgmt-apimanagement
@@ -4272,12 +4274,13 @@
     SUBDIR += py-cov-core
     SUBDIR += py-coverage
     SUBDIR += py-coverage_enable_subprocess
-    SUBDIR += py-cppy
     SUBDIR += py-cppheaderparser
+    SUBDIR += py-cppy
     SUBDIR += py-crank
     SUBDIR += py-crashtest
     SUBDIR += py-crc32c
     SUBDIR += py-crcmod
+    SUBDIR += py-cson
     SUBDIR += py-csv23
     SUBDIR += py-ctags
     SUBDIR += py-curio
@@ -5042,6 +5045,7 @@
     SUBDIR += py-sortedcontainers
     SUBDIR += py-sourcemap
     SUBDIR += py-speaklater
+    SUBDIR += py-speg
     SUBDIR += py-spyder
     SUBDIR += py-srsly
     SUBDIR += py-stackexchange
@@ -5702,6 +5706,7 @@
     SUBDIR += rubygem-azure_mgmt_appconfiguration
     SUBDIR += rubygem-azure_mgmt_attestation
     SUBDIR += rubygem-azure_mgmt_authorization
+    SUBDIR += rubygem-azure_mgmt_automanage
     SUBDIR += rubygem-azure_mgmt_automation
     SUBDIR += rubygem-azure_mgmt_azurestack
     SUBDIR += rubygem-azure_mgmt_azurestack_hci
@@ -5729,6 +5734,7 @@
     SUBDIR += rubygem-azure_mgmt_deployment_manager
     SUBDIR += rubygem-azure_mgmt_dev_spaces
     SUBDIR += rubygem-azure_mgmt_devtestlabs
+    SUBDIR += rubygem-azure_mgmt_digitaltwins
     SUBDIR += rubygem-azure_mgmt_dns
     SUBDIR += rubygem-azure_mgmt_edgegateway
     SUBDIR += rubygem-azure_mgmt_event_grid

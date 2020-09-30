@@ -6,7 +6,7 @@ PORTVERSION=	2.64.2
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ interfaces for glib2

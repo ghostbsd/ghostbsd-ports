@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	rspamd
-PORTVERSION=	2.6.a1.20200402
-PORTREVISION=	3
+PORTVERSION=	2.6.a1.20200929
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-devel
 
@@ -35,6 +34,7 @@ OPTIONS_DEFAULT_armv7=		LUAJIT
 OPTIONS_DEFAULT_i386=		LUAJIT
 OPTIONS_DEFAULT_powerpc=	LUAJIT
 OPTIONS_DEFAULT_powerpc64=	LUAJIT
+OPTIONS_DEFAULT_powerpc64le=	LUAJIT
 OPTIONS_SUB=	yes
 
 BLAS_DESC=	Use OpenBLAS to accelerate KANN
@@ -57,13 +57,14 @@ CMAKE_ARGS+=	-DCONFDIR=${PREFIX}/etc/rspamd \
 		-DDEBUG=ON \
 		-DGIT_ID=${GH_TAGNAME}
 USE_GITHUB=	yes
-GH_TAGNAME=	76a1fb0
+GH_TAGNAME=	80b8f0e
 
 DEBUG_FLAGS=	-g -O0
 
 USE_RC_SUBR=	rspamd
 
 BLAS_CMAKE_ON=	-DENABLE_BLAS=ON
+BLAS_LIB_DEPENDS=	libblis.so:math/blis liblapack.so:math/lapack
 BLAS_USES=	blaslapack:openblas
 
 GPERF_CMAKE_ON=	-DENABLE_GPERF_TOOLS=ON
@@ -83,7 +84,7 @@ CGP_RUN_DEPENDS+=	\
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == powerpc64
+.if ${ARCH:Mpowerpc*}
 LUAJIT_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
 USES+=		compiler:gcc-c++11-lib
 .else
