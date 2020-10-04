@@ -202,6 +202,7 @@
     SUBDIR += fldiff
     SUBDIR += flex
     SUBDIR += flip
+    SUBDIR += fmtlatex
     SUBDIR += fo-aspell
     SUBDIR += foiltex
     SUBDIR += fop
@@ -422,6 +423,7 @@
     SUBDIR += markdown-mode.el
     SUBDIR += markdownfmt
     SUBDIR += mathml-xsd
+    SUBDIR += mdbook
     SUBDIR += mdocml
     SUBDIR += meld
     SUBDIR += metauml
