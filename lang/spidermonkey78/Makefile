@@ -37,6 +37,7 @@ CONFIGURE_ARGS=	--disable-debug \
 		--disable-debug-symbols \
 		--disable-gold \
 		--disable-jemalloc \
+		--disable-tests \
 		--enable-optimize \
 		--enable-readline \
 		--enable-shared-js \
@@ -50,7 +51,8 @@ CONFIGURE_ARGS=	--disable-debug \
 CONFIGURE_ENV=	HOST_CC=${CC} \
 		HOST_CXX=${CXX}
 
-CONFIGURE_ENV+=	LLVM_CONFIG=llvm-config${LLVM_DEFAULT}
+CONFIGURE_ENV+=	LLVM_CONFIG=llvm-config${LLVM_DEFAULT} \
+		LLVM_OBJDUMP=llvm-objdump${LLVM_DEFAULT}
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 PLIST_SUB=	SP_VER=${SP_VER}

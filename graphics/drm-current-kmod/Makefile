@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	drm-current-kmod
-PORTVERSION=	5.4.62.g20200914
+PORTVERSION=	5.4.62.g20201003
 CATEGORIES=	graphics kld
 
 MAINTAINER=	x11@FreeBSD.org
@@ -11,7 +11,7 @@ COMMENT=	DRM modules for the linuxkpi-based KMS components
 LICENSE=	BSD2CLAUSE MIT GPLv2
 LICENSE_COMB=	multi
 
-ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64
+ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	the new KMS components are only supported on amd64, i386, aarch64 and powerpc64
 
 RUN_DEPENDS=	gpu-firmware-kmod>=g20200914:graphics/gpu-firmware-kmod
@@ -34,7 +34,7 @@ USES=		kmod uidfix compiler:c++11-lang
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd
 GH_PROJECT=	drm-kmod
-GH_TAGNAME=	drm_v5.4.62_1
+GH_TAGNAME=	drm_v5.4.62_3
 
 .include <bsd.port.options.mk>
 
@@ -55,7 +55,7 @@ PLIST_SUB+=	AMDGPU="@comment "
 PLIST_SUB+=	I915=""
 PLIST_SUB+=	VMWGFX=""
 PLIST_SUB+=	VBOXVIDEO=""
-.elif ${ARCH} == "aarch64" || ${ARCH} == "powerpc64"
+.elif ${ARCH} == "aarch64" || ${ARCH:Mpowerpc*}
 PLIST_SUB+=	AMDGPU=""
 PLIST_SUB+=	I915="@comment "
 PLIST_SUB+=	VBOXVIDEO="@comment "

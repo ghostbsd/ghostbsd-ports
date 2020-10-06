@@ -30,7 +30,6 @@
     SUBDIR += apache-xml-security-c
     SUBDIR += apg
     SUBDIR += arirang
-    SUBDIR += arm
     SUBDIR += arpCounterattack
     SUBDIR += asignify
     SUBDIR += autossh
@@ -121,6 +120,7 @@
     SUBDIR += dehydrated
     SUBDIR += denyhosts
     SUBDIR += destroy
+    SUBDIR += digestpp
     SUBDIR += dirbuster
     SUBDIR += dirmngr
     SUBDIR += distcache
@@ -203,6 +203,7 @@
     SUBDIR += gwee
     SUBDIR += hackbot
     SUBDIR += hardening-check
+    SUBDIR += hash
     SUBDIR += hashcat
     SUBDIR += hashcat-legacy
     SUBDIR += heaan
@@ -235,7 +236,6 @@
     SUBDIR += ipv6toolkit
     SUBDIR += isakmpd
     SUBDIR += isal-kmod
-    SUBDIR += ismtp
     SUBDIR += isnprober
     SUBDIR += jbrofuzz
     SUBDIR += john
@@ -899,7 +899,6 @@
     SUBDIR += py-gpsoauth
     SUBDIR += py-gssapi
     SUBDIR += py-gtts-token
-    SUBDIR += py-halberd
     SUBDIR += py-hkdf
     SUBDIR += py-htpasswd
     SUBDIR += py-itsdangerous
@@ -977,6 +976,7 @@
     SUBDIR += py-scramp
     SUBDIR += py-scrypt
     SUBDIR += py-securesystemslib
+    SUBDIR += py-sequoia
     SUBDIR += py-service_identity
     SUBDIR += py-signedjson
     SUBDIR += py-social-auth-core
@@ -1039,10 +1039,12 @@
     SUBDIR += rubygem-acme-client
     SUBDIR += rubygem-aes_key_wrap
     SUBDIR += rubygem-airbrussh
+    SUBDIR += rubygem-android_key_attestation
     SUBDIR += rubygem-attr_encrypted
     SUBDIR += rubygem-bcrypt
     SUBDIR += rubygem-bcrypt-ruby
     SUBDIR += rubygem-bcrypt_pbkdf
+    SUBDIR += rubygem-cose
     SUBDIR += rubygem-devise-two-factor
     SUBDIR += rubygem-devise-two-factor-rails5
     SUBDIR += rubygem-devise-two-factor-rails60
@@ -1085,6 +1087,7 @@
     SUBDIR += rubygem-nexpose
     SUBDIR += rubygem-nmap-parser
     SUBDIR += rubygem-omniauth
+    SUBDIR += rubygem-omniauth-atlassian-oauth2
     SUBDIR += rubygem-omniauth-bitbucket
     SUBDIR += rubygem-omniauth-cas
     SUBDIR += rubygem-omniauth-cas3
@@ -1097,6 +1100,7 @@
     SUBDIR += rubygem-openssl
     SUBDIR += rubygem-openssl-ccm
     SUBDIR += rubygem-openssl-cmac
+    SUBDIR += rubygem-openssl-signature_algorithm
     SUBDIR += rubygem-openvas-omp
     SUBDIR += rubygem-origami
     SUBDIR += rubygem-pbkdf2-ruby
@@ -1130,6 +1134,7 @@
     SUBDIR += rubygem-ruby-hmac
     SUBDIR += rubygem-ruby-rc4
     SUBDIR += rubygem-ruby-saml
+    SUBDIR += rubygem-safety_net_attestation
     SUBDIR += rubygem-scrypt
     SUBDIR += rubygem-securecompare
     SUBDIR += rubygem-signet
@@ -1137,7 +1142,9 @@
     SUBDIR += rubygem-sshkey
     SUBDIR += rubygem-sshkit
     SUBDIR += rubygem-timfel-krb5
+    SUBDIR += rubygem-tpm-key_attestation
     SUBDIR += rubygem-twitter_oauth
+    SUBDIR += rubygem-webauthn
     SUBDIR += rubygem-webpush
     SUBDIR += s2n
     SUBDIR += safesh
@@ -1157,6 +1164,7 @@
     SUBDIR += sectok
     SUBDIR += secure_delete
     SUBDIR += sedutil
+    SUBDIR += sequoia
     SUBDIR += setaudit
     SUBDIR += sha
     SUBDIR += sha1collisiondetection
@@ -1212,6 +1220,7 @@
     SUBDIR += sst
     SUBDIR += starttls
     SUBDIR += steghide
+    SUBDIR += stegify
     SUBDIR += step-certificates
     SUBDIR += step-cli
     SUBDIR += stoken
@@ -1225,7 +1234,6 @@
     SUBDIR += super
     SUBDIR += suricata
     SUBDIR += swatchdog
-    SUBDIR += switzerland
     SUBDIR += symbion-sslproxy
     SUBDIR += tailscale
     SUBDIR += tclsasl
@@ -1253,7 +1261,6 @@
     SUBDIR += tripwire-131
     SUBDIR += trousers
     SUBDIR += truecrypt
-    SUBDIR += tsshbatch
     SUBDIR += tthsum
     SUBDIR += u2f-devd
     SUBDIR += unhide

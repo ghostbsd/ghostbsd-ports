@@ -43,7 +43,6 @@
     SUBDIR += portal
     SUBDIR += portconf
     SUBDIR += portdowngrade
-    SUBDIR += portell
     SUBDIR += portest
     SUBDIR += portfind
     SUBDIR += portfmt

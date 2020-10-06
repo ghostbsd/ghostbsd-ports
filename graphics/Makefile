@@ -78,7 +78,6 @@
     SUBDIR += bsd-plotutils
     SUBDIR += c-a-i-r
     SUBDIR += cadubi
-    SUBDIR += caffe
     SUBDIR += cairo
     SUBDIR += cairomm
     SUBDIR += cal3d
@@ -90,7 +89,6 @@
     SUBDIR += cfdg
     SUBDIR += charls
     SUBDIR += cimg
-    SUBDIR += cloudcompare
     SUBDIR += clutter
     SUBDIR += clutter-gtk3
     SUBDIR += cluttermm
@@ -108,6 +106,7 @@
     SUBDIR += cuttlefish
     SUBDIR += darktable
     SUBDIR += dataplot
+    SUBDIR += dbow2
     SUBDIR += dc20pack
     SUBDIR += dcmtk
     SUBDIR += dcp2icc
@@ -165,7 +164,6 @@
     SUBDIR += epstool
     SUBDIR += eterm-bg
     SUBDIR += evince
-    SUBDIR += evince-lite
     SUBDIR += evolvotron
     SUBDIR += exif
     SUBDIR += exifprobe
@@ -407,7 +405,6 @@
     SUBDIR += kqtquickcharts
     SUBDIR += krita
     SUBDIR += ksnip
-    SUBDIR += kudu
     SUBDIR += kxstitch
     SUBDIR += l2p
     SUBDIR += largetifftools
@@ -450,7 +447,6 @@
     SUBDIR += libgltf
     SUBDIR += libglvnd
     SUBDIR += libgnomecanvas
-    SUBDIR += libgnomecanvas-reference
     SUBDIR += libgnomecanvasmm26
     SUBDIR += libgphoto2
     SUBDIR += libgxps
@@ -725,7 +721,6 @@
     SUBDIR += pecl-imagick-im7
     SUBDIR += pecl-qrencode
     SUBDIR += pecl-vips
-    SUBDIR += pecomato
     SUBDIR += pencil2d
     SUBDIR += peps
     SUBDIR += perceptualdiff
@@ -792,7 +787,6 @@
     SUBDIR += proj
     SUBDIR += pstoedit
     SUBDIR += ptex
-    SUBDIR += py-openshadinglanguage
     SUBDIR += py-OWSLib
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
@@ -808,7 +802,6 @@
     SUBDIR += py-descartes
     SUBDIR += py-django-easy-thumbnails
     SUBDIR += py-djvulibre
-    SUBDIR += py-editobj
     SUBDIR += py-exifread
     SUBDIR += py-face_recognition
     SUBDIR += py-face_recognition_models
@@ -817,7 +810,6 @@
     SUBDIR += py-gdal
     SUBDIR += py-geomdl
     SUBDIR += py-geopandas
-    SUBDIR += py-gimp
     SUBDIR += py-gizeh
     SUBDIR += py-glfw
     SUBDIR += py-glooey
@@ -835,7 +827,6 @@
     SUBDIR += py-img2pdf
     SUBDIR += py-leather
     SUBDIR += py-mapclassify
-    SUBDIR += py-mayavi
     SUBDIR += py-mcomix
     SUBDIR += py-ming
     SUBDIR += py-mpl-scatter-density
@@ -844,6 +835,7 @@
     SUBDIR += py-opencolorio
     SUBDIR += py-opencv
     SUBDIR += py-openimageio
+    SUBDIR += py-openshadinglanguage
     SUBDIR += py-photocollage
     SUBDIR += py-piexif
     SUBDIR += py-pillow
@@ -894,7 +886,6 @@
     SUBDIR += py-willow
     SUBDIR += py-yaswfp
     SUBDIR += py-zbar-py
-    SUBDIR += pymorph
     SUBDIR += qcomicbook
     SUBDIR += qcustomplot-qt5
     SUBDIR += qgis
@@ -1032,7 +1023,6 @@
     SUBDIR += tiffgt
     SUBDIR += tifmerge
     SUBDIR += tikzit
-    SUBDIR += tilecache
     SUBDIR += tiled
     SUBDIR += timeless
     SUBDIR += timg

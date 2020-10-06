@@ -1,12 +1,11 @@
---- gio/gunixvolume.c.orig	2020-06-15 12:26:27 UTC
-+++ gio/gunixvolume.c
-@@ -365,9 +365,15 @@ g_unix_volume_eject (GVolume             *volume,
+--- gio/gunixvolume.c.orig	2014-03-20 04:50:45.000000000 +0100
++++ gio/gunixvolume.c	2014-03-24 20:44:40.000000000 +0100
+@@ -356,9 +356,14 @@
                       gpointer             user_data)
  {
    GUnixVolume *unix_volume = G_UNIX_VOLUME (volume);
 +#ifdef __FreeBSD__
-+  const gchar *argv[] = { "cdcontrol", "-f", NULL, NULL };
-+
++  const gchar *argv[] = {"cdcontrol", "-f", NULL, "eject", NULL};
 +  argv[2] = unix_volume->device_path;
 +#else
    const gchar *argv[] = { "eject", NULL, NULL };
