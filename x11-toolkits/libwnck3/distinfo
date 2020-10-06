@@ -1,3 +1,3 @@
-TIMESTAMP = 1601154128
-SHA256 (gnome/libwnck-3.36.0.tar.xz) = bc508150b3ed5d22354b0e6774ad4eee465381ebc0ace45eb0e2d3a4186c925f
-SIZE (gnome/libwnck-3.36.0.tar.xz) = 447760
+TIMESTAMP = 1601943422
+SHA256 (gnome3/libwnck-3.30.0.tar.xz) = ac6d0d2646aa80676d3066651e73abb7bff7ed79be238c9b21a0083e2adc3439
+SIZE (gnome3/libwnck-3.30.0.tar.xz) = 800296
