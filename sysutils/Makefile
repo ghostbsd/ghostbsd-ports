@@ -988,6 +988,7 @@
     SUBDIR += py-borgmatic
     SUBDIR += py-cron-descriptor
     SUBDIR += py-croniter
+    SUBDIR += py-dict-toolbox
     SUBDIR += py-diffoscope
     SUBDIR += py-dirsync
     SUBDIR += py-distro
@@ -1032,6 +1033,7 @@
     SUBDIR += py-queuelib
     SUBDIR += py-ranger
     SUBDIR += py-rdiff-backup
+    SUBDIR += py-resolve-march-native
     SUBDIR += py-salt
     SUBDIR += py-salt-2019
     SUBDIR += py-scandir
