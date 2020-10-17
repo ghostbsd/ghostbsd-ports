@@ -539,6 +539,7 @@
     SUBDIR += mpz
     SUBDIR += mumble
     SUBDIR += murmur
+    SUBDIR += murmur-cli
     SUBDIR += muse-sequencer
     SUBDIR += musepack
     SUBDIR += musescore
@@ -761,6 +762,7 @@
     SUBDIR += spiralsynthmodular
     SUBDIR += splay
     SUBDIR += splaytk
+    SUBDIR += spotify-qt
     SUBDIR += spotify-tui
     SUBDIR += spotifyd
     SUBDIR += squash

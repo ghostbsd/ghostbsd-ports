@@ -168,6 +168,7 @@
     SUBDIR += lua51
     SUBDIR += lua52
     SUBDIR += lua53
+    SUBDIR += lua54
     SUBDIR += luajit
     SUBDIR += luajit-openresty
     SUBDIR += malbolge
@@ -283,6 +284,7 @@
     SUBDIR += python36
     SUBDIR += python37
     SUBDIR += python38
+    SUBDIR += python39
     SUBDIR += qmasm
     SUBDIR += qscheme
     SUBDIR += quickjs
@@ -299,6 +301,7 @@
     SUBDIR += ruby25
     SUBDIR += ruby26
     SUBDIR += ruby27
+    SUBDIR += ruby30
     SUBDIR += runawk
     SUBDIR += rust
     SUBDIR += rust-bootstrap
