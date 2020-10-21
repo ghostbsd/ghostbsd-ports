@@ -6,7 +6,6 @@ case ${2} in
       echo "USERUMOUNT=YES" > %%PREFIX%%/etc/automount.conf
       echo "REMOVEDIRS=YES" >> %%PREFIX%%/etc/automount.conf
     fi
-    service devd restart
     echo
     echo
     echo "Check %%PREFIX%%/sbin/automount --help for available options."

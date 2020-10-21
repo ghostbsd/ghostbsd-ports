@@ -3,7 +3,7 @@
 
 PORTNAME=	automount
 DISTVERSION=	1.7.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	vermaden@interia.pl
