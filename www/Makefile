@@ -1723,7 +1723,6 @@
     SUBDIR += py-turbogears2
     SUBDIR += py-tvdb_api
     SUBDIR += py-txrequests
-    SUBDIR += py-unit
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlman
     SUBDIR += py-urlobject
@@ -2258,6 +2257,7 @@
     SUBDIR += unit
     SUBDIR += unit-perl
     SUBDIR += unit-php
+    SUBDIR += unit-python
     SUBDIR += unit-ruby
     SUBDIR += uwebsockets
     SUBDIR += uwsgi
