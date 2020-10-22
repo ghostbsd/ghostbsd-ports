@@ -201,8 +201,8 @@ if [ "${RC_CMD}" != "stop" ] ; then
 	apache24_accf
 fi
 
-if [ "${RC_CMD}" = "restart" ] ; then
-	#replace the restart routine with a graceful restart instead
-	apache24_graceful
-	return $?
-fi
+#if [ "${RC_CMD}" = "restart" ] ; then
+#	#replace the restart routine with a graceful restart instead
+#	apache24_graceful
+#	return $?
+#fi
