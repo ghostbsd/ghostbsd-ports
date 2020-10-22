@@ -920,6 +920,8 @@
     SUBDIR += php73-posix
     SUBDIR += php74-fileinfo
     SUBDIR += php74-posix
+    SUBDIR += php80-fileinfo
+    SUBDIR += php80-posix
     SUBDIR += phpfpm_exporter
     SUBDIR += phybs
     SUBDIR += pick
