@@ -6857,6 +6857,7 @@
     SUBDIR += yasm
     SUBDIR += yasm-devel
     SUBDIR += youcompleteme
+    SUBDIR += yuck
     SUBDIR += z80-asm
     SUBDIR += z80asm
     SUBDIR += z80ex
