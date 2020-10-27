@@ -157,7 +157,6 @@ OPTIONS_DEFAULT= ACCT \
     BSD_CPIO \
     BSD_CRTBEGIN \
     BSD_GREP \
-    BSDINSTALL \
     BSNMP \
     BZIP2 \
     CALENDAR \
@@ -185,9 +184,7 @@ OPTIONS_DEFAULT= ACCT \
     FLOPPY \
     FMTREE \
     FP_LIBC \
-    FREEBSD_UPDATE \
     FTP \
-    GAMES \
     GCOV \
     GDB \
     GNU_DIFF \
@@ -233,11 +230,9 @@ OPTIONS_DEFAULT= ACCT \
     NTP \
     NVME \
     OFED \
-    PC_SYSINSTALL \
     PF \
     PKGBOOTSTRAP \
     PMC \
-    PORTSNAP \
     PPP \
     QUOTAS \
     RADIUS_SUPPORT \
