@@ -1054,6 +1054,7 @@
     SUBDIR += qchroot
     SUBDIR += qdirstat
     SUBDIR += qjail
+    SUBDIR += qjail54
     SUBDIR += qlogtools
     SUBDIR += qsudo
     SUBDIR += qt5-qtdiag
