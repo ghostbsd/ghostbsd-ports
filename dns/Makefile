@@ -99,6 +99,7 @@
     SUBDIR += libdjbdns
     SUBDIR += libidn
     SUBDIR += libidn2
+    SUBDIR += libmicrodns
     SUBDIR += libnspsl
     SUBDIR += libpsl
     SUBDIR += linux-c7-libasyncns
