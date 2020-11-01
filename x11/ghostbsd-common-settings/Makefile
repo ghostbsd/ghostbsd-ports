@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ghostbsd-common-settings
-PORTVERSION=	4.6
+PORTVERSION=	4.7
 CATEGORIES=	x11
 
 MAINTAINER=	eriturgeon@ghostbsd.org
