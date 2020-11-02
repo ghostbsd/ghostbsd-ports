@@ -1,55 +1,17 @@
 #!/sbin/openrc-run
 
-command="kldstat"
-
-start_pre() {
-	if [ $1 = vmmemctl ]; then
-		# VMware kernel module: vmmemctl
-		kernel_mod="vmmemctl"
-		name="vmware_guest_${kernel_mod}"
-	elif[ $1 = vmxnet ];
-		# VMware kernel module: vmxnet
-		kernel_mod="vmxnet"
-		name="vmware_guest_${kernel_mod}"
-	elif[ $1 = vmblock];
-		# VMware kernel module: vmblock
-		kernel_mod="vmblock"
-		name="vmware_guest_${kernel_mod}"
-	elif[ $1 = vmhgfs];
-		# VMware kernel module: vmhgfs
-		kernel_mod="vmhgfs"
-		name="vmware_guest_${kernel_mod}"
-	fi
-	checkvm_cmd="/usr/local/bin/vmware-checkvm > /dev/null"
-}
-
-stop_pre() {
-	checkvm_cmd="/usr/local/bin/vmware-checkvm > /dev/null"
-}
+name="vmware_kmod"
 
 start()
 {
-	echo -n "Loading $1 kernel module: "
-	$command -n /usr/local/lib/vmware-tools/modules/drivers/$1.ko >/dev/null 2>&1
-	if [ "$?" = "0" ]; then
-		einfo "Already loaded"
-	else
-		kldload /usr/local/lib/vmware-tools/modules/drivers/$1.ko >/dev/null 2>&1
-		if [ "$?" = "0" ]; then
-			einfo "Done"
-		else
-			einfo "Failed"
-		fi
-	fi
+  ebegin "Starting $name"
+  kldload /usr/local/lib/vmware-tools/modules/drivers/vmblock.ko
+  kldload /usr/local/lib/vmware-tools/modules/drivers/vmmemctl.ko
 }
 
-status()
+stop()
 {
-	echo -n "Checking $1 kernel module: "
-	$command -n /usr/local/lib/vmware-tools/modules/drivers/$1.ko >/dev/null 2>&1
-	if [ "$?" = "0" ]; then
-		einfo "Loaded"
-	else
-		einfo "Not loaded"
-	fi
+  ebegin "Stopping $name"
+  kldunload vmblock.ko
+  kldunload vmmemctl.ko
 }
