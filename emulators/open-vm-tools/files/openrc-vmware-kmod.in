@@ -1,4 +1,6 @@
-me="vmware_kmod"
+#!/sbin/openrc-run
+
+name="vmware_kmod"
 
 start()
 {
