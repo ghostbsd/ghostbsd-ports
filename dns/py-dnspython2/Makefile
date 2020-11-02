@@ -2,49 +2,36 @@
 # $FreeBSD$
 
 PORTNAME=	dnspython
-PORTVERSION=	1.12.0
+PORTVERSION=	2.0.0
 CATEGORIES=	dns python
-MASTER_SITES=	http://www.dnspython.org/kits${PORTVERSIONSUFFIX}/${PORTVERSION}/
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	2
-DISTNAME=	${PORTNAME}${PORTVERSIONSUFFIX}-${PORTVERSION}
 
-MAINTAINER=	rm@FreeBSD.org
-COMMENT=	DNS toolkit for Python
+MAINTAINER=	bofh@FreeBSD.org
+COMMENT=	DNS toolkit for Python - 2.X branch
 
-USES=		python:2.7
-USE_PYTHON=	autoplist distutils
+LICENSE=	ISCL
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
-OPTIONS_DEFINE=	DOCS EXAMPLES PYCRYPTO
-PYCRYPTO_DESC=	Enable pycrypto (part of dnssec needs it)
+USES=		python:3.6+ zip
+USE_PYTHON=	autoplist cython distutils
 
-PORTDOCS=	ChangeLog README
-DOCSDIR=	${PREFIX}/share/doc/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
+NO_ARCH=	yes
+
+OPTIONS_DEFINE=	EXAMPLES PYCRYPTODOME
+PYCRYPTODOME_DESC=	Enable pycryptodome (part of dnssec needs it)
+PYCRYPTODOME_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycryptodome>=0:security/py-pycryptodome@${PY_FLAVOR}
 
 PORTEXAMPLES=	ddns.py e164.py mx.py name.py reverse.py reverse_name.py \
 		xfr.py zonediff.py
-EXAMPLESDIR=	${PREFIX}/share/examples/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
 
-PYCRYPTO_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycrypto>0:${PORTSDIR}/security/py-pycrypto
-
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_MAJOR_VER} < 3
-PORTVERSIONSUFFIX=
-.else
-PORTVERSIONSUFFIX=	3
-EXAMPLESDIR:=	${EXAMPLESDIR}3
-.endif
-
-post-install:
-# docs
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
+post-install-EXAMPLES-on:
 # examples
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${PORTEXAMPLES:S,^,${WRKSRC}/examples/,} ${STAGEDIR}${EXAMPLESDIR}
-# permission safeness
-	@${FIND} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/dns -type f -exec ${CHMOD} ${SHAREMODE} {} \;
-	@${FIND} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/dns -type d -exec ${CHMOD} 755 {} \;
 
-.include <bsd.port.post.mk>
+do-test:
+	cd ${WRKSRC}/tests && ${SETENV} ${TEST_ENV} ${PYTHON_CMD} utest.py
+
+.include <bsd.port.mk>
