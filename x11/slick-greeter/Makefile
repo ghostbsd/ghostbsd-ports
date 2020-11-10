@@ -3,7 +3,7 @@
 
 PORTNAME=	slick-greeter
 PORTVERSION=	1.3.0
-PORTRESIVION=	1
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	ericbsd@FreeBSD.org
@@ -15,6 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	liblightdm-gobject-1.so:x11/lightdm \
 		libcanberra-gtk3.so:audio/libcanberra-gtk3
 BUILD_DEPENDS=	valac:lang/vala
+RUN_DEPENDS=	ghostbsd-slick-greeter-settings>=0:x11/ghostbsd-slick-greeter-settings
 
 USES=		autoreconf gettext gmake gnome localbase pkgconfig xorg
 USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool
