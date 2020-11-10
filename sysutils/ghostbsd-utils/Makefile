@@ -23,6 +23,6 @@ RUN_DEPENDS=	update-station:ports-mgmt/update-station \
 		ksh93:shells/ksh93 \
 		zsh:shells/zsh \
 		webcamd:multimedia/webcamd \
-		${LOCALBASE}/sbin/automount:sysutils/automount \
+		${LOCALBASE}/sbin/automount:sysutils/automount
 
 .include <bsd.port.mk>
