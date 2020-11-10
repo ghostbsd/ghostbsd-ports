@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ghostbsd-utils
-PORTVERSION=	18.12
+PORTVERSION=	20.11
 CATEGORIES=	sysutils
 
 MAINTAINER=	eturgeon@ixsystems.com
@@ -22,6 +22,8 @@ RUN_DEPENDS=	update-station:ports-mgmt/update-station \
 		ksh93:shells/ksh93 \
 		zsh:shells/zsh \
 		webcamd:multimedia/webcamd \
-		${LOCALBASE}/sbin/automount:sysutils/automount
+		${LOCALBASE}/sbin/automount:sysutils/automount \
+		slick-greeter>=0:x11/slick-greeter \
+		ghostbsd-slick-greeter-settings>0=:x11/ghostbsd-slick-greeter-settings
 
 .include <bsd.port.mk>
