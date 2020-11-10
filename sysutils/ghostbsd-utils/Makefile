@@ -3,6 +3,7 @@
 
 PORTNAME=	ghostbsd-utils
 PORTVERSION=	20.11
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	eturgeon@ixsystems.com
@@ -23,7 +24,5 @@ RUN_DEPENDS=	update-station:ports-mgmt/update-station \
 		zsh:shells/zsh \
 		webcamd:multimedia/webcamd \
 		${LOCALBASE}/sbin/automount:sysutils/automount \
-		slick-greeter>=0:x11/slick-greeter \
-		ghostbsd-slick-greeter-settings>0=:x11/ghostbsd-slick-greeter-settings
 
 .include <bsd.port.mk>
