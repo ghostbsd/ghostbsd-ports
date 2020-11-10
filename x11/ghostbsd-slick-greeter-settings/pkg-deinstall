@@ -1,8 +1,0 @@
-#!/bin/sh
-
-if [ "$2" = "DEINSTALL" ] ; then
-    # rm -f ${PKG_PREFIX}/etc/lightdm/slick-greeter.conf
-fi
-
-exit 0
- 

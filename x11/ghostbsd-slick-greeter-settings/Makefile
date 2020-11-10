@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ghostbsd-slick-greeter-settings
-PORTVERSION=	1.1
-PORTREVISION=	1
+PORTVERSION=	1.2
 
 CATEGORIES=	x11
 
