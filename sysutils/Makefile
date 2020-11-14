@@ -226,6 +226,7 @@
     SUBDIR += daemontools-encore
     SUBDIR += daggy
     SUBDIR += dar
+    SUBDIR += datadog
     SUBDIR += dateutils
     SUBDIR += dc3dd
     SUBDIR += dcfldd
@@ -312,6 +313,7 @@
     SUBDIR += etc_os-release
     SUBDIR += etcmerge
     SUBDIR += etcupdate
+    SUBDIR += ethname
     SUBDIR += evhz
     SUBDIR += evisum
     SUBDIR += evtviewer
@@ -527,8 +529,8 @@
     SUBDIR += ix-bhyve
     SUBDIR += istio
     SUBDIR += jadm
-    SUBDIR += jail_exporter
     SUBDIR += jail-primer
+    SUBDIR += jail_exporter
     SUBDIR += jailadmin
     SUBDIR += jaildaemon
     SUBDIR += jailme
@@ -1326,6 +1328,7 @@
     SUBDIR += throttle
     SUBDIR += timelimit
     SUBDIR += timemon
+    SUBDIR += tiramisu
     SUBDIR += titlefix
     SUBDIR += tkdvd
     SUBDIR += tlsdate
@@ -1409,6 +1412,7 @@
     SUBDIR += u-boot-rpi4
     SUBDIR += u-boot-sinovoip-bpi-m3
     SUBDIR += u-boot-sopine
+    SUBDIR += u-boot-sopine-spi
     SUBDIR += u-boot-tools
     SUBDIR += u-boot-utilite
     SUBDIR += u-boot-wandboard

@@ -60,12 +60,14 @@
     SUBDIR += dnswalk
     SUBDIR += dnswall
     SUBDIR += doc
+    SUBDIR += dog
     SUBDIR += doh-proxy
     SUBDIR += dq
     SUBDIR += drool
     SUBDIR += dsc
     SUBDIR += dsp
     SUBDIR += dynip
+    SUBDIR += encrypted-dns-server
     SUBDIR += erlang-idna
     SUBDIR += fastresolve
     SUBDIR += firedns

@@ -420,7 +420,7 @@ gitlab-pages:*:476:
 fiche:*:477:
 prometheus:*:478:
 alertmanager:*:479:
-# free: 480
+datadog:*:480:
 # free: 481
 # free: 482
 # free: 483
@@ -819,7 +819,7 @@ librespeed:*:874:
 # free: 876
 # free: 877
 # free: 878
-# free: 879
+_encrypted-dns:*:879:
 pyspf-milter:*:880:
 ultimaker:*:881:
 midpoint:*:882:

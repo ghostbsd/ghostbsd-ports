@@ -10,6 +10,17 @@ in the release notes and/or placed into UPDATING.
 
 All ports committers are allowed to commit to this file.
 
+20201110:
+AUTHOR: bapt@FreeBSD.org
+
+  Patents are a complicated topic, and their regulation varies depending on
+  jurisdiction. Patents are not necessarily related to the license and so
+  should not be connected to the license framework.
+
+  Patent limitations within the ports tree have been removed and left to the
+  user or consumer to deal with their local legislation to determine if they
+  can use the software without legal restrictions.
+
 20201022:
 AUTHOR: bapt@FreeBSD.org
 
@@ -23,8 +34,8 @@ AUTHOR: bapt@FreeBSD.org
 AUTHOR: bapt@FreeBSD.org
 
   @shell has been rewritten in lua
-  It provide the exact same feature as the previous version but it is now
-  sandboxed ans is rootdir compliant (see pkg -r option)
+  It provides the exact same feature set as the previous version but it is now
+  sandboxed and rootdir compliant (see the pkg -r option).
 
 20201001:
 AUTHOR: manu@FreeBSD.org
@@ -791,7 +802,7 @@ AUTHOR: bapt@FreeBSD.org
   @preunexec <command>: execute the <command> during pre-deinstall scripts
   @postunexec <command>: execute the <command> during post-deinstall scripts
 
-  @exec does not specify when if should be executed and is now considered as
+  @exec does not specify when it should be executed and is now considered as
   deprecated.
 
 20150914:

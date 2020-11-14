@@ -806,7 +806,6 @@
     SUBDIR += py-python-arango
     SUBDIR += py-python-binary-memcached
     SUBDIR += py-python-memcached
-    SUBDIR += py-python-rrdtool
     SUBDIR += py-python-sql
     SUBDIR += py-python-swiftclient
     SUBDIR += py-qt5-sql
@@ -1033,6 +1032,7 @@
     SUBDIR += xapian-core12
     SUBDIR += xrootd
     SUBDIR += xtrabackup
+    SUBDIR += xtrabackup8
     SUBDIR += zabbix3-libzbxpgsql
 
 .include <bsd.port.subdir.mk>

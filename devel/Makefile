@@ -1527,7 +1527,6 @@
     SUBDIR += newtonsoft-json
     SUBDIR += nextpnr
     SUBDIR += nexus2-oss
-    SUBDIR += nimble
     SUBDIR += nini
     SUBDIR += ninja
     SUBDIR += nlohmann-json
@@ -4045,6 +4044,7 @@
     SUBDIR += py-aenum
     SUBDIR += py-aiofiles
     SUBDIR += py-aioice
+    SUBDIR += py-aioitertools
     SUBDIR += py-aiologger
     SUBDIR += py-aiorpcX
     SUBDIR += py-aiortc
@@ -4207,6 +4207,7 @@
     SUBDIR += py-botocore
     SUBDIR += py-bsd
     SUBDIR += py-btest
+    SUBDIR += py-build
     SUBDIR += py-buildbot
     SUBDIR += py-buildbot-console-view
     SUBDIR += py-buildbot-grid-view
@@ -4347,6 +4348,7 @@
     SUBDIR += py-distlib
     SUBDIR += py-distorm
     SUBDIR += py-distributed
+    SUBDIR += py-dj31-django-rq
     SUBDIR += py-django-rq
     SUBDIR += py-docker-py
     SUBDIR += py-dockerpty
@@ -4390,6 +4392,7 @@
     SUBDIR += py-fastprogress
     SUBDIR += py-fbprophet
     SUBDIR += py-filebytes
+    SUBDIR += py-filedepot
     SUBDIR += py-filemagic
     SUBDIR += py-first
     SUBDIR += py-five.globalrequest
@@ -4479,6 +4482,7 @@
     SUBDIR += py-gyp
     SUBDIR += py-hash_ring
     SUBDIR += py-heapdict
+    SUBDIR += py-hg-evolve
     SUBDIR += py-hglib
     SUBDIR += py-hgtools
     SUBDIR += py-holidays
@@ -4511,6 +4515,7 @@
     SUBDIR += py-ipaddr
     SUBDIR += py-ipdb
     SUBDIR += py-ipykernel5
+    SUBDIR += py-ipympl
     SUBDIR += py-ipyparallel
     SUBDIR += py-ipython_genutils
     SUBDIR += py-ipywidgets
@@ -4617,6 +4622,7 @@
     SUBDIR += py-marrow.util
     SUBDIR += py-marshmallow
     SUBDIR += py-matrix-angular-sdk
+    SUBDIR += py-maturin
     SUBDIR += py-mccabe
     SUBDIR += py-mdv
     SUBDIR += py-medikit
@@ -4635,6 +4641,7 @@
     SUBDIR += py-monty
     SUBDIR += py-more-itertools
     SUBDIR += py-more-itertools5
+    SUBDIR += py-moto
     SUBDIR += py-mox
     SUBDIR += py-mox3
     SUBDIR += py-msal
@@ -4806,6 +4813,7 @@
     SUBDIR += py-poyo
     SUBDIR += py-prance
     SUBDIR += py-pre-commit
+    SUBDIR += py-pre-commit-hooks
     SUBDIR += py-preshed
     SUBDIR += py-pretend
     SUBDIR += py-prettyprinter
@@ -5857,6 +5865,7 @@
     SUBDIR += rubygem-blockenspiel
     SUBDIR += rubygem-bones
     SUBDIR += rubygem-bootsnap
+    SUBDIR += rubygem-bootsnap14
     SUBDIR += rubygem-bootstrap_form
     SUBDIR += rubygem-bson
     SUBDIR += rubygem-buftok
@@ -6013,6 +6022,7 @@
     SUBDIR += rubygem-ffi-win32-extensions
     SUBDIR += rubygem-ffi-yajl
     SUBDIR += rubygem-ffi110
+    SUBDIR += rubygem-fiber-local
     SUBDIR += rubygem-file-tail
     SUBDIR += rubygem-filesize
     SUBDIR += rubygem-fileutils
@@ -6823,6 +6833,7 @@
     SUBDIR += xa65
     SUBDIR += xbyak
     SUBDIR += xc3sprog
+    SUBDIR += xcscope.el
     SUBDIR += xdg-user-dirs
     SUBDIR += xdg-utils
     SUBDIR += xdgpaths

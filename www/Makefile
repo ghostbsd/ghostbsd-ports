@@ -71,6 +71,7 @@
     SUBDIR += cgiwrap
     SUBDIR += checkbot
     SUBDIR += chems
+    SUBDIR += chisel
     SUBDIR += choqok
     SUBDIR += chpasswd
     SUBDIR += chrome-gnome-shell
@@ -412,6 +413,7 @@
     SUBDIR += mongoose
     SUBDIR += mongrel2
     SUBDIR += monolith
+    SUBDIR += moodle310
     SUBDIR += moodle35
     SUBDIR += moodle37
     SUBDIR += moodle38
@@ -464,6 +466,7 @@
     SUBDIR += npm
     SUBDIR += npm-node10
     SUBDIR += npm-node12
+    SUBDIR += npm-node14
     SUBDIR += nspluginwrapper
     SUBDIR += obhttpd
     SUBDIR += oneshot
@@ -1442,6 +1445,20 @@
     SUBDIR += py-cssmin
     SUBDIR += py-cssselect
     SUBDIR += py-cssutils
+    SUBDIR += py-dj31-django-auth-ldap
+    SUBDIR += py-dj31-django-cacheops
+    SUBDIR += py-dj31-django-cors-headers
+    SUBDIR += py-dj31-django-debug-toolbar
+    SUBDIR += py-dj31-django-filter
+    SUBDIR += py-dj31-django-js-asset
+    SUBDIR += py-dj31-django-mptt
+    SUBDIR += py-dj31-django-prometheus
+    SUBDIR += py-dj31-django-redis
+    SUBDIR += py-dj31-django-tables2
+    SUBDIR += py-dj31-django-taggit
+    SUBDIR += py-dj31-django-timezone-field
+    SUBDIR += py-dj31-djangorestframework
+    SUBDIR += py-dj31-drf-yasg
     SUBDIR += py-django
     SUBDIR += py-django-allauth
     SUBDIR += py-django-annoying
@@ -1712,6 +1729,7 @@
     SUBDIR += py-secure-cookie
     SUBDIR += py-selector
     SUBDIR += py-selenium
+    SUBDIR += py-sentinelhub
     SUBDIR += py-slimit
     SUBDIR += py-slumber
     SUBDIR += py-sockjs-tornado
@@ -2097,6 +2115,7 @@
     SUBDIR += samdruckerserver
     SUBDIR += sarg
     SUBDIR += scloader
+    SUBDIR += screego
     SUBDIR += script4rss
     SUBDIR += seahub
     SUBDIR += searx

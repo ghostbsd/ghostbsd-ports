@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME?=	gitlab-ce
-PORTVERSION?=	13.5.2
+PORTVERSION?=	13.5.3
 PORTREVISION?=	0
 CATEGORIES=	www devel
 
@@ -27,7 +27,7 @@ MY_DEPENDS=	git>=2.26:devel/git \
 	bash>0:shells/bash \
 	gtar>0:archivers/gtar \
 	rubygem-rails60>=6.0.3.3<6.1:www/rubygem-rails60 \
-	rubygem-bootsnap>=1.4.6<2.0:devel/rubygem-bootsnap \
+	rubygem-bootsnap14>=1.4.6<2.0:devel/rubygem-bootsnap14 \
 	rubygem-nakayoshi_fork>=0.0.4<0.1.0:devel/rubygem-nakayoshi_fork \
 	rubygem-responders-rails60>=3.0<4.0:www/rubygem-responders-rails60 \
 	rubygem-sprockets3>=3.7<3.8:devel/rubygem-sprockets3 \
@@ -264,7 +264,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT?=	gitlab-org
 GL_PROJECT?=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT?=	187cae1b32bdbb01d70ad09a341dfc372bb559b7
+GL_COMMIT?=	eaa194f15e614301d6a513b493bf7b17af65c58d
 
 USERS=	git
 GROUPS=	git

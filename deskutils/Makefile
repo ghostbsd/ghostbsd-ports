@@ -19,6 +19,7 @@
     SUBDIR += belcard
     SUBDIR += bigyear
     SUBDIR += bijiben
+    SUBDIR += birdtray
     SUBDIR += bitcollider
     SUBDIR += cairo-dock
     SUBDIR += cairo-dock-plugins
