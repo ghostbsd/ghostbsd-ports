@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if ! [ -f "/var/run/optimus.pid" ]; then
+  echo "Optimus service isn't running." && exit 1
+else
+  /usr/local/VirtualGL/bin/vglrun -ld /usr/local/lib/nvidia -d ":8" "$@"
+fi

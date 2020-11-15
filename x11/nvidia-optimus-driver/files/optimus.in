@@ -1,0 +1,124 @@
+#!/bin/sh
+
+# PROVIDE: optimus
+# BEFORE:  LOGIN
+
+. /etc/rc.subr
+
+name="optimus"
+rcvar=optimus_enable
+
+load_rc_config $name
+
+: ${optimus_enable="NO"}
+: ${optimus_modeset="YES"}
+: ${optimus_manage_kld="YES"}
+: ${optimus_screen="8"}
+: ${optimus_x_conf=/usr/local/etc/X11/optimus.x.conf}
+: ${optimus_x_flags="-sharevts -noreset"}
+
+pidfile="/var/run/${name}.pid"
+command="/usr/sbin/daemon"
+command_args="-P ${pidfile} /usr/local/bin/X -config ${optimus_x_conf} ${optimus_x_flags} :${optimus_screen}"
+start_cmd="${name}_start"
+stop_postcmd="${name}_poststop"
+
+get_bus_id () {
+  bus_id=$(pciconf -lv | grep NVIDIA -B1 | grep -o "@pci[0-9]*:[0-9]*:[0-9]*:[0:9]" | grep -o "[0-9]*:[0-9]*:[0:9]\$")
+}
+
+generate_optimus_conf () {
+  get_bus_id
+
+  optimus_conf="Section \"ServerLayout\"
+    Identifier \"Layout0\"
+    Option \"AutoAddDevices\" \"false\"
+    InputDevice \"fake\" \"CorePointer\"
+EndSection
+
+Section \"Device\"
+    Identifier \"Device1\"
+    Driver \"nvidia\"
+    VendorName \"NVIDIA Corporation\"
+    BusID \"${bus_id}\"
+    Option \"NoLogo\" \"true\"
+    Option \"UseEDID\" \"false\"
+    Option \"ConnectedMonitor\" \"DFP\"
+    Option \"AllowEmptyInitialConfiguration\" \"True\"
+EndSection
+
+Section \"InputDevice\"
+    Identifier \"fake\"
+    Driver \"\"
+EndSection
+
+Section \"Files\"
+    ModulePath \"/usr/local/lib/xorg/modules/extensions/.nvidia-optimus/\"
+    ModulePath \"/usr/local/lib/xorg/modules\"
+EndSection"
+}
+
+write_optimus_conf () {
+  generate_optimus_conf
+  echo "$optimus_conf" > $optimus_x_conf
+}
+
+optimus_start () {
+  echo "Starting ${name}"
+  local iter
+
+  if ! [ -f "$optimus_x_conf" ]; then
+    write_optimus_conf
+  fi
+
+  ( iter=0
+  while ! pgrep -f "^/usr/local/bin/X " > /dev/null; do
+    if [ ${iter} -eq 90 ]; then
+      break
+    fi
+    sleep 1
+    iter=$((${iter} + 1))
+  done
+
+  if checkyesno optimus_manage_kld; then
+
+    kldstat -q -n nvidia.ko
+    MODULE_LOADED=$?
+    if [ $MODULE_LOADED != "0" ]; then
+      kldload nvidia.ko
+    fi
+
+    if checkyesno optimus_modeset; then
+      kldstat -q -n nvidia-modeset.ko
+      MODULE_LOADED=$?
+      if [ $MODULE_LOADED != "0" ]; then
+        kldload nvidia-modeset.ko
+      fi
+    fi
+
+  fi
+
+  ${command} ${command_args} ) &
+}
+
+optimus_poststop () {
+  if checkyesno optimus_manage_kld; then
+
+    kldstat -q -n nvidia.ko
+    MODULE_LOADED=$?
+    if [ $MODULE_LOADED = "0" ]; then
+      kldunload nvidia.ko
+    fi
+
+    if checkyesno optimus_modeset; then
+      kldstat -q -n nvidia-modeset.ko
+      MODULE_LOADED=$?
+      if [ $MODULE_LOADED = "0" ]; then
+        kldunload nvidia-modeset.ko
+      fi
+    fi
+
+  fi
+}
+
+run_rc_command "$1"
