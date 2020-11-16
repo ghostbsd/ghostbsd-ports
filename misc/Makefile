@@ -397,7 +397,6 @@
     SUBDIR += py-powerline-status
     SUBDIR += py-progressbar
     SUBDIR += py-progressbar2
-    SUBDIR += py-progressbar231
     SUBDIR += py-pyfiglet
     SUBDIR += py-pykml
     SUBDIR += py-pyprind

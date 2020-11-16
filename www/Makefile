@@ -315,6 +315,7 @@
     SUBDIR += ljdeps
     SUBDIR += logswan
     SUBDIR += logtools
+    SUBDIR += ls-qpack
     SUBDIR += lua-resty-core
     SUBDIR += lua-resty-lrucache
     SUBDIR += luakit
@@ -1415,6 +1416,7 @@
     SUBDIR += py-aiohttp-wsgi
     SUBDIR += py-aiohttp2
     SUBDIR += py-aiohttp_cors
+    SUBDIR += py-aioquic
     SUBDIR += py-arxiv
     SUBDIR += py-asgiref
     SUBDIR += py-autobahn
@@ -1422,7 +1424,6 @@
     SUBDIR += py-azure-storage
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
-    SUBDIR += py-beautifulsoup32
     SUBDIR += py-beautifulsoup448
     SUBDIR += py-betamax
     SUBDIR += py-biscuits
@@ -1574,7 +1575,6 @@
     SUBDIR += py-draftjs_exporter
     SUBDIR += py-drf-yasg
     SUBDIR += py-dtflickr
-    SUBDIR += py-evernote
     SUBDIR += py-fake-useragent
     SUBDIR += py-falcon
     SUBDIR += py-feedgenerator
@@ -1653,6 +1653,7 @@
     SUBDIR += py-httpx
     SUBDIR += py-httpx013
     SUBDIR += py-hyper
+    SUBDIR += py-hypercorn
     SUBDIR += py-hyperframe
     SUBDIR += py-hyperlink
     SUBDIR += py-imdbpy
@@ -1668,7 +1669,6 @@
     SUBDIR += py-livereload
     SUBDIR += py-mechanicalsoup
     SUBDIR += py-mechanize
-    SUBDIR += py-meld3
     SUBDIR += py-multidict
     SUBDIR += py-mwoauth
     SUBDIR += py-nevow
@@ -1689,6 +1689,7 @@
     SUBDIR += py-py-restclient
     SUBDIR += py-pyjwt
     SUBDIR += py-pylons
+    SUBDIR += py-pylsqpack
     SUBDIR += py-pyocclient
     SUBDIR += py-pyramid
     SUBDIR += py-pyramid_rpc
@@ -1706,7 +1707,6 @@
     SUBDIR += py-qt5-websockets
     SUBDIR += py-rackspace-monitoring
     SUBDIR += py-recaptcha
-    SUBDIR += py-requestbuilder
     SUBDIR += py-requests
     SUBDIR += py-requests-aws4auth
     SUBDIR += py-requests-cache
@@ -2166,6 +2166,7 @@
     SUBDIR += templatelite
     SUBDIR += thirtybees
     SUBDIR += threejs
+    SUBDIR += threema-web
     SUBDIR += thttpd
     SUBDIR += thumbnail_index
     SUBDIR += thundercache
