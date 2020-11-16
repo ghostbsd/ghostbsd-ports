@@ -314,6 +314,7 @@
     SUBDIR += swaybg
     SUBDIR += swayidle
     SUBDIR += swaylock
+    SUBDIR += swaylock-effects
     SUBDIR += sxhkd
     SUBDIR += sxpc
     SUBDIR += tabbed
@@ -337,6 +338,7 @@
     SUBDIR += virtualgl
     SUBDIR += wallutils
     SUBDIR += waybar
+    SUBDIR += wayland-logout
     SUBDIR += wbar
     SUBDIR += wcm
     SUBDIR += wdisplays
