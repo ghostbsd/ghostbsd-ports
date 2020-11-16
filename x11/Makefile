@@ -533,5 +533,6 @@
     SUBDIR += yeahconsole
     SUBDIR += yelp
     SUBDIR += zenity
->>>>>>> freebsd/master
+
+.include <bsd.port.subdir.mk>
 
