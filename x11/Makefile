@@ -1,6 +1,8 @@
 # $FreeBSD$
 #
+
     COMMENT = Ports to support the X window system
+
     SUBDIR += 3ddesktop
     SUBDIR += 9box
     SUBDIR += 9menu
@@ -68,7 +70,16 @@
     SUBDIR += fpc-x11
     SUBDIR += fstobdf
     SUBDIR += gdm
+    SUBDIR += ghostbsd-cinnamon-live-settings
+    SUBDIR += ghostbsd-cinnamon-settings
+    SUBDIR += ghostbsd-common-settings
+    SUBDIR += ghostbsd-gnome-live-settings
+    SUBDIR += ghostbsd-gnome-settings
+    SUBDIR += ghostbsd-mate
+    SUBDIR += ghostbsd-mate-settings
     SUBDIR += ghostbsd-slick-greeter-settings
+    SUBDIR += ghostbsd-slim-theme
+    SUBDIR += ghostbsd-xfce-settings
     SUBDIR += glcapsviewer
     SUBDIR += gmrun
     SUBDIR += gnome-clipboard-daemon
@@ -309,13 +320,13 @@
     SUBDIR += sselp
     SUBDIR += stalonetray
     SUBDIR += startup-notification
+    SUBDIR += station-tweak
     SUBDIR += sterm
     SUBDIR += stjerm
     SUBDIR += swarp
     SUBDIR += swaybg
     SUBDIR += swayidle
     SUBDIR += swaylock
-    SUBDIR += swaylock-effects
     SUBDIR += sxhkd
     SUBDIR += sxpc
     SUBDIR += tabbed
@@ -339,7 +350,6 @@
     SUBDIR += virtualgl
     SUBDIR += wallutils
     SUBDIR += waybar
-    SUBDIR += wayland-logout
     SUBDIR += wbar
     SUBDIR += wcm
     SUBDIR += wdisplays
@@ -348,7 +358,6 @@
     SUBDIR += wf-shell
     SUBDIR += wl-clipboard
     SUBDIR += wlogout
-    SUBDIR += wlr-randr
     SUBDIR += wlrctl
     SUBDIR += wmappl
     SUBDIR += wmblob
@@ -365,7 +374,6 @@
     SUBDIR += wofi
     SUBDIR += workrave
     SUBDIR += wshowkeys
-    SUBDIR += wtype
     SUBDIR += x11perf
     SUBDIR += x3270
     SUBDIR += xantfarm
@@ -404,6 +412,7 @@
     SUBDIR += xcmsdb
     SUBDIR += xcoloredit
     SUBDIR += xcolors
+    SUBDIR += xconfig
     SUBDIR += xconsole
     SUBDIR += xcursorgen
     SUBDIR += xcut
@@ -538,4 +547,3 @@
     SUBDIR += zenity
 
 .include <bsd.port.subdir.mk>
-
