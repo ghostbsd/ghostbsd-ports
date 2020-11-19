@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	software-station
-PORTVERSION=	1.0
+PORTVERSION=	1.1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
