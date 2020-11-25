@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ghostbsd-icons
-PORTVERSION=	1.7
+PORTVERSION=	1.8
 CATEGORIES=	x11-themes
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
