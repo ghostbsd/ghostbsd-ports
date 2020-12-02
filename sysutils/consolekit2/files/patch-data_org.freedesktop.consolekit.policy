@@ -1,0 +1,102 @@
+--- data/org.freedesktop.consolekit.policy.orig	2020-12-01 20:46:17.629911000 -0400
++++ data/org.freedesktop.consolekit.policy	2020-12-01 20:50:41.276205000 -0400
+@@ -13,7 +13,7 @@
+     <description>Stop the system</description>
+     <message>System policy prevents stopping the system</message>
+     <defaults>
+-      <allow_inactive>no</allow_inactive>
++      <allow_inactive>yes</allow_inactive>
+       <allow_active>yes</allow_active>
+     </defaults>
+   </action>
+@@ -22,8 +22,8 @@
+     <description>Stop the system when multiple users are logged in</description>
+     <message>System policy prevents stopping the system when other users are logged in</message>
+     <defaults>
+-      <allow_inactive>no</allow_inactive>
+-      <allow_active>auth_admin_keep</allow_active>
++      <allow_inactive>yes</allow_inactive>
++      <allow_active>yes</allow_active>
+     </defaults>
+   </action>
+ 
+@@ -31,7 +31,7 @@
+     <description>Restart the system</description>
+     <message>System policy prevents restarting the system</message>
+     <defaults>
+-      <allow_inactive>no</allow_inactive>
++      <allow_inactive>yes</allow_inactive>
+       <allow_active>yes</allow_active>
+     </defaults>
+   </action>
+@@ -40,8 +40,8 @@
+     <description>Restart the system when multiple users are logged in</description>
+     <message>System policy prevents restarting the system when other users are logged in</message>
+     <defaults>
+-      <allow_inactive>no</allow_inactive>
+-      <allow_active>auth_admin_keep</allow_active>
++      <allow_inactive>yes</allow_inactive>
++      <allow_active>yes</allow_active>
+     </defaults>
+   </action>
+ 
+@@ -49,7 +49,7 @@
+     <description>Suspend the system</description>
+     <message>System policy prevents suspending the system</message>
+     <defaults>
+-      <allow_inactive>no</allow_inactive>
++      <allow_inactive>yes</allow_inactive>
+       <allow_active>yes</allow_active>
+     </defaults>
+   </action>
+@@ -58,8 +58,8 @@
+     <description>Suspend the system when multiple users are logged in</description>
+     <message>System policy prevents suspending the system when other users are logged in</message>
+     <defaults>
+-      <allow_inactive>no</allow_inactive>
+-      <allow_active>auth_admin_keep</allow_active>
++      <allow_inactive>yes</allow_inactive>
++      <allow_active>yes</allow_active>
+     </defaults>
+   </action>
+ 
+@@ -67,7 +67,7 @@
+     <description>Hibernate the system</description>
+     <message>System policy prevents hibernating the system</message>
+     <defaults>
+-      <allow_inactive>no</allow_inactive>
++      <allow_inactive>yes</allow_inactive>
+       <allow_active>yes</allow_active>
+     </defaults>
+   </action>
+@@ -76,8 +76,8 @@
+     <description>Hibernate the system when multiple users are logged in</description>
+     <message>System policy prevents hibernating the system when other users are logged in</message>
+     <defaults>
+-      <allow_inactive>no</allow_inactive>
+-      <allow_active>auth_admin_keep</allow_active>
++      <allow_inactive>yes</allow_inactive>
++      <allow_active>yes</allow_active>
+     </defaults>
+   </action>
+ 
+@@ -85,7 +85,7 @@
+     <description>Hybrid sleep the system (sleep + hibernate)</description>
+     <message>System policy prevents hybrid sleeping the system</message>
+     <defaults>
+-      <allow_inactive>no</allow_inactive>
++      <allow_inactive>yes</allow_inactive>
+       <allow_active>yes</allow_active>
+     </defaults>
+   </action>
+@@ -94,8 +94,8 @@
+     <description>Hybrid sleep the system (sleep + hibernate) when multiple users are logged in</description>
+     <message>System policy prevents hybrid sleeping the system when other users are logged in</message>
+     <defaults>
+-      <allow_inactive>no</allow_inactive>
+-      <allow_active>auth_admin_keep</allow_active>
++      <allow_inactive>yes</allow_inactive>
++      <allow_active>yes</allow_active>
+     </defaults>
+   </action>
+ </policyconfig>
