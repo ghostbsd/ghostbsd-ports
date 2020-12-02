@@ -667,6 +667,7 @@
     SUBDIR += fpc-fcl-passrc
     SUBDIR += fpc-fcl-pdf
     SUBDIR += fpc-fcl-registry
+    SUBDIR += fpc-fcl-report
     SUBDIR += fpc-fcl-res
     SUBDIR += fpc-fcl-sdo
     SUBDIR += fpc-fcl-sound
@@ -676,7 +677,9 @@
     SUBDIR += fpc-fppkg
     SUBDIR += fpc-fv
     SUBDIR += fpc-gdbint
+    SUBDIR += fpc-libmagic
     SUBDIR += fpc-newt
+    SUBDIR += fpc-odata
     SUBDIR += fpc-pthreads
     SUBDIR += fpc-regexpr
     SUBDIR += fpc-sdl
@@ -861,10 +864,10 @@
     SUBDIR += gputils
     SUBDIR += gradle
     SUBDIR += gradle-completion
-    SUBDIR += gradle4
     SUBDIR += gradle5
     SUBDIR += gradle62
     SUBDIR += grantlee5
+    SUBDIR += grcov
     SUBDIR += grpc
     SUBDIR += grv
     SUBDIR += gsettings-desktop-schemas
@@ -1194,6 +1197,7 @@
     SUBDIR += libhoard
     SUBDIR += libhtp
     SUBDIR += libhyve-remote
+    SUBDIR += libibuddy
     SUBDIR += libical
     SUBDIR += libindicator
     SUBDIR += libinotify
@@ -1329,6 +1333,7 @@
     SUBDIR += libunicode
     SUBDIR += libuninum
     SUBDIR += libunistring
+    SUBDIR += libunit
     SUBDIR += libunwind
     SUBDIR += libuutil
     SUBDIR += libuv
@@ -4076,7 +4081,6 @@
     SUBDIR += py-aspyct
     SUBDIR += py-astor
     SUBDIR += py-astroid
-    SUBDIR += py-astroid1
     SUBDIR += py-asttokens
     SUBDIR += py-astunparse
     SUBDIR += py-async_generator
@@ -4224,6 +4228,7 @@
     SUBDIR += py-cachy
     SUBDIR += py-canonicaljson
     SUBDIR += py-capstone
+    SUBDIR += py-case
     SUBDIR += py-castellan
     SUBDIR += py-castellan1
     SUBDIR += py-cbor
@@ -4910,6 +4915,7 @@
     SUBDIR += py-pytest-cache
     SUBDIR += py-pytest-capturelog
     SUBDIR += py-pytest-cov
+    SUBDIR += py-pytest-datadir
     SUBDIR += py-pytest-django
     SUBDIR += py-pytest-env
     SUBDIR += py-pytest-factoryboy
@@ -5048,6 +5054,7 @@
     SUBDIR += py-selectors2
     SUBDIR += py-semantic_version
     SUBDIR += py-semver
+    SUBDIR += py-sentry-sdk
     SUBDIR += py-serializable
     SUBDIR += py-serpent
     SUBDIR += py-setproctitle
@@ -5177,7 +5184,6 @@
     SUBDIR += py-urwidtrees
     SUBDIR += py-user_agents
     SUBDIR += py-userpath
-    SUBDIR += py-utils
     SUBDIR += py-uvloop
     SUBDIR += py-validators
     SUBDIR += py-validictory
@@ -5291,7 +5297,6 @@
     SUBDIR += pydbus-common
     SUBDIR += pygobject3-common
     SUBDIR += pylint
-    SUBDIR += pylint1
     SUBDIR += pyobfuscate
     SUBDIR += pyotherside-qt5
     SUBDIR += pyside2
@@ -5473,6 +5478,7 @@
     SUBDIR += rubygem-aws-sdk-applicationdiscoveryservice
     SUBDIR += rubygem-aws-sdk-applicationinsights
     SUBDIR += rubygem-aws-sdk-appmesh
+    SUBDIR += rubygem-aws-sdk-appregistry
     SUBDIR += rubygem-aws-sdk-appstream
     SUBDIR += rubygem-aws-sdk-appsync
     SUBDIR += rubygem-aws-sdk-athena
@@ -5619,7 +5625,9 @@
     SUBDIR += rubygem-aws-sdk-mobile
     SUBDIR += rubygem-aws-sdk-mq
     SUBDIR += rubygem-aws-sdk-mturk
+    SUBDIR += rubygem-aws-sdk-mwaa
     SUBDIR += rubygem-aws-sdk-neptune
+    SUBDIR += rubygem-aws-sdk-networkfirewall
     SUBDIR += rubygem-aws-sdk-networkmanager
     SUBDIR += rubygem-aws-sdk-opsworks
     SUBDIR += rubygem-aws-sdk-opsworkscm
@@ -6105,7 +6113,9 @@
     SUBDIR += rubygem-grape140
     SUBDIR += rubygem-grape_logging
     SUBDIR += rubygem-graphiql-rails
+    SUBDIR += rubygem-graphlient
     SUBDIR += rubygem-graphql
+    SUBDIR += rubygem-graphql-client
     SUBDIR += rubygem-graphql-docs
     SUBDIR += rubygem-grit
     SUBDIR += rubygem-grpc-google-iam-v1
@@ -6809,6 +6819,7 @@
     SUBDIR += vera++
     SUBDIR += vexcl
     SUBDIR += viewvc
+    SUBDIR += viewvc-devel
     SUBDIR += violet
     SUBDIR += vitables
     SUBDIR += volk

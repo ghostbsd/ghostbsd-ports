@@ -50,7 +50,6 @@
     SUBDIR += ciscoconf
     SUBDIR += clog
     SUBDIR += cnagios
-    SUBDIR += cnagios4
     SUBDIR += collectd5
     SUBDIR += confregdecode
     SUBDIR += coovachilli
@@ -393,11 +392,6 @@
     SUBDIR += zabbix4-java
     SUBDIR += zabbix4-proxy
     SUBDIR += zabbix4-server
-    SUBDIR += zabbix44-agent
-    SUBDIR += zabbix44-frontend
-    SUBDIR += zabbix44-java
-    SUBDIR += zabbix44-proxy
-    SUBDIR += zabbix44-server
     SUBDIR += zabbix5-agent
     SUBDIR += zabbix5-frontend
     SUBDIR += zabbix5-java

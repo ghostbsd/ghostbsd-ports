@@ -82,6 +82,7 @@
     SUBDIR += c2html
     SUBDIR += c2man
     SUBDIR += ca-aspell
+    SUBDIR += cast2gif
     SUBDIR += castxml
     SUBDIR += catdoc
     SUBDIR += cdif
@@ -1297,6 +1298,7 @@
     SUBDIR += py-jtextfsm
     SUBDIR += py-junit-xml
     SUBDIR += py-langdetect
+    SUBDIR += py-langid
     SUBDIR += py-laserhammer
     SUBDIR += py-libxml2
     SUBDIR += py-license-expression
@@ -1372,6 +1374,7 @@
     SUBDIR += py-qt5-xml
     SUBDIR += py-qt5-xmlpatterns
     SUBDIR += py-rdflib
+    SUBDIR += py-readchar
     SUBDIR += py-recommonmark
     SUBDIR += py-regex
     SUBDIR += py-reno

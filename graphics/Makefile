@@ -55,6 +55,7 @@
     SUBDIR += apngasm
     SUBDIR += apngdis
     SUBDIR += argyllcms
+    SUBDIR += art
     SUBDIR += asciio
     SUBDIR += aseprite
     SUBDIR += atril
@@ -198,6 +199,7 @@
     SUBDIR += fpc-proj4
     SUBDIR += fpc-rsvg
     SUBDIR += fpc-svgalib
+    SUBDIR += fpc-vcl-compat
     SUBDIR += fracplanet
     SUBDIR += fractgen
     SUBDIR += fraqtive
@@ -236,6 +238,7 @@
     SUBDIR += giflib
     SUBDIR += gifmerge
     SUBDIR += gifsicle
+    SUBDIR += gifski
     SUBDIR += giftool
     SUBDIR += gimageview
     SUBDIR += gimmage
@@ -374,8 +377,8 @@
     SUBDIR += jp
     SUBDIR += jp2a
     SUBDIR += jpatch
-    SUBDIR += jpeg
     SUBDIR += jpeg-turbo
+    SUBDIR += jpeg-xl
     SUBDIR += jpeginfo
     SUBDIR += jpegoptim
     SUBDIR += jpgtn
@@ -803,6 +806,7 @@
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
     SUBDIR += py-actdiag
+    SUBDIR += py-beziers
     SUBDIR += py-blockdiag
     SUBDIR += py-blockdiagcontrib-cisco
     SUBDIR += py-cairo

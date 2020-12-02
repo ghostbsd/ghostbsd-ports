@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	rust
-PORTVERSION=	1.47.0
+PORTVERSION=	1.48.0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:rust \
 		LOCAL/mikael:armbase \
@@ -28,6 +28,7 @@ ONLY_FOR_ARCHS_REASON=	untested on other archs
 
 BUILD_DEPENDS=	cmake:devel/cmake \
 		gmake:devel/gmake \
+		ninja:devel/ninja \
 		rust>=${PORTVERSION}:lang/rust
 
 FLAVORS=	aarch64 amd64 armv6 armv7 i386 powerpc64_elfv1 powerpc64_elfv2 powerpc64le
@@ -118,11 +119,11 @@ post-patch:
 		${_CARGO_VENDOR_DIR}/*/.cargo-checksum.json
 .if ${FLAVOR} == powerpc64_elfv1
 	@${REINPLACE_CMD} -e 's,"c++","stdc++",g' \
-		${WRKSRC}/src/librustc_llvm/build.rs
+		${WRKSRC}/compiler/rustc_llvm/build.rs
 .endif
 	@${REINPLACE_CMD} -e 's,%CC%,${CC},g' \
 		-e 's,%WRKDIR%,${WRKDIR},g' \
-		${WRKSRC}/src/librustc_llvm/build.rs \
+		${WRKSRC}/compiler/rustc_llvm/build.rs \
 		${WRKSRC}/src/bootstrap/native.rs
 
 do-configure:
@@ -213,7 +214,7 @@ do-build:
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/rust-bootstrap/${FLAVOR}
-	${INSTALL_DATA} ${WRKSRC}/build/dist/*-unknown-${OPSYS:tl}${EXTRACT_SUFX} \
+	${INSTALL_DATA} ${WRKSRC}/build/dist/*-${_RUST_ARCH_${FLAVOR}:U${FLAVOR}}-unknown-${OPSYS:tl}${EXTRACT_SUFX} \
 		${STAGEDIR}${PREFIX}/rust-bootstrap/${FLAVOR}
 .if ${FLAVOR:Mpowerpc64_*}
 	@cd ${STAGEDIR}${PREFIX}/rust-bootstrap/${FLAVOR} && for f in *${EXTRACT_SUFX}; do \

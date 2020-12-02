@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gprolog
-PORTVERSION=	1.4.4
-PORTREVISION=	9
+PORTVERSION=	1.4.5
 CATEGORIES=	lang
 MASTER_SITES=	http://www.gprolog.org/
 
@@ -12,17 +11,12 @@ COMMENT=	Free Prolog compiler
 
 LICENSE=	GPLv2
 
-BROKEN=		fails to build
-DEPRECATED=		Abandonware upstream (more than five years), fails in various ways with remotely recent compilers
-# Bumped EXPIRATION date due to new release
-# and efforts to get it in: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=231393
-EXPIRATION_DATE=	2019-08-31
-
-ONLY_FOR_ARCHS=	i386 amd64
+ONLY_FOR_ARCHS=	amd64 i386
 
 USES=		gmake
-USE_GCC=	any
-CFLAGS+=	-O3 # gcc5/gcc6 + -O2 = pl2wam hangs
+CFLAGS+=	-DUSE_LOCKS=1 -DUSE_RECURSIVE_LOCKS=1 -DUSE_SPIN_LOCKS=0 \
+		-DMMAP_CLEARS=0 -DNO_MACHINE_REG_FOR_REG_BANK
+
 PLIST_SUB=	GPROLOG_VER=${PORTVERSION}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-c-flags="${CFLAGS}" \
@@ -32,22 +26,12 @@ CONFIGURE_TARGET=	${ARCH:S/amd64/x86_64/}-portbld-${OPSYS:tl}${OSREL}
 MAKE_JOBS_UNSAFE=	yes
 WRKSRC_SUBDIR=	src
 
-BROKEN=     force skip
-
 OPTIONS_DEFINE=		FD DOCS EXAMPLES
 OPTIONS_DEFAULT=	FD
 OPTIONS_SUB=		yes
 
 FD_DESC=		Enable finite domain constraint solver
 FD_CONFIGURE_OFF=	--disable-fd-solver
-
-.include <bsd.port.options.mk>
-
-# Disable registers on i386. This fixes build with gcc6.
-# See: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=852008
-.if ${ARCH} == i386
-CONFIGURE_ARGS+=		--disable-regs
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} \

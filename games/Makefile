@@ -237,6 +237,7 @@
     SUBDIR += epiphany-game
     SUBDIR += etracer
     SUBDIR += euchre
+    SUBDIR += eureka
     SUBDIR += evilfinder
     SUBDIR += evq3
     SUBDIR += excido
@@ -516,6 +517,7 @@
     SUBDIR += libretro-paralleln64
     SUBDIR += libretro-pcsx_rearmed
     SUBDIR += libretro-picodrive
+    SUBDIR += libretro-play
     SUBDIR += libretro-prboom
     SUBDIR += libretro-prosystem
     SUBDIR += libretro-quicknes

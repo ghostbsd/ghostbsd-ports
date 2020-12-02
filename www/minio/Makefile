@@ -13,8 +13,8 @@ LICENSE=	APACHE20
 USES=		compiler go:modules
 
 USE_GITHUB=	yes
-GHTAG=		RELEASE.2020-11-06T23-17-07Z
-COMMIT_ID=	54120107ce6fdbb4c34e9b1901f57a19a3c40e2c
+GHTAG=		RELEASE.2020-11-19T23-48-16Z
+COMMIT_ID=	f794fe79e3a756a823d30cd3c889dfa4326a3014
 
 GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		Azure:azure-pipeline-go:v0.2.2:azure_azure_pipeline_go/vendor/github.com/Azure/azure-pipeline-go \
@@ -24,7 +24,7 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		StackExchange:wmi:cbe66965904d:stackexchange_wmi/vendor/github.com/StackExchange/wmi \
 		alecthomas:participle:v0.2.1:alecthomas_participle/vendor/github.com/alecthomas/participle \
 		apache:thrift:v0.13.0:apache_thrift/vendor/git.apache.org/thrift.git \
-		bcicen:jstream:16c1f8af81c2:bcicen_jstream/vendor/github.com/bcicen/jstream \
+		bcicen:jstream:v1.0.1:bcicen_jstream/vendor/github.com/bcicen/jstream \
 		beevik:ntp:v0.3.0:beevik_ntp/vendor/github.com/beevik/ntp \
 		beorn7:perks:v1.0.0:beorn7_perks/vendor/github.com/beorn7/perks \
 		census-instrumentation:opencensus-go:v0.22.3:census_instrumentation_opencensus_go/vendor/go.opencensus.io \
@@ -155,8 +155,7 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		tidwall:match:v1.0.1:tidwall_match/vendor/github.com/tidwall/match \
 		tidwall:pretty:v1.0.0:tidwall_pretty/vendor/github.com/tidwall/pretty \
 		tidwall:sjson:v1.0.4:tidwall_sjson/vendor/github.com/tidwall/sjson \
-		tinylib:msgp:7dcb1f1e923b:tinylib_msgp/vendor/github.com/tinylib/msgp \
-		ttacon:chalk:22c06c80ed31:ttacon_chalk/vendor/github.com/ttacon/chalk \
+		tinylib:msgp:v1.1.3:tinylib_msgp/vendor/github.com/tinylib/msgp \
 		uber-go:atomic:v1.6.0:uber_go_atomic/vendor/go.uber.org/atomic \
 		uber-go:multierr:v1.5.0:uber_go_multierr/vendor/go.uber.org/multierr \
 		uber-go:zap:v1.14.1:uber_go_zap/vendor/go.uber.org/zap \

@@ -63,6 +63,7 @@
     SUBDIR += atf-rk3328
     SUBDIR += atf-rk3399
     SUBDIR += atf-sun50i_a64
+    SUBDIR += atf-sun50i_h6
     SUBDIR += atitvout
     SUBDIR += atop
     SUBDIR += auto-admin
@@ -158,6 +159,7 @@
     SUBDIR += cfengine-masterfiles314
     SUBDIR += cfengine-masterfiles315
     SUBDIR += cfengine-masterfiles316
+    SUBDIR += cfengine-masterfiles317
     SUBDIR += cfengine310
     SUBDIR += cfengine311
     SUBDIR += cfengine312
@@ -165,6 +167,7 @@
     SUBDIR += cfengine314
     SUBDIR += cfengine315
     SUBDIR += cfengine316
+    SUBDIR += cfengine317
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chgrep
@@ -1283,6 +1286,7 @@
     SUBDIR += stow
     SUBDIR += stowES
     SUBDIR += stress
+    SUBDIR += stressdisk
     SUBDIR += superiotool
     SUBDIR += swapd
     SUBDIR += swapexd
@@ -1396,6 +1400,7 @@
     SUBDIR += u-boot-orangepi-zero
     SUBDIR += u-boot-pandaboard
     SUBDIR += u-boot-pcduino3
+    SUBDIR += u-boot-pine-h64
     SUBDIR += u-boot-pine64
     SUBDIR += u-boot-pine64-lts
     SUBDIR += u-boot-pinebook

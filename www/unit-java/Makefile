@@ -42,14 +42,13 @@ COMMENT=	Java module for NGINX Unit
 RUN_DEPENDS=	unitd:www/unit
 
 UNIT_MODNAME=	java${JAVA_PORT_VERSION}
-CLASSGRAPH_VERSION=	4.4.11
-ECJ_VERSION=	3.13.102
-JETTY_VERSION=	9.4.12.v20180830
-TOMCAT_VERSION=	9.0.13
-UNIT_VERSION=	1.20.0
+CLASSGRAPH_VERSION=	4.8.90
+ECJ_VERSION=	3.23.0
+JETTY_VERSION=	9.4.33.v20201020
+TOMCAT_VERSION=	9.0.39
+UNIT_VERSION=	1.21.0
 
-PLIST_FILES=	libexec/unit/modules/${UNIT_MODNAME}.unit.so \
-		%%JAVAJARDIR%%/classgraph-${CLASSGRAPH_VERSION}.jar \
+PLIST_FILES=	%%JAVAJARDIR%%/classgraph-${CLASSGRAPH_VERSION}.jar \
 		%%JAVAJARDIR%%/ecj-${ECJ_VERSION}.jar \
 		%%JAVAJARDIR%%/jetty-http-${JETTY_VERSION}.jar \
 		%%JAVAJARDIR%%/jetty-server-${JETTY_VERSION}.jar \
@@ -62,12 +61,14 @@ PLIST_FILES=	libexec/unit/modules/${UNIT_MODNAME}.unit.so \
 		%%JAVAJARDIR%%/tomcat-jsp-api-${TOMCAT_VERSION}.jar \
 		%%JAVAJARDIR%%/tomcat-juli-${TOMCAT_VERSION}.jar \
 		%%JAVAJARDIR%%/tomcat-servlet-api-${TOMCAT_VERSION}.jar \
-		%%JAVAJARDIR%%/tomcat-util-scan-${TOMCAT_VERSION}.jar \
 		%%JAVAJARDIR%%/tomcat-util-${TOMCAT_VERSION}.jar \
-		%%JAVAJARDIR%%/websocket-api-java${JAVA_PORT_VERSION}-${UNIT_VERSION}.jar
+		%%JAVAJARDIR%%/tomcat-util-scan-${TOMCAT_VERSION}.jar \
+		%%JAVAJARDIR%%/websocket-api-java${JAVA_PORT_VERSION}-${UNIT_VERSION}.jar \
+		libexec/unit/modules/${UNIT_MODNAME}.unit.so
 
 USE_JAVA=	yes
 JAVA_VERSION=	8+
+#JAVA_VERSION=	8 11 12 13 14 15 
 
 USE_RC_SUBR?=	# reset to empty
 

@@ -28,11 +28,11 @@
 %%PORTDOCS%%%%DOCSDIR%%/core-functionality/vlans.md
 %%PORTDOCS%%%%DOCSDIR%%/development/application-registry.md
 %%PORTDOCS%%%%DOCSDIR%%/development/extending-models.md
+%%PORTDOCS%%%%DOCSDIR%%/development/getting-started.md
 %%PORTDOCS%%%%DOCSDIR%%/development/index.md
 %%PORTDOCS%%%%DOCSDIR%%/development/release-checklist.md
 %%PORTDOCS%%%%DOCSDIR%%/development/style-guide.md
 %%PORTDOCS%%%%DOCSDIR%%/development/user-preferences.md
-%%PORTDOCS%%%%DOCSDIR%%/development/utility-views.md
 %%PORTDOCS%%%%DOCSDIR%%/extra.css
 %%PORTDOCS%%%%DOCSDIR%%/index.md
 %%PORTDOCS%%%%DOCSDIR%%/installation/1-postgresql.md
@@ -135,7 +135,11 @@
 %%PORTDOCS%%%%DOCSDIR%%/rest-api/filtering.md
 %%PORTDOCS%%%%DOCSDIR%%/rest-api/overview.md
 %%PORTDOCS%%%%DOCSDIR%%/rest-api/working-with-secrets.md
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/apache.conf
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/gunicorn.py
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/netbox_rq.sample
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/netboxrc.sample
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/nginx.conf
 %%DATADIR%%/circuits/__init__.py
 %%DATADIR%%/circuits/api/__init__.py
 %%DATADIR%%/circuits/api/nested_serializers.py

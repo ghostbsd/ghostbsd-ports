@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	openssh
-DISTVERSION=	8.2p1
-PORTREVISION=	2
+DISTVERSION=	8.4p1
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	security
 MASTER_SITES=	OPENBSD/OpenSSH/portable
@@ -19,12 +19,13 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 CONFLICTS?=		openssh-3.* ssh-1.* ssh2-3.* openssh-portable-devel-*
 
-USES=			alias autoreconf ncurses ssl
+USES=			alias autoreconf compiler:c11 localbase ncurses \
+			pkgconfig ssl
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV=		ac_cv_func_strnvis=no
-CONFIGURE_ARGS=		--prefix=${PREFIX} --with-md5-passwords \
-			--without-zlib-version-check --with-ssl-engine \
-			--with-mantype=man
+CONFIGURE_ARGS=		--prefix=${PREFIX} \
+			--with-ssl-engine \
+			--with-mantype=man \
+			--with-Werror
 
 ETCOLD=			${PREFIX}/etc
 
@@ -40,8 +41,8 @@ gssapi_PKGNAMESUFFIX=		-portable-gssapi
 
 OPTIONS_DEFINE=		DOCS PAM TCP_WRAPPERS LIBEDIT BSM \
 			HPN KERB_GSSAPI \
-			LDNS NONECIPHER XMSS
-OPTIONS_DEFAULT=	LIBEDIT PAM TCP_WRAPPERS LDNS
+			LDNS NONECIPHER XMSS FIDO_U2F BLACKLISTD
+OPTIONS_DEFAULT=	LIBEDIT PAM TCP_WRAPPERS LDNS FIDO_U2F
 .if ${FLAVOR:U} == hpn
 OPTIONS_DEFAULT+=	HPN NONECIPHER
 .endif
@@ -60,6 +61,8 @@ HEIMDAL_BASE_DESC=	Heimdal Kerberos (base)
 MIT_DESC=		MIT Kerberos (security/krb5)
 NONECIPHER_DESC=	NONE Cipher support
 XMSS_DESC=		XMSS key support (experimental)
+FIDO_U2F_DESC=		FIDO/U2F support (security/libfido2)
+BLACKLISTD_DESC=	FreeBSD blacklistd(8) support
 
 OPTIONS_SUB=		yes
 
@@ -68,8 +71,6 @@ TCP_WRAPPERS_EXTRA_PATCHES=${FILESDIR}/extra-patch-tcpwrappers
 LDNS_CONFIGURE_WITH=	ldns=${LOCALBASE}
 LDNS_LIB_DEPENDS=	libldns.so:dns/ldns
 LDNS_EXTRA_PATCHES=	${FILESDIR}/extra-patch-ldns
-LDNS_CFLAGS=		-I${LOCALBASE}/include
-LDNS_CONFIGURE_ON=	--with-ldflags='-L${LOCALBASE}/lib'
 
 HPN_CONFIGURE_WITH=		hpn
 NONECIPHER_CONFIGURE_WITH=	nonecipher
@@ -83,6 +84,14 @@ TCP_WRAPPERS_CONFIGURE_WITH=	tcp-wrappers
 LIBEDIT_CONFIGURE_WITH=	libedit
 LIBEDIT_USES=		libedit
 BSM_CONFIGURE_ON=	--with-audit=bsm
+
+FIDO_U2F_LIB_DEPENDS=	libfido2.so:security/libfido2
+FIDO_U2F_CONFIGURE_ON=	--with-security-key-builtin
+FIDO_U2F_CONFIGURE_OFF=	--disable-security-key
+# Until https://reviews.freebsd.org/D27289 is committed
+FIDO_U2F_EXTRA_PATCHES=	${FILESDIR}/extra-patch-libfido2-configure.ac
+
+BLACKLISTD_EXTRA_PATCHES=	${FILESDIR}/extra-patch-blacklistd
 
 ETCDIR?=		${PREFIX}/etc/ssh
 
@@ -99,13 +108,20 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-hpn-gss-glue
 .  endif
 # - See https://sources.debian.org/data/main/o/openssh/ for which subdir to
 # pull from.
-GSSAPI_DEBIAN_SUBDIR=	${DISTVERSION}-4
+GSSAPI_DEBIAN_SUBDIR=	${DISTVERSION}-2
 # - Debian does not use a versioned filename so we trick fetch to make one for
 # us with the ?<anything>=/ trick.
 PATCH_SITES+=	https://sources.debian.org/data/main/o/openssh/1:${GSSAPI_DEBIAN_SUBDIR}/debian/patches/gssapi.patch?dummy=/:gsskex
 # Bump this when updating the patch location
-GSSAPI_UPDATE_DATE=	20190719
+GSSAPI_UPDATE_DATE=	20200607
 PATCHFILES+=	openssh-${DISTVERSION}-gsskex-all-20141021-debian-rh-${GSSAPI_UPDATE_DATE}.patch:-p1:gsskex
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-gssapi-sshconnect2.c
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-gssapi-kexgssc.c
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-gssapi-kexgsss.c
+.endif
+
+.if ${PORT_OPTIONS:MBLACKLISTD}
+CONFIGURE_LIBS+=	-lblacklist
 .endif
 
 # https://www.psc.edu/hpn-ssh https://github.com/rapier1/openssh-portable/tree/hpn-openssl1.1-7_7_P1
@@ -121,8 +137,6 @@ EXTRA_PATCHES+=		${FILESDIR}/extra-patch-hpn:-p2
 # Apply compatibility patch
 EXTRA_PATCHES+=		${FILESDIR}/extra-patch-hpn-compat
 .endif
-
-CONFIGURE_LIBS+=	-lutil
 
 CONFIGURE_ARGS+=	--disable-utmp --disable-wtmp --disable-wtmpx --without-lastlog
 
@@ -173,13 +187,13 @@ CONFIGURE_ARGS+=	--with-xauth=${LOCALBASE}/bin/xauth
 RC_SCRIPT_NAME=		openssh
 VERSION_ADDENDUM_DEFAULT?=	${OPSYS}-${PKGNAME}
 
+CFLAGS+=	${CFLAGS_${CHOSEN_COMPILER_TYPE}}
+CFLAGS_gcc=	-Wno-stringop-truncation
+
 post-patch:
-	@${REINPLACE_CMD} -e 's|-ldes|-lcrypto|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} \
 	    -e 's|install: \(.*\) host-key check-config|install: \1|g' \
 	    ${WRKSRC}/Makefile.in
-	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${LOCALBASE}|' \
-		-e 's|%%RC_SCRIPT_NAME%%|${RC_SCRIPT_NAME}|' ${WRKSRC}/sshd.8
 	@${REINPLACE_CMD} \
 	    -e 's|\(VersionAddendum\) none|\1 ${VERSION_ADDENDUM_DEFAULT}|' \
 	    ${WRKSRC}/sshd_config
@@ -191,6 +205,9 @@ post-patch:
 
 post-configure-XMSS-on:
 	@${ECHO_CMD} "#define WITH_XMSS 1" >> ${WRKSRC}/config.h
+
+post-configure-BLACKLISTD-on:
+	@${ECHO_CMD} "#define USE_BLACKLIST 1" >> ${WRKSRC}/config.h
 
 post-install:
 	${MV} ${STAGEDIR}${ETCDIR}/moduli \
@@ -206,10 +223,11 @@ post-install:
 
 test: build
 	cd ${WRKSRC} && ${SETENV} -i \
-		OBJ=${WRKDIR} ${MAKE_ENV} \
+		OBJ=${WRKDIR} ${MAKE_ENV:NHOME=*} \
 		TEST_SHELL=${SH} \
 		SUDO="${SUDO}" \
 		LOGNAME="${LOGNAME}" \
+		HOME="${HOME}" \
 		TEST_SSH_TRACE=yes \
 		PATH=${WRKSRC}:${PREFIX}/bin:${PREFIX}/sbin:${PATH} \
 		${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} tests
