@@ -48,7 +48,6 @@
 %%LINUX32%%%%LINUXBASE%%/usr/lib/libnvidia-encode.so
 %%LINUX32%%%%LINUXBASE%%/usr/lib/libnvidia-encode.so.1
 %%LINUX32%%%%LINUXBASE%%/usr/lib/libnvidia-encode.so.%%SHLIB_VERSION%%
-%%LINUX32%%%%LINUXBASE%%/usr/lib/libnvidia-fatbinaryloader.so.%%SHLIB_VERSION%%
 %%LINUX32%%%%LINUXBASE%%/usr/lib/libnvidia-fbc.so
 %%LINUX32%%%%LINUXBASE%%/usr/lib/libnvidia-fbc.so.1
 %%LINUX32%%%%LINUXBASE%%/usr/lib/libnvidia-fbc.so.%%SHLIB_VERSION%%
@@ -113,13 +112,10 @@
 %%LINUXBASE%%%%LINUX_LIBDIR%%/libnvidia-cfg.so.1
 %%LINUXBASE%%%%LINUX_LIBDIR%%/libnvidia-cfg.so.%%SHLIB_VERSION%%
 %%LINUXBASE%%%%LINUX_LIBDIR%%/libnvidia-compiler.so.%%SHLIB_VERSION%%
-%%LINUXBASE%%%%LINUX_LIBDIR%%/libnvidia-egl-wayland.so.1
-%%LINUXBASE%%%%LINUX_LIBDIR%%/libnvidia-egl-wayland.so.X
 %%LINUXBASE%%%%LINUX_LIBDIR%%/libnvidia-eglcore.so.%%SHLIB_VERSION%%
 %%LINUXBASE%%%%LINUX_LIBDIR%%/libnvidia-encode.so
 %%LINUXBASE%%%%LINUX_LIBDIR%%/libnvidia-encode.so.1
 %%LINUXBASE%%%%LINUX_LIBDIR%%/libnvidia-encode.so.%%SHLIB_VERSION%%
-%%LINUXBASE%%%%LINUX_LIBDIR%%/libnvidia-fatbinaryloader.so.%%SHLIB_VERSION%%
 %%LINUXBASE%%%%LINUX_LIBDIR%%/libnvidia-fbc.so
 %%LINUXBASE%%%%LINUX_LIBDIR%%/libnvidia-fbc.so.1
 %%LINUXBASE%%%%LINUX_LIBDIR%%/libnvidia-fbc.so.%%SHLIB_VERSION%%
@@ -144,7 +140,6 @@
 %%LINUXBASE%%%%LINUX_LIBDIR%%/libvdpau_nvidia.so.%%SHLIB_VERSION%%
 %%LINUXBASE%%%%LINUX_LIBDIR%%/tls/libnvidia-tls.so.%%SHLIB_VERSION%%
 %%LINUXBASE%%%%LINUX_LIBDIR%%/vdpau/libvdpau_nvidia.so.1
-%%LINUXBASE%%/usr/share/egl/egl_external_platform.d/10_nvidia_wayland.json
 %%LINUXBASE%%/usr/share/glvnd/egl_vendor.d/10_nvidia.json
 %%LINUXBASE%%/usr/share/man/man1/nvidia-cuda-mps-control.1.gz
 %%LINUXBASE%%/usr/share/man/man1/nvidia-persistenced.1.gz

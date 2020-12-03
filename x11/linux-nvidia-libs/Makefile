@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	nvidia-libs
-DISTVERSION?=	440.100
+DISTVERSION?=	455.38
 # Always try to set PORTREVISION as it can be overridden by the slave ports
 PORTREVISION?=	0
 CATEGORIES=	x11 linux
@@ -94,22 +94,33 @@ PLIST_RE+=	'\,${LINUXBASE}.*libEGL_nvidia\.so\.${PORTVERSION},d'
 PLIST_RE+=	'\,${LINUXBASE}.*libEGL_nvidia\.so,d'
 .endif
 .if ${NVVERSION} >= 361.016
+.if ${NVVERSION} <= 455.37
 LINUX_LIBS+=	libGLESv1_CM_nvidia.so.${PORTVERSION} \
+		libGLESv2_nvidia.so.${PORTVERSION} \
+		libGLX_nvidia.so.${PORTVERSION} \
+		libnvidia-ptxjitcompiler.so.${PORTVERSION}
+LINUX32_LIBS+=	libGLESv1_CM_nvidia.so.${PORTVERSION} \
+		libGLESv2_nvidia.so.${PORTVERSION} \
+		libGLX_nvidia.so.${PORTVERSION} \
+		libnvidia-ptxjitcompiler.so.${PORTVERSION}
+.else
+		LINUX_LIBS+=	libGLESv1_CM_nvidia.so.${PORTVERSION} \
 		libGLESv2_nvidia.so.${PORTVERSION} \
 		libGLX_nvidia.so.${PORTVERSION} \
 		libnvidia-fatbinaryloader.so.${PORTVERSION} \
 		libnvidia-ptxjitcompiler.so.${PORTVERSION}
+LINUX32_LIBS+=	libGLESv1_CM_nvidia.so.${PORTVERSION} \
+		libGLESv2_nvidia.so.${PORTVERSION} \
+		libGLX_nvidia.so.${PORTVERSION} \
+		libnvidia-fatbinaryloader.so.${PORTVERSION} \
+		libnvidia-ptxjitcompiler.so.${PORTVERSION}
+.endif
 LINUX_LINKS+=	libGLESv1_CM_nvidia.so.${PORTVERSION} libGLESv1_CM_nvidia.so.1 \
 		libGLESv2_nvidia.so.${PORTVERSION} libGLESv2_nvidia.so.2 \
 		libGLX_nvidia.so.${PORTVERSION} libGLX_nvidia.so.0 \
 		libGLX_nvidia.so.${PORTVERSION} libGLX_indirect.so.0 \
 		libnvidia-ptxjitcompiler.so.${PORTVERSION} libnvidia-ptxjitcompiler.so.1 \
 		libnvidia-ptxjitcompiler.so.${PORTVERSION} libnvidia-ptxjitcompiler.so
-LINUX32_LIBS+=	libGLESv1_CM_nvidia.so.${PORTVERSION} \
-		libGLESv2_nvidia.so.${PORTVERSION} \
-		libGLX_nvidia.so.${PORTVERSION} \
-		libnvidia-fatbinaryloader.so.${PORTVERSION} \
-		libnvidia-ptxjitcompiler.so.${PORTVERSION}
 LINUX32_LINKS+=	libGLESv1_CM_nvidia.so.${PORTVERSION} libGLESv1_CM_nvidia.so.1 \
 		libGLESv2_nvidia.so.${PORTVERSION} libGLESv2_nvidia.so.2 \
 		libGLX_nvidia.so.${PORTVERSION} libGLX_nvidia.so.0 \
@@ -122,7 +133,9 @@ PLIST_RE+=	'\,${LINUXBASE}.*libGLESv(1_CM|2)_nvidia\.so,d' \
 		'\,${LINUXBASE}.*libnvidia-fatbinaryloader\.so,d' \
 		'\,${LINUXBASE}.*libnvidia-ptxjitcompiler\.so,d'
 .endif
-.if ${NVVERSION} >= 440.026
+.if ${NVVERSION} >= 455.037
+	# noting
+.elif ${NVVERSION} >= 440.026
 LINUX_LIBS+=	libnvidia-egl-wayland.so.1.1.4
 LINUX_LINKS+=	libnvidia-egl-wayland.so.1.1.4 libnvidia-egl-wayland.so.1
 PLIST_RE+=	'\,${LINUXBASE},s/(libnvidia-egl-wayland\.so)\.X/\1.1.1.4/'

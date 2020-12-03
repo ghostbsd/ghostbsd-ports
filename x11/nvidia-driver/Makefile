@@ -11,7 +11,7 @@
 # or `x11/nvidia-driver-304').
 
 PORTNAME=	nvidia-driver
-DISTVERSION?=	440.100
+DISTVERSION?=	455.38
 # Always try to set PORTREVISION as it can be overridden by the slave ports
 PORTREVISION?=	1
 CATEGORIES=	x11
