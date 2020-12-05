@@ -3,7 +3,7 @@
 
 PORTNAME=	ghostbsd-refind
 PORTVERSION=	0.1
-CATEGORIES=	x11-themes
+CATEGORIES=	sysutils
 
 MAINTAINER=	ericturgeon@ghostbsd.org
 COMMENT=	rEFInd is an EFI boot manager utility
