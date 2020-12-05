@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	pc-sysinstall
-PORTVERSION=	2020092700
+PORTVERSION=	2020120500
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 
@@ -11,7 +11,8 @@ COMMENT=	TrueOS install backend
 
 LICENSE=	BSD2CLAUSE
 
-RUN_DEPENDS=	cpdup:sysutils/cpdup
+RUN_DEPENDS=	cpdup:sysutils/cpdup \
+		ghostbsd-refind>=0.1:sysutils/ghostbsd-refind
 
 USES=		pkgconfig tar:xz
 MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}
@@ -19,6 +20,6 @@ MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}
 USE_GITHUB=	yes
 GH_ACCOUNT=	ghostbsd
 GH_PROJECT=	pc-sysinstall
-GH_TAGNAME=	59f8ac7ba0c5fb1791737eafd02a33bf95153a42
+GH_TAGNAME=	d46a1f02bb646fd52b3c322ac1819b12774ebf34
 
 .include <bsd.port.mk>

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ghostbsd-refind
-PORTVERSION=	0.1
+PORTVERSION=	0.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	ericturgeon@ghostbsd.org
