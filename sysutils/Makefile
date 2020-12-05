@@ -435,6 +435,7 @@
     SUBDIR += getssl
     SUBDIR += ghostbsd-bug-report
     SUBDIR += ghostbsd-grub2-settings
+    SUBDIR += ghostbsd-refind
     SUBDIR += ghostbsd-utils
     SUBDIR += gigolo
     SUBDIR += gitwatch

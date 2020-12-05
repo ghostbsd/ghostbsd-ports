@@ -1,0 +1,7 @@
+rEFInd is a fork of the rEFIt boot manager. Like rEFIt, rEFInd can auto-detect
+your installed EFI boot loaders and it presents a pretty GUI menu of boot
+options. rEFInd goes beyond rEFIt in that rEFInd better handles systems with
+many boot loaders, gives better control over the boot loader search process,
+and provides the ability for users to define their own boot loader entries.
+
+WWW: http://www.ghostbsd.org/
