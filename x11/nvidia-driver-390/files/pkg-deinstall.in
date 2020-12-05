@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# $FreeBSD: head/x11/nvidia-driver/files/pkg-deinstall.in 433892 2017-02-11 16:43:11Z kwm $
+#
+
+PREFIX=${PKG_PREFIX-/usr/local}
+
+case $2 in
+DEINSTALL)
+	/bin/rm -f ${PREFIX}/lib/xorg/modules/extensions/libglx.so*
+
+	/bin/ln -f ${PREFIX}/lib/xorg/modules/extensions/.xorg/libglx.so \
+		${PREFIX}/lib/xorg/modules/extensions/libglx.so
+	;;
+esac

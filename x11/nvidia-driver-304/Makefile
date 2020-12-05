@@ -5,7 +5,7 @@ DISTVERSION=	304.137
 # Explicitly set PORTREVISION as it can be overridden by the master port
 PORTREVISION=	8
 
-MASTERDIR=	${.CURDIR}/../nvidia-driver
+MASTERDIR=	${.CURDIR}/../nvidia-driver-390
 PKGNAMESUFFIX=	-304
 
 .include "${MASTERDIR}/Makefile"
