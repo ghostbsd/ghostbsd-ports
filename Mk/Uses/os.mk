@@ -4,7 +4,7 @@
 #
 # Feature:	os
 # Usage:	USES=os
-# Valid ARGS:	(none), flavors, noflavors, generic, minimal, nozfs
+# Valid ARGS:	(none), flavors, noflavors, generic
 #
 #	- flavors  : Generates flavors for supported versions.
 #	- noflavors: Prevents generation of flavor.
@@ -19,7 +19,7 @@ OS_Include_MAINTAINER=	kmoore@FreeBSD.org
 
 _INCLUDE_USES_OS_MK=	yes
 
-_OS_VALID_ARGS=	flavors generic noflavors nozfs
+_OS_VALID_ARGS=	flavors generic noflavors
 
 _OS_UNKNOWN_ARGS=
 .for arg in ${os_ARGS}
@@ -35,7 +35,7 @@ IGNORE=	has unknown USES=os arguments: ${_OS_UNKNOWN_ARGS}
 os_ARGS:=	${os_ARGS:Nflavors}
 .  endif
 
-_ALL_OS_FLAVORS=	generic minimal nozfs
+_ALL_OS_FLAVORS=	generic
 
 OS_DEFAULT_FLAVOR?=	generic
 
