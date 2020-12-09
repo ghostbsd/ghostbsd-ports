@@ -119,6 +119,7 @@
     SUBDIR += cy-aspell
     SUBDIR += da-aspell
     SUBDIR += dadadodo
+    SUBDIR += dasel
     SUBDIR += datamash
     SUBDIR += db2latex
     SUBDIR += dbacl
@@ -312,6 +313,7 @@
     SUBDIR += jing
     SUBDIR += jo
     SUBDIR += jq
+    SUBDIR += jql
     SUBDIR += jrefentry
     SUBDIR += jshon
     SUBDIR += json-yaml
@@ -404,6 +406,7 @@
     SUBDIR += linuxdoc
     SUBDIR += linuxdoc-tools
     SUBDIR += localize
+    SUBDIR += lookatme
     SUBDIR += loook
     SUBDIR += lowdown
     SUBDIR += lt-aspell
@@ -1220,7 +1223,6 @@
     SUBDIR += pup
     SUBDIR += py-Chameleon
     SUBDIR += py-CommonMark
-    SUBDIR += py-MarkupSafe
     SUBDIR += py-QDarkStyle
     SUBDIR += py-Tempita
     SUBDIR += py-acora
@@ -1310,6 +1312,7 @@
     SUBDIR += py-markdown2
     SUBDIR += py-markuppy
     SUBDIR += py-markups
+    SUBDIR += py-markupsafe
     SUBDIR += py-misaka
     SUBDIR += py-mistune
     SUBDIR += py-mkdocs

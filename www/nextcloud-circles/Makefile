@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	circles
-PORTVERSION=	0.20.4
+PORTVERSION=	0.20.6
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/${PKGNAMEPREFIX:S/-//}/${PORTNAME}/releases/download/v${PORTVERSION}/
 PKGNAMEPREFIX=	nextcloud-

@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	mesa
-DISTVERSION=	20.3-branchpoint-786
-DISTVERSIONSUFFIX=	-g688dda5e1dd
+DISTVERSION=	20.3-branchpoint-1171
+DISTVERSIONSUFFIX=	-g2b1930a50a0
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -16,6 +16,7 @@ PATCHFILES+=	700efacda59c.patch:-p1
 PATCHFILES+=	4ed6d957f689.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/issues/966#note_394512
 PATCHFILES+=	167fa293d7b7.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5464
 PATCHFILES+=	19e001833ec1.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/7778
+PATCHFILES+=	50433886a3e3.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Bleeding edge Mesa drivers (OpenGL, Vulkan)

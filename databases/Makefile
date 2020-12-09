@@ -56,7 +56,6 @@
     SUBDIR += db
     SUBDIR += db18
     SUBDIR += db5
-    SUBDIR += db6
     SUBDIR += dbf
     SUBDIR += dbh
     SUBDIR += dbixx
@@ -737,8 +736,10 @@
     SUBDIR += pspg
     SUBDIR += puppetdb-terminus5
     SUBDIR += puppetdb-terminus6
+    SUBDIR += puppetdb-terminus7
     SUBDIR += puppetdb5
     SUBDIR += puppetdb6
+    SUBDIR += puppetdb7
     SUBDIR += puredb
     SUBDIR += pxlib
     SUBDIR += pxtools
@@ -746,6 +747,7 @@
     SUBDIR += py-MySQLdb
     SUBDIR += py-PyGreSQL
     SUBDIR += py-Pyrseas
+    SUBDIR += py-aesqlapius
     SUBDIR += py-agate-sql
     SUBDIR += py-aiopg
     SUBDIR += py-aioredis
