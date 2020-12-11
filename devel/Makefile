@@ -6699,7 +6699,6 @@
     SUBDIR += splint
     SUBDIR += spread-sheet-widget
     SUBDIR += srecord
-    SUBDIR += ssft
     SUBDIR += st
     SUBDIR += stack
     SUBDIR += staf
