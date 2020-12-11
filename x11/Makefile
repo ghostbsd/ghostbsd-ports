@@ -70,10 +70,8 @@
     SUBDIR += fpc-x11
     SUBDIR += fstobdf
     SUBDIR += gdm
-    SUBDIR += ghostbsd-cinnamon-live-settings
     SUBDIR += ghostbsd-cinnamon-settings
     SUBDIR += ghostbsd-common-settings
-    SUBDIR += ghostbsd-gnome-live-settings
     SUBDIR += ghostbsd-gnome-settings
     SUBDIR += ghostbsd-mate
     SUBDIR += ghostbsd-mate-settings
