@@ -28,7 +28,6 @@
     SUBDIR += epic5
     SUBDIR += evangeline
     SUBDIR += ezbounce
-    SUBDIR += ghostbsd-irc
     SUBDIR += gruftistats
     SUBDIR += hexchat
     SUBDIR += hexchat-fish
