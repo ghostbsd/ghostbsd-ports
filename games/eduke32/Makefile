@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	eduke32
-PORTVERSION=	20201128
+PORTVERSION=	20201209
 CATEGORIES=	games
 MASTER_SITES=	http://dukeworld.com/eduke32/synthesis/${PORTVERSION}-${GITREVISION}/:eduke32 \
 		http://www.duke4.org/files/nightfright/hrp/:hrp \
@@ -13,7 +13,7 @@ MASTER_SITES=	http://dukeworld.com/eduke32/synthesis/${PORTVERSION}-${GITREVISIO
 		https://www.quaddicted.com/files/idgames2/planetquake/planetduke/:shareware \
 		https://ftp.swin.edu.au/gentoo/distfiles/:shareware \
 		ftp://ftp.3drealms.com/share/:shareware \
-		https://github.com/NightFright2k19/voxelpack/releases/download/2.0pre4/:voxel
+		https://github.com/NightFright2k19/voxelpack/releases/download/2.0-rc1/:voxel
 DISTFILES=	${PORTNAME}_src_${PORTVERSION}-${GITREVISION}${EXTRACT_SUFX}:eduke32
 EXTRACT_ONLY=	${PORTNAME}_src_${PORTVERSION}-${GITREVISION}${EXTRACT_SUFX}
 
@@ -33,12 +33,12 @@ LIB_DEPENDS=	libFLAC.so:audio/flac \
 		libvpx.so:multimedia/libvpx \
 		libpng.so:graphics/png
 
-USES=		dos2unix gl gmake gnome pkgconfig sdl tar:xz
+USES=		dos2unix gl gmake gnome localbase pkgconfig sdl tar:xz
 USE_GL=		gl glu
 USE_GNOME=	gtk20
 USE_SDL=	sdl2 mixer2
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}-${GITREVISION}
-GITREVISION=	9276-42c62c58f
+GITREVISION=	9279-b89e16fbe
 DATADIR=	${PREFIX}/share/duke3d
 SUB_FILES=	pkg-message
 MAKEFILE=	GNUmakefile

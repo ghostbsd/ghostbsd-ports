@@ -427,6 +427,7 @@
     SUBDIR += markdown
     SUBDIR += markdown-mode.el
     SUBDIR += markdownfmt
+    SUBDIR += markdownpart
     SUBDIR += mathml-xsd
     SUBDIR += mdbook
     SUBDIR += mdocml
@@ -1508,6 +1509,7 @@
     SUBDIR += rubygem-asciidoctor
     SUBDIR += rubygem-asciidoctor-diagram
     SUBDIR += rubygem-asciidoctor-include-ext
+    SUBDIR += rubygem-asciidoctor-pdf
     SUBDIR += rubygem-asciidoctor-plantuml
     SUBDIR += rubygem-asciidoctor-plantuml0010
     SUBDIR += rubygem-autoprefixer-rails
@@ -1533,6 +1535,7 @@
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
+    SUBDIR += rubygem-cucumber-gherkin15
     SUBDIR += rubygem-cucumber-html-formatter
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
@@ -1649,6 +1652,7 @@
     SUBDIR += rubygem-rouge319
     SUBDIR += rubygem-rouge321
     SUBDIR += rubygem-rouge324
+    SUBDIR += rubygem-rouge325
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
@@ -1688,6 +1692,7 @@
     SUBDIR += rubygem-tidy_ffi
     SUBDIR += rubygem-toml
     SUBDIR += rubygem-tomlrb
+    SUBDIR += rubygem-tomlrb1
     SUBDIR += rubygem-truncato
     SUBDIR += rubygem-twitter-text
     SUBDIR += rubygem-twitter-text1

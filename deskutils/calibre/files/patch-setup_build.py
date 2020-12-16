@@ -1,6 +1,6 @@
---- setup/build.py.orig	2020-10-10 16:20:32 UTC
+--- setup/build.py.orig	2020-12-12 08:56:45 UTC
 +++ setup/build.py
-@@ -496,6 +496,7 @@ exceptions = {needs_exceptions}
+@@ -495,6 +495,7 @@ exceptions = {needs_exceptions}
  include-dirs = {ext.inc_dirs}
  qmake-QT = ["widgets"]
  sip-file = "{os.path.basename(sipf)}"

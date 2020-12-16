@@ -2,6 +2,7 @@
 
 PORTNAME=	qscintilla2
 PORTVERSION=	${QSCI2_VERSION}
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITES_QSCI2}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}qt5-
@@ -32,6 +33,9 @@ CONFIGURE_ARGS= --pyqt PyQt5 -d ${PYTHONPREFIX_SITELIBDIR}/PyQt5 -v ${PYQT_SIPDI
                 --sip ${SIP} --qsci-sipdir ${PYQT_SIPDIR} --qsci-incdir ${QT_INCDIR} --qsci-libdir ${QT_LIBDIR}
 WRKSRC=         ${WRKDIR}/${DISTNAME}/Python
 ALL_TARGET=     #empty
+
+post-patch:
+	${REINPLACE_CMD} -e "s/sip-module/sip-module-${PYTHON_VER}/" ${WRKSRC}/configure.py
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \

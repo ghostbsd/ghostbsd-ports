@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitaly
-DISTVERSION=	13.6.1
+DISTVERSION=	13.6.3
 PORTREVISION=	0
 CATEGORIES=	devel
 
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 MY_DEPENDS=	git>=2.29:devel/git \
 		rubygem-bundler>=2.1.4:sysutils/rubygem-bundler \
 		rubygem-rugged>=0.28:devel/rubygem-rugged \
-		rubygem-github-linguist>=7.11<8.0:textproc/rubygem-github-linguist \
+		rubygem-github-linguist>=7.12.1<8:textproc/rubygem-github-linguist \
 		rubygem-gitlab-markup>=1.7.1<1.8.0:textproc/rubygem-gitlab-markup \
 		rubygem-activesupport60>=6.0.3.3<6.0.4:devel/rubygem-activesupport60 \
 		rubygem-rdoc>=6.1<7.0:devel/rubygem-rdoc \
@@ -43,7 +43,7 @@ MAKE_ENV=	GOFLAGS="${GO_BUILDFLAGS}"
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 # Find this here: https://gitlab.com/gitlab-org/gitaly/-/tags
-GL_COMMIT=	bb6543b076f4c71b09198afd56caae65195265e4
+GL_COMMIT=	a316b208ee7a725c06d0abe34172d0920932413f
 
 # for go dependencies
 USE_GITHUB=	nodefault

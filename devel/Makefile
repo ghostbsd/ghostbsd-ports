@@ -1053,6 +1053,7 @@
     SUBDIR += kodi-platform
     SUBDIR += kokkos
     SUBDIR += kore
+    SUBDIR += kpublictransport
     SUBDIR += kronosnet
     SUBDIR += ksql
     SUBDIR += kyra
@@ -3995,10 +3996,8 @@
     SUBDIR += ptypes
     SUBDIR += publib
     SUBDIR += pushmi
-    SUBDIR += py-AddOns
     SUBDIR += py-Automat
     SUBDIR += py-BTrees
-    SUBDIR += py-BytecodeAssembler
     SUBDIR += py-DateTime
     SUBDIR += py-Dumper
     SUBDIR += py-ExtensionClass
@@ -4433,7 +4432,6 @@
     SUBDIR += py-gitpython
     SUBDIR += py-glance-store
     SUBDIR += py-glob2
-    SUBDIR += py-gobject
     SUBDIR += py-gobject3
     SUBDIR += py-google-cloud-iam
     SUBDIR += py-google-crc32c
@@ -4765,6 +4763,7 @@
     SUBDIR += py-pip-api
     SUBDIR += py-pip-licenses
     SUBDIR += py-pip-run
+    SUBDIR += py-pip-shims
     SUBDIR += py-pip-tools
     SUBDIR += py-pip-tools4
     SUBDIR += py-pipdeptree
@@ -4774,6 +4773,7 @@
     SUBDIR += py-pkgconfig
     SUBDIR += py-plac
     SUBDIR += py-plan
+    SUBDIR += py-plette
     SUBDIR += py-plex
     SUBDIR += py-pluggy
     SUBDIR += py-pluginbase
@@ -4800,9 +4800,9 @@
     SUBDIR += py-proglog
     SUBDIR += py-progress
     SUBDIR += py-promise
-    SUBDIR += py-prompt_toolkit
-    SUBDIR += py-prompt_toolkit1
-    SUBDIR += py-prompt_toolkit2
+    SUBDIR += py-prompt-toolkit
+    SUBDIR += py-prompt-toolkit1
+    SUBDIR += py-prompt-toolkit2
     SUBDIR += py-proselint
     SUBDIR += py-proto-plus
     SUBDIR += py-protobuf
@@ -4990,7 +4990,6 @@
     SUBDIR += py-repoze.sphinx.autointerface
     SUBDIR += py-repoze.tm2
     SUBDIR += py-repoze.who
-    SUBDIR += py-repoze.who-testutil
     SUBDIR += py-repoze.xmliter
     SUBDIR += py-represent
     SUBDIR += py-requestsexceptions
@@ -4999,7 +4998,6 @@
     SUBDIR += py-responses
     SUBDIR += py-retrying
     SUBDIR += py-retype
-    SUBDIR += py-riak_pb
     SUBDIR += py-robotframework
     SUBDIR += py-robotframework-databaselibrary
     SUBDIR += py-robotframework-pabot
@@ -5174,6 +5172,7 @@
     SUBDIR += py-virtualenv-clone
     SUBDIR += py-virtualenvwrapper
     SUBDIR += py-visitor
+    SUBDIR += py-vistir
     SUBDIR += py-voluptuous
     SUBDIR += py-vsts
     SUBDIR += py-vsts-cd-manager
@@ -5242,6 +5241,7 @@
     SUBDIR += py-yappi
     SUBDIR += py-yapps2
     SUBDIR += py-yarg
+    SUBDIR += py-yaspin
     SUBDIR += py-yattag
     SUBDIR += py-ydbf
     SUBDIR += py-yg.lockfile
@@ -5306,7 +5306,6 @@
     SUBDIR += pyside2-tools
     SUBDIR += pystring
     SUBDIR += pysvn
-    SUBDIR += pythk
     SUBDIR += pythontidy
     SUBDIR += qbs
     SUBDIR += qca
@@ -5472,11 +5471,13 @@
     SUBDIR += rubygem-aws-sdk-acmpca
     SUBDIR += rubygem-aws-sdk-alexaforbusiness
     SUBDIR += rubygem-aws-sdk-amplify
+    SUBDIR += rubygem-aws-sdk-amplifybackend
     SUBDIR += rubygem-aws-sdk-apigateway
     SUBDIR += rubygem-aws-sdk-apigatewaymanagementapi
     SUBDIR += rubygem-aws-sdk-apigatewayv2
     SUBDIR += rubygem-aws-sdk-appconfig
     SUBDIR += rubygem-aws-sdk-appflow
+    SUBDIR += rubygem-aws-sdk-appintegrationsservice
     SUBDIR += rubygem-aws-sdk-applicationautoscaling
     SUBDIR += rubygem-aws-sdk-applicationdiscoveryservice
     SUBDIR += rubygem-aws-sdk-applicationinsights
@@ -5485,6 +5486,7 @@
     SUBDIR += rubygem-aws-sdk-appstream
     SUBDIR += rubygem-aws-sdk-appsync
     SUBDIR += rubygem-aws-sdk-athena
+    SUBDIR += rubygem-aws-sdk-auditmanager
     SUBDIR += rubygem-aws-sdk-augmentedairuntime
     SUBDIR += rubygem-aws-sdk-autoscaling
     SUBDIR += rubygem-aws-sdk-autoscalingplans
@@ -5523,11 +5525,13 @@
     SUBDIR += rubygem-aws-sdk-computeoptimizer
     SUBDIR += rubygem-aws-sdk-configservice
     SUBDIR += rubygem-aws-sdk-connect
+    SUBDIR += rubygem-aws-sdk-connectcontactlens
     SUBDIR += rubygem-aws-sdk-connectparticipant
     SUBDIR += rubygem-aws-sdk-core
     SUBDIR += rubygem-aws-sdk-core2
     SUBDIR += rubygem-aws-sdk-costandusagereportservice
     SUBDIR += rubygem-aws-sdk-costexplorer
+    SUBDIR += rubygem-aws-sdk-customerprofiles
     SUBDIR += rubygem-aws-sdk-databasemigrationservice
     SUBDIR += rubygem-aws-sdk-dataexchange
     SUBDIR += rubygem-aws-sdk-datapipeline
@@ -5535,6 +5539,7 @@
     SUBDIR += rubygem-aws-sdk-dax
     SUBDIR += rubygem-aws-sdk-detective
     SUBDIR += rubygem-aws-sdk-devicefarm
+    SUBDIR += rubygem-aws-sdk-devopsguru
     SUBDIR += rubygem-aws-sdk-directconnect
     SUBDIR += rubygem-aws-sdk-directoryservice
     SUBDIR += rubygem-aws-sdk-dlm
@@ -5545,6 +5550,7 @@
     SUBDIR += rubygem-aws-sdk-ec2
     SUBDIR += rubygem-aws-sdk-ec2instanceconnect
     SUBDIR += rubygem-aws-sdk-ecr
+    SUBDIR += rubygem-aws-sdk-ecrpublic
     SUBDIR += rubygem-aws-sdk-ecs
     SUBDIR += rubygem-aws-sdk-efs
     SUBDIR += rubygem-aws-sdk-eks
@@ -5556,6 +5562,7 @@
     SUBDIR += rubygem-aws-sdk-elasticsearchservice
     SUBDIR += rubygem-aws-sdk-elastictranscoder
     SUBDIR += rubygem-aws-sdk-emr
+    SUBDIR += rubygem-aws-sdk-emrcontainers
     SUBDIR += rubygem-aws-sdk-eventbridge
     SUBDIR += rubygem-aws-sdk-firehose
     SUBDIR += rubygem-aws-sdk-fms
@@ -5572,6 +5579,7 @@
     SUBDIR += rubygem-aws-sdk-groundstation
     SUBDIR += rubygem-aws-sdk-guardduty
     SUBDIR += rubygem-aws-sdk-health
+    SUBDIR += rubygem-aws-sdk-healthlake
     SUBDIR += rubygem-aws-sdk-honeycode
     SUBDIR += rubygem-aws-sdk-iam
     SUBDIR += rubygem-aws-sdk-identitystore
@@ -5607,6 +5615,7 @@
     SUBDIR += rubygem-aws-sdk-lexmodelbuildingservice
     SUBDIR += rubygem-aws-sdk-licensemanager
     SUBDIR += rubygem-aws-sdk-lightsail
+    SUBDIR += rubygem-aws-sdk-lookoutforvision
     SUBDIR += rubygem-aws-sdk-machinelearning
     SUBDIR += rubygem-aws-sdk-macie
     SUBDIR += rubygem-aws-sdk-macie2
@@ -5666,6 +5675,8 @@
     SUBDIR += rubygem-aws-sdk-s3control
     SUBDIR += rubygem-aws-sdk-s3outposts
     SUBDIR += rubygem-aws-sdk-sagemaker
+    SUBDIR += rubygem-aws-sdk-sagemakeredgemanager
+    SUBDIR += rubygem-aws-sdk-sagemakerfeaturestoreruntime
     SUBDIR += rubygem-aws-sdk-sagemakerruntime
     SUBDIR += rubygem-aws-sdk-savingsplans
     SUBDIR += rubygem-aws-sdk-schemas
@@ -5943,6 +5954,7 @@
     SUBDIR += rubygem-cucumber-core
     SUBDIR += rubygem-cucumber-create-meta
     SUBDIR += rubygem-cucumber-cucumber-expressions
+    SUBDIR += rubygem-cucumber-cucumber-expressions10
     SUBDIR += rubygem-cucumber-formatter-dots
     SUBDIR += rubygem-cucumber-messages
     SUBDIR += rubygem-cucumber-messages4
@@ -6732,6 +6744,7 @@
     SUBDIR += t1lib
     SUBDIR += ta-lib
     SUBDIR += tablist
+    SUBDIR += tailor
     SUBDIR += talloc
     SUBDIR += taskctl
     SUBDIR += taskflow
@@ -6782,6 +6795,7 @@
     SUBDIR += tl-expected
     SUBDIR += tla
     SUBDIR += tllist
+    SUBDIR += tlx
     SUBDIR += tmake
     SUBDIR += tnt
     SUBDIR += tokamak

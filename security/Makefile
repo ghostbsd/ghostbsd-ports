@@ -925,7 +925,7 @@
     SUBDIR += py-ntlm-auth
     SUBDIR += py-oauth2client
     SUBDIR += py-oauthlib
-    SUBDIR += py-obfsproxy-tor
+    SUBDIR += py-onlykey
     SUBDIR += py-openssl
     SUBDIR += py-ospd
     SUBDIR += py-paramiko
@@ -965,6 +965,7 @@
     SUBDIR += py-python-nss
     SUBDIR += py-python-openid
     SUBDIR += py-python-pam
+    SUBDIR += py-python-pkcs11
     SUBDIR += py-python-registry
     SUBDIR += py-python3-openid
     SUBDIR += py-python3-saml
@@ -1293,6 +1294,7 @@
     SUBDIR += webscarab
     SUBDIR += whatweb
     SUBDIR += wipe
+    SUBDIR += wolfssh
     SUBDIR += wolfssl
     SUBDIR += wpa_supplicant
     SUBDIR += xca

@@ -1,22 +1,20 @@
 # $FreeBSD$
 
 PORTNAME=	pygdbmi
-PORTVERSION=	0.8.2.0
+PORTVERSION=	0.10.0.0
 CATEGORIES=	devel lang python
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Parse gdb machine interface (mi) string output
+MAINTAINER=	sunpoet@FreeBSD.org
+COMMENT=	Parse gdb machine interface output with Python
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-DEPRECATED=	Uses deprecated version of python
-EXPIRATION_DATE=	2020-12-12
+USES=		python:3.6+
+USE_PYTHON=	autoplist concurrent distutils
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	cs01
-USES=		python:2.7
-USE_PYTHON=	autoplist distutils
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

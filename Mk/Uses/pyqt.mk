@@ -63,11 +63,11 @@ MASTER_SITES_QSCI2=	RIVERBANK/QScintilla/${PORTVERSION} \
 			SF/pyqt/QScintilla2/QScintilla-${PORTVERSION} \
 			GENTOO
 
-SIP_VERSION=		5.4.0
+SIP_VERSION=		5.5.0
 QSCI2_VERSION=		2.11.5
-PYQT5_VERSION=		5.15.1
-PYQTSIP_VERSION=	12.8.0
-PYQTBUILDER_VERSION=	1.4.0
+PYQT5_VERSION=		5.15.2
+PYQTSIP_VERSION=	12.8.1
+PYQTBUILDER_VERSION=	1.6.0
 
 SIP_DISTNAME=		sip-${SIP_VERSION}
 PYQT5_DISTNAME=		PyQt5-${PYQT5_VERSION}
@@ -250,6 +250,7 @@ EXTRACT_AFTER_ARGS+=	--exclude "${DISTNAME}/dbus"
 
 .    if !target(do-configure)
 do-configure:
+	${REINPLACE_CMD} -e "s/sip-module/sip-module-${PYTHON_VER}/" ${WRKSRC}/configure.py
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
 		${PYTHON_CMD} configure.py ${CONFIGURE_ARGS}
 .    endif  # !target(do-configure)

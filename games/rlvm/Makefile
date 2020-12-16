@@ -4,6 +4,7 @@ PORTNAME=	rlvm
 DISTVERSIONPREFIX=	release-
 DISTVERSION=	0.14-75
 DISTVERSIONSUFFIX=	-g975e740c
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -15,7 +16,7 @@ LICENSE_COMB=	multi
 BROKEN_FreeBSD_11_powerpc64=	fails to link on powerpc64 elfv1: gcn_platform.cc: undefined reference to gcn::Exception::Exception
 BROKEN_FreeBSD_12_powerpc64=	fails to link on powerpc64 elfv1: gcn_platform.cc: undefined reference to gcn::Exception::Exception
 
-BUILD_DEPENDS=	${LOCALBASE}/include/utf8.h:devel/utf8cpp
+BUILD_DEPENDS=	${LOCALBASE}/include/utf8cpp/utf8.h:devel/utf8cpp
 LIB_DEPENDS=	libsndfile.so:audio/libsndfile \
 		libvorbisfile.so:audio/libvorbis \
 		libboost_serialization.so:devel/boost-libs \
@@ -60,8 +61,6 @@ TEST_BUILD_DEPENDS=googletest>=1.7.0:devel/googletest \
 TEST_EXTRA_PATCHES_OFF=${FILESDIR}/extra-patch-disable-test
 
 post-patch:
-	@${GREP} -Flr 'utf8cpp/' ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} \
-		-i .bak.utf8cpp -e 's,utf8cpp/,,'
 	@${REINPLACE_CMD} -e 's,/usr/share,${PREFIX}/share,' \
 		${WRKSRC}/src/platforms/gtk/gtk_rlvm_instance.cc
 	@${REINPLACE_CMD} -e 's,/usr/share,${LOCALBASE}/share,' \
