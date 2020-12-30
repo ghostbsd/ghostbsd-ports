@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	xconfig
-PORTVERSION=	0.4
+PORTVERSION=	0.5
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
