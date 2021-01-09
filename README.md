@@ -47,17 +47,22 @@ Git always displays all the conflicts.
 
 To fetch and merge from FreeBSD ports, we need to set the freebsd-ports remote repos to our local copy of ghostbsd-ports.
 
-> git clone https://github.com/ghostbsd/ghostbsd-ports.git
-> cd ghostbsd
-> git remote add freebsd https://github.com/freebsd/freebsdports.git
+> git clone https://github.com/ghostbsd/ghostbsd-ports.git  
+
+> cd ghostbsd 
+
+> git remote add freebsd https://github.com/freebsd/freebsdports.git 
 
 You should have this.
 
-git remote -v 
-freebsd    https://github.com/freebsd/freebsd-ports.git (fetch)
-freebsd    https://github.com/freebsd/freebsd-ports.git (push)
-origin    https://github.com/ghostbsd/ghostbsd-ports.git (fetch)
-origin    https://github.com/ghostbsd/ghostbsd-ports.git (push
+> git remote -v  
+> freebsd    https://github.com/freebsd/freebsd-ports.git (fetch) 
+
+> freebsd    https://github.com/freebsd/freebsd-ports.git (push) 
+
+> origin    https://github.com/ghostbsd/ghostbsd-ports.git (fetch) 
+
+> origin    https://github.com/ghostbsd/ghostbsd-ports.git (push 
 
 To fetch from freebsd-ports.
 
