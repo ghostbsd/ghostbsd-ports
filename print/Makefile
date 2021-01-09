@@ -21,7 +21,6 @@
     SUBDIR += catdvi
     SUBDIR += cdlabelgen
     SUBDIR += cloud-print-connector
-    SUBDIR += cloudprint
     SUBDIR += cups
     SUBDIR += cups-bjnp
     SUBDIR += cups-cloud-print
@@ -256,7 +255,6 @@
     SUBDIR += txtbdf2ps
     SUBDIR += typetools
     SUBDIR += utopia
-    SUBDIR += xfce4-print
     SUBDIR += xmbibtex
     SUBDIR += xpdfopen
     SUBDIR += xreader

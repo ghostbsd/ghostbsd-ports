@@ -18,13 +18,13 @@ LIB_DEPENDS=	libfcl05.so:math/fcl05 \
 BUILD_DEPENDS=	${PYNUMPY}
 RUN_DEPENDS=	${PYNUMPY}
 
-USES=		compiler:c++11-lang eigen:3 python
+USES=		compiler:c++11-lang eigen:3 python:3.6+
 
 USE_PYTHON=	distutils autoplist concurrent cython
 
 PYDISTUTILS_BUILD_TARGET=	build_ext
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/fcl/fcl.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/fcl/fcl*.so
 
 .include <bsd.port.mk>

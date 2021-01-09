@@ -13,7 +13,7 @@ COMMENT?=	Homebrew PVR project
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-ONLY_FOR_ARCHS=	amd64 i386
+ONLY_FOR_ARCHS=	amd64 i386 powerpc64 powerpc64le
 .if ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
 BROKEN_i386=	ld: error: can't create dynamic relocation R_386_32 against local symbol in readonly segment
 .endif
@@ -37,8 +37,8 @@ LIB_DEPENDS=	liblzo2.so:archivers/lzo2 \
 BUILD_DEPENDS=	yasm:devel/yasm \
 		${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 
-USES=		gmake gl iconv libtool pkgconfig pathfix qmake:no_env qt:5 ssl \
-		xorg
+USES=		compiler:c++11-lang gmake gl iconv libtool pkgconfig pathfix \
+		qmake:no_env qt:5 ssl xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	MythTV
 USE_GL=		gl
@@ -123,7 +123,6 @@ BINDINGS_BUILD_DEPENDS= ${PYTHON_PKGNAMEPREFIX}mysqlclient>=0:databases/py-mysql
 			p5-LWP-UserAgent-Determined>=0:www/p5-LWP-UserAgent-Determined
 BINDINGS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mysqlclient>=1.2.2:databases/py-mysqlclient@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
-			${PY_FUTURES} \
 			${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}requests-cache>0:www/py-requests-cache@${PY_FLAVOR} \

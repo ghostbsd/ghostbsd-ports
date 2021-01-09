@@ -1,24 +1,20 @@
 # Created by: Oliver Eikemeier
 # $FreeBSD$
 
-# Please don't remove commented lines, they become relevant once the first
-# patch for 5.1 has been released.
-
 PORTNAME=		bash
-#PATCHLEVEL=		0
-#PORTVERSION=		5.0.${PATCHLEVEL:S/^0//g}
-PORTVERSION=		5.1
-PORTREVISION?=		0
+PATCHLEVEL=		4
+PORTVERSION=		5.1.${PATCHLEVEL:S/^0//g}
+PORTREVISION?=		1
 CATEGORIES=		shells
 MASTER_SITES=		GNU
-#DISTNAME=		${PORTNAME}-${PORTVERSION:R}
+DISTNAME=		${PORTNAME}-${PORTVERSION:R}
 DIST_SUBDIR=		${PORTNAME}
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
-#PATCH_SITES=		GNU/${PORTNAME}/${DISTNAME}-patches/
-#PATCHFILES!=		/usr/bin/jot -s " " -w \
-#			${PORTNAME}${PORTVERSION:R:S/.//g}-%03d \
-#			${PATCHLEVEL} 1 ${PATCHLEVEL}
+PATCH_SITES=		GNU/${PORTNAME}/${DISTNAME}-patches/
+PATCHFILES!=		/usr/bin/jot -s " " -w \
+			${PORTNAME}${PORTVERSION:R:S/.//g}-%03d \
+			${PATCHLEVEL} 1 ${PATCHLEVEL}
 
 MAINTAINER=		ehaupt@FreeBSD.org
 COMMENT=		GNU Project's Bourne Again SHell
@@ -59,6 +55,8 @@ CONFIGURE_ARGS+=	--without-bash-malloc \
 			--disable-rpath \
 			--enable-disabled-builtins \
 			--with-libiconv-prefix=${ICONV_PREFIX}
+
+MAKE_ARGS+=	TERMCAP_LIB=-lncursesw
 
 .if empty(PKGNAMESUFFIX)
 CONFLICTS+=		bash-static-[0-9]*

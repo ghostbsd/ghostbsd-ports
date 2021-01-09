@@ -69,8 +69,10 @@
     SUBDIR += fireflies
     SUBDIR += florence
     SUBDIR += flruler
+    SUBDIR += fnott
     SUBDIR += fpc-x11
     SUBDIR += fstobdf
+    SUBDIR += fuzzel
     SUBDIR += gdm
     SUBDIR += ghostbsd-cinnamon-settings
     SUBDIR += ghostbsd-common-settings
@@ -218,6 +220,7 @@
     SUBDIR += lxqt-runner
     SUBDIR += lxrandr
     SUBDIR += ly
+    SUBDIR += mako
     SUBDIR += mate
     SUBDIR += mate-applets
     SUBDIR += mate-base
@@ -280,6 +283,7 @@
     SUBDIR += py-caffeine-ng
     SUBDIR += py-i3ipc
     SUBDIR += py-pyscreenshot
+    SUBDIR += py-python-xapp
     SUBDIR += py-pyvirtualdisplay
     SUBDIR += py-qt5-opengl
     SUBDIR += py-xcffib
@@ -332,6 +336,7 @@
     SUBDIR += sxhkd
     SUBDIR += sxpc
     SUBDIR += tabbed
+    SUBDIR += taiga
     SUBDIR += temperature.app
     SUBDIR += terminal.app
     SUBDIR += terminator
@@ -369,6 +374,7 @@
     SUBDIR += wmcliphist
     SUBDIR += wmctrl
     SUBDIR += wmdrawer
+    SUBDIR += wmfocus
     SUBDIR += wmmatrix
     SUBDIR += wmsystemtray
     SUBDIR += wmutils-core
@@ -382,7 +388,7 @@
     SUBDIR += x11perf
     SUBDIR += x3270
     SUBDIR += xantfarm
-    SUBDIR += xapps
+    SUBDIR += xapp
     SUBDIR += xascii
     SUBDIR += xauth
     SUBDIR += xautolock
@@ -399,6 +405,7 @@
     SUBDIR += xcalib
     SUBDIR += xcape
     SUBDIR += xcb
+    SUBDIR += xcb-imdkit
     SUBDIR += xcb-proto
     SUBDIR += xcb-util
     SUBDIR += xcb-util-cursor
@@ -421,6 +428,8 @@
     SUBDIR += xconsole
     SUBDIR += xcursorgen
     SUBDIR += xcut
+    SUBDIR += xdg-desktop-portal-wlr
+    SUBDIR += xdialog
     SUBDIR += xditview
     SUBDIR += xdm
     SUBDIR += xdo
@@ -437,14 +446,12 @@
     SUBDIR += xfce4-dashboard
     SUBDIR += xfce4-embed-plugin
     SUBDIR += xfce4-goodies
-    SUBDIR += xfce4-quicklauncher-plugin
     SUBDIR += xfce4-screensaver
     SUBDIR += xfce4-screenshooter-plugin
     SUBDIR += xfce4-taskmanager
     SUBDIR += xfce4-terminal
     SUBDIR += xfce4-verve-plugin
     SUBDIR += xfce4-whiskermenu-plugin
-    SUBDIR += xfce4-wmdock-plugin
     SUBDIR += xfd
     SUBDIR += xfishtank
     SUBDIR += xforward

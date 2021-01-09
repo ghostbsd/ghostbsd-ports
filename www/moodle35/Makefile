@@ -12,8 +12,7 @@ COMMENT=	Course management system based on social constructionism
 
 LICENSE=	GPLv3
 
-CONFLICTS=	moodle37-3.7.[0-9]* moodle38-3.8.[0-9]* moodle39-3.9.[0-9]* \
-		moodle310-3.10
+CONFLICTS=	moodle38-3.8.[0-9]* moodle39-3.9.[0-9]* moodle310-3.10
 
 DEPRECATED=	Deprecated by upstream
 EXPIRATION_DATE=2021-03-03
@@ -21,8 +20,10 @@ EXPIRATION_DATE=2021-03-03
 USES=		cpe php:flavors tar:tgz
 USE_PHP=	ctype curl dom fileinfo filter gd hash iconv intl json mbstring \
 		opcache openssl pcre session simplexml soap spl tokenizer \
-		xml xmlreader xmlrpc zip zlib
+		xml xmlreader zip zlib
 WRKSRC=		${WRKDIR}/moodle
+
+IGNORE_WITH_PHP=	80
 
 OPTIONS_SINGLE=		BACKEND
 OPTIONS_SINGLE_BACKEND=	MYSQL PGSQL MSSQL
@@ -45,6 +46,12 @@ SUB_LIST=	MOODLEDIR=${MOODLEDIR} \
 
 MOODLEDIR?=	www/moodle
 MOODLEDATADIR?=	moodledata
+
+.include <bsd.port.options.mk>
+
+.if ${FLAVOR} != php80
+USE_PHP+=       xmlrpc
+.endif
 
 pre-install:
 	@${ECHO_CMD} "@owner ${WWWOWN}" >> ${PLIST}

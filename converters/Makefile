@@ -137,9 +137,6 @@
     SUBDIR += pear-Services_JSON
     SUBDIR += pecl-igbinary
     SUBDIR += php-bsdconv
-    SUBDIR += php72-iconv
-    SUBDIR += php72-mbstring
-    SUBDIR += php72-recode
     SUBDIR += php73-iconv
     SUBDIR += php73-mbstring
     SUBDIR += php73-recode
@@ -160,6 +157,8 @@
     SUBDIR += rcctools
     SUBDIR += recode
     SUBDIR += rubygem-base32
+    SUBDIR += rubygem-base64
+    SUBDIR += rubygem-iconv
     SUBDIR += rubygem-json-ld
     SUBDIR += rubygem-json-ld-preloaded
     SUBDIR += rubygem-po_to_json

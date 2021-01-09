@@ -10,7 +10,6 @@
     SUBDIR += aewan
     SUBDIR += apel
     SUBDIR += asedit
-    SUBDIR += atom
     SUBDIR += beav
     SUBDIR += biew
     SUBDIR += bitedit
@@ -221,6 +220,7 @@
     SUBDIR += poedit
     SUBDIR += psgml
     SUBDIR += puff
+    SUBDIR += py-babi
     SUBDIR += py-editorconfig
     SUBDIR += py-pynvim
     SUBDIR += quilter

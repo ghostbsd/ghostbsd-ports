@@ -2,7 +2,7 @@
 
 PORTNAME=	teleport
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.3.7
+DISTVERSION=	4.3.9
 CATEGORIES=	security
 
 MAINTAINER=	swills@FreeBSD.org
@@ -48,7 +48,7 @@ post-patch:
 
 do-build:
 	@cd ${WRKDIR}/${GO_TELEPORT_SRC_DIR} && \
-		${SETENV} ${MAKE_ENV} ${BUILD_ENV} \
+		${SETENV} ${MAKE_ENV} ${BUILD_ENV} ${GO_ENV} \
 		CGO_ENABLED=1 GOPATH=${WRKDIR} \
 		${GMAKE} full
 

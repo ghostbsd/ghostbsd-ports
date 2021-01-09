@@ -75,7 +75,6 @@
     SUBDIR += c3270
     SUBDIR += calendarsupport
     SUBDIR += ccxstream
-    SUBDIR += ceph12
     SUBDIR += ceph14
     SUBDIR += cf
     SUBDIR += charm
@@ -85,6 +84,7 @@
     SUBDIR += clash
     SUBDIR += cloud-init
     SUBDIR += cloudflared
+    SUBDIR += cloudquery
     SUBDIR += clusterit
     SUBDIR += cnd
     SUBDIR += concourse-fly
@@ -177,6 +177,8 @@
     SUBDIR += geoipupdate
     SUBDIR += gerbera
     SUBDIR += gfbgraph
+    SUBDIR += gitlab-agent
+    SUBDIR += gitup
     SUBDIR += glflow
     SUBDIR += glib-networking
     SUBDIR += glusterfs
@@ -267,7 +269,6 @@
     SUBDIR += ip6_int
     SUBDIR += ipdecap
     SUBDIR += ipgrab
-    SUBDIR += iplog
     SUBDIR += ipsumdump
     SUBDIR += ipsvd
     SUBDIR += ipxe
@@ -430,7 +431,6 @@
     SUBDIR += mdns-repeater
     SUBDIR += measurement-kit
     SUBDIR += mediastreamer
-    SUBDIR += mediatomb
     SUBDIR += megacmd
     SUBDIR += megatools
     SUBDIR += messagelib
@@ -947,14 +947,9 @@
     SUBDIR += pecl-radius
     SUBDIR += pecl-rdkafka
     SUBDIR += pecl-smbclient
-    SUBDIR += pecl-yaz
     SUBDIR += pecl-zmq
     SUBDIR += pen
     SUBDIR += pfinger
-    SUBDIR += php72-ldap
-    SUBDIR += php72-soap
-    SUBDIR += php72-sockets
-    SUBDIR += php72-xmlrpc
     SUBDIR += php73-ldap
     SUBDIR += php73-soap
     SUBDIR += php73-sockets
@@ -1033,7 +1028,6 @@
     SUBDIR += py-ldappool
     SUBDIR += py-libcloud
     SUBDIR += py-libdnet
-    SUBDIR += py-libfte
     SUBDIR += py-magic-wormhole
     SUBDIR += py-matrix-synapse-ldap3
     SUBDIR += py-maxminddb
@@ -1276,8 +1270,10 @@
     SUBDIR += rubygem-net-netrc
     SUBDIR += rubygem-net-ntp
     SUBDIR += rubygem-net-ping
+    SUBDIR += rubygem-net-protocol
     SUBDIR += rubygem-netrc
     SUBDIR += rubygem-network_interface
+    SUBDIR += rubygem-nkf
     SUBDIR += rubygem-oauth
     SUBDIR += rubygem-oauth2
     SUBDIR += rubygem-octokit
@@ -1299,6 +1295,7 @@
     SUBDIR += rubygem-omniauth-twitter
     SUBDIR += rubygem-omniauth-ultraauth
     SUBDIR += rubygem-omniauth_openid_connect
+    SUBDIR += rubygem-open-uri
     SUBDIR += rubygem-open-uri-cached
     SUBDIR += rubygem-openid_connect
     SUBDIR += rubygem-opennebula
@@ -1360,6 +1357,7 @@
     SUBDIR += sctplib
     SUBDIR += sdl2_net
     SUBDIR += sdl_net
+    SUBDIR += seaweedfs
     SUBDIR += seda
     SUBDIR += self-service-password
     SUBDIR += sems
@@ -1540,6 +1538,7 @@
     SUBDIR += xprobe
     SUBDIR += xrdesktop2
     SUBDIR += xrdp
+    SUBDIR += xrdp-devel
     SUBDIR += yami4
     SUBDIR += yaph
     SUBDIR += yate

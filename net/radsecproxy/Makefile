@@ -6,7 +6,7 @@ DISTVERSION=	1.8.2
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/${DISTVERSION}/
 
-MAINTAINER=	neel@neelc.org
+MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Generic RADIUS proxy
 
 LICENSE=	BSD3CLAUSE
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libnettle.so:security/nettle
 
-USES=		cpe localbase:ldflags ssl
+USES=		compiler:c11 cpe localbase:ldflags ssl
 USE_RC_SUBR=	${PORTNAME}
 CPE_VENDOR=	uninett
 

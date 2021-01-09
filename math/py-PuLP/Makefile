@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	PuLP
-DISTVERSION=	2.3.1
+DISTVERSION=	2.4
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}amply>=0.1.2:math/py-amply@${PY_FLAVOR} \
 		cbc:math/cbc \
 		glpsol:math/glpk
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils concurrent autoplist
 
 NO_ARCH=	yes

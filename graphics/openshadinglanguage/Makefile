@@ -4,6 +4,7 @@
 PORTNAME=	openshadinglanguage
 DISTVERSIONPREFIX=	Release-
 DISTVERSION=	1.11.7.3
+PORTREVISION=	2
 CATEGORIES=	graphics devel
 
 MAINTAINER=	FreeBSD@Shaneware.biz
@@ -78,7 +79,7 @@ BUILD_DEPENDS+=	${PREFIX}/share/cmake/pybind11/pybind11Config.cmake:devel/pybind
 LIB_DEPENDS+=	liboslquery.so:graphics/openshadinglanguage
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}openimageio>0:graphics/py-openimageio@${PY_FLAVOR}
 PLIST=		${PKGDIR}/pkg-plist-pybind
-USES+=		python
+USES+=		python:3.6+
 USE_PYTHON=	flavors
 CMAKE_ON+=	USE_PYTHON
 CMAKE_ARGS+=	-DPYTHON_VERSION=${PYTHON_VER}
@@ -87,7 +88,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}
 	${INSTALL_LIB} ${BUILD_WRKSRC}/lib/python/site-packages/oslquery.so ${STAGEDIR}${PYTHON_SITELIBDIR}
 .else # SLAVE_PORT != yes
-USES+=		python:build
+USES+=		python:3.6+,build
 CMAKE_OFF+=	USE_PYTHON
 USE_LDCONFIG=	yes
 .endif # SLAVE_PORT

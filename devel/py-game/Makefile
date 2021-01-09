@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	game
-DISTVERSION=	2.0.0
+DISTVERSION=	2.0.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,7 +21,7 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 RUN_DEPENDS=	${PYNUMPY} \
 		v4l_compat>0:multimedia/v4l_compat
 
-USES=		jpeg pkgconfig python sdl xorg
+USES=		compiler:c11 jpeg pkgconfig python:3.6+ sdl xorg
 USE_SDL=	sdl2 ttf2 image2 mixer2
 USE_PYTHON=	autoplist distutils
 USE_XORG=	x11

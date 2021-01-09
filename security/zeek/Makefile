@@ -3,7 +3,7 @@
 
 PORTNAME=	zeek
 PORTVERSION=	3.0.12
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://old.zeek.org/downloads/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -13,7 +13,8 @@ COMMENT=	System for detecting network intruders in real-time
 
 LICENSE=	BSD3CLAUSE
 
-BROKEN_powerpc64=	Does not build: error: zero-size array 'names'
+BROKEN_FreeBSD_11_powerpc64==	Does not build: error: zero-size array 'names'
+BROKEN_FreeBSD_12_powerpc64==	Does not build: error: zero-size array 'names'
 
 USES=		bison cmake compiler:c++11-lang gettext-runtime ninja perl5 python shebangfix ssl
 USE_LDCONFIG=	yes
@@ -115,7 +116,6 @@ post-install-ZEEKCTL-on:
 	    ${STAGEDIR}${PREFIX}/share/zeekctl/scripts/zeekctl-config.sh
 
 post-install:
-	${RM} -r ${STAGEDIR}${PREFIX}/share/zeek/cmake
 	${MV} ${STAGEDIR}${DATADIR}/site/local.zeek \
 	    ${STAGEDIR}${DATADIR}/site/local.zeek.sample
 

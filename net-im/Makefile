@@ -13,6 +13,7 @@
     SUBDIR += cordless
     SUBDIR += coyim
     SUBDIR += cutegram
+    SUBDIR += dendrite
     SUBDIR += diligent
     SUBDIR += dino
     SUBDIR += echat
@@ -77,6 +78,7 @@
     SUBDIR += mikutter
     SUBDIR += mtxclient
     SUBDIR += neochat
+    SUBDIR += nextcloud-spreed-signaling
     SUBDIR += nextcloud-talk
     SUBDIR += nheko
     SUBDIR += openfire
@@ -179,6 +181,7 @@
     SUBDIR += vqcc-gtk
     SUBDIR += xmpp-client
     SUBDIR += yume
+    SUBDIR += zkgroup
     SUBDIR += zoom
 
 .include <bsd.port.subdir.mk>

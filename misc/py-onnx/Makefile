@@ -20,12 +20,12 @@ RUN_DEPENDS=	${PYNUMPY} \
 		${PY_TYPING} \
 		${PYTHON_PKGNAMEPREFIX}typing-extensions>0:devel/py-typing-extensions@${PY_FLAVOR}
 
-USES=		compiler:c11 python
+USES=		compiler:c11 python:3.6+
 USE_PYTHON=	distutils concurrent autoplist
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/onnx/onnx_cpp2py_export.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/onnx/onnx_cpp2py_export*.so
 
 .include <bsd.port.mk>

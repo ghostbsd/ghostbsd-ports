@@ -181,7 +181,6 @@
     SUBDIR += py-adns
     SUBDIR += py-aiodns
     SUBDIR += py-cloudflare
-    SUBDIR += py-dns
     SUBDIR += py-dns-lexicon
     SUBDIR += py-dnspython
     SUBDIR += py-dnspython2
@@ -217,6 +216,8 @@
     SUBDIR += rubygem-net-dns
     SUBDIR += rubygem-public_suffix
     SUBDIR += rubygem-public_suffix_service
+    SUBDIR += rubygem-resolv
+    SUBDIR += rubygem-resolv-replace
     SUBDIR += rubygem-simpleidn
     SUBDIR += rubygem-validates_hostname
     SUBDIR += rubygem-zonefile

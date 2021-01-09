@@ -21,8 +21,6 @@
     SUBDIR += apq-mysql
     SUBDIR += apq-odbc
     SUBDIR += apq-pgsql
-    SUBDIR += arangodb32
-    SUBDIR += arangodb33
     SUBDIR += arrow
     SUBDIR += ateam_mysql57_ldap_auth
     SUBDIR += ateam_mysql_ldap_auth
@@ -128,7 +126,6 @@
     SUBDIR += kexi
     SUBDIR += kyotocabinet
     SUBDIR += kyototycoon
-    SUBDIR += ldb14
     SUBDIR += ldb15
     SUBDIR += ldb20
     SUBDIR += ldb21
@@ -598,19 +595,6 @@
     SUBDIR += pguri
     SUBDIR += php-tarantool
     SUBDIR += php-xapian
-    SUBDIR += php72-dba
-    SUBDIR += php72-interbase
-    SUBDIR += php72-mysqli
-    SUBDIR += php72-odbc
-    SUBDIR += php72-pdo
-    SUBDIR += php72-pdo_dblib
-    SUBDIR += php72-pdo_firebird
-    SUBDIR += php72-pdo_mysql
-    SUBDIR += php72-pdo_odbc
-    SUBDIR += php72-pdo_pgsql
-    SUBDIR += php72-pdo_sqlite
-    SUBDIR += php72-pgsql
-    SUBDIR += php72-sqlite3
     SUBDIR += php73-dba
     SUBDIR += php73-interbase
     SUBDIR += php73-mysqli
@@ -660,6 +644,7 @@
     SUBDIR += postgis24
     SUBDIR += postgis25
     SUBDIR += postgis30
+    SUBDIR += postgis31
     SUBDIR += postgresql-cstore_fdw
     SUBDIR += postgresql-jdbc
     SUBDIR += postgresql-libpgeasy
@@ -744,7 +729,6 @@
     SUBDIR += pxlib
     SUBDIR += pxtools
     SUBDIR += py-Elixir
-    SUBDIR += py-MySQLdb
     SUBDIR += py-PyGreSQL
     SUBDIR += py-Pyrseas
     SUBDIR += py-aesqlapius
@@ -755,7 +739,6 @@
     SUBDIR += py-alembic
     SUBDIR += py-apsw
     SUBDIR += py-asyncpg
-    SUBDIR += py-bsddb
     SUBDIR += py-bsddb3
     SUBDIR += py-carbon
     SUBDIR += py-cassandra-driver
@@ -817,6 +800,7 @@
     SUBDIR += py-rb
     SUBDIR += py-redis
     SUBDIR += py-redis2
+    SUBDIR += py-rrdtool
     SUBDIR += py-sispy
     SUBDIR += py-south
     SUBDIR += py-sqlalchemy-json
@@ -974,6 +958,7 @@
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis-namespace16
     SUBDIR += rubygem-redis-namespace17
+    SUBDIR += rubygem-sdbm
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
     SUBDIR += rubygem-sqlite3-ruby

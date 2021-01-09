@@ -47,6 +47,7 @@
     SUBDIR += dstask
     SUBDIR += easystroke
     SUBDIR += egroupware
+    SUBDIR += elementary-calendar
     SUBDIR += fasd
     SUBDIR += fbreader
     SUBDIR += fet
@@ -218,6 +219,7 @@
     SUBDIR += shutter
     SUBDIR += simpleagenda
     SUBDIR += sliderule
+    SUBDIR += sowon
     SUBDIR += spice-gtk
     SUBDIR += synapse
     SUBDIR += syncthingtray

@@ -20,6 +20,7 @@ USES=		python:2.7-3.6
 USE_PYTHON=	distutils concurrent autoplist
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>0:devel/py-nose@${PY_FLAVOR}
 
+USES=		python:3.6+
 USE_GITHUB=	yes
 USE_PYTHON=	distutils concurrent autoplist
 

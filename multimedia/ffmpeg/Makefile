@@ -248,8 +248,8 @@ GCRYPT_LIB_DEPENDS=	libgcrypt.so:security/libgcrypt
 GCRYPT_CONFIGURE_ENABLE=	gcrypt
 
 # glslang
-GLSLANG_BUILD_DEPENDS=	glslang>0:devel/glslang \
-			spirv-tools>0:devel/spirv-tools
+GLSLANG_BUILD_DEPENDS=	glslang>0:graphics/glslang \
+			spirv-tools>0:graphics/spirv-tools
 GLSLANG_CONFIGURE_ENABLE=	libglslang
 GLSLANG_LDFLAGS=	-lm
 
@@ -541,7 +541,7 @@ VPX_LIB_DEPENDS=	libvpx.so:multimedia/libvpx
 VPX_CONFIGURE_ENABLE=	libvpx
 
 # vulkan
-VULKAN_BUILD_DEPENDS=	vulkan-headers>0:devel/vulkan-headers
+VULKAN_BUILD_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers
 VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
 VULKAN_CONFIGURE_ENABLE=	vulkan
 VULKAN_IMPLIES=		GLSLANG

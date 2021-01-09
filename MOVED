@@ -8163,9 +8163,6 @@ deskutils/ladon||2016-04-23|Has expired: Broken for more than 6 months
 java/linux-sun-jdk17||2016-04-24|Has expired: Unsupported and known for multiple security vulnerabilities
 devel/compiler-rt-devel|devel/llvm-devel|2016-04-24|Folded back in to devel/llvm-devel
 databases/rrdtool10|databases/rrdtool|2016-05-02|Old version, not maintained any more
-devel/sope|devel/sope2|2016-05-02|Renamed to devel/sope2
-www/sogo|www/sogo2|2016-05-02|Renamed to www/sogo2
-www/sogo-activesync|www/sogo2-activesync|2016-05-02|Renamed to www/sogo2-activesync
 textproc/rubygem-gherkin3|textproc/rubygem-gherkin|2016-05-03|Has expired: Use textproc/rubygem-gherkin instead
 dns/odsclient||2016-05-03|Has expired: ODS shuts service down, so client is probably useless
 games/Cockatrice|games/cockatrice|2016-05-05|Renamed to games/cockatrice
@@ -8288,7 +8285,6 @@ devel/avltree||2016-07-04|Has expired: Broken for more than 6 months
 devel/cbind||2016-07-04|Has expired: Broken for more than 6 months
 devel/tclgetopts||2016-07-04|Has expired: Broken for more than 6 months
 devel/antlrworks||2016-07-04|Has expired: Broken for more than 6 months
-devel/acme||2016-07-04|Has expired: Broken for more than 6 months
 devel/libopensync022||2016-07-04|Has expired: Broken for more than 6 months
 archivers/epkg||2016-07-04|Has expired: Broken for more than 6 months
 print/enscriptfonts||2016-07-04|Has expired: Broken for more than 6 months
@@ -9373,7 +9369,6 @@ security/openvas-libraries|security/openvas8-libraries|2017-08-03|Renamed to inc
 security/openvas-cli|security/openvas8-cli|2017-08-03|Renamed to include openvas 9 ports. It reflects a better name
 security/openvas-manager|security/openvas8-manager|2017-08-03|Renamed to include openvas 9 ports. It reflects a better name
 security/openvas-scanner|security/openvas8-scanner|2017-08-03|Renamed to include openvas 9 ports. It reflects a better name
-security/greenbone-security-assistant|security/greenbone-security-assistant8|2017-08-03|Renamed to include openvas 9 ports. It reflects a better name
 sysutils/consolekit|sysutils/consolekit2|2017-08-05|Continuation of the consolekit project
 mail/dovecot2|mail/dovecot|2017-08-07|Renamed to mail/dovecot
 mail/dovecot2-pigeonhole|mail/dovecot-pigeonhole|2017-08-07|Renamed to mail/dovecot-pigeonhole
@@ -10432,7 +10427,6 @@ graphics/OpenEXR|graphics/openexr|2018-09-22|Renamed to match upstream distribut
 math/mtl||2018-09-27|Has expired: fails to fetch: mastersite times out
 dns/dnscrypt-proxy|dns/dnscrypt-proxy2|2018-09-27|Has expired: Deprecated by upstream, use dns/dnscrypt-proxy2 instead
 www/waterfox||2018-09-29|Has expired: experiment ended: unsustainable
-net/xrdp-devel|net/xrdp|2018-09-30|Has expired: Use net/xrdp instead
 net/tigervnc-devel|net/tigervnc|2018-09-30|Has expired: Use net/tigervnc instead
 net/unison-devel|net/unison|2018-09-30|Has expired: Use net/unison instead
 textproc/p5-IDNA-Punycode||2018-09-30|Has expired: Deprecated by upstream
@@ -10812,7 +10806,6 @@ french/php_doc||2018-12-21|Has expired: unmaintained and documents obsolete PHP 
 japanese/php_doc||2018-12-21|Has expired: unmaintained and documents obsolete PHP < 5.6
 net/ntop||2018-12-21|Has expired: Broken for more than 6 months
 textproc/ots||2018-12-21|Has expired: Broken for more than 6 months
-x11/xdialog||2018-12-21|Has expired: Uses obsolete glib12
 net/netdude||2018-12-21|Has expired: Uses obsolete glib12
 japanese/jmode-skk||2018-12-21|Has expired: Uses obsolete glib12
 print/gsview||2018-12-21|Has expired: Uses obsolete glib12
@@ -13280,7 +13273,6 @@ sysutils/skill||2019-10-16|Has expired: Unfetchable, unmaintained
 sysutils/sloth||2019-10-16|Has expired: Unfetchable, unmaintained
 sysutils/snowlog||2019-10-16|Has expired: Unfetchable, unmaintained
 sysutils/wmfire||2019-10-16|Has expired: Unfetchable, unmaintained
-sysutils/xbattbar||2019-10-16|Has expired: Unfetchable, unmaintained
 textproc/bedic-data||2019-10-16|Has expired: Unfetchable, unmaintained
 textproc/clit||2019-10-16|Has expired: Unfetchable, unmaintained
 textproc/docbook-tdg||2019-10-16|Has expired: Unfetchable, unmaintained
@@ -14586,7 +14578,6 @@ devel/mercurialeclipse||2020-05-05|Has expired: Broken for more than 6 months
 devel/mime||2020-05-05|Has expired: Broken for more than 6 months
 devel/motor||2020-05-05|Has expired: Broken for more than 6 months
 devel/mq4cpp||2020-05-05|Has expired: Broken for more than 6 months
-devel/myrepos||2020-05-05|Has expired: Broken for more than 6 months
 devel/oozie||2020-05-05|Has expired: Broken for more than 6 months
 devel/p5-Cdk||2020-05-05|Has expired: Broken for more than 6 months
 devel/p5-Data-Average||2020-05-05|Has expired: Broken for more than 6 months
@@ -14851,9 +14842,7 @@ sysutils/tmate-slave||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/tss||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/vstrip||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/watchdog||2020-05-05|Has expired: Broken for more than 6 months
-sysutils/wmbsdbatt||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/wmcpuload||2020-05-05|Has expired: Broken for more than 6 months
-sysutils/wmcube||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/wtail||2020-05-05|Has expired: Broken for more than 6 months
 textproc/csv2latex||2020-05-05|Has expired: Broken for more than 6 months
 textproc/da-hyphen||2020-05-05|Has expired: Broken for more than 6 months
@@ -15251,7 +15240,6 @@ devel/py-yum-metadata-parser||2020-08-15|Has expired: Uses deprecated version of
 devel/rubygem-warden127||2020-08-15|Has expired: No longer needed
 dns/py-dnschain||2020-08-15|Has expired: Uses deprecated version of python
 dns/py-idnkit2||2020-08-15|Has expired: Uses deprecated version of python
-games/endgame-singularity||2020-08-15|Has expired: Uses deprecated version of python
 games/katawa-shoujo||2020-08-15|Has expired: Uses deprecated version of RenPy
 games/pyfa||2020-08-15|Has expired: Uses deprecated version of python
 games/renpy6||2020-08-15|Has expired: Uses deprecated version of python
@@ -15793,3 +15781,233 @@ www/py-pylons||2020-12-12|Has expired: Uses deprecated version of python
 www/py-qpy||2020-12-12|Has expired: Uses deprecated version of python
 news/py-sabyenc|news/py-sabyenc3|2020-12-12|Has expired: Uses deprecated version of python
 devel/py-gobject||2020-12-12|Has expired: Uses deprecated version of python
+games/gemrb||2020-12-18|Has expired: Uses deprecated version of python
+net/iplog||2020-12-18|Has expired: Unmaintained and dead upstream. Does not build with modern compilers
+www/rubygem-rack21|www/rubygem-rack|2020-12-18|Obsolete, please use www/rubygem-rack
+chinese/rime-data||2020-12-23|Unneeded metaport
+devel/vulkan-headers|graphics/vulkan-headers|2020-12-23|Moved to a better category, aligning with vulkan-loader
+devel/vulkan-tools|graphics/vulkan-tools|2020-12-23|Moved to a better category, aligning with vulkan-loader
+devel/vulkan-vulkan-validation-layers|graphics/vulkan-validation-layers|2020-12-23|Moved to a better category, aligning with vulkan-loader
+devel/glslang|graphics/glslang|2020-12-23|Moved to a better category, aligning with shaderc
+devel/spirv-tools|graphics/spirv-tools|2020-12-25|Moved to a better category, aligning with glslang and shaderc
+sysutils/basu|devel/basu|2020-12-25|Moved to a better category, aligning with dbus
+audio/modplugplay|audio/modplug-tools|2020-12-27|Moved to GitHub under a different name
+www/py-flexget|www/flexget|2020-12-28|Dropped py- prefix due to be a standalone application
+textproc/py-hypua2jamo||2020-12-29|Has expired: Uses deprecated version of python
+devel/py-delfick_error||2020-12-29|Has expired: Uses deprecated version of python
+devel/py-fusefs||2020-12-29|Has expired: Uses deprecated version of python
+devel/py-noseofyeti||2020-12-29|Has expired: Uses deprecated version of python
+databases/py-bsddb||2020-12-29|Has expired: Uses deprecated version of python
+www/py-webhelpers||2020-12-29|Has expired: Uses deprecated version of python
+security/py-pyptlib||2020-12-29|Has expired: Uses deprecated version of python
+japanese/py-zinnia||2020-12-29|Has expired: Uses deprecated version of python
+math/slepc||2020-12-29|Has expired: Broken, uses deprecated version of python
+www/py-pastescript||2020-12-29|Has expired: Uses deprecated version of python
+databases/ldb14||2020-12-29|Has expired: Uses deprecated version of python
+math/py-slepc4py||2020-12-29|Has expired: Depends on broken and expiring math/slepc
+multimedia/py-kaa-base||2020-12-29|Has expired: Uses deprecated version of python
+devel/py-ydbf||2020-12-29|Has expired: Uses deprecated version of python
+devel/py-SymbolType||2020-12-29|Has expired: Uses deprecated version of python
+databases/py-MySQLdb||2020-12-29|Has expired: Uses deprecated version of python
+net/py-libfte||2020-12-29|Has expired: Uses deprecated version of python
+audio/py-gmusicapi||2020-12-30|Has expired: Google Play Music is going away: https://github.com/simon-weber/gmusicapi/issues/673
+net/ceph12|net/ceph14|2020-12-30|Has expired: please use net/ceph14
+x11/xapps|x11/xapp|2020-12-31|Project renamed
+mail/opensmtpd-extras-table-python||2020-12-31|Has expired: Uses deprecated version of python
+net/php72-soap|net/php74-soap|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+net/php72-sockets|net/php74-sockets|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+net/php72-xmlrpc|net/php74-xmlrpc|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+net/php72-ldap|net/php74-ldap|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+textproc/php72-xmlwriter|textproc/php74-xmlwriter|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+textproc/php72-pspell|textproc/php74-pspell|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+textproc/php72-enchant|textproc/php74-enchant|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+textproc/php72-wddx||2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+textproc/php72-xsl|textproc/php74-xsl|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+textproc/php72-dom|textproc/php74-dom|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+textproc/php72-ctype|textproc/php74-ctype|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+textproc/php72-xml|textproc/php74-xml|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+textproc/php72-simplexml|textproc/php74-simplexml|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+textproc/php72-xmlreader|textproc/php74-xmlreader|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+graphics/php72-gd|graphics/php74-gd|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+graphics/php72-exif|graphics/php74-exif|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+mail/php72-imap|mail/php74-imap|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+www/php72-opcache|www/php74-opcache|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+www/mod_php72|www/mod_php74|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+www/php72-session|www/php74-session|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+www/php72-tidy|www/php74-tidy|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+security/php72-filter|security/php74-filter|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+security/php72-sodium|security/php74-sodium|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+security/php72-hash||2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+security/php72-openssl|security/php74-openssl|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+devel/php72-shmop|devel/php74-shmop|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+devel/php72-tokenizer|devel/php74-tokenizer|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+devel/php72-sysvshm|devel/php74-sysvshm|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+devel/php72-gettext|devel/php74-gettext|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+devel/php72-readline|devel/php74-readline|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+devel/php72-pcntl|devel/php74-pcntl|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+devel/php72-json|devel/php74-json|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+devel/php72-sysvmsg|devel/php74-sysvmsg|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+devel/php72-sysvsem|devel/php74-sysvsem|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+devel/php72-intl|devel/php74-intl|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+databases/php72-pdo_sqlite|databases/php74-pdo_sqlite|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+databases/php72-pdo_mysql|databases/php74-pdo_mysql|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+databases/php72-pgsql|databases/php74-pgsql|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+databases/php72-pdo_pgsql|databases/php74-pdo_pgsql|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+databases/php72-odbc|databases/php74-odbc|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+databases/php72-pdo_odbc|databases/php74-pdo_odbc|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+databases/php72-mysqli|databases/php74-mysqli|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+databases/php72-interbase||2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+databases/php72-pdo_firebird|databases/php74-pdo_firebird|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+databases/php72-pdo|databases/php74-pdo|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+databases/php72-dba|databases/php74-dba|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+databases/php72-pdo_dblib|databases/php74-pdo_dblib|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+databases/php72-sqlite3|databases/php74-sqlite3|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+ftp/php72-curl|ftp/php74-curl|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+ftp/php72-ftp|ftp/php74-ftp|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+misc/php72-calendar|misc/php74-calendar|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+math/php72-bcmath|math/php74-bcmath|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+math/php72-gmp|math/php74-gmp|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+archivers/php72-zip|archivers/php74-zip|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+archivers/php72-phar|archivers/php74-phar|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+archivers/php72-zlib|archivers/php74-zlib|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+archivers/php72-bz2|archivers/php74-bz2|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+net-mgmt/php72-snmp|net-mgmt/php74-snmp|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+lang/php72-extensions|lang/php74-extensions|2020-12-31|Removed, was part of expired PHP 7.2
+lang/php72|lang/php74|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+converters/php72-mbstring|converters/php74-mbstring|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+converters/php72-recode||2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+converters/php72-iconv|converters/php74-iconv|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+sysutils/php72-posix|sysutils/php74-posix|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+sysutils/php72-fileinfo|sysutils/php74-fileinfo|2020-12-31|Has expired: Security Support ends on 30 Nov 2020
+devel/arm-none-eabi-gdb||2020-12-31|Has expired: This is an old, obsolete version of gdb
+devel/pecl-weakref2||2020-12-31|Has expired: PHP 7.2 extension
+graphics/py-imageio24|graphics/py-imageio|2020-12-31|Has expired: Use graphics/py-imageio instead
+mail/bogofilter-tc||2020-12-31|Has expired: TokyoCabinet is being phased out in favor of KyotoCabinet
+net/pecl-yaz||2020-12-31|Has expired: PHP 7.2 extension
+print/cloudprint||2020-12-31|Has expired: Google Cloud Print is being shut down by Google by end of 2020
+science/py-eccodes-python|science/py-eccodes|2020-12-31|Has expired: Use science/py-eccodes instead
+sysutils/cfengine-masterfiles312|sysutils/cfengine-masterfiles315|2020-12-31|Has expired: EOL
+sysutils/cfengine-masterfiles313|sysutils/cfengine-masterfiles315|2020-12-31|Has expired: EOL
+sysutils/cfengine312|sysutils/cfengine315|2020-12-31|Has expired: EOL
+sysutils/cfengine313|sysutils/cfengine315|2020-12-31|Has expired: EOL
+sysutils/rubygem-chef-zero5|sysutils/rubygem-chef-zero|2020-12-31|Has expired: Please use sysutils/rubygem-chef-zero instead
+sysutils/syslog-ng325|sysutils/syslog-ng|2020-12-31|Has expired: Reduction of syslog-ng ports to one
+sysutils/syslog-ng326|sysutils/syslog-ng|2020-12-31|Has expired: Reduction of syslog-ng ports to one
+sysutils/syslog-ng328|sysutils/syslog-ng|2020-12-31|Has expired: Reduction of syslog-ng ports to one
+sysutils/syslog-ng329|sysutils/syslog-ng|2020-12-31|Has expired: Reduction of syslog-ng ports to one
+www/flashplayer||2020-12-31|Has expired: Depends on a deprecated port
+www/linux-flashplayer||2020-12-31|Has expired: Deprecated by upstream
+www/mediawiki133|www/mediawiki135|2020-12-31|Has expired: Upstream end of life
+www/mediawiki134|www/mediawiki135|2020-12-31|Has expired: Upstream end of life
+www/py-aiohttp2|www/py-aiohttp|2020-12-31|Has expired: Use www/py-aiohttp instead
+graphics/drm-legacy-kmod|graphics/drm-kmod|2020-12-31|Has expired: Obsolete version, use drm-kmod
+net/mediatomb|net/gerbera|2020-12-31|Removed: no new release for over 10 years
+devel/py-backports.shutil_get_terminal_size||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/py-backports.os||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/py-cheetah||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/py-dis3||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/py-functools32||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/py-more-itertools5||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/py-pathlib||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/py-selectors2||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/py-should_dsl||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/py-subprocess32||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/py-total-ordering||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/py-weakrefmethod||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+dns/py-dns||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+security/py-backports.ssl_match_hostname||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+security/sandsifter||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+sysutils/py-shutilwhich||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-OhlohWidgetsMacro||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-TracGoogleAnalytics||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-ccselector||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-advancedticketworkflow||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-autocomplete||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-customfieldadmin||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-datefield||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-defaultcc||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-discussion||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-email2trac||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-downloads||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-email2trac-postfix||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-estimator||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-fivestarvote||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-fullblognotification||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-graphviz||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-iniadmin||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-keywords||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-keywordsecretticket||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-ldapauthstore||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-math||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-mercurial||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-permredirect||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-navadd||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-privatetickets||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-pydotorgtheme||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-subtickets||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-scrumburndown||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-tags||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-ticketimport||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-tickettemplate||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-tocmacro||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-vote||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-tweakui||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-wikigoodies||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-wikinotification||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-wikitemplates||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-wikitopdf||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-wysiwyg||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-xmlrpc||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-fullblog||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-ldap||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-spam-filter||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-timingandestimation||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-themeengine||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/iridium||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+editors/atom||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/electron4||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/electron5||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/electron6||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+audio/ardour|audio/ardour6|2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+audio/mixxx21|audio/mixxx|2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+databases/arangodb32||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+databases/arangodb33||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/bzr||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/chromium-gn|devel/gn|2021-01-02|Has expired: Uses deprecated version of python, use devel/gn instead
+devel/mongo-cxx-driver||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+emulators/fceux||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+emulators/gem5||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+emulators/nonpareil||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+games/freera||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+games/glob2||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+games/marsnomercy||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+games/netpanzer||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+games/pingus||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+graphics/goxel||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+graphics/sk1libs||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+graphics/uniconvertor||2021-01-02|Has expired: Uses deprecated version of python
+games/dangerdeep||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+games/dangerdeep-data||2021-01-02|Removed, useless without games/dangerdeep
+lang/julia||2021-01-02|Removed, useless without any consumers
+lang/julia10||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+lang/spidermonkey24||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+mail/getmail||2021-01-02|Has expired: Uses deprecated version of python
+security/broccoli||2021-01-02|Has expired: Depends lang/python27 which is EOLed upstream
+security/orthrus||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+sysutils/ori||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
+sysutils/osquery||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+www/cliqz||2021-01-02|Has expired: Uses deprecated version of python
+www/trac||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+www/trac-accountmanager||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+print/xfce4-print||2021-01-02|Unmaintained, depends on dropped XFCE GTK2 support
+x11/xfce4-quicklauncher-plugin||2021-01-02|Unmaintained, depends on dropped XFCE GTK2 support
+x11/xfce4-wmdock-plugin||2021-01-02|Unmaintained, depends on dropped XFCE GTK2 support
+x11-toolkits/libxfce4gui||2021-01-02|Unmaintained, depends on dropped XFCE GTK2 support
+devel/py-backports.functools_lru_cache||2021-01-02|Uses Python 2.7 which is EOLed upstream
+devel/py-backports_abc||2021-01-02|Uses Python 2.7 which is EOLed upstream
+devel/py-futures||2021-01-02|Uses Python 2.7 which is EOLed upstream
+devel/py-singledispatch||2021-01-02|Uses Python 2.7 which is EOLed upstream
+graphics/py-pillow6|graphics/py-pillow|2021-01-02|Uses Python 2.7 which is EOLed upstream
+www/wt3|www/wt|2021-01-03|Has expired: Upstream end of life, switch to www/wt instead
+archivers/ecm|archivers/cmdpack|2021-01-04|ECM is now included in cmdpack
+math/qhull5|math/qhull|2021-01-04|Has expired: Legacy version of port no longer required by math/octave

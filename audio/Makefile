@@ -28,7 +28,6 @@
     SUBDIR += ample
     SUBDIR += amsynth
     SUBDIR += aqualung
-    SUBDIR += ardour
     SUBDIR += ardour6
     SUBDIR += ario
     SUBDIR += arss
@@ -365,7 +364,9 @@
     SUBDIR += kexis
     SUBDIR += kid3-kf5
     SUBDIR += kid3-qt5
+    SUBDIR += klystrack
     SUBDIR += kmix
+    SUBDIR += komposter
     SUBDIR += ksmp3play
     SUBDIR += kwave
     SUBDIR += ladspa
@@ -501,10 +502,9 @@
     SUBDIR += mixer.app
     SUBDIR += mixertui
     SUBDIR += mixxx
-    SUBDIR += mixxx21
     SUBDIR += mkcue
     SUBDIR += moc
-    SUBDIR += modplugplay
+    SUBDIR += modplug-tools
     SUBDIR += moodbar
     SUBDIR += moony-lv2
     SUBDIR += mous
@@ -559,6 +559,7 @@
     SUBDIR += ncspot
     SUBDIR += nekobi-lv2
     SUBDIR += noise-repellent-lv2
+    SUBDIR += noise-suppression-for-voice-lv2
     SUBDIR += normalize
     SUBDIR += nosefart
     SUBDIR += noson-app
@@ -659,7 +660,6 @@
     SUBDIR += py-discogs-client
     SUBDIR += py-eyed3
     SUBDIR += py-fmoo-audiotools
-    SUBDIR += py-gmusicapi
     SUBDIR += py-gtts
     SUBDIR += py-hsaudiotag3k
     SUBDIR += py-mpd
@@ -774,6 +774,7 @@
     SUBDIR += sratom
     SUBDIR += stegosaurus-lv2
     SUBDIR += stk
+    SUBDIR += stmp
     SUBDIR += stone-phaser-lv2
     SUBDIR += strawberry
     SUBDIR += streamripper
