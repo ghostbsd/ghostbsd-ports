@@ -800,6 +800,7 @@
     SUBDIR += osinfo-db-tools
     SUBDIR += p5-App-RunCron
     SUBDIR += p5-App-ZFSCurses
+    SUBDIR += p5-BackupPC-XS
     SUBDIR += p5-BSD-Jail-Object
     SUBDIR += p5-BSD-Process
     SUBDIR += p5-BSD-Sysctl
