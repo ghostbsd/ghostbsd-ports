@@ -8,7 +8,7 @@ lib/gvfs/libgvfsdaemon.so
 %%GOA%%libexec/gvfs-goa-volume-monitor
 %%GPHOTO%%libexec/gvfs-gphoto2-volume-monitor
 %%MTP%%libexec/gvfs-mtp-volume-monitor
-libexec/gvfs-udisks2-volume-monitor
+%%UDISKS2%%libexec/gvfs-udisks2-volume-monitor
 libexec/gvfsd
 %%AFC%%libexec/gvfsd-afc
 libexec/gvfsd-afp
@@ -46,7 +46,7 @@ share/dbus-1/services/org.gtk.vfs.Daemon.service
 %%GOA%%share/dbus-1/services/org.gtk.vfs.GoaVolumeMonitor.service
 %%MTP%%share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service
 share/dbus-1/services/org.gtk.vfs.Metadata.service
-share/dbus-1/services/org.gtk.vfs.UDisks2VolumeMonitor.service
+%%UDISKS2%%share/dbus-1/services/org.gtk.vfs.UDisks2VolumeMonitor.service
 %%AFC%%%%DATADIR%%/mounts/afc.mount
 %%DATADIR%%/mounts/afp-browse.mount
 %%DATADIR%%/mounts/afp.mount
@@ -76,7 +76,7 @@ share/dbus-1/services/org.gtk.vfs.UDisks2VolumeMonitor.service
 %%GOA%%%%DATADIR%%/remote-volume-monitors/goa.monitor
 %%GPHOTO%%%%DATADIR%%/remote-volume-monitors/gphoto2.monitor
 %%MTP%%%%DATADIR%%/remote-volume-monitors/mtp.monitor
-%%DATADIR%%/remote-volume-monitors/udisks2.monitor
+%%UDISKS2%%%%DATADIR%%/remote-volume-monitors/udisks2.monitor
 share/locale/af/LC_MESSAGES/gvfs.mo
 share/locale/ar/LC_MESSAGES/gvfs.mo
 share/locale/as/LC_MESSAGES/gvfs.mo

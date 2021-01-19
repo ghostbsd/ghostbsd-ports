@@ -3,7 +3,7 @@
 
 PORTNAME=	gvfs
 PORTVERSION=	1.46.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -20,8 +20,8 @@ LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
 		libgcr-base-3.so:security/gcr \
 		libsoup-2.4.so:devel/libsoup \
 		libgudev-1.0.so:devel/libgudev \
-		libudisks2.so:sysutils/libudisks \
 		libsecret-1.so:security/libsecret
+		# libudisks2.so:sysutils/libudisks \
 		
 RUN_DEPENDS=	bsdisks>0:sysutils/bsdisks
 PORTSCOUT=	limitw:1,even
@@ -41,7 +41,7 @@ USE_LDCONFIG=	yes
 GLIB_SCHEMAS=	org.gnome.system.gvfs.enums.xml
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	AVAHI FUSE AFC GOA SMB CDDA GOOGLE GPHOTO MTP NFS BLURAY
+OPTIONS_DEFINE=	AVAHI FUSE AFC GOA SMB CDDA GOOGLE GPHOTO MTP NFS BLURAY UDISKS2
 OPTIONS_DEFAULT=AVAHI SMB CDDA GPHOTO MTP NFS BLURAY
 
 AFC_DESC=	Apple device support
@@ -86,6 +86,9 @@ MTP_MESON_TRUE=		mtp
 
 NFS_LIB_DEPENDS=	libnfs.so:net/libnfs
 NFS_MESON_TRUE=		nfs
+
+UDISKS2_LIB_DEPENDS=        libudisks2.so:sysutils/libudisks
+UDISKS2_MESON_TRUE=         udisks2
 
 .include <bsd.port.mk>
 
