@@ -41,6 +41,7 @@
     SUBDIR += R-cran-ellipsis
     SUBDIR += R-cran-evaluate
     SUBDIR += R-cran-fansi
+    SUBDIR += R-cran-filelock
     SUBDIR += R-cran-foreach
     SUBDIR += R-cran-gbRd
     SUBDIR += R-cran-gbm
@@ -67,6 +68,7 @@
     SUBDIR += R-cran-pillar
     SUBDIR += R-cran-pkgbuild
     SUBDIR += R-cran-pkgconfig
+    SUBDIR += R-cran-pkgload
     SUBDIR += R-cran-pkgmaker
     SUBDIR += R-cran-plogr
     SUBDIR += R-cran-plyr
@@ -78,6 +80,7 @@
     SUBDIR += R-cran-proto
     SUBDIR += R-cran-purrr
     SUBDIR += R-cran-randomForest
+    SUBDIR += R-cran-rappdirs
     SUBDIR += R-cran-registry
     SUBDIR += R-cran-rematch2
     SUBDIR += R-cran-remotes
@@ -366,6 +369,7 @@
     SUBDIR += codesearch-py
     SUBDIR += codeworker
     SUBDIR += collada-dom
+    SUBDIR += color
     SUBDIR += colorgcc
     SUBDIR += colormake
     SUBDIR += commit-patch
@@ -529,7 +533,7 @@
     SUBDIR += efl
     SUBDIR += egypt
     SUBDIR += eiffelstudio
-    SUBDIR += electron7
+    SUBDIR += electron9
     SUBDIR += elf
     SUBDIR += elfio
     SUBDIR += elfkickers
@@ -644,6 +648,7 @@
     SUBDIR += fc++
     SUBDIR += fhist
     SUBDIR += fifechan
+    SUBDIR += fire-hpp
     SUBDIR += firmware-utils
     SUBDIR += fistgen
     SUBDIR += flang
@@ -866,6 +871,7 @@
     SUBDIR += google-styleguide
     SUBDIR += googletest
     SUBDIR += goprotobuf
+    SUBDIR += goredo
     SUBDIR += gorm
     SUBDIR += goswagger
     SUBDIR += got
@@ -1152,6 +1158,7 @@
     SUBDIR += libdwarf
     SUBDIR += libe
     SUBDIR += libedit
+    SUBDIR += libegit2
     SUBDIR += libeio
     SUBDIR += libelf
     SUBDIR += libepoll-shim
@@ -1476,6 +1483,7 @@
     SUBDIR += m4
     SUBDIR += mage
     SUBDIR += magit
+    SUBDIR += magit-devel
     SUBDIR += magit-popup
     SUBDIR += make++
     SUBDIR += makedepend
@@ -1565,6 +1573,7 @@
     SUBDIR += nsync
     SUBDIR += nuitka
     SUBDIR += obby
+    SUBDIR += objconv
     SUBDIR += objecthash
     SUBDIR += ocaml-annexlib
     SUBDIR += ocaml-calendar
@@ -3962,6 +3971,7 @@
     SUBDIR += plasma5-khotkeys
     SUBDIR += plasma5-kwrited
     SUBDIR += plasma5-plasma-sdk
+    SUBDIR += please
     SUBDIR += pmccabe
     SUBDIR += pmd
     SUBDIR += pmdk
@@ -4485,6 +4495,7 @@
     SUBDIR += py-infinity
     SUBDIR += py-inflect
     SUBDIR += py-inflection
+    SUBDIR += py-iniconfig
     SUBDIR += py-inifile
     SUBDIR += py-iniparse
     SUBDIR += py-intbitset
@@ -4572,6 +4583,7 @@
     SUBDIR += py-libcst
     SUBDIR += py-libioc
     SUBDIR += py-libpeas
+    SUBDIR += py-libplist
     SUBDIR += py-libtaxii
     SUBDIR += py-libtmux
     SUBDIR += py-libusb1
@@ -5091,6 +5103,7 @@
     SUBDIR += py-tartiflette-aiohttp
     SUBDIR += py-taskflow
     SUBDIR += py-taskflow3
+    SUBDIR += py-tasklib
     SUBDIR += py-tblib
     SUBDIR += py-tempora
     SUBDIR += py-tempora1
@@ -5138,7 +5151,6 @@
     SUBDIR += py-txaio
     SUBDIR += py-typechecks
     SUBDIR += py-typed-ast
-    SUBDIR += py-typing
     SUBDIR += py-typing-extensions
     SUBDIR += py-typing-inspect
     SUBDIR += py-tzlocal
@@ -5421,12 +5433,14 @@
     SUBDIR += rubygem-actionview50
     SUBDIR += rubygem-actionview52
     SUBDIR += rubygem-actionview60
+    SUBDIR += rubygem-actionview61
     SUBDIR += rubygem-active_scaffold
     SUBDIR += rubygem-activejob4
     SUBDIR += rubygem-activejob5
     SUBDIR += rubygem-activejob50
     SUBDIR += rubygem-activejob52
     SUBDIR += rubygem-activejob60
+    SUBDIR += rubygem-activejob61
     SUBDIR += rubygem-activemessaging
     SUBDIR += rubygem-activerecord-deprecated_finders
     SUBDIR += rubygem-activesupport4
@@ -5434,6 +5448,7 @@
     SUBDIR += rubygem-activesupport50
     SUBDIR += rubygem-activesupport52
     SUBDIR += rubygem-activesupport60
+    SUBDIR += rubygem-activesupport61
     SUBDIR += rubygem-airborne
     SUBDIR += rubygem-akismet
     SUBDIR += rubygem-algebrick
@@ -6196,6 +6211,7 @@
     SUBDIR += rubygem-jbuilder-rails50
     SUBDIR += rubygem-jbuilder-rails52
     SUBDIR += rubygem-jbuilder-rails60
+    SUBDIR += rubygem-jbuilder-rails61
     SUBDIR += rubygem-jekyll-coffeescript
     SUBDIR += rubygem-jenkins_api_client
     SUBDIR += rubygem-jeweler
@@ -6211,6 +6227,7 @@
     SUBDIR += rubygem-json1
     SUBDIR += rubygem-json_pure
     SUBDIR += rubygem-json_pure1
+    SUBDIR += rubygem-json_schema
     SUBDIR += rubygem-json_schemer
     SUBDIR += rubygem-jsonapi-renderer
     SUBDIR += rubygem-jsonpath
@@ -6529,6 +6546,7 @@
     SUBDIR += rubygem-sprockets-rails-rails50
     SUBDIR += rubygem-sprockets-rails-rails52
     SUBDIR += rubygem-sprockets-rails-rails60
+    SUBDIR += rubygem-sprockets-rails-rails61
     SUBDIR += rubygem-sprockets-sass
     SUBDIR += rubygem-sprockets2
     SUBDIR += rubygem-sprockets3
@@ -6628,6 +6646,7 @@
     SUBDIR += rubygem-un
     SUBDIR += rubygem-unicode
     SUBDIR += rubygem-unicode-display_width
+    SUBDIR += rubygem-unicode-display_width1
     SUBDIR += rubygem-unicode_utils
     SUBDIR += rubygem-unleash
     SUBDIR += rubygem-useragent
@@ -6643,6 +6662,7 @@
     SUBDIR += rubygem-warden
     SUBDIR += rubygem-wdm
     SUBDIR += rubygem-web-console-rails60
+    SUBDIR += rubygem-web-console-rails61
     SUBDIR += rubygem-web-console2
     SUBDIR += rubygem-web-console3-rails5
     SUBDIR += rubygem-web-console3-rails50
@@ -6650,6 +6670,7 @@
     SUBDIR += rubygem-webby
     SUBDIR += rubygem-webfinger
     SUBDIR += rubygem-webpacker-rails60
+    SUBDIR += rubygem-webpacker-rails61
     SUBDIR += rubygem-webpacker4-rails5
     SUBDIR += rubygem-webpacker4-rails50
     SUBDIR += rubygem-webpacker4-rails60
@@ -6841,6 +6862,8 @@
     SUBDIR += tortoisehg
     SUBDIR += tpasm
     SUBDIR += tradcpp
+    SUBDIR += transwarp
+    SUBDIR += transient
     SUBDIR += treepy.el
     SUBDIR += trellis
     SUBDIR += trio

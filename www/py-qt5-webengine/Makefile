@@ -2,6 +2,7 @@
 
 PORTNAME=	webengine
 DISTVERSION=	${PYQT_VERSION}
+PORTREVISION=	1
 CATEGORIES=	www devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/P/PyQtWebEngine/
 PKGNAMEPREFIX=	${PYQT_PY_RELNAME}-
@@ -11,9 +12,6 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python bindings for the Qt5 toolkit, QtWebEngine module
 
 LICENSE=	GPLv3
-
-BUILD_DEPENDS=	${PY_ENUM34}
-RUN_DEPENDS=	${PY_ENUM34}
 
 USES=		gl python:3.5+ pyqt:5 qt:5
 USE_GL=		gl

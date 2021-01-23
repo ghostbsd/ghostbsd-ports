@@ -2,6 +2,7 @@
 
 PORTNAME=	chart
 PORTVERSION=	${PYQT5_VERSION}
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits devel python
 MASTER_SITES=	${MASTER_SITES_PYQTCHART}
 PKGNAMEPREFIX=	${PYQT_PY_RELNAME}-
@@ -11,9 +12,6 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python bindings for the Qt5 toolkit, QtChart module
 
 LICENSE=	${PYQT5_LICENSE}
-
-BUILD_DEPENDS=	${PY_ENUM34}
-RUN_DEPENDS=	${PY_ENUM34}
 
 USES=		gl python:3.5+ pyqt:5 qt:5
 USE_GL=		gl

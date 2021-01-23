@@ -1,13 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	designer
+PORTREVISION=	1
 CATEGORIES=	devel python
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python bindings for the Qt5 toolkit, QtDesigner module
-
-BUILD_DEPENDS=	${PY_ENUM34}
-RUN_DEPENDS=	${PY_ENUM34}
 
 CONFIGURE_ARGS=	--enable QtDesigner --no-designer-plugin
 PYQT_DIST=	yes

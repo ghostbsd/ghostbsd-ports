@@ -565,11 +565,13 @@
     SUBDIR += rspamd-devel
     SUBDIR += rss2email3
     SUBDIR += rubygem-actionmailbox60
+    SUBDIR += rubygem-actionmailbox61
     SUBDIR += rubygem-actionmailer4
     SUBDIR += rubygem-actionmailer5
     SUBDIR += rubygem-actionmailer50
     SUBDIR += rubygem-actionmailer52
     SUBDIR += rubygem-actionmailer60
+    SUBDIR += rubygem-actionmailer61
     SUBDIR += rubygem-email_reply_parser
     SUBDIR += rubygem-email_reply_parser-discourse
     SUBDIR += rubygem-email_reply_trimmer
@@ -613,6 +615,7 @@
     SUBDIR += sigrot
     SUBDIR += simscan
     SUBDIR += slapd-cyrus
+    SUBDIR += slimta
     SUBDIR += sma
     SUBDIR += smfsav
     SUBDIR += smfsav-devel

@@ -21,8 +21,7 @@ LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
 		libsoup-2.4.so:devel/libsoup \
 		libgudev-1.0.so:devel/libgudev \
 		libsecret-1.so:security/libsecret
-		# libudisks2.so:sysutils/libudisks \
-		
+
 RUN_DEPENDS=	bsdisks>0:sysutils/bsdisks
 PORTSCOUT=	limitw:1,even
 
@@ -59,8 +58,8 @@ BLURAY_DESC=		Blu-ray metadata support
 FUSE_USES=		fuse:3
 FUSE_MESON_TRUE=	fuse
 
-AFC_LIB_DEPENDS=	libimobiledevice.so:comms/libimobiledevice \
-			libplist.so:devel/libplist
+AFC_LIB_DEPENDS=	libimobiledevice-1.0.so:comms/libimobiledevice \
+			libplist-2.0.so:devel/libplist
 AFC_MESON_TRUE=		afc
 
 GOA_LIB_DEPENDS=	libgoa-1.0.so:net/gnome-online-accounts
@@ -91,4 +90,3 @@ UDISKS2_LIB_DEPENDS=        libudisks2.so:sysutils/libudisks
 UDISKS2_MESON_TRUE=         udisks2
 
 .include <bsd.port.mk>
-

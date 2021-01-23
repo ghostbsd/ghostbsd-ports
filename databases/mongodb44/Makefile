@@ -2,7 +2,7 @@
 
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	4.4.2
+DISTVERSION=	4.4.3
 CATEGORIES=	databases net
 MASTER_SITES=	https://fastdl.mongodb.org/src/ \
 		http://fastdl.mongodb.org/src/
@@ -20,10 +20,9 @@ LICENSE_FILE_SSPLv1=	${WRKSRC}/LICENSE-Community.txt
 LICENSE_PERMS_SSPLv1=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 ONLY_FOR_ARCHS=	aarch64 amd64 powerpc64le
-ONLY_FOR_ARCHS_REASON=	"Only ported to amd64 and aarch64 on FreeBSD. Upstream supports arm64, ppc64le, s390x and x86-64."
+ONLY_FOR_ARCHS_REASON=	Only ported to amd64, aarch64 and powerpc64le on FreeBSD. Upstream supports arm64, ppc64le, s390x and x86-64.
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cheetah3>0:devel/py-cheetah3@${PY_FLAVOR} \
-		${PY_TYPING} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=3.11:devel/py-yaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR} \
 		${LOCALBASE}/bin/ar:devel/binutils
@@ -34,7 +33,6 @@ LIB_DEPENDS=	libpcre.so:devel/pcre \
 USES=		compiler:c++17-lang cpe python:3.5+,build scons shebangfix
 USE_RC_SUBR=	mongod
 
-CONFLICTS_BUILD=	mongo-cxx-driver
 CONFLICTS_INSTALL=	mongodb36 mongodb4[02]
 
 OPTIONS_DEFINE=	SASL SSL

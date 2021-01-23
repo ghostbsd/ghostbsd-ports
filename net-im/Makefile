@@ -117,6 +117,7 @@
     SUBDIR += purple-discord
     SUBDIR += purple-facebook
     SUBDIR += purple-hangouts
+    SUBDIR += purple-mattermost
     SUBDIR += purple-plugin-pack
     SUBDIR += purple-rocketchat
     SUBDIR += purple-slack
@@ -151,7 +152,6 @@
     SUBDIR += sshout
     SUBDIR += talkatu
     SUBDIR += teamwords
-    SUBDIR += telegram
     SUBDIR += telegram-cli
     SUBDIR += telegram-desktop
     SUBDIR += telegram-purple

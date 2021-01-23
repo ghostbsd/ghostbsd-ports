@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	automuteus
-DISTVERSION=	6.8.1
+DISTVERSION=	6.11.0
 CATEGORIES=	games
 
 MAINTAINER=	nc@FreeBSD.org
@@ -11,12 +11,6 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		go:modules
-USE_RC_SUBR=	${PORTNAME}
-SUB_FILES=	pkg-message
-
-GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
-GO_TARGET=	.:${PORTNAME}
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	denverquane
 
@@ -24,19 +18,20 @@ GH_TUPLE=	\
 		BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		automuteus:discordgo:v0.22.1:automuteus_discordgo/vendor/github.com/bwmarrin/discordgo \
 		automuteus:galactus:v1.2.2:automuteus_galactus/vendor/github.com/automuteus/galactus \
-		automuteus:utils:v0.0.6:automuteus_utils/vendor/github.com/automuteus/utils \
+		automuteus:utils:v0.0.9:automuteus_utils/vendor/github.com/automuteus/utils \
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
 		bsm:redislock:v0.7.0:bsm_redislock/vendor/github.com/bsm/redislock \
+		bwmarrin:discordgo:v0.22.1:bwmarrin_discordgo \
 		cespare:xxhash:v2.1.1:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
 		davecgh:go-spew:v1.1.1:davecgh_go_spew/vendor/github.com/davecgh/go-spew \
 		dgryski:go-rendezvous:9f7001d12a5f:dgryski_go_rendezvous/vendor/github.com/dgryski/go-rendezvous \
 		georgysavva:scany:v0.2.7:georgysavva_scany/vendor/github.com/georgysavva/scany \
-		go-redis:redis:v8.4.4:go_redis_redis_v8/vendor/github.com/go-redis/redis/v8 \
+		go-redis:redis:v8.4.8:go_redis_redis_v8/vendor/github.com/go-redis/redis/v8 \
 		go-yaml:yaml:9f266ea9e77c:go_yaml_yaml/vendor/gopkg.in/yaml.v3 \
 		golang:crypto:0c6587e931a9:golang_crypto/vendor/golang.org/x/crypto \
 		golang:protobuf:v1.4.3:golang_protobuf/vendor/github.com/golang/protobuf \
 		golang:sys:f9fddec55a1e:golang_sys/vendor/golang.org/x/sys \
-		golang:text:v0.3.4:golang_text/vendor/golang.org/x/text \
+		golang:text:v0.3.5:golang_text/vendor/golang.org/x/text \
 		golang:xerrors:5ec99f83aff1:golang_xerrors/vendor/golang.org/x/xerrors \
 		googollee:go-socket.io:v1.4.4:googollee_go_socket_io/vendor/github.com/googollee/go-socket.io \
 		gorilla:mux:v1.8.0:gorilla_mux/vendor/github.com/gorilla/mux \
@@ -64,10 +59,26 @@ GH_TUPLE=	\
 		stretchr:objx:v0.2.0:stretchr_objx/vendor/github.com/stretchr/objx \
 		stretchr:testify:v1.6.1:stretchr_testify/vendor/github.com/stretchr/testify
 
-PLIST_FILES=	bin/${PORTNAME} etc/${PORTNAME}/config.txt
+
+USE_RC_SUBR=	${PORTNAME}
+
+GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
+GO_TARGET=	.:${PORTNAME}
+
+SUB_FILES=	pkg-message
+PLIST_FILES=	bin/${PORTNAME} \
+		"@sample etc/${PORTNAME}/config.txt.sample" \
+		"@dir /var/log/automuteus" \
+		/var/log/${PORTNAME}/logs.txt
+
+post-extract:
+	@${MKDIR} ${WRKSRC}/vendor/github.com/bwmarrin
+	@${RLN} ${WRKSRC_automuteus_discordgo} ${WRKSRC}/vendor/github.com/bwmarrin/discordgo
 
 post-install:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/automuteus
-	@${CP} ${FILESDIR}/config.txt ${STAGEDIR}${PREFIX}/etc/automuteus
+	@${MKDIR} ${STAGEDIR}${ETCDIR}
+	@${CP} ${FILESDIR}/config.txt ${STAGEDIR}${ETCDIR}/config.txt.sample
+	@${MKDIR} ${STAGEDIR}/var/log/${PORTNAME}
+	@${TOUCH} ${STAGEDIR}/var/log/${PORTNAME}/logs.txt
 
 .include <bsd.port.mk>

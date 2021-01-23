@@ -1,13 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	sensors
+PORTREVISION=	1
 CATEGORIES=	comms devel python
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python bindings for the Qt5 toolkit, QtSensors module
-
-BUILD_DEPENDS=	${PY_ENUM34}
-RUN_DEPENDS=	${PY_ENUM34}
 
 CONFIGURE_ARGS=	--enable QtSensors
 PYQT_DIST=	yes

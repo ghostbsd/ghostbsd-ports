@@ -3,7 +3,7 @@
 
 PORTNAME=	mumps
 DISTVERSION=	5.1.2-aster7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math
 PKGNAMESUFFIX=	-edf
 
@@ -43,6 +43,11 @@ MAKE_JOBS_UNSAFE=yes
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../french/aster/bsd.aster.mk"
+
+.if ${GCC_DEFAULT} >= 10
+# workaround for Type mismatch in argument 's' at (1); passed INTEGER(4) to LOGICAL(4)
+FCFLAGS+=	-fallow-argument-mismatch
+.endif
 
 .ifdef WITH_MPI
 PKGNAMESUFFIX+=		-mpich

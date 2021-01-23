@@ -79,6 +79,7 @@
     SUBDIR += cf
     SUBDIR += charm
     SUBDIR += chrony
+    SUBDIR += chrony-lite
     SUBDIR += citrix_ica
     SUBDIR += cjdns
     SUBDIR += clash
@@ -297,6 +298,7 @@
     SUBDIR += kdenetwork
     SUBDIR += kdenetwork-filesharing
     SUBDIR += kea
+    SUBDIR += keycloak
     SUBDIR += kf5-kcalendarcore
     SUBDIR += kf5-kcontacts
     SUBDIR += kf5-kdav
@@ -1017,7 +1019,6 @@
     SUBDIR += py-httpstat
     SUBDIR += py-ifaddr
     SUBDIR += py-impacket
-    SUBDIR += py-ipaddress
     SUBDIR += py-iplib
     SUBDIR += py-iptools
     SUBDIR += py-kafka-python
@@ -1176,6 +1177,7 @@
     SUBDIR += rtptools
     SUBDIR += rubygem-activestorage52
     SUBDIR += rubygem-activestorage60
+    SUBDIR += rubygem-activestorage61
     SUBDIR += rubygem-amazon-ec2
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp

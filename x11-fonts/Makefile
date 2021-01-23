@@ -5,10 +5,12 @@
 
     SUBDIR += 3270font
     SUBDIR += Hasklig
+    SUBDIR += agave
     SUBDIR += alef
     SUBDIR += alegreya
     SUBDIR += alegreya-sans
     SUBDIR += alfont
+    SUBDIR += amigafonts
     SUBDIR += andika
     SUBDIR += anomaly-mono
     SUBDIR += anonymous-pro
@@ -19,6 +21,7 @@
     SUBDIR += artwiz-fonts
     SUBDIR += averiagwf
     SUBDIR += b612
+    SUBDIR += bdf2sfd
     SUBDIR += bdfresize
     SUBDIR += bdftopcf
     SUBDIR += bitstream-vera
@@ -46,6 +49,7 @@
     SUBDIR += doulos
     SUBDIR += doulos-compact
     SUBDIR += droid-fonts-ttf
+    SUBDIR += dseg
     SUBDIR += encodings
     SUBDIR += exo
     SUBDIR += fantasque-sans-mono

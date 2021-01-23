@@ -1,13 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	quick
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits devel python
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python bindings for the Qt5 toolkit, QtQuick module
-
-BUILD_DEPENDS=	${PY_ENUM34}
-RUN_DEPENDS=	${PY_ENUM34}
 
 CONFIGURE_ARGS=	--enable QtQuick
 PYQT_DIST=	yes

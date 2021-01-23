@@ -1,11 +1,14 @@
 # $FreeBSD$
 
-PORTNAME=	hwloc2
-PORTVERSION=	2.3.0
+PORTNAME=	hwloc
+PORTVERSION=	2.4.0
 CATEGORIES=	devel
 MASTER_SITES=	https://download.open-mpi.org/release/hwloc/v${PORTVERSION:R}/ \
 		http://icl.cs.utk.edu/open-mpi/software/hwloc/v${PORTVERSION:R}/downloads/
-DISTNAME=	hwloc-${PORTVERSION}
+PKGNAMESUFFIX=	2
+
+PATCH_SITES=	https://github.com/open-mpi/hwloc/commit/
+PATCHFILES=	45aaeb2010f32543cb3dd66fdfa784fad2597497.patch:-p1 # fix for https://github.com/open-mpi/hwloc/issues/442
 
 MAINTAINER=	phd_kimberlite@yahoo.co.jp
 COMMENT=	Portable Hardware Locality software package
@@ -29,12 +32,9 @@ CONFIGURE_ARGS=	--enable-static \
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
 
-DATADIR=	${PREFIX}/share/hwloc
-DOCSDIR=	${PREFIX}/share/doc/hwloc
-
 PORTDOCS=	*
 
-OPTIONS_DEFINE=	CAIRO DOCS
+OPTIONS_DEFINE=	CAIRO DEBUG DOCS
 OPTIONS_SUB=	yes
 
 CAIRO_CONFIGURE_OFF=	--disable-cairo --without-x
@@ -42,6 +42,8 @@ CAIRO_CONFIGURE_ON=	--enable-cairo --with-x
 CAIRO_LIB_DEPENDS=	libcairo.so:graphics/cairo
 CAIRO_USES=		xorg
 CAIRO_USE=		XORG=x11
+
+DEBUG_CONFIGURE_ENABLE=	debug # 'lstopo -' prints a lot of debug details when debug is enabled, this is separate from WITH_DEBUG=yes
 
 .include <bsd.port.pre.mk>
 
