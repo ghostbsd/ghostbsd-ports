@@ -209,6 +209,7 @@
     SUBDIR += convertall
     SUBDIR += coq
     SUBDIR += couenne
+    SUBDIR += coxeter3
     SUBDIR += cppad
     SUBDIR += crlibm
     SUBDIR += cryptominisat
@@ -863,7 +864,6 @@
     SUBDIR += py-spvcm
     SUBDIR += py-ssm
     SUBDIR += py-statsmodels
-    SUBDIR += py-statsmodels010
     SUBDIR += py-svgmath
     SUBDIR += py-sym
     SUBDIR += py-symcxx

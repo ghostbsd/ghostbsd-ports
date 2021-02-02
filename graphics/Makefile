@@ -584,8 +584,6 @@
     SUBDIR += opencolorio-tools
     SUBDIR += opencsg
     SUBDIR += opencv
-    SUBDIR += opencv-core
-    SUBDIR += opencv-java
     SUBDIR += opendx
     SUBDIR += openexr
     SUBDIR += openfx-arena
@@ -856,7 +854,6 @@
     SUBDIR += py-nwdiag
     SUBDIR += py-open3d-python
     SUBDIR += py-opencolorio
-    SUBDIR += py-opencv
     SUBDIR += py-openimageio
     SUBDIR += py-openshadinglanguage
     SUBDIR += py-photocollage

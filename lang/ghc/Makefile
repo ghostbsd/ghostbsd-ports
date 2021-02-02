@@ -131,8 +131,6 @@ _EXECUTABLES+=	${GHC_LIBDIR}/bin/ghc-iserv-prof
 _EXECUTABLES+=	${GHC_LIBDIR}/bin/ghc-iserv-dyn
 .endif
 
-.include <bsd.port.options.mk>
-
 .if empty(PORT_OPTIONS:MBOOT)
 BOOTSTRAPS_SUFFIX?=		${BOOTSTRAPS_SUFFIX_${ARCH}}
 BOOTSTRAPS_SUFFIX_powerpc64?=	-${PPC_ABI:tl}
@@ -151,6 +149,7 @@ RUN_DEPENDS+=		llc${LLVM_VERSION}:devel/llvm${LLVM_VERSION}
 # Keep in sync with LLVM_VERSION
 BINARY_ALIAS=		llc-9.0=llc90 \
 			opt-9.0=opt90
+CC=			clang90
 
 # When GHC being compiled and GHC used for bootstrapping support different
 # LLVM versions, we have to pull in both. Luckily, this is relatively rare.

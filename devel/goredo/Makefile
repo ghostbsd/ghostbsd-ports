@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	goredo
-DISTVERSION=	1.0.0
+DISTVERSION=	1.1.0
 CATEGORIES=	devel
 MASTER_SITES=	http://www.goredo.cypherpunks.ru/download/
 EXTRACT_SUFX=	.tar.zst
@@ -20,7 +20,7 @@ PLIST_FILES=	bin/${PORTNAME}
 
 .include <bsd.port.options.mk>
 
-.if ${OSVERSION} >= 1200000
+.if ${OSVERSION} < 1200000
 EXTRACT_DEPENDS=	zstd:archivers/zstd # 11 doesn't have the 'zstd' executable that tar(1) expects: Error opening archive: Can't initialize filter; unable to run program "zstd -d -qq"
 .endif
 

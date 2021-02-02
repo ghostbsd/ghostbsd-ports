@@ -4,6 +4,7 @@
 PORTNAME=	qgis
 DISTVERSIONPREFIX=	final-
 DISTVERSION=	3_16_3
+PORTREVISION=	1
 CATEGORIES=	graphics geography
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -96,7 +97,7 @@ RUN_DEPENDS=	astyle:devel/astyle \
 
 ### Fortran is needed by numpy, GRASS, etc.
 USES=		bison cmake compiler:features cpe desktop-file-utils \
-		fortran gl gmake gnome pgsql pyqt:5 python:3.6+ qca qt:5 \
+		fortran gl gmake gnome pgsql pyqt:5 python:3.7+ qca qt:5 \
 		shebangfix sqlite:3
 USE_GITHUB=	yes
 GH_PROJECT=	${PORTNAME:tu}

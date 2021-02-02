@@ -1964,6 +1964,7 @@
     SUBDIR += p5-Config-MVP-Reader-INI
     SUBDIR += p5-Config-Merge
     SUBDIR += p5-Config-Model
+    SUBDIR += p5-Config-Model-Backend-Yaml
     SUBDIR += p5-Config-Model-Tester
     SUBDIR += p5-Config-MySQL
     SUBDIR += p5-Config-Objective
@@ -2011,6 +2012,7 @@
     SUBDIR += p5-Data-Clone
     SUBDIR += p5-Data-Compare
     SUBDIR += p5-Data-Diver
+    SUBDIR += p5-Data-Dmp
     SUBDIR += p5-Data-Domain
     SUBDIR += p5-Data-Dump
     SUBDIR += p5-Data-Dump-Color
@@ -3116,6 +3118,7 @@
     SUBDIR += p5-Regexp-Pattern-Perl
     SUBDIR += p5-Regexp-RegGrp
     SUBDIR += p5-Regexp-Shellish
+    SUBDIR += p5-Regexp-Stringify
     SUBDIR += p5-Regexp-Subst-Parallel
     SUBDIR += p5-Regexp-Trie
     SUBDIR += p5-Religion
@@ -3694,6 +3697,7 @@
     SUBDIR += pam_wrapper
     SUBDIR += papi
     SUBDIR += papilio-loader
+    SUBDIR += parallel-hashmap
     SUBDIR += pas2dox
     SUBDIR += pasm
     SUBDIR += patch
@@ -4084,9 +4088,9 @@
     SUBDIR += py-atomicwrites
     SUBDIR += py-atpublic
     SUBDIR += py-attrs
+    SUBDIR += py-autocommand
     SUBDIR += py-autoflake
     SUBDIR += py-automaton
-    SUBDIR += py-automaton1
     SUBDIR += py-autoprop
     SUBDIR += py-avro
     SUBDIR += py-aws-sam-translator
@@ -4300,6 +4304,7 @@
     SUBDIR += py-curio
     SUBDIR += py-cursive
     SUBDIR += py-curtsies
+    SUBDIR += py-cwcwidth
     SUBDIR += py-cxx
     SUBDIR += py-cycler
     SUBDIR += py-cymem
@@ -4521,7 +4526,6 @@
     SUBDIR += py-jaraco.context
     SUBDIR += py-jaraco.context2
     SUBDIR += py-jaraco.functools
-    SUBDIR += py-jaraco.functools2
     SUBDIR += py-jaraco.itertools
     SUBDIR += py-jaraco.logging
     SUBDIR += py-jaraco.timing
@@ -4554,6 +4558,8 @@
     SUBDIR += py-jsonrpclib-pelix
     SUBDIR += py-jsonschema
     SUBDIR += py-jsonsir
+    SUBDIR += py-jupyter-packaging
+    SUBDIR += py-jupyter-server
     SUBDIR += py-jupyter-telemetry
     SUBDIR += py-jupyter_client
     SUBDIR += py-jupyter_console
@@ -4652,6 +4658,7 @@
     SUBDIR += py-nanotime
     SUBDIR += py-natsort
     SUBDIR += py-natural
+    SUBDIR += py-nbclassic
     SUBDIR += py-nbclient
     SUBDIR += py-nbconvert
     SUBDIR += py-nbdime
@@ -4750,6 +4757,7 @@
     SUBDIR += py-pastel
     SUBDIR += py-patch
     SUBDIR += py-patch-ng
+    SUBDIR += py-path
     SUBDIR += py-path.py
     SUBDIR += py-pathlib2
     SUBDIR += py-pathspec
@@ -4879,6 +4887,7 @@
     SUBDIR += py-pymaven-patch
     SUBDIR += py-pymisp
     SUBDIR += py-pympler
+    SUBDIR += py-pymtbl
     SUBDIR += py-pynest2d
     SUBDIR += py-pyopencl
     SUBDIR += py-pyparsing
@@ -4909,6 +4918,7 @@
     SUBDIR += py-pytest-cov
     SUBDIR += py-pytest-datadir
     SUBDIR += py-pytest-django
+    SUBDIR += py-pytest-enabler
     SUBDIR += py-pytest-env
     SUBDIR += py-pytest-factoryboy
     SUBDIR += py-pytest-fixture-config
@@ -5002,7 +5012,6 @@
     SUBDIR += py-readme-renderer
     SUBDIR += py-rebulk
     SUBDIR += py-rednose
-    SUBDIR += py-rekall-efilter
     SUBDIR += py-remote-pdb
     SUBDIR += py-repoze.lru
     SUBDIR += py-repoze.sphinx.autointerface
@@ -5633,6 +5642,8 @@
     SUBDIR += rubygem-aws-sdk-lambdapreview
     SUBDIR += rubygem-aws-sdk-lex
     SUBDIR += rubygem-aws-sdk-lexmodelbuildingservice
+    SUBDIR += rubygem-aws-sdk-lexmodelsv2
+    SUBDIR += rubygem-aws-sdk-lexruntimev2
     SUBDIR += rubygem-aws-sdk-licensemanager
     SUBDIR += rubygem-aws-sdk-lightsail
     SUBDIR += rubygem-aws-sdk-locationservice
@@ -6141,6 +6152,11 @@
     SUBDIR += rubygem-glib2
     SUBDIR += rubygem-gobject-introspection
     SUBDIR += rubygem-google-api-client
+    SUBDIR += rubygem-google-apis-core
+    SUBDIR += rubygem-google-apis-discovery_v1
+    SUBDIR += rubygem-google-apis-generator
+    SUBDIR += rubygem-google-apis-iamcredentials_v1
+    SUBDIR += rubygem-google-apis-storage_v1
     SUBDIR += rubygem-google-gax
     SUBDIR += rubygem-google-protobuf
     SUBDIR += rubygem-google-protobuf38
@@ -6326,6 +6342,7 @@
     SUBDIR += rubygem-oci
     SUBDIR += rubygem-octopress-hooks
     SUBDIR += rubygem-oj
+    SUBDIR += rubygem-oj310
     SUBDIR += rubygem-omniauth_crowd
     SUBDIR += rubygem-open3
     SUBDIR += rubygem-open3_backport
@@ -6381,6 +6398,7 @@
     SUBDIR += rubygem-pry
     SUBDIR += rubygem-pry-byebug
     SUBDIR += rubygem-pry-rails
+    SUBDIR += rubygem-pry-remote
     SUBDIR += rubygem-pry-remote-em
     SUBDIR += rubygem-ptreloaded
     SUBDIR += rubygem-puppet-resource_api
@@ -6802,6 +6820,7 @@
     SUBDIR += t1lib
     SUBDIR += ta-lib
     SUBDIR += tablist
+    SUBDIR += tabulate
     SUBDIR += tailor
     SUBDIR += talloc
     SUBDIR += taskctl
@@ -6862,8 +6881,8 @@
     SUBDIR += tortoisehg
     SUBDIR += tpasm
     SUBDIR += tradcpp
-    SUBDIR += transwarp
     SUBDIR += transient
+    SUBDIR += transwarp
     SUBDIR += treepy.el
     SUBDIR += trellis
     SUBDIR += trio

@@ -93,9 +93,6 @@
     SUBDIR += bareos-client
     SUBDIR += bareos-server
     SUBDIR += bareos-traymonitor
-    SUBDIR += bareos16-client
-    SUBDIR += bareos16-client-static
-    SUBDIR += bareos16-server
     SUBDIR += bareos17-client
     SUBDIR += bareos17-client-static
     SUBDIR += bareos17-server
@@ -761,6 +758,7 @@
     SUBDIR += neofetch
     SUBDIR += netevent
     SUBDIR += nfcutils
+    SUBDIR += nfs-over-tls
     SUBDIR += nitrogen
     SUBDIR += nix
     SUBDIR += nmrpflash
@@ -1132,14 +1130,12 @@
     SUBDIR += rubygem-chef-api
     SUBDIR += rubygem-chef-bin
     SUBDIR += rubygem-chef-config
-    SUBDIR += rubygem-chef-config12
     SUBDIR += rubygem-chef-dk
     SUBDIR += rubygem-chef-telemetry
     SUBDIR += rubygem-chef-utils
     SUBDIR += rubygem-chef-utils15
     SUBDIR += rubygem-chef-vault
     SUBDIR += rubygem-chef-zero
-    SUBDIR += rubygem-chef12
     SUBDIR += rubygem-choria-mcorpc-support
     SUBDIR += rubygem-facter
     SUBDIR += rubygem-fluent-mixin-plaintextformatter
@@ -1175,7 +1171,6 @@
     SUBDIR += rubygem-mothra
     SUBDIR += rubygem-murder
     SUBDIR += rubygem-ohai
-    SUBDIR += rubygem-ohai8
     SUBDIR += rubygem-parallel
     SUBDIR += rubygem-puppet_forge
     SUBDIR += rubygem-puppetfile-resolver
@@ -1528,7 +1523,6 @@
     SUBDIR += xfce4-diskperf-plugin
     SUBDIR += xfce4-fsguard-plugin
     SUBDIR += xfce4-genmon-plugin
-    SUBDIR += xfce4-kbdleds-plugin
     SUBDIR += xfce4-mount-plugin
     SUBDIR += xfce4-netload-plugin
     SUBDIR += xfce4-places-plugin

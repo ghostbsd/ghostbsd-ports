@@ -192,8 +192,8 @@
     SUBDIR += gost-engine
     SUBDIR += govpn
     SUBDIR += gpa
-    SUBDIR += gpgdir
     SUBDIR += gpg-gui
+    SUBDIR += gpgdir
     SUBDIR += gpgme
     SUBDIR += gpgme-cpp
     SUBDIR += gpgme-qt5
@@ -207,8 +207,8 @@
     SUBDIR += gstreamer1-plugins-dtls
     SUBDIR += gtkpasman
     SUBDIR += gvm
-    SUBDIR += gvmd
     SUBDIR += gvm-libs
+    SUBDIR += gvmd
     SUBDIR += gwee
     SUBDIR += hackbot
     SUBDIR += hardening-check
@@ -807,6 +807,7 @@
     SUBDIR += pidgin-otr
     SUBDIR += pinentry
     SUBDIR += pinentry-curses
+    SUBDIR += pinentry-efl
     SUBDIR += pinentry-fltk
     SUBDIR += pinentry-gnome3
     SUBDIR += pinentry-gtk2
@@ -975,9 +976,6 @@
     SUBDIR += py-python3-saml
     SUBDIR += py-pyvex
     SUBDIR += py-pywinrm
-    SUBDIR += py-rekall
-    SUBDIR += py-rekall-core
-    SUBDIR += py-rekall_lib
     SUBDIR += py-requests-credssp
     SUBDIR += py-requests-kerberos
     SUBDIR += py-ropper
@@ -1039,7 +1037,6 @@
     SUBDIR += razorback-virusTotal
     SUBDIR += razorback-yaraNugget
     SUBDIR += rcracki_mt
-    SUBDIR += regripper
     SUBDIR += reop
     SUBDIR += retranslator
     SUBDIR += revealrk

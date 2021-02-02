@@ -315,6 +315,7 @@
     SUBDIR += gstreamer1-plugins-wavpack
     SUBDIR += gstreamer1-plugins-webrtcdsp
     SUBDIR += gtick
+    SUBDIR += gtk-mixer
     SUBDIR += gtkguitune
     SUBDIR += gtkpod
     SUBDIR += gtmixer
@@ -804,6 +805,7 @@
     SUBDIR += teamspeak3-server
     SUBDIR += tempest_for_eliza
     SUBDIR += thunar-media-tags-plugin
+    SUBDIR += tiatracker
     SUBDIR += timely-lv2
     SUBDIR += timemachine
     SUBDIR += timidity

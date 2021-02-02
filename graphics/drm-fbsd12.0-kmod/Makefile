@@ -3,6 +3,7 @@
 
 PORTNAME=	drm-fbsd12.0-kmod
 PORTVERSION=	4.16.g20201016
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	x11@FreeBSD.org
@@ -16,11 +17,6 @@ ONLY_FOR_ARCHS_REASON=	the new KMS components are only supported on amd64 and i3
 
 RUN_DEPENDS=	gpu-firmware-kmod>=g20180319:graphics/gpu-firmware-kmod
 
-CONFLICTS_INSTALL=	drm-devel-kmod \
-			drm-fbsd11.2-kmod \
-			drm-current-kmod \
-			drm-legacy-kmod
-
 OPTIONS_DEFINE=	DEBUG
 
 USES=		kmod uidfix compiler:c++11-lang
@@ -32,7 +28,7 @@ GH_TAGNAME=	fa1387d
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && (${OSVERSION} < 1200058 || ${OSVERSION} > 1300000)
+.if ${OPSYS} == FreeBSD && (${OSVERSION} < 1200058 || ${OSVERSION} >= 1300000)
 IGNORE=		only supported on FreeBSD 12.
 .endif
 .if ${OPSYS} != FreeBSD

@@ -77,6 +77,351 @@ Notes:
   * Do not forget port variants (linux-f10-libxml2, libxml2, etc.)
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="8ec7d426-055d-46bc-8f5a-a9d73a5a71ab">
+    <topic>minio -- Server Side Request Forgery</topic>
+    <affects>
+      <package>
+	<name>minio</name>
+	<range><lt>2021.01.30.00.20.58</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Minio developers report:</p>
+	<blockquote cite="https://github.com/minio/minio/security/advisories/GHSA-m4qq-5f7c-693q">
+	  <p>Thanks to @phith0n from our community upon a code review, discovered an SSRF (Server Side Request Forgery) in our Browser API implementation. We have not observed this report/attack in the wild or reported elsewhere in the community at large.</p>
+	  <p>All users are advised to upgrade ASAP.</p>
+	  <p>The target application may have functionality for importing data from a URL, publishing data to a URL, or otherwise reading data from a URL that can be tampered with. The attacker modifies the calls to this functionality by supplying a completely different URL or by manipulating how URLs are built (path traversal etc.).</p>
+	  <p>In a Server-Side Request Forgery (SSRF) attack, the attacker can abuse functionality on the server to read or update internal resources. The attacker can supply or modify a URL which the code running on the server will read or submit data, and by carefully selecting the URLs, the attacker may be able to read server configuration such as AWS metadata, connect to internal services like HTTP enabled databases, or perform post requests towards internal services which are not intended to be exposed.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/minio/minio/security/advisories/GHSA-m4qq-5f7c-693q</url>
+    </references>
+    <dates>
+      <discovery>2021-01-29</discovery>
+      <entry>2021-01-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5d91370b-61fd-11eb-b87a-901b0ef719ab">
+    <topic>FreeBSD -- Xen guests can triger backend Out Of Memory</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>12.2</ge><lt>12.2_3</lt></range>
+	<range><ge>12.1</ge><lt>12.1_13</lt></range>
+	<range><ge>11.4</ge><lt>11.4_7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>Some OSes (including Linux, FreeBSD, and NetBSD) are processing watch
+	events using a single thread.  If the events are received faster than
+	the thread is able to handle, they will get queued.</p>
+	<p>As the queue is unbound, a guest may be able to trigger a OOM in
+	the backend.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-29568</cvename>
+      <freebsdsa>SA-21:02.xenoom</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2021-01-29</discovery>
+      <entry>2021-01-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a9c6e9be-61fb-11eb-b87a-901b0ef719ab">
+    <topic>FreeBSD -- Uninitialized kernel stack leaks in several file systems</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>12.2</ge><lt>12.2_3</lt></range>
+	<range><ge>12.1</ge><lt>12.1_13</lt></range>
+	<range><ge>11.4</ge><lt>11.4_7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>Several file systems were not properly initializing the d_off field
+	of the dirent structures returned by VOP_READDIR. In particular,
+	tmpfs(5), smbfs(5), autofs(5) and mqueuefs(5) were failing to do so.
+	As a result, eight uninitialized kernel stack bytes may be leaked to
+	userspace by these file systems. This problem is not present in
+	FreeBSD 11.</p>
+	<p>Additionally, msdosfs(5) was failing to zero-fill a pair of padding
+	fields in the dirent structure, resulting in a leak of three
+	uninitialized bytes.</p>
+	<h1>Impact:</h1>
+	<p>Kernel stack disclosures may leak sensitive information which could
+	be used to compromise the security of the system.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-25578</cvename>
+      <cvename>CVE-2020-25579</cvename>
+      <freebsdsa>SA-21:01.fsdisclosure</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2021-01-29</discovery>
+      <entry>2021-01-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="13ca36b8-6141-11eb-8a36-7085c2fb2c14">
+    <topic>pngcheck -- Buffer-overrun vulnerability</topic>
+    <affects>
+      <package>
+	<name>pngcheck</name>
+	<range><lt>3.0.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The libpng project reports:</p>
+	<blockquote cite="http://www.libpng.org/pub/png/apps/pngcheck.html">
+	  <p>pngcheck versions 3.0.0 and earlier have a pair of buffer-overrun
+	    bugs related to the sPLT and PPLT chunks (the latter is a MNG-only
+	    chunk, but it gets noticed even in PNG files if the -s option is used).
+	    Both bugs are fixed in version 3.0.1, released on 24 January 2021.
+	    Again, while all known vulnerabilities are fixed in this version,
+	    the code is quite crufty, so it would be safest to assume there are
+	    still some problems hidden in there. As always, use at your own risk.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.libpng.org/pub/png/apps/pngcheck.html</url>
+    </references>
+    <dates>
+      <discovery>2021-01-24</discovery>
+      <entry>2021-01-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f3cf4b33-6013-11eb-9a0e-206a8a720317">
+    <topic>sudo -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+       <name>sudo</name>
+       <range><lt>1.9.5p2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Todd C. Miller reports:</p>
+       <blockquote cite="https://www.sudo.ws/stable.html#1.9.5p2">
+	 <p>When invoked as sudoedit, the same set of command line options
+	    are now accepted as for sudo -e. The -H and -P options are now
+	    rejected for sudoedit and sudo -e which matches the sudo 1.7
+	    behavior. This is part of the fix for CVE-2021-3156.</p>
+	 <p>Fixed a potential buffer overflow when unescaping backslashes in
+	    the command's arguments. Normally, sudo escapes special characters
+	    when running a command via a shell (sudo -s or sudo -i). However,
+	    it was also possible to run sudoedit with the -s or -i flags in
+	    which case no escaping had actually been done, making a buffer
+	    overflow possible. This fixes CVE-2021-3156.</p>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://www.sudo.ws/stable.html#1.9.5p2</url>
+      <cvename>CVE-2021-3156</cvename>
+    </references>
+    <dates>
+      <discovery>2021-01-26</discovery>
+      <entry>2021-01-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fb67567a-5d95-11eb-a955-08002728f74c">
+    <topic>pysaml2 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py36-pysaml2</name>
+	<name>py37-pysaml2</name>
+	<name>py38-pysaml2</name>
+	<name>py39-pysaml2</name>
+	<range><lt>6.5.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>pysaml2 Releases:</p>
+	<blockquote cite="https://github.com/IdentityPython/pysaml2/releases">
+	  <p>Fix processing of invalid SAML XML documents - CVE-2021-21238</p>
+	  <p>Fix unspecified xmlsec1 key-type preference - CVE-2021-21239</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/IdentityPython/pysaml2/releases</url>
+      <url>https://github.com/IdentityPython/pysaml2/security/advisories/GHSA-f4g9-h89h-jgv9</url>
+      <url>https://github.com/IdentityPython/pysaml2/security/advisories/GHSA-5p3x-r448-pc62</url>
+      <cvename>CVE-2021-21238</cvename>
+      <cvename>CVE-2021-21239</cvename>
+    </references>
+    <dates>
+      <discovery>2021-01-20</discovery>
+      <entry>2021-01-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="425f2143-8876-4b0a-af84-e0238c5c2062">
+    <topic>jenkins -- Arbitrary file read vulnerability in workspace browsers</topic>
+    <affects>
+      <package>
+	<name>jenkins</name>
+	<range><lt>2.276</lt></range>
+      </package>
+      <package>
+	<name>jenkins-lts</name>
+	<range><lt>2.263.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory:</p>
+	<blockquote cite="https://www.jenkins.io/security/advisory/2021-01-26/">
+	  <h1>Description</h1>
+	  <h5>(Medium) SECURITY-2197 / CVE-2021-21615</h5>
+	  <p>Arbitrary file read vulnerability in workspace browsers</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://www.jenkins.io/security/advisory/2021-01-26/</url>
+    </references>
+    <dates>
+      <discovery>2021-01-26</discovery>
+      <entry>2021-01-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="387bbade-5d1d-11eb-bf20-4437e6ad11c4">
+    <topic>mutt -- denial of service</topic>
+    <affects>
+      <package>
+	<name>mutt</name>
+	<range><lt>2.0.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Tavis Ormandy reports:</p>
+	<blockquote cite="https://gitlab.com/muttmua/mutt/-/issues/323">
+	  <p>
+	    rfc822.c in Mutt through 2.0.4 allows remote attackers to cause a
+	    denial of service (mailbox unavailability) by sending email messages
+	    with sequences of semicolon characters in RFC822 address fields
+	    (aka terminators of empty groups). A small email message from the
+	    attacker can cause large memory consumption, and the victim
+	    may then be unable to see email messages from other persons.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+    <url>https://gitlab.com/muttmua/mutt/-/issues/323</url>
+    <cvename>CVE-2021-3181</cvename>
+    </references>
+    <dates>
+      <discovery>2021-01-17</discovery>
+      <entry>2021-01-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="31344707-5d87-11eb-929d-d4c9ef517024">
+    <topic>MySQL -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mysql56-client</name>
+	<range><lt>5.6.51</lt></range>
+      </package>
+      <package>
+	<name>mysql57-client</name>
+	<range><lt>5.7.33</lt></range>
+      </package>
+      <package>
+	<name>mysql80-client</name>
+	<range><lt>8.0.23</lt></range>
+      </package>
+      <package>
+	<name>mysql56-server</name>
+	<range><lt>5.6.51</lt></range>
+      </package>
+      <package>
+	<name>mysql57-server</name>
+	<range><lt>5.7.33</lt></range>
+      </package>
+      <package>
+	<name>mysql80-server</name>
+	<range><lt>8.0.23</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Oracle reports:</p>
+	<blockquote cite="https://www.oracle.com/security-alerts/cpujan2021.html#AppendixMSQL">
+	  <p>This Critical Patch Update contains 34 new security patches for
+	    Oracle MySQL Server and 4 for MySQL Client. </p>
+	  <p>The highest CVSS v3.1 Base Score of vulnerabilities affecting Oracle
+	    MySQL is 6.8.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://www.oracle.com/security-alerts/cpujan2021.html#AppendixMSQL</url>
+      <url>CVE-2021-2046</url>
+      <url>CVE-2021-2020</url>
+      <url>CVE-2021-2024</url>
+      <url>CVE-2021-2011</url>
+      <url>CVE-2021-2006</url>
+      <url>CVE-2021-2048</url>
+      <url>CVE-2021-2028</url>
+      <url>CVE-2021-2122</url>
+      <url>CVE-2021-2058</url>
+      <url>CVE-2021-2001</url>
+      <url>CVE-2021-2016</url>
+      <url>CVE-2021-2021</url>
+      <url>CVE-2021-2030</url>
+      <url>CVE-2021-2031</url>
+      <url>CVE-2021-2036</url>
+      <url>CVE-2021-2055</url>
+      <url>CVE-2021-2060</url>
+      <url>CVE-2021-2070</url>
+      <url>CVE-2021-2076</url>
+      <url>CVE-2021-2065</url>
+      <url>CVE-2021-2014</url>
+      <url>CVE-2021-2002</url>
+      <url>CVE-2021-2012</url>
+      <url>CVE-2021-2009</url>
+      <url>CVE-2021-2072</url>
+      <url>CVE-2021-2081</url>
+      <url>CVE-2021-2022</url>
+      <url>CVE-2021-2038</url>
+      <url>CVE-2021-2061</url>
+      <url>CVE-2021-2056</url>
+      <url>CVE-2021-2087</url>
+      <url>CVE-2021-2088</url>
+      <url>CVE-2021-2032</url>
+      <url>CVE-2021-2010</url>
+      <url>CVE-2021-1998</url>
+      <url>CVE-2021-2007</url>
+      <url>CVE-2021-2019</url>
+      <url>CVE-2021-2042</url>
+    </references>
+    <dates>
+      <discovery>2021-01-23</discovery>
+      <entry>2021-01-23</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="4ed0e43c-5cef-11eb-bafd-3065ec8fd3ec">
     <topic>chromium -- multiple vulnerabilities</topic>
     <affects>
@@ -202,8 +547,8 @@ Notes:
 	<range><lt>3.0.1</lt></range>
       </package>
       <package>
-        <name>crispy-doom</name>
-        <range><lt>5.9.0</lt></range>
+	<name>crispy-doom</name>
+	<range><lt>5.9.0</lt></range>
       </package>
     </affects>
     <description>
@@ -211,10 +556,10 @@ Notes:
 	<p>Michal Dardas from LogicalTrust reports:</p>
 	<blockquote cite="https://github.com/chocolate-doom/chocolate-doom/issues/1293">
 	  <p>
-            The server in Chocolate Doom 3.0.0 and Crispy Doom 5.8.0 doesn't validate
-            the user-controlled num_players value, leading to a buffer overflow. A
-            malicious user can overwrite the server's stack.
-          </p>
+	    The server in Chocolate Doom 3.0.0 and Crispy Doom 5.8.0 doesn't validate
+	    the user-controlled num_players value, leading to a buffer overflow. A
+	    malicious user can overwrite the server's stack.
+	  </p>
 	</blockquote>
       </body>
     </description>
@@ -14008,25 +14353,24 @@ whitespace)
     </dates>
   </vuln>
 
-  &vuln-2019;
-  &vuln-2018;
-  &vuln-2017;
-  &vuln-2016;
-  &vuln-2015;
-  &vuln-2014;
-  &vuln-2013;
-  &vuln-2012;
-  &vuln-2011;
-  &vuln-2010;
-  &vuln-2009;
-  &vuln-2008;
-  &vuln-2007;
-  &vuln-2006;
-  &vuln-2005;
-  &vuln-2004;
-  &vuln-2003;
-
-</vuxml><!-- EOF -->
+&vuln-2019;
+&vuln-2018;
+&vuln-2017;
+&vuln-2016;
+&vuln-2015;
+&vuln-2014;
+&vuln-2013;
+&vuln-2012;
+&vuln-2011;
+&vuln-2010;
+&vuln-2009;
+&vuln-2008;
+&vuln-2007;
+&vuln-2006;
+&vuln-2005;
+&vuln-2004;
+&vuln-2003;</vuxml>
+<!-- EOF -->
 <!-- Note:  Please add new entries to the beginning of this file. -->
 <!-- ex: set ts=8 tw=80 sw=2: -->
 <!-- vim: set softtabstop=2 noexpandtab: -->

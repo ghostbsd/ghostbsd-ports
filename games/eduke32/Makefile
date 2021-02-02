@@ -78,6 +78,10 @@ FULL_PLIST_FILES=	${DATADIR}/duke3d.grp ${DATADIR}/duke.rts
 
 .include <bsd.port.options.mk>
 
+.if ${ARCH} == i386 || ${ARCH} == powerpc64
+MAKE_ARGS+=	LTO=0
+.endif
+
 .if ${PORT_OPTIONS:MFULL}
 
 # Avoid checksumming original (commercial) game data files: A variety of
@@ -86,7 +90,7 @@ FULL_PLIST_FILES=	${DATADIR}/duke3d.grp ${DATADIR}/duke.rts
 # is set.
 _CKSUMFILES=	${ALLFILES:Nduke3d/duke*}
 
-.if !exists(${DISTDIR}/duke3d/duke3d.grp) || !exists(${DISTDIR}/duke3d/duke.rts)
+.if !exists(${DISTDIR}/duke3d/duke3d.grp) && !exists(${DISTDIR}/duke3d/duke.rts)
 IGNORE=	option FULL selected, but duke3d.grp or duke.rts not found in ${DISTDIR}/duke3d
 .endif
 

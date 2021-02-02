@@ -339,6 +339,7 @@
     SUBDIR += szip
     SUBDIR += teem
     SUBDIR += tfel
+    SUBDIR += thermofun
     SUBDIR += tfel-edf
     SUBDIR += tinker
     SUBDIR += udunits
@@ -352,7 +353,6 @@
     SUBDIR += wxmacmolplt
     SUBDIR += xcrysden
     SUBDIR += xdrawchem
-    SUBDIR += xfce4-equake-plugin
     SUBDIR += xtb
     SUBDIR += yoda
 
