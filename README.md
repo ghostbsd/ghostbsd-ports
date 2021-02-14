@@ -51,7 +51,7 @@ To fetch and merge from FreeBSD ports, we need to set the freebsd-ports remote r
 
 > cd ghostbsd 
 
-> git remote add freebsd https://github.com/freebsd/freebsdports.git 
+> git remote add freebsd https://github.com/freebsd/freebsd-ports.git 
 
 You should have this.
 
