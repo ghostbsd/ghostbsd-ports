@@ -11,6 +11,7 @@
     SUBDIR += ant-dracula-theme
     SUBDIR += arc-gruvbox-theme
     SUBDIR += audacious-skins
+    SUBDIR += canta-gtk-themes
     SUBDIR += classiclooks
     SUBDIR += claws-mail-themes
     SUBDIR += clearlooks
@@ -63,7 +64,6 @@
     SUBDIR += gnome-icons-ximian-south
     SUBDIR += gnome-themes
     SUBDIR += gnome-themes-extra
-    SUBDIR += gnome-themes-extras
     SUBDIR += greybird-theme
     SUBDIR += gtk-E17-theme
     SUBDIR += gtk-aluminumalloy-cryogenic-theme

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	foot
-DISTVERSION=	1.6.3
+DISTVERSION=	1.6.4
 CATEGORIES=	x11
 MASTER_SITES=	https://codeberg.org/dnkl/${PORTNAME}/archive/${DISTVERSIONFULL}${EXTRACT_SUFX}?dummy=/
 
@@ -24,6 +24,6 @@ LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim \
 USES=		compiler:c11 meson pkgconfig xorg
 USE_XORG=	pixman
 WRKSRC=		${WRKDIR}/${PORTNAME}
-MESON_ARGS=	-Dterminfo=false
+MESON_ARGS=	-Dterminfo=disabled
 
 .include <bsd.port.mk>

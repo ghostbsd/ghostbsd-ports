@@ -11,6 +11,7 @@
     SUBDIR += R-cran-ROAuth
     SUBDIR += R-cran-askpass
     SUBDIR += R-cran-digest
+    SUBDIR += R-cran-gitcreds
     SUBDIR += R-cran-openssl
     SUBDIR += acme.sh
     SUBDIR += acmed
@@ -199,8 +200,6 @@
     SUBDIR += gpgme-qt5
     SUBDIR += gputty
     SUBDIR += greenbone-security-assistant
-    SUBDIR += greenbone-security-assistant8
-    SUBDIR += greenbone-security-assistant9
     SUBDIR += gringotts
     SUBDIR += gsasl
     SUBDIR += gss
@@ -273,6 +272,7 @@
     SUBDIR += krb5-116
     SUBDIR += krb5-117
     SUBDIR += krb5-118
+    SUBDIR += krb5-119
     SUBDIR += krb5-appl
     SUBDIR += krb5-devel
     SUBDIR += kripp
@@ -418,16 +418,6 @@
     SUBDIR += openssl-unsafe
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas
-    SUBDIR += openvas8
-    SUBDIR += openvas8-cli
-    SUBDIR += openvas8-libraries
-    SUBDIR += openvas8-manager
-    SUBDIR += openvas8-scanner
-    SUBDIR += openvas9
-    SUBDIR += openvas9-cli
-    SUBDIR += openvas9-libraries
-    SUBDIR += openvas9-manager
-    SUBDIR += openvas9-scanner
     SUBDIR += openvpn
     SUBDIR += openvpn-admin
     SUBDIR += openvpn-auth-ldap
@@ -1045,6 +1035,7 @@
     SUBDIR += rifiuti2
     SUBDIR += rkhunter
     SUBDIR += rndpassw
+    SUBDIR += rnp
     SUBDIR += ruby-bitwarden
     SUBDIR += rubygem-acme-client
     SUBDIR += rubygem-aes_key_wrap
@@ -1259,7 +1250,6 @@
     SUBDIR += tinc
     SUBDIR += tinc-devel
     SUBDIR += tinyca
-    SUBDIR += titus
     SUBDIR += tls-check
     SUBDIR += tlswrap
     SUBDIR += tor
