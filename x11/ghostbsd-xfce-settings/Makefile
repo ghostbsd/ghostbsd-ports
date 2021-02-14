@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ghostbsd-xfce-settings
-PORTVERSION=	3.3.5
+PORTVERSION=	3.4
 CATEGORIES=	x11
 
 MAINTAINER=	eturgeon@ixsystems.com
