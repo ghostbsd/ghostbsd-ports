@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	youtube_dlc
-DISTVERSION=	2021.01.16
+DISTVERSION=	2021.02.09
 CATEGORIES=	www
 
 # Implicit approval to commit trivial version updates.

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ptpython
-PORTVERSION=	3.0.12
+PORTVERSION=	3.0.13
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,6 +23,11 @@ USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
+
+OPTIONS_DEFINE=	PTIPYTHON
+PTIPYTHON_DESC=	Interactive shell with IPython support
+
+PTIPYTHON_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ipython>=0:devel/ipython@${PY_FLAVOR}
 
 .include <bsd.port.pre.mk>
 

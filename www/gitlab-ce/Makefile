@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME?=	gitlab-ce
-PORTVERSION?=	13.8.1
-PORTREVISION?=	1
+PORTVERSION?=	13.8.4
+PORTREVISION?=	0
 CATEGORIES=	www devel
 
-MAINTAINER?=	mfechner@FreeBSD.org
-COMMENT?=	Web GUI for managing git repositories
+MAINTAINER=	mfechner@FreeBSD.org
+COMMENT=	Web GUI for managing git repositories
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -19,9 +19,9 @@ MY_DEPENDS=	git>=2.29:devel/git \
 	gitlab-elasticsearch-indexer>=2.8.0:textproc/gitlab-elasticsearch-indexer \
 	gitlab-agent>=13.8.0:net/gitlab-agent \
 	gitlab-pages>=1.34.0:www/gitlab-pages \
-	gitlab-shell>=13.15.0:devel/gitlab-shell \
+	gitlab-shell>=13.15.1:devel/gitlab-shell \
 	gitlab-workhorse>=8.59.0:www/gitlab-workhorse \
-	redis>=3.2.12:databases/redis \
+	redis>=4.0.0:databases/redis \
 	yarn>=1.10.0:www/yarn \
 	gtar>0:archivers/gtar \
 	bash>0:shells/bash \
@@ -219,7 +219,7 @@ MY_DEPENDS=	git>=2.29:devel/git \
 	rubygem-ed25519>=1.2<2.0:security/rubygem-ed25519 \
 	rubygem-bcrypt_pbkdf>=1.0<2.0:security/rubygem-bcrypt_pbkdf \
 	rubygem-gitaly>=13.8.0.pre.rc2<13.9.0:net/rubygem-gitaly \
-	rubygem-grpc>=1.30.2<1.31:net/rubygem-grpc \
+	rubygem-grpc130>=1.30.2<1.31:net/rubygem-grpc130 \
 	rubygem-google-protobuf>=3.12<4:devel/rubygem-google-protobuf \
 	rubygem-toml-rb10>=1.0.0<1.1.0:www/rubygem-toml-rb10 \
 	rubygem-flipper017>=0.17.1<0.18.0:devel/rubygem-flipper017 \
@@ -265,7 +265,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT?=	gitlab-org
 GL_PROJECT?=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT?=	7248f8bff5a90f3ff570c368310c361e1f4e9092
+GL_COMMIT?=	9fb9cbf50c31dc9d99fe3d6fd04782fbfc4216c0
 
 USERS=	git
 GROUPS=	git

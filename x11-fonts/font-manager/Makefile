@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	font-manager
-PORTVERSION=	0.8.3
+PORTVERSION=	0.8.4
 CATEGORIES=	x11-fonts gnome
 
 MAINTAINER=	ehaupt@FreeBSD.org
@@ -37,6 +37,9 @@ OPTIONS_SUB=	yes
 
 NLS_USES=	gettext-runtime
 NLS_MESON_TRUE=	enable-nls
+
+# flatpak specific changes only
+PORTSCOUT=	skipv:0.8.4-1
 
 post-patch:
 	@${REINPLACE_CMD} \

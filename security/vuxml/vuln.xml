@@ -77,6 +77,264 @@ Notes:
   * Do not forget port variants (linux-f10-libxml2, libxml2, etc.)
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="98044aba-6d72-11eb-aed7-1b1b8a70cc8b">
+    <topic>openexr, ilmbase -- security fixes related to reading corrupted input files</topic>
+    <affects>
+      <package>
+	<name>ilmbase</name>
+	<range><lt>2.5.5</lt></range>
+      </package>
+      <package>
+	<name>openexr</name>
+	<range><lt>2.5.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Cary Phillips reports:</p>
+	<blockquote cite="https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v2.5.5">
+	  <p>Patch release with various bug/sanitizer/security fixes, primarily related to reading corrupted input files[...].</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v2.5.5</url>
+    </references>
+    <dates>
+      <discovery>2021-02-12</discovery>
+      <entry>2021-02-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1020d401-6d2d-11eb-ab0b-001b217b3468">
+    <topic>Gitlab -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>13.8.0</ge><lt>13.8.4</lt></range>
+	<range><ge>13.7.0</ge><lt>13.7.7</lt></range>
+	<range><ge>10.5</ge><lt>13.6.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2021/02/11/security-release-gitlab-13-8-4-released/">
+	  <p>Improper Certificate Validation for Fortinet OTP</p>
+	  <p>Denial of Service Attack on gitlab-shell</p>
+	  <p>Resource exhaustion due to pending jobs</p>
+	  <p>Confidential issue titles were exposed</p>
+	  <p>Improper access control allowed demoted project members to access authored merge requests</p>
+	  <p>Improper access control allowed unauthorized users to access analytic pages</p>
+	  <p>Unauthenticated CI lint API may lead to information disclosure and SSRF</p>
+	  <p>Prometheus integration in Gitlab may lead to SSRF</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://about.gitlab.com/releases/2021/02/11/security-release-gitlab-13-8-4-released/</url>
+    </references>
+    <dates>
+      <discovery>2021-02-11</discovery>
+      <entry>2021-02-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3003ba60-6cec-11eb-8815-040e3c1b8a02">
+    <topic>oauth2-proxy -- domain whitelist could be used as redirect</topic>
+    <affects>
+      <package>
+	<name>oauth2-proxy</name>
+	<range><lt>7.0.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>SO-AND-SO reports:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2021-21291">
+	  <p>In OAuth2 Proxy before version 7.0.0, for users that use the
+	     whitelist domain feature, a domain that ended in a similar way to
+	     the intended domain could have been allowed as a redirect.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2021-21291</url>
+    </references>
+    <dates>
+      <discovery>2021-02-02</discovery>
+      <entry>2021-02-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="06a5abd4-6bc2-11eb-b292-90e2baa3bafc">
+    <topic>mod_dav_svn -- server crash</topic>
+    <affects>
+      <package>
+	<name>mod_dav_svn</name>
+	<range><ge>1.9.0</ge><le>1.10.6</le></range>
+	<range><ge>1.11.0</ge><le>1.14.0</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Subversion project reports:</p>
+	<blockquote cite="https://subversion.apache.org/security/CVE-2020-17525-advisory.txt">
+	<p>Subversion's mod_authz_svn module will crash if the server is using
+	   in-repository authz rules with the AuthzSVNReposRelativeAccessFile
+	   option and a client sends a request for a non-existing repository URL.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://subversion.apache.org/security/CVE-2020-17525-advisory.txt</url>
+    </references>
+    <dates>
+      <discovery>2021-01-29</discovery>
+      <entry>2021-02-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="cdb10765-6879-11eb-a7d8-08002734b9ed">
+    <topic>gitea -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.13.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Gitea Team reports for release 1.13.2:</p>
+	<blockquote cite="https://blog.gitea.io/2021/02/gitea-1.13.2-is-released/">
+	  <ul>
+	    <li>Prevent panic on fuzzer provided string</li>
+	    <li>Add secure/httpOnly attributes to the lang cookie</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/go-gitea/gitea/releases/tag/v1.13.2</url>
+      <freebsdpr>ports/253295</freebsdpr>
+    </references>
+    <dates>
+      <discovery>2021-01-07</discovery>
+      <entry>2021-02-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3e01aad2-680e-11eb-83e2-e09467587c17">
+    <topic>chromium -- heap buffer overflow in V8</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>88.0.4324.150</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/02/stable-channel-update-for-desktop_4.html">
+	  <p>[1170176] High CVE-2021-21148: Heap buffer overflow in V8.
+	    Reported by Mattias Buelens on 2021-01-24. Google is aware of
+	    reports that an exploit for CVE-2021-21148 exists in the wild.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-21148</cvename>
+      <url>https://chromereleases.googleblog.com/2021/02/stable-channel-update-for-desktop_4.html</url>
+    </references>
+    <dates>
+      <discovery>2021-02-04</discovery>
+      <entry>2021-02-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="479fdfda-6659-11eb-83e2-e09467587c17">
+    <topic>www/chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>88.0.4324.146</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/02/stable-channel-update-for-desktop.html">
+	  <p>This update include 6 security fixes:</p>
+	  <ul>
+	    <li>1169317] Critical CVE-2021-21142: Use after free in Payments.
+	      Reported by Khalil Zhani on 2021-01-21</li>
+	    <li>[1163504] High CVE-2021-21143: Heap buffer overflow in
+	      Extensions. Reported by Allen Parker and Alex Morgan of MU on
+	      2021-01-06</li>
+	    <li>[1163845] High CVE-2021-21144: Heap buffer overflow in Tab
+	      Groups. Reported by Leecraso and Guang Gong of 360 Alpha Lab on
+	      2021-01-07</li>
+	    <li>[1154965] High CVE-2021-21145: Use after free in Fonts. Reported
+	      by Anonymous on 2020-12-03</li>
+	    <li>[1161705] High CVE-2021-21146: Use after free in Navigation.
+	      Reported by Alison Huffman and Choongwoo Han of Microsoft Browser
+	      Vulnerability Research on 2020-12-24</li>
+	    <li>[1162942] Medium CVE-2021-21147: Inappropriate implementation in
+	      Skia. Reported by Roman Starkov on 2021-01-04</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-21142</cvename>
+      <cvename>CVE-2021-21143</cvename>
+      <cvename>CVE-2021-21144</cvename>
+      <cvename>CVE-2021-21145</cvename>
+      <cvename>CVE-2021-21146</cvename>
+      <cvename>CVE-2021-21147</cvename>
+      <url>https://chromereleases.googleblog.com/2021/02/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2021-02-02</discovery>
+      <entry>2021-02-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="66d1c277-652a-11eb-bb3f-001b217b3468">
+    <topic>Gitlab -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>13.8.0</ge><lt>13.8.2</lt></range>
+	<range><ge>13.7.0</ge><lt>13.7.6</lt></range>
+	<range><ge>11.8</ge><lt>13.6.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/blog/2021/02/01/security-release-gitlab-13-8-2-released/">
+	  <p>Stored XSS in merge request</p>
+	  <p>Stored XSS in epic's pages</p>
+	  <p>Sensitive GraphQL variables exposed in structured log</p>
+	  <p>Guest user can see tag names in private projects</p>
+	  <p>Information disclosure via error message</p>
+	  <p>DNS rebinding protection bypass</p>
+	  <p>Validate existence of private project</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://about.gitlab.com/blog/2021/02/01/security-release-gitlab-13-8-2-released/</url>
+      <cvename>CVE-2021-22172</cvename>
+      <cvename>CVE-2021-22169</cvename>
+    </references>
+    <dates>
+      <discovery>2021-02-01</discovery>
+      <entry>2021-02-02</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="8ec7d426-055d-46bc-8f5a-a9d73a5a71ab">
     <topic>minio -- Server Side Request Forgery</topic>
     <affects>

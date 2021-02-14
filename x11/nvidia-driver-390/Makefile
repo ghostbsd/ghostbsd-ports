@@ -11,7 +11,12 @@
 # or `x11/nvidia-driver-304').
 
 PORTNAME=	nvidia-driver
-DISTVERSION?=	390.138
+DISTVERSION=	390.141
+# Explicitly set PORTREVISION as it can be overridden by the master port
+PORTREVISION=	0
+
+MASTERDIR=	${.CURDIR}/../nvidia-driver
+
 PKGNAMESUFFIX=	-390
 # Always try to set PORTREVISION as it can be overridden by the slave ports
 PORTREVISION?=	1
