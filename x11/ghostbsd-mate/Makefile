@@ -24,7 +24,6 @@ RUN_DEPENDS=	mate-terminal:x11/mate-terminal \
 		mozo:deskutils/mozo \
 		mate-applets>=1.22.0:x11/mate-applets \
 		${LOCALBASE}/share/fonts/dejavu/DejaVuSerif.ttf:x11-fonts/dejavu \
-		${LOCALBASE}/share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi:sysutils/hal-info \
 		mate-user-guide>=1.22.0:misc/mate-user-guide \
 		mate-dock-applet>=0:x11/mate-dock-applet
 
