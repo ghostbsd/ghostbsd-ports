@@ -7,6 +7,6 @@ command=%%PREFIX%%/sbin/slurmd
 command_args=${slurmd_flags}
 
 depend() {
-	need munge
+	need munged
 	keyword -shutdown
 }
