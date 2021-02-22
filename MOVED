@@ -12774,7 +12774,6 @@ devel/rubygem-fastthread||2019-06-30|Has expired: Does not build for all support
 www/rubygem-responders-rails50|www/rubygem-responders|2019-06-30|Has expired: Use www/rubygem-responders (depends on Rails 5.0) instead
 emulators/xen-kernel47|emulators/xen-kernel|2019-07-01|Has expired: This port is about to be removed, please update to a newer Xen version
 sysutils/xen-tools47|sysutils/xen-tools|2019-07-01|Has expired: This port is about to be removed, please update to a newer Xen version
-www/palemoon||2019-07-03|Not maintained and full of security holes
 www/seamonkey||2019-07-03|2.49.* is not maintained upstream and full of security holes
 www/tomcat8||2019-07-06|Has expired: EoL since 2018-06-30
 devel/libevent-hiphop||2019-07-10|Has expired: Obsoleted with removal of lang/hiphop-php
@@ -12865,10 +12864,7 @@ irc/irssi-otr||2019-09-05|Has expired: Broken for more than 6 months
 mail/p5-Mail-ClamAV||2019-09-05|Has expired: Broken for more than 6 months
 mail/qmail-ldap||2019-09-05|Has expired: Broken for more than 6 months
 math/fityk||2019-09-05|Has expired: Broken for more than 6 months
-math/octave-forge-parallel||2019-09-05|Has expired: Broken for more than 6 months
-math/octave-forge-strings||2019-09-05|Has expired: Broken for more than 6 months
 math/octave-forge-tisean||2019-09-05|Has expired: Broken for more than 6 months
-math/octave-forge-video||2019-09-05|Has expired: Broken for more than 6 months
 misc/gnustep-examples||2019-09-05|Has expired: Broken for more than 6 months
 net/turses||2019-09-05|Has expired: Depends on expiring net/py-tweepy
 security/clamcour||2019-09-05|Has expired: Broken for more than 6 months
@@ -15501,7 +15497,6 @@ lang/julia06|lang/julia10|2020-09-19|Has expired: Uses deprecated version of pyt
 lang/julia07|lang/julia10|2020-09-19|Has expired: Uses deprecated version of python
 lang/julia11||2020-09-19|Has expired: Uses deprecated version of python
 lang/tinypy||2020-09-19|Has expired: Uses deprecated version of python
-mail/cleanup-maildir||2020-09-19|Has expired: Uses deprecated version of python
 mail/courier-pythonfilter||2020-09-19|Has expired: Uses deprecated version of python
 mail/muttils||2020-09-19|Has expired: Uses deprecated version of python
 mail/nohtml||2020-09-19|Has expired: Uses deprecated version of python
@@ -16144,6 +16139,7 @@ www/syndigator||2021-02-05|Abandon upstream, does not work with recent perl5 use
 x11-toolkits/p5-Gtk2-Html2||2021-02-05|Deprecated upstream, not depended on, dpeends on deprecated Gnome2 libraries
 www/libgtkhtml||2021-02-05|Deprecated upstream, not depended on
 net/twitux||2021-02-06|Does not work with actually twitter
+devel/grpc_old|devel/grpc|2021-02-06|Added by accident in r564200 and removed in r564203
 net-mgmt/ccnet-server||2021-02-07|Removed
 x11-toolkits/c++-gtk-utils||2021-02-07|Abandoned library not depended on
 textproc/xml-i18n-tools|textproc/intltool|2021-02-07|Has been replaced by intltools long ago
@@ -16165,3 +16161,12 @@ security/greenbone-security-assistant9|security/greenbone-security-assistant|202
 misc/pnpids|misc/hwdata|2021-02-14|Rename package to upstreams name
 misc/cdcollect||2021-02-14|Has expired: Unmaintained and dead upstream (12+ years) depends on  deprecated libraries as www/gtkhtml3
 security/krb5-116|security/krb5-118|2021-02-14|Has expired: EOL one year after the release of krb5 1.18
+www/palemoon||2021-02-15|Depends on expired version of python
+www/rtv||2021-02-17|Has expired: Abandoned, use www/py-ttrv or www/py-tuir instead
+textproc/py-sphinxcontrib-websupport11|textproc/py-sphinxcontrib-websupport|2021-02-17|Has expired: Use textproc/py-sphinxcontrib-websupport instead
+textproc/py-sphinx18|textproc/py-sphinx|2021-02-17|Has expired: Old version, use textproc/py-sphinx instead
+audio/herrie||2021-02-17|Removed
+sysutils/uefi-edk2-bhyve-devel|sysutils/uefi-edk2-bhyve|2021-02-17|Development version no longer necessary
+graphics/py-graph-core|graphics/py-pygraph|2021-02-19|Is outdated and broken with python3, use graphics/py-pygraph instead
+devel/llvm60||2021-02-19|Has expired: Uses Python 2.7 which is EOLed upstream, no more consumers left
+devel/allegro-devel|devel/allegro5|2021-02-20|Rename to better match upstream name

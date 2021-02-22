@@ -436,6 +436,7 @@
     SUBDIR += markdownfmt
     SUBDIR += markdownpart
     SUBDIR += mathml-xsd
+    SUBDIR += md4c
     SUBDIR += mdbook
     SUBDIR += mdocml
     SUBDIR += meld
@@ -1282,6 +1283,7 @@
     SUBDIR += py-guess-language
     SUBDIR += py-hexdump
     SUBDIR += py-hieroglyph
+    SUBDIR += py-hjson
     SUBDIR += py-html2text
     SUBDIR += py-html2text2018
     SUBDIR += py-humanfriendly
@@ -1401,7 +1403,6 @@
     SUBDIR += py-sphinx-issues
     SUBDIR += py-sphinx-me
     SUBDIR += py-sphinx-tabs
-    SUBDIR += py-sphinx18
     SUBDIR += py-sphinx_press_theme
     SUBDIR += py-sphinx_rtd_theme
     SUBDIR += py-sphinx_wikipedia
@@ -1421,7 +1422,6 @@
     SUBDIR += py-sphinxcontrib-qthelp
     SUBDIR += py-sphinxcontrib-serializinghtml
     SUBDIR += py-sphinxcontrib-websupport
-    SUBDIR += py-sphinxcontrib-websupport11
     SUBDIR += py-spylls
     SUBDIR += py-stemming
     SUBDIR += py-tabletext
@@ -1546,6 +1546,7 @@
     SUBDIR += rubygem-cucumber-gherkin
     SUBDIR += rubygem-cucumber-gherkin15
     SUBDIR += rubygem-cucumber-html-formatter
+    SUBDIR += rubygem-cucumber-html-formatter9
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
@@ -1808,6 +1809,7 @@
     SUBDIR += texi2db
     SUBDIR += texi2html
     SUBDIR += texi2mdoc
+    SUBDIR += textnote
     SUBDIR += textogif
     SUBDIR += textql
     SUBDIR += the_silver_searcher
@@ -1875,6 +1877,7 @@
     SUBDIR += wv2
     SUBDIR += xalan-c
     SUBDIR += xalan-j
+    SUBDIR += xenv
     SUBDIR += xerces-c3
     SUBDIR += xerces-j
     SUBDIR += xfce4-dict-plugin

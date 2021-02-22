@@ -1043,6 +1043,7 @@
     SUBDIR += py-pywatchman
     SUBDIR += py-pyznap
     SUBDIR += py-queuelib
+    SUBDIR += py-qmk
     SUBDIR += py-ranger
     SUBDIR += py-rdiff-backup
     SUBDIR += py-resolve-march-native
@@ -1433,7 +1434,6 @@
     SUBDIR += udfclient
     SUBDIR += uefi-edk2-bhyve
     SUBDIR += uefi-edk2-bhyve-csm
-    SUBDIR += uefi-edk2-bhyve-devel
     SUBDIR += uefi-edk2-qemu
     SUBDIR += ufetch
     SUBDIR += ufs_copy
