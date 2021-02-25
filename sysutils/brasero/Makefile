@@ -37,7 +37,6 @@ GLIB_SCHEMAS=	org.gnome.brasero.gschema.xml
 
 OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	NAUTILUS LIBBURNIA
-OPTIONS_DEFAULT=NAUTILUS
 NAUTILUS_DESC=	Build nautilus extension
 LIBBURNIA_DESC=	Build libburnia plug-ins
 NAUTILUS_USE=	GNOME=nautilus3
