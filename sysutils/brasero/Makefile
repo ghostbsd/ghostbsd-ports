@@ -20,7 +20,7 @@ RUN_DEPENDS=	growisofs:sysutils/dvd+rw-tools \
 
 USES=		desktop-file-utils gettext gmake gnome libtool pathfix \
 		pkgconfig shared-mime-info tar:xz xorg
-USE_GNOME=	gnomeprefix gtk30 intlhack libxml2
+USE_GNOME=	gnomeprefix gtk30 intlhack libxml2 introspection
 GNU_CONFIGURE=	yes
 USE_XORG=	sm ice
 USE_LDCONFIG=	yes
