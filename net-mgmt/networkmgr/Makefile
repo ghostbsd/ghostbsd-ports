@@ -2,7 +2,7 @@
 # $FreeBSD: head/net-mgmt/networkmgr/Makefile 548386 2020-09-12 18:00:09Z ericbsd $
 
 PORTNAME=	networkmgr
-DISTVERSION=	4.4
+DISTVERSION=	4.5
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	ericbsd@FreeBSD.org
