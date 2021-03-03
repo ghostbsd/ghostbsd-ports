@@ -90,7 +90,6 @@
     SUBDIR += kf5-kdnssd
     SUBDIR += knock
     SUBDIR += knot-resolver
-    SUBDIR += knot2
     SUBDIR += knot3
     SUBDIR += knot3-lib
     SUBDIR += ldapdns

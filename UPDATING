@@ -5,6 +5,15 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20210302:
+  AFFECTS: users of editors/emacs-devel
+  AUTHOR: jrm@FreeBSD.org
+
+  If you get the error "Symbol's value as variable is void: minor-modes",
+  rebuild the offending Emacs packages.  See
+  https://lists.gnu.org/archive/html/emacs-devel/2021-02/msg01164.html
+  for details.
+
 20210220:
   AFFECTS: users of math/py-mathics
   AUTHOR: thierry@FreeBSD.org
@@ -373,7 +382,7 @@ you update your ports collection, before attempting any port upgrades.
   AUTHOR: cy@FreeBSD.org
 
   rc.conf variables syslog_ng_config and syslog_ng_pid have been replaced
-  by syslog_ng_flags and syslog_ng_pidfile respecively, making them
+  by syslog_ng_flags and syslog_ng_pidfile respectively, making them
   consistent with the rest of the ports tree. syslog_ng_config and
   syslog_ng_pid will continue to work until syslog-ng331 has been
   released and imported into ports.
@@ -608,7 +617,7 @@ you update your ports collection, before attempting any port upgrades.
   AFFECTS: users of www/baikal
   AUTHOR: gahr@FreeBSD.org
 
-  The www/baikal has been upated to 0.7.1. With the 0.7.0 release, our
+  The www/baikal has been updated to 0.7.1. With the 0.7.0 release, our
   configuration format was updated to use YAML files. You need to go through
   the installer again but we pre-fill most values with the ones from your old
   installation. We recommend that you make a full backup of your data, as a

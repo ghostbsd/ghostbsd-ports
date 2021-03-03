@@ -84,6 +84,10 @@
     SUBDIR += backuppc-devel
     SUBDIR += backuppc4
     SUBDIR += backupuser
+    SUBDIR += bacula11-client
+    SUBDIR += bacula11-client-static
+    SUBDIR += bacula11-docs
+    SUBDIR += bacula11-server
     SUBDIR += bacula9-client
     SUBDIR += bacula9-client-static
     SUBDIR += bacula9-docs
@@ -141,6 +145,7 @@
     SUBDIR += byobu
     SUBDIR += catfish
     SUBDIR += cbsd
+    SUBDIR += cbsd-mq-router
     SUBDIR += ccd2iso
     SUBDIR += cciss_vol_status
     SUBDIR += ccze
@@ -525,6 +530,7 @@
     SUBDIR += ipad_charge
     SUBDIR += ipdbtools
     SUBDIR += ipfs-go
+    SUBDIR += ipfs-go-fs-repo-migrations
     SUBDIR += ipget
     SUBDIR += ipmitool
     SUBDIR += ipsc
@@ -1042,13 +1048,12 @@
     SUBDIR += py-pytsk
     SUBDIR += py-pywatchman
     SUBDIR += py-pyznap
-    SUBDIR += py-queuelib
     SUBDIR += py-qmk
+    SUBDIR += py-queuelib
     SUBDIR += py-ranger
     SUBDIR += py-rdiff-backup
     SUBDIR += py-resolve-march-native
     SUBDIR += py-salt
-    SUBDIR += py-salt-2019
     SUBDIR += py-scandir
     SUBDIR += py-scarab
     SUBDIR += py-supervisor
@@ -1472,6 +1477,7 @@
     SUBDIR += vimpager
     SUBDIR += virt-what
     SUBDIR += virtualmin
+    SUBDIR += vivid
     SUBDIR += vm-bhyve
     SUBDIR += vmdktool
     SUBDIR += vmtouch
