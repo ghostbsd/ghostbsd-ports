@@ -352,6 +352,7 @@
     SUBDIR += tint
     SUBDIR += trayer
     SUBDIR += tycoon
+    SUBDIR += ulauncher
     SUBDIR += urxvt-font-size
     SUBDIR += urxvt-perls
     SUBDIR += vdesk
