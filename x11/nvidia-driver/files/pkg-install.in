@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/x11/nvidia-driver/files/pkg-install.in 433892 2017-02-11 16:43:11Z kwm $
 #
 
 PREFIX=${PKG_PREFIX-/usr/local}
@@ -9,9 +9,5 @@ case $2 in
 POST-INSTALL)
 	/bin/ln -f ${PREFIX}/lib/xorg/modules/extensions/.nvidia/libglx.so.1 \
 		${PREFIX}/lib/xorg/modules/extensions/libglx.so
-	# Enable loading the nvidia binary driver
-	sysrc -f /etc/rc.conf kldload_nvidia="nvidia-modeset nvidia"
 	;;
 esac
-
-
