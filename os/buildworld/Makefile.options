@@ -184,7 +184,9 @@ OPTIONS_DEFAULT= ACCT \
     FLOPPY \
     FMTREE \
     FP_LIBC \
+    FREEBSD_UPDATE \
     FTP \
+    GAMES \
     GCOV \
     GDB \
     GNU_DIFF \
