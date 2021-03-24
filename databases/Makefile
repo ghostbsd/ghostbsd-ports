@@ -168,6 +168,7 @@
     SUBDIR += litestream
     SUBDIR += lmdb
     SUBDIR += lua-lsqlite3
+    SUBDIR += lua-pgsql
     SUBDIR += lua-resty-redis
     SUBDIR += lua-xapian
     SUBDIR += luadbi
@@ -481,6 +482,7 @@
     SUBDIR += p5-SQL-Abstract-Classic
     SUBDIR += p5-SQL-Abstract-Limit
     SUBDIR += p5-SQL-Abstract-More
+    SUBDIR += p5-SQL-Abstract-Pg
     SUBDIR += p5-SQL-Abstract-Plugin-InsertMulti
     SUBDIR += p5-SQL-Interp
     SUBDIR += p5-SQL-Maker
@@ -565,6 +567,7 @@
     SUBDIR += pg_citus
     SUBDIR += pg_dirtyread
     SUBDIR += pg_ed25519
+    SUBDIR += pg_hashids
     SUBDIR += pg_partman
     SUBDIR += pg_qualstats
     SUBDIR += pg_reorg
@@ -778,6 +781,7 @@
     SUBDIR += py-pgdbconn
     SUBDIR += py-pglast
     SUBDIR += py-pglite
+    SUBDIR += py-pgmigrate
     SUBDIR += py-pgspecial
     SUBDIR += py-pgxnclient
     SUBDIR += py-pickledb

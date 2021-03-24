@@ -32,6 +32,7 @@
     SUBDIR += R-cran-classInt
     SUBDIR += R-cran-cli
     SUBDIR += R-cran-clipr
+    SUBDIR += R-cran-clisymbols
     SUBDIR += R-cran-covr
     SUBDIR += R-cran-cpp11
     SUBDIR += R-cran-crayon
@@ -792,6 +793,7 @@
     SUBDIR += gettext
     SUBDIR += gettext-lint
     SUBDIR += gettext-msghack
+    SUBDIR += gettext-po-mode
     SUBDIR += gettext-runtime
     SUBDIR += gettext-tools
     SUBDIR += gflags
@@ -975,6 +977,7 @@
     SUBDIR += include-what-you-use
     SUBDIR += indicators
     SUBDIR += inifiled
+    SUBDIR += inih
     SUBDIR += inilib
     SUBDIR += inilike
     SUBDIR += iniparser
@@ -1092,6 +1095,7 @@
     SUBDIR += libCello
     SUBDIR += libIDL
     SUBDIR += libPropList
+    SUBDIR += libabigail
     SUBDIR += libafterbase
     SUBDIR += liballium
     SUBDIR += libantlr3c
@@ -1313,6 +1317,7 @@
     SUBDIR += libsavitar
     SUBDIR += libscca
     SUBDIR += libsearpc
+    SUBDIR += libserdes
     SUBDIR += libserialport
     SUBDIR += libshbuf
     SUBDIR += libshhmsg
@@ -1375,6 +1380,7 @@
     SUBDIR += libvirt-java
     SUBDIR += libvmdk
     SUBDIR += libvolume_id
+    SUBDIR += libvsgpt
     SUBDIR += libvshadow
     SUBDIR += libvslvm
     SUBDIR += libvterm
@@ -1422,7 +1428,6 @@
     SUBDIR += llvm10
     SUBDIR += llvm11
     SUBDIR += llvm12
-    SUBDIR += llvm60
     SUBDIR += llvm70
     SUBDIR += llvm80
     SUBDIR += llvm90
@@ -1440,6 +1445,7 @@
     SUBDIR += log4net
     SUBDIR += log4sh
     SUBDIR += log4shib
+    SUBDIR += loguru
     SUBDIR += lokalize
     SUBDIR += loki
     SUBDIR += love
@@ -3704,6 +3710,7 @@
     SUBDIR += pasm
     SUBDIR += patch
     SUBDIR += pcc-libs
+    SUBDIR += pcg-cpp
     SUBDIR += pcl
     SUBDIR += pcre
     SUBDIR += pcre++
@@ -4485,6 +4492,7 @@
     SUBDIR += py-hg-evolve
     SUBDIR += py-hglib
     SUBDIR += py-hgtools
+    SUBDIR += py-hidraw
     SUBDIR += py-holidays
     SUBDIR += py-http-prompt
     SUBDIR += py-humanize
@@ -4692,6 +4700,7 @@
     SUBDIR += py-onigurumacffi
     SUBDIR += py-opcodes
     SUBDIR += py-openapi-codec
+    SUBDIR += py-openapi-schema-validator
     SUBDIR += py-openapi-spec-validator
     SUBDIR += py-opencensus
     SUBDIR += py-opencensus-context
@@ -4704,6 +4713,7 @@
     SUBDIR += py-optik
     SUBDIR += py-orange-canvas-core
     SUBDIR += py-orange-widget-base
+    SUBDIR += py-orca
     SUBDIR += py-ordered-set
     SUBDIR += py-ordereddict
     SUBDIR += py-orderedmultidict
@@ -5416,6 +5426,7 @@
     SUBDIR += reproc
     SUBDIR += resolv_wrapper
     SUBDIR += revive
+    SUBDIR += rgbds
     SUBDIR += rhtvision
     SUBDIR += rinutils
     SUBDIR += riscv32-unknown-elf-gcc
@@ -6181,6 +6192,7 @@
     SUBDIR += rubygem-google-apis-storage_v1
     SUBDIR += rubygem-google-gax
     SUBDIR += rubygem-google-protobuf
+    SUBDIR += rubygem-google-protobuf314
     SUBDIR += rubygem-google-protobuf38
     SUBDIR += rubygem-googleapis-common-protos
     SUBDIR += rubygem-googleapis-common-protos-types

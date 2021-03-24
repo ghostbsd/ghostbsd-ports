@@ -1,9 +1,9 @@
 # Created by: Torsten Zuehlsdorff <tz@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME?=	gitlab-ce
-PORTVERSION?=	13.9.1
-PORTREVISION?=	0
+PORTNAME=	gitlab-ce
+PORTVERSION=	13.9.4
+PORTREVISION=	0
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -19,8 +19,8 @@ MY_DEPENDS=	git>=2.29:devel/git \
 	gitlab-elasticsearch-indexer>=2.9.0:textproc/gitlab-elasticsearch-indexer \
 	gitlab-agent>=13.9.1:net/gitlab-agent \
 	gitlab-pages>=1.35.0:www/gitlab-pages \
-	gitlab-shell>=13.16.1:devel/gitlab-shell \
-	gitlab-workhorse>=8.63.0:www/gitlab-workhorse \
+	gitlab-shell>=13.17.0:devel/gitlab-shell \
+	gitlab-workhorse>=8.63.2:www/gitlab-workhorse \
 	redis>=4.0.0:databases/redis \
 	yarn>=1.10.0:www/yarn \
 	gtar>0:archivers/gtar \
@@ -121,7 +121,7 @@ MY_DEPENDS=	git>=2.29:devel/git \
 	rubygem-asciidoctor>=2.0.12<2.1.0:textproc/rubygem-asciidoctor \
 	rubygem-asciidoctor-include-ext>=0.3.1<0.4.0:textproc/rubygem-asciidoctor-include-ext \
 	rubygem-asciidoctor-plantuml>=0.0.12<0.1:textproc/rubygem-asciidoctor-plantuml \
-	rubygem-asciidoctor-kroki>=0.3.0<0.4:textproc/rubygem-asciidoctor-kroki \
+	rubygem-asciidoctor-kroki>=0.4.0<0.5:textproc/rubygem-asciidoctor-kroki \
 	rubygem-rouge>=3.26.0<3.27:textproc/rubygem-rouge \
 	rubygem-truncato>=0.7.11<0.8.0:textproc/rubygem-truncato \
 	rubygem-bootstrap_form>=4.2.0<4.3.0:devel/rubygem-bootstrap_form \
@@ -188,6 +188,7 @@ MY_DEPENDS=	git>=2.29:devel/git \
 	rubygem-pg_query>=1.3.0<1.4:databases/rubygem-pg_query \
 	rubygem-premailer-rails-rails60>=1.10.3<1.11.0:mail/rubygem-premailer-rails-rails60 \
 	rubygem-gitlab-labkit>=0.14.0<0.16:devel/rubygem-gitlab-labkit \
+	rubygem-thrift>=0.14.0:devel/rubygem-thrift \
 	rubygem-ruby_parser>=3.15<4.0:devel/rubygem-ruby_parser \
 	rubygem-rails-i18n-rails60>=6.0<7.0:devel/rubygem-rails-i18n-rails60 \
 	rubygem-gettext_i18n_rails>=1.8.0<1.9.0:devel/rubygem-gettext_i18n_rails \
@@ -221,7 +222,7 @@ MY_DEPENDS=	git>=2.29:devel/git \
 	rubygem-bcrypt_pbkdf>=1.0<2.0:security/rubygem-bcrypt_pbkdf \
 	rubygem-gitaly>=13.9.0.pre.rc1<13.10.0:net/rubygem-gitaly \
 	rubygem-grpc130>=1.30.2<1.31:net/rubygem-grpc130 \
-	rubygem-google-protobuf>=3.12<4:devel/rubygem-google-protobuf \
+	rubygem-google-protobuf314>=3.12<3.15:devel/rubygem-google-protobuf314 \
 	rubygem-toml-rb10>=1.0.0<1.1.0:www/rubygem-toml-rb10 \
 	rubygem-flipper017>=0.17.1<0.18.0:devel/rubygem-flipper017 \
 	rubygem-flipper-active_record017>=0.17.1<0.18.0:databases/rubygem-flipper-active_record017 \
@@ -267,7 +268,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT?=	gitlab-org
 GL_PROJECT?=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT?=	03979b4aaf060cae40934b2aade0bbe8a210e311
+GL_COMMIT?=	4be21b774567b6ac6e5db57a9cb102f544ebaa4e
 
 USERS=	git
 GROUPS=	git
@@ -315,5 +316,11 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/www/${PORTNAME}/vendor/assets/stylesheets
 	${MKDIR} ${STAGEDIR}${PREFIX}/www/${PORTNAME}/workhorse/changelogs/unreleased
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/www/${PORTNAME})
+
+# Execute this target to automatically generate the correct pkg-plist
+makeplist:
+	$(MAKE) clean extract do-patch
+	php scripts/create-plist.php ${WRKSRC} > pkg-plist
+	$(MAKE) clean
 
 .include <bsd.port.mk>

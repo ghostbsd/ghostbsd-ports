@@ -199,7 +199,6 @@
     SUBDIR += fpc-modplug
     SUBDIR += fpc-oggvorbis
     SUBDIR += fpc-openal
-    SUBDIR += fplib
     SUBDIR += freealut
     SUBDIR += freedesktop-sound-theme
     SUBDIR += freepats
@@ -818,6 +817,7 @@
     SUBDIR += vorbis-tools
     SUBDIR += vorbisgain
     SUBDIR += vsound
+    SUBDIR += vst3sdk
     SUBDIR += waon
     SUBDIR += wav2cdr
     SUBDIR += wavbreaker

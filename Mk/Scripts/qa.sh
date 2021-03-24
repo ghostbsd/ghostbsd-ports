@@ -82,6 +82,7 @@ shebangonefile() {
 	/usr/bin/sed) ;;
 	/usr/sbin/dtrace) ;;
 	/usr/bin/make) ;;
+	/usr/libexec/atf-sh) ;;
 	*)
 		badinterp="${interp}"
 		;;

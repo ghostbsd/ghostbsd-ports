@@ -1782,6 +1782,7 @@
     SUBDIR += quark
     SUBDIR += qutebrowser
     SUBDIR += radicale
+    SUBDIR += rearx
     SUBDIR += redmine4
     SUBDIR += rejik
     SUBDIR += reportmagic
@@ -2255,6 +2256,7 @@
     SUBDIR += vdr-plugin-live
     SUBDIR += vdradmin-am
     SUBDIR += vertx
+    SUBDIR += vger
     SUBDIR += vimb
     SUBDIR += visitors
     SUBDIR += volta
@@ -2280,6 +2282,7 @@
     SUBDIR += webstone
     SUBDIR += webstone-ssl
     SUBDIR += webtrees
+    SUBDIR += webtrees20
     SUBDIR += wgetpaste
     SUBDIR += wikicalc
     SUBDIR += wordpress

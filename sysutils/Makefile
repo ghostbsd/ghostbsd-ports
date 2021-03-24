@@ -749,6 +749,7 @@
     SUBDIR += munin-master
     SUBDIR += munin-node
     SUBDIR += muse
+    SUBDIR += mxkill
     SUBDIR += mybashburn
     SUBDIR += myrescue
     SUBDIR += n98-magerun
@@ -971,7 +972,6 @@
     SUBDIR += powermon
     SUBDIR += pp
     SUBDIR += pprotectd
-    SUBDIR += prelink
     SUBDIR += prips
     SUBDIR += procenv
     SUBDIR += procmap
@@ -1216,6 +1216,7 @@
     SUBDIR += rundeck3
     SUBDIR += runit
     SUBDIR += runit-faster
+    SUBDIR += runj
     SUBDIR += runwhen
     SUBDIR += rw
     SUBDIR += s-tui
@@ -1402,6 +1403,7 @@
     SUBDIR += u-boot-orangepi-plus-2e
     SUBDIR += u-boot-orangepi-r1
     SUBDIR += u-boot-orangepi-zero
+    SUBDIR += u-boot-orangepi-zero-plus
     SUBDIR += u-boot-pandaboard
     SUBDIR += u-boot-pcduino3
     SUBDIR += u-boot-pine-h64

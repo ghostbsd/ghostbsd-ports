@@ -32,6 +32,7 @@
     SUBDIR += eiskaltdcpp-lib
     SUBDIR += frost
     SUBDIR += go-ethereum
+    SUBDIR += go-prysm
     SUBDIR += gtk-gnutella
     SUBDIR += gtorrentviewer
     SUBDIR += jackett
@@ -79,7 +80,6 @@
     SUBDIR += rtorrent
     SUBDIR += shx
     SUBDIR += sonarr
-    SUBDIR += sonarr-devel
     SUBDIR += torrent-file-editor
     SUBDIR += torrentcheck
     SUBDIR += torrentsniff

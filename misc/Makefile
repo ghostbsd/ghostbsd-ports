@@ -485,6 +485,7 @@
     SUBDIR += tellico
     SUBDIR += tempcontrol
     SUBDIR += termatrix
+    SUBDIR += terminfo-db
     SUBDIR += teseq
     SUBDIR += thefuck
     SUBDIR += thrill
