@@ -3,6 +3,7 @@
 PORTNAME=	libsignal-client
 DISTVERSIONPREFIX=	java-
 DISTVERSION=	0.2.3
+PORTREVISION=	1
 CATEGORIES=	net-im java
 
 MAINTAINER=	0mp@FreeBSD.org
@@ -11,10 +12,7 @@ COMMENT=	Implementation of the Signal client protocol
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-# Rust stable is not supported currently:
-# https://github.com/signalapp/libsignal-client/issues/141
-BUILD_DEPENDS=	rust-nightly>=0:lang/rust-nightly \
-		protoc:devel/protobuf
+BUILD_DEPENDS=	protoc:devel/protobuf
 
 USES=		cargo
 USE_GITHUB=	yes
@@ -210,11 +208,12 @@ CARGO_CRATES=	addr2line-0.13.0 \
 		x25519-dalek-1.1.0 \
 		zeroize-1.1.1 \
 		zeroize_derive-1.0.1
-# CARGO_BUILDDEP=no is needed to force the use of rust-nightly.
-CARGO_BUILDDEP=		no
 CARGO_BUILD_ARGS=	--package libsignal-jni
-CARGO_ENV=		CARGO_PROFILE_RELEASE_LTO=thin
 CARGO_INSTALL=		no
+# requires nightly features to build:
+# https://github.com/signalapp/libsignal-client/issues/141
+MAKE_ENV=		CARGO_PROFILE_RELEASE_LTO=thin \
+			RUSTC_BOOTSTRAP=1
 USE_LDCONFIG=		yes
 
 PLIST_FILES=	lib/libsignal_jni.so

@@ -12867,7 +12867,6 @@ security/clamcour||2019-09-05|Has expired: Broken for more than 6 months
 security/honeybadger||2019-09-05|Has expired: Broken for more than 6 months
 sysutils/freefilesync||2019-09-05|Has expired: Broken for more than 6 months
 sysutils/log-courier||2019-09-05|Has expired: Broken for more than 6 months
-textproc/py-orange3-text||2019-09-05|Has expired: Broken for more than 6 months
 www/feedjack||2019-09-05|Has expired: Upstream gone
 www/havp||2019-09-05|Has expired: Broken for more than 6 months
 www/rubygem-webpack-rails-rails5|devel/rubygem-webpacker-rails5|2019-09-05|Has expired: Upstream no longer maintained, use devel/rubygem-webpacker-rails* instead
@@ -13637,7 +13636,6 @@ x11-toolkits/linux-c6-pango|x11-toolkits/linux-c7-pango|2019-12-31|Has expired: 
 x11-toolkits/linux-c6-qt47-x11|x11-toolkits/linux-c7-qt-x11|2019-12-31|Has expired: Superseded by CentOS 7
 x11-toolkits/linux-c6-tk85|x11-toolkits/linux-c7-tk85|2019-12-31|Has expired: Superseded by CentOS 7
 lang/gnatdroid-x86||2019-12-31|Has expired: Unfetchable, unmaintained
-net/py-tweepy||2019-12-31|Has expired: Broken for more than 6 months
 archivers/squeeze|archivers/xarchiver|2020-01-01|Removed, dead upstream and depends on expired x11-fm/thunar-vfs
 x11-fm/thunar-vfs||2020-01-01|Has expired: Functionality included in Thunar
 sysutils/ansible1||2020-01-01|Has expired: please upgrade to sysutils/ansible
@@ -15349,8 +15347,6 @@ games/xminesweep||2020-08-27|Has expired: Broken for more than 6 months
 graphics/backfract||2020-08-27|Has expired: Broken for more than 6 months
 japanese/kanjipad||2020-08-27|Has expired: Broken for more than 6 months
 japanese/xdtp||2020-08-27|Has expired: Broken for more than 6 months
-math/openmesh||2020-08-27|Has expired: Broken for more than 6 months
-math/rehearse||2020-08-27|Has expired: Broken for more than 6 months
 net/hinfo||2020-08-27|Has expired: Broken for more than 6 months
 science/fleur||2020-08-27|Has expired: Broken for more than 6 months
 science/lm||2020-08-27|Has expired: Broken for more than 6 months
@@ -16194,3 +16190,9 @@ biology/py-fastTSNE|math/py-openTSNE|2021-03-13|project renamed/reimplemented un
 emulators/open-vm-tools-nox11|emulators/open-vm-tools@nox11|2021-03-17|Moved to a flavored, generic, version
 math/s2geometry|graphics/s2|2021-03-22|Remove duplicate port
 net-p2p/sonarr-devel|net-p2p/sonarr|2021-03-23|Removed, use net-p2p/sonarr instead
+www/py-django-jsonfield||2021-03-24|Removed: This port will be deleted in the future, please switch to use www/py-jsonfield or www/py-jsonfield2
+devel/hs-c2hs||2021-03-27|Has expired: Was used as BUILD_DEPENDS, not useful on its own
+x11-toolkits/tile||2021-03-27|Has expired: The Tile widget set is part of Tk 8.5 and above, see TIP 248
+security/apg||2021-03-28|Has expired: Abandonware. Please try security/makepasswd or security/rndpassw instead
+lang/Gofer||2021-03-28|Has expired: Old, unmaintained language
+net/libsignal|net/libsignal-protocol-c|2021-03-30|Rename to match upstream naming

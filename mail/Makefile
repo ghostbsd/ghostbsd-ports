@@ -203,6 +203,8 @@
     SUBDIR += mailgraph
     SUBDIR += mailhog
     SUBDIR += mailman
+    SUBDIR += mailman-exim4
+    SUBDIR += mailman-postfix
     SUBDIR += mailman3
     SUBDIR += mailscanner
     SUBDIR += mailsync
@@ -635,6 +637,7 @@
     SUBDIR += spamass-milter
     SUBDIR += spamass-rules
     SUBDIR += spamassassin
+    SUBDIR += spamassassin-devel
     SUBDIR += spamassassin-dqs
     SUBDIR += spambnc
     SUBDIR += spamcup

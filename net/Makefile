@@ -398,7 +398,7 @@
     SUBDIR += librespeed-cli
     SUBDIR += librespeed-go
     SUBDIR += librsync
-    SUBDIR += libsignal
+    SUBDIR += libsignal-protocol-c
     SUBDIR += libsrtp2
     SUBDIR += libstorj
     SUBDIR += libtnl
@@ -958,6 +958,7 @@
     SUBDIR += pecl-radius
     SUBDIR += pecl-rdkafka
     SUBDIR += pecl-smbclient
+    SUBDIR += pecl-xmlrpc
     SUBDIR += pecl-zmq
     SUBDIR += pen
     SUBDIR += pfinger
@@ -1123,6 +1124,7 @@
     SUBDIR += py-tofu
     SUBDIR += py-transip
     SUBDIR += py-trio
+    SUBDIR += py-tweepy
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
     SUBDIR += py-txrestapi
@@ -1249,6 +1251,7 @@
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab-fog-azure-rm
+    SUBDIR += rubygem-gitlab-fog-google
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-google-cloud-bigquery
     SUBDIR += rubygem-google-cloud-bigtable
@@ -1295,6 +1298,7 @@
     SUBDIR += rubygem-omniauth-auth0
     SUBDIR += rubygem-omniauth-auth014
     SUBDIR += rubygem-omniauth-authentiq
+    SUBDIR += rubygem-omniauth-azure-activedirectory-v2
     SUBDIR += rubygem-omniauth-azure-oauth2
     SUBDIR += rubygem-omniauth-facebook
     SUBDIR += rubygem-omniauth-facebook4

@@ -931,7 +931,6 @@
     SUBDIR += hpx
     SUBDIR += hs-ShellCheck
     SUBDIR += hs-alex
-    SUBDIR += hs-c2hs
     SUBDIR += hs-cabal-install
     SUBDIR += hs-cpphs
     SUBDIR += hs-darcs
@@ -1021,6 +1020,7 @@
     SUBDIR += jsoncpp
     SUBDIR += jsonnet
     SUBDIR += jsonrpc-glib
+    SUBDIR += juce
     SUBDIR += judy
     SUBDIR += jwasm
     SUBDIR += kBuild
@@ -4060,6 +4060,7 @@
     SUBDIR += py-aiortc
     SUBDIR += py-amalgamate
     SUBDIR += py-aniso8601
+    SUBDIR += py-aniso86016
     SUBDIR += py-ansi
     SUBDIR += py-antlr4-python3-runtime
     SUBDIR += py-anyconfig
@@ -4111,6 +4112,7 @@
     SUBDIR += py-azure-datalake-store
     SUBDIR += py-azure-functions-devops-build
     SUBDIR += py-azure-graphrbac
+    SUBDIR += py-azure-identity
     SUBDIR += py-azure-keyvault
     SUBDIR += py-azure-keyvault-administration
     SUBDIR += py-azure-loganalytics
@@ -4403,6 +4405,7 @@
     SUBDIR += py-filebytes
     SUBDIR += py-filedepot
     SUBDIR += py-filemagic
+    SUBDIR += py-filetype
     SUBDIR += py-first
     SUBDIR += py-five.globalrequest
     SUBDIR += py-fixtures
@@ -5208,6 +5211,7 @@
     SUBDIR += py-urwid
     SUBDIR += py-urwid-readline
     SUBDIR += py-urwidtrees
+    SUBDIR += py-us
     SUBDIR += py-user_agents
     SUBDIR += py-userpath
     SUBDIR += py-uvloop
