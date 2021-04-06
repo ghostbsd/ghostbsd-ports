@@ -1,8 +1,7 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	xmrig
-PORTVERSION=	6.10.0
+PORTVERSION=	6.11.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net-p2p
 

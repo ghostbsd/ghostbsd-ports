@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 
     COMMENT = Things that used to be on the desktop before computers were invented
 
@@ -237,8 +235,6 @@
     SUBDIR += thinkingrock
     SUBDIR += timewarrior
     SUBDIR += todo
-    SUBDIR += tomboy
-    SUBDIR += tomboy-plugin-reminder
     SUBDIR += toolboxkit
     SUBDIR += tpb
     SUBDIR += treeline

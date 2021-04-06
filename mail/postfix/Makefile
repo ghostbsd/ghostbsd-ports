@@ -1,5 +1,4 @@
 # Created by: Torsten Blum <torstenb@FreeBSD.org>
-# $FreeBSD: head/mail/postfix/Makefile 430486 2017-01-03 17:14:09Z ohauer $
 
 PORTNAME=	postfix
 DISTVERSION=	3.5.9

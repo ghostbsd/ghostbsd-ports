@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 
     COMMENT = Text processing utilities (does not include desktop publishing)
 
@@ -167,8 +165,6 @@
     SUBDIR += el-aspell
     SUBDIR += el-hyphen
     SUBDIR += elasticsearch-plugin-head
-    SUBDIR += elasticsearch5
-    SUBDIR += elasticsearch5-search-guard
     SUBDIR += elasticsearch6
     SUBDIR += elasticsearch7
     SUBDIR += elixir-earmark

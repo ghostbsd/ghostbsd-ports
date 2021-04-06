@@ -1,5 +1,4 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: head/www/pound/Makefile 497256 2019-03-30 15:47:42Z danfe $
 
 PORTNAME=	pound
 PORTVERSION=	2.8

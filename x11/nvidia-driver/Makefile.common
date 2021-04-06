@@ -1,5 +1,3 @@
-# $FreeBSD: head/x11/nvidia-driver/Makefile.common 564012 2021-02-04 10:11:36Z danfe $
-
 # LICENSE_FILE is set in the consumer ports because its location varies
 LICENSE=	NVIDIA
 LICENSE_NAME=	License For Customer Use of NVIDIA Software
