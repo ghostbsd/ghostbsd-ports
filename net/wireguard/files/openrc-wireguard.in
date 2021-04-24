@@ -4,9 +4,7 @@
 : ${wireguard_impl="wireguard-go"}
 
 depend() {
-	need localmount net
-	before netmount
-	after bootmisc
+	after net devd
 }
 
 start() {
