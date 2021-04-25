@@ -1,3 +1,0 @@
-PKG_NOTES+=	icon
-PKG_NOTE_icon=http://www.pcbsd.org/appcafe/icons/irc_bitlbee.png
-USE_OPENRC_SUBR=	openrc-bitlbee

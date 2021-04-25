@@ -1,1 +1,0 @@
-USE_OPENRC_SUBR=	openrc-cf-serverd openrc-cf-execd openrc-cf-monitord

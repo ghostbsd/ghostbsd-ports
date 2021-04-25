@@ -1,3 +1,0 @@
-PKG_NOTES+=	icon
-PKG_NOTE_icon=http://www.pcbsd.org/appcafe/icons/databases_mysql55-server.png
-USE_OPENRC_SUBR=	openrc-mysql-server

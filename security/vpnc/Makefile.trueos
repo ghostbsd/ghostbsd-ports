@@ -1,3 +1,0 @@
-PKG_NOTES+=	icon
-PKG_NOTE_icon=http://www.pcbsd.org/appcafe/icons/security_vpnc.png
-USE_OPENRC_SUBR=	openrc-vpnc

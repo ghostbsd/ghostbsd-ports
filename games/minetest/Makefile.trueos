@@ -1,3 +1,0 @@
-PKG_NOTES+=	icon
-PKG_NOTE_icon=http://www.pcbsd.org/appcafe/icons/games_minetest.png
-USE_OPENRC_SUBR=	openrc-minetest

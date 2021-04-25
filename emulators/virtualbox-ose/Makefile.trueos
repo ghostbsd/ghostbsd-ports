@@ -1,3 +1,0 @@
-PKG_NOTES+=	icon
-PKG_NOTE_icon=http://www.pcbsd.org/appcafe/icons/emulators_virtualbox-ose.png
-USE_OPENRC_SUBR=	openrc-vboxheadless openrc-vboxwatchdog openrc-vboxwebsrv

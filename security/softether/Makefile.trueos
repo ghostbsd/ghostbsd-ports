@@ -1,1 +1,0 @@
-USE_OPENRC_SUBR=	openrc-softether_bridge openrc-softether_client openrc-softether_server
