@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	jicofo
 DISTVERSION=	1.0-555
@@ -12,7 +11,7 @@ LICENSE=	APACHE20
 
 BUILD_DEPENDS=	${LOCALBASE}/share/java/maven/bin/mvn:devel/maven
 
-ONLY_FOR_ARCHS=	i386 amd64
+ONLY_FOR_ARCHS=	i386 amd64 powerpc64 powerpc64le
 
 USE_GITHUB=     yes
 GH_ACCOUNT=	jitsi

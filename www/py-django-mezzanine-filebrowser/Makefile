@@ -1,5 +1,4 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	django-mezzanine-filebrowser
 PORTVERSION=	0.5.0
@@ -14,7 +13,7 @@ COMMENT=	Fork of django-filebrowser for Mezzanine CMS
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		gettext python
+USES=		gettext python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

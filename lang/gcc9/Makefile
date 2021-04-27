@@ -1,9 +1,8 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	gcc
 PORTVERSION=	9.3.0
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	GCC
 PKGNAMESUFFIX=	${SUFFIX}
@@ -35,14 +34,12 @@ CPE_VENDOR=	gnu
 
 GCC_VERSION=	${PORTVERSION}
 SUFFIX=		${PORTVERSION:C/([0-9]+).*/\1/}
-SSP_UNSAFE=	yes
 CFLAGS:=	${CFLAGS:N-mretpoline}
 CXXFLAGS:=	${CXXFLAGS:N-mretpoline}
 
-OPTIONS_DEFINE=		BOOTSTRAP GRAPHITE PLUGINS
-OPTIONS_DEFAULT=	BOOTSTRAP PLUGINS
+OPTIONS_DEFINE=		BOOTSTRAP
+OPTIONS_DEFAULT=	BOOTSTRAP
 BOOTSTRAP_DESC=		Build using a full bootstrap
-GRAPHITE_DESC=		Support for Graphite loop optimizations
 
 .if exists(/usr/lib32/libc.so)
 OPTIONS_DEFINE_amd64+=		MULTILIB
@@ -55,8 +52,6 @@ MULTILIB_CONFIGURE_ENABLE=	multilib
 CONFIGURE_ARGS+=	--disable-multilib
 .endif
 
-PLUGINS_CONFIGURE_ENABLE=	plugin
-
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == amd64
@@ -67,8 +62,8 @@ CONFIGURE_ENV+=	UNAME_m="powerpc64"
 . if defined(PPC_ABI) && ${PPC_ABI} == ELFv2
 CONFIGURE_ARGS+=	--with-abi=elfv2
 . else
-MAKE_ARGS+=		CFLAGS_FOR_TARGET="-O0" CXXFLAGS_FOR_TARGET="-O0" BOOT_CFLAGS="-O0" 
-EXTRA_PATCHES+=		${FILESDIR}/extra-patch-libgcc_config_rs6000_t-crtstuff
+MAKE_ARGS+=	CFLAGS_FOR_TARGET="-O0" CXXFLAGS_FOR_TARGET="-O0" BOOT_CFLAGS="-O0"
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-libgcc_config_rs6000_t-crtstuff
 . endif
 .endif
 
@@ -90,6 +85,7 @@ BINMODE=	755
 .endif
 CONFIGURE_ARGS+=--disable-nls \
 		--enable-gnu-indirect-function \
+		--enable-plugin \
 		--libdir=${TARGLIB} \
 		--libexecdir=${LIBEXEC} \
 		--program-suffix=${SUFFIX} \
@@ -99,7 +95,8 @@ CONFIGURE_ARGS+=--disable-nls \
 		--with-ld=${LOCALBASE}/bin/ld \
 		${ICONV_CONFIGURE_ARG} \
 		--with-pkgversion="FreeBSD Ports Collection" \
-		--with-system-zlib
+		--with-system-zlib \
+		--without-zstd
 MAKE_ARGS+=	MAKEINFOFLAGS="--no-split"
 USE_LDCONFIG=	${TARGLIB}
 PLIST_SUB+=	GCC_VERSION=${GCC_VERSION} \
@@ -117,11 +114,6 @@ INFO+=		gcc${SUFFIX}/libquadmath \
 		gcc${SUFFIX}/libitm
 SUB_FILES=	pkg-message
 SUB_LIST+=	TARGLIB=${TARGLIB}
-
-.if ${PORT_OPTIONS:MGRAPHITE}
-LIB_DEPENDS+=	libisl.so:devel/isl
-CONFIGURE_ARGS+=--with-isl=${LOCALBASE}
-.endif
 
 CONFIGURE_ARGS+=--enable-languages=${LANGUAGES}
 

@@ -1,10 +1,9 @@
 # Created by: Willem Jan Withagen <wjw@digiware.nl>
-# $FreeBSD$
 
 PORTNAME=	ceph
 DISTVERSIONPREFIX=	v
 DISTVERSION=	14.2.11
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	net
 PKGNAMESUFFIX=	14
 
@@ -15,14 +14,14 @@ LICENSE=	GPLv2 LGPL3
 LICENSE_COMB=	dual
 
 # even though i386 will build, it is not really advised.
-ONLY_FOR_ARCHS=	amd64
+ONLY_FOR_ARCHS=	amd64 powerpc64 powerpc64le
 
 BUILD_DEPENDS=	\
 	bash:shells/bash \
 	git:devel/git \
 	gperf:devel/gperf \
 	yasm:devel/yasm \
-	${PY_SPHINX} \
+	${PYTHON_PKGNAMEPREFIX}sphinx>=2.1.2,1:textproc/py-sphinx@${PY_FLAVOR} \
 	${LOCALBASE}/lib/libatomic_ops.a:devel/libatomic_ops \
 	${LOCALBASE}/bin/ld:devel/binutils
 LIB_DEPENDS=	\
@@ -62,7 +61,7 @@ RUN_DEPENDS=	\
 	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}routes>=0:www/py-routes@${PY_FLAVOR}
 
-USES=		cmake:noninja dos2unix fuse gettext-runtime gmake ncurses \
+USES=		cmake:noninja compiler:c++17-lang dos2unix fuse gettext-runtime gmake ncurses \
 		pkgconfig python:3.7+ shebangfix ssl
 USE_PYTHON=	cython py3kplist
 USE_OPENLDAP=	yes
@@ -107,7 +106,17 @@ USE_LDCONFIG=	yes
 USERS=		ceph
 GROUPS=		ceph
 
-# PLIST_SUB=CMAKE_BUILD_TYPE_regex="\bdebug\b"
+BINARY_ALIAS=	sphinx-build=sphinx-build-${PYTHON_VER}
+
+# PLIST_SUB=CMAKE_BUILD_TYPE_regex="[[:<:]]debug[[:>:]]"
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} != amd64
+PLIST_SUB+=	NO_AMD64="@comment "
+.else
+PLIST_SUB+=	NO_AMD64=""
+.endif
 
 pre-configure:
 	[ -e ${WRKSRC}/build ] || ${LN} -s ${CONFIGURE_WRKSRC} ${WRKSRC}/build

@@ -1,5 +1,4 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	python-crontab
 PORTVERSION=	2.4.0
@@ -16,7 +15,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dateutil>=1.5:devel/py-dateutil@${PY_FLAVOR}
 		${PYTHON_PKGNAMEPREFIX}croniter>0:sysutils/py-croniter@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}cron-descriptor>0:sysutils/py-cron-descriptor@${PY_FLAVOR}
 
-USES=		python shebangfix
+USES=		python:3.6+ shebangfix
 SHEBANG_FILES=	${WRKSRC}/tests/data/crontest
 USE_PYTHON=	autoplist distutils
 

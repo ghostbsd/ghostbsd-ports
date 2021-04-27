@@ -1,5 +1,4 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	lisaem
 PORTVERSION=	1.2.6.2
@@ -12,6 +11,9 @@ COMMENT=	Apple Lisa 2 Emulator
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN_FreeBSD_13=	ld: error: duplicate symbol: mem68k_fetch_byte
+BROKEN_FreeBSD_14=	ld: error: duplicate symbol: mem68k_fetch_byte
 
 BUILD_DEPENDS=	pngtopnm:graphics/netpbm
 

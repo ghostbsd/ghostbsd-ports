@@ -1,5 +1,4 @@
 # Created by: Olivier Cochard-Labbe <olivier@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	deforaos-panel
 PORTVERSION=	0.3.6
@@ -13,6 +12,9 @@ COMMENT=	DeforaOS desktop panel
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN_FreeBSD_13=	network.c:298:19: error: variable has incomplete type 'struct ifdatareq'
+BROKEN_FreeBSD_14=	network.c:298:19: error: variable has incomplete type 'struct ifdatareq'
 
 LIB_DEPENDS=	libDesktop.so:x11/deforaos-libdesktop \
 		libSystem.so:devel/deforaos-libsystem \

@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	odfpy
 PORTVERSION=	1.4.1
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP \
 		http://opendocumentfellowship.com/files/
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}defusedxml>0:devel/py-defusedxml@${PY_FLAVOR
 
 CONFLICTS_BUILD=	py${PYTHON_SUFFIX}-setuptools_scm
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

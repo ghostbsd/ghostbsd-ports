@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	rainloop
-PORTVERSION=	1.14.0
+PORTVERSION=	1.15.0
 CATEGORIES=	mail www
 MASTER_SITES=	https://github.com/RainLoop/rainloop-webmail/releases/download/v${PORTVERSION}/
 PKGNAMESUFFIX?=	${PHP_PKGNAMESUFFIX}
@@ -20,7 +19,7 @@ USES=		php:web,flavors zip
 NO_BUILD=	yes
 NO_ARCH=	yes
 NO_WRKSUBDIR=	yes
-USE_PHP=	curl iconv json xml dom openssl pcre spl zlib
+USE_PHP=	curl dom iconv json openssl pcre simplexml spl xml zlib
 PLIST_SUB=	VER="${PORTVERSION}" WWWOWN="${WWWOWN}" WWWGRP="${WWWGRP}"
 
 .if "${PKGNAMESUFFIX}" == "${PHP_PKGNAMESUFFIX}"

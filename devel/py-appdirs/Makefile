@@ -1,5 +1,4 @@
 # Created by: Thomas Zander <riggs@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	appdirs
 PORTVERSION=	1.4.4
@@ -13,7 +12,7 @@ COMMENT=	Python module for determining platform-specific dirs
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

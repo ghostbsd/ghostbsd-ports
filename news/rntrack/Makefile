@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	rntrack
 PORTVERSION=	2.1.10
@@ -14,7 +13,7 @@ COMMENT=	FTN Messages tracker
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		tar:bzip2
+USES=		compiler:c11 tar:bzip2
 
 MAKE_ENV=	CONFIG=${ETCDIR}/rntrack.cfg
 

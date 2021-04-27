@@ -1,8 +1,7 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD$
 
 PORTNAME=	libxfce4util
-PORTVERSION=	4.14.0
+PORTVERSION=	4.16.0
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE
 DIST_SUBDIR=	xfce4

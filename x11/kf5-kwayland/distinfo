@@ -1,3 +1,3 @@
-TIMESTAMP = 1604789279
-SHA256 (KDE/frameworks/5.76.0/kwayland-5.76.0.tar.xz) = eee72a5f57a2f5c6ab5f1717aa3eb5a9089240794a5e40c6d85bdc37fa3027a7
-SIZE (KDE/frameworks/5.76.0/kwayland-5.76.0.tar.xz) = 344656
+TIMESTAMP = 1615268079
+SHA256 (KDE/frameworks/5.80.0/kwayland-5.80.0.tar.xz) = 403bf7c8426febfda37f26addb90a31b5978d9fc76d25a22472570e8273b79ab
+SIZE (KDE/frameworks/5.80.0/kwayland-5.80.0.tar.xz) = 344740

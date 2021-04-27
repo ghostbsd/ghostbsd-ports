@@ -1,12 +1,11 @@
-# $FreeBSD$
 
 PORTNAME=	glfw
-PORTVERSION=		1.11.2
+PORTVERSION=	2.1.0
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Ctypes-based wrapper for GLFW3
 
 LICENSE=	MIT
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 LIB_DEPENDS=	libglfw.so:graphics/glfw
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

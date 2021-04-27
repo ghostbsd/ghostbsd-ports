@@ -1,8 +1,7 @@
 # Created by: ijliao
-# $FreeBSD$
 
 PORTNAME=	gnu-cobol
-PORTVERSION=	3.1.1
+PORTVERSION=	3.1.2
 CATEGORIES=	lang
 MASTER_SITES=	GNU/gnucobol
 DISTNAME=	gnucobol-${PORTVERSION}

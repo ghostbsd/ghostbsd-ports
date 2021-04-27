@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	qmail
 PORTVERSION=	${QMAIL_VERSION}.${SPAMCONTROL_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES+=	http://www.fehcom.de/qmail/spamcontrol/:spamcontrol \
 		LOCAL/bdrewery/qmail/:spamcontrol

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	picpas
 PORTVERSION=	0.9.0
@@ -11,6 +10,8 @@ MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Multi-platform Pascal for Microchip PIC16F microcontrollers
 
 LICENSE=	GPLv2
+
+BROKEN=		fails to build
 
 gtk2_CONFLICTS_INSTALL=	${PORTNAME}-qt5
 qt5_CONFLICTS_INSTALL=	${PORTNAME}-gtk2

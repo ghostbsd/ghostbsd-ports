@@ -1,9 +1,9 @@
 # Created by: thierry@pompo.net
-# $FreeBSD$
 
 PORTNAME=	cgnslib
 PORTVERSION=	4.1.2
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	science
 

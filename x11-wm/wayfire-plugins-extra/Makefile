@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	wayfire-plugins-extra
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.6.0
+DISTVERSION=	0.7.0
 CATEGORIES=	x11-wm
 
 MAINTAINER=	jbeich@FreeBSD.org

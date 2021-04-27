@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	spectra
 DISTVERSION=	0.0.11
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>0:devel/py-nose@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

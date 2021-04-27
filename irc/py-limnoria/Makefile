@@ -1,5 +1,4 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	limnoria
 PORTVERSION=	2019.09.08
@@ -18,7 +17,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}feedparser>=0:textproc/py-feedparser@${PY_F
 		${PYTHON_PKGNAMEPREFIX}pytz>=0:devel/py-pytz@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mock>=0:devel/py-mock@${PY_FLAVOR}
 
-USES=		python # 2.6+
+USES=		python:3.6+ # 2.6+
 USE_GITHUB=	yes
 USE_PYTHON=	autoplist concurrent distutils
 

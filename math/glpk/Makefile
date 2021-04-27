@@ -1,8 +1,7 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	glpk
-DISTVERSION=	4.65
+DISTVERSION=	5.0
 CATEGORIES=	math
 MASTER_SITES=	GNU
 

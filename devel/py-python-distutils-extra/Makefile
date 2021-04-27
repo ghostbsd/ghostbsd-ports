@@ -1,5 +1,4 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	python-distutils-extra
 PORTVERSION=	2.45
@@ -14,7 +13,7 @@ COMMENT=	Add support for i18n, documentation, and icons to distutils
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python tar:xz
+USES=		python:3.6+ tar:xz
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

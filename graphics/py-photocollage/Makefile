@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	photocollage
 DISTVERSION=	1.4.4
@@ -17,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cairo>0:graphics/py-cairo@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}six>:devel/py-six@${PY_FLAVOR} \
 		${PY_PILLOW}
 
-USES=		gettext-tools python
+USES=		gettext-tools python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 NO_ARCH=	yes
 

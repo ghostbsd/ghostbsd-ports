@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	django-bootstrap4
 PORTVERSION=	0.0.8
@@ -12,7 +11,7 @@ COMMENT=	Bootstrap 4 support for Django projects
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

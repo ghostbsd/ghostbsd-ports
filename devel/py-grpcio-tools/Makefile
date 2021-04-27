@@ -1,8 +1,7 @@
 # Created by: vanilla@
-# $FreeBSD$
 
 PORTNAME=	grpcio-tools
-PORTVERSION=	1.34.0
+PORTVERSION=	1.36.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,6 +20,6 @@ CFLAGS+=	-DHAVE_PTHREAD=1
 LDFLAGS+=	-lcares
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/grpc_tools/_protoc_compiler.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/grpc_tools/_protoc_compiler*.so
 
 .include <bsd.port.mk>

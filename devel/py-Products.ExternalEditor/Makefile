@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	Products.ExternalEditor
 PORTVERSION=	1.1.0
@@ -13,7 +12,7 @@ COMMENT=	Zope external editor
 
 LICENSE=	ZPL21
 
-USES=		python zip
+USES=		python:3.6+ zip
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

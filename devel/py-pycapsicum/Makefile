@@ -1,5 +1,4 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pycapsicum
 PORTVERSION=	1.0
@@ -12,7 +11,7 @@ COMMENT=	Python interface to capsicum security
 
 LICENSE=	BSD3CLAUSE
 
-USES=		python
+USES=		python:3.6+
 USE_CSTD=	c99
 USE_PYTHON=	autoplist distutils
 

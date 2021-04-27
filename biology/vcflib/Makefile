@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=		vcflib
 DISTVERSIONPREFIX=	v
@@ -13,6 +12,7 @@ COMMENT=	C++ library and CLI tools for parsing and manipulating VCF files
 LICENSE=	MIT
 
 BROKEN_aarch64=		fails to compile: mmintrin.h:47:5: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
+BROKEN_riscv64=		fails to compile: mmintrin.h:47:5: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
 
 LIB_DEPENDS=	libhts.so:biology/htslib \
 		libtabix.so:biology/tabixpp \
@@ -42,6 +42,13 @@ CFLAGS_i386=	-msse2
 
 MAKEFILE=	${FILESDIR}/Makefile.external-libs
 INSTALL_TARGET=	install-strip
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc64le
+CFLAGS+=	-DNO_WARN_X86_INTRINSICS
+USES+=		compiler:gcc-c++11-lib 
+.endif
 
 post-install:
 	${RLN} ${STAGEDIR}${PREFIX}/lib/libvcflib.so.1 \

@@ -1,5 +1,4 @@
 # Created by: ijliao
-# $FreeBSD$
 
 PORTNAME=	simpy
 PORTVERSION=	3.0.13
@@ -15,7 +14,7 @@ LICENSE=	LGPL21
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools_scm>0:devel/py-setuptools_scm@${PY_FLAVOR}
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 OPTIONS_DEFINE=	TKINTER DOCS

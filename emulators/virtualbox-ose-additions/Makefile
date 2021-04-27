@@ -1,11 +1,9 @@
 # Created by: Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD$
 
 PORTNAME=	virtualbox-ose
-PORTVERSION=	5.2.44
-PORTREVISION=	3
+PORTVERSION=	6.1.18
 CATEGORIES=	emulators
-MASTER_SITES=	https://download.oracle.com/virtualbox/${PORTVERSION}/
+MASTER_SITES=	https://download.virtualbox.org/virtualbox/${PORTVERSION}/
 PKGNAMESUFFIX?=	-additions
 DISTNAME=	VirtualBox-${PORTVERSION}
 
@@ -15,7 +13,7 @@ COMMENT=	VirtualBox additions for FreeBSD guests
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-ONLY_FOR_ARCHS=	amd64 i386
+ONLY_FOR_ARCHS=	amd64
 USES=		compiler:c++11-lang cpe iconv kmod tar:bzip2
 USE_RC_SUBR=	vboxguest vboxservice
 
@@ -34,6 +32,7 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--disable-alsa \
 			--disable-docs \
 			--disable-libvpx \
+			--disable-opengl \
 			--disable-pulse \
 			--disable-python \
 			--disable-sdl-ttf \
@@ -47,21 +46,15 @@ CONFLICTS_INSTALL=	virtualbox-ose-[0-9]* \
 			virtualbox-ose-lite-[0-9]* \
 			virtualbox-ose-nox11-[0-9]*
 
-OPTIONS_DEFINE=	DBUS DEBUG OPENGL X11
+OPTIONS_DEFINE=	DBUS DEBUG X11
 OPTIONS_DEFAULT=	DBUS X11
 OPTIONS_SUB=	yes
-
-OPENGL_DESC=		3D pass-through support (requires X11)
 
 DBUS_CONFIGURE_OFF=	--disable-dbus
 DBUS_LIB_DEPENDS=	libdbus-1.so:devel/dbus
 DEBUG_CONFIGURE_ON=	--build-debug
 DEBUG_VARS=		KMK_BUILDTYPE=debug
 DEBUG_VARS_OFF=		KMK_BUILDTYPE=release
-OPENGL_CONFIGURE_OFF=	--disable-opengl
-OPENGL_IMPLIES=		X11
-OPENGL_USE=		GL=gl,glu XORG=xcomposite,xdamage,xfixes
-OPENGL_USES=		gl python:2.7,build xorg
 X11_BUILD_DEPENDS=	${LOCALBASE}/include/xorg/compiler.h:x11-servers/xorg-server
 X11_RUN_DEPENDS=	xrandr:x11/xrandr
 X11_USE=		XORG=x11,xcursor,xext,xorgproto,xmu,xrandr,xt
@@ -89,23 +82,12 @@ BUILD_WRKSRC=	${VBOX_BIN}/src
 KMK_ARCH=	freebsd.${ARCH:S/i386/x86/}
 KMK_CONFIG+=	VBOX_LIBPATH_X11=${LOCALBASE} VBOX_FREEBSD_SRC=${SRC_BASE}/sys
 
-.if ${PORT_OPTIONS:MOPENGL}
-VBOX_LIBS=	VBoxEGL.so \
-		VBoxOGL.so
-.endif
-
 .if ${PORT_OPTIONS:MX11}
 .else
 VBOX_WITH_X11=
 .endif
 
 .include <bsd.port.pre.mk>
-
-.if ${COMPILER_TYPE} == clang
-.if ${COMPILER_FEATURES:Mlibc++}
-EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-src-VBox-Additions-x11-VBoxClient-Makefile.kmk
-.endif
-.endif
 
 post-patch:
 	@${ECHO_CMD} 'VBOX_ONLY_ADDITIONS = 1' > ${WRKSRC}/LocalConfig.kmk
@@ -121,13 +103,10 @@ post-patch:
 	    -e 's| -fno-merge-constants||' \
 	    -e 's| -mpreferred-stack-boundary=2||' ${WRKSRC}/Config.kmk
 .endif
-	@${REINPLACE_CMD} -e 's|/usr/X11|${LOCALBASE}|g' \
-	    ${WRKSRC}/src/VBox/Additions/x11/VBoxClient/display.cpp
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 	    ${WRKSRC}/Config.kmk ${WRKSRC}/configure \
 	    ${WRKSRC}/kBuild/header.kmk ${WRKSRC}/kBuild/units/qt4.kmk \
 	    ${WRKSRC}/kBuild/units/qt5.kmk ${WRKSRC}/kBuild/sdks/LIBSDL.kmk \
-	    ${WRKSRC}/src/VBox/Additions/common/crOpenGL/load.c \
 	    ${WRKSRC}/src/VBox/Additions/x11/Installer/98vboxadd-xclient \
 	    ${WRKSRC}/src/VBox/Additions/x11/Installer/vboxclient.desktop \
 	    ${WRKSRC}/src/VBox/Additions/x11/vboxmouse/Makefile.kmk \
@@ -141,9 +120,6 @@ post-patch:
 	    ${WRKSRC}/src/VBox/Additions/x11/VBoxClient/Makefile.kmk
 	@${ECHO_CMD} 'VBOX_ICONV_DEFS = LIBICONV_PLUG' >> ${WRKSRC}/LocalConfig.kmk
 .endif
-
-post-patch-OPENGL-on:
-	@${ECHO_CMD} 'VBOX_USE_SYSTEM_GL_HEADERS = 1' >> ${WRKSRC}/LocalConfig.kmk
 
 post-patch-X11-on:
 	@${ECHO_CMD} 'VBOX_USE_SYSTEM_XORG_HEADERS = 1' >> \
@@ -183,11 +159,5 @@ do-install-X11-on:
 	${MKDIR} ${STAGEDIR}${INPUTDIR}
 	${INSTALL_DATA} ${VBOX_BIN}/vboxmouse_drv_system.so \
 	    ${STAGEDIR}${INPUTDIR}/vboxmouse_drv.so
-
-do-install-OPENGL-on:
-	${INSTALL_DATA} ${FILESDIR}/vboxvideo.conf \
-	    ${STAGEDIR}${PREFIX}/etc/libmap.d/
-	${INSTALL_DATA} ${VBOX_LIBS:S|^|${VBOX_BIN}/|} \
-	    ${STAGEDIR}${PREFIX}/lib/
 
 .include <bsd.port.post.mk>

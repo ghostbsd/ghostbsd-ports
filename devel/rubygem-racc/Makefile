@@ -1,8 +1,7 @@
 # Created by: Shin-ya MURAKAMI <murashin@gfd-dennou.org>
-# $FreeBSD$
 
 PORTNAME=	racc
-PORTVERSION=	1.5.1
+PORTVERSION=	1.5.2
 CATEGORIES=	devel ruby
 MASTER_SITES=	RG
 

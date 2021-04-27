@@ -1,8 +1,7 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD$
 
 PORTNAME=	PGP-Sign
-PORTVERSION=	1.03
+PORTVERSION=	1.04
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-

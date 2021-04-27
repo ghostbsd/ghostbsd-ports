@@ -1,5 +1,4 @@
 # Created by: Dryice Liu	<dryice@dryice.name>
-# $FreeBSD$
 
 PORTNAME=	Paste
 PORTVERSION=	3.4.6
@@ -20,7 +19,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}tox>0:devel/py-tox@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

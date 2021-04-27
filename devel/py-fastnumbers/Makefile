@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	fastnumbers
 DISTVERSION=	3.1.0
@@ -16,6 +15,6 @@ USES=		python:3.5+
 USE_PYTHON=	autoplist distutils
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/fastnumbers.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/fastnumbers*.so
 
 .include <bsd.port.mk>

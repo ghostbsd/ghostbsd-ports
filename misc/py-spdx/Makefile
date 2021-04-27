@@ -1,5 +1,4 @@
 # Created by: Brendan Molloy <brendan+freebsd@bbqsrc.net>
-# $FreeBSD$
 
 PORTNAME=	spdx
 PORTVERSION=	2.5.1
@@ -13,7 +12,7 @@ COMMENT=	SPDX license list database
 LICENSE=	CC0-1.0
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

@@ -1,5 +1,4 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pyfiglet
 PORTVERSION=	0.7.6
@@ -13,7 +12,7 @@ COMMENT=	Pure-python FIGlet implementation
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

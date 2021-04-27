@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 
     COMMENT = Benchmarking tools
 
@@ -102,6 +100,7 @@
     SUBDIR += unixbench
     SUBDIR += uperf
     SUBDIR += vegeta
+    SUBDIR += vkmark
     SUBDIR += webbench
     SUBDIR += wrk
 

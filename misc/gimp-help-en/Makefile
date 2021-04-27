@@ -1,5 +1,4 @@
 # Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	gimp-help
 PORTVERSION=	2.10.0
@@ -16,7 +15,7 @@ COMMENT?=	GIMP User Manual in English
 
 LICENSE=	GFDL
 
-BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2mod.so:textproc/py-libxml2@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2.py:textproc/py-libxml2@${PY_FLAVOR} \
 		${LOCALBASE}/share/xsl/docbook/xhtml/chunk.xsl:textproc/docbook-xsl
 
 USES=		gettext-tools gmake gnome perl5 pkgconfig python shebangfix \

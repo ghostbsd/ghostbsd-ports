@@ -1,8 +1,7 @@
 # Created by: Rainer Hurling <rhurlin@gwdg.de>
-# $FreeBSD$
 
 PORTNAME=	visvis
-PORTVERSION=	1.12.4
+PORTVERSION=	1.13.0
 PORTREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP

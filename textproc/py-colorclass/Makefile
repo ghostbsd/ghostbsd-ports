@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	colorclass
 PORTVERSION=	2.2.0
@@ -12,7 +11,7 @@ COMMENT=	Colorful worry-free console applications
 LICENSE=	MIT
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

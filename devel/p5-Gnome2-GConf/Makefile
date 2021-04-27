@@ -1,5 +1,4 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD$
 
 PORTNAME=	Gnome2-GConf
 PORTVERSION=	1.044
@@ -17,8 +16,9 @@ BUILD_DEPENDS=	p5-ExtUtils-Depends>=0:devel/p5-ExtUtils-Depends \
 RUN_DEPENDS=	p5-Glib>=0:devel/p5-Glib
 
 USES=		gnome perl5
-USE_PERL5=	configure
 USE_GNOME=	gconf2
+USE_PERL5=	configure
+
 MAKE_JOBS_UNSAFE=	yes
 
 .include <bsd.port.mk>

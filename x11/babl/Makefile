@@ -1,8 +1,7 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	babl
-PORTVERSION=	0.1.82
+PORTVERSION=	0.1.84
 CATEGORIES=	x11
 MASTER_SITES=	GIMP
 

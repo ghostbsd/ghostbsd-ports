@@ -1,8 +1,8 @@
 # Created by: Janos Mohacsi
-# $FreeBSD$
 
 PORTNAME=	opensaml
 PORTVERSION=	3.2.0
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://shibboleth.net/downloads/c++-opensaml/${PORTVERSION}/
 
@@ -14,8 +14,6 @@ LICENSE=	APACHE20
 BUILD_DEPENDS=	boost-libs>=0:devel/boost-libs
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		liblog4shib.so:devel/log4shib \
-		libxml-security-c.so:security/apache-xml-security-c \
-		libxerces-c.so:textproc/xerces-c3 \
 		libxmltooling.so:devel/xmltooling
 
 GNU_CONFIGURE=	yes

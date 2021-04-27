@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	launchpadlib
 PORTVERSION=	1.10.13
@@ -20,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}testresources>=0:devel/py-testresources@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wadllib>=0:devel/py-wadllib@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

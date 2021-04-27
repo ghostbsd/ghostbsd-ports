@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	filelock
 DISTVERSION=	3.0.12
@@ -12,7 +11,7 @@ COMMENT=	Platform independent file lock
 LICENSE=	PD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

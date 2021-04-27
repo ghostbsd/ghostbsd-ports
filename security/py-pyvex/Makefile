@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	pyvex
 DISTVERSION=	${ANGR_VERSION}
@@ -49,7 +48,7 @@ post-patch:
 		${WRKSRC}/setup.py
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/${PORTNAME}/lib/lib${PORTNAME}.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/${PORTNAME}/lib/lib${PORTNAME}*.so
 
 pre-test:
 	@${LN} -Fs ${WRKSRC_tests}/tests ${WRKSRC}/tests

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	ovs
 PORTVERSION=	2.9.0
@@ -13,7 +12,7 @@ LICENSE=	APACHE20
 
 NO_ARCH=	yes
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

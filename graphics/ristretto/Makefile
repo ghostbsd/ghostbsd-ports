@@ -1,9 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	ristretto
 PORTVERSION=	0.10.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4

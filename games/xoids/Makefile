@@ -1,5 +1,4 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD$
 
 PORTNAME=	xoids
 PORTVERSION=	1.5
@@ -14,7 +13,8 @@ NOT_FOR_ARCHS=		mips64
 NOT_FOR_ARCHS_REASON=	unknown architecture
 
 USES=		imake xorg
-USE_XORG=	xpm
+USE_XORG=	x11 xpm
+CFLAGS+=	-fcommon
 
 PLIST_FILES=	bin/xoids \
 		man/man6/xoids.6.gz

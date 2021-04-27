@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	better-bencode
 PORTVERSION=	0.2.1
@@ -11,7 +10,7 @@ COMMENT=	Fast, standard compliant Bencode serialization
 
 LICENSE=	BSD3CLAUSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 .include <bsd.port.mk>

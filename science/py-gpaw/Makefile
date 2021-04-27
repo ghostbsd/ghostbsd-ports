@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	gpaw
-DISTVERSION=	20.10.0
+DISTVERSION=	21.1.0
 CATEGORIES=	science python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -29,6 +28,6 @@ post-patch:
 	@${REINPLACE_CMD} "s|'/usr/local/|'${LOCALBASE}/|" ${WRKSRC}/gpaw/__init__.py
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/_gpaw.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/_gpaw*.so
 
 .include <bsd.port.mk>

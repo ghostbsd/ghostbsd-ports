@@ -1,8 +1,7 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	wavpack
-DISTVERSION=	5.3.0
+DISTVERSION=	5.4.0
 CATEGORIES=	audio
 MASTER_SITES=	http://www.wavpack.com/
 

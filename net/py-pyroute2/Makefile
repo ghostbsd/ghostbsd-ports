@@ -1,5 +1,4 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pyroute2
 PORTVERSION=	0.5.14
@@ -15,7 +14,7 @@ LICENSE_COMB=	dual
 LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE.Apache.v2
 LICENSE_FILE_GPLv2+ =	${WRKSRC}/LICENSE.GPL.v2
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

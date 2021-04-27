@@ -1,8 +1,7 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD$
 
 PORTNAME=	gromacs
-DISTVERSION=	2020.4
+DISTVERSION=	2021.1
 CATEGORIES=	science
 MASTER_SITES=	ftp://ftp.gromacs.org/pub/gromacs/
 
@@ -15,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BROKEN_i386=	undefined reference to `__atomic_load' and `__atomic_compare_exchange'
 
 BUILD_DEPENDS=	boost-libs>=1.44:devel/boost-libs
-LIB_DEPENDS=	libhwloc.so:devel/hwloc
+LIB_DEPENDS=	libhwloc.so:devel/hwloc2
 
 USES=		cmake compiler:c++14-lang fortran gnome perl5 pkgconfig shebangfix xorg
 SHEBANG_FILES=	admin/*.sh scripts/*.pl scripts/*.sh src/gromacs/selection/*.sh
@@ -25,10 +24,10 @@ CMAKE_OFF=	GMX_USE_RDTSCP \
 		USE_PYTHON_SCRIPTS
 USE_LDCONFIG=	yes
 
-OPTIONS_DEFINE=		ATLAS FLOAT OPENCL OPENMP SIMD X11
+OPTIONS_DEFINE=		ATLAS FLOAT LEGACY OPENCL OPENMP SIMD X11
 OPTIONS_SINGLE=		MP
 OPTIONS_SINGLE_MP=	NOMP MPICH OPENMPI THREAD_MPI
-OPTIONS_DEFAULT=	FLOAT OPENMP THREAD_MPI X11
+OPTIONS_DEFAULT=	LEGACY OPENMP THREAD_MPI X11 # FLOAT should not a default because science/votca needs double precision. This is likely the same for many other uses.
 OPTIONS_SUB=		yes
 
 ATLAS_DESC=		Use ATLAS for BLAS and LAPACK
@@ -48,7 +47,12 @@ FLOAT_CMAKE_OFF=	-DGMX_DOUBLE:BOOL=ON
 FLOAT_PLIST_SUB=	SUFFIX_D=""
 FLOAT_PLIST_SUB_OFF=	SUFFIX_D="_d"
 
-OPENCL_CMAKE_BOOL=	GMX_USE_OPENCL GMX_GPU
+LEGACY_DESC=		Install legacy API # expected by science/votca
+LEGACY_CMAKE_BOOL=	GMX_INSTALL_LEGACY_API
+
+OPENCL_CMAKE_BOOL=	GMX_USE_OPENCL
+OPENCL_CMAKE_ON=	-DGMX_GPU:STRING=OpenCL # one of: OFF, CUDA, OpenCL, SYCL
+OPENCL_CMAKE_OFF=	-DGMX_GPU:STRING=OFF
 OPENCL_LIB_DEPENDS=	libOpenCL.so:devel/ocl-icd
 
 OPENMP_CMAKE_ON=	-DGMX_CXX11:BOOL=OFF

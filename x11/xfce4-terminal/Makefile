@@ -1,8 +1,8 @@
 # Created by: Matt Lancereau
-# $FreeBSD$
 
 PORTNAME=	xfce4-terminal
-PORTVERSION=	0.8.9.2
+PORTVERSION=	0.8.10
+PORTREVISION=	1
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4

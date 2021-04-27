@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	gau2grid
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.0.4
+DISTVERSION=	2.0.7
 CATEGORIES=	math python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -17,7 +16,7 @@ BUILD_DEPENDS=	${PYNUMPY} \
 RUN_DEPENDS=	${PYNUMPY}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
 
-USES=		cmake compiler:c11 python
+USES=		cmake compiler:c11 python:3.6+
 USE_GITHUB=	yes
 GH_ACCOUNT=	dgasmith
 USE_PYTHON=	flavors

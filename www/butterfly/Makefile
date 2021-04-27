@@ -1,5 +1,4 @@
 # Created by: Yuri Victorovich <yuri@rawbw.com>
-# $FreeBSD$
 
 PORTNAME=	butterfly
 PORTVERSION=	2.0.1
@@ -16,7 +15,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}openssl>0:security/py-openssl@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tornado>0:www/py-tornado@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}libsass>0:www/py-libsass@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 # Can't use concurrent here, it changes ETCDIR, and breaks post-install.
 USE_PYTHON=	autoplist distutils optsuffix
 NO_ARCH=	yes

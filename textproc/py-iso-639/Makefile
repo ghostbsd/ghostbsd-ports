@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	iso-639
 PORTVERSION=	0.4.5
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}country>0:devel/py-country@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	noumar

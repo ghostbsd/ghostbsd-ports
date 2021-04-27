@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	tabletext
 PORTVERSION=	0.1
@@ -11,7 +10,7 @@ COMMENT=	Python library to pretty-print tabular data
 
 LICENSE=	GPLv3
 
-USES?=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 NO_ARCH=	yes
 

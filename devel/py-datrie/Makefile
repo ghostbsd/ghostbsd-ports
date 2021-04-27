@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	datrie
 PORTVERSION=	0.8.2
@@ -16,7 +15,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pip>0:devel/py-pip@${PY_FLAVOR} \
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}hypothesis>0:devel/py-hypothesis@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils cython autoplist
 
 do-test:

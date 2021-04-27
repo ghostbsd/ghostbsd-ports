@@ -1,15 +1,12 @@
-# $FreeBSD$
 
 PORTNAME=	wolfssl
-PORTVERSION=	4.5.0
+PORTVERSION=	4.7.0
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.wolfssl.com/ \
 		LOCAL/fox
+
 MAINTAINER=	fox@FreeBSD.org
 COMMENT=	Embedded SSL C-Library
-
-PATCH_SITES=	https://github.com/wolfSSL/wolfssl/commit/
-PATCHFILES=	e9b1ceae7e1daac6206d399e30c04bd51e3f8c7f.patch:-p1
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -19,28 +16,31 @@ USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-dependency-tracking \
+		--enable-certgen \
+		--enable-des3 \
 		--enable-dh \
 		--enable-dsa \
 		--enable-dtls \
 		--enable-ecc \
 		--enable-ipv6 \
 		--enable-keygen \
+		--enable-opensslall \
 		--enable-opensslextra \
 		--enable-ripemd \
+		--enable-sessioncerts \
 		--enable-sha512 \
 		--enable-shared \
 		--enable-sni \
 		--enable-ssh \
 		--enable-static \
 		--enable-tls13 \
-		--enable-tls13-draft18 \
-		--enable-tls13-draft22 \
-		--enable-tls13-draft23 \
-		--enable-tls13-draft26 \
-		--enable-tls13-draft28
+		--enable-tls13-draft18
 TEST_TARGET=	check
-PORTDOCS=	*
-OPTIONS_DEFINE=	DOCS
+CFLAGS+=	-DWOLFSSL_ALT_NAMES
+
+OPTIONS_DEFINE=	DEBUG DOCS
+
+DEBUG_CONFIGURE_ON=	--enable-debug
 
 post-configure:
 	@${REINPLACE_CMD} \
@@ -49,7 +49,7 @@ post-configure:
 		-e '/^pkgconfigdir/s|(libdir)|&data|' \
 		${WRKSRC}/Makefile
 
-post-install:
+post-install-DEBUG-off:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libwolfssl.so
 
 .include <bsd.port.mk>

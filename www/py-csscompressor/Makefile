@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	csscompressor
 DISTVERSION=	0.9.5
@@ -12,7 +11,7 @@ COMMENT=	Python port of YUI CSS Compressor
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

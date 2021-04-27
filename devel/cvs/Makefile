@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	cvs
 PORTVERSION=	1.20120905
-PORTREVISION?=	6
+PORTREVISION?=	7
 CATEGORIES=	devel
 MASTER_SITES=	LOCAL/eadler
 
@@ -39,6 +38,8 @@ WRKSRC=		${WRKDIR}/call/cvs-build
 # bsd.stage.makes sets the wrong value for DESTDIR
 DESTDIRNAME=	NADA
 MAKE_ARGS=	DESTDIR=${STAGEDIR}${PREFIX}
+# XXX static PIE libraries not yet supported by the base system
+MAKE_ARGS+=	WITHOUT_PIE=true
 
 .include <bsd.port.options.mk>
 

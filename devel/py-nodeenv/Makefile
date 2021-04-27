@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	nodeenv
 PORTVERSION=	1.5.0
@@ -12,7 +11,7 @@ COMMENT=	Node.js virtual environment builder
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

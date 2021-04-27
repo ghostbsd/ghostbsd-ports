@@ -1,5 +1,4 @@
 # Created by: Danilo G. Baio <dbaio@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	httpstat
 PORTVERSION=	1.3.0
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	curl:ftp/curl
 
-USES=		python
+USES=		python:3.6+
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	reorx

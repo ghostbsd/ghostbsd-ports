@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	fypp
 DISTVERSION=	3.0
@@ -12,7 +11,7 @@ COMMENT=	Python powered preprocessor
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils concurrent autoplist
 
 .include <bsd.port.mk>

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	zxcvbn
 DISTVERSIONPREFIX=	v
@@ -15,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_GITHUB=	yes
 USE_PYTHON=	autoplist distutils
 GH_ACCOUNT=	dwolfhub

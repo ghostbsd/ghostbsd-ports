@@ -1,8 +1,7 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	rubymarshal
-PORTVERSION=	1.2.7
+PORTVERSION=	1.2.10
 CATEGORIES=	devel python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -20,7 +19,7 @@ USE_GITHUB=	yes  # tests are missing from PyPI distribution
 GH_ACCOUNT=	d9pouces
 GH_PROJECT=	RubyMarshal
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 NO_ARCH=	yes
 

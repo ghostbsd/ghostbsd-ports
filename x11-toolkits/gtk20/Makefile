@@ -1,8 +1,7 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD$
 
 PORTNAME=	gtk
-PORTVERSION=	2.24.32		# sync with graphics/gtk-update-icon-cache
+PORTVERSION=	2.24.33		# sync with graphics/gtk-update-icon-cache
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME/sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 PKGNAMESUFFIX=	2
@@ -43,7 +42,7 @@ CUPS_CONFIGURE_ON=	--enable-cups=auto
 CUPS_CONFIGURE_OFF=	--disable-cups
 DEBUG_CONFIGURE_ON=	--enable-debug=yes
 
-PLIST_SUB+=	LIBGAILVER=18.0.1 LIBGVER=0.2400.32
+PLIST_SUB+=	LIBGAILVER=18.0.1 LIBGVER=0.2400.33
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|[{]libdir[}]/locale|{datadir}/locale|g' \

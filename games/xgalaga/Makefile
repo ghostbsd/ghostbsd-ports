@@ -1,5 +1,4 @@
 # Created by: Satoshi Asami <asami@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	xgalaga
 PORTVERSION=	2.1.1.0
@@ -10,6 +9,9 @@ MAINTAINER=	TsurutaniNaoki@gmail.com
 COMMENT=	Clone of the classic game Galaga for X11
 
 LICENSE=	GPLv2
+
+BROKEN_aarch64=		fails to configure: machine arm64-unknown not recognized
+BROKEN_riscv64=		fails to configure: /bin/sh ./config.sub riscv-unknown-freebsd13.0 failed
 
 USES=		gmake xorg
 USE_XORG=	xpm xmu
@@ -25,8 +27,6 @@ OPTIONS_DEFAULT=	SOUND
 OPTIONS_SUB=	yes
 
 SOUND_CONFIGURE_OFF=	--without-sound
-
-BROKEN_aarch64=		Fails to configure: machine arm64-unknown not recognized
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/xgalaga

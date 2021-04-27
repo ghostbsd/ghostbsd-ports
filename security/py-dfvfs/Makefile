@@ -1,8 +1,7 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	dfvfs
-PORTVERSION=	20200920
+PORTVERSION=	20201219
 CATEGORIES=	security devel python
 MASTER_SITES=	https://github.com/log2timeline/dfvfs/releases/download/${PORTVERSION}/ \
 		LOCAL/antoine
@@ -18,7 +17,9 @@ RUN_DEPENDS=	libbde>=a:devel/libbde \
 		libewf>=0:devel/libewf \
 		libfsapfs>=e:devel/libfsapfs \
 		libfsext>=e:devel/libfsext \
+		libfshfs>=e:devel/libfshfs \
 		libfsntfs>=e:devel/libfsntfs \
+		libfsxfs>=e:devel/libfsxfs \
 		libfvde>=0:sysutils/libfvde \
 		libfwnt>=e:devel/libfwnt \
 		libluksde>=e:devel/libluksde \

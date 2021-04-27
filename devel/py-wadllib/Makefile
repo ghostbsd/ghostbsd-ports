@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	wadllib
 PORTVERSION=	1.3.4
@@ -15,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING.txt
 RUN_DEPENDS=	\
 	${PYTHON_PKGNAMEPREFIX}lazr.uri>=0:devel/py-lazr.uri@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

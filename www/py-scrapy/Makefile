@@ -1,5 +1,4 @@
 # Created by: Qing Feng <qingfeng@douban.com>
-# $FreeBSD$
 
 PORTNAME=	Scrapy
 DISTVERSION=	1.6.0
@@ -25,7 +24,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}twisted>=13.1.0:devel/py-twisted@${PY_FLAVOR
 		${PYTHON_PKGNAMEPREFIX}six>=1.5.2:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}parsel>=1.5:textproc/py-parsel@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils concurrent autoplist
 
 OPTIONS_DEFINE=		SSL

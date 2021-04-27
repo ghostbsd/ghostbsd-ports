@@ -1,6 +1,6 @@
---- content/app/content_main.cc.orig	2020-11-16 14:31:07 UTC
+--- content/app/content_main.cc.orig	2021-03-12 23:57:24 UTC
 +++ content/app/content_main.cc
-@@ -230,7 +230,7 @@ int RunContentProcess(const ContentMainParams& params,
+@@ -229,7 +229,7 @@ int RunContentProcess(const ContentMainParams& params,
  #endif
      base::EnableTerminationOnOutOfMemory();
  

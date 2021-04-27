@@ -1,9 +1,8 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	jackit
 PORTVERSION=	0.125.0
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	audio
 
 MAINTAINER=	multimedia@FreeBSD.org

@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	WsgiDAV
-DISTVERSION=	3.0.3
+DISTVERSION=	3.1.0
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -29,7 +28,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cheroot>=6.0:www/py-cheroot@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tox>=2.0:devel/py-tox@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}WebTest>=2.0:www/py-WebTest@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

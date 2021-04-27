@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	django-storages
 PORTVERSION=	1.9.1
@@ -11,7 +10,7 @@ COMMENT=	Generic storages for Django
 
 LICENSE=	BSD3CLAUSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

@@ -1,5 +1,4 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	praw
 PORTVERSION=	6.2.0
@@ -22,7 +21,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mock>=0.8:devel/py-mock@${PY_FLAVOR} \
 #		betamax-matchers >=0.3.0, <0.5
 #		betamax-serializers >=0.2, <0.3
 
-USES=		python
+USES=		python:3.6+
 USE_GITHUB=	yes # missing test data files
 USE_PYTHON=	autoplist concurrent distutils
 

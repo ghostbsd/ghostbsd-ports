@@ -1,8 +1,7 @@
 # Created by: jeff@cetlink.net
-# $FreeBSD$
 
 PORTNAME=	libgd
-PORTVERSION=	2.3.0
+PORTVERSION=	2.3.1
 PORTREVISION=	0
 PORTEPOCH=	1
 CATEGORIES+=	graphics

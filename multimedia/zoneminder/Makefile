@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	zoneminder
 PORTVERSION=	1.34.21
@@ -10,7 +9,7 @@ COMMENT=	Complete security camera solution, fully web based with image analysis
 
 LICENSE=	GPLv2
 
-ONLY_FOR_ARCHS=	aarch64 amd64 i386
+ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64
 
 ZM_DEPENDS=	p5-DBI>=0:databases/p5-DBI \
 		p5-DBD-mysql>=0:databases/p5-DBD-mysql \
@@ -52,7 +51,6 @@ NLS_USES=	gettext
 NLS_CONFIGURE_ENABLE=	nls
 V4L_BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
 V4L_LIB_DEPENDS=	libv4l2.so:multimedia/libv4l
-PKGMESSAGE=	${MASTERDIR}/pkg-message
 
 PLIST_SUB=	WWWOWN="${WWWOWN}" WWWGRP="${WWWGRP}"
 SUB_FILES=	pkg-message

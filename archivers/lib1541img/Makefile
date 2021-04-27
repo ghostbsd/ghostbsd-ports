@@ -1,8 +1,8 @@
 # Created by: Felix Palmen <felix@palmen-it.de>
-# $FreeBSD$
 
 PORTNAME=	lib1541img
 PORTVERSION=	1.1
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	archivers devel emulators
 

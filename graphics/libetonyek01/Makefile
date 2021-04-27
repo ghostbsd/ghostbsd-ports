@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	libetonyek
 PORTVERSION=	0.1.9
-PORTREVISION=	6
+PORTREVISION=	8
 PORTEPOCH=	1
 CATEGORIES=	graphics
 MASTER_SITES=	LODEV/${PORTNAME}
@@ -24,7 +23,7 @@ LIB_DEPENDS=	libboost_filesystem.so:devel/boost-libs \
 USES=		compiler:c++11-lib gmake libtool pathfix \
 		pkgconfig tar:xz
 
-MDDS_VERSION=	1.5
+MDDS_VERSION=	1.7
 
 CONFIGURE_ARGS=	--disable-tests --disable-werror --without-docs --with-mdds=${MDDS_VERSION}
 CPPFLAGS+=	-I${LOCALBASE}/include

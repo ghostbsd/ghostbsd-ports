@@ -1,5 +1,4 @@
 # Created by: Mike Meyer <mwm@mired.org>
-# $FreeBSD$
 
 PORTNAME=	xlib
 DISTVERSION=	0.27
@@ -18,7 +17,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools_scm>=1.7:devel/py-setuptools_sc
 		${PYTHON_PKGNAMEPREFIX}six>=1.10.0:devel/py-six@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>=1.10.0:devel/py-six@${PY_FLAVOR}
 
-USES=		python tar:bz2
+USES=		python:3.6+ tar:bz2
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

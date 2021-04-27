@@ -1,5 +1,4 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	oletools
 PORTVERSION=	0.54.2
@@ -20,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyparsing>=2.2.0:devel/py-pyparsing@${PY_FLA
 		${PYTHON_PKGNAMEPREFIX}colorclass>=0:textproc/py-colorclass@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}msoffcrypto-tool>=0:security/py-msoffcrypto-tool@${PY_FLAVOR}
 
-USES=		python zip
+USES=		python:3.6+ zip
 USE_PYTHON=	distutils concurrent autoplist
 
 NO_ARCH=	yes

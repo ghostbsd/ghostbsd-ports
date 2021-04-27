@@ -1,5 +1,4 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	zfec
 PORTVERSION=	1.5.5
@@ -19,10 +18,10 @@ LICENSE_PERMS_TGGPL=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}argparse>=0.8:devel/py-argparse@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/zfec/_fec.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/zfec/_fec*.so
 
 .include <bsd.port.mk>

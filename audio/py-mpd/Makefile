@@ -1,5 +1,4 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	mpd
 PORTVERSION=	0.3.0
@@ -13,7 +12,7 @@ DISTNAME=	python-${PORTNAME}-${PORTVERSION}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Python MPD client library
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

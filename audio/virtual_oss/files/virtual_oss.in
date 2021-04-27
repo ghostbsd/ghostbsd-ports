@@ -1,7 +1,7 @@
 #!/bin/sh
-# $FreeBSD$
-#
+
 # PROVIDE: virtual_oss
+# REQUIRE: kld
 # BEFORE: LOGIN sndiod
 # KEYWORD: shutdown
 

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	pyjwt
 PORTVERSION=	1.7.1
@@ -19,7 +18,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}cryptography>0:security/py-cryptography@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pycrypto>=0:security/py-pycrypto@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils concurrent autoplist
 
 OPTIONS_DEFINE=	RSASSA

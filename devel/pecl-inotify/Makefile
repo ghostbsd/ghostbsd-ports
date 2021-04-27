@@ -1,8 +1,7 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	inotify
-PORTVERSION=	2.0.0
+PORTVERSION=	3.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org

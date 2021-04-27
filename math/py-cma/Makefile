@@ -1,5 +1,4 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	cma
 PORTVERSION=	3.0.3
@@ -15,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/cma/LICENSE
 
 RUN_DEPENDS=	${PYNUMPY}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

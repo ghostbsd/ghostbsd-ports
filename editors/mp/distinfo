@@ -1,3 +1,7 @@
-TIMESTAMP = 1593452440
-SHA256 (mp-5.41.tar.gz) = 51dc71d414d35fb0437b66d3b86e3a03de3811e5c60d86105d4662e30040513c
-SIZE (mp-5.41.tar.gz) = 550542
+TIMESTAMP = 1615814934
+SHA256 (ttcdt-mp-5.x-5.47_GH0.tar.gz) = cb2d209141ed30801b273bf49310863a9f5c546ba75a6a4320a98f5bad88b215
+SIZE (ttcdt-mp-5.x-5.47_GH0.tar.gz) = 235276
+SHA256 (ttcdt-mpdm-2.72_GH0.tar.gz) = eca91ca7549cab93931a806c7434fff9efa122f29ba787c670ab25fec24ecfbf
+SIZE (ttcdt-mpdm-2.72_GH0.tar.gz) = 144909
+SHA256 (ttcdt-mpsl-2.62_GH0.tar.gz) = 3e12bbbb8504bc9ebba31a5753c60e5280a1d7d9f3f0d5199ff0f1f3f241879a
+SIZE (ttcdt-mpsl-2.62_GH0.tar.gz) = 69393

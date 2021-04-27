@@ -1,5 +1,4 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pylev
 PORTVERSION=	1.3.0
@@ -12,7 +11,7 @@ COMMENT=	Pure Python Levenshtein implementation
 
 LICENSE=	BSD3CLAUSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

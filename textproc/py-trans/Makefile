@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	trans
 PORTVERSION=	2.1.0
@@ -17,7 +16,7 @@ LICENSE_TEXT=	License of this software is declared as 'BSD' in CHANGELOG. \
 		the source archive contains license information.
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-USES=		python tar:bzip2
+USES=		python:3.6+ tar:bzip2
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

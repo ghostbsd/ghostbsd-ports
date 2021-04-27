@@ -1,8 +1,7 @@
 # Created by: wenheping@gmail.com
-# $FreeBSD$
 
 PORTNAME=	rtree
-PORTVERSION=	0.9.4
+PORTVERSION=	0.9.7
 CATEGORIES=	devel science python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,10 +12,11 @@ COMMENT=	R-Tree Spatial Index For Python GIS
 
 LICENSE=	LGPL21
 
-BUILD_DEPENDS=	${LOCALBASE}/include/spatialindex/SpatialIndex.h:devel/spatialindex
+BUILD_DEPENDS=	${LOCALBASE}/include/spatialindex/SpatialIndex.h:devel/spatialindex \
+		${PYTHON_PKGNAMEPREFIX}wheel>=0.29.0:devel/py-wheel@${PY_FLAVOR}
 RUN_DEPENDS=	${LOCALBASE}/include/spatialindex/SpatialIndex.h:devel/spatialindex
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 post-extract:

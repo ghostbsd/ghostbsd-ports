@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	waifu2x-ncnn-vulkan
-DISTVERSION=	20200818
+DISTVERSION=	20210210
 CATEGORIES=	graphics
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -10,23 +9,22 @@ COMMENT=	Scale and denoise images using convolutional neural networks
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	glslangValidator:devel/glslang \
-		vulkan-headers>0:devel/vulkan-headers
+BUILD_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers
 LIB_DEPENDS=	libwebp.so:graphics/webp \
 		libvulkan.so:graphics/vulkan-loader
 
 USES=		cmake compiler:${OPENMP}c++11-lib
 USE_GITHUB=	yes
 GH_ACCOUNT=	nihui
-GH_TUPLE=	KhronosGroup:glslang:8.13.3743-39-gd39b8afc:glslang/src/ncnn/glslang \
-		Tencent:ncnn:20200727:ncnn/src/ncnn
+GH_TUPLE=	KhronosGroup:glslang:11.1.0-44-g4afd6917:glslang/src/ncnn/glslang \
+		Tencent:ncnn:20210124-35-g9fd4d371:ncnn/src/ncnn
 CMAKE_SOURCE_PATH=	${WRKSRC}/src
 CMAKE_ON=	USE_SYSTEM_WEBP
 PLIST_FILES=	bin/${PORTNAME}
 PORTDATA=	*
 
 .if !exists(/usr/include/omp.h)
-# XXX ports/199603: LLVM openmp in base doesn't support aarch64, armv6, armv7 yet
+# XXX ports/199603: LLVM openmp in base doesn't support armv6, armv7 yet
 OPENMP=		gcc-
 .endif
 

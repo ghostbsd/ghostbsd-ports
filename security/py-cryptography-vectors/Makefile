@@ -1,5 +1,4 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	cryptography-vectors
 PORTVERSION=	2.9.2
@@ -16,7 +15,7 @@ LICENSE_COMB=	dual
 LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE.APACHE
 LICENSE_FILE_BSD3CLAUSE=${WRKSRC}/LICENSE.BSD
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	random2
 DISTVERSION=	1.0.1
@@ -11,7 +10,7 @@ COMMENT=	Python 3 compatible Python 2 random module
 
 LICENSE=	PSFL
 
-USES=		python zip
+USES=		python:3.6+ zip
 USE_PYTHON=	distutils autoplist
 NO_ARCH=	yes
 

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	molmod
 DISTVERSION=	1.4.8
@@ -17,7 +16,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}future>0:devel/py-future@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>0:devel/py-nose@${PY_FLAVOR}
 
-USES=		python shebangfix
+USES=		python:3.6+ shebangfix
 SHEBANG_GLOB=	*.py
 USE_PYTHON=	distutils cython cython_run autoplist
 

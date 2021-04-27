@@ -1,8 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	fldigi
-PORTVERSION=	4.1.17
-PORTREVISION=	1
+PORTVERSION=	4.1.18
 CATEGORIES=	comms hamradio
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
@@ -13,8 +11,7 @@ LICENSE=	GPLv3
 
 BUILD_DEPENDS=	asciidoc:textproc/asciidoc\
 		docbook-xsl>=1.0:textproc/docbook-xsl\
-		xsltproc:textproc/libxslt \
-		gsed:textproc/gsed
+		xsltproc:textproc/libxslt
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs\
 		libpng.so:graphics/png \
 		libfltk.so:x11-toolkits/fltk \

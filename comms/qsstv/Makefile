@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	qsstv
 PORTVERSION=	9.3.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	comms hamradio
 MASTER_SITES=	http://users.telenet.be/on4qz/qsstv/downloads/ \
 		LOCAL/shurd

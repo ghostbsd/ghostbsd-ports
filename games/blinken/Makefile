@@ -1,11 +1,10 @@
-# $FreeBSD$
 
 PORTNAME=	blinken
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	games kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Memory enhancement game for KDE
+COMMENT=	Memory enhancement game
 
 USES=		cmake compiler:c++11-lang gettext kde:5 qt:5 tar:xz
 USE_KDE=	auth codecs config configwidgets coreaddons crash dbusaddons \

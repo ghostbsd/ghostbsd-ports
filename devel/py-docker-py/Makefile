@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	docker-py
 PORTVERSION=	1.7.2
@@ -14,7 +13,7 @@ LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}websocket-client>0:www/py-websocket-client@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

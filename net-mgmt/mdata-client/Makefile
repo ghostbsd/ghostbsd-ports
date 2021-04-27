@@ -1,10 +1,9 @@
-# $FreeBSD$
 
 PORTNAME=	mdata-client
 PORTVERSION=	20151001
 CATEGORIES=	net-mgmt
 
-MAINTAINER=	juraj@lutter.sk
+MAINTAINER=	otis@FreeBSD.org
 COMMENT=	Metadata tools for use within guests of the SmartOS
 
 LICENSE=	MIT

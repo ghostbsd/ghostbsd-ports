@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kris@ixsystems.com>
-# $FreeBSD$
+
 
 PORTNAME=	pc-networkmanager
 PORTVERSION=	201806271233

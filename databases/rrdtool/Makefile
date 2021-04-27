@@ -1,5 +1,4 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD$
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.7.2
@@ -100,7 +99,7 @@ post-install-PERL-off:
 	${RM} -r ${STAGEDIR}${EXAMPLESDIR}/rrdcached
 
 post-install-PYTHON-on:
-	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/rrdtool.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/rrdtool*.so
 
 post-install-PYTHON-off:
 	${RM} ${STAGEDIR}${EXAMPLESDIR}/stripes.py

@@ -1,6 +1,6 @@
---- chrome/common/chrome_features.h.orig	2020-11-13 06:36:38 UTC
+--- chrome/common/chrome_features.h.orig	2021-03-12 23:57:19 UTC
 +++ chrome/common/chrome_features.h
-@@ -82,10 +82,10 @@ extern const base::Feature kAppShimNewCloseBehavior;
+@@ -78,10 +78,10 @@ extern const base::Feature kAppShimNewCloseBehavior;
  
  COMPONENT_EXPORT(CHROME_FEATURES) extern const base::Feature kAsyncDns;
  
@@ -11,18 +11,19 @@
 -#endif  // defined(OS_WIN) || defined(OS_LINUX) || defined(OS_CHROMEOS)
 +#endif  // defined(OS_WIN) || defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
  
- #if defined(OS_CHROMEOS)
+ #if BUILDFLAG(IS_CHROMEOS_ASH)
  COMPONENT_EXPORT(CHROME_FEATURES) extern const base::Feature kBorealis;
-@@ -214,10 +214,10 @@ extern const base::Feature kEnableAmbientAuthenticatio
- COMPONENT_EXPORT(CHROME_FEATURES)
- extern const base::Feature kEnableAmbientAuthenticationInIncognito;
+@@ -230,11 +230,11 @@ extern const base::Feature kEnableAmbientAuthenticatio
  
--#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MAC)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MAC) || defined(OS_BSD)
+ // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // of lacros-chrome is complete.
+-#if defined(OS_WIN) || (defined(OS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || \
++#if defined(OS_WIN) || (defined(OS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || defined(OS_BSD) || \
+     defined(OS_MAC)
  COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::Feature kEnableEphemeralGuestProfilesOnDesktop;
--#endif  // defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MAC)
-+#endif  // defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MAC) || defined(OS_BSD)
+-#endif  // defined(OS_WIN) || (defined(OS_LINUX) ||
++#endif  // defined(OS_WIN) || (defined(OS_LINUX) || defined(OS_BSD) ||
+         // BUILDFLAG(IS_CHROMEOS_LACROS)) ||  defined(OS_MAC)
  
  #if defined(OS_WIN)
- COMPONENT_EXPORT(CHROME_FEATURES)

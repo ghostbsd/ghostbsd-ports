@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	pyshp
 PORTVERSION=	1.2.12
@@ -12,7 +11,7 @@ COMMENT=	Pure Python read/write support for ESRI Shapefile format
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 NO_ARCH=	yes
 

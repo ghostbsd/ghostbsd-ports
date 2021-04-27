@@ -1,5 +1,4 @@
 # Created by: vanilla@
-# $FreeBSD$
 
 PORTNAME=	plv8
 PORTVERSION=	1.4.8
@@ -13,6 +12,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PL/v8js procedural language for PostgreSQL database
 
 LICENSE=	PostgreSQL
+
+BROKEN=		fails to build
 
 LIB_DEPENDS=	libv8.so:lang/v8
 

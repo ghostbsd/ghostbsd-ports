@@ -1,5 +1,4 @@
 # Created by: ejc@bazzle.com
-# $FreeBSD$
 
 PORTNAME=	omniORB
 DISTVERSION=	4.2.4
@@ -11,6 +10,8 @@ COMMENT=	Robust high performance CORBA ORB for C++ and Python
 
 LICENSE=	GPLv2
 
+BROKEN_FreeBSD_13=	posix.cc:605:15: error: no matching function for call to 'pthread_detach'
+BROKEN_FreeBSD_14=	posix.cc:605:15: error: no matching function for call to 'pthread_detach'
 BROKEN_SSL=	openssl
 BROKEN_SSL_REASON_openssl=	member access into incomplete type 'DH' (aka 'dh_st')
 

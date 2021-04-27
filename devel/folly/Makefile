@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	folly
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2020.12.14.00
+DISTVERSION=	2021.04.05.00
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -36,6 +35,7 @@ CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_OFF=	FREEBSD_BUILD_EXAMPLES FREEBSD_FOLLY_USE_SYMBOLIZER # enabling symbolizer causes undefined symbol _r_debug, see https://github.com/facebook/folly/issues/1373
 
 CXXFLAGS+=	-fPIC
+CXXFLAGS_powerpc64=	-DFOLLY_QUOTIENT_MULTI_SET_SUPPORTED=0
 
 do-test:
 	@cd ${BUILD_WRKSRC} && \

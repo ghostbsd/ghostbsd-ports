@@ -1,9 +1,7 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	quantmod
-DISTVERSION=	0.4.17
-PORTREVISION=	1
+DISTVERSION=	0.4.18
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 

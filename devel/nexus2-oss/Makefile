@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	nexus2
 PORTVERSION=	2.14.18
@@ -9,11 +8,9 @@ PKGNAMESUFFIX=	-oss
 DISTNAME=	nexus-${PORTVERSION}-${DISTVERSIONSUFFIX}-bundle
 
 MAINTAINER=	michael.osipov@siemens.com
-COMMENT=	Maven (and others) artifacts repostory manager
+COMMENT=	Maven (and others) artifacts repository manager
 
 LICENSE=	EPL
-
-ONLY_FOR_ARCHS=	amd64 i386
 
 PATCH_DEPENDS=	zip:archivers/zip
 RUN_DEPENDS=	javaservicewrapper:sysutils/javaservicewrapper

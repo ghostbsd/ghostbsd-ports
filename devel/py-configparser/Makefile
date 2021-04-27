@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	configparser
 PORTVERSION=	3.5.3
@@ -15,7 +14,7 @@ LICENSE=	MIT
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}backports>=0:devel/py-backports@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_LOCALE=	en_US.UTF-8
 USE_PYTHON=	distutils autoplist
 

@@ -1,5 +1,4 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	commons-lang
 PORTVERSION=	2.6
@@ -14,6 +13,7 @@ COMMENT=	Apache library with helper utilities for the java.lang API
 LICENSE=	APACHE20
 
 USE_JAVA=	yes
+JAVA_VERSION=	8
 USE_ANT=	yes
 ALL_TARGET=	jar
 

@@ -1,7 +1,7 @@
---- chrome/browser/extensions/BUILD.gn.orig	2020-11-13 06:36:36 UTC
+--- chrome/browser/extensions/BUILD.gn.orig	2021-03-12 23:57:17 UTC
 +++ chrome/browser/extensions/BUILD.gn
-@@ -1219,6 +1219,12 @@ static_library("extensions") {
-     deps += [ "//chrome/common:service_process_mojom" ]
+@@ -1248,6 +1248,12 @@ static_library("extensions") {
+     ]
    }
  
 +  if (is_bsd) {

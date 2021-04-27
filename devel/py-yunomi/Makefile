@@ -1,5 +1,4 @@
 # Created by: Johannes Meixner <johannes@perceivon.net>
-# $FreeBSD$
 
 PORTNAME=	yunomi
 PORTVERSION=	0.3.0
@@ -15,7 +14,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_LOCALE=	en_US.UTF-8
 USE_PYTHON=	autoplist concurrent distutils
 

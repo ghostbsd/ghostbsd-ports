@@ -1,5 +1,4 @@
 # Created by: Peter C. Lai <cowbert@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	mk-livestatus
 PORTVERSION=	1.2.8p25
@@ -12,6 +11,9 @@ MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Nagios event broker module
 
 LICENSE=	GPLv2
+
+BROKEN_FreeBSD_13=	ld: error: duplicate symbol: g_mainthread_id
+BROKEN_FreeBSD_14=	ld: error: duplicate symbol: g_mainthread_id
 
 USES=		compiler:c++11-lang
 

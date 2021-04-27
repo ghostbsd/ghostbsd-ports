@@ -1,8 +1,7 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	owncloud
-PORTVERSION=	10.5.0
+PORTVERSION=	10.6.0
 CATEGORIES=	www
 MASTER_SITES=	https://download.owncloud.org/community/ \
 		LOCAL/sunpoet

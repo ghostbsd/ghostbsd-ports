@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	tflite-support
 DISTVERSION=	0.1.0a1
@@ -16,7 +15,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}absl>=0.7.0:devel/py-absl@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pybind11>=2.4:devel/py-pybind11@${PY_FLAVOR}
 
-USES=		compiler:c++14-lang python
+USES=		compiler:c++14-lang python:3.6+
 USE_PYTHON=	distutils concurrent autoplist
 
 post-install:

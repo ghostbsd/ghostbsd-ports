@@ -1,5 +1,4 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	zclockfile
 DISTVERSION=	2.0
@@ -17,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.testing>0:devel/py-zope.testing@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

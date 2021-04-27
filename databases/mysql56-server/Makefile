@@ -1,8 +1,7 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME?=	mysql
-PORTVERSION=	5.6.50
+PORTVERSION=	5.6.51
 PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	MYSQL/MySQL-5.6

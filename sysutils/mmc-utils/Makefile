@@ -1,9 +1,8 @@
 # Created by: Marius Strobl <marius@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	mmc-utils
-PORTVERSION=	20181214
-DISTVERSIONSUFFIX=	-aef913e3
+PORTVERSION=	20191004
+DISTVERSIONSUFFIX=	-73d6c59a
 CATEGORIES=	sysutils
 MASTER_SITES=	LOCAL/marius
 

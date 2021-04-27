@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	bareos
 PKGNAMESUFFIX=	18-client
@@ -6,6 +5,7 @@ PKGNAMESUFFIX=	18-client
 COMMENT=	Backup archiving recovery open sourced (client)
 
 BROKEN_aarch64=	Fails to link: missing sbrk
+BROKEN_riscv64=	Fails to link: missing sbrk
 
 CONFLICTS=	bareos17-client-* bareos16-client-* bareos-client-*
 

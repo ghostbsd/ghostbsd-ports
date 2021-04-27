@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	certbot-dns-cpanel
 DISTVERSION=	0.2.2
@@ -15,7 +14,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}certbot>0:security/py-certbot@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}zope.interface>0:devel/py-zope.interface@${PY_FLAVOR} \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 SUB_FILES=	pkg-message

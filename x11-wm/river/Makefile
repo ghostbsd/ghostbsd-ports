@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	river
-PORTVERSION=	s20201214
+PORTVERSION=	s20210328
 CATEGORIES=	x11-wm
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -22,18 +21,24 @@ USES=		pkgconfig xorg
 USE_GITHUB=	yes
 USE_XORG=	pixman
 GH_ACCOUNT=	ifreund
-GH_TAGNAME=	6cf01f3
+GH_TAGNAME=	3c1f1df
 GH_TUPLE=	ifreund:zig-pixman:7847fd1:zig_pixman/deps/zig-pixman \
-		ifreund:zig-wayland:52326e7:zig_wayland/deps/zig-wayland \
+		ifreund:zig-wayland:f170fe0:zig_wayland/deps/zig-wayland \
 		ifreund:zig-xkbcommon:9e4d41f:zig_xkbcommon/deps/zig-xkbcommon \
-		swaywm:zig-wlroots:16d9039:zig_wlroots/deps/zig-wlroots
-CONFIGURE_ARGS=	--prefix "${STAGEDIR}${PREFIX}" \
+		swaywm:zig-wlroots:35e5676:zig_wlroots/deps/zig-wlroots
+MAKE_ENV=	DESTDIR="${STAGEDIR}"
+CONFIGURE_ARGS=	--prefix "${PREFIX}" \
 		${WITH_DEBUG:U-Drelease-fast=true} \
 		--verbose
 NO_INSTALL=	yes # strip(1) breaks runtime
 PLIST_FILES=	bin/${PORTNAME} \
 		bin/${PORTNAME}ctl \
-		bin/${PORTNAME}tile
+		bin/${PORTNAME}tile \
+		"@sample ${ETCDIR}/init.sample" \
+		share/bash-completion/completions/${PORTNAME}ctl \
+		share/fish/vendor_completions.d/${PORTNAME}ctl.fish \
+		share/zsh/site-functions/_${PORTNAME}ctl \
+		${NULL}
 
 OPTIONS_DEFINE=	MANPAGES X11
 OPTIONS_DEFAULT=MANPAGES X11
@@ -52,12 +57,17 @@ X11_CONFIGURE_OFF=	-Dxwayland=false
 post-patch:
 # Respect PREFIX for system-wide config (a la sysconfdir in Meson)
 	@${REINPLACE_CMD} -e 's,/etc,${PREFIX}&,' \
-		${WRKSRC}/river/main.zig
+		${WRKSRC}/doc/${PORTNAME}.1.scd \
+		${WRKSRC}/doc/${PORTNAME}ctl.1.scd
 
 do-build:
 	@(cd ${WRKSRC} && ${MAKE_ENV} zig build ${CONFIGURE_ARGS})
 
 do-test:
 	@(cd ${WRKSRC} && ${TEST_ENV} zig build test ${CONFIGURE_ARGS})
+
+post-install:
+# Let @sample handle default files under etc/
+	@${MV} ${STAGEDIR}${ETCDIR}/init ${STAGEDIR}${ETCDIR}/init.sample
 
 .include <bsd.port.mk>

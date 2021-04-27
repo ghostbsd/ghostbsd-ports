@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	leviathan
 PORTVERSION=	0.1.1
@@ -15,7 +14,7 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyusb>=0:devel/py-pyusb@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	intel-media-sdk
 DISTVERSIONPREFIX=	intel-mediasdk-
-DISTVERSION=	20.5.0
+DISTVERSION=	21.1.3
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -55,9 +54,6 @@ post-patch:
 		-e '/set( *git_commit/s/"[^"]*"/"${DISTVERSIONFULL}"/' \
 		${WRKSRC}/builder/FindFunctions.cmake \
 		${WRKSRC}/builder/FindGlobals.cmake
-# Don't depend on lang/intel-compute-runtime during build
-	@${REINPLACE_CMD} -e 's,/etc[^[:space:]]*,/,' \
-		${WRKSRC}/builder/FindOpenCL.cmake
 # Don't assume GCC and glibc libraries are available
 	@${REINPLACE_CMD} -e 's/ -lstdc++ -ldl//' \
 		${WRKSRC}/api/mfx_dispatch/linux/pkg-config*.cmake

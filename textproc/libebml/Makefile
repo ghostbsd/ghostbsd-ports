@@ -1,8 +1,7 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	libebml
-DISTVERSION=	1.4.0
+DISTVERSION=	1.4.2
 CATEGORIES=	textproc
 MASTER_SITES=	https://dl.matroska.org/downloads/libebml/
 

@@ -1,5 +1,4 @@
 # Created by: Olivier Duchateau
-# $FreeBSD$
 
 PORTNAME=	itsdangerous
 PORTVERSION=	0.24
@@ -12,7 +11,7 @@ COMMENT=	Various helpers to pass data in untrusted environments
 
 LICENSE=	BSD3CLAUSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

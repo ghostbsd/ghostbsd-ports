@@ -1,10 +1,7 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	ijson
-PORTVERSION=	3.1.2
-DISTVERSIONSUFFIX=	.post0
-PORTREVISION=	1
+PORTVERSION=	3.1.3
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,7 +12,7 @@ COMMENT=	Iterative JSON parser with a standard Python iterator interface
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 OPTIONS_DEFINE=	YAJL

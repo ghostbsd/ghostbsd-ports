@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	exprtk
-DISTVERSION=	g20201017 # upstream rolls backwards commit dates, so use the port update date here
+DISTVERSION=	g20210303 # date when change was discovered because the upstream rolls back commit dates to Dec 31
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,7 +10,7 @@ LICENSE=	MIT
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	ArashPartow
-GH_TAGNAME=	d312ba91419c9cb12c8279fd3a19096d39dfcb5e
+GH_TAGNAME=	ca5c577917646ddba3f71ce6d5dd7d01f351ee80
 
 NO_BUILD=	yes
 NO_ARCH=	yes

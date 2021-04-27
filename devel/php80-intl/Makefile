@@ -1,6 +1,4 @@
-# $FreeBSD$
 
-PORTREVISION=	1
 CATEGORIES=	devel
 
 MASTERDIR=	${.CURDIR}/../../lang/php80

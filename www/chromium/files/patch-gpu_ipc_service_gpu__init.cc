@@ -1,33 +1,60 @@
---- gpu/ipc/service/gpu_init.cc.orig	2020-11-13 06:36:44 UTC
+--- gpu/ipc/service/gpu_init.cc.orig	2021-03-12 23:57:25 UTC
 +++ gpu/ipc/service/gpu_init.cc
-@@ -107,7 +107,7 @@ void InitializePlatformOverlaySettings(GPUInfo* gpu_in
- #endif
+@@ -108,7 +108,7 @@ void InitializePlatformOverlaySettings(GPUInfo* gpu_in
  }
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS) && !BUILDFLAG(IS_CHROMECAST)
-+#if (defined(OS_LINUX) && !defined(OS_CHROMEOS) && !BUILDFLAG(IS_CHROMECAST)) || defined(OS_BSD)
+ #if BUILDFLAG(IS_CHROMEOS_LACROS) || \
+-    (defined(OS_LINUX) && !BUILDFLAG(IS_CHROMECAST))
++    (defined(OS_LINUX) && !BUILDFLAG(IS_CHROMECAST)) || defined(OS_BSD)
  bool CanAccessNvidiaDeviceFile() {
    bool res = true;
    base::ScopedBlockingCall scoped_blocking_call(FROM_HERE,
-@@ -118,7 +118,7 @@ bool CanAccessNvidiaDeviceFile() {
+@@ -119,7 +119,7 @@ bool CanAccessNvidiaDeviceFile() {
    }
    return res;
  }
--#endif  // OS_LINUX && !OS_CHROMEOS && !BUILDFLAG(IS_CHROMECAST)
-+#endif  // (OS_LINUX && !OS_CHROMEOS && !BUILDFLAG(IS_CHROMECAST)) || defined(OS_BSD)
+-#endif  // BUILDFLAG(IS_CHROMEOS_LACROS) || (defined(OS_LINUX)  &&
++#endif  // BUILDFLAG(IS_CHROMEOS_LACROS) || defined(OS_BSD) || (defined(OS_LINUX)  &&
+         // !BUILDFLAG(IS_CHROMECAST))
  
  class GpuWatchdogInit {
-  public:
-@@ -203,7 +203,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
+@@ -206,7 +206,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
      device_perf_info_ = device_perf_info;
    }
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_BSD)
+-#if defined(OS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#if defined(OS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || defined(OS_BSD)
    if (gpu_info_.gpu.vendor_id == 0x10de &&  // NVIDIA
        gpu_info_.gpu.driver_vendor == "NVIDIA" && !CanAccessNvidiaDeviceFile())
      return false;
-@@ -337,14 +337,14 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
+@@ -258,7 +258,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
+   delayed_watchdog_enable = true;
+ #endif
+ 
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
+   // PreSandbox is mainly for resource handling and not related to the GPU
+   // driver, it doesn't need the GPU watchdog. The loadLibrary may take long
+   // time that killing and restarting the GPU process will not help.
+@@ -298,7 +298,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
+   }
+ 
+   bool attempted_startsandbox = false;
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
+   // On Chrome OS ARM Mali, GPU driver userspace creates threads when
+   // initializing a GL context, so start the sandbox early.
+   // TODO(zmo): Need to collect OS version before this.
+@@ -307,7 +307,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
+         watchdog_thread_.get(), &gpu_info_, gpu_preferences_);
+     attempted_startsandbox = true;
+   }
+-#endif  // defined(OS_LINUX) || defined(OS_CHROMEOS)
++#endif  // defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
+ 
+   base::TimeTicks before_initialize_one_off = base::TimeTicks::Now();
+ 
+@@ -345,7 +345,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
    }
    if (gl_initialized && gl_use_swiftshader_ &&
        gl::GetGLImplementation() != gl::kGLImplementationSwiftShaderGL) {
@@ -36,7 +63,8 @@
      VLOG(1) << "Quit GPU process launch to fallback to SwiftShader cleanly "
              << "on Linux";
      return false;
- #else
+@@ -353,7 +353,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
+     SaveHardwareGpuInfoAndGpuFeatureInfo();
      gl::init::ShutdownGL(true);
      gl_initialized = false;
 -#endif  // defined(OS_LINUX) || defined(OS_CHROMEOS)
@@ -44,7 +72,16 @@
    }
  
    if (!gl_initialized) {
-@@ -424,7 +424,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
+@@ -379,7 +379,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
+     }
+   }
+ 
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
+   // The ContentSandboxHelper is currently the only one implementation of
+   // GpuSandboxHelper and it has no dependency. Except on Linux where
+   // VaapiWrapper checks the GL implementation to determine which display
+@@ -433,7 +433,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
            command_line, gpu_feature_info_,
            gpu_preferences_.disable_software_rasterizer, false);
        if (gl_use_swiftshader_) {
@@ -53,7 +90,7 @@
          VLOG(1) << "Quit GPU process launch to fallback to SwiftShader cleanly "
                  << "on Linux";
          return false;
-@@ -438,7 +438,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
+@@ -448,7 +448,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
                << "failed";
            return false;
          }
@@ -62,7 +99,7 @@
        }
      } else {  // gl_use_swiftshader_ == true
        switch (gpu_preferences_.use_vulkan) {
-@@ -514,7 +514,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
+@@ -524,7 +524,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
  
    InitializePlatformOverlaySettings(&gpu_info_, gpu_feature_info_);
  
@@ -71,7 +108,7 @@
    // Driver may create a compatibility profile context when collect graphics
    // information on Linux platform. Try to collect graphics information
    // based on core profile context after disabling platform extensions.
-@@ -533,7 +533,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
+@@ -543,7 +543,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
        return false;
      }
    }
@@ -80,7 +117,7 @@
  
    if (gl_use_swiftshader_) {
      AdjustInfoToSwiftShader();
-@@ -701,7 +701,7 @@ void GpuInit::InitializeInProcess(base::CommandLine* c
+@@ -726,7 +726,7 @@ void GpuInit::InitializeInProcess(base::CommandLine* c
  
    InitializePlatformOverlaySettings(&gpu_info_, gpu_feature_info_);
  
@@ -89,7 +126,7 @@
    // Driver may create a compatibility profile context when collect graphics
    // information on Linux platform. Try to collect graphics information
    // based on core profile context after disabling platform extensions.
-@@ -721,7 +721,7 @@ void GpuInit::InitializeInProcess(base::CommandLine* c
+@@ -747,7 +747,7 @@ void GpuInit::InitializeInProcess(base::CommandLine* c
        }
      }
    }

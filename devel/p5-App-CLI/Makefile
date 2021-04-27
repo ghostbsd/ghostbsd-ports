@@ -1,5 +1,4 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	App-CLI
 PORTVERSION=	0.500
@@ -22,5 +21,7 @@ TEST_DEPENDS=	p5-Test-Kwalitee>=0:devel/p5-Test-Kwalitee \
 
 USES=		perl5
 USE_PERL5=	configure
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

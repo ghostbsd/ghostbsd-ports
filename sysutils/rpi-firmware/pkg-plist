@@ -70,6 +70,7 @@
 %%DATADIR%%/overlays/draws.dtbo
 %%DATADIR%%/overlays/dwc-otg.dtbo
 %%DATADIR%%/overlays/dwc2.dtbo
+%%DATADIR%%/overlays/edt-ft5406.dtbo
 %%DATADIR%%/overlays/enc28j60-spi2.dtbo
 %%DATADIR%%/overlays/enc28j60.dtbo
 %%DATADIR%%/overlays/exc3000.dtbo
@@ -89,6 +90,7 @@
 %%DATADIR%%/overlays/hd44780-lcd.dtbo
 %%DATADIR%%/overlays/hdmi-backlight-hwhack-gpio.dtbo
 %%DATADIR%%/overlays/hifiberry-amp.dtbo
+%%DATADIR%%/overlays/hifiberry-amp100.dtbo
 %%DATADIR%%/overlays/hifiberry-dac.dtbo
 %%DATADIR%%/overlays/hifiberry-dacplus.dtbo
 %%DATADIR%%/overlays/hifiberry-dacplusadc.dtbo
@@ -158,6 +160,9 @@
 %%DATADIR%%/overlays/pibell.dtbo
 %%DATADIR%%/overlays/pifacedigital.dtbo
 %%DATADIR%%/overlays/pifi-40.dtbo
+%%DATADIR%%/overlays/pifi-dac-hd.dtbo
+%%DATADIR%%/overlays/pifi-dac-zero.dtbo
+%%DATADIR%%/overlays/pifi-mini-210.dtbo
 %%DATADIR%%/overlays/piglow.dtbo
 %%DATADIR%%/overlays/piscreen.dtbo
 %%DATADIR%%/overlays/piscreen2r.dtbo
@@ -190,6 +195,8 @@
 %%DATADIR%%/overlays/sc16is752-spi1.dtbo
 %%DATADIR%%/overlays/sdhost.dtbo
 %%DATADIR%%/overlays/sdio.dtbo
+%%DATADIR%%/overlays/seeed-can-fd-hat-v1.dtbo
+%%DATADIR%%/overlays/seeed-can-fd-hat-v2.dtbo
 %%DATADIR%%/overlays/sh1106-spi.dtbo
 %%DATADIR%%/overlays/smi-dev.dtbo
 %%DATADIR%%/overlays/smi-nand.dtbo
@@ -232,14 +239,17 @@
 %%DATADIR%%/overlays/upstream-pi4.dtbo
 %%DATADIR%%/overlays/upstream.dtbo
 %%DATADIR%%/overlays/vc4-fkms-v3d.dtbo
+%%DATADIR%%/overlays/vc4-kms-dsi-7inch.dtbo
 %%DATADIR%%/overlays/vc4-kms-kippah-7inch.dtbo
 %%DATADIR%%/overlays/vc4-kms-v3d-pi4.dtbo
 %%DATADIR%%/overlays/vc4-kms-v3d.dtbo
+%%DATADIR%%/overlays/vc4-kms-vga666.dtbo
 %%DATADIR%%/overlays/vga666.dtbo
 %%DATADIR%%/overlays/w1-gpio-pullup.dtbo
 %%DATADIR%%/overlays/w1-gpio.dtbo
 %%DATADIR%%/overlays/w5500.dtbo
 %%DATADIR%%/overlays/wittypi.dtbo
+%%DATADIR%%/overlays/wm8960-soundcard.dtbo
 %%DATADIR%%/start.elf
 %%DATADIR%%/start4.elf
 %%DATADIR%%/start4cd.elf

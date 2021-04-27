@@ -1,5 +1,4 @@
 # Created by: Carlos J Puga Medina <cpm@fbsd.es>
-# $FreeBSD$
 
 PORTNAME=	repoze.sphinx.autointerface
 PORTVERSION=	0.8
@@ -13,7 +12,7 @@ COMMENT=	Auto-generates API docs from Zope interfaces
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=	python
+USES=	python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	git-review
 DISTVERSION=	1.28.0
@@ -15,7 +14,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pbr>0:devel/py-pbr@${PY_FLAVOR}
 RUN_DEPENDS=	git:devel/git \
 		${PYTHON_PKGNAMEPREFIX}requests>2.4:www/py-requests@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils concurrent optsuffix
 NO_ARCH=	yes
 

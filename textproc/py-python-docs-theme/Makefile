@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	python-docs-theme
 DISTVERSION=	2018.2
@@ -12,7 +11,7 @@ COMMENT=	Sphinx theme for the CPython docs and related projects
 LICENSE=	PSFL
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

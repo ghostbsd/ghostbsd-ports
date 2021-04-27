@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	puppet
-PORTVERSION=	6.19.1
+PORTVERSION=	6.21.1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	6
 
@@ -11,19 +10,20 @@ COMMENT=	Configuration management framework written in Ruby
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	rubygem-concurrent-ruby>0:devel/rubygem-concurrent-ruby \
+# rubygem-ruby-augeas add again see PR252339, it breaks the installation for some users
+# puppet7 does not have it anymore, so users can do a migration to next major version
+# without breaking their setup
+RUN_DEPENDS=	rubygem-concurrent-ruby>=1.0:devel/rubygem-concurrent-ruby \
 		rubygem-deep_merge>=1.0:devel/rubygem-deep_merge \
-		rubygem-hiera>=2.0:sysutils/rubygem-hiera \
-		rubygem-json_pure>=0:devel/rubygem-json_pure \
-		rubygem-semantic_puppet>=1:devel/rubygem-semantic_puppet
-RUN_DEPENDS=	rubygem-concurrent-ruby>0:devel/rubygem-concurrent-ruby \
-		rubygem-deep_merge>0:devel/rubygem-deep_merge \
-		rubygem-gettext-setup>=0:devel/rubygem-gettext-setup \
-		rubygem-hiera>=2.0:sysutils/rubygem-hiera \
-		rubygem-hocon>=0:devel/rubygem-hocon \
-		rubygem-json_pure>=0:devel/rubygem-json_pure \
-		rubygem-ruby-augeas>=0:textproc/rubygem-ruby-augeas \
-		rubygem-semantic_puppet>=1:devel/rubygem-semantic_puppet
+		rubygem-fast_gettext1>=1.1:devel/rubygem-fast_gettext1 \
+		rubygem-ffi>=1.9.24:devel/rubygem-ffi \
+		rubygem-hiera>=3.2.1:sysutils/rubygem-hiera \
+		rubygem-httpclient>=2.8:www/rubygem-httpclient \
+		rubygem-locale>=2.1:devel/rubygem-locale \
+		rubygem-multi_json>=1.10:devel/rubygem-multi_json \
+		rubygem-puppet-resource_api>=0:devel/rubygem-puppet-resource_api \
+		rubygem-semantic_puppet>=1:devel/rubygem-semantic_puppet \
+		rubygem-ruby-augeas>=0:textproc/rubygem-ruby-augeas
 
 USES=		cpe
 CPE_VENDOR=	puppetlabs

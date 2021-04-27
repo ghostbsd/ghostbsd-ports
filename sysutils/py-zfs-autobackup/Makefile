@@ -1,5 +1,4 @@
 # Created by: Sergey Kozlov <skozlov@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	zfs-autobackup
 DISTVERSION=	3.0
@@ -15,7 +14,7 @@ LICENSE=	GPLv3
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}colorama>0:devel/py-colorama@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

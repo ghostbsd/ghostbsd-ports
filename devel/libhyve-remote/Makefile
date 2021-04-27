@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	libhyve-remote
 PORTVERSION=	0.1.4.2
@@ -9,6 +8,8 @@ COMMENT=	Library to abstract vnc, rdp and spice protocols
 
 LICENSE=	BSD2CLAUSE GPLv2
 LICENSE_COMB=	dual
+
+BROKEN=		fails to build
 
 LIB_DEPENDS=	libvncserver.so:net/libvncserver
 

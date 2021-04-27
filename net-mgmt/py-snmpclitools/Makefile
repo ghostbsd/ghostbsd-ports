@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	snmpclitools
 PORTVERSION=	0.6.1
@@ -14,7 +13,7 @@ LICENSE=	BSD2CLAUSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pysnmp>=4.4.4:net-mgmt/py-pysnmp@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	concurrent distutils autoplist
 
 NO_ARCH=	yes

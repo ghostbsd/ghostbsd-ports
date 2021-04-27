@@ -1,5 +1,4 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	tilem
 PORTVERSION=	2.0
@@ -7,7 +6,7 @@ PORTREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	SF
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Texas Instruments Z80 series calculator emulator
 
 LICENSE=	GPLv3
@@ -20,10 +19,17 @@ CONFIGURE_ENV=	OPT_CFLAGS=" "	# Inhibit -O3, our default CFLAGS are upheld
 USE_GNOME=	gtk20
 INSTALLS_ICONS=	yes
 LIBS+=		-lm
+PORTDOCS=	CHANGELOG KEYS NEWS README THANKS TODO
+
+OPTIONS_DEFINE=	DOCS
 
 # Unbreak parallel builds (-jX)
 post-patch:
 	@${REINPLACE_CMD} -E 's,cd (.+) && (\$$\(MAKE\)),\2 -C \1,' \
 		${WRKSRC}/Makefile.in
+
+post-install-DOCS-on:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>

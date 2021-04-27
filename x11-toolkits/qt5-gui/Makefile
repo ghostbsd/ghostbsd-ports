@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	gui
 DISTVERSION=	${QT5_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11-toolkits graphics
 PKGNAMEPREFIX=	qt5-
 
@@ -10,7 +9,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt graphical user interface module
 
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
-		${LOCALBASE}/include/vulkan/vulkan.h:devel/vulkan-headers \
+		${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
 		${LOCALBASE}/include/xf86drm.h:graphics/libdrm \
 		at-spi2-core>=0:accessibility/at-spi2-core
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
@@ -26,7 +25,8 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libxcb-render-util.so:x11/xcb-util-renderutil \
 		libxcb.so:x11/libxcb \
 		libxkbcommon.so:x11/libxkbcommon
-RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:devel/vulkan-headers \
+RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
+		${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri \
 		xdg-open:devel/xdg-utils
 
 USES=			compiler:c++11-lang gl gnome jpeg localbase \

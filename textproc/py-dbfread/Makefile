@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	dbfread
 PORTVERSION=	2.0.7
@@ -13,7 +12,7 @@ LICENSE=	MIT
 
 NO_ARCH=	yes
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

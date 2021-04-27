@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 
     COMMENT = Domain Name Service tools
 
@@ -39,6 +37,7 @@
     SUBDIR += dnscrypt-proxy2
     SUBDIR += dnscrypt-wrapper
     SUBDIR += dnsdbck
+    SUBDIR += dnsdbflex
     SUBDIR += dnsdbq
     SUBDIR += dnsdist
     SUBDIR += dnsenum
@@ -47,6 +46,7 @@
     SUBDIR += dnshistory
     SUBDIR += dnsjava
     SUBDIR += dnsmasq
+    SUBDIR += dnsmasq-devel
     SUBDIR += dnsmax-perl
     SUBDIR += dnsproxy
     SUBDIR += dnsrecon
@@ -90,7 +90,6 @@
     SUBDIR += kf5-kdnssd
     SUBDIR += knock
     SUBDIR += knot-resolver
-    SUBDIR += knot2
     SUBDIR += knot3
     SUBDIR += knot3-lib
     SUBDIR += ldapdns
@@ -181,7 +180,6 @@
     SUBDIR += py-adns
     SUBDIR += py-aiodns
     SUBDIR += py-cloudflare
-    SUBDIR += py-dns
     SUBDIR += py-dns-lexicon
     SUBDIR += py-dnspython
     SUBDIR += py-dnspython2
@@ -212,11 +210,14 @@
     SUBDIR += rpsl2acl
     SUBDIR += rubygem-dnsruby
     SUBDIR += rubygem-gitlab-net-dns
+    SUBDIR += rubygem-google-apis-dns_v1
     SUBDIR += rubygem-google-cloud-dns
     SUBDIR += rubygem-idn-ruby
     SUBDIR += rubygem-net-dns
     SUBDIR += rubygem-public_suffix
     SUBDIR += rubygem-public_suffix_service
+    SUBDIR += rubygem-resolv
+    SUBDIR += rubygem-resolv-replace
     SUBDIR += rubygem-simpleidn
     SUBDIR += rubygem-validates_hostname
     SUBDIR += rubygem-zonefile

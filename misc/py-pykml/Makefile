@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	pykml
 DISTVERSION=	0.2.0
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=2.2.6:devel/py-lxml@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils concurrent autoplist
 NO_ARCH=	yes
 

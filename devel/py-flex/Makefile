@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	flex
 DISTVERSION=	6.14.0
@@ -21,7 +20,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}click>=3.3:devel/py-click@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}validate_email>=1.2:mail/py-validate_email@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=3.11:devel/py-yaml@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils concurrent autoplist
 
 NO_ARCH=	yes

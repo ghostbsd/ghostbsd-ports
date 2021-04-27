@@ -1,5 +1,4 @@
 # Created by: ijliao@FreeBSD.org
-# $FreeBSD$
 
 PORTNAME=	tables
 PORTVERSION=	3.6.1
@@ -23,7 +22,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 
 CONFLICTS_BUILD=	zstd # conflicting version of zstd is bundled
 
-USES=		fortran python
+USES=		fortran python:3.6+
 USE_PYTHON=	autoplist concurrent distutils cython
 
 PORTEXAMPLES=	*

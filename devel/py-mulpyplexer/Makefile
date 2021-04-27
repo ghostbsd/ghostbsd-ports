@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	mulpyplexer
 DISTVERSION=	0.08
@@ -12,7 +11,7 @@ COMMENT=	Module that multiplexes interactions with lists of Python objects
 LICENSE=	BSD2CLAUSE
 # License file available here: https://github.com/zardus/mulpyplexer
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

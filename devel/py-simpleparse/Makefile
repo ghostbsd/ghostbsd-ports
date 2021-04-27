@@ -1,5 +1,4 @@
 # Created by: ijliao
-# $FreeBSD$
 
 PORTNAME=	simpleparse
 PORTVERSION=	2.2.2
@@ -11,10 +10,10 @@ DISTNAME=	SimpleParse-${PORTVERSION}
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python EBNF parser generator (with mx.TextTools derivative)
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/simpleparse/stt/TextTools/mxTextTools/mxTextTools.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/simpleparse/stt/TextTools/mxTextTools/mxTextTools*.so
 
 .include <bsd.port.mk>

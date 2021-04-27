@@ -1,9 +1,8 @@
 # Created by: Ben Woods <woodsb02@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	lightdm
 PORTVERSION=	1.30.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/CanonicalLtd/${PORTNAME}/releases/download/${DISTVERSIONPREFIX}${DISTVERSION}/
 

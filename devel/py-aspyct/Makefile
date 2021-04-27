@@ -1,5 +1,4 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	aspyct
 PORTVERSION=	3.0
@@ -13,7 +12,7 @@ COMMENT=	Python library including an aspect-oriented programming (AOP) engine
 
 LICENSE=	LGPL3
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

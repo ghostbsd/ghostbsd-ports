@@ -1,8 +1,8 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD$
 
 PORTNAME=	thunar-archive-plugin
 PORTVERSION=	0.4.0
+PORTREVISION=	1
 CATEGORIES=	archivers xfce
 MASTER_SITES=	XFCE/thunar-plugins
 DIST_SUBDIR=	xfce4

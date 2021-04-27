@@ -1,8 +1,8 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	zcad
 PORTVERSION=	0.9.8.5
+PORTREVISION=	1
 CATEGORIES=	cad
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
 

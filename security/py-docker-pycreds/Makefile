@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	docker-pycreds
 PORTVERSION=	0.4.0
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>=1.4:devel/py-six@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

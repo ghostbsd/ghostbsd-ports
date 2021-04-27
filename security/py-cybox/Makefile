@@ -1,5 +1,4 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	cybox
 PORTVERSION=	2.1.0.21
@@ -23,7 +22,7 @@ GH_ACCOUNT=	CybOXProject
 GH_PROJECT=	python-${PORTNAME}
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	concurrent distutils autoplist
 
 PORTDOCS=	README.rst

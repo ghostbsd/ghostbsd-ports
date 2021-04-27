@@ -1,8 +1,7 @@
 # Created by: Muhammad Moinur Rahman <bd_subzero@yahoo.com>
-# $FreeBSD$
 
 PORTNAME=	libeXosip2
-PORTVERSION=	5.1.3
+PORTVERSION=	5.2.0
 CATEGORIES=	net
 MASTER_SITES=	SAVANNAH/exosip
 DISTNAME=	${PORTNAME:tl}-${PORTVERSION}
@@ -20,7 +19,7 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USES=		libtool ssl
 USE_LDCONFIG=	yes
-SHLIB_VER=	13
+SHLIB_VER=	14
 
 PLIST_SUB+=	SHLIB_VER=${SHLIB_VER}
 

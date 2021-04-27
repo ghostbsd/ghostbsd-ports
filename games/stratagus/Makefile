@@ -1,5 +1,4 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD$
 
 PORTNAME=	stratagus
 PORTVERSION=	2.4.2
@@ -11,6 +10,9 @@ COMMENT=	Free cross-platform real-time strategy gaming engine
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=	Uses EOL Python 2.7 via lang/tolua++
+EXPIRATION_DATE=2021-06-23
 
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libtolua++-${LUA_VER}.so:lang/tolua++
@@ -26,8 +28,6 @@ CMAKE_ARGS=	-DGAMEDIR:STRING="bin" \
 		-DTOLUA++_INCLUDE_DIR:STRING="${LUA_INCDIR}" \
 		-DTOLUA++_LIBRARY:STRING="${LUA_LIBDIR}/libtolua++.so"
 CMAKE_ON=	ENABLE_DEV
-
-CXXFLAGS+=	-Wno-c++11-narrowing
 
 PORTDOCS=	*
 
@@ -67,4 +67,12 @@ post-install-DOCS-on:
 	@cd ${WRKSRC}/doc && ${COPYTREE_SHARE} "[a-z]*.html *.txt graphics scripts" \
 		${STAGEDIR}${DOCSDIR}
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${CHOSEN_COMPILER_TYPE} == clang
+CXXFLAGS+=	-Wno-c++11-narrowing
+.else
+CXXFLAGS+=	-Wno-error
+.endif
+
+.include <bsd.port.post.mk>

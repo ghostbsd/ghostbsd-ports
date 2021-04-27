@@ -1,8 +1,8 @@
 # Created by: sten@blinkenlights.nl
-# $FreeBSD$
 
 PORTNAME=	recursor
-DISTVERSION=	4.4.0
+DISTVERSION=	4.4.2
+PORTREVISION=	1
 CATEGORIES=	dns
 MASTER_SITES=	http://downloads.powerdns.com/releases/
 PKGNAMEPREFIX=	powerdns-
@@ -23,8 +23,8 @@ BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:devel/boost-libs
 LIB_DEPENDS=	libboost_context.so:devel/boost-libs \
 		libprotobuf.so:devel/protobuf
 
-USES=		compiler:c++11-lib cpe gmake localbase:ldflags pkgconfig ssl \
-		tar:bzip2
+USES=		autoreconf compiler:c++11-lib cpe gmake libtool localbase:ldflags \
+		pkgconfig ssl tar:bzip2
 
 CPE_VENDOR=	powerdns
 USE_RC_SUBR=	pdns-recursor
@@ -63,10 +63,12 @@ LUA_USES=	lua
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200085 && ${SSL_DEFAULT} != openssl
-CONFIGURE_ARGS+=	--enable-libdecaf \
-			--enable-libsodium
+CONFIGURE_ARGS+=	--with-libdecaf \
+			--with-libsodium
 LIB_DEPENDS+=		libdecaf.so:security/libdecaf \
 			libsodium.so:security/libsodium
+.else
+CONFIGURE_ARGS+=	--with-libsodium=no
 .endif
 
 post-install:

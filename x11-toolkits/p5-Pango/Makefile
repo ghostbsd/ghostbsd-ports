@@ -1,5 +1,4 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	Pango
 PORTVERSION=	1.227
@@ -9,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:XAOC
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	swills@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for layout and render i18n text
 
 LICENSE=	LGPL21

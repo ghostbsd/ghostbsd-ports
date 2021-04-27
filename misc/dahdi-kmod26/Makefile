@@ -1,5 +1,4 @@
 # Created by: Maxim Khon <fjoe@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	dahdi-kmod26
 PORTVERSION=	${DAHDI_VERSION:S/-/./g}
@@ -18,7 +17,7 @@ COMMENT=	Digium/Asterisk Hardware Device Interface
 
 RUN_DEPENDS=	${LOCALBASE}/sbin/dahdi_cfg:misc/dahdi
 
-ONLY_FOR_ARCHS=		amd64 i386 sparc64
+ONLY_FOR_ARCHS=		amd64 i386 powerpc64 sparc64
 
 DAHDI_VERSION=		2.6.1-r10747
 DAHDI_TOOLS_VERSION=	2.4.0-rc1

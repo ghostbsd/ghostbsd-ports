@@ -1,5 +1,4 @@
 # Created by: Oleg Pudeyev <oleg@bsdpower.com>
-# $FreeBSD$
 
 PORTNAME=	Frozen-Flask
 PORTVERSION=	0.11
@@ -15,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Flask>=0:www/py-flask@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 NO_ARCH=	yes
 

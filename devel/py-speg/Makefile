@@ -1,5 +1,4 @@
 # Created by: Nicola Stanislao Vitale <nivit@FreeBSD:org>
-# $FreeBSD$
 
 PORTNAME=	speg
 DISTVERSION=	0.3
@@ -12,7 +11,7 @@ COMMENT=	PEG-based parser interpreter with memoization (Python module)
 
 LICENSE=	MIT
 
-USES=		python zip
+USES=		python:3.6+ zip
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

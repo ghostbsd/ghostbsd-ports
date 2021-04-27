@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	redisdesktopmanager
-PORTVERSION=	2020.5
+PORTVERSION=	2021.2
 CATEGORIES=	databases
 
 MAINTAINER=	swills@FreeBSD.org
@@ -26,7 +25,6 @@ CONFIGURE_WRKSRC=	${WRKSRC}/src
 INSTALL_WRKSRC=		${WRKSRC}/bin/linux/release
 PLIST_FILES=		bin/rdm \
 			share/pixmaps/rdm.png
-BINARY_ALIAS=		python3-config=${PYTHON_CMD}-config
 DESKTOP_ENTRIES=	"Redis Desktop Manager" \
 			"Redis Desktop Manager" \
 			"rdm" \
@@ -35,7 +33,7 @@ DESKTOP_ENTRIES=	"Redis Desktop Manager" \
 			""
 GH_TUPLE=		uglide:RedisDesktopManager:${PORTVERSION}:DEFAULT/RedisDesktopManager-${PORTVERSION} \
 			benlau:asyncfuture:5ca0304:asyncfuture/3rdparty/qredisclient/3rdparty/asyncfuture \
-			uglide:qredisclient:6e44e69:qredisclient/3rdparty/qredisclient \
+			uglide:qredisclient:103096d:qredisclient/3rdparty/qredisclient \
 			sijk:qt-unix-signals:d6a1d12:qtunixsignals/3rdparty/qt-unix-signals \
 			uglide:qsshclient:6fa7fb7:qsshclient/3rdparty/qredisclient/3rdparty/qsshclient \
 			uglide:pyotherside:c1a8cc0:pyotherside/3rdparty/pyotherside \

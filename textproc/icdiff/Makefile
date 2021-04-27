@@ -1,8 +1,7 @@
 # Created by: Ben Woods <woodsb02@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	icdiff
-PORTVERSION=	1.9.5
+PORTVERSION=	2.0.0
 DISTVERSIONPREFIX=	release-
 CATEGORIES=	textproc
 
@@ -11,7 +10,7 @@ COMMENT=	Improved colored diff
 
 LICENSE=	PSFL
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist concurrent optsuffix
 USE_GITHUB=	yes
 GH_ACCOUNT=	jeffkaufman

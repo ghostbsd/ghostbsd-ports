@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	amath
 PORTVERSION=	1.8.5
@@ -12,6 +11,8 @@ COMMENT=	Simple command line calculator
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_riscv64=		fails to compile: ./prim.h:117:2: Must define endianness
 
 USES=		gmake
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}

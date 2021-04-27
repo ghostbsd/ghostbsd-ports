@@ -1,5 +1,4 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	wcwidth
 PORTVERSION=	0.1.8
@@ -13,7 +12,7 @@ COMMENT=	Determine the printable width of the terminal
 LICENSE=	MIT
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 .include <bsd.port.mk>

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	python-augeas
 PORTVERSION=	1.0.3
@@ -15,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cffi>=1.1.0:devel/py-cffi@${PY_FLAVOR}
 LIB_DEPENDS=	libaugeas.so:textproc/augeas
 
-USES=		python
+USES=		python:3.6+
 USE_GITHUB=	yes
 USE_PYTHON=	distutils py3kplist
 

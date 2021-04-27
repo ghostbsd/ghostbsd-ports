@@ -1,9 +1,8 @@
-# $FreeBSD$
 
 PORTNAME=	setzer
 DISTVERSIONPREFIX=v
 DISTVERSION=	0.3.4
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	editors
 
 MAINTAINER=	greg@unrelenting.technology

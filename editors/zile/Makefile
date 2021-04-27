@@ -1,9 +1,8 @@
 # Created by: Jason Evans <jasone@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	zile
 PORTVERSION=	2.4.14
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	editors
 MASTER_SITES=	GNU
 
@@ -12,7 +11,8 @@ COMMENT=	Small emacs-like text editor
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	libgc.so:devel/boehm-gc
+LIB_DEPENDS=	libgc.so:devel/boehm-gc \
+		libgnuregex.so.6:devel/libgnuregex
 BUILD_DEPENDS=	${LOCALBASE}/bin/help2man:misc/help2man
 
 USES=		gmake ncurses perl5 pkgconfig compiler:c++11-lang
@@ -27,7 +27,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 		%%DOCSDIR%%/NEWS \
 		%%DOCSDIR%%/dotzile.sample
 
-CPPFLAGS+=	-I${LOCALBASE}/include -isystem /usr/include/gnu
+CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lgnuregex
 
 post-patch:

@@ -1,5 +1,4 @@
 # Created by: Jose Jachuf <jjachuf@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	rope
 DISTVERSION=	0.18.0
@@ -13,7 +12,7 @@ COMMENT=	Python refactoring library
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

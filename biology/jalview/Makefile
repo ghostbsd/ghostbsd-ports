@@ -1,5 +1,4 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD$
 
 PORTNAME=	jalview
 PORTVERSION=	2.07
@@ -12,6 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Viewer and editor for multiple sequence alignments
 
 USE_JAVA=	yes
+JAVA_VERSION=	8
 USE_ANT=	yes
 ALL_TARGET=	makejars
 WRKSRC=		${WRKDIR}/${PORTNAME}

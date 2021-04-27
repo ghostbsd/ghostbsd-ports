@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	jaraco
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,15 +10,15 @@ COMMENT=	Shared namespace shim for py-jaraco.* ports
 
 LICENSE=	MIT
 
-USES=		python
-USE_PYTHON=	flavors py3kplist
+USES=		python:3.6+
+USE_PYTHON=	flavors
 
 NO_ARCH=	yes
 NO_BUILD=	yes
 
 PLIST_FILES=	${PYTHON_SITELIBDIR}/jaraco/__init__.py \
-		${PYTHON_SITELIBDIR}/jaraco/__init__.pyc \
-		${PYTHON_SITELIBDIR}/jaraco/__init__.pyo
+		${PYTHON_SITELIBDIR}/jaraco/__pycache__/__init__.cpython-${PYTHON_SUFFIX}.opt-1.pyc \
+		${PYTHON_SITELIBDIR}/jaraco/__pycache__/__init__.cpython-${PYTHON_SUFFIX}.pyc
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}/jaraco

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	gssapi
 DISTVERSION=	1.6.9
@@ -12,8 +11,7 @@ COMMENT=	High-level and low-level Python bindings to GSSAPI C libraries
 LICENSE=	ISCL
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>1.4.0:devel/py-six@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}decorator>0:devel/py-decorator@${PY_FLAVOR} \
-		${PY_ENUM34}
+		${PYTHON_PKGNAMEPREFIX}decorator>0:devel/py-decorator@${PY_FLAVOR}
 
 USES=	python:3.6+
 USE_PYTHON=	distutils autoplist

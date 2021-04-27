@@ -1,8 +1,7 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD$
 
 PORTNAME=	Pod-Simple
-PORTVERSION=	3.41
+PORTVERSION=	3.42
 CATEGORIES=	textproc devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-

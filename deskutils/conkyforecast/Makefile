@@ -1,5 +1,4 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD$
 
 PORTNAME=	conkyforecast
 PORTVERSION=	2.20
@@ -17,7 +16,7 @@ LICENSE=	GPLv3
 RUN_DEPENDS=	conky:sysutils/conky \
 		pidof:sysutils/pidof
 
-USES=		gettext python fonts
+USES=		gettext python:3.6+ fonts
 USE_PYTHON=	distutils concurrent optsuffix
 SUB_FILES=	pkg-message
 

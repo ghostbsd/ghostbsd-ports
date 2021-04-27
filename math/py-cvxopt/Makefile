@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	cvxopt
-DISTVERSION=	1.2.5
+DISTVERSION=	1.2.6
 CATEGORIES=	math python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -15,7 +14,7 @@ LIB_DEPENDS=	libblas.so:math/blas \
 		liblapack.so:math/lapack \
 		libumfpack.so:math/suitesparse
 
-USES=		python localbase:ldflags
+USES=		python:3.6+ localbase:ldflags
 USE_GITHUB=	yes
 USE_PYTHON=	distutils autoplist
 

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	horoscopegenerator
 PORTVERSION=	0.1.8
@@ -15,7 +14,7 @@ LICENSE=	MIT
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nltk>=0:textproc/py-nltk@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

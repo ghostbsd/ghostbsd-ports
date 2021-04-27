@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	Cerberus
 PORTVERSION=	1.3.2
@@ -15,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 # Not to be confused with devel/py-pycerberus which fulfils a quite

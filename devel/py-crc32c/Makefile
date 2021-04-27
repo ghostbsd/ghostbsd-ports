@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	crc32c
-PORTVERSION=	2.0.1
+PORTVERSION=	2.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -9,7 +8,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Python package exposing the intel sse4.2 crc32c instruction
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	pandas-charm
 DISTVERSION=	0.3.0
@@ -15,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pandas>0:math/py-pandas@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.7+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

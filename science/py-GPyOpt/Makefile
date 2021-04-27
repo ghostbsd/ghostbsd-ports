@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	GPyOpt
 DISTVERSION=	1.2.6
@@ -16,7 +15,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}scipy>=0.16:science/py-scipy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}GPy>=1.8:science/py-GPy@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils concurrent autoplist
 
 NO_ARCH=	yes

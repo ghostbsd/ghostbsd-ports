@@ -1,5 +1,4 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pyspacewar
 PORTVERSION=	1.1.1
@@ -20,7 +19,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	mgedmin
 #GH_TAGNAME=	f872564
 
-USES=		gnome python
+USES=		gnome python:3.6+
 USE_PYTHON=	distutils autoplist
 NO_ARCH=	yes
 

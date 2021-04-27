@@ -1,5 +1,4 @@
 # Created by: Jordi Haarman
-# $FreeBSD$
 
 PORTNAME=	wsgiutils
 PORTVERSION=	0.7.2
@@ -14,7 +13,7 @@ COMMENT=	Utility libraries for development of simple WSGI programs
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

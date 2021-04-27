@@ -1,5 +1,4 @@
 # Created by: Ilia Skalozubov <freebsd@skinc.ru>
-# $FreeBSD$
 
 PORTNAME=	pyenet
 DISTVERSION=	1.3.13.post7
@@ -15,10 +14,10 @@ LICENSE_COMB=	multi
 LICENSE_FILE_BSD3CLAUSE=${WRKSRC}/LICENSE
 LICENSE_FILE_MIT=	${WRKSRC}/enet/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist cython distutils
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/enet.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/enet*.so
 
 .include <bsd.port.mk>

@@ -1,8 +1,8 @@
 # Created by: Oliver Lehmann (oliver@FreeBSD.org)
-# $FreeBSD$
 
 PORTNAME=	xfce4-dict
 PORTVERSION=	0.8.4
+PORTREVISION=	1
 CATEGORIES=	textproc xfce
 MASTER_SITES=	XFCE/apps
 PKGNAMESUFFIX=	-plugin

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	rules
 DISTVERSION=	2.0.1
@@ -12,7 +11,7 @@ COMMENT=	Awesome Django authorization, without the database
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

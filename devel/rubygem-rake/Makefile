@@ -1,8 +1,7 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD$
 
 PORTNAME=	rake
-PORTVERSION=	12.3.3
+PORTVERSION=	13.0.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 

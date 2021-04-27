@@ -1,5 +1,4 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	billiard
 PORTVERSION=	3.6.3.0
@@ -12,7 +11,7 @@ COMMENT=	Python multiprocessing fork with improvements and bugfixes
 
 LICENSE=	BSD3CLAUSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

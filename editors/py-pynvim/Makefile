@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	pynvim
 DISTVERSION=	0.4.2
@@ -14,10 +13,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}msgpack>=0.5.0:devel/py-msgpack@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}greenlet>=0:devel/py-greenlet@${PY_FLAVOR}
-py27_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}trollius>=0:devel/py-trollius@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=3.4.0:devel/py-pytest@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	concurrent distutils flavors autoplist
 
 NO_ARCH=	yes

@@ -1,8 +1,7 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	bitarray
-PORTVERSION=	1.6.1
+PORTVERSION=	1.8.1
 CATEGORIES=	devel python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -12,7 +11,7 @@ COMMENT=	Efficient arrays of booleans
 LICENSE=	PSFL
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 
 USE_GITHUB=	yes
 USE_PYTHON=	distutils autoplist

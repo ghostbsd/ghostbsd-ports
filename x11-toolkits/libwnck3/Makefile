@@ -1,5 +1,4 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: head/x11-toolkits/libwnck3/Makefile 550226 2020-09-26 21:12:50Z bapt $
 
 PORTNAME=	libwnck
 PORTVERSION=	3.36.0

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	ucl
 PORTVERSION=	0.8.1
@@ -16,7 +15,7 @@ LIB_DEPENDS=	libucl.so:textproc/libucl
 
 CFLAGS+=	-I${PREFIX}/include
 
-USES=		python
+USES=		python:3.6+
 USE_GITHUB=	yes
 USE_PYTHON=	autoplist concurrent distutils
 

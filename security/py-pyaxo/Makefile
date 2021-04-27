@@ -1,5 +1,4 @@
 # Created by: Yuri Victorovich
-# $FreeBSD$
 
 PORTNAME=	pyaxo
 DISTVERSION=	0.8.2
@@ -19,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}passlib>=1.6.1:security/py-passlib@${PY_FLAV
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

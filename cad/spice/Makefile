@@ -1,5 +1,4 @@
 # Created by: Julian Jenkins <kaveman@magna.com.au>
-# $FreeBSD$
 
 PORTNAME=	spice
 PORTVERSION=	3f5.2
@@ -22,9 +21,10 @@ COMMENT=	General-purpose circuit simulation program
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
-EXTRACT_DEPENDS=	${LOCALBASE}/bin/unzip:archivers/unzip
-
 BROKEN_aarch64=	Fails to link: missing sbrk
+BROKEN_riscv64=	Fails to link: missing sbrk
+
+EXTRACT_DEPENDS=	${LOCALBASE}/bin/unzip:archivers/unzip
 
 WRKSRC=		${WRKDIR}/${PORTNAME}3f5
 MAKEFILE=	${FILESDIR}/Makefile

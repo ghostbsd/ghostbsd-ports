@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	PyOpenGL
 PORTVERSION=	3.1.5
@@ -17,6 +16,6 @@ BUILD_DEPENDS=	${PYNUMPY}
 RUN_DEPENDS=	${PYNUMPY}
 
 USE_PYTHON=	autoplist distutils cython
-USES=		python
+USES=		python:3.6+
 
 .include <bsd.port.mk>

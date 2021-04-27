@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	adb
 DISTVERSION=	1.3.0-9
@@ -6,7 +5,7 @@ DISTVERSIONSUFFIX=	-gd0be33c
 CATEGORIES=	devel comms python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	jbeich@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Pure-python implementation of ADB and Fastboot protocols
 
 LICENSE=	APACHE20
@@ -20,7 +19,7 @@ GH_ACCOUNT=	google
 GH_PROJECT=	python-${PORTNAME}
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 do-test:

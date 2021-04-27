@@ -1,9 +1,7 @@
 # Created by: Greg Lewis <glewis@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	rpm
-PORTVERSION=	4.16.0
-PORTREVISION=	1
+PORTVERSION=	4.16.1.2
 CATEGORIES=	archivers
 MASTER_SITES=	http://ftp.rpm.org/releases/rpm-4.16.x/
 PKGNAMESUFFIX=	4

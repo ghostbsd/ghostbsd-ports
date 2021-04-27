@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	Flask-XML-RPC
 PORTVERSION=	0.1.2
@@ -17,7 +16,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>0:devel/py-nose@${PY_FLAVOR}
 NO_ARCH=	yes
 
 # 2.7,3.4+
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 do-test:

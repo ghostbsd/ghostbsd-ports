@@ -1,5 +1,4 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	editdistance
 PORTVERSION=	0.5.3
@@ -13,9 +12,9 @@ COMMENT=	Fast implementation of the edit distance (Levenshtein distance)
 LICENSE=	MIT
 
 USE_PYTHON=	autoplist concurrent distutils
-USES=		python
+USES=		python:3.6+
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/editdistance/bycython.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/editdistance/bycython*.so
 
 .include <bsd.port.mk>

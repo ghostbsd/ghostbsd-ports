@@ -1,5 +1,4 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD$
 
 PORTNAME=	radius
 DISTVERSION=	1.4.0b1
@@ -11,6 +10,7 @@ COMMENT=	Radius client library for PHP
 LICENSE=	BSD3CLAUSE
 
 USES=		php:pecl
+IGNORE_WITH_PHP=	80
 
 CONFIGURE_ARGS=	--enable-radius
 

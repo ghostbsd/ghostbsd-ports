@@ -1,5 +1,4 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	glances
 PORTVERSION=	3.1.4
@@ -17,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psutil>=5.3.0:sysutils/py-psutil@${PY_FLAVOR
 		${PYTHON_PKGNAMEPREFIX}future>=0.15.2:devel/py-future@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}coverage>=0.15.2:devel/py-coverage@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 USE_GITHUB=	yes
 

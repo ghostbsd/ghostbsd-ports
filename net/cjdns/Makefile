@@ -1,9 +1,8 @@
 # Created by: Yuri Victorovich <yuri@rawbw.com>
-# $FreeBSD$
 
 PORTNAME=	cjdns
 DISTVERSIONPREFIX=	cjdns-v
-DISTVERSION=	21
+DISTVERSION=	21.1
 CATEGORIES=	net security
 
 MAINTAINER=	yuri@FreeBSD.org

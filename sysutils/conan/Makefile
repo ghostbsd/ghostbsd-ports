@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	conan
-DISTVERSION=	1.31.3
+DISTVERSION=	1.35.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 
@@ -35,9 +34,7 @@ BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
 USES=		python
-USE_GITHUB=	yes
-GH_ACCOUNT=	conan-io
-USE_PYTHON=	distutils concurrent noflavors autoplist
+USE_PYTHON=	distutils noflavors autoplist
 
 NO_ARCH=	yes
 

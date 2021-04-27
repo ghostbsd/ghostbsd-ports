@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	RestrictedPython
 PORTVERSION=	3.6.0
@@ -13,7 +12,7 @@ COMMENT=	Restricted execution environment for Python
 
 LICENSE=	ZPL21
 
-USES=		python zip
+USES=		python:3.6+ zip
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

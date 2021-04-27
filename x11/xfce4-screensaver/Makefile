@@ -1,7 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	xfce4-screensaver
-PORTVERSION=	0.1.11
+PORTVERSION=	4.16.0
+PORTREVISION=	1
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4
@@ -36,8 +36,6 @@ SCREENSAVER_DIR=	share/applications/screensavers
 
 OPTIONS_DEFINE=	NLS PAM
 OPTIONS_DEFAULT=PAM
-PAM_DESC=	Pluggable Authentication Module support
-
 OPTIONS_SUB=	yes
 
 NLS_CONFIGURE_ENABLE=	nls
@@ -63,6 +61,6 @@ post-install:
 	@${REINPLACE_CMD} 's/^\(Name[^=]*=\)\(.*\)/\1XFCE \2/' ${STAGEDIR}${PREFIX}/etc/xdg/autostart/xfce4-screensaver.desktop
 
 post-install-PAM-on:
-	${INSTALL_DATA} ${FILESDIR}/xfce-screensaver.pam ${STAGEDIR}${PREFIX}/etc/pam.d/xfce-screensaver
+	${INSTALL_DATA} ${FILESDIR}/xfce4-screensaver.pam ${STAGEDIR}${PREFIX}/etc/pam.d/xfce4-screensaver.sample
 
 .include <bsd.port.post.mk>

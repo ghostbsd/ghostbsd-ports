@@ -1,9 +1,7 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	kibana
-PORTVERSION=	7.10.0
-PORTREVISION=	1
+PORTVERSION=	7.10.1
 DISTVERSIONSUFFIX=	-darwin-x86_64
 CATEGORIES=	textproc www
 MASTER_SITES=	https://artifacts.elastic.co/downloads/kibana/ \
@@ -15,7 +13,10 @@ COMMENT=	Browser based analytics and search interface to ElasticSearch
 
 LICENSE=	APACHE20
 
-RUN_DEPENDS=	node10>=10.21.0:www/node10
+DEPRECATED=	Uses EOL Python 2.7 via www/node10
+EXPIRATION_DATE=2021-06-23
+
+RUN_DEPENDS=	node10>=10.22.1:www/node10
 
 CONFLICTS=	kibana[6]*
 

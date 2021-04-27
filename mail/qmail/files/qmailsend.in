@@ -1,7 +1,5 @@
 #!/bin/sh
-#
-# $FreeBSD$
-#
+
 # PROVIDE: qmailsend
 # REQUIRE: network
 #
@@ -54,7 +52,7 @@ qmailsend_start() {
 '"${command_args}"
   fi
 
-  exec env - PATH="%%PREFIX%%/bin:$PATH" ${command} \'"${command_args}"\' splogger qmail&
+  exec env - PATH="%%PREFIX%%/bin:%%LOCALBASE%%/bin:$PATH" ${command} "${command_args}" splogger qmail&
   /bin/pgrep -P $$ > ${pidfile}
 }
 

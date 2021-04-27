@@ -1,5 +1,4 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pystache
 PORTVERSION=	0.5.4
@@ -14,7 +13,7 @@ COMMENT=	Logic-less templates for Python
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils concurrent autoplist
 NO_ARCH=	yes
 

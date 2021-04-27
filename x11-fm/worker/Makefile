@@ -1,8 +1,7 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD$
 
 PORTNAME=	worker
-PORTVERSION=	4.6.0
+PORTVERSION=	4.7.0
 CATEGORIES=	x11-fm
 MASTER_SITES=	http://www.boomerangsworld.de/cms/worker/downloads/
 
@@ -14,37 +13,39 @@ LICENSE=	GPLv2+
 RUN_DEPENDS=	bash:shells/bash
 
 USES=		compiler:c++14-lang localbase pkgconfig python:run \
-		shebangfix ssl tar:bzip2 xorg
+		shebangfix tar:bzip2 xorg
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
-		OPENSSL_LIBS="-L${OPENSSLLIB} -lcrypto"
 USE_XORG=	ice sm x11 xinerama
 
 SHEBANG_FILES=	${WRKSRC}/scripts/*.sh \
 		${WRKSRC}/scripts/xeditor \
 		${WRKSRC}/scripts/find_file_by_chksum.py
 
-OPTIONS_DEFINE=	AVFS HAL INOTIFY LUA XFT
-OPTIONS_DEFAULT=	AVFS INOTIFY XFT
+OPTIONS_DEFINE=	AVFS DBUS INOTIFY LUA SSL XFT
+OPTIONS_DEFAULT=	AVFS DBUS INOTIFY SSL XFT
 OPTIONS_EXCLUDE_DragonFly=	AVFS
 
 INOTIFY_DESC=	Monitor directory changes via libinotify
 AVFS_DESC=	Use AVFS library to access archives
+SSL_DESC=	SHA-256 checksum support via OpenSSL
 
 AVFS_LIB_DEPENDS=	libavfs.so:sysutils/avfs
+AVFS_CONFIGURE_OFF=	--without-avfs
 
-HAL_LIB_DEPENDS=	libhal-storage.so:sysutils/hal \
-			libdbus-glib-1.so:devel/dbus-glib \
-			libdbus-1.so:devel/dbus
-HAL_USE=	gnome=glib20 xorg=sm,ice
-HAL_USES=	gettext-runtime gnome
+DBUS_LIB_DEPENDS=	libdbus-1.so:devel/dbus
+DBUS_CONFIGURE_OFF=	--without-dbus
 
 INOTIFY_LIB_DEPENDS=	libinotify.so:devel/libinotify
+INOTIFY_CONFIGURE_OFF=	--disable-inotify
 
+LUA_USES=		lua
 LUA_CONFIGURE_OFF=	--disable-lua
-LUA_USES=	lua
 
+SSL_USES=		ssl
+SSL_CONFIGURE_ENV=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
+			OPENSSL_LIBS="-L${OPENSSLLIB} -lcrypto"
+
+XFT_USE=		xorg=xft
 XFT_CONFIGURE_OFF=	--disable-xft
-XFT_USE=	xorg=xft
 
 .include <bsd.port.mk>

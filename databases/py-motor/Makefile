@@ -1,5 +1,4 @@
 # Created by: Dmitry Sivachenko <mitya@yandex-team.ru>
-# $FreeBSD$
 
 PORTNAME=	motor
 PORTVERSION=	1.0
@@ -14,7 +13,7 @@ LICENSE=	APACHE20
 
 RUN_DEPENDS=    ${PYTHON_PKGNAMEPREFIX}pymongo>=3.3:databases/pymongo@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

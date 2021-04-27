@@ -1,8 +1,7 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	vitetris
-PORTVERSION=	0.59.0
+PORTVERSION=	0.59.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	games
 

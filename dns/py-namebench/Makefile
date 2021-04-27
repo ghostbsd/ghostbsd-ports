@@ -1,5 +1,4 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD$
 
 PORTNAME=	namebench
 PORTVERSION=	1.3.1
@@ -21,7 +20,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}Jinja2>=2.5.5:devel/py-Jinja2@${PY_FLAVOR} 
 	${PYTHON_PKGNAMEPREFIX}httplib2>=0.6.0:www/py-httplib2@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}simplejson>=2.1.6:devel/py-simplejson@${PY_FLAVOR}
 
-USES=	python tar:tgz
+USES=	python:3.6+ tar:tgz
 
 .include <bsd.port.options.mk>
 

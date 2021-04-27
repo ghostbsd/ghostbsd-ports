@@ -1,5 +1,4 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	google-crc32c
 PORTVERSION=	0.1.0
@@ -17,7 +16,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cffi>=1.0.0:devel/py-cffi@${PY_FLAVOR}
 LIB_DEPENDS=	libcrc32c.so:devel/crc32c
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cffi>=1.0.0:devel/py-cffi@${PY_FLAVOR}
 
-USES=		localbase python
+USES=		localbase python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 PORTSCOUT=	limit:^0\.

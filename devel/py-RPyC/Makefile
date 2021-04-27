@@ -1,5 +1,4 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	rpyc
 PORTVERSION=	4.1.5
@@ -11,7 +10,7 @@ COMMENT=	Remote Python Call
 
 LICENSE=	MIT
 
-USES=		python
+USES=		python:3.6+
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	tomerfiliba-org

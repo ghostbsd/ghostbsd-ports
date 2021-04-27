@@ -1,5 +1,4 @@
 # Created by: Maxim Ignatenko
-# $FreeBSD$
 
 PORTNAME=	vsftpd-ext
 PORTVERSION=	${UPSTREAMVERSION}.${EXTVERSION}
@@ -13,6 +12,7 @@ MAINTAINER=	xjflyttp@gmail.com
 COMMENT=	FTP daemon that aims to be "very secure". Extended build
 
 LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 UPSTREAMVERSION=3.0.3
 EXTVERSION=	1

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	throughpy
 PORTVERSION=	0.1
@@ -13,7 +12,7 @@ LICENSE=	BSD2CLAUSE
 
 RUN_DEPENDS=	iperf3>=0:benchmarks/iperf3
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

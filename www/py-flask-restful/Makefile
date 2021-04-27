@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	Flask-RESTful
 DISTVERSION=	0.3.7
@@ -18,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aniso8601>0:devel/py-aniso8601@${PY_FLAVOR} 
 		${PYTHON_PKGNAMEPREFIX}pytz>0:devel/py-pytz@${PY_FLAVOR}
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

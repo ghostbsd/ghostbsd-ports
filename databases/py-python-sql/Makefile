@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	python-sql
 PORTVERSION=	0.9
@@ -11,7 +10,7 @@ COMMENT=	Library to write SQL queries
 
 LICENSE=	BSD3CLAUSE
 
-USES=		pkgconfig python
+USES=		pkgconfig python:3.6+
 USE_PYTHON=	autoplist distutils
 NO_ARCH=	yes
 

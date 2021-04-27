@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=		tdb
 PORTVERSION=		1.4.3
@@ -62,7 +61,7 @@ CONFIGURE_ARGS+=	--disable-python
 .else
 USES+=			python:3.4+
 
-PLIST_FILES+=		${PYTHON_SITELIBDIR}/tdb.so \
+PLIST_FILES+=		${PYTHON_SITELIBDIR}/tdb${PYTHON_EXT_SUFFIX}.so \
 			${PYTHON_SITELIBDIR}/_tdb_text.py
 .endif
 
@@ -112,7 +111,7 @@ post-install:
 			${STRIP_CMD} ${STAGEDIR}${PREFIX}/${lib}
 .endfor
 .if !defined(NO_PYTHON)
-			${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/tdb.so
+			${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/tdb*.so
 .endif
 
 .include <bsd.port.post.mk>

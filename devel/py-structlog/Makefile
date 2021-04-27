@@ -1,5 +1,4 @@
 # Created by: Dave Cottlehuber <dch@skunkwerks.at>
-# $FreeBSD$
 
 PORTNAME=	structlog
 PORTVERSION=	18.2.0
@@ -19,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}colorama>=0.3.3:devel/py-colorama@${PY_FLAVO
 			${PYTHON_PKGNAMEPREFIX}six>=1.10.0:devel/py-six@${PY_FLAVOR}
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	sfizz
 DISTVERSION=	0.4.0
@@ -10,6 +9,8 @@ COMMENT=	SFZ parser and synth C++ library & LV2/VST3 plugins
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
+
+BROKEN_riscv64=	fails to compile: src/external/atomic_queue/defs.h:45:2: Unknown CPU architecture.
 
 LIB_DEPENDS=	libsndfile.so:audio/libsndfile
 

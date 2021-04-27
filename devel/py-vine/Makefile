@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	vine
 PORTVERSION=	1.3.0
@@ -11,7 +10,7 @@ COMMENT=	Promise library for Python
 
 LICENSE=	BSD3CLAUSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

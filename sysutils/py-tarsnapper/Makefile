@@ -1,5 +1,4 @@
 # Created by: philip@FreeBSD.org
-# $FreeBSD$
 
 PORTNAME=	tarsnapper
 PORTVERSION=	0.4
@@ -12,7 +11,7 @@ COMMENT=	Tarsnap wrapper which expires backups using a gfs-scheme
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 USE_GITHUB=	yes
 

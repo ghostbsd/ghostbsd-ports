@@ -1,5 +1,4 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	frama-c
 DISTVERSIONPREFIX=	Phosphorus-
@@ -11,6 +10,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extensible platform for source-code analysis of C
 
 LICENSE=	LGPL21
+
+BROKEN=		fails to build
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/ocaml/ocamlgraph/graph.a:math/ocaml-ocamlgraph \
 	    ${LOCALBASE}/lib/ocaml/site-lib/zarith/zarith.a:math/ocaml-zarith

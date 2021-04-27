@@ -1,9 +1,8 @@
-# $FreeBSD$
 
 PORTNAME=	openfx-arena
 PORTVERSION=	2.3.14
 DISTVERSIONPREFIX=	Natron-
-PORTREVISION=	32
+PORTREVISION=	35
 CATEGORIES=	graphics
 
 MAINTAINER=	olivier@FreeBSD.org
@@ -11,7 +10,7 @@ COMMENT=	Extra OpenFX plugins for Natron
 
 LICENSE=	GPLv2
 
-ONLY_FOR_ARCHS=	amd64
+ONLY_FOR_ARCHS=	amd64 powerpc64 powerpc64le
 BUILD_DEPENDS=	opencl>=0:devel/opencl
 LIB_DEPENDS=	libOpenColorIO.so:graphics/opencolorio \
 		libfontconfig.so:x11-fonts/fontconfig \

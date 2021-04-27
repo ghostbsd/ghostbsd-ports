@@ -1,8 +1,8 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD$
 
 PORTNAME=	xfburn
 PORTVERSION=	0.6.2
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4

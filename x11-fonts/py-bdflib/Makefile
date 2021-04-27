@@ -1,5 +1,4 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	bdflib
 PORTVERSION=	1.0.4
@@ -14,7 +13,7 @@ COMMENT=	Library for working with BDF font files
 
 LICENSE=	GPLv3
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

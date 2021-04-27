@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	kiwisolver
 PORTVERSION=	1.1.0
@@ -12,7 +11,7 @@ COMMENT=	Fast implementation of the Cassowary constraint solver
 
 LICENSE=	BSD3CLAUSE
 
-USES=		compiler:c++11-lang python
+USES=		compiler:c++11-lang python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 .include <bsd.port.mk>

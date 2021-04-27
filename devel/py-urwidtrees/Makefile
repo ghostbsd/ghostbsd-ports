@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	urwidtrees
 PORTVERSION=	1.0.2
@@ -17,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}urwid>=1.0.0:devel/py-urwid@${PY_FLAVOR}
 USE_GITHUB=	yes
 GH_ACCOUNT=	pazz
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 NO_ARCH=	yes
 

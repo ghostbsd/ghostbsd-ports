@@ -1,6 +1,5 @@
-# $FreeBSD$
 
-PORTREVISION=	4
+PORTREVISION=	7
 CATEGORIES=	graphics
 
 COMMENT=	GStreamer OpenExr codec plugin

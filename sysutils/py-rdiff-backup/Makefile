@@ -1,5 +1,4 @@
 # Created by: Gerhard Häring <gh@ghaering.de>
-# $FreeBSD$
 
 PORTNAME=	rdiff-backup
 DISTVERSION=	2.0.5
@@ -26,8 +25,8 @@ CONFLICTS=	rdiff-backup-devel-[0-9]* rdiff-backup-1.0*
 PORTSCOUT=	limitw:1,even
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/rdiff_backup/_librsync.so
-	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/rdiff_backup/C.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/rdiff_backup/_librsync*.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/rdiff_backup/C*.so
 
 do-test:
 	cd ${TEST_WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHON_CMD} -m tox

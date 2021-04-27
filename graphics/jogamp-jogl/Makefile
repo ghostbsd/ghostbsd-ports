@@ -1,5 +1,4 @@
 # Created by: Tassilo Philipp <tphilipp@potion-studios.com>
-# $FreeBSD$
 
 PORTNAME=	jogamp-jogl
 PORTVERSION=	2.3.2
@@ -17,7 +16,7 @@ COMMENT=	Java bindings for OpenGL
 BUILD_DEPENDS=	${JAVALIBDIR}/swt.jar:x11-toolkits/swt
 RUN_DEPENDS=	${JAVALIBDIR}/swt.jar:x11-toolkits/swt
 
-ONLY_FOR_ARCHS=	i386 amd64 powerpc64
+ONLY_FOR_ARCHS=	i386 amd64 powerpc64 powerpc64le
 
 USES=		compiler tar:xz xorg
 

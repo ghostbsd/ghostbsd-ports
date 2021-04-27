@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	scikit-fusion
 DISTVERSION=	0.2.1
@@ -17,7 +16,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}joblib>=0.8.4:devel/py-joblib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scipy>=0.12.0:science/py-scipy@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 NO_ARCH=	yes
 

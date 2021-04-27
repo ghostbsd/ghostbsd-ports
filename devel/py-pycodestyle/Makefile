@@ -1,8 +1,7 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pycodestyle
-PORTVERSION=	2.6.0
+PORTVERSION=	2.7.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +11,7 @@ COMMENT=	Python style guide checker
 
 LICENSE=	MIT # mentioned as "Expat"
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 NO_ARCH=	yes
 

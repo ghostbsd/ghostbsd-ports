@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	evdev
 PORTVERSION=	1.3.0
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 CPPFLAGS+=	-I${LOCALBASE}/include # v4l_compat
 

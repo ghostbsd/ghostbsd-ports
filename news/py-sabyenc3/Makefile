@@ -1,5 +1,4 @@
 # Created by: Ralf van der Enden <tremere@cainites.net>
-# $FreeBSD$
 
 PORTNAME=	sabyenc3
 PORTVERSION=	4.0.2
@@ -16,6 +15,6 @@ USES=		python:3.5+
 USE_PYTHON=	autoplist concurrent distutils
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/sabyenc3.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/sabyenc3*.so
 
 .include <bsd.port.mk>

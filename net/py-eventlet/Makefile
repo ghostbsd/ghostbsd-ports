@@ -1,8 +1,7 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD$
 
 PORTNAME=	eventlet
-PORTVERSION=	0.29.1
+PORTVERSION=	0.30.1
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,18 +17,12 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dnspython>=1.15.0<2.0.0:dns/py-dnspython@${P
 		${PYTHON_PKGNAMEPREFIX}six>=1.10.0:devel/py-six@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>=0:devel/py-nose@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 3500
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}monotonic>=1.4:devel/py-monotonic@${PY_FLAVOR}
-.endif
-
 do-test:
 	cd ${WRKSRC} && ${PYTHON_CMD} -m nose -v
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	mdynamix
 DISTVERSION=	5.2.8
@@ -34,4 +33,4 @@ do-install:
 FFLAGS+=	-fallow-argument-mismatch
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

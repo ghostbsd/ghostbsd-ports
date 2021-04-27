@@ -1,5 +1,4 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	markuppy
 PORTVERSION=	1.14
@@ -13,7 +12,7 @@ COMMENT=	HTML/XML generator
 
 LICENSE=	MIT
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

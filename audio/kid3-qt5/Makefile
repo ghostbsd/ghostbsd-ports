@@ -1,10 +1,9 @@
-# $FreeBSD$
 
 PORTNAME=	kid3
-PORTVERSION=	3.8.4
+PORTVERSION=	3.8.6
 PORTREVISION?=	0
 CATEGORIES=	audio kde
-MASTER_SITES=	SF
+MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}
 PKGNAMESUFFIX=	-${SLAVE}
 
 MAINTAINER=	jhale@FreeBSD.org
@@ -15,7 +14,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl
 
-USES=		cmake compiler:c++11-lang desktop-file-utils gnome pkgconfig qt:5
+USES=		cmake compiler:c++11-lang desktop-file-utils gnome \
+		pkgconfig qt:5 tar:xz
 USE_GNOME=	libxslt:build
 USE_LDCONFIG=	yes
 USE_QT=		core dbus gui multimedia network xml widgets \
@@ -79,6 +79,7 @@ TAGLIB_LIB_DEPENDS=	libtag.so:audio/taglib
 TAGLIB_CMAKE_BOOL=	WITH_TAGLIB
 
 TEST_USE=		LOCALE=en_US.UTF-8 QT=testlib_build
+TEST_CMAKE_BOOL=	BUILD_TESTING
 TEST_WRKSRC=		${BUILD_WRKSRC}/src/test
 TEST_VARS=		KID3_APPS+=TEST
 

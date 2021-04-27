@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 
     COMMENT = Editors
 
@@ -10,7 +8,6 @@
     SUBDIR += aewan
     SUBDIR += apel
     SUBDIR += asedit
-    SUBDIR += atom
     SUBDIR += beav
     SUBDIR += biew
     SUBDIR += bitedit
@@ -192,8 +189,8 @@
     SUBDIR += linux-sublime
     SUBDIR += linux-sublime3
     SUBDIR += madedit
+    SUBDIR += marker
     SUBDIR += mg
-    SUBDIR += mg-static
     SUBDIR += micro
     SUBDIR += mined
     SUBDIR += mle
@@ -219,8 +216,10 @@
     SUBDIR += picpas
     SUBDIR += pluma
     SUBDIR += poedit
+    SUBDIR += poke
     SUBDIR += psgml
     SUBDIR += puff
+    SUBDIR += py-babi
     SUBDIR += py-editorconfig
     SUBDIR += py-pynvim
     SUBDIR += quilter
@@ -231,6 +230,10 @@
     SUBDIR += setzer
     SUBDIR += shed
     SUBDIR += slime
+    SUBDIR += sly
+    SUBDIR += sly-asdf
+    SUBDIR += sly-named-readtables
+    SUBDIR += sly-quicklisp
     SUBDIR += ssed
     SUBDIR += sted
     SUBDIR += tamago

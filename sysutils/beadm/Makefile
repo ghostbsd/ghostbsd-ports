@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	beadm
 PORTVERSION=	1.3.2
@@ -29,4 +28,3 @@ do-install:
 	  ${STAGEDIR}${MANPREFIX}/man/man8/
 
 .include <bsd.port.mk>
-

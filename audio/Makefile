@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 
     COMMENT = Audio tools
 
@@ -25,10 +23,10 @@
     SUBDIR += alure
     SUBDIR += amarok
     SUBDIR += amb-plugins
+    SUBDIR += ampache
     SUBDIR += ample
     SUBDIR += amsynth
     SUBDIR += aqualung
-    SUBDIR += ardour
     SUBDIR += ardour6
     SUBDIR += ario
     SUBDIR += arss
@@ -54,7 +52,6 @@
     SUBDIR += baudline
     SUBDIR += bcg729
     SUBDIR += bchoppr-lv2
-    SUBDIR += beatslash-lv2
     SUBDIR += beep
     SUBDIR += beets
     SUBDIR += bharvestr-lv2
@@ -81,6 +78,7 @@
     SUBDIR += cdplay
     SUBDIR += celt
     SUBDIR += checkmate
+    SUBDIR += cheesecutter
     SUBDIR += chordpack
     SUBDIR += chromaprint
     SUBDIR += clementine-player
@@ -199,10 +197,10 @@
     SUBDIR += fpc-modplug
     SUBDIR += fpc-oggvorbis
     SUBDIR += fpc-openal
-    SUBDIR += fplib
     SUBDIR += freealut
     SUBDIR += freedesktop-sound-theme
     SUBDIR += freepats
+    SUBDIR += ft2play
     SUBDIR += funktrackergold
     SUBDIR += ganv
     SUBDIR += gbemol
@@ -247,39 +245,6 @@
     SUBDIR += gsequencer
     SUBDIR += gsm
     SUBDIR += gsound
-    SUBDIR += gstreamer-plugins-a52dec
-    SUBDIR += gstreamer-plugins-amrnb
-    SUBDIR += gstreamer-plugins-amrwbdec
-    SUBDIR += gstreamer-plugins-cdaudio
-    SUBDIR += gstreamer-plugins-cdparanoia
-    SUBDIR += gstreamer-plugins-faac
-    SUBDIR += gstreamer-plugins-faad
-    SUBDIR += gstreamer-plugins-flac
-    SUBDIR += gstreamer-plugins-flite
-    SUBDIR += gstreamer-plugins-fluendo-mp3
-    SUBDIR += gstreamer-plugins-gme
-    SUBDIR += gstreamer-plugins-gsm
-    SUBDIR += gstreamer-plugins-jack
-    SUBDIR += gstreamer-plugins-ladspa
-    SUBDIR += gstreamer-plugins-lame
-    SUBDIR += gstreamer-plugins-mad
-    SUBDIR += gstreamer-plugins-mp3
-    SUBDIR += gstreamer-plugins-musepack
-    SUBDIR += gstreamer-plugins-nas
-    SUBDIR += gstreamer-plugins-ogg
-    SUBDIR += gstreamer-plugins-opus
-    SUBDIR += gstreamer-plugins-pulse
-    SUBDIR += gstreamer-plugins-shout2
-    SUBDIR += gstreamer-plugins-sidplay
-    SUBDIR += gstreamer-plugins-sndfile
-    SUBDIR += gstreamer-plugins-sndio
-    SUBDIR += gstreamer-plugins-soundtouch
-    SUBDIR += gstreamer-plugins-spc
-    SUBDIR += gstreamer-plugins-speex
-    SUBDIR += gstreamer-plugins-taglib
-    SUBDIR += gstreamer-plugins-twolame
-    SUBDIR += gstreamer-plugins-vorbis
-    SUBDIR += gstreamer-plugins-wavpack
     SUBDIR += gstreamer1-plugins-a52dec
     SUBDIR += gstreamer1-plugins-amrnb
     SUBDIR += gstreamer1-plugins-amrwbdec
@@ -315,9 +280,11 @@
     SUBDIR += gstreamer1-plugins-wavpack
     SUBDIR += gstreamer1-plugins-webrtcdsp
     SUBDIR += gtick
+    SUBDIR += gtk-mixer
     SUBDIR += gtkguitune
     SUBDIR += gtkpod
     SUBDIR += gtmixer
+    SUBDIR += guidoar
     SUBDIR += guidolib
     SUBDIR += guitarix-lv2
     SUBDIR += guspat
@@ -326,7 +293,6 @@
     SUBDIR += gxplugins-lv2
     SUBDIR += harp
     SUBDIR += headsetcontrol
-    SUBDIR += herrie
     SUBDIR += hexter
     SUBDIR += hpsjam
     SUBDIR += hts_engine-API
@@ -365,7 +331,9 @@
     SUBDIR += kexis
     SUBDIR += kid3-kf5
     SUBDIR += kid3-qt5
+    SUBDIR += klystrack
     SUBDIR += kmix
+    SUBDIR += komposter
     SUBDIR += ksmp3play
     SUBDIR += kwave
     SUBDIR += ladspa
@@ -493,18 +461,21 @@
     SUBDIR += mda-lv2
     SUBDIR += mhwaveedit
     SUBDIR += midi-matrix-lv2
+    SUBDIR += midifile
     SUBDIR += midiomatic-lv2
     SUBDIR += midipp
+    SUBDIR += midisharelight
     SUBDIR += mikmod
     SUBDIR += milkytracker
+    SUBDIR += miniaudio
+    SUBDIR += minimp3
     SUBDIR += mio2jack
     SUBDIR += mixer.app
     SUBDIR += mixertui
     SUBDIR += mixxx
-    SUBDIR += mixxx21
     SUBDIR += mkcue
     SUBDIR += moc
-    SUBDIR += modplugplay
+    SUBDIR += modplug-tools
     SUBDIR += moodbar
     SUBDIR += moony-lv2
     SUBDIR += mous
@@ -559,6 +530,7 @@
     SUBDIR += ncspot
     SUBDIR += nekobi-lv2
     SUBDIR += noise-repellent-lv2
+    SUBDIR += noise-suppression-for-voice-lv2
     SUBDIR += normalize
     SUBDIR += nosefart
     SUBDIR += noson-app
@@ -644,6 +616,7 @@
     SUBDIR += portaudio
     SUBDIR += praat
     SUBDIR += pragha
+    SUBDIR += prelude-lv2
     SUBDIR += protracker
     SUBDIR += pulseaudio
     SUBDIR += pulseaudio-module-sndio
@@ -659,7 +632,6 @@
     SUBDIR += py-discogs-client
     SUBDIR += py-eyed3
     SUBDIR += py-fmoo-audiotools
-    SUBDIR += py-gmusicapi
     SUBDIR += py-gtts
     SUBDIR += py-hsaudiotag3k
     SUBDIR += py-mpd
@@ -667,6 +639,7 @@
     SUBDIR += py-musicbrainzngs
     SUBDIR += py-mutagen
     SUBDIR += py-opuslib
+    SUBDIR += py-pulsectl
     SUBDIR += py-pyacoustid
     SUBDIR += py-pyaudio
     SUBDIR += py-pylast
@@ -703,6 +676,7 @@
     SUBDIR += ripit
     SUBDIR += ripperx
     SUBDIR += rkr-lv2
+    SUBDIR += rnnoise
     SUBDIR += rnnoise-nu
     SUBDIR += rosegarden
     SUBDIR += rplay
@@ -774,6 +748,7 @@
     SUBDIR += sratom
     SUBDIR += stegosaurus-lv2
     SUBDIR += stk
+    SUBDIR += stmp
     SUBDIR += stone-phaser-lv2
     SUBDIR += strawberry
     SUBDIR += streamripper
@@ -800,6 +775,7 @@
     SUBDIR += teamspeak3-server
     SUBDIR += tempest_for_eliza
     SUBDIR += thunar-media-tags-plugin
+    SUBDIR += tiatracker
     SUBDIR += timely-lv2
     SUBDIR += timemachine
     SUBDIR += timidity
@@ -811,6 +787,7 @@
     SUBDIR += timidity++-xaw
     SUBDIR += timidity++-xskin
     SUBDIR += tkeca
+    SUBDIR += toccata-lv2
     SUBDIR += toolame
     SUBDIR += tosha
     SUBDIR += traverso
@@ -838,6 +815,7 @@
     SUBDIR += vorbis-tools
     SUBDIR += vorbisgain
     SUBDIR += vsound
+    SUBDIR += vst3sdk
     SUBDIR += waon
     SUBDIR += wav2cdr
     SUBDIR += wavbreaker

@@ -1,5 +1,4 @@
 # Created by: Johannes Meixner <johannes@perceivon.net>
-# $FreeBSD$
 
 PORTNAME=	bottleneck
 PORTVERSION=	1.3.2
@@ -17,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	${PYNUMPY}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent cython distutils
 
 DOCS=		README.rst RELEASE.rst \

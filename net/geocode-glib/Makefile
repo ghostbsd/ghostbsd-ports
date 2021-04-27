@@ -1,5 +1,4 @@
 # Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	geocode-glib
 PORTVERSION=	3.26.2
@@ -12,7 +11,6 @@ COMMENT=	Convenience library for the geocoding and reverse geocoding
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
-BUILD_DEPENDS=	gtkdoc-scan:textproc/gtk-doc
 LIB_DEPENDS=	libjson-glib-1.0.so:devel/json-glib \
 		libsoup-2.4.so:devel/libsoup
 
@@ -23,5 +21,11 @@ USE_GNOME=	glib20 introspection:build
 USE_LDCONFIG=	yes
 MESON_ARGS=	-Denable-installed-tests=false
 #MAKE_ENV=	XDG_CACHE_HOME=${WRKDIR}
+
+OPTIONS_DEFINE=	DOCS
+
+DOCS_BUILD_DEPENDS=	gtkdoc-scan:textproc/gtk-doc
+DOCS_MESON_TRUE=	enable-gtk-doc
+DOCSDIR=		${PREFIX}/share/gtk-doc/html/geocode-glib
 
 .include <bsd.port.mk>

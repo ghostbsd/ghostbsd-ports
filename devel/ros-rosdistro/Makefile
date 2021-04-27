@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	ros-rosdistro
 DISTVERSION=	0.7.5
@@ -16,7 +15,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ros-catkin_pkg>=0.4.0:devel/ros-catkin_pkg@$
 		${PYTHON_PKGNAMEPREFIX}ros-rospkg>=1:devel/ros-rospkg@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=3:devel/py-yaml@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 USE_GITHUB=	yes
 GH_ACCOUNT=	ros-infrastructure

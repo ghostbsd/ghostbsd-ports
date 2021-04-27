@@ -1,5 +1,4 @@
 # Created by: jessekempf@gmail.com
-# $FreeBSD$
 
 PORTNAME=	daemon
 PORTVERSION=	2.0.6
@@ -19,6 +18,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 NO_ARCH=	yes
 USE_PYTHON=	autoplist concurrent distutils
-USES=		python
+USES=		python:3.6+
 
 .include <bsd.port.mk>

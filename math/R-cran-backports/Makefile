@@ -1,8 +1,7 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	backports
-PORTVERSION=	1.2.0
+PORTVERSION=	1.2.1
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 

@@ -1,5 +1,4 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pdf-redact-tools
 PORTVERSION=	0.1.2
@@ -17,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	exiftool:graphics/p5-Image-ExifTool \
 		convert:graphics/ImageMagick6
 
-USES=		python
+USES=		python:3.6+
 USE_GITHUB=	yes
 USE_PYTHON=	autoplist concurrent distutils
 

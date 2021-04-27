@@ -1,5 +1,4 @@
 # Created by: glarkin
-# $FreeBSD$
 
 PORTNAME=	statsvn
 PORTVERSION=	0.7.0
@@ -20,6 +19,7 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
 USES=		zip
 USE_JAVA=	yes
+JAVA_VERSION=	8
 USE_ANT=	yes
 NO_ARCH=	yes
 

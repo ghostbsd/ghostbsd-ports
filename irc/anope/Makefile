@@ -1,7 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	anope
 PORTVERSION=	2.0.9
+PORTREVISION=	1
 CATEGORIES=	irc
 
 MAINTAINER=	egypcio@FreeBSD.org

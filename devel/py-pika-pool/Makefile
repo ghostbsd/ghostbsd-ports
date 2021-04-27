@@ -1,5 +1,4 @@
 # Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-# $FreeBSD$
 
 PORTNAME=	pika-pool
 PORTVERSION=	0.1.3
@@ -14,7 +13,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pika>=0.9.0:devel/py-pika@${PY_FLAVOR}
 
 NO_ARCH=	yes
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

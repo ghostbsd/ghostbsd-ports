@@ -1,8 +1,8 @@
-# $FreeBSD$
 
 PORTNAME=	grex
 DISTVERSIONPREFIX=v
 DISTVERSION=	1.1.0
+PORTREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	petteri.valkonen@iki.fi

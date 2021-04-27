@@ -1,11 +1,11 @@
---- components/viz/common/features.cc.orig	2020-11-13 06:36:42 UTC
+--- components/viz/common/features.cc.orig	2021-03-12 23:57:23 UTC
 +++ components/viz/common/features.cc
-@@ -22,7 +22,7 @@ const base::Feature kForcePreferredIntervalForVideo{
- 
+@@ -32,7 +32,7 @@ const base::Feature kEnableOverlayPrioritization {
  // Use the SkiaRenderer.
- #if defined(OS_WIN) || \
--    (defined(OS_LINUX) && !(defined(OS_CHROMEOS) || BUILDFLAG(IS_CHROMECAST)))
-+    (defined(OS_LINUX) && !(defined(OS_CHROMEOS) || BUILDFLAG(IS_CHROMECAST))) || defined(OS_BSD)
- const base::Feature kUseSkiaRenderer{"UseSkiaRenderer",
-                                      base::FEATURE_ENABLED_BY_DEFAULT};
+ const base::Feature kUseSkiaRenderer {
+   "UseSkiaRenderer",
+-#if defined(OS_WIN) || (defined(OS_LINUX) && !(BUILDFLAG(IS_CHROMEOS_ASH) || \
++#if defined(OS_WIN) || defined(OS_BSD) || (defined(OS_LINUX) && !(BUILDFLAG(IS_CHROMEOS_ASH) || \
+                                                BUILDFLAG(IS_CHROMECAST)))
+       base::FEATURE_ENABLED_BY_DEFAULT
  #else

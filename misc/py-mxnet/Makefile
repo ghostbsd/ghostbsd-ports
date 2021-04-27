@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	mxnet
 DISTVERSION=	1.7.0
@@ -15,7 +14,7 @@ RUN_DEPENDS=	mxnet>0:misc/mxnet \
 		${PYTHON_PKGNAMEPREFIX}graphviz>0:graphics/py-graphviz@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR}
 
-USES=		python localbase
+USES=		python:3.6+ localbase
 USE_GITHUB=	yes
 GH_ACCOUNT=	apache
 GH_PROJECT=	incubator-mxnet

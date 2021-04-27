@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	patch-ng
 DISTVERSION=	1.17.4
@@ -11,7 +10,7 @@ COMMENT=	Library to parse and apply unified diffs
 
 LICENSE=	MIT
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

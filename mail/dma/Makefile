@@ -1,9 +1,9 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD$
 
 PORTNAME=	dma
 PORTVERSION=	0.13
 DISTVERSIONPREFIX=	v
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	mail
 
@@ -25,7 +25,7 @@ CFLAGS+=	-I${OPENSSLINC} \
 		-DDMA_GROUP='\"mail\"'
 LDFLAGS+=	-L${OPENSSLLIB}
 
-MAKE_ENV=	__MAKE_CONF=/dev/null SRCCONF=/dev/null NO_WERROR=defined \
+MAKE_ENV=	__MAKE_CONF=/dev/null SRCCONF=/dev/null MK_WERROR=no \
 		MANDIR=${PREFIX}/share/man/man
 
 USE_RC_SUBR=	dma_flushq

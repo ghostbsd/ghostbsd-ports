@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	libglvnd
 DISTVERSION=	1.3.2
@@ -30,7 +29,7 @@ X11_MESON_ENABLED=	x11 glx
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == powerpc64
+.if ${ARCH:Mpowerpc64*}
 USES+=		compiler:gcc-c++11-lib
 .else
 USES+=		compiler:c++11-lib

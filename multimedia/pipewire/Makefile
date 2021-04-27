@@ -1,7 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	pipewire
-DISTVERSION=	0.3.11
+DISTVERSION=	0.3.23
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 MAINTAINER=	arrowd@FreeBSD.org
@@ -14,6 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	v4l_compat>0:multimedia/v4l_compat
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libdbus-1.so:devel/dbus \
+		libinotify.so:devel/libinotify \
 		libepoll-shim.so:devel/libepoll-shim \
 		libudev.so:devel/libudev-devd
 
@@ -27,7 +28,7 @@ GSTREAMER_LIB_DEPENDS=	libgstreamer-1.0.so:multimedia/gstreamer1 \
 
 VULKAN_DESC=	Enable Vulkan integration
 VULKAN_MESON_TRUE=	vulkan
-VULKAN_BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:devel/vulkan-headers
+VULKAN_BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
 VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
 
 USE_GNOME=	glib20

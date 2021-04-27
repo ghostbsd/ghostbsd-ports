@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	p4python
 PORTVERSION=	2016.1.1447008
@@ -18,7 +17,7 @@ BROKEN_riscv64=		fails to build: TypeError: can only concatenate str (not "NoneT
 BUILD_DEPENDS+=	${LOCALBASE}/lib/perforce/libclient.a:devel/p4api
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		dos2unix python ssl
+USES=		dos2unix python:3.6+ ssl
 USE_PYTHON=	distutils autoplist
 PYDISTUTILS_BUILDARGS=	--ssl ${OPENSSLLIB}
 

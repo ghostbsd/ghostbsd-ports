@@ -1,5 +1,4 @@
 # Created by: Wen Heping<wenheping@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	tinyarray
 PORTVERSION=	1.2.3
@@ -14,7 +13,7 @@ LICENSE=	BSD2CLAUSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>=0:devel/py-nose@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

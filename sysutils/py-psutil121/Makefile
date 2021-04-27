@@ -1,5 +1,4 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	psutil
 PORTVERSION=	1.2.1
@@ -18,7 +17,7 @@ CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}psutil
 
 PORTSCOUT=	limit:^1\.2\.
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

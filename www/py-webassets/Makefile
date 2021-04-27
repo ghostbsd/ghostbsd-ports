@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	webassets
 PORTVERSION=	2.0
@@ -12,7 +11,7 @@ COMMENT=	Media asset management for Python
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

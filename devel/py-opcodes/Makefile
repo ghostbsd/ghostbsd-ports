@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	opcodes
 DISTVERSION=	0.3.14
@@ -11,7 +10,7 @@ COMMENT=	Database of processor instructions/opcodes
 
 LICENSE=	BSD2CLAUSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

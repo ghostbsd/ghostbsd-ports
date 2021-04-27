@@ -1,8 +1,7 @@
 # Created by: Janos Mohacsi
-# $FreeBSD$
 
 PORTNAME=	xmltooling
-PORTVERSION=	3.1.0
+PORTVERSION=	3.2.0
 CATEGORIES=	devel security
 MASTER_SITES=	http://shibboleth.net/downloads/c++-opensaml/${PORTVERSION}/
 
@@ -14,7 +13,6 @@ LICENSE=	APACHE20
 BUILD_DEPENDS=	boost-libs>=0:devel/boost-libs
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		liblog4shib.so:devel/log4shib \
-		libxerces-c.so:textproc/xerces-c3 \
 		libxml-security-c.so:security/apache-xml-security-c
 
 GNU_CONFIGURE=	yes

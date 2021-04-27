@@ -1,5 +1,4 @@
 # Created by: martin.dieringer@gmx.de
-# $FreeBSD$
 
 PORTNAME=	python-ly
 PORTVERSION=	0.9.6
@@ -12,7 +11,7 @@ COMMENT=	Python package to manipulate LilyPond files
 
 LICENSE=	GPLv3
 
-USES=		python
+USES=		python:3.6+
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	wbsoft

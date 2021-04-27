@@ -1,9 +1,7 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD$
 
 PORTNAME=	PAR-Dist
-PORTVERSION=	0.49
-PORTREVISION=	1
+PORTVERSION=	0.51
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,6 +11,7 @@ COMMENT=	Create and manipulate PAR distributions
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		perl5
 USE_PERL5=	configure

@@ -1,8 +1,7 @@
 # Created by: Leo Vandewoestijne <freebsd@dns.company>
-# $FreeBSD$
 
 PORTNAME=	knot
-DISTVERSION=	3.0.0
+DISTVERSION=	3.0.5
 CATEGORIES=	dns
 MASTER_SITES=	https://secure.nic.cz/files/knot-dns/ \
 		https://dns.company/downloads/knot-dns/
@@ -14,15 +13,16 @@ COMMENT=	High performance authoritative-only DNS server
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	autoconf>=2.65:devel/autoconf \
-		gsed:textproc/gsed
+#BUILD_DEPENDS=	autoconf>=2.65:devel/autoconf \
+#		gsed:textproc/gsed
+BUILD_DEPENDS=	gsed:textproc/gsed
 LIB_DEPENDS=	libgnutls.so:security/gnutls \
 		liblmdb.so:databases/lmdb \
 		libnghttp2.so:www/libnghttp2
 
-CONFLICTS=	knot-1.* knot1-[0-6].* knot2-[0-9].*
+USES=		alias autoreconf libtool localbase pkgconfig tar:xz
 
-USES=		alias libtool localbase pkgconfig tar:xz
+CONFLICTS=	knot-1.* knot1-[0-6].* knot2-[0-9].*
 
 HAS_CONFIGURE=	yes
 BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed

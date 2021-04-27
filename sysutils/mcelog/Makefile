@@ -1,8 +1,7 @@
 # Created by: Jeremy Chadwick <freebsd@jdc.parodius.com>
-# $FreeBSD$
 
 PORTNAME=	mcelog
-PORTVERSION=	172
+PORTVERSION=	175
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 

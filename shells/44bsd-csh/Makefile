@@ -1,5 +1,4 @@
 # Created by: David O'Brien <obrien@NUXI.com>
-# $FreeBSD$
 
 PORTNAME=	44bsd-csh
 PORTVERSION=	20001106
@@ -10,9 +9,10 @@ MASTER_SITES=	LOCAL/cy
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	The traditional 4.4BSD /bin/csh C-shell
 
-EXTRACT_DEPENDS=	rcs:devel/rcs57
-
 BROKEN_aarch64=	Fails to link: missing sbrk
+BROKEN_riscv64=	Fails to link: missing sbrk
+
+EXTRACT_DEPENDS=	rcs:devel/rcs57
 
 USES=		tar:bzip2
 LDFLAGS=	-Wl,--allow-multiple-definition

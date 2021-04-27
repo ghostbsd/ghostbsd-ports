@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	nltk
 DISTVERSION=	3.4.1
@@ -17,9 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=3.09:devel/py-yaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR}
 
-py27_RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}singledispatch>0:devel/py-singledispatch@${PY_FLAVOR}
-
-USES=		python zip
+USES=		python:3.6+ zip
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

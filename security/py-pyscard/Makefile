@@ -1,5 +1,4 @@
 # Created by: mp39590@gmail.com
-# $FreeBSD$
 
 PORTNAME=	pyscard
 PORTVERSION=	2.0.0
@@ -18,13 +17,13 @@ BUILD_DEPENDS=	swig:devel/swig \
 RUN_DEPENDS=	pcsc-lite>0:devel/pcsc-lite
 
 ## Python3 is supported
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 PYDISTUTILS_BUILD_TARGET=	build_ext
 PYDISTUTILS_BUILDARGS+=	--include-dirs=${LOCALBASE}/include/PCSC
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/smartcard/scard/_scard.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/smartcard/scard/_scard*.so
 
 .include <bsd.port.mk>

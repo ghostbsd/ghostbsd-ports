@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	google-pasta
 PORTVERSION=	0.1.7
@@ -14,7 +13,7 @@ LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

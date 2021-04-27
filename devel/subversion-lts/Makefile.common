@@ -1,8 +1,7 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD$
 
 PORTNAME?=	subversion
-PORTVERSION=	1.10.6
+PORTVERSION=	1.10.7
 PORTREVISION?=	0
 CATEGORIES+=	devel
 MASTER_SITES=	APACHE/subversion

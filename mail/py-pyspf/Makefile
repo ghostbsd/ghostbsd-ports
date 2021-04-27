@@ -1,5 +1,4 @@
 # Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pyspf
 PORTVERSION=	2.0.14
@@ -16,13 +15,13 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}authres>=0:mail/py-authres@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dnspython>=1.16.0:dns/py-dnspython@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>=0:devel/py-yaml@${PY_FLAVOR}
 
-USES=		python shebangfix
+USES=		python:3.6+ shebangfix
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 PLIST_FILES=	bin/spf.py
+
 SHEBANG_FILES=	spf.py
 
 # Make the tests run as a module

@@ -1,6 +1,6 @@
---- chrome/renderer/chrome_content_renderer_client.cc.orig	2020-11-13 06:36:38 UTC
+--- chrome/renderer/chrome_content_renderer_client.cc.orig	2021-03-12 23:57:19 UTC
 +++ chrome/renderer/chrome_content_renderer_client.cc
-@@ -1072,7 +1072,7 @@ WebPlugin* ChromeContentRendererClient::CreatePlugin(
+@@ -1097,7 +1097,7 @@ WebPlugin* ChromeContentRendererClient::CreatePlugin(
        }
  
        case chrome::mojom::PluginStatus::kRestartRequired: {

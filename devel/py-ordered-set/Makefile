@@ -1,5 +1,4 @@
 # Created by: antoine@FreeBSD.org
-# $FreeBSD$
 
 PORTNAME=	ordered-set
 PORTVERSION=	3.1.1
@@ -16,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 do-test:

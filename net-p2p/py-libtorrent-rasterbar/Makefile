@@ -1,9 +1,9 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	libtorrent-rasterbar
 DISTVERSIONPREFIX=	libtorrent-
 DISTVERSION=	1.2.10
+PORTEPOCH=	1
 CATEGORIES=	net-p2p python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/../../COPYING
 LIB_DEPENDS=	libtorrent-rasterbar.so:net-p2p/libtorrent-rasterbar \
 		${PY_BOOST}
 
-USES=		compiler:c11 iconv localbase python
+USES=		compiler:c11 iconv localbase python:3.6+
 USE_GITHUB=	yes
 GH_ACCOUNT=	arvidn
 GH_PROJECT=	libtorrent
@@ -32,6 +32,6 @@ CONFIGURE_ENV=	PYTHON_INCLUDEDIR="${PYTHON_INCLUDEDIR}" \
 		PYTHON_VERSION="${PYTHON_VERSION}"
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/libtorrent.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/libtorrent*.so
 
 .include <bsd.port.mk>

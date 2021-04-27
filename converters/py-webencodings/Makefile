@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	webencodings
 DISTVERSION=	0.5.1
@@ -11,7 +10,7 @@ COMMENT=	Character encoding aliases for legacy web content
 
 LICENSE=	BSD3CLAUSE
 
-USES=		python
+USES=		python:2.7+
 USE_PYTHON=	distutils autoplist
 NO_ARCH=	yes
 

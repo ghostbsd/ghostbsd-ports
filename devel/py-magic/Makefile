@@ -1,5 +1,4 @@
 # Created by: Alexander Botero-Lowry <alexbl@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	magic
 PORTVERSION=	5.39
@@ -15,7 +14,7 @@ COMMENT=	Python module for determining file type
 
 LICENSE=	BSD2CLAUSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 # both install module as magic.py

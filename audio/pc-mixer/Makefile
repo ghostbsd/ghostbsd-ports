@@ -1,5 +1,4 @@
 # Created by: Joe Maloney <jmaloney@ixsystems.com>
-# $FreeBSD$
 
 PORTNAME=	pc-mixer
 PORTVERSION=	20180328

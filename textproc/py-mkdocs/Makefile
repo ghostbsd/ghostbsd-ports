@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	mkdocs
 DISTVERSION=	1.0
@@ -21,7 +20,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}click>=3.3:devel/py-click@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tornado>=5.0:www/py-tornado@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=3.10:devel/py-yaml@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils concurrent autoplist
 
 NO_ARCH=	yes

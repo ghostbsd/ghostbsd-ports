@@ -1,5 +1,4 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD$
 
 PORTNAME=	blockout
 PORTVERSION=	2.5
@@ -13,8 +12,6 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	BlockOut II is an adaptation of the original Blockout DOS game
 
 LICENSE=	GPLv2+
-
-ONLY_FOR_ARCHS=	i386 amd64
 
 USES=		dos2unix gl gmake sdl
 USE_SDL=	mixer sdl

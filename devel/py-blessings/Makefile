@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	blessings
 PORTVERSION=	1.7
@@ -11,7 +10,7 @@ COMMENT=	Thin wrapper around terminal coloring, styling, and positioning
 
 LICENSE=	MIT
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

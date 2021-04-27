@@ -1,5 +1,4 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	openpyxl
 PORTVERSION=	2.6.4
@@ -17,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jdcal>=0:devel/py-jdcal@${PY_FLAVOR} \
 
 NO_ARCH=	yes
 PORTSCOUT=	limit:^2\.	# Version 3 drops python 2.7 compatibility
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

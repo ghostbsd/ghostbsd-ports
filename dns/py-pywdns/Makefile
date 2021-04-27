@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	pywdns
 PORTVERSION=	0.10.0
@@ -14,13 +13,13 @@ LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 LIB_DEPENDS=	libwdns.so:dns/wdns
 
-USES=		pkgconfig python
+USES=		pkgconfig python:3.6+
 USE_PYTHON=	autoplist cython distutils
 
 post-patch:
 	${REINPLACE_CMD} -e "1s+ python+ ${PYTHON_CMD}+" ${WRKSRC}/gen_pywdns_constants
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}/${PYTHON_SITELIBDIR}/wdns.so
+	${STRIP_CMD} ${STAGEDIR}/${PYTHON_SITELIBDIR}/wdns*.so
 
 .include <bsd.port.mk>

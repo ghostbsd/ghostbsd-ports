@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	meliae
 PORTVERSION=	0.5.1
@@ -14,7 +13,7 @@ LICENSE=	GPLv3
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR}
 
-USES=		python:-3.8  # compile fails on Python 3.9
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist cython
 TEST_TARGET=	check  # test fails
 

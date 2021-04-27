@@ -1,4 +1,4 @@
---- ui/events/devices/x11/device_data_manager_x11.cc.orig	2020-11-13 06:37:05 UTC
+--- ui/events/devices/x11/device_data_manager_x11.cc.orig	2021-03-12 23:57:48 UTC
 +++ ui/events/devices/x11/device_data_manager_x11.cc
 @@ -841,6 +841,9 @@ void DeviceDataManagerX11::SetDisabledKeyboardAllowedK
  }

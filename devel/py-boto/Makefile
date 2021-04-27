@@ -1,5 +1,4 @@
 # Created by: Peter Schuller <peter.schuller@infidyne.com>
-# $FreeBSD$
 
 PORTNAME=	boto
 PORTVERSION=	2.49.0
@@ -13,7 +12,7 @@ COMMENT=	Python interface to Amazon Web Services
 
 LICENSE=	MIT
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

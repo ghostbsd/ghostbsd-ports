@@ -1,5 +1,4 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	vobject
 PORTVERSION=	0.9.6.1
@@ -18,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dateutil>=2.4.0:devel/py-dateutil@${PY_FLAVO
 		${PYTHON_PKGNAMEPREFIX}pytz>0:devel/py-pytz@${PY_FLAVOR}
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 USE_GITHUB=	yes

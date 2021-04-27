@@ -1,5 +1,4 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	setproctitle
 PORTVERSION=	1.1.10
@@ -14,7 +13,7 @@ COMMENT=	Python module to customize the process title
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 PORTDOCS=	HISTORY.rst README.rst
@@ -22,7 +21,7 @@ PORTDOCS=	HISTORY.rst README.rst
 OPTIONS_DEFINE=	DOCS
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/setproctitle.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/setproctitle*.so
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

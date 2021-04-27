@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 
     COMMENT = Network management tools
 
@@ -32,7 +30,6 @@
     SUBDIR += cacti88-spine
     SUBDIR += carbon-relay-ng
     SUBDIR += carbonzipper
-    SUBDIR += ccnet-server
     SUBDIR += cdpd
     SUBDIR += cdpr
     SUBDIR += cdpsnarf
@@ -44,6 +41,7 @@
     SUBDIR += check_mysql_health
     SUBDIR += check_nwc_health
     SUBDIR += check_ssl_cert
+    SUBDIR += check_ups_health
     SUBDIR += chillispot
     SUBDIR += choparp
     SUBDIR += cidr
@@ -134,6 +132,7 @@
     SUBDIR += nagcon
     SUBDIR += nagios
     SUBDIR += nagios-certexp-plugin
+    SUBDIR += nagios-check_bacula11
     SUBDIR += nagios-check_bacula9
     SUBDIR += nagios-check_clamav
     SUBDIR += nagios-check_cpu_usage
@@ -189,6 +188,7 @@
     SUBDIR += networkmgr
     SUBDIR += netxms
     SUBDIR += nfdump
+    SUBDIR += nfs-exporter
     SUBDIR += nfsen
     SUBDIR += ng_ipacct
     SUBDIR += nitpicker
@@ -275,7 +275,6 @@
     SUBDIR += pandorafms_server
     SUBDIR += percona-monitoring-plugins
     SUBDIR += pftabled
-    SUBDIR += php72-snmp
     SUBDIR += php73-snmp
     SUBDIR += php74-snmp
     SUBDIR += php80-snmp
@@ -297,6 +296,7 @@
     SUBDIR += py-arouteserver
     SUBDIR += py-ciscoconfparse
     SUBDIR += py-dnsdiag
+    SUBDIR += py-gstat_exporter
     SUBDIR += py-ipcalc
     SUBDIR += py-ipy
     SUBDIR += py-junos-eznc

@@ -1,9 +1,8 @@
-# $FreeBSD$
 
 PORTNAME=	barnyard2
 PORTVERSION=	1.13
 DISTVERSIONPREFIX=	v2-
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	security
 
 MAINTAINER=	bofh@FreeBSD.org
@@ -16,14 +15,13 @@ USES=		autoreconf libtool
 USE_GITHUB=	yes
 GH_ACCOUNT=	firnsy
 
-OPTIONS_DEFINE=	64BIT ARUBA BRO GRE IPV6 MPLS PORT_PCAP DOCS EXAMPLES
+OPTIONS_DEFINE=	64BIT ARUBA GRE IPV6 MPLS PORT_PCAP DOCS EXAMPLES
 OPTIONS_RADIO=	DATABASE
 OPTIONS_RADIO_DATABASE=	MYSQL MYSQL_SSL ODBC PGSQL
 NO_OPTIONS_SORT=yes
 
 64BIT_DESC=	Enable 64bit compilation (experimental)
 ARUBA_DESC=	Enable aruba support
-BRO_DESC=	Enable bro support (libbroccoli)
 GRE_DESC=	Enable gre support
 MYSQL_SSL_DESC=	Enable mysql ssl support (experimental)
 PORT_PCAP_DESC=	Use libpcap from ports
@@ -45,9 +43,6 @@ EXAMPLES=	SCHEMA_ACCESS create_db2 create_mssql create_mysql create_oracle.sql c
 
 64BIT_CONFIGURE_ENABLE=	64bit-gcc
 ARUBA_CONFIGURE_ENABLE=	aruba
-BRO_LIB_DEPENDS=	libbroccoli.so:security/broccoli
-BRO_CONFIGURE_ON=	--with-broccoli=${LOCALBASE}/lib
-BRO_CONFIGURE_ENABLE=	bro
 GRE_CONFIGURE_ENABLE=	gre
 IPV6_CONFIGURE_ENABLE=	ipv6
 MPLS_CONFIGURE_ENABLE=	mpls

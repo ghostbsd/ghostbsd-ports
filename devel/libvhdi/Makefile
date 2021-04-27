@@ -1,8 +1,7 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	libvhdi
-PORTVERSION=	20201018
+PORTVERSION=	20201204
 DISTVERSIONPREFIX=	alpha-
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/libyal/libvhdi/releases/download/${PORTVERSION}/ \

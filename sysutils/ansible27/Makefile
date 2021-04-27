@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTVERSION=	2.7.17
 PORTREVISION=	1
@@ -15,7 +14,7 @@ CONFLICTS=	ansible-* \
 MASTERDIR=	${.CURDIR}/../ansible
 DISTINFO_FILE=	${.CURDIR}/distinfo
 
-USES=		cpe python
+USES=		cpe python:3.6+
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-sesu \
 		${FILESDIR}/extra-patch-27
 

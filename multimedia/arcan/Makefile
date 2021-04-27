@@ -1,23 +1,17 @@
-# $FreeBSD$
 
 PORTNAME=	arcan
-DISTVERSION=	0.6.0
-PORTREVISION=	1
+DISTVERSION=	0.6.0.1
+PORTREVISION=	3
 CATEGORIES=	multimedia
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	7cf3d1066faf.patch:-p2 # https://github.com/letoram/arcan/pull/205
-PATCHFILES+=	f40395b6755d.patch:-p2 # https://github.com/letoram/arcan/pull/205
-PATCHFILES+=	b519eb023e20.patch:-p2 # https://github.com/letoram/arcan/pull/205
-PATCHFILES+=	d6b52b1b3601.patch:-p2 # https://github.com/letoram/arcan/pull/205
-PATCHFILES+=	d8a262d6d19a.patch:-p2 # https://github.com/letoram/arcan/pull/205
-PATCHFILES+=	f724b748cc72.patch:-p2 # https://github.com/letoram/arcan/pull/205
-PATCHFILES+=	06ca1fd319bf.patch:-p2 # https://github.com/letoram/arcan/pull/209
+PATCHFILES+=	347240c18313.patch:-p2 # https://github.com/letoram/arcan/pull/229
+PATCHFILES+=	bbdb86c8be1b.patch:-p2 # https://github.com/letoram/arcan/pull/230
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Display Server, Multimedia Framework, Game Engine
 
-LICENSE=	BSD3CLAUSE GPLv2+ LGPL21
+LICENSE=	BSD3CLAUSE GPLv2+ LGPL21+
 LICENSE_COMB=	multi
 LICENSE_FILE_BSD3CLAUSE=${WRKSRC:H}/data/distr/LICENSE.BSD
 LICENSE_FILE_GPLv2+ =	${WRKSRC:H}/data/distr/LICENSE.GPL
@@ -41,8 +35,6 @@ LDFLAGS_i386=	-Wl,-z,notext
 
 OPTIONS_DEFINE=	ESPEAK FFMPEG LUAJIT SDL SUID TESSERACT UVC VLC VNC WAYLAND
 OPTIONS_DEFAULT=ESPEAK FFMPEG LUAJIT SDL SUID TESSERACT UVC VLC VNC WAYLAND
-OPTIONS_EXCLUDE_aarch64=	LUAJIT # bug 225342
-OPTIONS_EXCLUDE_powerpc64=	LUAJIT
 OPTIONS_SUB=	yes
 
 ESPEAK_DESC=		Text to speech via eSpeak
@@ -51,7 +43,7 @@ ESPEAK_LIB_DEPENDS=	libespeak.so:audio/espeak
 FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 
 LUAJIT_DESC=		Use LuaJIT instead of standard Lua
-LUAJIT_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit
+LUAJIT_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
 LUAJIT_USES_OFF=	lua:51
 LUAJIT_CMAKE_BOOL_OFF=	DISABLE_JIT
 

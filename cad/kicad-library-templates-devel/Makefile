@@ -1,12 +1,13 @@
 # Created by: Thierry Thomas <thierry@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	kicad
 DISTVERSION=	r${GIT_TMPL_DATE}
 PORTREVISION=	1
 #PORTREVISION=	1
 CATEGORIES=	cad
+MASTER_SITES=   https://gitlab.com/kicad/libraries/${PORTNAME}-templates/-/archive/${GL_COMMIT}/
 PKGNAMESUFFIX=	-library-tmpl-devel
+DISTNAME=	${PORTNAME}-templates-${GL_COMMIT}
 
 MAINTAINER=	mr@FreeBSD.org
 COMMENT=	Official KiCad project templates
@@ -17,10 +18,10 @@ RUN_DEPENDS=	kicad:cad/kicad-devel
 
 CONFLICTS=	kicad-4.*
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	KiCad
-GH_PROJECT=	kicad-templates
-GH_TAGNAME=	${GIT_TMPL_HASH}
+USE_GITLAB=	nodefault
+GL_ACCOUNT=	kicad
+GL_PROJECT=	kicad/libraries
+GL_COMMIT=	${GIT_TMPL_HASH}
 
 USES=		cmake
 

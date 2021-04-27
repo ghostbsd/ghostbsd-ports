@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	azure-cli-base
 PORTVERSION=	1.0.0
@@ -13,7 +12,7 @@ LICENSE=	MIT
 
 NO_BUILD=	yes
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	flavors py3kplist
 
 do-install:

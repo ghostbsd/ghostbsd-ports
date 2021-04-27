@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	cryptominisat
 DISTVERSION=	5.8.0
@@ -15,7 +14,7 @@ LICENSE_FILE_MIT=	${WRKSRC}/../LICENSE.txt
 
 LIB_DEPENDS=	libcryptominisat5.so:math/cryptominisat
 
-USES=		compiler:c++11-lib python
+USES=		compiler:c++11-lib python:3.6+
 USE_PYTHON=	autoplist distutils
 USE_GITHUB=	yes
 
@@ -35,6 +34,6 @@ post-patch:
 	${CP} ${WRKSRC}/src/pycryptosat.cpp.in ${WRKSRC}/src/pycryptosat.cpp
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/pycryptosat.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/pycryptosat*.so
 
 .include <bsd.port.mk>

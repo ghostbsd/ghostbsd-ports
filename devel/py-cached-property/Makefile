@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	cached-property
 PORTVERSION=	1.5.1
@@ -12,7 +11,7 @@ COMMENT=	Decorator for caching properties in classes
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

@@ -1,5 +1,4 @@
 # Created by: Loïc BARTOLETTI <lbartoletti@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pyqtree
 PORTVERSION=	0.24
@@ -15,7 +14,7 @@ LICENSE=	MIT
 
 NO_ARCH=	yes
 
-USES=		python zip
+USES=		python:3.6+ zip
 USE_PYTHON=	autoplist concurrent distutils
 
 .include <bsd.port.mk>

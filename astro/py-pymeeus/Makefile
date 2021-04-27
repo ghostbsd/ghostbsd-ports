@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	pymeeus
 PORTVERSION=	0.3.6
@@ -15,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
 
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

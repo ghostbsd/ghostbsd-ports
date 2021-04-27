@@ -1,5 +1,4 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD$
 
 PORTNAME=	pylibmc
 PORTVERSION=	1.6.0
@@ -17,13 +16,13 @@ LIB_DEPENDS=	libmemcached.so:databases/libmemcached
 TEST_DEPENDS=	memcached:databases/memcached \
 		${PYTHON_PKGNAMEPREFIX}nose>0:devel/py-nose@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 MAKE_ENV+=	LIBMEMCACHED="${LOCALBASE}"
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/_pylibmc.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/_pylibmc*.so
 
 # Note: memcached needs to be running first for this to work
 

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	fastentrypoints
 PORTVERSION=	0.9
@@ -12,7 +11,7 @@ COMMENT=	Makes entry_points specified in setup.py load more quickly
 
 LICENSE=	BSD2CLAUSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 NO_ARCH=	yes
 

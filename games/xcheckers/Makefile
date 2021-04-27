@@ -1,5 +1,4 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD$
 
 PORTNAME=	xcheckers
 PORTVERSION=	2.2.3
@@ -9,6 +8,9 @@ MASTER_SITES=	http://arton.cunst.net/xcheckers/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Checkers game for X11
+
+BROKEN_FreeBSD_13=	duplicate symbol: board
+BROKEN_FreeBSD_14=	duplicate symbol: board
 
 USES=		imake xorg
 USE_XORG=	x11 xext xpm

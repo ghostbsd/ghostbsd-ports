@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	cadabra2
-DISTVERSION=	2.3.5
+DISTVERSION=	2.3.6.8
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -25,13 +24,15 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	kpeeters
 DOS2UNIX_FILES=	cmake/version.cmake
 USE_GNOME=	glib20 glibmm libsigc++20
-USE_TEX=	base texmf texhash
+USE_TEX=	base latex texmf texhash
 OPTIONS_SUB=	yes
 
 CMAKE_ON=	ENABLE_SYSTEM_JSONCPP USE_PYTHON_3 # OFF doesn't work, still links to python3: https://github.com/kpeeters/cadabra2/issues/76
 CMAKE_OFF=	ENABLE_MATHEMATICA
 CXXFLAGS+=	-I${LOCALBASE}/include/jsoncpp
 LDFLAGS+=	-ljsoncpp
+
+PLIST_SUB=	_PY_SONAME=${_PY_SONAME}
 
 OPTIONS_DEFINE=	GUI
 OPTIONS_DEFAULT=	GUI
@@ -41,7 +42,15 @@ GUI_USE=	GNOME=gtkmm30,gdkpixbuf2
 GUI_CMAKE_BOOL=	ENABLE_FRONTEND
 GUI_VARS=	INSTALLS_ICONS=yes
 
+.include <bsd.port.pre.mk>
+
+.if ${PYTHON_REL} < 3800
+_PY_SONAME=	.cpython-${PYTHON_SUFFIX}m
+.else
+_PY_SONAME=	${PYTHON_EXT_SUFFIX}
+.endif
+
 post-extract: # unbundle
 	@${RM} -r ${WRKSRC}/libs/jsoncpp ${WRKSRC}/libs/websocketpp
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	yapf
 PORTVERSION=	0.30.0
@@ -13,7 +12,7 @@ LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	concurrent distutils autoplist
 DO_MAKE_TEST=	${SETENV} ${TEST_ENV} ${PYTHON_CMD} ${PYDISTUTILS_SETUP}
 TEST_TARGET=	test

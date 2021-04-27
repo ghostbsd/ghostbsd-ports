@@ -1,8 +1,7 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD$
 
 PORTNAME=	ng_ipacct
-PORTVERSION=	20180401
+PORTVERSION=	20210316
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	vsevolod@FreeBSD.org
@@ -12,6 +11,7 @@ LICENSE=	BSD2CLAUSE
 
 BROKEN_armv6=		fails to build: ng_ipacct_hash.h:52:2: implicit declaration of function 'MALLOC' is invalid in C99
 BROKEN_armv7=		fails to build: ng_ipacct_hash.h:52:2: implicit declaration of function 'MALLOC' is invalid in C99
+BROKEN_riscv64=		fails to build: ng_ipacct.c:972:2: error: implicit declaration of function 'INP_HASH_RLOCK' is invalid in C99
 
 USE_GITHUB=	yes
 USES=		kmod uidfix

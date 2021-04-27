@@ -1,5 +1,4 @@
 # Created by: Johannes Jost Meixner <johannes@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	msrestazure
 DISTVERSION=	0.6.3
@@ -15,7 +14,7 @@ LICENSE=	MIT
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}msrest>0.6.0:net-mgmt/py-msrest@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}adal>0.6.0:net-mgmt/py-adal@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

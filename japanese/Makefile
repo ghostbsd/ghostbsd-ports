@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 
     COMMENT = Japanese support
 
@@ -58,6 +56,7 @@
     SUBDIR += fcitx-anthy
     SUBDIR += fcitx-mozc
     SUBDIR += fcitx-skk
+    SUBDIR += fcitx5-anthy
     SUBDIR += flower-fpw
     SUBDIR += foldoc-fpw
     SUBDIR += font-aozoramincho
@@ -69,6 +68,7 @@
     SUBDIR += font-genjyuugothic
     SUBDIR += font-genshingothic
     SUBDIR += font-hackgen
+    SUBDIR += font-hackgen-nerd
     SUBDIR += font-ipa
     SUBDIR += font-ipa-uigothic
     SUBDIR += font-ipaex
@@ -213,7 +213,6 @@
     SUBDIR += plan
     SUBDIR += prn
     SUBDIR += py-jaconv
-    SUBDIR += py-zinnia
     SUBDIR += qkc
     SUBDIR += quit
     SUBDIR += roget-fpw

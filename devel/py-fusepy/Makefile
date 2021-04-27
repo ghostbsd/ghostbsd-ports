@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	fusepy
 PORTVERSION=	3.0.1
@@ -6,7 +5,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	jbeich@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple ctypes bindings for FUSE
 
 LICENSE=	ISCL
@@ -14,7 +13,7 @@ LICENSE=	ISCL
 CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}fusefs # fuse.py
 
 NO_ARCH=	yes
-USES=		fuse python
+USES=		fuse python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

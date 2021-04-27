@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	mod_wsgi
 DISTVERSION=	4.7.0
@@ -11,7 +10,7 @@ COMMENT=	Python WSGI adapter module for Apache
 
 LICENSE=	APACHE20
 
-USES=		apache:2.4+ gettext python
+USES=		apache:2.4+ gettext python:3.6+
 USE_PYTHON=	flavors
 
 GNU_CONFIGURE=	yes

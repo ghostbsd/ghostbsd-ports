@@ -1,5 +1,4 @@
 # Created by: ismail@enderunix.org
-# $FreeBSD$
 
 PORTNAME=	eps
 PORTVERSION=	1.7
@@ -11,6 +10,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Email Parsing System
 
 BROKEN_aarch64=		fails to link: can't create dynamic relocation R_AARCH64_ABS64 against symbol: content_prefs in readonly segment
+BROKEN_riscv64=		fails to link: can't create dynamic relocation R_RISCV_HI20 against symbol: .Lswitch.table.content_parse in readonly segment
 
 OPTIONS_DEFINE=	DOCS
 

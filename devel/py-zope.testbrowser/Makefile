@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	zope.testbrowser
 PORTVERSION=	5.5.1
@@ -18,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mechanize>=0.2.0:www/py-mechanize@${PY_FLAVO
 		${PYTHON_PKGNAMEPREFIX}pytz>=0:devel/py-pytz@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}WebTest>=0:www/py-WebTest@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

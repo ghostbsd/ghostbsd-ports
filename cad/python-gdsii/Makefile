@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	python-gdsii
 PORTVERSION=	0.2.1
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LGPL-3
 
 RUN_DEPENDS=    ${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 NO_ARCH=	yes
 

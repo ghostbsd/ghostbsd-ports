@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	hglib
 PORTVERSION=	2.6.1
@@ -15,7 +14,7 @@ LICENSE=	MIT
 
 RUN_DEPENDS+=	${PY_MERCURIAL}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

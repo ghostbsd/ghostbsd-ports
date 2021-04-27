@@ -1,8 +1,8 @@
 # Created by: Olivier Duchateau
-# $FreeBSD$
 
 PORTNAME=	xfce4-pulseaudio-plugin
 PORTVERSION=	0.4.3
+PORTREVISION=	1
 CATEGORIES=	audio xfce
 MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4
@@ -14,7 +14,8 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libpulse-mainloop-glib.so:audio/pulseaudio \
 		libdbus-1.so:devel/dbus \
-		libdbus-glib-1.so:devel/dbus-glib
+		libdbus-glib-1.so:devel/dbus-glib \
+		libnotify.so:devel/libnotify
 RUN_DEPENDS=	pavucontrol>=2.0:audio/pavucontrol
 
 USES=		compiler:c11 gettext-tools gmake gnome libtool pkgconfig \

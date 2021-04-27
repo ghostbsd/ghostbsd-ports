@@ -1,5 +1,4 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	avro
 PORTVERSION=	1.10.1
@@ -13,7 +12,7 @@ COMMENT=	Data serialization system for python
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/avro/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

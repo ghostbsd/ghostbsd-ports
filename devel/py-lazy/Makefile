@@ -1,5 +1,4 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	lazy
 PORTVERSION=	1.4
@@ -13,7 +12,7 @@ COMMENT=	Lazy attributes for Python objects
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python zip
+USES=		python:3.6+ zip
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

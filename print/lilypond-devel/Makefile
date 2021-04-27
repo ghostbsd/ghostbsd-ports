@@ -1,8 +1,7 @@
 # Created by: patrick, trevor
-# $FreeBSD$
 
 PORTNAME=	lilypond
-DISTVERSION=	2.21.81
+DISTVERSION=	2.23.1
 CATEGORIES=	print audio
 MASTER_SITES=	http://lilypond.org/download/source/v${DISTVERSION:R}/
 PKGNAMESUFFIX=	-devel
@@ -26,21 +25,19 @@ BUILD_DEPENDS=	bash:shells/bash \
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libgmp.so:math/gmp \
-		libguile.so:lang/guile1 \
 		libltdl.so:devel/libltdl
 RUN_DEPENDS=	${LOCALBASE}/share/fonts/dejavu/DejaVuSans-Bold.ttf:x11-fonts/dejavu \
 		mftrace:print/mftrace
 
-USES=		bison:build compiler:c++11-lib ghostscript gmake gnome \
-		perl5 pkgconfig python:3.5+
+USES=		bison:build compiler:c++11-lib ghostscript gmake gnome perl5 \
+		pkgconfig python:3.5+
 USE_CXXSTD=	c++11
 USE_GNOME=	pango
 USE_PERL5=	build
 USE_TEX=	latex texmf
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-texgyre-dir=${LOCALBASE}/${TEXMFDISTDIR}/fonts/opentype/public/tex-gyre \
-			--without-urwotf-dir
+CONFIGURE_ARGS+=	--with-texgyre-dir=${LOCALBASE}/${TEXMFDISTDIR}/fonts/opentype/public/tex-gyre
 CONFIGURE_ENV+=		ac_cv_prog_MAKEINFO="${LOCALBASE}/bin/makeinfo" \
 			FLEX=${FLEX} \
 			HOME=${WRKDIR} \
@@ -51,24 +48,34 @@ ALL_TARGET=	all
 
 BINARY_ALIAS=	python=${PYTHON_VERSION}
 
-INFO=		internals \
-				lilypond-changes \
-				lilypond-contributor \
-				lilypond-essay \
-				lilypond-extending \
-				lilypond-internals \
-				lilypond-learning \
-				lilypond-notation \
-				lilypond-snippets \
-				lilypond-usage \
-				lilypond-web \
-				music-glossary
+INFO=		lilypond-changes \
+		lilypond-contributor \
+		lilypond-essay \
+		lilypond-extending \
+		lilypond-internals \
+		lilypond-learning \
+		lilypond-notation \
+		lilypond-snippets \
+		lilypond-usage \
+		music-glossary
 PLIST_SUB=	DISTVERSION=${DISTVERSION}
 
-OPTIONS_DEFINE=	NLS
+OPTIONS_DEFINE=	GUILE2 NLS URW
 OPTIONS_SUB=	yes
 
+GUILE2_DESC=	Use guile2 (will incur some performance penalty)
+URW_DESC=	Use bundled URW fonts
+
+GUILE2_LIB_DEPENDS=	libgc-threaded.so:devel/boehm-gc-threaded \
+			libguile-2.2.so:lang/guile2
+GUILE2_LIB_DEPENDS_OFF=	libguile.so:lang/guile1
+
 NLS_USES=	gettext
+
+URW_BUILD_DEPENDS=	urw-core35-fonts>0:x11-fonts/urw-core35-fonts
+URW_RUN_DEPENDS_OFF=	urw-core35-fonts>0:x11-fonts/urw-core35-fonts
+
+URW_CONFIGURE_WITH=	urwotf-dir=${LOCALBASE}/share/fonts/urw-core35-fonts
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|<FlexLexer.h>|"/usr/include/FlexLexer.h"|' \

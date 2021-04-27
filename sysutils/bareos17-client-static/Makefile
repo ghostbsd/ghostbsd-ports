@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	bareos
 PKGNAMESUFFIX=	17-client-static
@@ -6,7 +5,7 @@ PKGNAMESUFFIX=	17-client-static
 COMMENT=	Backup archiving recovery open sourced (static client)
 
 BROKEN_aarch64=	Fails to link: missing sbrk
-BROKEN_FreeBSD_13_powerpc64=	fails to compile: bsnprintf.c:621:16: static declaration of 'round' follows non-static declaration
+BROKEN_riscv64=	Fails to link: missing sbrk
 
 CONFLICTS=	bareos16-client-static-*
 

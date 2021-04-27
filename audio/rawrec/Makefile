@@ -1,5 +1,4 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	rawrec
 PORTVERSION=	0.9.991
@@ -8,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	SUNSITE/apps/sound/recorders \
 		SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	antonfb@hesiod.org
 COMMENT=	Utility to record and playback raw audio data
 
 LICENSE=	GPLv2+

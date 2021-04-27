@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 
     COMMENT = X11 window managers
 
@@ -52,6 +50,7 @@
     SUBDIR += jewel
     SUBDIR += jwm
     SUBDIR += kickshaw
+    SUBDIR += labwc
     SUBDIR += larswm
     SUBDIR += libcompizconfig
     SUBDIR += libdockapp

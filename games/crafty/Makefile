@@ -1,5 +1,4 @@
 # Created by: Stefan Eggers <seggers@semyam.dinoco.de>
-# $FreeBSD$
 
 PORTNAME=	crafty
 PORTVERSION=	25.2
@@ -22,6 +21,7 @@ BROKEN_armv7=		fails to compile: invokes amd64 assembler
 BROKEN_i386=		fails to compile: invokes amd64 assembler
 BROKEN_mips=		fails to compile: unrecognized command line option "-mpopcnt"
 BROKEN_mips64=		fails to compile: unrecognized command line option "-mpopcnt"
+BROKEN_riscv64=		fails to compile: invokes amd64 assembler
 
 USES=		gmake zip
 

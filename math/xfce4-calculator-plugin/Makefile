@@ -1,8 +1,7 @@
 # Created by: Olivier Duchateau
-# $FreeBSD$
 
 PORTNAME=	xfce4-calculator-plugin
-PORTVERSION=	0.7.0
+PORTVERSION=	0.7.1
 PORTREVISION=	1
 CATEGORIES=	math xfce
 MASTER_SITES=	XFCE/panel-plugins

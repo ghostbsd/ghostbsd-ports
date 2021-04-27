@@ -1,8 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	musicpd
-PORTVERSION=	0.22.3
-PORTREVISION=	1
+PORTVERSION=	0.22.6
 CATEGORIES=	audio
 MASTER_SITES=	https://www.musicpd.org/download/mpd/${PORTVERSION:R}/
 DISTNAME=	mpd-${PORTVERSION}
@@ -13,19 +11,15 @@ COMMENT=	Remote-controllable music daemon
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/sphinx-build:textproc/py-sphinx@${PY_FLAVOR}
 LIB_DEPENDS=	libboost_iostreams.so:devel/boost-libs \
 		libicudata.so:devel/icu
 
-USES=		compiler:c++17-lang gnome localbase:ldflags meson pkgconfig \
+USES=		compiler:c++17-lang localbase:ldflags meson pkgconfig \
 		python:build tar:xz
-
-USE_GNOME=	glib20
 
 USE_RC_SUBR=	${PORTNAME}
 MESON_ARGS=	-Dauto_features=disabled \
 		-Dbzip2=enabled \
-		-Ddocumentation=enabled \
 		-Dhttpd=true \
 		-Dicu=enabled \
 		-Doss=enabled \
@@ -37,8 +31,10 @@ PORTDOCS=	AUTHORS README.md NEWS
 
 SUB_FILES=	pkg-message
 
-OPTIONS_DEFINE=	DOCS ID3TAG IPV6 ISO9660 SQLITE3 \
-		PROXYDB LAME VORBISENC ZZIP
+OPTIONS_SUB=	yes
+
+OPTIONS_DEFINE=	DOCS ID3TAG IPV6 ISO9660 MANPAGES SQLITE3 \
+		PROXYDB VORBISENC ZZIP
 
 OPTIONS_RADIO=	RESAMPLER ZEROCONF
 
@@ -50,12 +46,12 @@ OPTIONS_MULTI=	DOCUMENTATION FILE_FORMAT
 OPTIONS_MULTI_FILE_FORMAT=	\
 			ADPLUG AUDIOFILE FAAD FFMPEG FLAC FLUIDSYNTH \
 			GME MAD MIKMOD MODPLUG MPG123 MUSEPACK \
-			OPUS SIDPLAY2 SNDFILE TWOLAME \
+			OPUS SIDPLAY SNDFILE TWOLAME \
 			VORBIS WAVPACK WILDMIDI
 
 OPTIONS_GROUP=	ACCESS PLAYBACK
 
-OPTIONS_GROUP_ACCESS=	CDPARANOIA CURL MMS NFS PLAYLISTS QOBUZ \
+OPTIONS_GROUP_ACCESS=	CDPARANOIA CURL LAME MMS NFS PLAYLISTS QOBUZ \
 			SMB SOUNDCLOUD TIDAL YAJL
 
 OPTIONS_GROUP_PLAYBACK=	AO JACK OPENAL PULSEAUDIO \
@@ -69,7 +65,8 @@ PROXYDB_DESC=	Proxy database support via libmpdclient
 LAME_DESC=	Support for MP3 Icecast Streams
 PLAYLISTS_DESC=	Enable extra playlist support (wma, RSS)
 QOBUZ_DESC=	Streaming service support: Qobuz
-SIDPLAY2_DESC=	Sidplay support (C64 mono and stereo files)
+SIDPLAY_DESC=	Sidplay support (C64 mono and stereo files)
+SMB_DESC=	SMB network support (currently strongly discouraged)
 SOUNDCLOUD_DESC=Streaming service support: SoundCloud
 TIDAL_DESC=	Streaming service support: TIDAL (currently defunct)
 TWOLAME_DESC=	TwoLAME support (mp2)
@@ -78,8 +75,11 @@ WILDMIDI_DESC=	WildMIDI support (MIDI files)
 YAJL_DESC=	JSON support via libyajl
 ZZIP_DESC=	Support for zzip archives
 
-OPTIONS_DEFAULT=CURL FFMPEG FLAC ID3TAG LAME OPUS \
-		PLAYLISTS SNDFILE VORBIS VORBISENC
+OPTIONS_DEFAULT=CURL FFMPEG FLAC ID3TAG LAME MANPAGES OPUS \
+		PLAYLISTS PROXYDB SNDFILE VORBIS VORBISENC
+
+MANPAGES_MESON_ENABLED=	documentation
+MANPAGES_BUILD_DEPENDS=	${LOCALBASE}/bin/sphinx-build:textproc/py-sphinx@${PY_FLAVOR}
 
 # Decoder plugins
 ADPLUG_MESON_ENABLED=	adplug
@@ -115,9 +115,9 @@ OPUS_LIB_DEPENDS=	libopus.so:audio/opus \
 			libogg.so:audio/libogg
 PLAYLISTS_MESON_ENABLED=expat
 PLAYLISTS_LIB_DEPENDS=	libexpat.so:textproc/expat2
-SIDPLAY2_MESON_ENABLED=	sidplay
-SIDPLAY2_LIB_DEPENDS=	libsidplay2.so:audio/libsidplay2
-SIDPLAY2_LDFLAGS=	-L${LOCALBASE}/lib/sidplay/builders
+SIDPLAY_MESON_ENABLED=	sidplay
+SIDPLAY_LIB_DEPENDS=	libsidplayfp.so:audio/libsidplayfp
+SIDPLAY_CXXFLAGS=	-D_LIBCPP_ENABLE_CXX17_REMOVED_AUTO_PTR
 SNDFILE_MESON_ENABLED=	sndfile
 SNDFILE_LIB_DEPENDS=	libsndfile.so:audio/libsndfile
 VORBIS_MESON_ENABLED=	vorbis
@@ -196,7 +196,7 @@ SOUNDCLOUD_IMPLIES=	CURL YAJL
 TIDAL_MESON_ENABLED=	tidal
 TIDAL_IMPLIES=		CURL YAJL
 
-# Misc library suppore
+# Misc library support
 AVAHI_MESON_ON=		-Dzeroconf=avahi
 AVAHI_LIB_DEPENDS=	libavahi-client.so:net/avahi-app
 MDNSRESPONDER_MESON_ON=		-Dzeroconf=bonjour
@@ -259,10 +259,12 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/_build/mpd \
 		${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+.if ${PORT_OPTIONS:MMANPAGES}
 	${INSTALL_MAN} ${WRKSRC}/_build/doc/${PORTNAME}.1 \
 		${STAGEDIR}${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/_build/doc/${PORTNAME}.conf.5 \
 		${STAGEDIR}${PREFIX}/man/man5
+.endif
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}/
 	${INSTALL_DATA} ${WRKSRC}/doc/mpdconf.example \

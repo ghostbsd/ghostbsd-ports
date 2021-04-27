@@ -1,8 +1,7 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	storj
-PORTVERSION=	1.18.1
+PORTVERSION=	1.25.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net
 
@@ -21,11 +20,6 @@ STORJ_CMDS=	certificates identity inspector metric-receiver multinode \
 		storj-admin storj-sim uplink versioncontrol
 
 GO_TARGET=	${STORJ_CMDS:S,^,./cmd/,}
-
-post-patch:
-# Unbreak the build on 32-bit architectures
-	@${REINPLACE_CMD} -e 's,1 << 31,1 << 30,' \
-		${WRKSRC}/cmd/storj-sim/main.go
 
 post-stage:
 # Avoid conflict with `graphics/mesa-demos'

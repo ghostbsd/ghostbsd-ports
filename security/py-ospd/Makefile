@@ -1,12 +1,11 @@
-# $FreeBSD$
 
 PORTNAME=	ospd
-DISTVERSION=	20.8.1
+DISTVERSION=	20.8.2
 CATEGORIES=	security net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	yuri@FreeBSD.org
+MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Base for scanner wrappers for OSP (Open Scanner Protocol)
 
 LICENSE=	GPLv2+
@@ -18,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}defusedxml>0:devel/py-defusedxml@${PY_FLAVOR
 		${PYTHON_PKGNAMEPREFIX}paramiko>0:security/py-paramiko@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

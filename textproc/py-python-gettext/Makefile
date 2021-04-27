@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	python-gettext
 PORTVERSION=	3.0
@@ -12,7 +11,7 @@ COMMENT=	Python Gettext po to mo file compiler
 LICENSE=	BSD2CLAUSE
 
 NO_ARCH=	yes
-USES=		python zip
+USES=		python:3.6+ zip
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

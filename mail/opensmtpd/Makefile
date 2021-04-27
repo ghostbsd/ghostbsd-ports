@@ -1,9 +1,8 @@
 # Created by: Ashish SHUKLA <ashish@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	opensmtpd
-PORTVERSION=	6.7.1
-DISTVERSIONSUFFIX=	p1
+PORTVERSION=	6.8.0
+DISTVERSIONSUFFIX=	p2
 PORTEPOCH=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.opensmtpd.org/archives/

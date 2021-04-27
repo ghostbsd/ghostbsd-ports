@@ -1,5 +1,4 @@
 # Created by: Jon M. Dugan <jdugan@x1024.net>
-# $FreeBSD$
 
 PORTNAME=	thrift
 PORTVERSION=	${THRIFT_PORTVERSION} # to keep in sync with thrift
@@ -16,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/../../LICENSE
 
 DISTINFO_FILE=	${PORTSDIR}/devel/thrift/distinfo
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/lib/py

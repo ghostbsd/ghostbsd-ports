@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	tuir
 DISTVERSION=	1.29.0
@@ -7,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	vulcan@wired.sh
+MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Browse Reddit from your terminal
 
 LICENSE=	MIT

@@ -1,8 +1,7 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	parole
-PORTVERSION=	1.0.5
+PORTVERSION=	4.16.0
 CATEGORIES=	multimedia xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4

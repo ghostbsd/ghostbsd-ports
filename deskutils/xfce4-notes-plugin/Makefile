@@ -1,5 +1,4 @@
 # Created by: Thorsten Greiner <thorsten.greiner@web.de>
-# $FreeBSD$
 
 PORTNAME=	xfce4-notes-plugin
 PORTVERSION=	1.8.1
@@ -12,6 +11,8 @@ MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Notes plugin for the Xfce panel
 
 LICENSE=	GPLv2
+
+BROKEN=		Depends on removed XFCE GTK2 support
 
 LIB_DEPENDS=	libunique-1.0.so:x11-toolkits/unique \
 		libfontconfig.so:x11-fonts/fontconfig \

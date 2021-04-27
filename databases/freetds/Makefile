@@ -1,8 +1,7 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD$
 
 PORTNAME=	freetds
-PORTVERSION=	1.2.12
+PORTVERSION=	1.2.18
 PORTEPOCH=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://www.freetds.org/files/stable/ \

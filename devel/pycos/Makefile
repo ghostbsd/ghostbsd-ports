@@ -1,5 +1,4 @@
 # Created by: Mikhail Teterin
-# $FreeBSD$
 
 PORTNAME=	pycos
 PORTVERSION=	4.8.11
@@ -14,7 +13,7 @@ COMMENT=	Concurrent, Asynchronous, Distributed, Communicating Tasks with Python
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 NO_ARCH=	yes
 

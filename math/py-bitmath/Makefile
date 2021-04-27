@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	bitmath
 DISTVERSION=	1.3.3.1
@@ -13,7 +12,7 @@ LICENSE=	MIT
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}progressbar>0:misc/py-progressbar@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

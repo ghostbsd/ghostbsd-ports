@@ -1,5 +1,4 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	uritemplate
 PORTVERSION=	3.0.1
@@ -13,7 +12,7 @@ COMMENT=	Python implementation of URI Template
 
 LICENSE=	APACHE20
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

@@ -1,12 +1,10 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	elasticsearch
 PORTVERSION=	6.8.13
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc java devel
-MASTER_SITES=	https://artifacts.elastic.co/downloads/${PORTNAME}/ \
-		https://ftp.sk.freebsd.org/pub/local/distfiles/
+MASTER_SITES=	https://artifacts.elastic.co/downloads/${PORTNAME}/
 PKGNAMESUFFIX=	6
 
 MAINTAINER=	elastic@FreeBSD.org

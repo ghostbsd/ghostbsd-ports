@@ -1,8 +1,8 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD$
 
 PORTNAME=	xfce4-screenshooter-plugin
-PORTVERSION=	1.9.7
+PORTVERSION=	1.9.8
+PORTREVISION=	1
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/apps
 DISTNAME=	xfce4-screenshooter-${DISTVERSIONFULL}

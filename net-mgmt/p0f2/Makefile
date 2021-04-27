@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	p0f2
 PORTVERSION=	2.0.8
@@ -9,6 +8,9 @@ DISTNAME=	p0f-${DISTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Passive OS fingerprinting tool
+
+BROKEN_FreeBSD_13=	ld: error: duplicate symbol: file_cksum
+BROKEN_FreeBSD_14=	ld: error: duplicate symbol: file_cksum
 
 CONFLICTS=	p0f-3.*
 

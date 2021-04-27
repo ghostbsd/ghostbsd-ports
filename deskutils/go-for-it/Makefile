@@ -1,10 +1,9 @@
-# $FreeBSD$
 
 PORTNAME=	go-for-it
-DISTVERSION=	1.9.0
+DISTVERSION=	1.9.2
 CATEGORIES=	deskutils
 
-MAINTAINER=	neel@neelc.org
+MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Stylish to-do list with built-in productivity timer
 
 LICENSE=	GPLv3+
@@ -14,7 +13,7 @@ BUILD_DEPENDS=	valac:lang/vala
 LIB_DEPENDS=	libcanberra.so:audio/libcanberra \
 		libnotify.so:devel/libnotify
 
-USES=		cmake gettext gnome pkgconfig
+USES=		cmake compiler:c11 gettext gnome pkgconfig
 CMAKE_ARGS=	-DAPP_SYSTEM_NAME:STRING=${PORTNAME}
 USE_GITHUB=	yes
 GH_ACCOUNT=	JMoerman

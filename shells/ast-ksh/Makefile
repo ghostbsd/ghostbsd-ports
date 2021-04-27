@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 # Make sure that your configuration DOES NOT set ANY gcc-related
 # variables.  ksh93 will not compile if you set even the seemingly
@@ -22,6 +21,7 @@ COMMENT=	KornShell 93
 LICENSE=	EPL
 
 BROKEN_aarch64=		Fails to compile: needs sbrk
+BROKEN_riscv64=		Fails to compile: ast-ksh93v/src/lib/libast/hash/hashalloc.c:162:4: non-const lvalue reference to type '__builtin_va_list' cannot bind to a temporary of type 'va_list'
 
 USES=		compiler:c11
 

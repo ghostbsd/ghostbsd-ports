@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	pdfrw
 PORTVERSION=	0.4
@@ -11,7 +10,7 @@ COMMENT=	PDF file reader/writer library
 
 LICENSE=	MIT
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

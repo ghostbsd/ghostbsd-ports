@@ -1,5 +1,4 @@
 # Created by: David Kalliecharan <dave@dal.ca>
-# $FreeBSD$
 
 PORTNAME=	hy
 PORTVERSION=	0.19.0
@@ -22,7 +21,7 @@ PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}astor>=0.8:devel/py-astor@${PY_FLAVOR} \
 BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 NO_ARCH=	yes
 

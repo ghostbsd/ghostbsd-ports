@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 
     COMMENT = Games and related software
 
@@ -19,6 +17,7 @@
     SUBDIR += KnightCap
     SUBDIR += NBlood
     SUBDIR += OpenDiablo2
+    SUBDIR += OpenLara
     SUBDIR += OpenTomb
     SUBDIR += abbayedesmorts
     SUBDIR += abe
@@ -67,6 +66,7 @@
     SUBDIR += atris
     SUBDIR += atris-sounds
     SUBDIR += auralquiz
+    SUBDIR += automuteus
     SUBDIR += avanor
     SUBDIR += avoision
     SUBDIR += avp
@@ -183,8 +183,6 @@
     SUBDIR += d2x
     SUBDIR += dMagnetic
     SUBDIR += dangen
-    SUBDIR += dangerdeep
-    SUBDIR += dangerdeep-data
     SUBDIR += darkplaces
     SUBDIR += defendguin
     SUBDIR += devilutionX
@@ -193,6 +191,7 @@
     SUBDIR += digger-vgl
     SUBDIR += divide-and-succeed
     SUBDIR += dmjava
+    SUBDIR += dobutsu
     SUBDIR += dodgindiamond2
     SUBDIR += domination
     SUBDIR += dontspace
@@ -228,6 +227,7 @@
     SUBDIR += el
     SUBDIR += el-data
     SUBDIR += emptyepsilon
+    SUBDIR += endgame-singularity
     SUBDIR += endgame-singularity-music
     SUBDIR += endless-sky
     SUBDIR += endless-sky-high-dpi
@@ -252,6 +252,7 @@
     SUBDIR += falconseye
     SUBDIR += fargoal
     SUBDIR += fbg2
+    SUBDIR += fheroes2
     SUBDIR += fightorperish
     SUBDIR += fillets-ng
     SUBDIR += filters
@@ -289,7 +290,6 @@
     SUBDIR += freeminer
     SUBDIR += freeminer-default
     SUBDIR += freeorion
-    SUBDIR += freera
     SUBDIR += freesweep
     SUBDIR += freesynd
     SUBDIR += freetennis
@@ -307,7 +307,6 @@
     SUBDIR += gbrainy
     SUBDIR += gcompris-qt
     SUBDIR += gemdropx
-    SUBDIR += gemrb
     SUBDIR += genact
     SUBDIR += gigalomania
     SUBDIR += gillo
@@ -318,7 +317,6 @@
     SUBDIR += glest-data
     SUBDIR += glightoff
     SUBDIR += glmaze
-    SUBDIR += glob2
     SUBDIR += glsfcave
     SUBDIR += gltron
     SUBDIR += gmastermind
@@ -445,6 +443,11 @@
     SUBDIR += knetwalk
     SUBDIR += knights
     SUBDIR += kobodeluxe
+    SUBDIR += kodi-addon-game.libretro
+    SUBDIR += kodi-addon-game.libretro.beetle-psx
+    SUBDIR += kodi-addon-game.libretro.genplus
+    SUBDIR += kodi-addon-game.libretro.pcsx-rearmed
+    SUBDIR += kodi-addon-game.libretro.picodrive
     SUBDIR += kolf
     SUBDIR += kollision
     SUBDIR += konquest
@@ -483,6 +486,7 @@
     SUBDIR += libretro-beetle_gba
     SUBDIR += libretro-beetle_lynx
     SUBDIR += libretro-beetle_ngp
+    SUBDIR += libretro-beetle_pce
     SUBDIR += libretro-beetle_pce_fast
     SUBDIR += libretro-beetle_pcfx
     SUBDIR += libretro-beetle_psx
@@ -521,6 +525,7 @@
     SUBDIR += libretro-play
     SUBDIR += libretro-prboom
     SUBDIR += libretro-prosystem
+    SUBDIR += libretro-px68k
     SUBDIR += libretro-quicknes
     SUBDIR += libretro-scummvm
     SUBDIR += libretro-shaders-glsl
@@ -535,6 +540,7 @@
     SUBDIR += libretro-vbanext
     SUBDIR += libretro-vecx
     SUBDIR += libretro-virtualjaguar
+    SUBDIR += libretro-xrick
     SUBDIR += libretro-yabause
     SUBDIR += libshhcards
     SUBDIR += libtmcg
@@ -588,8 +594,8 @@
     SUBDIR += manaplus
     SUBDIR += mancala
     SUBDIR += mangband
+    SUBDIR += marblemarcher
     SUBDIR += mari0
-    SUBDIR += marsnomercy
     SUBDIR += masterserver
     SUBDIR += maxr
     SUBDIR += meandmyshadow
@@ -605,6 +611,7 @@
     SUBDIR += minerbold
     SUBDIR += minetest
     SUBDIR += minetest_game
+    SUBDIR += minetestmapper
     SUBDIR += minilens
     SUBDIR += mirrormagic
     SUBDIR += miscom
@@ -638,7 +645,6 @@
     SUBDIR += nethack36
     SUBDIR += nethack36-nox11
     SUBDIR += netherearth
-    SUBDIR += netpanzer
     SUBDIR += netradiant
     SUBDIR += netrek-BRMH-bin
     SUBDIR += netrek-client-cow
@@ -819,6 +825,7 @@
     SUBDIR += r1q2
     SUBDIR += railroad-rampage
     SUBDIR += rawgl
+    SUBDIR += re3
     SUBDIR += redeclipse
     SUBDIR += redeclipse-data
     SUBDIR += redorblack

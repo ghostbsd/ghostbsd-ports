@@ -1,5 +1,4 @@
 # Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-# $FreeBSD$
 
 PORTNAME=	suds-jurko
 PORTVERSION=	0.6
@@ -16,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 
-USES=		dos2unix python tar:bz2
+USES=		dos2unix python:3.6+ tar:bz2
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

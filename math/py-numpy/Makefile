@@ -1,5 +1,4 @@
 # Created by: Tony Maher
-# $FreeBSD$
 
 PORTNAME=	numpy
 PORTVERSION=	1.16.6
@@ -21,7 +20,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 
-USES=		compiler:c11 fortran python zip
+USES=		compiler:c11 fortran python:3.6+ zip
 USE_PYTHON=	allflavors autoplist concurrent cython distutils
 
 GCCLIBDIR_CMDS=	${FC} -print-file-name=libgfortran.so | ${SED} -e s/libgfortran.so//

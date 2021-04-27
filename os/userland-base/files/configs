@@ -130,7 +130,6 @@ etc/ppp/ppp.conf
 etc/printcap
 etc/profile
 etc/protocols
-etc/rc.devd
 etc/rc.dynamicdiskless
 etc/rc.firewall
 etc/rc.resume

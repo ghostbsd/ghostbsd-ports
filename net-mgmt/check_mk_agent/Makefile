@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	check_mk_agent
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.0p14
+DISTVERSION=	1.6.0p19
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://raw.githubusercontent.com/tribe29/checkmk/${DISTVERSIONFULL}/agents/:agent \
 		https://raw.githubusercontent.com/tribe29/checkmk/${DISTVERSIONFULL}/doc/agents/:doc \

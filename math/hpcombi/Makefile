@@ -1,8 +1,8 @@
 # Created by: thierry@pompo.net
-# $FreeBSD$
 
 PORTNAME=	HPCombi
 PORTVERSION=	0.0.6
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	math devel
 

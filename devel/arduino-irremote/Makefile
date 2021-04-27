@@ -1,14 +1,13 @@
 # Created by: Craig Leres <leres@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	arduino-irremote
-PORTVERSION=	2.5.0
+PORTVERSION=	2.8.1
 CATEGORIES=	devel
 
 MAINTAINER=	leres@FreeBSD.org
 COMMENT=	Multi-protocol infrared remote library for the Arduino
 
-LICENSE=	LGPL21
+LICENSE=	MIT
 
 USES=		dos2unix
 USE_GITHUB=	yes

@@ -1,8 +1,7 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	gcc
-PORTVERSION=	11.0.0.s20201206
+PORTVERSION=	11.0.1.s20210321
 CATEGORIES=	lang
 MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
@@ -14,7 +13,7 @@ COMMENT=	GNU Compiler Collection 11
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
-ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64
+ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 powerpc64le
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \
@@ -67,12 +66,14 @@ CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 CONFIGURE_ENV+=	UNAME_m="powerpc64"
 . if defined(PPC_ABI) && ${PPC_ABI} == ELFv2
 CONFIGURE_ARGS+=	--with-abi=elfv2
-. else
-USE_GCC=	yes
 . endif
+USE_GCC=	yes
+
+.elif ${ARCH} == powerpc64le
+USE_GCC=	yes
 .endif
 
-LANGUAGES:=	c,c++,objc,fortran
+LANGUAGES:=	c,c++,objc,fortran,jit
 TARGLIB=	${PREFIX}/lib/gcc${SUFFIX}
 TARGLIB32=	${PREFIX}/lib32	# The version information is added later
 LIBEXEC=	${PREFIX}/libexec/gcc${SUFFIX}
@@ -90,6 +91,7 @@ BINMODE=	755
 .endif
 CONFIGURE_ARGS+=--disable-nls \
 		--enable-gnu-indirect-function \
+		--enable-host-shared \
 		--enable-plugin \
 		--libdir=${TARGLIB} \
 		--libexecdir=${LIBEXEC} \
@@ -100,7 +102,8 @@ CONFIGURE_ARGS+=--disable-nls \
 		--with-ld=${LOCALBASE}/bin/ld \
 		${ICONV_CONFIGURE_ARG} \
 		--with-pkgversion="FreeBSD Ports Collection" \
-		--with-system-zlib
+		--with-system-zlib \
+		--without-zstd
 MAKE_ARGS+=	MAKEINFOFLAGS="--no-split"
 USE_LDCONFIG=	${TARGLIB}
 PLIST_SUB+=	GCC_VERSION=${GCC_VERSION} \
@@ -112,6 +115,7 @@ INFO=		gcc${SUFFIX}/cpp \
 		gcc${SUFFIX}/gccinstall \
 		gcc${SUFFIX}/gccint \
 		gcc${SUFFIX}/gfortran \
+		gcc${SUFFIX}/libgccjit \
 		gcc${SUFFIX}/libgomp
 .if ${ARCH} == amd64 || ${ARCH} == i386
 INFO+=		gcc${SUFFIX}/libquadmath \

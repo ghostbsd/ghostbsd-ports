@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	mkdocs-nature
 DISTVERSION=	0.2.1
@@ -13,7 +12,7 @@ LICENSE=	BSD2CLAUSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mkdocs>0:textproc/py-mkdocs@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 NO_ARCH=	yes
 

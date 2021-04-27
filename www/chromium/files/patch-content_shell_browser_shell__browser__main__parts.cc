@@ -1,20 +1,20 @@
---- content/shell/browser/shell_browser_main_parts.cc.orig	2020-11-13 06:36:43 UTC
+--- content/shell/browser/shell_browser_main_parts.cc.orig	2021-03-12 23:57:24 UTC
 +++ content/shell/browser/shell_browser_main_parts.cc
-@@ -54,7 +54,7 @@
+@@ -55,7 +55,7 @@
  #if defined(USE_AURA) && defined(USE_X11)
  #include "ui/events/devices/x11/touch_factory_x11.h"  // nogncheck
  #endif
--#if !defined(OS_CHROMEOS) && defined(USE_AURA) && defined(OS_LINUX)
-+#if !defined(OS_CHROMEOS) && defined(USE_AURA) && (defined(OS_LINUX) || defined(OS_BSD))
+-#if defined(USE_AURA) && (defined(OS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
++#if defined(USE_AURA) && (defined(OS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || defined(OS_BSD))
  #include "ui/base/ime/init/input_method_initializer.h"
  #endif
- #if defined(OS_CHROMEOS)
-@@ -141,7 +141,7 @@ int ShellBrowserMainParts::PreEarlyInitialization() {
-   if (!features::IsUsingOzonePlatform())
-     ui::SetDefaultX11ErrorHandlers();
- #endif
--#if !defined(OS_CHROMEOS) && defined(USE_AURA) && defined(OS_LINUX)
-+#if !defined(OS_CHROMEOS) && defined(USE_AURA) && (defined(OS_BSD) || defined(OS_LINUX))
+ #if BUILDFLAG(IS_CHROMEOS_ASH)
+@@ -137,7 +137,7 @@ void ShellBrowserMainParts::PostMainMessageLoopStart()
+ }
+ 
+ int ShellBrowserMainParts::PreEarlyInitialization() {
+-#if defined(USE_AURA) && (defined(OS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
++#if defined(USE_AURA) && (defined(OS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || defined(OS_BSD))
    ui::InitializeInputMethodForTesting();
  #endif
  #if defined(OS_ANDROID)

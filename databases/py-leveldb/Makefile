@@ -1,5 +1,4 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	leveldb
 PORTVERSION=	0.201
@@ -15,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libleveldb.so:databases/leveldb
 
-USES=		compiler:c11 localbase python
+USES=		compiler:c11 localbase python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 post-patch:
@@ -23,6 +22,6 @@ post-patch:
 	@${RM} -r ${WRKSRC}/leveldb/ ${WRKSRC}/snappy/
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/leveldb.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/leveldb*.so
 
 .include <bsd.port.mk>

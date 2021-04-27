@@ -1,5 +1,4 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	repoze.who
 PORTVERSION=	2.4
@@ -19,7 +18,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}webob>=0:www/py-webob@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}zope.interface>=3.5.2:devel/py-zope.interface@${PY_FLAVOR}
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 NO_ARCH=	yes
 

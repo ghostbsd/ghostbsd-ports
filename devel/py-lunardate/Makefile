@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	lunardate
 PORTVERSION=	0.2.0
@@ -12,7 +11,7 @@ COMMENT=	Chinese Calendar Library in Pure Python
 
 LICENSE=	MIT
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

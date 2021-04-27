@@ -1,9 +1,8 @@
 # Created by: swallace
-# $FreeBSD$
 
 PORTNAME=	xinvaders
 PORTVERSION=	2.1.1
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	games
 MASTER_SITES=	SUNSITE/games/arcade/invaders
 

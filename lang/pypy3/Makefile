@@ -1,5 +1,4 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pypy3
 DISTNAME=	${PORTNAME}.6-v${DISTVERSION}-src
@@ -7,7 +6,6 @@ DISTNAME=	${PORTNAME}.6-v${DISTVERSION}-src
 MASTERDIR=	${.CURDIR}/../pypy
 
 WRKSRC=		${WRKDIR}/${PORTNAME}.6-v${DISTVERSION:C/-.*//}-src
-BUILD_WRKSRC?=	${WRKDIR}/build/usession-release-${PORTNAME}.6-v${DISTVERSION:C/-.*//}rc4-0/testing_1
 
 SHEBANG_FILES=	\
 		lib-python/3/base64.py \

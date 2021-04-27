@@ -1,5 +1,4 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pyrad
 PORTVERSION=	2.0
@@ -11,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	steve@energistic.com
 COMMENT=	Python implementation of RADIUS client
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 PORTEXAMPLES=	*

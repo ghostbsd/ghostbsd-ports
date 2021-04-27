@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	patch
 DISTVERSION=	1.16
@@ -11,7 +10,7 @@ COMMENT=	Cross-platform alternative to the UNIX patch utility
 
 LICENSE=	MIT
 
-USES=		python zip
+USES=		python:3.6+ zip
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

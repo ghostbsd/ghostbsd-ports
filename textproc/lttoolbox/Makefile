@@ -1,5 +1,4 @@
 # Created by: Mykola Dzham <freebsd@levsha.org.ua>
-# $FreeBSD$
 
 PORTNAME=	lttoolbox
 PORTVERSION=	${APVER}.${APREV}
@@ -18,7 +17,7 @@ USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 
 APVER=	3.5
-APREV=	1
+APREV=	3
 GH_ACCOUNT=	apertium
 
 GNU_CONFIGURE=	yes

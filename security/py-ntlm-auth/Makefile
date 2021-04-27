@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	ntlm-auth
 DISTVERSION=	1.5.0
@@ -12,7 +11,7 @@ COMMENT=	Create NTLM authentication structures
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 NO_ARCH=	yes
 

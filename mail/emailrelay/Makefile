@@ -1,9 +1,8 @@
 # Created by: Robert Nelson <robertn@the-nelsons.org>
-# $FreeBSD$
 
 PORTNAME=	emailrelay
 PORTVERSION=	1.9
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	SF
 EXTRACT_SUFX=	-src.tar.gz

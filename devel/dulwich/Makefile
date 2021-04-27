@@ -1,5 +1,4 @@
 # Created by: Marco Broeder <marco.broeder@posteo.eu>
-# $FreeBSD$
 
 PORTNAME=	dulwich
 PORTVERSION=	0.19.16
@@ -14,7 +13,7 @@ LICENSE=	APACHE20 GPLv2+
 LICENSE_COMB=	dual
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cpe python
+USES=		cpe python:3.6+
 
 PORTDOCS=	AUTHORS NEWS README.rst TODO conclusion.txt encoding.txt \
 		file-format.txt index.txt introduction.txt object-store.txt \

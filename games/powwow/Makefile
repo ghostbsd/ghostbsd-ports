@@ -1,5 +1,4 @@
 # Created by: Juraj Lutter <otis@sk.freebsd.org>
-# $FreeBSD$
 
 PORTNAME=	powwow
 PORTVERSION=	1.2.22
@@ -7,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	https://hoopajoo.net/static/projects/ \
 		https://ftp.sk.FreeBSD.org/pub/FreeBSD/local/distfiles/
 
-MAINTAINER=	juraj@lutter.sk
+MAINTAINER=	otis@FreeBSD.org
 COMMENT=	Client to play MUDs
 
 LICENSE=	GPLv2

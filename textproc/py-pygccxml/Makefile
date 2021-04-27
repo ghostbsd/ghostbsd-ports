@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	pygccxml
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.0.1
+DISTVERSION=	2.1.0
 CATEGORIES=	textproc python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -12,9 +11,9 @@ COMMENT=	Python package for easy C++ declarations navigation
 LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst
 
-USES=		python
+USES=		python:3.6+
 USE_GITHUB=	yes
-GH_ACCOUNT=	gccxml
+GH_ACCOUNT=	CastXML
 USE_PYTHON=	distutils autoplist
 NO_ARCH=	yes
 

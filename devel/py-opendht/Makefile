@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	opendht
 DISTVERSION=	1.10.1
@@ -22,6 +21,6 @@ USE_PYTHON=	distutils cython autoplist
 WRKSRC_SUBDIR=	python
 
 post-stage:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/opendht.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/opendht*.so
 
 .include <bsd.port.mk>

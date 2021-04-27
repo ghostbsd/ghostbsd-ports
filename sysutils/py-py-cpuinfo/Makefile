@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	py-cpuinfo
 DISTVERSION=	7.0.0
@@ -12,7 +11,7 @@ COMMENT=	Module for getting CPU info with pure Python
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils concurrent autoplist
 
 NO_ARCH=	yes

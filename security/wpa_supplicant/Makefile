@@ -1,15 +1,16 @@
-# $FreeBSD$
 
 PORTNAME=	wpa_supplicant
 PORTVERSION=	2.9
-PORTREVISION=	7
+PORTREVISION=	10
 CATEGORIES=	security net
 MASTER_SITES=	https://w1.fi/releases/
 
-PATCH_SITES=	https://w1.fi/security/2020-1/
+PATCH_SITES=	https://w1.fi/security/2020-1/ \
+		https://w1.fi/security/2021-1/
 PATCHFILES=	0001-WPS-UPnP-Do-not-allow-event-subscriptions-with-URLs-.patch:-p1 \
 		0002-WPS-UPnP-Fix-event-message-generation-using-a-long-U.patch:-p1 \
-		0003-WPS-UPnP-Handle-HTTP-initiation-failures-for-events-.patch:-p1
+		0003-WPS-UPnP-Handle-HTTP-initiation-failures-for-events-.patch:-p1 \
+		0001-P2P-Fix-a-corner-case-in-peer-addition-based-on-PD-R.patch:-p1
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Supplicant (client) for WPA/802.1x protocols
@@ -43,12 +44,13 @@ OPTIONS_DEFINE=		WPS WPS_ER WPS_NOREG WPS_NFC WPS_UPNP PKCS12 SMARTCARD \
 			IEEE80211R DEBUG_FILE DEBUG_SYSLOG PRIVSEP \
 			DELAYED_MIC IEEE80211N IEEE80211AC INTERWORKING \
 			IEEE8021X_EAPOL EAPOL_TEST \
-			HS20 NO_ROAMING P2P TDLS DBUS MATCH DOCS
-OPTIONS_DEFAULT=	BSD WIRED NDIS \
+			HS20 NO_ROAMING P2P TDLS DBUS MATCH DOCS \
+                        SIM_SIMULATOR USIM_SIMULATOR
+OPTIONS_DEFAULT=	BSD WIRED \
 			TLS PEAP TTLS MD5 MSCHAPV2 GTC LEAP OTP PSK \
 			WPS PKCS12 SMARTCARD IEEE80211R DEBUG_SYSLOG \
 			INTERWORKING HS20 DBUS MATCH IEEE80211R IEEE80211W \
-			IEEE8021X_EAPOL WPS_ER WPS_NFC WPS_UPNP NDIS \
+			IEEE8021X_EAPOL WPS_ER WPS_NFC WPS_UPNP \
 			FAST PWD PAX SAKE GPSK TNC IKEV2 EKE
 OPTIONS_SUB=
 
@@ -102,6 +104,8 @@ AKA_DESC=		Autentication and Key Agreement (UMTS)
 AKA_PRIME_DESC=		AKA Prime variant (RFC 5448)
 EKE_DESC=		Encrypted Key Exchange
 SIM_DESC=		Subscriber Identity Module
+SIM_SIMULATOR_DESC=	SIM simulator (Milenage) for EAP-SIM
+USIM_SIMULATOR_DESC=	SIM simulator (Milenage) for EAP-AKA
 IKEV2_DESC=		Internet Key Exchange version 2
 PWD_DESC=		Shared password (RFC 5931)
 PAX_DESC=		Password Authenticated Exchange
@@ -182,6 +186,12 @@ post-patch:
 .endif
 .if ${PORT_OPTIONS:MMATCH}
 	@${ECHO_CMD} CONFIG_MATCH_IFACE=y >> ${CFG}
+.endif
+.if ${PORT_OPTIONS:MUSIM_SIMULATOR}
+	@${ECHO_CMD} CONFIG_USIM_SIMULATOR=y >> ${CFG}
+.endif
+.if ${PORT_OPTIONS:MSIM_SIMULATOR}
+	@${ECHO_CMD} CONFIG_SIM_SIMULATOR=y >> ${CFG}
 .endif
 	@${ECHO_CMD} CONFIG_OS=unix >> ${CFG}
 	@${ECHO_CMD} CONFIG_CTRL_IFACE=unix >> ${CFG}

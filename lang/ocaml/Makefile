@@ -1,5 +1,4 @@
 # Created by: Kiriyama Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
-# $FreeBSD$
 # for committer: bump PORTREVISION for math/facile whenever ocaml gets updated
 
 PORTNAME=	ocaml
@@ -20,6 +19,7 @@ LICENSE_FILE_QPL10=	${WRKSRC}/LICENSE
 LICENSE_PERMS_QPL10=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 BROKEN_aarch64=		Does not build: sh: as: not found
+BROKEN_riscv64=		fails to build: hasgot.c:3:12: use of undeclared identifier 'secure_getenv'
 BROKEN_sparc64=	No rule to make target 'none.o', needed by 'libasmrun.a'
 BROKEN_mips64=	No ASM support
 BROKEN_mips=	No ASM support
@@ -35,6 +35,7 @@ ALL_TARGET=	world.opt
 STRIP=
 SSP_UNSAFE=	yes
 MAKE_JOBS_UNSAFE=	yes
+LDFLAGS_armv6=	-Wl,-znotext
 LDFLAGS_armv7=	-Wl,-znotext
 LDFLAGS_i386=	-Wl,-znotext
 
@@ -109,6 +110,10 @@ EXTRA_PATCHES=	${PATCHDIR}/extra-patch-asmcomp_power_arch.ml
 USE_GCC=	yes
 .endif
 
+.if ${ARCH} == powerpc64le
+USE_GCC=	yes
+.endif
+
 post-extract:
 .if ${PORT_OPTIONS:MDOCS}
 	@if ! (cd ${WRKDIR} && \
@@ -160,7 +165,7 @@ post-install:
 	${INSTALL_DATA} ${_DISTDIR}${DOCSDISTNAME}-refman.pdf ${STAGEDIR}${DOCSDIR}
 .endif
 # Spacetime profiling is only available for native code on 64-bit targets
-.if ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc
+.if ${ARCH} == armv6 || ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc
 	@${REINPLACE_CMD} -e '/raw_spacetime_lib/d' ${TMPPLIST}
 .endif
 

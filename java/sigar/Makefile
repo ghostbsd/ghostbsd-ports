@@ -1,5 +1,4 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	sigar
 PORTVERSION=	1.7.3
@@ -26,6 +25,7 @@ GH_TAGNAME=	b5af695
 USES=		perl5
 USE_PERL5=	build
 USE_JAVA=	yes
+JAVA_VERSION=	8
 JAVA_RUN=	yes
 USE_GCC=	any
 NO_CCACHE=	yes

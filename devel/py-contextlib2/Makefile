@@ -1,5 +1,4 @@
 # Created by: Yuri Victorovich <yuri@rawbw.com>
-# $FreeBSD$
 
 PORTNAME=	contextlib2
 DISTVERSION=	0.6.0.post1
@@ -12,7 +11,7 @@ COMMENT=	Backports and enhancements for the contextlib module
 
 LICENSE=	BSD2CLAUSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

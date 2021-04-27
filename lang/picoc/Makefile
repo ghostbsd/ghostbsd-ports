@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	picoc
 PORTVERSION=	2.1
@@ -9,6 +8,8 @@ MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Very small C interpreter for scripting
 
 LICENSE=	BSD3CLAUSE
+
+BROKEN_riscv64=	Fails to link: missing sbrk
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	zsaleeba

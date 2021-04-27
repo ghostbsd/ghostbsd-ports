@@ -1,6 +1,6 @@
---- base/files/file_util.h.orig	2020-11-13 06:36:34 UTC
+--- base/files/file_util.h.orig	2021-03-12 23:57:15 UTC
 +++ base/files/file_util.h
-@@ -278,14 +278,14 @@ BASE_EXPORT bool SetPosixFilePermissions(const FilePat
+@@ -284,14 +284,14 @@ BASE_EXPORT bool SetPosixFilePermissions(const FilePat
  BASE_EXPORT bool ExecutableExistsInPath(Environment* env,
                                          const FilePath::StringType& executable);
  
@@ -17,7 +17,7 @@
  
  #endif  // OS_POSIX
  
-@@ -592,7 +592,7 @@ BASE_EXPORT bool VerifyPathControlledByAdmin(const bas
+@@ -603,7 +603,7 @@ BASE_EXPORT bool VerifyPathControlledByAdmin(const bas
  // the directory |path|, in the number of FilePath::CharType, or -1 on failure.
  BASE_EXPORT int GetMaximumPathComponentLength(const base::FilePath& path);
  

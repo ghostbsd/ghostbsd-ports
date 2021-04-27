@@ -1,12 +1,11 @@
 # Created by: Eric Turgeon <ericturgeon.bsd@gmail.org>
-# $FreeBSD: head/net-mgmt/networkmgr/Makefile 548386 2020-09-12 18:00:09Z ericbsd $
 
 PORTNAME=	networkmgr
-DISTVERSION=	4.3
+DISTVERSION=	5.3
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	ericbsd@FreeBSD.org
-COMMENT=	FreeBSD/GhostBSD network conection manager
+COMMENT=	FreeBSD/GhostBSD network connection manager
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

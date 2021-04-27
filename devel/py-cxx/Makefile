@@ -1,5 +1,4 @@
 # Created by: ijliao
-# $FreeBSD$
 
 PORTNAME=	cxx
 PORTVERSION=	7.1.4
@@ -14,7 +13,7 @@ COMMENT=	Make it easier to extend Python with C++
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils pythonprefix
 PYDISTUTILS_PKGNAME=	CXX
 

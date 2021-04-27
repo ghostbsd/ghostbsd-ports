@@ -1,9 +1,8 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD$
 
 PORTNAME=	java3d
 PORTVERSION=	1.5.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	java graphics games devel
 MASTER_SITES=	https://sites.google.com/site/daemonwizard/
 

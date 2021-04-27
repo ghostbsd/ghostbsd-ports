@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	argh
 PORTVERSION=	0.26.2
@@ -11,7 +10,7 @@ COMMENT=	Simple (Python) argparse wrapper
 
 LICENSE=	LGPL3
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

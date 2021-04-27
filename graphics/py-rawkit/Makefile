@@ -1,5 +1,4 @@
 # Created by: Martin Neubauer <m.ne@gmx.net>
-# $FreeBSD$
 
 PORTNAME=	rawkit
 PORTVERSION=	0.6.0
@@ -13,7 +12,7 @@ COMMENT=	Ctypes based libraw bindings
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

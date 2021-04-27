@@ -1,8 +1,7 @@
 # Created by: Mahdi Mokhtari <mokhi64@gmail.com>
-# $FreeBSD$
 
 PORTNAME?=	mysql
-PORTVERSION=	5.7.32
+PORTVERSION=	5.7.33
 PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	MYSQL/MySQL-5.7
@@ -172,6 +171,10 @@ CXXFLAGS+=	-fpermissive
 BUILD_DEPENDS+=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 CC=		${LOCALBASE}/bin/clang${LLVM_DEFAULT}
 CXX=		${LOCALBASE}/bin/clang++${LLVM_DEFAULT}
+.endif
+
+.if ${ARCH} == powerpc
+LLD_UNSAFE=	yes
 .endif
 
 post-extract:

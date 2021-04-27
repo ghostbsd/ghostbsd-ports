@@ -1,5 +1,4 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	petname
 PORTVERSION=	2.2
@@ -13,7 +12,7 @@ COMMENT=	Generate human-readable, random object names
 
 LICENSE=	APACHE20
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

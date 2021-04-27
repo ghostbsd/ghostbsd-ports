@@ -1,8 +1,7 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD$
 
 PORTNAME=	ilmbase
-PORTVERSION=	2.5.3
+PORTVERSION=	2.5.5
 CATEGORIES=	graphics devel
 
 MAINTAINER=	mandree@FreeBSD.org
@@ -38,7 +37,7 @@ LARGE_STACK_CONFIGURE_ENABLE=	large-stack
 _MAJORVER=	2_5
 _VER=		25
 _MINVER=	0
-_PLVER=		2
+_PLVER=		4
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libHalf-${_MAJORVER}.so

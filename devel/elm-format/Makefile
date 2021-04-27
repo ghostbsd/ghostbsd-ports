@@ -1,10 +1,8 @@
-# $FreeBSD$
 
 PORTNAME=	elm-format
 PORTVERSION=	0.8.3
 PORTREVISION=	2
 CATEGORIES=	devel textproc
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Elm source code formatter based on the official Elm Style Guide

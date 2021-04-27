@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	got
-PORTVERSION=	0.45
+PORTVERSION=	0.52
 CATEGORIES=	devel
 MASTER_SITES=	https://gameoftrees.org/releases/
 
@@ -13,6 +12,8 @@ LICENSE_FILE=	${WRKSRC}/LICENCE
 
 USES=		uidfix
 
+# Insert #include "openbsd-compat.h" into each source file,
+# after the <...> includes and before the "..." ones.
 n=		${.newline}
 post-extract:
 	@${FIND} ${WRKSRC} -name '*.[cy]' -exec \

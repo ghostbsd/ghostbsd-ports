@@ -1,5 +1,4 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	aws
 PORTVERSION=	17.1
@@ -11,6 +10,9 @@ COMMENT=	Adacore Ada Web Server and framework
 
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
+
+DEPRECATED=	Uses EOL Python 2.7 via devel/gnatpython
+EXPIRATION_DATE=2021-06-23
 
 BUILD_DEPENDS=	gprbuild:devel/gprbuild \
 		xmlada>=4.4:textproc/xmlada \
@@ -119,6 +121,7 @@ CONF_ARGS+=	ENABLE_SHARED=false
 .if ${SSL_DEFAULT} == base
 BROKEN_FreeBSD_12=	undefined reference to `CRYPTO_set_id_callback'
 BROKEN_FreeBSD_13=	undefined reference to `CRYPTO_set_id_callback'
+BROKEN_FreeBSD_14=	undefined reference to `CRYPTO_set_id_callback'
 .endif
 
 post-patch:

@@ -1,5 +1,4 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD$
 
 PORTNAME=	libprelude
 PORTVERSION=	1.2.6
@@ -12,11 +11,13 @@ COMMENT=	Sensor support library from Prelude SIEM
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BROKEN_riscv64=		fails to configure: Easybindings require a C++ compiler, but none were found.
+
 LIB_DEPENDS=	libltdl.so:devel/libltdl \
 		libgnutls.so:security/gnutls \
 		libgcrypt.so:security/libgcrypt
 
-OPTIONS_DEFINE=	DOCS PERL PYTHON
+OPTIONS_DEFINE=	DOCS PERL
 OPTIONS_SUB=	yes
 
 USES=		charsetfix gettext-runtime gmake iconv libtool pathfix pkgconfig
@@ -35,9 +36,6 @@ ETCDIR=		${PREFIX}/etc/prelude
 
 PERL_CONFIGURE_WITH=	perl=${PERL}
 PERL_USES=		perl5
-PYTHON_CONFIGURE_WITH=	python2=${PYTHON_CMD}
-PYTHON_USES=		python:2.7
-PYTHON_PLIST_SUB=	VERSION="${PORTVERSION}"
 
 post-install:
 .for f in client.conf global.conf idmef-client.conf tls.conf

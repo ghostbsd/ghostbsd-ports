@@ -1,13 +1,12 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	chef-utils
-PORTVERSION=	16.6.14
+PORTVERSION=	16.11.7
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Basic utility functions for Core Chef development
+COMMENT=	Basic utility functions for Core Chef Infra development
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

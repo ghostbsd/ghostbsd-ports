@@ -1,5 +1,4 @@
 # Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pyvips
 PORTVERSION=	2.1.12
@@ -18,7 +17,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest-runner>=2.0.0:devel/py-pytest-runne
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cffi>=1.13:devel/py-cffi@${PY_FLAVOR}
 LIB_DEPENDS=	libvips.so:graphics/vips
 
-USES=		gnome pkgconfig python
+USES=		gnome pkgconfig python:3.6+
 
 USE_GNOME=	glib20
 USE_PYTHON=	distutils autoplist

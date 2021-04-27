@@ -1,9 +1,8 @@
 # Created by: Olivier Duchateau
-# $FreeBSD$
 
 PORTNAME=	xfce4-volumed-pulse
 PORTVERSION=	0.2.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4

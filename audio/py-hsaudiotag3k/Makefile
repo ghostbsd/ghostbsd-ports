@@ -1,5 +1,4 @@
 # Created by: Yuri Victorovich <yuri@rawbw.com>
-# $FreeBSD$
 
 PORTNAME=	hsaudiotag3k
 DISTVERSION=	1.1.3.post1
@@ -12,7 +11,7 @@ COMMENT=	Read metdata (tags) of mp3, mp4, wma, ogg, flac and aiff files
 
 LICENSE=	BSD3CLAUSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

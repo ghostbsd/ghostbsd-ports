@@ -1,9 +1,7 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	rtiff
-PORTVERSION=	1.4.7
-PORTREVISION=	1
+PORTVERSION=	1.4.8
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 

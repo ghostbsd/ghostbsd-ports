@@ -1,5 +1,4 @@
 # Created by: Mikhail T. <m.tsatsenko@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	quickfix
 PORTVERSION=	1.15.1
@@ -11,7 +10,6 @@ COMMENT=	Free FIX Protocol Implementation
 
 LICENSE=	GPLv3+
 
-BROKEN_powerpc64=	fails to configure: unable to find set_terminate in std or global namespace
 BROKEN_i386=	fails to build
 
 BUILD_DEPENDS=	bash:shells/bash
@@ -25,7 +23,7 @@ USE_LDCONFIG=	yes
 SHEBANG_FILES=	examples/tradeclientgui/banzai/build.sh
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV=	CXX=${CXX} CC=${CC} LIBS=-L${LOCALBASE}/lib/
-CONFIGURE_ARGS+=	--without-python --without-python3
+CONFIGURE_ARGS+=	--without-python2
 
 OPTIONS_DEFINE=	MYSQL PGSQL PYTHON RUBY JAVA
 OPTIONS_DEFAULT=	MYSQL
@@ -34,8 +32,8 @@ PGSQL_USES=	pgsql
 PGSQL_CONFIGURE_WITH=	postgresql
 MYSQL_USES=	mysql
 MYSQL_CONFIGURE_WITH=	mysql
-PYTHON_USES=	python:2.7
-PYTHON_CONFIGURE_WITH=	python2
+PYTHON_USES=	python:3.7
+PYTHON_CONFIGURE_WITH=	python3
 RUBY_USE=	ruby=yes
 RUBY_CONFIGURE_WITH=	ruby
 RUBY_LIB_DEPENDS+=libunwind.so:devel/libunwind
@@ -43,6 +41,14 @@ JAVA_USE=	java=yes
 JAVA_CONFIGURE_WITH=	java
 
 INSTALL_TARGET=install-strip
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} != amd64 && ${ARCH} != i386
+CXXFLAGS+=	-DENABLE_BOOST_ATOMIC_COUNT
+LIB_DEPENDS+=	libboost_system.so:devel/boost-libs
+USES+=		compiler:c++11-lang localbase
+.endif
 
 post-extract:
 	@${REINPLACE_CMD} -e 's|^make|gmake|' \

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	paramiko
 PORTVERSION=	1.18.5
@@ -15,7 +14,7 @@ LICENSE=	GPLv2
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>0:security/py-cryptography@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ecdsa>0:security/py-ecdsa@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 CONFLICTS_INSTALL=	py??-paramiko-*

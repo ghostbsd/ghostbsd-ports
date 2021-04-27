@@ -11,11 +11,13 @@ bin/promtool
 %%PROMETHEUS_CONSOLES_DIR%%/prometheus.html
 %%PORTDOCS%%%%DOCSDIR%%/configuration/alerting_rules.md
 %%PORTDOCS%%%%DOCSDIR%%/configuration/configuration.md
+%%PORTDOCS%%%%DOCSDIR%%/configuration/https.md
 %%PORTDOCS%%%%DOCSDIR%%/configuration/index.md
 %%PORTDOCS%%%%DOCSDIR%%/configuration/recording_rules.md
 %%PORTDOCS%%%%DOCSDIR%%/configuration/template_examples.md
 %%PORTDOCS%%%%DOCSDIR%%/configuration/template_reference.md
 %%PORTDOCS%%%%DOCSDIR%%/configuration/unit_testing_rules.md
+%%PORTDOCS%%%%DOCSDIR%%/disabled_features.md
 %%PORTDOCS%%%%DOCSDIR%%/federation.md
 %%PORTDOCS%%%%DOCSDIR%%/getting_started.md
 %%PORTDOCS%%%%DOCSDIR%%/images/remote_integrations.png
@@ -32,5 +34,3 @@ bin/promtool
 %%PORTDOCS%%%%DOCSDIR%%/stability.md
 %%PORTDOCS%%%%DOCSDIR%%/storage.md
 @sample etc/prometheus.yml.sample
-@dir(prometheus,prometheus) %%PROMETHEUS_DB_DIR%%
-@dir(root,root) %%PROMETHEUS_LOG_DIR%%

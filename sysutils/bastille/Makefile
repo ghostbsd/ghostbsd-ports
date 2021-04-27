@@ -1,8 +1,7 @@
 # Created by: Christer Edwards <christer.edwards@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	bastille
-PORTVERSION=	0.7.20200714
+PORTVERSION=	0.8.20210115
 CATEGORIES=	sysutils
 
 MAINTAINER=	christer.edwards@gmail.com
@@ -13,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	bastillebsd
-GH_TAGNAME=	5edf9cb
+GH_TAGNAME=	113beb5
 
 NO_BUILD=	yes
 NO_ARCH=	yes

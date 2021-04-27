@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	nanotime
 PORTVERSION=	0.5.2
@@ -11,7 +10,7 @@ COMMENT=	Nanotime python implementation
 
 LICENSE=	MIT
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

@@ -1,5 +1,4 @@
 # Created by: Tony Narlock <tony@git-pull.com>
-# $FreeBSD$
 
 PORTNAME=	libtmux
 PORTVERSION=	0.8.5
@@ -15,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	tmux:sysutils/tmux
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

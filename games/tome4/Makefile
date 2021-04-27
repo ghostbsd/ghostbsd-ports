@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	tome4
 DISTVERSION?=	1.7.2
@@ -40,7 +39,7 @@ LDFLAGS_i386=	-Wl,-znotext
 
 pre-build:
 	@${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/premake4.lua
-.if ${ARCH} == aarch64 || ${ARCH:Mpowerpc64*}
+.if ${ARCH} == aarch64 || ${ARCH:Mpowerpc64*} || ${ARCH} == riscv64
 	(cd ${WRKSRC} && premake4 --lua=default gmake)
 .else
 	(cd ${WRKSRC} && premake4 gmake)

@@ -1,5 +1,4 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	zopfli
 PORTVERSION=	0.1.7
@@ -13,7 +12,7 @@ COMMENT=	Zopfli module for python
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		python zip
+USES=		python:3.6+ zip
 USE_PYTHON=	autoplist concurrent distutils
 
 .include <bsd.port.mk>

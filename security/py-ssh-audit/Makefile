@@ -1,9 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	ssh-audit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.3.1
-PORTREVISION=	1
+DISTVERSION=	2.4.0
 CATEGORIES=	security
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -12,7 +10,7 @@ COMMENT=	SSH server auditing
 
 LICENSE=	MIT
 
-USES=		python
+USES=		python:3.6+
 USE_GITHUB=	yes
 GH_ACCOUNT=	jtesta
 USE_PYTHON=	autoplist distutils

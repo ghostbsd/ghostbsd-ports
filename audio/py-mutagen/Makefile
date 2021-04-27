@@ -1,5 +1,4 @@
 # Created by: Byung-Hee HWANG <bh@izb.knu.ac.kr>
-# $FreeBSD$
 
 PORTNAME=	mutagen
 PORTVERSION=	1.42.0
@@ -15,7 +14,7 @@ LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 NO_ARCH=	yes
-USES=		python shebangfix
+USES=		python:3.6+ shebangfix
 USE_PYTHON=	autoplist concurrent distutils
 SHEBANG_FILES=	tools/*
 

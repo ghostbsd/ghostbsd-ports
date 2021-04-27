@@ -1,9 +1,8 @@
 # Created by: Craig Rodrigues <rodrigc@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	serf
 PORTVERSION=	1.3.9
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	APACHE/serf
 

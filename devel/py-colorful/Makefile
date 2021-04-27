@@ -1,5 +1,4 @@
 # Created by: Patrice Clement <monsieurp@gentoo.org>
-# $FreeBSD$
 
 PORTNAME=	colorful
 PORTVERSION=	0.4.1
@@ -12,7 +11,7 @@ COMMENT=	Terminal string styling done right in Python
 
 LICENSE=	MIT
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

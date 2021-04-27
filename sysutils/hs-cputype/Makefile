@@ -1,9 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	cputype
 PORTVERSION=	0.2.1
 CATEGORIES=	sysutils haskell
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	arrowd@FreeBSD.org
 COMMENT=	Find out your CPUTYPE

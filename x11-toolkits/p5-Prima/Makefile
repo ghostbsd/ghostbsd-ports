@@ -1,8 +1,7 @@
 # Created by: dmitry@karasik.eu.org
-# $FreeBSD$
 
 PORTNAME=	Prima
-PORTVERSION=	1.59
+PORTVERSION=	1.60
 CATEGORIES=	x11-toolkits graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-

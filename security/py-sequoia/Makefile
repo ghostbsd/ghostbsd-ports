@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	sequoia
 DISTVERSIONPREFIX=	v
@@ -28,6 +27,6 @@ GL_COMMIT=	383133f6be990237044900a4df676488bf8dd71e
 CFLAGS+=	-I${LOCALBASE}/include
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/_sequoia.abi3.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/_sequoia.abi3*.so
 
 .include <bsd.port.mk>

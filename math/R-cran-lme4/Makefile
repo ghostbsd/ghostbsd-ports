@@ -1,8 +1,7 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	lme4
-DISTVERSION=	1.1-25
+DISTVERSION=	1.1-26
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 

@@ -1,8 +1,7 @@
 # Created by: jpaetzel@FreeBSD.org
-# $FreeBSD$
 
 PORTNAME=	catfish
-PORTVERSION=	1.4.13
+PORTVERSION=	4.16.0
 CATEGORIES=	sysutils
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4
@@ -26,6 +25,8 @@ USE_GNOME=	gtk30 intltool pygobject3
 
 NO_ARCH=	yes
 INSTALLS_ICONS=	yes
+
+PORTSCOUT=	limitw:1,even
 
 OPTIONS_DEFINE=	DOCS ZEITGEIST
 OPTIONS_DEFAULT=POLKIT

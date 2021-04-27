@@ -1,8 +1,8 @@
 # Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	thunar-vcs-plugin
 PORTVERSION=	0.2.0
+PORTREVISION=	1
 CATEGORIES=	devel xfce
 MASTER_SITES=	XFCE/thunar-plugins
 DIST_SUBDIR=	xfce4

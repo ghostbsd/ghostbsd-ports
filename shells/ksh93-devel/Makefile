@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 # Make sure that your configuration DOES NOT set ANY gcc-related
 # variables.  ksh93 will not compile if you set even the seemingly
@@ -21,10 +20,11 @@ COMMENT=	Development branch of AT&T KornShell 93
 
 LICENSE=	EPL
 
+BROKEN_aarch64=		Fails to link: missing sbrk
+BROKEN_riscv64=		Fails to link: missing sbrk
+
 HASH=		cc1bca27
 AST_COMMIT_DATE=	2020.06.30
-
-BROKEN_aarch64=		Fails to compile: needs sbrk
 
 USES=		compiler:c11
 

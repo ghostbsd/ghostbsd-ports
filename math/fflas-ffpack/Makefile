@@ -1,9 +1,8 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	fflas-ffpack
 PORTVERSION=	2.4.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 
 MAINTAINER=	ports@FreeBSD.org

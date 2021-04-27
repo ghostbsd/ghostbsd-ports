@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	pyfixbuf
 PORTVERSION=	0.8.1
@@ -15,10 +14,9 @@ LICENSE_NAME_GPLR=	Government Purpose License Rights
 LICENSE_FILE_GPLR=	${WRKSRC}/LICENSE-OPENSOURCE.txt
 LICENSE_PERMS_GPLR=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-RUN_DEPENDS=	${PY_IPADDRESS}
 LIB_DEPENDS=	libfixbuf.so:net/libfixbuf
 
-USES=		pkgconfig python
+USES=		pkgconfig python:3.6+
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

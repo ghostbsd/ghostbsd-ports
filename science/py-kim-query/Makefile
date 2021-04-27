@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	kim-query
 DISTVERSION=	1.1.0
@@ -13,7 +12,7 @@ LICENSE=	CDDL
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

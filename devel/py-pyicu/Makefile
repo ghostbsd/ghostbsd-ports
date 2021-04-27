@@ -1,5 +1,4 @@
 # Created by: bland@FreeBSD.org
-# $FreeBSD$
 
 PORTNAME=	pyicu
 PORTVERSION=	2.4.3
@@ -17,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libicudata.so:devel/icu
 
-USES=		compiler:c++11-lang python
+USES=		compiler:c++11-lang python:3.6+
 USE_CXXSTD=	c++11
 USE_PYTHON=	distutils autoplist
 

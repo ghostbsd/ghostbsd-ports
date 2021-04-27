@@ -1,12 +1,11 @@
-# $FreeBSD$
 
 PORTNAME=	android-file-transfer
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.1
+DISTVERSION=	4.2
 PORTREVISION?=	0
 CATEGORIES=	sysutils
 
-MAINTAINER=	jbeich@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Android MTP client with minimalistic UI
 
 LICENSE=	GPLv3+
@@ -37,7 +36,7 @@ OPENSSL_CMAKE_BOOL=	BUILD_MTPZ
 PYTHON_BUILD_DEPENDS=	pybind11>0:devel/pybind11
 PYTHON_USES=		python
 PYTHON_CMAKE_BOOL=	BUILD_PYTHON
-PYTHON_PLIST_FILES=	%%PYTHON_SITELIBDIR%%/aftl.so
+PYTHON_PLIST_FILES=	%%PYTHON_SITELIBDIR%%/aftl%%PYTHON_EXT_SUFFIX%%.so
 
 QT5_USES=	qt:5
 QT5_USE=	QT=qmake_build,buildtools_build,linguisttools_build,core,gui,network,widgets
@@ -61,7 +60,7 @@ post-patch-CLI-off:
 
 post-install-PYTHON-on:
 	${MKDIR} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
-	${INSTALL_LIB} ${BUILD_WRKSRC}/python/aftl.so \
+	${INSTALL_LIB} ${BUILD_WRKSRC}/python/aftl${PYTHON_EXT_SUFFIX}.so \
 		${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 
 .include <bsd.port.mk>

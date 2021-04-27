@@ -1,5 +1,4 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	brasero
 PORTVERSION=	3.12.2
@@ -20,7 +19,7 @@ RUN_DEPENDS=	growisofs:sysutils/dvd+rw-tools \
 
 USES=		desktop-file-utils gettext gmake gnome libtool pathfix \
 		pkgconfig shared-mime-info tar:xz xorg
-USE_GNOME=	gnomeprefix gtk30 intlhack libxml2
+USE_GNOME=	gnomeprefix gtk30 intlhack libxml2 introspection
 GNU_CONFIGURE=	yes
 USE_XORG=	sm ice
 USE_LDCONFIG=	yes
@@ -37,7 +36,6 @@ GLIB_SCHEMAS=	org.gnome.brasero.gschema.xml
 
 OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	NAUTILUS LIBBURNIA
-OPTIONS_DEFAULT=NAUTILUS
 NAUTILUS_DESC=	Build nautilus extension
 LIBBURNIA_DESC=	Build libburnia plug-ins
 NAUTILUS_USE=	GNOME=nautilus3

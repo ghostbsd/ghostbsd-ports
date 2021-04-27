@@ -1,8 +1,7 @@
 # Created by: tim@relay.nnn.tstu.ru
-# $FreeBSD$
 
 PORTNAME=	3proxy
-PORTVERSION=	0.9.1
+PORTVERSION=	0.9.3
 CATEGORIES=	net
 
 MAINTAINER=	timp87@gmail.com

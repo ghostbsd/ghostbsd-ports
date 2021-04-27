@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	jsonsir
 PORTVERSION=	0.0.2
@@ -10,7 +9,7 @@ COMMENT=	Serializer for JSON-like data in Python
 
 LICENSE=	MIT
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 USE_GITHUB=	yes

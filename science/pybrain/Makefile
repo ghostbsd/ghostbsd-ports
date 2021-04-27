@@ -1,5 +1,4 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	pybrain
 PORTVERSION=	0.3.3
@@ -15,7 +14,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}scipy>=0.7.1:science/py-scipy@${PY_FLAVOR}
 
 USE_GITHUB=	yes
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils concurrent optsuffix
 
 .include <bsd.port.mk>

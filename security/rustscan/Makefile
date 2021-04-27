@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	rustscan
 PORTVERSION=	2.0.1
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	security
 
 MAINTAINER=	mikael@FreeBSD.org

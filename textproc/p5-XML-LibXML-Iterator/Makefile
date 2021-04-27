@@ -1,8 +1,7 @@
 # Created by: Oliver Eikemeier <eikemeier@fillmore-labs.com>
-# $FreeBSD$
 
 PORTNAME=	XML-LibXML-Iterator
-PORTVERSION=	1.05
+PORTVERSION=	1.06
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-

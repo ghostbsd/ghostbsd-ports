@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	ruby-fogbugz
 PORTVERSION=	0.2.1
@@ -6,7 +5,7 @@ CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	021
 
-MAINTAINER=	swills@FreeBSD.org
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Simple Ruby wrapper for the Fogbugz XML API
 
 LICENSE=	MIT

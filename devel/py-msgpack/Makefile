@@ -1,8 +1,7 @@
 # Created by: Andrey Zonov <andrey@zonov.org>
-# $FreeBSD$
 
 PORTNAME=	msgpack
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,16 +12,10 @@ COMMENT=	MessagePack (de)serializer for Python
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent cython distutils
 
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} >= 3000
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/msgpack/_cmsgpack.so
-.else
-NO_ARCH=	yes
-.endif
+	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/msgpack/_cmsgpack*.so
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

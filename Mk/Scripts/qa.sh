@@ -1,6 +1,5 @@
 #!/bin/sh
 # MAINTAINER: portmgr@FreeBSD.org
-# $FreeBSD$
 
 set -o pipefail
 
@@ -82,6 +81,7 @@ shebangonefile() {
 	/usr/bin/sed) ;;
 	/usr/sbin/dtrace) ;;
 	/usr/bin/make) ;;
+	/usr/libexec/atf-sh) ;;
 	*)
 		badinterp="${interp}"
 		;;

@@ -1,4 +1,3 @@
-# $FreeBSD$
 #
 
 PORTNAME=	ebaysdk
@@ -14,7 +13,7 @@ LICENSE=	CDDL
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

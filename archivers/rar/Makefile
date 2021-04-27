@@ -1,8 +1,7 @@
 # Created by: ache
-# $FreeBSD$
 
 PORTNAME=	rar
-PORTVERSION=	6.0.b2
+PORTVERSION=	6.0.0
 PORTEPOCH=	3
 CATEGORIES=	archivers
 MASTER_SITES=	https://rarlab.com/rar/
@@ -22,13 +21,13 @@ RESTRICTED=	only unmodified original package can be distributed
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/rar
 
-PLIST_FILES=	bin/rar lib/default.sfx etc/rarfiles.lst man/cat1/rar.1.gz
+PLIST_FILES=	bin/rar etc/rarfiles.lst lib/default.sfx man/cat1/rar.1.gz
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rar ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/rar.txt ${STAGEDIR}${PREFIX}/man/cat1/rar.1
 	${INSTALL_DATA} ${WRKSRC}/rarfiles.lst ${STAGEDIR}${PREFIX}/etc
 	${INSTALL_DATA} ${WRKSRC}/default.sfx ${STAGEDIR}${PREFIX}/lib
+	${INSTALL_MAN} ${WRKSRC}/rar.txt ${STAGEDIR}${PREFIX}/man/cat1/rar.1
 
 # maintainer section:
 

@@ -1,8 +1,7 @@
 # Created by: Rui Lopes (rgl ruilopes com)
-# $FreeBSD$
 
 PORTNAME=	tzinfo
-PORTVERSION=	1.2.8
+PORTVERSION=	1.2.9
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	1

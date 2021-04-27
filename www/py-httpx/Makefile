@@ -1,8 +1,7 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	httpx
-PORTVERSION=	0.16.1
+PORTVERSION=	0.17.0
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -30,6 +29,6 @@ BROTLI_DESC=	Brotli support
 HTTP2_DESC=	HTTP/2 support
 
 BROTLI_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}brotlipy>=0.7<0.8:archivers/py-brotlipy@${PY_FLAVOR}
-HTTP2_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}h2>=3<4:www/py-h2@${PY_FLAVOR}
+HTTP2_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}h2>=3<5:www/py-h2@${PY_FLAVOR}
 
 .include <bsd.port.mk>

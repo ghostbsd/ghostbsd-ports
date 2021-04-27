@@ -1,13 +1,21 @@
-mpdm_f.c:1947:9: error: use of undeclared identifier 'environ'
-        environ = (char **) calloc(sizeof(char *), mpdm_size(v) + 1);
+mpdm_f.c:2395:24: error: variable has incomplete type 'struct sockaddr_in'
+    struct sockaddr_in host;
+                       ^
+mpdm_f.c:2395:12: note: forward declaration of 'struct sockaddr_in'
+    struct sockaddr_in host;
+           ^
+mpdm_f.c:2417:23: warning: implicit declaration of function 'htons' is invalid in C99 [-Wimplicit-function-declaration]
+    host.sin_port   = htons(p);
+                      ^
 
---- mpdm/mpdm_f.c.orig	2019-11-27 07:37:22 UTC
+--- mpdm/mpdm_f.c.orig	2020-11-22 08:58:48 UTC
 +++ mpdm/mpdm_f.c
-@@ -1944,6 +1944,7 @@ static int sysdep_popen(mpdm_t v, char *prg, int rw)
+@@ -78,6 +78,8 @@
+ #include <sys/file.h>
+ #endif
  
-         /* build the environment for the subprocess */
-         v = mpdm_join(mpdm_get_wcs(mpdm_root(), L"ENV"), MPDM_S(L"="));
-+        extern char **environ;
-         environ = (char **) calloc(sizeof(char *), mpdm_size(v) + 1);
++#include <netinet/in.h>
++
+ #include "mpdm.h"
  
-         mpdm_ref(v);
+ #ifdef CONFOPT_ICONV

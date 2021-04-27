@@ -1,9 +1,8 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	harfbuzz
-DISTVERSION=	2.7.2
-PORTREVISION?=	1
+DISTVERSION=	2.8.0
+PORTREVISION?=	0
 CATEGORIES=	print
 MASTER_SITES=	https://github.com/harfbuzz/harfbuzz/releases/download/${DISTVERSION}/
 
@@ -25,7 +24,7 @@ SHEBANG_GLOB=	*.py
 MESON_ARGS=	-Dglib=enabled -Dgobject=enabled -Dgraphite=enabled \
 		-Dfreetype=enabled -Dbenchmark=disabled
 
-PLIST_SUB+=	LIBVER=0.20702.0
+PLIST_SUB+=	LIBVER=0.20800.0
 
 HARFBUZZ_SLAVE?=	no
 

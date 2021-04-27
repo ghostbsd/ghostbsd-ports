@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	keystone-engine
 DISTVERSION=	0.9.1-3
@@ -17,7 +16,7 @@ BROKEN_FreeBSD_12_powerpc64=	fails to install: /wrkdirs/usr/ports/devel/py-keyst
 
 BUILD_DEPENDS=	cmake:devel/cmake
 
-USES=		pkgconfig python
+USES=		pkgconfig python:3.6+
 USE_PYTHON=	distutils autoplist
 
 # setup.py loses track of its cwd when it switches over to the CMake build

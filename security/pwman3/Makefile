@@ -1,5 +1,4 @@
 # Created by: Yarodin <yarodin@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	pwman3
 PORTVERSION=	0.0.6
@@ -15,7 +14,7 @@ COMMENT=	Console password management application with sql storage
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycrypto>=2.0:security/py-pycrypto@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist concurrent optsuffix
 
 .include <bsd.port.mk>

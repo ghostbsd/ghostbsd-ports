@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	autoflake
 PORTVERSION=	1.3.1
@@ -16,7 +15,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyflakes>=1.1.0:devel/py-pyflakes@${PY_FLAVO
 
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 TEST_ENV=	PYTHONPATH=${WRKSRC}/src

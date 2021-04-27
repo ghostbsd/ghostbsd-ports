@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	libmemcached
 PORTVERSION=	1.0.18
@@ -6,7 +5,7 @@ PORTREVISION=	7
 CATEGORIES=	databases
 MASTER_SITES=	http://launchpad.net/${PORTNAME}/1.0/${PORTVERSION}/+download/
 
-MAINTAINER=	m.tsatsenko@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C and C++ client library to the memcached server
 
 LICENSE=	BSD3CLAUSE

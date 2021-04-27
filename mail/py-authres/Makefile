@@ -1,5 +1,4 @@
 # Created by: Yasuhiro KIMURA <yasu@utahime.org>
-# $FreeBSD$
 
 PORTNAME=	authres
 PORTVERSION=	1.2.0
@@ -13,7 +12,7 @@ COMMENT=	Python module for RFC 5451 Authentication-Results headers
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

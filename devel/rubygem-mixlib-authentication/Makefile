@@ -1,8 +1,7 @@
 # Created by: renchap@cocoa-x.com
-# $FreeBSD$
 
 PORTNAME=	mixlib-authentication
-PORTVERSION=	1.4.2
+PORTVERSION=	3.0.7
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 

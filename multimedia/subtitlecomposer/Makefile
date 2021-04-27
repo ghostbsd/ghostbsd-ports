@@ -1,9 +1,8 @@
-# $FreeBSD$
 
 PORTNAME=	subtitlecomposer
 PORTVERSION=	0.7.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	multimedia kde
 
 MAINTAINER=	makc@FreeBSD.org

@@ -1,26 +1,24 @@
-# $FreeBSD$
 
 PORTNAME=	fts-xapian
-PORTVERSION=	1.4.3
+DISTVERSION=	1.4.8
 CATEGORIES=	mail
 PKGNAMEPREFIX=	dovecot-
 
-MAINTAINER=	juraj@lutter.sk
+MAINTAINER=	otis@FreeBSD.org
 COMMENT=	Dovecot FTS plugin based on Xapian
 
 LICENSE=	LGPL21
 
 BUILD_DEPENDS=	dovecot>=2.3.7:mail/dovecot
-LIB_DEPENDS=	libxapian.so:databases/xapian-core \
-		libicuuc.so:devel/icu
+LIB_DEPENDS=	libicuuc.so:devel/icu \
+		libxapian.so:databases/xapian-core
 RUN_DEPENDS=	dovecot>=2.3.7:mail/dovecot
 
 USES=		autoreconf compiler:c++11-lang libtool pkgconfig
 
-USE_LDCONFIG=	yes
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	grosjo
+USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
 

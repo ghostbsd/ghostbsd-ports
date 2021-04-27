@@ -1,5 +1,4 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	munkres
 PORTVERSION=	1.0.12
@@ -13,7 +12,7 @@ COMMENT=	Munkres implementation for Python
 
 LICENSE=	APACHE20
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

@@ -1,8 +1,7 @@
 # Created by: Leonardo Martins <lmartins@nepe.eee.ufg.br>
-# $FreeBSD$
 
 PORTNAME=	geos
-PORTVERSION=	3.8.1
+PORTVERSION=	3.9.1
 CATEGORIES=	graphics geography
 MASTER_SITES=	https://download.osgeo.org/geos/ \
 		LOCAL/sunpoet
@@ -21,9 +20,6 @@ TEST_TARGET=	check
 USE_LDCONFIG=	yes
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|-lstdc++||' ${WRKSRC}/tests/geostest/Makefile.in ${WRKSRC}/tests/thread/Makefile.in
 
 post-configure:
 	@${FIND} ${WRKSRC} -name Makefile -exec ${REINPLACE_CMD} -e '/CXXFLAGS = / s| -O2||' {} +

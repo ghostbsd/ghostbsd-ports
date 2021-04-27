@@ -1,5 +1,4 @@
 # Created by: nbm
-# $FreeBSD$
 
 PORTNAME=	pycrypto
 PORTVERSION=	2.6.1
@@ -16,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}pycryptodome-*
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 GNU_CONFIGURE=	yes

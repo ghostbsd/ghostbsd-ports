@@ -1,5 +1,4 @@
 # Created by: Mike Meyer
-# $FreeBSD$
 
 PORTNAME=	beautifulsoup4
 PORTVERSION=	4.8.2
@@ -16,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING.txt
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}soupsieve>=1.2:www/py-soupsieve@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

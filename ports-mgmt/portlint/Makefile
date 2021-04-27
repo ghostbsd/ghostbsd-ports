@@ -1,8 +1,7 @@
 # Created by: Jun-ichiro itojun Hagino <itojun@itojun.org>
-# $FreeBSD$
 
 PORTNAME=	portlint
-PORTVERSION=	2.19.3
+PORTVERSION=	2.19.4
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	# none
 DISTFILES=	# none

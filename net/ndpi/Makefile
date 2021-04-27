@@ -1,8 +1,8 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	ndpi
-PORTVERSION=	3.4.d20201101
+PORTVERSION=	3.4.d20201222
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	net
 
@@ -12,7 +12,9 @@ COMMENT=	NTOP-maintained superset of the popular OpenDPI library
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libjson-c.so:devel/json-c
+LIB_DEPENDS=	libjson-c.so:devel/json-c \
+		libgcrypt.so:security/libgcrypt \
+		libgpg-error.so:security/libgpg-error
 
 USES=		autoreconf compiler:c++11-lang libtool localbase:ldflags pathfix \
 		pkgconfig
@@ -28,7 +30,7 @@ INSTALL_TARGET=	install-strip
 USE_GITHUB=	yes
 GH_ACCOUNT=	ntop
 GH_PROJECT=	nDPI
-GH_TAGNAME=	d22bcc9
+GH_TAGNAME=	75898a4
 
 PLIST_SUB=	MAJOR_VER=${PORTVERSION:R:R} VER=${PORTVERSION:R}
 

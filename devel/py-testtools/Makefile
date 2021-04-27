@@ -1,5 +1,4 @@
 # Created by: Carlo Strub
-# $FreeBSD$
 
 PORTNAME=	testtools
 PORTVERSION=	2.4.0
@@ -21,7 +20,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}extras>=1.0.0:devel/py-extras@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}traceback2>=0:devel/py-traceback2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}unittest2>=1.0.0:devel/py-unittest2@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	python-statsd
 PORTVERSION=	2.1.0
@@ -12,7 +11,7 @@ COMMENT=	Client for Etsy's node-js statsd server
 LICENSE=	BSD3CLAUSE
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 post-extract:

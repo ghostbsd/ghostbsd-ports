@@ -1,9 +1,8 @@
 # Created by: thierry@pompo.net
-# $FreeBSD$
 
 PORTNAME=	linbox
 PORTVERSION=	1.6.3
-PORTREVISION=	4
+PORTREVISION=	5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	math
 
@@ -61,6 +60,7 @@ GNU_CONFIGURE=	yes
 # ATM expat and drivers are broken
 CONFIGURE_ARGS=	--without-expat
 USE_LDCONFIG=	yes
+INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 
 .if defined(PACKAGE_BUILDING)

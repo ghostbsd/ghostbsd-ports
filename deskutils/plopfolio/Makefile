@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	plopfolio
 PORTVERSION=	0.1.0
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	deskutils gnustep
 MASTER_SITES=	GNUSTEP/usr-apps
 

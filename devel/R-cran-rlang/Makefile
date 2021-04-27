@@ -1,8 +1,7 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	rlang
-PORTVERSION=	0.4.8
+PORTVERSION=	0.4.10
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 

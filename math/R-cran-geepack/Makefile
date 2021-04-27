@@ -1,9 +1,7 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	geepack
-DISTVERSION=	1.3-1
-PORTREVISION=	1
+DISTVERSION=	1.3-2
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 

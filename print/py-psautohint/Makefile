@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	psautohint
 DISTVERSION=	2.0.0
@@ -19,6 +18,6 @@ USES=		python:3.6+ zip
 USE_PYTHON=	autoplist concurrent distutils
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/psautohint/_psautohint.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/psautohint/_psautohint*.so
 
 .include <bsd.port.mk>

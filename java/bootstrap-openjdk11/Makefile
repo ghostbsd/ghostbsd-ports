@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	openjdk11
 PORTVERSION=	11.0.5.10.1
@@ -37,6 +36,7 @@ ONLY_FOR_ARCHS+=aarch64
 
 .if ${ARCH} == aarch64
 DISTNAME=	${JDK_PORT}-${JDK_ARCH}-12-${PORTVERSION}
+PLIST_SUB+=	PPC64LE=""
 .elif ${ARCH} == powerpc64le
 PLIST_SUB+=	PPC64LE="@comment "
 .else

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# Created by: Ken Moore <ken@pcbsd.org>
 
 PORTNAME=	lumina-core
 DISTVERSIONPREFIX=	v

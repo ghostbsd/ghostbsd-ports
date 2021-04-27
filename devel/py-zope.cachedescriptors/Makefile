@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	zope.cachedescriptors
 PORTVERSION=	3.5.1
@@ -13,7 +12,7 @@ COMMENT=	Method and property caching decorators
 
 LICENSE=	ZPL21
 
-USES=		python zip
+USES=		python:3.6+ zip
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

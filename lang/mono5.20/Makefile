@@ -1,10 +1,10 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	mono
 PORTVERSION=	5.20.1.34
 CATEGORIES=	lang
 MASTER_SITES=	https://download.mono-project.com/sources/mono/
+PKGNAMESUFFIX=	5.20
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	mono@FreeBSD.org
@@ -13,13 +13,15 @@ COMMENT=	Open source implementation of .NET Development Framework
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=		amd64 armv6 armv7 i386 powerpc
+ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc
 
 BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser \
 		bash:shells/bash \
 		cmake>0:devel/cmake
 LIB_DEPENDS=	libinotify.so:devel/libinotify
 RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss
+
+CONFLICTS_INSTALL=	mono5.10 mono6.8
 
 OPTIONS_DEFINE=		MONOLITE NLS X11 HEAPVIZ
 OPTIONS_DEFAULT=	MONOLITE X11
@@ -63,6 +65,15 @@ PORTSCOUT=	limit:^\d+\.\d+\.[1-9]\d*
 OPTIONS_SLAVE=	MONOLITE
 .endif
 
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == "aarch64"
+EXTRA_PATCHES=	${FILESDIR}/extra-patch-aarch64-race-workaround
+PLIST_SUB+=	BOEHM="@comment "
+.else
+PLIST_SUB+=	BOEHM=""
+.endif
+
 post-extract-MONOLITE-on:
 	${MKDIR} ${WRKSRC}/mcs/class/lib/monolite-linux
 	${MV} ${WRKDIR}/monolite-linux-${MONOLITE_VERSION}-latest ${WRKSRC}/mcs/class/lib/monolite-linux/${MONOLITE_VERSION}
@@ -91,4 +102,4 @@ post-configure:
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/mono
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	scikit-umfpack
 DISTVERSION=	0.3.2
@@ -20,7 +19,7 @@ LIB_DEPENDS=	libumfpack.so:math/suitesparse
 RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils cython autoplist
 
 post-extract: # workaround for https://github.com/scikit-umfpack/scikit-umfpack/issues/53

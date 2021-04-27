@@ -1,5 +1,4 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	ecj
 PORTVERSION=	4.4.2
@@ -21,6 +20,7 @@ EXTRACT_AFTER_ARGS=	-C ${WRKSRC}
 
 USE_ANT=	yes
 USE_JAVA=	yes
+JAVA_VERSION=	8
 SUB_FILES=	ecj.sh
 SUB_LIST=	PORTVERSION=${PORTVERSION}
 NO_WRKSUBDIR=	yes

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	ZopeUndo
 PORTVERSION=	2.12.0
@@ -13,7 +12,7 @@ COMMENT=	ZODB undo support for Zope2
 
 LICENSE=	ZPL21
 
-USES=		python zip
+USES=		python:3.6+ zip
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

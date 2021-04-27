@@ -1,5 +1,4 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	boost-libs
 PORTREVISION=	1
@@ -11,7 +10,7 @@ BUILD_DEPENDS=	bjam:devel/boost-jam \
 		${PYNUMPY}
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	flavors
 
 OPTIONS_DEFINE=	DEBUG OPTIMIZED_CFLAGS

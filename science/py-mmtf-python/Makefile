@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	mmtf-python
 DISTVERSIONPREFIX=	v
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}msgpack>0:devel/py-msgpack@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_GITHUB=	yes
 GH_ACCOUNT=	rcsb
 USE_PYTHON=	distutils autoplist

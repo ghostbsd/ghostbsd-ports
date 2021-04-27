@@ -1,4 +1,4 @@
---- chrome/browser/signin/signin_util.cc.orig	2020-11-13 06:36:37 UTC
+--- chrome/browser/signin/signin_util.cc.orig	2021-03-12 23:57:18 UTC
 +++ chrome/browser/signin/signin_util.cc
 @@ -34,7 +34,7 @@
  #include "google_apis/gaia/gaia_auth_util.h"

@@ -1,5 +1,4 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD$
 #
 # !!!NOTE!!! Update of x11-toolkits/gtk30 (specially >= 3.20.x) must be
 # accompanied by PORTREVISION bumps of this port.
@@ -7,7 +6,7 @@
 
 PORTNAME=	xfce4-notifyd
 PORTVERSION=	0.6.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4

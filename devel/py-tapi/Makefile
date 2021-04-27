@@ -1,5 +1,4 @@
 # Created by: Johannes Meixner <johannes@perceivon.net>
-# $FreeBSD$
 
 PORTNAME=	tapi
 PORTVERSION=	0.1.7
@@ -15,7 +14,7 @@ COMMENT=	Framework for testing APIs
 LICENSE=	MIT
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 .include <bsd.port.mk>

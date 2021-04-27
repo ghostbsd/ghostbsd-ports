@@ -1,9 +1,8 @@
 # Created by: Matthias Fechner <mfechner@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	gitlab-pg_query
-PORTVERSION=	1.3.0
-PORTREVISION=	1
+PORTVERSION=	1.3.1
+PORTREVISION=	0
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 

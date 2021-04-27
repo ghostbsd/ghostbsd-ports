@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	fail2ban
 PORTVERSION=	0.11.2
@@ -13,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR}
 
-USES=		python:patch shebangfix
+USES=		python:3.6+,patch shebangfix
 USE_GITHUB=	yes
 USE_PYTHON=	autoplist distutils
 USE_RC_SUBR=	fail2ban
@@ -56,8 +55,6 @@ FAIL2BAN_DBDIR=	/var/db/${PORTNAME}
 PY2TO3_CMD=	${LOCALBASE}/bin/2to3-${PYTHON_VER}
 PY2TO3_ARG=	--no-diffs --write --nobackups --fix=all
 
-.include <bsd.port.pre.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e 's,/etc/fail2ban,${ETCDIR},g' ${FILES}
 	@${REINPLACE_CMD} -e 's,paths-debian.conf,paths-freebsd.conf,g' \
@@ -69,9 +66,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's, sed , ${SED} ,g' \
 		${WRKSRC}/config/action.d/hostsdeny.conf
 
-.	if ${PYTHON_MAJOR_VER} >= 3
-		(cd ${WRKSRC}/ && ${PY2TO3_CMD} ${PY2TO3_ARG} bin/* fail2ban)
-.	endif
+	(cd ${WRKSRC}/ && ${PY2TO3_CMD} ${PY2TO3_ARG} bin/* fail2ban)
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${FAIL2BAN_DBDIR} ${STAGEDIR}/var/run/fail2ban
@@ -87,4 +82,4 @@ post-install-DOCS-on:
 do-test:
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYDISTUTILS_SETUP} test
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

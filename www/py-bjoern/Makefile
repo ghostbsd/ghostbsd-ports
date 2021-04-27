@@ -1,5 +1,4 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	bjoern
 PORTVERSION=	3.1.0
@@ -15,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libev.so:devel/libev
 
-USES=		localbase python
+USES=		localbase python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 LDFLAGS+=	-lc

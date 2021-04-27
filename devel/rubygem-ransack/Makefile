@@ -1,8 +1,7 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	ransack
-PORTVERSION=	2.4.0
+PORTVERSION=	2.4.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 

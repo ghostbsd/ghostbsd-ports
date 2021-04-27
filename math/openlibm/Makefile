@@ -1,5 +1,4 @@
 # Created by: Iblis Lin <iblis@hs.ntnu.edu.tw>
-# $FreeBSD$
 
 PORTNAME=	openlibm
 DISTVERSIONPREFIX=	v
@@ -29,7 +28,7 @@ USE_LDCONFIG=	yes
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == powerpc64
+.if ${ARCH:Mpowerpc64*}
 USES+=		compiler:gcc-c++11-lib
 .else
 USES+=		compiler:c11

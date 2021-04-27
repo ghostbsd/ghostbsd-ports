@@ -1,8 +1,7 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	boto3
-PORTVERSION=	1.15.8
+PORTVERSION=	1.17.23
 CATEGORIES=	www python devel
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -12,7 +11,7 @@ COMMENT=	AWS SDK for Python
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}botocore>=1.18.8,<1.19.0:devel/py-botocore@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}botocore>=1.20.23,<1.21.0:devel/py-botocore@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jmespath>=0.7.1,<1.0.0:devel/py-jmespath@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}s3transfer>=0.3.0,<0.4.0:net/py-s3transfer@${PY_FLAVOR}
 
@@ -20,7 +19,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>0:devel/py-nose@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mock>0:devel/py-mock@${PY_FLAVOR}
 
 # Actually 2.6-2.7,3.3-3.7
-USES=		python
+USES=		python:3.6+
 USE_GITHUB=	yes # tests missing from PyPI sdist
 USE_PYTHON=	autoplist distutils
 

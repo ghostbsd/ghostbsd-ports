@@ -1,5 +1,4 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	virtualenv-clone
 PORTVERSION=	0.5.4
@@ -14,7 +13,7 @@ COMMENT=	Python virtualenv cloning script
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 
 NO_ARCH=	yes
 

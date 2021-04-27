@@ -1,12 +1,11 @@
-# $FreeBSD$
 
 PORTNAME=	librespot
-PORTVERSION=	0.1.3
+PORTVERSION=	0.1.6
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
-MAINTAINER=	ehaupt@FreeBSD.org
+MAINTAINER=	driesm.michiels@gmail.com
 COMMENT=	Open Source Spotify client library
 
 LICENSE=	MIT

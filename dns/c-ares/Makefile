@@ -1,8 +1,7 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD$
 
 PORTNAME=	c-ares
-PORTVERSION=	1.16.1
+PORTVERSION=	1.17.1
 CATEGORIES=	dns
 MASTER_SITES=	https://c-ares.haxx.se/download/ \
 		ZI
@@ -39,6 +38,6 @@ HIDE_SYMBOLS_CONFIGURE_ENABLE=	symbol-hiding
 OPTIMIZED_CFLAGS_CONFIGURE_ENABLE=	optimize
 
 post-install:
-	${INSTALL_PROGRAM} ${PROGRAMS:S@^@${WRKSRC}/.libs/@} ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${PROGRAMS:S@^@${WRKSRC}/src/tools/.libs/@} ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	unqlite
 PORTVERSION=	0.5.3
@@ -11,7 +10,7 @@ COMMENT=	Fast Python bindings for the UnQLite embedded NoSQL database
 
 LICENSE=	MIT
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist cython
 
 .include <bsd.port.mk>

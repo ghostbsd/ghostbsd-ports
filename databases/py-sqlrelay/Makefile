@@ -1,5 +1,4 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD$
 
 PORTNAME=	${SQLRELAY_PORTNAME}
 PORTVERSION=	${SQLRELAY_PORTVERSION}
@@ -36,6 +35,6 @@ post-patch:
 			${WRKSRC}/configure
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/SQLRelay/CSQLRelay.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/SQLRelay/CSQLRelay*.so
 
 .include <bsd.port.mk>

@@ -1,5 +1,4 @@
 # Created by: pat
-# $FreeBSD$
 
 PORTNAME=	lcdproc
 DISTVERSIONPREFIX=	v
@@ -12,7 +11,7 @@ COMMENT=	Client/server suite for LCD devices
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-ONLY_FOR_ARCHS=	i386 amd64
+ONLY_FOR_ARCHS=	i386 amd64 powerpc64 powerpc64le
 
 USES=		autoreconf pkgconfig
 GNU_CONFIGURE=	yes
@@ -73,19 +72,29 @@ LCDPROC_DRIVERS=bayrad \
 		pyramid \
 		rawserial \
 		SureElec \
-		sdeclcd \
-		sed1330 \
-		sed1520 \
 		serialPOS \
 		serialVFD \
 		sli \
-		stv5730 \
-		t6963 \
 		text \
 		tyan \
 		vlsys_m428
 
 .include <bsd.port.options.mk>
+
+.if ${ARCH} == amd64 || ${ARCH} == i386
+LCDPROC_DRIVERS+=	sdeclcd \
+			sed1330 \
+			sed1520 \
+			stv5730 \
+			t6963
+PLIST_SUB+=	X86=""
+.else
+PLIST_SUB+=	X86="@comment "
+.endif
+
+.if ${ARCH:Mpowerpc64*}
+USE_GCC=	any
+.endif
 
 .if ${PORT_OPTIONS:MUSB}
 CONFIGURE_ARGS+=	--enable-libusb

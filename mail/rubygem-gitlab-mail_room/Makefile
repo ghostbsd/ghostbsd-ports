@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	gitlab-mail_room
-PORTVERSION=	0.0.7
+PORTVERSION=	0.0.9
 CATEGORIES=	mail rubygems
 MASTER_SITES=	RG
 

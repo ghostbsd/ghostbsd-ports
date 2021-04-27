@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	zope.structuredtext
 PORTVERSION=	3.5.1
@@ -13,7 +12,7 @@ COMMENT=	StructuredText parser
 
 LICENSE=	ZPL21
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

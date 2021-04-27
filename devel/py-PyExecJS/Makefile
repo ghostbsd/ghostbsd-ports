@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	PyExecJS
 DISTVERSION=	1.5.1
@@ -13,7 +12,7 @@ COMMENT=	Run JavaScript code from Python
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=     distutils autoplist
 
 OPTIONS_GROUP=		RUNTIME

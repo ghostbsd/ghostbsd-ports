@@ -1,12 +1,17 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD$
+
+.include "${.CURDIR}/../../devel/eric6/bsd.eric6.mk"
 
 PKGNAMESUFFIX=	-qt5-${FLAVOR:U:S/_/-/}
 DISTNAME=	${PORTNAME}-nolang-${DISTVERSION}
-PORTREVISION=	2
+PORTREVISION=	0
 CATEGORIES=	devel python
 
-RUN_DEPENDS+=	${PYTHON_LIBDIR}/lib-dynload/_sqlite3.so:databases/py-sqlite3@${PY_FLAVOR}
+DEPRECATED=	Uses EOL Python 2.7 via www/py-qt5-webengine
+EXPIRATION_DATE=2021-06-23
+
+BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pip>0:devel/py-pip@${PY_FLAVOR}
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR}
 
 CONFLICTS_INSTALL=	${FLAVORS:N${FLAVOR}:C/^/${PORTNAME}${PKGNAMESUFFIX}-/:C/$/-[0-9]*/}
 
@@ -25,7 +30,6 @@ PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-.include "${.CURDIR}/bsd.eric6.mk"
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -49,5 +53,9 @@ post-install:
 	${LN} -sf ${DATADIR:C|${PREFIX}(/share(/pixmaps)?)?||:C|/[^/]+|../|g}eric6/icons/default/eric.png \
 		${STAGEDIR}${PREFIX}/share/pixmaps/eric6.png
 	@${MKDIR} ${STAGEDIR}${DATADIR}/i18n
+	${REINPLACE_CMD} -e 's|${STAGEDIR}|${DATADIR}|g' \
+			 -e 's|${WRKSRC}|${DATADIR}|g' \
+			${STAGEDIR}/${DATADIR}/eric6install.json
+	@${RM}	${STAGEDIR}/${DATADIR}/eric6install.json.bak
 
 .include <bsd.port.mk>

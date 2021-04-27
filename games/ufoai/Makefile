@@ -1,5 +1,4 @@
 # Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	ufoai
 PORTVERSION=	2.5
@@ -12,7 +11,7 @@ DIST_SUBDIR=	${PORTNAME}
 PATCH_SITES=	https://github.com/ufoai/ufoai/commit/
 PATCHFILES=	163073ab9527cdaa33d77a713b8e46ff462a2b5c.patch:-p1
 
-MAINTAINER=	m.tsatsenko@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Strategy game featuring tactical combat
 
 LIB_DEPENDS=	libvorbis.so:audio/libvorbis \

@@ -1,8 +1,7 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD$
 
 PORTNAME=	xfce4-session
-PORTVERSION=	4.14.2
+PORTVERSION=	4.16.0
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	XFCE
 DIST_SUBDIR=	xfce4

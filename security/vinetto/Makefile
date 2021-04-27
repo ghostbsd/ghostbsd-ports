@@ -1,5 +1,4 @@
 # Created by: Aleksander Fafula <alex@BSDGuru.org>
-# $FreeBSD$
 
 PORTNAME=	vinetto
 PORTVERSION=	0.07
@@ -16,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	${PY_PILLOW}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils concurrent optsuffix
 PYDISTUTILS_PKGVERSION=	0.06alpha
 NO_ARCH=	yes

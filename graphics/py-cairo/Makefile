@@ -1,5 +1,4 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	cairo
 PORTVERSION=	1.18.1
@@ -11,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	py${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	desktop@FreeBSD.org
-COMMENT=	Python 2 bindings for Cairo
+COMMENT=	Python bindings for Cairo
 
 LICENSE=	LGPL21 MPL11
 LICENSE_COMB=	multi
@@ -20,13 +19,13 @@ LICENSE_FILE_MPL11=	${WRKSRC}/COPYING-MPL-1.1
 
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c11 gnome pkgconfig python
+USES=		compiler:c11 gnome pkgconfig python:3.6+
 USE_PYTHON=	distutils py3kplist
 USE_GNOME=	cairo
 
 PLIST_SUB=	PORTVER=${PORTVERSION}
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/cairo/_cairo.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/cairo/_cairo*.so
 
 .include <bsd.port.mk>

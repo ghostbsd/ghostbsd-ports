@@ -1,5 +1,4 @@
 # Created by: Joe Maloney <jmaloney@ixsystems.com>
-# $FreeBSD$
 
 PORTNAME=	pcdm
 PORTVERSION=	201710031254

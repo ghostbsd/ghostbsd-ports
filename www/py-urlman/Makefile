@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	urlman
 DISTVERSION=	1.2.0
@@ -11,7 +10,7 @@ COMMENT=	Nicer way to do URLs for Django models
 
 LICENSE=	APACHE20
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

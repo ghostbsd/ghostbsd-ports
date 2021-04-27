@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	pydispatcher
 PORTVERSION=	2.0.5
@@ -14,7 +13,7 @@ LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/license.txt
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

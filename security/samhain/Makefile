@@ -1,5 +1,4 @@
 # Created by: Nikola Kolev <koue@chaosophia.net>
-# $FreeBSD$
 
 PORTNAME=	samhain
 PORTVERSION=	4.4.3
@@ -12,9 +11,10 @@ COMMENT=	Samhain Intrusion Detection System
 
 LICENSE=	GPLv2
 
-BROKEN_aarch64=		fails to build: undefined reference to sbrk
+BROKEN_aarch64=		fails to link: missing sbrk
 BROKEN_mips=		fails to configure: error: Could not find the libwrap library
 BROKEN_mips64=		fails to configure: error: Could not find the libwrap library
+BROKEN_riscv64=		fails to link: missing sbrk
 
 USES=			shebangfix
 SHEBANG_FILES=		scripts/samhainadmin-gpg.pl.in \

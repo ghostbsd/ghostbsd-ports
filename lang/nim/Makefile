@@ -1,8 +1,7 @@
 # Created by: Neal Nelson <ports@nicandneal.net>
-# $FreeBSD$
 
 PORTNAME=	nim
-PORTVERSION=	1.4.2
+PORTVERSION=	1.4.4
 CATEGORIES=	lang
 MASTER_SITES=	https://nim-lang.org/download/
 
@@ -26,6 +25,7 @@ TOOLS_DESC=	Build and install nim tools, including nimble
 
 OPTIONS_DEFINE=	DOCS TOOLS
 OPTIONS_DEFAULT=	DOCS TOOLS
+OPTIONS_EXCLUDE_powerpc64=	DOCS
 
 TEST_BINARY_ALIAS=	node=nodejs
 

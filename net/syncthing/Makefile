@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	syncthing
-PORTVERSION=	1.12.0
+PORTVERSION=	1.13.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/syncthing/syncthing/releases/download/v${PORTVERSION}/
@@ -28,6 +27,9 @@ PORTDOCS=	*
 
 USERS=		syncthing
 GROUPS=		syncthing
+
+# Anonymize
+MAKE_ENV+=	BUILD_USER=ports BUILD_HOST=freebsd
 
 OPTIONS_DEFINE=	DOCS
 

@@ -1,8 +1,7 @@
 # Created by: David Barksdale <amatus@gnu.org>
-# $FreeBSD$
 
 PORTNAME=	libmicrohttpd
-DISTVERSION=	0.9.71
+DISTVERSION=	0.9.72
 CATEGORIES=	www
 MASTER_SITES=	GNU
 

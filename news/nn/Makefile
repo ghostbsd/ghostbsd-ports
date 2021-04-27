@@ -1,5 +1,4 @@
 # Created by: adam
-# $FreeBSD$
 
 PORTNAME=	nn
 PORTVERSION=	6.7.3
@@ -11,6 +10,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Menu based USENET newsreader
 
 BROKEN_aarch64=	Fails to link: missing sbrk
+BROKEN_riscv64=	Fails to link: missing sbrk
 
 SUB_FILES=	pkg-message
 

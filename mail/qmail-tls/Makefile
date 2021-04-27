@@ -1,9 +1,8 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br>
-# $FreeBSD$
 
 PORTNAME=	qmail
 PORTVERSION=	${QMAIL_VERSION}.${TLS_PATCH_DATE}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-tls
 

@@ -1,8 +1,7 @@
 # Created by: chinsan
-# $FreeBSD$
 
 PORTNAME=	File-Path
-PORTVERSION=	2.17
+PORTVERSION=	2.18
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-

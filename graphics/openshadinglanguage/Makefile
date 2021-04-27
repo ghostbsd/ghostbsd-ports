@@ -1,9 +1,9 @@
 # Created by: Shane Ambler <FreeBSD@Shaneware.biz>
-# $FreeBSD$
 
 PORTNAME=	openshadinglanguage
 DISTVERSIONPREFIX=	Release-
 DISTVERSION=	1.11.7.3
+PORTREVISION=	3
 CATEGORIES=	graphics devel
 
 MAINTAINER=	FreeBSD@Shaneware.biz
@@ -13,6 +13,7 @@ LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 BROKEN_FreeBSD_12_powerpc64=	fails to compile: llvm_ops.cpp:101:10: fatal error: 'iostream' file not found
+BROKEN_riscv64=		fails to build: /usr/include/c++/v1/__threading_support:135:3: Unsupported architecture
 
 BUILD_DEPENDS=	llvm-config${LLVM_VER}:devel/llvm${LLVM_VER}
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
@@ -78,7 +79,7 @@ BUILD_DEPENDS+=	${PREFIX}/share/cmake/pybind11/pybind11Config.cmake:devel/pybind
 LIB_DEPENDS+=	liboslquery.so:graphics/openshadinglanguage
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}openimageio>0:graphics/py-openimageio@${PY_FLAVOR}
 PLIST=		${PKGDIR}/pkg-plist-pybind
-USES+=		python
+USES+=		python:3.6+
 USE_PYTHON=	flavors
 CMAKE_ON+=	USE_PYTHON
 CMAKE_ARGS+=	-DPYTHON_VERSION=${PYTHON_VER}
@@ -87,7 +88,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}
 	${INSTALL_LIB} ${BUILD_WRKSRC}/lib/python/site-packages/oslquery.so ${STAGEDIR}${PYTHON_SITELIBDIR}
 .else # SLAVE_PORT != yes
-USES+=		python:build
+USES+=		python:3.6+,build
 CMAKE_OFF+=	USE_PYTHON
 USE_LDCONFIG=	yes
 .endif # SLAVE_PORT

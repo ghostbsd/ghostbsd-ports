@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	lci
 PORTVERSION=	0.11.2
@@ -6,7 +5,7 @@ DISTVERSIONPREFIX=	v
 PORTREVISION=	4
 CATEGORIES=	lang
 
-MAINTAINER=	che@bein.link
+MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Original LOLCODE interpreter
 
 LICENSE=	GPLv3

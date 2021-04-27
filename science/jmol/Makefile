@@ -1,8 +1,7 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	Jmol
-DISTVERSION=	14.31.18
+DISTVERSION=	14.31.35
 CATEGORIES=	science java
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}/Version%20${DISTVERSION:R}/${PORTNAME}%20${DISTVERSION}/
 DISTFILES=	${PORTNAME}-${DISTVERSION}-full${EXTRACT_SUFX}
@@ -24,7 +23,7 @@ SUB_FILES=	${EXES}
 SUB_LIST=	JAVA=${JAVA}
 
 EXES=		${PORTNAME:tl} ${PORTNAME:tl}data
-JARS=		${PORTNAME}.jar ${PORTNAME}Data.jar ${PORTNAME}Lib.jar
+JARS=		${PORTNAME}.jar Jvxl.jar ${PORTNAME}Data.jar # ${PORTNAME}Lib.jar
 
 PLIST_FILES=	${EXES:S/^/bin\//} \
 		${JARS:S/^/${JAVAJARDIR}\//}
@@ -58,6 +57,7 @@ do-install:
 do-install-JSMOL-on:
 	${MKDIR} ${STAGEDIR}${WWWDIR}
 	${CP} -r ${WRKDIR}${PREFIX}/www/jsmol/* ${STAGEDIR}${WWWDIR}
+	${RM} ${STAGEDIR}${WWWDIR}/debug.log
 
 do-install-DOCS-on:
 	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}

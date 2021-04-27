@@ -1,16 +1,14 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	gcr
-PORTVERSION=	3.38.0
+PORTVERSION=	3.38.1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library for bits of crypto UI and parsing
 
-BUILD_DEPENDS=	gtk-doc>0:textproc/gtk-doc \
-		gpg2:security/gnupg \
+BUILD_DEPENDS=	gpg2:security/gnupg \
 		vapigen:lang/vala
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libgpg-error.so:security/libgpg-error \
@@ -29,5 +27,11 @@ INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.crypto.pgp.gschema.xml
+
+OPTIONS_DEFINE=	DOCS
+
+DOCS_BUILD_DEPENDS=	gtk-doc>0:textproc/gtk-doc
+DOCS_MESON_TRUE=	gtk_doc
+DOCSDIR=		${PREFIX}/share/gtk-doc/html/
 
 .include <bsd.port.mk>

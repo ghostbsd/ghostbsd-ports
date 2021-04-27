@@ -1,9 +1,8 @@
 # Created by: Mario S F Ferreira <lioux@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	qmail
 PORTVERSION=	${QMAIL_VERSION}.${MYSQL_PATCH_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-mysql
 

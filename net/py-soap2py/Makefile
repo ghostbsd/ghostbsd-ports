@@ -1,5 +1,4 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	soap2py
 PORTVERSION=	1.16
@@ -14,7 +13,7 @@ LICENSE=	LGPL3+
 
 NO_ARCH=	yes
 USE_PYTHON=	autoplist concurrent distutils
-USES=		python
+USES=		python:3.6+
 
 PLIST_FILES=	${PYTHON_SITELIBDIR}/${PYDISTUTILS_EGGINFO}/PKG-INFO \
 		${PYTHON_SITELIBDIR}/${PYDISTUTILS_EGGINFO}/SOURCES.txt \

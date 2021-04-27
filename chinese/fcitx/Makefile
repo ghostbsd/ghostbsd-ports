@@ -1,5 +1,4 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD$
 
 PORTNAME=	fcitx
 PORTVERSION=	4.2.9.7
@@ -38,7 +37,7 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 SUB_FILES=	pkg-message
 SUB_LIST+=	PORTSDIR=${PORTSDIR}
 
-CONFLICTS=	zh-scim-fcitx-3.*
+CONFLICTS=	zh-scim-fcitx-3.* fcitx5
 
 USE_GNOME=	pango intltool libxml2 introspection
 USE_KDE=	ecm

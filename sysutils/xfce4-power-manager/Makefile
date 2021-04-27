@@ -1,8 +1,7 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD$
 
 PORTNAME=	xfce4-power-manager
-PORTVERSION=	1.6.6
+PORTVERSION=	4.16.0
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE
 DIST_SUBDIR=	xfce4
@@ -27,6 +26,8 @@ CONFIGURE_ARGS=	--disable-network-manager \
 		--enable-polkit \
 		--enable-xfce4panel
 INSTALL_TARGET=	install-strip
+
+PORTSCOUT=	limitw:1,even
 
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes

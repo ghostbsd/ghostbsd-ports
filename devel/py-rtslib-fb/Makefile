@@ -1,5 +1,4 @@
 # Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-# $FreeBSD$
 
 PORTNAME=	rtslib-fb
 PORTVERSION=	2.1.74
@@ -15,7 +14,7 @@ LICENSE=	APACHE20
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyudev>=0.16.1:devel/py-pyudev@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}six>=0:devel/py-six@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	gdspy
 PORTVERSION=	1.6
@@ -15,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>0:math/py-numpy@${PY_FLAVOR}
 TEST_DEPENDS=	pytest:devel/py-pytest@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 USE_GITHUB=	yes
 GH_ACCOUNT=	heitzmann
@@ -43,7 +42,7 @@ test:
 
 post-install:
 	cd ${STAGEDIR}${PYTHON_SITELIBDIR}/${PORTNAME} && \
-	    ${STRIP_CMD} clipper.so
+	    ${STRIP_CMD} clipper*.so
 
 post-install-EXAMPLES-on:
 	cd ${WRKSRC}/tests && \
