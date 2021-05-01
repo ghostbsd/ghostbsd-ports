@@ -1,4 +1,3 @@
-
     COMMENT = Security tools
 
     SUBDIR += 0d1n
@@ -27,6 +26,7 @@
     SUBDIR += amavisd-milter
     SUBDIR += amavisd-new
     SUBDIR += apache-xml-security-c
+    SUBDIR += apg
     SUBDIR += apkid
     SUBDIR += arirang
     SUBDIR += arpCounterattack
@@ -60,7 +60,6 @@
     SUBDIR += bsdsfv
     SUBDIR += bsmtrace
     SUBDIR += bsmtrace3
-    SUBDIR += bugs
     SUBDIR += bzrtp
     SUBDIR += ca_root_nss
     SUBDIR += caesarcipher
@@ -69,7 +68,6 @@
     SUBDIR += cargo-audit
     SUBDIR += ccrypt
     SUBDIR += ccsrch
-    SUBDIR += certificate-transparency
     SUBDIR += cfs
     SUBDIR += cfssl
     SUBDIR += chaosreader
@@ -126,9 +124,7 @@
     SUBDIR += dirbuster
     SUBDIR += dirmngr
     SUBDIR += distcache
-    SUBDIR += dmitry
     SUBDIR += doas
-    SUBDIR += doorman
     SUBDIR += doscan
     SUBDIR += dotdotpwn
     SUBDIR += dropbear
@@ -150,7 +146,6 @@
     SUBDIR += fakeident
     SUBDIR += fakeroot
     SUBDIR += farmhash
-    SUBDIR += fbopenssl
     SUBDIR += fcheck
     SUBDIR += fcrackzip
     SUBDIR += ffuf
@@ -372,7 +367,6 @@
     SUBDIR += nacl
     SUBDIR += ncrack
     SUBDIR += ncrypt
-    SUBDIR += netpgp
     SUBDIR += nettle
     SUBDIR += nextcloud-end_to_end_encryption
     SUBDIR += nextcloud-passman
@@ -522,6 +516,7 @@
     SUBDIR += p5-Crypt-HSXKPasswd
     SUBDIR += p5-Crypt-IDEA
     SUBDIR += p5-Crypt-Imail
+    SUBDIR += p5-Crypt-JWT
     SUBDIR += p5-Crypt-Juniper
     SUBDIR += p5-Crypt-Khazad
     SUBDIR += p5-Crypt-LE
@@ -772,6 +767,7 @@
     SUBDIR += pecl-libsodium
     SUBDIR += pecl-mcrypt
     SUBDIR += pecl-pam
+    SUBDIR += pecl-pkcs11
     SUBDIR += pecl-scrypt
     SUBDIR += pecl-ssh2
     SUBDIR += peda
@@ -791,7 +787,6 @@
     SUBDIR += php80-sodium
     SUBDIR += phpsecinfo
     SUBDIR += picosha2
-    SUBDIR += pidentd
     SUBDIR += pidgin-encryption
     SUBDIR += pidgin-otr
     SUBDIR += pinentry
@@ -807,6 +802,7 @@
     SUBDIR += pkcs11-dump
     SUBDIR += pkcs11-gateway
     SUBDIR += pkcs11-helper
+    SUBDIR += pkcs11-tools
     SUBDIR += pkesh
     SUBDIR += pks
     SUBDIR += pktsuckers
@@ -1147,6 +1143,7 @@
     SUBDIR += rubygem-sshkey
     SUBDIR += rubygem-sshkit
     SUBDIR += rubygem-sslshake
+    SUBDIR += rubygem-ssrf_filter
     SUBDIR += rubygem-timfel-krb5
     SUBDIR += rubygem-tpm-key_attestation
     SUBDIR += rubygem-twitter_oauth
@@ -1201,6 +1198,7 @@
     SUBDIR += softether-devel
     SUBDIR += softether5
     SUBDIR += softhsm2
+    SUBDIR += solana
     SUBDIR += sops
     SUBDIR += spass
     SUBDIR += spass-qt5

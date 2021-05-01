@@ -1,4 +1,3 @@
-
 PORTNAME=	pjsip
 DISTVERSION=	2.11
 CATEGORIES=	net
@@ -42,7 +41,6 @@ RESAMPLE_DESC=	Enable resampling implementations
 RESAMPLEDLL_DESC=	Build libresample as shared library
 SHARED_DESC=	Build shared libraries (other ports may depend on this)
 SPEEXAEC_DESC=	Speex Acoustic Echo Canceller/AEC
-V4L_DESC=	Video4Linux2 support
 WEBRTC_DESC=	Build libwebrtc
 
 OPTIONS_SUB=	yes

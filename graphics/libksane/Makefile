@@ -1,4 +1,3 @@
-
 PORTNAME=	libksane
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	graphics kde kde-applications
@@ -15,5 +14,8 @@ USE_QT=		core gui testlib widgets \
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DOCS
+
+# Override shared library version
+KDE_APPLICATIONS_SHLIB_VER=	"${KDE_APPLICATIONS_VERSION}"
 
 .include <bsd.port.mk>

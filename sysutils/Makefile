@@ -1,4 +1,3 @@
-
     COMMENT = System utilities
 
     SUBDIR += 3dm
@@ -44,6 +43,7 @@
     SUBDIR += ansible
     SUBDIR += ansible-iocage
     SUBDIR += ansible-kld
+    SUBDIR += ansible-sshjail
     SUBDIR += ansible-sysrc
     SUBDIR += ansible27
     SUBDIR += ansible28
@@ -212,7 +212,6 @@
     SUBDIR += coreos-ct
     SUBDIR += coreutils
     SUBDIR += cpdup
-    SUBDIR += cpu
     SUBDIR += cpu-x
     SUBDIR += cpuburn
     SUBDIR += cpuid
@@ -259,6 +258,7 @@
     SUBDIR += direnv
     SUBDIR += direvent
     SUBDIR += dirvish
+    SUBDIR += discus
     SUBDIR += diskcheckd
     SUBDIR += diskimage-tools
     SUBDIR += diskonaut
@@ -485,6 +485,8 @@
     SUBDIR += healthd
     SUBDIR += heirloom
     SUBDIR += helm
+    SUBDIR += helmfile
+    SUBDIR += herbe
     SUBDIR += hexpeek
     SUBDIR += hextools
     SUBDIR += hexyl
@@ -613,6 +615,7 @@
     SUBDIR += linux-c7-lttng-ust
     SUBDIR += linux-c7-numactl-libs
     SUBDIR += linux-c7-userspace-rcu
+    SUBDIR += linux-miniconda-installer
     SUBDIR += linux-rkbin
     SUBDIR += linuxfdisk
     SUBDIR += lizardfs
@@ -787,6 +790,7 @@
     SUBDIR += ohmu
     SUBDIR += omnibackup
     SUBDIR += onefetch
+    SUBDIR += opa
     SUBDIR += open
     SUBDIR += opencorsairlink
     SUBDIR += openipmi
@@ -799,6 +803,7 @@
     SUBDIR += openzfs
     SUBDIR += openzfs-kmod
     SUBDIR += osinfo-db-tools
+    SUBDIR += p5-App-Regather
     SUBDIR += p5-App-RunCron
     SUBDIR += p5-App-ZFSCurses
     SUBDIR += p5-BackupPC-XS
@@ -952,6 +957,7 @@
     SUBDIR += plasma5-ksysguard
     SUBDIR += plasma5-libksysguard
     SUBDIR += plasma5-plasma-disks
+    SUBDIR += plasma5-plasma-systemmonitor
     SUBDIR += plasma5-polkit-kde-agent-1
     SUBDIR += plasma5-powerdevil
     SUBDIR += plasma5-systemsettings
@@ -1113,6 +1119,7 @@
     SUBDIR += roct
     SUBDIR += rovclock
     SUBDIR += rpi-firmware
+    SUBDIR += rset
     SUBDIR += rsfetch
     SUBDIR += rshim-user-space
     SUBDIR += rsnapshot
@@ -1131,7 +1138,6 @@
     SUBDIR += rubygem-capistrano-ext
     SUBDIR += rubygem-capistrano-harrow
     SUBDIR += rubygem-chef
-    SUBDIR += rubygem-chef15
     SUBDIR += rubygem-chef-api
     SUBDIR += rubygem-chef-bin
     SUBDIR += rubygem-chef-config
@@ -1142,6 +1148,7 @@
     SUBDIR += rubygem-chef-utils15
     SUBDIR += rubygem-chef-vault
     SUBDIR += rubygem-chef-zero
+    SUBDIR += rubygem-chef15
     SUBDIR += rubygem-choria-mcorpc-support
     SUBDIR += rubygem-facter
     SUBDIR += rubygem-fluent-mixin-plaintextformatter
@@ -1247,7 +1254,6 @@
     SUBDIR += screenie
     SUBDIR += scterc
     SUBDIR += sd-agent
-    SUBDIR += sd-mux-ctrl
     SUBDIR += sdparm
     SUBDIR += seatd
     SUBDIR += seatools
@@ -1556,6 +1562,7 @@
     SUBDIR += zap
     SUBDIR += zbackup
     SUBDIR += zeitgeist
+    SUBDIR += zellij
     SUBDIR += zeroer
     SUBDIR += zetaback
     SUBDIR += zetaback-devel

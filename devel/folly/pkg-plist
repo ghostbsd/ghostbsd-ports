@@ -18,6 +18,7 @@ include/folly/ConcurrentLazy.h
 include/folly/ConcurrentSkipList-inl.h
 include/folly/ConcurrentSkipList.h
 include/folly/ConstexprMath.h
+include/folly/ConstructorCallback.h
 include/folly/Conv.h
 include/folly/CppAttributes.h
 include/folly/CpuId.h
@@ -619,13 +620,13 @@ include/folly/portability/GMock.h
 include/folly/portability/GTest.h
 include/folly/portability/IOVec.h
 include/folly/portability/Libgen.h
+include/folly/portability/Libunwind.h
 include/folly/portability/Malloc.h
 include/folly/portability/Math.h
 include/folly/portability/Memory.h
 include/folly/portability/OpenSSL.h
 include/folly/portability/PThread.h
 include/folly/portability/Sched.h
-include/folly/portability/Semaphore.h
 include/folly/portability/Sockets.h
 include/folly/portability/Stdio.h
 include/folly/portability/Stdlib.h
@@ -708,6 +709,7 @@ include/folly/synchronization/HazptrThreadPoolExecutor.h
 include/folly/synchronization/LifoSem.h
 include/folly/synchronization/Lock.h
 include/folly/synchronization/MicroSpinLock.h
+include/folly/synchronization/NativeSemaphore.h
 include/folly/synchronization/ParkingLot.h
 include/folly/synchronization/PicoSpinLock.h
 include/folly/synchronization/RWSpinLock.h

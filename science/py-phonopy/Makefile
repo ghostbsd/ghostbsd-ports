@@ -1,4 +1,3 @@
-
 PORTNAME=	phonopy
 DISTVERSION=	2.9.3
 CATEGORIES=	science python
@@ -20,7 +19,7 @@ BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>0:devel/py-nose@${PY_FLAVOR}
 
-USES=		python:3.6+
+USES=		python:3.7+
 USE_PYTHON=	distutils cython autoplist
 
 do-test:

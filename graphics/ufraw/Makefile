@@ -1,8 +1,7 @@
 # Created by: Mark Murray <markm@FreeBSD.org>
 
 PORTNAME=	ufraw
-PORTVERSION=	0.22
-PORTREVISION=	17
+PORTVERSION=	0.22.20210424
 CATEGORIES=	graphics
 
 MAINTAINER=	rodrigo@FreeBSD.org
@@ -19,7 +18,7 @@ LIB_DEPENDS=	libtiff.so:graphics/tiff \
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-extras
-USES=		compiler:c++11-lang gettext gmake jpeg pkgconfig autoreconf gnome
+USES=		compiler:c++11-lang desktop-file-utils gettext gmake jpeg pkgconfig autoreconf gnome
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-lpthread -L${LOCALBASE}/lib
@@ -36,7 +35,7 @@ GIMP_DESC=	Install GIMP plugin
 USE_GITHUB=	yes
 GH_ACCOUNT=	sergiomb2
 GH_PROJECT=	ufraw
-GH_TAGNAME=	6d3259a
+GH_TAGNAME=	f34669b
 
 USE_GNOME+=glib20 gtk20 cairo gdkpixbuf2
 

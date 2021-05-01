@@ -76,6 +76,12 @@ LIB_DEPENDS+=	libgmp.so:math/gmp \
 DIST_SUBDIR?=	cabal
 
 .  if !defined(USE_GITHUB) && !defined(USE_GITLAB) && !${cabal_ARGS:Mnodefault}
+_hackage_is_default=	yes
+.  else
+_hackage_is_default=	no
+.  endif
+
+.  if ${_hackage_is_default} == yes
 MASTER_SITES=	https://hackage.haskell.org/package/${PORTNAME}-${PORTVERSION}/ \
 		http://hackage.haskell.org/package/${PORTNAME}-${PORTVERSION}/
 DISTFILES+=	${PORTNAME}-${PORTVERSION}${CABAL_EXTRACT_SUFX}
@@ -125,8 +131,15 @@ DISTFILES+=	${package:C/_[0-9]+//}/revision/${package:C/[^_]*//:S/_//}.cabal:${p
 cabal-extract: ${WRKDIR}
 	${RM} -rf ${CABAL_HOME}/.cabal
 	${SETENV} HOME=${CABAL_HOME} cabal new-update
+.  if ${_hackage_is_default} == yes
 	cd ${WRKDIR} && \
 		${SETENV} ${LOCALE_ENV} HOME=${CABAL_HOME} cabal get ${PORTNAME}-${PORTVERSION}
+.  else
+	${MV} ${CABAL_HOME} /tmp/${PORTNAME}-cabal-home
+	cd ${.CURDIR} && ${MAKE} extract CABAL_BOOTSTRAP=yes
+	${RM} -rf ${CABAL_HOME}
+	${MV} /tmp/${PORTNAME}-cabal-home ${CABAL_HOME}
+.  endif
 
 # Fetches and unpacks dependencies sources for a cabal-extract'ed package.
 # Builds them as side-effect.
@@ -189,14 +202,14 @@ do-install:
 	${INSTALL_PROGRAM} \
 		$$(find ${WRKSRC}/dist-newstyle -name ${exe} -type f -perm +111) \
 		${STAGEDIR}${PREFIX}/${CABAL_LIBEXEC}/${exe}
-	${ECHO} '#!/bin/sh' > ${STAGEDIR}${PREFIX}/bin/${exe}
-	${ECHO} '' >> ${STAGEDIR}${PREFIX}/bin/${exe}
-	${ECHO} 'export ${exe:S/-/_/}_datadir=${DATADIR}' >> ${STAGEDIR}${PREFIX}/bin/${exe}
+	${ECHO_CMD} '#!/bin/sh' > ${STAGEDIR}${PREFIX}/bin/${exe}
+	${ECHO_CMD} '' >> ${STAGEDIR}${PREFIX}/bin/${exe}
+	${ECHO_CMD} 'export ${exe:S/-/_/}_datadir=${DATADIR}' >> ${STAGEDIR}${PREFIX}/bin/${exe}
 .         for dep in ${${exe}_DATADIR_VARS}
-	${ECHO} 'export ${dep:S/-/_/}_datadir=${DATADIR}' >> ${STAGEDIR}${PREFIX}/bin/${exe}
+	${ECHO_CMD} 'export ${dep:S/-/_/}_datadir=${DATADIR}' >> ${STAGEDIR}${PREFIX}/bin/${exe}
 .         endfor
-	${ECHO} '' >> ${STAGEDIR}${PREFIX}/bin/${exe}
-	${ECHO} '${PREFIX}/${CABAL_LIBEXEC}/${exe} "$$@"' >> ${STAGEDIR}${PREFIX}/bin/${exe}
+	${ECHO_CMD} '' >> ${STAGEDIR}${PREFIX}/bin/${exe}
+	${ECHO_CMD} 'exec ${PREFIX}/${CABAL_LIBEXEC}/${exe} "$$@"' >> ${STAGEDIR}${PREFIX}/bin/${exe}
 	${CHMOD} +x ${STAGEDIR}${PREFIX}/bin/${exe}
 .      endfor
 .    endif

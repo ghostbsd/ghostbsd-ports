@@ -1,7 +1,7 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
 
 PORTNAME=	wyrmgus
-PORTVERSION=	4.1.3
+PORTVERSION=	4.1.4
 DISTVERSIONPREFIX=	v
 CATEGORIES=	games devel
 
@@ -10,9 +10,6 @@ COMMENT=	Modified Stratagus engine for Wyrmsun
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-DEPRECATED=	Uses EOL Python 2.7 via lang/tolua++
-EXPIRATION_DATE=2021-06-23
 
 LIB_DEPENDS=	libtolua++-${LUA_VER}.so:lang/tolua++
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/tokenizer.hpp:devel/boost-libs

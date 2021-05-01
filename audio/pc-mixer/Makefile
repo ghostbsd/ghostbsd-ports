@@ -1,5 +1,3 @@
-# Created by: Joe Maloney <jmaloney@ixsystems.com>
-
 PORTNAME=	pc-mixer
 PORTVERSION=	20180328
 PORTREVISION=	2

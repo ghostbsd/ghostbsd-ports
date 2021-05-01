@@ -1,4 +1,3 @@
-
 PORTNAME=	or-tools
 DISTVERSIONPREFIX=	v
 DISTVERSION=	8.2
@@ -33,6 +32,13 @@ OPTIONS_DEFINE=		SCIP
 SCIP_DESC=		Use the SCIP solver # SCIP package isn't built because of licensing restrictions
 SCIP_CMAKE_BOOL=	USE_SCIP
 SCIP_LIB_DEPENDS=	libscip.so:math/SCIP
+
+post-patch:
+	@${REINPLACE_CMD} -e '/absl::container/s,^,#,' \
+		${WRKSRC}/ortools/constraint_solver/CMakeLists.txt \
+		${WRKSRC}/ortools/glop/CMakeLists.txt \
+		${WRKSRC}/ortools/linear_solver/CMakeLists.txt \
+		${WRKSRC}/ortools/sat/CMakeLists.txt
 
 post-install:
 	@${FIND} ${STAGEDIR}${PREFIX} -type d -empty -delete

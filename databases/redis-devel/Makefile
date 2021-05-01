@@ -1,7 +1,7 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
 
 PORTNAME=	redis
-PORTVERSION=	6.2.1
+PORTVERSION=	6.2.2
 CATEGORIES=	databases
 MASTER_SITES=	https://download.redis.io/releases/
 PKGNAMESUFFIX=	-devel
@@ -69,7 +69,7 @@ LDFLAGS=	-Wl,-E
 
 LDFLAGS+=	-lpthread -lm -lexecinfo
 
-CONFLICTS?=	redis4-4.* redis5-5.* redis-6.*
+CONFLICTS?=	redis5-5.* redis-6.*
 
 USE_RC_SUBR=	redis sentinel
 BIN_FILES=	redis-benchmark redis-check-aof redis-check-rdb \

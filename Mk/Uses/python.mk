@@ -248,7 +248,7 @@ _INCLUDE_USES_PYTHON_MK=	yes
 # What Python version and what Python interpreters are currently supported?
 # When adding a version, please keep the comment in
 # Mk/bsd.default-versions.mk in sync.
-_PYTHON_VERSIONS=		2.7 3.7 3.8 3.9 3.6 # preferred first
+_PYTHON_VERSIONS=		2.7 3.8 3.9 3.7 3.6 # preferred first
 _PYTHON_PORTBRANCH=		2.7		# ${_PYTHON_VERSIONS:[1]}
 _PYTHON_BASECMD=		${LOCALBASE}/bin/python
 _PYTHON_RELPORTDIR=		lang/python
@@ -445,12 +445,6 @@ PYTHON_REL=		# empty
 PYTHON_ABIVER=		# empty
 PYTHON_PORTSDIR=	${_PYTHON_RELPORTDIR}${PYTHON_SUFFIX}
 
-.if ${PYTHON_VER} >= 3.8
-PYTHON_EXT_SUFFIX=	.cpython-${PYTHON_SUFFIX}
-.else
-PYTHON_EXT_SUFFIX=	# empty
-.endif
-
 # Protect partial checkouts from Mk/Scripts/functions.sh:export_ports_env().
 .if !defined(_PORTS_ENV_CHECK) || exists(${PORTSDIR}/${PYTHON_PORTSDIR})
 .include "${PORTSDIR}/${PYTHON_PORTSDIR}/Makefile.version"
@@ -470,6 +464,12 @@ PYTHON_ABIVER!=		${PYTHON_CMD}-config --abiflags
 # Default ABI flags for lang/python3[67] ports
 PYTHON_ABIVER=		m
 .endif
+.endif
+
+.if ${PYTHON_REL} >= 3807
+PYTHON_EXT_SUFFIX=	.cpython-${PYTHON_SUFFIX}
+.else
+PYTHON_EXT_SUFFIX=	# empty
 .endif
 
 .if ${PYTHON_MAJOR_VER} == 2
@@ -643,12 +643,6 @@ PY_PYGMENTS=	${PYTHON_PKGNAMEPREFIX}pygments-25>=2.5.1<3:textproc/py-pygments-25
 .else
 PY_PILLOW=	${PYTHON_PKGNAMEPREFIX}pillow>=7.0.0:graphics/py-pillow@${PY_FLAVOR}
 PY_PYGMENTS=	${PYTHON_PKGNAMEPREFIX}pygments>=2.5.1<3:textproc/py-pygments@${PY_FLAVOR}
-.endif
-
-.if ${PYTHON_REL} < 3400
-PY_ENUM34=	${PYTHON_PKGNAMEPREFIX}enum34>=1.1<2.0:devel/py-enum34@${PY_FLAVOR}
-.else
-PY_ENUM34=
 .endif
 
 .if ${PYTHON_VER} != ${PYTHON_DEFAULT}

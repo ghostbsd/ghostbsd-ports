@@ -1,6 +1,5 @@
-
 PORTNAME=	aws-sdk-resources
-PORTVERSION=	3.94.0
+PORTVERSION=	3.97.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -8,6 +7,7 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	AWS SDK for Ruby Resources
 
 LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessanalyzer \
 		rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
@@ -106,6 +106,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-emrcontainers>=1<2:devel/rubygem-aws-sdk-emrcontainers \
 		rubygem-aws-sdk-eventbridge>=1<2:devel/rubygem-aws-sdk-eventbridge \
 		rubygem-aws-sdk-firehose>=1<2:devel/rubygem-aws-sdk-firehose \
+		rubygem-aws-sdk-fis>=1<2:devel/rubygem-aws-sdk-fis \
 		rubygem-aws-sdk-fms>=1<2:devel/rubygem-aws-sdk-fms \
 		rubygem-aws-sdk-forecastqueryservice>=1<2:devel/rubygem-aws-sdk-forecastqueryservice \
 		rubygem-aws-sdk-forecastservice>=1<2:devel/rubygem-aws-sdk-forecastservice \
@@ -164,6 +165,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-lightsail>=1<2:devel/rubygem-aws-sdk-lightsail \
 		rubygem-aws-sdk-locationservice>=1<2:devel/rubygem-aws-sdk-locationservice \
 		rubygem-aws-sdk-lookoutforvision>=1<2:devel/rubygem-aws-sdk-lookoutforvision \
+		rubygem-aws-sdk-lookoutmetrics>=1<2:devel/rubygem-aws-sdk-lookoutmetrics \
 		rubygem-aws-sdk-machinelearning>=1<2:devel/rubygem-aws-sdk-machinelearning \
 		rubygem-aws-sdk-macie>=1<2:devel/rubygem-aws-sdk-macie \
 		rubygem-aws-sdk-macie2>=1<2:devel/rubygem-aws-sdk-macie2 \
@@ -180,6 +182,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-mediastore>=1<2:devel/rubygem-aws-sdk-mediastore \
 		rubygem-aws-sdk-mediastoredata>=1<2:devel/rubygem-aws-sdk-mediastoredata \
 		rubygem-aws-sdk-mediatailor>=1<2:devel/rubygem-aws-sdk-mediatailor \
+		rubygem-aws-sdk-mgn>=1<2:devel/rubygem-aws-sdk-mgn \
 		rubygem-aws-sdk-migrationhub>=1<2:devel/rubygem-aws-sdk-migrationhub \
 		rubygem-aws-sdk-migrationhubconfig>=1<2:devel/rubygem-aws-sdk-migrationhubconfig \
 		rubygem-aws-sdk-mobile>=1<2:devel/rubygem-aws-sdk-mobile \

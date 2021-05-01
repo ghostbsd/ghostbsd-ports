@@ -222,6 +222,7 @@ include/thrift/lib/cpp2/protocol/TableBasedSerializer.h
 include/thrift/lib/cpp2/protocol/TableBasedSerializerImpl.h
 include/thrift/lib/cpp2/protocol/Traits.h
 include/thrift/lib/cpp2/protocol/VirtualProtocol.h
+include/thrift/lib/cpp2/protocol/detail/index.h
 include/thrift/lib/cpp2/protocol/detail/protocol_methods.h
 include/thrift/lib/cpp2/protocol/nimble/BufferingNimbleDecoder.h
 include/thrift/lib/cpp2/protocol/nimble/BufferingNimbleEncoder.h
@@ -280,6 +281,7 @@ include/thrift/lib/cpp2/server/LoggingEvent.h
 include/thrift/lib/cpp2/server/LoggingEventHelper.h
 include/thrift/lib/cpp2/server/MonitoringMethodNames.h
 include/thrift/lib/cpp2/server/MonitoringServerInterface.h
+include/thrift/lib/cpp2/server/PreprocessParams.h
 include/thrift/lib/cpp2/server/QIAdmissionController.h
 include/thrift/lib/cpp2/server/RequestDebugLog.h
 include/thrift/lib/cpp2/server/RequestsRegistry.h
@@ -377,6 +379,7 @@ include/thrift/lib/cpp2/util/Ewma.h
 include/thrift/lib/cpp2/util/EwmaRate.h
 include/thrift/lib/cpp2/util/Frozen2ViewHelpers.h
 include/thrift/lib/cpp2/util/ManagedStringView.h
+include/thrift/lib/cpp2/util/MethodMetadata.h
 include/thrift/lib/cpp2/util/ScopedServerInterfaceThread-inl.h
 include/thrift/lib/cpp2/util/ScopedServerInterfaceThread.h
 include/thrift/lib/cpp2/util/ScopedServerThread.h
@@ -397,6 +400,7 @@ include/thrift/lib/py3/stream.h
 include/thrift/lib/py3/test/BinaryTypes.h
 include/thrift/lib/py3/test/client_event_handlers/handler.h
 include/thrift/lib/py3/test/cpp_handler.h
+include/thrift/lib/py3/test/interactions/interaction_test.h
 include/thrift/lib/py3/test/is_overload/func.h
 include/thrift/lib/py3/test/stream/server.h
 include/thrift/lib/py3/types.h
@@ -469,8 +473,6 @@ lib/libcompiler_ast.so
 lib/libcompiler_ast.so.1.0.0
 lib/libcompiler_base.so
 lib/libcompiler_base.so.1.0.0
-lib/libcompiler_generators.so
-lib/libcompiler_generators.so.1.0.0
 lib/libcompiler_lib.so
 lib/libcompiler_lib.so.1.0.0
 lib/libconcurrency.so

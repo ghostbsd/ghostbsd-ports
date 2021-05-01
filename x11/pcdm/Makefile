@@ -1,5 +1,3 @@
-# Created by: Joe Maloney <jmaloney@ixsystems.com>
-
 PORTNAME=	pcdm
 PORTVERSION=	201710031254
 PORTREVISION=	3

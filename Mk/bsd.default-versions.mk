@@ -18,7 +18,7 @@ _INCLUDE_BSD_DEFAULT_VERSIONS_MK=	yes
 LOCALBASE?=	/usr/local
 
 .for lang in APACHE BDB COROSYNC EMACS FIREBIRD FORTRAN FPC GCC GHOSTSCRIPT \
-	IMAGEMAGICK JAVA LAZARUS LIBRSVG2 LINUX LLVM LUA MYSQL PERL5 \
+	IMAGEMAGICK JAVA LAZARUS LIBRSVG2 LINUX LLVM LUA MYSQL NINJA PERL5 \
 	PGSQL PHP PYTHON PYTHON2 PYTHON3 RUBY RUST SAMBA SSL TCLTK VARNISH
 .if defined(${lang}_DEFAULT)
 ERROR+=	"The variable ${lang}_DEFAULT is set and it should only be defined through DEFAULT_VERSIONS+=${lang:tl}=${${lang}_DEFAULT} in /etc/make.conf"
@@ -81,6 +81,8 @@ LUA_DEFAULT?=		5.2
 MONO_DEFAULT=		5.10
 # Possible values: 5.5, 5.6, 5.7, 8.0, 10.3m, 10.4m, 10.5m, 5.5p, 5.6p, 5.7p, 5.6w, 5.7w
 MYSQL_DEFAULT?=		5.7
+# Possible values: ninja, samurai
+NINJA_DEFAULT?=		ninja
 # Possible values: 5.28, 5.30, 5.32, devel
 .if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
@@ -101,16 +103,16 @@ PGSQL_DEFAULT?=		12
 # Possible values: 7.3, 7.4, 8.0
 PHP_DEFAULT?=		7.4
 # Possible values: 2.7, 3.6, 3.7, 3.8, 3.9
-PYTHON_DEFAULT?=	3.7
+PYTHON_DEFAULT?=	3.8
 # Possible values: 2.7
 PYTHON2_DEFAULT?=	2.7
 # Possible values: 3.6, 3.7, 3.8, 3.9
-PYTHON3_DEFAULT?=	3.7
+PYTHON3_DEFAULT?=	3.8
 # Possible values: 2.6, 2.7, 3.0
 RUBY_DEFAULT?=		2.7
 # Possible values: rust, rust-nightly
 RUST_DEFAULT?=		rust
-# Possible values: 4.11, 4.12, 4.13
+# Possible values: 4.12, 4.13
 SAMBA_DEFAULT?=		4.12
 # Possible values: base, openssl, libressl, libressl-devel
 .if !defined(SSL_DEFAULT)

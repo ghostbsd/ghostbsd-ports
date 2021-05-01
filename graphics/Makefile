@@ -1,4 +1,3 @@
-
     COMMENT = Graphics tools and libraries
 
     SUBDIR += 4va
@@ -345,7 +344,6 @@
     SUBDIR += iec16022
     SUBDIR += iiview
     SUBDIR += ikona
-    SUBDIR += ilmbase
     SUBDIR += imageindex
     SUBDIR += imageviewer
     SUBDIR += imageworsener
@@ -901,6 +899,7 @@
     SUBDIR += py-tifffile
     SUBDIR += py-toyplot
     SUBDIR += py-traitsui
+    SUBDIR += py-ueberzug
     SUBDIR += py-urbanaccess
     SUBDIR += py-urbansim
     SUBDIR += py-utm

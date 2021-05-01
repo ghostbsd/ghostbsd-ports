@@ -1,4 +1,3 @@
-
 PORTNAME=	plasma-desktop
 DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	x11 kde kde-plasma
@@ -47,7 +46,8 @@ USE_XORG=	ice sm x11 xcb xcursor xext xfixes xft xi xrender
 
 CMAKE_ON=	WANT_SYNAPTICS
 
-SHEBANG_FILES=	kcms/ksmserver/kconf_update/ksmserver_update_loginMode_value.py
+SHEBANG_FILES=	kcms/ksmserver/kconf_update/*.py \
+		kcms/keyboard/*.py
 
 OPTIONS_SUB=	yes
 

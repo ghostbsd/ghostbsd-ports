@@ -1,7 +1,7 @@
 # Created by: Corey Smith <corsmith@gmail.com>
 
 PORTNAME=	zerotier
-DISTVERSION=	1.6.4
+DISTVERSION=	1.6.5
 CATEGORIES=	net
 
 PATCH_SITES=	https://github.com/zerotier/zerotierone/pull/

@@ -1,4 +1,3 @@
-
     COMMENT = Development utilities
 
     SUBDIR += 9base
@@ -48,6 +47,7 @@
     SUBDIR += R-cran-gdata
     SUBDIR += R-cran-generics
     SUBDIR += R-cran-getopt
+    SUBDIR += R-cran-git2r
     SUBDIR += R-cran-glmnet
     SUBDIR += R-cran-glue
     SUBDIR += R-cran-gmodels
@@ -275,8 +275,6 @@
     SUBDIR += bugzilla50
     SUBDIR += build
     SUBDIR += buildstream
-    SUBDIR += buildtool
-    SUBDIR += buildtool-doc
     SUBDIR += bullet
     SUBDIR += busybee
     SUBDIR += byacc
@@ -587,6 +585,7 @@
     SUBDIR += embb
     SUBDIR += emscripten
     SUBDIR += entt
+    SUBDIR += envsubst
     SUBDIR += epl.el
     SUBDIR += epm
     SUBDIR += eric6
@@ -726,7 +725,6 @@
     SUBDIR += gammaray
     SUBDIR += gauche-readline
     SUBDIR += gaul
-    SUBDIR += gb
     SUBDIR += gbump
     SUBDIR += gcc-arm-embedded
     SUBDIR += gcc-msp430-ti-toolchain
@@ -783,7 +781,6 @@
     SUBDIR += geany-plugins-l10n
     SUBDIR += geany-themes
     SUBDIR += gearmand
-    SUBDIR += gearmand-devel
     SUBDIR += gecode
     SUBDIR += generate
     SUBDIR += gengetopt
@@ -793,6 +790,7 @@
     SUBDIR += gettext-msghack
     SUBDIR += gettext-po-mode
     SUBDIR += gettext-runtime
+    SUBDIR += gettext-tiny
     SUBDIR += gettext-tools
     SUBDIR += gflags
     SUBDIR += gh
@@ -937,8 +935,10 @@
     SUBDIR += hs-git-annex
     SUBDIR += hs-haddock
     SUBDIR += hs-happy
+    SUBDIR += hs-haskell-language-server
     SUBDIR += hs-hasktags
     SUBDIR += hs-hlint
+    SUBDIR += hs-hls-install
     SUBDIR += hs-hoogle
     SUBDIR += hs-hpack
     SUBDIR += hs-hspec-discover
@@ -1349,6 +1349,7 @@
     SUBDIR += libtextstyle
     SUBDIR += libthai
     SUBDIR += libthmap
+    SUBDIR += libtickit
     SUBDIR += libtifiles2
     SUBDIR += libtool
     SUBDIR += libtpl
@@ -1405,6 +1406,7 @@
     SUBDIR += linux-c7-libpciaccess
     SUBDIR += linux-c7-libsigc++20
     SUBDIR += linux-c7-libthai
+    SUBDIR += linux-c7-libtool-ltdl
     SUBDIR += linux-c7-libunwind
     SUBDIR += linux-c7-make
     SUBDIR += linux-c7-nspr
@@ -1633,7 +1635,6 @@
     SUBDIR += opengrok
     SUBDIR += openocd
     SUBDIR += openwince-include
-    SUBDIR += openzz
     SUBDIR += orc
     SUBDIR += osc
     SUBDIR += ossp-al
@@ -1655,6 +1656,7 @@
     SUBDIR += p5-Acme-Comment
     SUBDIR += p5-Acme-Damn
     SUBDIR += p5-Acme-MetaSyntactic
+    SUBDIR += p5-Adapter-Async
     SUBDIR += p5-Agent
     SUBDIR += p5-Algorithm-Accounting
     SUBDIR += p5-Algorithm-Annotate
@@ -2352,6 +2354,7 @@
     SUBDIR += p5-FFI-CheckLib
     SUBDIR += p5-FFI-Platypus
     SUBDIR += p5-FSA-Rules
+    SUBDIR += p5-Feature-Compat-Try
     SUBDIR += p5-Fennec-Lite
     SUBDIR += p5-File-Append-TempFile
     SUBDIR += p5-File-Assets
@@ -2627,6 +2630,7 @@
     SUBDIR += p5-Lingua-JA-Fold
     SUBDIR += p5-Lingua-Translit
     SUBDIR += p5-List-AllUtils
+    SUBDIR += p5-List-BinarySearch
     SUBDIR += p5-List-Cycle
     SUBDIR += p5-List-Flatten
     SUBDIR += p5-List-Gen
@@ -2737,6 +2741,7 @@
     SUBDIR += p5-Module-Build-Pluggable
     SUBDIR += p5-Module-Build-Pluggable-ReadmeMarkdownFromPod
     SUBDIR += p5-Module-Build-Tiny
+    SUBDIR += p5-Module-Build-Using-PkgConfig
     SUBDIR += p5-Module-Build-WithXSpp
     SUBDIR += p5-Module-Build-XSUtil
     SUBDIR += p5-Module-CPANTS-Analyse
@@ -3025,6 +3030,7 @@
     SUBDIR += p5-Parse-Yapp
     SUBDIR += p5-ParseLex
     SUBDIR += p5-ParseTemplate
+    SUBDIR += p5-Parser-MGC
     SUBDIR += p5-PatchReader
     SUBDIR += p5-Path-Abstract
     SUBDIR += p5-Path-Class
@@ -3520,6 +3526,9 @@
     SUBDIR += p5-Thrift
     SUBDIR += p5-Thrift-XS
     SUBDIR += p5-Throwable
+    SUBDIR += p5-Tickit
+    SUBDIR += p5-Tickit-Widget-Table
+    SUBDIR += p5-Tickit-Widgets
     SUBDIR += p5-Tie-Array-Pack
     SUBDIR += p5-Tie-Array-Sorted
     SUBDIR += p5-Tie-CPHash
@@ -3618,6 +3627,7 @@
     SUBDIR += p5-VCS-CVS
     SUBDIR += p5-VCS-Lite
     SUBDIR += p5-Validation-Class
+    SUBDIR += p5-Variable-Disposition
     SUBDIR += p5-Variable-Eject
     SUBDIR += p5-Variable-Magic
     SUBDIR += p5-Want
@@ -4171,6 +4181,7 @@
     SUBDIR += py-azure-mgmt-security
     SUBDIR += py-azure-mgmt-servicebus
     SUBDIR += py-azure-mgmt-servicefabric
+    SUBDIR += py-azure-mgmt-servicefabricmanagedclusters
     SUBDIR += py-azure-mgmt-signalr
     SUBDIR += py-azure-mgmt-sql
     SUBDIR += py-azure-mgmt-sqlvirtualmachine
@@ -4313,6 +4324,7 @@
     SUBDIR += py-curio
     SUBDIR += py-cursive
     SUBDIR += py-curtsies
+    SUBDIR += py-cvss
     SUBDIR += py-cwcwidth
     SUBDIR += py-cxx
     SUBDIR += py-cycler
@@ -4328,6 +4340,7 @@
     SUBDIR += py-darts.util.lru
     SUBDIR += py-dask
     SUBDIR += py-dataclasses
+    SUBDIR += py-dataclasses-json
     SUBDIR += py-datadog
     SUBDIR += py-datapackage
     SUBDIR += py-datatest
@@ -4376,7 +4389,6 @@
     SUBDIR += py-enlighten
     SUBDIR += py-entrypoints
     SUBDIR += py-enum-compat
-    SUBDIR += py-enum34
     SUBDIR += py-envisage
     SUBDIR += py-epdb
     SUBDIR += py-epsilon
@@ -4403,6 +4415,7 @@
     SUBDIR += py-filedepot
     SUBDIR += py-filemagic
     SUBDIR += py-filetype
+    SUBDIR += py-findlibs
     SUBDIR += py-first
     SUBDIR += py-five.globalrequest
     SUBDIR += py-fixtures
@@ -4485,6 +4498,7 @@
     SUBDIR += py-grpcio-tools
     SUBDIR += py-gs_api_client
     SUBDIR += py-gtfslib
+    SUBDIR += py-guppy3
     SUBDIR += py-gyp
     SUBDIR += py-hash_ring
     SUBDIR += py-heapdict
@@ -4573,6 +4587,7 @@
     SUBDIR += py-jsonsir
     SUBDIR += py-jupyter-packaging
     SUBDIR += py-jupyter-server
+    SUBDIR += py-jupyter-server-mathjax
     SUBDIR += py-jupyter-telemetry
     SUBDIR += py-jupyter_client
     SUBDIR += py-jupyter_console
@@ -4634,6 +4649,7 @@
     SUBDIR += py-marrow.mailer
     SUBDIR += py-marrow.util
     SUBDIR += py-marshmallow
+    SUBDIR += py-marshmallow-enum
     SUBDIR += py-matrix-angular-sdk
     SUBDIR += py-maturin
     SUBDIR += py-mccabe
@@ -4643,6 +4659,7 @@
     SUBDIR += py-memory-profiler
     SUBDIR += py-microversion-parse
     SUBDIR += py-milc
+    SUBDIR += py-mime
     SUBDIR += py-minidump
     SUBDIR += py-minimongo
     SUBDIR += py-minio
@@ -4800,6 +4817,7 @@
     SUBDIR += py-phonenumbers
     SUBDIR += py-phply
     SUBDIR += py-phpserialize
+    SUBDIR += py-phx-class-registry
     SUBDIR += py-pid
     SUBDIR += py-pika
     SUBDIR += py-pika-pool
@@ -4906,6 +4924,8 @@
     SUBDIR += py-pylama
     SUBDIR += py-pylev
     SUBDIR += py-pylibsrtp
+    SUBDIR += py-pylint-django
+    SUBDIR += py-pylint-plugin-utils
     SUBDIR += py-pylru
     SUBDIR += py-pylru-cache
     SUBDIR += py-pyls-black
@@ -5093,6 +5113,7 @@
     SUBDIR += py-setuptools_scm
     SUBDIR += py-setuptools_scm_git_archive
     SUBDIR += py-sexpdata
+    SUBDIR += py-sgmllib3k
     SUBDIR += py-sh
     SUBDIR += py-shapely
     SUBDIR += py-shellingham
@@ -5622,6 +5643,7 @@
     SUBDIR += rubygem-aws-sdk-emrcontainers
     SUBDIR += rubygem-aws-sdk-eventbridge
     SUBDIR += rubygem-aws-sdk-firehose
+    SUBDIR += rubygem-aws-sdk-fis
     SUBDIR += rubygem-aws-sdk-fms
     SUBDIR += rubygem-aws-sdk-forecastqueryservice
     SUBDIR += rubygem-aws-sdk-forecastservice
@@ -5680,6 +5702,7 @@
     SUBDIR += rubygem-aws-sdk-lightsail
     SUBDIR += rubygem-aws-sdk-locationservice
     SUBDIR += rubygem-aws-sdk-lookoutforvision
+    SUBDIR += rubygem-aws-sdk-lookoutmetrics
     SUBDIR += rubygem-aws-sdk-machinelearning
     SUBDIR += rubygem-aws-sdk-macie
     SUBDIR += rubygem-aws-sdk-macie2
@@ -5696,6 +5719,7 @@
     SUBDIR += rubygem-aws-sdk-mediastore
     SUBDIR += rubygem-aws-sdk-mediastoredata
     SUBDIR += rubygem-aws-sdk-mediatailor
+    SUBDIR += rubygem-aws-sdk-mgn
     SUBDIR += rubygem-aws-sdk-migrationhub
     SUBDIR += rubygem-aws-sdk-migrationhubconfig
     SUBDIR += rubygem-aws-sdk-mobile
@@ -6096,6 +6120,7 @@
     SUBDIR += rubygem-facets
     SUBDIR += rubygem-faker
     SUBDIR += rubygem-faraday-cookie_jar
+    SUBDIR += rubygem-faraday-excon
     SUBDIR += rubygem-faraday_middleware-aws-signers-v4
     SUBDIR += rubygem-faraday_middleware-aws-sigv4
     SUBDIR += rubygem-faraday_middleware-aws-sigv403
@@ -6522,6 +6547,7 @@
     SUBDIR += rubygem-ruby-fogbugz021
     SUBDIR += rubygem-ruby-libvirt
     SUBDIR += rubygem-ruby-macho
+    SUBDIR += rubygem-ruby-magic
     SUBDIR += rubygem-ruby-magic-static
     SUBDIR += rubygem-ruby-ole
     SUBDIR += rubygem-ruby-prof
@@ -6706,6 +6732,7 @@
     SUBDIR += rubygem-useragent
     SUBDIR += rubygem-uuid
     SUBDIR += rubygem-uuidtools
+    SUBDIR += rubygem-valid
     SUBDIR += rubygem-validatable
     SUBDIR += rubygem-validate_email
     SUBDIR += rubygem-validate_url
@@ -6758,7 +6785,7 @@
     SUBDIR += scandoc
     SUBDIR += sccache
     SUBDIR += scons
-    SUBDIR += sd-mux
+    SUBDIR += sd-mux-ctrl
     SUBDIR += sdl12
     SUBDIR += sdl20
     SUBDIR += sdl2pp
@@ -6809,7 +6836,6 @@
     SUBDIR += sope2
     SUBDIR += sope4
     SUBDIR += sord
-    SUBDIR += sourcenav
     SUBDIR += sparc64-gcc
     SUBDIR += sparc64-xtoolchain-gcc
     SUBDIR += spark

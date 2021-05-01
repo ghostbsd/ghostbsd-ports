@@ -1,9 +1,10 @@
 bin/certificates
 bin/inspector
+bin/metabase-createdat-migration
+bin/metainfo-loop-benchmark
 bin/metric-receiver
 bin/multinode
 bin/satellite
-bin/segment-reaper
 bin/storagenode
 bin/storagenode-updater
 bin/storj-admin

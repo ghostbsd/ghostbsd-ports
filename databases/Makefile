@@ -1,4 +1,3 @@
-
     COMMENT = Databases and related software
 
     SUBDIR += R-cran-DBI
@@ -39,7 +38,6 @@
     SUBDIR += cegobridge
     SUBDIR += clickhouse
     SUBDIR += cockroach
-    SUBDIR += couchdb2
     SUBDIR += couchdb3
     SUBDIR += courier-authlib-mysql
     SUBDIR += courier-authlib-pgsql
@@ -160,6 +158,7 @@
     SUBDIR += libsdb
     SUBDIR += libzdb
     SUBDIR += linux-c7-sqlite3
+    SUBDIR += linux-c7-unixODBC
     SUBDIR += linux-oracle-instantclient-basic
     SUBDIR += linux-oracle-instantclient-sdk
     SUBDIR += liquibase
@@ -554,8 +553,6 @@
     SUBDIR += pecl-rrd
     SUBDIR += percona-pam-for-mysql
     SUBDIR += percona-toolkit
-    SUBDIR += percona55-client
-    SUBDIR += percona55-server
     SUBDIR += percona56-client
     SUBDIR += percona56-server
     SUBDIR += percona57-client

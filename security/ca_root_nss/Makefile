@@ -1,4 +1,3 @@
-
 PORTNAME=	ca_root_nss
 PORTVERSION=	${VERSION_NSS}
 PORTREVISION=	1
@@ -36,7 +35,7 @@ BUNDLE_PROCESSOR=	MAca-bundle.pl
 SUB_FILES=	MAca-bundle.pl pkg-message
 SUB_LIST=	VERSION_NSS=${VERSION_NSS}
 
-do-build:	apply-slist
+do-build:
 	@${SETENV} PATH=${LOCALBASE}/bin:$${PATH} \
 		${PERL} ${WRKDIR}/${BUNDLE_PROCESSOR} \
 	    < ${WRKSRC}/${CERTDATA_TXT_PATH} > \

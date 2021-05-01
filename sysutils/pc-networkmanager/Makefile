@@ -1,6 +1,3 @@
-# Created by: Kris Moore <kris@ixsystems.com>
-
-
 PORTNAME=	pc-networkmanager
 PORTVERSION=	201806271233
 CATEGORIES=	sysutils

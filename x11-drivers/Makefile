@@ -1,4 +1,3 @@
-
     COMMENT = X11 drivers
 
     SUBDIR += ghostbsd-drivers

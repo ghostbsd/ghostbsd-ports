@@ -1,7 +1,5 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-
 PORTNAME=	mandelbulber
-PORTVERSION=	2.24
+PORTVERSION=	2.25
 CATEGORIES=	graphics
 
 MAINTAINER=	amdmi3@FreeBSD.org

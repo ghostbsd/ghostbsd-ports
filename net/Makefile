@@ -1,4 +1,3 @@
-
     COMMENT = Networking tools
 
     SUBDIR += 3proxy
@@ -37,6 +36,7 @@
     SUBDIR += asterisk13
     SUBDIR += asterisk16
     SUBDIR += asterisk18
+    SUBDIR += astron
     SUBDIR += avahi
     SUBDIR += avahi-app
     SUBDIR += avahi-autoipd
@@ -90,7 +90,6 @@
     SUBDIR += corkscrew
     SUBDIR += corosync2
     SUBDIR += corosync3
-    SUBDIR += coturn
     SUBDIR += courier-authlib-ldap
     SUBDIR += courier-sox
     SUBDIR += cppzmq
@@ -159,7 +158,6 @@
     SUBDIR += fping
     SUBDIR += freebsd-uucp
     SUBDIR += freediameter
-    SUBDIR += freenet6
     SUBDIR += freeradius-client
     SUBDIR += freeradius3
     SUBDIR += freerdp
@@ -182,6 +180,7 @@
     SUBDIR += glflow
     SUBDIR += glib-networking
     SUBDIR += glusterfs
+    SUBDIR += gmid
     SUBDIR += gnet2
     SUBDIR += gnetcat
     SUBDIR += gnome-nettool
@@ -358,7 +357,6 @@
     SUBDIR += libgweather
     SUBDIR += libilbc
     SUBDIR += libiscsi
-    SUBDIR += libjson-rpc-cpp
     SUBDIR += libkgapi
     SUBDIR += libksieve
     SUBDIR += libkvkontakte
@@ -1089,6 +1087,7 @@
     SUBDIR += py-python-socks
     SUBDIR += py-python-twitter
     SUBDIR += py-pytradfri
+    SUBDIR += py-pyu2f
     SUBDIR += py-pyvmomi
     SUBDIR += py-pyzmq
     SUBDIR += py-qt5-network
@@ -1359,7 +1358,6 @@
     SUBDIR += rude
     SUBDIR += ryu
     SUBDIR += sacc
-    SUBDIR += samba411
     SUBDIR += samba412
     SUBDIR += samba413
     SUBDIR += samplicator
@@ -1474,7 +1472,6 @@
     SUBDIR += toonel
     SUBDIR += torsocks
     SUBDIR += traefik
-    SUBDIR += traefik2
     SUBDIR += traff
     SUBDIR += trafshow
     SUBDIR += trafshow3

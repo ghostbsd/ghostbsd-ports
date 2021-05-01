@@ -1,11 +1,10 @@
-
 PORTNAME=	bindgen
 DISTVERSION=	0.58.1
 CATEGORIES=	devel
 MASTER_SITES=	CRATESIO
 PKGNAMEPREFIX=	rust-
 # XXX Teach USES=cargo to have proper default
-DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
+DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Generate Rust bindings from C (and some C++) code

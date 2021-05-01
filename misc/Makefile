@@ -1,4 +1,3 @@
-
     COMMENT = Miscellaneous utilities
 
     SUBDIR += R-cran-mime
@@ -32,7 +31,6 @@
     SUBDIR += broot
     SUBDIR += bsod
     SUBDIR += buffer
-    SUBDIR += cave
     SUBDIR += cheat
     SUBDIR += chef
     SUBDIR += chmlib
@@ -100,7 +98,6 @@
     SUBDIR += findutils
     SUBDIR += firestring
     SUBDIR += flag
-    SUBDIR += floatator
     SUBDIR += fortune-mod-bible
     SUBDIR += fortune-mod-bofh
     SUBDIR += fortune-mod-epictetus
@@ -132,6 +129,7 @@
     SUBDIR += freebsd-doc-zh_tw
     SUBDIR += freebsd-release-manifests
     SUBDIR += freeguide
+    SUBDIR += frugally-deep
     SUBDIR += ftdi-eeprom
     SUBDIR += fxload
     SUBDIR += gcstar
@@ -468,7 +466,6 @@
     SUBDIR += smssend
     SUBDIR += snakemake
     SUBDIR += soapysdr
-    SUBDIR += soapysdr-rtlsdr
     SUBDIR += solarized
     SUBDIR += sshbuddy
     SUBDIR += sssnips
@@ -543,6 +540,7 @@
     SUBDIR += xiphos
     SUBDIR += xless
     SUBDIR += xosd
+    SUBDIR += xplr
     SUBDIR += xtail
     SUBDIR += xtar
     SUBDIR += ytree

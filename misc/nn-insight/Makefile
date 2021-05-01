@@ -1,4 +1,3 @@
-
 PORTNAME=	nn-insight
 DISTVERSION=	1.0.5
 CATEGORIES=	misc # machine-learning
@@ -15,7 +14,7 @@ BUILD_DEPENDS=	avir>0:graphics/avir \
 		nlohmann-json>0:devel/nlohmann-json \
 		png++>0:graphics/png++
 LIB_DEPENDS=	libcgraph.so:graphics/graphviz \
-		libpng16.so:graphics/png \
+		libpng.so:graphics/png \
 		libtcmalloc.so:devel/google-perftools
 
 USES=		compiler:c++17-lang cmake pkgconfig qt:5

@@ -1,4 +1,3 @@
-
     COMMENT = Multimedia software
 
     SUBDIR += Bento4
@@ -74,7 +73,6 @@
     SUBDIR += gdialog
     SUBDIR += get_iplayer
     SUBDIR += gmerlin
-    SUBDIR += gmimms
     SUBDIR += gmmlib
     SUBDIR += gmp-api
     SUBDIR += gmtk
@@ -208,6 +206,7 @@
     SUBDIR += libva-vdpau-driver
     SUBDIR += libvdpau
     SUBDIR += libvdpau-va-gl
+    SUBDIR += libvlcpp
     SUBDIR += libvpx
     SUBDIR += libx264
     SUBDIR += libxine
@@ -220,13 +219,13 @@
     SUBDIR += livego
     SUBDIR += lives
     SUBDIR += livestreamer
+    SUBDIR += lms
     SUBDIR += lsdvd
     SUBDIR += m2tstoavi
     SUBDIR += m2vrequantiser
     SUBDIR += makemkv
     SUBDIR += mediainfo
     SUBDIR += mencoder
-    SUBDIR += mimms
     SUBDIR += minisatip
     SUBDIR += minitube
     SUBDIR += mjpegtools
@@ -281,6 +280,7 @@
     SUBDIR += omxplayer
     SUBDIR += openh264
     SUBDIR += openshot
+    SUBDIR += opentoonz
     SUBDIR += oscam
     SUBDIR += p5-Audio-M4P
     SUBDIR += p5-FFmpeg-Command
@@ -352,6 +352,7 @@
     SUBDIR += rubygem-streamio-ffmpeg
     SUBDIR += sabbu
     SUBDIR += schroedinger
+    SUBDIR += scte35dump
     SUBDIR += shotcut
     SUBDIR += simplescreenrecorder
     SUBDIR += smpeg
@@ -442,6 +443,7 @@
     SUBDIR += xporthdmv
     SUBDIR += xvid
     SUBDIR += yamdi
+    SUBDIR += ytfzf
     SUBDIR += zart
     SUBDIR += zoneminder
 

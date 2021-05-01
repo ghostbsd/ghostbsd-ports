@@ -1,4 +1,3 @@
-
     COMMENT = Text processing utilities (does not include desktop publishing)
 
     SUBDIR += 2bsd-diff
@@ -53,6 +52,7 @@
     SUBDIR += apertium
     SUBDIR += artha
     SUBDIR += asciidoc
+    SUBDIR += askgit
     SUBDIR += asm-xml
     SUBDIR += asm2html
     SUBDIR += aspell
@@ -78,7 +78,6 @@
     SUBDIR += br-aspell
     SUBDIR += bsddiff
     SUBDIR += bsdgrep
-    SUBDIR += bsdsort
     SUBDIR += btparse
     SUBDIR += c2html
     SUBDIR += c2man
@@ -104,6 +103,7 @@
     SUBDIR += confetti
     SUBDIR += confget
     SUBDIR += consul-template
+    SUBDIR += cpp-peglib
     SUBDIR += crex
     SUBDIR += crimson
     SUBDIR += crunch
@@ -230,6 +230,7 @@
     SUBDIR += gladtex
     SUBDIR += gmetadom
     SUBDIR += gnugrep
+    SUBDIR += go-md2man
     SUBDIR += goldendict
     SUBDIR += google-ctemplate
     SUBDIR += google-translate-cli
@@ -258,7 +259,6 @@
     SUBDIR += hr-aspell
     SUBDIR += hs-lhs2tex
     SUBDIR += hs-pandoc
-    SUBDIR += hs-pandoc-citeproc
     SUBDIR += hs-pandoc-crossref
     SUBDIR += hs-yaml
     SUBDIR += hsb-aspell
@@ -351,7 +351,6 @@
     SUBDIR += latex-service
     SUBDIR += latex2html
     SUBDIR += libabw
-    SUBDIR += libcrm114
     SUBDIR += libcroco
     SUBDIR += libcss
     SUBDIR += libcsv
@@ -482,6 +481,7 @@
     SUBDIR += opensp
     SUBDIR += openvanilla-framework
     SUBDIR += or-aspell
+    SUBDIR += ov
     SUBDIR += p5-AI-Categorizer
     SUBDIR += p5-Algorithm-CheckDigits
     SUBDIR += p5-Algorithm-RabinKarp
@@ -935,6 +935,7 @@
     SUBDIR += p5-Text-Table-Paragraph
     SUBDIR += p5-Text-Table-Sprintf
     SUBDIR += p5-Text-Table-TSV
+    SUBDIR += p5-Text-Table-TickitWidget
     SUBDIR += p5-Text-Table-Tiny
     SUBDIR += p5-Text-Table-TinyBorderStyle
     SUBDIR += p5-Text-Table-TinyColor
@@ -1382,6 +1383,8 @@
     SUBDIR += py-python-docx
     SUBDIR += py-python-gettext
     SUBDIR += py-python-language-server
+    SUBDIR += py-python-lsp-jsonrpc
+    SUBDIR += py-python-lsp-server
     SUBDIR += py-python-slugify
     SUBDIR += py-python-xmp-toolkit
     SUBDIR += py-pytidylib
@@ -1399,15 +1402,18 @@
     SUBDIR += py-rich
     SUBDIR += py-rnc2rng
     SUBDIR += py-rss2gen
+    SUBDIR += py-rst2ansi
     SUBDIR += py-rst2html5
     SUBDIR += py-scour
     SUBDIR += py-simplebayes
+    SUBDIR += py-smartypants
     SUBDIR += py-snowballstemmer
     SUBDIR += py-sparqlwrapper
     SUBDIR += py-sphinx
     SUBDIR += py-sphinx-argparse
     SUBDIR += py-sphinx-autoapi
     SUBDIR += py-sphinx-autodoc-typehints
+    SUBDIR += py-sphinx-copybutton
     SUBDIR += py-sphinx-inline-tabs
     SUBDIR += py-sphinx-intl
     SUBDIR += py-sphinx-issues
@@ -1452,6 +1458,7 @@
     SUBDIR += py-translationstring
     SUBDIR += py-transpopy
     SUBDIR += py-ttp
+    SUBDIR += py-typogrify
     SUBDIR += py-ucl
     SUBDIR += py-ufal.udpipe
     SUBDIR += py-wcmatch

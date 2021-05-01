@@ -1,6 +1,5 @@
-
 PORTNAME=	bootsnap
-PORTVERSION=	1.7.2
+PORTVERSION=	1.7.4
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 

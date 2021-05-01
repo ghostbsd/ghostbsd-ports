@@ -1,4 +1,3 @@
-
     COMMENT = Audio tools
 
     SUBDIR += GxSwitchlessWah-lv2
@@ -48,6 +47,7 @@
     SUBDIR += avldrums-lv2
     SUBDIR += aylet
     SUBDIR += bambootracker
+    SUBDIR += bamp-lv2
     SUBDIR += baresip
     SUBDIR += baudline
     SUBDIR += bcg729
@@ -58,7 +58,9 @@
     SUBDIR += bjumblr-lv2
     SUBDIR += bliss
     SUBDIR += blop
+    SUBDIR += boops-lv2
     SUBDIR += bristol
+    SUBDIR += bschaffl-lv2
     SUBDIR += bsequencer-lv2
     SUBDIR += bshapr-lv2
     SUBDIR += bslizr-lv2
@@ -75,7 +77,6 @@
     SUBDIR += cd2mp3
     SUBDIR += cddb-bundle
     SUBDIR += cdparanoia
-    SUBDIR += cdplay
     SUBDIR += celt
     SUBDIR += checkmate
     SUBDIR += cheesecutter
@@ -183,6 +184,7 @@
     SUBDIR += flake
     SUBDIR += flite
     SUBDIR += fluid-soundfont
+    SUBDIR += fluida-lv2
     SUBDIR += fluidplug-lv2
     SUBDIR += fluidsynth
     SUBDIR += fluidsynth-dssi
@@ -207,9 +209,7 @@
     SUBDIR += gbsplay
     SUBDIR += geonkick-lv2
     SUBDIR += gervill
-    SUBDIR += ghostess
     SUBDIR += giada
-    SUBDIR += gimmix
     SUBDIR += glurp
     SUBDIR += gmpc
     SUBDIR += gmpc-alarm
@@ -287,6 +287,7 @@
     SUBDIR += guidoar
     SUBDIR += guidolib
     SUBDIR += guitarix-lv2
+    SUBDIR += gula-plugins-lv2
     SUBDIR += guspat
     SUBDIR += gvolwheel
     SUBDIR += gxmms2
@@ -322,19 +323,18 @@
     SUBDIR += jacktrip
     SUBDIR += jalv
     SUBDIR += jalv-select
-    SUBDIR += jamin
     SUBDIR += jamulus
     SUBDIR += jid3lib
     SUBDIR += juk
     SUBDIR += juke
     SUBDIR += julius
+    SUBDIR += kapitonov-plugins-pack-lv2
     SUBDIR += kexis
     SUBDIR += kid3-kf5
     SUBDIR += kid3-qt5
     SUBDIR += klystrack
     SUBDIR += kmix
     SUBDIR += komposter
-    SUBDIR += ksmp3play
     SUBDIR += kwave
     SUBDIR += ladspa
     SUBDIR += lame
@@ -433,6 +433,7 @@
     SUBDIR += linuxsampler
     SUBDIR += liquidsfz
     SUBDIR += listener
+    SUBDIR += littlefly-lv2
     SUBDIR += lmms
     SUBDIR += logitechmediaserver
     SUBDIR += logitechmediaserver-dynamicplaylist
@@ -453,7 +454,9 @@
     SUBDIR += mac
     SUBDIR += madfufw
     SUBDIR += madplay
+    SUBDIR += madronalib
     SUBDIR += malint
+    SUBDIR += mamba
     SUBDIR += mate-media
     SUBDIR += mclk-lv2
     SUBDIR += mctoolame-decoder
@@ -518,11 +521,11 @@
     SUBDIR += muse-sequencer
     SUBDIR += musepack
     SUBDIR += musescore
-    SUBDIR += musicbox-tag-editor
     SUBDIR += musiccontrol
     SUBDIR += musicpc
     SUBDIR += musicpd
     SUBDIR += mythplugin-mythmusic
+    SUBDIR += myxer
     SUBDIR += nas
     SUBDIR += ncmpc
     SUBDIR += ncmpcpp
@@ -534,7 +537,7 @@
     SUBDIR += normalize
     SUBDIR += nosefart
     SUBDIR += noson-app
-    SUBDIR += nspmod
+    SUBDIR += nyquist
     SUBDIR += oaml
     SUBDIR += ocp
     SUBDIR += ogg2mp3
@@ -612,6 +615,7 @@
     SUBDIR += pms
     SUBDIR += pms-devel
     SUBDIR += pocketsphinx
+    SUBDIR += poly-lv2
     SUBDIR += polyphone
     SUBDIR += portaudio
     SUBDIR += praat
@@ -706,7 +710,6 @@
     SUBDIR += shairport-sync
     SUBDIR += sherlock-lv2
     SUBDIR += shntool
-    SUBDIR += shout
     SUBDIR += sidplay
     SUBDIR += sidplay2
     SUBDIR += sidplayer
@@ -788,7 +791,6 @@
     SUBDIR += timidity++-xskin
     SUBDIR += tkeca
     SUBDIR += toccata-lv2
-    SUBDIR += toolame
     SUBDIR += tosha
     SUBDIR += traverso
     SUBDIR += tse3
@@ -805,6 +807,7 @@
     SUBDIR += vimpc
     SUBDIR += virtual_oss
     SUBDIR += virtual_oss_ctl
+    SUBDIR += visp-go
     SUBDIR += vitunes
     SUBDIR += vm-lv2
     SUBDIR += vmpk
@@ -830,7 +833,6 @@
     SUBDIR += wildmidi
     SUBDIR += wmix
     SUBDIR += wmmp
-    SUBDIR += wmrecord
     SUBDIR += wmsmixer
     SUBDIR += wxguitar
     SUBDIR += x42-plugins-lv2

@@ -1,4 +1,3 @@
-
 PORTNAME=	synctex
 PORTVERSION=	1.15
 CATEGORIES=	devel

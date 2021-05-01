@@ -1,4 +1,3 @@
-
     COMMENT = Ports related to the World Wide Web
 
     SUBDIR += R-cran-RgoogleMaps
@@ -6,6 +5,7 @@
     SUBDIR += R-cran-bslib
     SUBDIR += R-cran-crosstalk
     SUBDIR += R-cran-downloader
+    SUBDIR += R-cran-gh
     SUBDIR += R-cran-htmlwidgets
     SUBDIR += R-cran-httpuv
     SUBDIR += R-cran-httr
@@ -211,8 +211,6 @@
     SUBDIR += gotty
     SUBDIR += gpx2map
     SUBDIR += grafana
-    SUBDIR += grafana4
-    SUBDIR += grafana5
     SUBDIR += grafana6
     SUBDIR += grafana7
     SUBDIR += grails
@@ -476,6 +474,7 @@
     SUBDIR += ot-recorder
     SUBDIR += otrs
     SUBDIR += otter-browser
+    SUBDIR += owncast
     SUBDIR += owncloud
     SUBDIR += p5-AMF-Perl
     SUBDIR += p5-Acme-Monta
@@ -1107,6 +1106,7 @@
     SUBDIR += p5-RT-Extension-LDAPImport
     SUBDIR += p5-RT-Extension-MandatoryOnTransition
     SUBDIR += p5-RT-Extension-RepeatTicket
+    SUBDIR += p5-RT-Extension-RepeatTicket2
     SUBDIR += p5-RTx-Calendar
     SUBDIR += p5-Reaction
     SUBDIR += p5-Reddit
@@ -1453,11 +1453,14 @@
     SUBDIR += py-dj31-djangorestframework
     SUBDIR += py-dj31-drf-yasg
     SUBDIR += py-django
+    SUBDIR += py-django-admin-rangefilter
+    SUBDIR += py-django-advanced-filters
     SUBDIR += py-django-allauth
     SUBDIR += py-django-annoying
     SUBDIR += py-django-appconf
     SUBDIR += py-django-assets
     SUBDIR += py-django-auth-ldap
+    SUBDIR += py-django-autocomplete-light
     SUBDIR += py-django-babel
     SUBDIR += py-django-bakery
     SUBDIR += py-django-bitfield
@@ -1468,6 +1471,7 @@
     SUBDIR += py-django-braces
     SUBDIR += py-django-bulk-update
     SUBDIR += py-django-cacheops
+    SUBDIR += py-django-ckeditor-5
     SUBDIR += py-django-classy-tags
     SUBDIR += py-django-cms
     SUBDIR += py-django-common-helpers
@@ -1505,7 +1509,6 @@
     SUBDIR += py-django-libsass
     SUBDIR += py-django-markdownx
     SUBDIR += py-django-markwhat
-    SUBDIR += py-django-mezzanine
     SUBDIR += py-django-mezzanine-filebrowser
     SUBDIR += py-django-mezzanine-grappelli
     SUBDIR += py-django-model-utils
@@ -1513,6 +1516,7 @@
     SUBDIR += py-django-modern-rpc
     SUBDIR += py-django-mptt
     SUBDIR += py-django-netfields
+    SUBDIR += py-django-object-actions
     SUBDIR += py-django-otp
     SUBDIR += py-django-otp-yubikey
     SUBDIR += py-django-pglocks
@@ -1530,9 +1534,11 @@
     SUBDIR += py-django-registration-redux
     SUBDIR += py-django-rest-swagger
     SUBDIR += py-django-reversion
+    SUBDIR += py-django-reversion-compare
     SUBDIR += py-django-sekizai
     SUBDIR += py-django-simple-captcha
     SUBDIR += py-django-simple-history
+    SUBDIR += py-django-smart-selects
     SUBDIR += py-django-solo
     SUBDIR += py-django-sortedm2m
     SUBDIR += py-django-star-ratings
@@ -1552,10 +1558,10 @@
     SUBDIR += py-django-voting
     SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
-    SUBDIR += py-django111
     SUBDIR += py-django22
     SUBDIR += py-django30
     SUBDIR += py-django31
+    SUBDIR += py-django32
     SUBDIR += py-django_compressor
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangoql
@@ -1636,6 +1642,7 @@
     SUBDIR += py-html5-parser
     SUBDIR += py-html5lib
     SUBDIR += py-httmock
+    SUBDIR += py-http-parser
     SUBDIR += py-httpbin
     SUBDIR += py-httpcore
     SUBDIR += py-httpie
@@ -1859,6 +1866,7 @@
     SUBDIR += rubygem-eventmachine_httpserver
     SUBDIR += rubygem-faraday
     SUBDIR += rubygem-faraday-net_http
+    SUBDIR += rubygem-faraday-net_http_persistent
     SUBDIR += rubygem-faraday0
     SUBDIR += rubygem-faraday_middleware
     SUBDIR += rubygem-faraday_middleware0
@@ -2294,8 +2302,6 @@
     SUBDIR += xfce4-smartbookmark-plugin
     SUBDIR += xist
     SUBDIR += xoops
-    SUBDIR += xshttpd
-    SUBDIR += xshttpd-devel
     SUBDIR += xsp
     SUBDIR += yabb
     SUBDIR += yanopaste
@@ -2307,7 +2313,6 @@
     SUBDIR += you-get
     SUBDIR += yourls
     SUBDIR += youtube_dl
-    SUBDIR += youtube_dlc
     SUBDIR += yt-dlp
     SUBDIR += ytdl
     SUBDIR += yuicompressor

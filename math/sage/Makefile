@@ -2,7 +2,7 @@
 
 PORTNAME=	sage
 PORTVERSION=	9.2
-PORTREVISION=	10
+PORTREVISION=	12
 CATEGORIES=	math
 MASTER_SITES=	https://mirrors.xmission.com/sage/src/		\
 		http://mirrors.xmission.com/sage/src/		\
@@ -142,7 +142,6 @@ BUILD_DEPENDS=	bash:shells/bash		\
 		pari-nftables>0:math/pari_nftables	\
 		pari-seadata>0:math/pari_seadata\
 		QuadraticSieve:math/flintqs	\
-		ninja:devel/ninja		\
 		gpatch:devel/patch		\
 		rubiks>0:math/rubiks		\
 		sympow:math/sympow		\
@@ -338,9 +337,10 @@ RUN_DEPENDS=	bash:shells/bash		\
 		yasm:devel/yasm			\
 		pixz:archivers/pixz
 
-USES=		autoreconf blaslapack:openblas compiler:c++11-lib fortran	\
-		gettext gmake gnome iconv jpeg libtool localbase ncurses perl5	\
-		pkgconfig python:3.7+ readline shebangfix sqlite tk xorg
+USES=		autoreconf blaslapack:openblas compiler:c++11-lib fortran \
+		gettext gmake gnome iconv jpeg libtool localbase ncurses \
+		ninja:build perl5 pkgconfig python:3.7+ readline shebangfix \
+		sqlite tk xorg
 USE_TEX=	latex:build pdftex:build tex:build
 USE_XORG=	x11 xext xscrnsaver
 USE_GNOME=	cairo glib20 pango
@@ -500,6 +500,8 @@ pre-configure:
 	${REINPLACE_CMD} -e 's|/var/lib/sage|/share/libdata/${PORTNAME}|'	\
 		${WRKSRC}/${f}
 .endfor
+	# Bug with py-docutils > 0.16
+	${RM} -r ${WRKSRC}/src/doc/hu
 	(cd ${WRKSRC} && ./bootstrap)
 	${MKDIR} ${BLDDIR}${PREFIX}/lib/pkgconfig	# Removed thereafter
 
