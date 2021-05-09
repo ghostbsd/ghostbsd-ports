@@ -75,7 +75,7 @@ _KDE_RELNAME=		KDE${_KDE_VERSION}
 
 # === VERSIONS OF THE DIFFERENT COMPONENTS =====================================
 # Current KDE desktop.
-KDE_PLASMA_VERSION?=		5.21.4
+KDE_PLASMA_VERSION?=		5.21.5
 KDE_PLASMA_BRANCH?=		stable
 
 # Current KDE frameworks.
@@ -133,7 +133,6 @@ GL_SITE=		https://invent.kde.org
 GL_ACCOUNT=		${_invent_category}
 GL_PROJECT=		${_invent_name}
 GL_COMMIT=		${_invent_hash}
-WRKSRC=			${WRKDIR}/${GL_PROJECT}-${GL_COMMIT}-${GL_COMMIT}
 .      endif
 .    endif
 

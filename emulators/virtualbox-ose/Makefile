@@ -1,7 +1,7 @@
 # Created by: Bernhard Froehlich <decke@bluelife.at>
 
 PORTNAME=	virtualbox-ose
-PORTVERSION=	6.1.20
+PORTVERSION=	6.1.22
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.virtualbox.org/virtualbox/${PORTVERSION}/
 DISTFILES=	VirtualBox-${PORTVERSION}${EXTRACT_SUFX} ${GUESTADDITIONS}
@@ -131,8 +131,11 @@ KMK_BUILDTYPE=	release
 
 .if ${PORT_OPTIONS:MGUESTADDITIONS}
 GUESTADDITIONS=	VBoxGuestAdditions_${PORTVERSION}.iso
-RESTRICTED=	for personal use only
-RESTRICTED_FILES=	${GUESTADDITIONS}
+LICENSE+=	Additions
+LICENSE_COMB=	multi
+LICENSE_NAME_Additions=	Guest Additions
+LICENSE_PERMS_Additions=	auto-accept
+LICENSE_DISTFILES_Additions=	${GUESTADDITIONS}
 .endif
 
 .if ${PORT_OPTIONS:MMANUAL}

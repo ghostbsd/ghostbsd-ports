@@ -174,7 +174,6 @@
     SUBDIR += libfm
     SUBDIR += libfm-extra
     SUBDIR += libfm-qt
-    SUBDIR += libgnome
     SUBDIR += libgnomekbd
     SUBDIR += libinput
     SUBDIR += libmatekbd
@@ -316,6 +315,7 @@
     SUBDIR += setlayout
     SUBDIR += setxkbmap
     SUBDIR += showkeys
+    SUBDIR += showmethekey
     SUBDIR += simdock
     SUBDIR += simplestroke
     SUBDIR += slick-greeter

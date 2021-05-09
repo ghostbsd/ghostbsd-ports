@@ -92,6 +92,7 @@
     SUBDIR += gcc10
     SUBDIR += gcc10-devel
     SUBDIR += gcc11-devel
+    SUBDIR += gcc12-devel
     SUBDIR += gcc48
     SUBDIR += gcc6-aux
     SUBDIR += gcc7
@@ -250,6 +251,7 @@
     SUBDIR += perl5.28
     SUBDIR += perl5.30
     SUBDIR += perl5.32
+    SUBDIR += perl5.34
     SUBDIR += petite-chez
     SUBDIR += pfe
     SUBDIR += pharo

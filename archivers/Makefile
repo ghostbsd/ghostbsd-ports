@@ -70,6 +70,7 @@
     SUBDIR += lrzip
     SUBDIR += lua-lzlib
     SUBDIR += lua-zlib
+    SUBDIR += lxqt-archiver
     SUBDIR += lzfse
     SUBDIR += lzip
     SUBDIR += lziprecover
@@ -168,6 +169,7 @@
     SUBDIR += py-acefile
     SUBDIR += py-borgbackup
     SUBDIR += py-brotli
+    SUBDIR += py-brotlicffi
     SUBDIR += py-brotlipy
     SUBDIR += py-bz2file
     SUBDIR += py-libarchive-c

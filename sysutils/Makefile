@@ -174,6 +174,7 @@
     SUBDIR += cfengine317
     SUBDIR += chaoskube
     SUBDIR += checkrestart
+    SUBDIR += chezmoi
     SUBDIR += chgrep
     SUBDIR += choria
     SUBDIR += chyves
@@ -648,6 +649,7 @@
     SUBDIR += lxqt-admin
     SUBDIR += lxqt-config
     SUBDIR += lxqt-policykit
+    SUBDIR += lxqt-powermanagement
     SUBDIR += lxqt-qtplugin
     SUBDIR += lxsplit
     SUBDIR += lxtask
@@ -793,6 +795,7 @@
     SUBDIR += opa
     SUBDIR += open
     SUBDIR += opencorsairlink
+    SUBDIR += opendircolors
     SUBDIR += openipmi
     SUBDIR += opensbi
     SUBDIR += openseachest
@@ -893,6 +896,7 @@
     SUBDIR += paicc
     SUBDIR += paladin
     SUBDIR += pam_mount
+    SUBDIR += pam_xdg
     SUBDIR += panicmail
     SUBDIR += parafly
     SUBDIR += parallel
@@ -964,8 +968,6 @@
     SUBDIR += plconfig
     SUBDIR += pmt
     SUBDIR += pnscan
-    SUBDIR += policykit
-    SUBDIR += policykit-gnome
     SUBDIR += polkit
     SUBDIR += polkit-gnome
     SUBDIR += polkit-qt
