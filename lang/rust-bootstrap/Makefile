@@ -2,7 +2,8 @@
 # to upload them to ~/public_distfiles on freefall in preparation
 # for the next lang/rust update.
 PORTNAME=	rust
-PORTVERSION=	1.51.0
+PORTVERSION=	1.52.1
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:rust \
 		LOCAL/mikael:armbase \
@@ -31,7 +32,8 @@ BUILD_DEPENDS=	cmake:devel/cmake \
 		gmake:devel/gmake \
 		rust>=${PORTVERSION}:lang/rust
 
-FLAVORS=	aarch64 amd64 armv6 armv7 i386 powerpc64_elfv1 powerpc64_elfv2 powerpc64le
+FLAVORS=	aarch64 amd64 armv6 armv7 i386 powerpc64_elfv1 powerpc64_elfv2 \
+		powerpc64le powerpc
 FLAVOR?=	${FLAVORS:[1]}
 
 aarch64_PKGNAMEPREFIX=		aarch64-
@@ -44,6 +46,7 @@ powerpc64_elfv1_PKGNAMEPREFIX=	powerpc64-elfv1-
 powerpc64_elfv1_BUILD_DEPENDS=	powerpc64-gcc9>0:devel/freebsd-gcc9@powerpc64
 powerpc64_elfv2_PKGNAMEPREFIX=	powerpc64-elfv2-
 powerpc64le_PKGNAMEPREFIX=	powerpc64le-
+powerpc_PKGNAMEPREFIX=		powerpc-
 
 USES=		ninja:build perl5 python:3.6+,build tar:xz
 .if ${FLAVOR} == powerpc64_elfv1
@@ -70,18 +73,21 @@ _RUST_FBSD_DIST_powerpc64_elfv1=	FreeBSD-${_RUST_FBSD_VER}-powerpc64-elfv1${EXTR
 					FreeBSD-${_RUST_FBSD_VER}-powerpc64-elfv1-gcc9-9.3.0${EXTRACT_SUFX}:powerpc64_gcc
 _RUST_FBSD_DIST_powerpc64_elfv2=	FreeBSD-${_RUST_FBSD_VER}-powerpc64-elfv2-v1300123${EXTRACT_SUFX}:base
 _RUST_FBSD_DIST_powerpc64le=		FreeBSD-${_RUST_FBSD_VER}-powerpc64le-r366300${EXTRACT_SUFX}:ppc64lebase
+_RUST_FBSD_DIST_powerpc=		FreeBSD-${_RUST_FBSD_VER}-powerpc${EXTRACT_SUFX}:base
 _RUST_FBSD_VER=				${_RUST_FBSD_VER_${FLAVOR}:U11.4-RELEASE}
 _RUST_FBSD_VER_aarch64=			12.2-RELEASE
 _RUST_FBSD_VER_armv7=			12.2-RELEASE
 _RUST_FBSD_VER_powerpc64_elfv1=		12.2-RELEASE
 _RUST_FBSD_VER_powerpc64_elfv2=		13.0-CURRENT
 _RUST_FBSD_VER_powerpc64le=		13.0-CURRENT
+_RUST_FBSD_VER_powerpc=			13.0-RELEASE
 _RUST_FBSD_SUBDIR_aarch64=		releases/arm64/${_RUST_FBSD_VER}/base.txz?dummy=
 _RUST_FBSD_SUBDIR_amd64=		releases/amd64/${_RUST_FBSD_VER}/base.txz?dummy=
 _RUST_FBSD_SUBDIR_i386=			releases/i386/${_RUST_FBSD_VER}/base.txz?dummy=
 _RUST_FBSD_SUBDIR_powerpc64_elfv1=	releases/powerpc/powerpc64/${_RUST_FBSD_VER}/base.txz?dummy=
 _RUST_FBSD_SUBDIR_powerpc64_elfv2=	snapshots/powerpc/powerpc64/${_RUST_FBSD_VER}/base.txz?dummy=
 _RUST_FBSD_SUBDIR_powerpc64le=		snapshots/powerpc/powerpc64le/${_RUST_FBSD_VER}/base.txz?dummy=
+_RUST_FBSD_SUBDIR_powerpc=		releases/powerpc/powerpc/${_RUST_FBSD_VER}/base.txz?dummy=
 
 _CARGO_VENDOR_DIR=			${WRKSRC}/vendor
 _RUST_ARCH_amd64=			x86_64
@@ -89,6 +95,7 @@ _RUST_ARCH_i386=			i686
 _RUST_ARCH_powerpc64_elfv1=		powerpc64
 _RUST_ARCH_powerpc64_elfv2=		powerpc64
 _RUST_ARCH_powerpc64le=			powerpc64le
+_RUST_ARCH_powerpc=			powerpc
 _RUST_HOST=				${_RUST_ARCH_${ARCH}:U${ARCH}}-unknown-${OPSYS:tl}
 _RUST_TARGET=				${_RUST_ARCH_${FLAVOR}:U${FLAVOR}}-unknown-${OPSYS:tl}
 _RUST_LLVM_TARGET=			${_RUST_LLVM_TARGET_${FLAVOR}}
@@ -100,9 +107,11 @@ _RUST_LLVM_TARGET_i386=			X86
 _RUST_LLVM_TARGET_powerpc64_elfv1=	PowerPC
 _RUST_LLVM_TARGET_powerpc64_elfv2=	PowerPC
 _RUST_LLVM_TARGET_powerpc64le=		PowerPC
+_RUST_LLVM_TARGET_powerpc=		PowerPC
 _RUST_LLVM_TRIPLE=			${_RUST_LLVM_TRIPLE_${FLAVOR}:U${_RUST_TARGET}}
 _RUST_LLVM_TRIPLE_armv6=		armv6-gnueabihf-freebsd
 _RUST_LLVM_TRIPLE_armv7=		armv7-gnueabihf-freebsd
+_RUST_LLVM_TRIPLE_powerpc=		powerpc-unknown-freebsd13.0 # secure-plt
 
 .include <bsd.port.pre.mk>
 
@@ -117,6 +126,11 @@ IGNORE=	will not build on 12.x due to old system
 
 .if exists(${PATCHDIR}/${FLAVOR:S/_/-/})
 EXTRA_PATCHES+=	${PATCHDIR}/${FLAVOR:S/_/-/}
+.endif
+
+.if make(makesum)
+DISTFILES:=	${DISTFILES:M*\:rust} \
+		${FLAVORS:O:@_flavor@${:!${SETENV} FLAVOR=${_flavor} ${MAKE} -V'DISTFILES:N*\:rust'!}@}
 .endif
 
 post-patch:
@@ -229,17 +243,5 @@ do-install:
 .endif
 	@cd ${STAGEDIR}${PREFIX} && \
 		${FIND} rust-bootstrap -type f >> ${TMPPLIST}
-
-.if !defined(_RUST_MAKESUM_GUARD)
-makesum:
-	${MAKE} -D_RUST_MAKESUM_GUARD makesum FLAVOR=${FLAVORS:O:[1]} DISTINFO_FILE=${DISTINFO_FILE}.tmp
-.for _flavor in ${FLAVORS:O:[2..-1]}
-	${MAKE} -D_RUST_MAKESUM_GUARD makesum FLAVOR=${_flavor} DISTINFO_FILE=${DISTINFO_FILE}.${_flavor}
-	${SED} 1d ${DISTINFO_FILE}.${_flavor} >> ${DISTINFO_FILE}.tmp
-	${RM} ${DISTINFO_FILE}.${_flavor}
-.endfor
-	${AWK} '!seen[$$0]++' ${DISTINFO_FILE}.tmp > ${DISTINFO_FILE}
-	${RM} ${DISTINFO_FILE}.tmp
-.endif
 
 .include <bsd.port.post.mk>

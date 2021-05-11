@@ -1,8 +1,7 @@
 # Created by: José García Juanino <jjuanino@gmail.com>
 
 PORTNAME=	borgbackup
-DISTVERSION=	1.1.15
-PORTREVISION=	1
+DISTVERSION=	1.1.16
 CATEGORIES=	archivers python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
