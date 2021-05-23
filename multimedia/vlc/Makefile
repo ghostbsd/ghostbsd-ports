@@ -54,6 +54,7 @@ CONFIGURE_ARGS=	--enable-avcodec --enable-avformat --enable-dvbpsi \
 		--disable-update-check --disable-vsxu \
 		--disable-wasapi --disable-x26410b \
 		--with-kde-solid=${PREFIX}/share/solid/actions \
+		--enable-smbclient \
 		ac_cv_search_pthread_rwlock_init=-pthread \
 		BUILDCC="${CC}"
 .if defined(WITH_DEBUG)
@@ -74,7 +75,7 @@ OPTIONS_DEFINE_powerpc64=	ALTIVEC
 OPTIONS_DEFAULT=AVAHI DAV1D DBUS DVDREAD DVDNAV GNUTLS JPEG \
 		LIVEMEDIA LUA OGG OPTIMIZED_CFLAGS \
 		OPUS PNG QT5 SAMPLERATE STREAM SPEEX TAGLIB THEORA TWOLAME \
-		V4L VAAPI VCD VDPAU VORBIS WAYLAND X11
+		V4L VAAPI VCD VDPAU VORBIS WAYLAND X11 SMB
 OPTIONS_DEFAULT_powerpc=	ALTIVEC
 OPTIONS_DEFAULT_powerpc64=	ALTIVEC
 OPTIONS_SUB=	yes
