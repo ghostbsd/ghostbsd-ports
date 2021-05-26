@@ -5,6 +5,41 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20210523:
+  AFFECTS: users of www/tt-rss
+  AUTHOR: dereks@lifeofadishwasher.com
+
+  tt-rss config.php syntax has changed.  You can find detailed changes
+  here https://tt-rss.org/wiki/GlobalConfig or look at config.php.sample.
+  Expect your config.php to not work with newer www/tt-rss releases.
+
+  Due to changes in ttrssd before updating you should stop ttrssd or
+  otherwise kill the php process running update_daemon2.php.
+
+20210516:
+  AFFECTS: users of security/bitwarden_rs
+  AUTHOR: mr@FreeBSD.org
+
+  bitwarden_rs has been renamed to vaultwarden upstream.
+  So switch to security/vaultwarden instead.
+
+20210515:
+  AFFECTS: users of databases/postgresql??-server
+  AUTHOR: girgen@FreeBSD.org
+
+  The rc.conf parameter for the login class of the postgresql daemon has
+  changed name from postgresql_class to postgresql_login_class.
+  rc.subr(8) states that the parameter should be named ${name}_login_class.
+
+20200512:
+  AFFECTS: users of sysutils/ansible*
+  AUTHOR: 0mp@FreeBSD.org
+
+  Ansible has been updated to 3.3.0. Please follow the porting guide
+  to update the rulesets:
+
+    https://docs.ansible.com/ansible/devel/porting_guides/porting_guide_3.html
+
 20210508:
   AFFECTS: users of devel/pycharm-ce
   AUTHOR: bsam@FreeBSD.org
@@ -19,7 +54,7 @@ you update your ports collection, before attempting any port upgrades.
   FreeBSD 11 users using base OpenSSL can switch to
   mail/postfix35
 
-  If you whish to use postfix35 until FreeBSD 11 EoL you might run the
+  If you wish to use postfix35 until FreeBSD 11 EoL you might run the
   following command:
 
   # pkg set -o mail/postfix:mail/postfix35

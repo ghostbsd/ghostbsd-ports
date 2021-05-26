@@ -592,6 +592,7 @@
     SUBDIR += pacpl
     SUBDIR += padthv1-lv2
     SUBDIR += paman
+    SUBDIR += pamixer
     SUBDIR += paprefs
     SUBDIR += pavucontrol
     SUBDIR += pavucontrol-qt
@@ -662,9 +663,11 @@
     SUBDIR += qjackctl
     SUBDIR += qmidiarp
     SUBDIR += qmidictl
+    SUBDIR += qmidinet
     SUBDIR += qsampler
     SUBDIR += qsynth
     SUBDIR += quimup
+    SUBDIR += qxgedit
     SUBDIR += raul
     SUBDIR += rawrec
     SUBDIR += re
@@ -727,6 +730,7 @@
     SUBDIR += soundgrab
     SUBDIR += soundkonverter
     SUBDIR += soundtouch
+    SUBDIR += soundtracker
     SUBDIR += sox
     SUBDIR += spc2it
     SUBDIR += spectacle-lv2
@@ -803,6 +807,7 @@
     SUBDIR += umodplayer
     SUBDIR += umurmur
     SUBDIR += vamp-plugin-sdk
+    SUBDIR += vban
     SUBDIR += vgmplay
     SUBDIR += vimpc
     SUBDIR += virtual_oss
@@ -824,6 +829,7 @@
     SUBDIR += wavbreaker
     SUBDIR += wavegain
     SUBDIR += waveplay
+    SUBDIR += wavetral
     SUBDIR += wavpack
     SUBDIR += wavplay
     SUBDIR += webrtc-audio-processing
@@ -834,6 +840,7 @@
     SUBDIR += wmix
     SUBDIR += wmmp
     SUBDIR += wmsmixer
+    SUBDIR += wolf-shaper-lv2
     SUBDIR += wxguitar
     SUBDIR += x42-plugins-lv2
     SUBDIR += xanalyser

@@ -30,6 +30,7 @@
     SUBDIR += gtk-sharp30
     SUBDIR += gtk20
     SUBDIR += gtk30
+    SUBDIR += gtk40
     SUBDIR += gtkada
     SUBDIR += gtkada3
     SUBDIR += gtkd
@@ -227,5 +228,6 @@
     SUBDIR += xbae
     SUBDIR += xforms
     SUBDIR += xmhtml
+    SUBDIR += ztoolkit
 
 .include <bsd.port.subdir.mk>

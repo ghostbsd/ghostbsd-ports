@@ -5,17 +5,15 @@ PORTNAME=	rust
 PORTVERSION=	1.52.1
 PORTREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	https://static.rust-lang.org/dist/:rust \
-		LOCAL/mikael:armbase \
-		LOCAL/mikael:base \
-		LOCAL/bdragon:ppc64lebase \
-		https://download.freebsd.org/ftp/${_RUST_FBSD_SUBDIR_${FLAVOR}}/:base \
-		LOCAL/mikael:powerpc64_gcc
+MASTER_SITES?=	https://static.rust-lang.org/dist/:rust \
+		LOCAL/tobik/rust:${FLAVOR} \
+		https://download.freebsd.org/ftp/${_RUST_FBSD_SUBDIR_${FLAVOR}}/:${FLAVOR}
 #		http://pkg.freebsd.org/FreeBSD:12:powerpc64/quarterly/All/gcc9-9.3.0_1.txz?dummy=/:powerpc64_gcc
 PKGNAMESUFFIX=	-bootstrap
 DISTNAME=	${PORTNAME}c-${PORTVERSION}-src
-DISTFILES=	rust/${DISTNAME}${EXTRACT_SUFX}:rust \
-		${_RUST_FBSD_DIST_${FLAVOR}}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:rust \
+		${_RUST_FBSD_DIST_${FLAVOR}:@f@bootstrap/$f:${FLAVOR}@}
+DIST_SUBDIR=	rust
 
 MAINTAINER=	rust@FreeBSD.org
 COMMENT=	Create bootstrap compilers for building lang/rust
@@ -47,6 +45,7 @@ powerpc64_elfv1_BUILD_DEPENDS=	powerpc64-gcc9>0:devel/freebsd-gcc9@powerpc64
 powerpc64_elfv2_PKGNAMEPREFIX=	powerpc64-elfv2-
 powerpc64le_PKGNAMEPREFIX=	powerpc64le-
 powerpc_PKGNAMEPREFIX=		powerpc-
+powerpc_BUILD_DEPENDS=		powerpc-binutils>0:devel/binutils@powerpc
 
 USES=		ninja:build perl5 python:3.6+,build tar:xz
 .if ${FLAVOR} == powerpc64_elfv1
@@ -62,18 +61,18 @@ PATCHDIR=	${.CURDIR}/../rust/files
 # Resulting packages are not specific to amd64
 NO_ARCH=	yes
 
-_RUST_FBSD_DIST_aarch64=		FreeBSD-${_RUST_FBSD_VER}-arm64${EXTRACT_SUFX}:base
-_RUST_FBSD_DIST_amd64=			FreeBSD-${_RUST_FBSD_VER}-amd64${EXTRACT_SUFX}:base
+_RUST_FBSD_DIST_aarch64=		FreeBSD-${_RUST_FBSD_VER}-arm64${EXTRACT_SUFX}
+_RUST_FBSD_DIST_amd64=			FreeBSD-${_RUST_FBSD_VER}-amd64${EXTRACT_SUFX}
 # base.txz for armv* created from WANDBOARD images as there seem
 # to be no generic base.txz for it.
-_RUST_FBSD_DIST_armv6=			FreeBSD-${_RUST_FBSD_VER}-arm-armv6${EXTRACT_SUFX}:armbase
-_RUST_FBSD_DIST_armv7=			FreeBSD-${_RUST_FBSD_VER}-arm-armv7${EXTRACT_SUFX}:armbase
-_RUST_FBSD_DIST_i386=			FreeBSD-${_RUST_FBSD_VER}-i386${EXTRACT_SUFX}:base
-_RUST_FBSD_DIST_powerpc64_elfv1=	FreeBSD-${_RUST_FBSD_VER}-powerpc64-elfv1${EXTRACT_SUFX}:base \
-					FreeBSD-${_RUST_FBSD_VER}-powerpc64-elfv1-gcc9-9.3.0${EXTRACT_SUFX}:powerpc64_gcc
-_RUST_FBSD_DIST_powerpc64_elfv2=	FreeBSD-${_RUST_FBSD_VER}-powerpc64-elfv2-v1300123${EXTRACT_SUFX}:base
-_RUST_FBSD_DIST_powerpc64le=		FreeBSD-${_RUST_FBSD_VER}-powerpc64le-r366300${EXTRACT_SUFX}:ppc64lebase
-_RUST_FBSD_DIST_powerpc=		FreeBSD-${_RUST_FBSD_VER}-powerpc${EXTRACT_SUFX}:base
+_RUST_FBSD_DIST_armv6=			FreeBSD-${_RUST_FBSD_VER}-arm-armv6${EXTRACT_SUFX}
+_RUST_FBSD_DIST_armv7=			FreeBSD-${_RUST_FBSD_VER}-arm-armv7${EXTRACT_SUFX}
+_RUST_FBSD_DIST_i386=			FreeBSD-${_RUST_FBSD_VER}-i386${EXTRACT_SUFX}
+_RUST_FBSD_DIST_powerpc64_elfv1=	FreeBSD-${_RUST_FBSD_VER}-powerpc64-elfv1${EXTRACT_SUFX} \
+					FreeBSD-${_RUST_FBSD_VER}-powerpc64-elfv1-gcc9-9.3.0${EXTRACT_SUFX}
+_RUST_FBSD_DIST_powerpc64_elfv2=	FreeBSD-${_RUST_FBSD_VER}-powerpc64-elfv2-v1300123${EXTRACT_SUFX}
+_RUST_FBSD_DIST_powerpc64le=		FreeBSD-${_RUST_FBSD_VER}-powerpc64le-r366300${EXTRACT_SUFX}
+_RUST_FBSD_DIST_powerpc=		FreeBSD-${_RUST_FBSD_VER}-powerpc${EXTRACT_SUFX}
 _RUST_FBSD_VER=				${_RUST_FBSD_VER_${FLAVOR}:U11.4-RELEASE}
 _RUST_FBSD_VER_aarch64=			12.2-RELEASE
 _RUST_FBSD_VER_armv7=			12.2-RELEASE
@@ -128,7 +127,9 @@ IGNORE=	will not build on 12.x due to old system
 EXTRA_PATCHES+=	${PATCHDIR}/${FLAVOR:S/_/-/}
 .endif
 
-.if make(makesum)
+.if make(distclean) || make(makesum)
+MASTER_SITES:=	${FLAVORS:@_flavor@${:!${SETENV} FLAVOR=${_flavor} ${MAKE} -VMASTER_SITES!}@:O:u}
+.export MASTER_SITES
 DISTFILES:=	${DISTFILES:M*\:rust} \
 		${FLAVORS:O:@_flavor@${:!${SETENV} FLAVOR=${_flavor} ${MAKE} -V'DISTFILES:N*\:rust'!}@}
 .endif
@@ -140,17 +141,18 @@ post-patch:
 .if ${FLAVOR} == powerpc64_elfv1
 	@${REINPLACE_CMD} -e 's,"c++","stdc++",g' \
 		${WRKSRC}/compiler/rustc_llvm/build.rs
-.endif
 	@${REINPLACE_CMD} -e 's,%CC%,${CC},g' \
 		-e 's,%WRKDIR%,${WRKDIR},g' \
 		${WRKSRC}/compiler/rustc_llvm/build.rs \
 		${WRKSRC}/src/bootstrap/native.rs
+.endif
 
 do-configure:
 # Check that the running kernel has COMPAT_FREEBSD11 required by lang/rust post-ino64
 	@${SETENV} CC="${CC}" OPSYS="${OPSYS}" OSVERSION="${OSVERSION}" WRKDIR="${WRKDIR}" \
 		${SH} ${SCRIPTSDIR}/rust-compat11-canary.sh
-	@${ECHO_CMD} '[build]' > ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'changelog-seen=2' > ${WRKSRC}/config.toml
+	@${ECHO_CMD} '[build]' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'vendor=true' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'extended=false' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'python="${PYTHON_CMD}"' >> ${WRKSRC}/config.toml
@@ -213,6 +215,12 @@ do-configure:
 		> ${WRKDIR}/${_RUST_TARGET}-cc
 	@${PRINTF} '#!/bin/sh\nexec ${CXX} --sysroot=${WRKDIR} -mabi=elfv2 --target=${_RUST_LLVM_TRIPLE} -stdlib=libc++ "$$@"\n' \
 		> ${WRKDIR}/${_RUST_TARGET}-c++
+.elif ${FLAVOR} == powerpc
+	@bfd="$$(${ECHO_CMD} ${LOCALBASE}/bin/${_RUST_TARGET}*[0-9]-ld.bfd)"; \
+		${PRINTF} '#!/bin/sh\nexec ${CC} --sysroot=${WRKDIR} --target=${_RUST_LLVM_TRIPLE} -Wno-unused-command-line-argument -fuse-ld=%s "$$@"\n' "$${bfd}" \
+			> ${WRKDIR}/${_RUST_TARGET}-cc; \
+		${PRINTF} '#!/bin/sh\nexec ${CXX} --sysroot=${WRKDIR} --target=${_RUST_LLVM_TRIPLE} -Wno-unused-command-line-argument -fuse-ld=%s "$$@"\n' "$${bfd}" \
+			> ${WRKDIR}/${_RUST_TARGET}-c++
 .else
 	@${PRINTF} '#!/bin/sh\nexec ${CC} --sysroot=${WRKDIR} --target=${_RUST_LLVM_TRIPLE} "$$@"\n' \
 		> ${WRKDIR}/${_RUST_TARGET}-cc

@@ -22,6 +22,7 @@
     SUBDIR += gpsprune
     SUBDIR += gpstk
     SUBDIR += gpxloggerd
+    SUBDIR += indiwebmanagerapp
     SUBDIR += jday
     SUBDIR += josm
     SUBDIR += kosmindoormap
@@ -73,6 +74,7 @@
     SUBDIR += p5-Net-GPSD3
     SUBDIR += p5-Starlink-AST
     SUBDIR += p5-Weather-Underground
+    SUBDIR += phd2
     SUBDIR += phoon
     SUBDIR += pp3
     SUBDIR += ptiger
@@ -81,6 +83,7 @@
     SUBDIR += py-astropy-helpers
     SUBDIR += py-ephem
     SUBDIR += py-horoscopegenerator
+    SUBDIR += py-indiweb
     SUBDIR += py-jplephem
     SUBDIR += py-metar
     SUBDIR += py-metpy
@@ -110,6 +113,7 @@
     SUBDIR += starplot
     SUBDIR += stars
     SUBDIR += stellarium
+    SUBDIR += stellarsolver
     SUBDIR += sunclock
     SUBDIR += sunwait
     SUBDIR += swe

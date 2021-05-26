@@ -17,7 +17,7 @@ LICENSE=	PSFL
 DEPRECATED=	Uses Python 2.7 codebase
 EXPIRATION_DATE=	2021-06-23
 
-USES=		pathfix shebangfix autoreconf ncurses pkgconfig readline:port ssl tar:xz
+USES=		pathfix shebangfix autoreconf ncurses pkgconfig readline ssl tar:xz
 PATHFIX_MAKEFILEIN=	Makefile.pre.in
 
 USE_GITHUB=	yes
@@ -98,7 +98,7 @@ THREADS_LDFLAGS=	-lpthread
 UCS2_CONFIGURE_ENABLE=	unicode=ucs2
 UCS4_CONFIGURE_ENABLE=	unicode=ucs4
 
-PYTHON_PORTVERSION=	${DISTVERSION}
+PYTHON_DISTVERSION=	${DISTVERSION}
 
 VERSION_NOMICRO=	${DISTVERSION:R}
 NAME_VERSION=		tauthon${VERSION_NOMICRO}

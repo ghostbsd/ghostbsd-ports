@@ -76,6 +76,586 @@ Notes:
   * Do not forget port variants (linux-f10-libxml2, libxml2, etc.)
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="674ed047-be0a-11eb-b927-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>91.0.4472.77</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/05/stable-channel-update-for-desktop_25.html">
+	  <p>This release contains 32 security fixes, including:</p>
+	  <ul>
+	    <li>[1208721] High CVE-2021-30521: Heap buffer overflow in Autofill.
+	      Reported by ZhanJia Song on 2021-05-13</li>
+	    <li>[1176218] High CVE-2021-30522: Use after free in WebAudio.
+	      Reported by Piotr Bania of Cisco Talos on 2021-02-09</li>
+	    <li>[1187797] High CVE-2021-30523: Use after free in WebRTC.
+	      Reported by Tolyan Korniltsev on 2021-03-13</li>
+	    <li>[1197146] High CVE-2021-30524: Use after free in TabStrip.
+	      Reported by David Erceg on 2021-04-08</li>
+	    <li>[1197888] High CVE-2021-30525: Use after free in TabGroups.
+	      Reported by David Erceg on 2021-04-11</li>
+	    <li>[1198717] High CVE-2021-30526: Out of bounds write in
+	      TabStrip. Reported by David Erceg on 2021-04-13</li>
+	    <li>[1199198] High CVE-2021-30527: Use after free in WebUI.
+	      Reported by David Erceg on 2021-04-15</li>
+	    <li>[1206329] High CVE-2021-30528: Use after free in
+	      WebAuthentication. Reported by Man Yue Mo of GitHub Security Lab on
+	      2021-05-06</li>
+	    <li>[1195278] Medium CVE-2021-30529: Use after free in Bookmarks.
+	      Reported by koocola (@alo_cook) and Nan Wang (@eternalsakura13) of
+	      360 Alpha Lab on 2021-04-02</li>
+	    <li>[1201033] Medium CVE-2021-30530: Out of bounds memory access
+	      in WebAudio. Reported by kkwon on 2021-04-21</li>
+	    <li>[1115628] Medium CVE-2021-30531: Insufficient policy
+	      enforcement in Content Security Policy. Reported by Philip Papurt on
+	      2020-08-12</li>
+	    <li>[1117687] Medium CVE-2021-30532: Insufficient policy
+	      enforcement in Content Security Policy. Reported by Philip Papurt on
+	      2020-08-18</li>
+	    <li>[1145553] Medium CVE-2021-30533: Insufficient policy
+	      enforcement in PopupBlocker. Reported by Eliya Stein on
+	      2020-11-04</li>
+	    <li>[1151507] Medium CVE-2021-30534: Insufficient policy
+	      enforcement in iFrameSandbox. Reported by Alesandro Ortiz on
+	      2020-11-20</li>
+	    <li>[1194899] Medium CVE-2021-30535: Double free in ICU. Reported
+	      by nocma, leogan, cheneyxu of WeChat Open Platform Security Team on
+	      2021-04-01</li>
+	    <li>[1145024] Medium CVE-2021-21212: Insufficient data validation
+	      in networking. Reported by Hugo Hue and Sze Yiu Chau of the Chinese
+	      University of Hong Kong on 2020-11-03</li>
+	    <li>[1194358] Low CVE-2021-30536: Out of bounds read in V8.
+	      Reported by Chris Salls (@salls) on 2021-03-31</li>
+	    <li>[830101] Low CVE-2021-30537: Insufficient policy enforcement
+	      in cookies. Reported by Jun Kokatsu (@shhnjk) on 2018-04-06</li>
+	    <li>[1115045] Low CVE-2021-30538: Insufficient policy enforcement
+	      in content security policy. Reported by Tianze Ding (@D1iv3) of
+	      Tencent Security Xuanwu Lab on 2020-08-11</li>
+	    <li>[971231] Low CVE-2021-30539: Insufficient policy enforcement
+	      in content security policy. Reported by unnamed researcher on
+	      2019-06-05</li>
+	    <li>[1184147] Low CVE-2021-30540: Incorrect security UI in
+	      payments. Reported by @retsew0x01 on 2021-03-03</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-30521</cvename>
+      <cvename>CVE-2021-30522</cvename>
+      <cvename>CVE-2021-30523</cvename>
+      <cvename>CVE-2021-30524</cvename>
+      <cvename>CVE-2021-30525</cvename>
+      <cvename>CVE-2021-30526</cvename>
+      <cvename>CVE-2021-30527</cvename>
+      <cvename>CVE-2021-30528</cvename>
+      <cvename>CVE-2021-30529</cvename>
+      <cvename>CVE-2021-30530</cvename>
+      <cvename>CVE-2021-30531</cvename>
+      <cvename>CVE-2021-30532</cvename>
+      <cvename>CVE-2021-30533</cvename>
+      <cvename>CVE-2021-30534</cvename>
+      <cvename>CVE-2021-30535</cvename>
+      <cvename>CVE-2021-21212</cvename>
+      <cvename>CVE-2021-30536</cvename>
+      <cvename>CVE-2021-30537</cvename>
+      <cvename>CVE-2021-30538</cvename>
+      <cvename>CVE-2021-30539</cvename>
+      <cvename>CVE-2021-30540</cvename>
+      <url>https://chromereleases.googleblog.com/2021/05/stable-channel-update-for-desktop_25.html</url>
+    </references>
+    <dates>
+      <discovery>2021-05-25</discovery>
+      <entry>2021-05-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="21ec4428-bdaa-11eb-a04e-641c67a117d8">
+    <topic>libzmq4 -- Denial of Service</topic>
+    <affects>
+      <package>
+	<name>libzmq4</name>
+	<range><lt>4.3.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Google's oss-fuzz project reports:</p>
+	<blockquote cite="https://github.com/zeromq/libzmq/releases/tag/v4.3.3">
+	  <p>Denial-of-Service on CURVE/ZAP-protected servers by
+	    unauthenticated clients.
+	    If a raw TCP socket is opened and connected to an endpoint that is fully
+	    configured with CURVE/ZAP, legitimate clients will not be able to exchange
+	    any message. Handshakes complete successfully, and messages are delivered to
+	    the library, but the server application never receives them.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-15166</cvename>
+      <url>https://github.com/zeromq/libzmq/releases/tag/v4.3.3</url>
+      <url>https://github.com/zeromq/libzmq/security/advisories/GHSA-25wp-cf8g-938m</url>
+      <freebsdpr>ports/255102</freebsdpr>
+    </references>
+    <dates>
+      <discovery>2020-09-07</discovery>
+      <entry>2021-05-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6954a2b0-bda8-11eb-a04e-641c67a117d8">
+    <topic>libzmq4 -- Stack overflow</topic>
+    <affects>
+      <package>
+	<name>libzmq4</name>
+	<range><lt>4.3.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Fang-Pen Lin reports:</p>
+	<blockquote cite="https://github.com/zeromq/libzmq/releases/tag/v4.3.2">
+	  <p>A remote, unauthenticated client connecting to a
+	    libzmq application, running with a socket listening with CURVE
+	    encryption/authentication enabled, may cause a stack overflow and
+	    overwrite the stack with arbitrary data, due to a buffer overflow in
+	    the library. Users running public servers with the above configuration
+	    are highly encouraged to upgrade as soon as possible, as there are no
+	    known mitigations.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2019-13132</cvename>
+      <url>https://github.com/zeromq/libzmq/releases/tag/v4.3.2</url>
+      <url>https://github.com/zeromq/libzmq/issues/3558</url>
+      <freebsdpr>ports/255102</freebsdpr>
+    </references>
+    <dates>
+      <discovery>2019-06-27</discovery>
+      <entry>2021-05-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0882f019-bd60-11eb-9bdd-8c164567ca3c">
+    <topic>NGINX -- 1-byte memory overwrite in resolver</topic>
+    <affects>
+      <package>
+	<name>nginx</name>
+	<range><lt>1.20.1</lt></range>
+      </package>
+      <package>
+	<name>nginx-devel</name>
+	<range><lt>1.21.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>NGINX team reports:</p>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23017">
+	  <p>1-byte memory overwrite might occur during DNS server response
+	   processing if the "resolver" directive was used, allowing an
+	   attacker who is able to forge UDP packets from the DNS server
+	   to cause worker process crash or, potentially, arbitrary code
+	   execution.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-23017</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23017</url>
+    </references>
+    <dates>
+      <discovery>2021-05-25</discovery>
+      <entry>2021-05-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="58b22f3a-bc71-11eb-b9c9-6cc21735f730">
+    <topic>PG Partition Manager -- arbitrary code execution</topic>
+    <affects>
+      <package>
+	<name>pg_partman</name>
+	<range><lt>4.5.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PG Partition Manager reports:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2021-33204">
+	  <p>
+	    In the pg_partman (aka PG Partition Manager) extension before 4.5.1
+	    for PostgreSQL, arbitrary code execution can be achieved via
+	    SECURITY DEFINER functions because an explicit search_path is not
+	    set.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-33204</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2021-33204</url>
+    </references>
+    <dates>
+      <discovery>2021-05-21</discovery>
+      <entry>2021-05-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5fa90ee6-bc9e-11eb-a287-e0d55e2a8bf9">
+    <topic>texproc/expat2 -- billion laugh attack</topic>
+    <affects>
+      <package>
+	<name>expat</name>
+	<range><lt>2.4.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Kurt Seifried reports:</p>
+	<blockquote cite="https://blog.hartwork.org/posts/cve-2013-0340-billion-laughs-fixed-in-expat-2-4-0/">
+	  <p>So here are the CVE's for the two big ones, libxml2 and expat.
+	     Both are affected by the expansion of internal entities
+	     (which can be used to consume resources) and external entities
+	     (which can cause a denial of service against other services, be
+	     used to port scan, etc.).</p>
+	   <p>A billion laughs attack is a type of denial-of-service attack
+	     which is aimed at parsers of XML documents.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-0340</cvename>
+	<url>https://www.openwall.com/lists/oss-security/2013/02/22/3</url>
+	<url>https://blog.hartwork.org/posts/cve-2013-0340-billion-laughs-fixed-in-expat-2-4-0/</url>
+	<url>https://nvd.nist.gov/vuln/detail/CVE-2013-0340</url>
+    </references>
+    <dates>
+      <discovery>2013-02-21</discovery>
+      <entry>2021-05-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="524bd03a-bb75-11eb-bf35-080027f515ea">
+    <topic>libxml2 -- Possible denial of service</topic>
+    <affects>
+      <package>
+	<name>libxml2</name>
+	<range><lt>2.9.10_4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Daniel Veillard reports:</p>
+	<blockquote cite="https://ubuntu.com/security/CVE-2021-3541">
+	  <p>
+	    A flaw was found in libxml2. Exponential entity expansion attack
+	    its possible bypassing all existing protection mechanisms and
+	    leading to denial of service.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-3541</cvename>
+      <url>https://ubuntu.com/security/CVE-2021-3541</url>
+      <url>https://gitlab.gnome.org/GNOME/libxml2/-/commit/8598060bacada41a0eb09d95c97744ff4e428f8e</url>
+    </references>
+    <dates>
+      <discovery>2021-05-18</discovery>
+      <entry>2021-05-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="62da9702-b4cc-11eb-b9c9-6cc21735f730">
+    <topic>PostgreSQL server -- two security issues</topic>
+    <affects>
+      <package>
+	<name>postgresql13-server</name>
+	<range><lt>13.3</lt></range>
+      </package>
+      <package>
+	<name>postgresql12-server</name>
+	<range><lt>12.7</lt></range>
+      </package>
+      <package>
+	<name>postgresql11-server</name>
+	<range><lt>11.12</lt></range>
+      </package>
+      <package>
+	<name>postgresql10-server</name>
+	<range><lt>10.17</lt></range>
+      </package>
+      <package>
+	<name>postgresql96-server</name>
+	<range><lt>9.6.22</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The PostgreSQL project reports:</p>
+	<blockquote cite="https://www.postgresql.org/support/security/CVE-2021-32028/">
+	  <p>Memory disclosure in INSERT ... ON CONFLICT ... DO UPDATE</p>
+	  <p>
+	    Using an INSERT ... ON CONFLICT ... DO UPDATE command on a
+	    purpose-crafted table, an attacker can read arbitrary bytes of
+	    server memory. In the default configuration, any authenticated
+	    database user can create prerequisite objects and complete this
+	    attack at will. A user lacking the CREATE and TEMPORARY privileges
+	    on all databases and the CREATE privilege on all schemas cannot use
+	    this attack at will..
+	  </p>
+	</blockquote>
+	<blockquote cite="https://www.postgresql.org/support/security/CVE-2021-32027/">
+	  <p>
+	    Buffer overrun from integer overflow in array subscripting
+	    calculations
+	  </p>
+	  <p>
+	    While modifying certain SQL array values, missing bounds checks let
+	    authenticated database users write arbitrary bytes to a wide area of
+	    server memory.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://www.postgresql.org/support/security/CVE-2021-32027/</url>
+      <url>https://www.postgresql.org/support/security/CVE-2021-32028/</url>
+    </references>
+    <dates>
+      <discovery>2021-05-13</discovery>
+      <entry>2021-05-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="76e0bb86-b4cb-11eb-b9c9-6cc21735f730">
+    <topic>PostgreSQL -- Memory disclosure in partitioned-table UPDATE ... RETURNING</topic>
+    <affects>
+      <package>
+	<name>postgresql13-server</name>
+	<range><lt>13.3</lt></range>
+      </package>
+      <package>
+	<name>postgresql12-server</name>
+	<range><lt>12.7</lt></range>
+      </package>
+      <package>
+	<name>postgresql11-server</name>
+	<range><lt>11.12</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The PostgreSQL project reports:</p>
+	<blockquote cite="https://www.postgresql.org/support/security/CVE-2021-32029/">
+	  <p>
+	    Using an UPDATE ... RETURNING on a purpose-crafted partitioned
+	    table, an attacker can read arbitrary bytes of server memory. In the
+	    default configuration, any authenticated database user can create
+	    prerequisite objects and complete this attack at will. A user
+	    lacking the CREATE and TEMPORARY privileges on all databases and the
+	    CREATE privilege on all schemas typically cannot use this attack at
+	    will.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://www.postgresql.org/support/security/CVE-2021-32029/</url>
+    </references>
+    <dates>
+      <discovery>2021-05-13</discovery>
+      <entry>2021-05-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fc75570a-b417-11eb-a23d-c7ab331fd711">
+    <topic>Prosody -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>prosody</name>
+	<range><lt>0.11.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Prosody security advisory 2021-05-12 reports:</p>
+	<blockquote cite="https://prosody.im/security/advisory_20210512/">
+	  <p>
+	    This advisory details 5 new security vulnerabilities discovered in the
+	    Prosody.im XMPP server software. All issues are fixed in the 0.11.9
+	    release default configuration.
+	  </p>
+	  <ul>
+	    <li>CVE-2021-32918: DoS via insufficient memory consumption controls</li>
+	    <li>CVE-2021-32920: DoS via repeated TLS renegotiation causing excessive CPU consumption</li>
+	    <li>CVE-2021-32921: Use of timing-dependent string comparison with sensitive values</li>
+	    <li>CVE-2021-32917: Use of mod_proxy65 is unrestricted in default configuration</li>
+	    <li>CVE-2021-32919: Undocumented dialback-without-dialback option insecure</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-32918</cvename>
+      <cvename>CVE-2021-32920</cvename>
+      <cvename>CVE-2021-32921</cvename>
+      <cvename>CVE-2021-32917</cvename>
+      <cvename>CVE-2021-32919</cvename>
+    </references>
+    <dates>
+      <discovery>2021-05-12</discovery>
+      <entry>2021-05-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3e0ca488-b3f6-11eb-a5f7-a0f3c100ae18">
+    <topic>ImageMagick6 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>ImageMagick6</name>
+	<name>ImageMagick6-nox11</name>
+	<range><lt>6.9.12.12,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>CVE reports:</p>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=ImageMagick">
+	  <p>Several vulnerabilities have been discovered in ImageMagick:</p>
+	  <ul>
+	    <li>CVE-2021-20309: A flaw was found in ImageMagick in versions before 6.9.12,
+	    where a division by zero in WaveImage() of MagickCore/visual-effects.c may trigger
+	    undefined behavior via a crafted image file submitted to an application using ImageMagick.</li>
+	    <li>CVE-2021-20176: A divide-by-zero flaw was found in ImageMagick 6.9.11-57 in gem.c.
+	    This flaw allows an attacker who submits a crafted file that is processed by ImageMagick
+	    to trigger undefined behavior through a division by zero.</li>
+	    <li>CVE-2020-29599: ImageMagick before 6.9.11-40  mishandles the -authenticate option,
+	    which allows setting a password for password-protected PDF files.</li>
+	    <li>And maybe some others…</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-29599</cvename>
+      <cvename>CVE-2021-20176</cvename>
+      <cvename>CVE-2021-20309</cvename>
+    </references>
+    <dates>
+      <discovery>2020-12-17</discovery>
+      <entry>2021-05-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a7c60af1-b3f1-11eb-a5f7-a0f3c100ae18">
+    <topic>ImageMagick7 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>ImageMagick7</name>
+	<name>ImageMagick7-nox11</name>
+	<range><lt>7.0.11.12</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>CVE reports:</p>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=ImageMagick">
+	  <p>Several vulnerabilities have been discovered in ImageMagick:</p>
+	  <ul>
+	    <li>CVE-2021-20313: A flaw was found in ImageMagick in versions before 7.0.11.
+	    A potential cipher leak when the calculate signatures in TransformSignature is possible.</li>
+	    <li>CVE-2021-20312: A flaw was found in ImageMagick in versions 7.0.11,
+	    where an integer overflow in WriteTHUMBNAILImage of coders/thumbnail.c may trigger
+	    undefined behavior via a crafted image file that is submitted by an attacker and
+	    processed by an application using ImageMagick.</li>
+	    <li>CVE-2021-20311: A flaw was found in ImageMagick in versions before 7.0.11,
+	    where a division by zero in sRGBTransformImage() in the MagickCore/colorspace.c
+	    may trigger undefined behavior via a crafted image file that is submitted by an
+	    attacker processed by an application using ImageMagick.</li>
+	    <li>CVE-2021-20310: A flaw was found in ImageMagick in versions before 7.0.11,
+	    where a division by zero ConvertXYZToJzazbz() of MagickCore/colorspace.c may trigger
+	    undefined behavior via a crafted image file that is submitted by an attacker
+	    and processed by an application using ImageMagick.</li>
+	    <li>CVE-2021-20309: A flaw was found in ImageMagick in versions before 7.0.11,
+	    where a division by zero in WaveImage() of MagickCore/visual-effects.c may trigger
+	    undefined behavior via a crafted image file submitted to an application using ImageMagick.</li>
+	    <li>And several others…</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-27829</cvename>
+      <cvename>CVE-2020-29599</cvename>
+      <cvename>CVE-2021-20176</cvename>
+      <cvename>CVE-2021-20241</cvename>
+      <cvename>CVE-2021-20243</cvename>
+      <cvename>CVE-2021-20244</cvename>
+      <cvename>CVE-2021-20245</cvename>
+      <cvename>CVE-2021-20246</cvename>
+      <cvename>CVE-2021-20309</cvename>
+      <cvename>CVE-2021-20310</cvename>
+      <cvename>CVE-2021-20311</cvename>
+      <cvename>CVE-2021-20312</cvename>
+      <cvename>CVE-2021-20313</cvename>
+    </references>
+    <dates>
+      <discovery>2020-10-27</discovery>
+      <entry>2021-05-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f947aa26-b2f9-11eb-a5f7-a0f3c100ae18">
+    <topic>Pillow -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py38-pillow</name>
+	<range><lt>8.2.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>python-pillow reports:</p>
+	<blockquote cite="https://github.com/python-pillow/Pillow/pull/5377/commits/8ec027867f19633d9adfc5c8b7504d9b609fc5f1">
+	  <p>This release fixes several vulnerabilities found with `OSS-Fuzz`.</p>
+	  <ul>
+	    <li>`CVE-2021-25288`: Fix OOB read in Jpeg2KDecode.
+	    This dates to Pillow 2.4.0.</li>
+	    <li>`CVE-2021-28675`: Fix DOS in PsdImagePlugin.
+	    This dates to the PIL fork.</li>
+	    <li>`CVE-2021-28676`: Fix FLI DOS.
+	    This dates to the PIL fork.</li>
+	    <li>`CVE-2021-28677`: Fix EPS DOS on _open.
+	    This dates to the PIL fork.</li>
+	    <li>`CVE-2021-28678`: Fix BLP DOS.
+	    This dates to Pillow 5.1.0.</li>
+	    <li>Fix memory DOS in ImageFont.
+	    This dates to the PIL fork.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-25288</cvename>
+      <cvename>CVE-2021-28675</cvename>
+      <cvename>CVE-2021-28676</cvename>
+      <cvename>CVE-2021-28677</cvename>
+      <cvename>CVE-2021-28678</cvename>
+    </references>
+    <dates>
+      <discovery>2021-04-01</discovery>
+      <entry>2021-05-12</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="3cac007f-b27e-11eb-97a0-e09467587c17">
     <topic>chromium -- multiple vulnerabilities</topic>
     <affects>
