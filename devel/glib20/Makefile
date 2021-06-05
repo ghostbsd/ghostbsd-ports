@@ -1,9 +1,9 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
 
 PORTNAME=	glib
-DISTVERSION=	2.66.7
-PORTREVISION=	1
-PORTEPOCH=	1
+DISTVERSION=	2.66.8
+PORTREVISION=	0
+PORTEPOCH=	2
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -32,15 +32,8 @@ MESON_ARGS=	-Db_lundef=false \
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 PORTSCOUT=	limitw:1,even
 
-LIBVERSION=	0.6600.7
-PLIST_SUB+=	LIBVERSION=${_LIBVERSION}
-CODEGENDIR=	${PREFIX}/share/glib-2.0/codegen
-
-glib_MAN=	gtester.1 gtester-report.1 glib-gettextize.1
-gio_MAN=	gdbus.1 gsettings.1 gio-querymodules.1 gio.1 \
-		glib-compile-schemas.1 gapplication.1 \
-		glib-compile-resources.1 gresource.1 gdbus-codegen.1
-gobject_MAN=	glib-genmarshal.1 glib-mkenums.1 gobject-query.1
+_LIBVERSION=	0.6600.8
+PLIST_SUB=	LIBVERSION=${_LIBVERSION}
 
 OPTIONS_DEFINE=	DEBUG FAM_ALTBACKEND MANPAGES NLS
 OPTIONS_DEFAULT=	MANPAGES

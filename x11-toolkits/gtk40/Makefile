@@ -1,5 +1,6 @@
 PORTNAME=	gtk
 PORTVERSION=	4.2.1
+PORTREVISION=	3
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	4
@@ -24,11 +25,14 @@ RUN_DEPENDS=	hicolor-icon-theme>=0:misc/hicolor-icon-theme \
 
 USES=		compiler:c11 gettext gnome localbase meson ninja \
 		pathfix perl5 python:3.7+ pkgconfig tar:xz
+USE_LDCONFIG=	yes
 USE_PERL5=	build
-BINARY_ALIAS=	python3=${PYTHON_CMD}
 USE_GNOME=	atk cairo gdkpixbuf2 introspection:build pango \
 		librsvg2:run
-LDFLAGS=	-lexecinfo
+LDFLAGS+=	-lexecinfo
+INSTALLS_ICONS=	yes
+
+BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 LIBVERSION=	0.2404.23
 PLIST_SUB+=	LIBVERSION=${LIBVERSION}
@@ -39,9 +43,14 @@ GLIB_SCHEMAS=	org.gtk.Demo4.gschema.xml \
 		org.gtk.gtk4.Settings.EmojiChooser.gschema.xml \
 		org.gtk.gtk4.Settings.FileChooser.gschema.xml
 
+.if exists(/usr/bin/ld.lld) && ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
+# undefined reference to symbol `g_module_symbol' (try adding -lgmodule-2.0)
+LDFLAGS+=	-fuse-ld=lld
+.endif
+
 OPTIONS_DEFINE=	CUPS CLOUDPRINT COLORD DEBUG BROADWAY FFMPEG \
-		GSTREAMER WAYLAND X11
-OPTIONS_DEFAULT=CUPS COLORD BROADWAY WAYLAND X11
+		GSTREAMER VULKAN WAYLAND X11
+OPTIONS_DEFAULT=CUPS COLORD BROADWAY VULKAN WAYLAND X11
 OPTIONS_SUB=	yes
 
 BROADWAY_DESC=	Enable GDK Broadway backend for showing GTK+ in the webbrowser using HTML5 and web sockets.
@@ -68,8 +77,13 @@ FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 
 GSTREAMER_DESC=		GStreamer multimedia backend
 GSTREAMER_MESON_ENABLED=media-gstreamer
-GSTREAMER_RUN_DEPENDS=	gstreamer1>0:multimedia/gstreamer1
-GSTREAMER_LIB_DEPENDS=	libgstreamer-1.0.so:multimedia/gstreamer1
+GSTREAMER_USE=		GSTREAMER1=bad,gl
+
+VULKAN_DESC=		GDK Vulkan renderer backend
+VULKAN_BUILD_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers
+VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
+VULKAN_RUN_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers
+VULKAN_MESON_ENABLED=	vulkan
 
 WAYLAND_DESC=		GDK Wayland backend
 WAYLAND_MESON_TRUE=	wayland-backend
@@ -90,8 +104,11 @@ pre-build:
 	@${RM} -r ${WRKSRC}/docs/gtk.info*
 
 post-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/gtk-4.0/engines
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/gtk-4.0/loaders
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/gtk-4.0/modules
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/gtk-4.0/${GTK4_VERSION}/engines
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/gtk-4.0/${GTK4_VERSION}/loaders
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/gtk-4.0/${GTK4_VERSION}/modules
 
 .include <bsd.port.mk>

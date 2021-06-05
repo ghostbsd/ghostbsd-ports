@@ -4110,6 +4110,7 @@ _FLAVOR_RECURSIVE_SH= \
 	for dir in $${recursive_dirs}; do \
 		unset flavor; \
 		case $${dir} in \
+			*@*/*) ;; \
 			*@*) \
 				flavor=$${dir\#*@}; \
 				dir=$${dir%@*}; \
@@ -4119,7 +4120,7 @@ _FLAVOR_RECURSIVE_SH= \
 		/*) ;; \
 		*) dir=${PORTSDIR}/$$dir ;; \
 		esac; \
-		(cd $$dir; ${SETENV} FLAVOR=$${flavor} ${MAKE} $${recursive_cmd}); \
+		(cd $$dir; ${SETENV} $${flavor:+FLAVOR=$${flavor}} ${MAKE} $${recursive_cmd}); \
 	done
 
 # This script is shared among several dependency list variables.  See file for

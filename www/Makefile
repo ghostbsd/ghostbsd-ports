@@ -78,6 +78,7 @@
     SUBDIR += chpasswd
     SUBDIR += chrome-gnome-shell
     SUBDIR += chromium
+    SUBDIR += civetweb
     SUBDIR += ckeditor
     SUBDIR += cl-lml
     SUBDIR += cl-lml-sbcl
@@ -108,12 +109,12 @@
     SUBDIR += dfileserver
     SUBDIR += dhttpd
     SUBDIR += dillo2
-    SUBDIR += dooble
     SUBDIR += dojo
     SUBDIR += dojo-shrinksafe
     SUBDIR += dokuwiki
     SUBDIR += dolibarr
     SUBDIR += domoticz
+    SUBDIR += dooble
     SUBDIR += drupal7
     SUBDIR += drupal7-wysiwyg
     SUBDIR += drupal8
@@ -344,6 +345,7 @@
     SUBDIR += minio-client
     SUBDIR += miniserve
     SUBDIR += mitmproxy
+    SUBDIR += mirrorselect
     SUBDIR += mknmz-wwwoffle
     SUBDIR += mnogosearch
     SUBDIR += mod_amazon_proxy
@@ -591,6 +593,7 @@
     SUBDIR += p5-CGI-SpeedyCGI
     SUBDIR += p5-CGI-Struct
     SUBDIR += p5-CGI-Thin
+    SUBDIR += p5-CGI-Tiny
     SUBDIR += p5-CGI-Untaint
     SUBDIR += p5-CGI-Untaint-date
     SUBDIR += p5-CGI-Untaint-email
@@ -1687,6 +1690,7 @@
     SUBDIR += py-praw
     SUBDIR += py-prawcore
     SUBDIR += py-priority
+    SUBDIR += py-protego
     SUBDIR += py-puppetboard
     SUBDIR += py-py-restclient
     SUBDIR += py-pyjwt
@@ -1792,6 +1796,7 @@
     SUBDIR += radicale
     SUBDIR += rearx
     SUBDIR += redmine4
+    SUBDIR += redmine42
     SUBDIR += rejik
     SUBDIR += reportmagic
     SUBDIR += repos-style
@@ -1869,6 +1874,8 @@
     SUBDIR += rubygem-ethon
     SUBDIR += rubygem-eventmachine_httpserver
     SUBDIR += rubygem-faraday
+    SUBDIR += rubygem-faraday-em_http
+    SUBDIR += rubygem-faraday-em_synchrony
     SUBDIR += rubygem-faraday-net_http
     SUBDIR += rubygem-faraday-net_http_persistent
     SUBDIR += rubygem-faraday0
@@ -2308,6 +2315,7 @@
     SUBDIR += xapian-omega
     SUBDIR += xapian-omega12
     SUBDIR += xfce4-smartbookmark-plugin
+    SUBDIR += xh
     SUBDIR += xist
     SUBDIR += xoops
     SUBDIR += xsp

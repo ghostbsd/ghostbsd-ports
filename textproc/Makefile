@@ -224,7 +224,6 @@
     SUBDIR += gastex
     SUBDIR += gd-aspell
     SUBDIR += gdome2
-    SUBDIR += gi-docgen
     SUBDIR += git-chglog
     SUBDIR += gitlab-elasticsearch-indexer
     SUBDIR += gl-aspell
@@ -649,6 +648,7 @@
     SUBDIR += p5-PPIx-QuoteLike
     SUBDIR += p5-PPIx-Regexp
     SUBDIR += p5-PPIx-Utilities
+    SUBDIR += p5-PPIx-Utils
     SUBDIR += p5-Parse-ANSIColor-Tiny
     SUBDIR += p5-Parse-BooleanLogic
     SUBDIR += p5-Parse-CSV
@@ -1288,6 +1288,7 @@
     SUBDIR += py-gambit-elasticsearch
     SUBDIR += py-genshi
     SUBDIR += py-gensim
+    SUBDIR += py-gi-docgen
     SUBDIR += py-googletrans
     SUBDIR += py-grako
     SUBDIR += py-guess-language

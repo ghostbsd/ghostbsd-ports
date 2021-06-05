@@ -586,6 +586,7 @@
     SUBDIR += kshutdown
     SUBDIR += ksystemlog
     SUBDIR += kubectl
+    SUBDIR += kvmclock-kmod
     SUBDIR += lava
     SUBDIR += lbl-cf
     SUBDIR += lbl-hf
@@ -1233,6 +1234,7 @@
     SUBDIR += runit-faster
     SUBDIR += runj
     SUBDIR += runwhen
+    SUBDIR += rush
     SUBDIR += rw
     SUBDIR += s-tui
     SUBDIR += s6
@@ -1350,6 +1352,7 @@
     SUBDIR += terraform-switcher
     SUBDIR += terragrunt
     SUBDIR += testdisk
+    SUBDIR += tflint
     SUBDIR += thefish
     SUBDIR += throttle
     SUBDIR += timelimit

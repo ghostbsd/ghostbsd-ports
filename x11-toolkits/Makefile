@@ -67,6 +67,7 @@
     SUBDIR += libXaw
     SUBDIR += libXmu
     SUBDIR += libXt
+    SUBDIR += libadwaita
     SUBDIR += libdazzle
     SUBDIR += libgdiplus
     SUBDIR += libhandy
@@ -200,6 +201,7 @@
     SUBDIR += soqt
     SUBDIR += swt
     SUBDIR += tepl
+    SUBDIR += tepl6
     SUBDIR += termit
     SUBDIR += tix
     SUBDIR += tk-wrapper

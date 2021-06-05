@@ -396,6 +396,7 @@
     SUBDIR += cppcheck
     SUBDIR += cppcheck-gui
     SUBDIR += cppi
+    SUBDIR += cpplint
     SUBDIR += cpprestsdk
     SUBDIR += cpptest
     SUBDIR += cppunit
@@ -669,6 +670,7 @@
     SUBDIR += fmake
     SUBDIR += fnccheck
     SUBDIR += folly
+    SUBDIR += forge
     SUBDIR += fortran-utils
     SUBDIR += fortytwo-encore
     SUBDIR += fossil
@@ -1787,6 +1789,7 @@
     SUBDIR += p5-CHI
     SUBDIR += p5-CHI-Driver-DBI
     SUBDIR += p5-CLASS
+    SUBDIR += p5-CLI-Osprey
     SUBDIR += p5-CPAN-Changes
     SUBDIR += p5-CPAN-Checksums
     SUBDIR += p5-CPAN-DistnameInfo
@@ -4555,6 +4558,8 @@
     SUBDIR += py-isodate
     SUBDIR += py-isort
     SUBDIR += py-itanium_demangler
+    SUBDIR += py-itemadapter
+    SUBDIR += py-itemloaders
     SUBDIR += py-iterpipes
     SUBDIR += py-itypes
     SUBDIR += py-jaraco
@@ -4594,12 +4599,12 @@
     SUBDIR += py-jsonrpclib-pelix
     SUBDIR += py-jsonschema
     SUBDIR += py-jsonsir
+    SUBDIR += py-jupyter-client
     SUBDIR += py-jupyter-core
     SUBDIR += py-jupyter-packaging
     SUBDIR += py-jupyter-server
     SUBDIR += py-jupyter-server-mathjax
     SUBDIR += py-jupyter-telemetry
-    SUBDIR += py-jupyter_client
     SUBDIR += py-jupyter_console
     SUBDIR += py-jupyterlab
     SUBDIR += py-jupyterlab-server
@@ -4816,6 +4821,7 @@
     SUBDIR += py-pefile
     SUBDIR += py-pendulum
     SUBDIR += py-pep517
+    SUBDIR += py-pep562
     SUBDIR += py-pep8-naming
     SUBDIR += py-period
     SUBDIR += py-persistent
@@ -5046,6 +5052,7 @@
     SUBDIR += py-pyvisa-py
     SUBDIR += py-pyxb
     SUBDIR += py-pyyaml-include
+    SUBDIR += py-pyzipper
     SUBDIR += py-q
     SUBDIR += py-qasync
     SUBDIR += py-qstylizer
@@ -5072,6 +5079,7 @@
     SUBDIR += py-readme-renderer
     SUBDIR += py-rebulk
     SUBDIR += py-rednose
+    SUBDIR += py-reedsolo
     SUBDIR += py-remote-pdb
     SUBDIR += py-repoze.lru
     SUBDIR += py-repoze.sphinx.autointerface
@@ -5123,6 +5131,7 @@
     SUBDIR += py-setuptools
     SUBDIR += py-setuptools-git
     SUBDIR += py-setuptools-pkg
+    SUBDIR += py-setuptools44
     SUBDIR += py-setuptools_hg
     SUBDIR += py-setuptools_scm
     SUBDIR += py-setuptools_scm_git_archive
@@ -5579,6 +5588,7 @@
     SUBDIR += rubygem-aws-sdk-applicationinsights
     SUBDIR += rubygem-aws-sdk-appmesh
     SUBDIR += rubygem-aws-sdk-appregistry
+    SUBDIR += rubygem-aws-sdk-apprunner
     SUBDIR += rubygem-aws-sdk-appstream
     SUBDIR += rubygem-aws-sdk-appsync
     SUBDIR += rubygem-aws-sdk-athena
@@ -6853,6 +6863,7 @@
     SUBDIR += smc
     SUBDIR += smv
     SUBDIR += soapui
+    SUBDIR += sobjectizer
     SUBDIR += socket_wrapper
     SUBDIR += sol2
     SUBDIR += sonar-scanner-cli
@@ -7045,6 +7056,7 @@
     SUBDIR += xxgdb
     SUBDIR += xxhash
     SUBDIR += xxl
+    SUBDIR += yaegi
     SUBDIR += yaggo
     SUBDIR += yajl
     SUBDIR += yajl-tcl
