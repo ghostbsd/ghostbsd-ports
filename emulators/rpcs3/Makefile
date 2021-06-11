@@ -1,15 +1,14 @@
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.16-12361 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-g6c44664c1
+DISTVERSION=	0.0.16-12386 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-g2dc6adc03
 CATEGORIES=	emulators
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	PS3 emulator/debugger
 
-LICENSE=	APACHE20 BSD3CLAUSE BSL GPLv2 MIT ZLIB
+LICENSE=	APACHE20 GPLv2 MIT ZLIB
 LICENSE_COMB=	multi
-LICENSE_FILE_BSD3CLAUSE=${WRKSRC_cereal}/LICENSE
 LICENSE_FILE_MIT=	${WRKSRC_pugixml}/LICENSE.md
 LICENSE_FILE_ZLIB=	${WRKSRC_asmjit}/LICENSE.md
 
@@ -22,7 +21,7 @@ ONLY_FOR_ARCHS_REASON=	requires int128 and SSE2
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	RPCS3
-GH_TUPLE=	RPCS3:hidapi:hidapi-0.8.0-rc1-28-g8961cf8:hidapi/3rdparty/hidapi/hidapi \
+GH_TUPLE=	RPCS3:hidapi:hidapi-0.8.0-rc1-125-g01f601a:hidapi/3rdparty/hidapi/hidapi \
 		RPCS3:llvm-mirror:5836324d6443:llvm/llvm \
 		Cyan4973:xxHash:v0.8.0:xxHash/3rdparty/xxHash \
 		FNA-XNA:FAudio:21.04:FAudio/3rdparty/FAudio \
@@ -32,7 +31,6 @@ GH_TUPLE=	RPCS3:hidapi:hidapi-0.8.0-rc1-28-g8961cf8:hidapi/3rdparty/hidapi/hidap
 		KhronosGroup:SPIRV-Headers:1.5.3.reservations1:spirv_headers/3rdparty/SPIRV/SPIRV-Headers \
 		KhronosGroup:SPIRV-Tools:v2020.4:spirv_tools/3rdparty/SPIRV/SPIRV-Tools \
 		KhronosGroup:glslang:11.4.0:glslang/3rdparty/glslang/glslang \
-		USCiLab:cereal:v1.3.0-5-g60c69df9:cereal/3rdparty/cereal \
 		wolfSSL:wolfssl:v4.5.0-stable-80-g39b544860:wolfssl/3rdparty/wolfssl \
 		zeux:pugixml:v1.11.4:pugixml/3rdparty/pugixml
 
@@ -89,7 +87,7 @@ CXX=		clang++${LLVM_DEFAULT}
 CPP=		clang-cpp${LLVM_DEFAULT}
 
 # XXX Drop after FreeBSD 12.2 EOL
-.if make(makesum) || (!exists(/usr/include/c++/v1/concepts) && exists(/usr/lib/libc++.so))
+.if make(makesum) || (!exists(/usr/include/c++/v1/__bits) && exists(/usr/lib/libc++.so))
 MASTER_SITES+=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${LLVM_VER}/:libcxx
 DISTFILES+=	libcxx-${LLVM_VER}.src.tar.xz:libcxx
 CXXFLAGS+=	-nostdinc++ -D_LIBCPP_HAS_NO_VENDOR_AVAILABILITY_ANNOTATIONS -isystem${WRKDIR}/libcxx-${LLVM_VER}.src/include

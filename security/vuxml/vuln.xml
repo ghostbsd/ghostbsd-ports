@@ -76,6 +76,195 @@ Notes:
   * Do not forget port variants (linux-f10-libxml2, libxml2, etc.)
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="e4cd0b38-c9f9-11eb-87e1-08002750c711">
+    <topic>cacti -- SQL Injection was possible due to incorrect validation order</topic>
+    <affects>
+      <package>
+	<name>cacti</name>
+	<range><ge>1.2</ge><lt>1.2.17</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Cati team reports:</p>
+	<blockquote cite="https://github.com/Cacti/cacti/issues/4022">
+	  <p>Due to a lack of validation, data_debug.php can be the source of a SQL injection.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>2020-35701</cvename>
+      <url>https://github.com/Cacti/cacti/issues/4022</url>
+    </references>
+    <dates>
+      <discovery>2020-12-24</discovery>
+      <entry>2021-06-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="20b3ab21-c9df-11eb-8558-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>91.0.4472.101</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/06/stable-channel-update-for-desktop.html">
+	  <p>This release contains 14 security fixes, including:</p>
+	  <ul>
+	    <li>[1212618] Critical CVE-2021-30544: Use after free in BFCache.
+	      Reported by Rong Jian and Guang Gong of 360 Alpha Lab on
+	      2021-05-24</li>
+	    <li>[1201031] High CVE-2021-30545: Use after free in Extensions.
+	      Reported by kkwon with everpall and kkomdal on 2021-04-21</li>
+	    <li>[1206911] High CVE-2021-30546: Use after free in Autofill.
+	      Reported by Abdulrahman Alqabandi, Microsoft Browser Vulnerability
+	      Research on 2021-05-08</li>
+	    <li>[1210414] High CVE-2021-30547: Out of bounds write in ANGLE.
+	      Reported by Seong-Hwan Park (SeHwa) of SecunologyLab on
+	      2021-05-18</li>
+	    <li>[1210487] High CVE-2021-30548: Use after free in Loader.
+	      Reported by Yangkang(@dnpushme) &amp; Wanglu of Qihoo360 Qex Team
+	      on 2021-05-18</li>
+	    <li>[1212498] High CVE-2021-30549: Use after free in Spell check.
+	      Reported by David Erceg on 2021-05-23</li>
+	    <li>[1212500] High CVE-2021-30550: Use after free in Accessibility.
+	      Reported by David Erceg on 2021-05-23</li>
+	    <li>[1216437] High CVE-2021-30551: Type Confusion in V8. Reported by
+	      Sergei Glazunov of Google Project Zero on 2021-06-04</li>
+	    <li>[1200679] Medium CVE-2021-30552: Use after free in Extensions.
+	      Reported by David Erceg on 2021-04-20</li>
+	    <li>[1209769] Medium CVE-2021-30553: Use after free in Network
+	      service. Reported by Anonymous on 2021-05-17</li>
+	  </ul>
+	  <p>Google is aware that an exploit for CVE-2021-30551 exists in the
+	    wild.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-30544</cvename>
+      <cvename>CVE-2021-30545</cvename>
+      <cvename>CVE-2021-30546</cvename>
+      <cvename>CVE-2021-30547</cvename>
+      <cvename>CVE-2021-30548</cvename>
+      <cvename>CVE-2021-30549</cvename>
+      <cvename>CVE-2021-30550</cvename>
+      <cvename>CVE-2021-30551</cvename>
+      <cvename>CVE-2021-30552</cvename>
+      <cvename>CVE-2021-30553</cvename>
+      <url>https://chromereleases.googleblog.com/2021/06/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2021-06-10</discovery>
+      <entry>2021-06-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fc1bcbca-c88b-11eb-9120-f02f74d0e4bd">
+    <topic>dino -- Path traversal in Dino file transfers</topic>
+    <affects>
+      <package>
+	<name>dino</name>
+	<range><lt>0.2.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Dino team reports:</p>
+	<blockquote cite="https://dino.im/security/cve-2021-33896/">
+	  <p>It was discovered that when a user receives and downloads
+	  a file in Dino, URI-encoded path separators in the file name
+	  will be decoded, allowing an attacker to traverse
+	  directories and create arbitrary files in the context of the
+	  user.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-33896</cvename>
+      <mlist msgid="392f934a-f937-7b29-5f7f-5df3ee60d8a8@.larma.de">https://marc.info/?l=oss-security&amp;m=162308719412719</mlist>
+      <url>https://dino.im/security/cve-2021-33896/</url>
+    </references>
+    <dates>
+      <discovery>2021-06-07</discovery>
+      <entry>2021-06-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="45b8716b-c707-11eb-b9a0-6805ca0b3d42">
+    <topic>pglogical -- shell command injection in pglogical.create_subscription()</topic>
+    <affects>
+      <package>
+	<name>pglogical</name>
+	<range><lt>2.3.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>2ndQuadrant reports:</p>
+	<blockquote cite="https://github.com/2ndQuadrant/pglogical/releases/tag/REL2_3_4">
+	  <ul>
+	    <li>
+	      Fix pg_dump/pg_restore execution (CVE-2021-3515)<br />
+	      <br />
+	      Correctly escape the connection string for both pg_dump
+	      and pg_restore so that exotic database and user names are
+	      handled correctly.<br />
+	      <br />
+	      Reported by Pedro Gallegos
+	    </li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-3515</cvename>
+      <url>https://github.com/2ndQuadrant/pglogical/releases/tag/REL2_3_4</url>
+      <url>https://bugzilla.redhat.com/show_bug.cgi?id=1954112</url>
+    </references>
+    <dates>
+      <discovery>2021-06-01</discovery>
+      <entry>2021-06-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f70ab05e-be06-11eb-b983-000c294bb613">
+    <topic>drupal7 -- fix possible CSS</topic>
+    <affects>
+      <package>
+	<name>drupal7</name>
+	<range><gt>7.0</gt><lt>7.80</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Drupal Security team reports:</p>
+	<blockquote cite="https://www.drupal.org/sa-core-2021-002">
+	  <p>Drupal core's sanitization API fails to properly filter
+		cross-site scripting under certain circumstances.
+		Not all sites and users are affected, but configuration
+		changes to prevent the exploit might be impractical
+		and will vary between sites. Therefore, we recommend
+		all sites update to this release as soon as
+		possible.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+	<cvename>CVE-2020-13672</cvename>
+    </references>
+    <dates>
+      <discovery>2021-04-21</discovery>
+      <entry>2021-06-06</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="36a35d83-c560-11eb-84ab-e0d55e2a8bf9">
     <topic>polkit -- local privilege escalation using polkit_system_bus_name_get_creds_sync</topic>
     <affects>

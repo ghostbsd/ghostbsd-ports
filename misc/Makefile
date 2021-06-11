@@ -463,6 +463,7 @@
     SUBDIR += shuffle-db
     SUBDIR += since
     SUBDIR += skyutils
+    SUBDIR += slides
     SUBDIR += sloccount
     SUBDIR += sls
     SUBDIR += smssend

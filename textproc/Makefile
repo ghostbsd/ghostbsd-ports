@@ -652,6 +652,7 @@
     SUBDIR += p5-Parse-ANSIColor-Tiny
     SUBDIR += p5-Parse-BooleanLogic
     SUBDIR += p5-Parse-CSV
+    SUBDIR += p5-Parse-EDID
     SUBDIR += p5-Parse-FixedLength
     SUBDIR += p5-Parse-Flex
     SUBDIR += p5-Parse-PhoneNumber
@@ -1327,6 +1328,7 @@
     SUBDIR += py-markuppy
     SUBDIR += py-markups
     SUBDIR += py-markupsafe
+    SUBDIR += py-mathics-pygments
     SUBDIR += py-mdit-py-plugins
     SUBDIR += py-misaka
     SUBDIR += py-mistune

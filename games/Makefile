@@ -120,6 +120,7 @@
     SUBDIR += bsdtris
     SUBDIR += bsp
     SUBDIR += bstone
+    SUBDIR += bubble-chains
     SUBDIR += bugsquish
     SUBDIR += bugsx
     SUBDIR += bumprace
@@ -472,6 +473,7 @@
     SUBDIR += libkmahjongg
     SUBDIR += liblcf
     SUBDIR += libmaitretarot
+    SUBDIR += libmanette
     SUBDIR += libmt_client
     SUBDIR += libretro
     SUBDIR += libretro-2048
