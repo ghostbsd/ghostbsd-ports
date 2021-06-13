@@ -87,3 +87,9 @@ It has two tags in the code, the HEAD, which is our master and the freebsd/maste
 When all the conflicts are fixed, you need to add, commit and push.
 
 > git add -A && git commit && git push origin master
+
+## To use the hook from FreeBSD adapted for GhostBSD.
+
+```
+git config --add core.hooksPath .hooks
+```
