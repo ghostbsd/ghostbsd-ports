@@ -6828,6 +6828,7 @@
     SUBDIR += slibtool
     SUBDIR += smake
     SUBDIR += smc
+    SUBDIR += smooth
     SUBDIR += smv
     SUBDIR += soapui
     SUBDIR += sobjectizer
