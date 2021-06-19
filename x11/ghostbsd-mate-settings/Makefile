@@ -3,7 +3,7 @@
 #
 
 PORTNAME=	ghostbsd-mate-settings
-PORTVERSION=	4.1
+PORTVERSION=	4.2
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
