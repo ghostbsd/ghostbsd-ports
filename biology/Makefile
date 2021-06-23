@@ -14,6 +14,7 @@
     SUBDIR += biolibc
     SUBDIR += bioparser
     SUBDIR += biosoup
+    SUBDIR += biostar-tools
     SUBDIR += bolt-lmm
     SUBDIR += bowtie
     SUBDIR += bowtie2
@@ -112,6 +113,7 @@
     SUBDIR += paml
     SUBDIR += pbbam
     SUBDIR += pbseqan
+    SUBDIR += peak-classifier
     SUBDIR += pear-merger
     SUBDIR += phrap
     SUBDIR += phred
@@ -173,6 +175,7 @@
     SUBDIR += smithwaterman
     SUBDIR += snpeff
     SUBDIR += spoa
+    SUBDIR += sra-tools
     SUBDIR += stacks
     SUBDIR += star
     SUBDIR += stringtie

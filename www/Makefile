@@ -215,6 +215,7 @@
     SUBDIR += grafana
     SUBDIR += grafana6
     SUBDIR += grafana7
+    SUBDIR += grafana8
     SUBDIR += grails
     SUBDIR += gregarius
     SUBDIR += groupoffice
@@ -1422,7 +1423,6 @@
     SUBDIR += py-azure-storage
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
-    SUBDIR += py-beautifulsoup448
     SUBDIR += py-betamax
     SUBDIR += py-biscuits
     SUBDIR += py-bjoern
@@ -1625,6 +1625,8 @@
     SUBDIR += py-google
     SUBDIR += py-google-api-core
     SUBDIR += py-google-api-python-client
+    SUBDIR += py-google-cloud-appengine-logging
+    SUBDIR += py-google-cloud-audit-log
     SUBDIR += py-google-cloud-bigtable
     SUBDIR += py-google-cloud-core
     SUBDIR += py-google-cloud-datastore
@@ -1723,6 +1725,7 @@
     SUBDIR += py-requests-toolbelt
     SUBDIR += py-requests-unixsocket
     SUBDIR += py-requests_ntlm
+    SUBDIR += py-respx
     SUBDIR += py-restclient
     SUBDIR += py-rfc3986
     SUBDIR += py-rfc3987

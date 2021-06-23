@@ -17,7 +17,7 @@ _INCLUDE_BSD_DEFAULT_VERSIONS_MK=	yes
 
 LOCALBASE?=	/usr/local
 
-.for lang in APACHE BDB COROSYNC EMACS FIREBIRD FORTRAN FPC GCC GHOSTSCRIPT \
+.for lang in APACHE BDB COROSYNC EMACS FIREBIRD FORTRAN FPC GCC GHOSTSCRIPT GL \
 	IMAGEMAGICK JAVA LAZARUS LIBRSVG2 LINUX LLVM LUA MYSQL NINJA PERL5 \
 	PGSQL PHP PYTHON PYTHON2 PYTHON3 RUBY RUST SAMBA SSL TCLTK VARNISH
 .if defined(${lang}_DEFAULT)
@@ -45,12 +45,14 @@ FIREBIRD_DEFAULT?=	2.5
 FORTRAN_DEFAULT?=	gfortran
 # Possible values: 3.2.0
 FPC_DEFAULT?=		3.2.0
-# Possible values: 8, 9 (powerpcspe was dropped with GCC 9), 10
+# Possible values: 8 (last to support powerpcspe), 9, 10
 .if ${ARCH} == "powerpcspe"
 GCC_DEFAULT?=		8
 .else
 GCC_DEFAULT?=		10
 .endif
+# Possible values (tuple): libglvnd, mesa-libs, mesa-devel
+GL_DEFAULT?=		libglvnd,mesa-libs
 # Possible values: 7, 8, 9, agpl
 GHOSTSCRIPT_DEFAULT?=	agpl
 # Possible values: 6, 6-nox11, 7, 7-nox11

@@ -21,7 +21,6 @@
     SUBDIR += cless
     SUBDIR += cnprint
     SUBDIR += dictd-database
-    SUBDIR += docproj
     SUBDIR += enscript
     SUBDIR += eterm
     SUBDIR += fandol
@@ -66,6 +65,7 @@
     SUBDIR += libreoffice-zh_TW
     SUBDIR += librime
     SUBDIR += libtabe
+    SUBDIR += linux-wps-office-zh_CN
     SUBDIR += lunar
     SUBDIR += moettf
     SUBDIR += muni
