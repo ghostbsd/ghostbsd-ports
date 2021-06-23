@@ -1237,8 +1237,8 @@ SLAVE_PORT?=	no
 MASTER_PORT?=
 .endif
 
-.if exists(${.CURDIR}/Makefile.trueos)
-.include "${.CURDIR}/Makefile.trueos"
+.if exists(${.CURDIR}/Makefile.ghostbsd)
+.include "${.CURDIR}/Makefile.ghostbsd"
 .endif
 
 # If they exist, include Makefile.inc, then architecture/operating
