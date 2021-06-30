@@ -7,7 +7,7 @@ desc="Nvidia GPU Dedicated Xorg"
 
 load_rc_config $name
 
-: ${nvidia_modeset:=NO}
+: ${nvidia_modeset:=YES}
 : ${nvidia_manage_kld:=YES}
 
 command=/usr/sbin/daemon
