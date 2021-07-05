@@ -540,7 +540,6 @@
     SUBDIR += open-isns
     SUBDIR += openbgpd
     SUBDIR += openbgpd6
-    SUBDIR += openggsn
     SUBDIR += openldap24-client
     SUBDIR += openldap24-sasl-client
     SUBDIR += openldap24-server
@@ -904,7 +903,6 @@
     SUBDIR += pacemaker2
     SUBDIR += packetdrill
     SUBDIR += packter-agent
-    SUBDIR += panoptis
     SUBDIR += parpd
     SUBDIR += pathneck
     SUBDIR += pbnc
@@ -1190,6 +1188,7 @@
     SUBDIR += routinator
     SUBDIR += rp-pppoe
     SUBDIR += rpki-client
+    SUBDIR += rscsi
     SUBDIR += rsocket-cpp
     SUBDIR += rsplib
     SUBDIR += rsync
@@ -1288,6 +1287,7 @@
     SUBDIR += rubygem-httpauth
     SUBDIR += rubygem-ipaddress
     SUBDIR += rubygem-iproto
+    SUBDIR += rubygem-kas-grpc
     SUBDIR += rubygem-lita-gems
     SUBDIR += rubygem-macaddr
     SUBDIR += rubygem-maxmind-db

@@ -348,6 +348,7 @@
     SUBDIR += swayidle
     SUBDIR += swaylock
     SUBDIR += swaylock-effects
+    SUBDIR += swayr
     SUBDIR += sxhkd
     SUBDIR += sxpc
     SUBDIR += tabbed

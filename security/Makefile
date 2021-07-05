@@ -7,6 +7,7 @@
     SUBDIR += ADMsnmp
     SUBDIR += R-cran-ROAuth
     SUBDIR += R-cran-askpass
+    SUBDIR += R-cran-credentials
     SUBDIR += R-cran-digest
     SUBDIR += R-cran-gitcreds
     SUBDIR += R-cran-openssl
@@ -373,11 +374,13 @@
     SUBDIR += nacl
     SUBDIR += ncrack
     SUBDIR += ncrypt
+    SUBDIR += nebula
     SUBDIR += nettle
     SUBDIR += nextcloud-end_to_end_encryption
     SUBDIR += nextcloud-passman
     SUBDIR += nextcloud-twofactor_totp
     SUBDIR += nextcloud-twofactor_u2f
+    SUBDIR += nextcloud-twofactor_webauthn
     SUBDIR += nflib
     SUBDIR += ngrok
     SUBDIR += nikto
@@ -1059,6 +1062,7 @@
     SUBDIR += rubygem-devise-two-factor
     SUBDIR += rubygem-devise-two-factor-rails5
     SUBDIR += rubygem-devise-two-factor-rails60
+    SUBDIR += rubygem-devise-two-factor-rails61
     SUBDIR += rubygem-devise-two-factor30-rails52
     SUBDIR += rubygem-devise-two-factor30-rails60
     SUBDIR += rubygem-devise_pam_authenticatable2

@@ -30,6 +30,8 @@ USE_XORG=	x11 xcb xdmcp
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	lightdm
 
+CONFLICTS_INSTALL=	sddm
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-tests # PAM errors
 INSTALL_TARGET=	install-strip

@@ -36,8 +36,6 @@
     SUBDIR += asql
     SUBDIR += authelia
     SUBDIR += awffull
-    SUBDIR += aws
-    SUBDIR += aws-demos
     SUBDIR += awstats
     SUBDIR += axis2
     SUBDIR += bacula-web
@@ -48,7 +46,6 @@
     SUBDIR += bareos19-webui
     SUBDIR += beehive
     SUBDIR += bkmrkconv
-    SUBDIR += blastbeat
     SUBDIR += bluefish
     SUBDIR += bolt
     SUBDIR += bozohttpd
@@ -103,14 +100,12 @@
     SUBDIR += davix
     SUBDIR += dddbl
     SUBDIR += ddgr
-    SUBDIR += demoroniser
     SUBDIR += deno
     SUBDIR += devd
     SUBDIR += dfileserver
     SUBDIR += dhttpd
     SUBDIR += dillo2
     SUBDIR += dojo
-    SUBDIR += dojo-shrinksafe
     SUBDIR += dokuwiki
     SUBDIR += dolibarr
     SUBDIR += domoticz
@@ -456,7 +451,6 @@
     SUBDIR += nift
     SUBDIR += node
     SUBDIR += node10
-    SUBDIR += node12
     SUBDIR += node14
     SUBDIR += nostromo
     SUBDIR += novnc
@@ -464,8 +458,6 @@
     SUBDIR += npapi-xine
     SUBDIR += npc
     SUBDIR += npm
-    SUBDIR += npm-node10
-    SUBDIR += npm-node12
     SUBDIR += npm-node14
     SUBDIR += nspluginwrapper
     SUBDIR += oauth2-proxy
@@ -1906,6 +1898,7 @@
     SUBDIR += rubygem-gon-rails5
     SUBDIR += rubygem-gon-rails50
     SUBDIR += rubygem-gon-rails60
+    SUBDIR += rubygem-gon-rails61
     SUBDIR += rubygem-hackpad-cli
     SUBDIR += rubygem-haml
     SUBDIR += rubygem-haml-coderay
@@ -1957,17 +1950,20 @@
     SUBDIR += rubygem-kaminari-actionview-rails50
     SUBDIR += rubygem-kaminari-actionview-rails52
     SUBDIR += rubygem-kaminari-actionview-rails60
+    SUBDIR += rubygem-kaminari-actionview-rails61
     SUBDIR += rubygem-kaminari-activerecord
     SUBDIR += rubygem-kaminari-activerecord-rails5
     SUBDIR += rubygem-kaminari-activerecord-rails50
     SUBDIR += rubygem-kaminari-activerecord-rails52
     SUBDIR += rubygem-kaminari-activerecord-rails60
+    SUBDIR += rubygem-kaminari-activerecord-rails61
     SUBDIR += rubygem-kaminari-core
     SUBDIR += rubygem-kaminari-rails4
     SUBDIR += rubygem-kaminari-rails5
     SUBDIR += rubygem-kaminari-rails50
     SUBDIR += rubygem-kaminari-rails52
     SUBDIR += rubygem-kaminari-rails60
+    SUBDIR += rubygem-kaminari-rails61
     SUBDIR += rubygem-kensa
     SUBDIR += rubygem-kubeclient
     SUBDIR += rubygem-layout_yullio_generator
@@ -1979,6 +1975,7 @@
     SUBDIR += rubygem-lograge-rails5
     SUBDIR += rubygem-lograge-rails52
     SUBDIR += rubygem-lograge-rails60
+    SUBDIR += rubygem-lograge-rails61
     SUBDIR += rubygem-maruku
     SUBDIR += rubygem-mechanize
     SUBDIR += rubygem-merb-assets
@@ -2069,10 +2066,12 @@
     SUBDIR += rubygem-redis-rails-rails50
     SUBDIR += rubygem-redis-rails-rails52
     SUBDIR += rubygem-redis-rails-rails60
+    SUBDIR += rubygem-redis-rails-rails61
     SUBDIR += rubygem-responders
     SUBDIR += rubygem-responders-rails5
     SUBDIR += rubygem-responders-rails52
     SUBDIR += rubygem-responders-rails60
+    SUBDIR += rubygem-responders-rails61
     SUBDIR += rubygem-rest-client
     SUBDIR += rubygem-rfacebook
     SUBDIR += rubygem-rfeedfinder
@@ -2327,8 +2326,6 @@
     SUBDIR += yabb
     SUBDIR += yanopaste
     SUBDIR += yarn
-    SUBDIR += yarn-node10
-    SUBDIR += yarn-node12
     SUBDIR += yarn-node14
     SUBDIR += yaws
     SUBDIR += you-get

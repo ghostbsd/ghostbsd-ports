@@ -5973,7 +5973,6 @@ java/linux-sun-jdk16||2014-05-11|Has expired: Unsupported and known for multiple
 ports-mgmt/pver||2014-05-11|Has expired: does not support pkgng
 databases/firebird20-client|databases/firebird25-client|2014-05-11|Firebird 2.0 is EOLed
 databases/firebird20-server|databases/firebird25-server|2014-05-11|Firebird 2.0 is EOLed
-editors/ved||2014-05-15|Has expired: Depends on deprecated smake
 japanese/chasen||2014-05-15|Has expired: Unmaintained since 2001
 www/openx|www/revive-adserver|2014-05-15|Upstream obsolete, forked
 security/clamav-devel||2014-05-16|Retire, older than security/clamav
@@ -16414,3 +16413,51 @@ devel/riscv64-xtoolchain-gcc|devel/freebsd-gcc9@riscv64|2021-06-19|Replaced by a
 www/py-beautifulsoup448|www/py-beautifulsoup|2021-06-20|Remove obsoleted port. Use www/py-beautifulsoup instead
 comms/rtl-443|comms/rtl-433|2021-06-21|Fix typo in port directory name
 devel/elixir-tirexs||2021-06-24|Remove obsoleted port. No releases on hex.pm.
+lang/perl5.28||2021-06-26|Has expired: Support ends three years after .0 release. Please upgrade to a more recent version of Perl
+sysutils/cfengine314||2021-06-26|Has expired: Expire one year after cfengine 3.16.0 released
+sysutils/cfengine-masterfiles314||2021-06-26|Has expired: Expire one year after cfengine 3.16.0 released
+lang/pypy3||2021-06-26|Has expired: Uses Python 2.7 which is EOLed upstream
+lang/pypy||2021-06-26|Has expired: Uses Python 2.7 which is EOLed upstream
+databases/pypy-gdbm||2021-06-26|Has expired: Uses EOL Python 2.7 via lang/pypy
+databases/pypy-sqlite3||2021-06-26|Has expired: Uses EOL Python 2.7 via lang/pypy
+x11-toolkits/pypy-tkinter||2021-06-26|Has expired: Uses EOL Python 2.7 via lang/pypy
+multimedia/gxine||2021-06-26|Has expired: Uses EOL Python 2.7 via lang/spidermonkey185
+lang/spidermonkey185||2021-06-26|Has expired: Uses Python 2.7 which is EOLed upstream
+www/aws||2021-06-26|Has expired: Uses EOL Python 2.7 via devel/gnatpython
+www/aws-demos||2021-06-26|Has expired: Uses EOL Python 2.7 via www/aws
+devel/gnatpython||2021-06-26|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/libosmocore||2021-06-26|Has expired: Uses Python 2.7 which is EOLed upstream
+net/openggsn||2021-06-26|Has expired: Uses EOL Python 2.7 via devel/libosmocore
+devel/libosmo-abis||2021-06-26|Has expired: Uses EOL Python 2.7 via devel/libosmocore
+www/node12||2021-06-26|Has expired: Uses Python 2.7 which is EOLed upstream
+www/npm-node12||2021-06-26|Removed, uses www/node12
+www/yarn-node12||2021-06-26|Has expired: Uses EOL Python 2.7 via www/node12
+www/npm-node10||2021-06-26|Removed, uses EOL Python 2.7 via www/node10
+www/yarn-node10||2021-06-26|Has expired: Uses EOL Python 2.7 via www/node10
+devel/libhid||2021-06-26|Has expired: Uses Python 2.7 which is EOLed upstream
+sysutils/usbhotkey||2021-06-26|Has expired: Uses EOL Python 2.7 via devel/libhid
+net/panoptis||2021-06-26|Has expired: Unmaintained upstream
+databases/elixir-mongo||2021-06-26|Has expired: Upsupported by upstream
+irc/eggdrop-devel|irc/eggdrop|2021-06-26|Has expired: Use stable version instead, irc/eggdrop
+audio/xmms2||2021-06-26|Has expired: Uses Python 2.7 which is EOLed upstream
+audio/gxmms2||2021-06-26|Has expired: Uses EOL Python 2.7 via audio/xmms2
+audio/lxmusic||2021-06-26|Has expired: Uses EOL Python 2.7 via audio/xmms2
+math/gringo||2021-06-26|Has expired: Uses Python 2.7 which is EOLed upstream
+math/aspcud||2021-06-26|Has expired: Uses EOL Python 2.7 via math/gringo
+math/py-pyasp||2021-06-26|Has expired: Uses EOL Python 2.7 via math/gringo
+devel/viewvc|devel/viewvc-devel|2021-06-26|Has expired: Uses Python 2.7 which is EOLed upstream
+chinese/sunpinyin||2021-06-26|Has expired: Uses Python 2.7 which is EOLed upstream
+chinese/fcitx-sunpinyin||2021-06-26|Has expired: Uses EOL Python 2.7 via chinese/sunpinyin
+www/dojo-shrinksafe||2021-06-26|Removed, deprecated upstream
+www/blastbeat||2021-06-26|Removed, abandoned upstream, broken on 12.X since 2019
+www/demoroniser||2021-06-26|Removed, made for Microsoft Powerpoint 9x with Perl 4.0
+x11-toolkits/v||2021-06-27|Has expired: Dead upstream, unmaintained and no consumers
+sysutils/ssid|sysutils/setsid|2021-06-27|Move to more obvious package name
+databases/pgpool-II-35||2021-07-01|Has expired: EOL since January 2021, please use one of the other pgpool-II-* ports
+sysutils/cdrtools-devel|sysutils/cdrtools|2021-07-01|Obsolete, use sysutils/cdrtools instead
+sysutils/sformat|sysutils/schilyutils|2021-07-01|Subsumed under sysutils/schilyutils
+misc/qtchooser||2021-07-04|No longer supported upstream
+databases/puppetdb5||2021-07-05|Has expired: Puppet 5 has reached EOL
+sysutils/puppet5||2021-07-05|Has expired: Puppet 5 has reached EOL
+sysutils/puppetserver5||2021-07-05|Has expired: Puppet 5 has reached EOL
+databases/puppetdb-terminus5||2021-07-05|Has expired: Puppet 5 has reached EOL
