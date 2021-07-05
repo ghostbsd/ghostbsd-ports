@@ -47,38 +47,35 @@ Git always displays all the conflicts.
 
 To fetch and merge from FreeBSD ports, we need to set the freebsd-ports remote repos to our local copy of ghostbsd-ports.
 
-> git clone https://github.com/ghostbsd/ghostbsd-ports.git
-> cd ghostbsd
-> git remote add freebsd https://github.com/freebsd/freebsd-ports.git
+	git clone https://github.com/ghostbsd/ghostbsd-ports.git
+	cd ghostbsd
+	git remote add freebsd https://github.com/freebsd/freebsd-ports.git
 
 You should have this.
 
-> git remote -v  
-> freebsd    https://github.com/freebsd/freebsd-ports.git (fetch) 
-
-> freebsd    https://github.com/freebsd/freebsd-ports.git (push) 
-
-> origin    https://github.com/ghostbsd/ghostbsd-ports.git (fetch) 
-
-> origin    https://github.com/ghostbsd/ghostbsd-ports.git (push 
+	git remote -v  
+	freebsd    https://github.com/freebsd/freebsd-ports.git (fetch) 
+	freebsd    https://github.com/freebsd/freebsd-ports.git (push) 
+	origin    https://github.com/ghostbsd/ghostbsd-ports.git (fetch) 
+	origin    https://github.com/ghostbsd/ghostbsd-ports.git (push 
 
 To fetch from freebsd-ports.
 
-> git fetch freebsd
+	git fetch freebsd
 
 To merge freebsd-ports master.
 
-> git merge freebsd/master
+	git merge freebsd/master
 
 If you don't have any conflict, you can push.
 
-> git push origin master
+	git push origin master
 
 If you have code conflicts, this is where the knowledge of maintaining ports comes to be necessary. When it is code related, it is not that hard. Most of the time is just a change that it was not able to do. For some reason, those are easy. When it comes to conflicts related to changes coming from us, we need to keep our code. The most common one is related to Mk files and Makefiles. FreeBSD does not contain the os ports, so merged that includes changes in Mk files that contain the code to recognize os ports will trigger a conflict.
 
 Now code conflicts always get tagged in the code, so instead of reading the verbose, I grep everything like this:
 
-> grep -R '<<<<<<< HEAD' *
+	grep -R '<<<<<<< HEAD' *
 
 It will give you all the files that have conflicts.
 
@@ -86,7 +83,7 @@ It has two tags in the code, the HEAD, which is our master and the freebsd/maste
 
 When all the conflicts are fixed, you need to add, commit and push.
 
-> git add -A && git commit && git push origin master
+	git add -A && git commit && git push origin master
 
 ## To use the hook from FreeBSD adapted for GhostBSD.
 
