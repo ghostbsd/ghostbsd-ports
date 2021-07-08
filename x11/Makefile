@@ -11,6 +11,7 @@
     SUBDIR += alttab
     SUBDIR += aminal
     SUBDIR += antimicro
+    SUBDIR += appmenu-registrar
     SUBDIR += appres
     SUBDIR += apwal
     SUBDIR += arandr
@@ -222,6 +223,7 @@
     SUBDIR += ly
     SUBDIR += mako
     SUBDIR += mate
+    SUBDIR += mate-applet-appmenu
     SUBDIR += mate-applets
     SUBDIR += mate-base
     SUBDIR += mate-desktop
@@ -400,6 +402,7 @@
     SUBDIR += workrave
     SUBDIR += wshowkeys
     SUBDIR += wtype
+    SUBDIR += x-on-resize
     SUBDIR += x11perf
     SUBDIR += x3270
     SUBDIR += xantfarm
