@@ -3,6 +3,7 @@
 PORTNAME=	webcamd
 DISTVERSIONPREFIX=	v
 DISTVERSION=	5.13.2.4
+PORTREVISION= 1
 CATEGORIES=	multimedia
 
 MAINTAINER=	hselasky@FreeBSD.org
@@ -15,7 +16,8 @@ BUILD_DEPENDS=	v4l_compat>=1.0.20100321:multimedia/v4l_compat
 USES=		pkgconfig tar:bzip2 uidfix
 MAKE_ARGS=	LIBDIR="${LOCALBASE}/lib" HAVE_CUSE="YES"
 USE_RC_SUBR=	webcamd
-SUB_FILES=	webcamd.conf
+SUB_FILES=	webcamd.conf \
+		openrc-webcamd.conf
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	hselasky
@@ -78,7 +80,9 @@ post-patch:
 	@(cd ${WEBCAMDDIR}/patches && ${SH} ./do_patch.sh)
 
 post-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/devd
+	${INSTALL_DATA} "${WRKDIR}/webcamd.conf" ${STAGEDIR}${PREFIX}/etc/devd
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/devd-openrc
-	${INSTALL_DATA} "${WRKDIR}/webcamd.conf" ${STAGEDIR}${PREFIX}/etc/devd-openrc
+	${INSTALL_DATA} "${WRKDIR}/openrc-webcamd.conf" ${STAGEDIR}${PREFIX}/etc/devd-openrc
 
 .include <bsd.port.mk>

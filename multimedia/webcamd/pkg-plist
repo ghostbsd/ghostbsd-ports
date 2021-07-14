@@ -1,5 +1,7 @@
-etc/devd-openrc/webcamd.conf
-sbin/webcamd
+etc/devd-openrc/openrc-webcamd.conf
+etc/devd/webcamd.conf
+etc/init.d/webcamd
+etc/rc.d/webcamd
 man/man4/a800.4.gz
 man/man4/af9005.4.gz
 man/man4/af9015.4.gz
@@ -64,3 +66,4 @@ man/man4/vp7045.4.gz
 man/man4/zc3xx.4.gz
 man/man4/zr364xx.4.gz
 man/man8/webcamd.8.gz
+sbin/webcamd
