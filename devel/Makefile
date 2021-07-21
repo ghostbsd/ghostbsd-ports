@@ -537,8 +537,8 @@
     SUBDIR += egypt
     SUBDIR += eiffelstudio
     SUBDIR += electron12
-    SUBDIR += elf-dissector
     SUBDIR += elf
+    SUBDIR += elf-dissector
     SUBDIR += elfio
     SUBDIR += elfkickers
     SUBDIR += elfsh
@@ -4382,6 +4382,7 @@
     SUBDIR += py-distlib
     SUBDIR += py-distributed
     SUBDIR += py-dj31-django-rq
+    SUBDIR += py-dj32-django-rq
     SUBDIR += py-django-rq
     SUBDIR += py-docker-py
     SUBDIR += py-dockerpty
@@ -4509,6 +4510,7 @@
     SUBDIR += py-greenlet
     SUBDIR += py-grizzled
     SUBDIR += py-grpc-google-iam-v1
+    SUBDIR += py-grpc-stubs
     SUBDIR += py-grpcio
     SUBDIR += py-grpcio-gcp
     SUBDIR += py-grpcio-tools
@@ -6729,6 +6731,7 @@
     SUBDIR += rubygem-to_regexp
     SUBDIR += rubygem-tool
     SUBDIR += rubygem-tracer
+    SUBDIR += rubygem-trailblazer-option
     SUBDIR += rubygem-transaction-simple
     SUBDIR += rubygem-travis
     SUBDIR += rubygem-treetop
