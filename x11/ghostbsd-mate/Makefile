@@ -1,11 +1,9 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	ghostbsd-mate
 PORTVERSION=	1.24.1
 CATEGORIES=	x11 mate
 
-MAINTAINER=	gnome@FreeBSD.org
+MAINTAINER=	ericturgeon@GhostBSD.org
 COMMENT=	"meta-port" for the GhostBSD MATE integrated X11 desktop
 
 USES=		metaport
