@@ -4,7 +4,7 @@ PORTVERSION=	1.24.1
 CATEGORIES=	x11 mate
 
 MAINTAINER=	ericturgeon@GhostBSD.org
-COMMENT=	"meta-port" for the GhostBSD MATE integrated X11 desktop
+COMMENT=	Meta-port for the GhostBSD MATE integrated X11 desktop
 
 USES=		metaport
 
