@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ghostbsd-mate-themes
-PORTVERSION=	1.8
+PORTVERSION=	1.9
 CATEGORIES=	x11-themes
 
 MAINTAINER=	ericturgeon@ghostbsd.org
