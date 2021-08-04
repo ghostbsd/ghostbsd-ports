@@ -80,6 +80,7 @@
     SUBDIR += ghostbsd-mate-settings
     SUBDIR += ghostbsd-slick-greeter-settings
     SUBDIR += ghostbsd-slim-theme
+    SUBDIR += ghostbsd-xfce
     SUBDIR += ghostbsd-xfce-settings
     SUBDIR += glcapsviewer
     SUBDIR += gmrun
