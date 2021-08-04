@@ -238,6 +238,7 @@
     SUBDIR += daemontools
     SUBDIR += daemontools-encore
     SUBDIR += daggy
+    SUBDIR += damager
     SUBDIR += dar
     SUBDIR += datadog-agent
     SUBDIR += datadog-integrations
@@ -312,6 +313,7 @@
     SUBDIR += dwatch-json
     SUBDIR += dwatch-pwsnoop
     SUBDIR += e2fsprogs
+    SUBDIR += e2tools
     SUBDIR += ebsnvme-id
     SUBDIR += ec2-scripts
     SUBDIR += eclat
@@ -581,6 +583,7 @@
     SUBDIR += kdf
     SUBDIR += kdialog
     SUBDIR += keyboard-daemon
+    SUBDIR += keyd
     SUBDIR += kf5-baloo
     SUBDIR += kf5-kwallet
     SUBDIR += kfloppy
@@ -1601,6 +1604,7 @@
     SUBDIR += zrepl
     SUBDIR += zsd
     SUBDIR += zsm
+    SUBDIR += ztop
     SUBDIR += zxfer
 
 .include <bsd.port.subdir.mk>

@@ -26,6 +26,7 @@
     SUBDIR += R-cran-stringi
     SUBDIR += R-cran-stringr
     SUBDIR += R-cran-utf8
+    SUBDIR += R-cran-vroom
     SUBDIR += R-cran-xml2
     SUBDIR += R-cran-xmlparsedata
     SUBDIR += R-cran-xtable
@@ -1397,7 +1398,6 @@
     SUBDIR += py-python-docs-theme
     SUBDIR += py-python-docx
     SUBDIR += py-python-gettext
-    SUBDIR += py-python-language-server
     SUBDIR += py-python-lsp-jsonrpc
     SUBDIR += py-python-lsp-server
     SUBDIR += py-python-slugify
@@ -1413,6 +1413,7 @@
     SUBDIR += py-recommonmark
     SUBDIR += py-regex
     SUBDIR += py-reno
+    SUBDIR += py-restructuredtext-lint
     SUBDIR += py-reverend
     SUBDIR += py-rich
     SUBDIR += py-rnc2rng

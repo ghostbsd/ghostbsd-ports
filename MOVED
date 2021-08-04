@@ -8256,7 +8256,6 @@ devel/py-EnthoughtBase||2016-07-04|Has expired: Broken for more than 6 months
 devel/cl-uffi||2016-07-04|Has expired: Broken for more than 6 months
 devel/ruby-event-loop||2016-07-04|Has expired: Broken for more than 6 months
 devel/libqxt||2016-07-04|Has expired: Broken for more than 6 months
-devel/dasm||2016-07-04|Has expired: Broken for more than 6 months
 devel/libopendaap||2016-07-04|Has expired: Broken for more than 6 months
 devel/cl-uffi-sbcl||2016-07-04|Has expired: Depends on expiring devel/cl-uffi
 devel/cvs2p4||2016-07-04|Has expired: Broken for more than 6 months
@@ -13855,7 +13854,6 @@ science/py-hcluster||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 science/py-pyteomics.biolccc||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 science/pycdf||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 security/blindelephant||2020-01-27|Has expired: Unmaintained, uses EOLed python27
-security/cfv||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 security/fsh||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 security/gcipher||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 security/kedpm||2020-01-27|Has expired: Unmaintained, uses EOLed python27
@@ -16464,3 +16462,13 @@ net-mgmt/unifi-lts||2021-07-18|Has expired: Upstream EoL the hardware supported 
 audio/ripit|audio/abcde|2021-07-18|Has expired: Upstream no longer maintained, use audio/abcde instead
 x11-toolkits/libsexymm||2021-07-19|Discontinued in 2006, no dependency left in the ports tree
 sysutils/rubygem-fluent-plugin-graylog||2021-07-21|Has expired: Project is abandoned upstreams
+www/rubygem-toml-rb10|www/rubygem-toml-rb|2021-07-25|Obsolete, use www/rubygem-toml-rb
+devel/rubygem-grape-entity07|devel/rubygem-grape-entity|2021-07-25|Obsolete, use devel/rubygem-grape-entity
+net/rubygem-gitlab-fog-google|net/rubygem-fog-google|2021-07-25|Obsolete, use net/rubygem-fog-google
+devel/rubygem-gitlab-rdoc|devel/rubygem-rdoc|2021-07-25|Obsolete, use devel/rubygem-rdoc
+databases/rubygem-redis-namespace17|databases/rubygem-redis-namespace|2021-07-25|Obsolete, use databases/rubygem-redis-namespace
+multimedia/mlt|multimedia/mlt6|2021-07-30|Moved to a versioned directory to make place for future versions
+multimedia/mlt-qt5|multimedia/mlt6-qt5|2021-07-30|Moved to a versioned directory to make place for future versions
+multimedia/py-mlt|multimedia/py-mlt6|2021-07-30|Moved to a versioned directory to make place for future versions
+net/openldap24-sasl-client|net/openldap24-client|2021-08-01|SASL is always enabled for OpenLDAP
+textproc/py-python-language-server|textproc/py-python-lsp-server|2021-08-01|Has expired: Upstream forked and replaced by py-python-lsp-server

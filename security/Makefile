@@ -72,6 +72,7 @@
     SUBDIR += certmgr
     SUBDIR += cfs
     SUBDIR += cfssl
+    SUBDIR += cfv
     SUBDIR += chaosreader
     SUBDIR += checkpassword
     SUBDIR += checkpassword-pam
@@ -1304,6 +1305,7 @@
     SUBDIR += vlock
     SUBDIR += vm-to-tor
     SUBDIR += vnccrack
+    SUBDIR += vouch-proxy
     SUBDIR += vpnc
     SUBDIR += vuls
     SUBDIR += vuxml

@@ -192,6 +192,7 @@
     SUBDIR += mdbx
     SUBDIR += mdcached
     SUBDIR += memcached
+    SUBDIR += metabase
     SUBDIR += mongodb-tools
     SUBDIR += mongodb36
     SUBDIR += mongodb36-tools
@@ -972,7 +973,6 @@
     SUBDIR += rubygem-redis-actionpack-rails61
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis-namespace16
-    SUBDIR += rubygem-redis-namespace17
     SUBDIR += rubygem-sdbm
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
