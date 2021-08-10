@@ -177,6 +177,10 @@
     SUBDIR += opensph
     SUBDIR += opsin
     SUBDIR += orthanc
+    SUBDIR += orthanc-dicomweb
+    SUBDIR += orthanc-mysql
+    SUBDIR += orthanc-postgresql
+    SUBDIR += orthanc-webviewer
     SUBDIR += p5-Algorithm-SVMLight
     SUBDIR += p5-Chemistry-3DBuilder
     SUBDIR += p5-Chemistry-Bond-Find
@@ -211,6 +215,7 @@
     SUBDIR += pagmo2
     SUBDIR += paje
     SUBDIR += pcmsolver
+    SUBDIR += phonopy
     SUBDIR += plumed
     SUBDIR += pnetcdf
     SUBDIR += pulseview
@@ -250,6 +255,7 @@
     SUBDIR += py-gsd
     SUBDIR += py-h5json
     SUBDIR += py-h5py
+    SUBDIR += py-hiphive
     SUBDIR += py-inequality
     SUBDIR += py-jupyter_jsmol
     SUBDIR += py-kim-query

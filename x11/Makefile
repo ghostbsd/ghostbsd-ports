@@ -52,6 +52,7 @@
     SUBDIR += docker-tray
     SUBDIR += dsbautostart
     SUBDIR += dsbxinput
+    SUBDIR += dwmblocks
     SUBDIR += dxpc
     SUBDIR += dzen2
     SUBDIR += eaglemode
@@ -114,6 +115,7 @@
     SUBDIR += hsetroot
     SUBDIR += i3blocks
     SUBDIR += i3lock
+    SUBDIR += i3lock-color
     SUBDIR += i3status
     SUBDIR += iceauth
     SUBDIR += ico

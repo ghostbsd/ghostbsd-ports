@@ -292,6 +292,7 @@
     SUBDIR += jicmp
     SUBDIR += jicmp6
     SUBDIR += jose
+    SUBDIR += jotta-cli
     SUBDIR += jrdesktop
     SUBDIR += jsch
     SUBDIR += jumpgate
@@ -1188,6 +1189,7 @@
     SUBDIR += rfbproxy
     SUBDIR += rinetd
     SUBDIR += ripe-whois
+    SUBDIR += rospo
     SUBDIR += routinator
     SUBDIR += rp-pppoe
     SUBDIR += rpki-client

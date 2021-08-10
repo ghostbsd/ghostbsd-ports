@@ -61,6 +61,7 @@
     SUBDIR += asmem
     SUBDIR += asmon
     SUBDIR += asusoled
+    SUBDIR += atf-fvp
     SUBDIR += atf-master
     SUBDIR += atf-rk3328
     SUBDIR += atf-rk3399
@@ -1384,6 +1385,7 @@
     SUBDIR += toybox
     SUBDIR += tracker
     SUBDIR += tracker-miners
+    SUBDIR += tracker3
     SUBDIR += tree
     SUBDIR += triton
     SUBDIR += trueos-libqt5
