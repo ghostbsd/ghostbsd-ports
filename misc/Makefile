@@ -137,6 +137,7 @@
     SUBDIR += geekcode
     SUBDIR += getopt
     SUBDIR += ghostbsd-pkg-conf
+    SUBDIR += ghostbsd-update-scripts
     SUBDIR += gimp-help-en
     SUBDIR += gkrellm-gamma
     SUBDIR += gkrellm-xkb
