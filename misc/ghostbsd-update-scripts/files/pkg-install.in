@@ -1,0 +1,13 @@
+#!/bin/sh
+
+case ${2} in
+  (POST-INSTALL)
+    if [ ! -f "/var/lib/ghostbsd-update/rc_change_done" ]; then
+      echo "Converting this system from OpenRC services to FreeBSD services"
+      sh %%PREFIX%%/share/ghostbsd-update-scripts/change_rc.sh
+      mkdir -p /var/lib/ghostbsd-update
+      touch /var/lib/ghostbsd-update/rc_change_done
+      echo "On the next reboot this system will run on FreeBSD services"
+    fi
+    ;;
+esac
