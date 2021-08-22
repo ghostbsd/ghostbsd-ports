@@ -4,4 +4,3 @@ etc/X11/cardDetect/XF86Config.scfb
 etc/X11/cardDetect/XF86Config.vesa
 etc/X11/cardDetect/XF86Config.virtualbox
 etc/X11/cardDetect/XF86Config.vmware
-etc/init.d/xconfig
