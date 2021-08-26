@@ -1,3 +1,3 @@
-TIMESTAMP = 1585959459
-SHA256 (GhostBSD-ghostbsd-pkg-conf-20.04.02_GH0.tar.gz) = e8e8dc24a377b5a8e42abf456f7e17595dad1430779b6cbb2eb21fde032c3487
-SIZE (GhostBSD-ghostbsd-pkg-conf-20.04.02_GH0.tar.gz) = 595
+TIMESTAMP = 1629980114
+SHA256 (GhostBSD-ghostbsd-pkg-conf-21.08.27_GH0.tar.gz) = dfa77be8f13b712c05b5b6e55e57fd67e73faff33a970665298d1181538d6dc6
+SIZE (GhostBSD-ghostbsd-pkg-conf-21.08.27_GH0.tar.gz) = 763
