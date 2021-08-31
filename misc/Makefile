@@ -224,6 +224,7 @@
     SUBDIR += libsupertone
     SUBDIR += libsweep-lidar
     SUBDIR += libutf
+    SUBDIR += libxdf
     SUBDIR += lifelines
     SUBDIR += lingoteach
     SUBDIR += locale-en_DK

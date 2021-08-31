@@ -1,5 +1,6 @@
 PORTNAME=	keyd
-PORTVERSION=	s20210803
+DISTVERSIONPREFIX=	v
+DISTVERSION=	1.1.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -11,12 +12,10 @@ LIB_DEPENDS=	libudev.so:devel/libudev-devd
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+USES=		localbase:ldflags
 USE_GITHUB=	yes
 USE_RC_SUBR=	${PORTNAME}
 GH_ACCOUNT=	rvaiya
-GH_TAGNAME=	f5d0c04
-MAKE_ENV=	CPATH="${LOCALBASE}/include" \
-		LIBRARY_PATH="${LOCALBASE}/lib"
 MAKE_ARGS=	DESTDIR="${DESTDIR}" PREFIX="${PREFIX}" \
 		GIT_HASH="${GH_TAGNAME:U${DISTVERSIONFULL}}"
 CFLAGS+=	-D_WITH_GETLINE # XXX Remove after FreeBSD 11 EOL
@@ -28,6 +27,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,/etc,${PREFIX}&,' \
 		-e '/systemd/d' \
 		-e '/^CFLAGS/s/=/+=/' \
+		-e '/-l/s/$$/ $$(LDFLAGS)/' \
 		-e 's/ -O3//' \
 		${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's,/etc,${PREFIX}&,' \

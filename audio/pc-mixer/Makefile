@@ -25,7 +25,9 @@ QMAKE_ARGS=     CONFIG+="configure"
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	trueos
-GH_PROJECT=	pc-mixer
-GH_TAGNAME=	dbbddfbe318db719dcfea337676e758efaa56ea2
+GH_TAGNAME=	ac1d74cc261337998526d091123c28d4ae85277e
+
+PLIST_FILES=	bin/pc-mixer \
+		share/applications/pc-mixer.desktop
 
 .include <bsd.port.mk>

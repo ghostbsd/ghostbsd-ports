@@ -79,11 +79,14 @@ BUNDLE_LIBS=	yes
 
 BUILD_DEPENDS+=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT} \
 				rust-cbindgen>=0.19.0:devel/rust-cbindgen \
-				${RUST_DEFAULT}>=1.53.0:lang/${RUST_DEFAULT} \
+				${RUST_DEFAULT}>=1.54.0:lang/${RUST_DEFAULT} \
 				node:www/node
 LIB_DEPENDS+=	libdrm.so:graphics/libdrm
 .if ${MOZILLA_VER:R:R} >= 85
 RUN_DEPENDS+=	${LOCALBASE}/lib/libpci.so:devel/libpci
+.endif
+.if ${MOZILLA_VER:R:R} >= 90
+LIB_DEPENDS+=	libepoll-shim.so:devel/libepoll-shim
 .endif
 MOZ_EXPORT+=	${CONFIGURE_ENV} \
 				PERL="${PERL}" \

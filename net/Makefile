@@ -276,6 +276,7 @@
     SUBDIR += ip6_int
     SUBDIR += ipdecap
     SUBDIR += ipgrab
+    SUBDIR += ipinfo-cli
     SUBDIR += ipsumdump
     SUBDIR += ipsvd
     SUBDIR += ipxe
@@ -1196,6 +1197,7 @@
     SUBDIR += rscsi
     SUBDIR += rsocket-cpp
     SUBDIR += rsplib
+    SUBDIR += rssguard
     SUBDIR += rsync
     SUBDIR += rsync-bpc
     SUBDIR += rtg
@@ -1546,6 +1548,7 @@
     SUBDIR += webalizer-geodb
     SUBDIR += whois
     SUBDIR += widentd
+    SUBDIR += wifibox
     SUBDIR += wireguard
     SUBDIR += wireguard-go
     SUBDIR += wireguard-kmod

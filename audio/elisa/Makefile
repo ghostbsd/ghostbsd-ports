@@ -1,6 +1,10 @@
 PORTNAME=	elisa
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	audio kde kde-applications
+
+PATCH_SITES=	https://invent.kde.org/multimedia/elisa/-/commit/
+PATCHFILES=	618cf9b589ef9dd58e3ec3dd7450a80f10e118f8.diff:-p1
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Audio player with QML and KDE Plasma integration
@@ -11,9 +15,9 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES=		cmake compiler:c++14-lang desktop-file-utils gettext kde:5 \
 		pkgconfig qt:5 tar:xz
 USE_KDE=	auth baloo5 bookmarks codecs completion config configwidgets \
-		coreaddons crash dbusaddons filemetadata i18n itemviews \
+		coreaddons crash dbusaddons filemetadata i18n iconthemes itemviews \
 		jobwidgets kcmutils kdeclarative kio kirigami2 package \
-		service solid widgetsaddons xmlgui
+		service solid widgetsaddons windowsystem xmlgui
 USE_QT=		buildtools_build qmake_build testlib_build \
 		concurrent core dbus declarative gui multimedia network \
 		quickcontrols2 sql svg widgets xml

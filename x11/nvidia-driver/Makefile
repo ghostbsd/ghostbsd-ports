@@ -14,9 +14,9 @@
 # ``make DISTVERSION=xxx.yy.zz -DNO_CHECKSUM'' should typically work.
 
 PORTNAME?=	nvidia-driver
-DISTVERSION?=	460.84
+DISTVERSION?=	470.63.01
 # Always try to set PORTREVISION as it can be overridden by the slave ports
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11
 MASTER_SITES=	NVIDIA/XFree86/FreeBSD-${ARCH_SUFX}/${DISTVERSION}
 DISTNAME=	NVIDIA-FreeBSD-${ARCH_SUFX}-${DISTVERSION}
@@ -32,7 +32,8 @@ LICENSE_FILE=	${WRKSRC}/doc/license.txt
 # obj/libEGL_nvidia.so.0 (see below)
 .if ${NVVERSION} >= 410.057
 PATCH_DEPENDS=	gsed:textproc/gsed
-BUILD_DEPENDS=	pkg-config:devel/pkgconf libglvnd>0:graphics/libglvnd
+BUILD_DEPENDS=	pkg-config:devel/pkgconf
+LIB_DEPENDS=	libOpenGL.so:graphics/libglvnd
 .endif
 
 USES=		kmod uidfix xorg

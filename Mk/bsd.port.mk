@@ -1005,10 +1005,16 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # DISABLE_SIZE	- Do not check the size of a distfile even if the SIZE field
 #				  has been specified in distinfo.  This is useful
 #				  when using an alternate FETCH_CMD.
-#
-# PKG_CREATE_VERBOSE		- If set, pass the -v option to pkg create which
+# PKG_CREATE_VERBOSE
+#				- If set, pass the -v option to pkg create which
 #				  ensures periodic output during packaging and
 #				  will help prevent timeouts by build monitors
+# PKG_COMPRESSION_FORMAT
+#				- the compression format used when creating a package, see
+#				  pkg-create(8) for valid formats
+# PKG_COMPRESSION_LEVEL
+#				- the compression level to use when creating a package, see
+#				  pkg-create(8) for valid values
 #
 # End of the list of all variables that need to be defined in a port.
 # Most port authors should not need to understand anything after this point.
@@ -1203,7 +1209,9 @@ _OSVERSION_MAJOR=	${OSVERSION:C/([0-9]?[0-9])([0-9][0-9])[0-9]{3}/\1/}
 # Skip if OSVERSION specified on cmdline for testing. Only works for bmake.
 .if !defined(.MAKEOVERRIDES) || !${.MAKEOVERRIDES:MOSVERSION}
 .if ${_OSVERSION_MAJOR} != ${_OSRELEASE:R}
+.if !defined(I_DONT_CARE_IF_MY_BUILDS_TARGET_THE_WRONG_RELEASE)
 .error UNAME_r (${_OSRELEASE}) and OSVERSION (${OSVERSION}) do not agree on major version number.
+.endif
 .elif ${_OSVERSION_MAJOR} != ${OSREL:R}
 .error OSREL (${OSREL}) and OSVERSION (${OSVERSION}) do not agree on major version number.
 .endif
@@ -1871,11 +1879,6 @@ PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
 .if defined(LLD_UNSAFE) && ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
 LDFLAGS+=	-fuse-ld=bfd
 BINARY_ALIAS+=	ld=${LD}
-.  if ${ARCH} == powerpc64
-# Base ld.bfd can't do ELFv2 which powerpc64 with Clang in base uses
-USE_BINUTILS=	yes
-LDFLAGS+=		-B${LOCALBASE}/bin
-.  endif
 .  if !defined(USE_BINUTILS)
 .    if exists(/usr/bin/ld.bfd)
 LD=	/usr/bin/ld.bfd
@@ -3511,6 +3514,9 @@ _EXTRA_PACKAGE_TARGET_DEP+=	${WRKDIR_PKGFILE}
 
 .if !target(do-package)
 PKG_CREATE_ARGS+= -f ${PKG_COMPRESSION_FORMAT}
+.if defined(PKG_COMPRESSION_LEVEL)
+PKG_CREATE_ARGS+= -l ${PKG_COMPRESSION_LEVEL}
+.endif
 PKG_CREATE_ARGS+=	-r ${STAGEDIR}
 .  if defined(PKG_CREATE_VERBOSE)
 PKG_CREATE_ARGS+=	-v

@@ -1438,6 +1438,7 @@
     SUBDIR += llvm10
     SUBDIR += llvm11
     SUBDIR += llvm12
+    SUBDIR += llvm13
     SUBDIR += llvm70
     SUBDIR += llvm80
     SUBDIR += llvm90
@@ -4668,6 +4669,7 @@
     SUBDIR += py-louie
     SUBDIR += py-lunardate
     SUBDIR += py-lxml
+    SUBDIR += py-lxml-stubs
     SUBDIR += py-mac-vendor-lookup
     SUBDIR += py-macholib
     SUBDIR += py-magic
@@ -5068,6 +5070,7 @@
     SUBDIR += py-qtconsole
     SUBDIR += py-qutip
     SUBDIR += py-ramlfications
+    SUBDIR += py-rapidfuzz
     SUBDIR += py-ratelimiter
     SUBDIR += py-rauth
     SUBDIR += py-raven
@@ -5232,10 +5235,18 @@
     SUBDIR += py-typechecks
     SUBDIR += py-typed-ast
     SUBDIR += py-typer
+    SUBDIR += py-types-Flask
+    SUBDIR += py-types-Jinja2
+    SUBDIR += py-types-MarkupSafe
+    SUBDIR += py-types-Pillow
     SUBDIR += py-types-PyYAML
+    SUBDIR += py-types-Werkzeug
+    SUBDIR += py-types-click
     SUBDIR += py-types-futures
     SUBDIR += py-types-protobuf
+    SUBDIR += py-types-psycopg2
     SUBDIR += py-types-requests
+    SUBDIR += py-types-xxhash
     SUBDIR += py-typing-extensions
     SUBDIR += py-typing-inspect
     SUBDIR += py-tzlocal
@@ -5453,6 +5464,7 @@
     SUBDIR += rang
     SUBDIR += range-v3
     SUBDIR += rapidcheck
+    SUBDIR += rapidfuzz-cpp
     SUBDIR += rapidjson
     SUBDIR += raylib
     SUBDIR += rbenv
@@ -6403,6 +6415,7 @@
     SUBDIR += rubygem-middleware
     SUBDIR += rubygem-mini_histogram
     SUBDIR += rubygem-mini_portile2
+    SUBDIR += rubygem-mini_portile2-25
     SUBDIR += rubygem-minitest
     SUBDIR += rubygem-mixlib-archive
     SUBDIR += rubygem-mixlib-authentication
@@ -6469,7 +6482,6 @@
     SUBDIR += rubygem-p4ruby
     SUBDIR += rubygem-paint
     SUBDIR += rubygem-paint1
-    SUBDIR += rubygem-paperclip
     SUBDIR += rubygem-paperclip-rails5
     SUBDIR += rubygem-paperclip-rails50
     SUBDIR += rubygem-parser

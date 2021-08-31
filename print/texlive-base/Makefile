@@ -1,13 +1,13 @@
 PORTNAME=	texlive
 PORTVERSION=	20150521
-PORTREVISION=	69
+PORTREVISION=	70
 CATEGORIES=	print
 MASTER_SITES=	TEX_CTAN/systems/texlive/Source/
 PKGNAMESUFFIX=	-base
 DISTNAME=	${PORTNAME}-${DISTVERSION}-source
 DIST_SUBDIR=	TeX
 
-MAINTAINER=	freebsd-tex@FreeBSD.org
+MAINTAINER=	tex@FreeBSD.org
 COMMENT=	TeX Live Typesetting System, base binaries
 
 LIB_DEPENDS=	libicuio.so:devel/icu \
