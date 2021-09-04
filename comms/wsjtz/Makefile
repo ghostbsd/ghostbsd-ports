@@ -14,24 +14,29 @@ BUILD_DEPENDS=	asciidoctor:textproc/rubygem-asciidoctor \
 		autoconf>=2.69:devel/autoconf \
 		automake>=1.16.1:devel/automake \
 		a2x:textproc/asciidoc \
+		boost-libs>0:devel/boost-libs \
 		libtool:devel/libtool \
 		${LOCALBASE}/share/xsl/docbook:textproc/docbook-xsl
 LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 		libfftw3f.so:math/fftw3-float \
-		libxslt.so:textproc/libxslt
+		libxslt.so:textproc/libxslt \
+		libhamlib.so:comms/hamlib \
+		libreadline.so:devel/readline
 
 USES=		cmake compiler:c++11-lib fortran gl \
 		makeinfo pkgconfig qt:5 zip
 USE_GL=		glu
 USE_QT=		core gui network widgets \
 		multimedia concurrent printsupport serialport sql sql-sqlite3 \
-		buildtools_build linguisttools_build qmake_build
+		testlib buildtools_build linguisttools_build qmake_build
 
 CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH+=${LOCALBASE}/wsjtx/lib \
 		-DLOCALBASE::STRING="${LOCALBASE}"
 # for detailed debugging uncomment the next line
 #CMAKE_ARGS+=   --debug-output --trace
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
+
+OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	*
 

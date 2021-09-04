@@ -836,6 +836,7 @@
     SUBDIR += gitolite
     SUBDIR += gitolite2
     SUBDIR += gittrac
+    SUBDIR += gitty
     SUBDIR += gitui
     SUBDIR += glab
     SUBDIR += glade
@@ -1501,7 +1502,6 @@
     SUBDIR += mage
     SUBDIR += magit
     SUBDIR += magit-devel
-    SUBDIR += magit-popup
     SUBDIR += make++
     SUBDIR += makedepend
     SUBDIR += marisa-trie
@@ -5489,6 +5489,7 @@
     SUBDIR += resolv_wrapper
     SUBDIR += revive
     SUBDIR += rgbds
+    SUBDIR += rgxg
     SUBDIR += rhtvision
     SUBDIR += rinutils
     SUBDIR += riscv32-unknown-elf-gcc
@@ -6814,6 +6815,7 @@
     SUBDIR += rubygem-virtus
     SUBDIR += rubygem-warbler
     SUBDIR += rubygem-warden
+    SUBDIR += rubygem-warning
     SUBDIR += rubygem-wdm
     SUBDIR += rubygem-weakref
     SUBDIR += rubygem-web-console-rails60
@@ -6863,6 +6865,7 @@
     SUBDIR += scons
     SUBDIR += sd-mux-ctrl
     SUBDIR += sdl12
+    SUBDIR += sdl12-compat
     SUBDIR += sdl20
     SUBDIR += sdl2pp
     SUBDIR += sdl_console
@@ -7009,6 +7012,7 @@
     SUBDIR += tl-expected
     SUBDIR += tla
     SUBDIR += tllist
+    SUBDIR += tlsh
     SUBDIR += tlx
     SUBDIR += tmake
     SUBDIR += tnt
