@@ -10,8 +10,8 @@ COMMENT=	Library with GTK+ widgets for mobile phones
 LICENSE=	LGPL21
 
 BUILD_DEPENDS=	valac:lang/vala
-LIB_DEPENDS=	libfribidi.so:converters/fribidi
-		# libgladeui-2.so:devel/glade
+LIB_DEPENDS=	libfribidi.so:converters/fribidi \
+		libgladeui-2.so:devel/glade
 
 USES=		compiler:c11 gettext gnome meson pkgconfig tar:xz
 USE_GNOME=	cairo gdkpixbuf2 gtk30 introspection:build
