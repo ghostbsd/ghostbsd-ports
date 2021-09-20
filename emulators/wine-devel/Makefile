@@ -1,7 +1,7 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
 
 PORTNAME=	wine
-DISTVERSION=	6.16
+DISTVERSION=	6.17
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -22,8 +22,10 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex
 LIB_DEPENDS=	libFAudio.so:audio/faudio \
 		libxml2.so:textproc/libxml2
 
-USES=		bison desktop-file-utils gmake localbase pkgconfig shebangfix tar:xz
+USES=		bison cpe desktop-file-utils gmake localbase pkgconfig shebangfix tar:xz
 USE_GCC=	yes
+
+CPE_VENDOR=	winehq
 
 CONFLICTS_INSTALL=	wine-[0-9]* i386-wine-[0-9]* i386-wine-devel-[0-9]*
 
@@ -154,7 +156,7 @@ LLD_UNSAFE=     yes
 
 # --libdir is required since Wine defaults to "${PREFIX}/lib64" on amd64.
 CONFIGURE_ARGS+=	--enable-win64 --libdir=${PREFIX}/lib
-PLIST_SUB+=		WINE32="@comment " WINE64="" WINEARCH="amd64"
+PLIST_SUB+=		WINE32="@comment " WINE64="" WINEARCH="x86_64"
 
 # Wine assumes a WoW64 package is available, which is not the case on
 # FreeBSD yet.

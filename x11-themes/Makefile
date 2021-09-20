@@ -166,5 +166,6 @@
     SUBDIR += xfce-icons-elementary
     SUBDIR += yaru-gtk-themes
     SUBDIR += yaru-icon-theme
+    SUBDIR += zuki-themes
 
 .include <bsd.port.subdir.mk>

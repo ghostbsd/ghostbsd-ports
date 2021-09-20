@@ -98,7 +98,6 @@
     SUBDIR += gcc12-devel
     SUBDIR += gcc48
     SUBDIR += gcc6-aux
-    SUBDIR += gcc7
     SUBDIR += gcc8
     SUBDIR += gcc9
     SUBDIR += gcc9-devel
@@ -142,6 +141,7 @@
     SUBDIR += itcl4
     SUBDIR += janet
     SUBDIR += jimtcl
+    SUBDIR += jpm
     SUBDIR += jruby
     SUBDIR += jython
     SUBDIR += kawa

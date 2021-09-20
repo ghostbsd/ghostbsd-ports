@@ -121,7 +121,6 @@
     SUBDIR += e2guardian
     SUBDIR += edbrowse
     SUBDIR += eden
-    SUBDIR += efront
     SUBDIR += element-web
     SUBDIR += elgg
     SUBDIR += elinks
@@ -312,6 +311,7 @@
     SUBDIR += linux-opera
     SUBDIR += litmus
     SUBDIR += ljdeps
+    SUBDIR += llhttp
     SUBDIR += logswan
     SUBDIR += logtools
     SUBDIR += ls-qpack
@@ -1461,12 +1461,14 @@
     SUBDIR += py-dj32-django-debug-toolbar
     SUBDIR += py-dj32-django-filter
     SUBDIR += py-dj32-django-js-asset
+    SUBDIR += py-dj32-django-modelcluster
     SUBDIR += py-dj32-django-mptt
     SUBDIR += py-dj32-django-prometheus
     SUBDIR += py-dj32-django-redis
     SUBDIR += py-dj32-django-tables2
     SUBDIR += py-dj32-django-taggit
     SUBDIR += py-dj32-django-timezone-field
+    SUBDIR += py-dj32-django-treebeard
     SUBDIR += py-dj32-djangorestframework
     SUBDIR += py-dj32-drf-yasg
     SUBDIR += py-django
@@ -1511,6 +1513,7 @@
     SUBDIR += py-django-filter
     SUBDIR += py-django-formset-js-improved
     SUBDIR += py-django-formtools
+    SUBDIR += py-django-graphiql-debug-toolbar
     SUBDIR += py-django-gravatar2
     SUBDIR += py-django-guardian
     SUBDIR += py-django-happenings-update
@@ -1550,7 +1553,6 @@
     SUBDIR += py-django-redis
     SUBDIR += py-django-registration
     SUBDIR += py-django-registration-redux
-    SUBDIR += py-django-rest-swagger
     SUBDIR += py-django-reversion
     SUBDIR += py-django-reversion-compare
     SUBDIR += py-django-sekizai
@@ -1567,7 +1569,6 @@
     SUBDIR += py-django-tables2
     SUBDIR += py-django-tagging
     SUBDIR += py-django-taggit
-    SUBDIR += py-django-taggit-serializer
     SUBDIR += py-django-tastypie
     SUBDIR += py-django-templatetag-sugar
     SUBDIR += py-django-timezone-field
@@ -1655,6 +1656,7 @@
     SUBDIR += py-grip
     SUBDIR += py-gunicorn
     SUBDIR += py-h2
+    SUBDIR += py-habanero
     SUBDIR += py-horizon
     SUBDIR += py-hpack
     SUBDIR += py-hstspreload

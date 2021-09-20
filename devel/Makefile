@@ -42,6 +42,8 @@
     SUBDIR += R-cran-fansi
     SUBDIR += R-cran-filelock
     SUBDIR += R-cran-foreach
+    SUBDIR += R-cran-future
+    SUBDIR += R-cran-future.apply
     SUBDIR += R-cran-gbRd
     SUBDIR += R-cran-gbm
     SUBDIR += R-cran-gdata
@@ -50,6 +52,7 @@
     SUBDIR += R-cran-getopt
     SUBDIR += R-cran-git2r
     SUBDIR += R-cran-glmnet
+    SUBDIR += R-cran-globals
     SUBDIR += R-cran-glue
     SUBDIR += R-cran-gmodels
     SUBDIR += R-cran-gsubfn
@@ -60,12 +63,14 @@
     SUBDIR += R-cran-itertools
     SUBDIR += R-cran-later
     SUBDIR += R-cran-lifecycle
+    SUBDIR += R-cran-listenv
     SUBDIR += R-cran-lubridate
     SUBDIR += R-cran-magrittr
     SUBDIR += R-cran-memoise
     SUBDIR += R-cran-microbenchmark
     SUBDIR += R-cran-mockery
     SUBDIR += R-cran-optparse
+    SUBDIR += R-cran-parallelly
     SUBDIR += R-cran-pillar
     SUBDIR += R-cran-pkgbuild
     SUBDIR += R-cran-pkgcache
@@ -78,6 +83,7 @@
     SUBDIR += R-cran-prettycode
     SUBDIR += R-cran-prettyunits
     SUBDIR += R-cran-progress
+    SUBDIR += R-cran-progressr
     SUBDIR += R-cran-promises
     SUBDIR += R-cran-proto
     SUBDIR += R-cran-purrr
@@ -379,7 +385,9 @@
     SUBDIR += commoncpp
     SUBDIR += compiler-rt
     SUBDIR += compiz-bcop
+    SUBDIR += concurrencpp
     SUBDIR += concurrencykit
+    SUBDIR += concurrentqueue
     SUBDIR += configkit
     SUBDIR += cons
     SUBDIR += cons-test
@@ -717,6 +725,7 @@
     SUBDIR += frama-c
     SUBDIR += freebsd-gcc6
     SUBDIR += freebsd-gcc9
+    SUBDIR += freebsd-sysroot
     SUBDIR += frink
     SUBDIR += fsmtrie
     SUBDIR += fstrcmp
@@ -883,6 +892,7 @@
     SUBDIR += googletest
     SUBDIR += goprotobuf
     SUBDIR += goredo
+    SUBDIR += goreleaser
     SUBDIR += gorm
     SUBDIR += goswagger
     SUBDIR += got
@@ -955,6 +965,7 @@
     SUBDIR += hs-hpack
     SUBDIR += hs-hspec-discover
     SUBDIR += hs-mueval
+    SUBDIR += hs-ormolu
     SUBDIR += hs-profiteur
     SUBDIR += hs-shake
     SUBDIR += hs-spago
@@ -1505,6 +1516,7 @@
     SUBDIR += make++
     SUBDIR += makedepend
     SUBDIR += marisa-trie
+    SUBDIR += marl
     SUBDIR += mate-common
     SUBDIR += matreshka
     SUBDIR += maven
@@ -1619,7 +1631,9 @@
     SUBDIR += ocaml-sdl
     SUBDIR += ocaml-sem
     SUBDIR += ocaml-sexplib
+    SUBDIR += ocaml-topkg
     SUBDIR += ocaml-type_conv
+    SUBDIR += ocaml-uchar
     SUBDIR += ocaml-ulex
     SUBDIR += ocaml-uutf
     SUBDIR += ocaml-xstr
@@ -3662,6 +3676,7 @@
     SUBDIR += p5-ZML
     SUBDIR += p5-accessors
     SUBDIR += p5-accessors-fast
+    SUBDIR += p5-alias-module
     SUBDIR += p5-aliased
     SUBDIR += p5-asa
     SUBDIR += p5-autobox
@@ -3840,7 +3855,6 @@
     SUBDIR += pear-PEAR_PackageFileManager
     SUBDIR += pear-PEAR_PackageFileManager2
     SUBDIR += pear-PEAR_PackageFileManager_Plugins
-    SUBDIR += pear-PHPDoc
     SUBDIR += pear-PHPTAL
     SUBDIR += pear-PHPUnit_MockObject
     SUBDIR += pear-PHP_ArrayOf
@@ -4050,6 +4064,7 @@
     SUBDIR += ptmalloc2
     SUBDIR += ptypes
     SUBDIR += publib
+    SUBDIR += purescript-language-server
     SUBDIR += pushmi
     SUBDIR += py-Automat
     SUBDIR += py-BTrees
@@ -4095,7 +4110,6 @@
     SUBDIR += py-apispec
     SUBDIR += py-apns2
     SUBDIR += py-appdirs
-    SUBDIR += py-application
     SUBDIR += py-applicationinsights
     SUBDIR += py-apptools
     SUBDIR += py-apscheduler
@@ -4212,6 +4226,7 @@
     SUBDIR += py-azure-storage-common
     SUBDIR += py-azure-synapse-accesscontrol
     SUBDIR += py-azure-synapse-artifacts
+    SUBDIR += py-azure-synapse-managedprivateendpoints
     SUBDIR += py-azure-synapse-spark
     SUBDIR += py-b2sdk
     SUBDIR += py-babel
@@ -4220,6 +4235,7 @@
     SUBDIR += py-backcall
     SUBDIR += py-backports
     SUBDIR += py-backports.csv
+    SUBDIR += py-backports.entry-points-selectable
     SUBDIR += py-backports.zoneinfo
     SUBDIR += py-banal
     SUBDIR += py-bandit
@@ -4846,6 +4862,7 @@
     SUBDIR += py-pkgconfig
     SUBDIR += py-plac
     SUBDIR += py-plan
+    SUBDIR += py-platformdirs
     SUBDIR += py-plette
     SUBDIR += py-plex
     SUBDIR += py-pluggy
@@ -5013,6 +5030,7 @@
     SUBDIR += py-pytest-xdist
     SUBDIR += py-pytest-xprocess
     SUBDIR += py-python-Levenshtein
+    SUBDIR += py-python-application
     SUBDIR += py-python-bugzilla
     SUBDIR += py-python-dbusmock
     SUBDIR += py-python-distutils-extra
@@ -5242,6 +5260,7 @@
     SUBDIR += py-types-PyYAML
     SUBDIR += py-types-Werkzeug
     SUBDIR += py-types-click
+    SUBDIR += py-types-docutils
     SUBDIR += py-types-futures
     SUBDIR += py-types-protobuf
     SUBDIR += py-types-psycopg2
@@ -5453,6 +5472,7 @@
     SUBDIR += qt5-testlib
     SUBDIR += qt5-uitools
     SUBDIR += qtcreator
+    SUBDIR += quantum
     SUBDIR += quickcheck++
     SUBDIR += quilt
     SUBDIR += rabs
@@ -6942,6 +6962,7 @@
     SUBDIR += strace
     SUBDIR += string_theory
     SUBDIR += stringencoders
+    SUBDIR += stuffbin
     SUBDIR += stxxl
     SUBDIR += subversion
     SUBDIR += subversion-book
@@ -7068,6 +7089,7 @@
     SUBDIR += wasi-compiler-rt11
     SUBDIR += wasi-libc
     SUBDIR += wasi-libcxx
+    SUBDIR += wasm3
     SUBDIR += websocketpp
     SUBDIR += websvn
     SUBDIR += wf-config

@@ -1,10 +1,6 @@
 PORTNAME=	pipewire
-DISTVERSION=	0.3.31
-PORTREVISION=	3
+DISTVERSION=	0.3.36
 CATEGORIES=	multimedia
-
-PATCH_SITES=	https://gitlab.freedesktop.org/${PORTNAME}/${PORTNAME}/-/commit/
-PATCHFILES+=	91988acb6b6a.patch:-p1 # https://gitlab.freedesktop.org/pipewire/pipewire/-/merge_requests/815
 
 MAINTAINER=	arrowd@FreeBSD.org
 COMMENT=	Server and user space API to deal with multimedia pipelines
@@ -12,7 +8,6 @@ COMMENT=	Server and user space API to deal with multimedia pipelines
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-#TODO: xmltoman
 BUILD_DEPENDS=	v4l_compat>0:multimedia/v4l_compat
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libdbus-1.so:devel/dbus \
@@ -29,16 +24,21 @@ USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	PipeWire
 
-OPTIONS_DEFINE=		GSTREAMER MEDIASESSION PULSEAUDIO VULKAN
-OPTIONS_DEFAULT=	GSTREAMER MEDIASESSION
+OPTIONS_DEFINE=		GSTREAMER MANPAGES MEDIASESSION PULSEAUDIO VULKAN
+OPTIONS_DEFAULT=	GSTREAMER MANPAGES MEDIASESSION
 OPTIONS_SUB=	yes
 
 GSTREAMER_MESON_ENABLED=gstreamer
 GSTREAMER_LIB_DEPENDS=	libgstreamer-1.0.so:multimedia/gstreamer1 \
 			libgstaudio-1.0.so:multimedia/gstreamer1-plugins
 
+MANPAGES_BUILD_DEPENDS=	rst2man:textproc/py-docutils
+MANPAGES_MESON_ENABLED=	man
+
 MEDIASESSION_DESC=	Session manager support
-MEDIASESSION_MESON_ENABLED=	alsa pipewire-alsa media-session pw-cat
+MEDIASESSION_MESON_ENABLED=	alsa pipewire-alsa pw-cat
+MEDIASESSION_MESON_ON=		-Dsession-managers=media-session
+MEDIASESSION_MESON_OFF=		-Dsession-managers=''
 MEDIASESSION_LIB_DEPENDS=	libsndfile.so:audio/libsndfile
 
 PULSEAUDIO_MESON_ENABLED=	libpulse
@@ -61,8 +61,5 @@ post-patch-MEDIASESSION-on:
 # alsa-seq is not supported & causes SIGSEGV with media session
 	@${REINPLACE_CMD} 's| alsa-seq|\ #alsa-seq|g' \
 		${WRKSRC}/src/daemon/media-session.d/media-session.conf
-# start media session by default
-	@${REINPLACE_CMD} '/manager_args/ s/@comment@//g' \
-		${WRKSRC}/src/daemon/pipewire.conf.in
 
 .include <bsd.port.mk>

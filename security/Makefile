@@ -189,6 +189,7 @@
     SUBDIR += gnupg1
     SUBDIR += gnutls
     SUBDIR += go-cve-dictionary
+    SUBDIR += gokart
     SUBDIR += gonepass
     SUBDIR += gopass
     SUBDIR += gorilla
@@ -309,6 +310,7 @@
     SUBDIR += libmcrypt
     SUBDIR += libnitrokey
     SUBDIR += libntlm
+    SUBDIR += liboqs
     SUBDIR += libotr
     SUBDIR += libotr3
     SUBDIR += libp11

@@ -76,7 +76,9 @@
     SUBDIR += lamarc
     SUBDIR += libbigwig
     SUBDIR += libgtextutils
+    SUBDIR += libnuml
     SUBDIR += libsbml
+    SUBDIR += libsedml
     SUBDIR += linux-foldingathome
     SUBDIR += mafft
     SUBDIR += mapm3
@@ -149,6 +151,8 @@
     SUBDIR += py-loompy
     SUBDIR += py-macs2
     SUBDIR += py-multiqc
+    SUBDIR += py-libnuml
+    SUBDIR += py-libsedml
     SUBDIR += py-ont-fast5-api
     SUBDIR += py-orange3-bioinformatics
     SUBDIR += py-orange3-single-cell
@@ -156,6 +160,7 @@
     SUBDIR += py-pyfaidx
     SUBDIR += py-pysam
     SUBDIR += py-python-libsbml
+    SUBDIR += py-pywgsim
     SUBDIR += py-resdk
     SUBDIR += py-scikit-bio
     SUBDIR += py-xenaPython
@@ -170,6 +175,7 @@
     SUBDIR += rubygem-bio-executables
     SUBDIR += rubygem-bio-old-biofetch-emulator
     SUBDIR += rubygem-bio-shell
+    SUBDIR += sam2pairwise
     SUBDIR += samtools
     SUBDIR += scrm
     SUBDIR += seaview
