@@ -42,12 +42,10 @@ include/libhandy-1/hdy-view-switcher.h
 include/libhandy-1/hdy-window-handle.h
 include/libhandy-1/hdy-window.h
 lib/girepository-1.0/Handy-1.typelib
-lib/glade/modules/libglade-handy-1.so
 lib/libhandy-1.so
 lib/libhandy-1.so.0
 libdata/pkgconfig/libhandy-1.pc
 share/gir-1.0/Handy-1.gir
-share/glade/catalogs/libhandy-1.xml
 share/locale/ca/LC_MESSAGES/libhandy.mo
 share/locale/de/LC_MESSAGES/libhandy.mo
 share/locale/en_GB/LC_MESSAGES/libhandy.mo
