@@ -48,8 +48,4 @@ lib/gbi/timezone.py
 lib/gbi/use_ufs.py
 lib/gbi/use_zfs.py
 lib/gbi/welcome_live.py
-%%PYTHON_SITELIBDIR%%/gbi-6.1-py%%PYTHON_VER%%.egg-info/PKG-INFO
-%%PYTHON_SITELIBDIR%%/gbi-6.1-py%%PYTHON_VER%%.egg-info/SOURCES.txt
-%%PYTHON_SITELIBDIR%%/gbi-6.1-py%%PYTHON_VER%%.egg-info/dependency_links.txt
-%%PYTHON_SITELIBDIR%%/gbi-6.1-py%%PYTHON_VER%%.egg-info/top_level.txt
 share/applications/gbi.desktop
