@@ -1,6 +1,6 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	4.2.15
+DISTVERSION=	4.2.17
 CATEGORIES=	databases net
 MASTER_SITES=	https://fastdl.mongodb.org/src/ \
 		http://fastdl.mongodb.org/src/
@@ -31,8 +31,7 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 USES=		compiler:c++17-lang cpe python:3.5+,build scons shebangfix
 USE_RC_SUBR=	mongod
 
-CONFLICTS_BUILD=	mongo-cxx-driver
-CONFLICTS_INSTALL=	mongodb36 mongodb4[04]
+CONFLICTS_INSTALL=	mongodb36 mongodb4[04] mongodb50
 
 OPTIONS_DEFINE=	LTO SASL SSL
 OPTIONS_DEFAULT=LTO SASL SSL
@@ -41,6 +40,7 @@ OPTIONS_EXCLUDE_aarch64_14=     LTO # Does not work with llvm12 on aarch64.
 
 SHEBANG_FILES=	src/mongo/installer/compass/install_compass
 python_OLD_CMD=	@python_interpreter@
+
 MAKE_ARGS=	--prefix=${STAGEDIR}${PREFIX} \
 		--use-system-zlib \
 		--use-system-pcre \
@@ -57,7 +57,6 @@ MAKE_ARGS=	--prefix=${STAGEDIR}${PREFIX} \
 USERS=		mongodb
 GROUPS=		mongodb
 
-LTO_LDFLAGS=	-fuse-ld=lld
 LTO_MAKE_ARGS=	--lto=on
 
 SASL_LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
@@ -68,10 +67,9 @@ SSL_MAKE_ARGS=	--ssl
 
 .include <bsd.port.pre.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1200057
-SUB_LIST+=	LEGACY_LIMITS="@comment " MODERN_LIMITS=""
-.else
-SUB_LIST+=	LEGACY_LIMITS="" MODERN_LIMITS="@comment "
+.if ${OPSYS} == FreeBSD && ((${OSREL:R} >= 14 && ${OSVERSION} < 1400033) \
+                        && ${ARCH} == "aarch64")
+BROKEN=	Aarch64 needs LSE atomics which was fixed in https://cgit.freebsd.org/src/commit/?id=efe67f33c322265eb303ec0ab40275100795b22a
 .endif
 
 .if ${ARCH} == aarch64 || ${ARCH} == powerpc64le

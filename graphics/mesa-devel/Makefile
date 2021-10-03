@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	21.2-branchpoint-2423
-DISTVERSIONSUFFIX=	-g897bb9a2225
+DISTVERSION=	21.2-branchpoint-3070
+DISTVERSIONSUFFIX=	-g2aa705ec87c
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -47,11 +47,6 @@ MESON_ARGS=	-Dgallium-omx=disabled \
 		${BINARY_ALIAS:D--native-file=binary_alias.ini} \
 		${NULL}
 PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/}
-
-.if exists(/usr/bin/ld.lld) && ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
-# --build-id isn't supported by old GNU ld.bfd in base
-LDFLAGS+=	-fuse-ld=lld
-.endif
 
 OPTIONS_DEFINE=		LIBUNWIND LLVM LTO VAAPI VDPAU VKLAYERS WAYLAND X11 ZSTD
 OPTIONS_DEFAULT=	LIBUNWIND LLVM LTO VAAPI VDPAU VKLAYERS WAYLAND X11 ZSTD

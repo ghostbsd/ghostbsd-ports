@@ -264,6 +264,7 @@
     SUBDIR += msopenh264
     SUBDIR += mswebrtc
     SUBDIR += musikcube
+    SUBDIR += musique
     SUBDIR += mxflib
     SUBDIR += mythtv
     SUBDIR += mythtv-frontend
@@ -369,7 +370,6 @@
     SUBDIR += smplayer
     SUBDIR += smplayer-skins
     SUBDIR += smplayer-themes
-    SUBDIR += sms1xxx-kmod
     SUBDIR += smtube
     SUBDIR += snapcast
     SUBDIR += snappy

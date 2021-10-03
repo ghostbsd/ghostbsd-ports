@@ -11,7 +11,7 @@ MASTER_SITES?=	https://golang.org/dl/ \
 DISTFILES?=	go${PORTVERSION}.src.tar.gz \
 		go-${OPSYS:tl}-${GOARCH_${ARCH}}${GOARM_${ARCH}}-${BOOTSTRAP_TAG}.tar.xz:bootstrap
 
-MAINTAINER=	dmgk@FreeBSD.org
+MAINTAINER=	ygy@FreeBSD.org
 COMMENT?=	Go programming language
 
 LICENSE=	BSD3CLAUSE
@@ -64,12 +64,6 @@ GOARCH_i386=	386
 
 GOARM_armv6=	6
 GOARM_armv7=	7
-
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == aarch64 && ${OSVERSION} < 1200000
-IGNORE=		aarch64 support requires FreeBSD 12.0 or newer
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|^if ulimit -T|false \&\& &|' ${WRKSRC}/src/run.bash
@@ -126,4 +120,4 @@ makesum:
 	${RM} ${DISTINFO_FILE}.tmp
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

@@ -144,7 +144,6 @@
     SUBDIR += drawpile
     SUBDIR += drm-current-kmod
     SUBDIR += drm-devel-kmod
-    SUBDIR += drm-fbsd11.2-kmod
     SUBDIR += drm-fbsd12.0-kmod
     SUBDIR += drm-fbsd13-kmod
     SUBDIR += drm-kmod
@@ -458,6 +457,7 @@
     SUBDIR += libgxps
     SUBDIR += libheif
     SUBDIR += libimg
+    SUBDIR += libimagequant
     SUBDIR += libiptcdata
     SUBDIR += libjpeg-turbo
     SUBDIR += libjxl
@@ -569,6 +569,7 @@
     SUBDIR += nomacs
     SUBDIR += nplot
     SUBDIR += npretty
+    SUBDIR += nsxiv
     SUBDIR += nurbs++
     SUBDIR += nvidia-texture-tools
     SUBDIR += ocaml-images
@@ -958,6 +959,7 @@
     SUBDIR += rigsofrods-caelum
     SUBDIR += rigsofrods-pagedgeometry
     SUBDIR += ristretto
+    SUBDIR += rlottie
     SUBDIR += ruby-gd
     SUBDIR += rubygem-cairo
     SUBDIR += rubygem-captcha

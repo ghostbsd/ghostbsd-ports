@@ -6,6 +6,7 @@ CATEGORIES=	graphics
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	adb32f3f8f37.patch:-p1 # https://github.com/libjxl/libjxl/pull/193
+PATCHFILES+=	c31dca74e68f.patch:-p1 # https://github.com/libjxl/libjxl/pull/678
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	JPEG XL reference encoder/decoder
@@ -14,8 +15,6 @@ LICENSE=	BSD3CLAUSE ZLIB
 LICENSE_COMB=	multi
 LICENSE_FILE_BSD3CLAUSE=${WRKSRC}/LICENSE
 LICENSE_FILE_ZLIB=	${WRKSRC}/third_party/lodepng/LICENSE
-
-BROKEN_powerpc64=	https://github.com/google/highway/issues/345
 
 LIB_DEPENDS=	libbrotlienc.so:archivers/brotli
 TEST_DEPENDS=	googletest>0:devel/googletest
@@ -53,10 +52,6 @@ JPEG_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_JPEG
 
 LTO_CMAKE_BOOL=		CMAKE_INTERPROCEDURAL_OPTIMIZATION
 LTO_CMAKE_ON=		-DCMAKE_POLICY_DEFAULT_CMP0069:STRING=NEW
-.if exists(/usr/bin/ld.lld) && ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
-# --plugin isn't supported by old GNU ld.bfd in base
-LTO_LDFLAGS=		-fuse-ld=lld
-.endif
 
 MANPAGES_BUILD_DEPENDS=	a2x:textproc/asciidoc
 MANPAGES_USES=		python:build
@@ -75,8 +70,6 @@ PNG_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_PNG
 post-patch:
 	@${REINPLACE_CMD} 's,/usr,${LOCALBASE},' \
 		${WRKSRC}/plugins/gdk-pixbuf/jxl.thumbnailer
-	${REINPLACE_CMD} 's,OpenEXR::Int64,uint64_t,' \
-		${WRKSRC}/lib/extras/codec_exr.cc
 
 # pkg_check_modules doesn't support CMAKE_DISABLE_*
 post-patch-GIMP-off:

@@ -1460,6 +1460,7 @@
     SUBDIR += py-dj32-django-cors-headers
     SUBDIR += py-dj32-django-debug-toolbar
     SUBDIR += py-dj32-django-filter
+    SUBDIR += py-dj32-django-graphiql-debug-toolbar
     SUBDIR += py-dj32-django-js-asset
     SUBDIR += py-dj32-django-modelcluster
     SUBDIR += py-dj32-django-mptt
@@ -1635,6 +1636,7 @@
     SUBDIR += py-frozen-flask
     SUBDIR += py-gandi.cli
     SUBDIR += py-gevent-websocket
+    SUBDIR += py-ghp-import
     SUBDIR += py-google
     SUBDIR += py-google-api-core
     SUBDIR += py-google-api-python-client
@@ -1729,6 +1731,7 @@
     SUBDIR += py-qt5-webkit
     SUBDIR += py-qt5-webkitwidgets
     SUBDIR += py-qt5-websockets
+    SUBDIR += py-quilt3
     SUBDIR += py-rackspace-monitoring
     SUBDIR += py-recaptcha
     SUBDIR += py-requests
@@ -2194,7 +2197,6 @@
     SUBDIR += sqstat
     SUBDIR += squid
     SUBDIR += squid-devel
-    SUBDIR += squid3
     SUBDIR += squid_radius_auth
     SUBDIR += squidanalyzer
     SUBDIR += squidclamav

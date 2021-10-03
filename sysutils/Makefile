@@ -145,6 +145,7 @@
     SUBDIR += busybox
     SUBDIR += bvm
     SUBDIR += byobu
+    SUBDIR += calamares
     SUBDIR += catfish
     SUBDIR += cbsd
     SUBDIR += cbsd-mq-api
@@ -164,14 +165,10 @@
     SUBDIR += cfengine-devel
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
-    SUBDIR += cfengine-masterfiles310
-    SUBDIR += cfengine-masterfiles311
     SUBDIR += cfengine-masterfiles315
     SUBDIR += cfengine-masterfiles316
     SUBDIR += cfengine-masterfiles317
     SUBDIR += cfengine-masterfiles318
-    SUBDIR += cfengine310
-    SUBDIR += cfengine311
     SUBDIR += cfengine315
     SUBDIR += cfengine316
     SUBDIR += cfengine317
@@ -220,6 +217,7 @@
     SUBDIR += cpdup
     SUBDIR += cpu-x
     SUBDIR += cpuburn
+    SUBDIR += cpufetch
     SUBDIR += cpuid
     SUBDIR += cpuid2cpuflags
     SUBDIR += cpulimit
@@ -597,6 +595,7 @@
     SUBDIR += kldfind
     SUBDIR += kldpatch
     SUBDIR += kops
+    SUBDIR += kpmcore
     SUBDIR += krename
     SUBDIR += kshutdown
     SUBDIR += ksystemlog
@@ -935,6 +934,7 @@
     SUBDIR += pciutils
     SUBDIR += pcpustat
     SUBDIR += pdixtract
+    SUBDIR += pdsh
     SUBDIR += pdumpfs
     SUBDIR += pear-Cache
     SUBDIR += pear-Cache_Lite
@@ -1138,6 +1138,7 @@
     SUBDIR += rmlint
     SUBDIR += rocr
     SUBDIR += roct
+    SUBDIR += root-tail
     SUBDIR += rovclock
     SUBDIR += rpi-firmware
     SUBDIR += rset
@@ -1289,7 +1290,6 @@
     SUBDIR += shim
     SUBDIR += shlock
     SUBDIR += shmcat
-    SUBDIR += showbeastie
     SUBDIR += shuf
     SUBDIR += siegfried
     SUBDIR += signon-kwallet-extension
@@ -1414,7 +1414,6 @@
     SUBDIR += u-boot-cubieboard
     SUBDIR += u-boot-cubieboard2
     SUBDIR += u-boot-cubox-hummingboard
-    SUBDIR += u-boot-duovero
     SUBDIR += u-boot-firefly-rk3399
     SUBDIR += u-boot-imx-serial-loader
     SUBDIR += u-boot-master

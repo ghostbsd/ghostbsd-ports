@@ -22,18 +22,13 @@ OPTIONS_SUB=	yes
 OPTIONS_DEFINE+=	SUID
 OPTIONS_RADIO=	CONF
 OPTIONS_RADIO_CONF=	DEVD UDEV
-OPTIONS_DEFAULT=	SUID FIXDRM
-OPTIONS_DEFAULT_FreeBSD_11=	DEVD
-OPTIONS_DEFAULT_FreeBSD_12=	UDEV
-OPTIONS_DEFAULT_FreeBSD_13=	UDEV
-OPTIONS_DEFAULT_FreeBSD_14=	UDEV
+OPTIONS_DEFAULT=	SUID UDEV
 OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
 
 SUID_DESC=	Install setuid wrapper to allow startx as non-root
 CONF_DESC=	Backend to use for input device configuration
 DEVD_DESC=	Use devd for autoconfiguration of input devices
 UDEV_DESC=	Use udev via libudev-devd for autoconfiguration of input devices
-FIXDRM_DESC=	Enable glamor workaround for drm-devel-kmod bug
 
 DEVD_CONFIGURE_ENABLE=	config-devd
 SUID_CONFIGURE_ENABLE=	suid-wrapper

@@ -1,6 +1,6 @@
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
-DISTVERSION=	14.17.0
+DISTVERSION=	14.17.6
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${DISTVERSION}/
 PKGNAMESUFFIX=	14
@@ -20,7 +20,6 @@ USES=		compiler:c++11-lib gmake python:2.7-3.9,build pkgconfig \
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
 OPTIONS_DEFAULT=	DTRACE
-OPTIONS_DEFAULT_FreeBSD_11=	BUNDLED_SSL
 OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
 OPTIONS_SUB=		yes
 
@@ -41,7 +40,7 @@ BUNDLED_SSL_CONFIGURE_OFF=	--shared-openssl --openssl-use-def-ca-store
 BUNDLED_SSL_RUN_DEPENDS_OFF=	ca_root_nss>=0:security/ca_root_nss
 
 NLS_CONFIGURE_ON=	--with-intl=system-icu
-NLS_BUILD_DEPENDS=	icu>=67.1:devel/icu
+NLS_BUILD_DEPENDS=	icu>=69.1:devel/icu
 NLS_LIB_DEPENDS=	libicui18n.so:devel/icu
 
 DTRACE_CONFIGURE_ON=	--with-dtrace
@@ -87,10 +86,6 @@ EXTRA_PATCHES=		${PATCHDIR}/extra-patch-common.gypi
 
 .if ${ARCH} == armv6 || ${ARCH} == armv7
 EXTRA_PATCHES=	${PATCHDIR}/extra-patch-tools_v8__gypfiles_v8.gyp
-.endif
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200085
-BROKEN_SSL+=	base
 .endif
 
 .if ${PORT_OPTIONS:MBUNDLED_SSL} && ${ARCH} != amd64

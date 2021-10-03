@@ -262,7 +262,6 @@
     SUBDIR += opendkim
     SUBDIR += opendmarc
     SUBDIR += opensmtpd
-    SUBDIR += opensmtpd-devel
     SUBDIR += opensmtpd-extras
     SUBDIR += opensmtpd-extras-queue-ram
     SUBDIR += opensmtpd-extras-scheduler-ram
@@ -477,7 +476,6 @@
     SUBDIR += postfix-policyd-weight
     SUBDIR += postfix-postfwd
     SUBDIR += postfix-sasl
-    SUBDIR += postfix35
     SUBDIR += postfixadmin
     SUBDIR += postgrey
     SUBDIR += postsrsd

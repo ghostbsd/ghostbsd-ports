@@ -1,6 +1,6 @@
 PORTNAME=	pkcs11-tools
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.4.1
+DISTVERSION=	2.4.2
 CATEGORIES=	security
 
 MAINTAINER=	eric.devolder@gmail.com
@@ -35,10 +35,6 @@ LDFLAGS+=	${OPENSSLBASE}/lib/libcrypto.a
 INSTALL_TARGET=	install-strip
 
 .include <bsd.port.options.mk>
-
-.if ${SSL_DEFAULT} == base && ${OPSYS} == FreeBSD && ${OSVERSION} < 1200085
-BROKEN=		OpenSSL version is too old, lacks symbols: error: use of undeclared identifier 'EVP_PKEY_X25519', etc.
-.endif
 
 post-extract:
 	@${RMDIR} ${WRKSRC}/.gnulib ${WRKSRC}/include/oasis-pkcs11

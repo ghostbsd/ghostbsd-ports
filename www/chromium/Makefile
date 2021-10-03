@@ -14,7 +14,6 @@ COMMENT=	Google web browser based on WebKit
 LICENSE=	BSD3CLAUSE LGPL21 MPL11
 LICENSE_COMB=	multi
 
-BROKEN_FreeBSD_11_aarch64=	components/safe_browsing_db/v4_rice.cc:120:18: use of overloaded operator '&' is ambiguous
 BROKEN_i386=			../../base/files/file_util_posix.cc:1258:29: error: no matching function for call to 'sendfile' (ssize_t vs off_t)
 ONLY_FOR_ARCHS=			aarch64 amd64 i386
 
@@ -207,10 +206,11 @@ TEST_ALL_TARGET=	${TEST_TARGETS}
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
 
-BASE_MEMPCPY!=	${GREP} mempcpy ${CROSS_SYSROOT}/usr/include/string.h
-.if empty(BASE_MEMPCPY)
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-no-mempcpy-nasm
-.endif
+# Add extra-patch-no-mempcpy-nasm only when there's no mempcpy() in base.
+# Nested variable expansion avoids executing the test when not needed for
+# expanding EXTRA_PATCHES.
+EXTRA_PATCHES+=	${"${:!${GREP} mempcpy ${CROSS_SYSROOT}/usr/include/string.h \
+	|| ${TRUE}!}" == "":?${PATCHDIR}/extra-patch-no-mempcpy-nasm:}
 
 .if ${PORT_OPTIONS:MHEIMDAL_BASE} && !exists(/usr/lib/libkrb5.so)
 IGNORE=		you have selected HEIMDAL_BASE but do not have Heimdal installed in base

@@ -1,7 +1,7 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 
 PORTNAME=	llhttp
-PORTVERSION=	6.0.4
+PORTVERSION=	6.0.5
 DISTVERSIONPREFIX=	 release/v
 CATEGORIES=	www
 
@@ -17,9 +17,5 @@ CMAKE_ON=	BUILD_SHARED_LIBS
 
 GH_ACCOUNT=	nodejs
 USE_GITHUB=	yes
-
-post-patch:
-# https://github.com/nodejs/llhttp/blob/master/CMakeLists.txt
-	@${CP} ${FILESDIR}/CMakeLists.txt ${WRKSRC}/
 
 .include <bsd.port.mk>

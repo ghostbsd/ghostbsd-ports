@@ -769,6 +769,7 @@
     SUBDIR += squash
     SUBDIR += squeezelite
     SUBDIR += sratom
+    SUBDIR += ssr-lv2
     SUBDIR += stegosaurus-lv2
     SUBDIR += stk
     SUBDIR += stmp

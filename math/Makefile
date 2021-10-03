@@ -162,6 +162,7 @@
     SUBDIR += bcps
     SUBDIR += bitwise
     SUBDIR += blacs
+    SUBDIR += blahtexml
     SUBDIR += blas
     SUBDIR += blasfeo
     SUBDIR += blaze
@@ -251,6 +252,7 @@
     SUBDIR += dune-istl
     SUBDIR += dune-localfunctions
     SUBDIR += dune-metagrid
+    SUBDIR += dune-multidomaingrid
     SUBDIR += dune-pdelab
     SUBDIR += dune-polygongrid
     SUBDIR += dune-spgrid
@@ -751,6 +753,7 @@
     SUBDIR += pecl-bitset
     SUBDIR += pecl-stats2
     SUBDIR += permlib
+    SUBDIR += petanque
     SUBDIR += petiga
     SUBDIR += php73-bcmath
     SUBDIR += php73-gmp
@@ -792,6 +795,7 @@
     SUBDIR += py-amply
     SUBDIR += py-apgl
     SUBDIR += py-arviz
+    SUBDIR += py-arybo
     SUBDIR += py-autograd
     SUBDIR += py-baycomp
     SUBDIR += py-bayesian-optimization
@@ -893,6 +897,7 @@
     SUBDIR += py-pysmt
     SUBDIR += py-pystan
     SUBDIR += py-pysym
+    SUBDIR += py-pytanque
     SUBDIR += py-python-fcl
     SUBDIR += py-python-igraph
     SUBDIR += py-python-louvain
@@ -904,6 +909,7 @@
     SUBDIR += py-random2
     SUBDIR += py-roman
     SUBDIR += py-rpy2
+    SUBDIR += py-rvlib
     SUBDIR += py-scikit-umfpack
     SUBDIR += py-scs
     SUBDIR += py-seaborn
@@ -936,6 +942,7 @@
     SUBDIR += qalculate
     SUBDIR += qd
     SUBDIR += qhull
+    SUBDIR += qhull8
     SUBDIR += qposases
     SUBDIR += qrupdate
     SUBDIR += qtiplot-doc
@@ -1031,6 +1038,7 @@
     SUBDIR += tetgen
     SUBDIR += teyjus
     SUBDIR += timbl
+    SUBDIR += tiny-bignum-c
     SUBDIR += tmv
     SUBDIR += tomsfastmath
     SUBDIR += topaz

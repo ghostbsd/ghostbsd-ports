@@ -6,16 +6,14 @@ CATEGORIES=		security
 .if !defined(MASTERDIR)
 PKGNAMESUFFIX=		-devel
 .endif
-HASH=			789a4d315
-MIT_COMMIT_DATE=	2021.09.08
+HASH=			b5efdddd5
+MIT_COMMIT_DATE=	2021.09.25
 
 PATCH_SITES=		http://web.mit.edu/kerberos/advisories/
 PATCH_DIST_STRIP=	-p2
 
 MAINTAINER=		cy@FreeBSD.org
 COMMENT=		MIT implementation of RFC 4120 network authentication service
-
-BROKEN_FreeBSD_11=	OpenSSL 1.0.2 is not supported
 
 LICENSE=		MIT
 

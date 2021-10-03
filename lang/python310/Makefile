@@ -112,8 +112,8 @@ PLIST_SUB+=	NO_NIS=""
 .endif
 
 # Python 3.10 requires OpenSSL >= 1.1.1 (PEP 644), so with
-# older OpenSSL or libressl, some modules are not built
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200000 && !${SSL_DEFAULT:Mopenssl*} || ${SSL_DEFAULT:Mlibressl*}
+# libressl, some modules are not built
+.if ${SSL_DEFAULT:Mlibressl*}
 PLIST_SUB+=	SUPPORTED_OPENSSL="@comment "
 .else
 PLIST_SUB+=	SUPPORTED_OPENSSL=""
@@ -124,6 +124,10 @@ post-patch:
 # which introduces hidden dependency and breaks build
 	@${REINPLACE_CMD} -e 's|uuid/uuid.h|ignore_&|' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e '/find_library_file/ s|uuid|ignore_&|' ${WRKSRC}/setup.py
+# disable detection of multiarch as it breaks with clang >= 13, which adds a
+# major.minor version number in -print-multiarch output, confusing Python
+	@${REINPLACE_CMD} -e 's|^MULTIARCH=.*|MULTIARCH=|' ${WRKSRC}/configure \
+		${WRKSRC}/configure.ac
 # Apply DISABLED_EXTENSIONS
 	@${ECHO_CMD} '*disabled*' > ${WRKSRC}/Modules/Setup.local
 .  for _module in ${DISABLED_EXTENSIONS}
