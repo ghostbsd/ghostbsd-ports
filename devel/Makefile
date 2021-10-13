@@ -775,7 +775,6 @@
     SUBDIR += geany-plugin-macro
     SUBDIR += geany-plugin-markdown
     SUBDIR += geany-plugin-miniscript
-    SUBDIR += geany-plugin-multiterm
     SUBDIR += geany-plugin-numberedbookmarks
     SUBDIR += geany-plugin-overview
     SUBDIR += geany-plugin-pairtaghighlighter
@@ -823,15 +822,19 @@
     SUBDIR += git-cinnabar
     SUBDIR += git-codereview
     SUBDIR += git-cola
+    SUBDIR += git-cvs
     SUBDIR += git-delta
     SUBDIR += git-extras
     SUBDIR += git-filter-repo
+    SUBDIR += git-gui
     SUBDIR += git-lab
     SUBDIR += git-lfs
     SUBDIR += git-merge-changelog
     SUBDIR += git-modes
+    SUBDIR += git-p4
     SUBDIR += git-review
     SUBDIR += git-subrepo
+    SUBDIR += git-svn
     SUBDIR += git-town
     SUBDIR += gitaly
     SUBDIR += gitblit
@@ -5007,6 +5010,7 @@
     SUBDIR += py-pytest-black
     SUBDIR += py-pytest-black-multipy
     SUBDIR += py-pytest-cache
+    SUBDIR += py-pytest-canonical-data
     SUBDIR += py-pytest-capturelog
     SUBDIR += py-pytest-checkdocs
     SUBDIR += py-pytest-cov
@@ -5033,6 +5037,7 @@
     SUBDIR += py-pytest-pycodestyle
     SUBDIR += py-pytest-randomly
     SUBDIR += py-pytest-regressions
+    SUBDIR += py-pytest-regtest
     SUBDIR += py-pytest-relaxed
     SUBDIR += py-pytest-rerunfailures
     SUBDIR += py-pytest-runner
@@ -5128,6 +5133,7 @@
     SUBDIR += py-requirementslib
     SUBDIR += py-resolvelib
     SUBDIR += py-resolvelib05
+    SUBDIR += py-resolvelib07
     SUBDIR += py-resolver
     SUBDIR += py-resource
     SUBDIR += py-responses
@@ -5243,7 +5249,6 @@
     SUBDIR += py-testtools
     SUBDIR += py-threema-msgapi
     SUBDIR += py-thrift
-    SUBDIR += py-thriftpy
     SUBDIR += py-thriftpy2
     SUBDIR += py-tiamat
     SUBDIR += py-timelib
@@ -5298,6 +5303,7 @@
     SUBDIR += py-unipath
     SUBDIR += py-unittest2
     SUBDIR += py-unittest-xml-reporting
+    SUBDIR += py-unittest2pytest
     SUBDIR += py-unpaddedbase64
     SUBDIR += py-update_checker
     SUBDIR += py-urlimport
@@ -5576,6 +5582,7 @@
     SUBDIR += rubygem-actionview52
     SUBDIR += rubygem-actionview60
     SUBDIR += rubygem-actionview61
+    SUBDIR += rubygem-actionview613
     SUBDIR += rubygem-active_scaffold
     SUBDIR += rubygem-activejob4
     SUBDIR += rubygem-activejob5
@@ -5583,6 +5590,7 @@
     SUBDIR += rubygem-activejob52
     SUBDIR += rubygem-activejob60
     SUBDIR += rubygem-activejob61
+    SUBDIR += rubygem-activejob613
     SUBDIR += rubygem-activemessaging
     SUBDIR += rubygem-activerecord-deprecated_finders
     SUBDIR += rubygem-activesupport4
@@ -5591,6 +5599,7 @@
     SUBDIR += rubygem-activesupport52
     SUBDIR += rubygem-activesupport60
     SUBDIR += rubygem-activesupport61
+    SUBDIR += rubygem-activesupport613
     SUBDIR += rubygem-airborne
     SUBDIR += rubygem-akismet
     SUBDIR += rubygem-algebrick
@@ -6186,8 +6195,10 @@
     SUBDIR += rubygem-devise-rails52
     SUBDIR += rubygem-devise-rails60
     SUBDIR += rubygem-devise-rails61
+    SUBDIR += rubygem-devise-rails613
     SUBDIR += rubygem-devise47-rails60
     SUBDIR += rubygem-devise47-rails61
+    SUBDIR += rubygem-devise47-rails613
     SUBDIR += rubygem-did_you_mean
     SUBDIR += rubygem-dig_rb
     SUBDIR += rubygem-directory_watcher
@@ -6303,6 +6314,7 @@
     SUBDIR += rubygem-gettext_i18n_rails_js-rails52
     SUBDIR += rubygem-gettext_i18n_rails_js-rails60
     SUBDIR += rubygem-gettext_i18n_rails_js-rails61
+    SUBDIR += rubygem-gettext_i18n_rails_js-rails613
     SUBDIR += rubygem-gh
     SUBDIR += rubygem-gibbler
     SUBDIR += rubygem-gio2
@@ -6545,6 +6557,7 @@
     SUBDIR += rubygem-peek-rails52
     SUBDIR += rubygem-peek-rails60
     SUBDIR += rubygem-peek-rails61
+    SUBDIR += rubygem-peek-rails613
     SUBDIR += rubygem-peek-rblineprof-rails52
     SUBDIR += rubygem-peek-redis-rails52
     SUBDIR += rubygem-pkg-config
@@ -6593,6 +6606,7 @@
     SUBDIR += rubygem-rails-i18n-rails52
     SUBDIR += rubygem-rails-i18n-rails60
     SUBDIR += rubygem-rails-i18n-rails61
+    SUBDIR += rubygem-rails-i18n-rails613
     SUBDIR += rubygem-rails-observers
     SUBDIR += rubygem-rainbow
     SUBDIR += rubygem-rake
@@ -6866,6 +6880,7 @@
     SUBDIR += rubygem-weakref
     SUBDIR += rubygem-web-console-rails60
     SUBDIR += rubygem-web-console-rails61
+    SUBDIR += rubygem-web-console-rails613
     SUBDIR += rubygem-web-console2
     SUBDIR += rubygem-web-console3-rails5
     SUBDIR += rubygem-web-console3-rails50
@@ -6874,6 +6889,7 @@
     SUBDIR += rubygem-webfinger
     SUBDIR += rubygem-webpacker-rails60
     SUBDIR += rubygem-webpacker-rails61
+    SUBDIR += rubygem-webpacker-rails613
     SUBDIR += rubygem-webpacker4-rails5
     SUBDIR += rubygem-webpacker4-rails50
     SUBDIR += rubygem-webpacker4-rails60

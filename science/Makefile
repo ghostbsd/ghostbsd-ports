@@ -178,6 +178,7 @@
     SUBDIR += openems
     SUBDIR += openkim
     SUBDIR += openkim-models
+    SUBDIR += openmc
     SUBDIR += openmx
     SUBDIR += opensim-core
     SUBDIR += opensph
@@ -231,8 +232,10 @@
     SUBDIR += py-MDAnalysis
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
+    SUBDIR += py-OpenMC
     SUBDIR += py-PubChemPy
     SUBDIR += py-PyFR
+    SUBDIR += py-PyNE
     SUBDIR += py-SimpleSpectral
     SUBDIR += py-abipy
     SUBDIR += py-access

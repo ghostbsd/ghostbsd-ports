@@ -1,11 +1,11 @@
 PORTNAME=	App-cpanminus
-PORTVERSION=	1.7042
+PORTVERSION=	1.7044
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MIYAGAWA
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	kuriyama@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension to get, unpack, build, and install modules from CPAN
 
 LICENSE=	ART10 GPLv1+

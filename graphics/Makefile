@@ -43,6 +43,7 @@
     SUBDIR += acidwarp
     SUBDIR += acidwarp-sdl
     SUBDIR += agg
+    SUBDIR += airsaned
     SUBDIR += akira
     SUBDIR += alembic
     SUBDIR += aloadimage
@@ -456,8 +457,8 @@
     SUBDIR += libgphoto2
     SUBDIR += libgxps
     SUBDIR += libheif
-    SUBDIR += libimg
     SUBDIR += libimagequant
+    SUBDIR += libimg
     SUBDIR += libiptcdata
     SUBDIR += libjpeg-turbo
     SUBDIR += libjxl
@@ -941,6 +942,7 @@
     SUBDIR += quat-gui
     SUBDIR += quesa
     SUBDIR += quesoglc
+    SUBDIR += quickqanava
     SUBDIR += qvge
     SUBDIR += radiance
     SUBDIR += radius-engine

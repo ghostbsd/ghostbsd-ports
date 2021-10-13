@@ -6,6 +6,7 @@
     SUBDIR += avida
     SUBDIR += babel
     SUBDIR += bamtools
+    SUBDIR += bamutil
     SUBDIR += bbmap
     SUBDIR += bcftools
     SUBDIR += bedtools
@@ -76,6 +77,7 @@
     SUBDIR += lamarc
     SUBDIR += libbigwig
     SUBDIR += libgtextutils
+    SUBDIR += libneurosim
     SUBDIR += libnuml
     SUBDIR += libsbml
     SUBDIR += libsedml
