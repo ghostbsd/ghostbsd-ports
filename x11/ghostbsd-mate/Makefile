@@ -1,6 +1,6 @@
 
 PORTNAME=	ghostbsd-mate
-PORTVERSION=	1.24.1
+PORTVERSION=	1.26.0
 CATEGORIES=	x11 mate
 
 MAINTAINER=	ericturgeon@GhostBSD.org
@@ -23,7 +23,9 @@ RUN_DEPENDS=	mate-terminal:x11/mate-terminal \
 		mate-applets>=1.22.0:x11/mate-applets \
 		${LOCALBASE}/share/fonts/dejavu/DejaVuSerif.ttf:x11-fonts/dejavu \
 		mate-user-guide>=1.22.0:misc/mate-user-guide \
-		mate-dock-applet>=0:x11/mate-dock-applet
+		mate-dock-applet>=0:x11/mate-dock-applet \
+		ghostbsd-mate-settings>=0:x11/ghostbsd-mate-settings \
+		mate-applet-appmenu>=0:x11/mate-applet-appmenu
 
 USE_MATE=	caja:run controlcenter:run icontheme:run \
 		marco:run notificationdaemon:run panel:run \
