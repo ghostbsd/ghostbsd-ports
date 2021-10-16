@@ -21,6 +21,8 @@ LIB_DEPENDS=	libaccountsservice.so:sysutils/accountsservice \
 		libck-connector.so:sysutils/consolekit2 \
 		libgcrypt.so:security/libgcrypt \
 		libxklavier.so:x11/libxklavier
+RUN_DEPENDS=	gnome-keyring-3:security/gnome-keyring
+
 
 USES=		compiler:c++11-lang gettext gmake gnome libtool localbase \
 		pathfix pkgconfig tar:xz xorg
