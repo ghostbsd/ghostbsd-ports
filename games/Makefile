@@ -14,11 +14,13 @@
     SUBDIR += DDNet
     SUBDIR += HeroesOfMightAndMagic
     SUBDIR += KnightCap
+    SUBDIR += LibreMines
     SUBDIR += NBlood
     SUBDIR += OpenDiablo2
     SUBDIR += OpenLara
     SUBDIR += OpenTomb
     SUBDIR += SRB2
+    SUBDIR += SpaceCadetPinball
     SUBDIR += abbayedesmorts
     SUBDIR += abe
     SUBDIR += abstreet
@@ -1033,6 +1035,7 @@
     SUBDIR += wolfpack
     SUBDIR += wop
     SUBDIR += wordplay
+    SUBDIR += wordsearch
     SUBDIR += wordwarvi
     SUBDIR += worldofpadman
     SUBDIR += wtf

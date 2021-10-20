@@ -573,6 +573,7 @@
     SUBDIR += pg_citus
     SUBDIR += pg_dirtyread
     SUBDIR += pg_ed25519
+    SUBDIR += pg_filedump
     SUBDIR += pg_hashids
     SUBDIR += pg_partman
     SUBDIR += pg_qualstats
@@ -1025,6 +1026,8 @@
     SUBDIR += tile38
     SUBDIR += tiledb
     SUBDIR += timescaledb
+    SUBDIR += timescaledb-backup
+    SUBDIR += timescaledb-tune
     SUBDIR += tinycdb
     SUBDIR += tokyocabinet
     SUBDIR += tokyotyrant
@@ -1048,5 +1051,6 @@
     SUBDIR += xtrabackup
     SUBDIR += xtrabackup8
     SUBDIR += zabbix3-libzbxpgsql
+    SUBDIR += zodb
 
 .include <bsd.port.subdir.mk>

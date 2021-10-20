@@ -1,3 +1,156 @@
+  <vuln vid="bdaecfad-3117-11ec-b3b0-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>95.0.4638.54</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/10/stable-channel-update-for-desktop_19.html">
+	  <p>This release contains 19 security fixes, including:</p>
+	  <ul>
+	    <li>[1246631] High CVE-2021-37981: Heap buffer overflow in Skia.
+	      Reported by Yangkang (@dnpushme) of 360 ATA on 2021-09-04</li>
+	    <li>[1248661] High CVE-2021-37982: Use after free in Incognito.
+	      Reported by Weipeng Jiang (@Krace) from Codesafe Team of
+	      Legendsec at Qi'anxin Group on 2021-09-11</li>
+	    <li>[1249810] High CVE-2021-37983: Use after free in Dev Tools.
+	      Reported by Zhihua Yao of KunLun Lab on 2021-09-15</li>
+	    <li>[1253399] High CVE-2021-37984: Heap buffer overflow in PDFium.
+	      Reported by Antti Levomäki, Joonas Pihlaja andChristian Jali
+	      from Forcepoint on 2021-09-27</li>
+	    <li>[1241860] High CVE-2021-37985: Use after free in V8. Reported
+	      by Yangkang (@dnpushme) of 360 ATA on 2021-08-20</li>
+	    <li>[1242404] Medium CVE-2021-37986: Heap buffer overflow in
+	      Settings. Reported by raven (@raid_akame) on 2021-08-23</li>
+	    <li>[1206928] Medium CVE-2021-37987: Use after free in Network APIs.
+	      Reported by Yangkang (@dnpushme) of 360 ATA on 2021-05-08</li>
+	    <li>[1228248] Medium CVE-2021-37988: Use after free in Profiles.
+	      Reported by raven (@raid_akame) on 2021-07-12</li>
+	    <li>[1233067] Medium CVE-2021-37989: Inappropriate implementation
+	      in Blink. Reported by Matt Dyas, Ankur Sundara on 2021-07-26</li>
+	    <li>[1247395] Medium CVE-2021-37990: Inappropriate implementation
+	      in WebView. Reported by Kareem Selim of CyShield on
+	      2021-09-07</li>
+	    <li>[1250660] Medium CVE-2021-37991: Race in V8. Reported by Samuel
+	      Gross of Google Project Zero on 2021-09-17</li>
+	    <li>[1253746] Medium CVE-2021-37992: Out of bounds read in WebAudio.
+	      Reported by sunburst@Ant Security Light-Year Lab on
+	      2021-09-28</li>
+	    <li>[1255332] Medium CVE-2021-37993: Use after free in PDF
+	      Accessibility. Reported by Cassidy Kim of Amber Security Lab,
+	      OPPO Mobile Telecommunications Corp. Ltd. on 2021-10-02</li>
+	    <li>[1243020] Medium CVE-2021-37996: Insufficient validation of
+	      untrusted input in Downloads. Reported by Anonymous on
+	      2021-08-24</li>
+	    <li>[1100761] Low CVE-2021-37994: Inappropriate implementation in
+	      iFrame Sandbox. Reported by David Erceg on 2020-06-30</li>
+	    <li>[1242315] Low CVE-2021-37995: Inappropriate implementation in
+	      WebApp Installer. Reported by Terence Eden on 2021-08-23</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-37981</cvename>
+      <cvename>CVE-2021-37982</cvename>
+      <cvename>CVE-2021-37983</cvename>
+      <cvename>CVE-2021-37984</cvename>
+      <cvename>CVE-2021-37985</cvename>
+      <cvename>CVE-2021-37986</cvename>
+      <cvename>CVE-2021-37987</cvename>
+      <cvename>CVE-2021-37988</cvename>
+      <cvename>CVE-2021-37989</cvename>
+      <cvename>CVE-2021-37990</cvename>
+      <cvename>CVE-2021-37991</cvename>
+      <cvename>CVE-2021-37992</cvename>
+      <cvename>CVE-2021-37993</cvename>
+      <cvename>CVE-2021-37994</cvename>
+      <cvename>CVE-2021-37995</cvename>
+      <cvename>CVE-2021-37996</cvename>
+      <url>https://chromereleases.googleblog.com/2021/10/stable-channel-update-for-desktop_19.html</url>
+    </references>
+    <dates>
+      <discovery>2021-10-19</discovery>
+      <entry>2021-10-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c9387e4d-2f5f-11ec-8be6-d4c9ef517024">
+    <topic>MySQL -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mysql57-server</name>
+	<range><lt>5.7.36</lt></range>
+      </package>
+      <package>
+	<name>mysql80-client</name>
+	<range><lt>8.0.27</lt></range>
+      </package>
+      <package>
+	<name>mysql80-server</name>
+	<range><lt>8.0.27</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Oracle reports:</p>
+	<blockquote cite="https://www.oracle.com/security-alerts/cpujul2021.html">
+	  <p>This Critical Patch Update contains 66 new security patches for
+	    Oracle MySQL. 8 of these vulnerabilities may be remotely exploitable
+	    without authentication, i.e., may be exploited over a network without
+	    requiring user credentials.<br/>
+	    The highest CVSS v3.1 Base Score of vulnerabilities affecting Oracle
+	    MySQL is 9.8.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://www.oracle.com/security-alerts/cpuoct2021.html</url>
+    </references>
+    <dates>
+      <discovery>2021-10-16</discovery>
+      <entry>2021-10-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a9c5e89d-2d15-11ec-8363-0022489ad614">
+    <topic>Node.js -- October 2021 Security Releases</topic>
+    <affects>
+      <package>
+	<name>node</name>
+	<range><lt>16.11.1</lt></range>
+      </package>
+      <package>
+	<name>node14</name>
+	<range><lt>14.18.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Node.js reports:</p>
+	<blockquote cite="https://nodejs.org/en/blog/vulnerability/oct-2021-security-releases/">
+	  <h1>HTTP Request Smuggling due to spaced in headers (Medium)(CVE-2021-22959)</h1>
+	  <p>The http parser accepts requests with a space (SP) right after the header name before the colon. This can lead to HTTP Request Smuggling (HRS).</p>
+	  <h1>HTTP Request Smuggling when parsing the body (Medium)(CVE-2021-22960)</h1>
+	  <p>The parse ignores chunk extensions when parsing the body of chunked requests. This leads to HTTP Request Smuggling (HRS) under certain conditions.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-22959</cvename>
+      <cvename>CVE-2021-22960</cvename>
+      <url>https://nodejs.org/en/blog/vulnerability/oct-2021-security-releases/</url>
+    </references>
+    <dates>
+      <discovery>2021-10-12</discovery>
+      <entry>2021-10-14</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="2a1b931f-2b86-11ec-8acd-c80aa9043978">
     <topic>OpenSSH -- OpenSSH 6.2 through 8.7 failed to correctly initialise supplemental groups when executing an AuthorizedKeysCommand or AuthorizedPrincipalsCommand</topic>
     <affects>
