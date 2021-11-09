@@ -1,11 +1,6 @@
 bin/update-station
 etc/sudoers.d/update-station
 etc/xdg/autostart/update-station.desktop
-%%PYTHON_SITELIBDIR%%/update_station-3.5-py%%PYTHON_VER%%.egg-info/PKG-INFO
-%%PYTHON_SITELIBDIR%%/update_station-3.5-py%%PYTHON_VER%%.egg-info/SOURCES.txt
-%%PYTHON_SITELIBDIR%%/update_station-3.5-py%%PYTHON_VER%%.egg-info/dependency_links.txt
-%%PYTHON_SITELIBDIR%%/update_station-3.5-py%%PYTHON_VER%%.egg-info/requires.txt
-%%PYTHON_SITELIBDIR%%/update_station-3.5-py%%PYTHON_VER%%.egg-info/top_level.txt
 lib/update-station/need_reboot.json
 lib/update-station/updateHandler.py
 share/applications/update-manager.desktop
