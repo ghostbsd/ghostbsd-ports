@@ -829,12 +829,11 @@
     SUBDIR += p5-App-RunCron
     SUBDIR += p5-App-ZFSCurses
     SUBDIR += p5-BackupPC-XS
+    SUBDIR += p5-Brackup
     SUBDIR += p5-BSD-Jail-Object
     SUBDIR += p5-BSD-Process
     SUBDIR += p5-BSD-Sysctl
     SUBDIR += p5-BSD-getloadavg
-    SUBDIR += p5-BackupPC-XS
-    SUBDIR += p5-Brackup
     SUBDIR += p5-Device-RAID-Poller
     SUBDIR += p5-Dir-Purge
     SUBDIR += p5-File-BackupCopy
