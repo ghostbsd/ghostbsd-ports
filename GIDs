@@ -240,7 +240,7 @@ conduit:*:297:
 neolink:*:298:
 owncast:*:299:
 backuppc:*:300:
-# free: 301
+openvpn:*:301:
 netdata:*:302:
 # free: 303
 # free: 304
@@ -297,7 +297,7 @@ jackett:*:354:
 nzbhydra2:*:355:
 lidarr:*:356:
 bazarr:*:357:
-# free: 358
+autoscan:*:358:
 # free: 359
 v2ray:*:360:
 httptunnel:*:361:

@@ -142,6 +142,7 @@
     SUBDIR += libvdwxc
     SUBDIR += libxc
     SUBDIR += liggghts
+    SUBDIR += linux-zotero
     SUBDIR += luscus
     SUBDIR += madness
     SUBDIR += maeparser
@@ -242,7 +243,6 @@
     SUBDIR += py-asdf
     SUBDIR += py-ase
     SUBDIR += py-avogadrolibs
-    SUBDIR += py-pyberny
     SUBDIR += py-cdo
     SUBDIR += py-chainer
     SUBDIR += py-chainer-chemistry
@@ -291,6 +291,7 @@
     SUBDIR += py-phonopy
     SUBDIR += py-pupynere
     SUBDIR += py-pyaixi
+    SUBDIR += py-pyberny
     SUBDIR += py-pycsw
     SUBDIR += py-pydicom
     SUBDIR += py-pygeodesy

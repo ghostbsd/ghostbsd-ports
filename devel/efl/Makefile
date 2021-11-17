@@ -2,7 +2,7 @@
 
 PORTNAME=	efl
 DISTVERSION=	1.25.1
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.org/rel/libs/${PORTNAME}/
 DIST_SUBDIR=	enlightenment
@@ -303,6 +303,11 @@ MESON_ARGS+=			${EVAS-LOADERS-DISABLER}
 # Work-around build failure, which is caused by subtle problem in lld and -as-needed flag
 .if ${ARCH} == i386
 MESON_ARGS+=	-Db_asneeded=false
+.endif
+
+.if ${ARCH:Marmv?}
+BUILD_DEPENDS+=	as:devel/binutils
+CFLAGS+=	-no-integrated-as
 .endif
 
 .if ${PORT_OPTIONS:MLUA} && ${PORT_OPTIONS:MCXX}

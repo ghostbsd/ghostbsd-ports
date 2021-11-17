@@ -1,7 +1,7 @@
 # Created by: nork@FreeBSD.org
 
 PORTNAME=	openexr
-PORTVERSION=	3.1.2
+PORTVERSION=	3.1.3
 CATEGORIES=	graphics devel
 
 MAINTAINER=	mandree@FreeBSD.org
@@ -12,7 +12,7 @@ LICENSE=	BSD3CLAUSE
 # exact version required to avoid hard-to-debug issues
 LIB_DEPENDS=	libImath-3_1.so.29:math/Imath
 
-USES=		cmake compiler:c++14-lang pathfix pkgconfig
+USES=		cmake compiler:c++14-lang cpe pathfix pkgconfig
 
 USE_GITHUB=	yes
 GH_TUPLE=	AcademySoftwareFoundation:openexr:v${PORTVERSION}
@@ -27,7 +27,7 @@ PATCH_STRIP=	-p0
 
 _MAJORVER=	3_1
 _VER=		30
-_MINVER=	2
+_MINVER=	3
 _PLVER=		0
 
 PLIST_SUB+=	MAJORVER=${_MAJORVER} \
@@ -40,8 +40,8 @@ PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 OPTIONS_SUB=	yes
-DOCS_CMAKE_BOOL=DOCS
 DOCS_BUILD_DEPENDS=breathe-apidoc:devel/py-breathe
+DOCS_CMAKE_BOOL=DOCS
 
 _DOCSRCDIR1=	${WRKSRC}
 _DOC_FILES1=	CHANGES.md CONTRIBUTING.md GOVERNANCE.md LICENSE.md SECURITY.md \

@@ -1,6 +1,6 @@
 PORTNAME=	bareos
 DISTVERSIONPREFIX=	Release/
-DISTVERSION=	18.2.11
+DISTVERSION=	18.2.12
 CATEGORIES?=	www sysutils
 PKGNAMESUFFIX=	18-webui
 
@@ -14,7 +14,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	bareos
 GH_PROJECT=	bareos
 
-USES=		php
+USES=		cpe php
 USE_PHP=	openssl gettext ctype hash json session iconv
 NO_BUILD=	yes
 NO_ARCH=	yes

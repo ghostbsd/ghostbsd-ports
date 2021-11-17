@@ -10,8 +10,8 @@ COMMENT?=	Highly efficient mail filter for identifying spam
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	apache
-GH_TAGNAME=	1b605e68e
-SA_COMMIT_DATE=	2021.10.18
+GH_TAGNAME=	f619d37e4
+SA_COMMIT_DATE=	2021.11.08
 
 LICENSE=	APACHE20
 
@@ -31,7 +31,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 TEST_DEPENDS+=	${${dep}_RUN_DEPENDS}
 .endfor
 
-CONFLICTS?=	ja-spamassassin-[0-9]* spamassassin-[0-9]*
+CONFLICTS?=	ja-spamassassin spamassassin
 
 CPE_VENDOR=	apache
 

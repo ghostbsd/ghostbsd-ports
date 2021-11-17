@@ -1,7 +1,7 @@
 PORTNAME=	electron
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${ELECTRON_VER:S/-beta./.b/}
-PORTREVISION=	2
+PORTREVISION=	1
 CATEGORIES=	devel java
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/:chromium \
 		https://commondatastorage.googleapis.com/chromium-fonts/:chromium_testfonts
@@ -16,6 +16,8 @@ COMMENT=	Build cross-platform desktop apps with JavaScript, HTML, and CSS
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/electron/LICENSE
+
+BROKEN_i386=	LLVM ERROR: out of memory
 
 FETCH_DEPENDS=		yarn-node14>0:www/yarn-node14
 EXTRACT_DEPENDS=	yarn-node14>0:www/yarn-node14
@@ -125,7 +127,7 @@ NODE_VER=			14.16.0
 # See ${WRKSRC}/electron/DEPS for NAN_VER
 NAN_VER=			2c4ee8a32a299eada3cd6e468bbd0a473bfea96d
 
-YARN_TIMESTAMP=	1621487762
+YARN_TIMESTAMP=	1637036886
 
 GN_ARGS+=		clang_use_chrome_plugins=false \
 			enable_hangout_services_extension=true \

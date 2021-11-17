@@ -1,5 +1,6 @@
 PORTNAME=	kwin
 DISTVERSION=	${KDE_PLASMA_VERSION}
+PORTREVISION=	1
 CATEGORIES=	x11-wm kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
@@ -25,6 +26,8 @@ LIB_DEPENDS=	libXcursor.so:x11/libXcursor \
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
 		xwayland-devel>0:x11-servers/xwayland-devel
 RUN_DEPENDS=	xwayland-devel>0:x11-servers/xwayland-devel
+
+CONFLICTS_INSTALL=	kwinft # bin/kwin_wayland
 
 USES=		cmake compiler:c++11-lib gettext gl gnome kde:5 pkgconfig \
 		python:3.5+,run qt:5 shebangfix tar:xz xorg

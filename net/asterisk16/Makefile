@@ -1,5 +1,6 @@
 PORTNAME=	asterisk
-PORTVERSION=	16.21.1
+PORTVERSION=	16.22.0
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729
 MASTER_SITE_SUBDIR=	asterisk/ \
@@ -51,7 +52,7 @@ MAKE_ENV=	PTHREAD_LIBS="-lpthread" \
 MAKE_ARGS+=	NOISY_BUILD=yes \
 		ASTDATADIR=${DATADIR}
 
-CONFLICTS=		ossp-uuid-[0-9]*
+CONFLICTS=		ossp-uuid
 CONFLICTS_BUILD=	linuxthreads-*
 CONFLICTS_INSTALL=	asterisk13 asterisk18
 

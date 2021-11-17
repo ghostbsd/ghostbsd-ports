@@ -2,7 +2,7 @@
 # to upload them to ~/public_distfiles on freefall in preparation
 # for the next lang/rust update.
 PORTNAME=	rust
-PORTVERSION=	1.55.0
+PORTVERSION=	1.56.0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 PKGNAMEPREFIX=	${FLAVOR:S/_/-/g}-
@@ -19,7 +19,7 @@ LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 
 ONLY_FOR_ARCHS=	amd64
-ONLY_FOR_ARCHS_REASON=	untested on other archs
+ONLY_FOR_ARCHS_REASON=	untested on other architectures
 
 BUILD_DEPENDS=	${FLAVOR:S/_/-/g}-freebsd-sysroot>=a2021.09.14:devel/freebsd-sysroot@${FLAVOR} \
 		cmake:devel/cmake \
@@ -124,9 +124,9 @@ do-configure:
 .endif
 # https://github.com/rust-lang/rust/pull/72696#issuecomment-641517185
 	@${ECHO_CMD} 'ldflags="-lz"' >> ${WRKSRC}/config.toml
-# we need to make sure to always build llvm with X86 support to get a
+# we need to make sure to always build llvm with host arch support to get a
 # host compiler that can build the host->target compiler
-	@${ECHO_CMD} 'targets="${_RUST_LLVM_TARGET};X86"' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'targets="${_RUST_LLVM_TARGET};${_RUST_LLVM_TARGET_${ARCH}}"' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} '[target.${_RUST_TARGET}]' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'cc="${LOCALBASE}/freebsd-sysroot/${FLAVOR:S/_/-/g}/bin/cc"' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'cxx="${LOCALBASE}/freebsd-sysroot/${FLAVOR:S/_/-/g}/bin/c++"' >> ${WRKSRC}/config.toml
