@@ -25,6 +25,7 @@ lib/gbi/backend-query/xkeyboard-models.sh
 lib/gbi/backend-query/xkeyboard-variants.sh
 lib/gbi/boot_manager.py
 lib/gbi/create_cfg.py
+lib/gbi/disk.png
 lib/gbi/end.py
 lib/gbi/error.py
 lib/gbi/gbiWindow.py
@@ -39,6 +40,7 @@ lib/gbi/install.py
 lib/gbi/installType.py
 lib/gbi/keyboard.py
 lib/gbi/language.py
+lib/gbi/laptop.png
 lib/gbi/network_setup.py
 lib/gbi/partition.py
 lib/gbi/partition_handler.py

@@ -3,7 +3,7 @@
 
 
 PORTNAME=	gbi
-PORTVERSION=	9.5
+PORTVERSION=	9.6
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
@@ -17,7 +17,7 @@ RUN_DEPENDS=	pc-sysinstall>0:sysutils/pc-sysinstall
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
-USES =		python
+USES =		python gnome
 USE_PYTHON=	distutils noflavors
 USE_GNOME=	pygobject3
 
