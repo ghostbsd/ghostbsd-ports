@@ -1,17 +1,16 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
 
 PORTNAME=	wine
-DISTVERSION=	6.21
-PORTREVISION=	1
+DISTVERSION=	6.22
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
 		http://mirrors.ibiblio.org/wine/source/6.x/
-PKGNAMESUFFIX?=	-devel
+PKGNAMESUFFIX=	-devel
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER?=	damjan.jov@gmail.com
-COMMENT?=	Microsoft Windows compatibility environment
+MAINTAINER=	damjan.jov@gmail.com
+COMMENT=	Microsoft Windows compatibility environment
 
 LICENSE=	LGPL21 LGPL3
 LICENSE_COMB=	dual
@@ -30,7 +29,7 @@ USE_SDL=	sdl2
 
 CPE_VENDOR=	winehq
 
-CONFLICTS_INSTALL=	wine-[0-9]* i386-wine-[0-9]*
+CONFLICTS_INSTALL=	wine
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--verbose \
@@ -43,22 +42,25 @@ CONFIGURE_ARGS+=--verbose \
 		--without-gettext --without-gettextpo \
 		--without-gphoto \
 		--without-gstreamer \
+		--without-hal \
 		--without-inotify \
 		--without-krb5 \
 		--without-mingw \
+		--without-netapi \
 		--without-opencl \
 		--without-osmesa \
 		--with-oss \
 		--with-pcap \
 		--with-pthread \
 		--without-pulse \
+		--without-quicktime \
 		--without-sane \
 		--with-sdl \
 		--without-udev \
 		--without-unwind \
 		--without-usb
 CONFIGURE_ENV=	CPPBIN="${CPP}" FLEX="${LOCALBASE}/bin/flex"
-WINELIBDIR?=	${PREFIX}/lib
+WINELIBDIR=	${PREFIX}/lib
 .if !defined(USE_LDCONFIG32)
 USE_LDCONFIG=	${WINELIBDIR} ${WINELIBDIR}/wine
 .endif

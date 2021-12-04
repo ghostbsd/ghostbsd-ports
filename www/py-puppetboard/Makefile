@@ -1,7 +1,6 @@
 PORTNAME=	puppetboard
-PORTVERSION=	3.2.0
+PORTVERSION=	3.3.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -23,7 +22,7 @@ USES=		python:3.6+
 USE_GITHUB=	yes
 USE_PYTHON=	autoplist distutils
 
-CONFLICTS_INSTALL=puppetboard02-* puppetboard03-*
+CONFLICTS_INSTALL=puppetboard02 puppetboard03
 
 GH_ACCOUNT=	voxpupuli
 PLIST_FILES=	"@sample etc/puppetboard/settings.py.sample"

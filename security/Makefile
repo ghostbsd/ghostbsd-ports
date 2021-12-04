@@ -1023,6 +1023,7 @@
     SUBDIR += py-vici
     SUBDIR += py-virustotal-api
     SUBDIR += py-volatility3
+    SUBDIR += py-vpn-slice
     SUBDIR += py-vulndb
     SUBDIR += py-webauthn
     SUBDIR += py-xkcdpass
@@ -1125,6 +1126,7 @@
     SUBDIR += rubygem-omniauth-bitbucket
     SUBDIR += rubygem-omniauth-cas
     SUBDIR += rubygem-omniauth-cas3
+    SUBDIR += rubygem-omniauth-dingtalk-oauth2
     SUBDIR += rubygem-omniauth-gitlab
     SUBDIR += rubygem-omniauth-jwt
     SUBDIR += rubygem-omniauth-multipassword
@@ -1353,6 +1355,7 @@
     SUBDIR += yubikey-manager-qt
     SUBDIR += yubikey-personalization-gui
     SUBDIR += yubioath-desktop
+    SUBDIR += zaproxy
     SUBDIR += zebedee
     SUBDIR += zeek
     SUBDIR += zeronet

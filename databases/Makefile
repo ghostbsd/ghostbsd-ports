@@ -122,6 +122,7 @@
     SUBDIR += jasperreports
     SUBDIR += jdb
     SUBDIR += jdbc-oracle11g
+    SUBDIR += jetbrains-datagrip
     SUBDIR += jlog
     SUBDIR += jrobin
     SUBDIR += jrrd
@@ -798,6 +799,9 @@
     SUBDIR += py-pony
     SUBDIR += py-postgresql
     SUBDIR += py-psycogreen
+    SUBDIR += py-psycopg
+    SUBDIR += py-psycopg-c
+    SUBDIR += py-psycopg-pool
     SUBDIR += py-psycopg2
     SUBDIR += py-psycopg2cffi
     SUBDIR += py-pum

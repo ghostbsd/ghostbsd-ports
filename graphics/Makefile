@@ -604,6 +604,7 @@
     SUBDIR += openrm
     SUBDIR += openshadinglanguage
     SUBDIR += opensubdiv
+    SUBDIR += openvkl
     SUBDIR += optar
     SUBDIR += optipng
     SUBDIR += osg
@@ -1002,6 +1003,7 @@
     SUBDIR += rubygem-ruby-graphviz
     SUBDIR += rubygem-ruby-vips
     SUBDIR += rubygem-scruffy
+    SUBDIR += rubygem-tanuki_emoji
     SUBDIR += rx
     SUBDIR += s10sh
     SUBDIR += s2
