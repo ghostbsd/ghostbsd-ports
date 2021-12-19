@@ -610,6 +610,8 @@
     SUBDIR += osg
     SUBDIR += osg34
     SUBDIR += osgearth
+    SUBDIR += ospray
+    SUBDIR += ospray-studio
     SUBDIR += ossim
     SUBDIR += oyranos
     SUBDIR += p5-Acme-Steganography-Image-Png
@@ -958,6 +960,7 @@
     SUBDIR += reactphysics3d
     SUBDIR += reallyslick
     SUBDIR += realsr-ncnn-vulkan
+    SUBDIR += recastnavigation
     SUBDIR += recoverjpeg
     SUBDIR += renrot
     SUBDIR += repng2jpeg

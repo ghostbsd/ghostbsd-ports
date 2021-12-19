@@ -45,6 +45,7 @@
     SUBDIR += R-cran-combinat
     SUBDIR += R-cran-conf.design
     SUBDIR += R-cran-conquer
+    SUBDIR += R-cran-date
     SUBDIR += R-cran-ddalpha
     SUBDIR += R-cran-deldir
     SUBDIR += R-cran-dimRed
@@ -67,6 +68,7 @@
     SUBDIR += R-cran-igraph
     SUBDIR += R-cran-influenceR
     SUBDIR += R-cran-inline
+    SUBDIR += R-cran-intervals
     SUBDIR += R-cran-ipred
     SUBDIR += R-cran-irlba
     SUBDIR += R-cran-isoband
@@ -264,7 +266,6 @@
     SUBDIR += eclib
     SUBDIR += ecos
     SUBDIR += edenmath
-    SUBDIR += eigen2
     SUBDIR += eigen3
     SUBDIR += eispack
     SUBDIR += elemental
@@ -591,6 +592,7 @@
     SUBDIR += osi-conic
     SUBDIR += osiipopt
     SUBDIR += osqp
+    SUBDIR += p5-Alien-GSL
     SUBDIR += p5-AI-DecisionTree
     SUBDIR += p5-AI-Genetic
     SUBDIR += p5-AI-NeuralNet-BackProp

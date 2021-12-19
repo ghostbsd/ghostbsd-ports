@@ -2,6 +2,7 @@
 
 PORTNAME=	wine
 DISTVERSION=	6.0.2
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -52,6 +53,7 @@ CONFIGURE_ARGS+=--verbose \
 		--with-pcap \
 		--with-pthread \
 		--without-pulse \
+		--without-quicktime \
 		--without-sane \
 		--with-sdl \
 		--without-tiff \

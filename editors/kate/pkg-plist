@@ -1,5 +1,6 @@
 bin/kate
 bin/kwrite
+%%QT_PLUGINDIR%%/ktexteditor/compilerexplorer.so
 %%QT_PLUGINDIR%%/ktexteditor/externaltoolsplugin.so
 %%QT_PLUGINDIR%%/ktexteditor/katebacktracebrowserplugin.so
 %%QT_PLUGINDIR%%/ktexteditor/katebuildplugin.so
@@ -20,6 +21,7 @@ bin/kwrite
 %%QT_PLUGINDIR%%/ktexteditor/katexmlcheckplugin.so
 %%QT_PLUGINDIR%%/ktexteditor/katexmltoolsplugin.so
 %%QT_PLUGINDIR%%/ktexteditor/ktexteditorpreviewplugin.so
+%%QT_PLUGINDIR%%/ktexteditor/latexcompletionplugin.so
 %%QT_PLUGINDIR%%/ktexteditor/lspclientplugin.so
 %%QT_PLUGINDIR%%/ktexteditor/tabswitcherplugin.so
 %%QT_PLUGINDIR%%/ktexteditor/textfilterplugin.so
@@ -68,6 +70,7 @@ share/katexmltools/xhtml1-frameset.dtd.xml
 share/katexmltools/xhtml1-strict.dtd.xml
 share/katexmltools/xhtml1-transitional.dtd.xml
 share/katexmltools/xslt-1.0.dtd.xml
+share/kservices5/plasma-applet-org.kde.plasma.katesessions.desktop
 share/kservices5/plasma-dataengine-katesessions.desktop
 share/locale/ar/LC_MESSAGES/kate-ctags-plugin.mo
 share/locale/ar/LC_MESSAGES/kate-replicode-plugin.mo

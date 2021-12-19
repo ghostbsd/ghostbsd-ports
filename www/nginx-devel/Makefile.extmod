@@ -253,7 +253,7 @@ OPENTRACING_LIB_DEPENDS=	libopentracing.so:devel/libopentracing
 OPENTRACING_VARS=		DSO_EXTMODS+=opentracing OPENTRACING_SUBDIR=/opentracing
 OPENTRACING_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-nginx-opentracing-opentracing-config
 
-PASSENGER_NGINX_VER=	6.0.11
+PASSENGER_NGINX_VER=	6.0.12
 PASSENGER_CATEGORIES=	ruby
 PASSENGER_USE=		ruby=yes
 PASSENGER_BUILD_DEPENDS=${LOCALBASE}/bin/rake:devel/rubygem-rake
@@ -299,8 +299,8 @@ SHIBBOLETH_VARS=	DSO_EXTMODS+=shibboleth
 SLOWFS_CACHE_GH_TUPLE=	baysao:ngx_slowfs_cache:d011a18:slowfs_cache
 SLOWFS_CACHE_VARS=	DSO_EXTMODS+=slowfs_cache
 
-SMALL_LIGHT_LIB_DEPENDS=	libMagickWand-6.so:graphics/ImageMagick6 \
-				libpcre.so:devel/pcre
+SMALL_LIGHT_USES=		magick:6
+SMALL_LIGHT_LIB_DEPENDS=	libpcre.so:devel/pcre
 SMALL_LIGHT_GH_TUPLE=		kawakibi:ngx_small_light:2f5e1d0:small_light
 SMALL_LIGHT_VARS=		DSO_EXTMODS+=small_light
 

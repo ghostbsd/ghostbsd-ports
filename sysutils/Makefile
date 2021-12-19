@@ -95,9 +95,6 @@
     SUBDIR += bareos-client
     SUBDIR += bareos-server
     SUBDIR += bareos-traymonitor
-    SUBDIR += bareos17-client
-    SUBDIR += bareos17-client-static
-    SUBDIR += bareos17-server
     SUBDIR += bareos18-client
     SUBDIR += bareos18-server
     SUBDIR += bareos18-traymonitor
@@ -168,9 +165,11 @@
     SUBDIR += cfengine-masterfiles316
     SUBDIR += cfengine-masterfiles317
     SUBDIR += cfengine-masterfiles318
+    SUBDIR += cfengine-masterfiles319
     SUBDIR += cfengine316
     SUBDIR += cfengine317
     SUBDIR += cfengine318
+    SUBDIR += cfengine319
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi

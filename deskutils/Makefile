@@ -171,6 +171,7 @@
     SUBDIR += mencal
     SUBDIR += menumaker
     SUBDIR += meteo
+    SUBDIR += mindforger
     SUBDIR += moregroupware
     SUBDIR += mozo
     SUBDIR += myitcrm
@@ -245,6 +246,7 @@
     SUBDIR += thinkingrock
     SUBDIR += timewarrior
     SUBDIR += todo
+    SUBDIR += todour
     SUBDIR += toolboxkit
     SUBDIR += tpb
     SUBDIR += treeline

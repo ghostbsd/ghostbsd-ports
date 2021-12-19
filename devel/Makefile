@@ -33,6 +33,7 @@
     SUBDIR += R-cran-covr
     SUBDIR += R-cran-cpp11
     SUBDIR += R-cran-crayon
+    SUBDIR += R-cran-cyclocomp
     SUBDIR += R-cran-data.table
     SUBDIR += R-cran-desc
     SUBDIR += R-cran-devtools
@@ -65,6 +66,7 @@
     SUBDIR += R-cran-itertools
     SUBDIR += R-cran-later
     SUBDIR += R-cran-lifecycle
+    SUBDIR += R-cran-lintr
     SUBDIR += R-cran-listenv
     SUBDIR += R-cran-lubridate
     SUBDIR += R-cran-magrittr
@@ -287,6 +289,7 @@
     SUBDIR += brz
     SUBDIR += bsdbuild
     SUBDIR += bsdcflow
+    SUBDIR += bsddialog
     SUBDIR += bsdowl
     SUBDIR += bugzilla44
     SUBDIR += bugzilla50
@@ -296,7 +299,6 @@
     SUBDIR += busybee
     SUBDIR += byacc
     SUBDIR += byaccj
-    SUBDIR += bsddialog
     SUBDIR += c2mdoc
     SUBDIR += caf
     SUBDIR += calibrator
@@ -812,6 +814,7 @@
     SUBDIR += generate
     SUBDIR += gengetopt
     SUBDIR += genie
+    SUBDIR += getoptions
     SUBDIR += gettext
     SUBDIR += gettext-lint
     SUBDIR += gettext-msghack
@@ -905,6 +908,7 @@
     SUBDIR += google-perftools
     SUBDIR += google-styleguide
     SUBDIR += googletest
+    SUBDIR += gopls
     SUBDIR += goprotobuf
     SUBDIR += goredo
     SUBDIR += goreleaser
@@ -7029,6 +7033,7 @@
     SUBDIR += soapui
     SUBDIR += sobjectizer
     SUBDIR += socket_wrapper
+    SUBDIR += soft-serve
     SUBDIR += sol2
     SUBDIR += sonar-scanner-cli
     SUBDIR += sonarqube-ant-task
