@@ -188,6 +188,7 @@
     SUBDIR += feh
     SUBDIR += fig2sxd
     SUBDIR += figurine
+    SUBDIR += filmulator
     SUBDIR += flam3
     SUBDIR += flasm
     SUBDIR += flif
@@ -195,6 +196,7 @@
     SUBDIR += fly
     SUBDIR += fortytwo
     SUBDIR += fotofix
+    SUBDIR += fotoxx
     SUBDIR += founts
     SUBDIR += fpc-cairo
     SUBDIR += fpc-graph
@@ -493,6 +495,7 @@
     SUBDIR += libreatlas
     SUBDIR += librsvg2
     SUBDIR += librsvg2-rust
+    SUBDIR += librtprocess
     SUBDIR += libsixel
     SUBDIR += libspiro
     SUBDIR += libspng

@@ -41,7 +41,6 @@
     SUBDIR += clifm
     SUBDIR += cloc
     SUBDIR += clpbar
-    SUBDIR += cmatrix
     SUBDIR += colortail
     SUBDIR += colwide
     SUBDIR += compat10x
@@ -451,7 +450,6 @@
     SUBDIR += rubygem-iesd
     SUBDIR += rubygem-mime-types
     SUBDIR += rubygem-mime-types-data
-    SUBDIR += rubygem-mime-types1
     SUBDIR += rubygem-mimemagic
     SUBDIR += rubygem-octicons
     SUBDIR += rubygem-rabbit

@@ -149,6 +149,7 @@
     SUBDIR += chroma
     SUBDIR += chromium-bsu
     SUBDIR += circuslinux
+    SUBDIR += cmatrix
     SUBDIR += cockatrice
     SUBDIR += coffeebreak
     SUBDIR += colobot
@@ -379,7 +380,6 @@
     SUBDIR += hitori
     SUBDIR += hllib
     SUBDIR += holotz-castle
-    SUBDIR += homura
     SUBDIR += hoverboard-sdl
     SUBDIR += hs-scroll
     SUBDIR += hypatia_engine
@@ -638,6 +638,7 @@
     SUBDIR += nazghul
     SUBDIR += nbsdgames
     SUBDIR += nehquake
+    SUBDIR += neo
     SUBDIR += neo-cowsay
     SUBDIR += nethack32
     SUBDIR += nethack33
@@ -931,6 +932,7 @@
     SUBDIR += supertux
     SUBDIR += supertux2
     SUBDIR += supertuxkart
+    SUBDIR += suyimazu
     SUBDIR += swell-foop
     SUBDIR += sxsame
     SUBDIR += tads
@@ -952,6 +954,7 @@
     SUBDIR += thegrind
     SUBDIR += tileworld
     SUBDIR += tkmoo
+    SUBDIR += tmatrix
     SUBDIR += tomatoes
     SUBDIR += tome4
     SUBDIR += tome4-beta

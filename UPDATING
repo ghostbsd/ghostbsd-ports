@@ -5,6 +5,37 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20211223:
+  AFFECTS: users of security/bastillion
+  AUTHOR: netchild@FreeBSD.org
+
+  This update contains an incompatible DB change. Either recreate your
+  DB (rm /usr/local/jetty_bastillion/bastillion/WEB-INF/classes/keydb/bastillion.*
+  and restart) by hand, or export the old DB while the old version is
+  installed and import the data into a new DB. See
+    https://github.com/bastillion-io/Bastillion/issues/405
+  for details.
+
+20211220:
+  AFFECTS: users of devel/notcurses
+  AUTHOR: nickblack@linux.com
+
+  Notcurses 3 introduces a new SONAME and significant API/ABI changes.
+  Dependent applications must be recompiled at a minimum. A complete
+  guide to updating for the new API is available under "Porting API2
+  Applications to API3" at
+  https://github.com/dankamongmen/notcurses/releases/tag/v3.0.0
+
+20211220:
+  AFFECTS: users of net-im/openfire
+  AUTHOR: nikita@druba.su
+
+  The port options have been renamed to be more readable.
+  When not using the default options, they have to be regenerated.
+
+  # cd /usr/ports/net-im/openfire
+  # make config
+
 20211213:
   AFFECTS: users of emulators/qemu-utils
   AUTHOR: bofh@FreeBSD.org

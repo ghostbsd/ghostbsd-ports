@@ -316,6 +316,7 @@
 %%WWWDIR%%/j2s/J/adapter/readers/xtal/GulpReader.js
 %%WWWDIR%%/j2s/J/adapter/readers/xtal/JanaReader.js
 %%WWWDIR%%/j2s/J/adapter/readers/xtal/MagresReader.js
+%%WWWDIR%%/j2s/J/adapter/readers/xtal/PWmatReader.js
 %%WWWDIR%%/j2s/J/adapter/readers/xtal/ShelxReader.js
 %%WWWDIR%%/j2s/J/adapter/readers/xtal/SiestaReader.js
 %%WWWDIR%%/j2s/J/adapter/readers/xtal/VaspChgcarReader.js
@@ -1747,6 +1748,7 @@
 %%WWWDIR%%/sync2.htm
 %%WWWDIR%%/sync4.htm
 %%WWWDIR%%/sync4b.htm
+%%WWWDIR%%/t
 %%WWWDIR%%/tabtest.htm
 %%WWWDIR%%/test2.htm
 %%WWWDIR%%/testEPFL.htm
