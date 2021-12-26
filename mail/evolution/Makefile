@@ -2,6 +2,7 @@
 
 PORTNAME=	evolution
 DISTVERSION=	3.42.1
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -45,14 +46,15 @@ PORTSCOUT=	limitw:1,even
 USES=		compiler:c11 cpe desktop-file-utils cmake gettext gnome \
 		iconv:wchar_t sqlite libarchive localbase pathfix pkgconfig \
 		tar:xz xorg
-USE_GNOME=	cairo evolutiondataserver3 gnomedesktop3 intltool
+USE_GNOME=	cairo evolutiondataserver3 intltool
 GNU_CONFIGURE=	yes
 USE_XORG=	x11
 USE_LDCONFIG=	yes
 CPE_VENDOR=	gnome
 CMAKE_ARGS=	-DENABLE_TEXT_HIGHLIGHT=YES \
 		-DWITH_ENCHANT_VERSION=2 \
-		-DVERSION_COMMENT="FreeBSD GNOME Team"
+		-DVERSION_COMMENT="FreeBSD GNOME Team" \
+		-DENABLE_GNOME_DESKTOP=OFF
 
 GLIB_SCHEMAS=	org.gnome.evolution.addressbook.gschema.xml \
 		org.gnome.evolution.bogofilter.gschema.xml \
