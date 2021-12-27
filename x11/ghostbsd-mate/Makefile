@@ -1,7 +1,7 @@
 
 PORTNAME=	ghostbsd-mate
 PORTVERSION=	1.26.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 mate
 
 MAINTAINER=	ericturgeon@GhostBSD.org
@@ -24,7 +24,10 @@ RUN_DEPENDS=	mate-terminal:x11/mate-terminal \
 		mate-user-guide>=1.22.0:misc/mate-user-guide \
 		mate-dock-applet>=0:x11/mate-dock-applet \
 		ghostbsd-mate-settings>=0:x11/ghostbsd-mate-settings \
+		ghostbsd-wallpapers>=0:x11/ghostbsd-wallpapers \
+		ghostbsd-mate-themes>=0:x11/ghostbsd-mate-themes \
 		mate-applet-appmenu>=0:x11/mate-applet-appmenu
+		
 
 USES=		metaport mate
 USE_MATE=	caja:run controlcenter:run icontheme:run \
