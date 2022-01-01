@@ -356,7 +356,9 @@
     SUBDIR += sterm
     SUBDIR += stjerm
     SUBDIR += swarp
+    SUBDIR += sway-audio-idle-inhibit
     SUBDIR += swaybg
+    SUBDIR += swayfloatingswitcher
     SUBDIR += swayidle
     SUBDIR += swaylock
     SUBDIR += swaylock-effects

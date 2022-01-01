@@ -80,7 +80,6 @@
     SUBDIR += cd2mp3
     SUBDIR += cddb-bundle
     SUBDIR += cdparanoia
-    SUBDIR += celt
     SUBDIR += checkmate
     SUBDIR += cheesecutter
     SUBDIR += chordpack
@@ -187,7 +186,6 @@
     SUBDIR += flac
     SUBDIR += flac123
     SUBDIR += flacon
-    SUBDIR += flake
     SUBDIR += flite
     SUBDIR += fluid-soundfont
     SUBDIR += fluida-lv2
@@ -318,7 +316,6 @@
     SUBDIR += id3ren
     SUBDIR += id3tool
     SUBDIR += id3v2
-    SUBDIR += ifp-line
     SUBDIR += infamous-plugins-lv2
     SUBDIR += inscore
     SUBDIR += intersect-lv2
@@ -353,7 +350,6 @@
     SUBDIR += lenticular-lv2
     SUBDIR += lewton
     SUBDIR += liba52
-    SUBDIR += libaacplus
     SUBDIR += libadplug
     SUBDIR += libaiff
     SUBDIR += libamrnb
@@ -402,7 +398,6 @@
     SUBDIR += libmusicbrainz5
     SUBDIR += libmusicxml
     SUBDIR += libmysofa
-    SUBDIR += libnjb
     SUBDIR += libnoise
     SUBDIR += libogg
     SUBDIR += liboggz
@@ -454,7 +449,6 @@
     SUBDIR += logitechmediaserver-sqlplaylist
     SUBDIR += logitechmediaserver-trackstat
     SUBDIR += lollypop
-    SUBDIR += lpac
     SUBDIR += lsp-plugins-lv2
     SUBDIR += lua-mpd
     SUBDIR += luppp
@@ -498,7 +492,7 @@
     SUBDIR += mp-player
     SUBDIR += mp3_check
     SUBDIR += mp3-archive-tools
-    SUBDIR += mp32ogg
+    SUBDIR += mp3_check
     SUBDIR += mp3asm
     SUBDIR += mp3blaster
     SUBDIR += mp3burn
@@ -525,7 +519,6 @@
     SUBDIR += mpg123
     SUBDIR += mpg123.el
     SUBDIR += mpg321
-    SUBDIR += mpiosh
     SUBDIR += mps
     SUBDIR += mpz
     SUBDIR += mumble
@@ -564,7 +557,6 @@
     SUBDIR += opusfile
     SUBDIR += opustags
     SUBDIR += orbit-lv2
-    SUBDIR += osalp
     SUBDIR += osd-lyrics
     SUBDIR += osdmixer
     SUBDIR += oss
@@ -703,7 +695,6 @@
     SUBDIR += rnnoise
     SUBDIR += rnnoise-nu
     SUBDIR += rosegarden
-    SUBDIR += rplay
     SUBDIR += rsynth
     SUBDIR += rtaudio
     SUBDIR += rtmidi
