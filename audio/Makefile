@@ -490,7 +490,6 @@
     SUBDIR += moony-lv2
     SUBDIR += mous
     SUBDIR += mp-player
-    SUBDIR += mp3_check
     SUBDIR += mp3-archive-tools
     SUBDIR += mp3_check
     SUBDIR += mp3asm
