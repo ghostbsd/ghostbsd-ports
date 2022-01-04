@@ -1,6 +1,6 @@
 
 PORTNAME=	ghostbsd-wallpapers
-PORTVERSION=	22.01
+PORTVERSION=	22.02
 CATEGORIES=	x11-themes
 PKGNAMESUFFIX=	22
 MAINTAINER=	ericturgeon@ghostbsd.org
