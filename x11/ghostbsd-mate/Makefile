@@ -22,12 +22,11 @@ RUN_DEPENDS=	mate-terminal:x11/mate-terminal \
 		mate-applets>=1.22.0:x11/mate-applets \
 		${LOCALBASE}/share/fonts/dejavu/DejaVuSerif.ttf:x11-fonts/dejavu \
 		mate-user-guide>=1.22.0:misc/mate-user-guide \
-		mate-dock-applet>=0:x11/mate-dock-applet \
-		ghostbsd-mate-settings>=0:x11/ghostbsd-mate-settings \
-		ghostbsd-wallpapers21>=0:x11-themes/ghostbsd-wallpapers22 \
-		ghostbsd-mate-themes>=0:x11-themes/ghostbsd-mate-themes \
-		mate-applet-appmenu>=0:x11/mate-applet-appmenu
-		
+		mate-dock-applet>0:x11/mate-dock-applet \
+		ghostbsd-mate-settings>0:x11/ghostbsd-mate-settings \
+		ghostbsd-wallpapers22>0:x11-themes/ghostbsd-wallpapers22 \
+		ghostbsd-mate-themes>0:x11-themes/ghostbsd-mate-themes \
+		mate-applet-appmenu>0:x11/mate-applet-appmenu
 
 USES=		metaport mate
 USE_MATE=	caja:run controlcenter:run icontheme:run \
