@@ -1,9 +1,5 @@
-# Created by:	Eric Turgeon ericturgeon@ghostbsd.org
-# Date created:	November 11 2013
-
-
 PORTNAME=	gbi
-PORTVERSION=	9.8
+PORTVERSION=	9.9
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
