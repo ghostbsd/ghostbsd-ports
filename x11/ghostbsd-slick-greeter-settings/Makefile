@@ -1,12 +1,8 @@
-# Created by: Angelescu Ovidiu <angelescuo@yahoo.com>
-# $FreeBSD$
-
 PORTNAME=	ghostbsd-slick-greeter-settings
-PORTVERSION=	1.2
-PORTSREVISION=	1
+PORTVERSION=	1.3
 CATEGORIES=	x11
 
-MAINTAINER=	angelescuo@yahoo.com
+MAINTAINER=	ericturgeon@ghostbsd.org
 COMMENT=	GhostBSD lightdm slick greeter settings
 
 LICENSE=	BSD
