@@ -15312,7 +15312,6 @@ graphics/backfract||2020-08-27|Has expired: Broken for more than 6 months
 japanese/kanjipad||2020-08-27|Has expired: Broken for more than 6 months
 japanese/xdtp||2020-08-27|Has expired: Broken for more than 6 months
 net/hinfo||2020-08-27|Has expired: Broken for more than 6 months
-science/fleur||2020-08-27|Has expired: Broken for more than 6 months
 science/lm||2020-08-27|Has expired: Broken for more than 6 months
 security/ddos_scan||2020-08-27|Has expired: Broken for more than 6 months
 security/gag||2020-08-27|Has expired: Broken for more than 6 months
@@ -16757,3 +16756,19 @@ www/py-dj31-djangorestframework||2021-12-31|Has expired: Extended support of Dja
 astro/google-earth||2022-01-01|Has expired: Needs newer version to connect to server
 net/tramp||2022-01-01|Has expired: Not updated in 5 years and now part of Emacs
 archivers/p7zip-codec-rar||2022-01-01|Has expired: Unmaintained for years and has known vulnerabilities
+textproc/askgit|textproc/mergestat|2022-01-03|Project renamed
+emulators/qemu-utils|emulators/qemu@tools|2022-01-10|Has expired: Use emulators/qemu@tools
+emulators/qemu42||2022-01-10|Has expired: Use emulators/qemu or emulators/qemu-devel
+devel/py-click6|devel/py-click|2022-01-11|Remove obsoleted port. Use devel/py-click instead
+devel/py-contextvars||2022-01-11|Remove obsoleted port. It is included in Python 3.7+
+devel/py-future-annotations||2022-01-11|Remove obsoleted port. It is included in Python 3.7+
+devel/rubygem-aws-sdk-v1|devel/rubygem-aws-sdk|2022-01-11|Remove obsoleted port. Use devel/rubygem-aws-sdk instead
+devel/rubygem-sidekiq62|devel/rubygem-sidekiq|2022-01-11|Remove obsoleted port. Use devel/rubygem-sidekiq instead
+security/rubygem-bcrypt_pbkdf10|security/rubygem-bcrypt_pbkdf|2022-01-11|Remove obsoleted port. Use security/rubygem-bcrypt_pbkdf instead
+math/gotoblas|math/openblas|2022-01-15|Remove obsoleted port. Use math/openblas instead
+net/pipsecd||2022-01-15|Has expired: Abandonware, current release is from 1999 and uses insecure encryption algorithms
+devel/maven31|devel/maven|2022-01-15|Has expired: Outdated, unsupported upstream
+devel/wasi-compiler-rt12||2022-01-15|Has expired: this ports exists solely for building Firefox 95+ in 2021Q4
+devel/e2fsprogs-libss||2022-01-17|Folded back into sysutils/e2fsprogs, which was the sole user
+lang/spidermonkey60|lang/spidermonkey78|2022-01-18|Has expired: Requires python2 to build
+shells/ammonite|devel/ammonite|2022-01-18|Ammonite dropped built-in shell support

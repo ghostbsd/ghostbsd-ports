@@ -3,6 +3,7 @@
     SUBDIR += 3proxy
     SUBDIR += 44bsd-rdist
     SUBDIR += 6tunnel
+    SUBDIR += R-cran-pingr
     SUBDIR += R-cran-twitteR
     SUBDIR += Sockets
     SUBDIR += activemq
@@ -242,6 +243,7 @@
     SUBDIR += haproxy21
     SUBDIR += haproxy22
     SUBDIR += haproxy23
+    SUBDIR += haproxy24
     SUBDIR += hblock
     SUBDIR += hexinject
     SUBDIR += hlmaster
@@ -469,6 +471,7 @@
     SUBDIR += mpd5
     SUBDIR += mpich
     SUBDIR += mpich2
+    SUBDIR += mpifx
     SUBDIR += mping
     SUBDIR += mptsd
     SUBDIR += mrouted
@@ -983,17 +986,16 @@
     SUBDIR += php74-sockets
     SUBDIR += php74-xmlrpc
     SUBDIR += php80-ldap
-    SUBDIR += php81-ldap
     SUBDIR += php80-soap
-    SUBDIR += php81-soap
     SUBDIR += php80-sockets
+    SUBDIR += php81-ldap
+    SUBDIR += php81-soap
     SUBDIR += php81-sockets
     SUBDIR += phpldapadmin
     SUBDIR += pichi
     SUBDIR += pimcommon
     SUBDIR += pimd
     SUBDIR += pimdd
-    SUBDIR += pipsecd
     SUBDIR += pjsip
     SUBDIR += pkt-gen
     SUBDIR += pktanon
@@ -1217,6 +1219,7 @@
     SUBDIR += rubygem-activestorage52
     SUBDIR += rubygem-activestorage60
     SUBDIR += rubygem-activestorage61
+    SUBDIR += rubygem-activestorage70
     SUBDIR += rubygem-amazon-ec2
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp

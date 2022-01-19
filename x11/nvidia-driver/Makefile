@@ -125,6 +125,7 @@ PLIST_SUB+=	LIBGLDIR=${LIBGLDIR} LIBGLMAP="@comment "
 PLIST_SUB+=	LIBGLDIR="@comment " LIBGLMAP=""
 .endif
 
+CONFLICTS_INSTALL+=	nvidia-driver nvidia-driver-*
 .if ${PORTNAME} != nvidia-secondary-driver
 CONFLICTS_INSTALL+=	nvidia-secondary-driver
 .endif
@@ -169,9 +170,10 @@ post-patch: .SILENT
 		${WRKSRC}/src/nvidia-modeset/nvidia-modeset-freebsd.c
 .endif
 # After src df38ada2931f, `sys/module.h' must be included after `sys/param.h'
-.if ${OSVERSION} >= 1400042 && ${NVVERSION} >= 358.009
-	@${REINPLACE_CMD} -e '/^#include <sys\/module/ { x; \
-		s:^:#include <sys/param.h>:; G; }; 14d' \
+.if ${NVVERSION} >= 358.009
+	@${REINPLACE_CMD} -e '/^#include <sys\/param\.h>/d; \
+		/^#include <sys\/module\.h>/ { x; \
+		s:^:#include <sys/param.h>:; G; }' \
 		${WRKSRC}/src/nvidia-modeset/nvidia-modeset-freebsd.c
 .endif
 # Disable installation of Linux libraries (provided by the corresponding

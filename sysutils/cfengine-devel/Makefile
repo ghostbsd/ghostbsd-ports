@@ -4,9 +4,9 @@ PORTNAME=	cfengine
 PORTVERSION=	3.${CFENGINE_COMMIT_DATE}
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
-CFENGINE_HASH=		d08ae9eff
-LIBNTECH_HASH=		66274a1
-CFENGINE_COMMIT_DATE=	2021.12.17
+CFENGINE_HASH=		ba547dafd
+LIBNTECH_HASH=		e8411e0
+CFENGINE_COMMIT_DATE=	2022.01.14
 
 MAINTAINER=	cy@FreeBSD.org
 #		gjb@FreeBSD.org is also committer for this port
@@ -22,9 +22,7 @@ GH_TUPLE=	cfengine:core:${CFENGINE_HASH} \
 		cfengine:libntech:${LIBNTECH_HASH}:libntech/libntech
 CPE_VENDOR=	gnu
 
-CONFLICTS=	cfengine-2* cfengine3[0-9]-* cfengine31[02-9]-* cfengine-3.*
-
-CONFLICTS=	cfengine-[12-9]*
+CONFLICTS=	cfengine cfengine3[0-9] cfengine3[0-9][0-9]
 
 USE_RC_SUBR=	cf-execd cf-serverd cf-monitord
 

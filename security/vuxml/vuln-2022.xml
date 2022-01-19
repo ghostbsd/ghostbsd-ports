@@ -1,0 +1,401 @@
+  <vuln vid="e3ec8b30-757b-11ec-922f-654747404482">
+    <topic>Prosody XMPP server advisory 2022-01-13</topic>
+    <affects>
+      <package>
+	<name>prosody</name>
+	<range><lt>0.11.12</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Prosody teaM reports:</p>
+	<blockquote cite="https://prosody.im/security/advisory_20220113/">
+	  <p>It was discovered that an internal Prosody library to load XML based on
+	  does not properly restrict the XML features allowed in parsed
+	  XML data. Given suitable attacker input, this results in expansion of
+	  recursive entity references from DTDs (CWE-776). In addition,
+	  depending on the libexpat version used, it may also allow injections
+	  using XML External Entity References (CWE-611).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-0217</cvename>
+      <url>https://prosody.im/security/advisory_20220113/</url>
+    </references>
+    <dates>
+      <discovery>2022-01-10</discovery>
+      <entry>2022-01-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="79b65dc5-749f-11ec-8be6-d4c9ef517024">
+    <topic>WordPress -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>wordpress</name>
+	<range><lt>5.8.3,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The WordPress project reports:</p>
+	<blockquote cite="https://wordpress.org/news/2022/01/wordpress-5-8-3-security-release/">
+	  <ul><li>Issue with stored XSS through post slugs</li>
+	    <li>Issue with Object injection in some multisite installations</li>
+	    <li>SQL injection vulnerability in WP_Query</li>
+	    <li>SQL injection vulnerability in WP_Meta_Query</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://wordpress.org/news/2022/01/wordpress-5-8-3-security-release/</url>
+    </references>
+    <dates>
+      <discovery>2022-01-06</discovery>
+      <entry>2022-01-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2a6106c6-73e5-11ec-8fa2-0800270512f4">
+    <topic>clamav -- invalid pointer read that may cause a crash</topic>
+    <affects>
+      <package>
+	<name>clamav</name>
+	<range><lt>0.104.2,1</lt></range>
+      </package>
+      <package>
+	<name>clamav-lts</name>
+	<range><lt>0.103.5,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Laurent Delosieres reports:</p>
+	<blockquote cite="https://blog.clamav.net/2022/01/clamav-01035-and-01042-security-patch.html">
+	  <p>
+	    Fix for invalid pointer read that may cause a crash. This issue affects
+	    0.104.1, 0.103.4 and prior when ClamAV is compiled with libjson-c and the
+	    <code>CL_SCAN_GENERAL_COLLECT_METADATA</code> scan option
+	    (the <code>clamscan --gen-json</code> option) is enabled.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-20698</cvename>
+      <url>https://blog.clamav.net/2022/01/clamav-01035-and-01042-security-patch.html</url>
+    </references>
+    <dates>
+      <discovery>2022-01-12</discovery>
+      <entry>2022-01-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="672eeea9-a070-4f88-b0f1-007e90a2cbc3">
+    <topic>jenkins -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>jenkins</name>
+	<range><lt>2.330</lt></range>
+      </package>
+      <package>
+	<name>jenkins-lts</name>
+	<range><lt>2.319.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory:</p>
+	<blockquote cite="https://www.jenkins.io/security/advisory/2021-11-04/">
+	  <h1>Description</h1>
+	  <h5>(Medium) SECURITY-2558 / CVE-2022-20612</h5>
+	  <p>CSRF vulnerability in build triggers</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-20612</cvename>
+      <url>https://www.jenkins.io/security/advisory/2022-01-12/</url>
+    </references>
+    <dates>
+      <discovery>2022-01-12</discovery>
+      <entry>2022-01-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="43f84437-73ab-11ec-a587-001b217b3468">
+    <topic>Gitlab -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>14.6.0</ge><lt>14.6.2</lt></range>
+	<range><ge>14.5.0</ge><lt>14.5.3</lt></range>
+	<range><ge>7.7</ge><lt>14.4.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2022/01/11/security-release-gitlab-14-6-2-released/">
+	  <p>Arbitrary file read via group import feature</p>
+	  <p>Stored XSS in notes</p>
+	  <p>Lack of state parameter on GitHub import project OAuth</p>
+	  <p>Vulnerability related fields are available to unauthorized users on GraphQL API</p>
+	  <p>Deleting packages may cause table locks</p>
+	  <p>IP restriction bypass via GraphQL</p>
+	  <p>Repository content spoofing using Git replacement references</p>
+	  <p>Users can import members from projects that they are not a maintainer on through API</p>
+	  <p>Possibility to direct user to malicious site through Slack integration</p>
+	  <p>Bypassing file size limits to the NPM package repository</p>
+	  <p>User with expired password can still access sensitive information</p>
+	  <p>Incorrect port validation allows access to services on ports 80 and 443 if GitLab is configured to run on another port</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-39946</cvename>
+      <cvename>CVE-2022-0154</cvename>
+      <cvename>CVE-2022-0152</cvename>
+      <cvename>CVE-2022-0151</cvename>
+      <cvename>CVE-2022-0172</cvename>
+      <cvename>CVE-2022-0090</cvename>
+      <cvename>CVE-2022-0125</cvename>
+      <cvename>CVE-2022-0124</cvename>
+      <cvename>CVE-2021-39942</cvename>
+      <cvename>CVE-2022-0093</cvename>
+      <cvename>CVE-2021-39927</cvename>
+      <url>https://about.gitlab.com/releases/2022/01/11/security-release-gitlab-14-6-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2022-01-11</discovery>
+      <entry>2022-01-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b927b654-7146-11ec-ad4b-5404a68ad561">
+    <topic>uriparser -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>uriparser</name>
+	<range><lt>0.9.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Upstream project reports:</p>
+	<blockquote cite="https://github.com/uriparser/uriparser/blob/uriparser-0.9.6/ChangeLog">
+	  <p>Fix a bug affecting both uriNormalizeSyntax* and uriMakeOwner*
+	     functions where the text range in .hostText would not be duped using
+	     malloc but remain unchanged (and hence "not owned") for URIs with
+	     an IPv4 or IPv6 address hostname; depending on how an application
+	     uses uriparser, this could lead the application into a use-after-free
+	     situation.
+	     As the second half, fix uriFreeUriMembers* functions that would not
+	     free .hostText memory for URIs with an IPv4 or IPv6 address host;
+	     also, calling uriFreeUriMembers* multiple times on a URI of this
+	     very nature would result in trying to free pointers to stack
+	     (rather than heap) memory.
+	     Fix functions uriNormalizeSyntax* for out-of-memory situations
+	     (i.e. malloc returning NULL) for URIs containing empty segments
+	     (any of user info, host text, query, or fragment) where previously
+	     pointers to stack (rather than heap) memory were freed.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-46141</cvename>
+      <cvename>CVE-2021-46142</cvename>
+      <url>https://github.com/uriparser/uriparser/blob/uriparser-0.9.6/ChangeLog</url>
+    </references>
+    <dates>
+      <discovery>2022-01-06</discovery>
+      <entry>2022-01-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d3e023fb-6e88-11ec-b948-080027240888">
+    <topic>Django -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py37-django22</name>
+	<name>py38-django22</name>
+	<name>py39-django22</name>
+	<range><lt>2.2.26</lt></range>
+      </package>
+      <package>
+	<name>py37-django32</name>
+	<name>py38-django32</name>
+	<name>py39-django32</name>
+	<range><lt>3.2.11</lt></range>
+      </package>
+      <package>
+	<name>py37-django40</name>
+	<name>py38-django40</name>
+	<name>py39-django40</name>
+	<range><lt>4.0.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Django Release  reports:</p>
+	<blockquote cite="https://www.djangoproject.com/weblog/2022/jan/04/security-releases/">
+	  <p>CVE-2021-45115: Denial-of-service possibility in UserAttributeSimilarityValidator.</p>
+	  <p>CVE-2021-45116: Potential information disclosure in dictsort template filter.</p>
+	  <p>CVE-2021-45452: Potential directory-traversal via Storage.save().</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-45115</cvename>
+      <cvename>CVE-2021-45116</cvename>
+      <cvename>CVE-2021-45452</cvename>
+      <url>https://www.djangoproject.com/weblog/2022/jan/04/security-releases/</url>
+    </references>
+    <dates>
+      <discovery>2021-12-20</discovery>
+      <entry>2022-01-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9c990e67-6e30-11ec-82db-b42e991fc52e">
+    <topic>routinator -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>routinator</name>
+	<range><lt>0.10.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>nlnetlabs reports:</p>
+	<blockquote cite="https://nlnetlabs.nl/projects/rpki/security-advisories/">
+	  <p>Release 0.10.2 contains fixes for the following issues:</p>
+	  <ul>
+	    <li>Medium CVE-2021-43172: Infinite length chain of RRDP
+	      repositories. Credit: Koen van Hove. Date: 2021-11-09</li>
+	    <li>Medium CVE-2021-43173: Hanging RRDP request.
+	      Credit: Koen van Hove. Date: 2021-11-09</li>
+	    <li>Medium	CVE-2021-43174: gzip transfer encoding caused
+	      out-of-memory crash. Credit Koen van Hove. Date: 2021-11-09</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-43172</cvename>
+      <cvename>CVE-2021-43173</cvename>
+      <cvename>CVE-2021-43174</cvename>
+      <url>https://nlnetlabs.nl/projects/rpki/security-advisories/</url>
+    </references>
+    <dates>
+      <discovery>2021-11-09</discovery>
+      <entry>2022-01-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9eeccbf3-6e26-11ec-bb10-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>97.0.4692.71</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2022/01/stable-channel-update-for-desktop.html">
+	  <p>This release contains 37 security fixes, including:</p>
+	  <ul>
+	    <li>[$TBD][1275020] Critical CVE-2022-0096: Use after free in
+	      Storage. Reported by Yangkang (@dnpushme) of 360 ATA on
+	      2021-11-30</li>
+	    <li>[1117173] High CVE-2022-0097: Inappropriate implementation in
+	      DevTools. Reported by David Erceg on 2020-08-17</li>
+	    <li>[1273609] High CVE-2022-0098: Use after free in Screen Capture.
+	      Reported by @ginggilBesel on 2021-11-24</li>
+	    <li>[1245629] High CVE-2022-0099: Use after free in Sign-in.
+	      Reported by Rox on 2021-09-01</li>
+	    <li>[1238209] High CVE-2022-0100: Heap buffer overflow in Media
+	      streams API. Reported by Cassidy Kim of Amber Security Lab, OPPO
+	      Mobile Telecommunications Corp. Ltd. on 2021-08-10</li>
+	    <li>[1249426] High CVE-2022-0101: Heap buffer overflow in Bookmarks.
+	      Reported by raven (@raid_akame) on 2021-09-14</li>
+	    <li>[1260129] High CVE-2022-0102: Type Confusion in V8 . Reported by
+	      Brendon Tiszka on 2021-10-14</li>
+	    <li>[1272266] High CVE-2022-0103: Use after free in SwiftShader.
+	      Reported by Abraruddin Khan and Omair on 2021-11-21</li>
+	    <li>[1273661] High CVE-2022-0104: Heap buffer overflow in ANGLE.
+	      Reported by Abraruddin Khan and Omair on 2021-11-25</li>
+	    <li>[1274376] High CVE-2022-0105: Use after free in PDF. Reported by
+	      Cassidy Kim of Amber Security Lab, OPPO Mobile Telecommunications
+	      Corp. Ltd. on 2021-11-28</li>
+	    <li>[1278960] High CVE-2022-0106: Use after free in Autofill.
+	      Reported by Khalil Zhani on 2021-12-10</li>
+	    <li>[1248438] Medium CVE-2022-0107: Use after free in File Manager
+	      API. Reported by raven (@raid_akame) on 2021-09-10</li>
+	    <li>[1248444] Medium CVE-2022-0108: Inappropriate implementation in
+	      Navigation. Reported by Luan Herrera (@lbherrera_) on
+	      2021-09-10</li>
+	    <li>[1261689] Medium CVE-2022-0109: Inappropriate implementation in
+	      Autofill. Reported by Young Min Kim (@ylemkimon), CompSec Lab at
+	      Seoul National University on 2021-10-20</li>
+	    <li>[1237310] Medium CVE-2022-0110: Incorrect security UI in
+	      Autofill. Reported by Alesandro Ortiz on 2021-08-06</li>
+	    <li>[1241188] Medium CVE-2022-0111: Inappropriate implementation in
+	      Navigation. Reported by garygreen on 2021-08-18</li>
+	    <li>[1255713] Medium CVE-2022-0112: Incorrect security UI in Browser
+	      UI. Reported by Thomas Orlita on 2021-10-04</li>
+	    <li>[1039885] Medium CVE-2022-0113: Inappropriate implementation in
+	      Blink. Reported by Luan Herrera (@lbherrera_) on 2020-01-07</li>
+	    <li>[1267627] Medium CVE-2022-0114: Out of bounds memory access in
+	      Web Serial. Reported by Looben Yang on 2021-11-06</li>
+	    <li>[1268903] Medium CVE-2022-0115: Uninitialized Use in File API.
+	      Reported by Mark Brand of Google Project Zero on 2021-11-10</li>
+	    <li>[1272250] Medium CVE-2022-0116: Inappropriate implementation in
+	      Compositing. Reported by Irvan Kurniawan (sourc7) on
+	      2021-11-20</li>
+	    <li>[1115847] Low CVE-2022-0117: Policy bypass in Service Workers.
+	      Reported by Dongsung Kim (@kid1ng) on 2020-08-13</li>
+	    <li>[1238631] Low CVE-2022-0118: Inappropriate implementation in
+	      WebShare. Reported by Alesandro Ortiz on 2021-08-11</li>
+	    <li>[1262953] Low CVE-2022-0120: Inappropriate implementation in
+	      Passwords. Reported by CHAKRAVARTHI (Ruler96) on 2021-10-25</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-0096</cvename>
+      <cvename>CVE-2022-0097</cvename>
+      <cvename>CVE-2022-0098</cvename>
+      <cvename>CVE-2022-0099</cvename>
+      <cvename>CVE-2022-0100</cvename>
+      <cvename>CVE-2022-0101</cvename>
+      <cvename>CVE-2022-0102</cvename>
+      <cvename>CVE-2022-0103</cvename>
+      <cvename>CVE-2022-0104</cvename>
+      <cvename>CVE-2022-0105</cvename>
+      <cvename>CVE-2022-0106</cvename>
+      <cvename>CVE-2022-0107</cvename>
+      <cvename>CVE-2022-0108</cvename>
+      <cvename>CVE-2022-0109</cvename>
+      <cvename>CVE-2022-0110</cvename>
+      <cvename>CVE-2022-0111</cvename>
+      <cvename>CVE-2022-0112</cvename>
+      <cvename>CVE-2022-0113</cvename>
+      <cvename>CVE-2022-0114</cvename>
+      <cvename>CVE-2022-0115</cvename>
+      <cvename>CVE-2022-0116</cvename>
+      <cvename>CVE-2022-0117</cvename>
+      <cvename>CVE-2022-0118</cvename>
+      <cvename>CVE-2022-0120</cvename>
+      <url>https://chromereleases.googleblog.com/2022/01/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2022-01-04</discovery>
+      <entry>2022-01-05</entry>
+    </dates>
+  </vuln>

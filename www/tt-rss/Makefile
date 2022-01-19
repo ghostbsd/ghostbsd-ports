@@ -1,7 +1,7 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
 
 PORTNAME=	tt-rss
-PORTVERSION=	g20211119
+PORTVERSION=	g20211223
 PORTEPOCH=	2
 CATEGORIES=	www
 MASTER_SITES=	https://git.tt-rss.org/fox/tt-rss/archive/
@@ -18,11 +18,12 @@ RUN_DEPENDS=	${LOCALBASE}/bin/git:devel/git
 USES=		gettext-tools php:cli,web shebangfix
 USE_PHP=	ctype dom exif fileinfo filter hash iconv intl json mbstring \
 		openssl pcntl pdo posix session tokenizer xml xmlrpc zip
+IGNORE_WITH_PHP=	81
 USE_RC_SUBR=	ttrssd
 
 SHEBANG_FILES=	update.php update_daemon2.php
 
-_GIT_TAGNAME=	2b4ba59a7
+_GIT_TAGNAME=	97baf3e8b
 
 REINPLACE_ARGS=	-i ""
 

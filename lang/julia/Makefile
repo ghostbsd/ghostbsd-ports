@@ -3,6 +3,7 @@
 PORTNAME=	julia
 DISTVERSION=	1.7.1
 DISTVERSIONSUFFIX=	-full
+PORTREVISION=	1
 CATEGORIES=	lang math
 MASTER_SITES=	https://github.com/JuliaLang/julia/releases/download/v${DISTVERSION}/
 
@@ -15,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 ONLY_FOR_ARCHS=		amd64
 ONLY_FOR_ARCHS_REASON=	Has not been ported to this platform for freebsd
 
-MY_DEPENDS=	7z:archivers/p7zip
+MY_DEPENDS=	7zz:archivers/7-zip
 BUILD_DEPENDS=	patchelf:sysutils/patchelf \
 		cmake:devel/cmake \
 		${MY_DEPENDS}
@@ -32,8 +33,10 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libopenlibm.so:math/openlibm
 RUN_DEPENDS=	${MY_DEPENDS}
 
-USES=		gmake compiler:c++14-lang fortran python perl5 \
+USES=		gmake compiler:c++14-lang cpe fortran python perl5 \
 		shebangfix blaslapack:openblas
+
+CPE_VENDOR=	julialang
 
 BINARY_ALIAS=	python3=${PYTHON_CMD} gfortran=gfortran${_GCC_VER}
 USE_LDCONFIG=	yes

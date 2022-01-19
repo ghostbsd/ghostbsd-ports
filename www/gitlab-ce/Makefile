@@ -1,8 +1,8 @@
 # Created by: Torsten Zuehlsdorff <tz@FreeBSD.org>
 
 PORTNAME=	gitlab-ce
-PORTVERSION=	14.6.0
-PORTREVISION=	1
+PORTVERSION=	14.6.2
+PORTREVISION=	0
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -24,7 +24,7 @@ MY_DEPENDS=	git>=2.32.0:devel/git \
 	yarn>=1.10.0:www/yarn \
 	gtar>0:archivers/gtar \
 	bash>0:shells/bash \
-	rubygem-rails61>=6.1.4.1<6.1.4.2:www/rubygem-rails61 \
+	rubygem-rails61>=6.1.4.1<6.1.5:www/rubygem-rails61 \
 	rubygem-bootsnap>=1.9.1<1.10:devel/rubygem-bootsnap \
 	rubygem-responders-rails61>=3.0<4.0:www/rubygem-responders-rails61 \
 	rubygem-sprockets3>=3.7<3.8:devel/rubygem-sprockets3 \
@@ -127,7 +127,7 @@ MY_DEPENDS=	git>=2.32.0:devel/git \
 	rubygem-asciidoctor-include-ext>=0.3.1<0.4.0:textproc/rubygem-asciidoctor-include-ext \
 	rubygem-asciidoctor-plantuml>=0.0.12<0.1:textproc/rubygem-asciidoctor-plantuml \
 	rubygem-asciidoctor-kroki>=0.5.0<0.6:textproc/rubygem-asciidoctor-kroki \
-	rubygem-rouge>=3.26.1<3.27:textproc/rubygem-rouge \
+	rubygem-rouge326>=3.26.1<3.27:textproc/rubygem-rouge326 \
 	rubygem-truncato>=0.7.11<0.8.0:textproc/rubygem-truncato \
 	rubygem-bootstrap_form>=4.2.0<4.3.0:devel/rubygem-bootstrap_form \
 	rubygem-nokogiri>=1.11.5<1.12:textproc/rubygem-nokogiri \
@@ -274,7 +274,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 GL_PROJECT=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT=	3bc07a0be9ce3b8f736890a0513283f04796b37e
+GL_COMMIT=	0a901d60f8ae4a60c04ae82e6e9c3a03e9321417
 
 USERS=	git
 GROUPS=	git
