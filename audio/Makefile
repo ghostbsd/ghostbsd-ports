@@ -327,8 +327,6 @@
     SUBDIR += jack-smf-utils
     SUBDIR += jack_ghero
     SUBDIR += jack_umidi
-    SUBDIR += jack-keyboard
-    SUBDIR += jack-smf-utils
     SUBDIR += jacktrip
     SUBDIR += jalv
     SUBDIR += jalv-select
