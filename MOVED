@@ -14488,7 +14488,6 @@ comms/ath3k-firmware||2020-05-05|Has expired: Broken for more than 6 months
 comms/geoid||2020-05-05|Has expired: Broken for more than 6 months
 comms/jerm||2020-05-05|Has expired: Broken for more than 6 months
 comms/yaac||2020-05-05|Has expired: Broken for more than 6 months
-converters/dumpasn1||2020-05-05|Has expired: Broken for more than 6 months
 databases/elixir-exredis||2020-05-05|Has expired: Broken for more than 6 months
 databases/hamsterdb||2020-05-05|Has expired: Broken for more than 6 months
 databases/memcacheq||2020-05-05|Has expired: Broken for more than 6 months
@@ -15905,7 +15904,6 @@ databases/arangodb33||2021-01-02|Has expired: Uses Python 2.7 which is EOLed ups
 devel/bzr||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
 devel/chromium-gn|devel/gn|2021-01-02|Has expired: Uses deprecated version of python, use devel/gn instead
 devel/mongo-cxx-driver||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
-emulators/fceux||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
 emulators/gem5||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
 emulators/nonpareil||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
 games/freera||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
@@ -16772,3 +16770,4 @@ devel/wasi-compiler-rt12||2022-01-15|Has expired: this ports exists solely for b
 devel/e2fsprogs-libss||2022-01-17|Folded back into sysutils/e2fsprogs, which was the sole user
 lang/spidermonkey60|lang/spidermonkey78|2022-01-18|Has expired: Requires python2 to build
 shells/ammonite|devel/ammonite|2022-01-18|Ammonite dropped built-in shell support
+emulators/yuzu-qt5|emulators/yuzu|2022-01-20|Merged as QT5 port option

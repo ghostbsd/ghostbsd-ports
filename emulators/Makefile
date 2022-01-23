@@ -29,6 +29,7 @@
     SUBDIR += elliott-803
     SUBDIR += emu64
     SUBDIR += emulationstation
+    SUBDIR += fceux
     SUBDIR += fmsx
     SUBDIR += frodo
     SUBDIR += fs-uae
@@ -178,7 +179,6 @@
     SUBDIR += xzx
     SUBDIR += yaze-ag
     SUBDIR += yuzu
-    SUBDIR += yuzu-qt5
     SUBDIR += z80pack
     SUBDIR += zsnes
 
