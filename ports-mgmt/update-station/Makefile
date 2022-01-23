@@ -1,12 +1,5 @@
-# New ports collection makefile for: update-station
-# Date created:        Sunday, April 17 2016
-# Whom:                ericturgeon@ghostbsd.com
-#
-# $FreeBSD$
-#
-
 PORTNAME=	update-station
-PORTVERSION=	4.0
+PORTVERSION=	4.1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
@@ -22,7 +15,7 @@ RUN_DEPENDS=	sudo:security/sudo \
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
-USES =		python:3.6+
+USES =		python:3.8+
 USE_PYTHON=	distutils
 USE_GNOME=	pygobject3
 
