@@ -1,3 +1,159 @@
+  <vuln vid="65847d9d-7f3e-11ec-8624-b42e991fc52e">
+    <topic>mustache - Possible Remote Code Execution</topic>
+    <affects>
+      <package>
+	<name>phpmustache</name>
+	<range><lt>2.14.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>huntr.dev reports:</p>
+	<blockquote cite="https://huntr.dev/bounties/a5f5a988-aa52-4443-839d-299a63f44fb7/">
+	  <p>In Mustache.php v2.0.0 through v2.14.0, Sections tag can
+	    lead to arbitrary php code execution even if
+	    strict_callables is true when section value is
+	    controllable.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-0323</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-0323</url>
+    </references>
+    <dates>
+      <discovery>2022-01-20</discovery>
+      <entry>2022-01-27</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0f8bf913-7efa-11ec-8c04-2cf05d620ecc">
+    <topic>polkit -- Local Privilege Escalation</topic>
+    <affects>
+      <package>
+	<name>polkit</name>
+	<range><lt>0.120_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Qualys reports:</p>
+	<blockquote cite="https://seclists.org/oss-sec/2022/q1/80">
+	  <p>We discovered a Local Privilege Escalation (from any user to root) in
+polkit's pkexec, a SUID-root program that is installed by default on
+every major Linux distribution.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-4034</cvename>
+      <url>https://seclists.org/oss-sec/2022/q1/80</url>
+      <freebsdpr>ports/261482</freebsdpr>
+    </references>
+    <dates>
+      <discovery>2022-01-25</discovery>
+      <entry>2022-01-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ccaea96b-7dcd-11ec-93df-00224d821998">
+    <topic>strongswan - Incorrect Handling of Early EAP-Success Messages</topic>
+    <affects>
+      <package>
+	<name>strongswan</name>
+	<range><lt>5.9.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Strongswan Release Notes reports:</p>
+	<blockquote cite="https://github.com/strongswan/strongswan/releases/tag/5.9.5">
+	  <p>Fixed a vulnerability in the EAP client implementation
+	    that was caused by incorrectly handling early EAP-Success
+	    messages. It may allow to bypass the client and in some
+	    scenarios even the server authentication, or could lead to
+	    a denial-of-service attack. This vulnerability has been
+	    registered as CVE-2021-45079.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-45079</cvename>
+      <url>https://www.strongswan.org/blog/2022/01/24/strongswan-vulnerability-(cve-2021-45079).html</url>
+    </references>
+    <dates>
+      <discovery>2021-12-16</discovery>
+      <entry>2022-01-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="58528a94-5100-4208-a04d-edc01598cf01">
+    <topic>strongswan - denial-of-service vulnerability in the gmp plugin/denial-of-service vulnerability in the in-memory certificate cache</topic>
+    <affects>
+      <package>
+	<name>strongswan</name>
+	<range><lt>5.9.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Strongswan Release Notes reports:</p>
+	<blockquote cite="https://github.com/strongswan/strongswan/releases/tag/5.9.4">
+	  <p>Fixed a denial-of-service vulnerability in the gmp plugin that
+	     was caused by an integer overflow when processing RSASSA-PSS
+	     signatures with very large salt lengths. This vulnerability has
+	     been registered as CVE-2021-41990.</p>
+	  <p>Fixed a denial-of-service vulnerability in the in-memory
+	     certificate cache if certificates are replaced and a very large
+	     random value caused an integer overflow. This vulnerability has
+	     been registered as CVE-2021-41991.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-41990</cvename>
+      <cvename>CVE-2021-41991</cvename>
+      <url>https://www.strongswan.org/blog/2021/10/18/strongswan-vulnerability-(cve-2021-41990).html</url>
+      <url>https://www.strongswan.org/blog/2021/10/18/strongswan-vulnerability-(cve-2021-41991).html</url>
+    </references>
+    <dates>
+      <discovery>2021-10-04</discovery>
+      <entry>2022-01-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="309c35f4-7c9f-11ec-a739-206a8a720317">
+    <topic>aide -- heap-based buffer overflow</topic>
+    <affects>
+      <package>
+	<name>aide</name>
+	<range><lt>0.17.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>David Bouman reports:</p>
+	<blockquote cite="INSERT URL HERE">
+	  <p>AIDE before 0.17.4 allows local users to obtain root privileges
+	     via crafted file metadata (such as XFS extended attributes or
+	     tmpfs ACLs), because of a heap-based buffer overflow.</p>
+	  <p>Aide uses a fixed size (16k bytes) for the return buffer in
+	     encode_base64/decode_base64 functions. This results in a segfault
+	     if aide processes a file with too large extended attribute value
+	     or ACL.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-45417</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45417</url>
+    </references>
+    <dates>
+      <discovery>2022-01-15</discovery>
+      <entry>2022-01-23</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="51496cbc-7a0e-11ec-a323-3065ec8fd3ec">
     <topic>chromium -- multiple vulnerabilities</topic>
     <affects>

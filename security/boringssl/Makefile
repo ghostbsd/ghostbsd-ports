@@ -1,5 +1,5 @@
 PORTNAME=	boringssl
-PORTVERSION=	0.0.0.0.2022.01.19.01
+PORTVERSION=	0.0.0.0.2022.01.26.01
 CATEGORIES=	security
 
 MAINTAINER=	osa@FreeBSD.org
@@ -20,7 +20,7 @@ CPE_VENDOR=	google
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	google
-GH_TAGNAME=	be04c56
+GH_TAGNAME=	0f4454c
 GH_TUPLE=	golang:crypto:c07d793c2f9a:golang_crypto/vendor/golang.org/x/crypto \
 		golang:net:04defd469f4e:golang_net/vendor/golang.org/x/net \
 		golang:sys:04245dca01da:golang_sys/vendor/golang.org/x/sys \
@@ -34,8 +34,6 @@ GO_BUILDFLAGS+=	-mod=vendor
 MAKE_ENV+=	GOPATH=${WRKSRC}/vendor GOPROXY=off
 
 post-patch:
-	@${GREP} -FRl -- '-D_XOPEN_SOURCE=700' ${WRKSRC} | \
-		${XARGS} ${REINPLACE_CMD} -e 's,-D_XOPEN_SOURCE=700,,'
 	@${GREP} -FRl '${GO_EXECUTABLE} run ' ${WRKSRC} | \
 		${XARGS} ${REINPLACE_CMD} -r -e 's,([$][{]GO_EXECUTABLE[}] run),\1 ${GO_BUILDFLAGS},'
 	@${FIND} ${WRKSRC}/include -name '*.bak' -delete
