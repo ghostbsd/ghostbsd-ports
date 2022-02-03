@@ -240,6 +240,7 @@
     SUBDIR += dbcsr
     SUBDIR += deal.ii
     SUBDIR += dieharder
+    SUBDIR += dionysus
     SUBDIR += disco
     SUBDIR += djbfft
     SUBDIR += drgeo
@@ -762,6 +763,7 @@
     SUBDIR += permlib
     SUBDIR += petanque
     SUBDIR += petiga
+    SUBDIR += pffft
     SUBDIR += php74-bcmath
     SUBDIR += php74-gmp
     SUBDIR += php80-bcmath
@@ -824,6 +826,7 @@
     SUBDIR += py-cyipopt
     SUBDIR += py-cypari2
     SUBDIR += py-deap
+    SUBDIR += py-dionysus
     SUBDIR += py-ducc0
     SUBDIR += py-ecos
     SUBDIR += py-faiss
@@ -943,6 +946,7 @@
     SUBDIR += py-symcxx
     SUBDIR += py-sympy
     SUBDIR += py-theano
+    SUBDIR += py-topologic
     SUBDIR += py-triangle
     SUBDIR += py-uncertainties
     SUBDIR += py-unyt
@@ -1055,6 +1059,7 @@
     SUBDIR += tomsfastmath
     SUBDIR += topaz
     SUBDIR += topcom
+    SUBDIR += topologic
     SUBDIR += triangle
     SUBDIR += trlan
     SUBDIR += trlib

@@ -1,7 +1,7 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
 
 PORTNAME=	firefox
-DISTVERSION=	91.5.0
+DISTVERSION=	91.6.0
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www

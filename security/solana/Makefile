@@ -1,6 +1,6 @@
 PORTNAME=	solana
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9.2
+DISTVERSION=	1.9.4
 PORTREVISION=	1
 CATEGORIES=	security
 
@@ -454,7 +454,7 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		solana-logger-1.8.2 \
 		solana-program-1.8.2 \
 		solana-sdk-macro-1.8.2 \
-		solana_rbpf-0.2.19 \
+		solana_rbpf-0.2.21 \
 		spin-0.5.2 \
 		spin-0.9.2 \
 		spl-associated-token-account-1.0.3 \

@@ -24,7 +24,6 @@
     SUBDIR += amfora
     SUBDIR += amphetadesk
     SUBDIR += analog
-    SUBDIR += annie
     SUBDIR += anyremote2html
     SUBDIR += anyterm
     SUBDIR += apache-mode.el
@@ -323,6 +322,7 @@
     SUBDIR += lua-resty-lrucache
     SUBDIR += luakit
     SUBDIR += luakit-devel
+    SUBDIR += lux
     SUBDIR += lychee
     SUBDIR += lynx
     SUBDIR += lynx-current
@@ -1590,6 +1590,7 @@
     SUBDIR += py-fake-useragent
     SUBDIR += py-falcon
     SUBDIR += py-fastapi
+    SUBDIR += py-fastapi-users
     SUBDIR += py-feedgenerator
     SUBDIR += py-flask
     SUBDIR += py-flask-admin
