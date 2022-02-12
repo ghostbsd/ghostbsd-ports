@@ -27,5 +27,6 @@
     SUBDIR += userland-rescue
     SUBDIR += userland-sbin
     SUBDIR += userland-tests
+    SUBDIR += version
 
 .include <bsd.port.subdir.mk>

@@ -7,6 +7,8 @@ COMMENT=	GhostBSD update scripts
 
 LICENSE=	BSD
 
+RUN_DEPENDS=	version>0:os/version
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
