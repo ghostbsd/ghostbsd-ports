@@ -11,6 +11,7 @@ COMMENT=	Tool install and deinstall software and pksystem packages.
 LICENSE =	BSD
 
 RUN_DEPENDS=	sudo:security/sudo \
+		pkg:ports-mgmt/pkg \
 		${LOCALBASE}/etc/pkg/repos/GhostBSD.conf.ca:misc/ghostbsd-pkg-conf
 
 USE_GITHUB=	yes

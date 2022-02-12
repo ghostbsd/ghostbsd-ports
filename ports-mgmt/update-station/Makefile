@@ -8,6 +8,7 @@ COMMENT=	Tool to update FreeBSD/GhostBSD software and system.
 LICENSE =	BSD
 
 RUN_DEPENDS=	sudo:security/sudo \
+		pkg:ports-mgmt/pkg \
 		${LOCALBASE}/etc/pkg/repos/GhostBSD.conf.ca:misc/ghostbsd-pkg-conf \
 		${PYTHON_PKGNAMEPREFIX}bectl>=0.1:sysutils/py-bectl@${PY_FLAVOR} \
 		ghostbsd-update-scripts>=0:misc/ghostbsd-update-scripts
