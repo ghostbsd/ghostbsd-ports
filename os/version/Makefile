@@ -5,6 +5,8 @@ CATEGORIES=	os
 MAINTAINER=	ericturgeon@GhostBSD.org
 COMMENT=	Update GhostBSD version file
 
+RUN_DEPENDS=	pkg:ports-mgmt/pkg
+
 NO_BUILD=	yes
 USES=metaport
 
