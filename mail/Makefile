@@ -94,6 +94,7 @@
     SUBDIR += dma
     SUBDIR += dot-forward
     SUBDIR += dovecot
+    SUBDIR += dovecot-fts-flatcurve
     SUBDIR += dovecot-fts-xapian
     SUBDIR += dovecot-pigeonhole
     SUBDIR += dspam
@@ -250,6 +251,7 @@
     SUBDIR += neomutt
     SUBDIR += nextcloud-mail
     SUBDIR += nmh
+    SUBDIR += nmh-devel
     SUBDIR += noattach
     SUBDIR += nocc
     SUBDIR += normalizemime

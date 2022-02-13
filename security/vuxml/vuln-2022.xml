@@ -1,3 +1,157 @@
+  <vuln vid="d923fb0c-8c2f-11ec-aa85-0800270512f4">
+    <topic>zsh -- Arbitrary command execution vulnerability</topic>
+    <affects>
+      <package>
+	<name>zsh</name>
+	<range><lt>5.8.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p> Marc Cornellà reports:</p>
+	<blockquote cite="https://zsh.sourceforge.io/releases.html">
+	  <p>
+	    Some prompt expansion sequences, such as %F, support 'arguments'
+	    which are themselves expanded in case they contain colour values,
+	    etc. This additional expansion would trigger PROMPT_SUBST evaluation,
+	    if enabled. This could be abused to execute code the user didn't
+	    expect. e.g., given a certain prompt configuration, an attacker
+	    could trick a user into executing arbitrary code by having them
+	    check out a Git branch with a specially crafted name.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-45444</cvename>
+      <url>https://zsh.sourceforge.io/releases.html</url>
+    </references>
+    <dates>
+      <discovery>2022-02-12</discovery>
+      <entry>2022-02-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0b0ad196-1ee8-4a98-89b1-4d5d82af49a9">
+    <topic>jenkins -- DoS vulnerability in bundled XStream library</topic>
+    <affects>
+      <package>
+	<name>jenkins</name>
+	<range><lt>2.334</lt></range>
+      </package>
+      <package>
+	<name>jenkins-lts</name>
+	<range><lt>2.319.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory:</p>
+	<blockquote cite="https://www.jenkins.io/security/advisory/2022-02-09/">
+	  <h1>Description</h1>
+	  <h5>(Medium) SECURITY-2602 / CVE-2021-43859 (upstream issue), CVE-2022-0538 (Jenkins-specific converters)</h5>
+	  <p>DoS vulnerability in bundled XStream library</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-43859</cvename>
+      <cvename>CVE-2022-0538</cvename>
+      <url>https://www.jenkins.io/security/advisory/2022-02-09/</url>
+    </references>
+    <dates>
+      <discovery>2022-02-09</discovery>
+      <entry>2022-02-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ff5606f7-8a45-11ec-8be6-d4c9ef517024">
+    <topic>MariaDB -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mariadb103-client</name>
+	<range><lt>10.3.33</lt></range>
+      </package>
+      <package>
+	<name>mariadb103-server</name>
+	<range><lt>10.3.33</lt></range>
+      </package>
+      <package>
+	<name>mariadb104-client</name>
+	<range><lt>10.4.23</lt></range>
+      </package>
+      <package>
+	<name>mariadb104-server</name>
+	<range><lt>10.4.23</lt></range>
+      </package>
+      <package>
+	<name>mariadb105-client</name>
+	<range><lt>10.5.14</lt></range>
+      </package>
+      <package>
+	<name>mariadb105-server</name>
+	<range><lt>10.5.14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MariaDB reports:</p>
+	<blockquote cite="https://mariadb.com/kb/en/cve/">
+	  <p>MariaDB reports 5 vulnerabilities in supported versions
+	    without further detailed information.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-24052</cvename>
+      <cvename>CVE-2022-24051</cvename>
+      <cvename>CVE-2022-24050</cvename>
+      <cvename>CVE-2022-24048</cvename>
+      <cvename>CVE-2021-46659</cvename>
+      <url>https://mariadb.com/kb/en/cve/</url>
+      <url>https://mariadb.com/kb/en/mdb-10333-rn/</url>
+      <url>https://mariadb.com/kb/en/mdb-10423-rn/</url>
+      <url>https://mariadb.com/kb/en/mdb-10514-rn/</url>
+    </references>
+    <dates>
+      <discovery>2022-02-10</discovery>
+      <entry>2022-02-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fc2a9541-8893-11ec-9d01-80ee73419af3">
+    <topic>xrdp -- privilege escalation</topic>
+    <affects>
+      <package>
+	<name>xrdp</name>
+	<range><lt>0.9.18.1</lt></range>
+	<range><ge>0.9.17</ge></range>
+      </package>
+      <package>
+	<name>xrdp-devel</name>
+	<range><lt>0.9.18.1</lt></range>
+	<range><ge>0.9.17</ge></range>
+      </package>
+
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>xrdp project reports:</p>
+	<blockquote cite="https://github.com/neutrinolabs/xrdp/security/advisories/GHSA-8h98-h426-xf32">
+	  <p>An integer underflow leading to a heap overflow in the sesman server allows any unauthenticated attacker which is accessible to a sesman server (listens by default on localhost when installing xrdp, but can be remote if configured otherwise) to execute code as root.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-23613</cvename>
+      <url>https://github.com/neutrinolabs/xrdp/security/advisories/GHSA-8h98-h426-xf32</url>
+    </references>
+    <dates>
+      <discovery>2022-01-23</discovery>
+      <entry>2022-02-08</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="3507bfb3-85d5-11ec-8c9c-001b217b3468">
     <topic>Gitlab -- multiple vulnerabilities</topic>
     <affects>

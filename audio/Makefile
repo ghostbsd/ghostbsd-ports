@@ -3,6 +3,7 @@
     SUBDIR += GxSwitchlessWah-lv2
     SUBDIR += HVSC-Update
     SUBDIR += Maaate
+    SUBDIR += a2jmidid
     SUBDIR += aacgain
     SUBDIR += aacplusenc
     SUBDIR += abcde
@@ -73,6 +74,7 @@
     SUBDIR += cantata
     SUBDIR += caps-lv2
     SUBDIR += caps-plugins
+    SUBDIR += cardinal
     SUBDIR += carla
     SUBDIR += cava
     SUBDIR += ccaudio2

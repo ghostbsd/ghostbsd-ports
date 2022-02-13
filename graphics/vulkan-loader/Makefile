@@ -1,6 +1,6 @@
 PORTNAME=	vulkan-loader
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.3.204
+DISTVERSION=	1.3.205
 CATEGORIES=	graphics devel
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -36,9 +36,12 @@ XLIB_CMAKE_BOOL=	BUILD_WSI_XLIB_SUPPORT
 
 post-patch:
 # Extract (snapshot) version from the port
+# Respect PREFIX when XDG_CONFIG_DIRS and XDG_DATA_DIRS are unset
 	@${REINPLACE_CMD} -e '/find_.*Git/d' \
 		-e '/BRANCH/s/--unknown--/main/' \
 		-e '/TAG/s/--unknown--/${DISTVERSIONFULL}/' \
+		-e '/FALLBACK/s,/etc,${PREFIX}&,' \
+		-e 's,/usr/local,${PREFIX},' \
 		${WRKSRC}/CMakeLists.txt
 # https://bugs.llvm.org/show_bug.cgi?id=47348
 	@if [ "${CHOSEN_COMPILER_TYPE}-${ARCH}-${_OSRELEASE:C/.*-//}" = "clang-i386-CURRENT" ]; then \

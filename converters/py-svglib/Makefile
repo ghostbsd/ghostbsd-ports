@@ -1,6 +1,6 @@
 PORTNAME=	svglib
-DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.0
+DISTVERSIONPREFIX=	v.
+DISTVERSION=	1.2.1
 CATEGORIES=	converters python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -23,11 +23,9 @@ USE_PYTHON=	autoplist concurrent distutils
 
 TEST_ENV=	PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 
-NO_ARCH=	yes
+CONFLICTS_INSTALL=	svg2pdf # bin/svg2pdf
 
-# Workaround to get a working console script
-post-extract:
-	@${CP} ${WRKSRC}/scripts/svg2pdf ${WRKSRC}/svglib/svg2pdf.py
+NO_ARCH=	yes
 
 do-test:
 	@cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHON_CMD} -m pytest -v -rs -k 'not test_font_family'
