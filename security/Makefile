@@ -748,6 +748,7 @@
     SUBDIR += pam_yubico
     SUBDIR += pamtester
     SUBDIR += paperkey
+    SUBDIR += passh
     SUBDIR += passivedns
     SUBDIR += pbc
     SUBDIR += pbnj
@@ -1243,6 +1244,7 @@
     SUBDIR += ssb
     SUBDIR += ssdeep
     SUBDIR += ssh-multiadd
+    SUBDIR += ssh-tools
     SUBDIR += ssh-vault
     SUBDIR += sshguard
     SUBDIR += sshpass
