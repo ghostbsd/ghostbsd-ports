@@ -1,8 +1,5 @@
-# Created by: Eric Turgeon <ericturgeon.bsd@gmail.org>
-# $FreeBSD$
-
 PORTNAME=	ghostbsd-pkg-conf
-PORTVERSION=	21.08.27
+PORTVERSION=	22.02.20
 CATEGORIES=	misc
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
