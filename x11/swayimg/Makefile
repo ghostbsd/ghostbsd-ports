@@ -1,10 +1,11 @@
 PORTNAME=	swayimg
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.6
+PORTREVISION=	2
 CATEGORIES=	x11
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	96c78f97731c.patch:-p1 # https://github.com/artemsen/swayimg/pull/23
+PATCHFILES+=	787d13e36783.patch:-p1 # https://github.com/artemsen/swayimg/pull/23
 PATCHFILES+=	d12f10e9ebbd.patch:-p1 # https://github.com/artemsen/swayimg/pull/24
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -31,7 +32,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 		${NULL}
 
 OPTIONS_DEFINE=	AVIF BASH GIF JPEG JXL LIBEXIF LIBRSVG2 PNG WEBP
-OPTIONS_DEFAULT=AVIF BASH GIF JPEG LIBEXIF LIBRSVG2 PNG WEBP
+OPTIONS_DEFAULT=AVIF BASH GIF JPEG JXL LIBEXIF LIBRSVG2 PNG WEBP
 OPTIONS_EXCLUDE=${LIBRSVG2_DEFAULT:Mlegacy:C/.+/LIBRSVG2/}
 
 AVIF_DESC=		AV1 Image File Format via libavif

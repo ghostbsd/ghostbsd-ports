@@ -11,7 +11,7 @@ COMMENT=	Fast instrumented fuzzer
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/docs/COPYING
 
-ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc powerpc64 powerpc64le
+ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc powerpc64 powerpc64le riscv64
 ONLY_FOR_ARCHS_REASON=	uses x86-only instrumentation or requires complete LLVM support
 
 BUILD_DEPENDS=	ginstall:sysutils/coreutils
@@ -36,6 +36,7 @@ MAKEFILE=	GNUmakefile
 MAKE_ARGS=	${${ARCH} != amd64 && ${ARCH} != i386:?AFL_NO_X86=1:} \
 		PREFIX="${PREFIX}/${PKGBASE}"
 .if ${FLAVOR} == llvm
+CFLAGS_riscv64=	-mno-relax
 MAKE_ARGS+=	CC=clang${_LLVM_VER} \
 		CXX=clang++${_LLVM_VER} \
 		LLVM_CONFIG=llvm-config${_LLVM_VER}

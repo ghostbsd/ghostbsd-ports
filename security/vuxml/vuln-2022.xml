@@ -1,3 +1,366 @@
+  <vuln vid="7695b0af-958f-11ec-9aa3-4ccc6adda413">
+    <topic>cryptopp -- ElGamal implementation allows plaintext recovery</topic>
+    <affects>
+      <package>
+	<name>cryptopp</name>
+	<range><lt>8.6.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Crypto++ 8.6 release notes reports:</p>
+	<blockquote cite="https://www.cryptopp.com/release860.html">
+	  <p>The ElGamal implementation in Crypto++ through 8.5 allows plaintext
+	    recovery because, during interaction between two cryptographic
+	    libraries, a certain dangerous combination of the prime defined by
+	    the receiver's public key, the generator defined by the receiver's
+	    public key, and the sender's ephemeral exponents can lead to a
+	    cross-configuration attack against OpenPGP.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-40530</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2021-40530</url>
+    </references>
+    <dates>
+      <discovery>2021-09-06</discovery>
+      <entry>2022-02-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5e1440c6-95af-11ec-b320-f8b156b6dcc8">
+    <topic>flac -- fix encoder bug</topic>
+    <affects>
+      <package>
+	<name>flac</name>
+	<range><lt>1.3.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The FLAC 1.3.4 release reports:</p>
+	<blockquote cite="https://xiph.org/flac/changelog.html">
+	  <p>Fix 12 decoder bugs found by oss-fuzz.</p>
+	  <p>Fix encoder bug CVE-2021-0561.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-0561</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-0561</url>
+    </references>
+    <dates>
+      <discovery>2022-02-20</discovery>
+      <entry>2022-02-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="022dde12-8f4a-11ec-83ac-080027415d17">
+    <topic>cyrus-sasl -- Escape password for SQL insert/update commands</topic>
+    <affects>
+      <package>
+	<name>cyrus-sasl-sql</name>
+	<range><ge>2.1.27</ge><lt>2.1.27_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Cyrus SASL 2.1.x Release Notes New in 2.1.28 reports:</p>
+	<blockquote cite="https://www.cyrusimap.org/sasl/sasl/release-notes/2.1/index.html#new-in-2-1-28">
+	  <p>Escape password for SQL insert/update commands.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-24407</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24407</url>
+    </references>
+    <dates>
+      <discovery>2022-02-04</discovery>
+      <entry>2022-02-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="85d976be-93e3-11ec-aaad-14dae9d5a9d2">
+    <topic>The Update Framwork -- path traversal vulnerability</topic>
+    <affects>
+      <package>
+	<name>py37-tuf</name>
+	<name>py38-tuf</name>
+	<name>py39-tuf</name>
+	<name>py310-tuf</name>
+	<name>py311-tuf</name>
+	<range><le>0.18.1</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>NVD reports:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2021-41131">
+	  <p>python-tuf is a Python reference implementation of The Update Framework (TUF). In both clients (`tuf/client` and `tuf/ngclient`), there is a path traversal vulnerability that in the worst case can overwrite files ending in `.json` anywhere on the client system on a call to `get_one_valid_targetinfo()`. It occurs because the rolename is used to form the filename, and may contain path traversal characters (ie `../../name.json`). The impact is mitigated by a few facts: It only affects implementations that allow arbitrary rolename selection for delegated targets metadata, The attack requires the ability to A) insert new metadata for the path-traversing role and B) get the role delegated by an existing targets metadata, The written file content is heavily restricted since it needs to be a valid, signed targets file. The file extension is always .json. A fix is available in version 0.19 or newer. There are no workarounds that do not require code changes. Clients can restrict the allowed character set for rolenames, or they can store metadata in files named in a way that is not vulnerable: neither of these approaches is possible without modifying python-tuf.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-41131</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2021-41131</url>
+    </references>
+    <dates>
+      <discovery>2021-10-22</discovery>
+      <entry>2022-02-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1cd565da-455e-41b7-a5b9-86ad8e81e33e">
+    <topic>seatd-launch -- remove files with escalated privileges with SUID</topic>
+    <affects>
+      <package>
+	<name>seatd</name>
+	<range><ge>0.6.0</ge><lt>0.6.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Kenny Levinsen reports:</p>
+	<blockquote cite="https://lists.sr.ht/~kennylevinsen/seatd-announce/%3CETEO7R.QG8B1KGD531R1%40kl.wtf%3E">
+	  <p>seatd-launch could use a user-specified socket path instead of the
+	    internally generated socket path, and would unlink the socket path
+	    before use to guard against collision with leftover sockets. This
+	    meant that a caller could freely control what file path would be
+	    unlinked and replaced with a user-owned seatd socket for the duration
+	    of the session.</p>
+	  <p>If seatd-launch had the SUID bit set, this could be used by a
+	    malicious user to remove files with the privileges of the owner of
+	    seatd-launch, which is likely root, and replace it with a user-owned
+	    domain socket.</p>
+	  <p>This does not directly allow retrieving the contents of existing
+	    files, and the user-owned socket file is at the current time not
+	    believed to be directly useful for further exploitation.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://lists.sr.ht/~kennylevinsen/seatd-announce/%3CETEO7R.QG8B1KGD531R1%40kl.wtf%3E</url>
+      <cvename>CVE-2022-25643</cvename>
+    </references>
+    <dates>
+      <discovery>2022-02-21</discovery>
+      <entry>2022-02-21</entry>
+      <modified>2022-02-22</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="43ae57f6-92ab-11ec-81b4-2cf05d620ecc">
+    <topic>Qt5 -- QProcess unexpected search path</topic>
+    <affects>
+      <package>
+	<name>qt5-core</name>
+	<range><lt>5.15.2p263_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Qt Company reports:</p>
+	<blockquote cite="https://lists.qt-project.org/pipermail/announce/2022-February/000333.html">
+	  <p>Recently, the Qt Project's security team was made aware of an issue regarding QProcess and determined it to be a security issue on Unix-based platforms only. We do not believe this to be a considerable risk for applications as the likelihood of it being triggered is minimal.
+</p>
+<p>Specifically, the problem is around using QProcess to start an application without having an absolute path, and as a result, it depends on it finding it in the PATH environment variable. As a result, it may be possible for an attacker to place their copy of the executable in question inside the working/current directory for the QProcess and have it invoked that instead.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-25255</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25255</url>
+    </references>
+    <dates>
+      <discovery>2022-02-17</discovery>
+      <entry>2022-02-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4d763c65-9246-11ec-9aa3-4ccc6adda413">
+    <topic>libmysoft -- Heap-based buffer overflow vulnerability</topic>
+    <affects>
+      <package>
+	<name>libmysofa</name>
+	<range><lt>1.2.1.13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Zhengjie Du reports:</p>
+	<blockquote cite="https://huntr.dev/bounties/7ca8d9ea-e2a6-4294-af28-70260bb53bc1/">
+	  <p>There are some heap-buffer-overflows in mysofa2json of
+	    libmysofa. They are in function loudness, mysofa_check and
+	    readOHDRHeaderMessageDataLayout.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-3756</cvename>
+      <url>https://www.huntr.dev/bounties/7ca8d9ea-e2a6-4294-af28-70260bb53bc1/</url>
+    </references>
+    <dates>
+      <discovery>2021-09-27</discovery>
+      <entry>2022-02-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="27bf9378-8ffd-11ec-8be6-d4c9ef517024">
+    <topic>MariaDB -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mariadb103-client</name>
+	<range><lt>10.3.34</lt></range>
+      </package>
+      <package>
+	<name>mariadb103-server</name>
+	<range><lt>10.3.34</lt></range>
+      </package>
+      <package>
+	<name>mariadb104-client</name>
+	<range><lt>10.4.24</lt></range>
+      </package>
+      <package>
+	<name>mariadb104-server</name>
+	<range><lt>10.4.24</lt></range>
+      </package>
+      <package>
+	<name>mariadb105-client</name>
+	<range><lt>10.5.15</lt></range>
+      </package>
+      <package>
+	<name>mariadb105-server</name>
+	<range><lt>10.5.15</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MariaDB reports:</p>
+	<blockquote cite="https://mariadb.com/kb/en/cve/">
+	  <p>MariaDB reports 5 vulnerabilities in supported versions
+	    resulting from fuzzing tests</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-46661</cvename>
+      <cvename>CVE-2021-46663</cvename>
+      <cvename>CVE-2021-46664</cvename>
+      <cvename>CVE-2021-46665</cvename>
+      <cvename>CVE-2021-46668</cvename>
+      <url>https://mariadb.com/kb/en/cve/</url>
+      <url>https://mariadb.com/kb/en/mdb-10334-rn/</url>
+      <url>https://mariadb.com/kb/en/mdb-10424-rn/</url>
+      <url>https://mariadb.com/kb/en/mdb-10515-rn/</url>
+    </references>
+    <dates>
+      <discovery>2022-02-12</discovery>
+      <entry>2022-02-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="096ab080-907c-11ec-bb14-002324b2fba8">
+    <topic>go -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>go</name>
+	<range><lt>1.17.7,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Go project reports:</p>
+	<blockquote cite="https://github.com/golang/go/issues/50974">
+	  <p>crypto/elliptic: fix IsOnCurve for big.Int values that are not
+	    valid coordinates</p>
+	  <p>Some big.Int values that are not valid field elements (negative or
+	    overflowing) might cause Curve.IsOnCurve to incorrectly return true.
+	    Operating on those values may cause a panic or an invalid curve
+	    operation. Note that Unmarshal will never return such values.</p>
+	</blockquote>
+	<blockquote cite="https://github.com/golang/go/issues/50699">
+	  <p>math/big: prevent large memory consumption in Rat.SetString</p>
+	  <p>An attacker can cause unbounded memory growth in a program using
+	    (*Rat).SetString due to an unhandled overflow.</p>
+	</blockquote>
+	<blockquote cite="https://github.com/golang/go/issues/35671">
+	  <p>cmd/go: prevent branches from materializing into versions</p>
+	  <p>A branch whose name resembles a version tag (such as "v1.0.0" or
+	    "subdir/v2.0.0-dev") can be considered a valid version by the go
+	    command. Materializing versions from branches might be unexpected
+	    and bypass ACLs that limit the creation of tags but not branches.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-23806</cvename>
+      <url>https://github.com/golang/go/issues/50974</url>
+      <cvename>CVE-2022-23772</cvename>
+      <url>https://github.com/golang/go/issues/50699</url>
+      <cvename>CVE-2022-23773</cvename>
+      <url>https://github.com/golang/go/issues/35671</url>
+    </references>
+    <dates>
+      <discovery>2022-02-10</discovery>
+      <entry>2022-02-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e12432af-8e73-11ec-8bc4-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>98.0.4758.102</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2022/02/stable-channel-update-for-desktop_14.html">
+	  <p>This release contains 11 security fixes, including:</p>
+	  <ul>
+	    <li>[1290008] High CVE-2022-0603: Use after free in File Manager.
+	      Reported by Chaoyuan Peng (@ret2happy) on 2022-01-22</li>
+	    <li>[1273397] High CVE-2022-0604: Heap buffer overflow in Tab
+	      Groups. Reported by Krace on 2021-11-24</li>
+	    <li>[1286940] High CVE-2022-0605: Use after free in Webstore API.
+	      Reported by Thomas Orlita on 2022-01-13</li>
+	    <li>[1288020] High CVE-2022-0606: Use after free in ANGLE. Reported
+	      by Cassidy Kim of Amber Security Lab, OPPO Mobile
+	      Telecommunications Corp. Ltd. on 2022-01-17</li>
+	    <li>[1250655] High CVE-2022-0607: Use after free in GPU. Reported by
+	      0x74960 on 2021-09-17</li>
+	    <li>[1270333] High CVE-2022-0608: Integer overflow in Mojo. Reported
+	      by Sergei Glazunov of Google Project Zero on 2021-11-16</li>
+	    <li>[1296150] High CVE-2022-0609: Use after free in Animation.
+	      Reported by Adam Weidemann and Clément Lecigne of Google'
+	      Threat Analysis Group on 2022-02-10</li>
+	    <li>[1285449] Medium CVE-2022-0610: Inappropriate implementation in
+	      Gamepad API. Reported by Anonymous on 2022-01-08</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-0603</cvename>
+      <cvename>CVE-2022-0604</cvename>
+      <cvename>CVE-2022-0605</cvename>
+      <cvename>CVE-2022-0606</cvename>
+      <cvename>CVE-2022-0607</cvename>
+      <cvename>CVE-2022-0608</cvename>
+      <cvename>CVE-2022-0609</cvename>
+      <cvename>CVE-2022-0610</cvename>
+      <url>https://chromereleases.googleblog.com/2022/02/stable-channel-update-for-desktop_14.html</url>
+    </references>
+    <dates>
+      <discovery>2022-02-14</discovery>
+      <entry>2022-02-15</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="24049967-88ec-11ec-88f5-901b0e934d69">
     <topic>py-twisted -- cookie and authorization headers are leaked when following cross-origin redirects</topic>
       <affects>
@@ -136,7 +499,6 @@
       <cvename>CVE-2022-24050</cvename>
       <cvename>CVE-2022-24048</cvename>
       <cvename>CVE-2021-46659</cvename>
-      <cvename>CVE-2021-46663</cvename>
       <url>https://mariadb.com/kb/en/cve/</url>
       <url>https://mariadb.com/kb/en/mdb-10333-rn/</url>
       <url>https://mariadb.com/kb/en/mdb-10423-rn/</url>
@@ -145,7 +507,7 @@
     <dates>
       <discovery>2022-02-10</discovery>
       <entry>2022-02-10</entry>
-      <modified>2022-02-15</modified>
+      <modified>2022-02-17</modified>
     </dates>
   </vuln>
 

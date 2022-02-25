@@ -216,8 +216,9 @@
     SUBDIR += coin-or-data-netlib
     SUBDIR += coin-or-data-sample
     SUBDIR += coin-or-data-stochastic
+    SUBDIR += coin-or-metis
+    SUBDIR += coin-or-mumps
     SUBDIR += coinmp
-    SUBDIR += coinmumps
     SUBDIR += coinutils
     SUBDIR += colpack
     SUBDIR += combblas
@@ -359,6 +360,7 @@
     SUBDIR += hpipm
     SUBDIR += hs-Agda
     SUBDIR += hs-penrose
+    SUBDIR += hsl
     SUBDIR += ideep
     SUBDIR += ignition-math
     SUBDIR += igraph
@@ -436,7 +438,6 @@
     SUBDIR += mate-calc
     SUBDIR += math77
     SUBDIR += mathgl
-    SUBDIR += mathics-django
     SUBDIR += mathicsscript
     SUBDIR += mathmod
     SUBDIR += mathomatic
@@ -849,6 +850,7 @@
     SUBDIR += py-iminuit
     SUBDIR += py-intspan
     SUBDIR += py-iohexperimenter
+    SUBDIR += py-ipyopt
     SUBDIR += py-jax
     SUBDIR += py-keras
     SUBDIR += py-keras-applications
@@ -899,7 +901,6 @@
     SUBDIR += py-pygsl
     SUBDIR += py-pygslodeiv2
     SUBDIR += py-pyhull
-    SUBDIR += py-pyipopt
     SUBDIR += py-pymc3
     SUBDIR += py-pynauty
     SUBDIR += py-pyneqsys
@@ -957,7 +958,7 @@
     SUBDIR += qalculate
     SUBDIR += qd
     SUBDIR += qhull
-    SUBDIR += qhull8
+    SUBDIR += qhull7
     SUBDIR += qposases
     SUBDIR += qrupdate
     SUBDIR += qtiplot-doc
@@ -1082,6 +1083,7 @@
     SUBDIR += wxmaxima
     SUBDIR += xblas
     SUBDIR += xfce4-calculator-plugin
+    SUBDIR += xgap
     SUBDIR += xgraph
     SUBDIR += xlapack
     SUBDIR += xldlas

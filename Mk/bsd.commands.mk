@@ -35,6 +35,7 @@ DIALOG4PORTS?=		${LOCALBASE}/bin/dialog4ports
 DIFF?=			/usr/bin/diff
 DIRNAME?=		/usr/bin/dirname
 EGREP?=			/usr/bin/egrep
+ELFCTL?=		/usr/bin/elfctl
 EXPR?=			/bin/expr
 FALSE?=			false	# Shell builtin
 FILE?=			/usr/bin/file

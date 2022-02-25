@@ -258,6 +258,7 @@
     SUBDIR += fightorperish
     SUBDIR += fillets-ng
     SUBDIR += filters
+    SUBDIR += fishfight
     SUBDIR += fishsupper
     SUBDIR += five-or-more
     SUBDIR += fkiss
@@ -1029,6 +1030,7 @@
     SUBDIR += wesnoth
     SUBDIR += whichwayisup
     SUBDIR += widelands
+    SUBDIR += wipeclean
     SUBDIR += wizznic
     SUBDIR += wmpuzzle
     SUBDIR += wmqstat

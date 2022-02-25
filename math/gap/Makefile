@@ -2,10 +2,11 @@
 
 PORTNAME=	gap
 DISTVERSION=	4.11.1
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	https://github.com/gap-system/gap/releases/download/v${DISTVERSION}/
 
-MAINTAINER=	hrs@FreeBSD.org
+MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	System for computational discrete algebra
 
 LICENSE=	GPLv2+
@@ -66,32 +67,56 @@ pre-configure:
 .endfor
 
 post-build:
-	cd ${WRKSRC}/pkg/simpcomp && \
-	    ${SETENV} ${CONFIGURE_ENV} ${SH} configure \
-		${CONFIGURE_ARGS:N--with-*} && \
-	    ${MAKE} ${MAKEFLAGS} && \
-	    ${MAKE} ${MAKEFLAGS} install-strip && \
-	    ${RM} bistellar
+	@cd ${WRKSRC}/pkg/simpcomp && \
+		${SETENV} ${CONFIGURE_ENV} ${SH} configure \
+			${CONFIGURE_ARGS:N--with-*} && \
+		${MAKE} ${MAKEFLAGS} && \
+		${MAKE} ${MAKEFLAGS} install-strip && \
+		${RM} bistellar
 
 post-install:
+	# additional header
 	${INSTALL_DATA} ${WRKSRC}/gen/config.h ${STAGEDIR}${PREFIX}/include/gap
-	(cd ${WRKSRC} &&	\
-	./libtool --mode=install install gap ${STAGEDIR}${PREFIX}/bin/gap-bin)
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/gap-bin ${STAGEDIR}${PREFIX}/lib/libgap.so.0.0.0
-	(cd ${WRKSRC} &&	\
-	./libtool --mode=install install gac ${STAGEDIR}${PREFIX}/bin/gac)
-	${SED} -e "s:${WRKSRC}:${GAP_LIBDIR}:" ${WRKSRC}/bin/gap.sh \
-		> ${WRKSRC}/bin/gap
-	${SED} -e "s:GAP_DIR=.*:GAP_DIR=${DATADIR}:" \
-		-e "s:GAP_EXE=.*:GAP_EXE=${PREFIX}/bin/gap-bin:" \
-		-e "/^exec/s:/gap::" ${WRKSRC}/bin/gap.sh > ${WRKSRC}/bin/gap
+	# install gap binary
+	${INSTALL_PROGRAM} ${WRKSRC}/gap ${STAGEDIR}${PREFIX}/bin/gap-bin
+	# strip
+	cd ${STAGEDIR}${PREFIX} && ${STRIP_CMD} bin/gap-bin lib/libgap.so.0.0.0
+	# install gac executable
+	${INSTALL_SCRIPT} ${WRKSRC}/gac ${STAGEDIR}${PREFIX}/bin/gac
+	${REINPLACE_CMD} -i '' -e ' \
+		s|^\. "$${abs_top_builddir}/sysinfo.gap"|. "${DATADIR}/sysinfo.gap"|; \
+		s|^abs_top_builddir=.*|abs_top_builddir="${DATADIR}/min-builddir"|; \
+		s|^abs_top_srcdir=.*|abs_top_srcdir="${DATADIR}/min-srcdir"| \
+		' ${STAGEDIR}${PREFIX}/bin/gac
+	# prepare and install wrapper
+	@${CAT} ${WRKSRC}/bin/gap.sh | ${SED} -e ' \
+		s:${WRKSRC}:${GAP_LIBDIR}:; \
+		s:GAP_DIR=.*:GAP_DIR=${DATADIR}:; \
+		s:GAP_EXE=.*:GAP_EXE=${PREFIX}/bin/gap-bin:; \
+		/^exec/s:/gap::; \
+		' > ${WRKSRC}/bin/gap
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/gap ${STAGEDIR}${PREFIX}/bin
+	# min-builddir and min-srcdir
+	${MKDIR} ${STAGEDIR}${DATADIR}/min-builddir ${STAGEDIR}${DATADIR}/min-srcdir
+	${INSTALL_SCRIPT} ${WRKSRC}/libtool ${STAGEDIR}${DATADIR}/min-builddir
+	${RLN} ${STAGEDIR}${PREFIX}/bin/gap ${STAGEDIR}${DATADIR}/min-builddir/gap
+	cd ${WRKSRC}/ && ${COPYTREE_SHARE} obj ${STAGEDIR}${DATADIR}/min-builddir/
+	# install packages
 	${MKDIR} ${STAGEDIR}${DATADIR}/pkg
-.for subdir in doc etc gen grp lib tst sysinfo.gap
-	${CP} -R ${WRKSRC}/${subdir} ${STAGEDIR}${DATADIR}/
+.for f in doc etc gen grp lib tst sysinfo.gap
+	${CP} -R ${WRKSRC}/${f} ${STAGEDIR}${DATADIR}/
 .endfor
 .for p in ${MINPACK} ${ADD_PACK}
-	(cd ${WRKSRC}/pkg && ${CP} -R $$(ls -d ${p}*) ${STAGEDIR}${DATADIR}/pkg/)
+	cd ${WRKSRC}/pkg && ${CP} -R $$(ls -d ${p}*) ${STAGEDIR}${DATADIR}/pkg/
 .endfor
+	# correct paths in sysinfo.gap
+	${REINPLACE_CMD} -i '' -e ' \
+		s|^GAP_BIN_DIR=.*|GAP_BIN_DIR="${PREFIX}/bin"|; \
+		s|^GAP_LIB_DIR=.*|GAP_LIB_DIR="${PREFIX}/lib"|; \
+		s| -isystem ${PREFIX}/include |&-I${PREFIX}/include/gap |; \
+		' ${STAGEDIR}${DATADIR}/sysinfo.gap
+
+do-test:
+	@cd ${WRKSRC} && ./gap ${FILESDIR}/test.g
 
 .include <bsd.port.mk>

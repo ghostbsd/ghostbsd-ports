@@ -222,6 +222,7 @@
     SUBDIR += hashcat
     SUBDIR += hashcat-legacy
     SUBDIR += heaan
+    SUBDIR += headscale
     SUBDIR += heimdal
     SUBDIR += helib
     SUBDIR += hexl
@@ -947,6 +948,7 @@
     SUBDIR += py-ospd-openvas
     SUBDIR += py-paramiko
     SUBDIR += py-pass-audit
+    SUBDIR += py-pass-git-helper
     SUBDIR += py-passlib
     SUBDIR += py-pbkdf2
     SUBDIR += py-pgpdump

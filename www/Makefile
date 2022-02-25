@@ -320,6 +320,7 @@
     SUBDIR += logtools
     SUBDIR += ls-qpack
     SUBDIR += lua-resty-core
+    SUBDIR += lua-resty-http
     SUBDIR += lua-resty-lrucache
     SUBDIR += luakit
     SUBDIR += luakit-devel
@@ -1451,6 +1452,7 @@
     SUBDIR += py-cssmin
     SUBDIR += py-cssselect
     SUBDIR += py-cssutils
+    SUBDIR += py-dj-database-url
     SUBDIR += py-dj32-django-auth-ldap
     SUBDIR += py-dj32-django-cacheops
     SUBDIR += py-dj32-django-cors-headers
@@ -1789,8 +1791,6 @@
     SUBDIR += py-webargs
     SUBDIR += py-webassets
     SUBDIR += py-webob
-    SUBDIR += py-weboob
-    SUBDIR += py-weboob-qt
     SUBDIR += py-websocket-client
     SUBDIR += py-webunit
     SUBDIR += py-werkzeug
@@ -1798,6 +1798,8 @@
     SUBDIR += py-whitenoise
     SUBDIR += py-wikipedia
     SUBDIR += py-wikitools
+    SUBDIR += py-woob
+    SUBDIR += py-woob-qt
     SUBDIR += py-ws4py
     SUBDIR += py-wsaccel
     SUBDIR += py-wsgidav

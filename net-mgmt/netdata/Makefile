@@ -2,12 +2,13 @@
 
 PORTNAME=	netdata
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.33.0
+DISTVERSION=	1.33.1
+PORTREVISION=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${DISTVERSION}/ \
 		https://github.com/forkbomb9/netdata/commit/:dashboard
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
-		55c08c1cdbc5dea9687bdda5d7ba15c0161a9c13.patch:dashboard
+		eaaddaa3b1f4b748e2468ffd4d7afbc7cb0efe78.patch:dashboard
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	nc@FreeBSD.org
@@ -61,6 +62,7 @@ DBENGINE_DESC=		Enable support for database engine
 FREEIPMI_DESC=		Enable support for freeipmi
 GOPLUGIN_DESC=		Enable the go collector plugin
 
+CLOUD_LIB_DEPENDS=		libprotobuf.so:devel/protobuf
 CLOUD_CONFIGURE_ON=		--with-aclk-ng
 CLOUD_CONFIGURE_OFF=		--disable-cloud
 CUPS_LIB_DEPENDS=		libcups.so:print/cups
@@ -99,7 +101,7 @@ post-patch:
 	    ${PATCH_WRKSRC}/collectors/python.d.plugin/python.d.plugin.in
 
 post-patch-CLOUD-off:
-	cd ${WRKSRC} && gpatch -p1 < ${_DISTDIR}/55c08c1cdbc5dea9687bdda5d7ba15c0161a9c13.patch
+	cd ${WRKSRC} && gpatch -p1 < ${_DISTDIR}/eaaddaa3b1f4b748e2468ffd4d7afbc7cb0efe78.patch
 
 post-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR}
@@ -113,5 +115,8 @@ post-install:
 			${STAGEDIR}${LOCALBASE}/lib/${PORTNAME}/conf.d/*/*.txt ; do \
 		${MV} $$fi $$fi".sample"; \
 	done)
+
+post-install-CLOUD-off:
+	rm ${STAGEDIR}${PREFIX}/sbin/netdata-claim.sh
 
 .include <bsd.port.mk>
