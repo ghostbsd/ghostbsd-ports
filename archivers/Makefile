@@ -222,6 +222,7 @@
     SUBDIR += snzip
     SUBDIR += squsq
     SUBDIR += star
+    SUBDIR += stormlib
     SUBDIR += streamvbyte
     SUBDIR += stuffit
     SUBDIR += szip
@@ -260,7 +261,6 @@
     SUBDIR += xpk
     SUBDIR += zchunk
     SUBDIR += zip
-    SUBDIR += zip-ada
     SUBDIR += zipmix
     SUBDIR += zipper
     SUBDIR += zlib-ng

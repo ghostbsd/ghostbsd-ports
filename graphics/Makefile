@@ -242,7 +242,6 @@
     SUBDIR += gdtclft
     SUBDIR += geeqie
     SUBDIR += gegl
-    SUBDIR += generic_image_decoder
     SUBDIR += geoapi
     SUBDIR += geomorph
     SUBDIR += geomview
@@ -460,7 +459,6 @@
     SUBDIR += libexif-gtk
     SUBDIR += libfpx
     SUBDIR += libfreehand
-    SUBDIR += libgaiagraphics
     SUBDIR += libgeotiff
     SUBDIR += libgfx
     SUBDIR += libgltext
@@ -825,6 +823,7 @@
     SUBDIR += price
     SUBDIR += processing
     SUBDIR += proj
+    SUBDIR += proj-data
     SUBDIR += pstoedit
     SUBDIR += ptex
     SUBDIR += py-OWSLib

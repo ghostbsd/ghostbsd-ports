@@ -780,7 +780,6 @@
     SUBDIR += ploticus
     SUBDIR += ploticus-nox11
     SUBDIR += plplot
-    SUBDIR += plplot-ada
     SUBDIR += poly2tri
     SUBDIR += polylib
     SUBDIR += polymake
@@ -956,6 +955,7 @@
     SUBDIR += py-z3-solver
     SUBDIR += pynac
     SUBDIR += qalculate
+    SUBDIR += qalculate-qt
     SUBDIR += qd
     SUBDIR += qhull
     SUBDIR += qhull7

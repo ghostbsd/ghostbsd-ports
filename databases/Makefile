@@ -9,16 +9,11 @@
     SUBDIR += R-cran-fastmap
     SUBDIR += R-cran-sqldf
     SUBDIR += WWWdb
-    SUBDIR += adabase
     SUBDIR += adminer
     SUBDIR += adodb
     SUBDIR += adodb5
     SUBDIR += akonadi
     SUBDIR += apache-commons-dbutils
-    SUBDIR += apq
-    SUBDIR += apq-mysql
-    SUBDIR += apq-odbc
-    SUBDIR += apq-pgsql
     SUBDIR += arrow
     SUBDIR += ateam_mysql57_ldap_auth
     SUBDIR += ateam_mysql_ldap_auth
@@ -1059,7 +1054,6 @@
     SUBDIR += xrootd
     SUBDIR += xtrabackup
     SUBDIR += xtrabackup8
-    SUBDIR += zabbix3-libzbxpgsql
     SUBDIR += zodb
 
 .include <bsd.port.subdir.mk>
