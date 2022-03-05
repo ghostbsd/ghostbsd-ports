@@ -1,5 +1,5 @@
 PORTNAME=	update-station
-PORTVERSION=	4.2
+PORTVERSION=	4.3
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
@@ -11,6 +11,7 @@ RUN_DEPENDS=	sudo:security/sudo \
 		pkg:ports-mgmt/pkg \
 		${LOCALBASE}/etc/pkg/repos/GhostBSD.conf.ca:misc/ghostbsd-pkg-conf \
 		${PYTHON_PKGNAMEPREFIX}bectl>=0.1:sysutils/py-bectl@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}requests>=0.1:www/py-requests@${PY_FLAVOR} \
 		ghostbsd-update-scripts>=0:misc/ghostbsd-update-scripts
 
 USE_GITHUB=	yes
