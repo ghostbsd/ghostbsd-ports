@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	software-station
-PORTVERSION=	1.3
+PORTVERSION=	1.4
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
@@ -12,12 +12,13 @@ LICENSE =	BSD
 
 RUN_DEPENDS=	sudo:security/sudo \
 		pkg:ports-mgmt/pkg \
-		${LOCALBASE}/etc/pkg/repos/GhostBSD.conf.ca:misc/ghostbsd-pkg-conf
+		${LOCALBASE}/etc/pkg/repos/GhostBSD.conf.ca:misc/ghostbsd-pkg-conf \
+	        ${PYTHON_PKGNAMEPREFIX}requests>=0.1:www/py-requests@${PY_FLAVOR}
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
-USES =		python:3.7+
+USES =		python:3.8+
 USE_PYTHON=	distutils
 USE_GNOME=	pygobject3
 
