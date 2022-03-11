@@ -3,6 +3,7 @@
 
 PORTNAME=	software-station
 PORTVERSION=	1.4
+PORTREVISION=	1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
