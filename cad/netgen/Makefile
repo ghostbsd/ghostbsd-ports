@@ -1,7 +1,7 @@
 # Created by: Thierry Thomas <thierry@FreeBSD.org>
 
 PORTNAME=	netgen
-PORTVERSION=	6.2.2201
+PORTVERSION=	6.2.2202
 DISTVERSIONPREFIX=	v
 CATEGORIES=	cad
 
@@ -10,6 +10,8 @@ COMMENT=	Automatic 3D tetrahedral mesh generator
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	compiler errors
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR} \
 		git:devel/git

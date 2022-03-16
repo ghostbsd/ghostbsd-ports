@@ -409,6 +409,7 @@
     SUBDIR += libxdiff
     SUBDIR += libxml++26
     SUBDIR += libxml2
+    SUBDIR += libxmlb
     SUBDIR += libxmlbird
     SUBDIR += libxode
     SUBDIR += libxslt
@@ -1365,7 +1366,10 @@
     SUBDIR += py-mkdocs-autorefs
     SUBDIR += py-mkdocs-material
     SUBDIR += py-mkdocs-material-extensions
+    SUBDIR += py-mkdocs-mermaid2-plugin
     SUBDIR += py-mkdocs-nature
+    SUBDIR += py-mkdocs-redirects
+    SUBDIR += py-mkdocs-simple-hooks
     SUBDIR += py-mkdocstrings
     SUBDIR += py-mwparserfromhell
     SUBDIR += py-myst-parser
@@ -1555,7 +1559,6 @@
     SUBDIR += rapidxml
     SUBDIR += raptor
     SUBDIR += raptor2
-    SUBDIR += rarian
     SUBDIR += rasqal
     SUBDIR += re-flex
     SUBDIR += re_graph
@@ -1749,6 +1752,7 @@
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
     SUBDIR += rubygem-rouge312
+    SUBDIR += rubygem-rouge327
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt

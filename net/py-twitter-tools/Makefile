@@ -1,13 +1,13 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
 
 PORTNAME=	twitter
-PORTVERSION=	1.18.0
+PORTVERSION=	1.19.3
 DISTVERSIONPREFIX=	${PORTNAME}-
 CATEGORIES=	net python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	-tools
 
-MAINTAINER=	koobs@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	API and command-line toolset for Twitter (twitter.com)
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pypandoc>0:textproc/py-pypandoc@${PY_FLAVOR}
@@ -21,9 +21,8 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>0:devel/py-nose@${PY_FLAVOR}
 
 USES=		python:3.6+
 USE_GITHUB=	yes
-USE_PYTHON=	distutils concurrent autoplist
-
 GH_ACCOUNT=	sixohsix
+USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
 

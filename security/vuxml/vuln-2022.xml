@@ -1,3 +1,329 @@
+  <vuln vid="ea05c456-a4fd-11ec-90de-1c697aa5a594">
+    <topic>OpenSSL -- Infinite loop in BN_mod_sqrt parsing certificates</topic>
+    <affects>
+      <package>
+	<name>openssl</name>
+	<range><lt>1.1.1n,1</lt></range>
+      </package>
+      <package>
+	<name>openssl-devel</name>
+	<range><lt>3.0.2</lt></range>
+      </package>
+      <package>
+	<name>FreeBSD</name>
+	<range><ge>13.0</ge><lt>13.0_8</lt></range>
+	<range><ge>12.3</ge><lt>12.3_3</lt></range>
+	<range><ge>12.2</ge><lt>12.2_14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL project reports:</p>
+	<blockquote cite="https://www.openssl.org/news/secadv/20220315.txt">
+	<p>Infinite loop in BN_mod_sqrt() reachable when parsing certificates
+	  (High)</p>
+	<p>The BN_mod_sqrt() function, which computes a modular square root,
+	  contains a bug that can cause it to loop forever for non-prime
+	  moduli.</p>
+	<p>Internally this function is used when parsing certificates that
+	  contain elliptic curve public keys in compressed form or explicit
+	  elliptic curve parameters with a base point encoded in compressed
+	  form.</p>
+	<p>It is possible to trigger the infinite loop by crafting a
+	  certificate that has invalid explicit curve parameters.</p>
+	<p>Since certificate parsing happens prior to verification of the
+	  certificate signature, any process that parses an externally
+	  supplied certificate may thus be subject to a denial of service
+	  attack. The infinite loop can also be reached when parsing crafted
+	  private keys as they can contain explicit elliptic curve
+	  parameters.</p>
+	<p>Thus vulnerable situations include:</p>
+	<ul>
+	  <li>TLS clients consuming server certificates</li>
+	  <li>TLS servers consuming client certificates</li>
+	  <li>Hosting providers taking certificates or private keys from
+	    customers</li>
+	  <li>Certificate authorities parsing certification requests from
+	    subscribers</li>
+	  <li>Anything else which parses ASN.1 elliptic curve parameters</li>
+	</ul>
+	<p>Also any other applications that use the BN_mod_sqrt() where the
+	  attacker can control the parameter values are vulnerable to this DoS
+	  issue.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-0778</cvename>
+      <url>https://www.openssl.org/news/secadv/20220315.txt</url>
+      <freebsdsa>SA-22:03.openssl</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2022-03-15</discovery>
+      <entry>2022-03-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8d20bd48-a4f3-11ec-90de-1c697aa5a594">
+    <topic>FreeBSD-kernel -- Multiple WiFi issues</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>13.0</ge><lt>13.0_8</lt></range>
+	<range><ge>12.3</ge><lt>12.3_3</lt></range>
+	<range><ge>12.2</ge><lt>12.2_14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>The paper "Fragment and Forge: Breaking Wi-Fi Through Frame
+	Aggregation and Fragmentation" reported a number of security
+	vulnerabilities in the 802.11 specification related to frame
+	aggregation and fragmentation.</p>
+	<p>Additionally, FreeBSD 12.x missed length validation of SSIDs and
+	Information Elements (IEs).</p>
+	<h1>Impact:</h1>
+	<p>As reported on the FragAttacks website, the "design flaws are hard
+	to abuse because doing so requires user interaction or is only
+	possible when using uncommon network settings."  Under suitable
+	conditions an attacker may be able to extract sensitive data or inject
+	data.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-26147</cvename>
+      <cvename>CVE-2020-24588</cvename>
+      <cvename>CVE-2020-26144</cvename>
+      <freebsdsa>SA-22:02.wifi</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2022-03-15</discovery>
+      <entry>2022-03-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="857be71a-a4b0-11ec-95fc-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>98.0.4844.74</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_15.html">
+	  <p>This release contains 11 security fixes, including:</p>
+	  <ul>
+	    <li>[1299422] Critical CVE-2022-0971: Use after free in Blink
+	      Layout. Reported by Sergei Glazunov of Google Project Zero on
+	      2022-02-21</li>
+	    <li>[1301320] High CVE-2022-0972: Use after free in Extensions.
+	      Reported by Sergei Glazunov of Google Project Zero on
+	      2022-02-28</li>
+	    <li>[1297498] High CVE-2022-0973: Use after free in Safe Browsing.
+	      Reported by avaue and Buff3tts at S.S.L. on 2022-02-15</li>
+	    <li>[1291986] High CVE-2022-0974: Use after free in Splitscreen.
+	      Reported by @ginggilBesel on 2022-01-28</li>
+	    <li>[1295411] High CVE-2022-0975: Use after free in ANGLE. Reported
+	      by SeongHwan Park (SeHwa) on 2022-02-09</li>
+	    <li>[1296866] High CVE-2022-0976: Heap buffer overflow in GPU.
+	      Reported by Omair on 2022-02-13</li>
+	    <li>[1299225] High CVE-2022-0977: Use after free in Browser UI.
+	      Reported by Khalil Zhani on 2022-02-20</li>
+	    <li>[1299264] High CVE-2022-0978: Use after free in ANGLE. Reported
+	      by Cassidy Kim of Amber Security Lab, OPPO Mobile
+	      Telecommunications Corp. Ltd. on 2022-02-20</li>
+	    <li>[1302644] High CVE-2022-0979: Use after free in Safe Browsing.
+	      Reported by anonymous on 2022-03-03</li>
+	    <li>[1302157] Medium CVE-2022-0980: Use after free in New Tab Page.
+	      Reported by Krace on 2022-03-02</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-0971</cvename>
+      <cvename>CVE-2022-0972</cvename>
+      <cvename>CVE-2022-0973</cvename>
+      <cvename>CVE-2022-0974</cvename>
+      <cvename>CVE-2022-0975</cvename>
+      <cvename>CVE-2022-0976</cvename>
+      <cvename>CVE-2022-0977</cvename>
+      <cvename>CVE-2022-0978</cvename>
+      <cvename>CVE-2022-0979</cvename>
+      <cvename>CVE-2022-0980</cvename>
+      <url>https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_15.html</url>
+    </references>
+    <dates>
+      <discovery>2022-03-15</discovery>
+      <entry>2022-03-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6601c08d-a46c-11ec-8be6-d4c9ef517024">
+    <topic>Apache httpd -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>apache24</name>
+	<range><lt>2.4.53</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache httpd project reports:</p>
+	<blockquote cite="https://httpd.apache.org/security/vulnerabilities_24.html">
+	  <ul>
+	    <li><p>mod_lua: Use of uninitialized value of in r:parsebody (moderate)
+	      (CVE-2022-22719)</p><p>A carefully crafted request body can cause a
+	      read to a random memory area which could cause the process to crash.
+	    </p></li>
+	    <li><p>HTTP request smuggling vulnerability (important) (CVE-2022-22720)
+	      </p><p>httpd fails to close inbound connection when errors are
+	      encountered discarding the request body, exposing the server to HTTP
+	      Request Smuggling</p></li>
+	    <li><p>core: Possible buffer overflow with very large or unlimited
+	      LimitXMLRequestBody (low) (CVE-2022-22721)</p><p>If LimitXMLRequestBody
+	      is set to allow request bodies larger than 350MB (defaults to 1M) on 32
+	      bit systems an integer overflow happens which later causes out of
+	      bounds writes.</p></li>
+	    <li><p>mod_sed: Read/write beyond bounds (important) (CVE-2022-23924)</p>
+	      <p>Out-of-bounds Write vulnerability in mod_sed of Apache HTTP Server
+		allows an attacker to overwrite heap memory with possibly attacker
+		provided data.</p></li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-22719</cvename>
+      <cvename>CVE-2022-22720</cvename>
+      <cvename>CVE-2022-22721</cvename>
+      <cvename>CVE-2022-23943</cvename>
+      <url>https://httpd.apache.org/security/vulnerabilities_24.html</url>
+    </references>
+    <dates>
+      <discovery>2022-03-14</discovery>
+      <entry>2022-03-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5aaf534c-a069-11ec-acdc-14dae9d5a9d2">
+    <topic>Teeworlds -- Buffer Overflow</topic>
+    <affects>
+      <package>
+	<name>teeworlds</name>
+	<range><lt>0.7.5_2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>NVD reports:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2021-43518">
+	  <p>Teeworlds up to and including 0.7.5 is vulnerable to Buffer Overflow. A map parser does not validate m_Channels value coming from a map file, leading to a buffer overflow. A malicious server may offer a specially crafted map that will overwrite client's stack causing denial of service or code execution.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-43518</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2021-43518</url>
+    </references>
+    <dates>
+      <discovery>2021-10-23</discovery>
+      <entry>2022-03-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2823048d-9f8f-11ec-8c9c-001b217b3468">
+    <topic>Gitlab -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>14.8.0</ge><lt>14.8.2</lt></range>
+	<range><ge>14.7.0</ge><lt>14.7.4</lt></range>
+	<range><ge>0</ge><lt>14.6.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2022/02/25/critical-security-release-gitlab-14-8-2-released/">
+	  <p>Runner registration token disclosure through Quick Actions</p>
+	  <p>Unprivileged users can add other users to groups through an API endpoint</p>
+	  <p>Inaccurate display of Snippet contents can be potentially misleading to users</p>
+	  <p>Environment variables can be leaked via the sendmail delivery method</p>
+	  <p>Unauthenticated user enumeration on GraphQL API</p>
+	  <p>Adding a mirror with SSH credentials can leak password</p>
+	  <p>Denial of Service via user comments</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-0735</cvename>
+      <cvename>CVE-2022-0549</cvename>
+      <cvename>CVE-2022-0751</cvename>
+      <cvename>CVE-2022-0741</cvename>
+      <cvename>CVE-2021-4191</cvename>
+      <cvename>CVE-2022-0738</cvename>
+      <cvename>CVE-2022-0489</cvename>
+      <url>https://about.gitlab.com/releases/2022/02/25/critical-security-release-gitlab-14-8-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2022-02-25</discovery>
+      <entry>2022-03-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="964c5460-9c66-11ec-ad3a-001999f8d30b">
+    <topic>asterisk -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>asterisk16</name>
+	<range><lt>16.24.1</lt></range>
+      </package>
+      <package>
+	<name>asterisk18</name>
+	<range><lt>18.10.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Asterisk project reports:</p>
+	<blockquote cite="https://www.asterisk.org/downloads/security-advisories/">
+	  <p>AST-2022-004 - The header length on incoming STUN
+	  messages that contain an ERROR-CODE attribute is not
+	  properly checked. This can result in an integer underflow.
+	  Note, this requires ICE or WebRTC support to be in use
+	  with a malicious remote party.</p>
+	  <p>AST-2022-005 - When acting as a UAC, and when placing
+	  an outgoing call to a target that then forks Asterisk may
+	  experience undefined behavior (crashes, hangs, etc) after
+	  a dialog set is prematurely freed.</p>
+	  <p>AST-2022-006 - If an incoming SIP message contains a
+	  malformed multi-part body an out of bounds read access
+	  may occur, which can result in undefined behavior. Note,
+	  its currently uncertain if there is any externally
+	  exploitable vector within Asterisk for this issue, but
+	  providing this as a security issue out of caution.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-37706</cvename>
+      <cvename>CVE-2022-23608</cvename>
+      <cvename>CVE-2022-21723</cvename>
+      <url>https://downloads.asterisk.org/pub/security/AST-2022-004.html</url>
+      <url>https://downloads.asterisk.org/pub/security/AST-2022-005.html</url>
+      <url>https://downloads.asterisk.org/pub/security/AST-2022-006.html</url>
+    </references>
+    <dates>
+      <discovery>2022-03-03</discovery>
+      <entry>2022-03-05</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="e0914087-9a09-11ec-9e61-3065ec8fd3ec">
     <topic>chromium -- multiple vulnerabilities</topic>
     <affects>

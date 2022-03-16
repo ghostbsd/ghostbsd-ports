@@ -1,7 +1,7 @@
 PORTNAME=	gleam
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.19.0
-PORTREVISION=	2
+DISTVERSION=	0.20.1
+PORTREVISION=	1
 CATEGORIES=	lang
 
 MAINTAINER=	dch@FreeBSD.org
@@ -37,5 +37,8 @@ post-install:
 
 post-install-DOCS-on:
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} README.md ${STAGEDIR}${DOCSDIR})
+
+do-test:
+	(cd ${WRKSRC} && gleam new hello && cd hello && gleam test)
 
 .include <bsd.port.mk>

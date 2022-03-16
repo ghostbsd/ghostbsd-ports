@@ -3,7 +3,6 @@
     SUBDIR += 9base
     SUBDIR += ChipmunkPhysics
     SUBDIR += ElectricFence
-    SUBDIR += ORBit2
     SUBDIR += R-cran-BH
     SUBDIR += R-cran-Defaults
     SUBDIR += R-cran-Hmisc
@@ -167,6 +166,7 @@
     SUBDIR += api-sanity-autotest
     SUBDIR += apitrace
     SUBDIR += app-builder
+    SUBDIR += appstream
     SUBDIR += appstream-glib
     SUBDIR += apr1
     SUBDIR += arachne-pnr
@@ -307,6 +307,7 @@
     SUBDIR += capnproto080
     SUBDIR += capstone3
     SUBDIR += capstone4
+    SUBDIR += capstone5
     SUBDIR += cargo-c
     SUBDIR += cargo-generate
     SUBDIR += cask
@@ -692,6 +693,7 @@
     SUBDIR += flexjson
     SUBDIR += flyspray
     SUBDIR += fmake
+    SUBDIR += fnc
     SUBDIR += fnccheck
     SUBDIR += folly
     SUBDIR += forge
@@ -1141,6 +1143,7 @@
     SUBDIR += libIDL
     SUBDIR += libPropList
     SUBDIR += libabigail
+    SUBDIR += libac
     SUBDIR += libafterbase
     SUBDIR += liballium
     SUBDIR += libantlr3c
@@ -1275,6 +1278,7 @@
     SUBDIR += libibuddy
     SUBDIR += libical
     SUBDIR += libindicator
+    SUBDIR += libinjection
     SUBDIR += libinotify
     SUBDIR += libiqxmlrpc
     SUBDIR += libisofs
@@ -1475,6 +1479,7 @@
     SUBDIR += llvm
     SUBDIR += llvm-cheri
     SUBDIR += llvm-devel
+    SUBDIR += llvm-morello
     SUBDIR += llvm10
     SUBDIR += llvm11
     SUBDIR += llvm12
@@ -4133,6 +4138,7 @@
     SUBDIR += py-adb
     SUBDIR += py-addict
     SUBDIR += py-aenum
+    SUBDIR += py-aioapns
     SUBDIR += py-aiocontextvars
     SUBDIR += py-aiofiles
     SUBDIR += py-aioice
@@ -4512,6 +4518,7 @@
     SUBDIR += py-filemagic
     SUBDIR += py-filetype
     SUBDIR += py-findlibs
+    SUBDIR += py-findpython
     SUBDIR += py-first
     SUBDIR += py-five.globalrequest
     SUBDIR += py-fixtures
@@ -4602,6 +4609,7 @@
     SUBDIR += py-guppy3
     SUBDIR += py-gyp
     SUBDIR += py-hash_ring
+    SUBDIR += py-hatch
     SUBDIR += py-heapdict
     SUBDIR += py-helpdev
     SUBDIR += py-hg-evolve
@@ -4632,6 +4640,7 @@
     SUBDIR += py-inifile
     SUBDIR += py-iniparse
     SUBDIR += py-installer
+    SUBDIR += py-installer03
     SUBDIR += py-intbitset
     SUBDIR += py-intelhex
     SUBDIR += py-intervals
@@ -5337,6 +5346,7 @@
     SUBDIR += py-types-click
     SUBDIR += py-types-docutils
     SUBDIR += py-types-futures
+    SUBDIR += py-types-mock
     SUBDIR += py-types-protobuf
     SUBDIR += py-types-psycopg2
     SUBDIR += py-types-requests
@@ -5496,7 +5506,6 @@
     SUBDIR += py-zope.testbrowser
     SUBDIR += py-zope.testing
     SUBDIR += py-zope.traversing
-    SUBDIR += py-zsm-lib
     SUBDIR += py3c
     SUBDIR += pybind11
     SUBDIR += pybugz
