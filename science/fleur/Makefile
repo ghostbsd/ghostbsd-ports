@@ -1,5 +1,6 @@
 PORTNAME=	fleur
 DISTVERSION=	5.1.20220103
+PORTREVISION=	1
 CATEGORIES=	science # chemistry
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -7,6 +8,8 @@ COMMENT=	FLAPW code for atomic computations in quantum chemistry and physics
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_aarch64=	Fatal Error: Cannot find an intrinsic module named 'ieee_arithmetic' at (1)
 
 LIB_DEPENDS=	liblapack.so:math/lapack \
 		libopenblas.so:math/openblas

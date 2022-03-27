@@ -1185,8 +1185,7 @@ OSVERSION!=	${AWK} '/^\#define[[:blank:]]__FreeBSD_version/ {print $$3}' < ${SRC
 .endif
 _EXPORTED_VARS+=	OSVERSION
 
-.if (${OPSYS} == FreeBSD && ${OSVERSION} < 1202000) || \
-    (${OPSYS} == DragonFly && ${DFLYVERSION} < 400400)
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1202000
 _UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
 								are guaranteed to build on this system. Please upgrade to a supported release.
 . if defined(ALLOW_UNSUPPORTED_SYSTEM)
@@ -1939,14 +1938,12 @@ PKGPOSTDEINSTALL?=	${PKGDIR}/pkg-post-deinstall
 
 _FORCE_POST_PATTERNS=	rmdir kldxref mkfontscale mkfontdir fc-cache \
 						fonts.dir fonts.scale gtk-update-icon-cache \
-						gio-querymodules \
 						gtk-query-immodules \
 						ldconfig \
 						load-octave-pkg \
 						ocamlfind \
 						update-desktop-database update-mime-database \
 						gdk-pixbuf-query-loaders catalog.ports \
-						glib-compile-schemas \
 						ccache-update-links
 
 .if defined(USE_LOCAL_MK)

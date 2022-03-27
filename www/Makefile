@@ -483,6 +483,7 @@
     SUBDIR += onlyoffice-documentserver
     SUBDIR += openarc
     SUBDIR += opencart
+    SUBDIR += openresty
     SUBDIR += orangehrm
     SUBDIR += osrm-backend
     SUBDIR += osticket
@@ -2320,6 +2321,7 @@
     SUBDIR += varnish-nagios
     SUBDIR += varnish4
     SUBDIR += varnish6
+    SUBDIR += varnish7
     SUBDIR += varnish_exporter
     SUBDIR += vdr-plugin-live
     SUBDIR += vdradmin-am

@@ -1,7 +1,8 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
 
 PORTNAME=	ndpi
-PORTVERSION=	4.2.d20220201
+PORTVERSION=	4.2.d20220210
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	net
 
@@ -11,7 +12,8 @@ COMMENT=	NTOP-maintained superset of the popular OpenDPI library
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libjson-c.so:devel/json-c \
+LIB_DEPENDS=	librrd.so:databases/rrdtool \
+		libjson-c.so:devel/json-c \
 		libgcrypt.so:security/libgcrypt \
 		libgpg-error.so:security/libgpg-error
 
@@ -30,7 +32,7 @@ INSTALL_TARGET=	install-strip
 USE_GITHUB=	yes
 GH_ACCOUNT=	ntop
 GH_PROJECT=	nDPI
-GH_TAGNAME=	8b5c6af
+GH_TAGNAME=	258fedb
 
 PLIST_SUB=	MAJOR_VER=${PORTVERSION:R:R} VER=${PORTVERSION:R}
 

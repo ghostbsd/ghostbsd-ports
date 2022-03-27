@@ -55,8 +55,7 @@ IGNORE=	USES=gnome takes no arguments
 
 # non-version specific components
 _USE_GNOME_ALL= intlhack intltool introspection \
-		referencehack gnomemimedata \
-		gnomeprefix
+		gnomemimedata gnomeprefix
 
 # GNOME 2 components
 _USE_GNOME_ALL+= atk cairo \
@@ -77,7 +76,7 @@ _USE_GNOME_ALL+=dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
 		pygobject3 vte3
 
 # GNOME 40 components
-_USE_GNOME_ALL+=gtk40 libadwaita
+_USE_GNOME_ALL+=gtk40 libadwaita gtksourceview5
 
 # C++ bindings
 _USE_GNOME_ALL+=atkmm cairomm gconfmm26 glibmm gtkmm24 \
@@ -87,9 +86,6 @@ _USE_GNOME_ALL+=atkmm cairomm gconfmm26 glibmm gtkmm24 \
 # glib-mkenums often fails with C locale
 # https://gitlab.gnome.org/GNOME/glib/issues/1430
 USE_LOCALE?=	en_US.UTF-8
-
-referencehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in" -type f | ${XARGS} ${FRAMEWORK_REINPLACE_CMD} -e \
-				"s|test \"\$$\$$installfiles\" = '\$$(srcdir)/html/\*'|:|"
 
 GNOME_HTML_DIR?=	${PREFIX}/share/doc
 GCONF_CONFIG_OPTIONS?=	merged
@@ -262,6 +258,9 @@ gtksourceview3_USE_GNOME_IMPL=gtk30 libxml2
 gtksourceview4_LIB_DEPENDS=	libgtksourceview-4.so:x11-toolkits/gtksourceview4
 gtksourceview4_USE_GNOME_IMPL=gtk30 libxml2
 
+gtksourceview5_LIB_DEPENDS=	libgtksourceview-5.so:x11-toolkits/gtksourceview5
+gtksourceview5_USE_GNOME_IMPL=gtk40 libxml2
+
 libgsf_LIB_DEPENDS=	libgsf-1.so:devel/libgsf
 libgsf_USE_GNOME_IMPL=	glib20 libxml2
 
@@ -415,15 +414,12 @@ gnome-post-gconf-schemas:
 	done
 .endif
 
-# we put the @glib-schemas behind the plist schema entry, because it compiles files 
-# in the directory. So we should remove the port file first before recompiling.
 .if defined(GLIB_SCHEMAS)
 _USES_install+=	690:gnome-post-glib-schemas
 gnome-post-glib-schemas:
 	@for i in ${GLIB_SCHEMAS}; do \
 		${ECHO_CMD} "share/glib-2.0/schemas/$${i}" >> ${TMPPLIST}; \
 	done
-	@${ECHO_CMD} "@glib-schemas" >> ${TMPPLIST};
 .endif
 
 .endif

@@ -15965,7 +15965,6 @@ devel/py-automaton1|devel/py-automaton|2021-01-31|Has expired: Use devel/py-auto
 devel/py-jaraco.functools2|devel/py-jaraco.functools|2021-01-31|Has expired: Use devel/py-jaraco.functools instead
 math/py-statsmodels010|math/py-statsmodels|2021-01-31|Has expired: Use math/py-statsmodels instead
 www/py-tornado6|www/py-tornado|2021-01-31|Has expired: Use www/py-tornado instead
-deskutils/orage||2021-02-01|Has expired: Unsupported upstream, cannot work with XFCE 4.16
 sysutils/rubygem-chef-config12|sysutils/rubygem-chef-config|2021-02-01|Has expired
 mail/openwebmail||2021-02-01|Has expired: Does not use modern Perl syntax and no development activity since 2006
 sysutils/rubygem-ohai8|sysutils/rubygem-ohai|2021-02-01|Has expired
@@ -16960,3 +16959,12 @@ math/qalculate|math/qalculate-gtk|2022-03-14|Renamed to match project name
 deskutils/nautilus-actions||2022-03-15|Abandonware
 textproc/rarian||2022-03-15|Abandonware
 devel/ORBit2||2022-02-14|Gnome2 library unused anymore
+games/pushover|games/domino-chain|2022-03-17|Chase upstream rename
+graphics/darktable38|graphics/darktable|2022-03-19|Darktable was upgraded to 3.8, separate port no longer needed
+security/1password-client-devel|security/1password-client2|2022-03-19|cli version 2 is now released.
+x11-toolkits/pangoxsl||2022-03-20|Has expired: Abandonware and not used by any port
+print/lgrind||2022-03-22|Has expired: Abandonware as last release was in 2001
+devel/py-decorator4||2022-03-22|Has expired: Legacy version, use devel/py-decorator instead
+devel/p5-Log-Any-Adapter-Callback|devel/p5-Log-Any|2022-03-22|Has expired: Use devel/p5-Log-Any (Log::Any::Adapter::Capture) instead
+devel/py-asyncio||2022-03-25|Remove obsoleted port. The asyncio package has been included in the standard library since Python 3.4
+math/py-mutatormath|math/py-MutatorMath|2022-03-25|Remove duplicate port

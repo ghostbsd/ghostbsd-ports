@@ -2,7 +2,7 @@
 
     SUBDIR += 0d1n
     SUBDIR += 1password-client
-    SUBDIR += 1password-client-devel
+    SUBDIR += 1password-client2
     SUBDIR += 2fa
     SUBDIR += ADMsmb
     SUBDIR += ADMsnmp
@@ -810,6 +810,7 @@
     SUBDIR += php81-filter
     SUBDIR += php81-sodium
     SUBDIR += phpsecinfo
+    SUBDIR += picocrypt
     SUBDIR += picosha2
     SUBDIR += pidgin-encryption
     SUBDIR += pidgin-otr
@@ -1016,6 +1017,7 @@
     SUBDIR += py-taxii2-client
     SUBDIR += py-tls-parser
     SUBDIR += py-tlslite
+    SUBDIR += py-tlslite-ng
     SUBDIR += py-trezor
     SUBDIR += py-trustme
     SUBDIR += py-tuf

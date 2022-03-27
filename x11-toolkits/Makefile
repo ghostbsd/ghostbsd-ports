@@ -46,6 +46,7 @@
     SUBDIR += gtksourceview2
     SUBDIR += gtksourceview3
     SUBDIR += gtksourceview4
+    SUBDIR += gtksourceview5
     SUBDIR += gtksourceviewmm3
     SUBDIR += guile-gnome-platform
     SUBDIR += irrlicht
@@ -145,7 +146,6 @@
     SUBDIR += pangolin
     SUBDIR += pangomm
     SUBDIR += pangox-compat
-    SUBDIR += pangoxsl
     SUBDIR += plasma5-kdeplasma-addons
     SUBDIR += plib
     SUBDIR += py-AnyQt
