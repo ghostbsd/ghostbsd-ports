@@ -1,4 +1,4 @@
-PORTREVISION=	4
+PORTREVISION=	0
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -18,12 +18,12 @@ BUILD_DEPENDS=	p5-Archive-Zip>=0:archivers/p5-Archive-Zip \
 		cppunit-config:devel/cppunit \
 		dmake:devel/dmake \
 		gperf>=3.1:devel/gperf \
+		${LOCALBASE}/include/libcuckoo/cuckoohash_map.hh:devel/libcuckoo \
 		mdds>=2.0:devel/mdds \
 		ucpp:devel/ucpp \
 		${LOCALBASE}/include/sane/sane.h:graphics/sane-backends \
 		vigra-config:graphics/vigra \
 		${LOCALBASE}/include/glm/glm.hpp:math/glm \
-		${LOCALBASE}/include/libcuckoo/cuckoohash_map.hh:devel/libcuckoo \
 		bash:shells/bash \
 		gsed:textproc/gsed \
 		${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
@@ -85,7 +85,14 @@ LIB_DEPENDS=	libapr-1.so:devel/apr1 \
 		libZXing.so:textproc/zxing-cpp \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libxcb-icccm.so:x11/xcb-util-wm \
-		libserf-1.so:www/serf
+		libserf-1.so:www/serf \
+		${LIB_DEPENDS_${ARCH}}
+LIB_DEPENDS_aarch64=	libunwind.so:devel/libunwind
+LIB_DEPENDS_amd64=	libunwind.so:devel/libunwind
+LIB_DEPENDS_armv7=	libunwind.so:devel/libunwind
+LIB_DEPENDS_i386=	libunwind.so:devel/libunwind
+LIB_DEPENDS_powerpc64=	libunwind.so:devel/libunwind
+LIB_DEPENDS_powerpc64le=	libunwind.so:devel/libunwind
 
 RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		${LOCALBASE}/share/fonts/Caladea/Caladea-Bold.ttf:x11-fonts/crosextrafonts-caladea-ttf \
@@ -265,6 +272,7 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--with-parallelism=${MAKE_JOBS_NUMBER} \
 		--with-system-abseil \
 		--with-system-cppunit \
+		--with-system-cuckoo \
 		--with-system-curl \
 		--with-system-dicts \
 		--with-system-gpgmepp \
