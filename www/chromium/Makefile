@@ -1,7 +1,7 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
 
 PORTNAME=	chromium
-PORTVERSION=	100.0.4896.75
+PORTVERSION=	100.0.4896.127
 CATEGORIES=	www
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/ \
 		https://nerd.hu/distfiles/:fonts
@@ -64,7 +64,7 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		noto-basic>0:x11-fonts/noto-basic
 
 USES=		bison compiler:c++17-lang cpe desktop-file-utils gl gnome jpeg localbase:ldflags \
-		ninja perl5 pkgconfig python:3.6-3.9,build shebangfix tar:xz xorg
+		ninja perl5 pkgconfig python:3.7+,build shebangfix tar:xz xorg
 
 CPE_VENDOR=	google
 CPE_PRODUCT=	chrome

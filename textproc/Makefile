@@ -451,6 +451,7 @@
     SUBDIR += md4c
     SUBDIR += mdbook
     SUBDIR += mdbook-linkcheck
+    SUBDIR += mdbook-mermaid
     SUBDIR += mdocml
     SUBDIR += meilisearch
     SUBDIR += meld
@@ -1172,6 +1173,7 @@
     SUBDIR += p5-libxml
     SUBDIR += p5-pod2pdf
     SUBDIR += p5-podlators
+    SUBDIR += p5-utf8-all
     SUBDIR += p5-xmltv
     SUBDIR += pa-aspell
     SUBDIR += pageedit
@@ -1473,6 +1475,7 @@
     SUBDIR += py-sphinx-autodoc-typehints
     SUBDIR += py-sphinx-book-theme
     SUBDIR += py-sphinx-copybutton
+    SUBDIR += py-sphinx-design
     SUBDIR += py-sphinx-inline-tabs
     SUBDIR += py-sphinx-intl
     SUBDIR += py-sphinx-issues
@@ -1632,6 +1635,7 @@
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
+    SUBDIR += rubygem-cucumber-gherkin22
     SUBDIR += rubygem-cucumber-html-formatter
     SUBDIR += rubygem-cucumber-html-formatter17
     SUBDIR += rubygem-diff-lcs

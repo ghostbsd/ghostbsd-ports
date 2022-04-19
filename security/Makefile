@@ -827,7 +827,9 @@
     SUBDIR += py-azure-keyvault-certificates
     SUBDIR += py-azure-keyvault-keys
     SUBDIR += py-azure-keyvault-secrets
+    SUBDIR += py-base58
     SUBDIR += py-bcrypt
+    SUBDIR += py-bitbox02
     SUBDIR += py-btchip-python
     SUBDIR += py-cerealizer
     SUBDIR += py-cert-human
@@ -901,11 +903,13 @@
     SUBDIR += py-muacrypt
     SUBDIR += py-netbox-secretstore
     SUBDIR += py-netmiko
+    SUBDIR += py-noiseprotocol
     SUBDIR += py-ntlm-auth
     SUBDIR += py-oauth2client
     SUBDIR += py-oauthlib
     SUBDIR += py-onlykey
     SUBDIR += py-openssl
+    SUBDIR += py-oscrypto
     SUBDIR += py-ospd
     SUBDIR += py-ospd-openvas
     SUBDIR += py-paramiko
@@ -926,6 +930,7 @@
     SUBDIR += py-pycryptodome
     SUBDIR += py-pycryptodomex
     SUBDIR += py-pyelliptic
+    SUBDIR += py-pyhanko-certvalidator
     SUBDIR += py-pylibacl
     SUBDIR += py-pymacaroons
     SUBDIR += py-pynacl
@@ -974,6 +979,7 @@
     SUBDIR += py-stix2
     SUBDIR += py-stix2-patterns
     SUBDIR += py-taxii2-client
+    SUBDIR += py-tinyaes
     SUBDIR += py-tls-parser
     SUBDIR += py-tlslite
     SUBDIR += py-tlslite-ng
@@ -991,6 +997,7 @@
     SUBDIR += py-xkcdpass
     SUBDIR += py-xmlsec
     SUBDIR += py-yara
+    SUBDIR += py-yara-python-dex
     SUBDIR += py-yubikey-manager
     SUBDIR += py-zkg
     SUBDIR += py-zope.password

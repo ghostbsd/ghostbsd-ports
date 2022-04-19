@@ -1,5 +1,5 @@
 PORTNAME=	difftastic
-DISTVERSION=	0.25.0
+DISTVERSION=	0.26.3
 CATEGORIES=	textproc
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -8,7 +8,7 @@ COMMENT=	Diff tool that compares files based on their syntax
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cargo cpe
+USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	Wilfred
 

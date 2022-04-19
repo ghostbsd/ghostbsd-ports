@@ -38,6 +38,9 @@
     SUBDIR += awstats
     SUBDIR += axis2
     SUBDIR += bacula-web
+    SUBDIR += baculum-api
+    SUBDIR += baculum-common
+    SUBDIR += baculum-web
     SUBDIR += baikal
     SUBDIR += bareos-webui
     SUBDIR += bareos18-webui
@@ -419,6 +422,7 @@
     SUBDIR += moodle310
     SUBDIR += moodle311
     SUBDIR += moodle39
+    SUBDIR += moodle40
     SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort
@@ -757,6 +761,7 @@
     SUBDIR += p5-Dancer2
     SUBDIR += p5-Dancer2-Plugin-Ajax
     SUBDIR += p5-Dancer2-Plugin-Deferred
+    SUBDIR += p5-Dancer2-Plugin-FormValidator
     SUBDIR += p5-Dancer2-Plugin-Interchange6
     SUBDIR += p5-Dancer2-Plugin-Path-Class
     SUBDIR += p5-Data-TreeDumper-Renderer-DHTML
@@ -802,6 +807,7 @@
     SUBDIR += p5-HTML-Element-Library
     SUBDIR += p5-HTML-Element-Replacer
     SUBDIR += p5-HTML-Encoding
+    SUBDIR += p5-HTML-Escape
     SUBDIR += p5-HTML-ExtractContent
     SUBDIR += p5-HTML-ExtractMain
     SUBDIR += p5-HTML-Field
@@ -1425,6 +1431,7 @@
     SUBDIR += py-azure-storage
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
+    SUBDIR += py-beautifulsoup449
     SUBDIR += py-betamax
     SUBDIR += py-biscuits
     SUBDIR += py-bjoern
@@ -1476,6 +1483,7 @@
     SUBDIR += py-django-babel
     SUBDIR += py-django-bakery
     SUBDIR += py-django-bitfield
+    SUBDIR += py-django-bleach
     SUBDIR += py-django-bootstrap-form
     SUBDIR += py-django-bootstrap-pagination
     SUBDIR += py-django-bootstrap3
@@ -2303,8 +2311,10 @@
     SUBDIR += varnish-ip2proxy
     SUBDIR += varnish-libvmod-digest
     SUBDIR += varnish-libvmod-dynamic
+    SUBDIR += varnish-libvmod-geoip2
     SUBDIR += varnish-libvmod-maxminddb
     SUBDIR += varnish-libvmod-querystring
+    SUBDIR += varnish-libvmod-redis
     SUBDIR += varnish-modules
     SUBDIR += varnish-nagios
     SUBDIR += varnish4

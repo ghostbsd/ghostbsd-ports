@@ -72,6 +72,7 @@
     SUBDIR += py-pytoport
     SUBDIR += py-skog
     SUBDIR += software-station
+    SUBDIR += reprise
     SUBDIR += sccache-overlay
     SUBDIR += synth
     SUBDIR += update-station

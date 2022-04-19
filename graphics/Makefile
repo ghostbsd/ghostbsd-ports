@@ -530,8 +530,8 @@
     SUBDIR += linux-c7-tiff
     SUBDIR += linux-c7-wayland
     SUBDIR += lua-gd
-    SUBDIR += lux
     SUBDIR += luminance-qt5
+    SUBDIR += lux
     SUBDIR += lximage-qt
     SUBDIR += magnum
     SUBDIR += magnum-examples
@@ -894,7 +894,6 @@
     SUBDIR += py-pygeoapi
     SUBDIR += py-pygeos
     SUBDIR += py-pyglet
-    SUBDIR += py-pyglet150
     SUBDIR += py-pygraph
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
@@ -1138,7 +1137,6 @@
     SUBDIR += xcftools
     SUBDIR += xd3d
     SUBDIR += xdgagrab
-    SUBDIR += xface.el
     SUBDIR += xfig
     SUBDIR += xfpovray
     SUBDIR += xfractint
