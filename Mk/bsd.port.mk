@@ -4618,9 +4618,8 @@ install-rc-script:
 .      endif
 .    endif
 
-<<<<<<< HEAD
-.if !target(install-openrc-script)
-.if defined(USE_OPENRC_SUBR)
+.    if !target(install-openrc-script)
+.    if defined(USE_OPENRC_SUBR)
 install-openrc-script:
 	@${ECHO_MSG} "===> Staging init.d startup script(s)"
 	@for i in ${USE_OPENRC_SUBR}; do \
@@ -4631,13 +4630,10 @@ install-openrc-script:
 		${INSTALL_SCRIPT} ${WRKDIR}/$${i} ${STAGEDIR}$${_prefix}/etc/init.d/$${_nfile}; \
 		${ECHO_CMD} "$${_prefix}/etc/init.d/$${_nfile}" >> ${TMPPLIST}; \
 	done
-.endif
-.endif
+.    endif
+.    endif
 
-.if !target(check-man)
-=======
 .    if !target(check-man)
->>>>>>> freebsd/main
 check-man: stage
 	@${ECHO_MSG} "====> Checking man pages (check-man)"
 	@mdirs= ; \
