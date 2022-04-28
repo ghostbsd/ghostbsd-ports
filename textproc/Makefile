@@ -320,6 +320,7 @@
     SUBDIR += jade
     SUBDIR += jalingo
     SUBDIR += jarnal
+    SUBDIR += jarowinkler-cpp
     SUBDIR += java2html
     SUBDIR += jaxup
     SUBDIR += jdictionary
@@ -1335,6 +1336,7 @@
     SUBDIR += py-iso-639
     SUBDIR += py-iso3166
     SUBDIR += py-j2cli
+    SUBDIR += py-jarowinkler
     SUBDIR += py-jc
     SUBDIR += py-jinja2-cli
     SUBDIR += py-jq
@@ -1702,6 +1704,7 @@
     SUBDIR += rubygem-kramdown
     SUBDIR += rubygem-kramdown-parser-gfm
     SUBDIR += rubygem-kramdown1
+    SUBDIR += rubygem-kramdown23
     SUBDIR += rubygem-kwalify
     SUBDIR += rubygem-libxml-ruby
     SUBDIR += rubygem-linguistics
@@ -2018,10 +2021,12 @@
     SUBDIR += yi-hunspell
     SUBDIR += yodl
     SUBDIR += yq
+    SUBDIR += zed
     SUBDIR += zenxml
     SUBDIR += zorba
     SUBDIR += zu-aspell
     SUBDIR += zu-hunspell
     SUBDIR += zxing-cpp
+    SUBDIR += zq
 
 .include <bsd.port.subdir.mk>

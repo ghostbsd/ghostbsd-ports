@@ -47,6 +47,7 @@ JBIG_CONFIGURE_WITH=	jbig
 JBIG_LIB_DEPENDS=	libjbig.so:graphics/jbigkit
 JPEG_CONFIGURE_WITH=	jpeg
 JPEG_USES=		jpeg
+JXL_BROKEN=		does not build: use of undeclared identifier 'JxlEncoderFrameSettings'
 JXL_CONFIGURE_WITH=	jxl
 JXL_LIB_DEPENDS=	libjxl.so:graphics/libjxl
 LCMS2_CONFIGURE_WITH=	lcms2

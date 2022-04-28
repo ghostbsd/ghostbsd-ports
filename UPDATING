@@ -5,6 +5,73 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20220428:
+  AFFECTS: users of databases/redis
+  AUTHOR: yasu@FreeBSD.org
+
+  The databases/redis port has been updated to 7.0. Users wanting to
+  stay on 6.2 can replace databases/redis with databases/redis62 with
+  one of the following commands.
+
+  If you use pkg with binary packages:
+    # pkg set -o databases/redis:databases/redis62
+    # pkg upgrade
+  If you use portmaster:
+    # portmaster -o databases/redis62 databases/redis
+  If you use portupgrade:
+    # portupgrade -o databases/redis62 databases/redis
+
+20220426:
+  AFFECTS: users of deskutils/grantleetheme
+  AUTHOR: kde@FreeBSD.org
+
+  The pkg update of deskutils/grantleetheme to 22.04 can fail due
+  to a filesystem location having changed from being a file to being
+  a directory. This leads to pkg's temporary file creation throwing
+  an error.
+
+  To update to KDE Gear 22.04 please run
+  # pkg delete -f grantleetheme
+  prior to the update.
+
+20220424:
+  AFFECTS: users of emulators/qemu
+  AUTHOR: bofh@FreeBSD.org
+
+  emulators/qemu has been updated to 7.0.0. Previous 6.2.X branch has
+  been repocopied to emulators/qemu6. If someone wants to stick with 6.2.X
+  branch please use one of the following command:
+
+  # pkg install qemu6/qemu6-nox11(based on flavor used)
+    or
+  # portmaster -o emulators/qemu6 emulators/qemu
+    or
+  # portupgrade -o emulators/qemu6 emulators/qemu
+
+20220421:
+  AFFECTS: users of lang/ruby27
+  AUTHOR: yasu@FreeBSD.org
+
+  The default ruby version has been updated from 2.7 to 3.0.
+
+  If you compile your own ports you may keep 2.7 as the default version by
+  adding the following lines to your /etc/make.conf file:
+
+  #
+  # Keep ruby 2.7 as default version
+  #
+  DEFAULT_VERSIONS+=ruby=2.7
+
+  If you wish to update to the new default version, you need to first stop any
+  software that uses ruby. Then, you will need to follow these steps, depending
+  upon how you manage your system.
+
+  If you use pkg, simply upgrade:
+  # pkg upgrade
+
+  If you do not use pkg, please check entry 20190420.
+  The description there should also work for this version.
+
 20220413:
   AFFECTS: users of net-im/py-matrix-synapse
   AUTHOR: ports@skyforge.at

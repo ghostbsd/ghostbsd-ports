@@ -1,5 +1,5 @@
 PORTNAME=	llvm
-DISTVERSION=	14.0.1
+DISTVERSION=	14.0.2
 PORTREVISION=	0
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/ \
@@ -66,6 +66,11 @@ CMAKE_ARGS=	-DLLVM_BUILD_LLVM_DYLIB=ON -DLLVM_LINK_LLVM_DYLIB=ON
 CMAKE_ARGS+=	-DLLVM_ENABLE_RTTI=ON
 CMAKE_ARGS+=	-DLLVM_DEFAULT_TARGET_TRIPLE=${CONFIGURE_TARGET}
 CMAKE_ARGS+=	-DLLVM_HOST_TRIPLE=${CONFIGURE_TARGET}
+.if ${DISTVERSION} == 14.0.2
+CMAKE_ARGS+=	-DLLVM_VERSION_PATCH=2
+.else
+.error update the LLVM_VERSION_PATCH hack.
+.endif
 # Following commit https://github.com/kitware/cmake/commit/956054
 # we need to either change the whole man-shuffle below, or simply
 # redefine CMAKE_INSTALL_MANDIR
@@ -89,7 +94,7 @@ OPTIONS_DEFINE_i386=	COMPILER_RT OPENMP
 OPTIONS_DEFINE_powerpc=	GOLD
 OPTIONS_DEFINE_powerpc64=	GOLD OPENMP
 OPTIONS_DEFINE_powerpc64le=	GOLD OPENMP
-OPTIONS_DEFINE_riscv64=	OPENMP
+OPTIONS_DEFINE_riscv64=	COMPILER_RT OPENMP
 OPTIONS_DEFAULT=	BE_AMDGPU BE_STANDARD BE_WASM CLANG EXTRAS FLANG LIT LLD LLDB MLIR PYCLANG
 OPTIONS_DEFAULT_aarch64=	OPENMP
 OPTIONS_DEFAULT_amd64=	COMPILER_RT GOLD OPENMP
@@ -99,7 +104,7 @@ OPTIONS_DEFAULT_powerpc64=	${OPTIONS_DEFAULT_powerpc64_${OSREL:R}} OPENMP
 OPTIONS_DEFAULT_powerpc64_13=	GOLD
 OPTIONS_DEFAULT_powerpc64_14=	GOLD
 OPTIONS_DEFAULT_powerpc64le=	GOLD OPENMP
-OPTIONS_DEFAULT_riscv64=	OPENMP
+OPTIONS_DEFAULT_riscv64=	COMPILER_RT OPENMP
 OPTIONS_EXCLUDE_armv6=	FLANG
 OPTIONS_EXCLUDE_armv7=	FLANG
 OPTIONS_EXCLUDE_i386=	FLANG
@@ -134,12 +139,7 @@ CLANG_SUB_LIST=		XCC=clang${LLVM_SUFFIX} \
 			X_COMPILER_TYPE=clang
 CLANG_USE=		GNOME=libxml2
 COMPILER_RT_DESC=	Sanitizer libraries
-# An unwind.h is require to build.  I think an in-tree one should be used
-# but this seems to work as a workaround...
-COMPILER_RT_BUILD_DEPENDS=	libunwind>0:devel/libunwind
 COMPILER_RT_CMAKE_ON=	-DCOMPILER_RT_INSTALL_PATH=${LLVM_PREFIX}/lib/clang/${LLVM_RELEASE}
-# Allow unwind.h to be found reliably
-COMPILER_RT_USES=	localbase
 COMPILER_RT_PLIST_FILES=${_COMPILER_RT_LIBS:S|^|${_CRTLIBDIR}/|} \
 			${_COMPILER_RT_BLACKLISTS:S|^|${_CRTBLDIR}/|}
 DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx-markdown-tables>=0:textproc/py-sphinx-markdown-tables@${PY_FLAVOR} \
@@ -307,6 +307,13 @@ USES+=		gnome
 .if ${PORT_OPTIONS:MCOMPILER_RT}
 LLVM_ENABLE_PROJECTS+=	compiler-rt
 COMPILER_RT_PATTERN=	(sanitizer|include.xray|include\/fuzzer|profile\/InstrProfData.inc)
+.if ${OSVERSION} < 1300525
+# An unwind.h is require to build.  I think an in-tree one should be used
+# but this seems to work as a workaround...
+BUILD_DEPENDS+=	libunwind>0:devel/libunwind
+# Allow unwind.h to be found reliably
+USES+=	localbase
+.endif
 .endif
 
 .if ${PORT_OPTIONS:MEXTRAS}
@@ -425,7 +432,6 @@ BE_PATTERN=${_BE_LIBS_STANDARD:O:S/$/.a/:ts|}|${_BE_INCS_STANDARD:ts|}
 
 _CRTLIBDIR=	${LLVM_DIR}/lib/clang/${LLVM_RELEASE}/lib/freebsd
 _CRTBLDIR=	${LLVM_DIR}/lib/clang/${LLVM_RELEASE}/share
-_COMPILER_RT_BLACKLISTS=	cfi_ignorelist.txt
 _COMPILER_RT_LIBS_i386=	\
 	libclang_rt.asan-i386.a \
 	libclang_rt.asan-i386.so \
@@ -445,6 +451,7 @@ _COMPILER_RT_LIBS_i386=	\
 	libclang_rt.ubsan_standalone-i386.so \
 	libclang_rt.ubsan_standalone_cxx-i386.a
 .if ${ARCH} == "amd64"
+_COMPILER_RT_BLACKLISTS=	cfi_ignorelist.txt
 _COMPILER_RT_BLACKLISTS+=	asan_ignorelist.txt
 _COMPILER_RT_BLACKLISTS+=	msan_ignorelist.txt
 _COMPILER_RT_LIBS=	\
@@ -492,10 +499,31 @@ _COMPILER_RT_LIBS=	\
 .if exists(/usr/lib32/libc.so.7)
 _COMPILER_RT_LIBS+=	${_COMPILER_RT_LIBS_i386}
 .endif
-.endif
-.if ${ARCH} == "i386"
+.elif ${ARCH} == "i386"
+_COMPILER_RT_BLACKLISTS=	cfi_ignorelist.txt
 _COMPILER_RT_BLACKLISTS+=	asan_ignorelist.txt
 _COMPILER_RT_LIBS+=	${_COMPILER_RT_LIBS_i386}
+.elif ${ARCH} == "riscv64"
+_COMPILER_RT_BLACKLISTS=	asan_ignorelist.txt
+_COMPILER_RT_LIBS= \
+	libclang_rt.asan-preinit-riscv64.a \
+	libclang_rt.asan-riscv64.a \
+	libclang_rt.asan-riscv64.a.syms \
+	libclang_rt.asan-riscv64.so \
+	libclang_rt.asan_cxx-riscv64.a \
+	libclang_rt.asan_cxx-riscv64.a.syms \
+	libclang_rt.asan_static-riscv64.a \
+	libclang_rt.builtins-riscv64.a \
+	libclang_rt.stats-riscv64.a \
+	libclang_rt.stats_client-riscv64.a \
+	libclang_rt.ubsan_minimal-riscv64.a \
+	libclang_rt.ubsan_minimal-riscv64.a.syms \
+	libclang_rt.ubsan_minimal-riscv64.so \
+	libclang_rt.ubsan_standalone-riscv64.a \
+	libclang_rt.ubsan_standalone-riscv64.a.syms \
+	libclang_rt.ubsan_standalone-riscv64.so \
+	libclang_rt.ubsan_standalone_cxx-riscv64.a \
+	libclang_rt.ubsan_standalone_cxx-riscv64.a.syms
 .endif
 
 .if ${ARCH} == "armv6"

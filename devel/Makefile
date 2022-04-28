@@ -1915,6 +1915,7 @@
     SUBDIR += p5-Class-Contract
     SUBDIR += p5-Class-Data-ConfigHash
     SUBDIR += p5-Class-Data-Inheritable
+    SUBDIR += p5-Class-Data-Lite
     SUBDIR += p5-Class-Date
     SUBDIR += p5-Class-Declare
     SUBDIR += p5-Class-Default
@@ -4139,7 +4140,6 @@
     SUBDIR += py-aioitertools
     SUBDIR += py-aiologger
     SUBDIR += py-aiorpcX
-    SUBDIR += py-aiorpcX-legacy
     SUBDIR += py-aiortc
     SUBDIR += py-aiosignal
     SUBDIR += py-amalgamate
@@ -4379,6 +4379,7 @@
     SUBDIR += py-cog
     SUBDIR += py-collective.monkeypatcher
     SUBDIR += py-colorama
+    SUBDIR += py-colored-traceback
     SUBDIR += py-coloredlogs
     SUBDIR += py-colorful
     SUBDIR += py-colorlog
@@ -4839,6 +4840,7 @@
     SUBDIR += py-onigurumacffi
     SUBDIR += py-opcodes
     SUBDIR += py-openapi-codec
+    SUBDIR += py-openapi-core
     SUBDIR += py-openapi-schema-validator
     SUBDIR += py-openapi-spec-validator
     SUBDIR += py-opencensus
@@ -4898,6 +4900,7 @@
     SUBDIR += py-patch-ng
     SUBDIR += py-path
     SUBDIR += py-path.py
+    SUBDIR += py-pathable
     SUBDIR += py-pathlib2
     SUBDIR += py-pathspec
     SUBDIR += py-pathtools
@@ -4946,6 +4949,7 @@
     SUBDIR += py-plette
     SUBDIR += py-plex
     SUBDIR += py-pluggy
+    SUBDIR += py-pluggy0
     SUBDIR += py-pluginbase
     SUBDIR += py-ply
     SUBDIR += py-pockets
@@ -5304,6 +5308,7 @@
     SUBDIR += py-taskflow
     SUBDIR += py-tasklib
     SUBDIR += py-tblib
+    SUBDIR += py-tdworkflow
     SUBDIR += py-telepath
     SUBDIR += py-tempora
     SUBDIR += py-tenacity
@@ -5362,6 +5367,7 @@
     SUBDIR += py-types-psycopg2
     SUBDIR += py-types-requests
     SUBDIR += py-types-termcolor
+    SUBDIR += py-types-typed-ast
     SUBDIR += py-types-urllib3
     SUBDIR += py-types-xxhash
     SUBDIR += py-typing-extensions
@@ -5627,7 +5633,6 @@
     SUBDIR += ros-console_bridge
     SUBDIR += ros-rosdep
     SUBDIR += ros-rosdistro
-    SUBDIR += ros-rosinstall
     SUBDIR += ros-rosinstall_generator
     SUBDIR += ros-rospkg
     SUBDIR += ros-urdfdom
@@ -6208,6 +6213,8 @@
     SUBDIR += rubygem-childprocess40
     SUBDIR += rubygem-chronic
     SUBDIR += rubygem-chronic_duration
+    SUBDIR += rubygem-claide
+    SUBDIR += rubygem-claide-plugins
     SUBDIR += rubygem-clamp
     SUBDIR += rubygem-clamp11
     SUBDIR += rubygem-classifier
@@ -6241,6 +6248,7 @@
     SUBDIR += rubygem-cookbook-omnifetch
     SUBDIR += rubygem-cool.io
     SUBDIR += rubygem-corefines
+    SUBDIR += rubygem-cork
     SUBDIR += rubygem-countries
     SUBDIR += rubygem-crack
     SUBDIR += rubygem-cri
@@ -6261,6 +6269,8 @@
     SUBDIR += rubygem-cyoi
     SUBDIR += rubygem-daemon_controller
     SUBDIR += rubygem-daemons
+    SUBDIR += rubygem-danger
+    SUBDIR += rubygem-danger-gitlab
     SUBDIR += rubygem-date
     SUBDIR += rubygem-ddmemoize
     SUBDIR += rubygem-ddmetrics
@@ -6410,7 +6420,9 @@
     SUBDIR += rubygem-git
     SUBDIR += rubygem-git-version-bump
     SUBDIR += rubygem-github_api
+    SUBDIR += rubygem-gitlab
     SUBDIR += rubygem-gitlab-chronic
+    SUBDIR += rubygem-gitlab-dangerfiles
     SUBDIR += rubygem-gitlab-experiment
     SUBDIR += rubygem-gitlab-labkit
     SUBDIR += rubygem-gitlab-license
@@ -6596,6 +6608,7 @@
     SUBDIR += rubygem-mutex_m
     SUBDIR += rubygem-mutter
     SUBDIR += rubygem-nakayoshi_fork
+    SUBDIR += rubygem-nap
     SUBDIR += rubygem-native-package-installer
     SUBDIR += rubygem-naught
     SUBDIR += rubygem-necromancer
@@ -6814,6 +6827,7 @@
     SUBDIR += rubygem-sentry-ruby-core
     SUBDIR += rubygem-sentry-sidekiq
     SUBDIR += rubygem-sequel
+    SUBDIR += rubygem-server_sent_events
     SUBDIR += rubygem-set
     SUBDIR += rubygem-settingslogic
     SUBDIR += rubygem-sexp_processor

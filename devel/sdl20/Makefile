@@ -1,6 +1,5 @@
 PORTNAME=	sdl2
-DISTVERSION=	2.0.20
-PORTREVISION=	1
+DISTVERSION=	2.0.22
 CATEGORIES=	devel
 MASTER_SITES=	https://www.libsdl.org/release/
 DISTNAME=	SDL2-${PORTVERSION}
@@ -128,6 +127,7 @@ SDL_CPUINFO_CONFIGURE_ENABLE=	cpuinfo
 SDL_EVENTS_CONFIGURE_ENABLE=	events
 SDL_FILE_CONFIGURE_ENABLE=	filesystem
 SDL_HAPTIC_CONFIGURE_ENABLE=	haptic
+SDL_HAPTIC_IMPLIES=		SDL_JOYSTICK  # otherwise: ld: error: undefined symbol: test_bit
 SDL_JOYSTICK_CONFIGURE_ENABLE=	joystick
 SDL_JOYSTICK_BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 SDL_JOYSTICK_LIB_DEPENDS=	libinotify.so:devel/libinotify

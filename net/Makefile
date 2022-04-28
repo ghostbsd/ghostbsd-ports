@@ -200,7 +200,6 @@
     SUBDIR += gofish
     SUBDIR += gogoc
     SUBDIR += google-cloud-sdk
-    SUBDIR += google-cloud-sdk-app-engine-go
     SUBDIR += gopher
     SUBDIR += goreplay
     SUBDIR += gorss
@@ -219,6 +218,7 @@
     SUBDIR += gsocket
     SUBDIR += gspoof
     SUBDIR += gssdp
+    SUBDIR += gssdp14
     SUBDIR += gstreamer1-plugins-libmms
     SUBDIR += gstreamer1-plugins-srtp
     SUBDIR += gtk-vnc
@@ -229,6 +229,7 @@
     SUBDIR += gupnp-igd
     SUBDIR += gupnp-tools
     SUBDIR += gupnp-ui
+    SUBDIR += gupnp14
     SUBDIR += gutenfetch
     SUBDIR += gwhois
     SUBDIR += h323plus
@@ -299,7 +300,6 @@
     SUBDIR += jwhois
     SUBDIR += k6
     SUBDIR += kafka
-    SUBDIR += kalarmcal
     SUBDIR += kamailio
     SUBDIR += kcalutils
     SUBDIR += kcat
@@ -511,6 +511,7 @@
     SUBDIR += netwib
     SUBDIR += nfs-ganesha-kmod
     SUBDIR += nfsshell
+    SUBDIR += nfstrace
     SUBDIR += ng_mikrotik_eoip
     SUBDIR += ngrep
     SUBDIR += nifmon
@@ -1318,6 +1319,7 @@
     SUBDIR += rubygem-netrc
     SUBDIR += rubygem-network_interface
     SUBDIR += rubygem-nkf
+    SUBDIR += rubygem-no_proxy_fix
     SUBDIR += rubygem-oauth
     SUBDIR += rubygem-oauth2
     SUBDIR += rubygem-octokit

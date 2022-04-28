@@ -439,6 +439,7 @@
     SUBDIR += fusefs-zip
     SUBDIR += fvcool
     SUBDIR += fwup
+    SUBDIR += fx
     SUBDIR += g15daemon
     SUBDIR += gaffitter
     SUBDIR += ganglia-monitor-core
@@ -1224,6 +1225,7 @@
     SUBDIR += rubygem-puppetfile-resolver
     SUBDIR += rubygem-puppetserver-ca
     SUBDIR += rubygem-r10k
+    SUBDIR += rubygem-redfish_client
     SUBDIR += rubygem-rubyipmi
     SUBDIR += rubygem-serverspec
     SUBDIR += rubygem-shellany
