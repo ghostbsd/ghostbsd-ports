@@ -1462,7 +1462,6 @@
     SUBDIR += py-dj32-django-filter
     SUBDIR += py-dj32-django-graphiql-debug-toolbar
     SUBDIR += py-dj32-django-js-asset
-    SUBDIR += py-dj32-django-modelcluster
     SUBDIR += py-dj32-django-mptt
     SUBDIR += py-dj32-django-prometheus
     SUBDIR += py-dj32-django-redis
@@ -2065,7 +2064,6 @@
     SUBDIR += rubygem-rack-protection
     SUBDIR += rubygem-rack-protection1
     SUBDIR += rubygem-rack-proxy
-    SUBDIR += rubygem-rack-proxy06
     SUBDIR += rubygem-rack-ssl
     SUBDIR += rubygem-rack-test
     SUBDIR += rubygem-rack-timeout

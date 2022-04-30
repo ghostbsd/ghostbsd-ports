@@ -675,6 +675,7 @@
     SUBDIR += fatal
     SUBDIR += fbthrift
     SUBDIR += fc++
+    SUBDIR += fccf
     SUBDIR += fhist
     SUBDIR += fifechan
     SUBDIR += fire-hpp
@@ -948,6 +949,7 @@
     SUBDIR += gwenhywfar-qt5
     SUBDIR += gzstream
     SUBDIR += hapy
+    SUBDIR += hare
     SUBDIR += hcs12mem
     SUBDIR += heaptrack
     SUBDIR += heimdall
@@ -4480,6 +4482,7 @@
     SUBDIR += py-durus
     SUBDIR += py-dynrules
     SUBDIR += py-easyprocess
+    SUBDIR += py-editables
     SUBDIR += py-editdistance
     SUBDIR += py-eggtestinfo
     SUBDIR += py-ejson
@@ -4608,6 +4611,7 @@
     SUBDIR += py-gyp
     SUBDIR += py-hash_ring
     SUBDIR += py-hatch
+    SUBDIR += py-hatchling
     SUBDIR += py-heapdict
     SUBDIR += py-helpdev
     SUBDIR += py-hg-evolve
@@ -4739,10 +4743,12 @@
     SUBDIR += py-linear-tsv
     SUBDIR += py-linecache2
     SUBDIR += py-lineedit
+    SUBDIR += py-littleutils
     SUBDIR += py-llfuse
     SUBDIR += py-llvmcpy
     SUBDIR += py-llvmlite
     SUBDIR += py-lml
+    SUBDIR += py-locket
     SUBDIR += py-lockfile
     SUBDIR += py-logan
     SUBDIR += py-logbook
@@ -4988,6 +4994,7 @@
     SUBDIR += py-ptpython
     SUBDIR += py-ptvsd
     SUBDIR += py-pudb
+    SUBDIR += py-pure-eval
     SUBDIR += py-purl
     SUBDIR += py-py
     SUBDIR += py-py-ubjson
@@ -5279,6 +5286,7 @@
     SUBDIR += py-squint
     SUBDIR += py-sre-yield
     SUBDIR += py-srsly
+    SUBDIR += py-stack-data
     SUBDIR += py-stackexchange
     SUBDIR += py-statgrab
     SUBDIR += py-statsd
@@ -5352,6 +5360,7 @@
     SUBDIR += py-txaio
     SUBDIR += py-typechecks
     SUBDIR += py-typed-ast
+    SUBDIR += py-typeguard
     SUBDIR += py-typer
     SUBDIR += py-types-Flask
     SUBDIR += py-types-Jinja2
@@ -5545,6 +5554,7 @@
     SUBDIR += pysvn
     SUBDIR += pythontidy
     SUBDIR += pytype
+    SUBDIR += qbe
     SUBDIR += qbs
     SUBDIR += qca
     SUBDIR += qconf
@@ -5751,6 +5761,7 @@
     SUBDIR += rubygem-aws-sdk-budgets
     SUBDIR += rubygem-aws-sdk-chime
     SUBDIR += rubygem-aws-sdk-chimesdkidentity
+    SUBDIR += rubygem-aws-sdk-chimesdkmediapipelines
     SUBDIR += rubygem-aws-sdk-chimesdkmeetings
     SUBDIR += rubygem-aws-sdk-chimesdkmessaging
     SUBDIR += rubygem-aws-sdk-cloud9
@@ -5871,6 +5882,7 @@
     SUBDIR += rubygem-aws-sdk-iottwinmaker
     SUBDIR += rubygem-aws-sdk-iotwireless
     SUBDIR += rubygem-aws-sdk-ivs
+    SUBDIR += rubygem-aws-sdk-ivschat
     SUBDIR += rubygem-aws-sdk-kafka
     SUBDIR += rubygem-aws-sdk-kafkaconnect
     SUBDIR += rubygem-aws-sdk-kendra
