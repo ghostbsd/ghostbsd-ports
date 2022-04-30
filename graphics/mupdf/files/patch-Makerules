@@ -1,35 +1,5 @@
 --- Makerules.orig	2018-10-04 09:19:28 UTC
 +++ Makerules
-@@ -87,7 +87,7 @@
- RANLIB_CMD = xcrun ranlib $@
- 
- # Linux uses pkg-config for system libraries.
--else ifeq "$(OS)" "Linux"
-+else ifeq "$(OS)" "FreeBSD"
- 
- HAVE_PTHREAD := yes
- SYS_PTHREAD_CFLAGS :=
-@@ -97,21 +97,15 @@
- SYS_GLUT_CFLAGS :=
- SYS_GLUT_LIBS := -lglut -lGL
- 
--ifeq "$(shell pkg-config --exists 'libcrypto >= 1.1.0' && echo yes)" "yes"
--HAVE_LIBCRYPTO := yes
--SYS_LIBCRYPTO_CFLAGS := -DHAVE_LIBCRYPTO $(shell pkg-config --cflags libcrypto)
--SYS_LIBCRYPTO_LIBS := $(shell pkg-config --libs libcrypto)
--endif
-+HAVE_LIBCRYPTO := no
-+SYS_LIBCRYPTO_CFLAGS :=
-+SYS_LIBCRYPTO_LIBS :=
- 
- ifeq "$(shell pkg-config --exists libcurl && echo yes)" "yes"
- HAVE_CURL := yes
- SYS_CURL_CFLAGS := $(shell pkg-config --cflags libcurl)
- SYS_CURL_LIBS := $(shell pkg-config --libs libcurl)
--ifeq "$(shell pkg-config --exists openssl && echo yes)" "yes"
--HAVE_OPENSSL_SSL := yes
--SYS_CURL_CFLAGS += $(shell pkg-config --cflags openssl)
--SYS_CURL_DEPS += $(shell pkg-config --libs openssl)
 @@ -24,28 +24,28 @@ ifeq ($(build),debug)
    CFLAGS += -pipe -g
    LDFLAGS += -g $(LDREMOVEUNREACH)
