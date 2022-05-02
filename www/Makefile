@@ -2189,7 +2189,6 @@
     SUBDIR += sfeed
     SUBDIR += sfnt2woff
     SUBDIR += shellinabox
-    SUBDIR += shttpd
     SUBDIR += silicon
     SUBDIR += simple-web-server
     SUBDIR += sitecopy

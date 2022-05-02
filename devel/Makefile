@@ -104,6 +104,7 @@
     SUBDIR += R-cran-reshape
     SUBDIR += R-cran-reshape2
     SUBDIR += R-cran-rgexf
+    SUBDIR += R-cran-rJava
     SUBDIR += R-cran-rlang
     SUBDIR += R-cran-rngtools
     SUBDIR += R-cran-roxygen2
@@ -159,6 +160,7 @@
     SUBDIR += apache-commons-daemon
     SUBDIR += apache-commons-io
     SUBDIR += apache-commons-jxpath
+    SUBDIR += apache-log4j2
     SUBDIR += apache-rat
     SUBDIR += aphpbreakdown
     SUBDIR += aphpunit
@@ -7108,6 +7110,7 @@
     SUBDIR += sope
     SUBDIR += sope2
     SUBDIR += sord
+    SUBDIR += sparsebitset
     SUBDIR += sparsehash
     SUBDIR += spatialindex
     SUBDIR += spdlog
