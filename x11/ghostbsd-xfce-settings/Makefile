@@ -1,5 +1,5 @@
 PORTNAME=	ghostbsd-xfce-settings
-PORTVERSION=	3.7
+PORTVERSION=	3.7.2
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon@ghostbsd.org
