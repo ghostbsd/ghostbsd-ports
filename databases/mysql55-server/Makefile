@@ -12,6 +12,9 @@ COMMENT?=	Multithreaded SQL database (server)
 
 LICENSE=	GPLv2
 
+DEPRECATED=	Upstream support ended on December 2018
+EXPIRATION_DATE=	2022-06-30
+
 SLAVEDIRS=	databases/mysql55-client
 USES=		cmake:insource,noninja compiler:c++11-lang cpe readline shebangfix
 CXXFLAGS+=	${CPPFLAGS}
@@ -29,7 +32,7 @@ CMAKE_ARGS+=	-DINSTALL_DOCDIR="share/doc/mysql" \
 		-DINSTALL_INCLUDEDIR="include/mysql" \
 		-DINSTALL_INFODIR="info" \
 		-DINSTALL_LIBDIR="lib/mysql" \
-		-DINSTALL_MANDIR="man" \
+		-DINSTALL_MANDIR="share/man" \
 		-DINSTALL_MYSQLDATADIR="/var/db/mysql" \
 		-DINSTALL_MYSQLSHAREDIR="share/mysql" \
 		-DINSTALL_MYSQLTESTDIR="share/mysql/tests" \

@@ -13,6 +13,7 @@
     SUBDIR += R-cran-DEoptimR
     SUBDIR += R-cran-DRR
     SUBDIR += R-cran-DoE.base
+    SUBDIR += R-cran-FNN
     SUBDIR += R-cran-Formula
     SUBDIR += R-cran-FrF2
     SUBDIR += R-cran-KFAS
@@ -36,7 +37,9 @@
     SUBDIR += R-cran-XLConnect
     SUBDIR += R-cran-Zelig
     SUBDIR += R-cran-acepack
+    SUBDIR += R-cran-admisc
     SUBDIR += R-cran-alabama
+    SUBDIR += R-cran-ash
     SUBDIR += R-cran-assertthat
     SUBDIR += R-cran-backports
     SUBDIR += R-cran-bdsmatrix
@@ -52,7 +55,9 @@
     SUBDIR += R-cran-dimRed
     SUBDIR += R-cran-dlmodeler
     SUBDIR += R-cran-dplyr
+    SUBDIR += R-cran-eRm
     SUBDIR += R-cran-energy
+    SUBDIR += R-cran-exactRankTests
     SUBDIR += R-cran-expm
     SUBDIR += R-cran-forcats
     SUBDIR += R-cran-forecast
@@ -66,6 +71,7 @@
     SUBDIR += R-cran-gss
     SUBDIR += R-cran-gtable
     SUBDIR += R-cran-haven
+    SUBDIR += R-cran-hdrcde
     SUBDIR += R-cran-hexbin
     SUBDIR += R-cran-igraph
     SUBDIR += R-cran-influenceR
@@ -79,16 +85,22 @@
     SUBDIR += R-cran-lazyeval
     SUBDIR += R-cran-linprog
     SUBDIR += R-cran-lme4
+    SUBDIR += R-cran-locfit
     SUBDIR += R-cran-lpSolve
+    SUBDIR += R-cran-ltm
     SUBDIR += R-cran-magic
     SUBDIR += R-cran-maps
+    SUBDIR += R-cran-mathjaxr
     SUBDIR += R-cran-matrixStats
     SUBDIR += R-cran-maxLik
+    SUBDIR += R-cran-mclust
     SUBDIR += R-cran-mcmc
     SUBDIR += R-cran-memisc
     SUBDIR += R-cran-minqa
+    SUBDIR += R-cran-misc3d
     SUBDIR += R-cran-miscTools
     SUBDIR += R-cran-mitools
+    SUBDIR += R-cran-moments
     SUBDIR += R-cran-mvtnorm
     SUBDIR += R-cran-nloptr
     SUBDIR += R-cran-nnls
@@ -98,11 +110,15 @@
     SUBDIR += R-cran-outliers
     SUBDIR += R-cran-partitions
     SUBDIR += R-cran-pbkrtest
+    SUBDIR += R-cran-plot3D
     SUBDIR += R-cran-pls
+    SUBDIR += R-cran-polycor
     SUBDIR += R-cran-polynom
+    SUBDIR += R-cran-pracma
     SUBDIR += R-cran-prodlim
     SUBDIR += R-cran-proxy
     SUBDIR += R-cran-psych
+    SUBDIR += R-cran-pwr
     SUBDIR += R-cran-quadprog
     SUBDIR += R-cran-qualityTools
     SUBDIR += R-cran-quantreg
@@ -273,6 +289,7 @@
     SUBDIR += eigen3
     SUBDIR += eispack
     SUBDIR += elemental
+    SUBDIR += elementary-calculator
     SUBDIR += elpa
     SUBDIR += emc2
     SUBDIR += ensmallen
@@ -748,7 +765,6 @@
     SUBDIR += p5-Text-AsciiTeX
     SUBDIR += p5-bignum
     SUBDIR += palp
-    SUBDIR += pantheon-calculator
     SUBDIR += pari
     SUBDIR += pari_elldata
     SUBDIR += pari_galdata
@@ -951,6 +967,7 @@
     SUBDIR += py-sym
     SUBDIR += py-sympy
     SUBDIR += py-theano
+    SUBDIR += py-timple
     SUBDIR += py-topologic
     SUBDIR += py-triangle
     SUBDIR += py-uncertainties
@@ -976,7 +993,7 @@
     SUBDIR += reed-solomon
     SUBDIR += rehearse
     SUBDIR += rexx-regmath
-    SUBDIR += rkward-kde
+    SUBDIR += rkward
     SUBDIR += rngstreams
     SUBDIR += rocs
     SUBDIR += rpcalc

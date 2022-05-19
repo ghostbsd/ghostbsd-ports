@@ -1,3 +1,255 @@
+  <vuln vid="a1360138-d446-11ec-8ea1-10c37b4ac2ea">
+    <topic>go -- syscall.Faccessat checks wrong group on Linux</topic>
+    <affects>
+      <package>
+	<name>go</name>
+	<range><lt>1.18.2,1</lt></range>
+      </package>
+      <package>
+	<name>go117</name>
+	<range><lt>1.17.10,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Go project reports:</p>
+	<blockquote cite="https://github.com/golang/go/issues/52313">
+	  <p>When called with a non-zero flags parameter, the
+	    syscall.Faccessat function could incorrectly report that a
+	    file is accessible. This bug only occurs on Linux systems.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-29526</cvename>
+      <url>https://github.com/golang/go/issues/52313</url>
+      <url>https://groups.google.com/g/golang-dev/c/CPU3TB6d4oY</url>
+    </references>
+    <dates>
+      <discovery>2022-04-12</discovery>
+      <entry>2022-05-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="11e36890-d28c-11ec-a06f-d4c9ef517024">
+    <topic>curl -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>curl</name>
+	<range><lt>7.83.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The curl project reports:</p>
+	<blockquote cite="https://curl.se/docs/security.html">
+	  <p>CVE-2022-27778: curl removes wrong file on error</p>
+	  <p>CVE-2022-27779: cookie for trailing dot TLD</p>
+	  <p>CVE-2022-27780: percent-encoded path separator in URL host</p>
+	  <p>CVE-2022-27781: CERTINFO never-ending busy-loop</p>
+	  <p>CVE-2022-27782: TLS and SSH connection too eager reuse</p>
+	  <p>CVE-2022-30115: HSTS bypass via trailing dot</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-27778</cvename>
+      <cvename>CVE-2022-27779</cvename>
+      <cvename>CVE-2022-27780</cvename>
+      <cvename>CVE-2022-27781</cvename>
+      <cvename>CVE-2022-27782</cvename>
+      <cvename>CVE-2022-30115</cvename>
+      <url>https://curl.se/docs/security.html</url>
+    </references>
+    <dates>
+      <discovery>2022-05-11</discovery>
+      <entry>2022-05-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="157ce083-d145-11ec-ab9b-6cc21735f730">
+    <topic>PostgreSQL Server -- execute arbitrary SQL code as DBA user</topic>
+    <affects>
+      <package>
+	<name>postgresql14-server</name>
+	<range><lt>14.3</lt></range>
+      </package>
+      <package>
+	<name>postgresql13-server</name>
+	<range><lt>13.7</lt></range>
+      </package>
+      <package>
+	<name>postgresql12-server</name>
+	<range><lt>12.11</lt></range>
+      </package>
+      <package>
+	<name>postgresql11-server</name>
+	<range><lt>11.16</lt></range>
+      </package>
+      <package>
+	<name>postgresql10-server</name>
+	<range><lt>10.21</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The PostgreSQL project reports:</p>
+	<blockquote>
+	  <p>
+	    Confine additional operations within "security restricted
+	    operation" sandboxes.
+	  </p>
+	  <p>
+	    Autovacuum, CLUSTER, CREATE INDEX, REINDEX, REFRESH MATERIALIZED VIEW,
+	    and pg_amcheck activated the "security restricted operation" protection
+	    mechanism too late, or even not at all in some code paths.
+	    A user having permission to create non-temporary objects within a
+	    database could define an object that would execute arbitrary SQL
+	    code with superuser permissions the next time that autovacuum
+	    processed the object, or that some superuser ran one of the affected
+	    commands against it.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-1552</cvename>
+    </references>
+    <dates>
+      <discovery>2022-05-11</discovery>
+      <entry>2022-05-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ac91cf5e-d098-11ec-bead-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>101.0.4951.64</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2022/05/stable-channel-update-for-desktop_10.html">
+	  <p>This release contains 13 security fixes, including:</p>
+	  <ul>
+	    <li>[1316990] High CVE-2022-1633: Use after free in Sharesheet. Reported by Khalil Zhani on 2022-04-18</li>
+	    <li>[1314908] High CVE-2022-1634: Use after free in Browser UI. Reported by Khalil Zhani on 2022-04-09</li>
+	    <li>[1319797] High CVE-2022-1635: Use after free in Permission Prompts. Reported by Anonymous on 2022-04-26</li>
+	    <li>[1297283] High CVE-2022-1636: Use after free in Performance APIs. Reported by Seth Brenith, Microsoft on 2022-02-15</li>
+	    <li>[1311820] High CVE-2022-1637: Inappropriate implementation in Web Contents. Reported by Alesandro Ortiz on 2022-03-31</li>
+	    <li>[1316946] High CVE-2022-1638: Heap buffer overflow in V8 Internationalization. Reported by DoHyun Lee (@l33d0hyun) of DNSLab, Korea University on 2022-04-17</li>
+	    <li>[1317650] High CVE-2022-1639: Use after free in ANGLE. Reported by SeongHwan Park (SeHwa) on 2022-04-19</li>
+	    <li>[1320592] High CVE-2022-1640: Use after free in Sharing. Reported by Weipeng Jiang (@Krace) and Guang Gong of 360 Vulnerability Research Institute on 2022-04-28</li>
+	    <li>[1305068] Medium CVE-2022-1641: Use after free in Web UI Diagnostics. Reported by Rong Jian of VRI on 2022-03-10</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-1633</cvename>
+      <cvename>CVE-2022-1634</cvename>
+      <cvename>CVE-2022-1635</cvename>
+      <cvename>CVE-2022-1636</cvename>
+      <cvename>CVE-2022-1637</cvename>
+      <cvename>CVE-2022-1638</cvename>
+      <cvename>CVE-2022-1639</cvename>
+      <cvename>CVE-2022-1640</cvename>
+      <cvename>CVE-2022-1641</cvename>
+      <url>https://chromereleases.googleblog.com/2022/05/stable-channel-update-for-desktop_10.html</url>
+    </references>
+    <dates>
+      <discovery>2022-05-10</discovery>
+      <entry>2022-05-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b9837fa1-cd72-11ec-98f1-6805ca0b3d42">
+    <topic>rsyslog8 -- heap buffer overflow on receiving TCP syslog</topic>
+    <affects>
+      <package>
+	<name>rsyslog</name>
+	<range><lt>8.2204.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Rainer Gerhards reports:</p>
+	<blockquote cite="https://github.com/rsyslog/rsyslog/security/advisories/GHSA-ggw7-xr6h-mmr8">
+	  <p>Modules for TCP syslog reception have a heap buffer
+	  overflow when octet-counted framing is used. The attacker
+	  can corrupt heap values, leading to data integrity issues
+	  and availability impact. Remote code execution is unlikely
+	  to happen but not impossible..</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-24903</cvename>
+      <url>https://github.com/rsyslog/rsyslog/security/advisories/GHSA-ggw7-xr6h-mmr8</url>
+    </references>
+    <dates>
+      <discovery>2022-05-05</discovery>
+      <entry>2022-05-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="647ac600-cc70-11ec-9cfc-10c37b4ac2ea">
+    <topic>gogs -- XSS in issue attachments</topic>
+    <affects>
+      <package>
+	<name>gogs</name>
+	<range><lt>0.12.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The gogs project reports:</p>
+	<blockquote cite="https://github.com/gogs/gogs/issues/6919">
+	  <p>Repository issues page allows HTML attachments with arbitrary
+	    JS code.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-1464</cvename>
+      <url>https://github.com/gogs/gogs/issues/6919</url>
+      <url>https://huntr.dev/bounties/34a12146-3a5d-4efc-a0f8-7a3ae04b198d/</url>
+    </references>
+    <dates>
+      <discovery>2022-04-12</discovery>
+      <entry>2022-05-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="95ee401d-cc6a-11ec-9cfc-10c37b4ac2ea">
+    <topic>gitea -- Escape git fetch remote</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.16.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Gitea team reports:</p>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/19487">
+	  <p>Escape git fetch remote in
+	    services/migrations/gitea_uploader.go</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/go-gitea/gitea/pull/19487</url>
+    </references>
+    <dates>
+      <discovery>2022-04-25</discovery>
+      <entry>2022-05-05</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="fceb2b08-cb76-11ec-a06f-d4c9ef517024">
     <topic>OpenSSL -- Multiple vulnerabilities</topic>
     <affects>
@@ -7,6 +259,10 @@
       </package>
       <package>
 	<name>openssl-devel</name>
+	<range><lt>3.0.3</lt></range>
+      </package>
+      <package>
+	<name>openssl-quictls</name>
 	<range><lt>3.0.3</lt></range>
       </package>
     </affects>
@@ -49,6 +305,7 @@
     <dates>
       <discovery>2022-05-03</discovery>
       <entry>2022-05-04</entry>
+      <modified>2022-05-05</modified>
     </dates>
   </vuln>
 
@@ -97,8 +354,11 @@
     <affects>
       <package>
 	<name>go</name>
+	<range><lt>1.18.1,1</lt></range>
+      </package>
+      <package>
+	<name>go117</name>
 	<range><lt>1.17.9,1</lt></range>
-	<range><ge>1.18,1</ge><lt>1.18.1,1</lt></range>
       </package>
     </affects>
     <description>

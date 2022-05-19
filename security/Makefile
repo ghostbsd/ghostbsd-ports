@@ -822,6 +822,7 @@
     SUBDIR += py-ailment
     SUBDIR += py-angr
     SUBDIR += py-argon2-cffi
+    SUBDIR += py-argon2-cffi-bindings
     SUBDIR += py-artifacts
     SUBDIR += py-asyncssh
     SUBDIR += py-authlib
@@ -1046,6 +1047,7 @@
     SUBDIR += rubygem-gpgme
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
+    SUBDIR += rubygem-haiti-hash
     SUBDIR += rubygem-hkdf
     SUBDIR += rubygem-hkdf0
     SUBDIR += rubygem-hrr_rb_ssh

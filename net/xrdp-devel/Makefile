@@ -2,7 +2,8 @@
 
 PORTNAME=	xrdp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.20.b20220329
+DISTVERSION=	0.9.80.b20220510
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	net
 PKGNAMESUFFIX=	-devel
@@ -31,12 +32,14 @@ USE_GITHUB=	yes
 
 GNU_CONFIGURE=	yes
 GH_ACCOUNT=	neutrinolabs
-GH_TAGNAME=	cd1af47
-GH_TUPLE=	neutrinolabs:librfxcodec:v0.1.6:librfxcodec/librfxcodec \
+GH_TAGNAME=	df425c2
+GH_TUPLE=	neutrinolabs:librfxcodec:79619b6:librfxcodec/librfxcodec \
 		neutrinolabs:libpainter:v0.1.1:libpainter/libpainter
 
 CONFIGURE_ARGS=	--localstatedir=/var --enable-strict-locations \
 		--with-pkgconfigdir=${LOCALBASE}/libdata/pkgconfig \
+		--with-socketdir=/var/run/xrdp \
+		--with-sesmanruntimedir=/var/run/xrdp-sesman \
 		--enable-pam-config=freebsd \
 		--enable-jpeg --enable-pixman --enable-rfxcodec --enable-painter \
 		--enable-imlib2

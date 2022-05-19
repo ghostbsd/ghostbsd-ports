@@ -5,11 +5,11 @@
 # - mail/dovecot-pigeonhole. See ports/146029 for an explanation.    #
 # - mail/dovecot-fts-xapian.                                         #
 # - mail/dovecot-fts-elastic.                                        #
+# - mail/dovecot-coi.                                                #
 ######################################################################
 
 PORTNAME=	dovecot
-PORTVERSION=	2.3.18
-PORTREVISION=	1
+PORTVERSION=	2.3.19
 CATEGORIES=	mail
 MASTER_SITES=	https://dovecot.org/releases/2.3/
 

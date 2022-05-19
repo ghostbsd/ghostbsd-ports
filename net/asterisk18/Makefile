@@ -1,5 +1,5 @@
 PORTNAME=	asterisk
-PORTVERSION=	18.11.3
+PORTVERSION=	18.12.0
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729
 MASTER_SITE_SUBDIR=	asterisk/ \
@@ -19,7 +19,7 @@ LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid \
 		libjansson.so:devel/jansson
 
 USES=		bison compiler:c11 cpe gmake gnome iconv libedit localbase \
-		shebangfix sqlite ssl ncurses
+		pkgconfig shebangfix sqlite ssl ncurses
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	asterisk
@@ -27,7 +27,7 @@ USE_GITHUB=	nodefault
 
 EXTRACT_ONLY:=	${DISTNAME}${EXTRACT_SUFX}
 
-PJSIP_VERSION=	2.10
+PJSIP_VERSION=	2.12
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datarootdir=${DATADIR} \
 		--with-ilbc=internal \
@@ -60,7 +60,7 @@ OPTIONS_DEFINE=			ASTVERSION BACKTRACE CURL EXCHANGE FREETDS G729 LDAP LUA MACRO
 				SPANDSP SRTP SYSINFO URIPARSER XMLDOC XMPP
 OPTIONS_DEFAULT=		CURL FREETDS GSM LUA MACRO MP3PLAYER NEWT ODBC OPUS MYSQL PGSQL \
 				PJSIP PORTAUDIO RADIUS SNMP SPANDSP SPEEX SRTP URIPARSER \
-				VORBIS XMLDOC 
+				VORBIS XMLDOC
 
 OPTIONS_DEFINE_i386=		DAHDI
 OPTIONS_DEFINE_amd64=		DAHDI
@@ -166,7 +166,6 @@ PGSQL_CONFIGURE_WITH=	postgres
 PGSQL_USES=		pgsql
 
 PJSIP_CONFIGURE_WITH=	pjproject pjproject-bundled
-PJSIP_USES=		pkgconfig
 PJSIP_LIB_DEPENDS=	libsrtp2.so:net/libsrtp2 \
 			libspeex.so:audio/speex \
 			libspeexdsp.so:audio/speexdsp
@@ -246,6 +245,7 @@ post-extract-OPUS-on:
 post-patch:
 	@${REINPLACE_CMD} -e 's|/var/lib|${PREFIX}/share|g' ${WRKSRC}/configs/samples/musiconhold.conf.sample
 	@${REINPLACE_CMD} -e 's/@XMLSTARLET@//' ${WRKSRC}/makeopts.in
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/main/term.c
 .if exists(${FILESDIR}/.asterisk.makeopts)
 	${CP} ${FILESDIR}/.asterisk.makeopts ${WRKSRC}/menuselect.makeopts
 .endif

@@ -23,6 +23,7 @@
     SUBDIR += R-cran-gridBase
     SUBDIR += R-cran-gridExtra
     SUBDIR += R-cran-jpeg
+    SUBDIR += R-cran-latticeExtra
     SUBDIR += R-cran-munsell
     SUBDIR += R-cran-pROC
     SUBDIR += R-cran-pixmap
@@ -536,10 +537,6 @@
     SUBDIR += luminance-qt5
     SUBDIR += lux
     SUBDIR += lximage-qt
-    SUBDIR += magnum
-    SUBDIR += magnum-examples
-    SUBDIR += magnum-extras
-    SUBDIR += magnum-plugins
     SUBDIR += mahotas
     SUBDIR += maim
     SUBDIR += mandelbulber
@@ -763,7 +760,6 @@
     SUBDIR += pho
     SUBDIR += photivo
     SUBDIR += photoflare
-    SUBDIR += photoflow
     SUBDIR += photopc
     SUBDIR += photoqt
     SUBDIR += phototonic

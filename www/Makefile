@@ -274,6 +274,7 @@
     SUBDIR += jitsi-meet
     SUBDIR += jmeter
     SUBDIR += joomla3
+    SUBDIR += joomla4
     SUBDIR += jwt-cli
     SUBDIR += kanboard
     SUBDIR += kannel
@@ -2199,6 +2200,7 @@
     SUBDIR += smarty3
     SUBDIR += smb_auth
     SUBDIR += snarf
+    SUBDIR += so
     SUBDIR += sogo
     SUBDIR += sogo-activesync
     SUBDIR += sogo2
@@ -2256,6 +2258,7 @@
     SUBDIR += transproxy
     SUBDIR += tt-rss
     SUBDIR += ttf2eot
+    SUBDIR += tuifeed
     SUBDIR += tusc
     SUBDIR += tusd
     SUBDIR += twiki

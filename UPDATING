@@ -5,6 +5,29 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20220513:
+  AFFECTS: devel/nexus2-oss
+  AUTHOR: michael.osipov@siemens.com
+
+  Nexus 2.15.x introduces incompatible configuration changes. You
+  must review changes in ETCDIR/wrapper.conf and ETCDIR/jetty*.xml
+  with updated samples as well as NEXUS_WORKDIR/conf/logback-nexus.xml
+  with its origin from
+  DATADIR/nexus/WEB-INF/lib/nexus-core-VERSION.jar!/META-INF/log/logback-nexus.xml,
+  grant write access to files in ETCDIR since Nexus itself might
+  update files in place otherwise your instance will not properly
+  work after the update.
+
+20220510
+  AFFECTS: sysutils/zrepl
+  AUTHOR: monwarez@gmail.com
+
+  The zrepl update to 0.5.0.8 includes the following breaking changes:
+  - The Prometheus metric zrepl_version_daemon was converted to zrepl_start_time
+  The metric still reports the zrepl version in a label.
+  But the metric *value* is now the Unix timestamp at the time the daemon was started.
+  The Grafana dashboard in zrepl examples directory has been updated.
+
 20220502:
   AFFECTS: mail/mutt
   AUTHOR: dereks@lifeofadishwasher.com
@@ -14,7 +37,7 @@ you update your ports collection, before attempting any port upgrades.
   to the EOL of databases/db5.
 
 20220501:
-  AFFECT: users of drm-current-kmod and drm-devel-kmod
+  AFFECTS: users of drm-current-kmod and drm-devel-kmod
   AUTHOR: manu@FreeBSD.org
 
   Both ports where removed.

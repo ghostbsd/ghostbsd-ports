@@ -1,8 +1,7 @@
 # Created by: Slawomir Wojciech Wojtczak <vermaden@interia.pl>
 
 PORTNAME=	automount
-DISTVERSION=	1.7.3
-PORTREVISION=	3
+DISTVERSION=	1.7.8
 CATEGORIES=	sysutils
 
 MAINTAINER=	vermaden@interia.pl
@@ -32,8 +31,6 @@ EXFAT_RUN_DEPENDS=	fusefs-exfat>=0:sysutils/fusefs-exfat \
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/automount             ${STAGEDIR}${PREFIX}/sbin
 	${INSTALL_DATA}   ${WRKSRC}/automount_devd.conf   ${STAGEDIR}${PREFIX}/etc/devd/automount_devd.conf
-	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/devd-openrc
-	${INSTALL_DATA}   ${WRKSRC}/automount_devd.conf   ${STAGEDIR}${PREFIX}/etc/devd-openrc/automount_devd.conf
 	${INSTALL_DATA}   ${WRKSRC}/automount.conf	  ${STAGEDIR}${PREFIX}/etc/automount.conf.sample
 
 .include <bsd.port.mk>

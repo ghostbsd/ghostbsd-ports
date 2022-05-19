@@ -2626,7 +2626,6 @@ PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
 PACKAGES:=	${PACKAGES:S/:/\:/g}
 _HAVE_PACKAGES=	yes
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
-PKGOLDFILE?=		${PKGREPOSITORY}/${PKGNAME}.${PKG_COMPRESSION_FORMAT}
 .    else
 PKGFILE?=		${.CURDIR}/${PKGNAME}${PKG_SUFX}
 .    endif
@@ -2636,10 +2635,12 @@ WRKDIR_PKGFILE=	${WRKDIR}/pkg/${PKGNAME}${PKG_SUFX}
 PKGLATESTREPOSITORY?=	${PACKAGES}/Latest
 PKGBASE?=			${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
 PKGLATESTFILE=		${PKGLATESTREPOSITORY}/${PKGBASE}${PKG_SUFX}
+.if ${PKG_COMPRESSION_FORMAT} == txz
 PKGOLDLATESTFILE=		${PKGLATESTREPOSITORY}/${PKGBASE}.${PKG_COMPRESSION_FORMAT}
 # Temporary workaround to be deleted once every supported version of FreeBSD
 # have a bootstrap which handles the pkg extension.
 PKGOLDSIGFILE=			${PKGLATESTREPOSITORY}/${PKGBASE}.${PKG_COMPRESSION_FORMAT}.sig
+.endif
 
 CONFIGURE_SCRIPT?=	configure
 CONFIGURE_CMD?=		./${CONFIGURE_SCRIPT}
@@ -2815,6 +2816,13 @@ IGNORE+=	(reason: ${NOT_FOR_ARCHS_REASON})
 
 # Check the user interaction and legal issues
 .    if !defined(NO_IGNORE)
+.for v in ${OSREL} ${OSREL:R}
+.for f in ${FLAVOR}
+.if defined($f_IGNORE_${OPSYS}_${v})
+IGNORE+= "${${f}_IGNORE_${OPSYS}_${v}}"
+.endif
+.endfor
+.endfor
 .      if (defined(IS_INTERACTIVE) && defined(BATCH))
 IGNORE=		is an interactive port
 .      elif (!defined(IS_INTERACTIVE) && defined(INTERACTIVE))
@@ -3399,12 +3407,6 @@ ${PKGFILE}: ${WRKDIR_PKGFILE} ${PKGREPOSITORY}
 	@${LN} -f ${WRKDIR_PKGFILE} ${PKGFILE} 2>/dev/null \
 			|| ${CP} -f ${WRKDIR_PKGFILE} ${PKGFILE}
 
-.      if !defined(_PKG_TRANSITIONING_TO_NEW_EXT)
-_EXTRA_PACKAGE_TARGET_DEP+= ${PKGOLDFILE}
-${PKGOLDFILE}: ${PKGFILE}
-	${INSTALL} -l rs ${PKGFILE} ${PKGOLDFILE}
-.      endif
-
 .      if ${PKGORIGIN} == "ports-mgmt/pkg" || ${PKGORIGIN} == "ports-mgmt/pkg-devel"
 _EXTRA_PACKAGE_TARGET_DEP+=	${PKGLATESTREPOSITORY}
 _PORTS_DIRECTORIES+=	${PKGLATESTREPOSITORY}
@@ -3414,11 +3416,11 @@ _EXTRA_PACKAGE_TARGET_DEP+=	${PKGLATESTFILE}
 ${PKGLATESTFILE}: ${PKGFILE} ${PKGLATESTREPOSITORY}
 	${INSTALL} -l rs ${PKGFILE} ${PKGLATESTFILE}
 
-.        if !defined(_PKG_TRANSITIONING_TO_NEW_EXT)
+.        if !defined(_PKG_TRANSITIONING_TO_NEW_EXT) && ${PKG_COMPRESSION_FORMAT} == txz
 _EXTRA_PACKAGE_TARGET_DEP+=	${PKGOLDLATESTFILE} ${PKGOLDSIGFILE}
 
-${PKGOLDLATESTFILE}: ${PKGOLDFILE} ${PKGLATESTREPOSITORY}
-	${INSTALL} -l rs ${PKGOLDFILE} ${PKGOLDLATESTFILE}
+${PKGOLDLATESTFILE}: ${PKGFILE} ${PKGLATESTREPOSITORY}
+	${INSTALL} -l rs ${PKGFILE} ${PKGOLDLATESTFILE}
 
 # Temporary workaround to be deleted once every supported version of FreeBSD
 # have a bootstrap which handles the pkg extension.
