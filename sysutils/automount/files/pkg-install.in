@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case ${2} in
+  (POST-INSTALL)
+    if [ ! -f "%%PREFIX%%/etc/automount.conf" ]; then
+      echo "USERUMOUNT=YES" > %%PREFIX%%/etc/automount.conf
+      echo "REMOVEDIRS=YES" >> %%PREFIX%%/etc/automount.conf
+    fi
+    echo
+    echo
+    echo "Check %%PREFIX%%/sbin/automount --help for available options."
+    echo
+    echo
+    ;;
+esac
