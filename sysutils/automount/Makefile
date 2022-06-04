@@ -2,6 +2,7 @@
 
 PORTNAME=	automount
 DISTVERSION=	1.7.8
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	vermaden@interia.pl
@@ -12,7 +13,10 @@ LICENSE=	BSD2CLAUSE
 USE_GITHUB=     yes
 GH_ACCOUNT=     GhostBSD
 
-PLIST_FILES=	sbin/automount etc/devd/automount_devd.conf etc/automount.conf.sample
+PLIST_FILES=	sbin/automount \
+		etc/devd/automount_devd.conf \
+		etc/devd/automount_devd_localdisks.conf \
+		etc/automount.conf.sample
 
 SUB_FILES=	pkg-install
 NO_BUILD=	yes
@@ -31,6 +35,7 @@ EXFAT_RUN_DEPENDS=	fusefs-exfat>=0:sysutils/fusefs-exfat \
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/automount             ${STAGEDIR}${PREFIX}/sbin
 	${INSTALL_DATA}   ${WRKSRC}/automount_devd.conf   ${STAGEDIR}${PREFIX}/etc/devd/automount_devd.conf
-	${INSTALL_DATA}   ${WRKSRC}/automount.conf	  ${STAGEDIR}${PREFIX}/etc/automount.conf.sample
+	${INSTALL_DATA}   ${WRKSRC}/automount_devd_localdisks.conf   ${STAGEDIR}${PREFIX}/etc/devd/automount_devd_localdisks.conf
+	${INSTALL_DATA}   ${WRKSRC}/automount.conf        ${STAGEDIR}${PREFIX}/etc/automount.conf.sample
 
 .include <bsd.port.mk>
