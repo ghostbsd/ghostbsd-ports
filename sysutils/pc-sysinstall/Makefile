@@ -1,8 +1,5 @@
-# Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD$
-
 PORTNAME=	pc-sysinstall
-PORTVERSION=	2022020800
+PORTVERSION=	2022060400
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 
@@ -20,6 +17,6 @@ MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}
 USE_GITHUB=	yes
 GH_ACCOUNT=	ghostbsd
 GH_PROJECT=	pc-sysinstall
-GH_TAGNAME=	242329ab7fde83456424bf5998234013e3d68c79
+GH_TAGNAME=	fc1bc69a36f68d7ef8e8401ead1d7251da2422e4
 
 .include <bsd.port.mk>

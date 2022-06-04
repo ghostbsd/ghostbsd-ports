@@ -9,5 +9,9 @@ case ${2} in
       touch /var/lib/ghostbsd-update/rc_change_done
       echo "On the next reboot this system will run on FreeBSD services"
     fi
+    if [ ! -f "/var/lib/ghostbsd-update/shm_to_tmp" ]; then
+      sed -i "" 's#/compat/linux/dev/shm#/tmp#g' /etc/fstab
+      touch /var/lib/ghostbsd-update/shm_to_tmp
+    fi
     ;;
 esac
