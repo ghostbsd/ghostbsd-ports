@@ -1,5 +1,6 @@
 PORTNAME=	ghostbsd-update-scripts
-PORTVERSION=	22.06.03
+PORTVERSION=	21.08.21
+PORTREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	ericturgeon@ghostbsd.org
