@@ -77,7 +77,6 @@
     SUBDIR += blend2d
     SUBDIR += blender
     SUBDIR += blender-doc
-    SUBDIR += blender-lts28
     SUBDIR += blender-lts29
     SUBDIR += bmeps
     SUBDIR += bmp2html
@@ -655,7 +654,6 @@
     SUBDIR += p5-GD-TextUtil
     SUBDIR += p5-GD-Thumbnail
     SUBDIR += p5-Geo-EOP
-    SUBDIR += p5-Geo-GDAL
     SUBDIR += p5-Geo-GDAL-FFI
     SUBDIR += p5-Geo-GML
     SUBDIR += p5-Geo-Gpx
@@ -907,6 +905,7 @@
     SUBDIR += py-pytesseract
     SUBDIR += py-python-poppler-qt5
     SUBDIR += py-pyvips
+    SUBDIR += py-pyvista
     SUBDIR += py-pyx
     SUBDIR += py-qrencode
     SUBDIR += py-railroad-diagrams

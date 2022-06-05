@@ -1,13 +1,13 @@
 # Created by: nectar@FreeBSD.org
 
 PORTNAME=		krb5
-PORTVERSION=		1.19.${MIT_COMMIT_DATE}
+PORTVERSION=		1.20.${MIT_COMMIT_DATE}
 CATEGORIES=		security
 .if !defined(MASTERDIR)
 PKGNAMESUFFIX=		-devel
 .endif
-HASH=			855c715e9
-MIT_COMMIT_DATE=	2022.04.29
+HASH=			2b34a0074
+MIT_COMMIT_DATE=	2022.05.24
 
 PATCH_SITES=		http://web.mit.edu/kerberos/advisories/
 PATCH_DIST_STRIP=	-p2

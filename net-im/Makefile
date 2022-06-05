@@ -28,11 +28,12 @@
     SUBDIR += gotosocial
     SUBDIR += icmpchat
     SUBDIR += icqlib
-    SUBDIR += jabber.el
     SUBDIR += jabberd
     SUBDIR += jarl
     SUBDIR += jggtrans
     SUBDIR += jicofo
+    SUBDIR += jitsi-meet-full
+    SUBDIR += jitsi-prosody-plugins
     SUBDIR += jitsi-videobridge
     SUBDIR += kaccounts-integration
     SUBDIR += kaccounts-providers

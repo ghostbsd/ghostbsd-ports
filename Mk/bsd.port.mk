@@ -4978,6 +4978,7 @@ do-config:
 	trap "${RM} $${TMPOPTIONSFILE}; exit 1" 1 2 3 5 10 13 15; \
 	${SETENV} ${D4P_ENV} ${SH} ${SCRIPTSDIR}/dialog4ports.sh $${TMPOPTIONSFILE} || { \
 		${RM} $${TMPOPTIONSFILE}; \
+		${ECHO_CMD}; \
 		${ECHO_MSG} "===> Options unchanged"; \
 		exit 0; \
 	}; \

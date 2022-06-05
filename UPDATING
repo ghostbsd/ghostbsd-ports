@@ -5,6 +5,16 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20220602:
+  AFFECTS: sysutils/graylog
+  AUTHOR: dch@FreeBSD.org
+
+  Graylog 4.3.0+ fails to start if graylog's internal collector for
+  system statistics is enabled. This will eventually be addressed
+  upstream.
+
+  Add disable_native_system_stats_collector=true to your graylog.conf.
+
 20220513:
   AFFECTS: devel/nexus2-oss
   AUTHOR: michael.osipov@siemens.com
@@ -827,7 +837,7 @@ reinstall the new ones without using the pkg upgrade facility.
   /!\ WARNING /!\
 
   1. Please ensure that your local installation of net-mgmt/netbox is at
-     the 2.11 release before attemping to upgrade to NetBox 3.0 or later.
+     the 2.11 release before attempting to upgrade to NetBox 3.0 or later.
 
   2. Please also note that the previously deprecated secrets functionality
      has been removed with NetBox 3.0.  This means, all of the secrets still

@@ -1,5 +1,5 @@
 PORTNAME=	fastf1
-PORTVERSION=	2.2.5
+PORTVERSION=	2.2.8
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,5 +21,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 
 USES=	python:3.6+
 USE_PYTHON=	distutils autoplist
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

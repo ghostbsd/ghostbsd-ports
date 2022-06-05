@@ -23,6 +23,7 @@
 # This file can be linted with Tools/scripts/MOVEDlint.awk
 #
 # Port|Moved to|Date|Why
+deskutils/planner|deskutils/gnome-planner|2020-05-31|Revive in more appropriate port name
 audio/polypaudio|audio/pulseaudio|2008-01-01|Project renamed
 audio/akode-plugins-polypaudio||2008-01-01|Polypaudio is obsolete in favor of Pulseaudio
 audio/teknap|net-p2p/teknap|2008-01-09|Moved to net-p2p category
@@ -10608,7 +10609,6 @@ net/g2ipmsg||2018-12-11|Has expired: GNOME 2 application
 net/grdesktop||2018-12-11|Has expired: GNOME 2 application
 textproc/gnome-spell||2018-12-11|Has expired: GNOME 2 application
 textproc/sagasu||2018-12-11|Has expired: GNOME 2 application
-deskutils/planner||2018-12-11|Has expired: GNOME 2 application
 deskutils/multisync||2018-12-11|Has expired: GNOME 2 application
 deskutils/drivel||2018-12-11|Has expired: GNOME 2 application
 deskutils/notecase||2018-12-11|Has expired: GNOME 2 application
@@ -15477,7 +15477,6 @@ news/rawdog||2020-09-19|Has expired: Uses deprecated version of python
 ports-mgmt/portell||2020-09-19|Has expired: Uses deprecated version of python
 print/biblio-py||2020-09-19|Has expired: Uses deprecated version of python
 science/brian||2020-09-19|Has expired: Uses deprecated version of python
-science/paraview||2020-09-19|Has expired: Uses deprecated version of python
 security/arm||2020-09-19|Has expired: Uses deprecated version of python
 security/ismtp||2020-09-19|Has expired: Uses deprecated version of python
 security/py-halberd||2020-09-19|Has expired: Uses deprecated version of python
@@ -15698,7 +15697,6 @@ devel/pythk||2020-12-12|Has expired: Uses deprecated version of python
 mail/py-spambayes||2020-12-12|Has expired: Uses deprecated version of python
 math/py-numeric|math/py-numpy|2020-12-12|Has expired: Uses deprecated version of python
 math/py-scientific||2020-12-12|Has expired: Uses deprecated version of python
-net/py-suds||2020-12-12|Has expired: Uses deprecated version of python
 net/pynids||2020-12-12|Has expired: Uses deprecated version of python
 security/py-obfsproxy-tor||2020-12-12|Has expired: Uses deprecated version of python
 sysutils/syslog-ng324||2020-12-12|Has expired: Agreed upon upstream one year deprecation policy
@@ -15988,7 +15986,6 @@ www/p5-RT-Extension-MandatoryOnTransition@rt42||2021-02-02|Removed, currently on
 www/p5-RT-Extension-RepeatTicket@rt42||2021-02-02|Removed, currently only supported with www/rt44
 www/p5-RT-Extension-RepeatTicket@rt44|www/p5-RT-Extension-RepeatTicket|2021-02-02|Unflavor, currently only supported with www/rt44
 www/p5-RTx-Calendar@rt42||2021-02-02|Removed, currently only supported with www/rt44
-www/p5-RTx-Calendar@rt44|www/p5-RTx-Calendar|2021-02-02|Unflavor, currently only supported with www/rt44
 www/rt42|www/rt44|2021-02-02|Has expired: Upstream support is ending; please migrate to RT-5.0 (www/rt50)
 www/opera||2021-02-04|Abandonware since 2013
 www/opera-linuxplugins||2021-02-04|Depends on opera browser
@@ -16959,7 +16956,7 @@ textproc/rarian||2022-03-15|Abandonware
 devel/ORBit2||2022-03-15|Gnome2 library unused anymore
 games/pushover|games/domino-chain|2022-03-17|Chase upstream rename
 graphics/darktable38|graphics/darktable|2022-03-19|Darktable was upgraded to 3.8, separate port no longer needed
-security/1password-client-devel|security/1password-client2|2022-03-19|cli version 2 is now released.
+security/1password-client-devel|security/1password-client2|2022-03-19|cli version 2 is now released
 x11-toolkits/pangoxsl||2022-03-20|Has expired: Abandonware and not used by any port
 print/lgrind||2022-03-22|Has expired: Abandonware as last release was in 2001
 devel/py-decorator4||2022-03-22|Has expired: Legacy version, use devel/py-decorator instead
@@ -17006,7 +17003,7 @@ security/vinetto||2022-03-31|Has expired: Obsolete, targets deprecated Windows o
 security/pbnj||2022-03-31|Has expired: Abandonware, last release in 2006 and reported broken upstream in 2017 upstream
 databases/jasperreports||2022-03-31|Has expired: Unsupported by upstream, released in 2013
 security/retranslator||2022-03-31|Has expired: Deprecated upstream (EOL)
-security/cp2fwb||2022-03-31|Has expired: Abandonware, used with deprecated software Firewall Builder.
+security/cp2fwb||2022-03-31|Has expired: Abandonware, used with deprecated software Firewall Builder
 security/webscarab||2022-03-31|Has expired: Deprecated by upstream in 2014
 security/pscan||2022-03-31|Has expired: Abandonware, last release in 2000
 security/vnccrack||2022-03-31|Has expired: Outdated and abandoned, last release in 2008. Upstream is at 2.1 while version in ports is 1.0.0
@@ -17152,3 +17149,43 @@ graphics/magnum||2022-05-17|Has expired: Broken for more than a year
 graphics/magnum-plugins||2022-05-17|Has expired: Depends on broken graphics/magnum
 graphics/magnum-extras||2022-05-17|Has expired: Depends on broken graphics/magnum
 math/pantheon-calculator|math/elementary-calculator|2022-05-18|Switch to reverse domain name notation
+mail/p5-MIME-Fast||2022-05-19|Depends on long deprecated gmime-2.2
+mail/gmime2-sharp|mail/gmime26-sharp|2022-05-19|Depends on long deprecated gmime-2.2
+mail/gmime2|mail/gmime26|2022-05-19|Not used anymore overcome by gnime26
+graphics/p5-Geo-GDAL||2022-05-22|Remove obsoleted port. GDAL removed deprecated SWIG Perl bindings since 3.5.0
+devel/py-gitdb2|devel/py-gitdb|2022-05-22|Remove obsoleted port. Use devel/py-gitdb instead
+devel/py-smmap2|devel/py-smmap|2022-05-22|Remove obsoleted port. Use devel/py-smmap instead
+devel/rubygem-cucumber-create-meta|devel/rubygem-cucumber-ci-environment|2022-05-22|Remove obsoleted port. Use devel/rubygem-cucumber-ci-environment instead
+devel/rubygem-cucumber-cucumber-expressions14|devel/rubygem-cucumber-cucumber-expressions|2022-05-22|Remove obsoleted port. Use devel/rubygem-cucumber-cucumber-expressions instead
+devel/rubygem-cucumber-formatter-dots|textproc/rubygem-cucumber-html-formatter|2022-05-22|Remove obsoleted port. Use textproc/rubygem-cucumber-html-formatter instead
+devel/rubygem-cucumber-messages4|devel/rubygem-cucumber-messages|2022-05-22|Remove obsoleted port. Use devel/rubygem-cucumber-messages instead
+devel/rubygem-cucumber-messages17|devel/rubygem-cucumber-messages|2022-05-22|Remove obsoleted port. Use devel/rubygem-cucumber-messages instead
+textproc/rubygem-cucumber-gherkin22|textproc/rubygem-cucumber-gherkin|2022-05-22|Remove obsoleted port. Use textproc/rubygem-cucumber-gherkin instead
+textproc/rubygem-cucumber-html-formatter17|textproc/rubygem-cucumber-html-formatter|2022-05-22|Remove obsoleted port. Use textproc/rubygem-cucumber-html-formatter instead
+security/greenbone-security-assistant|security/gsa|2022-05-22|It was splitted into security/gsad and security/gsa
+security/py-ospd|security/py-ospd-openvas|2022-05-22|It was merged into security/py-ospd-openvas
+lang/perl5.30||2022-05-23|Has expired: Support ends three years after .0 release. Please upgrade to a more recent version of Perl
+sysutils/ansible2||2022-05-23|Has expired: Upstream support ceases
+java/jdk12-doc||2022-05-24|Only useful for removed java/openjdk12
+java/openjdk12||2022-05-24|Has expired: EOLed since 30 september 2019
+java/openjdk13||2022-05-24|Has expired: EOLed since 31 march 2020
+java/openjdk14||2022-05-24|Has expired: EOLed since 30 september 2020
+java/openjdk15||2022-05-24|Has expired: EOLed since 31 march 2021
+java/openjdk16||2022-05-24|Has expired: EOLed since 30 September 2021
+sysutils/uefi-edk2-bhyve|sysutils/edk2@bhyve|2022-05-24|No more need for this port: please use sysutils/edk2 FLAVOR bhyve instead
+archivers/p7zip|archivers/7-zip|2022-05-25|Unmaintained for years and has known vulnerabilities. Use 7-Zip instead
+graphics/blender-lts28|graphics/blender-lts29|2022-05-26|Has expired: EOLed
+devel/autoconf-wrapper|devel/autoconf-switch|2022-05-27|Autoconf restructuring
+devel/autoconf213|devel/autoconf2.13|2022-05-27|Autoconf restructuring
+math/py-cdecimal||2022-05-27|Has expired: upstream does not support it after Python-3.2
+devel/py-meliae||2022-05-27|Has expired: does not build against Python-3.9
+databases/R-cran-RSQLite.extfuns|databases/R-cran-RSQLite|2022-05-31|Has expired: RSQLite incorporates RSQLite.extfuns
+net/mpich2|net/mpich|2022-05-31|Has been deprecrated for a long time and build fails with GCC 11
+net-im/jabber.el||2022-06-01|Has expired: is marked as broken: fails to build: jabber-chat.el:25:1: Error: Wrong number of arguments: (3 . 3), 2
+x11-fm/Arqiver|x11-fm/arqiver|2022-06-01|Convert PORTNATE to lowercase
+net/py-suds-community|net/py-suds|2022-06-03|Remove obsoleted port. Use net/py-suds instead
+net/py-suds-jurko|net/py-suds|2022-06-03|Remove obsoleted port. Use net/py-suds instead
+www/rubygem-faraday110|www/rubygem-faraday|2022-06-03|Obsolete, please use www/rubygem-faraday instead
+www/npm-node17|www/npm-node18|2022-06-03|Renamed for www/node update to v18
+www/yarn-node17|www/yarn-node18|2022-06-03|Renamed for www/node update to v18
+security/keepassx-devel||2022-06-05|Has expired: KeePassX had been stopped development/maintenance, please consider using security/keepassxc instead

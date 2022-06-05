@@ -17,8 +17,7 @@ USE_GITHUB=	yes
 # check https://github.com/minetest/minetest/releases for applicable irrlichmt version
 GH_TUPLE=	minetest:irrlicht:1.9.0mt5:irrlicht/lib/irrlichtmt
 
-CMAKE_ARGS=	-DCUSTOM_MANDIR="${PREFIX}/man" \
-		-DCUSTOM_EXAMPLE_CONF_DIR="${PREFIX}/etc" \
+CMAKE_ARGS=	-DCUSTOM_EXAMPLE_CONF_DIR="${PREFIX}/etc" \
 		-DENABLE_SYSTEM_JSONCPP=ON
 
 TEST_ENV=	${MAKE_ENV} LC_ALL=C.UTF-8
@@ -106,10 +105,12 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
 		${WRKSRC}/cmake/Modules/*.cmake
 
-do-test-CLIENT-on:
+do-test-TEST-on:
+.if ${PORT_OPTIONS:MCLIENT}
 	cd ${WRKDIR} && ${SETENV} ${TEST_ENV} ${STAGEDIR}${PREFIX}/bin/minetest --run-unittests
-
-do-test-SERVER-on:
+.endif
+.if ${PORT_OPTIONS:MSERVER}
 	cd ${WRKDIR} && ${SETENV} ${TEST_ENV} ${STAGEDIR}${PREFIX}/bin/minetestserver --run-unittests
+.endif
 
 .include <bsd.port.mk>

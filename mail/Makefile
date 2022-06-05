@@ -39,6 +39,7 @@
     SUBDIR += c-sig
     SUBDIR += cclient
     SUBDIR += claws-mail
+    SUBDIR += claws-mail-acpi_notifier
     SUBDIR += claws-mail-address_keeper
     SUBDIR += claws-mail-archive
     SUBDIR += claws-mail-att_remover
@@ -49,6 +50,7 @@
     SUBDIR += claws-mail-dillo
     SUBDIR += claws-mail-fetchinfo
     SUBDIR += claws-mail-gdata
+    SUBDIR += claws-mail-keyword_warner
     SUBDIR += claws-mail-libravatar
     SUBDIR += claws-mail-litehtml_viewer
     SUBDIR += claws-mail-mailmbox
@@ -136,8 +138,6 @@
     SUBDIR += geary
     SUBDIR += gensig
     SUBDIR += getmail6
-    SUBDIR += gmime2
-    SUBDIR += gmime2-sharp
     SUBDIR += gmime26
     SUBDIR += gmime26-sharp
     SUBDIR += gmime30
@@ -192,6 +192,7 @@
     SUBDIR += lmtp2nntp
     SUBDIR += lookout
     SUBDIR += lurker
+    SUBDIR += mail-expire
     SUBDIR += mail2sms
     SUBDIR += mailagent
     SUBDIR += maildrop
@@ -236,6 +237,7 @@
     SUBDIR += minimalist
     SUBDIR += missey
     SUBDIR += mlmmj
+    SUBDIR += mlmmj-archiver
     SUBDIR += mlmmj-webview
     SUBDIR += mls
     SUBDIR += mmh
@@ -334,7 +336,6 @@
     SUBDIR += p5-MIME-EcoEncode
     SUBDIR += p5-MIME-EncWords
     SUBDIR += p5-MIME-Explode
-    SUBDIR += p5-MIME-Fast
     SUBDIR += p5-MIME-Lite
     SUBDIR += p5-MIME-Lite-HTML
     SUBDIR += p5-MIME-Lite-TT
@@ -636,6 +637,7 @@
     SUBDIR += smtprc
     SUBDIR += smtprelay
     SUBDIR += smtptrapd
+    SUBDIR += snappymail
     SUBDIR += sortmail
     SUBDIR += spamass-ixhash
     SUBDIR += spamass-milter

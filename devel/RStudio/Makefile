@@ -3,7 +3,7 @@
 
 PORTNAME=	RStudio
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2022.02.2+485
+DISTVERSION=	2022.02.3+492
 CATEGORIES=	devel math java
 MASTER_SITES=	https://s3.amazonaws.com/rstudio-buildtools/dictionaries/:dictionaries \
 		https://s3.amazonaws.com/rstudio-buildtools/:buildtools
@@ -38,7 +38,7 @@ server_PKGNAMESUFFIX=	-server
 
 USES=		cmake fortran localbase:ldflags pgsql pkgconfig sqlite ssl
 USE_JAVA=	yes
-JAVA_VERSION=	14
+JAVA_VERSION=	11 # Java 8 fails on aarch64: Internal Error (assembler_aarch64.hpp:237), pid=1644, tid=0x00000000000c62b6 guarantee(val < (1U << nbits)) failed: Field too big for insn
 JAVA_BUILD=	yes
 
 USE_GITHUB=	yes

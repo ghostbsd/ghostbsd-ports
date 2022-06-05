@@ -11,6 +11,7 @@
     SUBDIR += cpipe
     SUBDIR += dbench
     SUBDIR += dbs
+    SUBDIR += ddosify
     SUBDIR += dhrystone
     SUBDIR += dkftpbench
     SUBDIR += fhourstones
@@ -87,6 +88,7 @@
     SUBDIR += rubygem-railsbench
     SUBDIR += scimark2
     SUBDIR += scimark2c
+    SUBDIR += scimark4c
     SUBDIR += shellbench
     SUBDIR += siege
     SUBDIR += sipp

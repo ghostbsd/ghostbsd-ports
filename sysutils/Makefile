@@ -45,7 +45,6 @@
     SUBDIR += ansible-kld
     SUBDIR += ansible-sshjail
     SUBDIR += ansible-sysrc
-    SUBDIR += ansible2
     SUBDIR += ansible4
     SUBDIR += anvil
     SUBDIR += apache-mesos
@@ -55,6 +54,7 @@
     SUBDIR += apcupsd
     SUBDIR += aptly
     SUBDIR += arcconf
+    SUBDIR += archey4
     SUBDIR += archivemount
     SUBDIR += ascpu
     SUBDIR += asfsm
@@ -76,6 +76,7 @@
     SUBDIR += avfs
     SUBDIR += azure-agent
     SUBDIR += b2sum
+    SUBDIR += b3sum
     SUBDIR += b43-fwcutter
     SUBDIR += backuppc
     SUBDIR += backuppc-devel
@@ -367,6 +368,7 @@
     SUBDIR += filevercmp
     SUBDIR += filewatcherd
     SUBDIR += finfo
+    SUBDIR += firstboot-cloudsetup
     SUBDIR += firstboot-freebsd-update
     SUBDIR += firstboot-growfs
     SUBDIR += firstboot-pkgs
@@ -810,6 +812,7 @@
     SUBDIR += nss_ndb
     SUBDIR += nsysctl
     SUBDIR += ntfy
+    SUBDIR += ntpstat
     SUBDIR += nut
     SUBDIR += nut-devel
     SUBDIR += nvclock
@@ -1489,7 +1492,6 @@
     SUBDIR += ucspi-tcp
     SUBDIR += ucspi-unix
     SUBDIR += udfclient
-    SUBDIR += uefi-edk2-bhyve
     SUBDIR += uefi-edk2-bhyve-csm
     SUBDIR += uefi-edk2-qemu
     SUBDIR += ufetch
@@ -1599,6 +1601,7 @@
     SUBDIR += xstow
     SUBDIR += xsysstats
     SUBDIR += xvidcap
+    SUBDIR += yadf
     SUBDIR += yadm
     SUBDIR += yank
     SUBDIR += z

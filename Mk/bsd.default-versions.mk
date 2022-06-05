@@ -45,7 +45,7 @@ FIREBIRD_DEFAULT?=	2.5
 FORTRAN_DEFAULT?=	gfortran
 # Possible values: 3.2.2
 FPC_DEFAULT?=		3.2.2
-# Possible values: 8 (last to support powerpcspe), 9, 10, 11
+# Possible values: 8 (last to support powerpcspe), 9, 10, 11, 12
 # (Any other version is completely unsupported and not meant for general use.)
 .  if ${ARCH} == "powerpcspe"
 GCC_DEFAULT?=		8
@@ -58,7 +58,7 @@ GL_DEFAULT?=		mesa-libs
 GHOSTSCRIPT_DEFAULT?=	agpl
 # Possible values: 6, 6-nox11, 7, 7-nox11
 IMAGEMAGICK_DEFAULT?=	7
-# Possible values: 7, 8, 11, 12, 13, 14, 15, 16
+# Possible values: 7, 8, 11, 17, 18
 JAVA_DEFAULT?=		8
 # Possible values: 2.2.0, 2.3.0
 .  if !defined(WANT_LAZARUS_DEVEL)
@@ -74,7 +74,7 @@ LIBRSVG2_DEFAULT?=	legacy
 .  endif
 # Possible values: c7
 LINUX_DEFAULT?=		c7
-# Possible values: 70, 80, 90, 10, 11, 12, 13, -devel (to be used when non-base compiler is required)
+# Possible values: 70, 80, 90, 10, 11, 12, 13, 14, -devel (to be used when non-base compiler is required)
 # Please give notice to the Graphics Team (x11@FreeBSD.org) in advance before
 # bumping the LLVM version.
 .  if ${ARCH} == powerpc
@@ -90,7 +90,7 @@ MONO_DEFAULT=		5.10
 MYSQL_DEFAULT?=		5.7
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
-# Possible values: 5.30, 5.32, 5.34, devel
+# Possible values: 5.32, 5.34, 5.36, devel
 .  if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
 PERL5_DEFAULT?=		5.32
@@ -105,7 +105,7 @@ _PERL5_FROM_BIN!=	${LOCALBASE}/bin/perl -e 'printf "%vd\n", $$^V;'
 _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .  endif
-# Possible values: 10, 11, 12, 13, 14
+# Possible values: 10, 11, 12, 13, 14, 15
 PGSQL_DEFAULT?=		13
 # Possible values: 7.4, 8.0, 8.1
 PHP_DEFAULT?=		8.0
@@ -163,7 +163,7 @@ TCLTK_DEFAULT?=		8.6
 # Possible values: 4, 6
 VARNISH_DEFAULT?=	4
 
-# Possible value: 14, 16, 17, lts, current
+# Possible value: 14, 16, 18, lts, current
 NODEJS_DEFAULT?=    lts
 
 .endif
