@@ -147,6 +147,7 @@
     SUBDIR += libssm
     SUBDIR += libsvm
     SUBDIR += libsvm-python
+    SUBDIR += libtensorflow1
     SUBDIR += libvdwxc
     SUBDIR += libxc
     SUBDIR += liggghts
@@ -308,6 +309,7 @@
     SUBDIR += py-phono3py
     SUBDIR += py-phonopy
     SUBDIR += py-pupynere
+    SUBDIR += py-py3Dmol
     SUBDIR += py-pyaixi
     SUBDIR += py-pyberny
     SUBDIR += py-pycsw

@@ -1,6 +1,7 @@
 PORTNAME=	gotosocial
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.3.4
+PORTREVISION=	1
 CATEGORIES=	net-im
 
 MAINTAINER=	me+freebsd@igalic.co
@@ -38,7 +39,7 @@ post-patch:
 .endif
 
 do-build:
-	@(cd ${WRKSRC} && ${SETENV} \
+	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		VERSION=${DISTVERSION} COMMIT=${GH_TAGNAME} scripts/build.sh )
 
 do-install:

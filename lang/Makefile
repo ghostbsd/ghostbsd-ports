@@ -115,6 +115,7 @@
     SUBDIR += go
     SUBDIR += go-devel
     SUBDIR += go117
+    SUBDIR += go118
     SUBDIR += gomacro
     SUBDIR += gprolog
     SUBDIR += gravity
@@ -261,7 +262,9 @@
     SUBDIR += php80
     SUBDIR += php80-extensions
     SUBDIR += php81
+    SUBDIR += php82
     SUBDIR += php81-extensions
+    SUBDIR += php82-extensions
     SUBDIR += picoc
     SUBDIR += plexil
     SUBDIR += pocl

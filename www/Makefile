@@ -401,6 +401,7 @@
     SUBDIR += mod_php74
     SUBDIR += mod_php80
     SUBDIR += mod_php81
+    SUBDIR += mod_php82
     SUBDIR += mod_proctitle
     SUBDIR += mod_qos
     SUBDIR += mod_realdoc
@@ -1391,8 +1392,11 @@
     SUBDIR += php80-session
     SUBDIR += php80-tidy
     SUBDIR += php81-opcache
+    SUBDIR += php82-opcache
     SUBDIR += php81-session
+    SUBDIR += php82-session
     SUBDIR += php81-tidy
+    SUBDIR += php82-tidy
     SUBDIR += phpbb
     SUBDIR += phpbb3
     SUBDIR += phpgroupware
@@ -1442,6 +1446,7 @@
     SUBDIR += py-bleach
     SUBDIR += py-bokeh
     SUBDIR += py-boto3
+    SUBDIR += py-botocore-stubs
     SUBDIR += py-bottle
     SUBDIR += py-bottle-cork
     SUBDIR += py-branca
@@ -1743,6 +1748,7 @@
     SUBDIR += py-requests
     SUBDIR += py-requests-aws4auth
     SUBDIR += py-requests-cache
+    SUBDIR += py-requests-cache93
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
     SUBDIR += py-requests-mock
@@ -2231,6 +2237,7 @@
     SUBDIR += suphp
     SUBDIR += surf
     SUBDIR += swiggle
+    SUBDIR += tcexam
     SUBDIR += tclhttpd
     SUBDIR += tclwebtest
     SUBDIR += tdiary

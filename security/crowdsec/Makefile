@@ -1,5 +1,6 @@
 PORTNAME=	crowdsec
 PORTVERSION=	1.3.4	# NOTE: change BUILD_VERSION and BUILD_TAG as well
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
 
@@ -10,10 +11,9 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	git:devel/git@lite \
-		go:lang/go \
 		jq:textproc/jq
 
-USES=		gmake
+USES=		gmake go:no_targets
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	crowdsecurity
