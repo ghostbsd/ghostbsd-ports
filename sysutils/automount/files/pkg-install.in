@@ -5,6 +5,17 @@ case ${2} in
     if [ ! -f "%%PREFIX%%/etc/automount.conf" ]; then
       echo "USERUMOUNT=YES" > %%PREFIX%%/etc/automount.conf
       echo "REMOVEDIRS=YES" >> %%PREFIX%%/etc/automount.conf
+      echo "IGNORE_SYS_PARTS=YES" >> %%PREFIX%%/etc/automount.conf
+    else
+      if ! grep -q 'USERUMOUNT' %%PREFIX%%/etc/automount.conf ; then
+      echo "USERUMOUNT=YES" >> %%PREFIX%%/etc/automount.conf
+      fi
+      if ! grep -q 'REMOVEDIRS' %%PREFIX%%/etc/automount.conf ; then
+      echo "REMOVEDIRS=YES" >> %%PREFIX%%/etc/automount.conf
+      fi
+      if ! grep -q 'IGNORE_SYS_PARTS' %%PREFIX%%/etc/automount.conf ; then
+      echo "IGNORE_SYS_PARTS=YES" >> %%PREFIX%%/etc/automount.conf
+      fi
     fi
     echo
     echo
