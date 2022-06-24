@@ -13,6 +13,7 @@
     SUBDIR += artikulate
     SUBDIR += asbutton
     SUBDIR += asr-manpages
+    SUBDIR += astc-encoder
     SUBDIR += bb
     SUBDIR += bbjd
     SUBDIR += bdelta
@@ -62,6 +63,7 @@
     SUBDIR += cs
     SUBDIR += cstream
     SUBDIR += ctm
+    SUBDIR += cuttlefish
     SUBDIR += cxxmatrix
     SUBDIR += dahdi
     SUBDIR += dahdi-kmod
@@ -81,6 +83,7 @@
     SUBDIR += dynomite
     SUBDIR += e2fsprogs-libblkid
     SUBDIR += e2fsprogs-libuuid
+    SUBDIR += edfbrowser
     SUBDIR += edflib
     SUBDIR += elixir-mime
     SUBDIR += elixir-uuid
@@ -384,6 +387,7 @@
     SUBDIR += py-dictdiffer
     SUBDIR += py-eemeter
     SUBDIR += py-emoji
+    SUBDIR += py-ezc3d
     SUBDIR += py-fast-histogram
     SUBDIR += py-fleep
     SUBDIR += py-fuzzy
@@ -530,6 +534,7 @@
     SUBDIR += vdmfec
     SUBDIR += veles
     SUBDIR += vera
+    SUBDIR += vfc
     SUBDIR += vifm
     SUBDIR += visp
     SUBDIR += viz

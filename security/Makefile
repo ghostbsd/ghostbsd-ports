@@ -775,8 +775,8 @@
     SUBDIR += php80-filter
     SUBDIR += php80-sodium
     SUBDIR += php81-filter
-    SUBDIR += php82-filter
     SUBDIR += php81-sodium
+    SUBDIR += php82-filter
     SUBDIR += php82-sodium
     SUBDIR += picocrypt
     SUBDIR += picosha2
@@ -1276,6 +1276,7 @@
     SUBDIR += wolfssl
     SUBDIR += wpa_supplicant
     SUBDIR += wpa_supplicant-devel
+    SUBDIR += wpa_supplicant29
     SUBDIR += xca
     SUBDIR += xinetd
     SUBDIR += xml-security
