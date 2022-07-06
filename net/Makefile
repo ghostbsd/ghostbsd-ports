@@ -136,12 +136,9 @@
     SUBDIR += dual-dhclient-daemon
     SUBDIR += easysoap
     SUBDIR += echoping
-    SUBDIR += elixir-kafka_ex
-    SUBDIR += elixir-oauth2
     SUBDIR += empty
     SUBDIR += endlessh
     SUBDIR += enet
-    SUBDIR += erlang-ranch
     SUBDIR += eternalterminal
     SUBDIR += evans
     SUBDIR += eventviews
@@ -319,7 +316,6 @@
     SUBDIR += kimap
     SUBDIR += kio-gdrive
     SUBDIR += kippo
-    SUBDIR += kissd
     SUBDIR += kitinerary
     SUBDIR += kldap
     SUBDIR += kmailtransport
@@ -1338,6 +1334,7 @@
     SUBDIR += rubygem-omniauth-kerberos
     SUBDIR += rubygem-omniauth-oauth
     SUBDIR += rubygem-omniauth-oauth2
+    SUBDIR += rubygem-omniauth-oauth2-v1
     SUBDIR += rubygem-omniauth-openid
     SUBDIR += rubygem-omniauth-salesforce
     SUBDIR += rubygem-omniauth-twitter
@@ -1426,6 +1423,7 @@
     SUBDIR += sipsak
     SUBDIR += skstream
     SUBDIR += sl2tps
+    SUBDIR += slackcat
     SUBDIR += smb4k
     SUBDIR += smcroute
     SUBDIR += smm++

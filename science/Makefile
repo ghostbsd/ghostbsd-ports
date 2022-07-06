@@ -133,6 +133,7 @@
     SUBDIR += libecpint
     SUBDIR += libefp
     SUBDIR += libgeodecomp
+    SUBDIR += libgetar
     SUBDIR += libghemical
     SUBDIR += libgridxc
     SUBDIR += libint
@@ -272,6 +273,7 @@
     SUBDIR += py-cirq-google
     SUBDIR += py-cirq-ionq
     SUBDIR += py-cirq-pasqal
+    SUBDIR += py-cirq-rigetti
     SUBDIR += py-coards
     SUBDIR += py-dipy
     SUBDIR += py-dlib
@@ -294,6 +296,7 @@
     SUBDIR += py-kinematics
     SUBDIR += py-kliff
     SUBDIR += py-liac-arff
+    SUBDIR += py-libgetar
     SUBDIR += py-libpysal
     SUBDIR += py-lifelines
     SUBDIR += py-mdp
