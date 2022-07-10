@@ -1,7 +1,8 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 
 PORTNAME=	yelp-tools
-PORTVERSION=	42.0
+PORTVERSION=	40.0
+PORTREVISION=	2
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
