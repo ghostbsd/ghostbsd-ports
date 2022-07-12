@@ -261,11 +261,12 @@
     SUBDIR += ultralist
     SUBDIR += virt-manager
     SUBDIR += vit
+    SUBDIR += walld
     SUBDIR += when
     SUBDIR += wmpinboard
     SUBDIR += x026
-    SUBDIR += xcbautolock
     SUBDIR += xcalendar
+    SUBDIR += xcbautolock
     SUBDIR += xchm
     SUBDIR += xdg-desktop-portal
     SUBDIR += xfce4-generic-slider

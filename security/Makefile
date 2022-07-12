@@ -217,6 +217,7 @@
     SUBDIR += i2p
     SUBDIR += i2pd
     SUBDIR += iaikpkcs11wrapper
+    SUBDIR += iddawc
     SUBDIR += idea
     SUBDIR += identify
     SUBDIR += imds-filterd
@@ -1009,6 +1010,7 @@
     SUBDIR += rcracki_mt
     SUBDIR += reop
     SUBDIR += rhash
+    SUBDIR += rhonabwy
     SUBDIR += ridl
     SUBDIR += rifiuti2
     SUBDIR += rkhunter
@@ -1065,6 +1067,7 @@
     SUBDIR += rubygem-net-ssh-krb
     SUBDIR += rubygem-net-ssh-multi
     SUBDIR += rubygem-net-ssh5
+    SUBDIR += rubygem-net-ssh6
     SUBDIR += rubygem-net-telnet
     SUBDIR += rubygem-nexpose
     SUBDIR += rubygem-nmap-parser
