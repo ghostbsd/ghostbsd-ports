@@ -503,6 +503,7 @@
     SUBDIR += libspng
     SUBDIR += libsvg
     SUBDIR += libsvg-cairo
+    SUBDIR += libsvgtiny
     SUBDIR += libvisual
     SUBDIR += libvisual04
     SUBDIR += libvisual04-plugins
@@ -605,6 +606,7 @@
     SUBDIR += openjpeg15
     SUBDIR += openjph
     SUBDIR += openjump
+    SUBDIR += openmvs
     SUBDIR += opennurbs
     SUBDIR += openorienteering-mapper
     SUBDIR += openrm

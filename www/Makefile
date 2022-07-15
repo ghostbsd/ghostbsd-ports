@@ -2060,7 +2060,6 @@
     SUBDIR += rubygem-rails52
     SUBDIR += rubygem-rails60
     SUBDIR += rubygem-rails61
-    SUBDIR += rubygem-rails61-node16
     SUBDIR += rubygem-rails70
     SUBDIR += rubygem-rails_12factor
     SUBDIR += rubygem-rails_autolink
@@ -2093,6 +2092,7 @@
     SUBDIR += rubygem-responders-rails52
     SUBDIR += rubygem-responders-rails60
     SUBDIR += rubygem-responders-rails61
+    SUBDIR += rubygem-responders-rails70
     SUBDIR += rubygem-rest-client
     SUBDIR += rubygem-rfacebook
     SUBDIR += rubygem-rfeedfinder
@@ -2136,7 +2136,6 @@
     SUBDIR += rubygem-turbolinks-source
     SUBDIR += rubygem-typhoeus
     SUBDIR += rubygem-uglifier
-    SUBDIR += rubygem-uglifier-node16
     SUBDIR += rubygem-underscore-rails
     SUBDIR += rubygem-unicorn
     SUBDIR += rubygem-unicorn-worker-killer
