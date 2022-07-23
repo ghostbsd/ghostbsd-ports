@@ -124,6 +124,7 @@
     SUBDIR += genwan
     SUBDIR += genyo
     SUBDIR += genyog
+    SUBDIR += ghostbsd-fonts
     SUBDIR += gnu-unifont
     SUBDIR += gnu-unifont-ttf
     SUBDIR += gofont-ttf
