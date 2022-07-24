@@ -26,7 +26,8 @@ RUN_DEPENDS=	mate-terminal:x11/mate-terminal \
 		ghostbsd-mate-settings>0:x11/ghostbsd-mate-settings \
 		ghostbsd-wallpapers22>0:x11-themes/ghostbsd-wallpapers22 \
 		ghostbsd-mate-themes>0:x11-themes/ghostbsd-mate-themes \
-		mate-applet-appmenu>0:x11/mate-applet-appmenu
+		mate-applet-appmenu>0:x11/mate-applet-appmenu \
+		ghostbsd-fonts>0:x11-fonts/ghostbsd-fonts
 
 USES=		metaport mate
 USE_MATE=	caja:run controlcenter:run icontheme:run \
