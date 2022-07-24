@@ -1,7 +1,7 @@
 
 PORTNAME=	ghostbsd-mate
 PORTVERSION=	1.26.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11 mate
 
 MAINTAINER=	ericturgeon@GhostBSD.org
