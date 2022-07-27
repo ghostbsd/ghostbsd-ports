@@ -1,6 +1,0 @@
-#!/sbin/openrc-run
-
-name="xshttpd"
-
-pidfile="/var/run/httpd.pid"
-command="%%PREFIX%%/bin/httpd"

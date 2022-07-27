@@ -1,6 +1,0 @@
-#!/sbin/openrc-run
-
-name="totd"
-command="%%PREFIX%%/sbin/${name}"
-pidfile="/var/run/${name}.pid"
-required_files="%%PREFIX%%/etc/${name}.conf"

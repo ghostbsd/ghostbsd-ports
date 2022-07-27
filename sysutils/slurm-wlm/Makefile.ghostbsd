@@ -1,1 +1,0 @@
-USE_OPENRC_SUBR=	openrc-slurmctld openrc-slurmd

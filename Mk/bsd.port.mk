@@ -402,14 +402,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  automatically be expanded, they will be installed in
 #				  ${PREFIX}/etc/rc.d if ${PREFIX} is not /usr, otherwise they
 #				  will be installed in /etc/rc.d/ and added to the packing list.
-#
-# USE_OPENRC_SUBR- If set, the ports startup/shutdown script uses the common
-#				  routines found in /etc/init.d
-#				  If this is set to a list of files, these files will be
-#				  automatically added to ${SUB_FILES}, some %%VAR%%'s will
-#				  automatically be expanded, they will be installed in
-#				  ${PREFIX}/etc/init.d if ${PREFIX} is not /usr, otherwise they
-#				  will be installed in /etc/init.d/ and added to the packing list.
 ##
 # Conflict checking.  Use if your port cannot be installed at the same time as
 # another package.
@@ -1897,10 +1889,6 @@ MAKE_ENV+=	${b}="${${b}}"
 
 .    if defined(USE_RC_SUBR)
 SUB_FILES+=	${USE_RC_SUBR}
-.    endif
-
-.    if defined(USE_OPENRC_SUBR)
-SUB_FILES+=	${USE_OPENRC_SUBR}
 .    endif
 
 .    if defined(USE_LDCONFIG) && ${USE_LDCONFIG:tl} == "yes"
@@ -4610,21 +4598,6 @@ install-rc-script:
 .      endif
 .    endif
 
-.    if !target(install-openrc-script)
-.    if defined(USE_OPENRC_SUBR)
-install-openrc-script:
-	@${ECHO_MSG} "===> Staging init.d startup script(s)"
-	@for i in ${USE_OPENRC_SUBR}; do \
-		_prefix=${PREFIX}; \
-		_nfile=`${ECHO_CMD} $${i%.sh} | ${SED} -e "s|openrc-||g"`; \
-		[ "${PREFIX}" = "/usr" ] && _prefix="" ; \
-		[ ! -d "${STAGEDIR}$${_prefix}/etc/init.d" ] && ${MKDIR} ${STAGEDIR}$${_prefix}/etc/init.d ; \
-		${INSTALL_SCRIPT} ${WRKDIR}/$${i} ${STAGEDIR}$${_prefix}/etc/init.d/$${_nfile}; \
-		${ECHO_CMD} "$${_prefix}/etc/init.d/$${_nfile}" >> ${TMPPLIST}; \
-	done
-.    endif
-.    endif
-
 .    if !target(check-man)
 check-man: stage
 	@${ECHO_MSG} "====> Checking man pages (check-man)"
@@ -5338,7 +5311,7 @@ _STAGE_SEQ=		050:stage-message 100:stage-dir 150:run-depends \
 				400:generate-plist 450:pre-su-install 475:create-users-groups \
 				500:do-install 550:kmod-post-install 600:fixup-lib-pkgconfig 700:post-install \
 				750:post-install-script 800:post-stage 850:compress-man \
-				860:install-rc-script 861:install-openrc-script 870:install-ldconfig-file \
+				860:install-rc-script 870:install-ldconfig-file \
 				880:install-license 890:install-desktop-entries \
 				900:add-plist-info 910:add-plist-docs 920:add-plist-examples \
 				930:add-plist-data 940:add-plist-post ${POST_PLIST:C/^/990:/} \

@@ -1,8 +1,0 @@
-#!/sbin/openrc-run
-
-name="tbd"
-command="%%PREFIX%%/libexec/tbd"
-
-depend() {
-	keyword -shutdown
-}

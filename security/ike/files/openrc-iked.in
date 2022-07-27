@@ -1,9 +1,0 @@
-#!/sbin/openrc-run
-
-name=iked
-command=/usr/local/sbin/iked
-command_args="-p /var/run/iked.pid > /dev/null"
-
-depend() {
-	keyword -shutdown
-}

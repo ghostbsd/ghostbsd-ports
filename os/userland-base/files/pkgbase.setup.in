@@ -7,66 +7,6 @@
 
 PKG_ROOTDIR="$1"
 
-setup_openrc()
-{
-	# Setup our OpenRC runtime environment
-	OPENRC_BOOT_LINK="abi adjkerntz bootmisc bridge cron devd dmesg fsck"
-	OPENRC_BOOT_LINK="${OPENRC_BOOT_LINK} hostid hostname kldxref localmount"
-	OPENRC_BOOT_LINK="${OPENRC_BOOT_LINK} modules motd network newsyslog root"
-	OPENRC_BOOT_LINK="${OPENRC_BOOT_LINK} routing staticroute swap"
-	OPENRC_BOOT_LINK="${OPENRC_BOOT_LINK} syscons sysctl syslogd urandom zfs zvol"
-	OPENRC_BOOT_LINK="${OPENRC_BOOT_LINK} devmatch devfs"
-	OPENRC_DEFAULT_LINK="local ntpd"
-	OPENRC_SHUTDOWN_LINK="savecache"
-	OPENRC_NONET_LINK="local"
-	INSTALL_SYMLINK="ln -fs"
-
-	# Sanity check OpenRC
-	if [ ! -e ${PKG_ROOTDIR}/etc/init.d/functions.sh ]; then \
-  		${INSTALL_SYMLINK} /libexec/rc/sh/functions.sh ${PKG_ROOTDIR}/etc/init.d/functions.sh; \
-	fi
-	if [ ! -d ${PKG_ROOTDIR}/etc/runlevels/boot ]; then \
-		mkdir -p ${PKG_ROOTDIR}/etc/runlevels/boot; \
-	fi
-	if [ ! -d ${PKG_ROOTDIR}/etc/runlevels/default ]; then \
-		mkdir ${PKG_ROOTDIR}/etc/runlevels/default; \
-	fi
-	if [ ! -d ${PKG_ROOTDIR}/etc/runlevels/nonetwork ]; then \
-		mkdir ${PKG_ROOTDIR}/etc/runlevels/nonetwork; \
-	fi
-	if [ ! -d ${PKG_ROOTDIR}/etc/runlevels/shutdown ]; then \
-		mkdir ${PKG_ROOTDIR}/etc/runlevels/shutdown; \
-	fi
-	if [ ! -d ${PKG_ROOTDIR}/etc/runlevels/sysinit ]; then \
-		mkdir ${PKG_ROOTDIR}/etc/runlevels/sysinit; \
-	fi
-	for rlink in ${OPENRC_BOOT_LINK}; do \
-		if [ ! -e ${PKG_ROOTDIR}/etc/runlevels/boot/${rlink} ] ; then \
-			${INSTALL_SYMLINK} /etc/init.d/${rlink} \
-			${PKG_ROOTDIR}/etc/runlevels/boot/${rlink}; \
-		fi \
-	done
-	for rlink in ${OPENRC_DEFAULT_LINK}; do \
-		if [ ! -e ${PKG_ROOTDIR}/etc/runlevels/default/${rlink} ] ; then \
-			${INSTALL_SYMLINK} /etc/init.d/${rlink} \
-				${PKG_ROOTDIR}/etc/runlevels/default/${rlink}; \
-		fi \
-	done
-	for rlink in ${OPENRC_NONET_LINK}; do \
-		if [ ! -e ${PKG_ROOTDIR}/etc/runlevels/nonetwork/${rlink} ] ; then \
-		${INSTALL_SYMLINK} /etc/init.d/${rlink} \
-			${PKG_ROOTDIR}/etc/runlevels/nonetwork/${rlink}; \
-		fi \
-	done
-	for rlink in ${OPENRC_SHUTDOWN_LINK}; do \
-		if [ ! -e ${PKG_ROOTDIR}/etc/runlevels/shutdown/${rlink} ] ; then \
-		${INSTALL_SYMLINK} /etc/init.d/${rlink} \
-			${PKG_ROOTDIR}/etc/runlevels/shutdown/${rlink}; \
-		fi \
-	done
-
-}
-
 # Make sure /etc/fstab exists to silence warnings from openrc
 if [ ! -e "${PKG_ROOTDIR}/etc/fstab" ]; then
 	touch ${PKG_ROOTDIR}/etc/fstab
@@ -84,11 +24,6 @@ mtree -deU -f ${PKG_ROOTDIR}/etc/mtree/BSD.include.dist \
 if [ -e ${PKG_ROOTDIR}/etc/mtree/BSD.lib32.dist ] ; then
 	mtree -deU -f ${PKG_ROOTDIR}/etc/mtree/BSD.lib32.dist \
 	     -p ${PKG_ROOTDIR}/usr >/dev/null 2>/dev/null
-fi
-
-# Do we need to setup openrc?
-if [ -e ${PKG_ROOTDIR}/sbin/openrc ] ; then
-	setup_openrc
 fi
 
 exit 0

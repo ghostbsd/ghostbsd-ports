@@ -1,9 +1,0 @@
-#!/sbin/openrc-run
-
-name=iaxmodem
-command=%%PREFIX%%/sbin/iaxmodem
-pidfile=${iaxmodem_pidfile:-"/var/run/iaxmodem.pid"}
-
-depend() {
-	keyword -shutdown
-}

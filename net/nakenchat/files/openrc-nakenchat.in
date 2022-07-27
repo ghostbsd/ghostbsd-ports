@@ -1,5 +1,0 @@
-#!/sbin/openrc-run
-
-name="nakenchat"
-command=/usr/local/bin/nakenchat
-command_args="&"

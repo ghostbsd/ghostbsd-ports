@@ -1,8 +1,0 @@
-#!/sbin/openrc-run
-
-name=rplayd
-command=%%PREFIX%%/sbin/${name}
-
-depend() {
-	keyword -shutdown
-}

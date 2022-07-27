@@ -1,9 +1,0 @@
-#!/sbin/openrc-run
-
-name=gsad
-command="%%PREFIX%%/sbin/gsad"
-pidfile=/var/run/gsad.pid
-
-depend() {
-		keyword -shutdown
-}

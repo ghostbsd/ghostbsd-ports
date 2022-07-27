@@ -1,5 +1,0 @@
-USE_OPENRC_SUBR=	ec2_bootmail
-USE_OPENRC_SUBR+=	ec2_configinit
-USE_OPENRC_SUBR+=	ec2_ephemeralswap
-USE_OPENRC_SUBR+=	ec2_fetchkey
-USE_OPENRC_SUBR+=	ec2_loghostkey

@@ -1,2 +1,0 @@
-USE_OPENRC_SUBR=	openrc-kannel_bearerbox openrc-kannel_smsbox openrc-kannel_wapbox
-

@@ -18,7 +18,6 @@ CONFIGURE_ARGS=	--bindir=${PREFIX}/sbin \
 		--disable-manpage_support \
 		--program-transform-name=""
 GNU_CONFIGURE=	yes
-USE_OPENRC_SUBR=tinyproxy
 USE_RC_SUBR=	tinyproxy
 
 CPE_VENDOR=	tinyproxy_project
