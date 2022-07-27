@@ -1,9 +1,0 @@
-#!/sbin/openrc-run
-
-name="miltercallback"
-command="%%PREFIX%%/libexec/milter-callback"
-required_files="%%PREFIX%%/etc/mail/milter-callback.conf"
-
-depend() {
-	keyword -shutdown
-}

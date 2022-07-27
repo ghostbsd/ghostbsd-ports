@@ -1,8 +1,0 @@
-#!/sbin/openrc-run
-
-name="corosync"
-command="%%PREFIX%%/sbin/corosync"
-
-depend() {
-	provide corosync
-}

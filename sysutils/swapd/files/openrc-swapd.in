@@ -1,9 +1,0 @@
-#!/sbin/openrc-run
-
-name=swapd
-
-command=%%PREFIX%%/sbin/swapd
-
-depend() {
-	keyword -shutdown
-}

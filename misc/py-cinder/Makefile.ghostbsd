@@ -1,1 +1,0 @@
-USE_OPENRC_SUBR=	openrc-cinder-scheduler openrc-cinder-volume openrc-cinder-api

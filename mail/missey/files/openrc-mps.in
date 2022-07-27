@@ -1,4 +1,0 @@
-#!/sbin/openrc-run
-
-name="mps"
-command="%%PREFIX%%/sbin/mps"

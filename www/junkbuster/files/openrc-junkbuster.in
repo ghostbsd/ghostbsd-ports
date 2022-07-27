@@ -1,6 +1,0 @@
-#!/sbin/openrc-run
-
-name="junkbuster"
-description=""
-command=%%PREFIX%%/sbin/junkbuster
-required_files=%%PREFIX%%/etc/junkbuster/configfile

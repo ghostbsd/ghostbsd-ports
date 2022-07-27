@@ -1,4 +1,0 @@
-#!/sbin/openrc-run
-
-name="symon"
-command="%%PREFIX%%/bin/symon"

@@ -1,4 +1,0 @@
-#!/sbin/openrc-run
-
-name="symux"
-command="%%PREFIX%%/bin/symux"

@@ -1,4 +1,0 @@
-#!/sbin/openrc-run
-
-name=chronyd
-command=%%PREFIX%%/sbin/chronyd
