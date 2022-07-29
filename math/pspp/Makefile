@@ -1,5 +1,3 @@
-# Created by: Andrew L. Neporada <andrew@chg.ru>
-
 PORTNAME=	pspp
 PORTVERSION=	1.6.1
 CATEGORIES=	math
@@ -13,9 +11,11 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	p5-Text-Diff>=0:textproc/p5-Text-Diff \
 		texinfo>0:print/texinfo
-LIB_DEPENDS=	libgslcblas.so:math/gsl
+LIB_DEPENDS=	libcairo.so:graphics/cairo \
+		libpango-1.0.so:x11-toolkits/pango \
+		libgslcblas.so:math/gsl
 
-USES=		cpe charsetfix gettext-tools gmake gnome iconv localbase	\
+USES=		cpe charsetfix gettext-tools gmake gnome iconv localbase \
 		libtool perl5 pkgconfig python:3.7+,build readline
 
 CPE_VENDOR=	gnu

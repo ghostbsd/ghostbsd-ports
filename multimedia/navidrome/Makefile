@@ -1,5 +1,3 @@
-# Created by: Daniel Morante <daniel@morante.net>
-
 PORTNAME=	navidrome
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.40.0
@@ -14,6 +12,8 @@ COMMENT=	Modern Music Server and Streamer compatible with Subsonic/Airsonic
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN=		react-scripts: not found
 
 BUILD_DEPENDS+=	npm>0:www/npm \
 				go-bindata:devel/go-bindata

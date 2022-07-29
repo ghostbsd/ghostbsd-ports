@@ -1,3 +1,254 @@
+  <vuln vid="e1387e95-08d0-11ed-be26-001999f8d30b">
+    <topic>VirtualBox -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>virtualbox-ose</name>
+	<range><lt>6.1.36</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Oracle reports:</p>
+	<blockquote cite="https://www.oracle.com/security-alerts/cpujul2022.html">
+	  <p> Easily exploitable vulnerability allows high privileged
+	  attacker with logon to the infrastructure where Oracle
+	  VM VirtualBox executes to compromise Oracle VM VirtualBox.
+	  Successful attacks of this vulnerability can result in
+	  unauthorized ability to cause a hang or frequently
+	  repeatable crash (complete DOS) of Oracle VM VirtualBox.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-21554</cvename>
+      <cvename>CVE-2022-21571</cvename>
+      <url>https://www.oracle.com/security-alerts/cpujul2022.html</url>
+    </references>
+    <dates>
+      <discovery>2022-07-20</discovery>
+      <entry>2022-07-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8e150606-08c9-11ed-856e-d4c9ef517024">
+    <topic>MySQL -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mysql-server56</name>
+	<range><lt>5.6.52</lt></range>
+      </package>
+      <package>
+	<name>mysql-server57</name>
+	<range><lt>5.7.39</lt></range>
+      </package>
+      <package>
+	<name>mysql-client80</name>
+	<range><lt>8.0.30</lt></range>
+      </package>
+      <package>
+	<name>mysql-server80</name>
+	<range><lt>8.0.30</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Oracle reports:</p>
+	<blockquote cite="https://www.oracle.com/security-alerts/cpujul2022.html#AppendixMSQL">
+	  <p>This Critical Patch Update contains 34 new security patches plus
+	    additional third party patches noted below for Oracle MySQL. 10 of
+	    these vulnerabilities may be remotely exploitable without
+	    authentication, i.e., may be exploited over a network without
+	    requiring user credentials.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-1292</cvename>
+      <cvename>CVE-2022-21824</cvename>
+      <cvename>CVE-2022-27778</cvename>
+      <cvename>CVE-2018-25032</cvename>
+      <cvename>CVE-2022-21556</cvename>
+      <cvename>CVE-2022-21569</cvename>
+      <cvename>CVE-2022-21550</cvename>
+      <cvename>CVE-2022-21519</cvename>
+      <cvename>CVE-2022-21527</cvename>
+      <cvename>CVE-2022-21528</cvename>
+      <cvename>CVE-2022-21509</cvename>
+      <cvename>CVE-2022-21539</cvename>
+      <cvename>CVE-2022-21517</cvename>
+      <cvename>CVE-2022-21537</cvename>
+      <cvename>CVE-2022-21547</cvename>
+      <cvename>CVE-2022-21525</cvename>
+      <cvename>CVE-2022-21526</cvename>
+      <cvename>CVE-2022-21529</cvename>
+      <cvename>CVE-2022-21530</cvename>
+      <cvename>CVE-2022-21531</cvename>
+      <cvename>CVE-2022-21553</cvename>
+      <cvename>CVE-2022-21515</cvename>
+      <cvename>CVE-2022-21455</cvename>
+      <cvename>CVE-2022-21534</cvename>
+      <cvename>CVE-2022-21522</cvename>
+      <cvename>CVE-2022-21538</cvename>
+      <cvename>CVE-2022-21535</cvename>
+      <url>https://www.oracle.com/security-alerts/cpujul2022.html#AppendixMSQL</url>
+    </references>
+    <dates>
+      <discovery>2022-07-19</discovery>
+      <entry>2022-07-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="27cc4258-0805-11ed-8ac1-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>103.0.5060.134</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2022/07/stable-channel-update-for-desktop_19.html">
+	  <p>This release contains 11 security fixes, including:</p>
+	  <ul>
+	    <li>[1336266] High CVE-2022-2477: Use after free in Guest View. Reported by anonymous on 2022-06-14</li>
+	    <li>[1335861] High CVE-2022-2478: Use after free in PDF. Reported by triplepwns on 2022-06-13</li>
+	    <li>[1329987] High CVE-2022-2479: Insufficient validation of untrusted input in File. Reported by anonymous on 2022-05-28</li>
+	    <li>[1339844] High CVE-2022-2480: Use after free in Service Worker API. Reported by Sergei Glazunov of Google Project Zero on 2022-06-27</li>
+	    <li>[1341603] High CVE-2022-2481: Use after free in Views. Reported by YoungJoo Lee(@ashuu_lee) of CompSecLab at Seoul National University on 2022-07-04</li>
+	    <li>[1308341] Low CVE-2022-2163: Use after free in Cast UI and Toolbar. Reported by Chaoyuan Peng (@ret2happy) on 2022-03-21</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-2163</cvename>
+      <cvename>CVE-2022-2477</cvename>
+      <cvename>CVE-2022-2478</cvename>
+      <cvename>CVE-2022-2479</cvename>
+      <cvename>CVE-2022-2480</cvename>
+      <cvename>CVE-2022-2481</cvename>
+      <url>https://chromereleases.googleblog.com/2022/07/stable-channel-update-for-desktop_19.html</url>
+    </references>
+    <dates>
+      <discovery>2022-07-19</discovery>
+      <entry>2022-07-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="871d93f9-06aa-11ed-8d5f-080027f5fec9">
+    <topic>redis -- Potential remote code execution vulnerability</topic>
+    <affects>
+      <package>
+	<name>redis</name>
+	<range><ge>7.0.0</ge><lt>7.0.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Redis core team reports:</p>
+	<blockquote cite="https://groups.google.com/g/redis-db/c/FWngtg3WpfA">
+	  <p>
+	    A specially crafted XAUTOCLAIM command on a stream key in
+	    a specific state may result with heap overflow, and
+	    potentially remote code execution.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-31144</cvename>
+      <url>https://groups.google.com/g/redis-db/c/FWngtg3WpfA</url>
+    </references>
+    <dates>
+      <discovery>2022-07-18</discovery>
+      <entry>2022-07-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0c367e98-0415-11ed-a53b-6c3be5272acd">
+    <topic>Grafana -- Stored XSS</topic>
+    <affects>
+      <package>
+	<name>grafana</name>
+	<range><ge>8.3.0</ge><lt>8.3.10</lt></range>
+	<range><ge>8.4.0</ge><lt>8.4.10</lt></range>
+	<range><ge>8.5.0</ge><lt>8.5.9</lt></range>
+	<range><ge>9.0.0</ge><lt>9.0.3</lt></range>
+      </package>
+      <package>
+	<name>grafana8</name>
+	<range><ge>8.3.0</ge><lt>8.3.10</lt></range>
+	<range><ge>8.4.0</ge><lt>8.4.10</lt></range>
+	<range><ge>8.5.0</ge><lt>8.5.9</lt></range>
+      </package>
+      <package>
+	<name>grafana9</name>
+	<range><lt>9.0.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Grafana Labs reports:</p>
+	<blockquote cite="https://grafana.com/blog/2022/07/14/grafana-v9-0-3-8-5-9-8-4-10-and-8-3-10-released-with-high-severity-security-fix/">
+	  <p>An attacker can exploit this vulnerability to escalate privilege from editor to admin by tricking an authenticated admin to click on a link. (Note: Grafana Alerting is activated by default in Grafana 9.0.)</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-31097</cvename>
+      <url>https://github.com/grafana/grafana/security/advisories/GHSA-vw7q-p2qg-4m5f</url>
+    </references>
+    <dates>
+      <discovery>2022-06-19</discovery>
+      <entry>2022-07-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0859e6d5-0415-11ed-a53b-6c3be5272acd">
+    <topic>Grafana -- OAuth Account Takeover</topic>
+    <affects>
+      <package>
+	<name>grafana</name>
+	<range><ge>5.3.0</ge><lt>8.3.10</lt></range>
+	<range><ge>8.4.0</ge><lt>8.4.10</lt></range>
+	<range><ge>8.5.0</ge><lt>8.5.9</lt></range>
+	<range><ge>9.0.0</ge><lt>9.0.3</lt></range>
+      </package>
+      <package>
+	<name>grafana7</name>
+	<range><ge>7.0</ge></range>
+      </package>
+      <package>
+	<name>grafana8</name>
+	<range><ge>8.3.0</ge><lt>8.3.10</lt></range>
+	<range><ge>8.4.0</ge><lt>8.4.10</lt></range>
+	<range><ge>8.5.0</ge><lt>8.5.9</lt></range>
+      </package>
+      <package>
+	<name>grafana9</name>
+	<range><lt>9.0.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Grafana Labs reports:</p>
+	<blockquote cite="https://grafana.com/blog/2022/07/14/grafana-v9-0-3-8-5-9-8-4-10-and-8-3-10-released-with-high-severity-security-fix/">
+	  <p>It is possible for a malicious user who has authorization to log into a Grafana instance via a configured OAuth IdP to take over an existing Grafana account under some conditions.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-31107</cvename>
+      <url>https://github.com/grafana/grafana/security/advisories/GHSA-mx47-6497-3fv2</url>
+    </references>
+    <dates>
+      <discovery>2022-06-27</discovery>
+      <entry>2022-07-15</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="a4f2416c-02a0-11ed-b817-10c37b4ac2ea">
     <topic>go -- multiple vulnerabilities</topic>
     <affects>

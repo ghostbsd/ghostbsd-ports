@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	yelp-tools
 PORTVERSION=	40.0
 PORTREVISION=	2

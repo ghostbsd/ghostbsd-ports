@@ -1,8 +1,6 @@
-# Created by: Igor Pokrovsky <tiamat@telegraph.spb.ru>
-
 PORTNAME=	exult
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9.0.20220622
+DISTVERSION=	1.9.0.20220721
 CATEGORIES=	games
 
 MAINTAINER=	eduardo@FreeBSD.org

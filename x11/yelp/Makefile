@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	yelp
 DISTVERSION=	40.3
 PORTREVISION=	2

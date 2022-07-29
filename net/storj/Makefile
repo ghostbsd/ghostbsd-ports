@@ -1,8 +1,5 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	storj
-PORTVERSION=	1.58.2
-PORTREVISION=	1
+PORTVERSION=	1.59.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net
 

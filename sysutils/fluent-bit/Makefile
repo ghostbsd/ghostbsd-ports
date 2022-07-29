@@ -1,8 +1,6 @@
-# Created by: Palle Girgensohn <girgen@FreeBSD.org>
-
 PORTNAME=	fluent-bit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9.5
+DISTVERSION=	1.9.6
 CATEGORIES=	sysutils
 
 MAINTAINER=	girgen@FreeBSD.org

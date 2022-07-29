@@ -1,5 +1,3 @@
-# Created by: Boris Popov <bp@FreeBSD.org>
-
 PORTNAME=	nut
 PORTVERSION=	${NUT_COMMIT_DATE}
 CATEGORIES=	sysutils
@@ -19,8 +17,8 @@ CONFLICTS=	nut-[0-9]*
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	networkupstools
-GH_TAGNAME=	d522fedeb
-NUT_COMMIT_DATE=	2022.06.23
+GH_TAGNAME=	4143afd43
+NUT_COMMIT_DATE=	2022.07.18
 
 MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes

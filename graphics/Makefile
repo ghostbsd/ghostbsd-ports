@@ -118,6 +118,7 @@
     SUBDIR += curtail
     SUBDIR += cuttlefish
     SUBDIR += darktable
+    SUBDIR += darktable40
     SUBDIR += dataplot
     SUBDIR += dbow2
     SUBDIR += dc20pack
@@ -232,6 +233,7 @@
     SUBDIR += gdal
     SUBDIR += gdchart
     SUBDIR += gdk-pixbuf2
+    SUBDIR += gdk-pixbuf2-xlib
     SUBDIR += gdtclft
     SUBDIR += geeqie
     SUBDIR += gegl
