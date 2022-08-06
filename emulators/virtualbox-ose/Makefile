@@ -18,7 +18,7 @@ BUILD_DEPENDS=	yasm:devel/yasm \
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libxslt.so:textproc/libxslt \
 		libcurl.so:ftp/curl
-RUN_DEPENDS=	${LOCALBASE}/etc/init.d/vboxnet:emulators/virtualbox-ose-kmod
+RUN_DEPENDS=	${LOCALBASE}/etc/rc.d/vboxnet:emulators/virtualbox-ose-kmod
 
 CPE_VENDOR=	oracle
 CPE_PRODUCT=	vm_virtualbox
