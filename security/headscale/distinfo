@@ -1,5 +1,5 @@
-TIMESTAMP = 1650529732
-SHA256 (go/security_headscale/headscale-v0.15.0/v0.15.0.mod) = 6d6bd48dae67f38cc64dba9621a75ec14a11b72a36e8e5ff2c2adb8fedbb50b8
-SIZE (go/security_headscale/headscale-v0.15.0/v0.15.0.mod) = 7113
-SHA256 (go/security_headscale/headscale-v0.15.0/v0.15.0.zip) = 7b23f26148eb668d2c1608c69e8975b09cadec25e3a788a8355cca22232759d1
-SIZE (go/security_headscale/headscale-v0.15.0/v0.15.0.zip) = 373899
+TIMESTAMP = 1660544340
+SHA256 (go/security_headscale/headscale-v0.16.2/v0.16.2.mod) = 5a1e6a81c94588289a91ad0ed5afab20d2c472a7acaedbf5315bbfc267865bf9
+SIZE (go/security_headscale/headscale-v0.16.2/v0.16.2.mod) = 6809
+SHA256 (go/security_headscale/headscale-v0.16.2/v0.16.2.zip) = 38dba15361a7c3777d1a6f9cd483440c3883b8578827fe381bee7a516a07b650
+SIZE (go/security_headscale/headscale-v0.16.2/v0.16.2.zip) = 461736

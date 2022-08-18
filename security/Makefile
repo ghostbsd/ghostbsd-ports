@@ -356,7 +356,6 @@
     SUBDIR += nextcloud-twofactor_admin
     SUBDIR += nextcloud-twofactor_nextcloud_notification
     SUBDIR += nextcloud-twofactor_totp
-    SUBDIR += nextcloud-twofactor_u2f
     SUBDIR += nextcloud-twofactor_webauthn
     SUBDIR += nflib
     SUBDIR += ngrok
@@ -845,6 +844,7 @@
     SUBDIR += py-certbot-dns-luadns
     SUBDIR += py-certbot-dns-nsone
     SUBDIR += py-certbot-dns-ovh
+    SUBDIR += py-certbot-dns-powerdns
     SUBDIR += py-certbot-dns-rfc2136
     SUBDIR += py-certbot-dns-route53
     SUBDIR += py-certbot-dns-sakuracloud
@@ -903,6 +903,7 @@
     SUBDIR += py-netbox-secretstore
     SUBDIR += py-netmiko
     SUBDIR += py-noiseprotocol
+    SUBDIR += py-notus-scanner
     SUBDIR += py-ntlm-auth
     SUBDIR += py-oauth2client
     SUBDIR += py-oauthlib
@@ -927,6 +928,7 @@
     SUBDIR += py-pyclamd
     SUBDIR += py-pycrypto
     SUBDIR += py-pycryptodome
+    SUBDIR += py-pycryptodome-test-vectors
     SUBDIR += py-pycryptodomex
     SUBDIR += py-pyelliptic
     SUBDIR += py-pyhanko-certvalidator
@@ -1264,6 +1266,7 @@
     SUBDIR += vxquery
     SUBDIR += wapiti
     SUBDIR += wazuh-agent
+    SUBDIR += wazuh-manager
     SUBDIR += webfwlog
     SUBDIR += weggli
     SUBDIR += whatweb

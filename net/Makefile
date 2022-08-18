@@ -474,6 +474,7 @@
     SUBDIR += mrouted
     SUBDIR += mrtparse
     SUBDIR += msend
+    SUBDIR += msoak
     SUBDIR += mtr
     SUBDIR += mtr-nox11
     SUBDIR += multicat
@@ -545,6 +546,7 @@
     SUBDIR += onedrive
     SUBDIR += onenetd
     SUBDIR += onioncat
+    SUBDIR += onionprobe
     SUBDIR += ooni-mini
     SUBDIR += ooni-probe-cli
     SUBDIR += opal
@@ -1026,6 +1028,7 @@
     SUBDIR += py-amqp
     SUBDIR += py-amqplib
     SUBDIR += py-avahi
+    SUBDIR += py-cepa
     SUBDIR += py-cjdns
     SUBDIR += py-cloudflare-scrape
     SUBDIR += py-cloudflare-scrape-js2py

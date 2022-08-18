@@ -374,6 +374,7 @@
     SUBDIR += py-SimpleSoapy
     SUBDIR += py-SoapySDR
     SUBDIR += py-alive-progress
+    SUBDIR += py-boost-histogram
     SUBDIR += py-cinder
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored
@@ -388,6 +389,7 @@
     SUBDIR += py-gluoncv
     SUBDIR += py-gluonnlp
     SUBDIR += py-halo
+    SUBDIR += py-histoprint
     SUBDIR += py-huepy
     SUBDIR += py-kartograph
     SUBDIR += py-log_symbols
@@ -412,6 +414,7 @@
     SUBDIR += py-pyprind
     SUBDIR += py-python-geohash
     SUBDIR += py-python-utils
+    SUBDIR += py-qiskit-machine-learning
     SUBDIR += py-scikit-fusion
     SUBDIR += py-serverfiles
     SUBDIR += py-soapy_power
@@ -426,6 +429,7 @@
     SUBDIR += py-toil
     SUBDIR += py-tqdm
     SUBDIR += py-tvm
+    SUBDIR += py-uhi
     SUBDIR += py-wurlitzer
     SUBDIR += py-xgboost
     SUBDIR += pyobd

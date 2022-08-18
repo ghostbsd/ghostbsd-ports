@@ -1,5 +1,5 @@
 PORTNAME=	freeciv
-PORTVERSION=	3.0.2
+PORTVERSION=	3.0.3
 CATEGORIES=	games
 MASTER_SITES=	SF/freeciv/Freeciv%20${PORTVERSION:R}/${PORTVERSION} \
 		http://files.freeciv.org/stable/
@@ -11,6 +11,7 @@ LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
+		libicuuc.so:devel/icu \
 		libltdl.so:devel/libltdl
 
 USES=		autoreconf compiler:c++11-lang cpe gmake iconv libtool lua:53 \

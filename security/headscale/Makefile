@@ -1,7 +1,6 @@
 PORTNAME=	headscale
-PORTVERSION=	0.15.0
+PORTVERSION=	0.16.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	5
 CATEGORIES=	security
 
 MAINTAINER=	m.muenz@gmail.com
@@ -23,7 +22,7 @@ GO_MODULE=	github.com/juanfont/headscale
 
 GO_TARGET=	./cmd/headscale
 
-PLIST_FILES=	${ETCDIR}/config.yaml \
+PLIST_FILES=	"@sample ${ETCDIR}/config.yaml.sample" \
 		"@dir /var/cache/${PORTNAME}" \
 		"@dir /var/db/${PORTNAME}" \
 		bin/${PORTNAME}
@@ -40,7 +39,7 @@ post-patch:
 
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/${PORTNAME}
-	${INSTALL_DATA} ${WRKSRC}/config-example.yaml ${STAGEDIR}${PREFIX}/etc/${PORTNAME}/config.yaml
+	${INSTALL_DATA} ${WRKSRC}/config-example.yaml ${STAGEDIR}${PREFIX}/etc/${PORTNAME}/config.yaml.sample
 	${MKDIR} ${STAGEDIR}/var/db/${PORTNAME}
 	${MKDIR} ${STAGEDIR}/var/cache/${PORTNAME}
 
