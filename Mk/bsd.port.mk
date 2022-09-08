@@ -4301,6 +4301,7 @@ create-manifest:
 			dp_PORT_OPTIONS='${PORT_OPTIONS}'                     \
 			dp_PREFIX='${PREFIX}'                                 \
 			dp_USERS='${USERS:u:S/$/,/}'                          \
+			dp_VITAL='${PKGVITAL}'                                \
 			dp_WWW='${_WWW}'                                      \
 			${PKG_NOTES_ENV}                                      \
 			${SH} ${SCRIPTSDIR}/create-manifest.sh
