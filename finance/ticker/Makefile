@@ -1,10 +1,11 @@
 PORTNAME=	ticker
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.5.3
+DISTVERSION=	4.5.4
 CATEGORIES=	finance
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Terminal stock ticker with live updates and position tracking
+WWW=		https://github.com/achannarasappa/ticker
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

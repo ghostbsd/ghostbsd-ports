@@ -1,10 +1,11 @@
 PORTNAME=	pijul
 PORTVERSION=	1.0.0.b
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Distributed version control system
+WWW=		https://pijul.org/
 
 LICENSE=	GPLv2
 

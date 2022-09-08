@@ -1,11 +1,12 @@
 PORTNAME=	bupstash
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.11.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	sysutils
 
 MAINTAINER=	felix@userspace.com.au
 COMMENT=	Easy and efficient encrypted backups
+WWW=		https://bupstash.io
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,11 +1,12 @@
 PORTNAME=	so
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.4.6
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	sec.research.2005@gmail.com
 COMMENT=	Terminal interface for Stack Overflow
+WWW=		https://github.com/samtay/so
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

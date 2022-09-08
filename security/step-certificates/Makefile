@@ -1,11 +1,11 @@
 PORTNAME=	step-certificates
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.21.0
-PORTREVISION=	2
+DISTVERSION=	0.22.0
 CATEGORIES=	security
 
 MAINTAINER=	mw@wipp.bayern
 COMMENT=	Smallstep step-ca certificates server
+WWW=		https://smallstep.com/certificates/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

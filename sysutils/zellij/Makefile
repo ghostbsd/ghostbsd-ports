@@ -1,10 +1,12 @@
 PORTNAME=	zellij
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.31.1
+DISTVERSION=	0.31.3
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	riggs@FreeBSD.org
 COMMENT=	Versatile, extensible terminal multiplexer
+WWW=		https://zellij.dev/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

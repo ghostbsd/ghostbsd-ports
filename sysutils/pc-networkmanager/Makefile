@@ -4,6 +4,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	kris@ixsystems.com
 COMMENT=	TrueOS Qt based network manager
+WWW=		https://github.com/trueos/pc-networkmanager
 
 LICENSE=	BSD2CLAUSE
 

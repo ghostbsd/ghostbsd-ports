@@ -1,11 +1,12 @@
 PORTNAME=	hyperfine
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.14.0
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	benchmarks
 
 MAINTAINER=	pizzamig@FreeBSD.org
 COMMENT=	Command-line benchmarking tool
+WWW=		https://github.com/sharkdp/hyperfine
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual

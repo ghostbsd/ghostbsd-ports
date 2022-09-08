@@ -1,10 +1,11 @@
 PORTNAME=	fselect
 DISTVERSION=	0.8.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	sysutils
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Find files with SQL-like queries
+WWW=		https://github.com/jhspetersson/fselect
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual

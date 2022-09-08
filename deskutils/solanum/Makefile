@@ -1,7 +1,7 @@
 PORTNAME=	solanum
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.0.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils
 
 PATCH_SITES=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
@@ -9,6 +9,7 @@ PATCHFILES+=	e5c5d88f95b0.patch:-p1 # https://gitlab.gnome.org/World/Solanum/-/m
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Pomodoro timer for the GNOME desktop
+WWW=		https://gitlab.gnome.org/World/Solanum
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

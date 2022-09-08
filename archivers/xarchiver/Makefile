@@ -1,9 +1,10 @@
 PORTNAME=	xarchiver
-DISTVERSION=	0.5.4.18
+DISTVERSION=	0.5.4.19
 CATEGORIES=	archivers
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Desktop-agnostic GTK frontend to various archiving tools
+WWW=		https://github.com/ib/xarchiver
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -13,7 +14,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libharfbuzz.so:print/harfbuzz
 RUN_DEPENDS=	7zz:archivers/7-zip \
 		gtar:archivers/gtar \
-		gzip:archivers/gzip \
+		${LOCALBASE}/bin/gzip:archivers/gzip \
 		${LOCALBASE}/bin/unzip:archivers/unzip \
 		xdg-open:devel/xdg-utils \
 		zip:archivers/zip

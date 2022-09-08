@@ -1,11 +1,12 @@
 PORTNAME=	delta
 DISTVERSION=	0.9.2
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	devel
 PKGNAMEPREFIX=	git-
 
 MAINTAINER=	greg@unrelenting.technology
 COMMENT=	Syntax-highlighting pager for git/diff
+WWW=		https://github.com/dandavison/delta
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

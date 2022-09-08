@@ -1,11 +1,11 @@
 PORTNAME=	mackerel-agent
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.72.15
-PORTREVISION=	1
+DISTVERSION=	0.73.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	meta@FreeBSD.org
 COMMENT=	Agent program to post your hosts' metrics to mackerel.io
+WWW=		https://mackerel.io
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

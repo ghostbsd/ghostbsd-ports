@@ -1,10 +1,11 @@
 PORTNAME=	libphonenumber
 DISTVERSIONPREFIX=	v
-DISTVERSION=	8.12.53
+DISTVERSION=	8.12.54
 CATEGORIES=	devel
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Library for parsing, formatting, and validating phone numbers
+WWW=		https://github.com/google/libphonenumber
 
 LICENSE=	APACHE20
 

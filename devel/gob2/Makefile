@@ -2,10 +2,11 @@ PORTNAME=	gob2
 PORTVERSION=	2.0.18
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Preprocessor for making GObjects with inline C
+WWW=		https://www.5z.com/jirka/gob.html
 
 LICENSE=	GPLv2
 

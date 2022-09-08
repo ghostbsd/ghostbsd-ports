@@ -1,10 +1,11 @@
 PORTNAME=	bkt
 PORTVERSION=	0.5.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Subprocess caching utility
+WWW=		https://github.com/dimo414/bkt
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

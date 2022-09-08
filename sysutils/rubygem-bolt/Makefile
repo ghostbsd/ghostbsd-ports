@@ -1,10 +1,11 @@
 PORTNAME=	bolt
-PORTVERSION=	3.25.0
+PORTVERSION=	3.26.1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	puppet@FreeBSD.org
 COMMENT=	Execute commands remotely over SSH and WinRM
+WWW=		https://github.com/puppetlabs/bolt
 
 LICENSE=	APACHE20
 

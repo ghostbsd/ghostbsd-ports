@@ -4,11 +4,14 @@ CATEGORIES=	games
 
 MAINTAINER=	dmenelkir@gmail.com
 COMMENT=	Final Burn Alpha fork for libretro
+WWW=		https://github.com/libretro/FBNeo
 
 LICENSE=	FBNeo
 LICENSE_NAME=	FBNeo
 LICENSE_FILE=	${WRKSRC}/src/license.txt
 LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
+
+BROKEN=		does not build: non-const lvalue reference to type 'basic_ostringstream<...>' cannot bind to a temporary of type 'basic_ostringstream<...>'
 
 USES=		compiler:c11 gmake gl
 USE_LDCONFIG=	yes

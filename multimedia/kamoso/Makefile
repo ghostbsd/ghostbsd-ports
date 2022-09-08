@@ -5,11 +5,12 @@ CATEGORIES=	multimedia kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Application to take pictures and videos out of your webcam
+WWW=		https://userbase.kde.org/Kamoso
 
 LICENSE=	GPLv2
 
-USES=		cmake compiler:c++11-lang gettext gl gnome gstreamer kde:5 pkgconfig qt:5 \
-		tar:xz
+USES=		cmake compiler:c++11-lang gettext gl gnome gstreamer kde:5 \
+		pkgconfig qt:5 tar:xz xorg
 USE_GL=		gl
 USE_GNOME=	glib20
 USE_KDE=	auth bookmarks codecs completion config configwidgets \
@@ -19,6 +20,7 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 USE_QT=		concurrent core dbus declarative graphicaleffects gui network \
 		quickcontrols widgets xml \
 		buildtools_build qmake_build
+USE_XORG=	x11
 
 OPTIONS_DEFINE=	DOCS
 

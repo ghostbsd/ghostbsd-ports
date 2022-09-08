@@ -1,9 +1,10 @@
 PORTNAME=	boringssl
-PORTVERSION=	0.0.0.0.2022.08.05.01
+PORTVERSION=	0.0.0.0.2022.09.01.01
 CATEGORIES=	security
 
 MAINTAINER=	osa@FreeBSD.org
 COMMENT=	Fork of OpenSSL
+WWW=		https://github.com/google/boringssl
 
 LICENSE=	OpenSSL
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -18,7 +19,7 @@ CPE_VENDOR=	google
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	google
-GH_TAGNAME=	ce65c1d
+GH_TAGNAME=	8462a36
 GH_TUPLE=	golang:crypto:c07d793c2f9a:golang_crypto/vendor/golang.org/x/crypto \
 		golang:net:04defd469f4e:golang_net/vendor/golang.org/x/net \
 		golang:sys:04245dca01da:golang_sys/vendor/golang.org/x/sys \

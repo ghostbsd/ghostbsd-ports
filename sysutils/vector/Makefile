@@ -1,11 +1,12 @@
 PORTNAME=	vector
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.10.0
-PORTREVISION=	17
+PORTREVISION=	18
 CATEGORIES=	sysutils
 
 MAINTAINER=	greg@unrelenting.technology
 COMMENT=	High performance logs, metrics, and events router
+WWW=		https://vector.dev
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,10 +1,10 @@
 PORTNAME=	eventviews
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Event view libriares for KDEPim
+WWW=		https://github.com/KDE/mailcommon
 
 LICENSE=	LGPL21
 

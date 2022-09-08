@@ -1,10 +1,11 @@
 PORTNAME=	sobjectizer
-PORTVERSION=	5.7.4.1
+PORTVERSION=	5.7.4.2
 DISTVERSIONPREFIX=	v.
 CATEGORIES=	devel
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Cross-platform C++ actor framework
+WWW=		https://stiffstream.com/en/products/sobjectizer.html
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/../LICENSE

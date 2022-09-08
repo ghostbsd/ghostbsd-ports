@@ -1,12 +1,12 @@
 PORTNAME=	opensearch-dashboards
-DISTVERSION=	2.1.0
+DISTVERSION=	2.2.0
 DISTVERSIONSUFFIX=	-linux-x64
-PORTREVISION=	1
 CATEGORIES=	textproc www
 MASTER_SITES=	https://artifacts.opensearch.org/releases/bundle/${PORTNAME}/${DISTVERSION}/
 
 MAINTAINER=	opensearch@FreeBSD.org
 COMMENT=	Visualization dashboards for OpenSearch
+WWW=		https://opensearch.org
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

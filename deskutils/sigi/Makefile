@@ -1,10 +1,12 @@
 PORTNAME=	sigi
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.4.2
+PORTREVISION=	1
 CATEGORIES=	deskutils
 
 MAINTAINER=	hiljusti@so.dang.cool
 COMMENT=	Organizing tool for terminal lovers who hate organizing
+WWW=		https://github.com/hiljusti/sigi
 
 LICENSE=	GPLv2
 

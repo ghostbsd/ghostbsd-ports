@@ -1,11 +1,12 @@
 PORTNAME=	oha
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.5.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	net
 
 MAINTAINER=	otis@FreeBSD.org
 COMMENT=	Web load generator
+WWW=		https://github.com/hatoo/oha
 
 LICENSE=	MIT
 

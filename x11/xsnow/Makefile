@@ -1,10 +1,11 @@
 PORTNAME=	xsnow
-PORTVERSION=	3.5.1
+PORTVERSION=	3.5.2
 CATEGORIES=	x11
 MASTER_SITES=	SF/${PORTNAME}/
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Create a snowy and Santa-y desktop
+WWW=		https://www.ratrabbit.nl/ratrabbit/xsnow/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

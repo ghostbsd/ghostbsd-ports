@@ -1,9 +1,10 @@
 PORTNAME=	qschematic
-PORTVERSION=	1.3.1
+DISTVERSION=	1.3.2
 CATEGORIES=	devel
 
 MAINTAINER=	jbo@insane.engineer
 COMMENT=	Qt/C++ library providing widgets for drawing diagrams
+WWW=		https://github.com/simulton/qschematic
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/license.txt
@@ -19,5 +20,7 @@ GH_PROJECT=	QSchematic
 
 CMAKE_OFF=	QSCHEMATIC_BUILD_DEMO QSCHEMATIC_DEPENDENCY_GPDS_DOWNLOAD
 CMAKE_ARGS=	-DQSCHEMATIC_DEPENDENCY_GPDS_TARGET:STRING="gpds::gpds-shared"
+
+PLIST_SUB=	DISTVERSION=${DISTVERSION}
 
 .include <bsd.port.mk>

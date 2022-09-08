@@ -1,6 +1,6 @@
 PORTNAME=	kadu
 PORTVERSION=	4.3
-PORTREVISION=	23
+PORTREVISION=	24
 PORTEPOCH=	1
 CATEGORIES=	polish net-im
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}/:kadu \
@@ -12,6 +12,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Internet communicator supporting Gadu-Gadu and Jabber/XMPP
+WWW=		http://kadu.im
 
 LICENSE=	GPLv2
 

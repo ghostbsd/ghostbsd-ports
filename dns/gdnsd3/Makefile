@@ -1,6 +1,5 @@
 PORTNAME=	gdnsd
-PORTVERSION=	3.7.0
-PORTREVISION=	1
+PORTVERSION=	3.8.0
 CATEGORIES=	dns
 MASTER_SITES=	https://github.com/gdnsd/gdnsd/releases/download/v${PORTVERSION}/ \
 		ZI \
@@ -9,6 +8,7 @@ PKGNAMESUFFIX=	3
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Authoritative-only GeoIP-aware DNS server
+WWW=		https://github.com/blblack/gdnsd
 
 LICENSE=	GPLv3
 

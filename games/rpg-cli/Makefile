@@ -1,10 +1,11 @@
 PORTNAME=	rpg-cli
 DISTVERSION=	1.0.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Your filesystem as a dungeon
+WWW=		https://github.com/facundoolano/rpg-cli
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

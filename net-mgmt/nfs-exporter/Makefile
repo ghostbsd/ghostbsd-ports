@@ -1,11 +1,12 @@
 PORTNAME=	nfs-exporter
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.3.1
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	asomers@FreeBSD.org
 COMMENT=	Prometheus exporter for NFS statistics
+WWW=		https://github.com/Axcient/freebsd-nfs-exporter
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual

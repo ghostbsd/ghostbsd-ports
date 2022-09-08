@@ -1,9 +1,10 @@
 PORTNAME=	aws-sdk-cpp
-PORTVERSION=	1.9.183
+PORTVERSION=	1.9.328
 CATEGORIES=	devel
 
-MAINTAINER=	danilo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ interface for Amazon Web Services (AWS)
+WWW=		https://github.com/aws/aws-sdk-cpp
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

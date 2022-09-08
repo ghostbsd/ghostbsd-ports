@@ -4,8 +4,9 @@ DISTVERSIONPREFIX=	v
 PORTREVISION=	4
 CATEGORIES=	net www
 
-MAINTAINER=	danfe@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple RSS/Atom reader written in Go
+WWW=		https://github.com/Lallassu/gorss
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

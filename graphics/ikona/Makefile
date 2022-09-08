@@ -1,6 +1,6 @@
 PORTNAME=		ikona
 DISTVERSION=		1.0
-PORTREVISION=	25
+PORTREVISION=	26
 CATEGORIES=		graphics kde
 MASTER_SITES=		KDE/stable/${PORTNAME}/${DISTVERSION}/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
@@ -9,6 +9,7 @@ EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		kde@FreeBSD.org
 COMMENT=		Icon editing companion
+WWW=		https://kde.org/applications/system/org.kde.Ikona
 
 LICENSE=		GPLv2
 LICENSE_FILE=		${WRKSRC}/LICENSE

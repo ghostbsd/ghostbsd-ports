@@ -1,11 +1,11 @@
 PORTNAME=	csvq
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.17.8
-PORTREVISION=	1
+DISTVERSION=	1.17.10
 CATEGORIES=	textproc
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	SQL-like query language for csv
+WWW=		https://mithrandie.github.io/csvq/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

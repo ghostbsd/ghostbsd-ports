@@ -1,10 +1,11 @@
 PORTNAME=	arti
 DISTVERSION=	0.4.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Implementation of Tor, in Rust
+WWW=		https://gitlab.torproject.org/tpo/core/arti/
 
 LICENSE=	MIT
 

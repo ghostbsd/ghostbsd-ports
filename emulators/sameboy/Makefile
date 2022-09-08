@@ -1,10 +1,11 @@
 PORTNAME=	sameboy
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.15.4
+DISTVERSION=	0.15.5
 CATEGORIES=	emulators games
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Game Boy and Game Boy Color emulator written in C
+WWW=		https://sameboy.github.io/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -22,6 +23,8 @@ USE_SDL=	sdl2
 MAKE_ARGS=	FREEDESKTOP=true \
 		WARNINGS="-Wno-error"
 ALL_TARGET=	sdl
+
+PORTSCOUT=	limit:^d\.d+\.
 
 OPTIONS_DEFINE=		LIBRETRO
 OPTIONS_DEFAULT=	LIBRETRO

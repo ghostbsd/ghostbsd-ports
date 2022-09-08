@@ -1,10 +1,11 @@
 PORTNAME=	iddawc
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.1.4
+DISTVERSION=	1.1.6
 CATEGORIES=	security
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	OAuth2/OIDC Client and Relying Party library
+WWW=		https://github.com/babelouest/iddawc
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -27,5 +28,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	babelouest
 
 CMAKE_ARGS=	-DWITH_JOURNALD=off
+
+PLIST_SUB=	DISTVERSION=${DISTVERSION}
 
 .include <bsd.port.mk>

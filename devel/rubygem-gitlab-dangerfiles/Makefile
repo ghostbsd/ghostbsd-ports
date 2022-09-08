@@ -1,10 +1,11 @@
 PORTNAME=	gitlab-dangerfiles
-PORTVERSION=	3.4.1
+PORTVERSION=	3.4.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Dangerfile and plugins for GitLab projects
+WWW=		https://gitlab.com/gitlab-org/ruby/gems/gitlab-dangerfiles
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

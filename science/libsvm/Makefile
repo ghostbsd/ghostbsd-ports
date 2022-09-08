@@ -1,11 +1,12 @@
 PORTNAME=	libsvm
-PORTVERSION=	3.23
+PORTVERSION=	3.24
 CATEGORIES=	science math
 MASTER_SITES=	http://www.csie.ntu.edu.tw/~cjlin/libsvm/ \
 		http://www.csie.ntu.edu.tw/~cjlin/libsvm/oldfiles/
 
 MAINTAINER?=	iblis@hs.ntnu.edu.tw
 COMMENT=	Library for Support Vector Machines
+WWW=		https://www.csie.ntu.edu.tw/~cjlin/libsvm/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT

@@ -1,12 +1,13 @@
 PORTNAME=	plexmediaserver
-PORTVERSION?=	1.28.0.5999
-DISTVERSIONSUFFIX?=97678ded3
+PORTVERSION?=	1.28.2.6151
+DISTVERSIONSUFFIX?=914ddd2b3
 CATEGORIES=	multimedia
 MASTER_SITES?=	https://downloads.plex.tv/plex-media-server-new/${DISTVERSION}-${DISTVERSIONSUFFIX}/freebsd/
 DISTNAME?=	PlexMediaServer-${DISTVERSION}-${DISTVERSIONSUFFIX}-FreeBSD-${ARCH}
 
 MAINTAINER?=	b.shertenlieb@yahoo.com
 COMMENT=	Plex Media Server component
+WWW=		https://plex.tv
 
 ONLY_FOR_ARCHS=	amd64
 ONLY_FOR_ARCHS_REASON=	binary-only program, source code not available

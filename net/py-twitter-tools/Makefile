@@ -7,6 +7,7 @@ PKGNAMESUFFIX=	-tools
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	API and command-line toolset for Twitter (twitter.com)
+WWW=		https://github.com/sixohsix/twitter
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pypandoc>0:textproc/py-pypandoc@${PY_FLAVOR}
 

@@ -1,10 +1,12 @@
 PORTNAME=	psi
 PORTVERSION=	1.5
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	SF/${PORTNAME}/Psi/${PORTVERSION}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Qt-based Jabber (XMPP) client
+WWW=		https://psi-im.org/
 
 LICENSE=	GPLv2+
 

@@ -1,5 +1,5 @@
 PORTNAME=	webmin
-PORTVERSION=	1.996
+PORTVERSION=	1.997
 PORTREVISION=	0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.webmin.com/updates/:up \
@@ -10,6 +10,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Web-based interface for system administration for Unix
+WWW=		https://www.webmin.com/
 
 LICENSE=	BSD3CLAUSE
 

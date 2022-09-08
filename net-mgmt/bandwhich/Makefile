@@ -1,10 +1,11 @@
 PORTNAME=	bandwhich
 DISTVERSION=	0.20.0
-PORTREVISION=	17
+PORTREVISION=	18
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Terminal bandwidth utilization tool
+WWW=		https://github.com/imsnif/bandwhich
 
 LICENSE=	MIT
 

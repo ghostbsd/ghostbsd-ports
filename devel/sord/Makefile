@@ -1,10 +1,11 @@
 PORTNAME=	sord
-PORTVERSION=	0.16.10
+PORTVERSION=	0.16.12
 CATEGORIES=	devel
 MASTER_SITES=	http://download.drobilla.net/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight C library for storing RDF data in memory
+WWW=		https://drobilla.net/category/sord/
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -12,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libserd-0.so:devel/serd \
 		libpcre.so:devel/pcre
 
-USES=		pkgconfig python:build tar:bzip2 waf
+USES=		meson pkgconfig python:build tar:xz
 USE_LDCONFIG=	yes
 PLIST_SUB=	VERSION=${PORTVERSION}
 

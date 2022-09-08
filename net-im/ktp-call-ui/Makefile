@@ -1,10 +1,10 @@
 PORTNAME=	ktp-call-ui
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	2
 CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Voice/Video Call UI for Telepathy
+WWW=		https://community.kde.org/KTp
 
 LICENSE=	GPLv2+ LGPL21+
 LICENSE_COMB=	multi

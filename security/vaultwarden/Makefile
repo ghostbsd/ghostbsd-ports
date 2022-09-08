@@ -1,5 +1,6 @@
 PORTNAME=	vaultwarden
 DISTVERSION=	1.25.2
+PORTREVISION=	1
 #PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/dani-garcia/bw_web_builds/releases/download/v${DISTVERSION_WV}/:web
@@ -7,6 +8,7 @@ DISTFILES=	${WV_DISTFILE}:web
 
 MAINTAINER=	mr@FreeBSD.org
 COMMENT=	Bitwarden compatible backend server
+WWW=		https://github.com/dani-garcia/vaultwarden
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

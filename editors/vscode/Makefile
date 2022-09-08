@@ -1,6 +1,6 @@
 PORTNAME=	vscode
-DISTVERSION=	1.70.1
-PORTREVISION=	1
+DISTVERSION=	1.70.2
+PORTREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	https://registry.npmjs.org/esbuild-freebsd-64/-/:esbuild_binary \
 		https://nodejs.org/dist/v${NODE_VER}/:node_headers \
@@ -18,6 +18,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX} \
 
 MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Visual Studio Code - Open Source ("Code - OSS")
+WWW=		https://code.visualstudio.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -70,7 +71,7 @@ USES=		desktop-file-utils gl gmake gnome iconv jpeg pkgconfig \
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	6d9b74a70ca9c7733b29f0456fd8195364076dda
+SOURCE_COMMIT_HASH=	e4503b30fc78200f846c62cf8091b76ff5547662
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 

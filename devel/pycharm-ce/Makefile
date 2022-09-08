@@ -1,5 +1,5 @@
 PORTNAME=	pycharm-ce
-DISTVERSION=	2022.2
+DISTVERSION=	2022.2.1
 CATEGORIES=	devel java python
 MASTER_SITES=	https://download.jetbrains.com/python/ \
 		http://download.jetbrains.com/python/
@@ -7,6 +7,7 @@ DISTNAME=	pycharm-community-${PORTVERSION}
 
 MAINTAINER=	jonc@chen.org.nz
 COMMENT=	JetBrains PyCharm Community Edition IDE
+WWW=		https://www.jetbrains.com/pycharm/
 
 LICENSE=	APACHE20
 

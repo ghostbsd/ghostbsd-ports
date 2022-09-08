@@ -1,5 +1,5 @@
 PORTNAME=	rubymine
-PORTVERSION=	2022.2
+PORTVERSION=	2022.2.1
 CATEGORIES=	devel java
 MASTER_SITES=	https://download.jetbrains.com/ruby/ \
 		http://download.jetbrains.com/ruby/
@@ -7,6 +7,7 @@ DISTNAME=	RubyMine-${PORTVERSION}
 
 MAINTAINER=	rene@FreeBSD.org
 COMMENT=	Ruby on Rails IDE by JetBrains
+WWW=		https://www.jetbrains.com/ruby/
 
 LICENSE=	IntelliJ-Rubymine
 LICENSE_NAME=	Subscription license agreement for business and organizations

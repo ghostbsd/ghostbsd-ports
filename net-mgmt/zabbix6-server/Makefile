@@ -1,12 +1,13 @@
 PORTNAME=	zabbix6
-DISTVERSION=	6.0.7
+DISTVERSION=	6.0.8
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${DISTVERSION:R}/
 PKGNAMESUFFIX?=	-server
 DISTNAME=	zabbix-${DISTVERSION}
 
-MAINTAINER=	cy@FreeBSD.org
+MAINTAINER=	otis@FreeBSD.org
 COMMENT=	Enterprise-class open source distributed monitoring (${PKGNAMESUFFIX:S/^-//})
+WWW=		https://www.zabbix.com/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

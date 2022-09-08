@@ -1,11 +1,12 @@
 PORTNAME=	ja2
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.19.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 
 MAINTAINER=	timp87@gmail.com
 COMMENT=	Port of "Jagged Alliance 2" using SDL
+WWW=		https://ja2-stracciatella.github.io/
 
 LICENSE=		PD SFI-SCLA
 LICENSE_COMB=		multi

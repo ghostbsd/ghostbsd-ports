@@ -1,10 +1,11 @@
 PORTNAME=	nano
-DISTVERSION=	6.2
+DISTVERSION=	6.4
 CATEGORIES=	editors
 MASTER_SITES=	https://www.nano-editor.org/dist/v${DISTVERSION:R:R}/ GNU
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Nano's ANOther editor, an enhanced free Pico clone
+WWW=		https://www.nano-editor.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

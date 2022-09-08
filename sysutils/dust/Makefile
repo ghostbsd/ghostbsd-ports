@@ -1,10 +1,12 @@
 PORTNAME=	dust
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.8.1
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	antranigv@freebsd.am
 COMMENT=	More intuitive version of du
+WWW=		https://github.com/bootandy/dust
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

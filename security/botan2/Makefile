@@ -8,6 +8,7 @@ DISTNAME=	Botan-${PORTVERSION}
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Portable, easy to use and efficient C++ crypto library
+WWW=		https://botan.randombit.net/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/license.txt
@@ -24,7 +25,7 @@ SHEBANG_FILES=	configure.py src/python/botan2.py src/scripts/install.py
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	configure.py
-CONFIGURE_ARGS=		--cc=${COMPILER_TYPE} \
+CONFIGURE_ARGS=		--cc=${CHOSEN_COMPILER_TYPE} \
 			--prefix=${PREFIX:Q} \
 			--with-boost \
 			--with-bzip2 \

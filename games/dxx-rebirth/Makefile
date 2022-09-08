@@ -1,5 +1,5 @@
 PORTNAME=	dxx-rebirth
-PORTVERSION=	20220622
+PORTVERSION=	20220823
 DISTVERSIONSUFFIX=	-src
 CATEGORIES=	games
 MASTER_SITES=	https://www.dxx-rebirth.com/download/dxx/rebirth/
@@ -7,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}${DISTVERSIONSUFFIX}
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Open source port of Descent and Descent 2
+WWW=		https://www.dxx-rebirth.com/
 
 LICENSE=	GPLv3 PARALLAX
 LICENSE_COMB=	multi

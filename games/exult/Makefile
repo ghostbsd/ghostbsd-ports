@@ -1,15 +1,17 @@
 PORTNAME=	exult
 DISTVERSION?=	1.8
+PORTREVISION?=	1
 PORTEPOCH=	1
 CATEGORIES=	games
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Engine for Ultima VII (BG, FOV, SI, SS)
+WWW=		http://exult.info
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libfreetype.so:print/freetype2 \
+LIB_DEPENDS?=	libfreetype.so:print/freetype2 \
 		libogg.so:audio/libogg \
 		libpng.so:graphics/png \
 		libvorbis.so:audio/libvorbis
@@ -28,8 +30,8 @@ CONFIGURE_ARGS=	--disable-static \
 		--with-icondir=${PREFIX}/share/pixmaps
 
 CONFLICTS_INSTALL=	exult-devel
-SUB_FILES=	pkg-message
-PLIST?=		${.CURDIR}/pkg-plist
+SUB_FILES=		pkg-message
+PLIST?=			${.CURDIR}/pkg-plist
 
 .if !defined(MASTERDIR)
 MASTER_SITES=	http://prdownloads.sourceforge.net/exult/

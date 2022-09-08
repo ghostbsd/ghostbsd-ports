@@ -1,12 +1,13 @@
 PORTNAME=	icedtea-web
 PORTVERSION=	1.8.4
 DISTVERSIONPREFIX=	icedtea-web-
-PORTREVISION=	21
+PORTREVISION=	22
 CATEGORIES=	java www
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	java@FreeBSD.org
 COMMENT=	Free Java plug-in and Java Web Start for OpenJDK
+WWW=		http://icedtea.classpath.org/wiki/IcedTea-Web
 
 LICENSE=	GPLv2
 

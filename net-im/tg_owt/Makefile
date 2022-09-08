@@ -1,9 +1,11 @@
 PORTNAME=	tg_owt
 PORTVERSION=	0.0.20220811
+PORTREVISION=	1
 CATEGORIES=	net-im
 
 MAINTAINER=	osa@FreeBSD.org
 COMMENT=	Webrtc library used by telegram-desktop
+WWW=		https://github.com/desktop-app/tg_owt
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -12,11 +14,9 @@ BUILD_DEPENDS=	v4l_compat>0:multimedia/v4l_compat \
 		yasm:devel/yasm
 LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libavformat.so:multimedia/ffmpeg \
-		libevent.so:devel/libevent \
 		libjpeg.so:graphics/jpeg-turbo \
 		libopus.so:audio/opus \
-		libpipewire-0.3.so:multimedia/pipewire \
-		libusrsctp.so:net/libusrsctp
+		libpipewire-0.3.so:multimedia/pipewire
 
 USES=		cmake gl pkgconfig xorg
 USE_XORG=	x11 xcomposite xdamage xrender xrandr xtst

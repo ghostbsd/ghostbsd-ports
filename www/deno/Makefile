@@ -1,10 +1,12 @@
 PORTNAME=	deno
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.24.3
+PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Secure JavaScript and TypeScript runtime
+WWW=		https://github.com/denoland
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

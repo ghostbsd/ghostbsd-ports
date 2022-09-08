@@ -1,11 +1,12 @@
 PORTNAME=	opensips31
-DISTVERSION=	3.1.10
+DISTVERSION=	3.1.11
 CATEGORIES=	net
 MASTER_SITES=	https://opensips.org/pub/opensips/${DISTVERSION}/
 DISTNAME=	opensips-${DISTVERSION}
 
 MAINTAINER=	bambyster@gmail.com
 COMMENT=	Open SIP Server
+WWW=		https://www.opensips.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

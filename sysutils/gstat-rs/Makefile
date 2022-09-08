@@ -1,11 +1,12 @@
 PORTNAME=	gstat-rs
 DISTVERSIONPREFIX=	gstat-v
 DISTVERSION=	0.1.2
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	sysutils
 
 MAINTAINER=	asomers@FreeBSD.org
 COMMENT=	Replacement for gstat(8)
+WWW=		https://github.com/asomers/gstat-rs
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

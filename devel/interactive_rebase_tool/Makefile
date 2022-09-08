@@ -1,10 +1,11 @@
 PORTNAME=	interactive_rebase_tool
 DISTVERSION=	2.2.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Improved sequence editor for Git
+WWW=		https://gitrebasetool.mitmaro.ca/
 
 LICENSE=	GPLv3+
 

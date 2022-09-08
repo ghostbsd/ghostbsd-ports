@@ -1,11 +1,12 @@
 PORTNAME=	open-vm-tools
-PORTVERSION=	12.0.5
+PORTVERSION=	12.1.0
 DISTVERSIONPREFIX=	stable-
 PORTEPOCH=	2
 CATEGORIES=	emulators
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Open VMware tools for FreeBSD VMware guests ${${FLAVOR}_COMMENT}
+WWW=		https://github.com/vmware/open-vm-tools
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

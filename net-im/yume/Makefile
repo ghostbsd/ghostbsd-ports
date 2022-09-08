@@ -1,11 +1,12 @@
 PORTNAME=	yume
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2.0
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	net-im
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Encrypted peer-to-peer IPv6 UDP messaging terminal
+WWW=		https://github.com/yamafaktory/yume
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE-MIT

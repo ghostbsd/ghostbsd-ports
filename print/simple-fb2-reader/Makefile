@@ -3,8 +3,9 @@ PORTVERSION=	1.1.3
 PORTREVISION=	3
 CATEGORIES=	print
 
-MAINTAINER=	danfe@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple FB2 format book reader
+WWW=		https://github.com/Cactus64k/simple-fb2-reader
 
 LICENSE=	GPLv3+
 

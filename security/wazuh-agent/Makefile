@@ -1,5 +1,5 @@
 PORTNAME=	wazuh
-DISTVERSION=	4.3.6
+DISTVERSION=	4.3.7
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
 MASTER_SITES=	https://packages.wazuh.com/deps/16/libraries/sources/:wazuh_sources
@@ -10,6 +10,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Security tool to monitor and check logs and intrusions (agent)
+WWW=		https://github.com/wazuh/wazuh
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

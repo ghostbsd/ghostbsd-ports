@@ -1,6 +1,6 @@
 PORTNAME=	authenticator
 DISTVERSION=	4.0.3
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	security
 
 PATCH_SITES=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
@@ -9,6 +9,7 @@ PATCHFILES+=	76e7c31709a2.patch:-p1 # https://gitlab.gnome.org/World/Authenticat
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Generate Two-Factor Codes
+WWW=		https://gitlab.gnome.org/World/Authenticator
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

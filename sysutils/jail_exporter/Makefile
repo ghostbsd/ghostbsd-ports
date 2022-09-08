@@ -1,11 +1,12 @@
 PORTNAME=	jail_exporter
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.15.1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	sysutils
 
 MAINTAINER=	dor.bsd@xm0.uk
 COMMENT=	Prometheus exporter for FreeBSD jail metrics
+WWW=		https://github.com/phyber/jail_exporter
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

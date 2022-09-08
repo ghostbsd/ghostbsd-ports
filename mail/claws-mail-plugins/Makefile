@@ -4,8 +4,7 @@ CATEGORIES=	mail news
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	claws-mail plugins meta-port
-
-LICENSE=	BSD2CLAUSE
+WWW=		https://www.claws-mail.org/plugins.php
 
 USES=		metaport
 

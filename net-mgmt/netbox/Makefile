@@ -1,10 +1,11 @@
 PORTNAME=	netbox
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.2.8
+DISTVERSION=	3.2.9
 CATEGORIES=	net-mgmt python
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	IP address management tool
+WWW=		https://github.com/netbox-community/netbox
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

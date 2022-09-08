@@ -1,10 +1,12 @@
 PORTNAME=	broot
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.14.2
+PORTREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Quick and easy new way to see and navigate directory trees
+WWW=		https://dystroy.org/broot/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

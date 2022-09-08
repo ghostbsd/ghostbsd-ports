@@ -1,10 +1,12 @@
 PORTNAME=	mcfly
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.6.1
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Fly through your shell history
+WWW=		https://github.com/cantino/mcfly
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

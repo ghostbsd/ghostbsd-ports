@@ -1,22 +1,22 @@
 PORTNAME=	tarantool
-PORTVERSION=	2.10.0
-PORTREVISION=	2
+PORTVERSION=	2.10.2
 CATEGORIES=	databases
 MASTER_SITES=	https://download.tarantool.org/tarantool/src/
 
 MAINTAINER=	balaev@tarantool.org
 COMMENT=	NoSQL database running in a Lua application server
+WWW=		https://tarantool.io/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_aarch64=		fails to compile: mmintrin.h:50:12: invalid conversion between vector type '__m64' (vector of 1 'long long' value) and integer type 'int' of different siz
 BROKEN_riscv64=		fails to compile: mmintrin.h:50:12: invalid conversion between vector type '__m64' (vector of 1 'long long' value) and integer type 'int' of different siz
-NOT_FOR_ARCHS=		armv6 powerpc64 sparc64
+NOT_FOR_ARCHS=		armv6 i386 powerpc64 sparc64
 NOT_FOR_ARCHS_REASON=	fails to build: Unsupported architecture
 
 BUILD_DEPENDS=	gsed:textproc/gsed \
-		msgpuck>=2.0_4:devel/msgpuck
+		msgpuck>=2.0_5:devel/msgpuck
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libicui18n.so:devel/icu \
 		libmsgpuck.so:devel/msgpuck \

@@ -1,11 +1,12 @@
 PORTNAME=	viu
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.4.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	graphics
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Simple terminal image viewer written in Rust
+WWW=		https://github.com/atanunq/viu
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE-MIT

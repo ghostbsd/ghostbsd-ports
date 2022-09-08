@@ -1,12 +1,12 @@
 PORTNAME=	mkvtoolnix
-PORTVERSION=	69.0.0
-PORTREVISION=	1
+PORTVERSION=	70.0.0
 CATEGORIES=	multimedia audio
 MASTER_SITES=	https://www.bunkus.org/videotools/mkvtoolnix/sources/ \
 		https://mkvtoolnix.download/sources/
 
 MAINTAINER=	riggs@FreeBSD.org
 COMMENT=	Tools to extract from/get info about/create Matroska media streams
+WWW=		https://www.bunkus.org/videotools/mkvtoolnix/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

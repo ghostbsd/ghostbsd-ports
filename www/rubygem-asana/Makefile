@@ -1,11 +1,11 @@
 PORTNAME=	asana
-PORTVERSION=	0.10.3
-PORTREVISION=	2
+PORTVERSION=	1.0.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby wrapper for the Asana REST API
+WWW=		https://github.com/Asana/ruby-asana
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 RUN_DEPENDS=	rubygem-faraday1>=1.0<2:www/rubygem-faraday1 \
 		rubygem-faraday_middleware>=1.0<2:www/rubygem-faraday_middleware \
 		rubygem-faraday_middleware-multi_json>=0.0<1:devel/rubygem-faraday_middleware-multi_json \
-		rubygem-oauth21>=1.4<2:net/rubygem-oauth21
+		rubygem-oauth21>=1.4<3:net/rubygem-oauth21
 
 USES=		gem
 USE_RUBY=	yes

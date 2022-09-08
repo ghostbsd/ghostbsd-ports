@@ -3,8 +3,9 @@ PORTVERSION=	1.25
 PORTREVISION=	3
 CATEGORIES=	security
 
-MAINTAINER=	danfe@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small, simple, yet very secure encryption tool
+WWW=		https://github.com/HACKERALERT/Picocrypt
 
 LICENSE=	GPLv3
 

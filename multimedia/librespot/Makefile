@@ -1,10 +1,12 @@
 PORTNAME=	librespot
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.4.2
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 MAINTAINER=	driesm@FreeBSD.org
 COMMENT=	Open Source Spotify client library
+WWW=		https://github.com/librespot-org/librespot
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

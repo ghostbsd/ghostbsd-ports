@@ -1,12 +1,12 @@
 PORTNAME=	sftpgo
-PORTVERSION=	2.3.1
-PORTREVISION=	2
+PORTVERSION=	2.3.3
 CATEGORIES=	ftp www
 MASTER_SITES=	https://github.com/drakkan/${PORTNAME}/releases/download/v${DISTVERSION}/
 DISTNAME=	${PORTNAME}_v${PORTVERSION}_src_with_deps
 
 MAINTAINER=	skozlov@FreeBSD.org
 COMMENT=	Fully featured and highly configurable SFTP, FTP/S, and WebDAV server
+WWW=		https://github.com/drakkan/sftpgo
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

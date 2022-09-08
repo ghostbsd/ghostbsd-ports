@@ -1,10 +1,11 @@
 PORTNAME=	kmcp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.8.3
+DISTVERSION=	0.8.4
 CATEGORIES=	biology
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Accurate metagenomic profiling & fast large-scale genome searching
+WWW=		https://bioinf.shenwei.me/kmcp/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

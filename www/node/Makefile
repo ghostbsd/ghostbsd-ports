@@ -1,11 +1,12 @@
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
-DISTVERSION=	18.5.0
+DISTVERSION=	18.7.0
 CATEGORIES=	www
 MASTER_SITES=	https://nodejs.org/dist/v${DISTVERSION}/
 
 MAINTAINER=	bhughes@FreeBSD.org
 COMMENT=	V8 JavaScript for client and server
+WWW=		https://nodejs.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

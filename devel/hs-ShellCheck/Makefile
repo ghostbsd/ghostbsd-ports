@@ -3,8 +3,9 @@ DISTVERSION=	0.8.0
 PORTREVISION=	2
 CATEGORIES=	devel haskell
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Shell script analysis tool
+WWW=		https://www.shellcheck.net/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

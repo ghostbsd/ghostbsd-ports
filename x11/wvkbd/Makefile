@@ -1,10 +1,11 @@
 PORTNAME=	wvkbd
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9
+DISTVERSION=	0.10
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	On-screen keyboard for wlroots
+WWW=		https://github.com/jjsullivan5196/wvkbd
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

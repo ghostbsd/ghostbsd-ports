@@ -1,5 +1,5 @@
 PORTNAME=	clion
-PORTVERSION=	2022.2
+PORTVERSION=	2022.2.1
 CATEGORIES=	devel java
 MASTER_SITES=	https://download-cdn.jetbrains.com/cpp/
 PKGNAMEPREFIX=	jetbrains-
@@ -8,6 +8,7 @@ DIST_SUBDIR=	jetbrains
 
 MAINTAINER=	dmitry.wagin@ya.ru
 COMMENT=	JetBrains CLion IDE
+WWW=		https://www.jetbrains.com/clion/
 
 LICENSE=	IntelliJ-CLion
 LICENSE_NAME=	Subscription license agreement for business and organizations
@@ -20,7 +21,7 @@ RUN_DEPENDS=	intellij-fsnotifier>0:java/intellij-fsnotifier \
 USES=		cpe python:run shebangfix
 
 USE_JAVA=	yes
-JAVA_VERSION=	11+
+JAVA_VERSION=	17+
 
 CPE_VENDOR=	jetbrains
 

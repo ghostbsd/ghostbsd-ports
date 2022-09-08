@@ -1,10 +1,12 @@
 PORTNAME=	ab-av1
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.4.2
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	AV1 re-encoding using ffmpeg, svt-av1 & vmaf
+WWW=		https://github.com/alexheretic/ab-av1
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

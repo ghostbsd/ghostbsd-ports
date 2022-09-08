@@ -1,14 +1,16 @@
 PORTNAME=	nvc
 DISTVERSIONPREFIX=	r
-DISTVERSION=	1.7.0-23
-DISTVERSIONSUFFIX=	-g265f2800
+DISTVERSION=	1.7.1
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	VHDL compiler and simulator
+WWW=		https://github.com/nickg/nvc
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN_FreeBSD_14_i386=	clang creashes, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=265826
 
 BUILD_DEPENDS=	llvm-config${LLVM_VERSION}:devel/llvm${LLVM_VERSION}
 RUN_DEPENDS=	llvm${LLVM_VERSION}>0:devel/llvm${LLVM_VERSION} \
@@ -31,7 +33,8 @@ LDFLAGS+=	-lexecinfo
 
 CONFIGURE_ARGS=	--with-llvm=${LOCALBASE}/bin/llvm-config${LLVM_VERSION}
 
-TEST_TARGET=	check # one test fails
+TEST_TARGET=	check # several tests fail, see https://github.com/nickg/nvc/issues/530
+TEST_WRKSRC=	${WRKSRC}/.build
 
 MAKE_ARGS=	CFLAGS="${CFLAGS}" # only for tests
 

@@ -1,11 +1,12 @@
 PORTNAME=	weggli
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2.3
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	security
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Semantic search tool for C and C++ codebases
+WWW=		https://github.com/googleprojectzero/weggli
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

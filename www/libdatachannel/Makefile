@@ -1,10 +1,11 @@
 PORTNAME=	libdatachannel
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.17.9
+DISTVERSION=	0.17.10
 CATEGORIES=	www
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	WebRTC Data Channels, WebRTC Media Transport, and WebSockets library
+WWW=		https://github.com/paullouisageneau/libdatachannel
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE

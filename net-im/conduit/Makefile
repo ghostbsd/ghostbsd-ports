@@ -1,12 +1,13 @@
 PORTNAME=	conduit
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-im
 PKGNAMEPREFIX=	matrix-
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Simple, fast and reliable chat server powered by Matrix
+WWW=		https://conduit.rs/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,10 +1,12 @@
 PORTNAME=	kitty
 DISTVERSION=	0.25.2
+PORTREVISION=	1
 CATEGORIES=	x11 wayland
 MASTER_SITES=	https://github.com/kovidgoyal/${PORTNAME}/releases/download/v${DISTVERSION}/
 
 MAINTAINER=	alexis.praga@free.fr
 COMMENT=	Cross-platform, fast, featureful, GPU-based terminal emulator
+WWW=		https://sw.kovidgoyal.net/kitty/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -67,6 +69,11 @@ MAKE_ENV+=	KITTY_NO_LTO=1
 USES+=		ncurses:port
 .else
 USES+=		ncurses
+.endif
+
+# fix clang static_assert on 12.x releases, https://github.com/kovidgoyal/kitty/pull/5398
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1300000
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-kitty_data-types.h
 .endif
 
 # For librsync, we need to set header and library path

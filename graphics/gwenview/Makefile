@@ -4,13 +4,15 @@ CATEGORIES=	graphics kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Image viewer and browser for KDE
+WWW=		http://gwenview.sourceforge.net
 
 BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
 		docbook-xml>0:textproc/docbook-xml
 LIB_DEPENDS=	libexiv2.so:graphics/exiv2 \
 		liblcms2.so:graphics/lcms2 \
 		libpng.so:graphics/png \
-		libtiff.so:graphics/tiff
+		libtiff.so:graphics/tiff \
+		libkImageAnnotator.so:graphics/kimageannotator
 RUN_DEPENDS=	kipi-plugins>=0:graphics/kipi-plugins
 
 USES=		compiler:c++11-lang cmake desktop-file-utils gettext jpeg pkgconfig \

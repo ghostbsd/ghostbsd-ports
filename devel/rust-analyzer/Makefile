@@ -1,9 +1,11 @@
 PORTNAME=	rust-analyzer
 DISTVERSION=	2022-07-18
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	rust@FreeBSD.org
 COMMENT=	Experimental Rust compiler front-end for IDEs
+WWW=		https://rust-analyzer.github.io/
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual

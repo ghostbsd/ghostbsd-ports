@@ -1,12 +1,14 @@
 PORTNAME=	rustworkx
 DISTVERSION=	0.11.0-51
 DISTVERSIONSUFFIX=	-ge9edfdc
+PORTREVISION=	1
 CATEGORIES=	math python
 #MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	High performance Python graph library implemented in Rust
+WWW=		https://github.com/Qiskit/rustworkx
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

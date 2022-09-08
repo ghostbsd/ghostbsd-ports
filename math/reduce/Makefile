@@ -6,10 +6,12 @@ DISTNAME=	Reduce-svn6339-src
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Codemist Standard Lisp REDUCE general-purpose computer system
+WWW=		http://www.reduce-algebra.com/
 
 LICENSE=	BSD2CLAUSE
 
-BROKEN_i386=		fails to compile: sysv.S:832:1: changed section flags for .eh_frame, expected: 0x2
+BROKEN_armv7=	fails to compile: error: no viable overloaded '=': return *this = int128_t(rhs);
+BROKEN_i386=	fails to compile: sysv.S:832:1: changed section flags for .eh_frame, expected: 0x2
 
 BUILD_DEPENDS=	gnuplot:math/gnuplot
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \

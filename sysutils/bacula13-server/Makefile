@@ -7,6 +7,7 @@ PKGNAMESUFFIX?=	13-server
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT?=	Network backup solution (server)
+WWW=		https://www.bacula.org/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -14,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES+=		cpe libtool readline shebangfix ssl
 SHEBANG_FILES=	src/cats/make_catalog_backup.pl.in scripts/baculabackupreport.in
 
-CONFLICTS?=	bacula13-server bacula9-server bacula-server
+CONFLICTS?=	bacula11-server bacula9-server bacula-server
 
 LIB_DEPENDS+=	liblzo2.so:archivers/lzo2
 

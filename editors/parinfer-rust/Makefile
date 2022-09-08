@@ -1,11 +1,12 @@
 PORTNAME=	parinfer-rust
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.4.3.20220110
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	editors
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Infer parentheses for Clojure, Lisp, and Scheme
+WWW=		https://github.com/eraserhd/parinfer-rust
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

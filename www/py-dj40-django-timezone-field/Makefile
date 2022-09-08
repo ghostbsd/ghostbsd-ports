@@ -1,11 +1,13 @@
 PORTNAME=	django-timezone-field
 DISTVERSION=	5.0
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}dj40-
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	Provides database and form fields for pytz timezone objects for Django
+WWW=		https://github.com/mfogel/django-timezone-field
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

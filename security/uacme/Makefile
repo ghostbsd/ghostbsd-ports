@@ -4,8 +4,9 @@ DISTVERSION=	1.7.1
 PORTREVISION=	2
 CATEGORIES=	security www
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight C ACMEv2 client which uses external authenticators
+WWW=		https://github.com/ndilieto/uacme
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

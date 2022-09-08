@@ -8,6 +8,7 @@ DISTNAME=	wxGTK-${PORTVERSION}
 
 MAINTAINER?=	desktop@FreeBSD.org
 COMMENT?=	The wxWidgets GUI toolkit with GTK+ bindings
+WWW=		https://www.wxwidgets.org/
 
 LIB_DEPENDS+=	libpng.so:graphics/png\
 		libtiff.so:graphics/tiff\
@@ -83,7 +84,7 @@ CONFIGURE_ARGS+=--enable-unicode
 .include <bsd.port.pre.mk>
 
 # GCC is broken with PCH: https://lists.freebsd.org/pipermail/svn-src-all/2015-March/101722.html
-.if ${COMPILER_TYPE} == gcc
+.if ${CHOSEN_COMPILER_TYPE} == gcc
 CONFIGURE_ARGS+=	--disable-precomp-headers
 .endif
 

@@ -1,11 +1,11 @@
 PORTNAME=	gopass
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.14.4
-PORTREVISION=	1
+DISTVERSION=	1.14.5
 CATEGORIES=	security
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Rewrite of the pass password manager in Go
+WWW=		https://www.gopass.pw/
 
 LICENSE=	MIT
 

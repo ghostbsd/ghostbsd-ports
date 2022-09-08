@@ -1,11 +1,12 @@
 PORTNAME=	spotifyd
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.3.3
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	audio
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Spotify daemon
+WWW=		https://github.com/Spotifyd/spotifyd
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/cargo-crates/ansi_term-0.11.0/LICENCE

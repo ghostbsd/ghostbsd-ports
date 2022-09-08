@@ -4,8 +4,9 @@ DISTVERSION=	1.5.1
 PORTREVISION=	2
 CATEGORIES=	sysutils
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	List files, recursively
+WWW=		https://github.com/leahneukirchen/lr/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

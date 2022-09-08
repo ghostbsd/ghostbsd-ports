@@ -1,11 +1,11 @@
 PORTNAME=	restic
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.13.1
-PORTREVISION=	3
+DISTVERSION=	0.14.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Fast, secure, efficient backup program
+WWW=		https://restic.net/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

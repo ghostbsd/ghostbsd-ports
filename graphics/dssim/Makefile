@@ -1,6 +1,6 @@
 PORTNAME=	dssim
 DISTVERSION=	3.2.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	CRATESIO
 # XXX Teach USES=cargo to have proper default
@@ -8,6 +8,7 @@ DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Image similarity comparison simulating human perception
+WWW=		https://kornel.ski/dssim
 
 LICENSE=	AGPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

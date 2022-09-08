@@ -1,5 +1,5 @@
 PORTNAME=	electrum
-PORTVERSION=	4.3.0
+PORTVERSION=	4.3.1
 CATEGORIES=	finance python
 MASTER_SITES=	https://download.electrum.org/${PORTVERSION}/ \
 		http://download.electrum.org/${PORTVERSION}/
@@ -8,6 +8,7 @@ DISTNAME=	Electrum-${PORTVERSION}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Easy to use Bitcoin client
+WWW=		https://electrum.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENCE

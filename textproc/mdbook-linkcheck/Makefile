@@ -1,11 +1,12 @@
 PORTNAME=	mdbook-linkcheck
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.6
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	textproc
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	mdBook backend to check links
+WWW=		https://github.com/Michael-F-Bryan/mdbook-linkcheck
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,11 +1,12 @@
 PORTNAME=	dspdfviewer
 PORTVERSION=	1.15.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	56
+PORTREVISION=	57
 CATEGORIES=	graphics
 
 MAINTAINER=	fox@FreeBSD.org
 COMMENT=	Dual-screen PDF viewer for LaTeX-beamer
+WWW=		https://github.com/dannyedel/dspdfviewer
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -13,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libboost_program_options.so:devel/boost-libs \
 		libpoppler-qt5.so:graphics/poppler-qt5
 
-USES=		cmake:insource compiler:c++11-lang pkgconfig qt:5
+USES=		cmake:insource compiler:c++14-lang pkgconfig qt:5
 USE_QT=		core gui linguisttools widgets xml buildtools_build qmake_build
 USE_LDCONFIG=	yes
 

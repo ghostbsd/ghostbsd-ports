@@ -1,11 +1,12 @@
 PORTNAME=	oci
-PORTVERSION=	2.75.1
+PORTVERSION=	2.79.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ale_sagra@hotmail.com
 COMMENT=	Python interface to Oracle Cloud Infrastructure
+WWW=		https://github.com/oracle/oci-python-sdk/
 
 LICENSE=	APACHE20 UPL
 LICENSE_COMB=	dual

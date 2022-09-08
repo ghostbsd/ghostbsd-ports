@@ -1,10 +1,12 @@
 PORTNAME=	grex
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.4.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Command-line tool for generating regular expressions from test cases
+WWW=		https://github.com/pemistahl/grex/
 
 LICENSE=	APACHE20
 

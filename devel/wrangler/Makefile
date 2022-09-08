@@ -1,11 +1,12 @@
 PORTNAME=	wrangler
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.19.12
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	antranigv@freebsd.am
 COMMENT=	Cloudflare Workers CLI Tool
+WWW=		https://developers.cloudflare.com/workers/cli-wrangler/
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual

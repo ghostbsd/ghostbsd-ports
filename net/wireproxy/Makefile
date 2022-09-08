@@ -1,11 +1,11 @@
 PORTNAME=	wireproxy
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.3
-PORTREVISION=	3
+DISTVERSION=	1.0.4
 CATEGORIES=	net
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Wireguard client that exposes itself as a socks5 proxy
+WWW=		https://github.com/octeep/wireproxy
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE

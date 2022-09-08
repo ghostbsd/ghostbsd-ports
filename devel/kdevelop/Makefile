@@ -3,11 +3,12 @@
 #  devel/kdev-python
 PORTNAME=	kdevelop
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	2
+PORTREVISION=	1
 CATEGORIES=	devel kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plugin extensible IDE for C/C++ and other languages
+WWW=		https://www.kdevelop.org/
 
 LICENSE=	GPLv2+ LGPL20+
 LICENSE_COMB=	multi
@@ -22,17 +23,19 @@ LIB_DEPENDS=	libKasten4Controllers.so:devel/okteta \
 RUN_DEPENDS=	gmake:devel/gmake \
 		llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT}
 
-USES=		cmake compiler:c++11-lib desktop-file-utils \
-		gettext grantlee:5 kde:5 qt:5 shared-mime-info shebangfix tar:xz
+USES=		cmake compiler:c++11-lib desktop-file-utils gettext grantlee:5 \
+		kde:5 qt:5 shared-mime-info shebangfix tar:xz xorg
 USE_KDE=	archive attica auth bookmarks codecs completion config configwidgets \
 		coreaddons crash guiaddons emoticons i18n iconthemes init \
 		itemmodels itemviews jobwidgets kcmutils kdeclarative \
 		kio libksysguard newstuff notifications \
 		notifyconfig package parts plasma-framework purpose \
-		runner service solid sonnet texteditor textwidgets threadweaver \
+		runner service solid sonnet syntaxhighlighting texteditor \
+		textwidgets threadweaver \
 		widgetsaddons windowsystem xmlgui
-USE_QT=		concurrent core dbus declarative gui help network \
+USE_QT=		concurrent core dbus declarative gui help network printsupport \
 		script sql widgets xml buildtools_build qmake_build
+USE_XORG=	x11
 SHEBANG_FILES=	kdevplatform/util/kdevplatform_shell_environment.sh \
 		kdevplatform/util/.zshrc
 # Most ports have ecm_build, testlib_build, but because this is an
@@ -45,9 +48,9 @@ USE_QT+=	testlib
 CMAKE_ARGS=	-DCMAKE_POLICY_DEFAULT_CMP0074=NEW -DLLVM_ROOT=${LOCALBASE}/llvm${LLVM_DEFAULT}
 
 # Versioning values, to reduce plist churn
-PLATFORM_VER=	36
-SO_VER=		58
-SO_VER_LONG=	5.8.220403
+PLATFORM_VER=	37
+SO_VER=		59
+SO_VER_LONG=	5.9.220800
 PLIST_SUB+=	PLATFORM_VER=${PLATFORM_VER} SO_VER=${SO_VER} SO_VER_LONG=${SO_VER_LONG}
 
 OPTIONS_DEFINE=	WEBENGINE

@@ -1,11 +1,12 @@
 PORTNAME=	diffoscope
-PORTVERSION=	220
+PORTVERSION=	221
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	In-depth comparison of files, archives, and directories
+WWW=		https://diffoscope.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

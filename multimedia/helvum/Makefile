@@ -1,10 +1,11 @@
 PORTNAME=	helvum
 DISTVERSION=	0.3.4
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	GTK patchbay for PipeWire
+WWW=		https://gitlab.freedesktop.org/ryuukyu/helvum
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

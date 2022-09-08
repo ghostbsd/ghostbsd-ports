@@ -1,12 +1,13 @@
 PORTNAME=	sccache
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2.15
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	ports-mgmt
 PKGNAMESUFFIX=	-overlay
 
 MAINTAINER=	rust@FreeBSD.org
 COMMENT=	Ports overlay for sccache
+WWW=		https://github.com/mozilla/sccache
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

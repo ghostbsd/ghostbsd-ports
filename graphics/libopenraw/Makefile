@@ -1,12 +1,13 @@
 PORTNAME=	libopenraw
 PORTVERSION=	0.3.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://libopenraw.freedesktop.org/download/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Library for camera RAW files decoding
+WWW=		https://libopenraw.freedesktop.org/
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER

@@ -1,12 +1,11 @@
 PORTNAME=	qiskit
-DISTVERSION=	0.37.1-4
-DISTVERSIONSUFFIX=	-gf178fcc98
-PORTREVISION=	5
+DISTVERSION=	0.37.2
 CATEGORIES=	science python # quantum-computing
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Qiskit meta-package: SDK for working with quantum computers
+WWW=		https://qiskit.org/
 
 LICENSE=	BSD2CLAUSE
 

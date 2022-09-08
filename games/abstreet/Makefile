@@ -1,13 +1,14 @@
 PORTNAME=	abstreet
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2.64
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	LOCAL/yuri:data
 DISTFILES=	${PORTNAME}-data-${DISTVERSION}.tgz:data # updated by the update-data target
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Game exploring how changes to city affect drivers/cyclists/pedestrians
+WWW=		https://github.com/dabreegster/abstreet
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

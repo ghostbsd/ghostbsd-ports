@@ -1,11 +1,12 @@
 PORTNAME=	gnome-desktop
-PORTVERSION=	42.3
+PORTVERSION=	42.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Additional UI API for GNOME
+WWW=		https://www.gnome.org/
 
 LICENSE=	GPLv2+ LGPL20+
 LICENSE_COMB=	multi

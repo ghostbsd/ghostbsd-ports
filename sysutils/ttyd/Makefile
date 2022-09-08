@@ -1,9 +1,10 @@
 PORTNAME=	ttyd
-DISTVERSION=	1.7.0
+DISTVERSION=	1.7.1
 CATEGORIES=	sysutils
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Program to share your terminal over the web
+WWW=		https://github.com/tsl0922/ttyd
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

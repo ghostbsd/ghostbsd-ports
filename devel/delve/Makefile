@@ -1,11 +1,11 @@
 PORTNAME=	delve
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9.0
-PORTREVISION=	1
+DISTVERSION=	1.9.1
 CATEGORIES=	devel
 
 MAINTAINER=	dmitry.wagin@ya.ru
 COMMENT=	Debugger for the Go programming language
+WWW=		https://github.com/go-delve/delve
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

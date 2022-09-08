@@ -1,6 +1,6 @@
 PORTNAME=	0ad
 PORTVERSION=	0.0.25b
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	games
 MASTER_SITES=	http://releases.wildfiregames.com/ \
 		SF/zero-ad/releases
@@ -9,6 +9,7 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}-alpha-unix-build.tar.xz \
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Real-time strategy (RTS) game of ancient warfare
+WWW=		https://play0ad.com/
 
 BROKEN_aarch64=		fails to compile: no member named verifyHeapAccessDisassembly
 BROKEN_armv6=		fails to link: fatal error: conftest: Unknown error: -1

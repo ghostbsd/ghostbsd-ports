@@ -1,12 +1,13 @@
 PORTNAME=	newsboat
 DISTVERSION=	2.27
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	https://newsboat.org/releases/${DISTVERSION}/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	mt-bugs@markoturk.info
 COMMENT=	RSS feed reader for the text console
+WWW=		https://newsboat.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

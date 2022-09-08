@@ -1,10 +1,12 @@
 PORTNAME=	inferno
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.11.7
+PORTREVISION=	1
 CATEGORIES=	benchmarks
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Stack trace visualizer, a Rust port of flamegraph
+WWW=		https://github.com/jonhoo/inferno
 
 LICENSE=	CDDL
 LICENSE_FILE=	${WRKSRC}/LICENSE

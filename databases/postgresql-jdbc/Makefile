@@ -1,5 +1,5 @@
 PORTNAME=	postgresql
-PORTVERSION=	42.4.1
+PORTVERSION=	42.4.2
 CATEGORIES=	databases java
 MASTER_SITES=	http://jdbc.postgresql.org/download/
 PKGNAMESUFFIX=	-jdbc
@@ -8,6 +8,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	pgsql@FreeBSD.org
 COMMENT=	Java JDBC implementation for PostgreSQL
+WWW=		https://jdbc.postgresql.org/
 
 LICENSE=	BSD3CLAUSE
 

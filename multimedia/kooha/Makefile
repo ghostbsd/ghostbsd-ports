@@ -1,11 +1,12 @@
 PORTNAME=	kooha
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.1
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	multimedia wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Elegantly record your screen
+WWW=		https://github.com/SeaDve/Kooha
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

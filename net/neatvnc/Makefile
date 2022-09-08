@@ -1,10 +1,11 @@
 PORTNAME=	neatvnc
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.1
+DISTVERSION=	0.5.3
 CATEGORIES=	net
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Liberally licensed VNC server library
+WWW=		https://github.com/any1/neatvnc
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING

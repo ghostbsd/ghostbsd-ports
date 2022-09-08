@@ -1,6 +1,6 @@
 PORTNAME=	anki
 DISTVERSION=	2.1.49
-PORTREVISION=	3
+PORTREVISION=	4
 # Don't forget to update ${_MY_BUILDHASH} if DISTVERSION changes
 CATEGORIES=	games education python
 MASTER_SITES=	LOCAL/kai/:yarncache
@@ -8,6 +8,7 @@ DISTFILES=	anki-yarn-cache-${DISTVERSION}${EXTRACT_SUFX}:yarncache
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	Flashcard trainer with spaced repetition
+WWW=		https://apps.ankiweb.net/
 
 LICENSE=	AGPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

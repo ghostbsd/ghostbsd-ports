@@ -1,10 +1,11 @@
 PORTNAME=	jwt-cli
 PORTVERSION=	5.0.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www
 
 MAINTAINER=	osa@FreeBSD.org
 COMMENT=	Super fast CLI tool to decode and encode JWTs
+WWW=		https://github.com/mike-engel/jwt-cli
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
