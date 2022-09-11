@@ -23,8 +23,8 @@ USES=		cmake:noninja desktop-file-utils fpc gl lua:51 pkgconfig qt:5 \
 USE_SDL=	sdl2 mixer2 image2 ttf2 net2
 USE_FPC=	opengl libpng rtl-objpas rtl-extra
 USE_QT=		core gui widgets network \
-		qmake_build buildtools_build \
-		linguisttools_build
+		qmake:build buildtools:build \
+		linguisttools:build
 USE_GL=		gl glu
 USE_LDCONFIG=	yes
 CMAKE_ON=	NOSERVER
@@ -58,6 +58,10 @@ VIDEOREC_CMAKE_OFF=	-DNOVIDEOREC=1
 .if ${ARCH} == i386
 BUILD_DEPENDS+=	ghc:lang/ghc
 .endif
+
+post-extract:
+	# Remove included CMakeFile, which is incompatible with >= cmake-3.24
+	${RM} ${WRKSRC}/cmake_modules/CMakeSystemSpecificInformation.cmake
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' ${WRKSRC}/cmake_modules/*.cmake

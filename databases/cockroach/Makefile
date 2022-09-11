@@ -1,7 +1,7 @@
 PORTNAME=	cockroach
 DISTVERSIONPREFIX=	v
 DISTVERSION=	19.1.11
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	databases
 MASTER_SITES=	https://binaries.cockroachdb.com/
 EXTRACT_SUFX=	.src.tgz
@@ -18,7 +18,7 @@ ONLY_FOR_ARCHS_REASON=	64-bit system is strongly recommended
 
 BUILD_DEPENDS=	autoconf:devel/autoconf \
 		bash:shells/bash \
-		cmake:devel/cmake
+		cmake:devel/cmake-core
 
 USES=		gmake go libedit
 

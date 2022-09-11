@@ -1,6 +1,5 @@
 PORTNAME=	kget
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	2
 CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -25,9 +24,9 @@ USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
 		kdelibs4support kio notifications notifyconfig parts service \
 		solid sonnet textwidgets unitconversion wallet widgetsaddons \
 		windowsystem xmlgui \
-		ecm_build
+		ecm:build
 USE_QT=		concurrent core dbus gui network printsupport sql widgets xml \
-		buildtools_build qmake_build testlib_build
+		buildtools:build qmake:build testlib:build
 USE_XORG=	x11
 USE_LDCONFIG=	yes
 

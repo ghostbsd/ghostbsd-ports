@@ -1,6 +1,5 @@
 PORTNAME=	falkon
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	www kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -12,10 +11,10 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		cmake desktop-file-utils kde:5 qt:5 ssl tar:xz xorg
 USE_KDE=	archive i18n \
-		ecm_build
+		ecm:build
 USE_QT=		concurrent core dbus declarative gui location network printsupport \
-		sql webchannel webengine widgets x11extras sql-sqlite3_run \
-		buildtools_build qmake_build
+		sql webchannel webengine widgets x11extras sql-sqlite3:run \
+		buildtools:build qmake:build
 USE_XORG=	x11 xcb
 
 USE_LDCONFIG=	yes

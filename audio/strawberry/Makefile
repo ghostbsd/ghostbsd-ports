@@ -5,7 +5,7 @@ CATEGORIES=	audio
 MASTER_SITES=	https://github.com/strawberrymusicplayer/${PORTNAME}/releases/download/${DISTVERSION}/ \
 		https://files.jkvinge.net/packages/strawberry/
 
-MAINTAINER=	dmenelkir@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fork of clementine with many features
 WWW=		https://www.strawberrymusicplayer.org/
 
@@ -24,7 +24,7 @@ USES=		cmake compiler:c++11-lang desktop-file-utils gettext-runtime \
 
 USE_GNOME=	glib20
 USE_QT=		concurrent core dbus gui linguisttools network sql sql-sqlite3 \
-		widgets x11extras buildtools_build qmake_build testlib_build
+		widgets x11extras buildtools:build qmake:build testlib:build
 USE_XORG=	ice sm x11 xcb xext
 
 CMAKE_ARGS=	-DENABLE_GSTREAMER:BOOL=true \

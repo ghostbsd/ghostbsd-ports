@@ -1,6 +1,5 @@
 PORTNAME=	ktp-kded-module
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -18,7 +17,7 @@ USE_KDE=	activities auth codecs completion config configwidgets coreaddons \
 		dbusaddons i18n idletime jobwidgets kcmutils kio notifications \
 		service solid wallet widgetsaddons windowsystem
 USE_QT=		concurrent core dbus gui network sql widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_XORG=	x11
 
 OPTIONS_DEFINE=	DOCS

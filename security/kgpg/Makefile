@@ -1,6 +1,5 @@
 PORTNAME=	kgpg
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	security kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -16,9 +15,9 @@ USE_KDE=	akonadi akonadicontacts archive auth bookmarks codecs \
 		dbusaddons doctools grantleetheme i18n iconthemes itemmodels itemviews \
 		jobwidgets kio notifications service solid sonnet textwidgets \
 		widgetsaddons windowsystem xmlgui \
-		ecm_build
+		ecm:build
 USE_QT=		concurrent core dbus gui network printsupport widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_XORG=	x11
 
 OPTIONS_DEFINE=	DOCS

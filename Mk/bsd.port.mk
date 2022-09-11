@@ -4366,7 +4366,7 @@ _FETCH_DEPENDS=${FETCH_DEPENDS:C/^[^ :]+:([^ :@]+)(@[^ :]+)?(:[^ :]+)?/\1/:O:u:C
 _LIB_DEPENDS=${LIB_DEPENDS:C/^[^ :]+:([^ :@]+)(@[^ :]+)?(:[^ :]+)?/\1/:O:u:C,(^[^/]),${PORTSDIR}/\1,}
 _BUILD_DEPENDS=${BUILD_DEPENDS:C/^[^ :]+:([^ :@]+)(@[^ :]+)?(:[^ :]+)?/\1/:O:u:C,(^[^/]),${PORTSDIR}/\1,} ${_LIB_DEPENDS}
 _RUN_DEPENDS=${RUN_DEPENDS:C/^[^ :]+:([^ :@]+)(@[^ :]+)?(:[^ :]+)?/\1/:O:u:C,(^[^/]),${PORTSDIR}/\1,} ${_LIB_DEPENDS}
-_WWW=${WWW:U${MASTER_SITES:[1]}}
+_WWW=${WWW}
 .      if exists(${DESCR})
 _DESCR=${DESCR}
 .      else
@@ -4381,7 +4381,7 @@ INDEX_OUT=/dev/stdout
 
 .      if empty(FLAVORS) || defined(_DESCRIBE_WITH_FLAVOR)
 describe:
-	@(${ECHO_CMD} "${PKGNAME}|${.CURDIR}|${PREFIX}|${COMMENT:Q}|${_DESCR}|${MAINTAINER}|${CATEGORIES}|${_EXTRACT_DEPENDS}|${_PATCH_DEPENDS}|${_FETCH_DEPENDS}|${_BUILD_DEPENDS:O:u}|${_RUN_DEPENDS:O:u}|${_WWW}" >> ${INDEX_OUT})
+	@(${ECHO_CMD} "${PKGNAME}|${.CURDIR}|${PREFIX}|"${COMMENT:Q}"|${_DESCR}|${MAINTAINER}|${CATEGORIES}|${_EXTRACT_DEPENDS}|${_PATCH_DEPENDS}|${_FETCH_DEPENDS}|${_BUILD_DEPENDS:O:u}|${_RUN_DEPENDS:O:u}|${_WWW}" >> ${INDEX_OUT})
 .      else # empty(FLAVORS)
 describe: ${FLAVORS:S/^/describe-/}
 .        for f in ${FLAVORS}

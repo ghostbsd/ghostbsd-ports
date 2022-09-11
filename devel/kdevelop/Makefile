@@ -3,7 +3,6 @@
 #  devel/kdev-python
 PORTNAME=	kdevelop
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	devel kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -34,11 +33,11 @@ USE_KDE=	archive attica auth bookmarks codecs completion config configwidgets \
 		textwidgets threadweaver \
 		widgetsaddons windowsystem xmlgui
 USE_QT=		concurrent core dbus declarative gui help network printsupport \
-		script sql widgets xml buildtools_build qmake_build
+		script sql widgets xml buildtools:build qmake:build
 USE_XORG=	x11
 SHEBANG_FILES=	kdevplatform/util/kdevplatform_shell_environment.sh \
 		kdevplatform/util/.zshrc
-# Most ports have ecm_build, testlib_build, but because this is an
+# Most ports have ecm:build, testlib:build, but because this is an
 # IDE, which **probably** is used for Qt / KDE development (also
 # other things, but let's guess a target market), pull in some
 # additional development things that are otherwise build-dep-only.
@@ -50,7 +49,7 @@ CMAKE_ARGS=	-DCMAKE_POLICY_DEFAULT_CMP0074=NEW -DLLVM_ROOT=${LOCALBASE}/llvm${LL
 # Versioning values, to reduce plist churn
 PLATFORM_VER=	37
 SO_VER=		59
-SO_VER_LONG=	5.9.220800
+SO_VER_LONG=	5.9.220801
 PLIST_SUB+=	PLATFORM_VER=${PLATFORM_VER} SO_VER=${SO_VER} SO_VER_LONG=${SO_VER_LONG}
 
 OPTIONS_DEFINE=	WEBENGINE

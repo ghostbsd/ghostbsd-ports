@@ -1,6 +1,5 @@
 PORTNAME=	libkleo
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	security kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -19,7 +18,7 @@ USES=		cmake compiler:c++11-lang gettext kde:5 qt:5 tar:xz
 USE_KDE=	auth codecs completion config configwidgets coreaddons \
 		i18n itemmodels pimtextedit widgetsaddons windowsystem
 USE_QT=		core gui widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 
 _CORETOOLS=	md5sum sha1sum sha256sum sha512sum
 

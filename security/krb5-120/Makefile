@@ -11,10 +11,11 @@ PATCH_DIST_STRIP=	-p2
 
 MAINTAINER=		cy@FreeBSD.org
 COMMENT=		MIT implementation of RFC 4120 network authentication service
+WWW=			https://web.mit.edu/kerberos/
 
 LICENSE=		MIT
 
-CONFLICTS=		heimdal krb5 krb5-*
+CONFLICTS=		heimdal krb5 krb5-11*
 CONFLICTS_BUILD=	boringssl
 
 IGNORE_SSL=		libressl libressl-devel

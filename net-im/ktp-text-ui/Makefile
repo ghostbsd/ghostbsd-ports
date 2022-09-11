@@ -1,6 +1,5 @@
 PORTNAME=	ktp-text-ui
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -21,10 +20,10 @@ USE_KDE=	archive auth codecs completion config configwidgets coreaddons \
 		kcmutils kdewebkit kio notifications notifyconfig people \
 		service solid sonnet textwidgets wallet widgetsaddons windowsystem \
 		xmlgui \
-		ecm_build
+		ecm:build
 USE_QT=		concurrent core dbus declarative gui location network \
 		printsupport speech webchannel webengine widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_XORG=	x11
 USE_LDCONFIG=	yes
 

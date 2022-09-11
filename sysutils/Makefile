@@ -129,6 +129,7 @@
     SUBDIR += bksh
     SUBDIR += bkt
     SUBDIR += boot-extract
+    SUBDIR += bottom
     SUBDIR += boxbackup-devel
     SUBDIR += bpytop
     SUBDIR += brasero
@@ -666,6 +667,7 @@
     SUBDIR += logstash-forwarder
     SUBDIR += logstash6
     SUBDIR += logstash7
+    SUBDIR += logstash8
     SUBDIR += logtool
     SUBDIR += logwatch
     SUBDIR += loki

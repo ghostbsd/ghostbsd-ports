@@ -1,6 +1,5 @@
 PORTNAME=	kaccounts-providers
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	11
 CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -18,7 +17,7 @@ USE_GNOME=	intltool
 USE_KDE=	config coreaddons i18n kdeclarative kio package service
 USE_QT=		concurrent core dbus declarative gui location network \
 		xml webchannel webengine \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 
 OPTIONS_DEFINE=	DOCS
 
