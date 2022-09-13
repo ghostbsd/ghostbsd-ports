@@ -406,7 +406,6 @@
     SUBDIR += mongoose
     SUBDIR += mongrel2
     SUBDIR += monolith
-    SUBDIR += moodle310
     SUBDIR += moodle311
     SUBDIR += moodle39
     SUBDIR += moodle40
@@ -1403,6 +1402,7 @@
     SUBDIR += pserv
     SUBDIR += publicfile
     SUBDIR += punbb
+    SUBDIR += py-Pituophis
     SUBDIR += py-Tenjin
     SUBDIR += py-WebError
     SUBDIR += py-WebFlash
