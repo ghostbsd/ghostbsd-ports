@@ -58,6 +58,7 @@
     SUBDIR += apricots
     SUBDIR += aquaria
     SUBDIR += armagetronad
+    SUBDIR += arttime
     SUBDIR += arx-libertatis
     SUBDIR += ascii-invaders
     SUBDIR += asciiquarium
@@ -108,6 +109,7 @@
     SUBDIR += blokish
     SUBDIR += bloodfrontier
     SUBDIR += bluemoon
+    SUBDIR += blues
     SUBDIR += bomber
     SUBDIR += bomberclone
     SUBDIR += bombherman
@@ -526,6 +528,7 @@
     SUBDIR += libretro-mame2000
     SUBDIR += libretro-mame2003
     SUBDIR += libretro-mame2003_plus
+    SUBDIR += libretro-melonds
     SUBDIR += libretro-mgba
     SUBDIR += libretro-mu
     SUBDIR += libretro-nestopia
@@ -612,6 +615,7 @@
     SUBDIR += megaglest
     SUBDIR += megaglest-data
     SUBDIR += megamario
+    SUBDIR += melonds
     SUBDIR += memonix
     SUBDIR += meqcc
     SUBDIR += meritous
@@ -781,6 +785,7 @@
     SUBDIR += prboom-plus
     SUBDIR += primateplunge
     SUBDIR += puckman
+    SUBDIR += punchy
     SUBDIR += pvpgn
     SUBDIR += py-2048-py
     SUBDIR += py-cbeams
@@ -1014,6 +1019,7 @@
     SUBDIR += vanilla-conquer
     SUBDIR += vavoom
     SUBDIR += vavoom-extras
+    SUBDIR += vcmi
     SUBDIR += vectoroids
     SUBDIR += veloren
     SUBDIR += violetland

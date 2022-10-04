@@ -1,6 +1,6 @@
 PORTNAME=	gitlab-ce
-PORTVERSION=	15.2.3
-PORTREVISION=	4
+PORTVERSION=	15.2.5
+PORTREVISION=	1
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -171,7 +171,7 @@ MY_DEPENDS=	git>=2.32.0:devel/git \
 	rubygem-kubeclient>=4.9.2<4.10.0:www/rubygem-kubeclient \
 	rubygem-sanitize>=6.0<7:textproc/rubygem-sanitize \
 	rubygem-babosa>=1.0.4<1.1.0:textproc/rubygem-babosa \
-	rubygem-loofah>=2.18.0<3.0:textproc/rubygem-loofah \
+	rubygem-loofah218>=2.18.0<2.19:textproc/rubygem-loofah218 \
 	rubygem-licensee>=9.14.1<9.15:devel/rubygem-licensee \
 	rubygem-charlock_holmes>=0.7.7<0.8.0:textproc/rubygem-charlock_holmes \
 	rubygem-ruby-magic>=0.5.4<1:devel/rubygem-ruby-magic \
@@ -250,9 +250,9 @@ MY_DEPENDS=	git>=2.32.0:devel/git \
 	rubygem-valid_email>=0.1<1:mail/rubygem-valid_email \
 	rubygem-json>=2.5.1<3:devel/rubygem-json \
 	rubygem-json_schemer>=0.2.18<0.3:devel/rubygem-json_schemer \
-	rubygem-oj>=3.13.19<3.14:devel/rubygem-oj \
+	rubygem-oj>=3.13.21<3.14:devel/rubygem-oj \
 	rubygem-multi_json114>=1.14.1<1.15:devel/rubygem-multi_json114 \
-	rubygem-yajl-ruby>=1.4.1<1.5:devel/rubygem-yajl-ruby \
+	rubygem-yajl-ruby>=1.4.3<1.5:devel/rubygem-yajl-ruby \
 	rubygem-webauthn>=2.3<3:security/rubygem-webauthn \
 	rubygem-ipaddress>=0.8.3<0.9:net/rubygem-ipaddress \
 	rubygem-parslet1>=1.8<2:textproc/rubygem-parslet1 \
@@ -278,7 +278,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 GL_PROJECT=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT=	a2c3f44b8aa62d78c27c892e6a6b7ba6bd442787
+GL_COMMIT=	e736b21380483e56b6f786480427587225feaf91
 
 USERS=	git
 GROUPS=	git

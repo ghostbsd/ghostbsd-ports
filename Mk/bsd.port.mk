@@ -3580,6 +3580,8 @@ create-users-groups:
 .      endif
 .    endif
 
+_WWW=	${WWW:[1]}
+
 .    if !defined(DISABLE_SECURITY_CHECK)
 .      if !target(security-check)
 security-check: ${TMPPLIST}
@@ -3871,19 +3873,6 @@ delete-distfiles-list:
 	@${ECHO_CMD} "${RMDIR} ${_DISTDIR} 2>/dev/null || ${TRUE}"
 .      endif
 .    endif
-
-# Generates patches.
-
-update-patches:
-	@toedit=`PATCH_WRKSRC=${PATCH_WRKSRC} \
-		PATCHDIR=${PATCHDIR} \
-		PATCH_LIST=${PATCHDIR}/patch-* \
-		DIFF_ARGS=${DIFF_ARGS} \
-		DISTORIG=${DISTORIG} \
-		${SH} ${PORTSDIR}/Tools/scripts/update-patches`; \
-	case $$toedit in "");; \
-	*) ${ECHO_CMD} -n 'edit patches: '; read i; \
-	cd ${PATCHDIR} && $${VISUAL:-$${EDIT:-/usr/bin/vi}} $$toedit;; esac
 
 # Checksumming utilities
 
@@ -4302,7 +4291,7 @@ create-manifest:
 			dp_PREFIX='${PREFIX}'                                 \
 			dp_USERS='${USERS:u:S/$/,/}'                          \
 			dp_VITAL='${PKGVITAL}'                                \
-			dp_WWW='${_WWW}'                                      \
+			dp_WWW='${WWW}'                                       \
 			${PKG_NOTES_ENV}                                      \
 			${SH} ${SCRIPTSDIR}/create-manifest.sh
 
@@ -4366,7 +4355,6 @@ _FETCH_DEPENDS=${FETCH_DEPENDS:C/^[^ :]+:([^ :@]+)(@[^ :]+)?(:[^ :]+)?/\1/:O:u:C
 _LIB_DEPENDS=${LIB_DEPENDS:C/^[^ :]+:([^ :@]+)(@[^ :]+)?(:[^ :]+)?/\1/:O:u:C,(^[^/]),${PORTSDIR}/\1,}
 _BUILD_DEPENDS=${BUILD_DEPENDS:C/^[^ :]+:([^ :@]+)(@[^ :]+)?(:[^ :]+)?/\1/:O:u:C,(^[^/]),${PORTSDIR}/\1,} ${_LIB_DEPENDS}
 _RUN_DEPENDS=${RUN_DEPENDS:C/^[^ :]+:([^ :@]+)(@[^ :]+)?(:[^ :]+)?/\1/:O:u:C,(^[^/]),${PORTSDIR}/\1,} ${_LIB_DEPENDS}
-_WWW=${WWW}
 .      if exists(${DESCR})
 _DESCR=${DESCR}
 .      else

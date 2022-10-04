@@ -5,7 +5,6 @@
     SUBDIR += Maaate
     SUBDIR += a2jmidid
     SUBDIR += aacgain
-    SUBDIR += aacplusenc
     SUBDIR += abcde
     SUBDIR += abcselect
     SUBDIR += abgate-lv2
@@ -26,6 +25,7 @@
     SUBDIR += alure
     SUBDIR += amarok
     SUBDIR += amb-plugins
+    SUBDIR += amberol
     SUBDIR += ampache
     SUBDIR += ample
     SUBDIR += amsynth
@@ -226,6 +226,7 @@
     SUBDIR += gmtp
     SUBDIR += gmusicbrowser
     SUBDIR += gnaural
+    SUBDIR += gnome-metronome
     SUBDIR += gnome-music
     SUBDIR += gnome-podcasts
     SUBDIR += gnormalize
@@ -331,8 +332,7 @@
     SUBDIR += julius
     SUBDIR += kapitonov-plugins-pack-lv2
     SUBDIR += kexis
-    SUBDIR += kid3-kf5
-    SUBDIR += kid3-qt5
+    SUBDIR += kid3
     SUBDIR += klystrack
     SUBDIR += kmix
     SUBDIR += komposter
@@ -461,8 +461,6 @@
     SUBDIR += mamba
     SUBDIR += mate-media
     SUBDIR += mclk-lv2
-    SUBDIR += mctoolame-decoder
-    SUBDIR += mctoolame-encoder
     SUBDIR += mda-lv2
     SUBDIR += mhwaveedit
     SUBDIR += midi-matrix-lv2
@@ -602,7 +600,6 @@
     SUBDIR += pd
     SUBDIR += pear-Text_Spell_Audio
     SUBDIR += penguinsap
-    SUBDIR += phaserotate-lv2
     SUBDIR += pianobar
     SUBDIR += pianobooster
     SUBDIR += pianod2
@@ -759,6 +756,7 @@
     SUBDIR += spiralsynthmodular
     SUBDIR += splay
     SUBDIR += splaytk
+    SUBDIR += spotify-player
     SUBDIR += spotify-qt
     SUBDIR += spotify-tui
     SUBDIR += spotifyd

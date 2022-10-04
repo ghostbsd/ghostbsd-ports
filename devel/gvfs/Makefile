@@ -1,5 +1,6 @@
 PORTNAME=	gvfs
 PORTVERSION=	1.50.2
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -18,8 +19,8 @@ LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
 		libsoup-3.0.so:devel/libsoup3 \
 		libgudev-1.0.so:devel/libgudev \
 		libsecret-1.so:security/libsecret
-
-RUN_DEPENDS=	bsdisks>0:sysutils/bsdisks
+RUN_DEPENDS=	bsdisks>0:sysutils/bsdisks \
+		lsof:sysutils/lsof
 PORTSCOUT=	limitw:1,even
 
 USES=		cpe gettext gnome libarchive localbase meson \

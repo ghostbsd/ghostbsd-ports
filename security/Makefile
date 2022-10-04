@@ -120,6 +120,7 @@
     SUBDIR += dehydrated
     SUBDIR += denyhosts
     SUBDIR += destroy
+    SUBDIR += diffcode
     SUBDIR += digestpp
     SUBDIR += dirbuster
     SUBDIR += dirmngr
@@ -814,7 +815,6 @@
     SUBDIR += pvk
     SUBDIR += pwauth
     SUBDIR += pwman
-    SUBDIR += pwman3
     SUBDIR += pwned-check
     SUBDIR += py-RestrictedPython
     SUBDIR += py-SecretStorage
@@ -974,6 +974,7 @@
     SUBDIR += py-scp
     SUBDIR += py-scramp
     SUBDIR += py-scrypt
+    SUBDIR += py-secure
     SUBDIR += py-securesystemslib
     SUBDIR += py-sequoia
     SUBDIR += py-service_identity
@@ -1025,6 +1026,7 @@
     SUBDIR += rkhunter
     SUBDIR += rndpassw
     SUBDIR += rnp
+    SUBDIR += rotate
     SUBDIR += rubygem-acme-client
     SUBDIR += rubygem-aes_key_wrap
     SUBDIR += rubygem-airbrussh
@@ -1153,7 +1155,7 @@
     SUBDIR += rubygem-webauthn
     SUBDIR += rubygem-webpush
     SUBDIR += rustscan
-    SUBDIR += s2n
+    SUBDIR += s2n-tls
     SUBDIR += safesh
     SUBDIR += samhain
     SUBDIR += samhain-client
@@ -1275,7 +1277,10 @@
     SUBDIR += vxquery
     SUBDIR += wapiti
     SUBDIR += wazuh-agent
+    SUBDIR += wazuh-dashboard
+    SUBDIR += wazuh-indexer
     SUBDIR += wazuh-manager
+    SUBDIR += wazuh-server
     SUBDIR += webfwlog
     SUBDIR += weggli
     SUBDIR += whatweb

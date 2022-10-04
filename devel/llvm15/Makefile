@@ -1,5 +1,5 @@
 PORTNAME=	llvm
-DISTVERSION=	15.0.0
+DISTVERSION=	15.0.1
 PORTREVISION=	0
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/ \
@@ -202,8 +202,10 @@ EXTRAS_LIBS=	libclangApplyReplacements \
 		libclangChangeNamespace \
 		libclangDaemon \
 		libclangDoc \
+		libclangIncludeCleaner \
 		libclangIncludeFixer \
 		libclangMove \
+		libclangPseudo \
 		libclangQuery \
 		libclangRename \
 		libclangReorderFields \

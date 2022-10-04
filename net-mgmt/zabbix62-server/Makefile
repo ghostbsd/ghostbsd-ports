@@ -1,5 +1,5 @@
 PORTNAME=	zabbix62
-DISTVERSION=	6.2.2
+DISTVERSION=	6.2.3
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${DISTVERSION:R}/
 PKGNAMESUFFIX?=	-server
@@ -61,6 +61,8 @@ CONFIGURE_ARGS+=	--enable-${ZABBIX_BUILD} \
 LIB_DEPENDS+=	libnetsnmp.so:net-mgmt/net-snmp
 
 CPPFLAGS+=	-I${LOCALBASE}/include
+
+PORTSCOUT=	limit:^6\.2\.
 
 SUB_FILES=	pkg-message
 
