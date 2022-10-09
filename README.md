@@ -1,20 +1,12 @@
 This is the FreeBSD Ports Collection. For an easy to use
 WEB-based interface to it, please see:
 
-http://www.FreeBSD.org/ports
+http://www.freebsd.org/ports
 
-For general information on the Ports Collection, please see the
-FreeBSD Handbook ports section which is available from:
-
-	http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/handbook/ports.html
-		for the latest official version
-	or:
-	The ports(7) manual page (man ports).
-
-These will explain how to use ports and packages.
+For general information on the Ports Collection, see [Installing Applications: Packages and Ports](https://docs.freebsd.org/en/books/handbook/ports/) in the FreeBSD Handbook, or the [ports(7)](https://www.freebsd.org/cgi/man.cgi?query=ports&sektion=7&manpath=FreeBSD) manual page (man ports). These will explain how to use ports and packages.
 
 If you would like to search for a port, you can do so easily by
-saying (in /usr/ports):
+saying (in `/usr/ports`):
 
 
 	make search name="<name>"
@@ -27,15 +19,15 @@ make search also supports wildcards, such as:
 	make search name="gtk*"
 
 For information about contributing to FreeBSD ports, please see the Porter's
-Handbook, available at:
+Handbook:
 
-http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/porters-handbook/
+https://docs.freebsd.org/en/books/porters-handbook/
 
 NOTE:  This tree will GROW significantly in size during normal usage!
-The distribution tar files can and do accumulate in /usr/ports/distfiles,
+The distribution tar files can and do accumulate in `/usr/ports/distfiles`,
 and the individual ports will also use up lots of space in their work
 subdirectories unless you remember to "make clean" after you're done
-building a given port.  /usr/ports/distfiles can also be periodically
+building a given port.  `/usr/ports/distfiles` can also be periodically
 cleaned without ill-effect.
 
 
