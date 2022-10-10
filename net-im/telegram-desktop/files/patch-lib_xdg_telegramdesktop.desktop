@@ -1,8 +1,0 @@
---- lib/xdg/telegramdesktop.desktop.orig	2022-07-27 23:11:02 UTC
-+++ lib/xdg/telegramdesktop.desktop
-@@ -1,5 +1,4 @@
- [Desktop Entry]
--Version=1.5
- Name=Telegram Desktop
- Comment=Official desktop version of Telegram messaging app
- TryExec=telegram-desktop
