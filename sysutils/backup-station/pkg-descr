@@ -1,0 +1,2 @@
+Backup Station is a tool to create Boot Environment backup on GhostBSD and
+FreeBSD using py-bectl.

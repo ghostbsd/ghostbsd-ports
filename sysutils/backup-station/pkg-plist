@@ -1,0 +1,3 @@
+bin/backup-station
+etc/sudoers.d/backup-station
+share/applications/backup-station.desktop
