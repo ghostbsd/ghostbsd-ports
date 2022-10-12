@@ -1,0 +1,21 @@
+PORTNAME=	backup-station
+PORTVERSION=	0.1
+CATEGORIES=	sysutils
+
+MAINTAINER=	ericturgeon@ghostbsd.org
+COMMENT=	Tool install and deinstall software and pksystem packages
+WWW=		http://github.com/ghostbsd/software-station
+
+LICENSE=	BSD
+
+RUN_DEPENDS=	sudo:security/sudo \
+		pkg:ports-mgmt/pkg \
+		${PYTHON_PKGNAMEPREFIX}bectl>=0.1:sysutils/py-bectl@${PY_FLAVOR}
+
+USES=		python:3.9+
+USE_GITHUB=	yes
+GH_ACCOUNT=	GhostBSD
+USE_PYTHON=	distutils
+USE_GNOME=	pygobject3
+
+.include <bsd.port.mk>
