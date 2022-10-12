@@ -1,8 +1,5 @@
-# Created by: Eric Turgeon <eturgeon@ixsystems.com>
-# $FreeBSD$
-
 PORTNAME=	ghostbsd-utils
-PORTVERSION=	22.07.30
+PORTVERSION=	22.10.11
 PORTREVISION=	0
 CATEGORIES=	sysutils
 
@@ -12,6 +9,7 @@ COMMENT=	GhostBSD util tools
 USES=		metaport
 
 RUN_DEPENDS=	update-station:ports-mgmt/update-station \
+		backup-station:sysutils/backup-station \
 		sudo:security/sudo \
 		setxkbmap:x11/setxkbmap \
 		xmodmap:x11/xmodmap \
