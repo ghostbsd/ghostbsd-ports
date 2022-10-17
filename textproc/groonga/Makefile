@@ -1,5 +1,6 @@
 PORTNAME=	groonga
-PORTVERSION=	12.0.7
+PORTVERSION=	12.0.8
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://packages.groonga.org/source/groonga/
 
@@ -12,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libpcre.so:devel/pcre
 
-USES=		gmake libedit libtool pathfix pkgconfig
+USES=		gmake libedit libtool localbase:ldflags pathfix pkgconfig ssl
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
@@ -28,8 +29,8 @@ CONFIGURE_ARGS=	--disable-benchmark \
 
 INSTALL_TARGET=	install-strip
 
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+#CPPFLAGS+=	-I${LOCALBASE}/include
+#LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=		MECAB RUBY SUGGEST
 OPTIONS_DEFAULT=	MECAB RUBY SUGGEST
@@ -44,7 +45,7 @@ RUBY_RUN_DEPENDS=	rubygem-bundler>=0:sysutils/rubygem-bundler
 RUBY_USE=		RUBY=yes
 RUBY_CONFIGURE_ON=	--enable-mruby
 SUGGEST_LIB_DEPENDS=	libevent.so:devel/libevent \
-			libmsgpackc.so:devel/msgpack \
+			libmsgpackc.so:devel/msgpack-c \
 			libzmq.so:net/libzmq2
 SUGGEST_CONFIGURE_ON=	--enable-zeromq \
 			--with-libevent=${LOCALBASE} \

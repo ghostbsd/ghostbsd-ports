@@ -1,9 +1,8 @@
 PORTNAME=	vkquake
-DISTVERSION=	1.12.2
-PORTREVISION=	1
+DISTVERSION=	1.20.3
 CATEGORIES=	games
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Quake 1 port using Vulkan instead of OpenGL, based on QuakeSpasm
 WWW=		https://github.com/Novum/vkQuake
 

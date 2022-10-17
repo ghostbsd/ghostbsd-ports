@@ -80,6 +80,7 @@
     SUBDIR += cjdns
     SUBDIR += clash
     SUBDIR += cloud-init
+    SUBDIR += cloud-init-devel
     SUBDIR += cloudflared
     SUBDIR += cloudquery
     SUBDIR += clusterit
@@ -1329,7 +1330,6 @@
     SUBDIR += rubygem-omniauth-azure-activedirectory-v2
     SUBDIR += rubygem-omniauth-azure-oauth2
     SUBDIR += rubygem-omniauth-facebook
-    SUBDIR += rubygem-omniauth-facebook4
     SUBDIR += rubygem-omniauth-github
     SUBDIR += rubygem-omniauth-github-discourse
     SUBDIR += rubygem-omniauth-google-oauth2
@@ -1395,6 +1395,7 @@
     SUBDIR += sakisafecli
     SUBDIR += samba412
     SUBDIR += samba413
+    SUBDIR += samba416
     SUBDIR += samplicator
     SUBDIR += savvycan
     SUBDIR += sbd

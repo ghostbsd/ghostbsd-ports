@@ -48,10 +48,10 @@ setup(
         'nbformat.v2',
         'nbformat.v3',
         'nbformat.v4',
-        'tests',
-        'tests.v1',
-        'tests.v2',
-        'tests.v3',
-        'tests.v4',
     ],
+    package_data = {
+        'nbformat' : [
+            '**/nbformat.**.schema.json',
+        ]
+    },
 )

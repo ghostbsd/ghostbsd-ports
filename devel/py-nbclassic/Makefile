@@ -1,5 +1,6 @@
 PORTNAME=	nbclassic
-PORTVERSION=	0.4.4
+PORTVERSION=	0.4.5
+PORTREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP \
 		https://github.com/jupyter/nbclassic/releases/download/v${PORTVERSION}/
@@ -30,7 +31,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}argon2-cffi>=0:security/py-argon2-cffi@${PY_
 		${PYTHON_PKGNAMEPREFIX}tornado>=6.1:www/py-tornado@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}traitlets>=4.2.1:devel/py-traitlets@${PY_FLAVOR}
 
-USES=		python:3.7+
+USES=		desktop-file-utils python:3.7+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

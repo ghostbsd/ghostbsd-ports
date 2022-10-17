@@ -52,6 +52,7 @@
     SUBDIR += apache-commons-digester
     SUBDIR += apache-poi
     SUBDIR += apache-solr
+    SUBDIR += apache-solr9
     SUBDIR += apache-xmlbeans
     SUBDIR += apertium
     SUBDIR += apertium-eng
@@ -200,6 +201,7 @@
     SUBDIR += fcitx5-gtk
     SUBDIR += fcitx5-lua
     SUBDIR += fcitx5-qt
+    SUBDIR += fcitx5-qt-common
     SUBDIR += fex
     SUBDIR += ffe
     SUBDIR += fi-aspell
@@ -1458,6 +1460,7 @@
     SUBDIR += py-python-docs-theme
     SUBDIR += py-python-docx
     SUBDIR += py-python-gettext
+    SUBDIR += py-python-lsp-black
     SUBDIR += py-python-lsp-jsonrpc
     SUBDIR += py-python-lsp-server
     SUBDIR += py-python-markdown-math

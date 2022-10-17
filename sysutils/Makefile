@@ -264,10 +264,10 @@
     SUBDIR += deltup
     SUBDIR += desktop-installer
     SUBDIR += detox
-    SUBDIR += devctl-jail-kmod
     SUBDIR += devcpu-data
     SUBDIR += devcpu-data-amd
     SUBDIR += devcpu-data-intel
+    SUBDIR += devctl-jail-kmod
     SUBDIR += devstat
     SUBDIR += dfc
     SUBDIR += di
@@ -1157,6 +1157,7 @@
     SUBDIR += rclean
     SUBDIR += rcm
     SUBDIR += rdate
+    SUBDIR += rdfind
     SUBDIR += rdup
     SUBDIR += read-edid
     SUBDIR += recoverdm
