@@ -14,8 +14,7 @@ BUILD_DEPENDS=	v4l_compat>=1.0.20100321:multimedia/v4l_compat
 USES=		pkgconfig tar:bzip2 uidfix
 MAKE_ARGS=	LIBDIR="${LOCALBASE}/lib" HAVE_CUSE="YES"
 USE_RC_SUBR=	webcamd
-SUB_FILES=	webcamd.conf \
-		openrc-webcamd.conf
+SUB_FILES=	webcamd.conf
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	hselasky
