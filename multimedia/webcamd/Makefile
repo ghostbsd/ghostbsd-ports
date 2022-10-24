@@ -83,7 +83,5 @@ post-patch:
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/devd
 	${INSTALL_DATA} "${WRKDIR}/webcamd.conf" ${STAGEDIR}${PREFIX}/etc/devd
-	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/devd-openrc
-	${INSTALL_DATA} "${WRKDIR}/openrc-webcamd.conf" ${STAGEDIR}${PREFIX}/etc/devd-openrc
 
 .include <bsd.port.mk>

@@ -1,6 +1,4 @@
-etc/devd-openrc/openrc-webcamd.conf
 etc/devd/webcamd.conf
-etc/init.d/webcamd
 etc/rc.d/webcamd
 man/man4/a800.4.gz
 man/man4/af9005.4.gz
