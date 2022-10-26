@@ -32,7 +32,7 @@ do-install:
 		--exclude ./work/ \
 		--exclude .git \
 		--exclude .svn . \
-		| ${TAR} xpf - -C ${STAGEDIR}/${SRCDIR}
+		| ${TAR} xpf - -C ${STAGEDIR}${SRCDIR}
 	(cd ${STAGEDIR}; ${FIND} . \( -type f -o -type l \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
