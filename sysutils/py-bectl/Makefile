@@ -1,9 +1,5 @@
-# Created by: Joe Maloney <jmaloney@ixsystems.com>
-# $FreeBSD$
-
 PORTNAME=	bectl
-PORTVERSION=	0.1
-PORTREVISION=	1
+PORTVERSION=	0.2
 CATEGORIES=	sysutils
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 

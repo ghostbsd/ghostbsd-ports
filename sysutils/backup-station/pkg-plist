@@ -1,3 +1,4 @@
 bin/backup-station
 etc/sudoers.d/backup-station
 share/applications/backup-station.desktop
+share/locale/ru/LC_MESSAGES/backup-station.mo
