@@ -8,6 +8,7 @@ WWW=		http://github.com/ghostbsd/software-station
 
 LICENSE=	BSD
 
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}python-distutils-extra>=2.15:devel/py-python-distutils-extra@${PY_FLAVOR}
 RUN_DEPENDS=	sudo:security/sudo \
 		pkg:ports-mgmt/pkg \
 		${PYTHON_PKGNAMEPREFIX}bectl>=0.1:sysutils/py-bectl@${PY_FLAVOR}
