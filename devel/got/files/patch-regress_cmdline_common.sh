@@ -1,6 +1,6 @@
---- regress/cmdline/common.sh.orig	2021-03-22 10:05:11 UTC
+--- regress/cmdline/common.sh.orig	2022-10-24 22:00:47 UTC
 +++ regress/cmdline/common.sh
-@@ -26,6 +26,20 @@ export GOT_TEST_ROOT="/tmp"
+@@ -27,6 +27,20 @@ export GOT_IGNORE_GITCONFIG=1
  
  export MALLOC_OPTIONS=S
  

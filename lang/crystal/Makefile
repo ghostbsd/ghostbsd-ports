@@ -1,15 +1,10 @@
 PORTNAME=	crystal
-DISTVERSION=	1.6.0
-PORTREVISION=	1
+DISTVERSION=	1.6.2
 CATEGORIES=	lang
 MASTER_SITES=	https://github.com/dmgk/crystal-bootstrap/releases/download/${BOOTSTRAP_VERSION}/:bootstrap \
 		LOCAL/dmgk/crystal:bootstrap
 DISTFILES=	${BOOTSTRAP_NAME}.tar.xz:bootstrap
 DIST_SUBDIR=	${PORTNAME}
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-# https://github.com/crystal-lang/crystal/pull/12600
-PATCHFILES=	a9262815f45fc35ad63fa3c1d3d03ce7a57b76e1.diff:-p1
 
 MAINTAINER=	dmgk@FreeBSD.org
 COMMENT=	Language with Ruby-like syntax and static type checking
@@ -38,6 +33,7 @@ USES=		compiler gmake pkgconfig ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	crystal-lang
 
+COMMIT_ID=		879691b2e326
 LLVM_VERSION?=		14
 BOOTSTRAP_LLVM_VERSION=	14
 BOOTSTRAP_VERSION=	1.5.1
@@ -45,6 +41,7 @@ BOOTSTRAP_NAME=		crystal-${BOOTSTRAP_VERSION}-${ARCH}-llvm${BOOTSTRAP_LLVM_VERSI
 
 MAKE_ARGS=	LLVM_CONFIG="${LOCALBASE}/bin/llvm-config${LLVM_VERSION}" \
 		CRYSTAL_CONFIG_PATH="lib:${PREFIX}/lib/${PORTNAME}" \
+		CRYSTAL_CONFIG_BUILD_COMMIT="${COMMIT_ID}" \
 		CRYSTAL_CACHE_DIR="${WRKDIR}/cache" \
 		FLAGS="--progress --stats --threads ${MAKE_JOBS_NUMBER} ${OPT_FLAGS}"
 

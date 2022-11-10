@@ -8,6 +8,7 @@
     SUBDIR += alarm-clock-applet
     SUBDIR += anydesk
     SUBDIR += appwrapper
+    SUBDIR += arttime
     SUBDIR += aspostit
     SUBDIR += ausweisapp2
     SUBDIR += autocutsel
@@ -182,6 +183,7 @@
     SUBDIR += nextcloudclient
     SUBDIR += note
     SUBDIR += notekit
+    SUBDIR += notes
     SUBDIR += noti
     SUBDIR += notification-daemon
     SUBDIR += notify-osd
@@ -238,6 +240,7 @@
     SUBDIR += solanum
     SUBDIR += sowon
     SUBDIR += spice-gtk
+    SUBDIR += subsurface
     SUBDIR += synapse
     SUBDIR += syncthingtray
     SUBDIR += sysctlview

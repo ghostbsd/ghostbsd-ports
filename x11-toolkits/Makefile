@@ -158,6 +158,7 @@
     SUBDIR += py-guietta
     SUBDIR += py-python-xlib
     SUBDIR += py-qt5-chart
+    SUBDIR += py-qt6-chart
     SUBDIR += py-tkinter
     SUBDIR += py-tktreectrl
     SUBDIR += py-wxPython4
@@ -231,7 +232,7 @@
     SUBDIR += wxgtk28-contrib
     SUBDIR += wxgtk28-contrib-common
     SUBDIR += wxgtk30
-    SUBDIR += wxgtk31
+    SUBDIR += wxgtk32
     SUBDIR += xbae
     SUBDIR += xforms
     SUBDIR += xmhtml

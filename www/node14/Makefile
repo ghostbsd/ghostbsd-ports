@@ -1,11 +1,12 @@
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
 DISTVERSION=	14.20.0
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${DISTVERSION}/
 PKGNAMESUFFIX=	14
 
-MAINTAINER=	bhughes@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	V8 JavaScript for client and server
 WWW=		https://nodejs.org/
 

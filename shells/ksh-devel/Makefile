@@ -22,8 +22,8 @@ LICENSE=	EPL
 BROKEN_aarch64=		Fails to link: missing sbrk
 BROKEN_riscv64=		Fails to link: missing sbrk
 
-HASH=		d84067a0
-AST_COMMIT_DATE=	2022.09.28
+HASH=		28ab6db7
+AST_COMMIT_DATE=	2022.10.31
 
 USES=		compiler:c11
 

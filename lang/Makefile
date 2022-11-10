@@ -22,7 +22,6 @@
     SUBDIR += chez-scheme
     SUBDIR += chibi-scheme
     SUBDIR += chicken
-    SUBDIR += chicken5
     SUBDIR += cim
     SUBDIR += cjs
     SUBDIR += cling
@@ -155,6 +154,7 @@
     SUBDIR += lci
     SUBDIR += ldc
     SUBDIR += lfe
+    SUBDIR += lfortran
     SUBDIR += libhx
     SUBDIR += libobjc2
     SUBDIR += librep

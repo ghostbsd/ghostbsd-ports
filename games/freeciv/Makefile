@@ -1,5 +1,6 @@
 PORTNAME=	freeciv
 PORTVERSION=	3.0.4
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	SF/freeciv/Freeciv%20${PORTVERSION:R}/${PORTVERSION} \
 		http://files.freeciv.org/stable/
@@ -29,7 +30,7 @@ CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG} \
 		--enable-mapimg=no \
 		--enable-shared
 
-LDFLAGS+=	-Wl,--as-needed
+LDFLAGS+=	-Wl,--as-needed ${ICONV_LIB}
 
 PORTDATA=	*
 

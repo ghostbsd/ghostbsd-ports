@@ -1,7 +1,7 @@
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.24-14273 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-gfafae1cbb5
+DISTVERSION=	0.0.25-14365 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-gb875a86e1d
 CATEGORIES=	emulators wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -12,6 +12,8 @@ LICENSE=	APACHE20 ISCL GPLv2 MIT ZLIB
 LICENSE_COMB=	multi
 LICENSE_FILE_ISCL=	${WRKSRC_cubeb}/LICENSE
 LICENSE_FILE_ZLIB=	${WRKSRC_asmjit}/LICENSE.md
+
+FLAVORS=	qt5 qt6
 
 BUILD_DEPENDS=	flatc:devel/flatbuffers
 LIB_DEPENDS=	libxxhash.so:devel/xxhash \
@@ -30,9 +32,9 @@ GH_TUPLE=	RPCS3:hidapi:hidapi-0.12.0-2-gc2aa9dd:hidapi/3rdparty/hidapi/hidapi \
 		RPCS3:soundtouch:2.3.1-16-g83cfba6:soundtouch/3rdparty/SoundTouch/soundtouch \
 		asmjit:asmjit:06d0bad:asmjit/3rdparty/asmjit/asmjit \
 		jbeder:yaml-cpp:yaml-cpp-0.7.0-1-g0b67821:yamlcpp/3rdparty/yaml-cpp/yaml-cpp \
-		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-152-g4995a2f:spirv_headers/3rdparty/SPIRV/SPIRV-Headers \
-		KhronosGroup:SPIRV-Tools:v2022.2:spirv_tools/3rdparty/SPIRV/SPIRV-Tools \
-		KhronosGroup:glslang:11.10.0:glslang/3rdparty/glslang/glslang \
+		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-172-g36c0c15:spirv_headers/3rdparty/SPIRV/SPIRV-Headers \
+		KhronosGroup:SPIRV-Tools:v2022.2-71-g5e61ea20:spirv_tools/3rdparty/SPIRV/SPIRV-Tools \
+		KhronosGroup:glslang:11.11.0-2-g10423ec6:glslang/3rdparty/glslang/glslang \
 		kinetiknz:cubeb:cubeb-0.2-1391-gdc511c6:cubeb/3rdparty/cubeb/cubeb \
 		wolfSSL:wolfssl:v5.4.0-stable:wolfssl/3rdparty/wolfssl/wolfssl
 
@@ -46,6 +48,27 @@ CMAKE_ON+=	BUNDLE_SPEEX # only used by cubeb tests
 CMAKE_OFF=	USE_NATIVE_INSTRUCTIONS USE_PRECOMPILED_HEADERS
 LDFLAGS+=	-Wl,--as-needed # GLU
 ELF_FEATURES=	+noaslr,wxneeded:bin/${PORTNAME}
+
+.if ${FLAVOR:U} == qt6 || make(makesum) || make(fetch)
+PATCH_SITES+=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/:qt6
+PATCHFILES+=	052d8cceb679.patch:-p1:qt6 # https://github.com/RPCS3/rpcs3/pull/12471
+PKGNAMESUFFIX=	-${FLAVOR}
+USES:=		${USES:S/qt:5/qt:6/}
+USE_QT=		base multimedia svg
+PKGMESSAGE=	${.CURDIR}/pkg-message.${FLAVOR}
+
+CONFLICTS_INSTALL=	${PORTNAME}
+
+post-patch:	${FLAVOR}-post-patch
+${FLAVOR}-post-patch:
+# patch(1) doesn't support renames unlike git-apply(1)
+	@${MV}  ${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_surface.cpp \
+		${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_sink.cpp
+	@${MV}  ${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_surface.h \
+		${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_sink.h
+.else
+CONFLICTS_INSTALL=	${PORTNAME}-qt6
+.endif
 
 OPTIONS_DEFINE=	ALSA EVDEV FAUDIO PULSEAUDIO JACK SNDIO VULKAN
 OPTIONS_DEFAULT=EVDEV FAUDIO PULSEAUDIO JACK SNDIO VULKAN

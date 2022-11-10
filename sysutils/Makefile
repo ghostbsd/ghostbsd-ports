@@ -250,6 +250,7 @@
     SUBDIR += daggy
     SUBDIR += damager
     SUBDIR += dar
+    SUBDIR += darling-dmg
     SUBDIR += datadog-agent
     SUBDIR += datadog-integrations
     SUBDIR += dateutils
@@ -433,6 +434,7 @@
     SUBDIR += fusefs-lkl
     SUBDIR += fusefs-mhddfs
     SUBDIR += fusefs-mp3fs
+    SUBDIR += fusefs-nbt
     SUBDIR += fusefs-ntfs
     SUBDIR += fusefs-ntfs-compression
     SUBDIR += fusefs-pod
@@ -570,6 +572,7 @@
     SUBDIR += ipfs-go-fs-repo-migrations
     SUBDIR += ipget
     SUBDIR += ipmitool
+    SUBDIR += ipmi_exporter
     SUBDIR += ipsc
     SUBDIR += isc-cron
     SUBDIR += isomaster

@@ -1,5 +1,5 @@
 PORTNAME=	poppler
-DISTVERSION=	22.10.0
+DISTVERSION=	22.11.0
 CATEGORIES=	graphics print
 MASTER_SITES=	https://poppler.freedesktop.org/
 
@@ -104,6 +104,9 @@ post-install:
 		${STAGEDIR}${PREFIX}/libdata/pkgconfig
 .elif ${_SLAVE_PORT} == qt5
 	${INSTALL_DATA} ${WRKSRC}/poppler-qt5.pc \
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig
+.elif ${_SLAVE_PORT} == qt6
+	${INSTALL_DATA} ${WRKSRC}/poppler-qt6.pc \
 		${STAGEDIR}${PREFIX}/libdata/pkgconfig
 .endif
 

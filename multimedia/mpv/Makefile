@@ -1,7 +1,7 @@
 PORTNAME=	mpv
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.34.1
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio wayland
 MASTER_SITES=	https://waf.io/:waf
@@ -52,11 +52,11 @@ CONFIGURE_ARGS=	--docdir="${EXAMPLESDIR}" \
 		--enable-libmpv-shared
 
 OPTIONS_DEFINE=		ARCHIVE DOCS LCMS2 MANPAGES MUJS TEST UCHARDET EXAMPLES ZIMG
-OPTIONS_DEFAULT=	ARCHIVE DVDNAV LUA MANPAGES OPENGL UCHARDET \
+OPTIONS_DEFAULT=	ARCHIVE DVDNAV LUA MANPAGES NVDEC OPENGL UCHARDET \
 			V4L VAAPI VDPAU VULKAN WAYLAND X11 YTDLP
 OPTIONS_GROUP=		IN VO AO
 OPTIONS_GROUP_IN=	CDIO DVDNAV LIBBLURAY V4L
-OPTIONS_GROUP_VO=	CACA OPENGL SIXEL VAAPI VDPAU VULKAN WAYLAND X11
+OPTIONS_GROUP_VO=	CACA NVDEC OPENGL SIXEL VAAPI VDPAU VULKAN WAYLAND X11
 OPTIONS_GROUP_AO=	ALSA JACK OPENAL PIPEWIRE PULSEAUDIO SDL SNDIO
 OPTIONS_RADIO=		YOUTUBE
 OPTIONS_RADIO_YOUTUBE=	YTDL YTDLP
@@ -68,6 +68,7 @@ DVDNAV_DESC=		DVD menu navigation
 LUA_NONE_DESC=		Disable Lua scripting language support
 LUAJIT_DESC=		Use LuaJIT instead of Lua scripting language support
 MUJS_DESC=		Use MuJS for Javascript language support
+NVDEC_DESC=		NVIDIA decoder with CUDA support
 PIPEWIRE_DESC=		Pipewire sound server support
 SIXEL_DESC=		Sixel graphics support
 UCHARDET_DESC=		Guess subtitle encoding via uchardet
@@ -123,6 +124,9 @@ MUJS_LIB_DEPENDS=		libmujs.so:lang/mujs
 MUJS_CONFIGURE_ON=		--enable-javascript
 MUJS_CONFIGURE_OFF=		--disable-javascript
 
+NVDEC_BUILD_DEPENDS=		${LOCALBASE}/include/ffnvcodec/dynlink_loader.h:multimedia/ffnvcodec-headers
+NVDEC_CONFIGURE_OFF=		--disable-cuda-hwaccel
+
 OPENAL_CONFIGURE_ENABLE=	openal
 OPENAL_USES=			openal
 OPENAL_LDFLAGS=			${_OPENAL_LDFLAGS_${ARCH}}
@@ -168,7 +172,7 @@ VULKAN_LIB_DEPENDS=		libplacebo.so:graphics/libplacebo \
 				libvulkan.so:graphics/vulkan-loader
 VULKAN_CONFIGURE_OFF=		--disable-vulkan --disable-libplacebo
 
-WAYLAND_BUILD_DEPENDS=		wayland-protocols>=1.14:graphics/wayland-protocols \
+WAYLAND_BUILD_DEPENDS=		wayland-protocols>=1.15:graphics/wayland-protocols \
 				${LOCALBASE}/include/linux/input-event-codes.h:devel/evdev-proto
 WAYLAND_LIB_DEPENDS=		libwayland-client.so:graphics/wayland \
 				libwayland-cursor.so:graphics/wayland \

@@ -63,6 +63,7 @@
     SUBDIR += bosh-cli
     SUBDIR += bounce
     SUBDIR += bredbandskollen
+    SUBDIR += brynet
     SUBDIR += bsdec2-image-upload
     SUBDIR += bsdrcmds
     SUBDIR += bwi-firmware-kmod
@@ -306,6 +307,7 @@
     SUBDIR += kdenetwork
     SUBDIR += kdenetwork-filesharing
     SUBDIR += kea
+    SUBDIR += keama
     SUBDIR += keycloak
     SUBDIR += kf5-kcalendarcore
     SUBDIR += kf5-kcontacts
@@ -522,6 +524,7 @@
     SUBDIR += nncp
     SUBDIR += nng
     SUBDIR += norm
+    SUBDIR += nqptp
     SUBDIR += ns3
     SUBDIR += nsq
     SUBDIR += nss-pam-ldapd
@@ -1117,6 +1120,7 @@
     SUBDIR += py-pyvmomi
     SUBDIR += py-pyzmq
     SUBDIR += py-qt5-networkauth
+    SUBDIR += py-qt6-networkauth
     SUBDIR += py-rabbitpy
     SUBDIR += py-radix
     SUBDIR += py-raet

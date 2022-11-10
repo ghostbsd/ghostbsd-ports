@@ -386,6 +386,7 @@
     SUBDIR += hptt
     SUBDIR += hs-Agda
     SUBDIR += hs-penrose
+    SUBDIR += hs-syfco
     SUBDIR += hsl
     SUBDIR += ideep
     SUBDIR += ignition-math
@@ -432,6 +433,7 @@
     SUBDIR += libbraiding
     SUBDIR += libccd
     SUBDIR += libdivide
+    SUBDIR += libfixmath
     SUBDIR += libflame
     SUBDIR += libhomfly
     SUBDIR += libmesh
@@ -476,6 +478,7 @@
     SUBDIR += mbasecalc
     SUBDIR += mcsim
     SUBDIR += mdal
+    SUBDIR += mesquite
     SUBDIR += metis
     SUBDIR += mfem
     SUBDIR += mingw32-libgmp
@@ -514,6 +517,7 @@
     SUBDIR += ngraph
     SUBDIR += nlopt
     SUBDIR += ntl
+    SUBDIR += ntpoly
     SUBDIR += numdiff
     SUBDIR += obake
     SUBDIR += ocaml-num
@@ -524,14 +528,19 @@
     SUBDIR += octave-forge
     SUBDIR += octave-forge-actuarial
     SUBDIR += octave-forge-audio
+    SUBDIR += octave-forge-automatic-differentiation
     SUBDIR += octave-forge-base
     SUBDIR += octave-forge-bim
     SUBDIR += octave-forge-bioinfo
+    SUBDIR += octave-forge-biosig
     SUBDIR += octave-forge-bsltl
+    SUBDIR += octave-forge-cfitsio
     SUBDIR += octave-forge-cgi
     SUBDIR += octave-forge-civil-engineering
+    SUBDIR += octave-forge-coder
     SUBDIR += octave-forge-communications
     SUBDIR += octave-forge-control
+    SUBDIR += octave-forge-csg-toolkit
     SUBDIR += octave-forge-data-smoothing
     SUBDIR += octave-forge-database
     SUBDIR += octave-forge-dataframe
@@ -539,6 +548,8 @@
     SUBDIR += octave-forge-divand
     SUBDIR += octave-forge-doctest
     SUBDIR += octave-forge-econometrics
+    SUBDIR += octave-forge-fda
+    SUBDIR += octave-forge-femoctave
     SUBDIR += octave-forge-fenv
     SUBDIR += octave-forge-financial
     SUBDIR += octave-forge-fits
@@ -547,6 +558,7 @@
     SUBDIR += octave-forge-ga
     SUBDIR += octave-forge-general
     SUBDIR += octave-forge-generate_html
+    SUBDIR += octave-forge-geographiclib
     SUBDIR += octave-forge-geometry
     SUBDIR += octave-forge-gnuplot
     SUBDIR += octave-forge-gsl
@@ -554,6 +566,7 @@
     SUBDIR += octave-forge-image
     SUBDIR += octave-forge-informationtheory
     SUBDIR += octave-forge-integration
+    SUBDIR += octave-forge-internal-fluid-flow
     SUBDIR += octave-forge-interval
     SUBDIR += octave-forge-io
     SUBDIR += octave-forge-irsa
@@ -563,9 +576,12 @@
     SUBDIR += octave-forge-ltfat
     SUBDIR += octave-forge-mapping
     SUBDIR += octave-forge-matgeom
+    SUBDIR += octave-forge-mccabe-thiele
     SUBDIR += octave-forge-mechanics
     SUBDIR += octave-forge-miscellaneous
     SUBDIR += octave-forge-missing-functions
+    SUBDIR += octave-forge-mpi
+    SUBDIR += octave-forge-mqtt
     SUBDIR += octave-forge-msh
     SUBDIR += octave-forge-multicore
     SUBDIR += octave-forge-mvn
@@ -579,12 +595,16 @@
     SUBDIR += octave-forge-octclip
     SUBDIR += octave-forge-octproj
     SUBDIR += octave-forge-odebvp
+    SUBDIR += octave-forge-onsas
     SUBDIR += octave-forge-optics
     SUBDIR += octave-forge-optim
     SUBDIR += octave-forge-optiminterp
     SUBDIR += octave-forge-outliers
     SUBDIR += octave-forge-parallel
+    SUBDIR += octave-forge-pde1dm
     SUBDIR += octave-forge-plot
+    SUBDIR += octave-forge-ponchon-savarit
+    SUBDIR += octave-forge-pythonic
     SUBDIR += octave-forge-quaternion
     SUBDIR += octave-forge-queueing
     SUBDIR += octave-forge-secs1d
@@ -597,7 +617,9 @@
     SUBDIR += octave-forge-specfun
     SUBDIR += octave-forge-special-matrix
     SUBDIR += octave-forge-splines
+    SUBDIR += octave-forge-sqlite
     SUBDIR += octave-forge-statistics
+    SUBDIR += octave-forge-statistics-bootstrap
     SUBDIR += octave-forge-stk
     SUBDIR += octave-forge-strings
     SUBDIR += octave-forge-struct
@@ -606,6 +628,7 @@
     SUBDIR += octave-forge-tcl-octave
     SUBDIR += octave-forge-tsa
     SUBDIR += octave-forge-video
+    SUBDIR += octave-forge-websockets
     SUBDIR += octave-forge-zenity
     SUBDIR += octave-forge-zeromq
     SUBDIR += octomap
@@ -865,6 +888,7 @@
     SUBDIR += py-docplex
     SUBDIR += py-ducc0
     SUBDIR += py-ecos
+    SUBDIR += py-evalidate
     SUBDIR += py-faiss
     SUBDIR += py-fastcluster
     SUBDIR += py-fastdtw

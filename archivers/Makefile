@@ -92,6 +92,7 @@
     SUBDIR += minizip-ng
     SUBDIR += mscompress
     SUBDIR += mtf
+    SUBDIR += nevada-toolset
     SUBDIR += nfpm
     SUBDIR += nomarch
     SUBDIR += nwreckdum
@@ -184,6 +185,7 @@
     SUBDIR += py-brotlipy
     SUBDIR += py-bup
     SUBDIR += py-bz2file
+    SUBDIR += py-compressed-rtf
     SUBDIR += py-libarchive-c
     SUBDIR += py-lz4
     SUBDIR += py-lzma
@@ -233,6 +235,7 @@
     SUBDIR += szip
     SUBDIR += tar-stream-chunker
     SUBDIR += tardy
+    SUBDIR += tartest
     SUBDIR += thunar-archive-plugin
     SUBDIR += torrentzip
     SUBDIR += ucl

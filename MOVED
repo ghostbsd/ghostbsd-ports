@@ -11564,7 +11564,6 @@ emulators/ppsspp-devel|emulators/ppsspp|2019-03-14|Out of date: use emulators/pp
 sysutils/polkit-qt@qt4||2019-03-16|Qt4 deprecation
 sysutils/polkit-qt@qt5|sysutils/polkit-qt|2019-03-16|Flavor has been removed
 security/qtkeychain@qt4||2019-03-16|Qt4 deprecation
-security/qtkeychain@qt5|security/qtkeychain|2019-03-16|Flavor has been removed
 deskutils/znotes@qt4||2019-03-16|Qt4 deprecation
 deskutils/znotes@qt5|deskutils/znotes|2019-03-16|Flavor has been removed
 net-im/telepathy-qt@qt4||2019-03-16|Qt4 deprecation
@@ -11582,7 +11581,6 @@ x11-themes/Kvantum@qt5|x11-themes/Kvantum|2019-03-16|Flavor has been removed
 devel/qjson@qt4||2019-03-16|Qt4 deprecation
 devel/qjson@qt5|devel/qjson|2019-03-16|Flavor has been removed
 devel/qca@qt4||2019-03-16|Qt4 deprecation
-devel/qca@qt5|devel/qca|2019-03-16|Flavor has been removed
 x11-themes/adwaita@qt4||2019-03-16|Qt4 deprecation
 x11-themes/adwaita@qt5|x11-themes/adwaita-qt|2019-03-16|Flavor has been removed
 devel/libdbusmenu-qt@qt4||2019-03-16|Qt4 deprecation
@@ -13493,7 +13491,6 @@ www/php71-tidy|www/php72-tidy|2019-12-17|Has expired: upstream security support 
 lang/php71-extensions|lang/php72-extensions|2019-12-17|Has expired: upstream security support ended
 devel/pecl-request||2019-12-17|Has expired: upstream security support ended
 devel/googlemock||2019-12-19|Merged into devel/googletest
-lang/chicken|lang/chicken5|2019-12-22|Has expired: Old release; please migrate to lang/chicken5
 math/metis-edf||2019-12-23|No more required by Code_Aster 14.4.0-1
 textproc/py-text-unidecode||2019-12-24|Duplicate of converters/py-text-unidecode
 java/jakarta-bcel|java/apache-bcel|2019-12-24|Renamed upstream
@@ -14508,7 +14505,6 @@ devel/hs-bytestring-nums||2020-05-05|Has expired: No releases since 2012
 devel/iz||2020-05-05|Has expired: Broken for more than 6 months
 devel/jfrog-cli||2020-05-05|Has expired: Broken for more than 6 months
 devel/libcfg||2020-05-05|Has expired: Broken for more than 6 months
-devel/libdispatch||2020-05-05|Has expired: Broken for more than 6 months
 devel/libjson++||2020-05-05|Has expired: Broken for more than 6 months
 devel/libmonetra||2020-05-05|Has expired: Broken for more than 6 months
 devel/libol||2020-05-05|Has expired: Broken for more than 6 months
@@ -15889,7 +15885,6 @@ games/freera||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Pyth
 games/glob2||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
 games/marsnomercy||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
 games/netpanzer||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
-graphics/goxel||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
 graphics/sk1libs||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
 graphics/uniconvertor||2021-01-02|Has expired: Uses deprecated version of python
 games/dangerdeep||2021-01-02|Has expired: Uses Python 2.7 version of scons, and Python 2.7 which is EOLed upstream
@@ -17091,7 +17086,6 @@ security/razorback-scriptNugget||2022-03-31|Has expired: Abandonware, last relea
 dns/bind911||2022-03-31|Has expired: End of life, please migrate to a newer version of BIND9
 www/grafana6||2022-03-31|Has expired: EOLed upstream, unfixed vulnerabilities
 security/govpn||2022-03-31|Has expired: Deprecated upstream, reference: http://www.govpn.info/
-devel/spark||2022-03-31|Has expired: Depends on expired devel/maven33
 security/hashcat-legacy||2022-03-31|Has expired: Unsupported upstream, please consider using security/hashcat
 security/razorback-masterNugget||2022-03-31|Has expired: Abandonware, last release in 2012 and listed as alpha quality by upstream
 security/razorback-syslogNugget||2022-03-31|Has expired: Abandonware, last release in 2012 and listed as alpha quality by upstream
@@ -17601,3 +17595,11 @@ devel/py-ipykernel5|devel/py-ipykernel|2022-10-15|ipykernel5 is discontinued, ip
 x11-toolkits/libshumate-shortwave|x11-toolkits/libshumate|2022-10-15|No longer used by audio/shortwave
 misc/orion||2022-10-16|Dead upstream and fails to build with mpv-0.35
 devel/msgpack|devel/msgpack-c|2022-10-16|MsgPack now separates C and C++ versions
+games/arttime|deskutils/arttime|2022-10-18|Moved to a better category
+security/nextcloud-twofactor_totp|www/nextcloud|2022-10-21|Twofactor TOTP provider bundled with Nextcloud 25
+x11-toolkits/wxgtk31|x11-toolkits/wxgtk32|2022-10-25|Remove obsoleted port. Use x11-toolkits/wxgtk32 instead
+devel/py-pyxdg|devel/py-xdg|2022-10-28|Remove duplicate port
+lang/chicken5|lang/chicken|2022-10-30|Has expired: Please use lang/chicken instead
+devel/py-spyder|devel/spyder|2022-11-06|Spyder is an application, and not a library
+www/grafana7||2022-11-07|Has expired: EOLed upstream, unfixed vulnerabilities
+devel/cppcheck-gui|devel/cppcheck|2022-11-07|GUI is now included in devel/cppcheck port

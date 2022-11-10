@@ -374,6 +374,7 @@
     SUBDIR += libepubgen
     SUBDIR += libextractor
     SUBDIR += libexttextcat
+    SUBDIR += libfyaml
     SUBDIR += libfo
     SUBDIR += libfolia
     SUBDIR += libgepub
@@ -1272,6 +1273,7 @@
     SUBDIR += py-CommonMark
     SUBDIR += py-Morfessor
     SUBDIR += py-QDarkStyle
+    SUBDIR += py-RTFDE
     SUBDIR += py-Tempita
     SUBDIR += py-acora
     SUBDIR += py-aeidon
@@ -1308,11 +1310,13 @@
     SUBDIR += py-diff-match-patch
     SUBDIR += py-docrepr
     SUBDIR += py-docstring-parser
+    SUBDIR += py-docstring-to-markdown
     SUBDIR += py-docutils
     SUBDIR += py-docx2txt
     SUBDIR += py-dominate
     SUBDIR += py-dparse
     SUBDIR += py-duecredit
+    SUBDIR += py-ebcdic
     SUBDIR += py-elasticsearch
     SUBDIR += py-elasticsearch-async
     SUBDIR += py-elasticsearch-curator
@@ -1325,6 +1329,7 @@
     SUBDIR += py-enchant
     SUBDIR += py-enrich
     SUBDIR += py-et_xmlfile
+    SUBDIR += py-extract-msg
     SUBDIR += py-fastavro
     SUBDIR += py-feedparser
     SUBDIR += py-fingerprints
@@ -1394,6 +1399,7 @@
     SUBDIR += py-mkdocs-redirects
     SUBDIR += py-mkdocs-simple-hooks
     SUBDIR += py-mkdocstrings
+    SUBDIR += py-morse3
     SUBDIR += py-mwparserfromhell
     SUBDIR += py-myst-parser
     SUBDIR += py-nbsphinx
@@ -1530,6 +1536,7 @@
     SUBDIR += py-sphinxcontrib-programoutput
     SUBDIR += py-sphinxcontrib-qthelp
     SUBDIR += py-sphinxcontrib-serializinghtml
+    SUBDIR += py-sphinxcontrib-svg2pdfconverter
     SUBDIR += py-sphinxcontrib-towncrier
     SUBDIR += py-sphinxcontrib-websupport
     SUBDIR += py-sphinxemoji
@@ -1541,6 +1548,7 @@
     SUBDIR += py-tablib
     SUBDIR += py-terminaltables
     SUBDIR += py-textdistance
+    SUBDIR += py-textract
     SUBDIR += py-textfsm
     SUBDIR += py-texttable
     SUBDIR += py-textual

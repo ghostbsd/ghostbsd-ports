@@ -1,5 +1,6 @@
 PORTNAME=	emacs
-DISTVERSION=	29.0.50.20221015
+DISTVERSION=	29.0.50.20221031
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-devel
@@ -24,7 +25,7 @@ USES=		autoreconf:build cpe gmake localbase:ldflags ncurses pkgconfig
 CPE_VENDOR=	gnu
 USE_GITHUB=	yes
 GH_ACCOUNT=	emacs-mirror
-GH_TAGNAME=	8300899
+GH_TAGNAME=	a691e811
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--disable-build-details \
@@ -69,7 +70,7 @@ SUB_LIST=	EMACS_VER=${DISTVERSION:R} \
 		NATIVECOMP_COMMENT_START=${NATIVECOMP_COMMENT_START}
 
 INFO=		auth autotype bovine calc ccmode cl dbus dired-x ebrowse ede \
-		ediff edt efaq eieio eintr elisp emacs emacs-gnutls emacs-mime \
+		ediff edt efaq eglot eieio eintr elisp emacs emacs-gnutls emacs-mime \
 		epa erc ert eshell eudc eww flymake forms gnus htmlfontify \
 		idlwave ido info mairix-el message mh-e modus-themes newsticker \
 		nxml-mode octave-mode org pcl-cvs pgg rcirc reftex remember \
@@ -171,10 +172,9 @@ MAILUTILS_CONFIGURE_WITH=	mailutils
 MAILUTILS_CONFIGURE_ENV_OFF=	ac_cv_lib_lockfile_maillock=no \
 				ac_cv_prog_liblockfile=no
 MODULES_CONFIGURE_WITH=		modules
-NATIVECOMP_LIB_DEPENDS=		libgccjit.so:lang/${_GCC_PORT}
+NATIVECOMP_USE=			GCC=11+
 NATIVECOMP_CONFIGURE_WITH=	native-compilation
 NATIVECOMP_MAKE_ARGS=		NATIVE_FULL_AOT=1
-NATIVECOMP_LDFLAGS=		-L${LOCALBASE}/lib/${_GCC_PORT}
 OSS_CONFIGURE_ON=		--with-sound=oss
 OTF_LIB_DEPENDS=		libotf.so:print/libotf
 OTF_CONFIGURE_WITH=		libotf
@@ -228,10 +228,6 @@ NATIVECOMP_COMMENT_START=
 .else
 NATIVECOMP_COMMENT_END=		'*/'
 NATIVECOMP_COMMENT_START=	'/*'
-.endif
-
-.if ${PORT_OPTIONS:MNATIVECOMP} && !defined(_GCC_PORT_CHOSEN)
-_GCC_PORT!=	${BSDMAKE} -V_GCC_PORT USE_GCC=11+ _GCC_PORT_CHOSEN=yes
 .endif
 
 .if ${FLAVOR:U} != nox
