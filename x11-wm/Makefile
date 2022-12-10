@@ -45,7 +45,7 @@
     SUBDIR += herbstluftwm
     SUBDIR += hikari
     SUBDIR += hs-xmonad
-    SUBDIR += hyprland-devel
+    SUBDIR += hyprland
     SUBDIR += i3
     SUBDIR += i3-gaps
     SUBDIR += icewm
@@ -101,7 +101,6 @@
     SUBDIR += stumpwm
     SUBDIR += subtle
     SUBDIR += sway
-    SUBDIR += sway-devel
     SUBDIR += tinywm
     SUBDIR += transset
     SUBDIR += treewm

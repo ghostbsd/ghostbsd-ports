@@ -175,6 +175,7 @@
     SUBDIR += elasticsearch-plugin-head
     SUBDIR += elasticsearch6
     SUBDIR += elasticsearch7
+    SUBDIR += elasticsearch8
     SUBDIR += en-aspell
     SUBDIR += en-hunspell
     SUBDIR += en-mythes
@@ -239,7 +240,6 @@
     SUBDIR += gojq
     SUBDIR += goldendict
     SUBDIR += google-ctemplate
-    SUBDIR += google-translate-cli
     SUBDIR += gpp
     SUBDIR += grap
     SUBDIR += grc-aspell
@@ -341,6 +341,7 @@
     SUBDIR += kf5-sonnet
     SUBDIR += kf5-syntax-highlighting
     SUBDIR += kibana7
+    SUBDIR += kibana8
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
     SUBDIR += kmfl-khmer
@@ -374,9 +375,9 @@
     SUBDIR += libepubgen
     SUBDIR += libextractor
     SUBDIR += libexttextcat
-    SUBDIR += libfyaml
     SUBDIR += libfo
     SUBDIR += libfolia
+    SUBDIR += libfyaml
     SUBDIR += libgepub
     SUBDIR += libixion
     SUBDIR += libkmfl
@@ -502,7 +503,9 @@
     SUBDIR += openfts
     SUBDIR += openjade
     SUBDIR += opensearch
+    SUBDIR += opensearch13
     SUBDIR += opensearch-dashboards
+    SUBDIR += opensearch-dashboards13
     SUBDIR += opensp
     SUBDIR += openvanilla-framework
     SUBDIR += or-aspell
@@ -1224,7 +1227,6 @@
     SUBDIR += peco
     SUBDIR += peg
     SUBDIR += perl2html
-    SUBDIR += php-mecab
     SUBDIR += php74-ctype
     SUBDIR += php74-dom
     SUBDIR += php74-enchant
@@ -1548,8 +1550,8 @@
     SUBDIR += py-tablib
     SUBDIR += py-terminaltables
     SUBDIR += py-textdistance
-    SUBDIR += py-textract
     SUBDIR += py-textfsm
+    SUBDIR += py-textract
     SUBDIR += py-texttable
     SUBDIR += py-textual
     SUBDIR += py-three-merge
@@ -1663,6 +1665,7 @@
     SUBDIR += rubygem-babel-transpiler
     SUBDIR += rubygem-babosa
     SUBDIR += rubygem-case_transform
+    SUBDIR += rubygem-case_transform61
     SUBDIR += rubygem-character_set
     SUBDIR += rubygem-charlock_holmes
     SUBDIR += rubygem-chewy
@@ -1959,6 +1962,7 @@
     SUBDIR += toml-f
     SUBDIR += tr-aspell
     SUBDIR += trang
+    SUBDIR += translate-shell
     SUBDIR += translate-toolkit
     SUBDIR += trdsql
     SUBDIR += ts-hunspell

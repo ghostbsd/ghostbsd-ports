@@ -1,6 +1,7 @@
 PORTNAME=	mesa
-DISTVERSION=	22.3-branchpoint-316
-DISTVERSIONSUFFIX=	-g0f81d9bc88a
+DISTVERSION=	22.3-branchpoint-1672
+DISTVERSIONSUFFIX=	-gbdb7fd69d65
+PORTREVISION=	1
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -137,7 +138,7 @@ ZSTD_MESON_ENABLED=	zstd
 
 # Ignore Mk/bsd.default-versions.mk but respect make.conf(5)
 .if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mllvm*}
-LLVM_DEFAULT=	13 # chase mesa-dri
+LLVM_DEFAULT=	15 # chase mesa-dri
 .endif
 
 post-extract:
@@ -155,10 +156,10 @@ post-patch:
 		${WRKSRC}/bin/git_sha1_gen.py
 
 post-patch-COINST-on:
-	@${MV} ${WRKSRC}/src/amd/vulkan/00-radv-defaults.conf \
-		${WRKSRC}/src/amd/vulkan/00-radv${PKGNAMESUFFIX}-defaults.conf
 	@${MV} ${WRKSRC}/src/util/00-${PORTNAME}-defaults.conf \
 		${WRKSRC}/src/util/00-${PKGBASE}-defaults.conf
+	@${MV} ${WRKSRC}/src/util/00-radv-defaults.conf \
+		${WRKSRC}/src/util/00-radv${PKGNAMESUFFIX}-defaults.conf
 
 post-install-COINST-on:
 	@${INSTALL_DATA} ${WRKDIR}/libmap.conf \

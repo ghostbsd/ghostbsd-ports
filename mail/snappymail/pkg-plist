@@ -39,7 +39,6 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Commands/Quota.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Enumerations/FetchType.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Enumerations/FolderACL.php
-%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Enumerations/FolderResponseStatus.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Enumerations/FolderStatus.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Enumerations/FolderType.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Enumerations/MessageFlag.php
@@ -68,6 +67,7 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Responses/ACL.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/SearchCriterias.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/SequenceSet.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Settings.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Traits/ResponseParser.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Traits/Status.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/LICENSE
@@ -92,7 +92,6 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Mime/Enumerations/DkimStatus.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Mime/Enumerations/Header.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Mime/Enumerations/MessagePriority.php
-%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Mime/Enumerations/MimeType.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Mime/Enumerations/Parameter.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Mime/Header.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Mime/HeaderCollection.php
@@ -114,18 +113,21 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Net/Exceptions/SocketUnsuppoterdSecureConnectionException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Net/Exceptions/SocketWriteException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Net/NetClient.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Net/SSLContext.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/RuntimeException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/Exceptions/LoginBadCredentialsException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/Exceptions/LoginBadMethodException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/Exceptions/LoginException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/Exceptions/NegativeResponseException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/Exceptions/ResponseException.php
-%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/ManageSieveClient.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/Settings.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/SieveClient.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Smtp/Exceptions/LoginBadCredentialsException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Smtp/Exceptions/LoginBadMethodException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Smtp/Exceptions/LoginException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Smtp/Exceptions/NegativeResponseException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Smtp/Exceptions/ResponseException.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Smtp/Settings.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Smtp/SmtpClient.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/Predis/Client.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/Predis/ClientContextInterface.php
@@ -572,6 +574,9 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/crypt.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/dav/client.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/dns.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/file/magic.mime
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/file/magic.mime.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/file/mimetype.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/http/csp.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/http/exception.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/http/request.php
@@ -587,6 +592,7 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/image/gd2/imagerotate.inc
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/image/gmagick.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/image/imagick.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/imap/sync.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/intl/LICENSE
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/intl/idn.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/intl/unidata/canonicalComposition.php
@@ -612,9 +618,10 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/sasl.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/sasl/cram.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/sasl/login.php
-%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/sasl/oauth.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/sasl/oauthbearer.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/sasl/plain.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/sasl/scram.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/sasl/xoauth2.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/stream/zip.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/tar.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/totp.php
@@ -658,6 +665,10 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/app/localization/et-EE/relativetimeformat.js
 %%WWWDIR%%/snappymail/v/%%VER%%/app/localization/et-EE/static.json
 %%WWWDIR%%/snappymail/v/%%VER%%/app/localization/et-EE/user.json
+%%WWWDIR%%/snappymail/v/%%VER%%/app/localization/eu/admin.json
+%%WWWDIR%%/snappymail/v/%%VER%%/app/localization/eu/relativetimeformat.js
+%%WWWDIR%%/snappymail/v/%%VER%%/app/localization/eu/static.json
+%%WWWDIR%%/snappymail/v/%%VER%%/app/localization/eu/user.json
 %%WWWDIR%%/snappymail/v/%%VER%%/app/localization/fa-IR/admin.json
 %%WWWDIR%%/snappymail/v/%%VER%%/app/localization/fa-IR/relativetimeformat.js
 %%WWWDIR%%/snappymail/v/%%VER%%/app/localization/fa-IR/static.json
@@ -825,6 +836,7 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/app/templates/Views/User/SettingsSecurity.html
 %%WWWDIR%%/snappymail/v/%%VER%%/app/templates/Views/User/SettingsThemes.html
 %%WWWDIR%%/snappymail/v/%%VER%%/app/templates/Views/User/SystemDropDown.html
+%%WWWDIR%%/snappymail/v/%%VER%%/cpanel.php
 %%WWWDIR%%/snappymail/v/%%VER%%/include.php
 %%WWWDIR%%/snappymail/v/%%VER%%/index.php
 %%WWWDIR%%/snappymail/v/%%VER%%/setup.php
@@ -854,6 +866,7 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/static/favicon-light.png
 %%WWWDIR%%/snappymail/v/%%VER%%/static/favicon.ico
 %%WWWDIR%%/snappymail/v/%%VER%%/static/favicon.png
+%%WWWDIR%%/snappymail/v/%%VER%%/static/favicon.svg
 %%WWWDIR%%/snappymail/v/%%VER%%/static/js/admin.js
 %%WWWDIR%%/snappymail/v/%%VER%%/static/js/admin.js.br
 %%WWWDIR%%/snappymail/v/%%VER%%/static/js/admin.js.gz

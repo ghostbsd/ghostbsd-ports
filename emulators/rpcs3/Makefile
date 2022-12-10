@@ -1,7 +1,8 @@
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.25-14365 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-gb875a86e1d
+DISTVERSION=	0.0.25-14422 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-g9274b3f14d
+PORTREVISION=	1
 CATEGORIES=	emulators wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -32,11 +33,11 @@ GH_TUPLE=	RPCS3:hidapi:hidapi-0.12.0-2-gc2aa9dd:hidapi/3rdparty/hidapi/hidapi \
 		RPCS3:soundtouch:2.3.1-16-g83cfba6:soundtouch/3rdparty/SoundTouch/soundtouch \
 		asmjit:asmjit:06d0bad:asmjit/3rdparty/asmjit/asmjit \
 		jbeder:yaml-cpp:yaml-cpp-0.7.0-1-g0b67821:yamlcpp/3rdparty/yaml-cpp/yaml-cpp \
-		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-172-g36c0c15:spirv_headers/3rdparty/SPIRV/SPIRV-Headers \
-		KhronosGroup:SPIRV-Tools:v2022.2-71-g5e61ea20:spirv_tools/3rdparty/SPIRV/SPIRV-Tools \
-		KhronosGroup:glslang:11.11.0-2-g10423ec6:glslang/3rdparty/glslang/glslang \
+		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-187-g85a1ed2:spirv_headers/3rdparty/SPIRV/SPIRV-Headers \
+		KhronosGroup:SPIRV-Tools:v2022.4:spirv_tools/3rdparty/SPIRV/SPIRV-Tools \
+		KhronosGroup:glslang:11.12.0:glslang/3rdparty/glslang/glslang \
 		kinetiknz:cubeb:cubeb-0.2-1391-gdc511c6:cubeb/3rdparty/cubeb/cubeb \
-		wolfSSL:wolfssl:v5.4.0-stable:wolfssl/3rdparty/wolfssl/wolfssl
+		wolfSSL:wolfssl:v5.5.0-stable:wolfssl/3rdparty/wolfssl/wolfssl
 
 USES=		cmake compiler:c++17-lang elfctl gl iconv:wchar_t localbase:ldflags \
 		openal:soft pkgconfig python:3.4+,build qt:5 xorg
@@ -109,7 +110,7 @@ post-patch:
 
 # Ignore Mk/bsd.default-versions.mk but respect make.conf(5)
 .if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mllvm*}
-LLVM_DEFAULT=	13 # bump if not latest release
+LLVM_DEFAULT=	15 # bump if not latest release
 .endif
 BUILD_DEPENDS+=	clang++${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 USES:=		${USES:Ncompiler*}
@@ -118,13 +119,14 @@ CXX=		clang++${LLVM_DEFAULT}
 CPP=		clang-cpp${LLVM_DEFAULT}
 
 # XXX Move into separate port and standardize via USES
-GH_TUPLE+=	llvm:llvm-project:llvmorg-13.0.1-rc1:libcxx
+GH_TUPLE+=	llvm:llvm-project:llvmorg-15.0.6:libcxx
 CXXFLAGS+=	-nostdinc++ -isystem${WRKDIR}/libcxx_prefix/include/c++/v1
 LDFLAGS+=	-nostdlib++ -L${WRKDIR}/libcxx_prefix/lib -l:libc++.a -lcxxrt
 
 pre-configure:	bundled-libcxx
 bundled-libcxx:
 	@${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS:M*Ninja*} \
+		-DLIBCXX_INCLUDE_BENCHMARKS:BOOL=OFF \
 		-DCMAKE_INSTALL_PREFIX:PATH=${WRKDIR}/libcxx_prefix \
 		-B ${WRKDIR}/libcxx_build -S ${WRKSRC_libcxx}/libcxx
 	@${DO_MAKE_BUILD:NDESTDIR*} install -C ${WRKDIR}/libcxx_build

@@ -4,6 +4,8 @@
     SUBDIR += ALPSCore
     SUBDIR += ChipmunkPhysics
     SUBDIR += InsightToolkit
+    SUBDIR += InsightToolkit501
+    SUBDIR += InsightToolkit521
     SUBDIR += PETSc
     SUBDIR += R-cran-DCluster
     SUBDIR += R-cran-Epi
@@ -26,6 +28,7 @@
     SUBDIR += aircraft-datcom
     SUBDIR += antioch
     SUBDIR += apbs
+    SUBDIR += arbor
     SUBDIR += ascent
     SUBDIR += atompaw
     SUBDIR += avogadro2
@@ -69,6 +72,7 @@
     SUBDIR += dd_package
     SUBDIR += devisor
     SUBDIR += dftbplus
+    SUBDIR += dftd3
     SUBDIR += dftd4
     SUBDIR += dimod
     SUBDIR += dirac
@@ -150,6 +154,7 @@
     SUBDIR += libgridxc
     SUBDIR += libint
     SUBDIR += libint2
+    SUBDIR += libint2-psi4
     SUBDIR += libkml
     SUBDIR += liblinear
     SUBDIR += libmbd
@@ -188,8 +193,11 @@
     SUBDIR += molscript
     SUBDIR += molsketch
     SUBDIR += mopac
+    SUBDIR += mp2d
     SUBDIR += mpb
     SUBDIR += mpqc
+    SUBDIR += mrchem
+    SUBDIR += mrcpp
     SUBDIR += msms
     SUBDIR += mstore
     SUBDIR += multicharge
@@ -243,6 +251,7 @@
     SUBDIR += p5-Chemistry-Reaction
     SUBDIR += p5-Chemistry-Ring
     SUBDIR += p5-Geo-BUFR
+    SUBDIR += p5-Geo-Calc
     SUBDIR += p5-Geo-Coordinates-Converter
     SUBDIR += p5-Geo-Coordinates-Converter-iArea
     SUBDIR += p5-Geo-WebService-Elevation-USGS
@@ -258,7 +267,9 @@
     SUBDIR += phonopy
     SUBDIR += plumed
     SUBDIR += pnetcdf
+    SUBDIR += polytope
     SUBDIR += precice
+    SUBDIR += psi4
     SUBDIR += pulseview
     SUBDIR += py-DendroPy
     SUBDIR += py-GPy
@@ -275,6 +286,7 @@
     SUBDIR += py-SimpleSpectral
     SUBDIR += py-abipy
     SUBDIR += py-access
+    SUBDIR += py-arbor
     SUBDIR += py-asap3
     SUBDIR += py-asdf
     SUBDIR += py-asdf-standard
@@ -335,17 +347,21 @@
     SUBDIR += py-libpysal
     SUBDIR += py-lifelines
     SUBDIR += py-mdp
+    SUBDIR += py-meshio
     SUBDIR += py-mmcif
     SUBDIR += py-mmtf-python
     SUBDIR += py-molmod
     SUBDIR += py-moltemplate
+    SUBDIR += py-mrchem
     SUBDIR += py-netCDF4
     SUBDIR += py-netcdf-flattener
     SUBDIR += py-nibabel
     SUBDIR += py-nilearn
     SUBDIR += py-obspy
     SUBDIR += py-oddt
+    SUBDIR += py-openbabel
     SUBDIR += py-openpiv
+    SUBDIR += py-optking
     SUBDIR += py-paida
     SUBDIR += py-paramz
     SUBDIR += py-penaltymodel
@@ -394,6 +410,7 @@
     SUBDIR += py-scimath
     SUBDIR += py-scipy
     SUBDIR += py-scoria
+    SUBDIR += py-sdf
     SUBDIR += py-segregation
     SUBDIR += py-segyio
     SUBDIR += py-sklearn-pandas
@@ -428,6 +445,7 @@
     SUBDIR += rubygem-ruby-dcl
     SUBDIR += rubygem-ruby-netcdf
     SUBDIR += scidavis
+    SUBDIR += sciplot
     SUBDIR += segyio
     SUBDIR += serac
     SUBDIR += shelxle

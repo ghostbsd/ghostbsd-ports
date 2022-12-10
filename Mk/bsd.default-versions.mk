@@ -42,7 +42,7 @@ COROSYNC_DEFAULT?=	2
 #EMACS_DEFAULT?=	let the flavor be the default if not explicitly set
 # Possible values: 2.5, 3.0, 4.0
 FIREBIRD_DEFAULT?=	2.5
-# Possible values: flang (experimental), gfortran
+# Possible values: gfortran
 FORTRAN_DEFAULT?=	gfortran
 # Possible values: 3.2.2
 FPC_DEFAULT?=		3.2.2
@@ -51,7 +51,7 @@ FPC_DEFAULT?=		3.2.2
 .  if ${ARCH} == "powerpcspe"
 GCC_DEFAULT?=		8
 .  else
-GCC_DEFAULT?=		11
+GCC_DEFAULT?=		12
 .  endif
 # Possible values: 7, 8, 9, agpl
 GHOSTSCRIPT_DEFAULT?=	agpl
@@ -118,8 +118,8 @@ PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .  endif
 # Possible values: 10, 11, 12, 13, 14, 15
 PGSQL_DEFAULT?=		13
-# Possible values: 7.4, 8.0, 8.1
-PHP_DEFAULT?=		8.0
+# Possible values: 7.4, 8.0, 8.1, 8.2
+PHP_DEFAULT?=		8.1
 # Possible values: 2.7, 3.7, 3.8, 3.9, 3.10, 3.11
 PYTHON_DEFAULT?=	3.9
 # Possible values: 2.7

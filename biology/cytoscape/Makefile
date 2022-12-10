@@ -12,9 +12,7 @@ WWW=		https://www.cytoscape.org
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/api/LICENSE
 
-BROKEN=		fails to build: Cytoscape Third-Party Dependencies (third-party): FAILURE
-
-BUILD_DEPENDS=	mvn:devel/maven \
+BUILD_DEPENDS=	maven363>0:devel/maven363 \
 		bash:shells/bash
 RUN_DEPENDS=	bash:shells/bash
 

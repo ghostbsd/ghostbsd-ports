@@ -204,6 +204,7 @@
     SUBDIR += heaan
     SUBDIR += headscale
     SUBDIR += heimdal
+    SUBDIR += heimdal-devel
     SUBDIR += helib
     SUBDIR += hexl
     SUBDIR += highwayhash
@@ -325,6 +326,7 @@
     SUBDIR += linux-c7-openssl-devel
     SUBDIR += linux-c7-p11-kit
     SUBDIR += linux-c7-trousers
+    SUBDIR += local-php-security-checker
     SUBDIR += logcheck
     SUBDIR += lua-bcrypt
     SUBDIR += luasec
@@ -389,6 +391,7 @@
     SUBDIR += openconnect-gui
     SUBDIR += opencryptoki
     SUBDIR += openct
+    SUBDIR += openfhe
     SUBDIR += openfortivpn
     SUBDIR += openiked
     SUBDIR += openiked-portable
@@ -841,7 +844,6 @@
     SUBDIR += py-certbot
     SUBDIR += py-certbot-apache
     SUBDIR += py-certbot-dns-cloudflare
-    SUBDIR += py-certbot-dns-cloudxns
     SUBDIR += py-certbot-dns-cpanel
     SUBDIR += py-certbot-dns-digitalocean
     SUBDIR += py-certbot-dns-dnsimple
@@ -1038,18 +1040,21 @@
     SUBDIR += rubygem-bcrypt-ruby
     SUBDIR += rubygem-bcrypt_pbkdf
     SUBDIR += rubygem-cose
+    SUBDIR += rubygem-cvss-suite
     SUBDIR += rubygem-declarative_policy
     SUBDIR += rubygem-devise-two-factor
     SUBDIR += rubygem-devise-two-factor-rails5
     SUBDIR += rubygem-devise-two-factor-rails61
     SUBDIR += rubygem-devise-two-factor-rails70
     SUBDIR += rubygem-devise_pam_authenticatable2
+    SUBDIR += rubygem-devise_pam_authenticatable2-rails61
     SUBDIR += rubygem-digest
     SUBDIR += rubygem-digest-crc
     SUBDIR += rubygem-doorkeeper
     SUBDIR += rubygem-doorkeeper-openid_connect
     SUBDIR += rubygem-doorkeeper-rails5
     SUBDIR += rubygem-doorkeeper-rails50
+    SUBDIR += rubygem-doorkeeper-rails61
     SUBDIR += rubygem-ed25519
     SUBDIR += rubygem-ed2551912
     SUBDIR += rubygem-encryptor
@@ -1099,6 +1104,7 @@
     SUBDIR += rubygem-omniauth-oauth2-generic
     SUBDIR += rubygem-omniauth-rails_csrf_protection
     SUBDIR += rubygem-omniauth-saml
+    SUBDIR += rubygem-omniauth-saml1
     SUBDIR += rubygem-omniauth-shibboleth
     SUBDIR += rubygem-omniauth1
     SUBDIR += rubygem-openssl
@@ -1106,10 +1112,12 @@
     SUBDIR += rubygem-openssl-cmac
     SUBDIR += rubygem-openssl-signature_algorithm
     SUBDIR += rubygem-openssl2
+    SUBDIR += rubygem-openssl221
     SUBDIR += rubygem-openvas-omp
     SUBDIR += rubygem-origami
     SUBDIR += rubygem-pbkdf2-ruby
     SUBDIR += rubygem-pundit
+    SUBDIR += rubygem-pundit61
     SUBDIR += rubygem-pyu-ruby-sasl
     SUBDIR += rubygem-rack-oauth2
     SUBDIR += rubygem-razorback-scriptNugget
@@ -1179,6 +1187,7 @@
     SUBDIR += setaudit
     SUBDIR += sha1collisiondetection
     SUBDIR += sha2wordlist
+    SUBDIR += shibboleth-idp
     SUBDIR += shibboleth-sp
     SUBDIR += sig2dot
     SUBDIR += signify

@@ -1,7 +1,7 @@
 PORTNAME=	f3d
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.3.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,6 +10,8 @@ WWW=		https://f3d-app.github.io/f3d/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	compilation breaks: non-constant-expression cannot be narrowed from type 'unsigned int' to 'vtkIdType' (aka 'int') in initializer list (new release should fix this)
 
 LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libfontconfig.so:x11-fonts/fontconfig \

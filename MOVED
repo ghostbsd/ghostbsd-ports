@@ -2481,7 +2481,6 @@ chinese/gbscript||2011-09-01|Has expired: No more public distfiles
 chinese/mplayer-fonts||2011-09-01|Has expired: No more public distfiles
 chinese/oxford||2011-09-01|Has expired: No more public distfiles
 chinese/vflib||2011-09-01|Has expired: No more public distfiles
-databases/mysql++||2011-09-01|Has expired: No more public distfiles
 databases/mysql_last_value||2011-09-01|Has expired: No Master Site
 databases/p5-DBIx-Table||2011-09-01|Has expired: No more public distfiles
 deskutils/gkrellm-gtodo||2011-09-01|Has expired: No more public distfiles
@@ -3876,7 +3875,6 @@ java/jdk16|java/openjdk6|2012-12-10|Has expired: Outdated, consider using openjd
 java/linux-sun-jre15|java/linux-sun-jre16|2012-12-10|Has expired: EOLed upstream since October 2009
 java/linux-sun-jdk15|java/linux-sun-jdk16|2012-12-10|Has expired: EOLed upstream since October 2009
 java/jdk15-doc|java/jdk16-doc|2012-12-10|Has expired: EOLed upstream since October 2009
-science/py-openbabel||2012-12-11|Merged to science/openbabel
 www/moodle2|www/moodle23|2012-12-11|Renamed
 deskutils/horde-hermes|deskutils/horde3-hermes|2012-12-12|Rename of old horde apps
 deskutils/horde-klutz|deskutils/horde3-klutz|2012-12-12|Rename of old horde apps
@@ -7911,7 +7909,6 @@ www/eliom||2015-12-30|Has expired: Depends on broken and expiring www/ocsigen
 audio/py-fastaudio||2015-12-30|Has expired: Broken for more than 6 months
 devel/jgoodies-common||2015-12-30|Has expired: Broken for more than 6 months
 games/kanatest||2015-12-30|Has expired: Broken for more than 6 months
-editors/bless||2015-12-30|Has expired: Broken for more than 6 months
 security/burpsuite||2015-12-30|Has expired: Broken for more than 6 months
 dns/bind10|dns/bundy|2015-12-31|Has expired: Is not developed any more, use dns/bundy
 lang/perl5.16||2015-12-31|Has expired: Unsupported, please upgrade to a more recent version of Perl
@@ -10217,7 +10214,6 @@ mail/p5-Mail-Cache||2018-07-16|Has expired: Unmaintained
 www/p5-ZConf-RSS||2018-07-16|Has expired: Unmaintained
 www/p5-ZConf-RSS-GUI-GTK||2018-07-16|Has expired: Unmaintained
 devel/p5-ZConf-GUI||2018-07-16|Has expired: Unmaintained
-net-im/mastodon||2018-07-16|Has expired: Breaks too frequently
 x11-fm/p5-PerlFM||2018-07-16|Has expired: Unmaintained
 astro/p5-ZConf-Weather||2018-07-16|Has expired: Unmaintained
 sysutils/p5-ZConf-Cron||2018-07-16|Has expired: Unmaintained
@@ -10712,7 +10708,6 @@ games/kajongg||2018-12-21|Has expired: Broken for more than 6 months
 games/netspades||2018-12-21|Has expired: Uses obsolete glib12
 games/gtklife||2018-12-21|Has expired: Uses obsolete glib12
 biology/xmolwt||2018-12-21|Has expired: Uses obsolete glib12
-x11-clocks/wmclockmon||2018-12-21|Has expired: Uses obsolete glib12
 x11-clocks/asclock-gtk||2018-12-21|Has expired: Uses obsolete glib12
 net-im/gale||2018-12-21|Has expired: Uses obsolete glib12
 audio/xmms-ahx||2018-12-21|Has expired: Uses obsolete glib12, use audio/hvl2wav instead
@@ -13173,7 +13168,6 @@ net/librouteros||2019-10-16|Has expired: Unfetchable, unmaintained
 net/nettest||2019-10-16|Has expired: Unfetchable, unmaintained
 net/py-netstring||2019-10-16|Has expired: Unfetchable, unmaintained
 net/radiusd-cistron||2019-10-16|Has expired: Unfetchable, unmaintained
-net/smbldap-tools||2019-10-16|Has expired: Unfetchable, unmaintained
 net/wackford-squeers||2019-10-16|Has expired: Unfetchable, unmaintained
 net/wmnet2||2019-10-16|Has expired: Unfetchable, unmaintained
 net-im/pidgin-birthday-reminder||2019-10-16|Has expired: Unfetchable, unmaintained
@@ -15368,7 +15362,6 @@ biology/tophat||2020-09-19|Has expired: Uses deprecated version of python
 chinese/ibus-array||2020-09-19|Has expired: Uses deprecated version of python
 comms/congruity||2020-09-19|Has expired: Uses deprecated version of python
 comms/libbtbb||2020-09-19|Has expired: Uses deprecated version of python
-comms/quisk||2020-09-19|Has expired: Uses deprecated version of python
 databases/mtools-mongodb||2020-09-19|Has expired: Uses deprecated version of python
 databases/mydbf2mysql||2020-09-19|Has expired: Uses deprecated version of python
 databases/ntdb||2020-09-19|Has expired: Uses deprecated version of python
@@ -17566,7 +17559,6 @@ net/libmms||2022-09-30|Has expired: Obsolete, Microsoft deprecated MMS protocol 
 audio/mctoolame-decoder||2022-09-30|Has expired: Legacy and obscure audio format that never gained any traction
 audio/mctoolame-encoder||2022-09-30|Has expired: Legacy and obscure audio format that never gained any traction
 www/py-ws4py||2022-09-30|Has expired: Upstream abandoned
-ftp/axel||2022-09-30|Has expired: Last release in 2009 and dead upstream, please consider using www/aria2
 databases/py-bsddb3|databases/py-berkeleydb|2022-09-30|Has expired: Requires upstream EOLd db5. Use py-berkeleydb
 graphics/megapov|graphics/povray37|2022-10-01|Has expired: Abandoned upstream. graphics/povray37 is the recommended replacement
 x11-toolkits/gstreamer1-plugins-gtk4||2022-10-01|No consumers left and deprecated in favor gtk4 plugin from multimedia/gstreamer1-plugins-rust >= 0.8.0
@@ -17603,3 +17595,41 @@ lang/chicken5|lang/chicken|2022-10-30|Has expired: Please use lang/chicken inste
 devel/py-spyder|devel/spyder|2022-11-06|Spyder is an application, and not a library
 www/grafana7||2022-11-07|Has expired: EOLed upstream, unfixed vulnerabilities
 devel/cppcheck-gui|devel/cppcheck|2022-11-07|GUI is now included in devel/cppcheck port
+devel/py-types-termcolor||2022-11-11|No longer needed, type annotations are now available in termcolor module
+x11-toolkits/wlroots-devel|x11-toolkits/wlroots|2022-11-11|Out of date: use x11-toolkits/wlroots for now
+multimedia/mpv034||2022-11-14|No longer needed
+devel/py-types-xxhash||2022-11-15|No longer needed, type annotations are now available in xxhash module
+devel/awscli|devel/py-awscli|2022-11-15|Renamed comply with Python Ports Policy and flavored
+graphics/sciplot|science/sciplot|2022-11-15|Move to avoid conflict with graphics/SciPlot
+x11-wm/hyprland-devel|x11-wm/hyprland|2022-11-16|Updated to the latest stable version
+net/rabbitmq-c-devel|net/rabbitmq-c|2022-11-16|Remove obsolete devel port, use net/rabbitmq-c instead
+databases/foundationdb-devel|databases/foundationdb|2022-11-16|Remove obsolete devel port, use databases/foundationdb instead
+devel/py-pytest4-asyncio||2022-11-19|Has expired: legacy version for pytest4 no longer used by any port
+devel/tokamak||2022-11-20|Has expired: Last release in 2008, abandoned upstream, not used, website disappeared
+net/libutp|net-p2p/libutp|2022-11-20|Moved to a more adequated category
+x11-wm/sway-devel|x11-wm/sway|2022-11-26|Out of date: use x11-wm/sway for now
+math/suitesparse-slip_lu|math/suitesparse-spex|2022-11-26|Renamed by upstream
+graphics/giblib||2022-11-27|Has expired: Last release in 2004, abandoned upstream, not used, website disappeared
+www/typo3-10||2022-11-29|Requires php74 which was EOL on 2022-11-28
+www/phalcon4||2022-11-29|Requires php74 which was EOL on 2022-11-28
+www/ilias6||2022-11-29|Requires php74 which was EOL on 2022-11-28
+net/pecl-zmq||2022-11-29|Requires php74 which was EOL on 2022-11-28
+textproc/php-mecab||2022-11-29|Requires php74 which was EOL on 2022-11-28
+sysutils/ganglia-webfrontend||2022-11-29|Requires php74 which was EOL on 2022-11-28
+net/pecl-mosquitto||2022-11-30|Requires php74 which was EOL on 2022-11-28
+devel/pecl-propro2||2022-11-30|Requires php74 which was EOL on 2022-11-28
+devel/pecl-jsond||2022-11-30|Requires php74 which was EOL on 2022-11-28
+databases/pecl-cassandra||2022-11-30|Requires php74 which was EOL on 2022-11-28
+deskutils/egroupware||2022-12-01|Requires php74 which was EOL on 2022-11-28
+devel/pecl-APCu_bc||2022-12-01|Requires php74 which was EOL on 2022-11-28
+textproc/google-translate-cli|textproc/translate-shell|2022-12-02|Renamed by upstream
+net-mgmt/zabbix4-frontend||2022-12-05|Requires php74 which was EOL on 2022-11-28
+math/pecl-stats2||2022-12-05|Requires php74 which was EOL on 2022-11-28
+devel/pecl-jsmin||2022-12-05|Requires php74 which was EOL on 2022-11-28
+security/py-certbot-dns-cloudxns||2022-12-06|The CloudXNS DNS service is defunct and upstream removed plugin for it
+security/pam_krb5|security/pam_krb5@mit|2022-12-06|The pam_krb5 package is now the (default) mit flavor
+devel/pecl-hrtime||2022-12-08|Requires php74 which was EOL on 2022-11-28
+net-mgmt/zabbix5-frontend||2022-12-08|Requires php74 which was EOL on 2022-11-28
+multimedia/php-pHash||2022-12-08|Requires php74 which was EOL on 2022-11-28
+print/pecl-pdflib||2022-12-09|Requires php74 which was EOL on 2022-11-28
+ftp/php-fastdfs||2022-12-09|Requires php74 which was EOL on 2022-11-28

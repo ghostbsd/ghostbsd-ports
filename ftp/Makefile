@@ -2,6 +2,7 @@
 
     SUBDIR += R-cran-RCurl
     SUBDIR += R-cran-curl
+    SUBDIR += axel
     SUBDIR += bbftp-client
     SUBDIR += bbftp-server
     SUBDIR += bftpd
@@ -52,7 +53,6 @@
     SUBDIR += pavuk
     SUBDIR += pear-Net_FTP
     SUBDIR += pftpd
-    SUBDIR += php-fastdfs
     SUBDIR += php74-curl
     SUBDIR += php74-ftp
     SUBDIR += php80-curl

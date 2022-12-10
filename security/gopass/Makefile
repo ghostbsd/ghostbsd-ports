@@ -1,13 +1,17 @@
 PORTNAME=	gopass
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.14.10
+DISTVERSION=	1.15.0
 CATEGORIES=	security
+
+PATCH_SITES=	https://github.com/gopasspw/gopass/pull/2456/commits/
+PATCHFILES=	3865a456ff5afcf1b065542d5df02390bc440142.patch:-p1 # Fix vi detection, https://github.com/gopasspw/gopass/issues/2424
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Rewrite of the pass password manager in Go
 WWW=		https://www.gopass.pw/
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	amd64
 ONLY_FOR_ARCHS_REASON=	upstream only supports amd64

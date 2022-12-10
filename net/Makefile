@@ -87,6 +87,7 @@
     SUBDIR += clusterit
     SUBDIR += cnd
     SUBDIR += concourse-fly
+    SUBDIR += containernetworking-plugins
     SUBDIR += corkscrew
     SUBDIR += corosync2
     SUBDIR += corosync3
@@ -198,6 +199,7 @@
     SUBDIR += gnu-radius
     SUBDIR += go-bapu
     SUBDIR += go-cs
+    SUBDIR += go-tcping
     SUBDIR += gobgp
     SUBDIR += gofish
     SUBDIR += google-cloud-sdk
@@ -416,7 +418,6 @@
     SUBDIR += libunp
     SUBDIR += libusipp
     SUBDIR += libusrsctp
-    SUBDIR += libutp
     SUBDIR += libvncserver
     SUBDIR += libwebsockets
     SUBDIR += libyang
@@ -976,13 +977,11 @@
     SUBDIR += pear-XML_RPC
     SUBDIR += pear-XML_RPC2
     SUBDIR += pecl-amqp
-    SUBDIR += pecl-mosquitto
     SUBDIR += pecl-oauth2
     SUBDIR += pecl-radius
     SUBDIR += pecl-rdkafka
     SUBDIR += pecl-smbclient
     SUBDIR += pecl-xmlrpc
-    SUBDIR += pecl-zmq
     SUBDIR += pen
     SUBDIR += php74-ldap
     SUBDIR += php74-soap
@@ -1180,7 +1179,6 @@
     SUBDIR += rabbiteer
     SUBDIR += rabbitmq
     SUBDIR += rabbitmq-c
-    SUBDIR += rabbitmq-c-devel
     SUBDIR += radcli
     SUBDIR += raddump
     SUBDIR += radiator
@@ -1307,6 +1305,7 @@
     SUBDIR += rubygem-http_parser.rb
     SUBDIR += rubygem-httpauth
     SUBDIR += rubygem-ipaddr
+    SUBDIR += rubygem-ipaddr122
     SUBDIR += rubygem-ipaddress
     SUBDIR += rubygem-iproto
     SUBDIR += rubygem-kas-grpc
@@ -1431,6 +1430,7 @@
     SUBDIR += sl2tps
     SUBDIR += slackcat
     SUBDIR += smb4k
+    SUBDIR += smbldap-tools
     SUBDIR += smcroute
     SUBDIR += smm++
     SUBDIR += sngrep
@@ -1457,6 +1457,7 @@
     SUBDIR += ssldump
     SUBDIR += sslh
     SUBDIR += ssspl
+    SUBDIR += stc
     SUBDIR += stone
     SUBDIR += storj
     SUBDIR += stund

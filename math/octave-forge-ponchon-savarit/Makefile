@@ -1,7 +1,6 @@
 PORTNAME=	octave-forge-ponchon-savarit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1.1
-PORTREVISION=	1
+DISTVERSION=	0.1.3
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org

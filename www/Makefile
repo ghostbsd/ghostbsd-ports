@@ -242,20 +242,20 @@
     SUBDIR += httpcore
     SUBDIR += httptunnel
     SUBDIR += httrack
+    SUBDIR += hurl
     SUBDIR += hypermail
     SUBDIR += igal2
     SUBDIR += ikiwiki
     SUBDIR += ilias
-    SUBDIR += ilias6
     SUBDIR += interchange
     SUBDIR += iridium
     SUBDIR += itop
     SUBDIR += janus
     SUBDIR += jericho-html
     SUBDIR += jesred
+    SUBDIR += jetty10
     SUBDIR += jetty8
     SUBDIR += jetty9
-    SUBDIR += jetty10
     SUBDIR += jira-cli
     SUBDIR += jitsi-meet
     SUBDIR += jmeter
@@ -329,6 +329,7 @@
     SUBDIR += mediawiki135
     SUBDIR += mediawiki137
     SUBDIR += mediawiki138
+    SUBDIR += mediawiki139
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -411,6 +412,7 @@
     SUBDIR += moodle311
     SUBDIR += moodle39
     SUBDIR += moodle40
+    SUBDIR += moodle41
     SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort
@@ -787,6 +789,7 @@
     SUBDIR += p5-HTML-ContentExtractor
     SUBDIR += p5-HTML-DOM
     SUBDIR += p5-HTML-Declare
+    SUBDIR += p5-HTML-Defang
     SUBDIR += p5-HTML-Defaultify
     SUBDIR += p5-HTML-Diff
     SUBDIR += p5-HTML-Display
@@ -919,6 +922,7 @@
     SUBDIR += p5-HTTP-MobileAgent-Plugin-Locator
     SUBDIR += p5-HTTP-MultiPartParser
     SUBDIR += p5-HTTP-Negotiate
+    SUBDIR += p5-HTTP-OAI
     SUBDIR += p5-HTTP-Parser
     SUBDIR += p5-HTTP-Parser-XS
     SUBDIR += p5-HTTP-Proxy
@@ -1367,7 +1371,6 @@
     SUBDIR += persepolis
     SUBDIR += pglogd
     SUBDIR += phalcon
-    SUBDIR += phalcon4
     SUBDIR += php74-opcache
     SUBDIR += php74-session
     SUBDIR += php74-tidy
@@ -1748,6 +1751,7 @@
     SUBDIR += py-secure-cookie
     SUBDIR += py-selector
     SUBDIR += py-selenium
+    SUBDIR += py-selenium-wire
     SUBDIR += py-semiphemeral
     SUBDIR += py-sentinelhub
     SUBDIR += py-slimit
@@ -1945,6 +1949,7 @@
     SUBDIR += rubygem-hamlit-rails
     SUBDIR += rubygem-hamlit-rails-rails5
     SUBDIR += rubygem-hamlit-rails-rails50
+    SUBDIR += rubygem-hamlit-rails-rails61
     SUBDIR += rubygem-hashicorp-checkpoint
     SUBDIR += rubygem-heroics
     SUBDIR += rubygem-heroku-api
@@ -2074,6 +2079,7 @@
     SUBDIR += rubygem-rails-settings-cached
     SUBDIR += rubygem-rails-settings-cached-rails5
     SUBDIR += rubygem-rails-settings-cached-rails50
+    SUBDIR += rubygem-rails-settings-cached-rails61
     SUBDIR += rubygem-rails4
     SUBDIR += rubygem-rails5
     SUBDIR += rubygem-rails50
@@ -2123,6 +2129,8 @@
     SUBDIR += rubygem-roda
     SUBDIR += rubygem-rqrcode
     SUBDIR += rubygem-rqrcode-rails3
+    SUBDIR += rubygem-rqrcode2
+    SUBDIR += rubygem-rqrcode_core
     SUBDIR += rubygem-rss
     SUBDIR += rubygem-rtlit
     SUBDIR += rubygem-ruby-oembed
@@ -2301,8 +2309,8 @@
     SUBDIR += twiki-TwistyPlugin
     SUBDIR += twiki-WysiwygPlugin
     SUBDIR += twms
-    SUBDIR += typo3-10
     SUBDIR += typo3-11
+    SUBDIR += typo3-12
     SUBDIR += uchiwa
     SUBDIR += ufdbguard
     SUBDIR += ulfius

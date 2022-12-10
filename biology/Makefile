@@ -3,10 +3,12 @@
     SUBDIR += abyss
     SUBDIR += ad2vcf
     SUBDIR += artemis
+    SUBDIR += augustus
     SUBDIR += avida
     SUBDIR += babel
     SUBDIR += bamtools
     SUBDIR += bamutil
+    SUBDIR += barrnap
     SUBDIR += bbmap
     SUBDIR += bcftools
     SUBDIR += bedtools
@@ -90,6 +92,8 @@
     SUBDIR += linux-foldingathome
     SUBDIR += mafft
     SUBDIR += mapm3
+    SUBDIR += megahit
+    SUBDIR += metaeuk
     SUBDIR += migrate
     SUBDIR += minimap2
     SUBDIR += mmseqs2
@@ -171,6 +175,7 @@
     SUBDIR += py-py2bit
     SUBDIR += py-pybigwig
     SUBDIR += py-pyfaidx
+    SUBDIR += py-pyrodigal
     SUBDIR += py-pysam
     SUBDIR += py-python-libsbml
     SUBDIR += py-pywgsim
