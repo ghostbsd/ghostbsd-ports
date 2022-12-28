@@ -619,6 +619,7 @@
     SUBDIR += opennurbs
     SUBDIR += openorienteering-mapper
     SUBDIR += openrm
+    SUBDIR += openscenegraph
     SUBDIR += openshadinglanguage
     SUBDIR += openslide
     SUBDIR += opensubdiv

@@ -7,7 +7,7 @@ newish_makefiles=$(git diff --name-only --cached --diff-filter=ACR | grep -E '^[
 if [ $? -eq 0 ] ; then
 	for newish_makefile in ${newish_makefiles} ; do
 		category=$(echo "${newish_makefile}" | awk -F '/' '{print $1}')
-		port=$(echo "${newish_makefile}" | awk -F '/' '{print $2}')
+		port=$(echo "${newish_makefile}" | awk -F '/' '{print $2}' | sed 's/+/\\\+/g')
 		grep -q -E "^[[:space:]]+SUBDIR[[:space:]]\+=[[:space:]]*${port}\$" ${category}/Makefile
 		if [ $? -ne 0 ] ; then
 			echo "[pre-commit] ERROR: Missing 'SUBDIR += ${port}' in ${category}/Makefile"
