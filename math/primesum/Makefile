@@ -11,6 +11,10 @@ WWW=		https://github.com/kimwalisch/primesum
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BROKEN_armv6=	compiler does not support int128_t
+BROKEN_armv7=	compiler does not support int128_t
+BROKEN_i386=	compiler does not support int128_t
+
 USES=		cmake:testing compiler:c++11-lang
 USE_LDCONFIG=	yes
 

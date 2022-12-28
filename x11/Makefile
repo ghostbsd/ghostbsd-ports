@@ -39,6 +39,7 @@
     SUBDIR += cinnamon-session
     SUBDIR += cl-clx
     SUBDIR += cl-clx-sbcl
+    SUBDIR += cliphist
     SUBDIR += clipman
     SUBDIR += compton-conf
     SUBDIR += conlecterm
@@ -119,6 +120,9 @@
     SUBDIR += hhpc
     SUBDIR += hs-xmobar
     SUBDIR += hsetroot
+    SUBDIR += hyprland-share-picker
+    SUBDIR += hyprpaper
+    SUBDIR += hyprpicker
     SUBDIR += i3blocks
     SUBDIR += i3lock-color
     SUBDIR += iceauth
@@ -479,6 +483,7 @@
     SUBDIR += xconsole
     SUBDIR += xcursorgen
     SUBDIR += xcut
+    SUBDIR += xdg-desktop-portal-hyprland
     SUBDIR += xdg-desktop-portal-wlr
     SUBDIR += xdialog
     SUBDIR += xditview

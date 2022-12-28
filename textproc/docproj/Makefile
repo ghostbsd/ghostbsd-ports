@@ -1,5 +1,5 @@
 PORTNAME=	docproj
-PORTVERSION=	4.1.3
+PORTVERSION=	4.1.5
 CATEGORIES=	textproc
 
 MAINTAINER=	doceng@FreeBSD.org

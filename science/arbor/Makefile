@@ -1,7 +1,6 @@
 PORTNAME=	arbor
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.8
-PORTREVISION=	1
+DISTVERSION=	0.8.1
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,14 +10,18 @@ WWW=		https://arbor-sim.org/
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BROKEN_armv7=	compilation fails: unknown type name 'float64x2_t'
+
 BUILD_DEPENDS=	bash:shells/bash \
 		libfmt>0:devel/libfmt \
 		nlohmann-json>0:devel/nlohmann-json \
 		random123>0:devel/random123 \
 		${PYTHON_PKGNAMEPREFIX}svgwrite>0:graphics/py-svgwrite@${PY_FLAVOR}
+LIB_DEPENDS=	libpugixml.so:textproc/pugixml
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}svgwrite>0:graphics/py-svgwrite@${PY_FLAVOR}
+TEST_DEPENDS=	googletest>=0:devel/googletest
 
-USES=		cmake compiler:c++17-lang python shebangfix
+USES=		cmake compiler:c++17-lang localbase python shebangfix
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	arbor-sim
@@ -32,6 +35,8 @@ OPTIONS_DEFINE=		NATIVE
 
 NATIVE_CMAKE_ON=	-DARB_ARCH=native
 NATIVE_CMAKE_OFF=	-DARB_ARCH=none
+
+TEST_TARGET=	tests # tests fail to build, see https://github.com/arbor-sim/arbor/issues/2075
 
 post-install:
 	@${RMDIR} ${STAGEDIR}${DOCSDIR}
