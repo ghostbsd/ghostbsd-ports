@@ -106,6 +106,7 @@
     SUBDIR += codesearch
     SUBDIR += codespell
     SUBDIR += colordiff
+    SUBDIR += comrak
     SUBDIR += confetti
     SUBDIR += confget
     SUBDIR += consul-template
@@ -158,6 +159,7 @@
     SUBDIR += docbook2odf
     SUBDIR += docbookrx
     SUBDIR += docproj
+    SUBDIR += docproj-fonts-cjk
     SUBDIR += docproj-legacy
     SUBDIR += dom4j
     SUBDIR += domc
@@ -173,7 +175,6 @@
     SUBDIR += el-aspell
     SUBDIR += el-hyphen
     SUBDIR += elasticsearch-plugin-head
-    SUBDIR += elasticsearch6
     SUBDIR += elasticsearch7
     SUBDIR += elasticsearch8
     SUBDIR += en-aspell
@@ -318,6 +319,7 @@
     SUBDIR += itstool
     SUBDIR += jade
     SUBDIR += jalingo
+    SUBDIR += jaq
     SUBDIR += jarnal
     SUBDIR += jarowinkler-cpp
     SUBDIR += java2html
@@ -503,9 +505,9 @@
     SUBDIR += openfts
     SUBDIR += openjade
     SUBDIR += opensearch
-    SUBDIR += opensearch13
     SUBDIR += opensearch-dashboards
     SUBDIR += opensearch-dashboards13
+    SUBDIR += opensearch13
     SUBDIR += opensp
     SUBDIR += openvanilla-framework
     SUBDIR += or-aspell
@@ -1404,6 +1406,7 @@
     SUBDIR += py-ocrmypdf
     SUBDIR += py-openpyxl
     SUBDIR += py-openstackdocstheme
+    SUBDIR += py-openstep-plist
     SUBDIR += py-orange3-text
     SUBDIR += py-os-api-ref
     SUBDIR += py-packageurl-python
@@ -1584,6 +1587,7 @@
     SUBDIR += py-xmldiff
     SUBDIR += py-xmlschema
     SUBDIR += py-yapf
+    SUBDIR += py-youseedee
     SUBDIR += py-zope.i18nmessageid
     SUBDIR += py-zope.structuredtext
     SUBDIR += py-zope.tal
@@ -1853,6 +1857,7 @@
     SUBDIR += rxp
     SUBDIR += s5
     SUBDIR += sablotron
+    SUBDIR += sad
     SUBDIR += sansi
     SUBDIR += sarep
     SUBDIR += sary

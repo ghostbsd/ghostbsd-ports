@@ -118,11 +118,13 @@
     SUBDIR += dolibarr15
     SUBDIR += domoticz
     SUBDIR += dooble
+    SUBDIR += dot-http
+    SUBDIR += drill
+    SUBDIR += drupal10
     SUBDIR += drupal7
     SUBDIR += drupal7-wysiwyg
     SUBDIR += drupal8
     SUBDIR += drupal9
-    SUBDIR += drupal10
     SUBDIR += drush
     SUBDIR += dtse
     SUBDIR += dufs
@@ -1775,7 +1777,6 @@
     SUBDIR += py-tuir
     SUBDIR += py-turbogears2
     SUBDIR += py-tvdb_api
-    SUBDIR += py-txrequests
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlman
     SUBDIR += py-urlobject
@@ -1792,7 +1793,6 @@
     SUBDIR += py-websocket-client
     SUBDIR += py-webunit
     SUBDIR += py-werkzeug
-    SUBDIR += py-werkzeug21
     SUBDIR += py-wfuzz
     SUBDIR += py-whitenoise
     SUBDIR += py-wikipedia
@@ -1820,8 +1820,8 @@
     SUBDIR += rearx
     SUBDIR += redmine42
     SUBDIR += redmine50
-    SUBDIR += remark42
     SUBDIR += rejik
+    SUBDIR += remark42
     SUBDIR += reportmagic
     SUBDIR += repos-style
     SUBDIR += reproxy
@@ -2336,13 +2336,13 @@
     SUBDIR += varnish-ip2proxy
     SUBDIR += varnish-libvmod-digest
     SUBDIR += varnish-libvmod-dynamic
+    SUBDIR += varnish-libvmod-fileserver
     SUBDIR += varnish-libvmod-geoip2
     SUBDIR += varnish-libvmod-maxminddb
     SUBDIR += varnish-libvmod-querystring
     SUBDIR += varnish-libvmod-redis
     SUBDIR += varnish-modules
     SUBDIR += varnish-nagios
-    SUBDIR += varnish4
     SUBDIR += varnish6
     SUBDIR += varnish7
     SUBDIR += varnish_exporter

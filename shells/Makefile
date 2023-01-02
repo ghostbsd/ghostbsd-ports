@@ -26,7 +26,6 @@
     SUBDIR += klish
     SUBDIR += ksh
     SUBDIR += ksh-devel
-    SUBDIR += ksh2020
     SUBDIR += ksh93
     SUBDIR += mksh
     SUBDIR += modernish
@@ -46,6 +45,7 @@
     SUBDIR += rush
     SUBDIR += sash
     SUBDIR += scponly
+    SUBDIR += shellharden
     SUBDIR += starship
     SUBDIR += switchBashZsh
     SUBDIR += tcsh_nls

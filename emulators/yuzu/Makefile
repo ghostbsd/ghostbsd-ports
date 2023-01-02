@@ -1,5 +1,5 @@
 PORTNAME=	yuzu
-PORTVERSION=	s20221226
+PORTVERSION=	s20221230
 CATEGORIES=	emulators wayland
 .if make(makesum)
 MASTER_SITES=	https://api.yuzu-emu.org/gamedb/?dummy=/:gamedb
@@ -25,7 +25,10 @@ LICENSE_FILE_MIT=	${WRKSRC}/externals/sirit/externals/SPIRV-Headers/LICENSE
 
 ONLY_FOR_ARCHS=	aarch64 amd64
 ONLY_FOR_ARCHS_REASON=	requires int128 and dynarmic backend
-BROKEN_FreeBSD_12=	htonl() in <x86/endian.h> fails -Werror=conversion
+# XXX Drop after FreeBSD 12.3 EOL around 2023-03-01
+.if !exists(/usr/include/c++/v1/concepts)
+BROKEN_FreeBSD_12=	base libc++ is too old
+.endif
 
 BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 		nlohmann-json>0:devel/nlohmann-json \
@@ -50,7 +53,7 @@ qt6_OPTIONS_EXCLUDE=	QT5
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	2d7f9fb21
+GH_TAGNAME=	88f5d38b9
 GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
 		yuzu-emu:sirit:d7ad93a:sirit/externals/sirit \
 		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-201-gc214f6f:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
@@ -65,7 +68,7 @@ USES=		cmake:testing elfctl localbase:ldflags pkgconfig sdl ssl
 USE_SDL=	sdl2
 CMAKE_ON=	Boost_USE_STATIC_LIBS
 CMAKE_ON+=	BUNDLE_SPEEX # only used by cubeb tests
-CMAKE_OFF=	YUZU_CHECK_SUBMODULES YUZU_USE_EXTERNAL_SDL2
+CMAKE_OFF=	YUZU_CHECK_SUBMODULES YUZU_USE_EXTERNAL_SDL2 YUZU_USE_EXTERNAL_VULKAN_HEADERS
 CMAKE_OFF+=	${CMAKE_TESTING_ON}
 CMAKE_TESTING_ON=	YUZU_TESTS
 CXXFLAGS+=	-D_LIBCPP_HAS_NO_INCOMPLETE_RANGES # common/polyfill_ranges.h

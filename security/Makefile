@@ -34,6 +34,7 @@
     SUBDIR += asignify
     SUBDIR += assh
     SUBDIR += authenticator
+    SUBDIR += authoscope
     SUBDIR += autossh
     SUBDIR += aws-c-auth
     SUBDIR += aws-c-cal
@@ -938,7 +939,6 @@
     SUBDIR += py-pyaxo
     SUBDIR += py-pyblake2
     SUBDIR += py-pyclamd
-    SUBDIR += py-pycrypto
     SUBDIR += py-pycryptodome
     SUBDIR += py-pycryptodome-test-vectors
     SUBDIR += py-pycryptodomex
@@ -1253,6 +1253,7 @@
     SUBDIR += tclsasl
     SUBDIR += tcpcrypt
     SUBDIR += teleport
+    SUBDIR += teleport5
     SUBDIR += testssl.sh
     SUBDIR += tfhe
     SUBDIR += tfsec

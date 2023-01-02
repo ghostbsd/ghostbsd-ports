@@ -44,6 +44,7 @@
     SUBDIR += cloc
     SUBDIR += clpbar
     SUBDIR += colortail
+    SUBDIR += coloursum
     SUBDIR += colwide
     SUBDIR += compat.el
     SUBDIR += compat10x
@@ -76,6 +77,7 @@
     SUBDIR += delay
     SUBDIR += diction
     SUBDIR += digitemp
+    SUBDIR += dijo
     SUBDIR += dive
     SUBDIR += dnetc
     SUBDIR += dtach
@@ -269,6 +271,7 @@
     SUBDIR += nut
     SUBDIR += ompl
     SUBDIR += ondir
+    SUBDIR += onnx
     SUBDIR += opencyc
     SUBDIR += openhab
     SUBDIR += openhab-addons
@@ -446,6 +449,7 @@
     SUBDIR += py-wurlitzer
     SUBDIR += py-xgboost
     SUBDIR += pyobd
+    SUBDIR += pytorch
     SUBDIR += qbrew
     SUBDIR += qlas
     SUBDIR += qt5-doc

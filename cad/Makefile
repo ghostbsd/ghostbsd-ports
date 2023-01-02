@@ -11,7 +11,6 @@
     SUBDIR += astk-client
     SUBDIR += astk-serveur
     SUBDIR += atlc
-    SUBDIR += basicdsp
     SUBDIR += brlcad
     SUBDIR += calculix
     SUBDIR += calculix-ccx
@@ -77,7 +76,6 @@
     SUBDIR += libredwg
     SUBDIR += librepcb
     SUBDIR += librnd
-    SUBDIR += linux-eagle5
     SUBDIR += logisim
     SUBDIR += magic
     SUBDIR += meshdev

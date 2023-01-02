@@ -35,7 +35,6 @@
     SUBDIR += dsd
     SUBDIR += dump1090
     SUBDIR += ebook2cw
-    SUBDIR += ebook2cwgui
     SUBDIR += ebusd
     SUBDIR += echolinux
     SUBDIR += ems-flasher
@@ -64,7 +63,6 @@
     SUBDIR += hamlib
     SUBDIR += hcidump
     SUBDIR += hidapi
-    SUBDIR += hylafax
     SUBDIR += ibp
     SUBDIR += iceoryx
     SUBDIR += inspectrum
@@ -193,7 +191,6 @@
     SUBDIR += tilp2
     SUBDIR += tio
     SUBDIR += tits
-    SUBDIR += tkhylafax
     SUBDIR += tkscanfax
     SUBDIR += tlf
     SUBDIR += trustedqsl

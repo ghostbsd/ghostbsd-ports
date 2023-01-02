@@ -108,7 +108,6 @@
     SUBDIR += colmap
     SUBDIR += colord
     SUBDIR += colord-gtk
-    SUBDIR += comical
     SUBDIR += compupic
     SUBDIR += converseen
     SUBDIR += corrupter
@@ -616,6 +615,7 @@
     SUBDIR += openmvs
     SUBDIR += opennurbs
     SUBDIR += openorienteering-mapper
+    SUBDIR += openpgl
     SUBDIR += openrm
     SUBDIR += openscenegraph
     SUBDIR += openshadinglanguage

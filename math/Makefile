@@ -374,7 +374,6 @@
     SUBDIR += gnuplot-tex-extras
     SUBDIR += gp2c
     SUBDIR += grace
-    SUBDIR += graphthing
     SUBDIR += gravity
     SUBDIR += gretl
     SUBDIR += gri
@@ -446,7 +445,6 @@
     SUBDIR += libnormaliz
     SUBDIR += libocas
     SUBDIR += liborigin
-    SUBDIR += libpgmath
     SUBDIR += libpoly
     SUBDIR += libqalculate
     SUBDIR += libranlip
@@ -905,6 +903,7 @@
     SUBDIR += py-fenics-ffcx
     SUBDIR += py-fenics-ufl
     SUBDIR += py-flax
+    SUBDIR += py-formulaic
     SUBDIR += py-fpylll
     SUBDIR += py-fraction
     SUBDIR += py-fvcore
@@ -931,6 +930,7 @@
     SUBDIR += py-kiwisolver
     SUBDIR += py-levmar
     SUBDIR += py-libpoly
+    SUBDIR += py-linearmodels
     SUBDIR += py-lmfit
     SUBDIR += py-luminol
     SUBDIR += py-mathics
@@ -979,6 +979,7 @@
     SUBDIR += py-pycosat
     SUBDIR += py-pygsl
     SUBDIR += py-pygslodeiv2
+    SUBDIR += py-pyhdfe
     SUBDIR += py-pyhull
     SUBDIR += py-pymc3
     SUBDIR += py-pynauty
@@ -1039,7 +1040,6 @@
     SUBDIR += py-vincenty
     SUBDIR += py-yt
     SUBDIR += py-z3-solver
-    SUBDIR += pynac
     SUBDIR += qalculate-gtk
     SUBDIR += qalculate-qt
     SUBDIR += qd

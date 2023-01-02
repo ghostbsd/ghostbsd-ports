@@ -1491,7 +1491,6 @@ audio/libjackasyn|audio/jack|2011-02-11|Has expired: development has ceased; try
 audio/xmms-jackasyn|audio/xmms-jack|2011-02-11|Has expired: development has ceased; try audio/xmms-jack instead
 lang/p5-SQL-Tokenizer|textproc/p5-SQL-Tokenizer|2011-02-13|Moved to a more appropriate category
 misc/wanpipe||2011-02-14|Removed
-devel/root||2011-02-21|Has expired: Port does not build on supported versions of FreeBSD
 net/ztelnet||2011-02-21|Has expired: unfetchable
 print/kaspaliste||2011-02-21|Has expired: yes
 sysutils/perf||2011-02-21|Has expired: Does not build on supported versions of FreeBSD
@@ -17701,3 +17700,48 @@ devel/php74-sysvshm|devel/php80-sysvshm|2022-12-25|Has expired: Security support
 devel/php74-gettext|devel/php80-gettext|2022-12-25|Has expired: Security support ended on 2022-11-22
 devel/php74-readline|devel/php80-readline|2022-12-25|Has expired: Security support ended on 2022-11-22
 audio/ardour6|audio/ardour|2022-12-26|Remove major version from portname as we update from 6.9.0 to 7.2.0
+multimedia/obs-transition-matrix||2022-12-29|Removed: not compatible with obs-studio-28.1.2
+multimedia/obs-websocket||2022-12-29|Removed: included in obs-studio-28.1.2
+multimedia/obs-ndi||2022-12-29|Removed: it depends on a closed commercial library
+multimedia/obs-v4l2sink||2022-12-29|Removed: obs-studio-28.1.2 now contains same functionality
+multimedia/obs-audio-spectralizer|multimedia/obs-waveform|2022-12-29|Removed obsolete port in favor of multimedia/obs-waveform
+www/py-werkzeug21|www/py-werkzeug|2022-12-30|Remove obsoleted port. Use www/py-werkzeug instead
+devel/rubygem-aws-sdk-core3131|devel/rubygem-aws-sdk-core|2022-12-30|Remove obsoleted port. Use devel/rubygem-aws-sdk-core instead
+devel/rubygem-aws-sdk-core3159|devel/rubygem-aws-sdk-core|2022-12-30|Remove obsoleted port. Use devel/rubygem-aws-sdk-core instead
+devel/rubygem-aws-sdk-s31114|devel/rubygem-aws-sdk-s3|2022-12-30|Remove obsoleted port. Use devel/rubygem-aws-sdk-s3 instead
+devel/rubygem-google-protobuf319|devel/rubygem-google-protobuf|2022-12-30|Remove obsoleted port. Use devel/rubygem-google-protobuf instead
+databases/pgpool-II-37|databases/pgpool-II-43|2022-12-30|Has expired: Upstream EOL reaches on 2022-11 use pgpool-II-43
+shells/ksh2020||2022-12-30|Has expired: Upstream ksh2020 branch archived, development continues under new ksh93 project
+games/scorched3d||2022-12-31|Has expired: Abandoned project and use deprecated wxgtk28
+comms/hylafax||2022-12-31|Has expired: dead upstream, someone port hylafax+ from sourceforge.net instead
+comms/tkhylafax||2022-12-31|Has expired: Depends on expired comms/hylafax
+lang/ponyc||2022-12-31|Has expired: Very outdated and unsupported upstream, depends on end of life devel/llvm70
+www/varnish4|www/varnish6|2022-12-31|Has expired: End of life upstream, users are recommended to upgrade to 6.x or higher
+devel/unittest-cpp||2022-12-31|Has expired: Upstream have declared hiatus status since 2+ years back. Please consider using devel/googletest instead
+math/libpgmath||2022-12-31|Has expired: Depends on end of life devel/llvm70
+cad/linux-eagle5||2022-12-31|Has expired: Deprecated upstream, superseded by Autodesk EAGLE 9
+net-p2p/amule-devel|net-p2p/amule|2022-12-31|Has expired: Superseded by non development port
+graphics/comical||2022-12-31|Has expired: Abandoned project and use deprecated wxgtk28
+emulators/lisaem||2022-12-31|Broken for more than a year and use deprecated wxgtk28
+editors/madedit||2022-12-31|Has expired: Abandoned project and use deprecated wxgtk28
+comms/ebook2cwgui||2022-12-31|Has expired: Abandoned project, last update 2013-01-23 and use deprecated wxgtk28
+databases/firebird25-client||2022-12-31|Has expired: Upstream Support ends on 2019-06-24
+databases/firebird25-server||2022-12-31|Has expired: Upstream Support ends on 2019-06-24
+multimedia/libkate||2022-12-31|Has expired: Obsolete format that never got any traction and no development in over 10 years
+net/opennx||2022-12-31|Has expired: Abandoned project and use deprecated wxgtk28
+cad/basicdsp||2022-12-31|Has expired: Abandoned project and use deprecated wxgtk28
+deskutils/xchm||2022-12-31|Has expired: Abandoned project and use deprecated wxgtk28
+math/graphthing||2022-12-31|Has expired: Abandoned project and use deprecated wxgtk28
+math/pynac||2022-12-31|Project merged with SageMath
+x11-toolkits/wxgtk28-contrib-common||2022-12-31|Has expired: Upstream support ended
+x11-toolkits/wxgtk28-contrib||2022-12-31|Has expired: Upstream support ended
+x11-toolkits/wxgtk28-common||2022-12-31|Has expired: Upstream support ended
+x11-toolkits/wxgtk28|x11-toolkits/wxgtk30|2022-12-31|Has expired: Upstream support ended, use wx 3.x
+www/py-txrequests|www/py-requests-futures|2022-12-31|Has expired: Use www/py-requests-futures as upstream is unmaintained since 2018
+sysutils/py-ansible-core211||2022-12-31|Has expired: Depends on expired security/py-pycrypto
+sysutils/ansible4||2022-12-31|Has expired: Depends on expired security/py-pycrypto (via sysutils/py-ansible-core211)
+security/py-pycrypto|security/py-pycryptodome|2022-12-31|Has expired: Unmaintained, obsolete, and contains security vulnerabilities. Use security/py-pycryptodome instead
+ports-mgmt/chucky||2023-01-01|Has expired: Uses the obsoleted reeBSD tag
+sysutils/beats6||2023-01-01|Has expired: No longer maintained and supported
+sysutils/logstash6||2023-01-01|Has expired: No longer maintained and supported
+textproc/elasticsearch6||2023-01-01|Has expired: No longer maintained and supported

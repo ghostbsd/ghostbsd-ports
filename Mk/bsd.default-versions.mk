@@ -40,8 +40,8 @@ BDB_DEFAULT?=		5
 COROSYNC_DEFAULT?=	2
 # Possible_values: full canna nox devel_full devel_nox
 #EMACS_DEFAULT?=	let the flavor be the default if not explicitly set
-# Possible values: 2.5, 3.0, 4.0
-FIREBIRD_DEFAULT?=	2.5
+# Possible values: 3.0, 4.0
+FIREBIRD_DEFAULT?=	3.0
 # Possible values: gfortran
 FORTRAN_DEFAULT?=	gfortran
 # Possible values: 3.2.2
@@ -171,6 +171,6 @@ SSL_DEFAULT?=	base
 # Possible values: 8.5, 8.6, 8.7
 TCLTK_DEFAULT?=		8.6
 # Possible values: 4, 6, 7
-VARNISH_DEFAULT?=	4
+VARNISH_DEFAULT?=	6
 
 .endif

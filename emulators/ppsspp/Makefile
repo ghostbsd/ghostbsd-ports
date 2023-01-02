@@ -1,6 +1,6 @@
 PORTNAME=	ppsspp
 DISTVERSIONPREFIX=	v
-DISTVERSION?=	1.14.1
+DISTVERSION?=	1.14.3
 PORTREVISION?=	0
 CATEGORIES=	emulators
 # XXX Get from Debian once #697821 lands
@@ -68,6 +68,7 @@ QT5_USE=	QT=qmake:build,buildtools:build,linguisttools:build,gui,multimedia,open
 QT5_USE+=	SDL=sdl2 # audio, joystick
 QT5_CMAKE_BOOL=	USING_QT_UI
 QT5_VARS=	EXENAME=PPSSPPQt
+SDL_CATEGORIES=		wayland
 SDL_BUILD_DEPENDS=	png>=1.6:graphics/png
 SDL_LIB_DEPENDS=	libpng.so:graphics/png
 SDL_USES=	sdl
