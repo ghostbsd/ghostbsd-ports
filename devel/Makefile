@@ -187,6 +187,7 @@
     SUBDIR += arduino-tools
     SUBDIR += arduino18
     SUBDIR += arduinoOTA
+    SUBDIR += argc
     SUBDIR += argdata
     SUBDIR += argobots
     SUBDIR += argouml
@@ -253,6 +254,7 @@
     SUBDIR += b2
     SUBDIR += babelflow
     SUBDIR += babeltrace
+    SUBDIR += bacon
     SUBDIR += bam
     SUBDIR += bashdb
     SUBDIR += basu
@@ -305,6 +307,7 @@
     SUBDIR += buildkite-agent
     SUBDIR += buildstream
     SUBDIR += bullet
+    SUBDIR += bunyan
     SUBDIR += busybee
     SUBDIR += byacc
     SUBDIR += byaccj
@@ -324,6 +327,7 @@
     SUBDIR += catch
     SUBDIR += catch2
     SUBDIR += cbang
+    SUBDIR += cbfmt
     SUBDIR += cbrowser
     SUBDIR += cc65
     SUBDIR += ccache
@@ -421,6 +425,7 @@
     SUBDIR += cons
     SUBDIR += cons-test
     SUBDIR += containers
+    SUBDIR += convco
     SUBDIR += cook
     SUBDIR += corrade
     SUBDIR += courier-unicode
@@ -832,6 +837,7 @@
     SUBDIR += glib20
     SUBDIR += glibmm
     SUBDIR += glibmm26
+    SUBDIR += glitter
     SUBDIR += gllvm
     SUBDIR += global
     SUBDIR += glog
@@ -7345,6 +7351,7 @@
     SUBDIR += tabulate
     SUBDIR += tailor
     SUBDIR += talloc
+    SUBDIR += tarpaulin
     SUBDIR += taskctl
     SUBDIR += taskflow
     SUBDIR += tass64

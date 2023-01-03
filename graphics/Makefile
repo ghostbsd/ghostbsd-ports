@@ -24,6 +24,7 @@
     SUBDIR += R-cran-gridExtra
     SUBDIR += R-cran-jpeg
     SUBDIR += R-cran-latticeExtra
+    SUBDIR += R-cran-magick
     SUBDIR += R-cran-munsell
     SUBDIR += R-cran-pROC
     SUBDIR += R-cran-pixmap
@@ -119,6 +120,7 @@
     SUBDIR += cuttlefish
     SUBDIR += cxxplot
     SUBDIR += darktable
+    SUBDIR += darktable42
     SUBDIR += dataplot
     SUBDIR += dbow2
     SUBDIR += dc20pack
@@ -1124,6 +1126,7 @@
     SUBDIR += tweeny
     SUBDIR += ufraw
     SUBDIR += unpaper
+    SUBDIR += upscaler
     SUBDIR += urho3d
     SUBDIR += urt
     SUBDIR += vapoursynth-fmtconv

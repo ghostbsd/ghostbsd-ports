@@ -39,6 +39,7 @@
     SUBDIR += cinnamon-session
     SUBDIR += cl-clx
     SUBDIR += cl-clx-sbcl
+    SUBDIR += clipcat
     SUBDIR += cliphist
     SUBDIR += clipman
     SUBDIR += compton-conf
@@ -329,6 +330,7 @@
     SUBDIR += remontoire
     SUBDIR += rendercheck
     SUBDIR += rgb
+    SUBDIR += rlaunch
     SUBDIR += rofi
     SUBDIR += rofi-calc
     SUBDIR += rofi-emoji
