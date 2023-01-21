@@ -5,6 +5,7 @@
     SUBDIR += alchemist.el
     SUBDIR += algol68g
     SUBDIR += angelscript
+    SUBDIR += antimony
     SUBDIR += apache-commons-jelly
     SUBDIR += asn1c
     SUBDIR += atlast
@@ -371,6 +372,5 @@
     SUBDIR += ypsilon
     SUBDIR += zephir
     SUBDIR += zig
-    SUBDIR += zig-devel
 
 .include <bsd.port.subdir.mk>

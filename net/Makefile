@@ -138,6 +138,7 @@
     SUBDIR += dual-dhclient
     SUBDIR += dual-dhclient-daemon
     SUBDIR += easysoap
+    SUBDIR += ecal
     SUBDIR += echoping
     SUBDIR += empty
     SUBDIR += endlessh
@@ -338,6 +339,7 @@
     SUBDIR += krill
     SUBDIR += ksmtp
     SUBDIR += ktnef
+    SUBDIR += kube-apiserver
     SUBDIR += kube-controller-manager
     SUBDIR += kube-scheduler
     SUBDIR += l2tpd
@@ -345,6 +347,7 @@
     SUBDIR += lambdamoo
     SUBDIR += landrop
     SUBDIR += latd
+    SUBDIR += lavinmq
     SUBDIR += ldap-stats
     SUBDIR += ldapbrowser
     SUBDIR += ldapdiff
@@ -1181,6 +1184,7 @@
     SUBDIR += radreport
     SUBDIR += radsecproxy
     SUBDIR += radvd
+    SUBDIR += rathole
     SUBDIR += rclone
     SUBDIR += rclone-browser
     SUBDIR += rdapper
@@ -1414,6 +1418,7 @@
     SUBDIR += serviio
     SUBDIR += sflowtool
     SUBDIR += shadowsocks-libev
+    SUBDIR += shadowsocks-rust
     SUBDIR += shelldap
     SUBDIR += shmux
     SUBDIR += sie-nmsg

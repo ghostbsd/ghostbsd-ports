@@ -104,6 +104,7 @@
     SUBDIR += cuetools
     SUBDIR += cutmp3
     SUBDIR += cyanrip
+    SUBDIR += d11amp
     SUBDIR += dagrab
     SUBDIR += darkice
     SUBDIR += dcd
@@ -222,6 +223,7 @@
     SUBDIR += gbsplay
     SUBDIR += geonkick-lv2
     SUBDIR += gervill
+    SUBDIR += ggwave
     SUBDIR += giada
     SUBDIR += glurp
     SUBDIR += gmsynth-lv2

@@ -79,6 +79,7 @@
     SUBDIR += kibi
     SUBDIR += kile
     SUBDIR += komodo-edit
+    SUBDIR += languageclient-neovim
     SUBDIR += lapce
     SUBDIR += lazarus
     SUBDIR += lazarus-devel
@@ -219,6 +220,7 @@
     SUBDIR += o
     SUBDIR += openoffice-4
     SUBDIR += openoffice-devel
+    SUBDIR += ox
     SUBDIR += p5-Proc-InvokeEditor
     SUBDIR += p5-Vimana
     SUBDIR += paredit-mode.el

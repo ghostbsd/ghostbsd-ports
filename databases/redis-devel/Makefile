@@ -1,5 +1,5 @@
 PORTNAME=	redis
-DISTVERSION=	7.0.5.20221130
+DISTVERSION=	7.0.8.20230116
 CATEGORIES=	databases
 PKGNAMESUFFIX=	-devel
 
@@ -13,12 +13,12 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES+=		compiler:c11 cpe gmake
 CPE_VENDOR=	redislabs
 USE_GITHUB=	yes
-GH_TAGNAME=	68e87eb08
+GH_TAGNAME=	b4123663c
 
 MAKE_ENV=	OPTIMIZATION= \
 		V=yo
 
-CONFLICTS_INSTALL=	redis redis6 # etc/rc.d/redis
+CONFLICTS_INSTALL=	redis redis6 redis62 # etc/rc.d/redis
 
 PORTSCOUT=	ignore:1
 
@@ -48,7 +48,7 @@ TLS_USES=		ssl
 TLS_MAKE_ENV=		BUILD_TLS=yes
 TRIB_CATEGORIES=	ruby
 TRIB_RUN_DEPENDS=	rubygem-redis>=2.2:databases/rubygem-redis
-TRIB_USE=		RUBY=yes
+TRIB_USES=		ruby
 
 .include <bsd.port.pre.mk>
 

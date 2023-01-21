@@ -167,6 +167,7 @@
     SUBDIR += amgcl
     SUBDIR += analitza
     SUBDIR += ann
+    SUBDIR += annoy
     SUBDIR += antic
     SUBDIR += apache-commons-math
     SUBDIR += apc
@@ -181,6 +182,7 @@
     SUBDIR += asl
     SUBDIR += asymptote
     SUBDIR += atlas
+    SUBDIR += audi
     SUBDIR += barvinok
     SUBDIR += basic-stats
     SUBDIR += bcal
@@ -263,8 +265,7 @@
     SUBDIR += ctl-sat
     SUBDIR += cudd
     SUBDIR += curv
-    SUBDIR += cvc3
-    SUBDIR += cvc4
+    SUBDIR += cvc5
     SUBDIR += dbcsr
     SUBDIR += deal.ii
     SUBDIR += dieharder
@@ -458,6 +459,7 @@
     SUBDIR += libxsmm
     SUBDIR += lidia
     SUBDIR += linbox
+    SUBDIR += lingeling
     SUBDIR += linpack
     SUBDIR += lis
     SUBDIR += lll_spect
@@ -866,6 +868,7 @@
     SUBDIR += py-amply
     SUBDIR += py-animatplot
     SUBDIR += py-animatplot-ng
+    SUBDIR += py-annoy
     SUBDIR += py-apgl
     SUBDIR += py-arviz
     SUBDIR += py-arybo
@@ -922,6 +925,7 @@
     SUBDIR += py-intspan
     SUBDIR += py-iohexperimenter
     SUBDIR += py-ipyopt
+    SUBDIR += py-isosurfaces
     SUBDIR += py-jax
     SUBDIR += py-kahip
     SUBDIR += py-keras
@@ -933,6 +937,7 @@
     SUBDIR += py-linearmodels
     SUBDIR += py-lmfit
     SUBDIR += py-luminol
+    SUBDIR += py-mapbox-earcut
     SUBDIR += py-mathics
     SUBDIR += py-mathics-scanner
     SUBDIR += py-matplotlib
@@ -974,6 +979,7 @@
     SUBDIR += py-primecountpy
     SUBDIR += py-primme
     SUBDIR += py-pyFFTW
+    SUBDIR += py-pyaudi
     SUBDIR += py-pybloom
     SUBDIR += py-pyclipper
     SUBDIR += py-pycosat
@@ -989,6 +995,7 @@
     SUBDIR += py-pyodeint
     SUBDIR += py-pyodesys
     SUBDIR += py-pyreadr
+    SUBDIR += py-pyrr
     SUBDIR += py-pysmt
     SUBDIR += py-pystan
     SUBDIR += py-pysym
@@ -1139,6 +1146,7 @@
     SUBDIR += superlu
     SUBDIR += superlu-dist
     SUBDIR += symengine
+    SUBDIR += symfpu
     SUBDIR += symmetrica
     SUBDIR += symphony
     SUBDIR += sympol
@@ -1149,6 +1157,7 @@
     SUBDIR += testu01
     SUBDIR += tetgen
     SUBDIR += teyjus
+    SUBDIR += the-algorithms-c++
     SUBDIR += timbl
     SUBDIR += tiny-bignum-c
     SUBDIR += tlapack

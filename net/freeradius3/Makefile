@@ -1,5 +1,6 @@
 PORTNAME=	freeradius
 DISTVERSION=	3.2.1
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/FreeRADIUS/freeradius-server/releases/download/release_${DISTVERSION:S/./_/g}/ \
 		https://freeradius.org/ftp/pub/radius/%SUBDIR%/ \
@@ -140,7 +141,7 @@ REST_CONFIGURE_ON=		--with-libcurl=${LOCALBASE} \
 REST_LIB_DEPENDS=		libcurl.so:ftp/curl \
 				libjson-c.so:devel/json-c
 RUBY_CONFIGURE_WITH=		rlm_ruby
-RUBY_USE=			RUBY
+RUBY_USES=			ruby
 RUBY_IGNORE=			with ruby support leaks memory, breaks signal handling.  Please disable RUBY support
 SQLITE3_CONFIGURE_WITH=		rlm_sql_sqlite
 SQLITE3_LIB_DEPENDS=		libsqlite3.so:databases/sqlite3
@@ -312,6 +313,6 @@ post-build:
 	@${FIND} ${WRKSRC}/build/bin -type f -exec ${STRIP_CMD} {} \;
 
 post-install:
-	${MKDIR} ${STAGEDIR}/var/run/radiusd
+	${MKDIR} ${STAGEDIR}/var/run/radiusd ${STAGEDIR}/var/log/radacct
 
 .include <bsd.port.post.mk>

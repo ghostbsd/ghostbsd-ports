@@ -1,8 +1,8 @@
 PORTNAME=	limesurvey
-PORTVERSION=	3.24.3
+PORTVERSION=	3.28.44
 CATEGORIES=	www
 MASTER_SITES=	http://download.limesurvey.org/lts-releases/
-DISTNAME=	${PORTNAME}${PORTVERSION}+201027
+DISTNAME=	${PORTNAME}${PORTVERSION}+230110
 
 MAINTAINER=	flo@FreeBSD.org
 COMMENT=	PHP-based survey building and runing system

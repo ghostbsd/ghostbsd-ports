@@ -139,6 +139,7 @@
     SUBDIR += acme
     SUBDIR += acsccid
     SUBDIR += activitymail
+    SUBDIR += actor-framework
     SUBDIR += adacurses
     SUBDIR += aegis
     SUBDIR += agar
@@ -147,11 +148,11 @@
     SUBDIR += ald
     SUBDIR += allegro
     SUBDIR += allegro5
+    SUBDIR += amber
     SUBDIR += aml
     SUBDIR += ammonite
     SUBDIR += amqp-cpp
     SUBDIR += android-tools
-    SUBDIR += android-tools-simpleperf
     SUBDIR += anjuta
     SUBDIR += antlr
     SUBDIR += antlr3
@@ -313,7 +314,6 @@
     SUBDIR += byaccj
     SUBDIR += c2mdoc
     SUBDIR += c4core
-    SUBDIR += caf
     SUBDIR += calibrator
     SUBDIR += caliper
     SUBDIR += capnproto
@@ -321,6 +321,7 @@
     SUBDIR += capstone3
     SUBDIR += capstone4
     SUBDIR += capstone5
+    SUBDIR += cargo-bloat
     SUBDIR += cargo-c
     SUBDIR += cargo-generate
     SUBDIR += cask
@@ -336,7 +337,6 @@
     SUBDIR += ccache-static
     SUBDIR += cccc
     SUBDIR += ccdoc
-    SUBDIR += ccls
     SUBDIR += ccrtp
     SUBDIR += cctz
     SUBDIR += cdash
@@ -563,6 +563,7 @@
     SUBDIR += dulwich
     SUBDIR += dupl
     SUBDIR += duplo
+    SUBDIR += dura
     SUBDIR += dwarf2json
     SUBDIR += dwarfdump
     SUBDIR += dwarves
@@ -621,7 +622,7 @@
     SUBDIR += evemu
     SUBDIR += eventxx
     SUBDIR += exercisix
-    SUBDIR += f18
+    SUBDIR += exomizer
     SUBDIR += f77flow
     SUBDIR += fam
     SUBDIR += fastcrc
@@ -647,6 +648,7 @@
     SUBDIR += fmake
     SUBDIR += fnc
     SUBDIR += fnccheck
+    SUBDIR += fnm
     SUBDIR += folly
     SUBDIR += forge
     SUBDIR += forge-devel
@@ -699,8 +701,10 @@
     SUBDIR += fsmtrie
     SUBDIR += fstrcmp
     SUBDIR += fstrm
+    SUBDIR += fsx
     SUBDIR += ftjam
     SUBDIR += ftnchek
+    SUBDIR += ftxui
     SUBDIR += fuel
     SUBDIR += functionalplus
     SUBDIR += fungw
@@ -795,8 +799,10 @@
     SUBDIR += gio-sharp
     SUBDIR += git
     SUBDIR += git-absorb
+    SUBDIR += git-branchless
     SUBDIR += git-bug
     SUBDIR += git-cinnabar
+    SUBDIR += git-cliff
     SUBDIR += git-codereview
     SUBDIR += git-cola
     SUBDIR += git-cvs
@@ -814,6 +820,7 @@
     SUBDIR += git-subrepo
     SUBDIR += git-svn
     SUBDIR += git-town
+    SUBDIR += git-workspace
     SUBDIR += gitaly
     SUBDIR += gitflow
     SUBDIR += gitg
@@ -827,6 +834,7 @@
     SUBDIR += gitlist
     SUBDIR += gitolite
     SUBDIR += gitolite2
+    SUBDIR += gitoxide
     SUBDIR += gitqlient
     SUBDIR += gittrac
     SUBDIR += gitty
@@ -921,6 +929,7 @@
     SUBDIR += hcs12mem
     SUBDIR += heaptrack
     SUBDIR += heimdall
+    SUBDIR += heirloom-devtools
     SUBDIR += hexcompare
     SUBDIR += hexd
     SUBDIR += hgreviewboard
@@ -932,6 +941,7 @@
     SUBDIR += horde-content
     SUBDIR += horde-timeobjects
     SUBDIR += horde-whups
+    SUBDIR += hotspot
     SUBDIR += hp48cc
     SUBDIR += hp48xgcc
     SUBDIR += hpx
@@ -978,6 +988,7 @@
     SUBDIR += ignition-tools
     SUBDIR += ikos
     SUBDIR += imake
+    SUBDIR += imtui
     SUBDIR += inastemp
     SUBDIR += include-what-you-use
     SUBDIR += indi
@@ -1086,6 +1097,7 @@
     SUBDIR += kpublictransport
     SUBDIR += kronosnet
     SUBDIR += ksql
+    SUBDIR += ktextaddons
     SUBDIR += kyra
     SUBDIR += kyua
     SUBDIR += lab
@@ -1460,9 +1472,6 @@
     SUBDIR += llvm13
     SUBDIR += llvm14
     SUBDIR += llvm15
-    SUBDIR += llvm70
-    SUBDIR += llvm80
-    SUBDIR += llvm90
     SUBDIR += lm4tools
     SUBDIR += lmdbg
     SUBDIR += lndir
@@ -3803,9 +3812,12 @@
     SUBDIR += papi
     SUBDIR += papilio-loader
     SUBDIR += parallel-hashmap
+    SUBDIR += parol
+    SUBDIR += parol-ls
     SUBDIR += pas2dox
     SUBDIR += pasm
     SUBDIR += patch
+    SUBDIR += patsh
     SUBDIR += pcc-libs
     SUBDIR += pcg-cpp
     SUBDIR += pcl
@@ -4019,6 +4031,7 @@
     SUBDIR += performance
     SUBDIR += perlconsole
     SUBDIR += phabricator
+    SUBDIR += phasar
     SUBDIR += php-Psr_Log
     SUBDIR += php-composer
     SUBDIR += php-composer2
@@ -4688,6 +4701,7 @@
     SUBDIR += py-iopath
     SUBDIR += py-ipaddr
     SUBDIR += py-ipdb
+    SUBDIR += py-ipydatawidgets
     SUBDIR += py-ipykernel
     SUBDIR += py-ipympl
     SUBDIR += py-ipyparallel
@@ -5244,6 +5258,7 @@
     SUBDIR += py-pythonfinder
     SUBDIR += py-pythran
     SUBDIR += py-pytimeparse
+    SUBDIR += py-pytoolconfig
     SUBDIR += py-pytools
     SUBDIR += py-pytrie
     SUBDIR += py-pytvmaze
@@ -5355,6 +5370,7 @@
     SUBDIR += py-setuptools-pkg
     SUBDIR += py-setuptools-rust
     SUBDIR += py-setuptools44
+    SUBDIR += py-setuptools58
     SUBDIR += py-setuptools_hg
     SUBDIR += py-setuptools_scm
     SUBDIR += py-setuptools_scm_git_archive
@@ -5382,6 +5398,7 @@
     SUBDIR += py-speaklater
     SUBDIR += py-speg
     SUBDIR += py-spyder-kernels
+    SUBDIR += py-spyder-unittest
     SUBDIR += py-squint
     SUBDIR += py-sre-yield
     SUBDIR += py-srsly
@@ -5452,6 +5469,7 @@
     SUBDIR += py-traceback2
     SUBDIR += py-traitlets
     SUBDIR += py-traits
+    SUBDIR += py-traittypes
     SUBDIR += py-transaction
     SUBDIR += py-transitions
     SUBDIR += py-tree-format
@@ -5560,6 +5578,7 @@
     SUBDIR += py-wsme
     SUBDIR += py-xarray
     SUBDIR += py-xarray-einstats
+    SUBDIR += py-xarray-simlab
     SUBDIR += py-xattr
     SUBDIR += py-xcaplib
     SUBDIR += py-xdg
@@ -5611,6 +5630,7 @@
     SUBDIR += py-z3c.autoinclude
     SUBDIR += py-z3c.batching
     SUBDIR += py-z3c.zcmlhook
+    SUBDIR += py-zarr
     SUBDIR += py-zc.buildout
     SUBDIR += py-zclockfile
     SUBDIR += py-zconfig
@@ -5747,6 +5767,7 @@
     SUBDIR += readline
     SUBDIR += rebar
     SUBDIR += rebar3
+    SUBDIR += recycle
     SUBDIR += redasm
     SUBDIR += redo
     SUBDIR += regexx
@@ -6812,6 +6833,7 @@
     SUBDIR += rubygem-oci
     SUBDIR += rubygem-octopress-hooks
     SUBDIR += rubygem-oj
+    SUBDIR += rubygem-oj-introspect
     SUBDIR += rubygem-omniauth_crowd
     SUBDIR += rubygem-omnibus
     SUBDIR += rubygem-open3
@@ -7104,6 +7126,8 @@
     SUBDIR += rubygem-systemu
     SUBDIR += rubygem-table_print
     SUBDIR += rubygem-tdiff
+    SUBDIR += rubygem-telesign
+    SUBDIR += rubygem-telesignenterprise
     SUBDIR += rubygem-tempfile
     SUBDIR += rubygem-templater
     SUBDIR += rubygem-temple
@@ -7226,8 +7250,10 @@
     SUBDIR += rust-analyzer
     SUBDIR += rust-bindgen
     SUBDIR += rust-cbindgen
+    SUBDIR += rustc-demangle
     SUBDIR += rvi
     SUBDIR += rvm
+    SUBDIR += rxcpp
     SUBDIR += sabre
     SUBDIR += safe-iop
     SUBDIR += samurai
@@ -7258,6 +7284,7 @@
     SUBDIR += sfml1
     SUBDIR += sfsexp
     SUBDIR += sgb
+    SUBDIR += shadered
     SUBDIR += shapelib
     SUBDIR += shards
     SUBDIR += shell-toolbox
@@ -7349,6 +7376,7 @@
     SUBDIR += ta-lib
     SUBDIR += tablist
     SUBDIR += tabulate
+    SUBDIR += tagref
     SUBDIR += tailor
     SUBDIR += talloc
     SUBDIR += tarpaulin
@@ -7418,6 +7446,7 @@
     SUBDIR += transient-devel
     SUBDIR += transwarp
     SUBDIR += tree-sitter
+    SUBDIR += tree-sitter-graph
     SUBDIR += treefmt
     SUBDIR += treepy.el
     SUBDIR += trellis
@@ -7499,8 +7528,6 @@
     SUBDIR += xtl
     SUBDIR += xtl-quant-stack
     SUBDIR += xtoolchain-llvm-devel
-    SUBDIR += xtoolchain-llvm80
-    SUBDIR += xtoolchain-llvm90
     SUBDIR += xwpe
     SUBDIR += xxgdb
     SUBDIR += xxhash

@@ -1,5 +1,5 @@
 PORTNAME=	telegram-desktop
-DISTVERSION=	4.5.2
+DISTVERSION=	4.5.3
 CATEGORIES=	net-im
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/v${DISTVERSION}/
 DISTNAME=	tdesktop-${DISTVERSION}-full
@@ -82,9 +82,6 @@ CMAKE_ARGS+=	-DLINUX=true
 
 # libdispatch components
 LDFLAGS+=	-lBlocksRuntime
-
-# see Bugzilla #245452 for details
-NO_CCACHE=	yes
 
 # Telegram uses OpenAL for its audio, but libtgvoip (for voice calls) can use PulseAudio or ALSA.
 # It dynamically loads PulseAudio, and if this fails, it loads ALSA.

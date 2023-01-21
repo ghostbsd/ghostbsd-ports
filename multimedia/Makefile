@@ -380,6 +380,8 @@
     SUBDIR += transcode
     SUBDIR += tvheadend
     SUBDIR += ustreamer
+    SUBDIR += uvg266
+    SUBDIR += uxplay
     SUBDIR += v4l-utils
     SUBDIR += v4l_compat
     SUBDIR += vamps

@@ -74,6 +74,7 @@
     SUBDIR += azpainterb
     SUBDIR += barcode
     SUBDIR += batik
+    SUBDIR += bgfx
     SUBDIR += birdfont
     SUBDIR += bitmap
     SUBDIR += blend2d
@@ -545,6 +546,8 @@
     SUBDIR += luminance-qt5
     SUBDIR += lux
     SUBDIR += lximage-qt
+    SUBDIR += magnum
+    SUBDIR += magnum-plugins
     SUBDIR += mahotas
     SUBDIR += maim
     SUBDIR += mandelbulber
@@ -832,6 +835,7 @@
     SUBDIR += proj-data
     SUBDIR += pstoedit
     SUBDIR += ptex
+    SUBDIR += py-ManimPango
     SUBDIR += py-OWSLib
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
@@ -863,6 +867,7 @@
     SUBDIR += py-geopandas
     SUBDIR += py-giddy
     SUBDIR += py-gizeh
+    SUBDIR += py-glcontext
     SUBDIR += py-glfw
     SUBDIR += py-glooey
     SUBDIR += py-gphoto2
@@ -884,6 +889,7 @@
     SUBDIR += py-mcomix
     SUBDIR += py-mgwr
     SUBDIR += py-ming
+    SUBDIR += py-moderngl
     SUBDIR += py-momepy
     SUBDIR += py-mpl-interactions
     SUBDIR += py-mpl-scatter-density
@@ -1000,6 +1006,8 @@
     SUBDIR += recoverjpeg
     SUBDIR += renrot
     SUBDIR += repng2jpeg
+    SUBDIR += resvg
+    SUBDIR += resvg-capi
     SUBDIR += rgbpaint
     SUBDIR += rigsofrods-caelum
     SUBDIR += rigsofrods-pagedgeometry

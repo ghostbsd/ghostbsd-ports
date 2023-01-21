@@ -137,6 +137,7 @@
     SUBDIR += py-hidapi
     SUBDIR += py-libimobiledevice
     SUBDIR += py-libscrc
+    SUBDIR += py-pymodbus
     SUBDIR += py-pyserial
     SUBDIR += py-pyserial-asyncio
     SUBDIR += py-xmodem
@@ -168,6 +169,8 @@
     SUBDIR += sdr-wspr
     SUBDIR += ser2net
     SUBDIR += serialoverip
+    SUBDIR += sigdigger
+    SUBDIR += sigutils
     SUBDIR += sms_client
     SUBDIR += smstools3
     SUBDIR += snap7
@@ -183,6 +186,8 @@
     SUBDIR += splat
     SUBDIR += sredird
     SUBDIR += sunxi-tools
+    SUBDIR += suscan
+    SUBDIR += suwidgets
     SUBDIR += svxlink
     SUBDIR += syncterm
     SUBDIR += tcpser

@@ -4,6 +4,7 @@
     SUBDIR += anongitssh
     SUBDIR += antibody
     SUBDIR += ast-ksh
+    SUBDIR += atuin
     SUBDIR += bash
     SUBDIR += bash-completion
     SUBDIR += bash-static
@@ -46,6 +47,7 @@
     SUBDIR += rush
     SUBDIR += sash
     SUBDIR += scponly
+    SUBDIR += shell-hist
     SUBDIR += shellharden
     SUBDIR += starship
     SUBDIR += switchBashZsh

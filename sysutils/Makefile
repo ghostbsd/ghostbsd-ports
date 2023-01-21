@@ -32,6 +32,7 @@
     SUBDIR += alfio
     SUBDIR += am-utils
     SUBDIR += amazon-ssm-agent
+    SUBDIR += amazon-ssm-plugin
     SUBDIR += amdmsrtweaker
     SUBDIR += amrstat
     SUBDIR += amtc
@@ -260,6 +261,7 @@
     SUBDIR += dc3dd
     SUBDIR += dcfldd
     SUBDIR += dd_rescue
+    SUBDIR += ddh
     SUBDIR += ddpt
     SUBDIR += ddrescue
     SUBDIR += debhelper
@@ -473,6 +475,7 @@
     SUBDIR += gdisk
     SUBDIR += gdmap
     SUBDIR += gdu
+    SUBDIR += genimage
     SUBDIR += genisoimage
     SUBDIR += geomWatch
     SUBDIR += getdelta
@@ -976,6 +979,7 @@
     SUBDIR += pc-updatemanager
     SUBDIR += pcapfix
     SUBDIR += pciutils
+    SUBDIR += pcns
     SUBDIR += pcpustat
     SUBDIR += pdixtract
     SUBDIR += pdsh
@@ -1044,6 +1048,7 @@
     SUBDIR += pprotectd
     SUBDIR += prips
     SUBDIR += procenv
+    SUBDIR += process-viewer
     SUBDIR += procmap
     SUBDIR += progsreiserfs
     SUBDIR += pslist
@@ -1399,6 +1404,7 @@
     SUBDIR += sysrc
     SUBDIR += sysup
     SUBDIR += sysvbanner
+    SUBDIR += szyszka
     SUBDIR += tai64nfrac
     SUBDIR += tarsnap
     SUBDIR += tarsnap-gui
@@ -1410,6 +1416,7 @@
     SUBDIR += tdir
     SUBDIR += tealdeer
     SUBDIR += tenshi
+    SUBDIR += tere
     SUBDIR += terraform
     SUBDIR += terraform-docs
     SUBDIR += terraform-provider-gridscale
@@ -1438,6 +1445,7 @@
     SUBDIR += topless
     SUBDIR += torque
     SUBDIR += toshctl
+    SUBDIR += touchegg
     SUBDIR += toybox
     SUBDIR += tracker
     SUBDIR += tracker-miners

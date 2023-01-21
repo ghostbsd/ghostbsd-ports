@@ -127,6 +127,7 @@
     SUBDIR += dirbuster
     SUBDIR += dirmngr
     SUBDIR += distcache
+    SUBDIR += diswall
     SUBDIR += doas
     SUBDIR += dotdotpwn
     SUBDIR += dropbear
@@ -237,7 +238,7 @@
     SUBDIR += isnprober
     SUBDIR += john
     SUBDIR += kbfsd
-    SUBDIR += kc24
+    SUBDIR += kc
     SUBDIR += kdbxviewer
     SUBDIR += keepass
     SUBDIR += keepass-plugin-keepassrpc
@@ -246,6 +247,7 @@
     SUBDIR += keychain
     SUBDIR += keynote
     SUBDIR += keyprint
+    SUBDIR += keysmith
     SUBDIR += kf5-kdesu
     SUBDIR += kgpg
     SUBDIR += kickpass
@@ -332,6 +334,7 @@
     SUBDIR += linux-c7-trousers
     SUBDIR += local-php-security-checker
     SUBDIR += logcheck
+    SUBDIR += lua-argon2
     SUBDIR += lua-bcrypt
     SUBDIR += luasec
     SUBDIR += lxqt-openssh-askpass
@@ -416,6 +419,7 @@
     SUBDIR += openvpn-auth-radius
     SUBDIR += openvpn-auth-script
     SUBDIR += openvpn-devel
+    SUBDIR += opie
     SUBDIR += ophcrack
     SUBDIR += ossec-hids
     SUBDIR += ossec-hids-agent
@@ -837,6 +841,7 @@
     SUBDIR += py-azure-keyvault-certificates
     SUBDIR += py-azure-keyvault-keys
     SUBDIR += py-azure-keyvault-secrets
+    SUBDIR += py-badkeys
     SUBDIR += py-base58
     SUBDIR += py-bcrypt
     SUBDIR += py-bitbox02

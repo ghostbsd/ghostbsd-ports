@@ -255,9 +255,9 @@ _arti:*:311:
 _sphinx:*:312:
 _fastdfs:*:313:
 promscale:*:314:
-# free: 315
-# free: 316
-# free: 317
+lavinmq:*:315:
+nut:*:316:
+hedgedoc:*:317:
 # free: 318
 # free: 319
 # free: 320

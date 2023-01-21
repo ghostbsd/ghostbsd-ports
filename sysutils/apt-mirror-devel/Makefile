@@ -1,6 +1,7 @@
 PORTNAME=	apt-mirror
 DISTVERSION=	0.5.4-35
 DISTVERSIONSUFFIX=	-g088fa51
+PORTREVISION=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 
@@ -21,5 +22,6 @@ NO_ARCH=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' ${WRKSRC}/Makefile
+	@${CP} ${WRKSRC}/mirror.list ${WRKSRC}/mirror.list.sample
 
 .include <bsd.port.mk>
