@@ -1255,6 +1255,7 @@
     SUBDIR += libgudev
     SUBDIR += libgusb
     SUBDIR += libgutenfetch
+    SUBDIR += libheinz
     SUBDIR += libhoard
     SUBDIR += libhtp
     SUBDIR += libhyve-remote
@@ -7248,7 +7249,7 @@
     SUBDIR += rudiments
     SUBDIR += ruff
     SUBDIR += rust-analyzer
-    SUBDIR += rust-bindgen
+    SUBDIR += rust-bindgen-cli
     SUBDIR += rust-cbindgen
     SUBDIR += rustc-demangle
     SUBDIR += rvi

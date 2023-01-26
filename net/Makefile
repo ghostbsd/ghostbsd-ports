@@ -246,6 +246,7 @@
     SUBDIR += haproxy23
     SUBDIR += haproxy24
     SUBDIR += haproxy25
+    SUBDIR += haproxy26
     SUBDIR += hblock
     SUBDIR += hexinject
     SUBDIR += hlmaster
@@ -1428,6 +1429,7 @@
     SUBDIR += skstream
     SUBDIR += sl2tps
     SUBDIR += slackcat
+    SUBDIR += slurm
     SUBDIR += smb4k
     SUBDIR += smbldap-tools
     SUBDIR += smcroute
