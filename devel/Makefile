@@ -586,6 +586,7 @@
     SUBDIR += electron18
     SUBDIR += electron19
     SUBDIR += electron21
+    SUBDIR += electron22
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -4875,6 +4876,7 @@
     SUBDIR += py-mutmut
     SUBDIR += py-mygpoclient
     SUBDIR += py-mypy
+    SUBDIR += py-mypy-boto3-s3
     SUBDIR += py-mypy-protobuf
     SUBDIR += py-mypy_extensions
     SUBDIR += py-naiveBayesClassifier
