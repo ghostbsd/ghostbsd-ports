@@ -1,6 +1,7 @@
 PORTNAME=	nnn
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.7
+PORTREVISION=	1
 CATEGORIES=	misc shells
 
 MAINTAINER=	dmgk@FreeBSD.org
@@ -17,6 +18,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	jarun
 
 MAKE_ARGS=	CFLAGS_OPTIMIZATION= \
+		O_NERD=1 \
 		LDLIBS_CURSES=-lncursesw \
 		MANPREFIX=${PREFIX}/share/man \
 		PKG_CONFIG=/usr/bin/true
