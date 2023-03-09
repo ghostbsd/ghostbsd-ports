@@ -2,6 +2,7 @@ PORTNAME=	john
 # NB: starting from the next version, community-enhanced (jumbo) patch
 # should be offered as an option (suggested by Solar Designer himself).
 DISTVERSION=	1.9.0-jumbo-1
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.openwall.com/john/j/ \
 		http://mirrors.kernel.org/openwall/projects/john/${DISTVERSION:C/-.*//}/ \

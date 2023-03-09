@@ -263,7 +263,7 @@ promscale:*:314:314::0:0:Promscale:/nonexistent:/usr/sbin/nologin
 lavinmq:*:315:315::0:0:LavinMQ user:/nonexistent:/usr/sbin/nologin
 nut:*:316:316::0:0:Network UPS Tools user:/nonexistent:/usr/sbin/nologin
 hedgedoc:*:317:317::0:0:HedgeDoc user:/nonexistent:/usr/sbin/nologin
-# free: 318
+icingadirector:*:318:183::0:0:icingadirector user:/nonexistent:/usr/sbin/nologin
 # free: 319
 # free: 320
 # free: 321
@@ -272,7 +272,7 @@ hedgedoc:*:317:317::0:0:HedgeDoc user:/nonexistent:/usr/sbin/nologin
 # free: 324
 dkfilter:*:325:325::0:0:DK Filter Owner:/nonexistent:/usr/sbin/nologin
 smfs:*:326:326::0:0:SMFSAV Owner:/nonexistent:/usr/sbin/nologin
-# free: 327
+_reticulum:*:327:327::0:0:Reticulum Daemon:/nonexistent:/usr/sbin/nologin
 # free: 328
 # free: 329
 orthanc:*:330:330::0:0:Orthanc Daemon:/nonexistent:/usr/sbin/nologin
@@ -571,7 +571,7 @@ taskd:*:616:616::0:0:taskd user:/nonexistent:/usr/sbin/nologin
 # free: 622
 # free: 623
 # free: 624
-# free: 625
+xapsd:*:625:625::0:0:xapsd:/var/lib/xapsd:/usr/sbin/nologin
 # free: 626
 # free: 627
 # free: 628

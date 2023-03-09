@@ -7735,7 +7735,6 @@ audio/cmus-post.fm||2015-10-31|Has expired: Broken for more than 6 months
 devel/libphish||2015-10-31|Has expired: Broken for more than 6 months
 devel/rubygem-debugger||2015-10-31|Has expired: This port is for Ruby 1.9 only, upstream stopped maintenance
 games/linux-ningpo-demo||2015-10-31|Has expired: Broken for more than 6 months
-graphics/gdal-grass||2015-10-31|Has expired: Superseded by gdal-2.0.0
 graphics/picviz||2015-10-31|Has expired: Broken for more than 6 months
 irc/weechat-devel|irc/weechat|2015-10-31|Has expired: far behind stable irc/weechat (use it instead)
 mail/cucipop||2015-10-31|Has expired: Broken for more than 6 months
@@ -7906,7 +7905,6 @@ math/p5-Math-Geometry-Planar-GPC-Polygon||2015-12-30|Has expired: Broken for mor
 www/eliom||2015-12-30|Has expired: Depends on broken and expiring www/ocsigen
 audio/py-fastaudio||2015-12-30|Has expired: Broken for more than 6 months
 devel/jgoodies-common||2015-12-30|Has expired: Broken for more than 6 months
-games/kanatest||2015-12-30|Has expired: Broken for more than 6 months
 security/burpsuite||2015-12-30|Has expired: Broken for more than 6 months
 dns/bind10|dns/bundy|2015-12-31|Has expired: Is not developed any more, use dns/bundy
 lang/perl5.16||2015-12-31|Has expired: Unsupported, please upgrade to a more recent version of Perl
@@ -14714,7 +14712,6 @@ security/libbf||2020-05-05|Has expired: Broken for more than 6 months
 security/log2timeline||2020-05-05|Has expired: Broken for more than 6 months
 security/opencdk||2020-05-05|Has expired: Broken for more than 6 months
 security/pad||2020-05-05|Has expired: Broken for more than 6 months
-security/pam_fprint||2020-05-05|Has expired: Broken for more than 6 months
 security/pam_per_user||2020-05-05|Has expired: Broken for more than 6 months
 security/razorback-dispatcher||2020-05-05|Has expired: Broken for more than 6 months
 security/ruby-camellia||2020-05-05|Has expired: Broken for more than 6 months
@@ -15487,7 +15484,6 @@ www/waccess||2020-09-19|Has expired: Uses deprecated version of python
 www/wadcomblog||2020-09-19|Has expired: Uses deprecated version of python
 www/webcheck||2020-09-19|Has expired: Uses deprecated version of python
 www/woof||2020-09-19|Has expired: Uses deprecated version of python
-x11-drivers/xf86-video-qxl||2020-09-19|Has expired: uses deprecated version of python
 x11-fm/twander||2020-09-19|Has expired: Uses deprecated version of python
 x11-wm/compizconfig-python||2020-09-19|Has expired: Uses deprecated version of python
 x11-wm/fvwm-crystal||2020-09-19|Has expired: Uses deprecated version of python
@@ -15557,7 +15553,6 @@ multimedia/p5-GStreamer||2020-11-09|Depends on the expired gstreamer 0.10
 emulators/riscv-fesvr||2020-11-09|Now bundled with emulators/riscv-isa-sim
 databases/py-python-rrdtool||2020-11-10|Has expired: Uses deprecated version of python
 net/spideroak||2020-11-10|Has expired: Uses deprecated version of python
-emulators/playonbsd||2020-11-10|Has expired: Uses deprecated version of python
 net/xorp||2020-11-10|Has expired: Uses deprecated version of python
 archivers/py-pyliblzma||2020-11-15|Has expired: Uses deprecated version of python
 databases/postgis23|databases/postgis24|2020-11-15|Has expired: Upstream no longer maintained
@@ -16870,7 +16865,6 @@ net-mgmt/zabbix3-frontend||2022-02-28|Has expired: Upstream EOL reached on 2021-
 net-mgmt/zabbix3-agent||2022-02-28|Has expired: Upstream EOL reached on 2021-02-28
 net-mgmt/zabbix3-server||2022-02-28|Has expired: Upstream EOL reached on 2021-02-28
 archivers/zip-ada||2022-02-28|Removed, depends on expired lang/gcc6-aux
-cad/ghdl||2022-02-28|Removed, depends on expired lang/gcc6-aux
 databases/adabase||2022-02-28|Removed, depends on expired lang/gcc6-aux
 databases/apq||2022-02-28|Removed, depends on expired lang/gcc6-aux
 databases/apq-mysql||2022-02-28|Removed, depends on expired lang/gcc6-aux
@@ -17407,7 +17401,7 @@ multimedia/mpeg_play||2022-06-30|Has expired: Obsolete, please consider using mu
 multimedia/mpeg_stat||2022-06-30|Has expired: Obsolete, please consider using multimedia/mediainfo or multimedia/ffmpeg
 multimedia/qt-faststart||2022-06-30|Has expired: Obsolete, please consider using multimedia/Bento4, multimedia/gpac-mp4box or multimedia/ffmpeg
 multimedia/spigot||2022-06-30|Has expired: Deprecated hardware, released in the early 90s
-audio/forked-daapd||2022-06-30|Has expired: Deprecated upstream, project is now called OwnTone
+audio/forked-daapd|audio/owntone|2022-06-30|Has expired: Deprecated upstream, project is now called OwnTone
 multimedia/tstools||2022-06-30|Has expired: Obsolete, please consider using multimedia/ffmpeg
 multimedia/sabbu||2022-06-30|Has expired: please consider using multimedia/aegisub
 multimedia/avinfo||2022-06-30|Has expired: Last release in 2008, please consider using multimedia/mediainfo or multimedia/ffmpeg instead
@@ -17746,7 +17740,6 @@ devel/llvm70||2023-01-15|Removed old llvm ports
 devel/llvm80||2023-01-15|Removed old llvm ports
 devel/llvm90||2023-01-15|Removed old llvm ports
 devel/android-tools-simpleperf||2023-01-15|Depends on removed old llvm ports
-devel/ccls||2023-01-15|Depends on removed old llvm ports
 devel/f18||2023-01-15|Depends on removed old llvm ports
 devel/xtoolchain-llvm80||2023-01-15|Depends on removed old llvm ports
 devel/xtoolchain-llvm90||2023-01-15|Depends on removed old llvm ports
@@ -17757,3 +17750,24 @@ sysutils/ior|benchmarks/ior|2023-01-20|Moved to a better fit category
 emulators/qemu-guest-agent|emulators/qemu@guestagent|2023-01-20|Seperate port merged with main port as a flavor
 devel/rust-bindgen|devel/rust-bindgen-cli|2023-01-22|Renamed upstream
 graphics/darktable42||2023-01-27|Removed as part of the update of graphics/darktable to 4.2.0
+devel/py-cachecontrol|www/py-cachecontrol|2023-01-29|Remove duplicate added later
+devel/dulwich|devel/py-dulwich|2023-01-29|Add py- prefix
+www/webtrees||2023-01-30|Has expired: Uses obsolete PHP version; use www/webtrees21 instead
+x11-toolkits/libsexy||2023-01-30|Depends on EOLed gtk+20, not depended on in the ports tree
+x11-toolkits/gtkmathview||2023-01-30|Depends on EOLed gtk+20, not depended on in the ports tree
+x11-toolkits/vdk||2023-01-30|Depends on EOLed gtk+20, not depended on in the ports tree
+audio/libgpod-sharp||2023-02-01|Depends on EOLed gtk+20, not depended on in the ports tree
+x11/plasma5-kwayland-server|x11-wm/plasma5-kwin|2023-02-07|Reintegrated into x11-wm/plasma5-kwin
+finance/py-TA-Lib|finance/py-ta-lib|2023-02-12|Remove duplicate port
+x11-toolkits/gnocl||2023-02-13|Fails to build, newer snapshot depends on a removed port
+games/opendungeons||2023-02-14|Has expired: Broken for more than 6 months
+databases/mysql-connector-odbc|databases/mysql-connector-odbc-80|2023-02-18|Has expired: Requires EOLd mysql version
+devel/yaml-cpp03|devel/yaml-cpp|2023-02-21|Used by blender-lts28 which is EOL'd
+sysutils/uutils|sysutils/rust-coreutils|2023-02-22|Request by upstream
+print/harfbuzz-hb-view|print/harfbuzz-cairo|2023-02-23|Match feature and library name
+sysutils/screenfetch-nox11|sysutils/screenfetch@nox11|2023-02-23|Converted to flavor
+editors/r7-office|editors/linux-r7-office|2023-02-25|Follow the naming scheme of Linux ports
+www/mediawiki137||2023-02-28|Has expired: End of life upstream, users are recommended to upgrade to 1.39 or higher
+games/veloren|games/veloren-weekly|2023-03-02|Using releases is currently discouraged upstream
+accessibility/atk|accessibility/at-spi2-core|2023-03-02|Integrated into other package
+accessibility/at-spi2-atk|accessibility/at-spi2-core|2023-03-02|Integrated into other package

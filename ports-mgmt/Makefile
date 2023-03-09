@@ -74,8 +74,13 @@
     SUBDIR += py-pytoport
     SUBDIR += py-skog
     SUBDIR += software-station
+    SUBDIR += rc-subr-jail
     SUBDIR += reprise
     SUBDIR += sccache-overlay
+    SUBDIR += rc-subr-jail
+    SUBDIR += reprise
+    SUBDIR += sccache-overlay
+    SUBDIR += software-station
     SUBDIR += synth
     SUBDIR += update-station
     SUBDIR += wanted-ports

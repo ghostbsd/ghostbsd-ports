@@ -203,7 +203,7 @@
     SUBDIR += mysql-connector-c++
     SUBDIR += mysql-connector-java
     SUBDIR += mysql-connector-java51
-    SUBDIR += mysql-connector-odbc
+    SUBDIR += mysql-connector-odbc-80
     SUBDIR += mysql-q4m
     SUBDIR += mysql-udf
     SUBDIR += mysql++
@@ -997,6 +997,7 @@
     SUBDIR += rubygem-redis-clustering
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis-namespace18
+    SUBDIR += rubygem-redis-namespace19
     SUBDIR += rubygem-redis4
     SUBDIR += rubygem-scenic61
     SUBDIR += rubygem-sdbm

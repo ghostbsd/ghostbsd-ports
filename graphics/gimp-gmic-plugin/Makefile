@@ -1,6 +1,6 @@
 PORTNAME=	gmic
 PORTVERSION=	1.6.9
-PORTREVISION=	36
+PORTREVISION=	37
 CATEGORIES=	graphics
 MASTER_SITES=	http://gmic.eu/files/source/
 PKGNAMEPREFIX=	gimp-
@@ -12,6 +12,8 @@ COMMENT=	GREYC's Magic Image Converter
 WWW=		https://gmic.eu/
 
 BROKEN=		OpenCV4 no longer ships OpencCV-1.0 headers
+DEPRECATED=	Broken since 2021
+EXPIRATION_DATE=	2023-03-21
 
 LIB_DEPENDS=	libGraphicsMagick++.so:graphics/GraphicsMagick \
 		libOpenEXR.so:graphics/openexr \

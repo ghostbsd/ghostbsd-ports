@@ -182,9 +182,11 @@
     SUBDIR += cfengine-masterfiles318
     SUBDIR += cfengine-masterfiles319
     SUBDIR += cfengine-masterfiles320
+    SUBDIR += cfengine-masterfiles321
     SUBDIR += cfengine318
     SUBDIR += cfengine319
     SUBDIR += cfengine320
+    SUBDIR += cfengine321
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -650,6 +652,7 @@
     SUBDIR += libcdio-paranoia
     SUBDIR += libchk
     SUBDIR += libcpuid
+    SUBDIR += libdisplay-info
     SUBDIR += libdnf
     SUBDIR += libfvde
     SUBDIR += libg15
@@ -1305,6 +1308,7 @@
     SUBDIR += runj
     SUBDIR += runwhen
     SUBDIR += rush
+    SUBDIR += rust-coreutils
     SUBDIR += rw
     SUBDIR += s-tui
     SUBDIR += s6
@@ -1329,7 +1333,6 @@
     SUBDIR += schilyutils
     SUBDIR += screen
     SUBDIR += screenfetch
-    SUBDIR += screenfetch-nox11
     SUBDIR += screenie
     SUBDIR += scterc
     SUBDIR += sd-agent
@@ -1364,6 +1367,7 @@
     SUBDIR += smug
     SUBDIR += snap
     SUBDIR += snapraid
+    SUBDIR += sndy
     SUBDIR += snmp_exporter
     SUBDIR += snooze
     SUBDIR += sockaddr
@@ -1441,6 +1445,7 @@
     SUBDIR += tmpwatch
     SUBDIR += tmux
     SUBDIR += tmux-mem-cpu-load
+    SUBDIR += tmux-xpanes
     SUBDIR += tmux23
     SUBDIR += topgrade
     SUBDIR += topless

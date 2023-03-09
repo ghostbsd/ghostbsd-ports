@@ -1867,10 +1867,6 @@ MAKE_ENV+=	${b}="${${b}}"
 .      endfor
 .    endif
 
-.    if defined(USE_OPENLDAP) || defined(WANT_OPENLDAP_VER)
-.include "${PORTSDIR}/Mk/bsd.ldap.mk"
-.    endif
-
 .    if defined(USE_RC_SUBR)
 SUB_FILES+=	${USE_RC_SUBR}
 .    endif
@@ -2049,7 +2045,7 @@ MAKE_JOBS_NUMBER=	1
 _MAKE_JOBS_NUMBER:=	${MAKE_JOBS_NUMBER}
 .      else
 .        if !defined(_SMP_CPUS)
-_SMP_CPUS!=		${SYSCTL} -n kern.smp.cpus
+_SMP_CPUS!=		${NPROC} 2>/dev/null || ${SYSCTL} -n kern.smp.cpus
 .        endif
 _EXPORTED_VARS+=	_SMP_CPUS
 _MAKE_JOBS_NUMBER=	${_SMP_CPUS}

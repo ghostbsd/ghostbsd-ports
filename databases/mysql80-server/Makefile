@@ -1,5 +1,5 @@
 PORTNAME?=		mysql
-PORTVERSION=		8.0.31
+PORTVERSION=		8.0.32
 PORTREVISION?=		0
 CATEGORIES=		databases
 MASTER_SITES=		MYSQL/MySQL-8.0
@@ -11,8 +11,6 @@ COMMENT?=		Multithreaded SQL database (server)
 WWW=		https://www.mysql.com/
 
 LICENSE=		GPLv2
-
-BROKEN_i386=	--yplg_out: protoc-gen-yplg: Plugin killed by signal 11.
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}${DISTVERSIONSUFFIX}
 
@@ -86,7 +84,7 @@ CMAKE_ARGS+=	-DINSTALL_LAYOUT=FREEBSD \
 		-DWITH_ICU=system \
 		-DWITH_CURL=system \
 		-DWITH_ZSTD=system \
-		-DWITH_PROTOBUF=system \
+		-DWITH_PROTOBUF=bundled \
 		-DWITH_SSL=system \
 		-DWITH_AUTHENTICATION_FIDO=1 \
 		-DBUILD_BUNDLED_ZLIB=0 \

@@ -1,11 +1,8 @@
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.26-14614 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-g7c4734c24d
+DISTVERSION=	0.0.27 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-14783-g0178b20983
 CATEGORIES=	emulators wayland
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	3df5f4f16158.patch:-p1 # https://github.com/RPCS3/rpcs3/pull/13302
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	PS3 emulator/debugger
@@ -30,7 +27,7 @@ ONLY_FOR_ARCHS_REASON=	requires int128 and SSE2
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	RPCS3
-GH_TUPLE=	RPCS3:hidapi:hidapi-0.13.0-2-ga3ce129:hidapi/3rdparty/hidapi/hidapi \
+GH_TUPLE=	RPCS3:hidapi:hidapi-0.13.1-2-gecf1b62:hidapi/3rdparty/hidapi/hidapi \
 		RPCS3:llvm-mirror:9b52b6c39ae9:llvm/llvm \
 		RPCS3:soundtouch:2.3.1-16-g83cfba6:soundtouch/3rdparty/SoundTouch/soundtouch \
 		asmjit:asmjit:06d0bad:asmjit/3rdparty/asmjit/asmjit \
@@ -38,8 +35,9 @@ GH_TUPLE=	RPCS3:hidapi:hidapi-0.13.0-2-ga3ce129:hidapi/3rdparty/hidapi/hidapi \
 		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-187-g85a1ed2:spirv_headers/3rdparty/SPIRV/SPIRV-Headers \
 		KhronosGroup:SPIRV-Tools:v2022.4:spirv_tools/3rdparty/SPIRV/SPIRV-Tools \
 		KhronosGroup:glslang:11.11.0-2-g10423ec6:glslang/3rdparty/glslang/glslang \
-		kinetiknz:cubeb:cubeb-0.2-1391-gdc511c6:cubeb/3rdparty/cubeb/cubeb \
-		wolfSSL:wolfssl:v5.5.0-stable:wolfssl/3rdparty/wolfssl/wolfssl
+		kinetiknz:cubeb:cubeb-0.2-1427-g70b4e3d:cubeb/3rdparty/cubeb/cubeb \
+		miniupnp:miniupnp:miniupnpd_2_3_2:miniupnp/3rdparty/miniupnp/miniupnp \
+		wolfSSL:wolfssl:v5.5.4-stable:wolfssl/3rdparty/wolfssl/wolfssl
 
 USES=		cmake elfctl gl iconv:wchar_t localbase:ldflags \
 		openal:soft pkgconfig python:3.4+,build qt:5 xorg
@@ -54,11 +52,10 @@ ELF_FEATURES=	+noaslr,wxneeded:bin/${PORTNAME}
 
 .if ${FLAVOR:U} == qt6 || make(makesum) || make(fetch)
 PATCH_SITES+=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/:qt6
-PATCHFILES+=	cb5204344a80.patch:-p1:qt6 # https://github.com/RPCS3/rpcs3/pull/12471
+PATCHFILES+=	98a2f373fd59.patch:-p1:qt6 # https://github.com/RPCS3/rpcs3/pull/12471
 PKGNAMESUFFIX=	-${FLAVOR}
 USES:=		${USES:S/qt:5/qt:6/}
 USE_QT=		base multimedia svg
-PKGMESSAGE=	${.CURDIR}/pkg-message.${FLAVOR}
 
 CONFLICTS_INSTALL=	${PORTNAME}
 
@@ -82,7 +79,8 @@ ALSA_CMAKE_BOOL=	USE_ALSA
 EVDEV_DESC=		libevdev-based joystick support
 EVDEV_CMAKE_BOOL=	USE_LIBEVDEV
 EVDEV_BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto
-EVDEV_LIB_DEPENDS=	libevdev.so:devel/libevdev
+EVDEV_LIB_DEPENDS=	libevdev.so:devel/libevdev \
+			libudev.so:devel/libudev-devd
 
 FAUDIO_DESC=		FAudio audio support
 FAUDIO_LIB_DEPENDS=	libFAudio.so:audio/faudio
@@ -108,7 +106,18 @@ post-patch:
 		-e '/GIT_VERSION/s/local_build/${GH_TAGNAME:C/[^-]*-//}/' \
 		${WRKSRC}/${PORTNAME}/git-version.cmake
 
-# XXX Drop after FreeBSD 12.3 EOL around 2023-03-01 (don't forget distinfo)
+.include <bsd.port.options.mk>
+
+# XXX https://github.com/llvm/llvm-project/issues/58207
+.if ${_OSRELEASE:M*-CURRENT}
+# Ignore Clang assertions
+USES+=		llvm
+CC=		clang${LLVM_VERSION}
+CXX=		clang++${LLVM_VERSION}
+CPP=		clang-cpp${LLVM_VERSION}
+.endif
+
+# XXX Drop after FreeBSD 12.3 EOL around 2023-03-31 (don't forget distinfo)
 .if !exists(/usr/include/c++/v1/concepts) || make(makesum) || make(fetch)
 USES+=		llvm:13,build
 CC=		clang${LLVM_VERSION}

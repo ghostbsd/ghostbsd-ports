@@ -1,6 +1,6 @@
 PORTNAME=	lms
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.35.1
+DISTVERSION=	3.36.0
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -32,7 +32,7 @@ PLIST_SUB=	USER="${USER}" GROUP="${GROUP}"
 
 OPTIONS_RADIO=			IMAGE_LIB
 OPTIONS_RADIO_IMAGE_LIB=	STB MAGICK
-OPTIONS_DEFAULT=		MAGICK
+OPTIONS_DEFAULT=		STB # STB is prefered by the upstream
 
 STB_DESC=			Use STB as image library (uses less memory)
 STB_BUILD_DEPENDS=		${LOCALBASE}/include/stb/stb_image.h:devel/stb

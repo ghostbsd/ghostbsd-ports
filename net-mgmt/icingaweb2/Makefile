@@ -1,6 +1,7 @@
 PORTNAME=	icingaweb2
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.11.3
+DISTVERSION=	2.11.4
+PORTREVISION=	1
 CATEGORIES=	net-mgmt www
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
@@ -9,13 +10,13 @@ COMMENT=	Next generation web interface for Icinga 1 and 2
 WWW=		https://www.icinga.com/products/icinga-web-2
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	icinga-php-library${PHP_PKGNAMESUFFIX}>=0.10.0:net-mgmt/icinga-php-library@${PHP_FLAVOR} \
 		icinga-php-thirdparty${PHP_PKGNAMESUFFIX}>=0.11.0:net-mgmt/icinga-php-thirdparty@${PHP_FLAVOR} \
 		icingaweb2-module-incubator${PHP_PKGNAMESUFFIX}>=0.18.0:net-mgmt/icingaweb2-module-incubator@${PHP_FLAVOR}
 
-USES=		php:build,web,flavors
+USES=		php:build,web,flavors shebangfix
 USE_PHP=	bcmath bitset ctype curl dom gd gettext hash iconv json ldap \
 		mbstring mcrypt memcache memcached opcache openssl pcre pdo \
 		pdo_sqlite posix session simplexml soap sockets sqlite3 xml \
@@ -28,6 +29,8 @@ NO_BUILD=	yes
 NO_ARCH=	yes
 
 CONFLICTS_INSTALL=	icingaweb2-php* # bin/icingacli
+
+SHEBANG_FILES=	bin/icingacli
 
 SUB_FILES=	pkg-message
 SUB_LIST=	ETCDIR=${ETCDIR} \

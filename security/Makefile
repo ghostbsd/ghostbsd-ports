@@ -408,6 +408,7 @@
     SUBDIR += openssh-askpass
     SUBDIR += openssh-portable
     SUBDIR += openssl
+    SUBDIR += openssl-agent
     SUBDIR += openssl-devel
     SUBDIR += openssl-quictls
     SUBDIR += openssl-unsafe
@@ -420,8 +421,8 @@
     SUBDIR += openvpn-auth-script
     SUBDIR += openvpn-devel
     SUBDIR += openvpn25
-    SUBDIR += opie
     SUBDIR += ophcrack
+    SUBDIR += opie
     SUBDIR += ossec-hids
     SUBDIR += ossec-hids-agent
     SUBDIR += ossec-hids-agent-config
@@ -714,6 +715,7 @@
     SUBDIR += pam-modules
     SUBDIR += pam-mysql
     SUBDIR += pam-pgsql
+    SUBDIR += pam_fprint
     SUBDIR += pam_google_authenticator
     SUBDIR += pam_helper
     SUBDIR += pam_jail
@@ -935,6 +937,7 @@
     SUBDIR += py-pass-git-helper
     SUBDIR += py-passlib
     SUBDIR += py-pbkdf2
+    SUBDIR += py-pem
     SUBDIR += py-pgpdump
     SUBDIR += py-pgpy
     SUBDIR += py-plaso
@@ -1227,6 +1230,7 @@
     SUBDIR += srm
     SUBDIR += ssb
     SUBDIR += ssdeep
+    SUBDIR += ssh-import-id
     SUBDIR += ssh-multiadd
     SUBDIR += ssh-tools
     SUBDIR += ssh-vault

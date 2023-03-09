@@ -1,6 +1,7 @@
 PORTNAME=	onedrive
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.4.22
+DISTVERSION=	2.4.23
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	hiroo.ono+freebsd@gmail.com
@@ -16,12 +17,10 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 RUN_DEPENDS=	${LOCALBASE}/sbin/logrotate:sysutils/logrotate
 
 USES=		autoreconf gmake pkgconfig sqlite
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	abraunegg
 
 GNU_CONFIGURE=	yes
-PKGCONFIG=	pkgconf
 
 PORTDOCS=	*
 

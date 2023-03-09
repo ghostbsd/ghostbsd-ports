@@ -1,5 +1,6 @@
 PORTNAME=	vscode
-DISTVERSION=	1.74.3
+DISTVERSION=	1.75.1
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://registry.npmjs.org/esbuild-freebsd-64/-/:esbuild_binary \
 		https://nodejs.org/dist/v${NODE_VER}/:node_headers \
@@ -29,7 +30,7 @@ BUILD_DEPENDS=	zip:archivers/zip \
 		rg:textproc/ripgrep \
 		npm-node${NODE_VER_MAJOR}>0:www/npm-node${NODE_VER_MAJOR} \
 		yarn-node${NODE_VER_MAJOR}>0:www/yarn-node${NODE_VER_MAJOR}
-LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
+LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libatspi.so:accessibility/at-spi2-core \
 		libsnappy.so:archivers/snappy \
 		libasound.so:audio/alsa-lib \
@@ -71,7 +72,7 @@ USES=		desktop-file-utils gl gmake gnome iconv jpeg pkgconfig \
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	97dec172d3256f8ca4bfb2143f3f76b503ca0534
+SOURCE_COMMIT_HASH=	441438abd1ac652551dbe4d408dfcec8a499b8bf
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -233,6 +234,7 @@ do-install:
 		${TAR} -cf - . | ${TAR} -xf - -C ${STAGEDIR}${DATADIR}
 	cd ${STAGEDIR}${DATADIR}/resources/app/node_modules.asar.unpacked && \
 		${FIND} . -type f -name '*.node' -exec ${STRIP_CMD} {} ';'
+	${STRIP_CMD} ${STAGEDIR}${DATADIR}/resources/app/node_modules.asar.unpacked/node-pty/build/Release/spawn-helper
 .for f in chromedriver mksnapshot v8_context_snapshot_generator
 	${RM} ${STAGEDIR}${DATADIR}/${f}
 .endfor

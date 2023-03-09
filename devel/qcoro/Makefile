@@ -1,7 +1,6 @@
 PORTNAME=	qcoro
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.7.0
-PORTREVISION=	1
+DISTVERSION=	0.8.0
 CATEGORIES=	devel kde
 PKGNAMESUFFIX=	-${FLAVOR}
 
@@ -28,6 +27,9 @@ CMAKE_ARGS=	-DUSE_QT_VERSION=${FLAVOR:S/qt//}
 
 PLIST_SUB=	QT_VER=${FLAVOR:S/qt//}
 
+# XXX Drop after FreeBSD 12.3 EOL around 2023-03-31
+.if exists(/usr/include/c++/v1) && !exists(/usr/include/c++/v1/concepts)
 BROKEN_FreeBSD_12=	requires recent C++ compiler
+.endif
 
 .include <bsd.port.mk>

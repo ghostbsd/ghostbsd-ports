@@ -41,6 +41,7 @@
     SUBDIR += gdt
     SUBDIR += geda
     SUBDIR += gerbv
+    SUBDIR += ghdl
     SUBDIR += gmsh
     SUBDIR += gnucap
     SUBDIR += gplcver
@@ -48,6 +49,7 @@
     SUBDIR += gspiceui
     SUBDIR += gtkwave
     SUBDIR += horizon-eda
+    SUBDIR += hs-verismith
     SUBDIR += ifcopenshell
     SUBDIR += impact
     SUBDIR += irsim
@@ -102,6 +104,7 @@
     SUBDIR += pcb-rnd
     SUBDIR += pdnmesh
     SUBDIR += py-cadquery
+    SUBDIR += py-cocotb
     SUBDIR += py-cq-editor
     SUBDIR += py-edalize
     SUBDIR += py-ezdxf

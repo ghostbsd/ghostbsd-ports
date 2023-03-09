@@ -1,9 +1,9 @@
 PORTNAME=	chamfer
-DISTVERSION=	s20221218
+DISTVERSION=	s20230209
 CATEGORIES=	x11-wm
 
 MAINTAINER=	jbeich@FreeBSD.org
-COMMENT=	Tiling X11 window manager with Vulkan compositor
+COMMENT=	Tiling X11 window manager and Vulkan compositor
 WWW=		https://jaelpark.github.io/chamferwm-docs/
 
 LICENSE=	BSD3CLAUSE
@@ -31,7 +31,7 @@ USE_GITHUB=	yes
 USE_XORG=	xcb
 GH_ACCOUNT=	jaelpark
 GH_PROJECT=	${PORTNAME}wm
-GH_TAGNAME=	e5b310f
+GH_TAGNAME=	68c91f2
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr,${PREFIX},' \

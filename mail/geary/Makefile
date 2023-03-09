@@ -1,6 +1,6 @@
 PORTNAME=	geary
 PORTVERSION=	40.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
@@ -49,5 +49,7 @@ SHEBANG_FILES=	desktop/geary-attach
 
 MESON_ARGS=	-Dprofile=release
 BINARY_ALIAS=	python3=${PYTHON_VERSION}
+
+CFLAGS+=	-Wno-error=int-conversion
 
 .include <bsd.port.mk>

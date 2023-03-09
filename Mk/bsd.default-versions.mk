@@ -19,7 +19,7 @@ LOCALBASE?=	/usr/local
 
 .  for lang in APACHE BDB COROSYNC EMACS FIREBIRD FORTRAN FPC GCC \
 	GHOSTSCRIPT GL GO IMAGEMAGICK JAVA LAZARUS LIBRSVG2 LINUX LLVM \
-	LUA LUAJIT MONO MYSQL NINJA NODEJS PERL5 PGSQL PHP PYTHON \
+	LUA LUAJIT MONO MYSQL NINJA NODEJS OPENLDAP PERL5 PGSQL PHP PYTHON \
 	PYTHON2 PYTHON3 RUBY RUST SAMBA SSL TCLTK VARNISH
 .    if defined(${lang}_DEFAULT)
 ERROR+=	"The variable ${lang}_DEFAULT is set and it should only be defined through DEFAULT_VERSIONS+=${lang:tl}=${${lang}_DEFAULT} in /etc/make.conf"
@@ -57,8 +57,8 @@ GCC_DEFAULT?=		12
 GHOSTSCRIPT_DEFAULT?=	agpl
 # Possible values: mesa-libs, mesa-devel
 GL_DEFAULT?=		mesa-libs
-# Possible values: 1.18, 1.19, 1.20-devel
-GO_DEFAULT?=		1.19
+# Possible values: 1.18, 1.19, 1.20, 1.21-devel
+GO_DEFAULT?=		1.20
 # Possible values: 6, 6-nox11, 7, 7-nox11
 IMAGEMAGICK_DEFAULT?=	7
 # Possible values: 7, 8, 11, 17, 18
@@ -70,7 +70,7 @@ LAZARUS_DEFAULT?=       2.2.4
 LAZARUS_DEFAULT?=       2.3.0
 .  endif
 # Possible values: rust, legacy
-.  if empty(ARCH:Naarch64:Narmv6:Narmv7:Namd64:Ni386:Npowerpc64:Npowerpc64le:Npowerpc)
+.  if empty(ARCH:Naarch64:Narmv7:Namd64:Ni386:Npowerpc64:Npowerpc64le:Npowerpc)
 LIBRSVG2_DEFAULT?=	rust
 .  else
 LIBRSVG2_DEFAULT?=	legacy
@@ -90,11 +90,13 @@ LUAJIT_DEFAULT?=	luajit-devel
 # Possible values: 5.10, 5.20, 6.8
 MONO_DEFAULT=		5.10
 # Possible values: 5.6, 5.7, 8.0, 10.3m, 10.4m, 10.5m, 5.7p, 5.7w
-MYSQL_DEFAULT?=		5.7
+MYSQL_DEFAULT?=		8.0
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
-# Possible value: 14, 16, 18, lts, current
+# Possible value: 14, 16, 18, 19, current, lts (Note: current = 19 and lts = 18)
 NODEJS_DEFAULT?=    lts
+# Possible value: 24, 25, 26
+OPENLDAP_DEFAULT?=    26
 # Possible values: 5.32, 5.34, 5.36, devel
 .  if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
@@ -164,7 +166,7 @@ SSL_DEFAULT?=	base
 .  endif
 # Possible values: 8.5, 8.6, 8.7
 TCLTK_DEFAULT?=		8.6
-# Possible values: 4, 6, 7
+# Possible values: 6, 7
 VARNISH_DEFAULT?=	6
 
 .endif

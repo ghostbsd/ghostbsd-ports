@@ -11,6 +11,7 @@
     SUBDIR += bamutil
     SUBDIR += barrnap
     SUBDIR += bbmap
+    SUBDIR += bcf-score
     SUBDIR += bcftools
     SUBDIR += bedtools
     SUBDIR += bfc
@@ -238,6 +239,7 @@
     SUBDIR += viennarna
     SUBDIR += vsearch
     SUBDIR += vt
+    SUBDIR += wfa2-lib
     SUBDIR += wise
 
 .include <bsd.port.subdir.mk>

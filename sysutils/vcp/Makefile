@@ -3,9 +3,9 @@ PORTVERSION=	2.2
 PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://freebsdcluster.org/~mich/software/ \
-		http://fuz.su/~fuz/distfiles/vcp/
+		LOCAL/fuz
 
-MAINTAINER=	fuz@fuz.su
+MAINTAINER=	fuz@FreeBSD.org
 COMMENT=	Copy files in curses interface
 
 LICENSE=	BSD3CLAUSE

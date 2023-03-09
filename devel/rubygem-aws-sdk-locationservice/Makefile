@@ -1,5 +1,5 @@
 PORTNAME=	aws-sdk-locationservice
-PORTVERSION=	1.25.0
+PORTVERSION=	1.28.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 

@@ -1,6 +1,5 @@
 PORTNAME=	solidity
-PORTVERSION=	0.8.17
-PORTREVISION=	1
+PORTVERSION=	0.8.19
 CATEGORIES=	lang
 MASTER_SITES=	https://github.com/ethereum/solidity/releases/download/v${PORTVERSION}/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -40,8 +39,13 @@ CMAKE_ARGS+=	-DUSE_LD_GOLD=OFF -DTESTS=OFF \
 		-DSTRICT_Z3_VERSION=OFF
 
 PLIST_FILES=	bin/solc \
-		bin/solidity-upgrade \
 		bin/yul-phaser
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400079
+CXXFLAGS+=	-Wno-unqualified-std-cast-call
+.endif
 
 pre-patch:
 		@${CP} ${FILESDIR}/fmtlib.cmake ${FILESDIR}/jsoncpp.cmake ${WRKSRC}/cmake/

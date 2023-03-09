@@ -131,6 +131,6 @@ lib/cmake/highs/highs-config.cmake
 lib/cmake/highs/highs-targets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/highs/highs-targets.cmake
 lib/libhighs.so
-lib/libhighs.so.1.4
-lib/libhighs.so.1.4.0
+lib/libhighs.so.1.5
+lib/libhighs.so.1.5.1
 libdata/pkgconfig/highs.pc

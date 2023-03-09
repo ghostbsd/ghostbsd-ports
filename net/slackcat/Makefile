@@ -1,11 +1,11 @@
 PORTNAME=	slackcat
 DISTVERSION=	1.7.3
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	https://raw.githubusercontent.com/${GH_ACCOUNT}/${GH_PROJECT}/${DISTVERSIONFULL}/:gomod
 DISTFILES=	go.mod:gomod
 
-MAINTAINER=	nork@ninth-nine.com
+MAINTAINER=	nork@FreeBSD.org
 COMMENT=	Simple commandline utility to post snippets to Slack
 WWW=		https://github.com/bcicen/slackcat
 

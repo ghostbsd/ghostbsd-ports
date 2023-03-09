@@ -1,6 +1,6 @@
 PORTNAME=	birdfont
 DISTVERSION=	2.32.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics x11-fonts
 MASTER_SITES=	https://birdfont.org/releases/
 
@@ -35,6 +35,7 @@ CONFIGURE_ARGS=	--cc="${CC}" \
 		--ldflags="${LDFLAGS}" \
 		--prefix="${PREFIX}"
 
+LDFLAGS_powerpc=	-lm
 _STRIPPABLE=	bin/birdfont bin/birdfont-autotrace bin/birdfont-export \
 		bin/birdfont-import lib/libbirdfont.so.36.0 \
 		lib/libbirdgems.so.0.0

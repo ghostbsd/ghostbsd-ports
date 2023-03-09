@@ -1,6 +1,7 @@
 PORTNAME=	gitoxide
 DISTVERSIONPREFIX=	git-repository-v
 DISTVERSION=	0.32.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -391,7 +392,7 @@ OPENSSLLIB=	/usr/lib
 PLIST_FILES=	bin/ein \
 		bin/gix
 
-PORTSCOUT=	ignore # repository tags don't make sense and only cause confusion
+PORTSCOUT=	ignore:1 # repository tags don't make sense and only cause confusion
 
 post-install:
 	@${STRIP_CMD} \

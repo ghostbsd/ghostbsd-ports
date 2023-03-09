@@ -1,6 +1,6 @@
 PORTNAME=	srain
 DISTVERSION=	1.3.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	irc
 
 MAINTAINER=	ashish@FreeBSD.org
@@ -9,6 +9,8 @@ WWW=		https://srain.im/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN=		fails to package
 
 LIB_DEPENDS=	libconfig.so:devel/libconfig \
 		libsecret-1.so:security/libsecret \

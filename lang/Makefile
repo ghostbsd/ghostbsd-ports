@@ -104,6 +104,7 @@
     SUBDIR += gforth
     SUBDIR += ghc
     SUBDIR += ghc810
+    SUBDIR += gir-to-d
     SUBDIR += gjs
     SUBDIR += gleam
     SUBDIR += gnat12
@@ -120,6 +121,7 @@
     SUBDIR += go-devel
     SUBDIR += go118
     SUBDIR += go119
+    SUBDIR += go120
     SUBDIR += gomacro
     SUBDIR += gprolog
     SUBDIR += gravity
@@ -134,6 +136,7 @@
     SUBDIR += hermes
     SUBDIR += hla
     SUBDIR += hs-brainfuck
+    SUBDIR += hs-futhark
     SUBDIR += hs-unlambda
     SUBDIR += huc
     SUBDIR += icc

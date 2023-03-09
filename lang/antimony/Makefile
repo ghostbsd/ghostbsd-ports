@@ -1,6 +1,7 @@
 PORTNAME=	antimony
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.0
+PORTREVISION=	1
 CATEGORIES=	lang
 PKGNAMESUFFIX=	-language
 
@@ -11,9 +12,7 @@ WWW=		https://antimony-lang.github.io/antimony/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	node:www/node
-
-USES=		cargo
+USES=		cargo nodejs:run
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	antimony-lang

@@ -298,12 +298,14 @@
     SUBDIR += py-asdf
     SUBDIR += py-asdf-standard
     SUBDIR += py-asdf-transform-schemas
+    SUBDIR += py-asdf-unit-schemas
     SUBDIR += py-ase
     SUBDIR += py-atomium
     SUBDIR += py-avogadrolibs
     SUBDIR += py-boutdata
     SUBDIR += py-boututils
     SUBDIR += py-cdo
+    SUBDIR += py-cfgrib
     SUBDIR += py-chainer
     SUBDIR += py-chainer-chemistry
     SUBDIR += py-chempy

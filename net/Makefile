@@ -15,6 +15,7 @@
     SUBDIR += akonadi-mime
     SUBDIR += akonadi-notes
     SUBDIR += akonadi-search
+    SUBDIR += alligator
     SUBDIR += aluminum
     SUBDIR += aoe
     SUBDIR += apache-commons-net
@@ -181,6 +182,7 @@
     SUBDIR += gemserv
     SUBDIR += geoclue
     SUBDIR += geocode-glib
+    SUBDIR += geocode-glib2
     SUBDIR += geoipupdate
     SUBDIR += gerbera
     SUBDIR += gfbgraph
@@ -243,7 +245,6 @@
     SUBDIR += haproxy18
     SUBDIR += haproxy20
     SUBDIR += haproxy22
-    SUBDIR += haproxy23
     SUBDIR += haproxy24
     SUBDIR += haproxy25
     SUBDIR += haproxy26
@@ -413,6 +414,7 @@
     SUBDIR += librdkafka
     SUBDIR += librespeed-cli
     SUBDIR += librespeed-go
+    SUBDIR += librest1
     SUBDIR += librsync
     SUBDIR += libsignal-protocol-c
     SUBDIR += libslirp
@@ -1168,6 +1170,7 @@
     SUBDIR += pyrad
     SUBDIR += qadsl
     SUBDIR += qoauth-qt5
+    SUBDIR += qrcp
     SUBDIR += qt5-network
     SUBDIR += qt5-networkauth
     SUBDIR += qt6-networkauth
@@ -1227,6 +1230,7 @@
     SUBDIR += rubygem-amqp
     SUBDIR += rubygem-amqp-utils
     SUBDIR += rubygem-apollo_upload_server
+    SUBDIR += rubygem-app_store_connect
     SUBDIR += rubygem-asset_sync
     SUBDIR += rubygem-aws-s3
     SUBDIR += rubygem-aws-ses
@@ -1357,6 +1361,7 @@
     SUBDIR += rubygem-qiniu
     SUBDIR += rubygem-rabbiter
     SUBDIR += rubygem-rbvmomi
+    SUBDIR += rubygem-rbvmomi2
     SUBDIR += rubygem-right_aws
     SUBDIR += rubygem-right_flexiscale
     SUBDIR += rubygem-right_gogrid
@@ -1506,6 +1511,7 @@
     SUBDIR += throttled
     SUBDIR += tigervnc-server
     SUBDIR += tigervnc-viewer
+    SUBDIR += tigervnc-viewer-java
     SUBDIR += tightvnc
     SUBDIR += timed
     SUBDIR += tintin++
@@ -1594,6 +1600,7 @@
     SUBDIR += x11vnc
     SUBDIR += x2goclient
     SUBDIR += x2goclient-cli
+    SUBDIR += xapsd
     SUBDIR += xisp
     SUBDIR += xmlrpc-c
     SUBDIR += xmlrpc-epi

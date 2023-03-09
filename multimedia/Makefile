@@ -294,6 +294,8 @@
     SUBDIR += pipe-viewer
     SUBDIR += pipewire
     SUBDIR += pitivi
+    SUBDIR += plasma5-plank-player
+    SUBDIR += plasmatube
     SUBDIR += playerctl
     SUBDIR += plexmediaserver
     SUBDIR += plexmediaserver-plexpass

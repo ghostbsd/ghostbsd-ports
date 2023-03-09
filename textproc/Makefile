@@ -95,6 +95,7 @@
     SUBDIR += cg3
     SUBDIR += cgrep
     SUBDIR += chkascii
+    SUBDIR += choose
     SUBDIR += chpp
     SUBDIR += cl-meta
     SUBDIR += cl-meta-sbcl
@@ -254,6 +255,7 @@
     SUBDIR += groonga
     SUBDIR += gsed
     SUBDIR += gspell
+    SUBDIR += gstreamer1-plugins-zxing
     SUBDIR += gtk-doc
     SUBDIR += gtkspell
     SUBDIR += gtkspell3
@@ -502,6 +504,7 @@
     SUBDIR += nuspell
     SUBDIR += nux
     SUBDIR += ny-aspell
+    SUBDIR += obsidian
     SUBDIR += ocaml-csv
     SUBDIR += ocaml-expat
     SUBDIR += ocaml-text
@@ -1342,6 +1345,7 @@
     SUBDIR += py-gi-docgen
     SUBDIR += py-googletrans
     SUBDIR += py-grako
+    SUBDIR += py-grapheme
     SUBDIR += py-guess-language
     SUBDIR += py-hashids
     SUBDIR += py-hexdump
@@ -1409,6 +1413,7 @@
     SUBDIR += py-numpydoc
     SUBDIR += py-ocrmypdf
     SUBDIR += py-openpyxl
+    SUBDIR += py-opensearch-py
     SUBDIR += py-openstackdocstheme
     SUBDIR += py-openstep-plist
     SUBDIR += py-orange3-text
@@ -1490,6 +1495,7 @@
     SUBDIR += py-rich
     SUBDIR += py-rich-cli
     SUBDIR += py-rich-rst
+    SUBDIR += py-rich12
     SUBDIR += py-rnc2rng
     SUBDIR += py-rss2gen
     SUBDIR += py-rst2ansi
@@ -1708,6 +1714,7 @@
     SUBDIR += rubygem-ferret
     SUBDIR += rubygem-fog-xml
     SUBDIR += rubygem-gemoji
+    SUBDIR += rubygem-gemoji3
     SUBDIR += rubygem-gepub
     SUBDIR += rubygem-github-linguist
     SUBDIR += rubygem-github-markup

@@ -1,5 +1,5 @@
 PORTNAME=	cyrus-imapd
-PORTVERSION=	3.6.0
+PORTVERSION=	3.6.1
 PORTREVISION=	0
 CATEGORIES=	mail
 MASTER_SITES=	https://github.com/cyrusimap/cyrus-imapd/releases/download/${PORTNAME}-${DISTVERSION}/
@@ -91,7 +91,7 @@ HTTP_USE=		GNOME=libxml2
 IDLED_DESC=		Enable IMAP idled support
 IDLED_CONFIGURE_ENABLE=	idled
 LDAP_DESC=		Enable LDAP support (experimental)
-LDAP_USE=		OPENLDAP=yes
+LDAP_USES=		ldap
 LDAP_CONFIGURE_ON=	--with-ldap=${LOCALBASE}
 LDAP_CONFIGURE_OFF=	--without-ldap
 MURDER_DESC=		Enable IMAP Murder support

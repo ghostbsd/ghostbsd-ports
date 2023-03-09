@@ -1,6 +1,6 @@
 PORTNAME=	openjfx
 DISTVERSION=	14.0.2.1+1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	java x11-toolkits devel
 MASTER_SITES=	https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-core/7.7.1/:core \
 		https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-grouping/7.7.1/:grouping \
@@ -16,7 +16,7 @@ DISTFILES=	lucene-core-7.7.1.jar:core \
 		lucene-sandbox-7.7.1.jar:sandbox \
 		antlr4-4.7.2-complete.jar:antlr
 
-MAINTAINER=	mikael@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	JavaFX SDK overlay for OpenJDK 11
 WWW=		https://openjdk.java.net/projects/openjfx/
 
@@ -46,7 +46,8 @@ JAVA_VERSION=	11
 USE_LDCONFIG=	yes
 USE_XORG=	x11 xtst xxf86vm
 
-CFLAGS+=	-Wno-unused-command-line-argument
+CFLAGS+=	-Wno-unused-command-line-argument \
+		-Wno-int-conversion
 
 PLIST_SUB=	INSTALLDIR=${_INSTALLDIR}
 
