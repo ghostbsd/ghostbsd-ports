@@ -388,6 +388,7 @@
     SUBDIR += libmdf
     SUBDIR += libmediawiki
     SUBDIR += libnatpmp
+    SUBDIR += libndp
     SUBDIR += libnet
     SUBDIR += libnfs
     SUBDIR += libngtcp2
@@ -1529,8 +1530,6 @@
     SUBDIR += trickle
     SUBDIR += tsclient
     SUBDIR += tsctp
-    SUBDIR += tshark
-    SUBDIR += tshark-lite
     SUBDIR += tsocks
     SUBDIR += tunneller
     SUBDIR += turnserver
@@ -1585,7 +1584,6 @@
     SUBDIR += wireguard-tools
     SUBDIR += wireproxy
     SUBDIR += wireshark
-    SUBDIR += wireshark-lite
     SUBDIR += wlan2eth
     SUBDIR += wlvncc
     SUBDIR += wmnd

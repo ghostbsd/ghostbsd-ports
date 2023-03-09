@@ -883,6 +883,8 @@
     SUBDIR += godot-tools
     SUBDIR += godot2
     SUBDIR += godot2-tools
+    SUBDIR += godot35
+    SUBDIR += godot35-tools
     SUBDIR += goffice
     SUBDIR += gogs
     SUBDIR += golangci-lint
@@ -1564,6 +1566,7 @@
     SUBDIR += mercurial
     SUBDIR += mergify
     SUBDIR += meson
+    SUBDIR += meson-python
     SUBDIR += microsoft-gsl
     SUBDIR += mill
     SUBDIR += mimalloc
@@ -4592,6 +4595,7 @@
     SUBDIR += py-flake8-bugbear
     SUBDIR += py-flake8-builtins
     SUBDIR += py-flake8-docstrings
+    SUBDIR += py-flake8-future-annotations
     SUBDIR += py-flake8-import-order
     SUBDIR += py-flake8-polyfill
     SUBDIR += py-flake8-print
@@ -5482,6 +5486,7 @@
     SUBDIR += py-telepath
     SUBDIR += py-tempora
     SUBDIR += py-tenacity
+    SUBDIR += py-tendo
     SUBDIR += py-termcolor
     SUBDIR += py-termcolor-whl
     SUBDIR += py-termstyle

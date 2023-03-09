@@ -1,3 +1,551 @@
+  <vuln vid="d357f6bb-0af4-4ac9-b096-eeec183ad829">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>111.0.5563.64</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>111.0.5563.64</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2023/03/stable-channel-update-for-desktop.html">
+	 <p>This update includes 40 security fixes:</p>
+	 <ul>
+	   <li>[1411210] High CVE-2023-1213: Use after free in Swiftshader. Reported by Jaehun Jeong(@n3sk) of Theori on 2023-01-30</li>
+	   <li>[1412487] High CVE-2023-1214: Type Confusion in V8. Reported by Man Yue Mo of GitHub Security Lab on 2023-02-03</li>
+	   <li>[1417176] High CVE-2023-1215: Type Confusion in CSS. Reported by Anonymous on 2023-02-17</li>
+	   <li>[1417649] High CVE-2023-1216: Use after free in DevTools. Reported by Ganjiang Zhou(@refrain_areu) of ChaMd5-H1 team on 2023-02-21</li>
+	   <li>[1412658] High CVE-2023-1217: Stack buffer overflow in Crash reporting. Reported by sunburst of Ant Group Tianqiong Security Lab on 2023-02-03</li>
+	   <li>[1413628] High CVE-2023-1218: Use after free in WebRTC. Reported by Anonymous on 2023-02-07</li>
+	   <li>[1415328] High CVE-2023-1219: Heap buffer overflow in Metrics. Reported by Sergei Glazunov of Google Project Zero on 2023-02-13</li>
+	   <li>[1417185] High CVE-2023-1220: Heap buffer overflow in UMA. Reported by Sergei Glazunov of Google Project Zero on 2023-02-17</li>
+	   <li>[1385343] Medium CVE-2023-1221: Insufficient policy enforcement in Extensions API. Reported by Ahmed ElMasry on 2022-11-16</li>
+	   <li>[1403515] Medium CVE-2023-1222: Heap buffer overflow in Web Audio API. Reported by Cassidy Kim(@cassidy6564) on 2022-12-24</li>
+	   <li>[1398579] Medium CVE-2023-1223: Insufficient policy enforcement in Autofill. Reported by Ahmed ElMasry on 2022-12-07</li>
+	   <li>[1403539] Medium CVE-2023-1224: Insufficient policy enforcement in Web Payments API. Reported by Thomas Orlita on 2022-12-25</li>
+	   <li>[1408799] Medium CVE-2023-1225: Insufficient policy enforcement in Navigation. Reported by Roberto Ffrench-Davis @Lihaft on 2023-01-20</li>
+	   <li>[1013080] Medium CVE-2023-1226: Insufficient policy enforcement in Web Payments API. Reported by Anonymous on 2019-10-10</li>
+	   <li>[1348791] Medium CVE-2023-1227: Use after free in Core. Reported by @ginggilBesel on 2022-07-31</li>
+	   <li>[1365100] Medium CVE-2023-1228: Insufficient policy enforcement in Intents. Reported by Axel Chong on 2022-09-18</li>
+	   <li>[1160485] Medium CVE-2023-1229: Inappropriate implementation in Permission prompts. Reported by Thomas Orlita on 2020-12-20</li>
+	   <li>[1404230] Medium CVE-2023-1230: Inappropriate implementation in WebApp Installs. Reported by Axel Chong on 2022-12-30</li>
+	   <li>[1274887] Medium CVE-2023-1231: Inappropriate implementation in Autofill. Reported by Yan Zhu, Brave on 2021-11-30</li>
+	   <li>[1346924] Low CVE-2023-1232: Insufficient policy enforcement in Resource Timing. Reported by Sohom Datta on 2022-07-24</li>
+	   <li>[1045681] Low CVE-2023-1233: Insufficient policy enforcement in Resource Timing. Reported by Soroush Karami on 2020-01-25</li>
+	   <li>[1404621] Low CVE-2023-1234: Inappropriate implementation in Intents. Reported by Axel Chong on 2023-01-03</li>
+	   <li>[1404704] Low CVE-2023-1235: Type Confusion in DevTools. Reported by raven at KunLun lab on 2023-01-03</li>
+	   <li>[1374518] Low CVE-2023-1236: Inappropriate implementation in Internals. Reported by Alesandro Ortiz on 2022-10-14</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-1213</cvename>
+      <cvename>CVE-2023-1214</cvename>
+      <cvename>CVE-2023-1215</cvename>
+      <cvename>CVE-2023-1216</cvename>
+      <cvename>CVE-2023-1217</cvename>
+      <cvename>CVE-2023-1218</cvename>
+      <cvename>CVE-2023-1219</cvename>
+      <cvename>CVE-2023-1220</cvename>
+      <cvename>CVE-2023-1221</cvename>
+      <cvename>CVE-2023-1222</cvename>
+      <cvename>CVE-2023-1223</cvename>
+      <cvename>CVE-2023-1224</cvename>
+      <cvename>CVE-2023-1225</cvename>
+      <cvename>CVE-2023-1226</cvename>
+      <cvename>CVE-2023-1227</cvename>
+      <cvename>CVE-2023-1228</cvename>
+      <cvename>CVE-2023-1229</cvename>
+      <cvename>CVE-2023-1230</cvename>
+      <cvename>CVE-2023-1231</cvename>
+      <cvename>CVE-2023-1232</cvename>
+      <cvename>CVE-2023-1233</cvename>
+      <cvename>CVE-2023-1234</cvename>
+      <cvename>CVE-2023-1235</cvename>
+      <cvename>CVE-2023-1236</cvename>
+      <url>https://chromereleases.googleblog.com/2023/03/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2023-03-08</discovery>
+      <entry>2023-03-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f68bb358-be8e-11ed-9215-00e081b7aa2d">
+    <topic>jenkins -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>jenkins</name>
+	<range><lt>2.394</lt></range>
+      </package>
+      <package>
+	<name>jenkins-lts</name>
+	<range><lt>2.387.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory:</p>
+	<blockquote cite="https://www.jenkins.io/security/advisory/2023-03-08/">
+	  <h1>Description</h1>
+	  <h5>(High) SECURITY-3037 / CVE-2023-27898</h5>
+	  <p>XSS vulnerability in plugin manager</p>
+	  <h5>(Medium) SECURITY-3030 / CVE-2023-24998 (upstream issue), CVE-2023-27900 (MultipartFormDataParser), CVE-2023-27901 (StaplerRequest)</h5>
+	  <p>DoS vulnerability in bundled Apache Commons FileUpload library</p>
+	  <h5></h5>
+	  <h5>(Medium) SECURITY-1807 / CVE-2023-27902</h5>
+	  <p>Workspace temporary directories accessible through directory browser</p>
+	  <h5>(Low) SECURITY-3058 / CVE-2023-27903</h5>
+	  <p>Temporary file parameter created with insecure permissions</p>
+	  <h5>(Low) SECURITY-2120 / CVE-2023-27904</h5>
+	  <p>Information disclosure through error stack traces related to agents</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-27898</cvename>
+      <cvename>CVE-2023-24998</cvename>
+      <cvename>CVE-2023-27900</cvename>
+      <cvename>CVE-2023-27901</cvename>
+      <cvename>CVE-2023-27902</cvename>
+      <cvename>CVE-2023-27903</cvename>
+      <cvename>CVE-2023-27904</cvename>
+      <cvename></cvename>
+      <url>https://www.jenkins.io/security/advisory/2023-03-08/</url>
+    </references>
+    <dates>
+      <discovery>2023-03-08</discovery>
+      <entry>2023-03-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="742279d6-bdbe-11ed-a179-2b68e9d12706">
+    <topic>go -- crypto/elliptic: incorrect P-256 ScalarMult and ScalarBaseMult results</topic>
+    <affects>
+      <package>
+	<name>go119</name>
+	<range><lt>1.19.7</lt></range>
+      </package>
+      <package>
+	<name>go120</name>
+	<range><lt>1.20.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Go project reports:</p>
+	<blockquote cite="https://go.dev/issue/58647">
+	  <p>crypto/elliptic: incorrect P-256 ScalarMult and
+	    ScalarBaseMult results</p>
+	  <p>The ScalarMult and ScalarBaseMult methods of the P256
+	    Curve may return an incorrect result if called with some
+	    specific unreduced scalars (a scalar larger than the
+	    order of the curve).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-24532</cvename>
+      <url>https://groups.google.com/g/golang-dev/c/3wmx8i5WvNY/m/AEOlccrGAwAJ</url>
+    </references>
+    <dates>
+      <discovery>2023-02-22</discovery>
+      <entry>2023-03-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bed545c6-bdb8-11ed-bca8-a33124f1beb1">
+    <topic>mantis -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mantis-php74</name>
+	<name>mantis-php80</name>
+	<name>mantis-php81</name>
+	<name>mantis-php82</name>
+	<range><lt>2.25.6,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mantis 2.25.6 release reports:</p>
+	<blockquote cite="https://mantisbt.org/bugs/changelog_page.php?project=mantisbt&amp;version=2.25.6">
+	  <p>Security and maintenance release</p>
+	  <ul>
+	    <li>0031086: Private issue summary disclosure (CVE-2023-22476)</li>
+	    <li>0030772: Update (bundled) moment.js to 2.29.4 (CVE-2022-31129)</li>
+	    <li>0030791: Allow adding relation type noopener/noreferrer to outgoing links</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-22476</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=2023-22476</url>
+      <cvename>CVE-2022-31129</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-31129</url>
+    </references>
+    <dates>
+      <discovery>2023-01-06</discovery>
+      <entry>2023-03-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6678211c-bd47-11ed-beb0-1c1b0d9ea7e6">
+    <topic>Apache OpenOffice -- master password vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>apache-openoffice</name>
+	<range><lt>4.1.13</lt></range>
+      </package>
+      <package>
+	<name>apache-openoffice-devel</name>
+	<range><lt>4.2.1678061694i,4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache Openoffice project reports:</p>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-37400">
+	  <p>Apache OpenOffice supports the storage of passwords for web connections in the user's configuration database. The stored passwords are encrypted with a single master key provided by the user. A flaw in OpenOffice existed where the required initialization vector for encryption was always the same which weakens the security of the encryption making them vulnerable if an attacker has access to the user's configuration data. This issue affects: Apache OpenOffice versions prior to 4.1.13. Reference: CVE-2022-26306 - LibreOffice</p>
+	</blockquote>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-37401">
+	  <p>Apache OpenOffice supports the storage of passwords for web connections in the user's configuration database. The stored passwords are encrypted with a single master key provided by the user. A flaw in OpenOffice existed where master key was poorly encoded resulting in weakening its entropy from 128 to 43 bits making the stored passwords vulnerable to a brute force attack if an attacker has access to the users stored config. This issue affects: Apache OpenOffice versions prior to 4.1.13. Reference: CVE-2022-26307 - LibreOffice</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-37400</cvename>
+      <cvename>CVE-2022-37401</cvename>
+      <url>https://cwiki.apache.org/confluence/display/OOOUSERS/AOO+4.1.13+Release+Notes</url>
+    </references>
+    <dates>
+      <discovery>2022-02-25</discovery>
+      <entry>2023-03-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f0798a6a-bbdb-11ed-ba99-080027f5fec9">
+    <topic>rack -- possible DoS vulnerability in multipart MIME parsing</topic>
+    <affects>
+      <package>
+	<name>rubygem-rack</name>
+	<range><lt>3.0.4.2,3</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack22</name>
+	<range><lt>2.2.6.6,3</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack16</name>
+	<range><lt>1.6.14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Aaron Patterson reports:</p>
+	<blockquote cite="https://discuss.rubyonrails.org/t/cve-2023-27530-possible-dos-vulnerability-in-multipart-mime-parsing/82388">
+	  <p>
+	    The Multipart MIME parsing code in Rack limits the number
+	    of file parts, but does not limit the total number of
+	    parts that can be uploaded. Carefully crafted requests can
+	    abuse this and cause multipart parsing to take longer than
+	    expected.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-27530</cvename>
+      <url>https://discuss.rubyonrails.org/t/cve-2023-27530-possible-dos-vulnerability-in-multipart-mime-parsing/82388</url>
+    </references>
+    <dates>
+      <discovery>2023-03-03</discovery>
+      <entry>2023-03-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="be233fc6-bae7-11ed-a4fb-080027f5fec9">
+    <topic>curl -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>curl</name>
+	<range><lt>7.88.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Harry Sintonen and Patrick Monnerat report:</p>
+	<blockquote cite="https://curl.se/docs/security.html">
+	  <dl>
+	    <dt>CVE-2023-23914</dt>
+	    <dd>
+	      A cleartext transmission of sensitive information
+	      vulnerability exists in curl &lt; v7.88.0 that could
+	      cause HSTS functionality fail when multiple URLs are
+	      requested serially. Using its HSTS support, curl can be
+	      instructed to use HTTPS instead of using an insecure
+	      clear-text HTTP step even when HTTP is provided in the
+	      URL. This HSTS mechanism would however surprisingly be
+	      ignored by subsequent transfers when done on the same
+	      command line because the state would not be properly
+	      carried on.
+	    </dd>
+	    <dt>CVE-2023-23915</dt>
+	    <dd>
+	      A cleartext transmission of sensitive information
+	      vulnerability exists in curl &lt; v7.88.0 that could
+	      cause HSTS functionality to behave incorrectly when
+	      multiple URLs are requested in parallel. Using its HSTS
+	      support, curl can be instructed to use HTTPS instead of
+	      using an insecure clear-text HTTP step even when HTTP is
+	      provided in the URL. This HSTS mechanism would however
+	      surprisingly fail when multiple transfers are done in
+	      parallel as the HSTS cache file gets overwritten by the
+	      most recently completed transfer. A later HTTP-only
+	      transfer to the earlier host name would then *not* get
+	      upgraded properly to HSTS.
+	    </dd>
+	    <dt>CVE-2023-23916</dt>
+	    <dd>
+	      An allocation of resources without limits or throttling
+	      vulnerability exists in curl &lt; v7.88.0 based on the
+	      &quot;chained&quot; HTTP compression algorithms, meaning
+	      that a server response can be compressed multiple times
+	      and potentially with different algorithms. The number of
+	      acceptable &quot;links&quot; in this &quot;decompression
+	      chain&quot; was capped, but the cap was implemented on a
+	      per-header basis allowing a malicious server to insert a
+	      virtually unlimited number of compression steps simply
+	      by using many headers. The use of such a decompression
+	      chain could result in a &quot;malloc bomb&quot;, making
+	      curl end up spending enormous amounts of allocated heap
+	      memory, or trying to and returning out of memory errors.
+	    </dd>
+	  </dl>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-23914</cvename>
+      <cvename>CVE-2023-23915</cvename>
+      <cvename>CVE-2023-23916</cvename>
+      <url>https://curl.se/docs/security.html</url>
+    </references>
+    <dates>
+      <discovery>2023-02-15</discovery>
+      <entry>2023-03-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3f9b6943-ba58-11ed-bbbd-00e0670f2660">
+    <topic>strongSwan -- certificate verification vulnerability</topic>
+    <affects>
+      <package>
+	<name>strongswan</name>
+	<range><ge>5.9.8</ge><lt>5.9.9_2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>strongSwan reports:</p>
+	<blockquote cite="https://www.strongswan.org/blog/2023/03/02/strongswan-vulnerability-(cve-2023-26463).html">
+	  <p>A vulnerability related to certificate verification in TLS-based EAP methods
+	     was discovered in strongSwan that results in a denial of service
+	     but possibly even remote code execution. Versions 5.9.8 and 5.9.9
+	     may be affected. </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-26463</cvename>
+      <url>https://www.strongswan.org/blog/2023/03/02/strongswan-vulnerability-(cve-2023-26463).html</url>
+    </references>
+    <dates>
+      <discovery>2023-03-02</discovery>
+      <entry>2023-03-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f7c5b3a9-b9fb-11ed-99c6-001b217b3468">
+    <topic>Gitlab -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>15.9.0</ge><lt>15.9.2</lt></range>
+	<range><ge>15.8.0</ge><lt>15.8.4</lt></range>
+	<range><ge>9.0.0</ge><lt>15.7.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2023/03/02/security-release-gitlab-15-9-2-released/">
+	  <p>Stored XSS via Kroki diagram</p>
+	  <p>Prometheus integration Google IAP details are not hidden, may leak account details from instance/group/project settings</p>
+	  <p>Improper validation of SSO and SCIM tokens while managing groups</p>
+	  <p>Maintainer can leak Datadog API key by changing Datadog site</p>
+	  <p>Clipboard based XSS in the title field of work items</p>
+	  <p>Improper user right checks for personal snippets</p>
+	  <p>Release Description visible in public projects despite release set as project members only</p>
+	  <p>Group integration settings sensitive information exposed to project maintainers</p>
+	  <p>Improve pagination limits for commits</p>
+	  <p>Gitlab Open Redirect Vulnerability</p>
+	  <p>Maintainer may become an Owner of a project</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0050</cvename>
+      <cvename>CVE-2022-4289</cvename>
+      <cvename>CVE-2022-4331</cvename>
+      <cvename>CVE-2023-0483</cvename>
+      <cvename>CVE-2022-4007</cvename>
+      <cvename>CVE-2022-3758</cvename>
+      <cvename>CVE-2023-0223</cvename>
+      <cvename>CVE-2022-4462</cvename>
+      <cvename>CVE-2023-1072</cvename>
+      <cvename>CVE-2022-3381</cvename>
+      <cvename>CVE-2023-1084</cvename>
+      <url>https://about.gitlab.com/releases/2023/03/02/security-release-gitlab-15-9-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2023-03-02</discovery>
+      <entry>2023-03-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6dccc186-b824-11ed-b695-6c3be5272acd">
+    <topic>Grafana -- Stored XSS in text panel plugin</topic>
+    <affects>
+      <package>
+	<name>grafana</name>
+	<range><ge>9.2.0</ge><lt>9.2.10</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.4</lt></range>
+      </package>
+      <package>
+	<name>grafana9</name>
+	<range><ge>9.2.0</ge><lt>9.2.10</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Grafana Labs reports:</p>
+	<blockquote cite="https://grafana.com/blog/2023/02/28/grafana-security-release-new-versions-with-security-fixes-for-cve-2023-0594-cve-2023-0507-and-cve-2023-22462/">
+	  <p>During an internal audit of Grafana on January 1, a member of the security
+	  team found a stored XSS vulnerability affecting the core text plugin.</p>
+	  <p>The stored XSS vulnerability requires several user interactions in order
+	  to be fully exploited. The vulnerability was possible due to React’s render
+	  cycle that will pass through the unsanitized HTML code, but in the next cycle,
+	  the HTML is cleaned up and saved in Grafana’s database.</p>
+	  <p>The CVSS score for this vulnerability is 6.4 Medium
+	  (CVSS:6.4/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:N).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-22462</cvename>
+      <url>https://github.com/grafana/grafana/security/advisories/GHSA-7rqg-hjwc-6mjf</url>
+    </references>
+    <dates>
+      <discovery>2023-01-01</discovery>
+      <entry>2023-03-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e7841611-b808-11ed-b695-6c3be5272acd">
+    <topic>Grafana -- Stored XSS in TraceView panel</topic>
+    <affects>
+      <package>
+	<name>grafana</name>
+	<range><lt>8.5.21</lt></range>
+	<range><ge>9.0.0</ge><lt>9.2.13</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.8</lt></range>
+      </package>
+      <package>
+	<name>grafana8</name>
+	<range><lt>8.5.21</lt></range>
+      </package>
+      <package>
+	<name>grafana9</name>
+	<range><ge>9.0.0</ge><lt>9.2.13</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Grafana Labs reports:</p>
+	<blockquote cite="https://grafana.com/blog/2023/02/28/grafana-security-release-new-versions-with-security-fixes-for-cve-2023-0594-cve-2023-0507-and-cve-2023-22462/">
+	  <p>During an internal audit of Grafana on January 30, a member
+	  of the engineering team found a stored XSS vulnerability affecting
+	  the <code>TraceView</code> panel.</p>
+	  <p>The stored XSS vulnerability was possible because the value of a span’s
+	  attributes/resources were not properly sanitized, and this will be rendered
+	  when the span’s attributes/resources are expanded.</p>
+	  <p>The CVSS score for this vulnerability is 7.3 High
+	  (CVSS:7.3/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0594</cvename>
+      <url>https://grafana.com/blog/2023/02/28/grafana-security-release-new-versions-with-security-fixes-for-cve-2023-0594-cve-2023-0507-and-cve-2023-22462/</url>
+    </references>
+    <dates>
+      <discovery>2023-01-30</discovery>
+      <entry>2023-03-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e2a8e2bd-b808-11ed-b695-6c3be5272acd">
+    <topic>Grafana -- Stored XSS in geomap panel plugin via attribution</topic>
+    <affects>
+      <package>
+	<name>grafana</name>
+	<range><lt>8.5.21</lt></range>
+	<range><ge>9.0.0</ge><lt>9.2.13</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.8</lt></range>
+      </package>
+      <package>
+	<name>grafana8</name>
+	<range><lt>8.5.21</lt></range>
+      </package>
+      <package>
+	<name>grafana9</name>
+	<range><ge>9.0.0</ge><lt>9.2.13</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Grafana Labs reports:</p>
+	<blockquote cite="https://grafana.com/blog/2023/02/28/grafana-security-release-new-versions-with-security-fixes-for-cve-2023-0594-cve-2023-0507-and-cve-2023-22462/">
+	  <p>During an internal audit of Grafana on January 25, a member of the security
+	  team found a stored XSS vulnerability affecting the core geomap plugin.</p>
+	  <p>The stored XSS vulnerability was possible because map attributions weren’t
+	  properly sanitized, allowing arbitrary JavaScript to be executed in the context
+	  of the currently authorized user of the Grafana instance.</p>
+	  <p>The CVSS score for this vulnerability is 7.3 High
+	  (CVSS:7.3/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0507</cvename>
+      <url>https://grafana.com/blog/2023/02/28/grafana-security-release-new-versions-with-security-fixes-for-cve-2023-0594-cve-2023-0507-and-cve-2023-22462/</url>
+    </references>
+    <dates>
+      <discovery>2023-01-25</discovery>
+      <entry>2023-03-01</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="b17bce48-b7c6-11ed-b304-080027f5fec9">
     <topic>redis -- multiple vulnerabilities</topic>
     <affects>

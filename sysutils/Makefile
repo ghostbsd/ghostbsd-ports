@@ -151,6 +151,7 @@
     SUBDIR += bstack
     SUBDIR += btop
     SUBDIR += btsixad
+    SUBDIR += budgie-control-center
     SUBDIR += buildah
     SUBDIR += bulk_extractor
     SUBDIR += bupstash

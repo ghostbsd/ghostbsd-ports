@@ -321,6 +321,7 @@
     SUBDIR += libzrtpcppcore
     SUBDIR += lime
     SUBDIR += linux-bitwarden-cli
+    SUBDIR += linux-c7-ca-certificates
     SUBDIR += linux-c7-cyrus-sasl2
     SUBDIR += linux-c7-gnutls
     SUBDIR += linux-c7-libgcrypt
@@ -732,6 +733,7 @@
     SUBDIR += pam_script
     SUBDIR += pam_search_list
     SUBDIR += pam_ssh_agent_auth
+    SUBDIR += pam_u2f
     SUBDIR += pam_yubico
     SUBDIR += pamtester
     SUBDIR += paperkey

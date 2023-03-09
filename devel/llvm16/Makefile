@@ -1,6 +1,6 @@
 PORTNAME=	llvm
 DISTVERSION=	16.0.0rc3
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/ \
 		https://${PRE_}releases.llvm.org/${LLVM_RELEASE}${RCDIR}/
@@ -91,7 +91,7 @@ OPTIONS_DEFINE_amd64=	GOLD
 OPTIONS_DEFINE_powerpc=	GOLD
 OPTIONS_DEFINE_powerpc64=	GOLD
 OPTIONS_DEFINE_powerpc64le=	GOLD
-OPTIONS_DEFAULT=	BE_AMDGPU BE_STANDARD BE_WASM CLANG COMPILER_RT EXTRAS LIT LLD LLDB OPENMP PYCLANG
+OPTIONS_DEFAULT=	BE_AMDGPU BE_STANDARD BE_WASM CLANG COMPILER_RT EXTRAS LIT LLD LLDB MLIR OPENMP PYCLANG
 OPTIONS_DEFAULT_amd64=	GOLD
 OPTIONS_DEFAULT_powerpc=	GOLD
 OPTIONS_DEFAULT_powerpc64=	GOLD
@@ -117,7 +117,7 @@ BE_STANDARD_DESC=	All non-experimental backends
 BE_WASM_DESC=		WebAssembly backend (required by firefox via wasi)
 .for BE in FREEBSD NATIVE STANDARD
 BE_${BE}_PLIST_FILES=	${_BE_LIBS_${BE}:O:S/$/.a/:S|^|${LLVM_DIR}/lib/libLLVM|} \
-			${_BE_INCS_${BE}:S|^|${LLVM_DIR}/lib/clang/${LLVM_MAJOR}/include/|:N${LLVM_DIR}/lib/clang/${LLVM_RELEASE}/include/$}
+			${_BE_INCS_${BE}:S|^|${LLVM_DIR}/lib/clang/${LLVM_MAJOR}/include/|:N${LLVM_DIR}/lib/clang/${LLVM_MAJOR}/include/$}
 .endfor
 CLANG_DESC=	Build clang
 CLANG_CMAKE_ON=		-DCLANG_DEFAULT_OPENMP_RUNTIME=libomp
@@ -226,10 +226,6 @@ MLIR_PATTERN=	${MLIR_COMMANDS:S/^/bin./:tW:C/  */|/g}|mlir|libMLIR|obj.MLIRCAP
 
 .include <bsd.port.options.mk>
 
-.if defined(PPC_ABI) && ${PPC_ABI} == ELFv2
-EXTRA_PATCHES=	${FILESDIR}/extra-patch-clang_lib_Driver_ToolChains_Clang.cpp
-.endif
-
 # keep in sync with /usr/src/lib/clang/clang.build.mk
 # ----------- start of sync block ------------------
 # Armv6 and armv7 uses hard float abi, unless the CPUTYPE has soft in it.
@@ -324,7 +320,7 @@ FREEBSD_BACKENDS=	${_FREEBSD_BACKENDS}
 .if ${ARCH} == amd64
 _NATIVE_BACKENDS=	X86
 .elif ${ARCH} == aarch64
-_NATIVE_BACKENDS=	AArch64
+_NATIVE_BACKENDS=	AArch64 ARM
 .elif ${ARCH:Marmv*}
 _NATIVE_BACKENDS=	ARM
 .elif ${ARCH} == i386
