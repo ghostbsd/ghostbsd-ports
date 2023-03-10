@@ -623,7 +623,6 @@
     SUBDIR += openorienteering-mapper
     SUBDIR += openpgl
     SUBDIR += openrm
-    SUBDIR += openscenegraph
     SUBDIR += openshadinglanguage
     SUBDIR += openslide
     SUBDIR += opensubdiv
