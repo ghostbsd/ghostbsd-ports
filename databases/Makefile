@@ -197,7 +197,11 @@
     SUBDIR += mtop
     SUBDIR += mydumper
     SUBDIR += mysac
+<<<<<<< HEAD
     SUBDIR += mysql-connector-c
+=======
+    SUBDIR += mysql++
+>>>>>>> 2eee60381d40 (databases/mysql-connector-c: Remove expired port:)
     SUBDIR += mysql-connector-c++
     SUBDIR += mysql-connector-java
     SUBDIR += mysql-connector-java51
