@@ -845,7 +845,6 @@
     SUBDIR += vsound
     SUBDIR += vst3sdk
     SUBDIR += waon
-    SUBDIR += wav2cdr
     SUBDIR += wavbreaker
     SUBDIR += wavegain
     SUBDIR += waveplay
