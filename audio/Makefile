@@ -747,7 +747,6 @@
     SUBDIR += sorcer-lv2
     SUBDIR += sound-juicer
     SUBDIR += soundgrab
-    SUBDIR += soundkonverter
     SUBDIR += soundtouch
     SUBDIR += soundtracker
     SUBDIR += sox
