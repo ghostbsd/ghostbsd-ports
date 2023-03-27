@@ -1,6 +1,6 @@
 PORTNAME=	signal-desktop
 DISTVERSIONPREFIX=	v
-DISTVERSION=	6.9.0
+DISTVERSION=	6.11.0
 CATEGORIES=	net-im
 MASTER_SITES=	LOCAL/mikael/signal-desktop/:npm \
 		LOCAL/mikael/signal-desktop/:sqlite \
@@ -32,7 +32,7 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libringrtc.so:multimedia/ringrtc \
 		jq:textproc/jq \
 		electron${ELECTRON_VER_MAJOR}:devel/electron${ELECTRON_VER_MAJOR} \
 		npm:www/npm-node16 \
-		${LOCALBASE}/lib/libcrypto.a:security/openssl-devel \
+		${LOCALBASE}/lib/libcrypto.a:security/openssl30 \
 		vips>0:graphics/vips \
 		yarn:www/yarn-node16
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
@@ -90,7 +90,7 @@ ELECTRON_GYP_VERSION=	22.2.0
 
 # sh get_deps.sh
 NPM_SIGNAL_DIR=		npm-@signalapp-libsignal-client-0.22.0-d57441612df46f90df68fc5d9ad45b857b9d2c44-integrity
-NPM_RINGRTC_DIR=	npm-@signalapp-ringrtc-2.25.0-dfa75860c69dd6a81aef568d9fe3fb1a0573a4f7-integrity
+NPM_RINGRTC_DIR=	npm-@signalapp-ringrtc-2.25.2-6e6e32fe3e507f1ead7cd287d53eb35d1f9b5ef9-integrity
 NPM_SQLITE3_DIR=	npm-@signalapp-better-sqlite3-8.4.3-7ffa8d03d2a12543247936bfb7b9f74cdbc6fe9b-integrity
 NPM_ESBUILD_VERS=	0.17.2
 SQLCIPHER=		sqlcipher-4.5.3-fts--3.0.7--0.2.1-b633825cf7e0fdd39a6cdf128f2bd76552a88d325f2b9cd07bb87a457cefb986

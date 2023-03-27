@@ -440,6 +440,7 @@
     SUBDIR += wmcliphist
     SUBDIR += wmctrl
     SUBDIR += wmdrawer
+    SUBDIR += wmenu
     SUBDIR += wmfocus
     SUBDIR += wmsystemtray
     SUBDIR += wmutils-core

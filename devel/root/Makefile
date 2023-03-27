@@ -1,6 +1,5 @@
 PORTNAME=	root
-DISTVERSION=	6.28.00
-PORTREVISION=	1
+DISTVERSION=	6.28.02
 CATEGORIES=	devel science math parallel python
 MASTER_SITES=	https://root.cern/download/
 DISTFILES=	${PORTNAME}_v${DISTVERSION}.source${EXTRACT_SUFX}
@@ -77,7 +76,7 @@ PLIST_SUB+=	NOT_INSTALLED_ON_AARCH64="" ONLY_INSTALLED_ON_AARCH64="@comment " AA
 # Some files only installed with LLVM/Clang 13 (used on FreeBSD 12.4 and 13.x)
 # TODO: Introduce USES+=llvm:min=14 instead when this can be deemed not too obtrusive on supported releases
 #       -- the post-patch step further down can then be phased out as well
-.if 1204000 <= ${OSVERSION} && ${OSVERSION} < 1400000
+.if 1204000 <= ${OSVERSION} && ${OSVERSION} < 1400000 && ${OSVERSION} != 1301507
 PLIST_SUB+=	ONLY_INSTALLED_WITH_LLVM_CLANG_13=""
 .else
 PLIST_SUB+=	ONLY_INSTALLED_WITH_LLVM_CLANG_13="@comment "

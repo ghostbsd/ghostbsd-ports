@@ -52,6 +52,7 @@
     SUBDIR += apcctrl
     SUBDIR += apcpwr
     SUBDIR += apcupsd
+    SUBDIR += appjail
     SUBDIR += apt-mirror-devel
     SUBDIR += aptly
     SUBDIR += arc_summary
@@ -132,6 +133,7 @@
     SUBDIR += bkpupsd
     SUBDIR += bksh
     SUBDIR += bkt
+    SUBDIR += blisp
     SUBDIR += boot-extract
     SUBDIR += bottom
     SUBDIR += boxbackup-devel
@@ -356,7 +358,6 @@
     SUBDIR += equinix-metal-cli
     SUBDIR += etc_os-release
     SUBDIR += etcmerge
-    SUBDIR += etcupdate
     SUBDIR += ethname
     SUBDIR += evhz
     SUBDIR += evisum
@@ -480,7 +481,6 @@
     SUBDIR += gdu
     SUBDIR += genimage
     SUBDIR += genisoimage
-    SUBDIR += geomWatch
     SUBDIR += getdelta
     SUBDIR += geteltorito
     SUBDIR += getssl
@@ -570,7 +570,6 @@
     SUBDIR += intel-pcm
     SUBDIR += intel-undervolt
     SUBDIR += inxi
-    SUBDIR += ioc
     SUBDIR += iocage
     SUBDIR += iocage-devel
     SUBDIR += iocell
@@ -604,7 +603,6 @@
     SUBDIR += jdupes
     SUBDIR += jest
     SUBDIR += jkill
-    SUBDIR += jobd
     SUBDIR += jps
     SUBDIR += jruls
     SUBDIR += jstest-gtk
