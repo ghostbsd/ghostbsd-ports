@@ -1213,6 +1213,7 @@
     SUBDIR += rsyslog8
     SUBDIR += rtsx-kmod
     SUBDIR += rtty
+    SUBDIR += rtx
     SUBDIR += rubygem-backup
     SUBDIR += rubygem-bolt
     SUBDIR += rubygem-bosh-gen
@@ -1465,6 +1466,7 @@
     SUBDIR += tty-clock
     SUBDIR += ttyd
     SUBDIR += ttyload
+    SUBDIR += tuckr
     SUBDIR += tuptime
     SUBDIR += turbostat
     SUBDIR += tw_cli
