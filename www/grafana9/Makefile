@@ -1,7 +1,7 @@
 PORTNAME=	grafana
-DISTVERSIONPREFIX=	v
-DISTVERSION=	9.3.8
 PORTREVISION=	1
+DISTVERSIONPREFIX=	v
+DISTVERSION=	9.4.3
 CATEGORIES=	www
 MASTER_SITES=	https://dl.grafana.com/oss/release/:public \
 		https://raw.githubusercontent.com/${GH_ACCOUNT}/${GH_PROJECT}/${DISTVERSIONFULL}/:gomod
@@ -16,7 +16,7 @@ WWW=		https://github.com/grafana/grafana
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=	aarch64 amd64 i386
+ONLY_FOR_ARCHS=	aarch64 amd64 i386 riscv64
 
 BUILD_DEPENDS=	wire:devel/go-wire
 RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss
@@ -26,7 +26,7 @@ USES=		cpe go:modules
 USE_GITHUB=	yes
 
 USE_RC_SUBR=	grafana
-TAG=		7ab70db
+TAG=		cf0a135
 
 GO_MODULE=	github.com/grafana/grafana
 GO_TARGET=	./pkg/cmd/grafana \

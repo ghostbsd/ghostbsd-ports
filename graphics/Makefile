@@ -44,6 +44,7 @@
     SUBDIR += aaphoto
     SUBDIR += acidwarp
     SUBDIR += acidwarp-sdl
+    SUBDIR += aeskulap
     SUBDIR += agg
     SUBDIR += airsaned
     SUBDIR += akira
@@ -260,7 +261,6 @@
     SUBDIR += gimp-app
     SUBDIR += gimp-beautify-plugin
     SUBDIR += gimp-data-extras
-    SUBDIR += gimp-gmic-plugin
     SUBDIR += gimp-jxl-plugin
     SUBDIR += gimp-lensfun-plugin
     SUBDIR += gimp-lqr-plugin
@@ -716,7 +716,6 @@
     SUBDIR += p5-Image-MetaData-GQview
     SUBDIR += p5-Image-MetaData-JPEG
     SUBDIR += p5-Image-OCR-Tesseract
-    SUBDIR += p5-Image-ObjectDetect
     SUBDIR += p5-Image-PBMlib
     SUBDIR += p5-Image-PNG-Libpng
     SUBDIR += p5-Image-PNG-QRCode
@@ -895,7 +894,6 @@
     SUBDIR += py-mpl-interactions
     SUBDIR += py-mpl-scatter-density
     SUBDIR += py-nwdiag
-    SUBDIR += py-open3d-python
     SUBDIR += py-opencolorio
     SUBDIR += py-openimageio
     SUBDIR += py-openshadinglanguage
@@ -1042,7 +1040,6 @@
     SUBDIR += rubygem-invisible_captcha
     SUBDIR += rubygem-mini_magick
     SUBDIR += rubygem-mini_magick410
-    SUBDIR += rubygem-objectdetect
     SUBDIR += rubygem-opengl
     SUBDIR += rubygem-pdfkit
     SUBDIR += rubygem-png

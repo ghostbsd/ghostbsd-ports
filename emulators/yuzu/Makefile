@@ -1,5 +1,5 @@
 PORTNAME=	yuzu
-PORTVERSION=	s20230308
+PORTVERSION=	s20230327
 CATEGORIES=	emulators wayland
 .if make(makesum)
 MASTER_SITES=	https://api.yuzu-emu.org/gamedb/?dummy=/:gamedb
@@ -8,9 +8,6 @@ MASTER_SITES=	LOCAL/jbeich:gamedb
 .endif
 DISTFILES=	${PORTNAME}-${DISTVERSIONFULL}/compatibility_list.json:gamedb
 EXTRACT_ONLY=	${DISTFILES:N*\:gamedb:C/\:.*//}
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	2ce5bb9bd6cd.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/9822 mainline-merge
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo Switch emulator/debugger
@@ -53,7 +50,7 @@ qt6_OPTIONS_EXCLUDE=	QT5
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	4562f7af9
+GH_TAGNAME=	fbbf532d4
 GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
 		yuzu-emu:sirit:ab75463:sirit/externals/sirit \
 		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-201-gc214f6f:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
@@ -161,7 +158,7 @@ CONFIGURE_ENV+=	CC="${CC}" CXX="${CXX}" CPP="${CPP}"
 . endif
 
 # XXX Move into separate port and standardize via USES
-GH_TUPLE+=	llvm:llvm-project:llvmorg-16.0.0-rc2:libcxx
+GH_TUPLE+=	llvm:llvm-project:llvmorg-16.0.0:libcxx
 CXXFLAGS+=	-nostdinc++ -isystem${WRKDIR}/libcxx_prefix/include/c++/v1
 # Don't link against new libc++ to avoid ABI mismatch in Qt
 #LDFLAGS+=	-nostdlib++ -L${WRKDIR}/libcxx_prefix/lib -l:libc++.a -lcxxrt

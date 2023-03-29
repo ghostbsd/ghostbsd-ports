@@ -1,5 +1,5 @@
 PORTNAME=	iridium
-PORTVERSION=	2023.01.109
+PORTVERSION=	2023.03.111
 PORTREVISION=	1
 CATEGORIES=	www wayland
 MASTER_SITES=	https://downloads.iridiumbrowser.de/source/
@@ -16,7 +16,7 @@ LICENSE_COMB=	multi
 ONLY_FOR_ARCHS=	aarch64 amd64 i386
 
 PATCH_SITES=	https://nerd.hu/distfiles/
-PATCHFILES+=	disable-privacy-sandbox-7f49edb924b6d2b38fcc9a2c76d4e5e1f857e7b9.patch:-p1
+PATCHFILES+=	disable-privacy-sandbox-ce036275d9d21a8408ef48ee9839b3c21b8448ca.patch:-p1
 
 BUILD_DEPENDS=	bash:shells/bash \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${PY_FLAVOR} \
@@ -42,7 +42,9 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libspeex.so:audio/speex \
 		libdbus-1.so:devel/dbus \
 		libdbus-glib-1.so:devel/dbus-glib \
+		libepoll-shim.so:devel/libepoll-shim \
 		libevent.so:devel/libevent \
+		libffi.so:devel/libffi \
 		libicuuc.so:devel/icu \
 		libjsoncpp.so:devel/jsoncpp \
 		libpci.so:devel/libpci \
@@ -119,9 +121,8 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		use_sysroot=false \
 		use_system_freetype=false \
 		use_system_harfbuzz=true \
+		use_system_libffi=true \
 		use_system_libjpeg=true \
-		use_system_libwayland=true \
-		use_system_wayland_scanner=true \
 		use_udev=false \
 		extra_cxxflags="${CXXFLAGS}" \
 		extra_ldflags="${LDFLAGS}"

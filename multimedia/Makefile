@@ -60,6 +60,7 @@
     SUBDIR += ffaudioconverter
     SUBDIR += ffdec
     SUBDIR += ffmpeg
+    SUBDIR += ffmpeg4
     SUBDIR += ffmpegthumbnailer
     SUBDIR += ffms2
     SUBDIR += ffnvcodec-headers
@@ -183,8 +184,6 @@
     SUBDIR += libmtp
     SUBDIR += libndi
     SUBDIR += libopenshot
-    SUBDIR += libquicktime
-    SUBDIR += libquicktime-lame
     SUBDIR += librav1e
     SUBDIR += librespot
     SUBDIR += librist
@@ -227,7 +226,6 @@
     SUBDIR += mkclean
     SUBDIR += mkvalidator
     SUBDIR += mkvtoolnix
-    SUBDIR += mkvtoolnix-nox11
     SUBDIR += mkxvcd
     SUBDIR += mlt6
     SUBDIR += mlt6-qt5
