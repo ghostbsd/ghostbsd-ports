@@ -453,6 +453,7 @@
     SUBDIR += py-scikit-fusion
     SUBDIR += py-serverfiles
     SUBDIR += py-shap2
+    SUBDIR += py-shell-gpt
     SUBDIR += py-soapy_power
     SUBDIR += py-spdx
     SUBDIR += py-spdx-lookup
