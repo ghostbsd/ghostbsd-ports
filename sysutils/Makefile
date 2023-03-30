@@ -1648,6 +1648,7 @@
     SUBDIR += xpipe
     SUBDIR += xstow
     SUBDIR += xsysstats
+    SUBDIR += xxd
     SUBDIR += yadf
     SUBDIR += yadm
     SUBDIR += yank
