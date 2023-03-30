@@ -991,6 +991,7 @@
     SUBDIR += quesoglc
     SUBDIR += quickqanava
     SUBDIR += qvge
+    SUBDIR += qview
     SUBDIR += radius-engine
     SUBDIR += rapid-photo-downloader
     SUBDIR += raster3d
