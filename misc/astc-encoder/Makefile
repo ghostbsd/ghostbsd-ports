@@ -1,5 +1,5 @@
 PORTNAME=	astc-encoder
-DISTVERSION=	4.2.0
+DISTVERSION=	4.4.0
 CATEGORIES=	misc
 
 MAINTAINER=	yuri@FreeBSD.org

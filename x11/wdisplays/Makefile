@@ -1,7 +1,11 @@
 PORTNAME=	wdisplays
 DISTVERSION=	1.1
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	x11 wayland
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	f4cf935e490b.patch:-p1 # https://github.com/artizirk/wdisplays/pull/1
+PATCHFILES+=	59edbbd15500.patch:-p1 # https://github.com/artizirk/wdisplays/pull/2
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	GUI display configurator for wlroots compositors
@@ -24,6 +28,6 @@ USE_GNOME=	cairo gtk30
 GH_ACCOUNT=	artizirk
 PLIST_FILES=	bin/${PORTNAME} \
 		share/applications/network.cycles.${PORTNAME}.desktop \
-		share/icons/hicolor/scalable/apps/${PORTNAME}.svg
+		share/icons/hicolor/scalable/apps/network.cycles.${PORTNAME}.svg
 
 .include <bsd.port.mk>

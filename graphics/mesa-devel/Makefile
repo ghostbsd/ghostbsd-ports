@@ -1,12 +1,13 @@
 PORTNAME=	mesa
-DISTVERSION=	23.0-branchpoint-2750
-DISTVERSIONSUFFIX=	-gb8017243523
+DISTVERSION=	23.0-branchpoint-4037
+DISTVERSIONSUFFIX=	-gac993ae8287
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	700efacda59c.patch:-p1
 PATCHFILES+=	3043f16d66bf.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
+PATCHFILES+=	2930dcbb3329.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/22246
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Bleeding edge Mesa drivers (OpenCL, OpenGL, Vulkan)
@@ -37,6 +38,10 @@ BINARY_ALIAS=	python=${PYTHON_CMD}
 SHEBANG_FILES=	src/vulkan/overlay-layer/${PORTNAME}-overlay-control.py
 MESON_ARGS=	-Dgallium-omx=disabled \
 		-Dgallium-xa=disabled \
+		-Dandroid-libbacktrace=disabled \
+		-Dlmsensors=disabled \
+		-Dmicrosoft-clc=disabled \
+		-Dvalgrind=disabled \
 		-Dglvnd=true \
 		-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} \
 		${NULL}

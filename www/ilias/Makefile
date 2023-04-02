@@ -1,6 +1,6 @@
 PORTNAME=	ilias
 DISTVERSIONPREFIX=	v
-DISTVERSION=	8.0_beta2
+DISTVERSION=	8.0
 CATEGORIES=	www education
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 
@@ -9,6 +9,10 @@ COMMENT=	Powerful, dynamic, PHP and MySQL based e-learning platform
 WWW=		https://www.ilias.de
 
 LICENSE=	GPLv2
+
+# Will switch to version 9 snapshots before the removal
+DEPRECATED=	Requires php80 which is set to expire on 2023-11-26
+EXPIRATION_DATE=	2023-12-31
 
 IGNORE_WITH_PHP=	81 82
 
@@ -55,6 +59,8 @@ EXTRA_FILES=	%%WWWDIR%%/Modules/Chatroom/chat/node_modules/.bin/mime \
 		%%WWWDIR%%/node_modules/.bin/_mocha \
 		%%WWWDIR%%/node_modules/.bin/acorn \
 		%%WWWDIR%%/node_modules/.bin/atob \
+		%%WWWDIR%%/node_modules/.bin/browserslist \
+		%%WWWDIR%%/node_modules/.bin/browserslist-lint \
 		%%WWWDIR%%/node_modules/.bin/errno \
 		%%WWWDIR%%/node_modules/.bin/escodegen \
 		%%WWWDIR%%/node_modules/.bin/esgenerate \
@@ -68,6 +74,8 @@ EXTRA_FILES=	%%WWWDIR%%/Modules/Chatroom/chat/node_modules/.bin/mime \
 		%%WWWDIR%%/node_modules/.bin/he \
 		%%WWWDIR%%/node_modules/.bin/image-size \
 		%%WWWDIR%%/node_modules/.bin/js-yaml \
+		%%WWWDIR%%/node_modules/.bin/jsesc \
+		%%WWWDIR%%/node_modules/.bin/json5 \
 		%%WWWDIR%%/node_modules/.bin/lessc \
 		%%WWWDIR%%/node_modules/.bin/loose-envify \
 		%%WWWDIR%%/node_modules/.bin/mime \
@@ -77,17 +85,24 @@ EXTRA_FILES=	%%WWWDIR%%/Modules/Chatroom/chat/node_modules/.bin/mime \
 		%%WWWDIR%%/node_modules/.bin/needle \
 		%%WWWDIR%%/node_modules/.bin/node-gyp \
 		%%WWWDIR%%/node_modules/.bin/node-ninja \
-		%%WWWDIR%%/node_modules/.bin/node-which \
 		%%WWWDIR%%/node_modules/.bin/nopt \
 		%%WWWDIR%%/node_modules/.bin/pbf \
+		%%WWWDIR%%/node_modules/.bin/parser \
 		%%WWWDIR%%/node_modules/.bin/prebuild \
+		%%WWWDIR%%/node_modules/.bin/regjsparser \
 		%%WWWDIR%%/node_modules/.bin/rimraf \
 		%%WWWDIR%%/node_modules/.bin/rc \
 		%%WWWDIR%%/node_modules/.bin/rollup \
 		%%WWWDIR%%/node_modules/.bin/semver \
 		%%WWWDIR%%/node_modules/.bin/terser \
 		%%WWWDIR%%/node_modules/.bin/which \
+		%%WWWDIR%%/node_modules/@babel/core/node_modules/.bin/semver \
+		%%WWWDIR%%/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver \
+		%%WWWDIR%%/node_modules/@babel/helper-define-polyfill-provider/node_modules/.bin/semver \
+		%%WWWDIR%%/node_modules/@babel/preset-env/node_modules/.bin/semver \
+		%%WWWDIR%%/node_modules/babel-plugin-polyfill-corejs2/node_modules/.bin/semver \
 		%%WWWDIR%%/node_modules/acorn-globals/node_modules/.bin/acorn \
+		%%WWWDIR%%/node_modules/regjsparser/node_modules/.bin/jsesc
 
 pre-install:
 	@${ECHO_CMD} "@owner ${WWWOWN}" >> ${PLIST}

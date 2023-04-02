@@ -20,10 +20,8 @@ USE_LDCONFIG=	yes
 
 CPE_VENDOR=	p11-kit_project
 
-MESON_ARGS=	-Dbash_completion=enabled \
-		-Dlibffi=enabled \
-		-Dnls=false \
-		-Dtrust_module=enabled \
+MESON_ARGS=	-Dnls=false \
+		-Dsystemd=disabled \
 		-Dtrust_paths=${DATADIR}/certs
 
 OPTIONS_DEFINE=		DOCS MANPAGES TEST

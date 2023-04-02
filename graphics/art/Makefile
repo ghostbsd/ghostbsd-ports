@@ -1,6 +1,6 @@
 PORTNAME=	art
-DISTVERSION=	1.18.1
-PORTREVISION=	1
+DISTVERSION=	1.19.3
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://bitbucket.org/agriggio/art/downloads/
 PKGNAMESUFFIX=	-raw-image-editor
@@ -20,6 +20,7 @@ EXTRACT_DEPENDS=	gtar:archivers/gtar # bsdtar(1) complains about hard links to i
 BUILD_DEPENDS=	${LOCALBASE}/include/fftw3.h:math/fftw3
 LIB_DEPENDS=	libcanberra.so:audio/libcanberra \
 		libcanberra-gtk3.so:audio/libcanberra-gtk3 \
+		libraw_r.so:graphics/libraw \
 		libexiv2.so:graphics/exiv2 \
 		libexpat.so:textproc/expat2 \
 		libfftw3f.so:math/fftw3-float \
@@ -38,9 +39,14 @@ EXTRACT_CMD=	gtar
 
 LDFLAGS+=	-lpthread # otherwise build breaks on some systems: error: undefined symbol: pthread_create
 
+OPTIONS_DEFINE=		LTO
+OPTIONS_DEFAULT=	LTO
+
+LTO_CMAKE_BOOL=		WITH_LTO
+
 .if exists(/usr/include/omp.h)
-OPTIONS_DEFINE=		OPENMP
-OPTIONS_DEFAULT=	OPENMP
+OPTIONS_DEFINE+=	OPENMP
+OPTIONS_DEFAULT+=	OPENMP
 
 OPENMP_CMAKE_BOOL=	OPTION_OMP
 .else
