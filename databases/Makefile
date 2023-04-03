@@ -185,8 +185,6 @@
     SUBDIR += memcached
     SUBDIR += metabase
     SUBDIR += mongodb-tools
-    SUBDIR += mongodb36
-    SUBDIR += mongodb36-tools
     SUBDIR += mongodb40
     SUBDIR += mongodb40-tools
     SUBDIR += mongodb42
@@ -199,7 +197,7 @@
     SUBDIR += mtop
     SUBDIR += mydumper
     SUBDIR += mysac
-    SUBDIR += mysql-connector-c
+    SUBDIR += mysql++
     SUBDIR += mysql-connector-c++
     SUBDIR += mysql-connector-java
     SUBDIR += mysql-connector-java51

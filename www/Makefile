@@ -25,7 +25,6 @@
     SUBDIR += amphetadesk
     SUBDIR += analog
     SUBDIR += anyremote2html
-    SUBDIR += anyterm
     SUBDIR += apache-mode.el
     SUBDIR += apache24
     SUBDIR += apt-cacher-ng
@@ -222,11 +221,6 @@
     SUBDIR += hedgedoc
     SUBDIR += hiawatha
     SUBDIR += hiawatha-monitor
-    SUBDIR += horde-ansel
-    SUBDIR += horde-base
-    SUBDIR += horde-passwd
-    SUBDIR += horde-trean
-    SUBDIR += horde-wicked
     SUBDIR += hotcrp
     SUBDIR += hs-DAV
     SUBDIR += hs-hjsmin

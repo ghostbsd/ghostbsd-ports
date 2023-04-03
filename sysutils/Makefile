@@ -293,7 +293,6 @@
     SUBDIR += diskimage-tools
     SUBDIR += diskonaut
     SUBDIR += diskscrub
-    SUBDIR += disktype
     SUBDIR += diskus
     SUBDIR += dmg2img
     SUBDIR += dmidecode
@@ -1185,7 +1184,6 @@
     SUBDIR += reed
     SUBDIR += reggae
     SUBDIR += rej
-    SUBDIR += relaxconf
     SUBDIR += rename
     SUBDIR += renameutils
     SUBDIR += reoback
@@ -1648,6 +1646,7 @@
     SUBDIR += xpipe
     SUBDIR += xstow
     SUBDIR += xsysstats
+    SUBDIR += xxd
     SUBDIR += yadf
     SUBDIR += yadm
     SUBDIR += yank
