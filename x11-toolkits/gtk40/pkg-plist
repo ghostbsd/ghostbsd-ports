@@ -401,11 +401,6 @@ libdata/pkgconfig/gtk4-unix-print.pc
 %%WAYLAND%%libdata/pkgconfig/gtk4-wayland.pc
 %%X11%%libdata/pkgconfig/gtk4-x11.pc
 libdata/pkgconfig/gtk4.pc
-share/applications/org.gtk.Demo4.desktop
-share/applications/org.gtk.IconBrowser4.desktop
-share/applications/org.gtk.PrintEditor4.desktop
-share/applications/org.gtk.WidgetFactory4.desktop
-share/applications/org.gtk.gtk4.NodeEditor.desktop
 share/gettext/its/gtk4builder.its
 share/gettext/its/gtk4builder.loc
 share/gir-1.0/Gdk-4.0.gir
