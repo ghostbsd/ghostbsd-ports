@@ -1420,6 +1420,7 @@
     SUBDIR += py-aioh2
     SUBDIR += py-aiohttp
     SUBDIR += py-aiohttp-middlewares
+    SUBDIR += py-aiohttp-oauthlib
     SUBDIR += py-aiohttp-session
     SUBDIR += py-aiohttp-wsgi
     SUBDIR += py-aiohttp_cors
@@ -1591,6 +1592,7 @@
     SUBDIR += py-django32
     SUBDIR += py-django40
     SUBDIR += py-django41
+    SUBDIR += py-django42
     SUBDIR += py-django_compressor
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangoql

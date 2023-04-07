@@ -1,5 +1,5 @@
-TIMESTAMP = 1680237602
-SHA256 (go/www_gitlab-workhorse/gitlab-org-gitlab-foss-c57c04a970e6e1afcd0dbc287afe1006a103afd4_GL0/go.mod) = 47c828240bfe55fc868643db03874e5d509117901ba77b8748731cbb4d6b1de9
-SIZE (go/www_gitlab-workhorse/gitlab-org-gitlab-foss-c57c04a970e6e1afcd0dbc287afe1006a103afd4_GL0/go.mod) = 6347
-SHA256 (go/www_gitlab-workhorse/gitlab-org-gitlab-foss-c57c04a970e6e1afcd0dbc287afe1006a103afd4_GL0/gitlab-org-gitlab-foss-c57c04a970e6e1afcd0dbc287afe1006a103afd4_GL0.tar.gz) = e71eae094597534d83277f4e97eec013cf20ffd32b43fc589b831f2423e8e32c
-SIZE (go/www_gitlab-workhorse/gitlab-org-gitlab-foss-c57c04a970e6e1afcd0dbc287afe1006a103afd4_GL0/gitlab-org-gitlab-foss-c57c04a970e6e1afcd0dbc287afe1006a103afd4_GL0.tar.gz) = 99770751
+TIMESTAMP = 1680514336
+SHA256 (go/www_gitlab-workhorse/gitlab-org-gitlab-foss-d6192c2ab77ab814b9bd66103663047556fd67e4_GL0/go.mod) = 165e946b71ad1f8ba80b2b2d5057345f3506ca29ecb92786555d740a6487c393
+SIZE (go/www_gitlab-workhorse/gitlab-org-gitlab-foss-d6192c2ab77ab814b9bd66103663047556fd67e4_GL0/go.mod) = 6261
+SHA256 (go/www_gitlab-workhorse/gitlab-org-gitlab-foss-d6192c2ab77ab814b9bd66103663047556fd67e4_GL0/gitlab-org-gitlab-foss-d6192c2ab77ab814b9bd66103663047556fd67e4_GL0.tar.gz) = 508f5aa774e5116d25dabd812dd7a083031628f0148711dbc1493ef8dd6d0fb4
+SIZE (go/www_gitlab-workhorse/gitlab-org-gitlab-foss-d6192c2ab77ab814b9bd66103663047556fd67e4_GL0/gitlab-org-gitlab-foss-d6192c2ab77ab814b9bd66103663047556fd67e4_GL0.tar.gz) = 101383166
