@@ -23,13 +23,12 @@ PORTSCOUT=	limitw:1,even
 USES=		compiler:c++11-lang gettext gnome localbase meson \
 		pkgconfig python:3.6+ tar:xz vala:build
 USE_LDCONFIG=	yes
-USE_GNOME=	cairo gdkpixbuf2 gtk30 gtk40 introspection:build
+USE_GNOME=	cairo gdkpixbuf2 gtk30 introspection:build
 
 MESON_ARGS=	-Da11y=true \
 		-Dgir=true \
 		-Dfribidi=true \
 		-Dgtk3=true \
-		-Dgtk4=true \
 		-Dicu=true \
 		-D_systemd=false \
 		-Dvapi=true
