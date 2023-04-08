@@ -1,9 +1,5 @@
-# Created by: Angelescu Ovidiu <angelescuo@yahoo.com>
-# $FreeBSD$
-#
-
 PORTNAME=	ghostbsd-mate-settings
-PORTVERSION=	22.02
+PORTVERSION=	23.04.08
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
