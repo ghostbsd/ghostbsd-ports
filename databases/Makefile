@@ -171,6 +171,8 @@
     SUBDIR += mantis
     SUBDIR += mariadb-connector-c
     SUBDIR += mariadb-connector-odbc
+    SUBDIR += mariadb1011-client
+    SUBDIR += mariadb1011-server
     SUBDIR += mariadb103-client
     SUBDIR += mariadb103-server
     SUBDIR += mariadb104-client
@@ -808,6 +810,7 @@
     SUBDIR += py-rb
     SUBDIR += py-redis
     SUBDIR += py-redis2
+    SUBDIR += py-redis3
     SUBDIR += py-rrdtool
     SUBDIR += py-sispy
     SUBDIR += py-south

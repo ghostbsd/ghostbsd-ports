@@ -46,6 +46,7 @@
     SUBDIR += bareos18-webui
     SUBDIR += bareos19-webui
     SUBDIR += bareos20-webui
+    SUBDIR += bareos21-webui
     SUBDIR += beehive
     SUBDIR += bkmrkconv
     SUBDIR += bluefish
@@ -453,6 +454,7 @@
     SUBDIR += node16
     SUBDIR += node18
     SUBDIR += node19
+    SUBDIR += node20
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -463,6 +465,7 @@
     SUBDIR += npm-node16
     SUBDIR += npm-node18
     SUBDIR += npm-node19
+    SUBDIR += npm-node20
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
     SUBDIR += oneshot
@@ -1791,6 +1794,7 @@
     SUBDIR += py-starlette
     SUBDIR += py-swapper
     SUBDIR += py-textile
+    SUBDIR += py-ticketutil
     SUBDIR += py-tornado
     SUBDIR += py-tornado4
     SUBDIR += py-tornado5
@@ -1815,6 +1819,7 @@
     SUBDIR += py-wagtail-localize
     SUBDIR += py-wagtail-transfer
     SUBDIR += py-waitress
+    SUBDIR += py-wcag-contrast-ratio
     SUBDIR += py-webargs
     SUBDIR += py-webassets
     SUBDIR += py-webob
@@ -1925,7 +1930,6 @@
     SUBDIR += rubygem-em-websocket
     SUBDIR += rubygem-emk-sinatra-url-for
     SUBDIR += rubygem-erubi
-    SUBDIR += rubygem-erubi19
     SUBDIR += rubygem-erubis
     SUBDIR += rubygem-ethon
     SUBDIR += rubygem-eventmachine_httpserver
@@ -2383,6 +2387,7 @@
     SUBDIR += varnish6
     SUBDIR += varnish7
     SUBDIR += varnish_exporter
+    SUBDIR += vaultwarden-web_vault
     SUBDIR += vdr-plugin-live
     SUBDIR += vdradmin-am
     SUBDIR += vertx
@@ -2446,6 +2451,7 @@
     SUBDIR += yarn-node16
     SUBDIR += yarn-node18
     SUBDIR += yarn-node19
+    SUBDIR += yarn-node20
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get

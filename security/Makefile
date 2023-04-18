@@ -958,6 +958,7 @@
     SUBDIR += py-pycryptodome-test-vectors
     SUBDIR += py-pycryptodomex
     SUBDIR += py-pyelliptic
+    SUBDIR += py-pyhanko
     SUBDIR += py-pyhanko-certvalidator
     SUBDIR += py-pylibacl
     SUBDIR += py-pymacaroons
@@ -1073,6 +1074,7 @@
     SUBDIR += rubygem-doorkeeper-rails50
     SUBDIR += rubygem-doorkeeper-rails61
     SUBDIR += rubygem-doorkeeper562
+    SUBDIR += rubygem-duo_api
     SUBDIR += rubygem-ed25519
     SUBDIR += rubygem-ed2551912
     SUBDIR += rubygem-encryptor
@@ -1130,7 +1132,6 @@
     SUBDIR += rubygem-openssl-cmac
     SUBDIR += rubygem-openssl-signature_algorithm
     SUBDIR += rubygem-openssl2
-    SUBDIR += rubygem-openssl221
     SUBDIR += rubygem-openvas-omp
     SUBDIR += rubygem-origami
     SUBDIR += rubygem-pbkdf2-ruby

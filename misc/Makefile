@@ -5,6 +5,7 @@
     SUBDIR += aclgen
     SUBDIR += actiona
     SUBDIR += adios2
+    SUBDIR += aichat
     SUBDIR += amanda-client
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
@@ -37,6 +38,7 @@
     SUBDIR += bsod
     SUBDIR += buffer
     SUBDIR += caffe
+    SUBDIR += chatgpt-shell-cli
     SUBDIR += cheat
     SUBDIR += chef
     SUBDIR += chmlib

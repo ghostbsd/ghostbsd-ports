@@ -1,10 +1,10 @@
 PORTNAME=	gocheese
 DISTVERSION=	3.7.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel python
 MASTER_SITES=	http://www.gocheese.cypherpunks.ru/download/
 
-MAINTAINER=	swills@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Python private package repository and caching proxy
 WWW=		http://www.gocheese.cypherpunks.ru/
 

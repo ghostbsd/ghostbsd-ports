@@ -1,10 +1,10 @@
 PORTNAME=	athens
 PORTVERSION=	0.11.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	devel
 
-MAINTAINER=	swills@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Proxy server for the Go Modules download API
 WWW=		https://github.com/gomods/athens
 

@@ -576,6 +576,8 @@ include/folly/io/async/TerminateCancellationToken.h
 include/folly/io/async/TimeoutManager.h
 include/folly/io/async/VirtualEventBase.h
 include/folly/io/async/WriteChainAsyncTransportWrapper.h
+include/folly/io/async/fdsock/AsyncFdSocket.h
+include/folly/io/async/fdsock/SocketFds.h
 include/folly/io/async/ssl/BasicTransportCertificate.h
 include/folly/io/async/ssl/OpenSSLTransportCertificate.h
 include/folly/io/async/ssl/OpenSSLUtils.h
@@ -709,6 +711,7 @@ include/folly/portability/OpenSSL.h
 include/folly/portability/PThread.h
 include/folly/portability/Sched.h
 include/folly/portability/Sockets.h
+include/folly/portability/SourceLocation.h
 include/folly/portability/Stdio.h
 include/folly/portability/Stdlib.h
 include/folly/portability/String.h

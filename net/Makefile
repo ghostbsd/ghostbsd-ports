@@ -234,6 +234,7 @@
     SUBDIR += gupnp-av
     SUBDIR += gupnp-dlna
     SUBDIR += gupnp-igd
+    SUBDIR += gupnp-igd12
     SUBDIR += gupnp-tools
     SUBDIR += gupnp-ui
     SUBDIR += gupnp14
@@ -1320,10 +1321,12 @@
     SUBDIR += rubygem-mqtt
     SUBDIR += rubygem-nats-pure
     SUBDIR += rubygem-net-ldap
+    SUBDIR += rubygem-net-ldap017
     SUBDIR += rubygem-net-netrc
     SUBDIR += rubygem-net-ntp
     SUBDIR += rubygem-net-ping
     SUBDIR += rubygem-net-protocol
+    SUBDIR += rubygem-net-protocol01
     SUBDIR += rubygem-netrc
     SUBDIR += rubygem-network_interface
     SUBDIR += rubygem-nkf
@@ -1515,6 +1518,7 @@
     SUBDIR += tigervnc-server
     SUBDIR += tigervnc-viewer
     SUBDIR += tigervnc-viewer-java
+    SUBDIR += tightvnc
     SUBDIR += timed
     SUBDIR += tintin++
     SUBDIR += tiny-network-utilities

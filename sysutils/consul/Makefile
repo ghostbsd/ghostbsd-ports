@@ -1,11 +1,10 @@
 PORTNAME=	consul
 PORTVERSION=	1.12.4
-PORTREVISION=	7
+PORTREVISION=	8
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 
-MAINTAINER=	swills@FreeBSD.org
-# co-maintainer: brd
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Service discovery and configuration made easy
 WWW=		https://www.consul.io/
 

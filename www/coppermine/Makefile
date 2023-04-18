@@ -1,5 +1,5 @@
 PORTNAME=	coppermine
-PORTVERSION=	1.6.23
+PORTVERSION=	1.6.24
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 
@@ -17,7 +17,7 @@ IMAGEMAGICK_DESC=	Use ImageMagick instead of PHP GD extension
 IMAGEMAGICK_USES=	magick:6,run
 IMAGEMAGICK_USE_OFF=	PHP=gd
 
-USE_PHP=	ctype hash json mysqli pcre xml
+USE_PHP=	ctype mysqli xml
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	coppermine-gallery
