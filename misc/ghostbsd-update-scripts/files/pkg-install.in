@@ -13,5 +13,10 @@ case ${2} in
       sed -i "" 's#/compat/linux/dev/shm#/tmp#g' /etc/fstab
       touch /var/lib/ghostbsd-update/shm_to_tmp
     fi
+    # make sure that /etc/machine-id exist for dbus and lightdm work properly.
+    if [ ! -f "/etc/machine-id" ] ; then
+      dbus-uuidgen --ensure
+      cp /var/lib/dbus/machine-id /etc/machine-id
+    fi
     ;;
 esac
