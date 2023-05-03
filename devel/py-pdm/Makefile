@@ -1,5 +1,5 @@
 PORTNAME=	pdm
-PORTVERSION=	2.5.2
+PORTVERSION=	2.5.3
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -33,6 +33,14 @@ USES=		python:3.7+
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
+
+OPTIONS_DEFINE=	WORKFLOW
+WORKFLOW_DESC=	Workflow support
+
+WORKFLOW_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}parver>=0.3.1:devel/py-parver@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}pdm-pep517>=1.0.0<2.0.0:devel/py-pdm-pep517@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}pycomplete>=0.3<1:devel/py-pycomplete@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}towncrier>=20:textproc/py-towncrier@${PY_FLAVOR}
 
 .include <bsd.port.pre.mk>
 
