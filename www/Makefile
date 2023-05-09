@@ -15,6 +15,7 @@
     SUBDIR += R-cran-selectr
     SUBDIR += R-cran-servr
     SUBDIR += R-cran-shiny
+    SUBDIR += R-cran-shinyjs
     SUBDIR += R-cran-webshot
     SUBDIR += Stikked
     SUBDIR += UniversalFeedCreator
@@ -114,9 +115,6 @@
     SUBDIR += dojo
     SUBDIR += dokuwiki
     SUBDIR += dolibarr
-    SUBDIR += dolibarr13
-    SUBDIR += dolibarr14
-    SUBDIR += dolibarr15
     SUBDIR += dolibarr16
     SUBDIR += domoticz
     SUBDIR += dooble
@@ -182,6 +180,7 @@
     SUBDIR += geneweb
     SUBDIR += geolizer
     SUBDIR += get_flash_videos
+    SUBDIR += ghostunnel
     SUBDIR += gist
     SUBDIR += gitea
     SUBDIR += gitlab-ce
@@ -412,9 +411,9 @@
     SUBDIR += mongrel2
     SUBDIR += monolith
     SUBDIR += moodle311
-    SUBDIR += moodle39
     SUBDIR += moodle40
     SUBDIR += moodle41
+    SUBDIR += moodle42
     SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort
@@ -1392,6 +1391,7 @@
     SUBDIR += php82-tidy
     SUBDIR += phpbb
     SUBDIR += phpbb3
+    SUBDIR += phpfpmtop
     SUBDIR += phpgroupware
     SUBDIR += phpmustache
     SUBDIR += phpmyfaq
@@ -1422,6 +1422,7 @@
     SUBDIR += py-adblock
     SUBDIR += py-aioh2
     SUBDIR += py-aiohttp
+    SUBDIR += py-aiohttp-jinja2
     SUBDIR += py-aiohttp-middlewares
     SUBDIR += py-aiohttp-oauthlib
     SUBDIR += py-aiohttp-session
@@ -1758,7 +1759,6 @@
     SUBDIR += py-requests-cache93
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
-    SUBDIR += py-requests-futures0
     SUBDIR += py-requests-gssapi
     SUBDIR += py-requests-mock
     SUBDIR += py-requests-oauthlib
@@ -1822,6 +1822,7 @@
     SUBDIR += py-wcag-contrast-ratio
     SUBDIR += py-webargs
     SUBDIR += py-webassets
+    SUBDIR += py-webdriver_manager
     SUBDIR += py-webob
     SUBDIR += py-websocket-client
     SUBDIR += py-webunit
@@ -2003,6 +2004,7 @@
     SUBDIR += rubygem-http4
     SUBDIR += rubygem-http_router
     SUBDIR += rubygem-httparty
+    SUBDIR += rubygem-httparty020
     SUBDIR += rubygem-httpclient
     SUBDIR += rubygem-httpi
     SUBDIR += rubygem-hurley
@@ -2177,6 +2179,7 @@
     SUBDIR += rubygem-rss
     SUBDIR += rubygem-rtlit
     SUBDIR += rubygem-ruby-oembed
+    SUBDIR += rubygem-ruby-openai
     SUBDIR += rubygem-ruby-readability
     SUBDIR += rubygem-savon
     SUBDIR += rubygem-sawyer

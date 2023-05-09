@@ -561,6 +561,7 @@
     SUBDIR += octave-forge-fda
     SUBDIR += octave-forge-femoctave
     SUBDIR += octave-forge-fenv
+    SUBDIR += octave-forge-fileio
     SUBDIR += octave-forge-financial
     SUBDIR += octave-forge-fits
     SUBDIR += octave-forge-fpl
@@ -612,6 +613,7 @@
     SUBDIR += octave-forge-outliers
     SUBDIR += octave-forge-parallel
     SUBDIR += octave-forge-pde1dm
+    SUBDIR += octave-forge-pkg-octave-doc
     SUBDIR += octave-forge-plot
     SUBDIR += octave-forge-ponchon-savarit
     SUBDIR += octave-forge-psychrometrics
@@ -639,6 +641,7 @@
     SUBDIR += octave-forge-symbolic
     SUBDIR += octave-forge-tcl-octave
     SUBDIR += octave-forge-tsa
+    SUBDIR += octave-forge-velas
     SUBDIR += octave-forge-video
     SUBDIR += octave-forge-websockets
     SUBDIR += octave-forge-zenity
@@ -955,6 +958,7 @@
     SUBDIR += py-mip
     SUBDIR += py-mixsimulator
     SUBDIR += py-ml-dtypes
+    SUBDIR += py-mnnpy
     SUBDIR += py-moarchiving
     SUBDIR += py-mpmath
     SUBDIR += py-munkres

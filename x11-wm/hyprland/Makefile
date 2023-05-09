@@ -36,6 +36,8 @@ GH_TUPLE=	hyprwm:hyprland-protocols:d7d403b:hyprland_protocols/subprojects/hyprl
 		canihavesomecoffee:udis86:1.7.2-186-g5336633:udis86/subprojects/udis86
 MESON_ARGS=	-Dsystemd=disabled
 
+CONFLICTS_INSTALL=	${PORTNAME}-devel
+
 OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=X11
 
@@ -46,7 +48,7 @@ post-patch:
 # Extract (snapshot) version from the port instead of meson.build
 	@${REINPLACE_CMD} -i .nogit -e "/GIT_BRANCH/s/run_command.*/'main'/" \
 		-e "/GIT_COMMIT_HASH/s/run_command.*/'${DISTVERSIONFULL}'/" \
-		-e "/GIT_COMMIT_MESSAGE/s/run_command.*/'?'/" \
+		-e "/GIT_COMMIT_MESSAGE/d" \
 		-e "/GIT_DIRTY/s/run_command.*/'portbld'/" \
 		-e "/version.*jq/s/run_command.*/'${DISTVERSIONFULL}',/" \
 		${WRKSRC}/meson.build
@@ -58,10 +60,9 @@ post-patch:
 		${WRKSRC}/src/Compositor.cpp
 
 .ifdef GH_TUPLE
-post-install:
-# XXX USES=meson invokes ninja directly, so doesn't support --skip-subprojects
-	@${RM} -r ${STAGEDIR}${PREFIX}/share/pkgconfig
-	@${RM} -r ${STAGEDIR}${PREFIX}/share/protocols
+post-configure:
+	@${REINPLACE_CMD} 's/meson install/& \
+		--skip-subprojects/' ${BUILD_WRKSRC}/build.ninja
 .endif
 
 # XXX Drop after FreeBSD 13.2 EOL around 2024-05-01 (don't forget distinfo)

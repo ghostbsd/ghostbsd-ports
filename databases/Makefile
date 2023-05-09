@@ -194,6 +194,7 @@
     SUBDIR += mongodb44
     SUBDIR += mongodb50
     SUBDIR += mongodb60
+    SUBDIR += mongodb70
     SUBDIR += movine
     SUBDIR += mroonga
     SUBDIR += mtop
@@ -717,8 +718,10 @@
     SUBDIR += pspg
     SUBDIR += puppetdb-terminus6
     SUBDIR += puppetdb-terminus7
+    SUBDIR += puppetdb-terminus8
     SUBDIR += puppetdb6
     SUBDIR += puppetdb7
+    SUBDIR += puppetdb8
     SUBDIR += puredb
     SUBDIR += pxlib
     SUBDIR += pxtools
@@ -863,7 +866,6 @@
     SUBDIR += replibyte
     SUBDIR += retcl
     SUBDIR += rocksdb
-    SUBDIR += rocksdb-lite
     SUBDIR += rrdman
     SUBDIR += rrdmerge
     SUBDIR += rrdtool
@@ -964,6 +966,7 @@
     SUBDIR += rubygem-paranoia
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-pg13
+    SUBDIR += rubygem-pg14
     SUBDIR += rubygem-pg_array_parser
     SUBDIR += rubygem-pg_query
     SUBDIR += rubygem-pghero

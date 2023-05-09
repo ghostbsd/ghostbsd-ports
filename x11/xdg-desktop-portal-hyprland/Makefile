@@ -1,11 +1,7 @@
 PORTNAME=	xdg-desktop-portal-hyprland
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.1
-PORTREVISION=	1
+DISTVERSION=	0.3.1
 CATEGORIES=	x11 wayland
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	12b83459c0a1.patch:-p1 # https://github.com/hyprwm/xdg-desktop-portal-hyprland/pull/42
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	xdg-desktop-portal backend for hyprland
@@ -47,10 +43,9 @@ SLURP_DESC=		Simple output chooser
 SLURP_RUN_DEPENDS=	slurp:x11/slurp
 
 .ifdef GH_TUPLE
-post-install:
-# XXX USES=meson invokes ninja directly, so doesn't support --skip-subprojects
-	@${RM} -r ${STAGEDIR}${PREFIX}/share/hyprland-protocols
-	@${RM} -r ${STAGEDIR}${PREFIX}/share/pkgconfig
+post-configure:
+	@${REINPLACE_CMD} 's/meson install/& \
+		--skip-subprojects/' ${BUILD_WRKSRC}/build.ninja
 .endif
 
 .include <bsd.port.mk>

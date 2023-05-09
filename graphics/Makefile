@@ -6,9 +6,7 @@
     SUBDIR += Hermes
     SUBDIR += IPA
     SUBDIR += ImageMagick6
-    SUBDIR += ImageMagick6-nox11
     SUBDIR += ImageMagick7
-    SUBDIR += ImageMagick7-nox11
     SUBDIR += O2-tools
     SUBDIR += R-cran-DiagrammeR
     SUBDIR += R-cran-GDD
@@ -63,6 +61,7 @@
     SUBDIR += appleseed
     SUBDIR += argyllcms
     SUBDIR += art
+    SUBDIR += asciinema-agg
     SUBDIR += asciio
     SUBDIR += aseprite
     SUBDIR += atril
@@ -374,6 +373,7 @@
     SUBDIR += impressive
     SUBDIR += imv
     SUBDIR += inkscape
+    SUBDIR += inkscape-open-symbols
     SUBDIR += instant-meshes
     SUBDIR += intel-backlight
     SUBDIR += intergif
@@ -554,6 +554,7 @@
     SUBDIR += maim
     SUBDIR += mandelbulber
     SUBDIR += mapcache
+    SUBDIR += mapnik
     SUBDIR += mapserver
     SUBDIR += mapyrus
     SUBDIR += matplotlib-cpp
@@ -861,6 +862,7 @@
     SUBDIR += py-face_recognition
     SUBDIR += py-face_recognition_models
     SUBDIR += py-fiona
+    SUBDIR += py-fotokilof
     SUBDIR += py-freeimagepy
     SUBDIR += py-gdal
     SUBDIR += py-geomdl
@@ -933,6 +935,7 @@
     SUBDIR += py-pyqtgraph
     SUBDIR += py-pyrsgis
     SUBDIR += py-pytesseract
+    SUBDIR += py-python-barcode
     SUBDIR += py-python-poppler-qt5
     SUBDIR += py-pyvips
     SUBDIR += py-pyvista
@@ -948,10 +951,12 @@
     SUBDIR += py-seqdiag
     SUBDIR += py-sorl-thumbnail
     SUBDIR += py-spectra
+    SUBDIR += py-sqlalchemy-imageattach
     SUBDIR += py-svg.path
     SUBDIR += py-svgwrite
     SUBDIR += py-termtosvg
     SUBDIR += py-tifffile
+    SUBDIR += py-tkcolorpicker
     SUBDIR += py-toyplot
     SUBDIR += py-traitsui
     SUBDIR += py-ueberzug
