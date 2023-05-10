@@ -1,6 +1,6 @@
 PORTNAME=	mailpit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.5
+DISTVERSION=	1.6.9
 CATEGORIES=	mail devel
 MASTER_SITES=	https://www.madpilot.net/mailpit/:npmcache \
 		LOCAL/madpilot/mailpit:npmcache
@@ -39,10 +39,10 @@ GH_TUPLE=	\
 		golang:crypto:v0.8.0:golang_crypto/vendor/golang.org/x/crypto \
 		golang:image:v0.7.0:golang_image/vendor/golang.org/x/image \
 		golang:mod:v0.10.0:golang_mod/vendor/golang.org/x/mod \
-		golang:net:v0.9.0:golang_net/vendor/golang.org/x/net \
-		golang:sys:v0.7.0:golang_sys/vendor/golang.org/x/sys \
+		golang:net:v0.10.0:golang_net/vendor/golang.org/x/net \
+		golang:sys:v0.8.0:golang_sys/vendor/golang.org/x/sys \
 		golang:text:v0.9.0:golang_text/vendor/golang.org/x/text \
-		golang:tools:v0.8.0:golang_tools/vendor/golang.org/x/tools \
+		golang:tools:v0.9.0:golang_tools/vendor/golang.org/x/tools \
 		google:uuid:v1.3.0:google_uuid/vendor/github.com/google/uuid \
 		gorilla:mux:v1.8.0:gorilla_mux/vendor/github.com/gorilla/mux \
 		gorilla:websocket:v1.5.0:gorilla_websocket/vendor/github.com/gorilla/websocket \
@@ -75,11 +75,11 @@ USE_GITLAB=	nodefault
 GL_TUPLE=	\
 		cznic:cc:03159e8e41eec8d08c1e502bfc46868b9a03aa57:cznic_cc/vendor/modernc.org/cc/v3 \
 		cznic:ccgo:0641811a3b4e1b829e42b48fa6cf751b3a681ed5:cznic_ccgo/vendor/modernc.org/ccgo/v3 \
-		cznic:libc:43454080a172124dbb34a4870ef7fc6d6ee6c2da:cznic_libc/vendor/modernc.org/libc \
+		cznic:libc:5beac8ad65347b6f7068cd2ec6035cfbe3150ed6:cznic_libc/vendor/modernc.org/libc \
 		cznic:mathutil:b13e5b5643328f15fd2fcedc85f647f0d8f9180f:cznic_mathutil/vendor/modernc.org/mathutil \
 		cznic:memory:93bf078bc8d6adb7f31db2b81355b62eb168b17f:cznic_memory/vendor/modernc.org/memory \
 		cznic:opt:6b647abadf922391a4527f3a4fa1817eff08b7cd:cznic_opt/vendor/modernc.org/opt \
-		cznic:sqlite:e027e08b760bce2d519410400054da9199e19c34:cznic_sqlite/vendor/modernc.org/sqlite \
+		cznic:sqlite:4cc292533194c70435f23c44cbf064da8235c0de:cznic_sqlite/vendor/modernc.org/sqlite \
 		cznic:strutil:bba0c72b66bb9ced2dfd2ee521b7f16b2cbb39fa:cznic_strutil/vendor/modernc.org/strutil \
 		cznic:token:24e30cd78ee0f2d5d4516917d9cc1101e3ccc1ab:cznic_token/vendor/modernc.org/token
 
@@ -94,4 +94,5 @@ make-npm-cache: patch
 	@cd ${WRKDIR} \
 		&& ${TAR} -c --zstd -f ${PORTNAME}-npm-cache-${DISTVERSION}${EXTRACT_SUFX} .npm \
 		&& ${ECHO} "Please upload the file ${WRKDIR}/${PORTNAME}-npm-cache-${DISTVERSION}${EXTRACT_SUFX}"
+
 .include <bsd.port.mk>

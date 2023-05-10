@@ -268,6 +268,7 @@
     SUBDIR += cvc5
     SUBDIR += dbcsr
     SUBDIR += deal.ii
+    SUBDIR += dgl
     SUBDIR += dieharder
     SUBDIR += dihydrogen
     SUBDIR += dionysus
@@ -603,6 +604,7 @@
     SUBDIR += octave-forge-nnet
     SUBDIR += octave-forge-nurbs
     SUBDIR += octave-forge-oct2mat
+    SUBDIR += octave-forge-octave-pool
     SUBDIR += octave-forge-octclip
     SUBDIR += octave-forge-octproj
     SUBDIR += octave-forge-odebvp
@@ -903,6 +905,7 @@
     SUBDIR += py-cyipopt
     SUBDIR += py-cypari2
     SUBDIR += py-deap
+    SUBDIR += py-dgl
     SUBDIR += py-dionysus
     SUBDIR += py-disjoint-set
     SUBDIR += py-docplex
@@ -919,6 +922,7 @@
     SUBDIR += py-formulaic
     SUBDIR += py-fpylll
     SUBDIR += py-fraction
+    SUBDIR += py-fsph
     SUBDIR += py-fvcore
     SUBDIR += py-gau2grid
     SUBDIR += py-gimmik
@@ -946,6 +950,7 @@
     SUBDIR += py-libpoly
     SUBDIR += py-linearmodels
     SUBDIR += py-lmfit
+    SUBDIR += py-lrcalc
     SUBDIR += py-luminol
     SUBDIR += py-mapbox-earcut
     SUBDIR += py-mathics

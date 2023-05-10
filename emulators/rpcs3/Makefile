@@ -1,7 +1,7 @@
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.27-14956 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-gea3a73b598
+DISTVERSION=	0.0.27-14980 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-g195de818b6
 CATEGORIES=	emulators wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -51,7 +51,7 @@ ELF_FEATURES=	+noaslr,wxneeded:bin/${PORTNAME}
 
 .if ${FLAVOR:U} == qt6 || make(makesum) || make(fetch)
 PATCH_SITES+=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/:qt6
-PATCHFILES+=	ec621e5b401e.patch:-p1:qt6 # https://github.com/RPCS3/rpcs3/pull/12471
+PATCHFILES+=	9e0b4ac56138.patch:-p1:qt6 # https://github.com/RPCS3/rpcs3/pull/12471
 PKGNAMESUFFIX=	-${FLAVOR}
 USES:=		${USES:S/qt:5/qt:6/}
 USE_QT=		base multimedia svg
@@ -72,8 +72,8 @@ ${FLAVOR}-post-patch:
 CONFLICTS_INSTALL=	${PORTNAME}-qt6
 .endif
 
-OPTIONS_DEFINE=	ALSA EVDEV FAUDIO PULSEAUDIO JACK SNDIO VULKAN
-OPTIONS_DEFAULT=EVDEV FAUDIO PULSEAUDIO JACK SNDIO VULKAN
+OPTIONS_DEFINE=	ALSA EVDEV FAUDIO PULSEAUDIO JACK SDL SNDIO VULKAN
+OPTIONS_DEFAULT=EVDEV FAUDIO PULSEAUDIO JACK SDL SNDIO VULKAN
 
 ALSA_BUILD_DEPENDS=	alsa-lib>0:audio/alsa-lib
 ALSA_CMAKE_BOOL=	USE_ALSA
@@ -94,6 +94,10 @@ JACK_CMAKE_BOOL=	USE_JACK
 PULSEAUDIO_BUILD_DEPENDS=pulseaudio>0:audio/pulseaudio
 PULSEAUDIO_CMAKE_BOOL=	USE_PULSE
 
+SDL_USES=		sdl
+SDL_USE=		SDL=sdl2
+SDL_CMAKE_BOOL=		USE_SDL USE_SYSTEM_SDL
+
 SNDIO_BUILD_DEPENDS=	sndio>0:audio/sndio
 SNDIO_CMAKE_BOOL=	USE_SNDIO
 
@@ -107,16 +111,5 @@ post-patch:
 		 -e '/GIT_FULL_BRANCH/s/local_build/${GH_ACCOUNT}\/${GH_PROJECT}\/master/' \
 		-e '/GIT_VERSION/s/local_build/${GH_TAGNAME:C/[^-]*-//}/' \
 		${WRKSRC}/${PORTNAME}/git-version.cmake
-
-.include <bsd.port.options.mk>
-
-# XXX https://github.com/llvm/llvm-project/issues/58207
-.if ${_OSRELEASE:M*-CURRENT}
-# Ignore Clang assertions
-USES+=		llvm
-CC=		clang${LLVM_VERSION}
-CXX=		clang++${LLVM_VERSION}
-CPP=		clang-cpp${LLVM_VERSION}
-.endif
 
 .include <bsd.port.mk>
