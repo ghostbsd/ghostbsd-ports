@@ -78,6 +78,7 @@
     SUBDIR += reprise
     SUBDIR += sccache-overlay
     SUBDIR += software-station
+    SUBDIR += submodules2tuple
     SUBDIR += synth
     SUBDIR += update-station
     SUBDIR += wanted-ports

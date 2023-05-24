@@ -58,6 +58,7 @@
     SUBDIR += deskmenu
     SUBDIR += disman
     SUBDIR += dmenu
+    SUBDIR += dmenu2
     SUBDIR += docker-tray
     SUBDIR += dsbautostart
     SUBDIR += dsbxinput
@@ -193,6 +194,7 @@
     SUBDIR += libXxf86dga
     SUBDIR += libXxf86vm
     SUBDIR += libclipboard
+    SUBDIR += libei
     SUBDIR += libexo
     SUBDIR += libfakekey
     SUBDIR += libfm
@@ -553,6 +555,7 @@
     SUBDIR += xlogo
     SUBDIR += xlsatoms
     SUBDIR += xlsclients
+    SUBDIR += xlupe
     SUBDIR += xmag
     SUBDIR += xman
     SUBDIR += xmangekyou

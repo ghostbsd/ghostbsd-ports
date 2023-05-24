@@ -1,5 +1,5 @@
 PORTNAME=	octave-forge-communications
-PORTVERSION=	1.2.5
+PORTVERSION=	1.2.6
 CATEGORIES=	math
 MASTER_SITES=	SF/octave/Octave%20Forge%20Packages/Individual%20Package%20Releases
 DISTNAME=	${OCTAVE_PKGNAME}-${DISTVERSIONFULL}
@@ -13,9 +13,7 @@ LICENSE_FILE=	${WRKDIR}/${OCTAVE_SRC}/COPYING
 
 RUN_DEPENDS=	${OCTAVE_TARBALLS_DIR}/signal.tar.gz:math/octave-forge-signal
 
-USES=		octave autoreconf
-
-OCTAVE_SRC=	${OCTAVE_PKGNAME}
+USES=		octave autoreconf pkgconfig
 
 GNU_CONFIGURE=	yes
 

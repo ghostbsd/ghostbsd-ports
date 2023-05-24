@@ -20,6 +20,7 @@
     SUBDIR += Stikked
     SUBDIR += UniversalFeedCreator
     SUBDIR += adguardhome
+    SUBDIR += adjuster
     SUBDIR += adzap
     SUBDIR += alef-webfont
     SUBDIR += amfora
@@ -1463,21 +1464,6 @@
     SUBDIR += py-cssselect
     SUBDIR += py-cssutils
     SUBDIR += py-dj-database-url
-    SUBDIR += py-dj40-django-auth-ldap
-    SUBDIR += py-dj40-django-cors-headers
-    SUBDIR += py-dj40-django-debug-toolbar
-    SUBDIR += py-dj40-django-filter
-    SUBDIR += py-dj40-django-graphiql-debug-toolbar
-    SUBDIR += py-dj40-django-js-asset
-    SUBDIR += py-dj40-django-mptt
-    SUBDIR += py-dj40-django-prometheus
-    SUBDIR += py-dj40-django-redis
-    SUBDIR += py-dj40-django-rich
-    SUBDIR += py-dj40-django-tables2
-    SUBDIR += py-dj40-django-taggit
-    SUBDIR += py-dj40-django-timezone-field
-    SUBDIR += py-dj40-djangorestframework
-    SUBDIR += py-dj40-drf-yasg
     SUBDIR += py-dj41-django-auth-ldap
     SUBDIR += py-dj41-django-cors-headers
     SUBDIR += py-dj41-django-debug-toolbar
@@ -1595,7 +1581,6 @@
     SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
     SUBDIR += py-django32
-    SUBDIR += py-django40
     SUBDIR += py-django41
     SUBDIR += py-django42
     SUBDIR += py-django_compressor
@@ -1919,6 +1904,7 @@
     SUBDIR += rubygem-cgi_multipart_eof_fix
     SUBDIR += rubygem-chosen-rails
     SUBDIR += rubygem-chromedriver-helper
+    SUBDIR += rubygem-circuitbox
     SUBDIR += rubygem-cookiejar
     SUBDIR += rubygem-crass
     SUBDIR += rubygem-cssbundling-rails
@@ -2122,6 +2108,7 @@
     SUBDIR += rubygem-rack-timeout
     SUBDIR += rubygem-rack16
     SUBDIR += rubygem-rack22
+    SUBDIR += rubygem-rack227
     SUBDIR += rubygem-rack_csrf
     SUBDIR += rubygem-rackup
     SUBDIR += rubygem-rails-settings-cached
@@ -2183,6 +2170,7 @@
     SUBDIR += rubygem-rtlit
     SUBDIR += rubygem-ruby-oembed
     SUBDIR += rubygem-ruby-openai
+    SUBDIR += rubygem-ruby-openai37
     SUBDIR += rubygem-ruby-readability
     SUBDIR += rubygem-savon
     SUBDIR += rubygem-sawyer
