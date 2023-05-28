@@ -1154,6 +1154,7 @@
     SUBDIR += py-tofu
     SUBDIR += py-transip
     SUBDIR += py-trio
+    SUBDIR += py-trio-websocket
     SUBDIR += py-tweepy
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
@@ -1307,14 +1308,12 @@
     SUBDIR += rubygem-google-cloud-spanner-v1
     SUBDIR += rubygem-google-cloud-storage
     SUBDIR += rubygem-grpc
-    SUBDIR += rubygem-grpc142
     SUBDIR += rubygem-hangouts-chat
     SUBDIR += rubygem-http-parser
     SUBDIR += rubygem-http_parser.rb
     SUBDIR += rubygem-httpauth
     SUBDIR += rubygem-interfacez
     SUBDIR += rubygem-ipaddr
-    SUBDIR += rubygem-ipaddr122
     SUBDIR += rubygem-ipaddress
     SUBDIR += rubygem-iproto
     SUBDIR += rubygem-kas-grpc
@@ -1339,6 +1338,7 @@
     SUBDIR += rubygem-oauth21
     SUBDIR += rubygem-octokit
     SUBDIR += rubygem-octokit4
+    SUBDIR += rubygem-octokit5
     SUBDIR += rubygem-octopress-deploy
     SUBDIR += rubygem-omniauth-auth0
     SUBDIR += rubygem-omniauth-authentiq
@@ -1367,6 +1367,7 @@
     SUBDIR += rubygem-pcaprub
     SUBDIR += rubygem-private_address_check
     SUBDIR += rubygem-proxifier
+    SUBDIR += rubygem-proxifier2
     SUBDIR += rubygem-qiniu
     SUBDIR += rubygem-rabbiter
     SUBDIR += rubygem-rbvmomi
@@ -1393,6 +1394,7 @@
     SUBDIR += rubygem-t
     SUBDIR += rubygem-train
     SUBDIR += rubygem-train-core
+    SUBDIR += rubygem-train-rest
     SUBDIR += rubygem-train-winrm
     SUBDIR += rubygem-tweetstream
     SUBDIR += rubygem-twitter
@@ -1461,6 +1463,7 @@
     SUBDIR += socketpipe
     SUBDIR += socketw
     SUBDIR += sofia-sip
+    SUBDIR += speedtest-go
     SUBDIR += spiritvnc
     SUBDIR += spoofer
     SUBDIR += spread

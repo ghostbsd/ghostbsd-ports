@@ -451,7 +451,6 @@
     SUBDIR += nibbleblog
     SUBDIR += nift
     SUBDIR += node
-    SUBDIR += node14
     SUBDIR += node16
     SUBDIR += node18
     SUBDIR += node19
@@ -462,7 +461,6 @@
     SUBDIR += npapi-xine
     SUBDIR += npc
     SUBDIR += npm
-    SUBDIR += npm-node14
     SUBDIR += npm-node16
     SUBDIR += npm-node18
     SUBDIR += npm-node19
@@ -1885,7 +1883,6 @@
     SUBDIR += rubygem-amazon-ecs
     SUBDIR += rubygem-anemone
     SUBDIR += rubygem-asana
-    SUBDIR += rubygem-asana0
     SUBDIR += rubygem-asana1
     SUBDIR += rubygem-async-http
     SUBDIR += rubygem-async-pool
@@ -2018,7 +2015,6 @@
     SUBDIR += rubygem-json-jwt
     SUBDIR += rubygem-json-jwt115
     SUBDIR += rubygem-jwt
-    SUBDIR += rubygem-jwt25
     SUBDIR += rubygem-kaminari
     SUBDIR += rubygem-kaminari-actionview
     SUBDIR += rubygem-kaminari-actionview-rails5
@@ -2215,7 +2211,6 @@
     SUBDIR += rubygem-webdrivers
     SUBDIR += rubygem-webmock
     SUBDIR += rubygem-webrick
-    SUBDIR += rubygem-webrick17
     SUBDIR += rubygem-webrobots
     SUBDIR += rubygem-websocket
     SUBDIR += rubygem-websocket-client-simple
@@ -2441,7 +2436,6 @@
     SUBDIR += yabb
     SUBDIR += yanopaste
     SUBDIR += yarn
-    SUBDIR += yarn-node14
     SUBDIR += yarn-node16
     SUBDIR += yarn-node18
     SUBDIR += yarn-node19

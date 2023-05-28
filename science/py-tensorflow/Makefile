@@ -1,7 +1,7 @@
 PORTNAME=	tensorflow
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.9.1
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	science python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DIST_SUBDIR=	${PORTNAME}
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	${RUN_DEPENDS} \
 		bash:shells/bash \
 		cython:lang/cython \
 		swig:devel/swig \
-		bazel:devel/bazel \
+		bazel:devel/bazel5 \
 		git:devel/git
 LIB_DEPENDS=	libnsync.so:devel/nsync \
 		libgpr.so:devel/grpc \

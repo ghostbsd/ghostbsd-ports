@@ -1,6 +1,6 @@
 PORTNAME=	gitlab-ce
 PORTVERSION=	15.11.3
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -79,7 +79,7 @@ MY_DEPENDS=	git>=2.39.2:devel/git \
 	rubygem-rubyzip>=2.3.2<2.4:archivers/rubygem-rubyzip \
 	rubygem-acme-client>=2.0.9<3:security/rubygem-acme-client \
 	rubygem-browser>=5.3.1<5.4:www/rubygem-browser \
-	rubygem-ohai>=17.9<18:sysutils/rubygem-ohai \
+	rubygem-ohai17>=17.9<18:sysutils/rubygem-ohai17 \
 	rubygem-gpgme>=2.0.22<2.1.0:security/rubygem-gpgme \
 	rubygem-gitlab_omniauth-ldap>=2.2.0<2.3.0:net/rubygem-gitlab_omniauth-ldap \
 	rubygem-net-ldap017>=0.17.1<0.18:net/rubygem-net-ldap017 \
@@ -120,7 +120,7 @@ MY_DEPENDS=	git>=2.39.2:devel/git \
 	rubygem-elasticsearch-model713>=7.2<8:textproc/rubygem-elasticsearch-model713 \
 	rubygem-elasticsearch-rails>=7.2<8:textproc/rubygem-elasticsearch-rails \
 	rubygem-elasticsearch-api713>=7.13.3<7.13.4:textproc/rubygem-elasticsearch-api713 \
-	rubygem-aws-sdk-core>=3.171.0<3.172:devel/rubygem-aws-sdk-core \
+	rubygem-aws-sdk-core3171>=3.171.0<3.172:devel/rubygem-aws-sdk-core3171 \
 	rubygem-aws-sdk-cloudformation>=1<2:devel/rubygem-aws-sdk-cloudformation \
 	rubygem-aws-sdk-s31121>=1.121.0<1.122:devel/rubygem-aws-sdk-s31121 \
 	rubygem-faraday_middleware-aws-sigv403>=0.3.0<0.4:devel/rubygem-faraday_middleware-aws-sigv403 \
@@ -179,7 +179,7 @@ MY_DEPENDS=	git>=2.39.2:devel/git \
 	rubygem-ruby-openai37>=3.7<4:www/rubygem-ruby-openai37 \
 	rubygem-sanitize>=6.0<7:textproc/rubygem-sanitize \
 	rubygem-babosa>=1.0.4<1.1.0:textproc/rubygem-babosa \
-	rubygem-loofah>=2.20.0<2.21:textproc/rubygem-loofah \
+	rubygem-loofah220>=2.20.0<2.21:textproc/rubygem-loofah220 \
 	rubygem-licensee>=9.15<10:devel/rubygem-licensee \
 	rubygem-charlock_holmes>=0.7.7<0.8.0:textproc/rubygem-charlock_holmes \
 	rubygem-ruby-magic>=0.6<1:devel/rubygem-ruby-magic \
@@ -218,7 +218,7 @@ MY_DEPENDS=	git>=2.39.2:devel/git \
 	rubygem-warning>=1.3.0<1.4:devel/rubygem-warning \
 	rubygem-license_finder>=7.0.0<8:devel/rubygem-license_finder \
 	rubygem-gitlab-dangerfiles>=3.9.0<3.10:devel/rubygem-gitlab-dangerfiles \
-	rubygem-octokit>=4.20<6.0:net/rubygem-octokit \
+	rubygem-octokit5>=4.20<6.0:net/rubygem-octokit5 \
 	rubygem-gitlab-mail_room>=0.0.23<0.1.0:mail/rubygem-gitlab-mail_room \
 	rubygem-email_reply_trimmer>=0.1<1.0:mail/rubygem-email_reply_trimmer \
 	rubygem-html2text>=0:textproc/rubygem-html2text \
@@ -237,7 +237,7 @@ MY_DEPENDS=	git>=2.39.2:devel/git \
 	rubygem-gitaly>=15.9.0.pre.rc3<15.10.0:net/rubygem-gitaly \
 	rubygem-kas-grpc>=0.0.2,1<0.0.3,1:net/rubygem-kas-grpc \
 	rubygem-grpc>=1.42.0<2:net/rubygem-grpc \
-	rubygem-google-protobuf>=3.22.3<4:devel/rubygem-google-protobuf \
+	rubygem-google-protobuf322>=3.22.3<4:devel/rubygem-google-protobuf322 \
 	rubygem-toml-rb>=2.2.0<3:www/rubygem-toml-rb \
 	rubygem-flipper025>=0.25.0<0.26:devel/rubygem-flipper025 \
 	rubygem-flipper-active_record-rails61>=0.25.0<0.26:databases/rubygem-flipper-active_record-rails61 \
@@ -255,7 +255,7 @@ MY_DEPENDS=	git>=2.39.2:devel/git \
 	rubygem-valid_email>=0.1<1:mail/rubygem-valid_email \
 	rubygem-json>=2.6.3<3:devel/rubygem-json \
 	rubygem-json_schemer>=0.2.18<0.3:devel/rubygem-json_schemer \
-	rubygem-oj>=3.13.21<3.14:devel/rubygem-oj \
+	rubygem-oj313>=3.13.21<3.14:devel/rubygem-oj313 \
 	rubygem-oj-introspect>=0.7<1:devel/rubygem-oj-introspect \
 	rubygem-multi_json114>=1.14.1<1.15:devel/rubygem-multi_json114 \
 	rubygem-yajl-ruby>=1.4.3<1.5:devel/rubygem-yajl-ruby \
