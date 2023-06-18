@@ -5,6 +5,50 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20230609:
+  AFFECTS: users of security/sequoia
+  AUTHOR: vishwin@FreeBSD.org
+
+  sq has been split to security/sequoia-sq; security/sequoia becomes
+  a meta-port, where security/sequoia-sq is currently the only
+  dependency. As other programs are individually ported over, they
+  will become OPTIONS in the meta-port.
+
+  Per upstream, FFI is deprecated in favour of point solutions.
+
+20230602:
+  AFFECTS: users of net-mgmt/netbox
+  AUTHOR: kai@FreeBSD.org
+
+  1. If the plugin security/py-netbox-secretstore is used, which is no
+     longer maintained by upstream, the following steps must be done before
+     upgrading to NetBox 3.5:
+
+     * Migrate from security/py-netbox-secretstore (= 1.4.2_2) to
+       security/py-netbox-secrets (= 1.7.6) with a NetBox 3.4.x instance.
+
+       It is very important that the versions of py-netbox-secretstore and
+       py-netbox-secrets match as specified otherwise the migration will not
+       be successful.
+
+       The reason for this is that py-netbox-secrets 1.8.x is not backwards
+       compatible with Netbox 3.4.  For further details please see the
+       updating instructions of py-netbox-secretstore or the UPDATING entry
+       of 2023-05-11.
+
+  2. Please also check the pkg-message and the changelogs for further info.
+
+20230531:
+  AFFECTS: users of net-mgmt/netdisco
+  AUTHOR: dgeo@centrale-marseille.fr
+
+  The netdisco user now needs a HOME and a shell.
+  For existing installs you will need to set
+  HOME to /usr/local/etc/netdisco and shell to /bin/sh.
+
+  For example in one shell line:
+  pw user mod netdisco -d /usr/local/etc/netdisco -s /bin/sh
+
 20230526:
   AFFECTS: users of mail/exim
   AUTHOR: pi@FreeBSD.org
@@ -102,7 +146,7 @@ you update your ports collection, before attempting any port upgrades.
   e.g. change sysutils_py-mqttwarn_REISPUB to sysutils_py-mqttwarn_REDISPUB
 
 20230416:
-  AFFECTS: users of databases/mongodb50 and databases/mongodb44
+  AFFECTS: users of databases/mongodb50, databases/mongodb44 and databases/mongodb60
   AUTHOR: ronald@FreeBSD.org
 
   MongoDB removed the settings 'fork' and 'pidFilePath' from the default

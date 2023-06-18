@@ -1267,6 +1267,15 @@
     SUBDIR += php82-xmlreader
     SUBDIR += php82-xmlwriter
     SUBDIR += php82-xsl
+    SUBDIR += php83-ctype
+    SUBDIR += php83-dom
+    SUBDIR += php83-enchant
+    SUBDIR += php83-pspell
+    SUBDIR += php83-simplexml
+    SUBDIR += php83-xml
+    SUBDIR += php83-xmlreader
+    SUBDIR += php83-xmlwriter
+    SUBDIR += php83-xsl
     SUBDIR += pict
     SUBDIR += po4a
     SUBDIR += pod2mdoc
@@ -1624,6 +1633,7 @@
     SUBDIR += qt5-xml
     SUBDIR += qt5-xmlpatterns
     SUBDIR += qu-aspell
+    SUBDIR += quickwit
     SUBDIR += rand
     SUBDIR += randlm
     SUBDIR += rapidxml
@@ -1778,8 +1788,6 @@
     SUBDIR += rubygem-liquid4
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
-    SUBDIR += rubygem-loofah220
-    SUBDIR += rubygem-loofah221
     SUBDIR += rubygem-ltsv
     SUBDIR += rubygem-markaby
     SUBDIR += rubygem-mdl
@@ -1788,6 +1796,7 @@
     SUBDIR += rubygem-nokogiri
     SUBDIR += rubygem-nokogiri-diff
     SUBDIR += rubygem-nokogiri111
+    SUBDIR += rubygem-nokogiri114
     SUBDIR += rubygem-nokogumbo
     SUBDIR += rubygem-octopress-escape-code
     SUBDIR += rubygem-opml
@@ -2087,6 +2096,7 @@
     SUBDIR += yamcha
     SUBDIR += yaml-mode.el
     SUBDIR += yaml.el
+    SUBDIR += yamlfmt
     SUBDIR += ydiff
     SUBDIR += yelp-tools
     SUBDIR += yelp-xsl

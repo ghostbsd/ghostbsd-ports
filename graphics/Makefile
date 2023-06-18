@@ -94,6 +94,7 @@
     SUBDIR += cairomm
     SUBDIR += cal3d
     SUBDIR += camerakit
+    SUBDIR += catimg
     SUBDIR += cbonsai
     SUBDIR += cbviewer
     SUBDIR += cegui
@@ -787,6 +788,8 @@
     SUBDIR += php81-gd
     SUBDIR += php82-exif
     SUBDIR += php82-gd
+    SUBDIR += php83-exif
+    SUBDIR += php83-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle
@@ -813,6 +816,7 @@
     SUBDIR += pngrewrite
     SUBDIR += pngwriter
     SUBDIR += podofo
+    SUBDIR += podofo09
     SUBDIR += polyclipping
     SUBDIR += poppler
     SUBDIR += poppler-data
@@ -866,6 +870,7 @@
     SUBDIR += py-fiona
     SUBDIR += py-fotokilof
     SUBDIR += py-freeimagepy
+    SUBDIR += py-fury
     SUBDIR += py-gdal
     SUBDIR += py-geomdl
     SUBDIR += py-geopandas
@@ -926,6 +931,7 @@
     SUBDIR += py-pygeos
     SUBDIR += py-pyglet
     SUBDIR += py-pyglet1
+    SUBDIR += py-pygltflib
     SUBDIR += py-pygraph
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
@@ -1135,6 +1141,7 @@
     SUBDIR += timg
     SUBDIR += tintfu
     SUBDIR += tinyows
+    SUBDIR += tippecanoe
     SUBDIR += tkpng
     SUBDIR += togl
     SUBDIR += tslib

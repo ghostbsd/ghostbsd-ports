@@ -381,6 +381,7 @@
     SUBDIR += php80-calendar
     SUBDIR += php81-calendar
     SUBDIR += php82-calendar
+    SUBDIR += php83-calendar
     SUBDIR += pinfo
     SUBDIR += pipe
     SUBDIR += posixtestsuite
@@ -422,6 +423,7 @@
     SUBDIR += py-ipyfastscape
     SUBDIR += py-kartograph
     SUBDIR += py-lightgbm
+    SUBDIR += py-lightning-utilities
     SUBDIR += py-log_symbols
     SUBDIR += py-mffpy
     SUBDIR += py-molequeue
@@ -454,6 +456,7 @@
     SUBDIR += py-python-geohash
     SUBDIR += py-python-utils
     SUBDIR += py-pytorch
+    SUBDIR += py-pytorch-lightning
     SUBDIR += py-qiskit-machine-learning
     SUBDIR += py-scikit-fusion
     SUBDIR += py-serverfiles
@@ -469,6 +472,8 @@
     SUBDIR += py-tflite
     SUBDIR += py-tflite-support
     SUBDIR += py-toil
+    SUBDIR += py-torch-geometric
+    SUBDIR += py-torchmetrics
     SUBDIR += py-torchvision
     SUBDIR += py-tqdm
     SUBDIR += py-tvm

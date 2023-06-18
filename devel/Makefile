@@ -207,7 +207,6 @@
     SUBDIR += argtable
     SUBDIR += arm-elf-binutils
     SUBDIR += arm-none-eabi-gcc
-    SUBDIR += arm-none-eabi-gcc492
     SUBDIR += arm-none-eabi-newlib
     SUBDIR += aros-sdk
     SUBDIR += arpc
@@ -919,6 +918,7 @@
     SUBDIR += gradle5
     SUBDIR += gradle6
     SUBDIR += gradle62
+    SUBDIR += gradle761
     SUBDIR += grantlee5
     SUBDIR += grcov
     SUBDIR += grex
@@ -1104,7 +1104,7 @@
     SUBDIR += kf5-threadweaver
     SUBDIR += kio-extras
     SUBDIR += kirigami-gallery
-    SUBDIR += kiwix-lib
+    SUBDIR += klib
     SUBDIR += kms-cmake-utils
     SUBDIR += kodi-platform
     SUBDIR += kokkos
@@ -1222,6 +1222,7 @@
     SUBDIR += libevdev
     SUBDIR += libevdevplus
     SUBDIR += libevent
+    SUBDIR += libevent-devel
     SUBDIR += libevt
     SUBDIR += libevtx
     SUBDIR += libewf
@@ -1288,6 +1289,7 @@
     SUBDIR += libixp
     SUBDIR += libjitterentropy
     SUBDIR += libk8055
+    SUBDIR += libkiwix
     SUBDIR += libklel
     SUBDIR += liblangtag
     SUBDIR += liblas
@@ -4097,6 +4099,16 @@
     SUBDIR += php82-sysvsem
     SUBDIR += php82-sysvshm
     SUBDIR += php82-tokenizer
+    SUBDIR += php83-ffi
+    SUBDIR += php83-gettext
+    SUBDIR += php83-intl
+    SUBDIR += php83-pcntl
+    SUBDIR += php83-readline
+    SUBDIR += php83-shmop
+    SUBDIR += php83-sysvmsg
+    SUBDIR += php83-sysvsem
+    SUBDIR += php83-sysvshm
+    SUBDIR += php83-tokenizer
     SUBDIR += phpunit10
     SUBDIR += phpunit8
     SUBDIR += phpunit9
@@ -4121,8 +4133,8 @@
     SUBDIR += pmd
     SUBDIR += pmdk
     SUBDIR += poco
-    SUBDIR += poetry
     SUBDIR += popt
+    SUBDIR += poser
     SUBDIR += poxml
     SUBDIR += ppl
     SUBDIR += pprof
@@ -4388,6 +4400,7 @@
     SUBDIR += py-cached-property
     SUBDIR += py-cachetools
     SUBDIR += py-cachetools3
+    SUBDIR += py-cacheyou
     SUBDIR += py-cachy
     SUBDIR += py-cadquery-pywrap
     SUBDIR += py-calver
@@ -4540,6 +4553,7 @@
     SUBDIR += py-devtools
     SUBDIR += py-dexml2
     SUBDIR += py-diazo
+    SUBDIR += py-diff-cover
     SUBDIR += py-dill
     SUBDIR += py-dirspec
     SUBDIR += py-diskcache
@@ -4560,7 +4574,6 @@
     SUBDIR += py-dpcontracts
     SUBDIR += py-dtfabric
     SUBDIR += py-dulwich
-    SUBDIR += py-dulwich020
     SUBDIR += py-dunamai
     SUBDIR += py-durus
     SUBDIR += py-dynrules
@@ -4582,6 +4595,7 @@
     SUBDIR += py-etils
     SUBDIR += py-evdev
     SUBDIR += py-eventlib
+    SUBDIR += py-ewah-bool-utils
     SUBDIR += py-ewmh
     SUBDIR += py-exam
     SUBDIR += py-exceptiongroup
@@ -4790,7 +4804,9 @@
     SUBDIR += py-janus
     SUBDIR += py-jaraco
     SUBDIR += py-jaraco.classes
+    SUBDIR += py-jaraco.collections
     SUBDIR += py-jaraco.context
+    SUBDIR += py-jaraco.env
     SUBDIR += py-jaraco.functools
     SUBDIR += py-jaraco.itertools
     SUBDIR += py-jaraco.logging
@@ -4899,6 +4915,7 @@
     SUBDIR += py-loguru
     SUBDIR += py-logutils
     SUBDIR += py-logzero
+    SUBDIR += py-looseversion
     SUBDIR += py-louie
     SUBDIR += py-lru-dict
     SUBDIR += py-lsprotocol
@@ -5321,6 +5338,7 @@
     SUBDIR += py-pytest-relaxed
     SUBDIR += py-pytest-rerunfailures
     SUBDIR += py-pytest-runner
+    SUBDIR += py-pytest-services
     SUBDIR += py-pytest-shutil
     SUBDIR += py-pytest-subtests
     SUBDIR += py-pytest-sugar
@@ -5382,7 +5400,6 @@
     SUBDIR += py-pyusb
     SUBDIR += py-pyvisa
     SUBDIR += py-pyvisa-py
-    SUBDIR += py-pyxb
     SUBDIR += py-pyxb-x
     SUBDIR += py-pyyaml-include
     SUBDIR += py-pyyaml5
@@ -5490,6 +5507,7 @@
     SUBDIR += py-setproctitle
     SUBDIR += py-setuptools
     SUBDIR += py-setuptools-declarative-requirements
+    SUBDIR += py-setuptools-gettext
     SUBDIR += py-setuptools-git
     SUBDIR += py-setuptools-pkg
     SUBDIR += py-setuptools-rust
@@ -5587,6 +5605,7 @@
     SUBDIR += py-thrift
     SUBDIR += py-thriftpy2
     SUBDIR += py-tiamat
+    SUBDIR += py-time-machine
     SUBDIR += py-timelib
     SUBDIR += py-timeout-decorator
     SUBDIR += py-tinyarray
@@ -5636,7 +5655,9 @@
     SUBDIR += py-types-protobuf
     SUBDIR += py-types-psutil
     SUBDIR += py-types-psycopg2
+    SUBDIR += py-types-python-dateutil
     SUBDIR += py-types-requests
+    SUBDIR += py-types-retry
     SUBDIR += py-types-setuptools
     SUBDIR += py-types-toml
     SUBDIR += py-types-typed-ast
@@ -6109,7 +6130,6 @@
     SUBDIR += rubygem-aws-sdk-controltower
     SUBDIR += rubygem-aws-sdk-core
     SUBDIR += rubygem-aws-sdk-core2
-    SUBDIR += rubygem-aws-sdk-core3171
     SUBDIR += rubygem-aws-sdk-core3172
     SUBDIR += rubygem-aws-sdk-costandusagereportservice
     SUBDIR += rubygem-aws-sdk-costexplorer
@@ -6312,6 +6332,7 @@
     SUBDIR += rubygem-aws-sdk-route53resolver
     SUBDIR += rubygem-aws-sdk-s3
     SUBDIR += rubygem-aws-sdk-s31121
+    SUBDIR += rubygem-aws-sdk-s31122
     SUBDIR += rubygem-aws-sdk-s3control
     SUBDIR += rubygem-aws-sdk-s3outposts
     SUBDIR += rubygem-aws-sdk-sagemaker
@@ -6708,7 +6729,6 @@
     SUBDIR += rubygem-fast-stemmer
     SUBDIR += rubygem-fast_blank
     SUBDIR += rubygem-fast_gettext
-    SUBDIR += rubygem-fast_gettext1
     SUBDIR += rubygem-fast_stack
     SUBDIR += rubygem-fast_xor
     SUBDIR += rubygem-fastercsv
@@ -6769,7 +6789,6 @@
     SUBDIR += rubygem-getoptlong
     SUBDIR += rubygem-gettext
     SUBDIR += rubygem-gettext-setup
-    SUBDIR += rubygem-gettext-setup0
     SUBDIR += rubygem-gettext_i18n_rails
     SUBDIR += rubygem-gettext_i18n_rails18
     SUBDIR += rubygem-gettext_i18n_rails_js-rails5
@@ -7588,6 +7607,7 @@
     SUBDIR += tcl-signal
     SUBDIR += tcl-trf
     SUBDIR += tclap
+    SUBDIR += tclap12
     SUBDIR += tclbsd
     SUBDIR += tclcheck
     SUBDIR += tcllauncher

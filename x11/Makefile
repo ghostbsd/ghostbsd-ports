@@ -337,7 +337,6 @@
     SUBDIR += qt5-qev
     SUBDIR += qt5-x11extras
     SUBDIR += qterminal
-    SUBDIR += radare-cutter
     SUBDIR += remontoire
     SUBDIR += rendercheck
     SUBDIR += rgb
@@ -366,6 +365,7 @@
     SUBDIR += setlayout
     SUBDIR += setxkbmap
     SUBDIR += sfwbar
+    SUBDIR += shikane
     SUBDIR += shotman
     SUBDIR += showkeys
     SUBDIR += showmethekey
@@ -377,6 +377,7 @@
     SUBDIR += slop
     SUBDIR += slurp
     SUBDIR += smproxy
+    SUBDIR += somebar
     SUBDIR += sprop
     SUBDIR += squeekboard
     SUBDIR += srandrd
@@ -407,7 +408,6 @@
     SUBDIR += terminal.app
     SUBDIR += terminator
     SUBDIR += terminology
-    SUBDIR += thinglaunch
     SUBDIR += thingylaunch
     SUBDIR += tilda
     SUBDIR += tilix
@@ -426,6 +426,7 @@
     SUBDIR += wapanel
     SUBDIR += way-displays
     SUBDIR += waybar
+    SUBDIR += wayidle
     SUBDIR += wayland-logout
     SUBDIR += waylock
     SUBDIR += wayout

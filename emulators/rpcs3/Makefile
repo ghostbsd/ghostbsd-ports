@@ -1,8 +1,7 @@
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.27-15080 # git rev-list --count HEAD
-PORTREVISION=	1
-DISTVERSIONSUFFIX=	-g9f5e3ecb8c
+DISTVERSION=	0.0.28-15212 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-ga6d8c4343f
 CATEGORIES=	emulators wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -52,7 +51,7 @@ ELF_FEATURES=	+noaslr,wxneeded:bin/${PORTNAME}
 
 .if ${FLAVOR:U} == qt6 || make(makesum) || make(fetch)
 PATCH_SITES+=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/:qt6
-PATCHFILES+=	248c4cf8c3f7.patch:-p1:qt6 # https://github.com/RPCS3/rpcs3/pull/12471
+PATCHFILES+=	b1f76399f65b.patch:-p1:qt6 # https://github.com/RPCS3/rpcs3/pull/12471
 PKGNAMESUFFIX=	-${FLAVOR}
 USES:=		${USES:S/qt:5/qt:6/}
 USE_QT=		base multimedia svg
@@ -61,9 +60,9 @@ CONFLICTS_INSTALL=	${PORTNAME}
 
 post-patch:	${FLAVOR}-post-patch
 ${FLAVOR}-post-patch:
-# XXX Drop after devel/qt6-base >= 6.5 update
-	@${REINPLACE_CMD} -e '/QT_MIN_VER/s/6\.5\.0/6.4.2/' \
-		${WRKSRC}/3rdparty/qt6.cmake
+# XXX Drop after upstream fixes "undefined symbol: fmt_class_string<QByteArray, void>::..."
+	@${REINPLACE_CMD} -E '/camera_log/s/\.(id|description)\(\)/&.toStdString()/g' \
+		${WRKSRC}/rpcs3/rpcs3qt/qt_camera_handler.cpp
 # patch(1) doesn't support renames unlike git-apply(1)
 	@${MV}  ${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_surface.cpp \
 		${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_sink.cpp
