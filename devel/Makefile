@@ -4219,6 +4219,7 @@
     SUBDIR += py-apptools
     SUBDIR += py-apscheduler
     SUBDIR += py-archinfo
+    SUBDIR += py-archspec
     SUBDIR += py-argcomplete
     SUBDIR += py-argh
     SUBDIR += py-argparse
@@ -4229,6 +4230,7 @@
     SUBDIR += py-asgi-lifespan
     SUBDIR += py-asn1
     SUBDIR += py-asn1crypto
+    SUBDIR += py-aspectlib
     SUBDIR += py-aspy.yaml
     SUBDIR += py-ast-decompiler
     SUBDIR += py-asteval
@@ -4478,6 +4480,7 @@
     SUBDIR += py-confusable_homoglyphs
     SUBDIR += py-confuse
     SUBDIR += py-connection_pool
+    SUBDIR += py-cons
     SUBDIR += py-constantly
     SUBDIR += py-construct
     SUBDIR += py-construct-classes
@@ -4593,6 +4596,7 @@
     SUBDIR += py-epdb
     SUBDIR += py-epsilon
     SUBDIR += py-etils
+    SUBDIR += py-etuples
     SUBDIR += py-evdev
     SUBDIR += py-eventlib
     SUBDIR += py-ewah-bool-utils
@@ -4946,6 +4950,7 @@
     SUBDIR += py-microversion-parse
     SUBDIR += py-milc
     SUBDIR += py-mime
+    SUBDIR += py-miniKanren
     SUBDIR += py-minidump
     SUBDIR += py-minimongo
     SUBDIR += py-minio
@@ -5852,6 +5857,8 @@
     SUBDIR += pyotherside-qt5
     SUBDIR += pyside2
     SUBDIR += pyside2-tools
+    SUBDIR += pyside6
+    SUBDIR += pyside6-tools
     SUBDIR += pystring
     SUBDIR += pysvn
     SUBDIR += pythontidy
@@ -7506,6 +7513,7 @@
     SUBDIR += shflags
     SUBDIR += shfmt
     SUBDIR += shiboken2
+    SUBDIR += shiboken6
     SUBDIR += shmap
     SUBDIR += shroud
     SUBDIR += shtk

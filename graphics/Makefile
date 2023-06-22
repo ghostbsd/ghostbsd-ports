@@ -1,6 +1,6 @@
     COMMENT = Graphics tools and libraries
 
-    SUBDIR += 3d-ascii-viewer-c
+    SUBDIR += 3d-ascii-viewer
     SUBDIR += 4va
     SUBDIR += Coin
     SUBDIR += GraphicsMagick
@@ -225,6 +225,7 @@
     SUBDIR += freetype-gl
     SUBDIR += frei0r
     SUBDIR += frei0r-plugins
+    SUBDIR += frei0r-plugins-cairo
     SUBDIR += frei0r-plugins-gavl
     SUBDIR += frei0r-plugins-opencv
     SUBDIR += frogr
