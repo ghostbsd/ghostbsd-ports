@@ -196,14 +196,12 @@
     SUBDIR += mroonga
     SUBDIR += mtop
     SUBDIR += mydumper
-    SUBDIR += mysac
     SUBDIR += mysql++
     SUBDIR += mysql-connector-c++
     SUBDIR += mysql-connector-java
     SUBDIR += mysql-connector-java51
     SUBDIR += mysql-connector-odbc-80
     SUBDIR += mysql-udf
-    SUBDIR += mysql++
     SUBDIR += mysql2pgsql
     SUBDIR += mysql57-client
     SUBDIR += mysql57-server
