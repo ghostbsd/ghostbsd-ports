@@ -13,7 +13,7 @@ BUILD_DEPENDS=  gtk-update-icon-cache:graphics/gtk-update-icon-cache
 RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:misc/hicolor-icon-theme \
 		sudo:security/sudo
 
-USES=		gettext-tools gnome python:3.7+ shebangfix
+USES=		gettext-tools gnome python shebangfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 USE_GNOME=	pygobject3

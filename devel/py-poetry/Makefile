@@ -39,17 +39,13 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}build>=0.10.0<0.11:devel/py-build@${PY_FLAVO
 		${PYTHON_PKGNAMEPREFIX}urllib3>=1.26.0,1<2,1:net/py-urllib3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}virtualenv>=20.22.0<21:devel/py-virtualenv@${PY_FLAVOR}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	autoplist concurrent pep517
 
 BINARY_ALIAS=	git=false
 NO_ARCH=	yes
 
 .include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 30800
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}backports.cached-property>=1.0.2<2:devel/py-backports.cached-property@${PY_FLAVOR}
-.endif
 
 .if ${PYTHON_REL} < 31000
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}importlib-metadata>=4.4:devel/py-importlib-metadata@${PY_FLAVOR}
