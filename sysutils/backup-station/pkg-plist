@@ -1,4 +1,10 @@
 bin/backup-station
 etc/sudoers.d/backup-station
+%%PYTHON_SITELIBDIR%%/__pycache__/setup%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/__pycache__/setup%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/build/lib/__pycache__/setup%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/build/lib/__pycache__/setup%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/build/lib/setup.py
+%%PYTHON_SITELIBDIR%%/setup.py
 share/applications/backup-station.desktop
 share/locale/ru/LC_MESSAGES/backup-station.mo
