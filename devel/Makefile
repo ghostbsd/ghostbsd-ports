@@ -1718,6 +1718,7 @@
     SUBDIR += ossp-val
     SUBDIR += ossp-var
     SUBDIR += ossp-xds
+    SUBDIR += outcome
     SUBDIR += p4
     SUBDIR += p4.el
     SUBDIR += p4api
@@ -7524,6 +7525,7 @@
     SUBDIR += sdl_console
     SUBDIR += sdlmm
     SUBDIR += sdlskk
+    SUBDIR += sdsl-lite
     SUBDIR += sdts++
     SUBDIR += sedsed
     SUBDIR += selene
@@ -7723,6 +7725,7 @@
     SUBDIR += undead
     SUBDIR += unibilium
     SUBDIR += universal-ctags
+    SUBDIR += unordered-dense
     SUBDIR += upnp
     SUBDIR += upp
     SUBDIR += upslug

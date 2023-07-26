@@ -15,6 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
 
 USES=		autoreconf:build compiler:c11 gmake
+USE_CXXSTD=	c++14
 USE_GITHUB=	yes
 GH_ACCOUNT=	POV-Ray
 
