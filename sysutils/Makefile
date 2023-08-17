@@ -235,6 +235,10 @@
     SUBDIR += coreos-ct
     SUBDIR += coreutils
     SUBDIR += cpdup
+    SUBDIR += cpu-microcode
+    SUBDIR += cpu-microcode-amd
+    SUBDIR += cpu-microcode-intel
+    SUBDIR += cpu-microcode-rc
     SUBDIR += cpu-x
     SUBDIR += cpuburn
     SUBDIR += cpufetch
@@ -276,9 +280,6 @@
     SUBDIR += deltup
     SUBDIR += desktop-installer
     SUBDIR += detox
-    SUBDIR += devcpu-data
-    SUBDIR += devcpu-data-amd
-    SUBDIR += devcpu-data-intel
     SUBDIR += devctl-jail-kmod
     SUBDIR += devd-mount
     SUBDIR += devedeng
@@ -673,6 +674,7 @@
     SUBDIR += libretto-config
     SUBDIR += libsunacl
     SUBDIR += libsysstat
+    SUBDIR += libtpms
     SUBDIR += libtree
     SUBDIR += libudisks
     SUBDIR += liburcu
@@ -1362,6 +1364,7 @@
     SUBDIR += signon-plugin-oauth2
     SUBDIR += signon-qt5
     SUBDIR += signon-ui
+    SUBDIR += sispmctl
     SUBDIR += skopeo
     SUBDIR += slack
     SUBDIR += sleuthkit
@@ -1403,6 +1406,7 @@
     SUBDIR += swapmon
     SUBDIR += swapusage
     SUBDIR += sweeper
+    SUBDIR += swtpm
     SUBDIR += symlinks
     SUBDIR += symon
     SUBDIR += synergy

@@ -1,3 +1,3 @@
-TIMESTAMP = 1689965081
-SHA256 (awslabs-aws-crt-cpp-v0.20.7_GH0.tar.gz) = ecc80ec9aed86f1aa64498913a6152eb23c7cbfc3f724c72c4f8f29f82019447
-SIZE (awslabs-aws-crt-cpp-v0.20.7_GH0.tar.gz) = 319163
+TIMESTAMP = 1691868719
+SHA256 (awslabs-aws-crt-cpp-v0.23.0_GH0.tar.gz) = 687b756c9426da2128b7a1d4ef6776078c35c98904e145410c47bda1721821f1
+SIZE (awslabs-aws-crt-cpp-v0.23.0_GH0.tar.gz) = 322542

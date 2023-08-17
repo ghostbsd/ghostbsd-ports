@@ -1,7 +1,7 @@
 PORTNAME=	xwayland
 DISTVERSIONPREFIX=	xorg-server-
-DISTVERSION=	21.0.99.1-495
-DISTVERSIONSUFFIX=	-gc4ee35ef2
+DISTVERSION=	21.0.99.1-511
+DISTVERSIONSUFFIX=	-g8128a2155
 CATEGORIES=	x11-servers
 PKGNAMESUFFIX=	-devel
 
@@ -40,7 +40,7 @@ USE_XORG=	pixman xau xdmcp xfont2 xkbfile xshmfence xtrans
 GL_SITE=	https://gitlab.freedesktop.org
 GL_ACCOUNT=	xorg
 GL_PROJECT=	xserver
-GL_TUPLE=	xorg/proto:xorgproto:766967322209f2dcb72e6a8edea0c651f586201d:xorgproto/subprojects/xorgproto
+GL_TUPLE=	xorg/proto:xorgproto:xorgproto-2023.2:xorgproto/subprojects/xorgproto
 MESON_ARGS=	-D${PORTNAME}=true \
 		-Dxorg=false \
 		-Dxnest=false \

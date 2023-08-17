@@ -43,6 +43,7 @@
     SUBDIR += opencpn
     SUBDIR += openuniverse
     SUBDIR += oskar
+    SUBDIR += osmium-tool
     SUBDIR += osmosis
     SUBDIR += p5-Astro
     SUBDIR += p5-Astro-ADS
@@ -127,6 +128,7 @@
     SUBDIR += swe
     SUBDIR += tclgeomap
     SUBDIR += tkgeomap
+    SUBDIR += viking
     SUBDIR += wcslib
     SUBDIR += weather
     SUBDIR += wmglobe

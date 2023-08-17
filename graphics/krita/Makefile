@@ -1,6 +1,6 @@
 PORTNAME=	krita
 DISTVERSION=	5.1.5
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${DISTVERSION}
 DIST_SUBDIR=	KDE/${PORTNAME}
@@ -45,7 +45,8 @@ USES=		cmake compiler:c++11-lib desktop-file-utils eigen:3 gettext \
 		jpeg kde:5 localbase:ldflags pkgconfig python qt:5 \
 		shared-mime-info tar:xz xorg
 USE_KDE=	archive completion config coreaddons crash guiaddons i18n \
-		itemmodels itemviews kio service widgetsaddons windowsystem
+		itemmodels itemviews kio service widgetsaddons windowsystem \
+		ecm:build
 USE_QT=		concurrent core dbus declarative gui multimedia network \
 		printsupport sql svg testlib widgets x11extras xml \
 		buildtools:build qmake:build \

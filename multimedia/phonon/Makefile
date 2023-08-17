@@ -1,5 +1,6 @@
 PORTNAME=	phonon
 DISTVERSION=	4.11.1
+PORTREVISION=	3
 CATEGORIES=	multimedia kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${DISTVERSION}
 DIST_SUBDIR=	KDE/phonon
@@ -19,7 +20,7 @@ CMAKE_ON=	PHONON_INSTALL_QT_EXTENSIONS_INTO_SYSTEM_QT \
 CMAKE_OFF=	PHONON_BUILD_DESIGNER_PLUGIN \
 		PHONON_BUILD_DECLARATIVE_PLUGIN
 USE_LDCONFIG=	yes
-USE_KDE=	ecm
+USE_KDE=	ecm:build
 USE_QT=		core dbus gui opengl widgets \
 		buildtools:build qmake:build
 
@@ -32,10 +33,4 @@ PULSEAUDIO_USES=	gnome
 PULSEAUDIO_USE=		GNOME=glib20
 PULSEAUDIO_CMAKE_BOOL=	WITH_PulseAudio
 
-.include <bsd.port.pre.mk>
-
-.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160
-CXXFLAGS+=	-Wno-error=enum-constexpr-conversion
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

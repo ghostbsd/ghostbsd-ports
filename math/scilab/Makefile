@@ -132,8 +132,12 @@ CONFIGURE_ARGS+=	--enable-debug
 
 .include <bsd.port.pre.mk>
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 150
 CFLAGS+=	-Wno-error=int-conversion
+.endif
+
+.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160
+CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
 
 .if ${GCC_DEFAULT} >= 10
@@ -144,6 +148,15 @@ FFLAGS+=	-fallow-argument-mismatch
 post-patch:
 	@${REINPLACE_CMD} 's,/usr/local,${LOCALBASE},' ${WRKSRC}/etc/librarypath.xml
 	@${REINPLACE_CMD} -e 's, gfortran, ${FC},' ${WRKSRC}/modules/dynamic_link/src/scripts/configure
+.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160
+	@${REINPLACE_CMD} -e 's|std::filesystem|std::__fs::filesystem|g' \
+		${WRKSRC}/modules/fileio/src/cpp/fullpath.cpp \
+		${WRKSRC}/modules/fileio/sci_gateway/cpp/sci_get_absolute_file_path.cpp
+	@${REINPLACE_CMD} -e 's|std::binary_function|std::__binary_function|' \
+		${WRKSRC}/modules/ast/includes/types/sparseOp.hxx
+	@${REINPLACE_CMD} -e 's|std::unary_function|std::__unary_function|' \
+		${WRKSRC}/modules/ast/src/cpp/types/sparse.cpp
+.endif
 
 post-patch-GUI-on:
 # scilab segfaults on FreeBSD with C locale

@@ -1,7 +1,6 @@
 PORTNAME=	xplr
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.21.2
-PORTREVISION=	3
+DISTVERSION=	0.21.3
 CATEGORIES=	misc
 
 MAINTAINER=	lcook@FreeBSD.org
@@ -10,6 +9,8 @@ WWW=		https://xplr.dev
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+RUN_DEPENDS=	bash:shells/bash
 
 USES=		cargo compiler desktop-file-utils gmake luajit
 USE_GITHUB=	yes
@@ -25,13 +26,6 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 _ASSETS=	${WRKSRC}/assets
 _ICONS=		${STAGEDIR}${PREFIX}/share/icons/hicolor
-
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == powerpc && ${COMPILER_VERSION} < 140
-BUILD_DEPENDS+=	as:devel/binutils
-CFLAGS+=	-fno-integrated-as
-.endif
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
@@ -61,4 +55,4 @@ post-install-EXAMPLES-on:
 		${INSTALL_DATA} ${_EXAMPLES} \
 		${STAGEDIR}${EXAMPLESDIR}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

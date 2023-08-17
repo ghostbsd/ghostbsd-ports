@@ -27,6 +27,17 @@
     SUBDIR += amphetadesk
     SUBDIR += analog
     SUBDIR += angie
+    SUBDIR += angie-module-auth-jwt
+    SUBDIR += angie-module-brotli
+    SUBDIR += angie-module-cache-purge
+    SUBDIR += angie-module-geoip2
+    SUBDIR += angie-module-image-filter
+    SUBDIR += angie-module-jwt
+    SUBDIR += angie-module-keyval
+    SUBDIR += angie-module-njs
+    SUBDIR += angie-module-perl
+    SUBDIR += angie-module-redis2
+    SUBDIR += angie-module-xslt
     SUBDIR += anyremote2html
     SUBDIR += apache-mode.el
     SUBDIR += apache24
@@ -46,7 +57,6 @@
     SUBDIR += badwolf
     SUBDIR += baikal
     SUBDIR += bareos-webui
-    SUBDIR += bareos18-webui
     SUBDIR += bareos19-webui
     SUBDIR += bareos20-webui
     SUBDIR += bareos21-webui
@@ -1749,6 +1759,7 @@
     SUBDIR += py-requests
     SUBDIR += py-requests-aws4auth
     SUBDIR += py-requests-cache
+    SUBDIR += py-requests-cache0
     SUBDIR += py-requests-cache93
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
@@ -1842,6 +1853,7 @@
     SUBDIR += qt5-websockets
     SUBDIR += qt5-websockets-qml
     SUBDIR += qt5-webview
+    SUBDIR += qt6-httpserver
     SUBDIR += qt6-webchannel
     SUBDIR += qt6-webengine
     SUBDIR += qt6-websockets
@@ -2243,6 +2255,7 @@
     SUBDIR += sfeed
     SUBDIR += sfnt2woff
     SUBDIR += shellinabox
+    SUBDIR += shiori
     SUBDIR += silicon
     SUBDIR += simple-web-server
     SUBDIR += sitecopy
@@ -2386,6 +2399,7 @@
     SUBDIR += vdradmin-am
     SUBDIR += vertx
     SUBDIR += vger
+    SUBDIR += vigil
     SUBDIR += vimb
     SUBDIR += visitors
     SUBDIR += volta

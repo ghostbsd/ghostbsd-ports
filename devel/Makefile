@@ -123,6 +123,7 @@
     SUBDIR += R-cran-sfsmisc
     SUBDIR += R-cran-sourcetools
     SUBDIR += R-cran-sys
+    SUBDIR += R-cran-testit
     SUBDIR += R-cran-testthat
     SUBDIR += R-cran-tibble
     SUBDIR += R-cran-tidyr
@@ -293,6 +294,7 @@
     SUBDIR += blame
     SUBDIR += blitz
     SUBDIR += bloaty
+    SUBDIR += bloomberg-bde
     SUBDIR += blueprint-compiler
     SUBDIR += bmake
     SUBDIR += bmkdep
@@ -725,6 +727,7 @@
     SUBDIR += fungw
     SUBDIR += fuzzylite
     SUBDIR += fxdiv
+    SUBDIR += g-golf
     SUBDIR += g-wrap
     SUBDIR += ga
     SUBDIR += gaa
@@ -951,7 +954,6 @@
     SUBDIR += hexd
     SUBDIR += hgreviewboard
     SUBDIR += hgsvn
-    SUBDIR += hhdate
     SUBDIR += highlighterkit
     SUBDIR += highway
     SUBDIR += hoel
@@ -1037,6 +1039,7 @@
     SUBDIR += jetbrains-goland
     SUBDIR += jetbrains-phpstorm
     SUBDIR += jetbrains-pty4j
+    SUBDIR += jetbrains-sqlite
     SUBDIR += jetbrains-webstorm
     SUBDIR += jgoodies-looks
     SUBDIR += jiic
@@ -1049,6 +1052,7 @@
     SUBDIR += jsmin
     SUBDIR += json-c
     SUBDIR += json-dto
+    SUBDIR += json-fortran
     SUBDIR += json-glib
     SUBDIR += jsoncpp
     SUBDIR += jsonnet
@@ -1127,6 +1131,7 @@
     SUBDIR += lefthook
     SUBDIR += leiningen
     SUBDIR += lemon
+    SUBDIR += lets
     SUBDIR += level-zero
     SUBDIR += lfcbase
     SUBDIR += lfcxml
@@ -1441,6 +1446,7 @@
     SUBDIR += libvshadow
     SUBDIR += libvslvm
     SUBDIR += libvterm
+    SUBDIR += libwasmtime
     SUBDIR += libwfut
     SUBDIR += libx86
     SUBDIR += libxalloc
@@ -1493,6 +1499,7 @@
     SUBDIR += llvm14
     SUBDIR += llvm15
     SUBDIR += llvm16
+    SUBDIR += llvm17
     SUBDIR += lm4tools
     SUBDIR += lmdbg
     SUBDIR += lndir
@@ -1517,6 +1524,7 @@
     SUBDIR += love5
     SUBDIR += lpc21isp
     SUBDIR += lrmi
+    SUBDIR += lua-Penlight
     SUBDIR += lua-argparse
     SUBDIR += lua-bitlib
     SUBDIR += lua-bitop
@@ -1772,6 +1780,7 @@
     SUBDIR += p5-AnyEvent
     SUBDIR += p5-AnyEvent-AIO
     SUBDIR += p5-AnyEvent-Connection
+    SUBDIR += p5-AnyEvent-Connector
     SUBDIR += p5-AnyEvent-DBI
     SUBDIR += p5-AnyEvent-DBI-Abstract
     SUBDIR += p5-AnyEvent-DBus
@@ -2840,6 +2849,7 @@
     SUBDIR += p5-Module-Build-Pluggable
     SUBDIR += p5-Module-Build-Pluggable-CPANfile
     SUBDIR += p5-Module-Build-Pluggable-ReadmeMarkdownFromPod
+    SUBDIR += p5-Module-Build-Prereqs-FromCPANfile
     SUBDIR += p5-Module-Build-Tiny
     SUBDIR += p5-Module-Build-Using-PkgConfig
     SUBDIR += p5-Module-Build-WithXSpp
@@ -4521,6 +4531,7 @@
     SUBDIR += py-cwcwidth
     SUBDIR += py-cxx
     SUBDIR += py-cycler
+    SUBDIR += py-cykhash
     SUBDIR += py-cymbal
     SUBDIR += py-cymem
     SUBDIR += py-cysignals
@@ -4535,6 +4546,7 @@
     SUBDIR += py-darts.util.lru
     SUBDIR += py-dask
     SUBDIR += py-dask-histogram
+    SUBDIR += py-dataclass-array
     SUBDIR += py-dataclasses-json
     SUBDIR += py-datadog
     SUBDIR += py-datapackage
@@ -4560,6 +4572,7 @@
     SUBDIR += py-deprecat
     SUBDIR += py-deprecated
     SUBDIR += py-deprecation
+    SUBDIR += py-deptry
     SUBDIR += py-devtools
     SUBDIR += py-dexml2
     SUBDIR += py-diazo
@@ -4822,6 +4835,7 @@
     SUBDIR += py-jaraco.functools
     SUBDIR += py-jaraco.itertools
     SUBDIR += py-jaraco.logging
+    SUBDIR += py-jaraco.stream
     SUBDIR += py-jaraco.text
     SUBDIR += py-jaraco.timing
     SUBDIR += py-jaraco.util
@@ -4858,6 +4872,7 @@
     SUBDIR += py-jsonschema-spec
     SUBDIR += py-jsonschema-specifications
     SUBDIR += py-jsonschema3
+    SUBDIR += py-jsonschema417
     SUBDIR += py-jsonsir
     SUBDIR += py-jupyter-client
     SUBDIR += py-jupyter-core
@@ -5217,6 +5232,7 @@
     SUBDIR += py-pyasn1
     SUBDIR += py-pyasn1-modules
     SUBDIR += py-pybind11
+    SUBDIR += py-pybind11210
     SUBDIR += py-pybix
     SUBDIR += py-pycadf
     SUBDIR += py-pycalendar
@@ -5224,6 +5240,7 @@
     SUBDIR += py-pycapsicum
     SUBDIR += py-pycerberus
     SUBDIR += py-pycmd
+    SUBDIR += py-pycocotools
     SUBDIR += py-pycodeexport
     SUBDIR += py-pycodestyle
     SUBDIR += py-pycognito
@@ -5551,6 +5568,7 @@
     SUBDIR += py-shellingham
     SUBDIR += py-shtab
     SUBDIR += py-signalr-client-aio
+    SUBDIR += py-simple-parsing
     SUBDIR += py-simple-term-menu
     SUBDIR += py-simpleeval
     SUBDIR += py-simplegeneric
@@ -5723,6 +5741,7 @@
     SUBDIR += py-venusian
     SUBDIR += py-verboselogs
     SUBDIR += py-versioneer
+    SUBDIR += py-versioneer-518
     SUBDIR += py-versioningit
     SUBDIR += py-versiontools
     SUBDIR += py-verspec
@@ -5922,6 +5941,7 @@
     SUBDIR += qt6-5compat
     SUBDIR += qt6-base
     SUBDIR += qt6-languageserver
+    SUBDIR += qt6-location
     SUBDIR += qt6-positioning
     SUBDIR += qt6-remoteobjects
     SUBDIR += qt6-scxml
@@ -6200,6 +6220,7 @@
     SUBDIR += rubygem-aws-sdk-emr
     SUBDIR += rubygem-aws-sdk-emrcontainers
     SUBDIR += rubygem-aws-sdk-emrserverless
+    SUBDIR += rubygem-aws-sdk-entityresolution
     SUBDIR += rubygem-aws-sdk-eventbridge
     SUBDIR += rubygem-aws-sdk-finspace
     SUBDIR += rubygem-aws-sdk-finspacedata
@@ -6284,6 +6305,7 @@
     SUBDIR += rubygem-aws-sdk-macie2
     SUBDIR += rubygem-aws-sdk-mainframemodernization
     SUBDIR += rubygem-aws-sdk-managedblockchain
+    SUBDIR += rubygem-aws-sdk-managedblockchainquery
     SUBDIR += rubygem-aws-sdk-managedgrafana
     SUBDIR += rubygem-aws-sdk-marketplacecatalog
     SUBDIR += rubygem-aws-sdk-marketplacecommerceanalytics
@@ -6298,6 +6320,7 @@
     SUBDIR += rubygem-aws-sdk-mediastore
     SUBDIR += rubygem-aws-sdk-mediastoredata
     SUBDIR += rubygem-aws-sdk-mediatailor
+    SUBDIR += rubygem-aws-sdk-medicalimaging
     SUBDIR += rubygem-aws-sdk-memorydb
     SUBDIR += rubygem-aws-sdk-mgn
     SUBDIR += rubygem-aws-sdk-migrationhub
@@ -7512,6 +7535,7 @@
     SUBDIR += sbt
     SUBDIR += scalatest
     SUBDIR += scandoc
+    SUBDIR += scc
     SUBDIR += sccache
     SUBDIR += sccs
     SUBDIR += schilybase
@@ -7528,6 +7552,7 @@
     SUBDIR += sdsl-lite
     SUBDIR += sdts++
     SUBDIR += sedsed
+    SUBDIR += seer-gdb
     SUBDIR += selene
     SUBDIR += sentry-cli
     SUBDIR += serd
@@ -7756,6 +7781,7 @@
     SUBDIR += wasi-libc
     SUBDIR += wasi-libcxx
     SUBDIR += wasm3
+    SUBDIR += wasmer
     SUBDIR += websocketpp
     SUBDIR += websvn
     SUBDIR += wf-config

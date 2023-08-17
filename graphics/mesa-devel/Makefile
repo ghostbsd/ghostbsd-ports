@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	23.2.0-branchpoint-567
-DISTVERSIONSUFFIX=	-g75452f611e8
+DISTVERSION=	23.2.0-branchpoint-2503
+DISTVERSIONSUFFIX=	-g783d59eec1a
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -55,7 +55,6 @@ OPTIONS_GROUP_GALLIUM=	crocus iris panfrost r600 radeonsi
 OPTIONS_GROUP_VULKAN=	anv hasvk radv
 OPTIONS_EXCLUDE_DragonFly=	LIBUNWIND anv hasvk
 OPTIONS_EXCLUDE_i386=	LTO # anv: vkcube fails on vkCreateSwapchainKHR
-OPTIONS_EXCLUDE_powerpc64=	${"${/usr/bin/ld:L:tA}"==/usr/bin/ld.lld:?LTO:} # https://github.com/llvm/llvm-project/issues/46697
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:C/.+/panfrost/}
 OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:Nx86_64:C/.+/crocus hasvk/}
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:Namd64:Ni386:Nx86_64:C/.+/anv iris/}
@@ -147,7 +146,7 @@ WAYLAND_VARS=		PLATFORMS+=wayland
 X11_USES=		xorg
 X11_USE=		XORG=x11,xcb,xdamage,xext,xfixes,xorgproto,xrandr,xshmfence,xxf86vm
 X11_VARS=		PLATFORMS+=x11
-X11_MESON_OFF=		-Dglx=disabled
+X11_MESON_OFF=		-Dglx=disabled -Dxlib-lease=disabled
 
 ZSTD_DESC=		Use ZSTD for shader cache
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd

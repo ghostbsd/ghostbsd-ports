@@ -1,5 +1,5 @@
 PORTNAME=	readarr
-DISTVERSION=	0.2.4.1999
+DISTVERSION=	0.3.0.2091
 CATEGORIES=	net-p2p
 MASTER_SITES=	https://github.com/Readarr/Readarr/releases/download/v${PORTVERSION}/
 DISTNAME=	Readarr.develop.${DISTVERSION}.freebsd-core-x64
@@ -20,7 +20,7 @@ RUN_DEPENDS=	ca_root_nss>0:security/ca_root_nss \
 		libinotify>0:devel/libinotify \
 		libunwind>0:devel/libunwind
 
-USES=	ssl:run sqlite
+USES=	ssl:run sqlite:3
 
 USE_RC_SUBR=	${PORTNAME}
 

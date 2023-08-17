@@ -1,6 +1,6 @@
 PORTNAME=	apache-openoffice
 PORTVERSION=	${AOOVERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	editors java
 MASTER_SITES=	https://dlcdn.apache.org/openoffice/${PORTVERSION}/source/ \
 		https://archive.apache.org/dist/openoffice/${PORTVERSION}/source/ \
@@ -113,8 +113,6 @@ RUN_DEPENDS+=	gcc${GCC_DEFAULT}>0:lang/gcc${GCC_DEFAULT}
 USES=		autoreconf bison compiler:c++11-lib cpe desktop-file-utils \
 		gettext-runtime gl gmake gnome iconv jpeg perl5 pkgconfig \
 		shared-mime-info ssl tar:bzip2 xorg
-BROKEN_SSL=	openssl30 openssl31
-BROKEN_SSL_REASON=	unsupported option -print-multi-os-directory
 USE_GL=		gl glu
 USE_GNOME=	gdkpixbuf2 gdkpixbuf2xlib gtk20 libxslt libidl glib20
 USE_JAVA=	yes
@@ -200,10 +198,15 @@ TARGET_ORDER_OVERRIDE=	710:gnome-post-icons
 WITH=	SDK
 .endif
 
+.include <bsd.port.options.mk>
+
+.if ( ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400092 && ${SSL_DEFAULT} == base ) || ${SSL_DEFAULT:Mopenssl3*}
+BROKEN=	fails to compile undefined symbol ERR_GET_FUNC
+.endif
+
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD && ( \
-    (${OSVERSION} >= 1301500 && ${OSVERSION} < 1301502) || \
     (${OSVERSION} >= 1400051 && ${OSVERSION} < 1400057))
 BROKEN=	please update FreeBSD base system first to fix an ABI incompatibility
 .endif

@@ -82,6 +82,7 @@
     SUBDIR += freetds
     SUBDIR += freetds-devel
     SUBDIR += frontbase-jdbc
+    SUBDIR += futuresql
     SUBDIR += galera
     SUBDIR += galera26
     SUBDIR += gdbm
@@ -870,6 +871,7 @@
     SUBDIR += redis-devel
     SUBDIR += redis6
     SUBDIR += redis62
+    SUBDIR += redis70
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += redisjson
@@ -914,6 +916,7 @@
     SUBDIR += rubygem-arel6
     SUBDIR += rubygem-arel7
     SUBDIR += rubygem-arel8
+    SUBDIR += rubygem-attr_json
     SUBDIR += rubygem-awesome_nested_set
     SUBDIR += rubygem-bdb1
     SUBDIR += rubygem-bigrecord

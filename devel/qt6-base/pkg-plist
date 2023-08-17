@@ -1803,8 +1803,8 @@ bin/qmake6
 %%QT_INCDIR%%/QtOpenGLWidgets/qtopenglwidgetsglobal.h
 %%QT_INCDIR%%/QtOpenGLWidgets/qtopenglwidgetsversion.h
 %%QT_INCDIR%%/QtPrintSupport/%%FULLVER%%/QtPrintSupport/private/qabstractprintdialog_p.h
-%%QT_INCDIR%%/QtPrintSupport/%%FULLVER%%/QtPrintSupport/private/qcups_p.h
-%%QT_INCDIR%%/QtPrintSupport/%%FULLVER%%/QtPrintSupport/private/qcupsjobwidget_p.h
+%%CUPS%%%%QT_INCDIR%%/QtPrintSupport/%%FULLVER%%/QtPrintSupport/private/qcups_p.h
+%%CUPS%%%%QT_INCDIR%%/QtPrintSupport/%%FULLVER%%/QtPrintSupport/private/qcupsjobwidget_p.h
 %%QT_INCDIR%%/QtPrintSupport/%%FULLVER%%/QtPrintSupport/private/qpagesetupdialog_p.h
 %%QT_INCDIR%%/QtPrintSupport/%%FULLVER%%/QtPrintSupport/private/qpagesetupdialog_unix_p.h
 %%QT_INCDIR%%/QtPrintSupport/%%FULLVER%%/QtPrintSupport/private/qpaintengine_alpha_p.h
@@ -3589,6 +3589,7 @@ libdata/pkgconfig/Qt6Xml.pc
 %%QT_DOCDIR%%/config/exampleurl-qtmacextras.qdocconf
 %%QT_DOCDIR%%/config/exampleurl-qtmultimedia.qdocconf
 %%QT_DOCDIR%%/config/exampleurl-qtnetworkauth.qdocconf
+%%QT_DOCDIR%%/config/exampleurl-qtpositioning.qdocconf
 %%QT_DOCDIR%%/config/exampleurl-qtpurchasing.qdocconf
 %%QT_DOCDIR%%/config/exampleurl-qtquickcontrols.qdocconf
 %%QT_DOCDIR%%/config/exampleurl-qtquickcontrols2.qdocconf

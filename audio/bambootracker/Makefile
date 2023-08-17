@@ -1,7 +1,7 @@
 PORTNAME=	bambootracker
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.6.1
-PORTREVISION=	1
+DISTVERSION=	0.6.2
+PORTREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/BambooTracker/BambooTracker/releases/download/${DISTVERSIONPREFIX}${DISTVERSION}/
 DISTNAME=	BambooTracker-src-${DISTVERSIONPREFIX}${DISTVERSION}
@@ -9,9 +9,6 @@ DISTNAME=	BambooTracker-src-${DISTVERSIONPREFIX}${DISTVERSION}
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Music tracker for the Yamaha YM2608 (OPNA) sound chip
 WWW=		https://github.com/rerrahkr/BambooTracker
-
-# https://github.com/BambooTracker/BambooTracker/issues/492
-BROKEN=		incompatible with rtaudio 6.x
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

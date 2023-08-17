@@ -1,7 +1,11 @@
 PORTNAME=	gegl
 PORTVERSION=	0.4.46
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	GIMP
+
+PATCH_SITES=	https://gitlab.gnome.org/GNOME/gegl/-/commit/
+PATCHFILES+=	a99a93e5c9013bd4101f5058cdee7d0cf30234fe.patch:-p1
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Graph based image processing framework
@@ -19,8 +23,13 @@ LIB_DEPENDS=	libbabl-0.1.so:x11/babl \
 		libnsgif.so:graphics/libnsgif \
 		libpng.so:graphics/png
 
-USES=		compiler:c++14-lang cpe gettext gnome jpeg localbase \
-		meson pkgconfig shebangfix uniquefiles tar:xz
+USES=		cpe gettext gnome jpeg localbase meson pkgconfig shebangfix \
+		uniquefiles tar:xz
+.if !exists(/usr/include/omp.h)
+USES+=		compiler:gcc-c++11-lib
+.else
+USES+=		compiler:c++14-lang
+.endif
 USE_GNOME=	glib20 introspection:build
 USE_LDCONFIG=	yes
 MESON_ARGS=	-Ddocs=false \
@@ -32,7 +41,10 @@ MESON_ARGS=	-Ddocs=false \
 		-Dmaxflow=disabled \
 		-Dmrg=disabled \
 		-Dpygobject=disabled \
-		-Dlua=disabled
+		-Dlua=disabled \
+		${MESON_ARGS_${ARCH}}
+MESON_ARGS_armv6=	-Dopenmp=disabled
+MESON_ARGS_armv7=	-Dopenmp=disabled
 
 GEGL_SHLIB=	0.445.1
 GEGL_VER=	0.4
