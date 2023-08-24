@@ -27,6 +27,11 @@ CARGO_BUILD=	no
 CARGO_INSTALL=	no
 CARGO_TEST=	no
 
+.if ${MACHINE_ARCH} == i386
+# https://github.com/rust-lang/rust/issues/85598
+LTO_UNSAFE=	yes
+.endif
+
 OPTIONS_DEFINE=	ASM CAIRO CSOUND DAV1D GTK4 PANGO SODIUM WEBP
 OPTIONS_DEFAULT=ASM CAIRO CSOUND DAV1D GTK4 PANGO SODIUM WEBP
 OPTIONS_EXCLUDE_aarch64=	CSOUND # https://github.com/neithanmo/csound-rs/commit/8962b89d7bda
@@ -50,7 +55,6 @@ DAV1D_DESC=		AV1 video decoding via libdav1d
 DAV1D_LIB_DEPENDS=	libdav1d.so:multimedia/dav1d
 DAV1D_MESON_ENABLED=	dav1d
 
-GTK4_DESC=		${GTK3_DESC:S/3/4/}
 GTK4_LIB_DEPENDS=	libgraphene-1.0.so:graphics/graphene
 GTK4_USE=		GNOME=gtk40
 GTK4_MESON_ENABLED=	gtk4

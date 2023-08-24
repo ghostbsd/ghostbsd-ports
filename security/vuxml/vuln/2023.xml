@@ -1,3 +1,274 @@
+  <vuln vid="5999fc39-72d0-4b99-851c-ade7ff7125c3">
+    <topic>electron25 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>electron25</name>
+	<range><lt>25.7.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v25.7.0">
+	  <p>This update fixes the following vulnerabilities:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2023-4071.</li>
+	    <li>Security: backported fix for CVE-2023-4070.</li>
+	    <li>Security: backported fix for CVE-2023-4075.</li>
+	    <li>Security: backported fix for CVE-2023-4076.</li>
+	    <li>Security: backported fix for CVE-2023-4074.</li>
+	    <li>Security: backported fix for CVE-2023-4072.</li>
+	    <li>Security: backported fix for CVE-2023-4068.</li>
+	    <li>Security: backported fix for CVE-2023-4073.</li>
+	    <li>Security: backported fix for CVE-2023-4355.</li>
+	    <li>Security: backported fix for CVE-2023-4354.</li>
+	    <li>Security: backported fix for CVE-2023-4353.</li>
+	    <li>Security: backported fix for CVE-2023-4351.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-4071</cvename>
+      <url>https://github.com/advisories/GHSA-qc3g-vp59-7vwh</url>
+      <cvename>CVE-2023-4070</cvename>
+      <url>https://github.com/advisories/GHSA-9xxv-mx64-rx27</url>
+      <cvename>CVE-2023-4075</cvename>
+      <url>https://github.com/advisories/GHSA-7332-j628-x48x</url>
+      <cvename>CVE-2023-4076</cvename>
+      <url>https://github.com/advisories/GHSA-7rfc-cwhj-x2qv</url>
+      <cvename>CVE-2023-4074</cvename>
+      <url>https://github.com/advisories/GHSA-6j3m-7hm6-qjrx</url>
+      <cvename>CVE-2023-4072</cvename>
+      <url>https://github.com/advisories/GHSA-9j4r-qr47-rcxp</url>
+      <cvename>CVE-2023-4068</cvename>
+      <url>https://github.com/advisories/GHSA-wh89-h5f7-hhcr</url>
+      <cvename>CVE-2023-4073</cvename>
+      <url>https://github.com/advisories/GHSA-g9wf-6ppg-937x</url>
+      <cvename>CVE-2023-4355</cvename>
+      <url>https://github.com/advisories/GHSA-xrw8-8992-37w4</url>
+      <cvename>CVE-2023-4354</cvename>
+      <url>https://github.com/advisories/GHSA-rq4v-7hxq-wpm5</url>
+      <cvename>CVE-2023-4353</cvename>
+      <url>https://github.com/advisories/GHSA-mjq9-8vf6-qh49</url>
+      <cvename>CVE-2023-4351</cvename>
+      <url>https://github.com/advisories/GHSA-mh2g-52mr-mr5v</url>
+    </references>
+    <dates>
+      <discovery>2023-08-23</discovery>
+      <entry>2023-08-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="99bc2966-55be-4411-825f-b04017a4c100">
+    <topic>electron{22,24} -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>electron22</name>
+	<range><lt>22.3.22</lt></range>
+      </package>
+      <package>
+	<name>electron24</name>
+	<range><lt>24.8.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v22.3.22">
+	  <p>This update fixes the following vulnerabilities:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2023-4355.</li>
+	    <li>Security: backported fix for CVE-2023-4354.</li>
+	    <li>Security: backported fix for CVE-2023-4353.</li>
+	    <li>Security: backported fix for CVE-2023-4352.</li>
+	    <li>Security: backported fix for CVE-2023-4351.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-4355</cvename>
+      <url>https://github.com/advisories/GHSA-xrw8-8992-37w4</url>
+      <cvename>CVE-2023-4354</cvename>
+      <url>https://github.com/advisories/GHSA-rq4v-7hxq-wpm5</url>
+      <cvename>CVE-2023-4353</cvename>
+      <url>https://github.com/advisories/GHSA-mjq9-8vf6-qh49</url>
+      <cvename>CVE-2023-4352</cvename>
+      <url>https://github.com/advisories/GHSA-vp8r-986v-6qj4</url>
+      <cvename>CVE-2023-4351</cvename>
+      <url>https://github.com/advisories/GHSA-mh2g-52mr-mr5v</url>
+    </references>
+    <dates>
+      <discovery>2023-08-23</discovery>
+      <entry>2023-08-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ddd3fcc9-2bdd-11ee-9af4-589cfc0f81b0">
+    <topic>phpmyfaq -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>phpmyfaq-php80</name>
+	<name>phpmyfaq-php81</name>
+	<name>phpmyfaq-php82</name>
+	<name>phpmyfaq-php83</name>
+	<range><lt>3.1.16</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>phpmyfaq developers report:</p>
+	<blockquote cite="https://www.phpmyfaq.de/security/advisory-2023-07-16">
+	  <p>Cross Site Scripting vulnerability</p>
+	  <p>CSV injection vulnerability</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://huntr.dev/bounties/e891dcbc-2092-49d3-9518-23e37187a5ea/</url>
+      <url>https://huntr.dev/bounties/36149a42-cbd5-445e-a371-e351c899b189/</url>
+    </references>
+    <dates>
+      <discovery>2023-07-16</discovery>
+      <entry>2023-08-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5666688f-803b-4cf0-9cb1-08c088f2225a">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>116.0.5845.96</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>116.0.5845.96</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2023/08/stable-channel-update-for-desktop_15.html">
+	 <p>This update includes 26 security fixes:</p>
+	 <ul>
+	    <li>[1448548] High CVE-2023-2312: Use after free in Offline. Reported by avaue at S.S.L. on 2023-05-24</li>
+	    <li>[1458303] High CVE-2023-4349: Use after free in Device Trust Connectors. Reported by Weipeng Jiang (@Krace) of VRI on 2023-06-27</li>
+	    <li>[1454817] High CVE-2023-4350: Inappropriate implementation in Fullscreen. Reported by Khiem Tran (@duckhiem) on 2023-06-14</li>
+	    <li>[1465833] High CVE-2023-4351: Use after free in Network. Reported by Guang and Weipeng Jiang of VRI on 2023-07-18</li>
+	    <li>[1452076] High CVE-2023-4352: Type Confusion in V8. Reported by Sergei Glazunov of Google Project Zero on 2023-06-07</li>
+	    <li>[1458046] High CVE-2023-4353: Heap buffer overflow in ANGLE. Reported by Christoph Diehl / Microsoft Vulnerability Research on 2023-06-27</li>
+	    <li>[1464215] High CVE-2023-4354: Heap buffer overflow in Skia. Reported by Mark Brand of Google Project Zero on 2023-07-12</li>
+	    <li>[1468943] High CVE-2023-4355: Out of bounds memory access in V8. Reported by Sergei Glazunov of Google Project Zero on 2023-07-31</li>
+	    <li>[1449929] Medium CVE-2023-4356: Use after free in Audio. Reported by Zhenghang Xiao (@Kipreyyy) on 2023-05-30</li>
+	    <li>[1458911] Medium CVE-2023-4357: Insufficient validation of untrusted input in XML. Reported by Igor Sak-Sakovskii on 2023-06-28</li>
+	    <li>[1466415] Medium CVE-2023-4358: Use after free in DNS. Reported by Weipeng Jiang (@Krace) of VRI on 2023-07-20</li>
+	    <li>[1443722] Medium CVE-2023-4359: Inappropriate implementation in App Launcher. Reported by @retsew0x01 on 2023-05-09</li>
+	    <li>[1462723] Medium CVE-2023-4360: Inappropriate implementation in Color. Reported by Axel Chong on 2023-07-07</li>
+	    <li>[1465230] Medium CVE-2023-4361: Inappropriate implementation in Autofill. Reported by Thomas Orlita on 2023-07-17</li>
+	    <li>[1316379] Medium CVE-2023-4362: Heap buffer overflow in Mojom IDL. Reported by Zhao Hai of NanJing Cyberpeace TianYu Lab on 2022-04-14</li>
+	    <li>[1367085] Medium CVE-2023-4363: Inappropriate implementation in WebShare. Reported by Alesandro Ortiz on 2022-09-23</li>
+	    <li>[1406922] Medium CVE-2023-4364: Inappropriate implementation in Permission Prompts. Reported by Jasper Rebane on 2023-01-13</li>
+	    <li>[1431043] Medium CVE-2023-4365: Inappropriate implementation in Fullscreen. Reported by Hafiizh on 2023-04-06</li>
+	    <li>[1450784] Medium CVE-2023-4366: Use after free in Extensions. Reported by asnine on 2023-06-02</li>
+	    <li>[1467743] Medium CVE-2023-4367: Insufficient policy enforcement in Extensions API. Reported by Axel Chong on 2023-07-26</li>
+	    <li>[1467751] Medium CVE-2023-4368: Insufficient policy enforcement in Extensions API. Reported by Axel Chong on 2023-07-26</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-2312</cvename>
+      <cvename>CVE-2023-4349</cvename>
+      <cvename>CVE-2023-4350</cvename>
+      <cvename>CVE-2023-4351</cvename>
+      <cvename>CVE-2023-4352</cvename>
+      <cvename>CVE-2023-4353</cvename>
+      <cvename>CVE-2023-4354</cvename>
+      <cvename>CVE-2023-4355</cvename>
+      <cvename>CVE-2023-4356</cvename>
+      <cvename>CVE-2023-4357</cvename>
+      <cvename>CVE-2023-4358</cvename>
+      <cvename>CVE-2023-4359</cvename>
+      <cvename>CVE-2023-4360</cvename>
+      <cvename>CVE-2023-4361</cvename>
+      <cvename>CVE-2023-4362</cvename>
+      <cvename>CVE-2023-4363</cvename>
+      <cvename>CVE-2023-4364</cvename>
+      <cvename>CVE-2023-4365</cvename>
+      <cvename>CVE-2023-4366</cvename>
+      <cvename>CVE-2023-4367</cvename>
+      <cvename>CVE-2023-4368</cvename>
+      <url>https://chromereleases.googleblog.com/2023/08/stable-channel-update-for-desktop_15.html</url>
+    </references>
+    <dates>
+      <discovery>2023-08-15</discovery>
+      <entry>2023-08-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="759a5599-3ce8-11ee-a0d1-84a93843eb75">
+    <topic>MySQL -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mysql-connector-c++</name>
+	<range><lt>8.0.33</lt></range>
+      </package>
+      <package>
+	<name>mysql-client57</name>
+	<range><lt>5.7.43</lt></range>
+      </package>
+      <package>
+	<name>mysql-server57</name>
+	<range><lt>5.7.43</lt></range>
+      </package>
+      <package>
+	<name>mysql-client80</name>
+	<range><lt>8.0.34</lt></range>
+      </package>
+      <package>
+	<name>mysql-server80</name>
+	<range><lt>8.0.34</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Oracle reports:</p>
+	<blockquote cite="https://www.oracle.com/security-alerts/cpujul2023.html#AppendixMSQL">
+	  <p>This Critical Patch Update contains 24 new security patches for Oracle
+	    MySQL. 11 of these vulnerabilities may be remotely exploitable without
+	    authentication, i.e., may be exploited over a network without requiring
+	    user credentials.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-4899</cvename>
+      <cvename>CVE-2023-0361</cvename>
+      <cvename>CVE-2022-4899</cvename>
+      <cvename>CVE-2022-4899</cvename>
+      <cvename>CVE-2023-22053</cvename>
+      <cvename>CVE-2023-22008</cvename>
+      <cvename>CVE-2023-22046</cvename>
+      <cvename>CVE-2023-22054</cvename>
+      <cvename>CVE-2023-22056</cvename>
+      <cvename>CVE-2023-21950</cvename>
+      <cvename>CVE-2023-22007</cvename>
+      <cvename>CVE-2023-22057</cvename>
+      <cvename>CVE-2023-22033</cvename>
+      <cvename>CVE-2023-22058</cvename>
+      <cvename>CVE-2023-22005</cvename>
+      <cvename>CVE-2023-22048</cvename>
+      <cvename>CVE-2023-22038</cvename>
+      <url>https://www.oracle.com/security-alerts/cpujul2023.html#AppendixMSQL</url>
+    </references>
+    <dates>
+      <discovery>2023-07-18</discovery>
+      <entry>2023-08-17</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="8e561cfe-3c59-11ee-b32e-080027f5fec9">
     <topic>clamav -- Possible denial of service vulnerability in the AutoIt file parser</topic>
     <affects>

@@ -31,7 +31,6 @@ OPTIONS_DEFINE=	DOCS GD MOTIF GTK2 GTK2GL GTK4 STROKE WGET
 OPTIONS_DEFAULT=	GD GTK2 GTK2GL STROKE WGET
 OPTIONS_SUB=	yes
 GTK2GL_DESC=	GTK+ 2 GUI with OpenGL support
-GTK4_DESC=	GTK+ 4 GUI toolkit support
 WGET_DESC=	Wget support
 
 GD_LIB_DEPENDS=	libgd.so:graphics/gd
@@ -68,6 +67,15 @@ STROKE_CONFIGURE_OFF=	--disable-stroke
 
 WGET_RUN_DEPENDS=	wget:ftp/wget
 WGET_CONFIGURE_OFF=	--disable-lib_wget
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+USES+=	llvm:max=15
+CC=	clang${LLVM_VERSION}
+CPP=	clang-cpp${LLVM_VERSION}
+CXX=	clang++${LLVM_VERSION}
+.endif
 
 .include <bsd.port.pre.mk>
 

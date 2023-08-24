@@ -92,6 +92,7 @@
     SUBDIR += bacula11-client
     SUBDIR += bacula11-client-static
     SUBDIR += bacula11-docs
+    SUBDIR += bacula11-libs3
     SUBDIR += bacula11-server
     SUBDIR += bacula13-client
     SUBDIR += bacula13-client-static
@@ -808,7 +809,6 @@
     SUBDIR += munin-contrib
     SUBDIR += munin-master
     SUBDIR += munin-node
-    SUBDIR += muse
     SUBDIR += mxkill
     SUBDIR += mybashburn
     SUBDIR += myrescue
@@ -1443,6 +1443,7 @@
     SUBDIR += tflint
     SUBDIR += thefish
     SUBDIR += throttle
+    SUBDIR += tiempo
     SUBDIR += timelimit
     SUBDIR += timemon
     SUBDIR += tiramisu
@@ -1628,6 +1629,7 @@
     SUBDIR += xbatt
     SUBDIR += xbattbar
     SUBDIR += xcdroast
+    SUBDIR += xcp
     SUBDIR += xcpustate
     SUBDIR += xdu
     SUBDIR += xe

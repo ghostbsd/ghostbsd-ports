@@ -550,6 +550,7 @@
     SUBDIR += ntopng
     SUBDIR += ntp
     SUBDIR += ntpa
+    SUBDIR += ntpd-rs
     SUBDIR += ntpsec
     SUBDIR += ntraceroute
     SUBDIR += nusoap
@@ -1040,6 +1041,7 @@
     SUBDIR += py-amqplib
     SUBDIR += py-anonfile
     SUBDIR += py-avahi
+    SUBDIR += py-blobfile
     SUBDIR += py-bonsai
     SUBDIR += py-cepa
     SUBDIR += py-cjdns
