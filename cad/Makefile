@@ -38,6 +38,7 @@
     SUBDIR += gds3d
     SUBDIR += gdscpp
     SUBDIR += gdsreader
+    SUBDIR += gdstk
     SUBDIR += gdt
     SUBDIR += geda
     SUBDIR += gerbv
@@ -110,6 +111,7 @@
     SUBDIR += py-edalize
     SUBDIR += py-ezdxf
     SUBDIR += py-gdspy
+    SUBDIR += py-gdstk
     SUBDIR += py-gmsh
     SUBDIR += py-lcapy
     SUBDIR += py-ocp
