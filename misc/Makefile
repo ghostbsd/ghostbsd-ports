@@ -248,6 +248,7 @@
     SUBDIR += locale-en_DK
     SUBDIR += localedata
     SUBDIR += logsurfer
+    SUBDIR += ls-lint
     SUBDIR += lscolors
     SUBDIR += lsix
     SUBDIR += lv

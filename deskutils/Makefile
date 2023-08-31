@@ -34,6 +34,7 @@
     SUBDIR += cfiles
     SUBDIR += charmtimetracker
     SUBDIR += chart
+    SUBDIR += cherrytree
     SUBDIR += clipit
     SUBDIR += clipmenu
     SUBDIR += clipnotify
@@ -183,6 +184,7 @@
     SUBDIR += mindforger
     SUBDIR += moregroupware
     SUBDIR += mozo
+    SUBDIR += mytetra
     SUBDIR += nautilus-sendto
     SUBDIR += nextcloudclient
     SUBDIR += note
@@ -271,6 +273,7 @@
     SUBDIR += ultralist
     SUBDIR += virt-manager
     SUBDIR += vit
+    SUBDIR += vnote
     SUBDIR += vym
     SUBDIR += walld
     SUBDIR += when
