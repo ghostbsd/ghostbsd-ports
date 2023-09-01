@@ -24,14 +24,9 @@ OPTIONS_DEFAULT=	NTFS3G EXT4 EXFAT HFS
 NTFS3G_DESC=		Enable NTFS write support with ntfs-3g over FUSE
 NTFS3G_RUN_DEPENDS=	fusefs-ntfs>=0:sysutils/fusefs-ntfs
 EXT4_DESC=		Support EXT2/3/4 filesystem
-<<<<<<< HEAD
-EXT4_RUN_DEPENDS=	fusefs-ext2>=0:sysutils/fusefs-ext2 \
-			fusefs-lkl>=0:sysutils/fusefs-lkl
-=======
 EXT4_RUN_DEPENDS=	fusefs-lkl>=0:sysutils/fusefs-lkl
 HFS_DESC=		Support macOS HFS filesystem
 HFS_RUN_DEPENDS=	fusefs-hfsfuse>=0:sysutils/fusefs-hfsfuse
->>>>>>> freebsd/main
 EXFAT_DESC=		Support Microsoft exFAT filesystem
 EXFAT_RUN_DEPENDS=	fusefs-exfat>=0:sysutils/fusefs-exfat \
 			exfat-utils>=0:sysutils/exfat-utils
