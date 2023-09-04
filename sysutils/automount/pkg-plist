@@ -1,0 +1,4 @@
+%%ETCDIR%%.conf.sample
+etc/devd/automount_devd.conf
+etc/devd/automount_devd_localdisks.conf
+sbin/automount
