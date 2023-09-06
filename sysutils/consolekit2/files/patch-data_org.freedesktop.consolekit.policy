@@ -1,6 +1,6 @@
---- data/org.freedesktop.consolekit.policy.orig	2020-12-01 20:46:17.629911000 -0400
-+++ data/org.freedesktop.consolekit.policy	2020-12-01 20:50:41.276205000 -0400
-@@ -13,7 +13,7 @@
+--- data/org.freedesktop.consolekit.policy.orig	2023-08-31 07:06:53 UTC
++++ data/org.freedesktop.consolekit.policy
+@@ -13,7 +13,7 @@ Policy definitions for ConsoleKit
      <description>Stop the system</description>
      <message>System policy prevents stopping the system</message>
      <defaults>
@@ -9,7 +9,7 @@
        <allow_active>yes</allow_active>
      </defaults>
    </action>
-@@ -22,8 +22,8 @@
+@@ -22,8 +22,8 @@ Policy definitions for ConsoleKit
      <description>Stop the system when multiple users are logged in</description>
      <message>System policy prevents stopping the system when other users are logged in</message>
      <defaults>
@@ -20,7 +20,7 @@
      </defaults>
    </action>
  
-@@ -31,7 +31,7 @@
+@@ -31,7 +31,7 @@ Policy definitions for ConsoleKit
      <description>Restart the system</description>
      <message>System policy prevents restarting the system</message>
      <defaults>
@@ -29,7 +29,7 @@
        <allow_active>yes</allow_active>
      </defaults>
    </action>
-@@ -40,8 +40,8 @@
+@@ -40,8 +40,8 @@ Policy definitions for ConsoleKit
      <description>Restart the system when multiple users are logged in</description>
      <message>System policy prevents restarting the system when other users are logged in</message>
      <defaults>
@@ -40,7 +40,7 @@
      </defaults>
    </action>
  
-@@ -49,7 +49,7 @@
+@@ -49,7 +49,7 @@ Policy definitions for ConsoleKit
      <description>Suspend the system</description>
      <message>System policy prevents suspending the system</message>
      <defaults>
@@ -49,7 +49,7 @@
        <allow_active>yes</allow_active>
      </defaults>
    </action>
-@@ -58,8 +58,8 @@
+@@ -58,8 +58,8 @@ Policy definitions for ConsoleKit
      <description>Suspend the system when multiple users are logged in</description>
      <message>System policy prevents suspending the system when other users are logged in</message>
      <defaults>
@@ -59,3 +59,40 @@
 +      <allow_active>yes</allow_active>
      </defaults>
    </action>
+ 
+@@ -68,7 +68,7 @@ Policy definitions for ConsoleKit
+     <message>System policy prevents hibernating the system</message>
+     <defaults>
+       <allow_inactive>no</allow_inactive>
+-      <allow_active>yes</allow_active>
++      <allow_active>no</allow_active>
+     </defaults>
+   </action>
+ 
+@@ -77,7 +77,7 @@ Policy definitions for ConsoleKit
+     <message>System policy prevents hibernating the system when other users are logged in</message>
+     <defaults>
+       <allow_inactive>no</allow_inactive>
+-      <allow_active>auth_admin_keep</allow_active>
++      <allow_active>no</allow_active>
+     </defaults>
+   </action>
+ 
+@@ -86,7 +86,7 @@ Policy definitions for ConsoleKit
+     <message>System policy prevents hybrid sleeping the system</message>
+     <defaults>
+       <allow_inactive>no</allow_inactive>
+-      <allow_active>yes</allow_active>
++      <allow_active>no</allow_active>
+     </defaults>
+   </action>
+ 
+@@ -95,7 +95,7 @@ Policy definitions for ConsoleKit
+     <message>System policy prevents hybrid sleeping the system when other users are logged in</message>
+     <defaults>
+       <allow_inactive>no</allow_inactive>
+-      <allow_active>auth_admin_keep</allow_active>
++      <allow_active>no</allow_active>
+     </defaults>
+   </action>
+ </policyconfig>
