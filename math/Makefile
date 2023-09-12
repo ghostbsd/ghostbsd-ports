@@ -103,6 +103,7 @@
     SUBDIR += R-cran-mitools
     SUBDIR += R-cran-moments
     SUBDIR += R-cran-mvtnorm
+    SUBDIR += R-cran-ncdf4
     SUBDIR += R-cran-nloptr
     SUBDIR += R-cran-nnls
     SUBDIR += R-cran-nortest
@@ -622,6 +623,7 @@
     SUBDIR += octave-forge-pkg-octave-doc
     SUBDIR += octave-forge-plot
     SUBDIR += octave-forge-ponchon-savarit
+    SUBDIR += octave-forge-prompt
     SUBDIR += octave-forge-psychrometrics
     SUBDIR += octave-forge-pythonic
     SUBDIR += octave-forge-quaternion

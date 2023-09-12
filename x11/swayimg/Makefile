@@ -1,7 +1,7 @@
 PORTNAME=	swayimg
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.12
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -77,6 +77,12 @@ WEBP_MESON_ENABLED=	webp
 
 ZSH_MESON_ENABLED=	zsh
 ZSH_PLIST_FILES=	share/zsh/site-functions/_${PORTNAME}
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400097
+CFLAGS+=	-D__BSD_VISIBLE -D__XSI_VISIBLE
+.endif
 
 post-patch:
 # Respect PREFIX for system-wide config

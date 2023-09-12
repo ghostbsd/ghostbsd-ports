@@ -1324,7 +1324,6 @@ games/spellathon||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 games/sudoku-sensei||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 games/tbe||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 games/xptools||2019-03-16|Has expired: Qt4 has been EOL since december 2015
-german/tipp10||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 graphics/aqsis||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 graphics/autoq3d||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 graphics/burplex||2019-03-16|Has expired: Qt4 has been EOL since december 2015
@@ -4129,7 +4128,6 @@ editors/omegaT||2020-05-05|Has expired: Broken for more than 6 months
 finance/cbb||2020-05-05|Has expired: Broken for more than 6 months
 ftp/llnlxdir||2020-05-05|Has expired: Broken for more than 6 months
 ftp/llnlxftp||2020-05-05|Has expired: Broken for more than 6 months
-games/adom||2020-05-05|Has expired: Broken for more than 6 months
 games/bsdrain||2020-05-05|Has expired: Broken for more than 6 months
 games/bunnysay||2020-05-05|Has expired: Broken for more than 6 months
 games/castlevox||2020-05-05|Has expired: Broken for more than 6 months
@@ -6468,7 +6466,6 @@ devel/alog||2022-02-28|Removed, depends on expired lang/gcc6-aux
 devel/aunit||2022-02-28|Removed, depends on expired lang/gcc6-aux
 devel/florist-gpl||2022-02-28|Removed, depends on expired lang/gcc6-aux
 devel/libspark2012||2022-02-28|Removed, depends on expired lang/gcc6-aux
-devel/matreshka||2022-02-28|Removed, depends on expired lang/gcc6-aux
 devel/pcsc-ada||2022-02-28|Removed, depends on expired lang/gcc6-aux
 devel/pragmarcs||2022-02-28|Removed, depends on expired lang/gcc6-aux
 devel/sdl_gnat||2022-02-28|Removed, depends on expired lang/gcc6-aux
@@ -7781,7 +7778,6 @@ x11-toolkits/wlinfo||2023-08-10|Redundant with wayland-info from graphics/waylan
 www/bareos18-webui|www/bareos19-webui|2023-08-16|Has expired
 sysutils/devcpu-data-amd|sysutils/cpu-microcode-amd|2023-08-16|Reorganize CPU microcode ports
 sysutils/devcpu-data-intel|sysutils/cpu-microcode-intel|2023-08-16|Reorganize CPU microcode ports
-sysutils/devcpu-data|sysutils/cpu-microcode-rc|2023-08-16|Reorganize CPU microcode ports
 devel/py-python-Levenshtein|devel/py-Levenshtein|2023-08-17|Rename to match upstream
 devel/py-jaraco||2023-08-21|Remove obsoleted port
 security/rubygem-openssl2|security/rubygem-openssl|2023-08-21|Remove obsoleted port. Use security/rubygem-openssl instead
@@ -7837,3 +7833,23 @@ databases/mysql-connector-java|databases/mysql-connector-j|2023-08-27|Following 
 deskutils/kalendar|deskutils/merkuro|2023-08-28|Renamed upstream
 www/joomla3|www/joomla4|2023-08-30|Has expired: EOL upstream
 sysutils/llama|sysutils/walk|2023-08-31|Renamed to match upstream naming
+devel/py-typed-ast||2023-08-31|Has expired: This project is no longer maintained. Use the standard library ast module instead
+devel/py-retype||2023-08-31|Has expired: This project is no longer supported/maintained
+ports-mgmt/parfetch-overlay||2023-08-31|Has expired: Unmaintained
+cad/py-cq-editor||2023-09-01|Has expired: Depends on expiring cad/py-cadquery
+cad/py-cadquery||2023-09-01|Has expired: Depends on exppired cad/py-ocp
+www/squid-devel||2023-09-01|Has expired: Not used anymore to create rc-state releases
+databases/rubygem-red-plasma||2023-09-04|Remove deprecated port. red-plasma is deprecated since 10.0.0. red-plasma will not be released from Apache Arrow 12.0.0 or so
+devel/rubygem-cucumber-cucumber-expressions15|devel/rubygem-cucumber-cucumber-expressions|2023-09-04|Remove obsoleted port. Use devel/rubygem-cucumber-cucumber-expressions instead
+devel/rubygem-cucumber-messages18|devel/rubygem-cucumber-messages|2023-09-04|Remove obsoleted port. Use devel/rubygem-cucumber-messages instead
+textproc/rubygem-cucumber-gherkin23|textproc/rubygem-cucumber-gherkin|2023-09-04|Remove obsoleted port. Use textproc/rubygem-cucumber-gherkin instead
+textproc/rubygem-cucumber-html-formatter19|textproc/rubygem-cucumber-html-formatter|2023-09-04|Remove obsoleted port. Use textproc/rubygem-cucumber-html-formatter instead
+sysutils/bacula11-libs3|sysutils/bacula-libs3|2023-09-10|No reason to have version in the port name. Works with 11 and 13
+net-p2p/transmission-cli|net-p2p/transmission|2023-09-10|Moved to a flavored version
+net-p2p/transmission-daemon|net-p2p/transmission|2023-09-10|Moved to a flavored version
+net-p2p/transmission-gtk|net-p2p/transmission|2023-09-10|Moved to a flavored version
+net-p2p/transmission-qt|net-p2p/transmission|2023-09-10|Moved to a flavored version
+net-p2p/transmission-utils|net-p2p/transmission|2023-09-10|Moved to a flavored version
+www/transmission-web|net-p2p/transmission|2023-09-10|Moved to the daemon flavor
+devel/rubygem-cucumber-tag-expressions4|devel/rubygem-cucumber-tag-expressions|2023-09-11|Remove obsoleted port. Use devel/rubygem-cucumber-tag-expressions instead
+cad/py-ocp||2023-09-05|Has expired: Broken since 2021

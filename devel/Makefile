@@ -1292,6 +1292,7 @@
     SUBDIR += libisofs
     SUBDIR += libixp
     SUBDIR += libjitterentropy
+    SUBDIR += libjodycode
     SUBDIR += libk8055
     SUBDIR += libkiwix
     SUBDIR += libklel
@@ -1571,9 +1572,11 @@
     SUBDIR += marl
     SUBDIR += massif-visualizer
     SUBDIR += mate-common
+    SUBDIR += matreshka
     SUBDIR += maven
     SUBDIR += maven-wrapper
     SUBDIR += maven363
+    SUBDIR += maven39
     SUBDIR += mcpp
     SUBDIR += mdb
     SUBDIR += mdds
@@ -1715,6 +1718,8 @@
     SUBDIR += opendht
     SUBDIR += opengrok
     SUBDIR += openocd
+    SUBDIR += opentelemetry-cpp
+    SUBDIR += opentelemetry-proto
     SUBDIR += openwince-include
     SUBDIR += orc
     SUBDIR += orcania
@@ -2996,6 +3001,7 @@
     SUBDIR += p5-MooseX-Singleton
     SUBDIR += p5-MooseX-Storage
     SUBDIR += p5-MooseX-StrictConstructor
+    SUBDIR += p5-MooseX-Test-Role
     SUBDIR += p5-MooseX-TraitFor-Meta-Class-BetterAnonClassNames
     SUBDIR += p5-MooseX-Traits
     SUBDIR += p5-MooseX-Traits-Pluggable
@@ -4227,6 +4233,7 @@
     SUBDIR += py-antlr4-python3-runtime
     SUBDIR += py-anyconfig
     SUBDIR += py-anyio
+    SUBDIR += py-anyio3
     SUBDIR += py-anyjson
     SUBDIR += py-anytree
     SUBDIR += py-apache_conf_parser
@@ -4569,6 +4576,7 @@
     SUBDIR += py-debtcollector
     SUBDIR += py-debugpy
     SUBDIR += py-debugtools
+    SUBDIR += py-decopatch
     SUBDIR += py-decorator
     SUBDIR += py-decoratortools
     SUBDIR += py-deepdiff
@@ -4590,6 +4598,8 @@
     SUBDIR += py-distributed
     SUBDIR += py-dj41-django-rq
     SUBDIR += py-dj41-graphene-django
+    SUBDIR += py-dj42-django-rq
+    SUBDIR += py-dj42-graphene-django
     SUBDIR += py-django-rq
     SUBDIR += py-dockerpty
     SUBDIR += py-docopt
@@ -4656,6 +4666,7 @@
     SUBDIR += py-find-libpython
     SUBDIR += py-findlibs
     SUBDIR += py-findpython
+    SUBDIR += py-fire
     SUBDIR += py-first
     SUBDIR += py-fixtures
     SUBDIR += py-flake8
@@ -4926,6 +4937,7 @@
     SUBDIR += py-libversion
     SUBDIR += py-libvirt
     SUBDIR += py-libzfs
+    SUBDIR += py-lief
     SUBDIR += py-line-profiler
     SUBDIR += py-linear-tsv
     SUBDIR += py-linecache2
@@ -5215,6 +5227,7 @@
     SUBDIR += py-prompt-toolkit2
     SUBDIR += py-property-cached
     SUBDIR += py-proselint
+    SUBDIR += py-prospector
     SUBDIR += py-proto-plus
     SUBDIR += py-protobuf
     SUBDIR += py-protobuf-compiler
@@ -5286,6 +5299,7 @@
     SUBDIR += py-pylev
     SUBDIR += py-pylibsrtp
     SUBDIR += py-pylint-django
+    SUBDIR += py-pylint-flask
     SUBDIR += py-pylint-plugin-utils
     SUBDIR += py-pylint-venv
     SUBDIR += py-pylru
@@ -5317,6 +5331,7 @@
     SUBDIR += py-pyrfc3339
     SUBDIR += py-pyright
     SUBDIR += py-pyro
+    SUBDIR += py-pyroma
     SUBDIR += py-pyrsistent
     SUBDIR += py-pyscaffold
     SUBDIR += py-pysdl2
@@ -5335,6 +5350,7 @@
     SUBDIR += py-pytest-cache
     SUBDIR += py-pytest-canonical-data
     SUBDIR += py-pytest-capturelog
+    SUBDIR += py-pytest-cases
     SUBDIR += py-pytest-checkdocs
     SUBDIR += py-pytest-console-scripts
     SUBDIR += py-pytest-cov
@@ -5501,7 +5517,6 @@
     SUBDIR += py-responses
     SUBDIR += py-retry2
     SUBDIR += py-retrying
-    SUBDIR += py-retype
     SUBDIR += py-rfc3339
     SUBDIR += py-rfc3339-validator
     SUBDIR += py-rfc3986-validator
@@ -5550,6 +5565,7 @@
     SUBDIR += py-serializable
     SUBDIR += py-serpent
     SUBDIR += py-session-info
+    SUBDIR += py-setoptconf
     SUBDIR += py-setproctitle
     SUBDIR += py-setuptools
     SUBDIR += py-setuptools-declarative-requirements
@@ -5609,6 +5625,7 @@
     SUBDIR += py-streamparse
     SUBDIR += py-strenum
     SUBDIR += py-strict-rfc3339
+    SUBDIR += py-strictyaml
     SUBDIR += py-stringbrewer
     SUBDIR += py-stringcase
     SUBDIR += py-structlog
@@ -5684,7 +5701,6 @@
     SUBDIR += py-txaio
     SUBDIR += py-txi2p-tahoe
     SUBDIR += py-typechecks
-    SUBDIR += py-typed-ast
     SUBDIR += py-typeguard
     SUBDIR += py-typer
     SUBDIR += py-types-Flask
@@ -6305,6 +6321,7 @@
     SUBDIR += rubygem-aws-sdk-mturk
     SUBDIR += rubygem-aws-sdk-mwaa
     SUBDIR += rubygem-aws-sdk-neptune
+    SUBDIR += rubygem-aws-sdk-neptunedata
     SUBDIR += rubygem-aws-sdk-networkfirewall
     SUBDIR += rubygem-aws-sdk-networkmanager
     SUBDIR += rubygem-aws-sdk-nimblestudio
@@ -6320,6 +6337,7 @@
     SUBDIR += rubygem-aws-sdk-panorama
     SUBDIR += rubygem-aws-sdk-paymentcryptography
     SUBDIR += rubygem-aws-sdk-paymentcryptographydata
+    SUBDIR += rubygem-aws-sdk-pcaconnectorad
     SUBDIR += rubygem-aws-sdk-personalize
     SUBDIR += rubygem-aws-sdk-personalizeevents
     SUBDIR += rubygem-aws-sdk-personalizeruntime
@@ -6580,6 +6598,7 @@
     SUBDIR += rubygem-bacon
     SUBDIR += rubygem-baf
     SUBDIR += rubygem-batch-loader
+    SUBDIR += rubygem-bcp47_spec
     SUBDIR += rubygem-benelux
     SUBDIR += rubygem-better_html-rails61
     SUBDIR += rubygem-bin_utils
@@ -6666,12 +6685,9 @@
     SUBDIR += rubygem-cucumber-ci-environment
     SUBDIR += rubygem-cucumber-core
     SUBDIR += rubygem-cucumber-cucumber-expressions
-    SUBDIR += rubygem-cucumber-cucumber-expressions15
     SUBDIR += rubygem-cucumber-messages
-    SUBDIR += rubygem-cucumber-messages18
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
-    SUBDIR += rubygem-cucumber-tag-expressions4
     SUBDIR += rubygem-cucumber-wire
     SUBDIR += rubygem-curses
     SUBDIR += rubygem-cyoi
@@ -6710,6 +6726,7 @@
     SUBDIR += rubygem-devise-rails60
     SUBDIR += rubygem-devise-rails61
     SUBDIR += rubygem-devise-rails70
+    SUBDIR += rubygem-devise48-rails70
     SUBDIR += rubygem-did_you_mean
     SUBDIR += rubygem-dig_rb
     SUBDIR += rubygem-directory_watcher
@@ -6823,6 +6840,7 @@
     SUBDIR += rubygem-gettext
     SUBDIR += rubygem-gettext-setup
     SUBDIR += rubygem-gettext_i18n_rails
+    SUBDIR += rubygem-gettext_i18n_rails111
     SUBDIR += rubygem-gettext_i18n_rails18
     SUBDIR += rubygem-gettext_i18n_rails_js-rails5
     SUBDIR += rubygem-gettext_i18n_rails_js-rails50
@@ -6892,6 +6910,7 @@
     SUBDIR += rubygem-grape-route-helpers
     SUBDIR += rubygem-grape-swagger
     SUBDIR += rubygem-grape-swagger-entity
+    SUBDIR += rubygem-grape17
     SUBDIR += rubygem-grape_logging
     SUBDIR += rubygem-graphiql-rails
     SUBDIR += rubygem-graphlient
@@ -6909,6 +6928,7 @@
     SUBDIR += rubygem-hashie-forbidden_attributes
     SUBDIR += rubygem-hashie4
     SUBDIR += rubygem-health_check
+    SUBDIR += rubygem-health_check-rails70
     SUBDIR += rubygem-heapy
     SUBDIR += rubygem-highline
     SUBDIR += rubygem-highline1
@@ -7277,6 +7297,7 @@
     SUBDIR += rubygem-semi_semantic
     SUBDIR += rubygem-semver2
     SUBDIR += rubygem-semver_dialects
+    SUBDIR += rubygem-semver_dialects12
     SUBDIR += rubygem-semverse
     SUBDIR += rubygem-sentry-rails
     SUBDIR += rubygem-sentry-raven
@@ -7577,6 +7598,7 @@
     SUBDIR += smooth
     SUBDIR += smv
     SUBDIR += snazy
+    SUBDIR += snitch
     SUBDIR += soapui
     SUBDIR += sobjectizer
     SUBDIR += socket_wrapper

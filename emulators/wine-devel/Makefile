@@ -1,6 +1,6 @@
 PORTNAME=	wine
 DISTVERSION=	8.11
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://dl.winehq.org/wine/source/8.x/
@@ -46,6 +46,7 @@ CONFIGURE_ARGS+=--verbose \
 		--without-opencl \
 		--without-osmesa \
 		--without-pcap \
+		--without-pcsclite \
 		--with-pthread \
 		--without-pulse \
 		--without-sane \
@@ -70,7 +71,7 @@ SUB_FILES=	pkg-message
 PORTDATA=	wine.inf
 
 OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS V4L WINEMAKER X11 GECKO MONO
-OPTIONS_DEFAULT=GNUTLS OSS X11
+OPTIONS_DEFAULT=ALSA GNUTLS X11
 OPTIONS_RADIO=	AUDIO
 OPTIONS_RADIO_AUDIO=	ALSA OSS
 OPTIONS_SUB=	yes
@@ -114,7 +115,7 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 .include <bsd.port.pre.mk>
 
 .if (${LLVM_DEFAULT} == 10 || ${LLVM_DEFAULT} == 11)
-_LLVM_VERSION=	12
+_LLVM_VERSION=	15
 .else
 _LLVM_VERSION=	${LLVM_DEFAULT}
 .endif

@@ -314,10 +314,26 @@ _PYTHON_BASECMD=		${LOCALBASE}/bin/python
 _PYTHON_RELPORTDIR=		lang/python
 
 # List all valid USE_PYTHON features here
-_VALID_PYTHON_FEATURES=	allflavors autoplist concurrent cython cython_run cython_test \
-			distutils flavors noegginfo noflavors nose nose2 \
-			optsuffix pep517 py3kplist pytest pytest4 pythonprefix \
-			unittest unittest2
+_VALID_PYTHON_FEATURES=	allflavors \
+			autoplist \
+			concurrent \
+			cython \
+			cython_run \
+			cython_test \
+			distutils \
+			flavors \
+			noegginfo \
+			noflavors \
+			nose \
+			nose2 \
+			optsuffix \
+			pep517 \
+			py3kplist \
+			pytest \
+			pytest4 \
+			pythonprefix \
+			unittest \
+			unittest2
 _INVALID_PYTHON_FEATURES=
 .  for var in ${USE_PYTHON}
 .    if empty(_VALID_PYTHON_FEATURES:M${var})
@@ -581,6 +597,7 @@ _PYTHONPKGLIST=	${WRKDIR}/.PLIST.pymodtmp
 # - it uses USE_PYTHON=distutils
 #
 
+# cython* support
 .  if defined(_PYTHON_FEATURE_CYTHON)
 BUILD_DEPENDS+=	cython-${PYTHON_VER}:lang/cython@${PY_FLAVOR}
 .  endif
@@ -771,6 +788,8 @@ CONFIGURE_ENV+=	PYTHON="${PYTHON_CMD}"
 # By default CMake picks up the highest available version of Python package.
 # Enforce the version required by the port or the default.
 CMAKE_ARGS+=	-DPython_ADDITIONAL_VERSIONS=${PYTHON_VER}
+CMAKE_ARGS+=	-DPython_EXECUTABLE:FILEPATH="${PYTHON_CMD}"
+CMAKE_ARGS+=	-DPython${PYTHON_MAJOR_VER}_EXECUTABLE:FILEPATH="${PYTHON_CMD}"
 
 # Python 3rd-party modules
 PYGAME=		${PYTHON_PKGNAMEPREFIX}game>0:devel/py-game@${PY_FLAVOR}

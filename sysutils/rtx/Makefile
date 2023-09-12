@@ -1,6 +1,7 @@
 PORTNAME=	rtx
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2023.8.9
+DISTVERSION=	2023.9.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -17,7 +18,7 @@ GH_ACCOUNT=	jdxcode
 
 CARGO_CRATES=	addr2line-0.21.0 \
 		adler-1.0.2 \
-		aho-corasick-1.0.4 \
+		aho-corasick-1.0.5 \
 		android-tzdata-0.1.1 \
 		android_system_properties-0.1.5 \
 		anstream-0.5.0 \
@@ -27,11 +28,11 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		anstyle-wincon-2.1.0 \
 		autocfg-1.1.0 \
 		backtrace-0.3.69 \
-		base64-0.21.2 \
+		base64-0.21.3 \
 		bitflags-1.3.2 \
 		bitflags-2.4.0 \
 		block-buffer-0.10.4 \
-		bstr-1.6.0 \
+		bstr-1.6.2 \
 		built-0.6.1 \
 		bumpalo-3.13.0 \
 		byteorder-1.4.3 \
@@ -39,16 +40,16 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		cargo-lock-9.0.0 \
 		cc-1.0.83 \
 		cfg-if-1.0.0 \
-		chrono-0.4.26 \
-		clap-4.4.0 \
-		clap_builder-4.4.0 \
+		chrono-0.4.28 \
+		clap-4.4.2 \
+		clap_builder-4.4.2 \
 		clap_complete-4.4.0 \
-		clap_derive-4.4.0 \
+		clap_derive-4.4.2 \
 		clap_lex-0.5.1 \
 		clap_mangen-0.2.13 \
 		color-eyre-0.6.2 \
-		color-print-0.3.4 \
-		color-print-proc-macro-0.3.4 \
+		color-print-0.3.5 \
+		color-print-proc-macro-0.3.5 \
 		color-spantrace-0.2.0 \
 		colorchoice-1.0.0 \
 		console-0.15.7 \
@@ -62,7 +63,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		crossbeam-utils-0.8.16 \
 		crypto-common-0.1.6 \
 		ctor-0.2.4 \
-		ctrlc-3.4.0 \
+		ctrlc-3.4.1 \
 		deranged-0.3.8 \
 		dialoguer-0.10.4 \
 		diff-0.1.13 \
@@ -76,7 +77,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		encoding_rs-0.8.33 \
 		equivalent-1.0.1 \
 		errno-0.2.8 \
-		errno-0.3.2 \
+		errno-0.3.3 \
 		errno-dragonfly-0.1.2 \
 		exec-0.3.1 \
 		eyre-0.6.8 \
@@ -139,35 +140,35 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		linux-raw-sys-0.3.8 \
 		linux-raw-sys-0.4.5 \
 		log-0.4.20 \
-		memchr-2.5.0 \
+		memchr-2.6.3 \
 		memoffset-0.9.0 \
 		mime-0.3.17 \
 		minimal-lexical-0.2.1 \
 		miniz_oxide-0.7.1 \
 		mio-0.8.8 \
 		native-tls-0.2.11 \
-		nix-0.26.2 \
+		nix-0.27.1 \
 		nom-7.1.3 \
 		num-traits-0.2.16 \
 		num_cpus-1.16.0 \
 		num_threads-0.1.6 \
 		number_prefix-0.4.0 \
-		object-0.32.0 \
+		object-0.32.1 \
 		once_cell-1.18.0 \
-		openssl-0.10.56 \
+		openssl-0.10.57 \
 		openssl-macros-0.1.1 \
 		openssl-probe-0.1.5 \
-		openssl-sys-0.9.91 \
+		openssl-sys-0.9.93 \
 		os_pipe-1.1.4 \
 		owo-colors-3.5.0 \
 		paste-1.0.14 \
 		path-absolutize-3.1.0 \
 		path-dedot-3.1.0 \
 		percent-encoding-2.3.0 \
-		pest-2.7.2 \
-		pest_derive-2.7.2 \
-		pest_generator-2.7.2 \
-		pest_meta-2.7.2 \
+		pest-2.7.3 \
+		pest_derive-2.7.3 \
+		pest_generator-2.7.3 \
+		pest_meta-2.7.3 \
 		pin-project-lite-0.2.13 \
 		pin-utils-0.1.0 \
 		pkg-config-0.3.27 \
@@ -185,9 +186,9 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		redox_syscall-0.2.16 \
 		redox_syscall-0.3.5 \
 		redox_users-0.4.3 \
-		regex-1.9.3 \
-		regex-automata-0.3.6 \
-		regex-syntax-0.7.4 \
+		regex-1.9.5 \
+		regex-automata-0.3.8 \
+		regex-syntax-0.7.5 \
 		reqwest-0.11.20 \
 		ring-0.16.20 \
 		rmp-0.8.12 \
@@ -195,8 +196,8 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		roff-0.2.1 \
 		rustc-demangle-0.1.23 \
 		rustix-0.37.23 \
-		rustix-0.38.9 \
-		rustls-0.21.6 \
+		rustix-0.38.11 \
+		rustls-0.21.7 \
 		rustls-native-certs-0.6.3 \
 		rustls-pemfile-1.0.3 \
 		rustls-webpki-0.101.4 \
@@ -225,21 +226,20 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		socket2-0.4.9 \
 		socket2-0.5.3 \
 		spin-0.5.2 \
-		static_assertions-1.1.0 \
 		strsim-0.10.0 \
 		syn-1.0.109 \
-		syn-2.0.29 \
+		syn-2.0.31 \
 		tar-0.4.40 \
 		tempfile-3.8.0 \
-		tera-1.19.0 \
+		tera-1.19.1 \
 		termcolor-1.1.3 \
 		terminal_size-0.2.6 \
-		thiserror-1.0.47 \
-		thiserror-impl-1.0.47 \
-		thread_local-1.1.4 \
-		time-0.3.27 \
+		thiserror-1.0.48 \
+		thiserror-impl-1.0.48 \
+		thread_local-1.1.7 \
+		time-0.3.28 \
 		time-core-0.1.1 \
-		time-macros-0.2.13 \
+		time-macros-0.2.14 \
 		tinyvec-1.6.0 \
 		tinyvec_macros-0.1.1 \
 		tokio-1.32.0 \
@@ -269,14 +269,14 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		unicode-segmentation-1.10.1 \
 		unicode-width-0.1.10 \
 		untrusted-0.7.1 \
-		url-2.4.0 \
+		url-2.4.1 \
 		urlencoding-2.1.3 \
 		utf8parse-0.2.1 \
 		valuable-0.1.0 \
 		vcpkg-0.2.15 \
 		version_check-0.9.4 \
 		versions-5.0.1 \
-		walkdir-2.3.3 \
+		walkdir-2.4.0 \
 		want-0.3.1 \
 		wasi-0.11.0+wasi-snapshot-preview1 \
 		wasm-bindgen-0.2.87 \

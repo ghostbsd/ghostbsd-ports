@@ -808,6 +808,7 @@
     SUBDIR += py-psycopg2
     SUBDIR += py-psycopg2cffi
     SUBDIR += py-pum
+    SUBDIR += py-pyarrow
     SUBDIR += py-pycql
     SUBDIR += py-pylibmc
     SUBDIR += py-pymemcache
@@ -997,7 +998,6 @@
     SUBDIR += rubygem-red-arrow-dataset
     SUBDIR += rubygem-red-gandiva
     SUBDIR += rubygem-red-parquet
-    SUBDIR += rubygem-red-plasma
     SUBDIR += rubygem-redis
     SUBDIR += rubygem-redis-actionpack
     SUBDIR += rubygem-redis-actionpack-rails5
@@ -1019,6 +1019,7 @@
     SUBDIR += rubygem-sqlite3-ruby
     SUBDIR += rubygem-state_machines-activemodel
     SUBDIR += rubygem-state_machines-activerecord
+    SUBDIR += rubygem-state_machines-activerecord08
     SUBDIR += rubygem-tarantool
     SUBDIR += sequeler
     SUBDIR += sfcgal

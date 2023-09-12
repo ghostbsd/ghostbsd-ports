@@ -1457,6 +1457,7 @@
     SUBDIR += py-os-api-ref
     SUBDIR += py-packageurl-python
     SUBDIR += py-pager
+    SUBDIR += py-paginate
     SUBDIR += py-pallets-sphinx-themes
     SUBDIR += py-pandocfilters
     SUBDIR += py-paragrep
@@ -1466,6 +1467,7 @@
     SUBDIR += py-parsimonious
     SUBDIR += py-parso
     SUBDIR += py-patiencediff
+    SUBDIR += py-pdf2docx
     SUBDIR += py-pdfminer.six
     SUBDIR += py-pdfminer3k
     SUBDIR += py-pdfrw
@@ -1524,6 +1526,7 @@
     SUBDIR += py-qrcode
     SUBDIR += py-rdflib
     SUBDIR += py-readchar
+    SUBDIR += py-readtime
     SUBDIR += py-recommonmark
     SUBDIR += py-regex
     SUBDIR += py-reindent
@@ -1620,6 +1623,7 @@
     SUBDIR += py-ufal.udpipe
     SUBDIR += py-unicodeitplus
     SUBDIR += py-untangle
+    SUBDIR += py-wavedrom
     SUBDIR += py-wcmatch
     SUBDIR += py-whatthepatch
     SUBDIR += py-whoosh
@@ -1728,13 +1732,12 @@
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
-    SUBDIR += rubygem-cucumber-gherkin23
     SUBDIR += rubygem-cucumber-html-formatter
-    SUBDIR += rubygem-cucumber-html-formatter19
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
     SUBDIR += rubygem-docdiff
+    SUBDIR += rubygem-elastic-apm
     SUBDIR += rubygem-elastic-transport
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api

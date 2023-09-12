@@ -1,6 +1,6 @@
 PORTNAME=	fractal
 DISTVERSION=	4.4.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-im
 MASTER_SITES=	https://gitlab.gnome.org/GNOME/${PORTNAME}/-/archive/${DISTVERSION}/
 # XXX USES=cargo omits the default source archive by default
@@ -8,7 +8,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	vishwin@FreeBSD.org
 COMMENT=	GTK Matrix IM client
-WWW=		https://wiki.gnome.org/Apps/Fractal
+WWW=		https://gitlab.gnome.org/GNOME/fractal
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

@@ -12,7 +12,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}coverage>=5.2.1:devel/py-coverage@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pytest>=3.6:devel/py-pytest@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}pytest>=4.6,1:devel/py-pytest@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fields>0:devel/py-fields@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}hunter>0:devel/py-hunter@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}process-tests>0:devel/py-process-tests@${PY_FLAVOR} \
@@ -20,7 +20,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fields>0:devel/py-fields@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}virtualenv>0:devel/py-virtualenv@${PY_FLAVOR}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	autoplist concurrent distutils pytest
 
 CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}pytest4-cov
