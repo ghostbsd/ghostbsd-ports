@@ -828,6 +828,7 @@
     SUBDIR += plasma5-kwallet-pam
     SUBDIR += please
     SUBDIR += poly1305aes
+    SUBDIR += portacl-rc
     SUBDIR += proftpd-mod_clamav
     SUBDIR += proxycheck
     SUBDIR += proxytunnel
@@ -1071,7 +1072,6 @@
     SUBDIR += rkhunter
     SUBDIR += rndpassw
     SUBDIR += rnp
-    SUBDIR += rosenpass
     SUBDIR += rotate
     SUBDIR += rubygem-acme-client
     SUBDIR += rubygem-aes_key_wrap

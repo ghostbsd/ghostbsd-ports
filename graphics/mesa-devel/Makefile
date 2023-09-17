@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	23.2.0-branchpoint-3550
-DISTVERSIONSUFFIX=	-g9e37631aa5e
+DISTVERSION=	23.2.0-branchpoint-3792
+DISTVERSIONSUFFIX=	-g3c4c263dc73
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -47,6 +47,7 @@ MESON_ARGS=	-Dgallium-omx=disabled \
 		-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} \
 		-Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc \
 		${NULL}
+LDFLAGS+=	-Wl,--undefined-version # https://gitlab.freedesktop.org/mesa/mesa/-/issues/8003
 PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/}
 
 OPTIONS_DEFINE=		LIBUNWIND LLVM LTO OPENCL VAAPI VDPAU VKLAYERS WAYLAND X11 ZSTD
@@ -99,7 +100,7 @@ LIBUNWIND_LIB_DEPENDS=	libunwind.so:devel/libunwind
 LIBUNWIND_MESON_ENABLED=	libunwind
 
 LLVM_DESC=		Build with LLVM support (see implies)
-LLVM_USES=		llvm:min=15,lib
+LLVM_USES=		llvm:min=15,lib,noexport
 LLVM_CONFIGURE_ENV=	LLVM_CONFIG=${LLVM_CONFIG}
 LLVM_MESON_ENABLED=	llvm
 .for i in r600 radeonsi radv
@@ -120,7 +121,7 @@ OPENCL_MESON_FALSE=	b_lundef # environ
 OPENCL_MESON_TRUE=	gallium-rusticl
 OPENCL_MESON_ON=	-Dgallium-opencl=icd
 OPENCL_MESON_OFF=	-Dgallium-opencl=disabled
-OPENCL_VARS=		LLVM_USES=llvm:15,lib # chase libclc + rust (LTO)
+OPENCL_VARS=		LLVM_USES=llvm:15,lib,noexport # chase libclc + rust (LTO)
 .if ${MACHINE_ARCH} != aarch64 # XXX missing in ONLY_FOR_ARCHS
 OPENCL_VARS+=		COINST_RUN_DEPENDS+=clover>0:lang/clover # ICD
 .endif
