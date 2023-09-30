@@ -31,6 +31,7 @@
     SUBDIR += angie-module-auth-spnego
     SUBDIR += angie-module-brotli
     SUBDIR += angie-module-cache-purge
+    SUBDIR += angie-module-dav-ext
     SUBDIR += angie-module-echo
     SUBDIR += angie-module-enhanced-memcached
     SUBDIR += angie-module-eval
@@ -39,6 +40,7 @@
     SUBDIR += angie-module-image-filter
     SUBDIR += angie-module-jwt
     SUBDIR += angie-module-keyval
+    SUBDIR += angie-module-lua
     SUBDIR += angie-module-ndk
     SUBDIR += angie-module-njs
     SUBDIR += angie-module-perl
@@ -59,7 +61,6 @@
     SUBDIR += aria2
     SUBDIR += asql
     SUBDIR += authelia
-    SUBDIR += awffull
     SUBDIR += awstats
     SUBDIR += axis2
     SUBDIR += bacula-web
@@ -69,7 +70,6 @@
     SUBDIR += badwolf
     SUBDIR += baikal
     SUBDIR += bareos-webui
-    SUBDIR += bareos19-webui
     SUBDIR += bareos20-webui
     SUBDIR += bareos21-webui
     SUBDIR += beehive
@@ -135,12 +135,12 @@
     SUBDIR += deno
     SUBDIR += devd
     SUBDIR += dfileserver
-    SUBDIR += dhttpd
     SUBDIR += dillo2
     SUBDIR += dojo
     SUBDIR += dokuwiki
     SUBDIR += dolibarr
     SUBDIR += dolibarr16
+    SUBDIR += dolibarr17
     SUBDIR += domoticz
     SUBDIR += dooble
     SUBDIR += dot-http
@@ -148,7 +148,6 @@
     SUBDIR += drupal10
     SUBDIR += drupal7
     SUBDIR += drupal7-wysiwyg
-    SUBDIR += drupal8
     SUBDIR += drupal9
     SUBDIR += drush
     SUBDIR += dtse
@@ -182,7 +181,6 @@
     SUBDIR += flat-frog
     SUBDIR += flexget
     SUBDIR += flickcurl
-    SUBDIR += fnord
     SUBDIR += formication
     SUBDIR += foswiki
     SUBDIR += fpc-fastcgi
@@ -227,7 +225,6 @@
     SUBDIR += gopherus
     SUBDIR += gotty
     SUBDIR += gpx2map
-    SUBDIR += grafana8
     SUBDIR += grafana9
     SUBDIR += grails
     SUBDIR += gregarius
@@ -249,6 +246,7 @@
     SUBDIR += hiawatha-monitor
     SUBDIR += hotcrp
     SUBDIR += hs-DAV
+    SUBDIR += hs-gitit
     SUBDIR += hs-hjsmin
     SUBDIR += hs-postgrest
     SUBDIR += hs-wai-app-static
@@ -355,7 +353,6 @@
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
     SUBDIR += mediawiki135
-    SUBDIR += mediawiki138
     SUBDIR += mediawiki139
     SUBDIR += mediawiki140
     SUBDIR += mergelog
@@ -1432,14 +1429,12 @@
     SUBDIR += pmwiki
     SUBDIR += pnews
     SUBDIR += podcastamatic
-    SUBDIR += polipo
     SUBDIR += pomerium
     SUBDIR += pound
     SUBDIR += privatebin
     SUBDIR += privoxy
     SUBDIR += protovis
     SUBDIR += proxygen
-    SUBDIR += pserv
     SUBDIR += publicfile
     SUBDIR += punbb
     SUBDIR += py-Pituophis
@@ -1822,6 +1817,7 @@
     SUBDIR += py-selenium-wire
     SUBDIR += py-semiphemeral
     SUBDIR += py-sentinelhub
+    SUBDIR += py-simple-websocket
     SUBDIR += py-slimit
     SUBDIR += py-slumber
     SUBDIR += py-social-auth-app-django

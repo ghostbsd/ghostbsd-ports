@@ -1,8 +1,8 @@
 PORTNAME=	sniffnet
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.2.2
-PORTREVISION=	1
-CATEGORIES=	net
+PORTREVISION=	2
+CATEGORIES=	net wayland
 
 MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Comfortably monitor your Internet traffic

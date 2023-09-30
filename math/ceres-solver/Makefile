@@ -1,6 +1,6 @@
 PORTNAME=	ceres-solver
 DISTVERSION=	2.1.0
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,6 +9,8 @@ WWW=		http://ceres-solver.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN=		configure error: Target "ceres" links to: CXSparse::CXSparse but the target was not found
 
 BUILD_DEPENDS=	glog>=0.5.0:devel/glog
 LIB_DEPENDS=	libglog.so:devel/glog

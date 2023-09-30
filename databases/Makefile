@@ -187,8 +187,6 @@
     SUBDIR += memcached
     SUBDIR += metabase
     SUBDIR += mongodb-tools
-    SUBDIR += mongodb42
-    SUBDIR += mongodb42-tools
     SUBDIR += mongodb44
     SUBDIR += mongodb50
     SUBDIR += mongodb60
@@ -873,7 +871,6 @@
     SUBDIR += recutils
     SUBDIR += redis
     SUBDIR += redis-devel
-    SUBDIR += redis6
     SUBDIR += redis62
     SUBDIR += redis70
     SUBDIR += redis_exporter

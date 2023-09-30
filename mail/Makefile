@@ -77,8 +77,6 @@
     SUBDIR += couriergraph
     SUBDIR += crm114
     SUBDIR += cvsmail
-    SUBDIR += cyrus-imapd23
-    SUBDIR += cyrus-imapd24
     SUBDIR += cyrus-imapd25
     SUBDIR += cyrus-imapd30
     SUBDIR += cyrus-imapd32
@@ -555,7 +553,6 @@
     SUBDIR += qpopper
     SUBDIR += qsf
     SUBDIR += qsheff
-    SUBDIR += qtools
     SUBDIR += queue-fix
     SUBDIR += queue-repair
     SUBDIR += rainloop

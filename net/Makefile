@@ -141,7 +141,6 @@
     SUBDIR += dtcpclient
     SUBDIR += dual-dhclient
     SUBDIR += dual-dhclient-daemon
-    SUBDIR += easysoap
     SUBDIR += ecal
     SUBDIR += echoping
     SUBDIR += empty
@@ -414,6 +413,7 @@
     SUBDIR += libpcapnav
     SUBDIR += libpfctl
     SUBDIR += libproxy
+    SUBDIR += libproxy-duktape
     SUBDIR += libproxy-gnome3
     SUBDIR += libproxy-kde
     SUBDIR += libproxy-pacrunner
@@ -571,8 +571,6 @@
     SUBDIR += openbgpd
     SUBDIR += openbgpd6
     SUBDIR += openbgpd7
-    SUBDIR += openldap24-client
-    SUBDIR += openldap24-server
     SUBDIR += openldap25-client
     SUBDIR += openldap25-server
     SUBDIR += openldap26-client
@@ -1074,6 +1072,7 @@
     SUBDIR += py-ldap
     SUBDIR += py-ldap0
     SUBDIR += py-ldap3
+    SUBDIR += py-ldapdomaindump
     SUBDIR += py-ldappool
     SUBDIR += py-libcloud
     SUBDIR += py-libdnet
@@ -1118,7 +1117,6 @@
     SUBDIR += py-pystun
     SUBDIR += py-python-barbicanclient
     SUBDIR += py-python-bitcoinrpc
-    SUBDIR += py-python-ceilometerclient
     SUBDIR += py-python-cinderclient
     SUBDIR += py-python-designateclient
     SUBDIR += py-python-glanceclient
@@ -1419,6 +1417,7 @@
     SUBDIR += rubygem-uri-redis
     SUBDIR += rubygem-uri_template
     SUBDIR += rubygem-whois
+    SUBDIR += rubygem-x
     SUBDIR += rubygem-xmlrpc
     SUBDIR += rude
     SUBDIR += rustdesk-server

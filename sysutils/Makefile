@@ -107,9 +107,6 @@
     SUBDIR += bareos-client
     SUBDIR += bareos-server
     SUBDIR += bareos-traymonitor
-    SUBDIR += bareos19-client
-    SUBDIR += bareos19-server
-    SUBDIR += bareos19-traymonitor
     SUBDIR += bareos20-client
     SUBDIR += bareos20-server
     SUBDIR += bareos20-traymonitor
@@ -605,7 +602,6 @@
     SUBDIR += ipsc
     SUBDIR += isc-cron
     SUBDIR += isomaster
-    SUBDIR += istatserver
     SUBDIR += ix-bhyve
     SUBDIR += istio
     SUBDIR += jadm
@@ -683,6 +679,7 @@
     SUBDIR += libtree
     SUBDIR += libudisks
     SUBDIR += liburcu
+    SUBDIR += limine
     SUBDIR += lineak-defaultplugin
     SUBDIR += lineak-xosdplugin
     SUBDIR += lineakd
@@ -702,7 +699,6 @@
     SUBDIR += loganalyzer
     SUBDIR += logrotate
     SUBDIR += logstalgia
-    SUBDIR += logstash-forwarder
     SUBDIR += logstash7
     SUBDIR += logstash8
     SUBDIR += logtool
@@ -1211,7 +1207,6 @@
     SUBDIR += rovclock
     SUBDIR += rpi-firmware
     SUBDIR += rset
-    SUBDIR += rsfetch
     SUBDIR += rshim-user-space
     SUBDIR += rsnapshot
     SUBDIR += rsyncbackup
@@ -1312,7 +1307,7 @@
     SUBDIR += rubygem-winrm-fs
     SUBDIR += rubygem-yell
     SUBDIR += runas
-    SUBDIR += rundeck3
+    SUBDIR += rundeck
     SUBDIR += runiq
     SUBDIR += runit
     SUBDIR += runit-faster
@@ -1423,8 +1418,11 @@
     SUBDIR += syslinux
     SUBDIR += syslog-ng
     SUBDIR += syslogger
+<<<<<<< HEAD
     SUBDIR += sysrc
     SUBDIR += sysup
+=======
+>>>>>>> freebsd/main
     SUBDIR += sysvbanner
     SUBDIR += szyszka
     SUBDIR += tai64nfrac

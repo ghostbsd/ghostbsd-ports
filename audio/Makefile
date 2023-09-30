@@ -4,7 +4,6 @@
     SUBDIR += HVSC-Update
     SUBDIR += Maaate
     SUBDIR += a2jmidid
-    SUBDIR += aacgain
     SUBDIR += abcde
     SUBDIR += abcselect
     SUBDIR += abgate-lv2
@@ -26,7 +25,6 @@
     SUBDIR += amb-plugins
     SUBDIR += amberol
     SUBDIR += ampache
-    SUBDIR += ample
     SUBDIR += amsynth
     SUBDIR += aqualung
     SUBDIR += ardour
@@ -80,7 +78,6 @@
     SUBDIR += cardinal
     SUBDIR += carla
     SUBDIR += cava
-    SUBDIR += ccaudio2
     SUBDIR += cd-discid
     SUBDIR += cddb-bundle
     SUBDIR += cdparanoia
@@ -403,7 +400,6 @@
     SUBDIR += libsonic
     SUBDIR += libsoxr
     SUBDIR += libspecbleach
-    SUBDIR += libtremor
     SUBDIR += libvorbis
     SUBDIR += libxmp
     SUBDIR += lilv
@@ -425,6 +421,7 @@
     SUBDIR += linux-c7-sdl_mixer
     SUBDIR += linux-laudio
     SUBDIR += linuxsampler
+    SUBDIR += linuxwave
     SUBDIR += liquidsfz
     SUBDIR += listener
     SUBDIR += littlefly-lv2
@@ -693,7 +690,6 @@
     SUBDIR += rhvoice
     SUBDIR += rhvoice-dictionary
     SUBDIR += rhythmbox
-    SUBDIR += rioutil
     SUBDIR += ripperx
     SUBDIR += rkr-lv2
     SUBDIR += rnnoise
@@ -852,7 +848,6 @@
     SUBDIR += waon
     SUBDIR += wavbreaker
     SUBDIR += wavegain
-    SUBDIR += waveplay
     SUBDIR += wavetral
     SUBDIR += wavpack
     SUBDIR += wavplay

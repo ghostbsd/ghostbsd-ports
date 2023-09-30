@@ -83,6 +83,7 @@
     SUBDIR += biodiff
     SUBDIR += bn-aspell
     SUBDIR += br-aspell
+    SUBDIR += bsd-spell
     SUBDIR += bsddiff
     SUBDIR += bsdgrep
     SUBDIR += btparse
@@ -387,7 +388,6 @@
     SUBDIR += libe-book
     SUBDIR += libebml
     SUBDIR += libepubgen
-    SUBDIR += libextractor
     SUBDIR += libexttextcat
     SUBDIR += libfo
     SUBDIR += libfolia
@@ -466,6 +466,7 @@
     SUBDIR += markdownfmt
     SUBDIR += markdownpart
     SUBDIR += mathml-xsd
+    SUBDIR += md2roff
     SUBDIR += md4c
     SUBDIR += mdbook
     SUBDIR += mdbook-linkcheck
@@ -1283,7 +1284,6 @@
     SUBDIR += pict
     SUBDIR += po4a
     SUBDIR += pod2mdoc
-    SUBDIR += popup
     SUBDIR += popup-stacks
     SUBDIR += ppower4
     SUBDIR += print-n-times
@@ -1301,6 +1301,7 @@
     SUBDIR += py-agate-dbf
     SUBDIR += py-agate-excel
     SUBDIR += py-alabaster
+    SUBDIR += py-ansi2html
     SUBDIR += py-anyascii
     SUBDIR += py-arabic-reshaper
     SUBDIR += py-asciinema
@@ -1657,7 +1658,6 @@
     SUBDIR += rand
     SUBDIR += randlm
     SUBDIR += rapidxml
-    SUBDIR += raptor
     SUBDIR += raptor2
     SUBDIR += rasqal
     SUBDIR += re-flex
@@ -1861,6 +1861,7 @@
     SUBDIR += rubygem-rubypants
     SUBDIR += rubygem-rugments
     SUBDIR += rubygem-sanitize
+    SUBDIR += rubygem-sanitize60
     SUBDIR += rubygem-sass
     SUBDIR += rubygem-sass-listen
     SUBDIR += rubygem-sass-rails-rails4
@@ -2114,7 +2115,6 @@
     SUBDIR += xwindiff
     SUBDIR += y2l
     SUBDIR += yali
-    SUBDIR += yamcha
     SUBDIR += yaml-mode.el
     SUBDIR += yaml.el
     SUBDIR += yamlfmt

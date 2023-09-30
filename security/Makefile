@@ -124,6 +124,7 @@
     SUBDIR += cyrus-sasl2-sql
     SUBDIR += cyrus-sasl2-srp
     SUBDIR += d0_blind_id
+    SUBDIR += debian-keyring
     SUBDIR += dehydrated
     SUBDIR += denyhosts
     SUBDIR += destroy
@@ -166,7 +167,6 @@
     SUBDIR += ftimes
     SUBDIR += fuzz
     SUBDIR += fwanalog
-    SUBDIR += fwbuilder
     SUBDIR += fwknop
     SUBDIR += fwlogwatch
     SUBDIR += gcr
@@ -920,6 +920,7 @@
     SUBDIR += py-google-auth-oauthlib
     SUBDIR += py-gpgme
     SUBDIR += py-gpsoauth
+    SUBDIR += py-greenbone-feed-sync
     SUBDIR += py-gssapi
     SUBDIR += py-gvm-tools
     SUBDIR += py-hkdf
