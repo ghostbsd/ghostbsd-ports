@@ -798,7 +798,6 @@
     SUBDIR += msiklm
     SUBDIR += msktutil
     SUBDIR += mstflint
-    SUBDIR += mstflint-lite
     SUBDIR += msyslog
     SUBDIR += mtm
     SUBDIR += mtpfs
@@ -822,7 +821,6 @@
     SUBDIR += nerdctl
     SUBDIR += netevent
     SUBDIR += nfcutils
-    SUBDIR += nfs-over-tls
     SUBDIR += nitrogen
     SUBDIR += nix
     SUBDIR += nmrpflash

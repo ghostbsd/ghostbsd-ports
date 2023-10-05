@@ -124,7 +124,7 @@ _PERL5_FROM_BIN!=	${LOCALBASE}/bin/perl -e 'printf "%vd\n", $$^V;'
 _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .  endif
-# Possible values: 11, 12, 13, 14, 15
+# Possible values: 11, 12, 13, 14, 15, 16
 PGSQL_DEFAULT?=		15
 # Possible values: 8.0, 8.1, 8.2, 8.3
 PHP_DEFAULT?=		8.1
@@ -140,7 +140,7 @@ PYTHON_DEFAULT?=	3.9
 PYTHON2_DEFAULT?=	2.7
 # Possible values: 3.0, 3.1, 3.2, 3.3
 RUBY_DEFAULT?=		3.1
-# Possible values: rust, rust-nightly
+# Possible values: rust, rust-bootstrap, rust-nightly
 RUST_DEFAULT?=		rust
 # Possible values: 4.13, 4.16
 SAMBA_DEFAULT?=		4.13

@@ -155,6 +155,7 @@
     SUBDIR += aifad
     SUBDIR += aixlog
     SUBDIR += ald
+    SUBDIR += alire
     SUBDIR += allegro
     SUBDIR += allegro5
     SUBDIR += amber
@@ -1461,6 +1462,7 @@
     SUBDIR += linenoise-ng
     SUBDIR += linux-c7-dbus-libs
     SUBDIR += linux-c7-devtools
+    SUBDIR += linux-c7-devtoolset
     SUBDIR += linux-c7-elfutils-libelf
     SUBDIR += linux-c7-elfutils-libs
     SUBDIR += linux-c7-icu
@@ -5298,6 +5300,7 @@
     SUBDIR += py-pyjsparser
     SUBDIR += py-pykdtree
     SUBDIR += py-pylama
+    SUBDIR += py-pyleri
     SUBDIR += py-pylev
     SUBDIR += py-pylibsrtp
     SUBDIR += py-pylint-django
@@ -5496,6 +5499,7 @@
     SUBDIR += py-rebulk
     SUBDIR += py-recordclass
     SUBDIR += py-recurring-ical-events
+    SUBDIR += py-red-black-tree-mod
     SUBDIR += py-rednose
     SUBDIR += py-reedsolo
     SUBDIR += py-referencing
@@ -5574,6 +5578,7 @@
     SUBDIR += py-setuptools-declarative-requirements
     SUBDIR += py-setuptools-gettext
     SUBDIR += py-setuptools-git
+    SUBDIR += py-setuptools-git-versioning
     SUBDIR += py-setuptools-pkg
     SUBDIR += py-setuptools-rust
     SUBDIR += py-setuptools44
@@ -5857,6 +5862,7 @@
     SUBDIR += py-ypy-websocket
     SUBDIR += py-yunomi
     SUBDIR += py-zarr
+    SUBDIR += py-zc.lockfile
     SUBDIR += py-zclockfile
     SUBDIR += py-zconfig
     SUBDIR += py-zfp
@@ -5876,6 +5882,7 @@
     SUBDIR += pycanberra
     SUBDIR += pycharm-ce
     SUBDIR += pycharm-pro
+    SUBDIR += pycomposefile
     SUBDIR += pycos
     SUBDIR += pycount
     SUBDIR += pydbus-common
@@ -5884,6 +5891,7 @@
     SUBDIR += pyenv
     SUBDIR += pygobject3-common
     SUBDIR += pylint
+    SUBDIR += pymsteams
     SUBDIR += pyobfuscate
     SUBDIR += pyotherside-qt5
     SUBDIR += pyside2
