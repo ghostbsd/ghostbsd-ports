@@ -17,8 +17,8 @@ RUN_DEPENDS=	sudo:security/sudo \
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
-USES =		python:3.8+
+USES =		python:3.8+ gnome gettext-tools
 USE_PYTHON=	distutils
-USE_GNOME=	pygobject3
+USE_GNOME=	pygobject3 
 
 .include <bsd.port.mk>
