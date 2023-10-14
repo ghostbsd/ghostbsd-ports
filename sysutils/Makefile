@@ -1418,11 +1418,8 @@
     SUBDIR += syslinux
     SUBDIR += syslog-ng
     SUBDIR += syslogger
-<<<<<<< HEAD
     SUBDIR += sysrc
     SUBDIR += sysup
-=======
->>>>>>> freebsd/main
     SUBDIR += sysvbanner
     SUBDIR += szyszka
     SUBDIR += tai64nfrac
