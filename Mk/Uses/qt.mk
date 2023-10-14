@@ -22,9 +22,9 @@ _QT_MK_INCLUDED=	qt.mk
 
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=		5 6
-QT5_VERSION?=		5.15.10
+QT5_VERSION?=		5.15.11
 QT6_VERSION?=		6.5.3
-PYSIDE6_VERSION?=	6.5.2
+PYSIDE6_VERSION?=	6.5.3
 
 # We accept the Qt version to be passed by either or all of the three mk files.
 .  if empty(qt_ARGS) && empty(qmake_ARGS) && empty(qt-dist_ARGS)

@@ -597,6 +597,7 @@
     SUBDIR += pianod2
     SUBDIR += picard
     SUBDIR += picard-plugins
+    SUBDIR += pipewire-module-xrdp
     SUBDIR += pithos
     SUBDIR += plasma5-kpipewire
     SUBDIR += plasma5-plasma-pa
@@ -683,7 +684,6 @@
     SUBDIR += rawrec
     SUBDIR += re
     SUBDIR += rebot3
-    SUBDIR += rem
     SUBDIR += resid
     SUBDIR += rexima
     SUBDIR += rezound

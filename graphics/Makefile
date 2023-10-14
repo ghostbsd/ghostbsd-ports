@@ -1139,7 +1139,6 @@
     SUBDIR += tgif
     SUBDIR += tif22pnm
     SUBDIR += tiff
-    SUBDIR += tiffgt
     SUBDIR += tifmerge
     SUBDIR += tikzit
     SUBDIR += tiled
