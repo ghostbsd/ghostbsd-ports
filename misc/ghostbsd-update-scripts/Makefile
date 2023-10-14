@@ -1,14 +1,12 @@
 PORTNAME=	ghostbsd-update-scripts
 PORTVERSION=	21.08.21
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	misc
 
 MAINTAINER=	ericturgeon@ghostbsd.org
 COMMENT=	GhostBSD update scripts
 
 LICENSE=	BSD
-
-RUN_DEPENDS=	version>0:os/version
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
