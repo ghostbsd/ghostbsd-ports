@@ -9,13 +9,15 @@ EXTRACT_ONLY=
 MAINTAINER=	kmoore@FreeBSD.org
 COMMENT=	FreeBSD base system source
 
+RUN_DEPENDS=	/usr/bin/clang:os/userland-devtools@${OS_FLAVOR}
+
+USES=	os:flavors
+
 PREFIX=/
 SRCDIR?=/usr/src
 NO_BUILD=	yes
 WITHOUT_FBSD10_FIX=	yes
 WRKSRC=	${BASEPKG_SRCDIR}
-
-RUN_DEPENDS=	/usr/bin/clang:os/userland-devtools@${OS_FLAVOR}
 
 .include <bsd.port.pre.mk>
 
