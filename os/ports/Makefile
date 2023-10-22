@@ -16,6 +16,8 @@ NO_BUILD=	yes
 WITHOUT_FBSD10_FIX=	yes
 WRKSRC=	${BASE_PORTSDIR}
 
+RUN_DEPENDS=	/usr/bin/clang:os/userland-devtools@${OS_FLAVOR}
+
 .include <bsd.port.pre.mk>
 
 patch:
