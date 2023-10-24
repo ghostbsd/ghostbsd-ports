@@ -1,6 +1,5 @@
 bin/networkmgr
 bin/networkmgr_configuration
-etc/devd-openrc/networkmgr.conf
 etc/devd/networkmgr.conf
 etc/sudoers.d/networkmgr
 etc/xdg/autostart/networkmgr.desktop
