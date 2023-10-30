@@ -37,7 +37,7 @@ APACHE_DEFAULT?=	2.4
 # Possible values: 5, 18
 BDB_DEFAULT?=		5
 # Possible values: 2, 3
-COROSYNC_DEFAULT?=	2
+COROSYNC_DEFAULT?=	3
 # Possible values: rust, legacy
 .  if empty(ARCH:Naarch64:Namd64:Narmv7:Ni386:Npowerpc64:Npowerpc64le:Npowerpc:Nriscv64)
 EBUR128_DEFAULT?=	rust
@@ -60,7 +60,7 @@ GCC_DEFAULT?=		8
 GCC_DEFAULT?=		12
 .  endif
 # Possible values: 9, agpl, 10
-GHOSTSCRIPT_DEFAULT?=	agpl
+GHOSTSCRIPT_DEFAULT?=	10
 # Possible values: mesa-libs, mesa-devel
 GL_DEFAULT?=		mesa-libs
 # Possible values: 1.19, 1.20, 1.21, 1.22-devel
@@ -75,11 +75,11 @@ GUILE_DEFAULT?=		2.2
 IMAGEMAGICK_DEFAULT?=	7
 # Possible values: 8, 11, 17, 18
 JAVA_DEFAULT?=		8
-# Possible values: 2.2.6, 2.3.0
+# Possible values: 2.2.6, 3.0.0
 .  if !defined(WANT_LAZARUS_DEVEL)
 LAZARUS_DEFAULT?=	2.2.6
 .  else
-LAZARUS_DEFAULT?=	2.3.0
+LAZARUS_DEFAULT?=	3.0.0
 .  endif
 # Possible values: rust, legacy
 .  if empty(ARCH:Naarch64:Namd64:Narmv7:Ni386:Npowerpc64:Npowerpc64le:Npowerpc:Nriscv64)
@@ -112,7 +112,7 @@ OPENLDAP_DEFAULT?=	26
 # Possible values: 5.34, 5.36, 5.38, devel
 .  if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
-PERL5_DEFAULT?=		5.34
+PERL5_DEFAULT?=		5.36
 .  elif !defined(PERL5_DEFAULT)
 # There's no need to replace development versions, like "5.23" with "devel"
 # because 1) nobody is supposed to use it outside of poudriere, and 2) it must
@@ -144,7 +144,7 @@ RUBY_DEFAULT?=		3.1
 RUST_DEFAULT?=		rust
 # Possible values: 4.13, 4.16
 SAMBA_DEFAULT?=		4.13
-# Possible values: base, openssl, libressl, libressl-devel
+# Possible values: base, openssl, openssl111, openssl31, openssl32, libressl, libressl-devel
 .  if !defined(SSL_DEFAULT)
 #	If no preference was set, check for an installed base version
 #	but give an installed port preference over it.
