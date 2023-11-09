@@ -457,6 +457,7 @@
     SUBDIR += midiomatic-lv2
     SUBDIR += midipp
     SUBDIR += midisharelight
+    SUBDIR += midivisualizer
     SUBDIR += mikmod
     SUBDIR += milkytracker
     SUBDIR += miniaudio
@@ -559,8 +560,7 @@
     SUBDIR += p5-CDDB_get
     SUBDIR += p5-CDDB-File
     SUBDIR += p5-Filesys-Virtual-DAAP
-    SUBDIR += p5-libvorbis
-    SUBDIR += p5-MIDI
+    SUBDIR += p5-MIDI-Perl
     SUBDIR += p5-MP3-Find
     SUBDIR += p5-MP3-ID3v1Tag
     SUBDIR += p5-MP3-Info
@@ -578,6 +578,7 @@
     SUBDIR += p5-Ogg-Vorbis-Header-PurePerl
     SUBDIR += p5-Shout
     SUBDIR += p5-tagged
+    SUBDIR += pa-applet
     SUBDIR += pacpl
     SUBDIR += padthv1-lv2
     SUBDIR += paman

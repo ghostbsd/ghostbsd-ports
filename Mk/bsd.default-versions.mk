@@ -73,7 +73,7 @@ GUILE_DEFAULT?=		2.2
 # Format:	     version[-flavor]
 # Examples:	     6-nox11, 7
 IMAGEMAGICK_DEFAULT?=	7
-# Possible values: 8, 11, 17, 18
+# Possible values: 8, 11, 17, 18, 19, 20, 21
 JAVA_DEFAULT?=		8
 # Possible values: 2.2.6, 3.0.0
 .  if !defined(WANT_LAZARUS_DEVEL)
@@ -105,7 +105,7 @@ MONO_DEFAULT?=		5.20
 MYSQL_DEFAULT?=		8.0
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
-# Possible value: 16, 18, 20, current, lts (Note: current = 20 and lts = 18)
+# Possible value: 16, 18, 20, 21, current, lts (Note: current = 21 and lts = 20)
 NODEJS_DEFAULT?=	lts
 # Possible value: 25, 26
 OPENLDAP_DEFAULT?=	26

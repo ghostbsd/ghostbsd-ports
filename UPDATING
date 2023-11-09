@@ -5,6 +5,32 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20231104:
+  AFFECTS: users of security/libressl
+  AUTHOR: brnrd@FreeBSD.org
+
+  The port has been updated to the latest stable version 3.8 of LibreSSL.
+  The shared library versions of the libraries have been bumped.
+
+  After upgrading, manually update all packages that depend on any of the
+  libraries provided by LibreSSL (libssl, libcrypto and libtls) since the
+  versions of these libraries have changed. Normally, you can obtain the
+  list of dependent software by running the following command:
+
+  # pkg info -r libressl
+
+  Then you should rebuild all ports depending on libressl to avoid dangling
+  shared library dependencies.
+
+20231031:
+  AFFECTS: users of devel/subversion-lts
+  AUTHOR: michaelo@FreeBSD.org
+
+  devel/subversion-lts has been updated from 1.10.x to the latest LTS version,
+  1.14.x. Some changes between these releases may require attention from
+  administrators or users.
+  Refer to https://subversion.apache.org/docs/release-notes/1.14.html#compat-misc for details.
+
 20231028:
   AFFECTS: users of net-mgmt/nfdump
 
@@ -64,7 +90,7 @@ you update your ports collection, before attempting any port upgrades.
 
   logging.http section has now been split into two parts, logging.http is for
   the Mailman internal code and logging.gunicorn is for Gunicorn specifically
-  since they have different logging formats. This should fix suprious errors
+  since they have different logging formats. This should fix spurious errors
   with KeyError: t that was often confusing for users.
 
   Python 3.9 is now the minimum supported version of Python.

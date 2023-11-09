@@ -35,6 +35,7 @@
     SUBDIR += coffeescript
     SUBDIR += colm
     SUBDIR += cparser
+    SUBDIR += crumb
     SUBDIR += crystal
     SUBDIR += csharp-mode.el
     SUBDIR += cython
@@ -148,6 +149,7 @@
     SUBDIR += hs-unlambda
     SUBDIR += huc
     SUBDIR += icc
+    SUBDIR += inko
     SUBDIR += intel-compute-runtime
     SUBDIR += intercal
     SUBDIR += io
@@ -222,6 +224,7 @@
     SUBDIR += njs
     SUBDIR += nll
     SUBDIR += nqc
+    SUBDIR += numbat
     SUBDIR += nwcc
     SUBDIR += nx
     SUBDIR += nyan

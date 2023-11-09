@@ -74,7 +74,6 @@
     SUBDIR += c3270
     SUBDIR += calendarsupport
     SUBDIR += ccxstream
-    SUBDIR += ceph14
     SUBDIR += cf
     SUBDIR += charm
     SUBDIR += chrony
@@ -1239,6 +1238,7 @@
     SUBDIR += rubygem-activestorage60
     SUBDIR += rubygem-activestorage61
     SUBDIR += rubygem-activestorage70
+    SUBDIR += rubygem-activestorage71
     SUBDIR += rubygem-amazon-ec2
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp
