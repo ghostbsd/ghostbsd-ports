@@ -114,7 +114,6 @@
     SUBDIR += fontpreview
     SUBDIR += fonts-indic
     SUBDIR += fonttosfnt
-    SUBDIR += fpc-libfontconfig
     SUBDIR += freefont-ttf
     SUBDIR += freefonts
     SUBDIR += fslsfonts
@@ -179,6 +178,7 @@
     SUBDIR += mkbold-mkitalic
     SUBDIR += mkfontscale
     SUBDIR += mkitalic
+    SUBDIR += monaspace
     SUBDIR += mondulkiri
     SUBDIR += monoid
     SUBDIR += montecarlo_fonts

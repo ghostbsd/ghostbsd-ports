@@ -158,9 +158,6 @@
     SUBDIR += flower
     SUBDIR += foreman-proxy
     SUBDIR += fort
-    SUBDIR += fpc-ldap
-    SUBDIR += fpc-libenet
-    SUBDIR += fpc-pcap
     SUBDIR += fping
     SUBDIR += freebsd-telnetd
     SUBDIR += freebsd-uucp
@@ -570,6 +567,7 @@
     SUBDIR += openbgpd
     SUBDIR += openbgpd6
     SUBDIR += openbgpd7
+    SUBDIR += openbgpd8
     SUBDIR += openldap25-client
     SUBDIR += openldap25-server
     SUBDIR += openldap26-client
@@ -1218,6 +1216,7 @@
     SUBDIR += remotebox
     SUBDIR += remotedesk
     SUBDIR += repeater
+    SUBDIR += revsocks
     SUBDIR += rfbproxy
     SUBDIR += rinetd
     SUBDIR += ripe-whois
@@ -1229,6 +1228,7 @@
     SUBDIR += rscsi
     SUBDIR += rsplib
     SUBDIR += rssguard
+    SUBDIR += rsyn
     SUBDIR += rsync
     SUBDIR += rsync-bpc
     SUBDIR += rtg
@@ -1317,6 +1317,7 @@
     SUBDIR += rubygem-google-cloud-spanner-admin-instance-v1
     SUBDIR += rubygem-google-cloud-spanner-v1
     SUBDIR += rubygem-google-cloud-storage
+    SUBDIR += rubygem-google-cloud-storage144
     SUBDIR += rubygem-grpc
     SUBDIR += rubygem-hangouts-chat
     SUBDIR += rubygem-http-parser

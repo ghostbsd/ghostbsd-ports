@@ -159,8 +159,6 @@
     SUBDIR += fizz
     SUBDIR += fl0p
     SUBDIR += flawfinder
-    SUBDIR += fpc-gnutls
-    SUBDIR += fpc-openssl
     SUBDIR += fprint_demo
     SUBDIR += fprintd
     SUBDIR += fragroute
@@ -962,6 +960,7 @@
     SUBDIR += py-ntlm-auth
     SUBDIR += py-oauth2client
     SUBDIR += py-oauthlib
+    SUBDIR += py-omemo-dr
     SUBDIR += py-onlykey
     SUBDIR += py-openssl
     SUBDIR += py-oscrypto

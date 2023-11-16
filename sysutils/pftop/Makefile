@@ -1,5 +1,5 @@
 PORTNAME=	pftop
-PORTVERSION=	0.9
+PORTVERSION=	0.10
 CATEGORIES=	sysutils net
 
 MAINTAINER=	grembo@FreeBSD.org
@@ -10,11 +10,9 @@ LICENSE=	BSD2CLAUSE
 
 LIB_DEPENDS=	libpfctl.so:net/libpfctl
 
+USES=		localbase
 USE_GITHUB=	yes
 GH_ACCOUNT=	grembo
-
-CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -lpfctl
 
 OPTIONS_DEFINE=	ALTQ
 

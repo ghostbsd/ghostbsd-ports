@@ -344,6 +344,7 @@
     SUBDIR += cargo-c
     SUBDIR += cargo-depgraph
     SUBDIR += cargo-generate
+    SUBDIR += cargo-mutants
     SUBDIR += cask
     SUBDIR += catch
     SUBDIR += catch2
@@ -681,39 +682,6 @@
     SUBDIR += fossil
     SUBDIR += fossology-nomos-standalone
     SUBDIR += fp16
-    SUBDIR += fpc-bfd
-    SUBDIR += fpc-dbus
-    SUBDIR += fpc-fcl-async
-    SUBDIR += fpc-fcl-base
-    SUBDIR += fpc-fcl-db
-    SUBDIR += fpc-fcl-extra
-    SUBDIR += fpc-fcl-fpcunit
-    SUBDIR += fpc-fcl-image
-    SUBDIR += fpc-fcl-js
-    SUBDIR += fpc-fcl-json
-    SUBDIR += fpc-fcl-net
-    SUBDIR += fpc-fcl-passrc
-    SUBDIR += fpc-fcl-pdf
-    SUBDIR += fpc-fcl-registry
-    SUBDIR += fpc-fcl-report
-    SUBDIR += fpc-fcl-res
-    SUBDIR += fpc-fcl-sdo
-    SUBDIR += fpc-fcl-sound
-    SUBDIR += fpc-fcl-stl
-    SUBDIR += fpc-fcl-web
-    SUBDIR += fpc-fcl-xml
-    SUBDIR += fpc-fppkg
-    SUBDIR += fpc-fv
-    SUBDIR += fpc-gdbint
-    SUBDIR += fpc-libmagic
-    SUBDIR += fpc-newt
-    SUBDIR += fpc-odata
-    SUBDIR += fpc-pthreads
-    SUBDIR += fpc-regexpr
-    SUBDIR += fpc-sdl
-    SUBDIR += fpc-symbolic
-    SUBDIR += fpc-tplylib
-    SUBDIR += fpc-zlib
     SUBDIR += fpp
     SUBDIR += freebsd-gcc12
     SUBDIR += freebsd-gcc9
@@ -1030,6 +998,7 @@
     SUBDIR += isfreedesktop
     SUBDIR += isl
     SUBDIR += ispc
+    SUBDIR += ittapi
     SUBDIR += ivykis
     SUBDIR += jam
     SUBDIR += jansson
@@ -1062,6 +1031,7 @@
     SUBDIR += jsonnet
     SUBDIR += jsonrpc-glib
     SUBDIR += juce
+    SUBDIR += juce706
     SUBDIR += judy
     SUBDIR += jwasm
     SUBDIR += kBuild
@@ -1497,6 +1467,7 @@
     SUBDIR += llnextgen
     SUBDIR += llvm
     SUBDIR += llvm-cheri
+    SUBDIR += llvm-cheriot
     SUBDIR += llvm-devel
     SUBDIR += llvm-morello
     SUBDIR += llvm10
@@ -4901,6 +4872,7 @@
     SUBDIR += py-jsonschema3
     SUBDIR += py-jsonschema417
     SUBDIR += py-jsonsir
+    SUBDIR += py-junitparser
     SUBDIR += py-jupyter-client
     SUBDIR += py-jupyter-collaboration
     SUBDIR += py-jupyter-core
@@ -5272,6 +5244,7 @@
     SUBDIR += py-pycapsicum
     SUBDIR += py-pycerberus
     SUBDIR += py-pycmd
+    SUBDIR += py-pycnite
     SUBDIR += py-pycocotools
     SUBDIR += py-pycodeexport
     SUBDIR += py-pycodestyle
@@ -5906,6 +5879,7 @@
     SUBDIR += pyenv
     SUBDIR += pygobject3-common
     SUBDIR += pylint
+    SUBDIR += pylyzer
     SUBDIR += pymsteams
     SUBDIR += pyobfuscate
     SUBDIR += pyotherside-qt5
@@ -6307,6 +6281,7 @@
     SUBDIR += rubygem-aws-sdk-lakeformation
     SUBDIR += rubygem-aws-sdk-lambda
     SUBDIR += rubygem-aws-sdk-lambdapreview
+    SUBDIR += rubygem-aws-sdk-launchwizard
     SUBDIR += rubygem-aws-sdk-lex
     SUBDIR += rubygem-aws-sdk-lexmodelbuildingservice
     SUBDIR += rubygem-aws-sdk-lexmodelsv2
@@ -6717,6 +6692,7 @@
     SUBDIR += rubygem-cucumber-core
     SUBDIR += rubygem-cucumber-cucumber-expressions
     SUBDIR += rubygem-cucumber-messages
+    SUBDIR += rubygem-cucumber-messages22
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
     SUBDIR += rubygem-cucumber-tag-expressions5
@@ -6795,6 +6771,7 @@
     SUBDIR += rubygem-etc
     SUBDIR += rubygem-event_emitter
     SUBDIR += rubygem-event_stream_parser
+    SUBDIR += rubygem-event_stream_parser0
     SUBDIR += rubygem-eventmachine
     SUBDIR += rubygem-excon
     SUBDIR += rubygem-execjs
@@ -6945,6 +6922,7 @@
     SUBDIR += rubygem-grape-route-helpers
     SUBDIR += rubygem-grape-swagger
     SUBDIR += rubygem-grape-swagger-entity
+    SUBDIR += rubygem-grape1
     SUBDIR += rubygem-grape17
     SUBDIR += rubygem-grape_logging
     SUBDIR += rubygem-graphiql-rails
@@ -7306,6 +7284,8 @@
     SUBDIR += rubygem-ruby-fogbugz
     SUBDIR += rubygem-ruby-libvirt
     SUBDIR += rubygem-ruby-lsp
+    SUBDIR += rubygem-ruby-lsp-rails
+    SUBDIR += rubygem-ruby-lsp-rspec
     SUBDIR += rubygem-ruby-macho
     SUBDIR += rubygem-ruby-magic
     SUBDIR += rubygem-ruby-ole
@@ -7806,6 +7786,7 @@
     SUBDIR += upslug
     SUBDIR += urjtag
     SUBDIR += utf8cpp
+    SUBDIR += utf8cpp3
     SUBDIR += uthash
     SUBDIR += util-linux
     SUBDIR += valgrind

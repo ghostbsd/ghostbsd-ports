@@ -278,6 +278,7 @@
     SUBDIR += dqfun
     SUBDIR += drgeo
     SUBDIR += dsdp
+    SUBDIR += dsfmt
     SUBDIR += dune-alugrid
     SUBDIR += dune-common
     SUBDIR += dune-curvedgeometry
@@ -337,9 +338,6 @@
     SUBDIR += flopc++
     SUBDIR += form
     SUBDIR += fparser
-    SUBDIR += fpc-fftw
-    SUBDIR += fpc-gmp
-    SUBDIR += fpc-numlib
     SUBDIR += fplll
     SUBDIR += freefem++
     SUBDIR += fricas
@@ -464,6 +462,7 @@
     SUBDIR += librsb
     SUBDIR += libsemigroups
     SUBDIR += libsharp2
+    SUBDIR += libtexprintf
     SUBDIR += libtommath
     SUBDIR += libxls
     SUBDIR += libxlsxwriter
@@ -880,10 +879,12 @@
     SUBDIR += py-GridDataFormats
     SUBDIR += py-MutatorMath
     SUBDIR += py-PuLP
+    SUBDIR += py-Py-BOBYQA
     SUBDIR += py-PyMetis
     SUBDIR += py-PySCIPOpt
     SUBDIR += py-PyWavelets
     SUBDIR += py-Pyomo
+    SUBDIR += py-SQNomad
     SUBDIR += py-affine
     SUBDIR += py-algopy
     SUBDIR += py-altgraph
