@@ -1,5 +1,5 @@
 PORTNAME=	yuzu
-PORTVERSION=	s20231118
+PORTVERSION=	s20231129
 CATEGORIES=	emulators wayland
 .if make(makesum)
 MASTER_SITES=	https://api.yuzu-emu.org/gamedb/?dummy=/:gamedb
@@ -8,6 +8,9 @@ MASTER_SITES=	LOCAL/jbeich:gamedb
 .endif
 DISTFILES=	${PORTNAME}-s20230424/compatibility_list.json:gamedb
 EXTRACT_ONLY=	${DISTFILES:N*\:gamedb:C/\:.*//}
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	df96caec793f.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/12227
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo Switch emulator/debugger
@@ -25,13 +28,13 @@ ONLY_FOR_ARCHS_REASON=	requires int128 and dynarmic backend
 
 BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 		nlohmann-json>0:devel/nlohmann-json \
+		simpleini>0:devel/simpleini \
 		xbyak>0:devel/xbyak \
 		glslangValidator:graphics/glslang \
 		vulkan-headers>0:graphics/vulkan-headers
 LIB_DEPENDS=	liblz4.so:archivers/liblz4 \
 		libzstd.so:archivers/zstd \
 		libopus.so:audio/opus \
-		libinih.so:devel/inih \
 		libfmt.so:devel/libfmt \
 		libavcodec.so:multimedia/ffmpeg \
 		libenet.so:net/enet
@@ -46,7 +49,7 @@ qt6_OPTIONS_EXCLUDE=	QT5
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	feb60de5c3
+GH_TAGNAME=	9dc9aaf4af
 GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
 		yuzu-emu:sirit:ab75463:sirit/externals/sirit \
 		GPUOpen-LibrariesAndSDKs:VulkanMemoryAllocator:v3.0.1-114-g2f382df:VulkanMemoryAllocator/externals/VulkanMemoryAllocator \
@@ -54,7 +57,6 @@ GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
 		MerryMage:dynarmic:6.5.0-11-g0df09e2f:dynarmic/externals/dynarmic \
 		arun11299:cpp-jwt:v1.4-18-g10ef573:cpp_jwt/externals/cpp-jwt \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
-		benhoyt:inih:r57:inih/externals/inih/inih \
 		eggert:tz:2022g-11-g16ce126a:tz/externals/nx_tzdb/tzdb_to_nx/externals/tz/tz \
 		kinetiknz:cubeb:cubeb-0.2-1452-g48689ae:cubeb/externals/cubeb \
 		lat9nq:tzdb_to_nx:221202:tzdb_to_nx/externals/nx_tzdb/tzdb_to_nx \

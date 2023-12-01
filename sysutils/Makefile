@@ -863,7 +863,7 @@
     SUBDIR += openipmi
     SUBDIR += opensbi
     SUBDIR += openseachest
-    SUBDIR += openshift-install
+    SUBDIR += opentofu
     SUBDIR += openupsd
     SUBDIR += openzfs
     SUBDIR += openzfs-kmod
@@ -877,6 +877,9 @@
     SUBDIR += p5-BSD-Process
     SUBDIR += p5-BSD-Sysctl
     SUBDIR += p5-BSD-getloadavg
+    SUBDIR += p5-BackupPC-XS
+    SUBDIR += p5-Brackup
+    SUBDIR += p5-Command-Runner
     SUBDIR += p5-Device-RAID-Poller
     SUBDIR += p5-Dir-Purge
     SUBDIR += p5-File-BackupCopy
@@ -1076,7 +1079,6 @@
     SUBDIR += pwsafe
     SUBDIR += pxattr
     SUBDIR += pxp-agent
-    SUBDIR += p5-Command-Runner
     SUBDIR += py-ansible-compat
     SUBDIR += py-ansible-core
     SUBDIR += py-ansible-lint
@@ -1662,6 +1664,7 @@
     SUBDIR += xin
     SUBDIR += xjobs
     SUBDIR += xmbmon
+    SUBDIR += xnvme
     SUBDIR += xorriso
     SUBDIR += xosview
     SUBDIR += xpipe

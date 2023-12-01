@@ -182,6 +182,7 @@
     SUBDIR += qt6-charts
     SUBDIR += qt6-datavis3d
     SUBDIR += qt6-declarative
+    SUBDIR += qt6-graphs
     SUBDIR += qt6-quick3d
     SUBDIR += qt6-quicktimeline
     SUBDIR += qt6-shadertools
@@ -228,8 +229,8 @@
     SUBDIR += vte
     SUBDIR += vte3
     SUBDIR += wlroots
-    SUBDIR += wlroots-devel
     SUBDIR += wlroots015
+    SUBDIR += wlroots016
     SUBDIR += wmapp
     SUBDIR += wxgtk30
     SUBDIR += wxgtk32

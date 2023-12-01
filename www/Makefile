@@ -132,10 +132,10 @@
     SUBDIR += davix
     SUBDIR += dddbl
     SUBDIR += ddgr
+    SUBDIR += deforaos-surfer
     SUBDIR += deno
     SUBDIR += devd
     SUBDIR += dezoomify-rs
-    SUBDIR += dfileserver
     SUBDIR += dillo2
     SUBDIR += dojo
     SUBDIR += dokuwiki
@@ -230,7 +230,6 @@
     SUBDIR += gstreamer1-plugins-srt
     SUBDIR += gtkhtml4
     SUBDIR += guacamole-client
-    SUBDIR += guile-www
     SUBDIR += gurl
     SUBDIR += gwsocket
     SUBDIR += h2c
@@ -296,6 +295,7 @@
     SUBDIR += kineto
     SUBDIR += kiwix-tools
     SUBDIR += kohana
+    SUBDIR += ladybird
     SUBDIR += lagrange
     SUBDIR += larbin
     SUBDIR += libapreq2
@@ -1945,7 +1945,6 @@
     SUBDIR += rubygem-amazon-ecs
     SUBDIR += rubygem-anemone
     SUBDIR += rubygem-asana
-    SUBDIR += rubygem-asana1
     SUBDIR += rubygem-async-http
     SUBDIR += rubygem-async-pool
     SUBDIR += rubygem-async-rest
@@ -2234,7 +2233,6 @@
     SUBDIR += rubygem-robots
     SUBDIR += rubygem-roda
     SUBDIR += rubygem-rqrcode
-    SUBDIR += rubygem-rqrcode-rails3
     SUBDIR += rubygem-rqrcode2
     SUBDIR += rubygem-rqrcode_core
     SUBDIR += rubygem-rss
@@ -2349,6 +2347,7 @@
     SUBDIR += suphp
     SUBDIR += surf
     SUBDIR += swiggle
+    SUBDIR += sws
     SUBDIR += tcexam
     SUBDIR += tclhttpd
     SUBDIR += tclwebtest

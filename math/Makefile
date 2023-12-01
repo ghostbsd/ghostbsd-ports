@@ -380,7 +380,6 @@
     SUBDIR += grace
     SUBDIR += gravity
     SUBDIR += gretl
-    SUBDIR += gri
     SUBDIR += grpn
     SUBDIR += gsl
     SUBDIR += half
@@ -498,7 +497,6 @@
     SUBDIR += mesquite
     SUBDIR += metis
     SUBDIR += mfem
-    SUBDIR += mingw32-libgmp
     SUBDIR += minisat
     SUBDIR += minizinc
     SUBDIR += minizinc-ide

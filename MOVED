@@ -1472,7 +1472,6 @@ mail/claws-mail-fancy||2019-03-24|Has expired: webkit-gtk* last release in 2016 
 multimedia/miro||2019-03-24|Has expired: webkit-gtk* last release in 2016 and security issues
 net/libproxy-webkit||2019-03-24|Has expired: webkit-gtk* last release in 2016 and security issues
 net-im/hotot||2019-03-24|Has expired: webkit-gtk* last release in 2016 and security issues
-www/deforaos-surfer||2019-03-24|Has expired: webkit-gtk* last release in 2016 and security issues
 www/gnome-web-photo||2019-03-24|Has expired: webkit-gtk* last release in 2016 and security issue
 www/hs-webkit||2019-03-24|Has expired: webkit-gtk* last release in 2016 and security issues
 www/p5-Gtk2-WebKit||2019-03-24|Has expired: webkit-gtk* last release in 2016 and security issues
@@ -4410,7 +4409,6 @@ www/redmine-sidebar_hide||2020-05-05|Has expired: Broken for more than 6 months
 www/rssowl||2020-05-05|Has expired: Broken for more than 6 months
 www/skytemplate||2020-05-05|Has expired: Broken for more than 6 months
 www/surfraw||2020-05-05|Has expired: Broken for more than 6 months
-www/sws||2020-05-05|Has expired: Broken for more than 6 months
 www/tickr||2020-05-05|Has expired: Broken for more than 6 months
 www/tinytinyhttpd||2020-05-05|Has expired: Broken for more than 6 months
 www/udmsearch||2020-05-05|Has expired: Broken for more than 6 months
@@ -4934,7 +4932,6 @@ audio/cplay||2020-09-19|Has expired: Uses deprecated version of python
 audio/cpp-xmms2||2020-09-19|Has expired: Uses deprecated version of python
 audio/p5-xmms2||2020-09-19|Has expired: Uses deprecated version of python
 biology/tophat||2020-09-19|Has expired: Uses deprecated version of python
-chinese/ibus-array||2020-09-19|Has expired: Uses deprecated version of python
 comms/congruity||2020-09-19|Has expired: Uses deprecated version of python
 comms/libbtbb||2020-09-19|Has expired: Uses deprecated version of python
 databases/mtools-mongodb||2020-09-19|Has expired: Uses deprecated version of python
@@ -6296,7 +6293,6 @@ security/rubygem-bcrypt_pbkdf10|security/rubygem-bcrypt_pbkdf|2022-01-11|Remove 
 math/gotoblas|math/openblas|2022-01-15|Remove obsoleted port. Use math/openblas instead
 net/pipsecd||2022-01-15|Has expired: Abandonware, current release is from 1999 and uses insecure encryption algorithms
 devel/maven31|devel/maven|2022-01-15|Has expired: Outdated, unsupported upstream
-devel/wasi-compiler-rt12||2022-01-15|Has expired: this ports exists solely for building Firefox 95+ in 2021Q4
 devel/e2fsprogs-libss||2022-01-17|Folded back into sysutils/e2fsprogs, which was the sole user
 lang/spidermonkey60|lang/spidermonkey78|2022-01-18|Has expired: Requires python2 to build
 shells/ammonite|devel/ammonite|2022-01-18|Ammonite dropped built-in shell support
@@ -7193,7 +7189,6 @@ sysutils/cfengine-masterfiles317||2022-12-10|Has expired: Expire one year after 
 net-mgmt/icingaweb2-module-ipl|net-mgmt/icinga-php-library|2022-12-13|Renamed by project
 x11/darkman|accessibility/darkman|2022-12-14|Moved to a better category
 net/samba412||2022-12-18|Has expired: Reached its EoL on September 20, 2021
-graphics/opencoloriov1|graphics/opencolorio|2022-12-20|Used by blender-lts28 which is EOL'd
 graphics/openimageio-ociov1|graphics/openimageio|2022-12-20|Used by blender-lts28 which is EOL'd
 textproc/retext|editors/retext|2022-12-21|Moved to a better category
 math/vtk6||2022-12-24|Has expired: Old version not used anywhere in the ports tree
@@ -7623,10 +7618,7 @@ sysutils/intel-qcu|sysutils/intel-epct|2023-06-14|Moved to sysutils/intel-epct
 multimedia/obs-qtwebkit||2023-06-16|Has expired: OBS ships with their own browser plugin from version 25 onwards
 games/tuxmath||2023-06-16|Has expired: Upstream last release was in 2011
 emulators/skyeye||2023-06-17|Has expired: Upstream last release was in 2014
-x11/deforaos-panel||2023-06-18|Has expired: Broken on all supported versions
 x11/deforaos-desktop||2023-06-18|Removed, needs expired x11/deforaos-panel
-x11/deforaos-locker||2023-06-18|Removed, needs expired x11/deforaos-panel
-comms/deforaos-phone||2023-06-18|Removed, needs expired x11/deforaos-panel
 textproc/apache-solr9|textproc/apache-solr|2023-06-18|New stable release
 games/poker-eval||2023-06-20|Upstream vanished
 graphics/3d-ascii-viewer-c|graphics/3d-ascii-viewer|2023-06-21|Project was renamed
@@ -8078,3 +8070,34 @@ x11-toolkits/fpc-xforms|lang/fpc|2023-11-12|This port was merged into lang/fpc
 x11-toolkits/fpc-gtk2|lang/fpc|2023-11-12|This port was merged into lang/fpc
 sysutils/fpc-users|lang/fpc|2023-11-14|This port was merged into lang/fpc
 net/py-ldap|net/py-python-ldap|2023-11-17|Rename to conform upstream name
+devel/wasi-compiler-rt11||2023-11-20|Version no longer supported as a WASI component
+devel/mingw32-libyaml||2023-11-21|Has expired: Last upstream release was in 2014 and mingw32 project is defunct
+devel/mingw32-pdcurses||2023-11-21|Has expired: Last upstream release was in 2009 and mingw32 project is defunct
+devel/mingw32-openssl||2023-11-21|Has expired: Upstream reached EOL and mingw32 project is defunct
+devel/mingw32-pthreads||2023-11-21|Has expired: Last upstream release was in 2012 and mingw32 project is defunct
+devel/mingw32-directx||2023-11-21|Has expired: Last upstream release was in 2002 and mingw32 project is more or less dead
+math/mingw32-libgmp||2023-11-21|Has expired: Broken for more than a year
+devel/mingw32-libffi||2023-11-21|Has expired: Last upstream release was in 2014 and mingw32 project is defunct
+devel/mingw32-bin-msvcrt||2023-11-21|Has expired: Last upstream release was in 2014 and project mingw32 is defunct
+devel/mingw32-zlib||2023-11-21|Has expired: Last upstream release was in 2014 and project mingw32 is defunct
+devel/mingw32-gcc||2023-11-21|Has expired: Upstream release was in 2015 and mingw32 project is defunct
+www/guile-www||2023-11-21|Has expired: Last upstream release was in 2002 and no longer relevant nowadays
+x11-toolkits/wlroots-devel|x11-toolkits/wlroots|2023-11-21|Out of date: use x11-toolkits/wlroots for now
+games/suyimazu|games/mizuma|2023-11-22|Project renamed
+www/dfileserver||2023-11-22|Has expired: Obsolete, consider using www/darkhttpd
+devel/sdts++||2023-11-22|Has expired: Last upstream release was in 2003 and both MASTER_SITES and WWW are unreachable
+databases/postgis30||2023-11-22|Removed
+math/gri||2023-11-26|Has expired: Last upstream release was in 2012 and gnuplot generates better results
+comms/telldus-core||2023-11-26|Has expired: BROKEN for more than a year
+sysutils/openshift-install||2023-11-26|Has expired: BROKEN for more than a year
+devel/capnproto080|devel/capnproto1|2023-11-27|Remove obsoleted port. Use devel/capnproto1 instead
+devel/py-cachetools3|devel/py-cachetools|2023-11-27|Remove obsoleted port. Use devel/py-cachetools instead
+www/rubygem-asana1|www/rubygem-asana|2023-11-27|Remove obsoleted port. Use www/rubygem-asana instead
+devel/rubygem-rdoc63|devel/rubygem-rdoc|2023-11-27|Remove obsoleted port. Use devel/rubygem-rdoc instead
+security/rubygem-devise-two-factor40-rails70|security/rubygem-devise-two-factor41-rails70|2023-11-27|Remove obsoleted port. Use security/rubygem-devise-two-factor41-rails70 instead
+www/rubygem-rqrcode-rails3|www/rubygem-rqrcode|2023-11-27|Remove obsoleted port. Use www/rubygem-rqrcode instead
+textproc/py-pygments-25|textproc/py-pygments|2023-11-27|Remove obsoleted port. Use textproc/py-pygments instead
+devel/rubygem-devise48-rails70|devel/rubygem-devise-rails70|2023-11-29|Use devel/rubygem-devise-rails70 instead
+textproc/rubygem-rouge41|textproc/rubygem-rouge|2023-11-29|Use textproc/rubygem-rouge instead
+devel/rubygem-aws-sdk-s31121|devel/rubygem-aws-sdk-s3|2023-11-29|Use devel/rubygem-aws-sdk-s3 instead
+games/py-mnemosyne|games/py-mnemosyne-proj|2023-11-30|Rename to match PyPI name

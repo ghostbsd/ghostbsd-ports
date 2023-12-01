@@ -633,6 +633,7 @@
     SUBDIR += minetestmapper
     SUBDIR += mirrormagic
     SUBDIR += miscom
+    SUBDIR += mizuma
     SUBDIR += mkhexgrid
     SUBDIR += moagg
     SUBDIR += monsterz
@@ -796,7 +797,7 @@
     SUBDIR += py-cbeams
     SUBDIR += py-discord.py
     SUBDIR += py-fife
-    SUBDIR += py-mnemosyne
+    SUBDIR += py-mnemosyne-proj
     SUBDIR += py-pychess
     SUBDIR += py-pysol-cards
     SUBDIR += py-sgflib
@@ -949,7 +950,6 @@
     SUBDIR += supertux
     SUBDIR += supertux2
     SUBDIR += supertuxkart
-    SUBDIR += suyimazu
     SUBDIR += swell-foop
     SUBDIR += sxsame
     SUBDIR += tads

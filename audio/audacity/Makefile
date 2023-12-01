@@ -1,6 +1,7 @@
 PORTNAME=	audacity
 DISTVERSIONPREFIX=	Audacity-
-DISTVERSION=	3.4.1
+DISTVERSION=	3.4.2
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	xxjack12xx@gmail.com
@@ -147,6 +148,13 @@ VST_CMAKE_BOOL=		audacity_use_vst
 CMAKE_ARGS+=	-DHAVE_MMX:BOOL=OFF \
 		-DHAVE_SSE:BOOL=OFF \
 		-DHAVE_SSE2:BOOL=OFF
+.endif
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1302508
+# Workarounds for buggy libc++ std::conjunction
+EXTRA_PATCHES=	${PATCHDIR}/extra-libraries_lib-utility_TypeList.cpp \
+		${PATCHDIR}/extra-libraries_lib-utility_TypeList.h \
+		${PATCHDIR}/extra-libraries_lib-utility_TypeSwitch.h
 .endif
 
 post-install:
