@@ -877,8 +877,6 @@
     SUBDIR += p5-BSD-Process
     SUBDIR += p5-BSD-Sysctl
     SUBDIR += p5-BSD-getloadavg
-    SUBDIR += p5-BackupPC-XS
-    SUBDIR += p5-Brackup
     SUBDIR += p5-Command-Runner
     SUBDIR += p5-Device-RAID-Poller
     SUBDIR += p5-Dir-Purge
@@ -1423,7 +1421,6 @@
     SUBDIR += syslinux
     SUBDIR += syslog-ng
     SUBDIR += syslogger
-    SUBDIR += sysrc
     SUBDIR += sysup
     SUBDIR += sysvbanner
     SUBDIR += szyszka
