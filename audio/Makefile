@@ -227,7 +227,6 @@
     SUBDIR += gonic
     SUBDIR += goobox
     SUBDIR += gqradio
-    SUBDIR += gradio
     SUBDIR += gramofile
     SUBDIR += grip
     SUBDIR += gsequencer
@@ -462,14 +461,12 @@
     SUBDIR += mixer.app
     SUBDIR += mixertui
     SUBDIR += mixxx
-    SUBDIR += mixxx22
     SUBDIR += mkcue
     SUBDIR += mmtc
     SUBDIR += moc
     SUBDIR += modplug-tools
     SUBDIR += moodbar
     SUBDIR += moony-lv2
-    SUBDIR += mous
     SUBDIR += mousai
     SUBDIR += mp-player
     SUBDIR += mp3-archive-tools
