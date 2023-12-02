@@ -9,10 +9,6 @@ EXTRACT_ONLY=
 MAINTAINER=	kmoore@FreeBSD.org
 COMMENT=	FreeBSD base system source
 
-RUN_DEPENDS=	/usr/bin/clang:os/userland-devtools@${OS_FLAVOR}
-
-USES=	os:flavors
-
 PREFIX=/
 SRCDIR?=/usr/src
 NO_BUILD=	yes
