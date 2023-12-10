@@ -9,7 +9,7 @@ share/glib-2.0/schemas/91_org.cinnamon.theme.gschema.override
 share/glib-2.0/schemas/91_org.gnome.terminal.legacy.settings.gschema.override
 share/glib-2.0/schemas/91_org.gnome.totem.settings.gschema.override
 share/glib-2.0/schemas/91_org.nemo.desktop.gschema.override
-/usr/share/skel/cinnamon/configs/menu@cinnamon.org/menu@cinnamon.org.json
-@dir /usr/share/skel/cinnamon/configs/menu@cinnamon.org
-@dir /usr/share/skel/cinnamon/configs
-@dir /usr/share/skel/cinnamon
+/usr/share/skel/dot.cinnamon/configs/menu@cinnamon.org/menu@cinnamon.org.json
+@dir /usr/share/skel/dot.cinnamon/configs/menu@cinnamon.org
+@dir /usr/share/skel/dot.cinnamon/configs
+@dir /usr/share/skel/dot.cinnamon
