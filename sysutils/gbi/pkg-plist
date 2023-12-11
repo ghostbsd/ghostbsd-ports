@@ -1,5 +1,6 @@
 bin/gbi
-lib/gbi/addUser.py
+lib/gbi/add_admin.py
+lib/gbi/add_users.py
 lib/gbi/backend-query/detect-laptop.sh
 lib/gbi/backend-query/detect-nics.sh
 lib/gbi/backend-query/detect-sheme.sh
@@ -29,6 +30,7 @@ lib/gbi/disk.png
 lib/gbi/end.py
 lib/gbi/error.py
 lib/gbi/gbiWindow.py
+lib/gbi/gbi_common.py
 lib/gbi/ghostbsd-style.css
 lib/gbi/image/G_logo.gif
 lib/gbi/image/disk.png
@@ -44,7 +46,7 @@ lib/gbi/laptop.png
 lib/gbi/network_setup.py
 lib/gbi/partition.py
 lib/gbi/partition_handler.py
-lib/gbi/root.py
+lib/gbi/setup_system.py
 lib/gbi/sys_handler.py
 lib/gbi/timezone.py
 lib/gbi/use_ufs.py
