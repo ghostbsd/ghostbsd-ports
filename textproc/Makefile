@@ -521,7 +521,9 @@
     SUBDIR += openjade
     SUBDIR += opensearch
     SUBDIR += opensearch-dashboards
+    SUBDIR += opensearch-dashboards210
     SUBDIR += opensearch13
+    SUBDIR += opensearch210
     SUBDIR += opensp
     SUBDIR += openvanilla-framework
     SUBDIR += or-aspell
@@ -1521,6 +1523,7 @@
     SUBDIR += py-python-markdown-math
     SUBDIR += py-python-pptx
     SUBDIR += py-python-slugify
+    SUBDIR += py-python-ulid
     SUBDIR += py-python-xmp-toolkit
     SUBDIR += py-pytidylib
     SUBDIR += py-pytkdocs
@@ -1992,7 +1995,6 @@
     SUBDIR += ssddiff
     SUBDIR += stardict-dict-fa_IR
     SUBDIR += stardict-dictd_mova
-    SUBDIR += stardict-quick
     SUBDIR += stardict-rptts
     SUBDIR += stardict3
     SUBDIR += sv-aspell

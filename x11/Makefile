@@ -146,6 +146,7 @@
     SUBDIR += kb2mb2
     SUBDIR += kde-baseapps
     SUBDIR += kde5
+    SUBDIR += kde6
     SUBDIR += kdisplay
     SUBDIR += keybinder
     SUBDIR += keybinder-gtk3
@@ -172,6 +173,7 @@
     SUBDIR += kickoff
     SUBDIR += kitty
     SUBDIR += konsole
+    SUBDIR += konsole-devel
     SUBDIR += lavalauncher
     SUBDIR += lemonbar
     SUBDIR += lemonbar-xft
@@ -324,6 +326,20 @@
     SUBDIR += plasma5-plasma-desktop
     SUBDIR += plasma5-plasma-integration
     SUBDIR += plasma5-plasma-workspace
+    SUBDIR += plasma6-kactivitymanagerd
+    SUBDIR += plasma6-kgamma
+    SUBDIR += plasma6-kglobalacceld
+    SUBDIR += plasma6-kscreen
+    SUBDIR += plasma6-kwayland
+    SUBDIR += plasma6-layer-shell-qt
+    SUBDIR += plasma6-libkscreen
+    SUBDIR += plasma6-libplasma
+    SUBDIR += plasma6-plasma
+    SUBDIR += plasma6-plasma-activities
+    SUBDIR += plasma6-plasma-activities-stats
+    SUBDIR += plasma6-plasma-desktop
+    SUBDIR += plasma6-plasma-integration
+    SUBDIR += plasma6-plasma-workspace
     SUBDIR += pmenu
     SUBDIR += polybar
     SUBDIR += printscreen
@@ -375,6 +391,7 @@
     SUBDIR += setlayout
     SUBDIR += setxkbmap
     SUBDIR += sfwbar
+    SUBDIR += shaderbg
     SUBDIR += shikane
     SUBDIR += shotman
     SUBDIR += showkeys
@@ -405,6 +422,7 @@
     SUBDIR += swayimg
     SUBDIR += swaylock
     SUBDIR += swaylock-effects
+    SUBDIR += swaylock-plugin
     SUBDIR += swaync
     SUBDIR += swayr
     SUBDIR += swayrbar
@@ -469,6 +487,7 @@
     SUBDIR += wob
     SUBDIR += wofi
     SUBDIR += workrave
+    SUBDIR += wscreensaver
     SUBDIR += wshowkeys
     SUBDIR += wtype
     SUBDIR += wvkbd
@@ -558,6 +577,7 @@
     SUBDIR += xkbctrl
     SUBDIR += xkbevd
     SUBDIR += xkbind
+    SUBDIR += xkblayout-state
     SUBDIR += xkbprint
     SUBDIR += xkbset
     SUBDIR += xkbutils

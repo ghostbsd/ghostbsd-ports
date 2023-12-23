@@ -322,6 +322,7 @@
     SUBDIR += fastops
     SUBDIR += fcl
     SUBDIR += fcl05
+    SUBDIR += fend
     SUBDIR += fenics-basix
     SUBDIR += fflas-ffpack
     SUBDIR += fftw
@@ -352,7 +353,6 @@
     SUBDIR += gemmlowp
     SUBDIR += geogebra
     SUBDIR += geogram
-    SUBDIR += geonext
     SUBDIR += gexpr
     SUBDIR += gf2x
     SUBDIR += gfan
@@ -661,6 +661,7 @@
     SUBDIR += onednn252
     SUBDIR += openblas
     SUBDIR += openfst
+    SUBDIR += openfst-vosk
     SUBDIR += openlibm
     SUBDIR += openmesh
     SUBDIR += openscop
@@ -876,6 +877,7 @@
     SUBDIR += py-Diofant
     SUBDIR += py-GridDataFormats
     SUBDIR += py-MutatorMath
+    SUBDIR += py-POT
     SUBDIR += py-PuLP
     SUBDIR += py-Py-BOBYQA
     SUBDIR += py-PyMetis

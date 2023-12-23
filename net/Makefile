@@ -163,6 +163,7 @@
     SUBDIR += freebsd-telnetd
     SUBDIR += freebsd-uucp
     SUBDIR += freediameter
+    SUBDIR += freeipa-client
     SUBDIR += freeradius-client
     SUBDIR += freeradius3
     SUBDIR += freerdp
@@ -341,6 +342,7 @@
     SUBDIR += kontactinterface
     SUBDIR += kpeoplevcard
     SUBDIR += kpimtextedit
+    SUBDIR += krakend-ce
     SUBDIR += krdc
     SUBDIR += krfb
     SUBDIR += krill
@@ -385,7 +387,6 @@
     SUBDIR += libiscsi
     SUBDIR += libkgapi
     SUBDIR += libksieve
-    SUBDIR += libkvkontakte
     SUBDIR += liblinphone
     SUBDIR += libmaia
     SUBDIR += libmateweather
@@ -425,6 +426,7 @@
     SUBDIR += librsync
     SUBDIR += libsignal-protocol-c
     SUBDIR += libslirp
+    SUBDIR += libsockpp
     SUBDIR += libsrtp2
     SUBDIR += libtnl
     SUBDIR += libtrace
@@ -1034,7 +1036,6 @@
     SUBDIR += py-aiohttp-socks
     SUBDIR += py-amqp
     SUBDIR += py-amqplib
-    SUBDIR += py-anonfile
     SUBDIR += py-avahi
     SUBDIR += py-blobfile
     SUBDIR += py-bonsai
@@ -1310,8 +1311,13 @@
     SUBDIR += rubygem-google-cloud-core
     SUBDIR += rubygem-google-cloud-env
     SUBDIR += rubygem-google-cloud-errors
+    SUBDIR += rubygem-google-cloud-location
     SUBDIR += rubygem-google-cloud-logging
     SUBDIR += rubygem-google-cloud-logging-v2
+    SUBDIR += rubygem-google-cloud-monitoring
+    SUBDIR += rubygem-google-cloud-monitoring-dashboard-v1
+    SUBDIR += rubygem-google-cloud-monitoring-metrics_scope-v1
+    SUBDIR += rubygem-google-cloud-monitoring-v3
     SUBDIR += rubygem-google-cloud-pubsub
     SUBDIR += rubygem-google-cloud-pubsub-v1
     SUBDIR += rubygem-google-cloud-resource_manager
@@ -1321,6 +1327,9 @@
     SUBDIR += rubygem-google-cloud-spanner-v1
     SUBDIR += rubygem-google-cloud-storage
     SUBDIR += rubygem-google-cloud-storage144
+    SUBDIR += rubygem-google-cloud-trace
+    SUBDIR += rubygem-google-cloud-trace-v1
+    SUBDIR += rubygem-google-cloud-trace-v2
     SUBDIR += rubygem-grpc
     SUBDIR += rubygem-hangouts-chat
     SUBDIR += rubygem-http-parser
@@ -1455,6 +1464,7 @@
     SUBDIR += shmux
     SUBDIR += sie-nmsg
     SUBDIR += simpleproxy
+    SUBDIR += sing-box
     SUBDIR += siproxd
     SUBDIR += sipsak
     SUBDIR += skstream

@@ -78,6 +78,7 @@
     SUBDIR += R-cran-magrittr
     SUBDIR += R-cran-memoise
     SUBDIR += R-cran-microbenchmark
+    SUBDIR += R-cran-mlbench
     SUBDIR += R-cran-mockery
     SUBDIR += R-cran-msm
     SUBDIR += R-cran-multicool
@@ -344,6 +345,7 @@
     SUBDIR += cargo-c
     SUBDIR += cargo-depgraph
     SUBDIR += cargo-generate
+    SUBDIR += cargo-leptos
     SUBDIR += cargo-mutants
     SUBDIR += cask
     SUBDIR += catch
@@ -575,10 +577,12 @@
     SUBDIR += doctest
     SUBDIR += doctorj
     SUBDIR += dolphin-plugins
+    SUBDIR += dolphin-plugins-devel
     SUBDIR += dotconf
     SUBDIR += double-conversion
     SUBDIR += doxygen
     SUBDIR += dparser
+    SUBDIR += dra
     SUBDIR += dragon
     SUBDIR += ds2
     SUBDIR += dsymbol
@@ -607,9 +611,9 @@
     SUBDIR += efl
     SUBDIR += egypt
     SUBDIR += eiffelstudio
-    SUBDIR += electron24
     SUBDIR += electron25
     SUBDIR += electron26
+    SUBDIR += electron27
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -831,6 +835,7 @@
     SUBDIR += glab
     SUBDIR += glade
     SUBDIR += glademm
+    SUBDIR += glaze
     SUBDIR += glib20
     SUBDIR += glibd
     SUBDIR += glibmm
@@ -1124,6 +1129,7 @@
     SUBDIR += kyua
     SUBDIR += lab
     SUBDIR += lager
+    SUBDIR += laminar
     SUBDIR += lasi
     SUBDIR += lattice-ice40-examples-hx1k
     SUBDIR += lattice-ice40-examples-hx8k
@@ -1156,6 +1162,7 @@
     SUBDIR += libast
     SUBDIR += libastylej
     SUBDIR += libastylej-arduino
+    SUBDIR += libasyncplusplus
     SUBDIR += libatomic_ops
     SUBDIR += libaura
     SUBDIR += libavl
@@ -4145,6 +4152,9 @@
     SUBDIR += plasma5-khotkeys
     SUBDIR += plasma5-kwrited
     SUBDIR += plasma5-plasma-sdk
+    SUBDIR += plasma6-kwrited
+    SUBDIR += plasma6-plasma-sdk
+    SUBDIR += plasma6-plasma5support
     SUBDIR += please
     SUBDIR += pmccabe
     SUBDIR += pmd
@@ -4162,6 +4172,7 @@
     SUBDIR += protobuf-c
     SUBDIR += protobuf-java
     SUBDIR += protobuf25
+    SUBDIR += protobuf3
     SUBDIR += prototool
     SUBDIR += protozero
     SUBDIR += pructl
@@ -4244,6 +4255,7 @@
     SUBDIR += py-argh
     SUBDIR += py-argparse
     SUBDIR += py-args
+    SUBDIR += py-ariadne
     SUBDIR += py-arpeggio
     SUBDIR += py-array-api-compat
     SUBDIR += py-arrow
@@ -4258,7 +4270,6 @@
     SUBDIR += py-asteval
     SUBDIR += py-astor
     SUBDIR += py-astroid
-    SUBDIR += py-astroid253
     SUBDIR += py-asttokens
     SUBDIR += py-astunparse
     SUBDIR += py-async-lru
@@ -4807,6 +4818,7 @@
     SUBDIR += py-immutables
     SUBDIR += py-importlab
     SUBDIR += py-importlib-metadata
+    SUBDIR += py-importlib-metadata6
     SUBDIR += py-importlib-resources
     SUBDIR += py-incremental
     SUBDIR += py-infinity
@@ -5272,6 +5284,8 @@
     SUBDIR += py-pycompilation
     SUBDIR += py-pycomplete
     SUBDIR += py-pycparser
+    SUBDIR += py-pycrdt
+    SUBDIR += py-pycrdt-websocket
     SUBDIR += py-pydantic
     SUBDIR += py-pydantic-core
     SUBDIR += py-pydantic-extra-types
@@ -5330,6 +5344,7 @@
     SUBDIR += py-pyperclip
     SUBDIR += py-pyperf
     SUBDIR += py-pyplusplus
+    SUBDIR += py-pyproject-api
     SUBDIR += py-pyproject-flake8
     SUBDIR += py-pyproject-fmt
     SUBDIR += py-pyproject-metadata
@@ -6334,8 +6349,10 @@
     SUBDIR += rubygem-aws-sdk-managedblockchain
     SUBDIR += rubygem-aws-sdk-managedblockchainquery
     SUBDIR += rubygem-aws-sdk-managedgrafana
+    SUBDIR += rubygem-aws-sdk-marketplaceagreement
     SUBDIR += rubygem-aws-sdk-marketplacecatalog
     SUBDIR += rubygem-aws-sdk-marketplacecommerceanalytics
+    SUBDIR += rubygem-aws-sdk-marketplacedeployment
     SUBDIR += rubygem-aws-sdk-marketplaceentitlementservice
     SUBDIR += rubygem-aws-sdk-marketplacemetering
     SUBDIR += rubygem-aws-sdk-mediaconnect
@@ -6726,10 +6743,10 @@
     SUBDIR += rubygem-cucumber
     SUBDIR += rubygem-cucumber-ci-environment
     SUBDIR += rubygem-cucumber-core
+    SUBDIR += rubygem-cucumber-core12
     SUBDIR += rubygem-cucumber-cucumber-expressions
     SUBDIR += rubygem-cucumber-messages
     SUBDIR += rubygem-cucumber-messages22
-    SUBDIR += rubygem-cucumber-messages23
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
     SUBDIR += rubygem-cucumber-tag-expressions5
@@ -6861,7 +6878,6 @@
     SUBDIR += rubygem-fog-json
     SUBDIR += rubygem-font-awesome-rails
     SUBDIR += rubygem-font-awesome-rails-rails5
-    SUBDIR += rubygem-font-awesome-rails-rails50
     SUBDIR += rubygem-font-awesome-rails-rails52
     SUBDIR += rubygem-font-awesome-rails-rails60
     SUBDIR += rubygem-foreigner
@@ -7034,6 +7050,7 @@
     SUBDIR += rubygem-json-canonicalization
     SUBDIR += rubygem-json-schema
     SUBDIR += rubygem-json1
+    SUBDIR += rubygem-json26
     SUBDIR += rubygem-json_pure
     SUBDIR += rubygem-json_pure1
     SUBDIR += rubygem-json_schema
@@ -7240,6 +7257,7 @@
     SUBDIR += rubygem-rails-i18n-rails60
     SUBDIR += rubygem-rails-i18n-rails61
     SUBDIR += rubygem-rails-i18n-rails70
+    SUBDIR += rubygem-rails-i18n-rails71
     SUBDIR += rubygem-rails-observers
     SUBDIR += rubygem-rainbow
     SUBDIR += rubygem-rake
@@ -7540,11 +7558,11 @@
     SUBDIR += rubygem-validates_timeliness
     SUBDIR += rubygem-version_gem
     SUBDIR += rubygem-versionomy
-    SUBDIR += rubygem-view_component-rails61
     SUBDIR += rubygem-view_component-rails70
     SUBDIR += rubygem-virtus
     SUBDIR += rubygem-vite_rails-rails70
     SUBDIR += rubygem-vite_ruby
+    SUBDIR += rubygem-vite_ruby33
     SUBDIR += rubygem-warbler
     SUBDIR += rubygem-warden
     SUBDIR += rubygem-warning
@@ -7822,6 +7840,7 @@
     SUBDIR += upp
     SUBDIR += upslug
     SUBDIR += urjtag
+    SUBDIR += ut
     SUBDIR += utf8cpp
     SUBDIR += utf8cpp3
     SUBDIR += uthash

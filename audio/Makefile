@@ -165,7 +165,6 @@
     SUBDIR += festlex-cmu
     SUBDIR += festlex-czech
     SUBDIR += festlex-oald
-    SUBDIR += festlex-ogi
     SUBDIR += festlex-poslex
     SUBDIR += festvox-cmu_us_awb_arctic
     SUBDIR += festvox-cmu_us_bdl_arctic
@@ -318,12 +317,15 @@
     SUBDIR += juk
     SUBDIR += juke
     SUBDIR += julius
+    SUBDIR += kaldi
+    SUBDIR += kaldi-vosk
     SUBDIR += kapitonov-plugins-pack-lv2
     SUBDIR += kid3
     SUBDIR += klystrack
     SUBDIR += kmix
     SUBDIR += komposter
     SUBDIR += kwave
+    SUBDIR += ladish
     SUBDIR += ladspa
     SUBDIR += lame
     SUBDIR += lash
@@ -597,6 +599,10 @@
     SUBDIR += plasma5-kpipewire
     SUBDIR += plasma5-oxygen-sounds
     SUBDIR += plasma5-plasma-pa
+    SUBDIR += plasma6-kpipewire
+    SUBDIR += plasma6-ocean-sound-theme
+    SUBDIR += plasma6-oxygen-sounds
+    SUBDIR += plasma6-plasma-pa
     SUBDIR += play
     SUBDIR += playgsf
     SUBDIR += playmidi
@@ -662,6 +668,8 @@
     SUBDIR += py-speechrecognition
     SUBDIR += py-spotipy
     SUBDIR += py-tagpy
+    SUBDIR += py-torchaudio
+    SUBDIR += py-vosk
     SUBDIR += py-wavio
     SUBDIR += py-webrtcvad
     SUBDIR += py-zita-audiotools
@@ -840,9 +848,11 @@
     SUBDIR += volumeicon
     SUBDIR += vorbis-tools
     SUBDIR += vorbisgain
+    SUBDIR += vosk-api
     SUBDIR += vsound
     SUBDIR += vst3sdk
     SUBDIR += waon
+    SUBDIR += wasabi
     SUBDIR += wavbreaker
     SUBDIR += wavegain
     SUBDIR += wavetral

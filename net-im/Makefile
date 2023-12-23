@@ -3,7 +3,6 @@
     SUBDIR += beebeep
     SUBDIR += biboumi
     SUBDIR += cawbird
-    SUBDIR += centerim
     SUBDIR += chatterino2
     SUBDIR += climm
     SUBDIR += coccinella
@@ -33,7 +32,6 @@
     SUBDIR += icqlib
     SUBDIR += jabberd
     SUBDIR += jarl
-    SUBDIR += jggtrans
     SUBDIR += jicofo
     SUBDIR += jitsi-meet-full
     SUBDIR += jitsi-prosody-plugins
@@ -144,6 +142,7 @@
     SUBDIR += sshout
     SUBDIR += talkatu
     SUBDIR += tdlib
+    SUBDIR += tdlib-purple
     SUBDIR += teamwords
     SUBDIR += telegram-cli
     SUBDIR += telegram-desktop

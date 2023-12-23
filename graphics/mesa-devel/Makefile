@@ -1,15 +1,14 @@
 PORTNAME=	mesa
-DISTVERSION=	23.3-branchpoint-1831
-DISTVERSIONSUFFIX=	-g00e88584af6
+DISTVERSION=	23.3-branchpoint-3059
+DISTVERSIONSUFFIX=	-g551924aa879
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
 PATCH_SITES=	https://github.com/mesa3d/${GL_PROJECT}/commit/:github
 PATCHFILES+=	700efacda59c.patch:-p1:github
 PATCH_SITES+=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
-PATCHFILES+=	3043f16d66bf.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
+PATCHFILES+=	58b505331612.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
 PATCHFILES+=	2930dcbb3329.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/22246
-PATCHFILES+=	64eb280bb074.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/26394
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Bleeding edge Mesa drivers (OpenCL, OpenGL, Vulkan)
@@ -46,7 +45,7 @@ MESON_ARGS=	-Dgallium-omx=disabled \
 		-Dvalgrind=disabled \
 		-Dglvnd=true \
 		-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} \
-		-Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc,av1dec,av1enc,vp9dec \
+		-Dvideo-codecs=all \
 		${NULL}
 LDFLAGS+=	-Wl,--undefined-version # https://gitlab.freedesktop.org/mesa/mesa/-/issues/8003
 PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/}

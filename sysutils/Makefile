@@ -78,6 +78,7 @@
     SUBDIR += autojump
     SUBDIR += automount
     SUBDIR += automounter
+    SUBDIR += autorestic
     SUBDIR += avfs
     SUBDIR += azure-agent
     SUBDIR += b2sum
@@ -192,9 +193,11 @@
     SUBDIR += cfengine-masterfiles320
     SUBDIR += cfengine-masterfiles321
     SUBDIR += cfengine-masterfiles322
+    SUBDIR += cfengine-masterfiles323
     SUBDIR += cfengine320
     SUBDIR += cfengine321
     SUBDIR += cfengine322
+    SUBDIR += cfengine323
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -1038,6 +1041,17 @@
     SUBDIR += plasma5-polkit-kde-agent-1
     SUBDIR += plasma5-powerdevil
     SUBDIR += plasma5-systemsettings
+    SUBDIR += plasma6-drkonqi
+    SUBDIR += plasma6-kde-cli-tools
+    SUBDIR += plasma6-kinfocenter
+    SUBDIR += plasma6-kmenuedit
+    SUBDIR += plasma6-ksystemstats
+    SUBDIR += plasma6-libksysguard
+    SUBDIR += plasma6-plasma-disks
+    SUBDIR += plasma6-plasma-systemmonitor
+    SUBDIR += plasma6-polkit-kde-agent-1
+    SUBDIR += plasma6-powerdevil
+    SUBDIR += plasma6-systemsettings
     SUBDIR += plconfig
     SUBDIR += plocate
     SUBDIR += pmt
@@ -1505,6 +1519,7 @@
     SUBDIR += u-boot-nanopi-neo
     SUBDIR += u-boot-nanopi-neo-air
     SUBDIR += u-boot-nanopi-neo2
+    SUBDIR += u-boot-nanopi-r2s
     SUBDIR += u-boot-nanopi-r4s
     SUBDIR += u-boot-olimex-a20-som-evb
     SUBDIR += u-boot-olinuxino-lime

@@ -221,6 +221,7 @@
     SUBDIR += gopherus
     SUBDIR += gotty
     SUBDIR += gpx2map
+    SUBDIR += grafana
     SUBDIR += grafana9
     SUBDIR += grails
     SUBDIR += gregarius
@@ -332,6 +333,7 @@
     SUBDIR += lua-resty-core
     SUBDIR += lua-resty-http
     SUBDIR += lua-resty-lrucache
+    SUBDIR += lua-resty-session
     SUBDIR += luakit
     SUBDIR += luakit-devel
     SUBDIR += lux
@@ -1400,6 +1402,7 @@
     SUBDIR += persepolis
     SUBDIR += pglogd
     SUBDIR += phalcon
+    SUBDIR += php-google-api-php-client
     SUBDIR += php80-opcache
     SUBDIR += php80-session
     SUBDIR += php80-tidy
@@ -1424,6 +1427,7 @@
     SUBDIR += phpvirtualbox-legacy
     SUBDIR += piwigo
     SUBDIR += plasma5-plasma-browser-integration
+    SUBDIR += plasma6-plasma-browser-integration
     SUBDIR += pmwiki
     SUBDIR += pnews
     SUBDIR += podcastamatic
@@ -1626,6 +1630,7 @@
     SUBDIR += py-django32
     SUBDIR += py-django41
     SUBDIR += py-django42
+    SUBDIR += py-django50
     SUBDIR += py-django_compressor
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangoql
@@ -1633,6 +1638,7 @@
     SUBDIR += py-djangorestframework-csv
     SUBDIR += py-djangorestframework-filters
     SUBDIR += py-djangorestframework-xml
+    SUBDIR += py-djangosaml2
     SUBDIR += py-draftjs-exporter
     SUBDIR += py-drf-spectacular
     SUBDIR += py-drf-spectacular-sidecar
@@ -1878,6 +1884,7 @@
     SUBDIR += py-xandikos
     SUBDIR += py-xyzservices
     SUBDIR += py-yarl
+    SUBDIR += py-yt-dlp
     SUBDIR += pydio-cells
     SUBDIR += qdecoder
     SUBDIR += qhttpengine
@@ -2207,6 +2214,7 @@
     SUBDIR += rubygem-rdf-normalize
     SUBDIR += rubygem-redcloth
     SUBDIR += rubygem-redis-rack
+    SUBDIR += rubygem-redis-rack2
     SUBDIR += rubygem-redis-rails
     SUBDIR += rubygem-redis-rails-rails5
     SUBDIR += rubygem-redis-rails-rails50
@@ -2356,7 +2364,6 @@
     SUBDIR += thttpd
     SUBDIR += thumbnail_index
     SUBDIR += thundercache
-    SUBDIR += thundersnarf
     SUBDIR += tidy
     SUBDIR += tidy-devel
     SUBDIR += tidy-html5
@@ -2504,7 +2511,6 @@
     SUBDIR += xoops
     SUBDIR += xsp
     SUBDIR += yabb
-    SUBDIR += yanopaste
     SUBDIR += yarn
     SUBDIR += yarn-node16
     SUBDIR += yarn-node18
