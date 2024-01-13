@@ -17,7 +17,6 @@
     SUBDIR += KnightCap
     SUBDIR += LibreMines
     SUBDIR += NBlood
-    SUBDIR += OpenDiablo2
     SUBDIR += OpenLara
     SUBDIR += OpenTomb
     SUBDIR += SRB2
@@ -242,6 +241,7 @@
     SUBDIR += entombed
     SUBDIR += enygma
     SUBDIR += epiphany-game
+    SUBDIR += etlegacy
     SUBDIR += etracer
     SUBDIR += euchre
     SUBDIR += eureka
@@ -704,6 +704,7 @@
     SUBDIR += openbor3711
     SUBDIR += openbor3979
     SUBDIR += openbor4432
+    SUBDIR += openbor7144
     SUBDIR += openbubbles
     SUBDIR += openbve
     SUBDIR += opencity
@@ -830,7 +831,6 @@
     SUBDIR += quake2-xatrix
     SUBDIR += quake2lnx
     SUBDIR += quake2max
-    SUBDIR += quake3
     SUBDIR += quake3-data
     SUBDIR += quake3-excessive
     SUBDIR += quake3-osp
@@ -932,8 +932,6 @@
     SUBDIR += spellcast
     SUBDIR += spicetrade
     SUBDIR += spider
-    SUBDIR += spring
-    SUBDIR += springlobby
     SUBDIR += starfighter
     SUBDIR += starlanes
     SUBDIR += steelstorm

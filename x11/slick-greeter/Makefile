@@ -1,6 +1,5 @@
 PORTNAME=	slick-greeter
-PORTVERSION=	1.6.0
-PORTREVISION=	1
+PORTVERSION=	2.0.2
 CATEGORIES=	x11
 
 MAINTAINER=	ericbsd@FreeBSD.org
@@ -14,9 +13,12 @@ LIB_DEPENDS=	libcanberra-gtk3.so:audio/libcanberra-gtk3 \
 		libcanberra.so:audio/libcanberra \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
-		liblightdm-gobject-1.so:x11/lightdm
 RUN_DEPENDS=	ghostbsd-slick-greeter-settings>=0:x11/ghostbsd-slick-greeter-settings \
 		numlockx>=0:x11/numlockx
+		liblightdm-gobject-1.so:x11/lightdm \
+		libxapp.so:x11/xapp
+
+RUN_DEPENDS=	numlockx>=0:x11/numlockx
 
 USES=		autoreconf gettext gmake gnome localbase pkgconfig python:run shebangfix \
 		vala:build xorg

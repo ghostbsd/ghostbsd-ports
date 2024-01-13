@@ -1,6 +1,7 @@
 PORTNAME=	wazuh
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.7.1
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://packages.wazuh.com/deps/23/libraries/sources/:wazuh_sources \
 		LOCAL/acm/${PORTNAME}/:wazuh_cache
@@ -140,9 +141,7 @@ FBSD_RELEASE=	freebsd_${UNAME_r:S/./_/g:S/-/_/g}
 
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} >= 1200500 && ${OSVERSION} < 1300000
-IGNORE=		FreeBSD 12.x (EoL) is not supported on ${ARCH}
-.elif ${OSVERSION} >= 1300139 && ${OSVERSION} < 1400000
+.if ${OSVERSION} >= 1300139 && ${OSVERSION} < 1400000
 FBSD_VERSION_BASE=freebsd_13_2_release_p8
 WAZUH_CACHENAME=${PORTNAME}-cache-fbsd13-${ARCH}-${DISTVERSION}
 DISTFILES+=	${WAZUH_CACHENAME}${EXTRACT_SUFX}:wazuh_cache

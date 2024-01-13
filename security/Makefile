@@ -497,6 +497,7 @@
     SUBDIR += p5-Bytes-Random-Secure
     SUBDIR += p5-Bytes-Random-Secure-Tiny
     SUBDIR += p5-CACertOrg-CA
+    SUBDIR += p5-CPAN-Audit
     SUBDIR += p5-CSP
     SUBDIR += p5-Cisco-Hash
     SUBDIR += p5-Crypt-Anubis
@@ -801,8 +802,6 @@
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
     SUBDIR += pgpin
-    SUBDIR += php80-filter
-    SUBDIR += php80-sodium
     SUBDIR += php81-filter
     SUBDIR += php81-sodium
     SUBDIR += php82-filter
@@ -1086,6 +1085,7 @@
     SUBDIR += rndpassw
     SUBDIR += rnp
     SUBDIR += rotate
+    SUBDIR += rpm-sequoia
     SUBDIR += rubygem-acme-client
     SUBDIR += rubygem-aes_key_wrap
     SUBDIR += rubygem-airbrussh
@@ -1327,6 +1327,7 @@
     SUBDIR += tpm-quote-tools
     SUBDIR += tpm-tools
     SUBDIR += tpm2-abrmd
+    SUBDIR += tpm2-pkcs11
     SUBDIR += tpm2-tools
     SUBDIR += tpm2-tss
     SUBDIR += transcrypt

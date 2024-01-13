@@ -7,6 +7,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lint for DNS zones (Domain Name Server zone verification utility)
 WWW=		https://BSDforge.com/projects/dns/dlint
 
+BROKEN=		Unfetchable
+
 USES=		shebangfix tar:xz
 NO_ARCH=	yes
 NO_BUILD=	yes
@@ -22,7 +24,7 @@ do-configure:
 do-install:
 	cd ${WRKSRC} ; ${INSTALL_SCRIPT} dlint digparse \
 		${STAGEDIR}${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/dlint.8 ${STAGEDIR}${MANPREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/dlint.8 ${STAGEDIR}${PREFIX}/share/man/man8
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 

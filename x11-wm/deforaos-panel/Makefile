@@ -1,5 +1,6 @@
 PORTNAME=	deforaos-panel
 PORTVERSION=	0.4.5
+PORTREVISION=	1
 CATEGORIES=	x11-wm
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Panel/
 DISTNAME=	Panel-${PORTVERSION}
@@ -31,7 +32,7 @@ USE_GNOME=	gtk30 cairo gdkpixbuf2
 USE_XORG=	x11
 USE_LDCONFIG=	yes
 MAKE_ARGS+=	PREFIX=${PREFIX}
-MAKE_ENV+=	MANDIR=${STAGEDIR}${MANPREFIX}/man
+MAKE_ENV+=	MANDIR=${STAGEDIR}${PREFIX}/share/man
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/lib/|/libdata/|g' \

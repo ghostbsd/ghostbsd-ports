@@ -16,4 +16,4 @@
 +/* #define MNG_GAMMA_ONLY */
 +#define MNG_FULL_CMS
  /* #define MNG_APP_CMS */
- 
+  
