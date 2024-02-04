@@ -1,7 +1,8 @@
 bin/update-station
 etc/sudoers.d/update-station
 etc/xdg/autostart/update-station.desktop
+%%PYTHON_SITELIBDIR%%/updateHandler.py
+%%PYTHON_SITELIBDIR%%/update_data.py
 lib/update-station/need_reboot.json
-lib/update-station/updateHandler.py
 share/applications/update-manager.desktop
 share/locale/ru/LC_MESSAGES/update-station.mo
