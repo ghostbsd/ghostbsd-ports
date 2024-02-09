@@ -9,7 +9,7 @@ LICENSE =	BSD
 
 RUN_DEPENDS=	sudo:security/sudo \
 		pkg:ports-mgmt/pkg \
-		distro:sysutils/py-distro \
+		distro:sysutils/py-distro@${PY_FLAVOR} \
 		${LOCALBASE}/etc/pkg/repos/GhostBSD.conf.ca:misc/ghostbsd-pkg-conf \
 		${PYTHON_PKGNAMEPREFIX}bectl>=0.1:sysutils/py-bectl@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>=0.1:www/py-requests@${PY_FLAVOR} \
