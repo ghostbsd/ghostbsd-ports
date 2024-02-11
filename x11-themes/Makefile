@@ -46,6 +46,7 @@
     SUBDIR += ghostbsd-wallpapers
     SUBDIR += ghostbsd-wallpapers21
     SUBDIR += ghostbsd-wallpapers22
+    SUBDIR += ghostbsd-wallpapers24
     SUBDIR += gnome-backgrounds
     SUBDIR += gnome-icon-theme-symbolic
     SUBDIR += gnome-icons
