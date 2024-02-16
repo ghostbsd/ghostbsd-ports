@@ -1,11 +1,8 @@
 PORTNAME=	kodi
-DISTVERSION=	20.2
-PORTREVISION=	5
+DISTVERSION=	20.3
+PORTREVISION=	1
 CATEGORIES=	multimedia java
 # do not forget to fix devel/kodi-platform when updating kodi
-
-PATCH_SITES=	https://github.com/xbmc/xbmc/commit/
-PATCHFILES=	58a24d4e6165e838d102e807a003db0d9c186de7.patch:-p1
 
 MAINTAINER=	yzrh@noema.org
 COMMENT=	Award winning media center application
@@ -226,6 +223,7 @@ GBM_LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim \
 			libdrm.so:graphics/libdrm \
 			libxkbcommon.so:x11/libxkbcommon \
 			libinput.so:x11/libinput
+GBM_RUN_DEPENDS=	mesa-dri>0:graphics/mesa-dri
 
 WAYLAND_CATEGORIES=	wayland
 WAYLAND_USES=		gl

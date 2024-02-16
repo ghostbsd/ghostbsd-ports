@@ -1,9 +1,10 @@
 PORTNAME=	terragrunt
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.54.12
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
-MAINTAINER=	nulldutra@proton.me
+MAINTAINER=	dutra@FreeBSD.org
 COMMENT=	Terragrunt is a thin wrapper for Terraform
 WWW=		https://terragrunt.gruntwork.io/
 

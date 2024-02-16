@@ -101,7 +101,6 @@
     SUBDIR += ip4r
     SUBDIR += ipa_sdb
     SUBDIR += iplike
-    SUBDIR += isql-viewer
     SUBDIR += jdb
     SUBDIR += jdbc-oracle11g
     SUBDIR += jetbrains-datagrip
@@ -547,7 +546,6 @@
     SUBDIR += pg_similarity
     SUBDIR += pg_stat_kcache
     SUBDIR += pg_tileserv
-    SUBDIR += pg_vector
     SUBDIR += pgaccess
     SUBDIR += pgadmin3
     SUBDIR += pgagroal
@@ -573,6 +571,7 @@
     SUBDIR += pgtcl
     SUBDIR += pgtop
     SUBDIR += pguri
+    SUBDIR += pgvector
     SUBDIR += php-tarantool
     SUBDIR += php-xapian
     SUBDIR += php81-dba
@@ -810,6 +809,7 @@
     SUBDIR += py-sqlalchemy13
     SUBDIR += py-sqlalchemy14
     SUBDIR += py-sqlalchemy20
+    SUBDIR += py-sqlcipher3
     SUBDIR += py-sqlglot
     SUBDIR += py-sqlite-fts4
     SUBDIR += py-sqlite-utils
@@ -831,7 +831,6 @@
     SUBDIR += qdrant
     SUBDIR += qof
     SUBDIR += qt5-sql
-    SUBDIR += qt5-sqldrivers-ibase
     SUBDIR += qt5-sqldrivers-mysql
     SUBDIR += qt5-sqldrivers-odbc
     SUBDIR += qt5-sqldrivers-pgsql
@@ -1032,6 +1031,7 @@
     SUBDIR += sqlx-cli
     SUBDIR += sqsh
     SUBDIR += squirrel-sql
+    SUBDIR += surrealdb
     SUBDIR += symphytum
     SUBDIR += tarantool
     SUBDIR += tarantool-c

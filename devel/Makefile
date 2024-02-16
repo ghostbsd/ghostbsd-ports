@@ -351,6 +351,7 @@
     SUBDIR += catch2
     SUBDIR += cbang
     SUBDIR += cbfmt
+    SUBDIR += cbmc
     SUBDIR += cbrowser
     SUBDIR += cc65
     SUBDIR += ccache
@@ -612,6 +613,7 @@
     SUBDIR += electron25
     SUBDIR += electron26
     SUBDIR += electron27
+    SUBDIR += electron28
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -1035,6 +1037,7 @@
     SUBDIR += juce
     SUBDIR += juce706
     SUBDIR += judy
+    SUBDIR += jujutsu
     SUBDIR += jwasm
     SUBDIR += kBuild
     SUBDIR += kapptemplate
@@ -1159,7 +1162,6 @@
     SUBDIR += libast
     SUBDIR += libastylej
     SUBDIR += libastylej-arduino
-    SUBDIR += libasyncplusplus
     SUBDIR += libatomic_ops
     SUBDIR += libaura
     SUBDIR += libavl
@@ -1429,6 +1431,7 @@
     SUBDIR += libubox
     SUBDIR += libudev-devd
     SUBDIR += libuinputplus
+    SUBDIR += libuiohook
     SUBDIR += libukcprog
     SUBDIR += libunicode
     SUBDIR += libuninum
@@ -1450,6 +1453,7 @@
     SUBDIR += libvirt-java
     SUBDIR += libvmdk
     SUBDIR += libvolume_id
+    SUBDIR += libvsapm
     SUBDIR += libvsgpt
     SUBDIR += libvshadow
     SUBDIR += libvslvm
@@ -1512,6 +1516,7 @@
     SUBDIR += llvm15
     SUBDIR += llvm16
     SUBDIR += llvm17
+    SUBDIR += llvm18
     SUBDIR += lm4tools
     SUBDIR += lmdbg
     SUBDIR += lndir
@@ -1658,6 +1663,7 @@
     SUBDIR += nss_wrapper
     SUBDIR += nsync
     SUBDIR += nuitka
+    SUBDIR += ob-rust
     SUBDIR += obby
     SUBDIR += objconv
     SUBDIR += objecthash
@@ -2461,6 +2467,7 @@
     SUBDIR += p5-FFI-CheckLib
     SUBDIR += p5-FFI-Platypus
     SUBDIR += p5-FFI-Platypus-Declare
+    SUBDIR += p5-FFI-Platypus-Lang-Rust
     SUBDIR += p5-FFI-Platypus-Type-Enum
     SUBDIR += p5-FFI-Platypus-Type-PtrObject
     SUBDIR += p5-FSA-Rules
@@ -4204,6 +4211,7 @@
     SUBDIR += py-about-time
     SUBDIR += py-absl
     SUBDIR += py-absl-py
+    SUBDIR += py-acstore
     SUBDIR += py-adb
     SUBDIR += py-addict
     SUBDIR += py-aenum
@@ -4473,16 +4481,19 @@
     SUBDIR += py-click-creds
     SUBDIR += py-click-default-group
     SUBDIR += py-click-default-group-wheel
+    SUBDIR += py-click-didyoumean
     SUBDIR += py-click-help-colors
     SUBDIR += py-click-log
     SUBDIR += py-click-option-group
     SUBDIR += py-click-plugins
+    SUBDIR += py-click-repl
     SUBDIR += py-click-threading
     SUBDIR += py-click7
     SUBDIR += py-cliff
     SUBDIR += py-cligj
     SUBDIR += py-clikit
     SUBDIR += py-clint
+    SUBDIR += py-clldutils
     SUBDIR += py-cloudpickle
     SUBDIR += py-cluster
     SUBDIR += py-cmd2
@@ -4642,6 +4653,7 @@
     SUBDIR += py-exceptiongroup
     SUBDIR += py-executing
     SUBDIR += py-expandvars
+    SUBDIR += py-expecttest
     SUBDIR += py-expiringdict
     SUBDIR += py-extras
     SUBDIR += py-extremes
@@ -4669,6 +4681,7 @@
     SUBDIR += py-findlibs
     SUBDIR += py-findpython
     SUBDIR += py-fire
+    SUBDIR += py-fireREST
     SUBDIR += py-first
     SUBDIR += py-fixtures
     SUBDIR += py-flake8
@@ -5286,6 +5299,7 @@
     SUBDIR += py-pydantic-yaml
     SUBDIR += py-pydantic2
     SUBDIR += py-pydash
+    SUBDIR += py-pydbus
     SUBDIR += py-pydecor
     SUBDIR += py-pydenticon
     SUBDIR += py-pydevd
@@ -5308,6 +5322,7 @@
     SUBDIR += py-pyinotify
     SUBDIR += py-pyinquirer
     SUBDIR += py-pyinstaller
+    SUBDIR += py-pyinstaller-hooks-contrib
     SUBDIR += py-pyintelowl
     SUBDIR += py-pyjq
     SUBDIR += py-pyjsparser
@@ -5376,6 +5391,7 @@
     SUBDIR += py-pytest-cpp
     SUBDIR += py-pytest-datadir
     SUBDIR += py-pytest-django
+    SUBDIR += py-pytest-drop-dup-tests
     SUBDIR += py-pytest-enabler
     SUBDIR += py-pytest-env
     SUBDIR += py-pytest-factoryboy
@@ -5486,6 +5502,7 @@
     SUBDIR += py-q
     SUBDIR += py-qasync
     SUBDIR += py-qcs-api-client
+    SUBDIR += py-qcs-sdk-python
     SUBDIR += py-qstylizer
     SUBDIR += py-qt5
     SUBDIR += py-qt5-pyqt
@@ -5632,6 +5649,7 @@
     SUBDIR += py-speg
     SUBDIR += py-spyder-kernels
     SUBDIR += py-spyder-unittest
+    SUBDIR += py-sqids
     SUBDIR += py-squint
     SUBDIR += py-sre-yield
     SUBDIR += py-srsly
@@ -5657,6 +5675,7 @@
     SUBDIR += py-sure
     SUBDIR += py-swagger-spec-validator
     SUBDIR += py-synr
+    SUBDIR += py-syrupy
     SUBDIR += py-sysctl
     SUBDIR += py-sysv_ipc
     SUBDIR += py-tables
@@ -7604,6 +7623,8 @@
     SUBDIR += rust-analyzer
     SUBDIR += rust-bindgen-cli
     SUBDIR += rust-cbindgen
+    SUBDIR += rust-mode
+    SUBDIR += rust-script
     SUBDIR += rustc-demangle
     SUBDIR += rvi
     SUBDIR += rvm
@@ -7840,6 +7861,7 @@
     SUBDIR += utf8cpp3
     SUBDIR += uthash
     SUBDIR += util-linux
+    SUBDIR += uv
     SUBDIR += valgrind
     SUBDIR += valgrind-devel
     SUBDIR += vasm

@@ -1,10 +1,10 @@
 PORTNAME=	dnsx
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.1.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	dns
 
-MAINTAINER=	nulldutra@proton.me
+MAINTAINER=	dutra@FreeBSD.org
 COMMENT=	DNS toolkit allow to run multiple DNS queries
 WWW=		https://github.com/projectdiscovery/dnsx
 

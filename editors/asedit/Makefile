@@ -1,6 +1,6 @@
 PORTNAME=	asedit
 PORTVERSION=	1.3.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	editors
 MASTER_SITES=	XCONTRIB/editors
 
@@ -20,7 +20,7 @@ PLIST_FILES=	bin/asedit \
 		lib/X11/app-defaults/Asedit_em-sgi \
 		lib/X11/asedit.hlp \
 		lib/X11/asedit_em.hlp \
-		man/man1/asedit.1.gz
+		share/man/man1/asedit.1.gz
 
 .include <bsd.port.pre.mk>
 

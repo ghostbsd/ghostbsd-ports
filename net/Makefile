@@ -29,6 +29,7 @@
     SUBDIR += arping
     SUBDIR += arpoison
     SUBDIR += arprelease
+    SUBDIR += arrowdl
     SUBDIR += asio
     SUBDIR += aslookup
     SUBDIR += asterisk-chan_sccp
@@ -126,7 +127,6 @@
     SUBDIR += dico
     SUBDIR += dictd
     SUBDIR += dimes
-    SUBDIR += downzemall
     SUBDIR += dpdk
     SUBDIR += dpdk-20.11
     SUBDIR += dpinger
@@ -210,7 +210,6 @@
     SUBDIR += gorss
     SUBDIR += gost
     SUBDIR += gotthard
-    SUBDIR += gq
     SUBDIR += graphpath
     SUBDIR += grilo
     SUBDIR += grilo-plugins
@@ -1430,11 +1429,13 @@
     SUBDIR += rude
     SUBDIR += rustdesk-server
     SUBDIR += ryu
+    SUBDIR += s3m
     SUBDIR += s5cmd
     SUBDIR += sacc
     SUBDIR += sakisafecli
     SUBDIR += samba413
     SUBDIR += samba416
+    SUBDIR += samba419
     SUBDIR += samplicator
     SUBDIR += savvycan
     SUBDIR += sbd
@@ -1578,7 +1579,6 @@
     SUBDIR += ulxmlrpcpp
     SUBDIR += unfs3
     SUBDIR += unison
-    SUBDIR += unison232
     SUBDIR += unison240
     SUBDIR += unison248
     SUBDIR += unison251

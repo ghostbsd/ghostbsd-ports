@@ -115,6 +115,7 @@
     SUBDIR += cosmoplayer
     SUBDIR += cptutils
     SUBDIR += crw
+    SUBDIR += ctl
     SUBDIR += curator
     SUBDIR += curtail
     SUBDIR += cuttlefish
@@ -165,6 +166,7 @@
     SUBDIR += enblend
     SUBDIR += engauge-digitizer
     SUBDIR += entangle
+    SUBDIR += entice
     SUBDIR += eog
     SUBDIR += eog-plugins
     SUBDIR += eom
@@ -584,6 +586,7 @@
     SUBDIR += nanosvg
     SUBDIR += netpbm
     SUBDIR += nip2
+    SUBDIR += noaa-apt
     SUBDIR += nomacs
     SUBDIR += nplot
     SUBDIR += npretty
@@ -800,6 +803,7 @@
     SUBDIR += pixelize
     SUBDIR += pixen
     SUBDIR += pixie
+    SUBDIR += plantuml
     SUBDIR += plasma-kmod
     SUBDIR += plotutils
     SUBDIR += png
@@ -1018,7 +1022,6 @@
     SUBDIR += raster3d
     SUBDIR += rawstudio
     SUBDIR += rawtherapee
-    SUBDIR += rayshade
     SUBDIR += reactphysics3d
     SUBDIR += realesrgan-ncnn-vulkan
     SUBDIR += reallyslick
@@ -1115,6 +1118,7 @@
     SUBDIR += skanlite
     SUBDIR += skanpage
     SUBDIR += spectacle
+    SUBDIR += spectacle-devel
     SUBDIR += spirv-tools
     SUBDIR += springgraph
     SUBDIR += squish
@@ -1157,7 +1161,6 @@
     SUBDIR += unpaper
     SUBDIR += upscaler
     SUBDIR += urho3d
-    SUBDIR += urt
     SUBDIR += vapoursynth-fmtconv
     SUBDIR += vapoursynth-waifu2x-ncnn-vulkan
     SUBDIR += vapoursynth-waifu2x-w2xc

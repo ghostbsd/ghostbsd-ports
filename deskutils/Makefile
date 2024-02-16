@@ -190,6 +190,7 @@
     SUBDIR += nanonote
     SUBDIR += nautilus-sendto
     SUBDIR += nextcloudclient
+    SUBDIR += normcap
     SUBDIR += note
     SUBDIR += notekit
     SUBDIR += notes
@@ -225,6 +226,7 @@
     SUBDIR += puush
     SUBDIR += py-autokey
     SUBDIR += py-bugwarrior
+    SUBDIR += py-i3-gnome-pomodoro
     SUBDIR += py-khal
     SUBDIR += py-khard
     SUBDIR += py-paperless

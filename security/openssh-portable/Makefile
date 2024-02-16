@@ -108,8 +108,8 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-hpn-gss-glue
 .  endif
 # - See https://sources.debian.org/data/main/o/openssh/ for which subdir to
 # pull from.
-GSSAPI_DEBIAN_VERSION=	9.4p1
-GSSAPI_DEBIAN_SUBDIR=	${GSSAPI_DEBIAN_VERSION:U${DISTVERSION}}-1
+GSSAPI_DEBIAN_VERSION=	9.6p1
+GSSAPI_DEBIAN_SUBDIR=	${GSSAPI_DEBIAN_VERSION:U${DISTVERSION}}-3
 # - Debian does not use a versioned filename so we trick fetch to make one for
 # us with the ?<anything>=/ trick.
 PATCH_SITES+=	https://sources.debian.org/data/main/o/openssh/1:${GSSAPI_DEBIAN_SUBDIR}/debian/patches/gssapi.patch?dummy=/:gsskex
@@ -127,7 +127,7 @@ CONFIGURE_LIBS+=	-lblacklist
 
 # https://www.psc.edu/hpn-ssh https://github.com/rapier1/openssh-portable/tree/hpn-openssl1.1-7_7_P1
 .if ${PORT_OPTIONS:MHPN} || ${PORT_OPTIONS:MNONECIPHER}
-BROKEN=			HPN: Not yet updated for ${DISTVERSION} yet.
+#BROKEN=			HPN: Not yet updated for ${DISTVERSION} yet.
 PORTDOCS+=		HPN-README
 HPN_VERSION=		14v15
 HPN_DISTVERSION=	7.7p1

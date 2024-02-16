@@ -1,6 +1,6 @@
 PORTNAME=	koka
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.6.0
+DISTVERSION=	3.0.4
 CATEGORIES=	lang haskell
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -19,6 +19,7 @@ GH_TUPLE=	microsoft:mimalloc:10efe29:mimalloc/kklib/mimalloc
 CABAL_FLAGS=	-relocatable
 
 USE_CABAL=	Diff-0.5_1 \
+		FloatingHex-0.5 \
 		OneTuple-0.4.1.1_1 \
 		QuickCheck-2.14.3 \
 		StateVar-1.2.2 \
@@ -89,7 +90,7 @@ USE_CABAL=	Diff-0.5_1 \
 		regex-pcre-builtin-0.95.2.3.8.44_6 \
 		regex-tdfa-1.3.2.2_2 \
 		row-types-1.0.1.2_1 \
-		safe-0.3.19 \
+		safe-0.3.21 \
 		safe-exceptions-0.1.7.4_1 \
 		scientific-0.3.7.0_7 \
 		semialign-1.3_1 \
@@ -106,7 +107,7 @@ USE_CABAL=	Diff-0.5_1 \
 		text-rope-0.2 \
 		text-short-0.1.5_3 \
 		th-abstraction-0.6.0.0_1 \
-		th-compat-0.1.4_3 \
+		th-compat-0.1.4_4 \
 		these-1.2_1 \
 		time-compat-1.9.6.1_6 \
 		time-locale-compat-0.1.1.5 \
@@ -114,17 +115,19 @@ USE_CABAL=	Diff-0.5_1 \
 		transformers-compat-0.7.2 \
 		type-equality-1_6 \
 		unliftio-core-0.2.1.0_3 \
-		unordered-containers-0.2.19.1_3 \
+		unordered-containers-0.2.20_1 \
 		utf8-string-1.0.2 \
 		uuid-1.3.15_3 \
 		uuid-types-1.0.5.1 \
 		vector-0.13.1.0 \
-		vector-stream-0.1.0.0_3 \
+		vector-stream-0.1.0.1 \
 		void-0.7.3 \
 		witherable-0.4.2_4
 
 CABAL_EXECUTABLES=	${PORTNAME}
 CABAL_WRAPPER_SCRIPTS=	${CABAL_EXECUTABLES}
+
+PLIST_SUB+=	VER=${DISTVERSIONFULL}
 
 post-install:
 	cd ${WRKSRC} && \

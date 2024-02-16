@@ -100,15 +100,15 @@ KDE_PLASMA5_VERSION?=		5.27.10
 KDE_PLASMA5_BRANCH?=		stable
 
 # Next KDE Plasma desktop
-KDE_PLASMA6_VERSION?=		5.91.0
+KDE_PLASMA6_VERSION?=		5.92.0
 KDE_PLASMA6_BRANCH?=		unstable
 
 # Current KDE frameworks.
-KDE_FRAMEWORKS5_VERSION?=	5.113.0
+KDE_FRAMEWORKS5_VERSION?=	5.114.0
 KDE_FRAMEWORKS5_BRANCH?=	stable
 
 # Next KDE Frameworks (Qt6 based)
-KDE_FRAMEWORKS6_VERSION?=	5.247.0
+KDE_FRAMEWORKS6_VERSION?=	5.248.0
 KDE_FRAMEWORKS6_BRANCH?=	unstable
 
 # Current KDE applications.
@@ -119,10 +119,10 @@ KDE_APPLICATIONS5_SHLIB_G_VER?=	23.8.4
 KDE_APPLICATIONS5_BRANCH?=	stable
 
 # Next KDE applications.
-KDE_APPLICATIONS6_VERSION?=	24.01.85
+KDE_APPLICATIONS6_VERSION?=	24.01.90
 KDE_APPLICATIONS6_SHLIB_VER?=	5.24.3
 # G as in KDE Gear, and as in "don't make the variable name longer than required"
-KDE_APPLICATIONS6_SHLIB_G_VER?=	24.01.85
+KDE_APPLICATIONS6_SHLIB_G_VER?=	24.01.90
 KDE_APPLICATIONS6_BRANCH?=	unstable
 
 # Extended KDE universe applications.
@@ -248,9 +248,7 @@ CMAKE_ARGS+=	-DCMAKE_MODULE_PATH="${LOCALBASE};${KDE_PREFIX}" \
 		-DCMAKE_INSTALL_PREFIX="${KDE_PREFIX}" \
 		-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=true
 
-# Set man-page installation prefix.
-CMAKE_ARGS+=	-DKDE_INSTALL_MANDIR:PATH="${KDE_PREFIX}/man" \
-		-DMAN_INSTALL_DIR:PATH="${KDE_PREFIX}/man"
+KDE_MAN_PREFIX?=	${KDE_PREFIX}/share/man
 
 # Disable autotests unless TEST_TARGET is defined.
 .    if !defined(TEST_TARGET)
@@ -793,7 +791,7 @@ kde-xdg-desktop-portal-kde_PORT=	deskutils/plasma${_KDE_VERSION}-xdg-desktop-por
 kde-xdg-desktop-portal-kde_PATH=	${KDE_PREFIX}/lib/libexec/xdg-desktop-portal-kde
 
 kde-plasma5support_PORT=	devel/plasma${_KDE_VERSION}-plasma5support
-kde-plasma5support_LIB=		libKF${_KDE_VERSION}Plasma5Support.so
+kde-plasma5support_LIB=		libPlasma5Support.so
 
 kde-kirigami-addons_PORT5=	x11-toolkits/kirigami-addons
 kde-kirigami-addons_PORT6=	x11-toolkits/kirigami-addons-devel

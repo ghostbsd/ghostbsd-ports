@@ -1,6 +1,6 @@
 PORTNAME=	aegisub
 PORTVERSION=	3.2.2
-PORTREVISION=	62
+PORTREVISION=	63
 CATEGORIES=	multimedia
 MASTER_SITES=	http://ftp.aegisub.org/pub/archives/releases/source/ \
 		ftp://ftp.aegisub.org/pub/archives/releases/source/ \
@@ -13,6 +13,9 @@ WWW=		http://www.aegisub.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENCE
+
+DEPRECATED=	BROKEN for nearly a year
+EXPIRATION_DATE=	2024-02-29
 
 BROKEN=		fails to build
 BROKEN_aarch64=		Fails to compile: no support for this architecture (yet)

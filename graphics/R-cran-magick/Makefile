@@ -1,9 +1,9 @@
 PORTNAME=	magick
-DISTVERSION=	2.8.1
+DISTVERSION=	2.8.2
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
-MAINTAINER=	uzsolt@uzsolt.hu
+MAINTAINER=	uzsolt@FreeBSD.org
 COMMENT=	Advanced Graphics and Image-Processing in R
 WWW=		https://cran.r-project.org/web/packages/magick/index.html
 

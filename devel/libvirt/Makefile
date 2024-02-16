@@ -1,8 +1,11 @@
 PORTNAME=	libvirt
-PORTVERSION=	9.10.0
+PORTVERSION=	10.0.0
 CATEGORIES=	devel
 MASTER_SITES=	http://libvirt.org/sources/ \
 		ftp://libvirt.org/libvirt/
+
+PATCH_SITES=	https://github.com/libvirt/libvirt/commit/
+PATCHFILES=	dcfe548cb0.patch:-p1
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Toolkit to interact with virtualization capabilities
@@ -117,6 +120,7 @@ MESON_ARGS+=	\
 		-Dnetcf=disabled \
 		-Dsysctl_config=disabled \
 		-Dnbdkit=disabled \
+		-Dnbdkit_config_default=disabled \
 		-Dlogin_shell=disabled \
 		-Dwireshark_dissector=disabled \
 		-Dinit_script=none \
@@ -140,7 +144,7 @@ USE_PERL5=	build
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
-SHLIB_VER=	0.9010.0
+SHLIB_VER=	0.10000.0
 PLIST_SUB+=	SHLIB_VER=${SHLIB_VER}
 PORTDOCS=	*
 #SHEBANG_FILES=	src/keycodemapdb/tools/keymap-gen

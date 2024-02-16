@@ -7,11 +7,11 @@ bin/etags
 libexec/emacs/%%EMACS_VER%%/%%GNU_HOST%%/hexl
 libexec/emacs/%%EMACS_VER%%/%%GNU_HOST%%/movemail
 libexec/emacs/%%EMACS_VER%%/%%GNU_HOST%%/rcs2log
-man/man1/ctags.1.gz
-man/man1/ebrowse.1.gz
-man/man1/emacs.1.gz
-man/man1/emacsclient.1.gz
-man/man1/etags.1.gz
+share/man/man1/ctags.1.gz
+share/man/man1/ebrowse.1.gz
+share/man/man1/emacs.1.gz
+share/man/man1/emacsclient.1.gz
+share/man/man1/etags.1.gz
 share/applications/emacs.desktop
 share/applications/emacsclient.desktop
 share/applications/emacs-mail.desktop
@@ -1779,6 +1779,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/trace.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/unsafep.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/unsafep.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/visual-wrap.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/visual-wrap.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/vtable.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/vtable.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/warnings.el.gz
@@ -3603,6 +3605,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/elixir-ts-mode.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/erts-mode.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/erts-mode.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/etags-regen.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/etags-regen.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/etags.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/etags.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/executable.el.gz

@@ -6,6 +6,7 @@
     SUBDIR += angelscript
     SUBDIR += antimony
     SUBDIR += apache-commons-jelly
+    SUBDIR += asm-lsp
     SUBDIR += asn1c
     SUBDIR += atlast
     SUBDIR += awka
@@ -43,6 +44,7 @@
     SUBDIR += cython3
     SUBDIR += dhall
     SUBDIR += dlang-tools
+    SUBDIR += dotnet
     SUBDIR += duktape
     SUBDIR += duktape-lib
     SUBDIR += ecl
@@ -102,6 +104,7 @@
     SUBDIR += gir-to-d
     SUBDIR += gjs
     SUBDIR += gleam
+    SUBDIR += gluon
     SUBDIR += gnat12
     SUBDIR += gnatcross-binutils-aarch64
     SUBDIR += gnatcross-sysroot-aarch64
@@ -205,6 +208,7 @@
     SUBDIR += nawk
     SUBDIR += nbfc
     SUBDIR += neko
+    SUBDIR += neocmakelsp
     SUBDIR += nesasm
     SUBDIR += newlisp
     SUBDIR += nhc98
@@ -322,6 +326,7 @@
     SUBDIR += rust
     SUBDIR += rust-bootstrap
     SUBDIR += rust-nightly
+    SUBDIR += rustpython
     SUBDIR += s7
     SUBDIR += sagittarius-scheme
     SUBDIR += sather-specification
@@ -379,6 +384,7 @@
     SUBDIR += ypsilon
     SUBDIR += zephir
     SUBDIR += zig
+    SUBDIR += zig-devel
     SUBDIR += zig010
 
 .include <bsd.port.subdir.mk>

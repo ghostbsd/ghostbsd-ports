@@ -72,6 +72,7 @@
     SUBDIR += bareos-webui
     SUBDIR += bareos20-webui
     SUBDIR += bareos21-webui
+    SUBDIR += bareos22-webui
     SUBDIR += beehive
     SUBDIR += bkmrkconv
     SUBDIR += bluefish
@@ -137,6 +138,7 @@
     SUBDIR += devd
     SUBDIR += dezoomify-rs
     SUBDIR += dillo2
+    SUBDIR += dmarcts-report-viewer
     SUBDIR += dojo
     SUBDIR += dokuwiki
     SUBDIR += dolibarr
@@ -316,7 +318,6 @@
     SUBDIR += libwww
     SUBDIR += lightsquid
     SUBDIR += lighttpd
-    SUBDIR += lighttpd-mod_h264_streaming
     SUBDIR += limesurvey
     SUBDIR += linklint
     SUBDIR += links
@@ -430,7 +431,6 @@
     SUBDIR += moinmoin
     SUBDIR += moinmoincli
     SUBDIR += mongoose
-    SUBDIR += mongrel2
     SUBDIR += monolith
     SUBDIR += moodle41
     SUBDIR += moodle42
@@ -443,6 +443,7 @@
     SUBDIR += mythplugin-mythweb
     SUBDIR += nanoblogger
     SUBDIR += nanoblogger-extra
+    SUBDIR += ncgopher
     SUBDIR += neon
     SUBDIR += netrik
     SUBDIR += netstiff
@@ -1550,6 +1551,7 @@
     SUBDIR += py-django-hierarkey
     SUBDIR += py-django-hijack
     SUBDIR += py-django-htmlmin
+    SUBDIR += py-django-htmx
     SUBDIR += py-django-i18nfield
     SUBDIR += py-django-jquery-js
     SUBDIR += py-django-js-asset
@@ -1690,6 +1692,7 @@
     SUBDIR += py-google-cloud-resource-manager
     SUBDIR += py-google-cloud-speech
     SUBDIR += py-google-cloud-storage
+    SUBDIR += py-google-cloud-testutils
     SUBDIR += py-google-cloud-translate
     SUBDIR += py-google-cloud-vision
     SUBDIR += py-google-resumable-media
@@ -1739,6 +1742,7 @@
     SUBDIR += py-multidict
     SUBDIR += py-mwoauth
     SUBDIR += py-nevow
+    SUBDIR += py-nh3
     SUBDIR += py-notebook
     SUBDIR += py-onetimepass
     SUBDIR += py-openbrokerapi
@@ -2312,6 +2316,7 @@
     SUBDIR += sogo2-activesync
     SUBDIR += spawn-fcgi
     SUBDIR += spreadlogd
+    SUBDIR += sqlpage
     SUBDIR += sqstat
     SUBDIR += squid
     SUBDIR += squid-langpack
@@ -2363,6 +2368,7 @@
     SUBDIR += tor-browser
     SUBDIR += trac
     SUBDIR += trac-accountmanager
+    SUBDIR += trac-markdownmacro
     SUBDIR += trac-spamfilter
     SUBDIR += trac-tocmacro
     SUBDIR += trafficserver
@@ -2492,6 +2498,7 @@
     SUBDIR += xist
     SUBDIR += xoops
     SUBDIR += xsp
+    SUBDIR += xurls
     SUBDIR += yabb
     SUBDIR += yarn
     SUBDIR += yarn-node16

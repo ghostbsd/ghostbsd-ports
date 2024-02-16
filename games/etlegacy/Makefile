@@ -1,5 +1,6 @@
 PORTNAME=	etlegacy
 DISTVERSION=	2.81.1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	https://mirror.etlegacy.com/geoip/:geoip \
 		https://mirror.etlegacy.com/wolfadmin/:wolfadmin
@@ -48,16 +49,56 @@ CLIENT_LIB_DEPENDS=	libcurl.so:ftp/curl \
 CLIENT_USES=		gl jpeg openal:soft,alut minizip sdl xorg
 CLIENT_USE=		GL=gl,glu,glew SDL=sdl2 XORG=x11,xxf86dga,xxf86vm
 
+DEDICATED_LIB_DEPENDS=	libcurl.so:ftp/curl \
+			libcjson.so:devel/libcjson
+DEDICATED_USES=		minizip
+
 SUB_FILES=	pkg-message
 
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "i386"
 PLIST_SUB+=	I386="" \
-		AMD64="@comment "
+		AARCH64="@comment " \
+		AMD64="@comment " \
+		POWERPC="@comment " \
+		POWERPC64="@comment " \
+		ARMV7="@comment "
 .elif ${ARCH} == "amd64"
 PLIST_SUB+=	I386="@comment " \
-		AMD64=""
+		AARCH64="@comment " \
+		AMD64="" \
+		POWERPC="@comment " \
+		POWERPC64="@comment " \
+		ARMV7="@comment "
+.elif ${ARCH} == "aarch64"
+PLIST_SUB+=	I386="@comment " \
+		AARCH64="" \
+		AMD64="@comment " \
+		POWERPC="@comment " \
+		POWERPC64="@comment " \
+		ARMV7="@comment "
+.elif ${ARCH} == "powerpc"
+PLIST_SUB+=	I386="@comment " \
+		AARCH64="@comment " \
+		AMD64="@comment " \
+		POWERPC="" \
+		POWERPC64="@comment " \
+		ARMV7="@comment "
+.elif ${ARCH:Mpowerpc64*}
+PLIST_SUB+=	I386="@comment " \
+		AARCH64="@comment " \
+		AMD64="@comment " \
+		POWERPC="@comment " \
+		POWERPC64="" \
+		ARMV7="@comment "
+.elif ${ARCH} == "armv7"
+PLIST_SUB+=	I386="@comment " \
+		AARCH64="@comment " \
+		AMD64="@comment " \
+		POWERPC="@comment " \
+		POWERPC64="@comment " \
+		ARMV7=""
 .endif
 
 .if ! ${PORT_OPTIONS:MCLIENT} && ${PORT_OPTIONS:MDEDICATED}

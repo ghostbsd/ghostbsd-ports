@@ -5,11 +5,10 @@ CATEGORIES=	deskutils
 MASTER_SITES=	https://BSDforge.com/projects/source/deskutils/bigyear/
 DISTNAME=	${PORTNAME}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Program to print a large (one month per page) calendar
 
-BROKEN=		Unfetchable
-DEPRECATED=	Last release in 2001 and dead upstream, consider using deskutils/pal
+DEPRECATED=    Last release in 2001 and dead upstream, consider using deskutils/pal
 EXPIRATION_DATE=2024-02-29
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"

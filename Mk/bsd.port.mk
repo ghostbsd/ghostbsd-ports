@@ -501,9 +501,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  Installs all directories and files from ${WRKSRC}/doc
 #				  to ${DOCSDIR} except sed(1) backup files.
 #
-# MANPREFIX		- The directory prefix for manual pages.
-#				  Default: ${PREFIX}
-#
 # Set the following to specify all .info files your port installs.
 #
 # INFO			- A list of .info files (omitting the trailing ".info");
@@ -752,7 +749,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				- Pass these args to configure if ${HAS_CONFIGURE} is set.
 #				  Default: "--prefix=${GNU_CONFIGURE_PREFIX}
 #				  --infodir=${PREFIX}/${INFO_PATH} --localstatedir=/var
-#				  --mandir=${MANPREFIX}/man --build=${CONFIGURE_TARGET}" if
+#				  --mandir=${PREFIX}/man --build=${CONFIGURE_TARGET}" if
 #				  GNU_CONFIGURE is set, "CC=${CC} CFLAGS=${CFLAGS}
 #				  PREFIX=${PREFIX} INSTALLPRIVLIB=${PREFIX}/lib
 #				  INSTALLARCHLIB=${PREFIX}/lib" if USES=perl5 and
@@ -1016,7 +1013,7 @@ LC_ALL=		C
 # These need to be absolute since we don't know how deep in the ports
 # tree we are and thus can't go relative.  They can, of course, be overridden
 # by individual Makefiles or local system make configuration.
-_LIST_OF_WITH_FEATURES=	debug lto ssp pie relro bind_now
+_LIST_OF_WITH_FEATURES=	bind_now debug debuginfo lto pie relro sanitize ssp
 _DEFAULT_WITH_FEATURES=	ssp
 PORTSDIR?=		/usr/ports
 LOCALBASE?=		/usr/local
@@ -1452,13 +1449,7 @@ USES+=mysql:${USE_MYSQL}
 .include "${PORTSDIR}/Mk/bsd.wx.mk"
 .    endif
 
-.    if !defined(UID)
-.      if defined(.MAKE.UID)
-UID=	${.MAKE.UID}
-.      else
-UID!=	${ID} -u
-.      endif
-.    endif
+UID?=	${.MAKE.UID}
 
 DESTDIRNAME?=	DESTDIR
 
@@ -2038,8 +2029,7 @@ MAKE_ENV+=		PREFIX=${PREFIX} \
 			CC="${CC}" CFLAGS="${CFLAGS}" \
 			CPP="${CPP}" CPPFLAGS="${CPPFLAGS}" \
 			LDFLAGS="${LDFLAGS}" LIBS="${LIBS}" \
-			CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" \
-			MANPREFIX="${MANPREFIX}"
+			CXX="${CXX}" CXXFLAGS="${CXXFLAGS}"
 
 # Add -fno-strict-aliasing to CFLAGS with optimization level -O2 or higher.
 # gcc 4.x enable strict aliasing optimization with -O2 which is known to break
@@ -2664,7 +2654,7 @@ _SUBPACKAGE_HELPERS_FILE=	DESCR PKGINSTALL PKGDEINSTALL PKGMESSAGE \
 ${v}.${sp}?=	${$v}.${sp}
 .        endfor
 _PKGMESSAGES.${sp}=		${PKGMESSAGE}.${sp}
-.        if !exists(${DESCR.${sp}})
+.        if !exists(${DESCR.${sp}}) && ${sp} != debuginfo
 DESCR.${sp}=	${DESCR}
 DEV_WARNING+=	"DESCR.${sp} needs to point to an existing file."
 .        endif
@@ -2711,7 +2701,7 @@ CONFIGURE_MAX_CMD_LEN!=	${SYSCTL} -n kern.argmax
 .      endif
 _EXPORTED_VARS+=	CONFIGURE_MAX_CMD_LEN
 GNU_CONFIGURE_PREFIX?=	${PREFIX}
-GNU_CONFIGURE_MANPREFIX?=	${MANPREFIX}
+GNU_CONFIGURE_MANPREFIX?=	${PREFIX}
 CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX} $${_LATE_CONFIGURE_ARGS}
 .      if defined(CROSS_TOOLCHAIN)
 CROSS_HOST=		${ARCH:S/amd64/x86_64/}-unknown-${OPSYS:tl}${OSREL}
@@ -2755,14 +2745,9 @@ SCRIPTS_ENV+=	CURDIR=${MASTERDIR} DISTDIR=${DISTDIR} \
 SCRIPTS_ENV+=	BATCH=yes
 .    endif
 
-.    if ${PREFIX} == /usr
-MANPREFIX?=	/usr/share
-.    else
-MANPREFIX?=	${PREFIX}
 MANDIRS+=	${PREFIX}/share/man
-.    endif
 
-MANDIRS+=	${MANPREFIX}/man
+MANDIRS+=	${PREFIX}/man
 INFO_PATH?=	share/info
 
 .    if defined(INFO)
@@ -3506,11 +3491,13 @@ ${WRKDIR_PKGFILE${_SP.${sp}}}:	${_PLIST}.${sp} create-manifest ${WRKDIR}/pkg
 
 _EXTRA_PACKAGE_TARGET_DEP+=	${WRKDIR_PKGFILE${_SP.${sp}}}
 
+.      if defined(_HAVE_PACKAGES)
 ${PKGFILE${_SP.${sp}}}: ${WRKDIR_PKGFILE${_SP.${sp}}}
 	@${LN} -f ${WRKDIR_PKGFILE${_SP.${sp}}} ${PKGFILE${_SP.${sp}}} 2>/dev/null \
 		|| ${CP} -f ${WRKDIR_PKGFILE${_SP.${sp}}} ${PKGFILE${_SP.${sp}}}
 
 _EXTRA_PACKAGE_TARGET_DEP+=	${PKGFILE${_SP.${sp}}}
+.      endif
 .    endfor
 # This will be the end of the loop
 
@@ -4866,7 +4853,7 @@ pretty-flavors-package-names: .PHONY
 
 flavors-package-names: .PHONY
 .    if empty(FLAVORS)
-	@${ECHO_CMD} "${PKGNAMES}"
+	@${ECHO_CMD} "${PKGNAMES}" | ${XARGS} -n 1
 .    else
 .      for f in ${FLAVORS}
 	@cd ${.CURDIR} && ${SETENV} -i FLAVOR=${f} ${MAKE} -B -V PKGNAMES | ${XARGS} -n 1
@@ -5493,7 +5480,7 @@ _STAGE_SEQ=		050:stage-message 100:stage-dir 150:run-depends \
 				900:add-plist-info 910:add-plist-docs 920:add-plist-examples \
 				930:add-plist-data 940:add-plist-post ${POST_PLIST:C/^/990:/} \
 				${_OPTIONS_install} ${_USES_install} \
-				${_OPTIONS_stage} ${_USES_stage}
+				${_OPTIONS_stage} ${_USES_stage} ${_FEATURES_stage}
 .    if defined(DEVELOPER)
 _STAGE_SEQ+=	995:stage-qa
 .    else

@@ -304,6 +304,7 @@
     SUBDIR += edenmath
     SUBDIR += eigen3
     SUBDIR += eispack
+    SUBDIR += elan
     SUBDIR += elemental
     SUBDIR += elementary-calculator
     SUBDIR += elpa
@@ -436,6 +437,9 @@
     SUBDIR += lcalc
     SUBDIR += ldouble
     SUBDIR += lean
+    SUBDIR += lean4
+    SUBDIR += lean4-std
+    SUBDIR += leangz
     SUBDIR += lemon
     SUBDIR += levmar
     SUBDIR += lib2geom
@@ -627,6 +631,7 @@
     SUBDIR += octave-forge-pythonic
     SUBDIR += octave-forge-quaternion
     SUBDIR += octave-forge-queueing
+    SUBDIR += octave-forge-rtree
     SUBDIR += octave-forge-secs1d
     SUBDIR += octave-forge-secs2d
     SUBDIR += octave-forge-secs3d
@@ -646,6 +651,7 @@
     SUBDIR += octave-forge-struct
     SUBDIR += octave-forge-symband
     SUBDIR += octave-forge-symbolic
+    SUBDIR += octave-forge-tablicious
     SUBDIR += octave-forge-tcl-octave
     SUBDIR += octave-forge-tsa
     SUBDIR += octave-forge-velas
@@ -1178,6 +1184,7 @@
     SUBDIR += suitesparse-lagraph
     SUBDIR += suitesparse-ldl
     SUBDIR += suitesparse-mongoose
+    SUBDIR += suitesparse-paru
     SUBDIR += suitesparse-rbio
     SUBDIR += suitesparse-spex
     SUBDIR += suitesparse-spqr

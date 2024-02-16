@@ -53,7 +53,6 @@
     SUBDIR += bamp-lv2
     SUBDIR += bangr-lv2
     SUBDIR += baresip
-    SUBDIR += baudline
     SUBDIR += bcg729
     SUBDIR += bchoppr-lv2
     SUBDIR += beep
@@ -398,6 +397,7 @@
     SUBDIR += libsonic
     SUBDIR += libsoxr
     SUBDIR += libspecbleach
+    SUBDIR += libvgm
     SUBDIR += libvorbis
     SUBDIR += libxmp
     SUBDIR += lilv
@@ -499,6 +499,7 @@
     SUBDIR += mps
     SUBDIR += mpz
     SUBDIR += mumble
+    SUBDIR += mumble-server
     SUBDIR += murmur
     SUBDIR += murmur-cli
     SUBDIR += muse-sequencer
@@ -760,9 +761,6 @@
     SUBDIR += speex
     SUBDIR += speexdsp
     SUBDIR += spek
-    SUBDIR += sphinx
-    SUBDIR += sphinx3
-    SUBDIR += sphinxbase
     SUBDIR += spiralloops
     SUBDIR += spiralsynth
     SUBDIR += spiralsynthmodular
@@ -776,7 +774,6 @@
     SUBDIR += ssr-lv2
     SUBDIR += stegosaurus-lv2
     SUBDIR += stk
-    SUBDIR += stmp
     SUBDIR += stone-phaser-lv2
     SUBDIR += strawberry
     SUBDIR += streamripper

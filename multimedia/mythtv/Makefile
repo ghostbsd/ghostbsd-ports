@@ -1,7 +1,7 @@
 PORTNAME=	mythtv
 DISTVERSIONPREFIX=	v
 DISTVERSION=	33.1
-PORTREVISION=	5
+PORTREVISION=	6
 PORTEPOCH=	1
 CATEGORIES=	multimedia
 
@@ -22,7 +22,6 @@ LIB_DEPENDS=	liblzo2.so:archivers/lzo2 \
 		libtag.so:audio/taglib \
 		libexiv2.so:graphics/exiv2 \
 		libva.so:multimedia/libva \
-		libva-glx.so:multimedia/libva-glx \
 		libbluray.so:multimedia/libbluray \
 		libass.so:multimedia/libass \
 		libfftw3_threads.so:math/fftw3 \
@@ -69,6 +68,7 @@ MAKE_ENV=	QTDIR="${PREFIX}" \
 		QMAKESPEC="${QMAKESPEC}"
 NOPRECIOUSMAKEVARS=	# don't override ARCH in ffmpeg makefiles
 DESTDIRNAME=	INSTALL_ROOT
+CFLAGS_powerpc=	-Wno-error=int-conversion
 CPPFLAGS+=	${QTCPPFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib
 LDFLAGS_aarch64=-Wl,-z,notext

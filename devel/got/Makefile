@@ -1,5 +1,5 @@
 PORTNAME=	got
-DISTVERSION=	0.95
+DISTVERSION=	0.96
 CATEGORIES=	devel
 MASTER_SITES=	https://gameoftrees.org/releases/
 
