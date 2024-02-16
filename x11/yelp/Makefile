@@ -18,7 +18,6 @@ LIB_DEPENDS=	libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
 		libgcrypt.so:security/libgcrypt \
 		libgpg-error.so:security/libgpg-error \
 		libharfbuzz.so:print/harfbuzz \
-		libsoup-2.4.so:devel/libsoup
 		libsoup-2.4.so:devel/libsoup \
 		libwebkit2gtk-4.0.so:www/webkit2-gtk3
 RUN_DEPENDS=	yelp-xsl>=0:textproc/yelp-xsl
