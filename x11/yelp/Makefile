@@ -1,6 +1,6 @@
 PORTNAME=	yelp
-DISTVERSION=	42.1
-PORTREVISION=	3
+DISTVERSION=	40.3
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
@@ -18,8 +18,7 @@ LIB_DEPENDS=	libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
 		libgcrypt.so:security/libgcrypt \
 		libgpg-error.so:security/libgpg-error \
 		libharfbuzz.so:print/harfbuzz \
-		libsoup-2.4.so:devel/libsoup \
-		libwebkit2gtk-4.0.so:www/webkit2-gtk3
+		libsoup-2.4.so:devel/libsoup
 RUN_DEPENDS=	yelp-xsl>=0:textproc/yelp-xsl
 
 PORTSCOUT=	limitw:1,even
