@@ -3,11 +3,6 @@ bin/networkmgr_configuration
 etc/devd/networkmgr.conf
 etc/sudoers.d/networkmgr
 etc/xdg/autostart/networkmgr.desktop
-%%PYTHON_SITELIBDIR%%/NetworkMgr-6.3-py%%PYTHON_VER%%.egg-info/PKG-INFO
-%%PYTHON_SITELIBDIR%%/NetworkMgr-6.3-py%%PYTHON_VER%%.egg-info/SOURCES.txt
-%%PYTHON_SITELIBDIR%%/NetworkMgr-6.3-py%%PYTHON_VER%%.egg-info/dependency_links.txt
-%%PYTHON_SITELIBDIR%%/NetworkMgr-6.3-py%%PYTHON_VER%%.egg-info/requires.txt
-%%PYTHON_SITELIBDIR%%/NetworkMgr-6.3-py%%PYTHON_VER%%.egg-info/top_level.txt
 %%PYTHON_SITELIBDIR%%/NetworkMgr/__init__.py
 %%PYTHON_SITELIBDIR%%/NetworkMgr/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/NetworkMgr/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc
@@ -222,4 +217,5 @@ share/icons/hicolor/scalable/apps/nm-signal-75.svg
 share/locale/ru/LC_MESSAGES/networkmgr.mo
 share/locale/zh_CN/LC_MESSAGES/networkmgr.mo
 %%DATADIR%%/auto-switch.py
+%%DATADIR%%/link-up.py
 %%DATADIR%%/setup-nic.py
