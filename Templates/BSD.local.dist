@@ -655,11 +655,20 @@
         man
             cat1
             ..
+            cat2
+            ..
             cat5
             ..
             cat7
             ..
             cat8
+            ..
+            es              uname=root
+/set uname=root
+                man7
+                ..
+                man8
+                ..
             ..
             ja              uname=root
 /set uname=root

@@ -120,6 +120,7 @@
     SUBDIR += go119
     SUBDIR += go120
     SUBDIR += go121
+    SUBDIR += go122
     SUBDIR += gomacro
     SUBDIR += gprolog
     SUBDIR += gravity
@@ -365,6 +366,7 @@
     SUBDIR += tcl85
     SUBDIR += tcl86
     SUBDIR += tcl87
+    SUBDIR += tcl9
     SUBDIR += tclX
     SUBDIR += tolua
     SUBDIR += tolua++

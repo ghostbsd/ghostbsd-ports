@@ -89,6 +89,7 @@
     SUBDIR += gqlplus
     SUBDIR += grass7
     SUBDIR += grass8
+    SUBDIR += greptimedb
     SUBDIR += hashtypes
     SUBDIR += hiredis
     SUBDIR += hsqldb
@@ -1065,7 +1066,7 @@
     SUBDIR += xls2txt
     SUBDIR += xrootd
     SUBDIR += xtrabackup
-    SUBDIR += xtrabackup8
+    SUBDIR += xtrabackup80
     SUBDIR += zodb
 
 .include <bsd.port.subdir.mk>

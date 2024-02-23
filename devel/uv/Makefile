@@ -1,5 +1,6 @@
 PORTNAME=	uv
 DISTVERSION=	0.1.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,6 +11,8 @@ LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
 LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
+
+BROKEN_i386=	compilation of the libopenssl_sys-abc7d27a34743709 crate fails: ld: error: undefined symbol: __atomic_is_lock_free, etc
 
 LIB_DEPENDS=	libssh2.so:security/libssh2
 

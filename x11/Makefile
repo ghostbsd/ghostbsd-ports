@@ -86,6 +86,7 @@
     SUBDIR += foot
     SUBDIR += fstobdf
     SUBDIR += fuzzel
+    SUBDIR += gbsddialog
     SUBDIR += gdm
     SUBDIR += ghostbsd-cinnamon-settings
     SUBDIR += ghostbsd-common-settings
@@ -130,6 +131,7 @@
     SUBDIR += hs-xmobar
     SUBDIR += hsetroot
     SUBDIR += hybrid-bar
+    SUBDIR += hypridle
     SUBDIR += hyprpaper
     SUBDIR += hyprpicker
     SUBDIR += i3bar-river

@@ -578,6 +578,7 @@
     SUBDIR += openldap26-server
     SUBDIR += openmdns
     SUBDIR += openmpi
+    SUBDIR += openmpi4
     SUBDIR += openntpd
     SUBDIR += openpgm
     SUBDIR += openradius
@@ -1048,7 +1049,10 @@
     SUBDIR += py-dugong
     SUBDIR += py-ec2-cli-tools
     SUBDIR += py-ephemeral-port-reserve
+    SUBDIR += py-err-backend-discord
+    SUBDIR += py-err-backend-mattermost
     SUBDIR += py-errbot
+    SUBDIR += py-errbot-backend-slackv3
     SUBDIR += py-eventlet
     SUBDIR += py-gdown
     SUBDIR += py-geopy
@@ -1116,6 +1120,7 @@
     SUBDIR += py-python-designateclient
     SUBDIR += py-python-glanceclient
     SUBDIR += py-python-heatclient
+    SUBDIR += py-python-ipware
     SUBDIR += py-python-keystoneclient
     SUBDIR += py-python-ldap
     SUBDIR += py-python-neutronclient
@@ -1304,6 +1309,7 @@
     SUBDIR += rubygem-google-cloud-bigtable
     SUBDIR += rubygem-google-cloud-bigtable-admin-v2
     SUBDIR += rubygem-google-cloud-bigtable-v2
+    SUBDIR += rubygem-google-cloud-compute-v1
     SUBDIR += rubygem-google-cloud-core
     SUBDIR += rubygem-google-cloud-env
     SUBDIR += rubygem-google-cloud-errors
@@ -1323,6 +1329,7 @@
     SUBDIR += rubygem-google-cloud-spanner-v1
     SUBDIR += rubygem-google-cloud-storage
     SUBDIR += rubygem-google-cloud-storage144
+    SUBDIR += rubygem-google-cloud-storage145
     SUBDIR += rubygem-google-cloud-trace
     SUBDIR += rubygem-google-cloud-trace-v1
     SUBDIR += rubygem-google-cloud-trace-v2

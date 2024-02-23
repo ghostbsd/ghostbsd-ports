@@ -1,5 +1,5 @@
 PORTNAME=	nokogiri
-PORTVERSION=	1.15.5
+PORTVERSION=	1.16.2
 PORTREVISION=	1
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
@@ -26,7 +26,7 @@ CONFIGURE_ARGS=	--use-system-libraries
 
 PLIST_FILES=	bin/nokogiri
 
-post-install:
-	${RMDIR} ${STAGEDIR}${PREFIX}/${GEM_LIB_DIR}/ports/
+post-patch:
+	@${RM} -r ${WRKSRC}/patches/ ${WRKSRC}/ports/
 
 .include <bsd.port.mk>

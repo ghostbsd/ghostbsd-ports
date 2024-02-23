@@ -1,6 +1,7 @@
 PORTNAME=	tenere
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.11
+PORTREVISION=	1
 CATEGORIES=	misc # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,6 +10,8 @@ WWW=		https://github.com/pythops/tenere
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	compilation fails: cargo:warning=c/freebsd.c:31:10: error: conflicting types for 'get_cpu_speed'
 
 LIB_DEPENDS=	libonig.so:devel/oniguruma
 

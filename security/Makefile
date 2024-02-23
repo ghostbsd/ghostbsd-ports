@@ -68,6 +68,7 @@
     SUBDIR += caesarcipher
     SUBDIR += caldera
     SUBDIR += caldera-ot
+    SUBDIR += caldera4
     SUBDIR += calife
     SUBDIR += cardpeek
     SUBDIR += cargo-audit
@@ -1006,7 +1007,6 @@
     SUBDIR += py-pysaml24
     SUBDIR += py-pysaml26
     SUBDIR += py-pyscard
-    SUBDIR += py-pysha3
     SUBDIR += py-pysodium
     SUBDIR += py-pyspnego
     SUBDIR += py-python-axolotl
