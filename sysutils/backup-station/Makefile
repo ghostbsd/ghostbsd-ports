@@ -1,5 +1,5 @@
 PORTNAME=	backup-station
-PORTVERSION=	0.4
+PORTVERSION=	0.5
 CATEGORIES=	sysutils
 
 MAINTAINER=	ericturgeon@ghostbsd.org
