@@ -266,6 +266,7 @@
     SUBDIR += p5-NetAddr-IP-Lite
     SUBDIR += p5-NetApp
     SUBDIR += p5-POE-Component-SNMP
+    SUBDIR += p5-Prometheus-Tiny
     SUBDIR += p5-RDR-Collector
     SUBDIR += p5-SNMP-Info
     SUBDIR += p5-SNMP-MIB-Compiler
@@ -392,7 +393,6 @@
     SUBDIR += torrus
     SUBDIR += triton-guesttools
     SUBDIR += unbound_exporter
-    SUBDIR += unifi7
     SUBDIR += unifi8
     SUBDIR += victoria-metrics
     SUBDIR += virt-viewer

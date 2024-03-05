@@ -169,6 +169,7 @@
     SUBDIR += bvm
     SUBDIR += byobu
     SUBDIR += calamares
+    SUBDIR += cardano-cli
     SUBDIR += catatonit
     SUBDIR += catfish
     SUBDIR += catsit
@@ -192,11 +193,9 @@
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
     SUBDIR += cfengine-masterfiles-lts
-    SUBDIR += cfengine-masterfiles320
     SUBDIR += cfengine-masterfiles321
     SUBDIR += cfengine-masterfiles322
     SUBDIR += cfengine-masterfiles323
-    SUBDIR += cfengine320
     SUBDIR += cfengine321
     SUBDIR += cfengine322
     SUBDIR += cfengine323
@@ -1059,8 +1058,7 @@
     SUBDIR += podman-suite
     SUBDIR += polkit
     SUBDIR += polkit-gnome
-    SUBDIR += polkit-qt
-    SUBDIR += polkit-qt-1-devel
+    SUBDIR += polkit-qt-1
     SUBDIR += pot
     SUBDIR += potnet
     SUBDIR += poweralertd
@@ -1109,6 +1107,7 @@
     SUBDIR += py-concurrent-log-handler
     SUBDIR += py-cron-descriptor
     SUBDIR += py-croniter
+    SUBDIR += py-croniter2
     SUBDIR += py-dict-toolbox
     SUBDIR += py-diffoscope
     SUBDIR += py-director

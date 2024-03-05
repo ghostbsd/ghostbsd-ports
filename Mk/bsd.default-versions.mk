@@ -56,9 +56,9 @@ FPC_DEFAULT?=		3.2.2
 .  else
 FPC_DEFAULT?=		3.3.1
 .  endif
-# Possible values: 9, 10, 11, 12
+# Possible values: 9, 10, 11, 12, 13, 14
 # (Any other version is completely unsupported and not meant for general use.)
-GCC_DEFAULT?=		12
+GCC_DEFAULT?=		13
 # Possible values: 10
 GHOSTSCRIPT_DEFAULT?=	10
 # Possible values: mesa-libs, mesa-devel
@@ -139,7 +139,7 @@ PYTHON_DEFAULT?=	3.9
 # Possible values: 2.7
 PYTHON2_DEFAULT?=	2.7
 # Possible values: 3.0, 3.1, 3.2, 3.3
-RUBY_DEFAULT?=		3.1
+RUBY_DEFAULT?=		3.2
 # Possible values: rust, rust-nightly
 RUST_DEFAULT?=		rust
 # Possible values: 4.13, 4.16, 4.19

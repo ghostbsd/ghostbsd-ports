@@ -39,7 +39,6 @@
     SUBDIR += a2png
     SUBDIR += aalib
     SUBDIR += aaphoto
-    SUBDIR += acidwarp
     SUBDIR += acidwarp-sdl
     SUBDIR += aeskulap
     SUBDIR += agg
@@ -243,7 +242,6 @@
     SUBDIR += gifski
     SUBDIR += giftool
     SUBDIR += gimageview
-    SUBDIR += gimmage
     SUBDIR += gimp
     SUBDIR += gimp-app
     SUBDIR += gimp-beautify-plugin
@@ -406,6 +404,7 @@
     SUBDIR += kf6-prison
     SUBDIR += kgeotag
     SUBDIR += kgraphviewer
+    SUBDIR += khronos-texture
     SUBDIR += kimageannotator
     SUBDIR += kimagemapeditor
     SUBDIR += kipi-plugins
@@ -635,6 +634,7 @@
     SUBDIR += openslide
     SUBDIR += opensubdiv
     SUBDIR += openvkl
+    SUBDIR += openxr
     SUBDIR += optar
     SUBDIR += optipng
     SUBDIR += osg
@@ -1122,6 +1122,7 @@
     SUBDIR += skanpage
     SUBDIR += spectacle
     SUBDIR += spectacle-devel
+    SUBDIR += spirv-cross
     SUBDIR += spirv-tools
     SUBDIR += springgraph
     SUBDIR += squish

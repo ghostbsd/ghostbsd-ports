@@ -669,6 +669,10 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #
 # For options see bsd.options.mk
 #
+# WRK_ENV		- Environment used when running the upstream build system.
+#				  Target-specific environment variables can be defined using
+#				  CONFIGURE_ENV, MAKE_ENV, TEST_ENV, and similar variables.
+#
 # For fetch:
 #
 # FETCH_BINARY	- Path to ftp/http fetch command if not in $PATH.
@@ -1013,7 +1017,7 @@ LC_ALL=		C
 # These need to be absolute since we don't know how deep in the ports
 # tree we are and thus can't go relative.  They can, of course, be overridden
 # by individual Makefiles or local system make configuration.
-_LIST_OF_WITH_FEATURES=	bind_now debug debuginfo lto pie relro sanitize ssp
+_LIST_OF_WITH_FEATURES=	bind_now debug debuginfo lto pie relro sanitize ssp testing
 _DEFAULT_WITH_FEATURES=	ssp
 PORTSDIR?=		/usr/ports
 LOCALBASE?=		/usr/local
@@ -1326,18 +1330,39 @@ LDCONFIG32_DIR=	libdata/ldconfig32
 TMPDIR?=	/tmp
 .    endif # defined(PACKAGE_BUILDING)
 
+# If user specified WITH_FEATURE=yes for a feature that is disabled by default
+# treat it as enabled by default
+.    for feature in ${_LIST_OF_WITH_FEATURES}
+.      if ${_DEFAULT_WITH_FEATURES:N${feature}}
+.        if defined(WITH_${feature:tu})
+_DEFAULT_WITH_FEATURES+=	${feature}
+.        endif
+.      endif
+.    endfor
+
+.    for feature in ${_LIST_OF_WITH_FEATURES}
+# Create _{WITH,WITHOUT}_FEATURE vars based on user-provided {WITH,WITHOUT}_FEATURE
+.      if defined(WITH_${feature:tu})
+_WITH_${feature:tu}=	${WITH_${feature:tu}}
+.      endif
+.      if defined(WITHOUT_${feature:tu})
+_WITHOUT_${feature:tu}=	${WITHOUT_${feature:tu}}
+.      endif
 # For each Feature we support, process the
 # WITH_FEATURE_PORTS and WITHOUT_FEATURE_PORTS variables
-.    for feature in ${_LIST_OF_WITH_FEATURES}
 .      if ${_DEFAULT_WITH_FEATURES:M${feature}}
-_WITH_OR_WITHOUT=	WITHOUT
+.        if defined(WITHOUT_${feature:tu}_PORTS)
+.          if ${WITHOUT_${feature:tu}_PORTS:M${PKGORIGIN}}
+_WITHOUT_${feature:tu}=	yes
+.undef _WITH_${feature:tu}
+.          endif
+.        endif
 .      else
-_WITH_OR_WITHOUT=	WITH
-.      endif
-
-.      if defined(${_WITH_OR_WITHOUT}_${feature:tu}_PORTS)
-.        if ${${_WITH_OR_WITHOUT}_${feature:tu}_PORTS:M${PKGORIGIN}}
-${_WITH_OR_WITHOUT}_${feature:tu}=	yes
+.        if defined(WITH_${feature:tu}_PORTS)
+.          if ${WITH_${feature:tu}_PORTS:M${PKGORIGIN}}
+_WITH_${feature:tu}=	yes
+.undef _WITHOUT_${feature:tu}
+.          endif
 .        endif
 .      endif
 .    endfor
@@ -1613,6 +1638,16 @@ PKG_NOTES+=	flavor
 PKG_NOTE_flavor=	${FLAVOR}
 .    endif
 
+WRK_ENV+=		HOME=${WRKDIR} \
+				PWD="$${PWD}"
+.    for e in OSVERSION PATH TERM TMPDIR \
+				UNAME_b UNAME_i UNAME_K UNAME_m UNAME_n \
+				UNAME_p UNAME_r UNAME_s UNAME_U UNAME_v
+.      ifdef ${e}
+WRK_ENV+=		${e}=${${e}:Q}
+.      endif
+.    endfor
+
 TEST_ARGS?=		${MAKE_ARGS}
 TEST_ENV?=		${MAKE_ENV}
 
@@ -1791,7 +1826,7 @@ CFLAGS:=	${CFLAGS:C/${_CPUCFLAGS}//}
 .    endif
 
 .    for f in ${_LIST_OF_WITH_FEATURES}
-.      if defined(WITH_${f:tu}) || ( ${_DEFAULT_WITH_FEATURES:M${f}} &&  !defined(WITHOUT_${f:tu}) )
+.      if defined(_WITH_${f:tu}) || ( ${_DEFAULT_WITH_FEATURES:M${f}} &&  !defined(_WITHOUT_${f:tu}) )
 .include "${PORTSDIR}/Mk/Features/$f.mk"
 .      endif
 .    endfor
@@ -3318,7 +3353,7 @@ do-configure:
 	@${MKDIR} ${CONFIGURE_WRKSRC}
 	@(cd ${CONFIGURE_WRKSRC} && \
 	    ${SET_LATE_CONFIGURE_ARGS} \
-		if ! ${SETENV} CC="${CC}" CPP="${CPP}" CXX="${CXX}" \
+		if ! ${SETENVI} ${WRK_ENV} CC="${CC}" CPP="${CPP}" CXX="${CXX}" \
 	    CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 	    LDFLAGS="${LDFLAGS}" LIBS="${LIBS}" \
 	    INSTALL="/usr/bin/install -c" \
@@ -3335,7 +3370,8 @@ do-configure:
 .    endif
 
 # Build
-DO_MAKE_BUILD?=	${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${_MAKE_JOBS} ${MAKE_ARGS:N${DESTDIRNAME}=*}
+DO_MAKE_BUILD?=	${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} \
+				${MAKEFILE} ${_MAKE_JOBS} ${MAKE_ARGS:N${DESTDIRNAME}=*}
 .    if !target(do-build)
 do-build:
 	@(cd ${BUILD_WRKSRC}; if ! ${DO_MAKE_BUILD} ${ALL_TARGET}; then \
@@ -3426,13 +3462,15 @@ check-install-conflicts:
 
 .    if !target(do-install) && !defined(NO_INSTALL)
 do-install:
-	@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${FAKEROOT} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
+	@(cd ${INSTALL_WRKSRC} && ${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${FAKEROOT} \
+		${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
 .    endif
 
 # Test
 
 .    if !target(do-test) && defined(TEST_TARGET)
-DO_MAKE_TEST?=	${SETENV} ${TEST_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${TEST_ARGS:N${DESTDIRNAME}=*}
+DO_MAKE_TEST?=	${SETENVI} ${WRK_ENV} ${TEST_ENV} ${MAKE_CMD} ${MAKE_FLAGS} \
+				${MAKEFILE} ${TEST_ARGS:N${DESTDIRNAME}=*}
 do-test:
 	@(cd ${TEST_WRKSRC}; if ! ${DO_MAKE_TEST} ${TEST_TARGET}; then \
 		if [ -n "${TEST_FAIL_MESSAGE}" ] ; then \
@@ -5497,7 +5535,7 @@ _INSTALL_SEQ=	100:install-message \
 				300:create-manifest
 _INSTALL_SUSEQ=	400:fake-pkg 500:security-check
 
-_PACKAGE_DEP=	stage
+_PACKAGE_DEP=	stage ${_TESTING_PACKAGE_DEP}
 _PACKAGE_SEQ=	100:package-message 300:pre-package 450:pre-package-script \
 				500:do-package 850:post-package-script \
 				${_OPTIONS_package} ${_USES_package}
