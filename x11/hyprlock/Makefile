@@ -1,10 +1,10 @@
 PORTNAME=	hyprlock
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1.0
+DISTVERSION=	0.2.0
 CATEGORIES=	x11 wayland
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	fa2a875e339a.patch:-p1 # https://github.com/hyprwm/hyprlock/pull/115
+PATCHFILES+=	e040c56ad294.patch:-p1 # https://github.com/hyprwm/hyprlock/pull/195
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Hyprland's GPU-accelerated screen locking utility #'
@@ -40,7 +40,7 @@ LIB_DEPENDS+=	libdate-tz.so:devel/date
 USES+=		localbase:ldflags
 .endif
 
-# XXX Drop after FreeBSD 13.2 EOL around 2024-05-01 (don't forget distinfo)
+# XXX Drop after FreeBSD 13.2 EOL around 2024-07-01 (don't forget distinfo)
 .if ${CXX} == c++ && exists(/usr/lib/libc++.so)
 .if !exists(/usr/include/c++/v1/expected) || make(makesum) || make(fetch)
 USES+=		llvm:min=16,build,export

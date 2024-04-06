@@ -1,4 +1,4 @@
---- Makefile.simde.orig	2023-04-25 16:44:52 UTC
+--- Makefile.simde.orig	2024-03-12 17:20:07 UTC
 +++ Makefile.simde
 @@ -1,13 +1,26 @@
 -CFLAGS=		-g -Wall -O2 -Wc++-compat #-Wextra

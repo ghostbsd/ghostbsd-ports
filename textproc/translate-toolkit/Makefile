@@ -1,5 +1,6 @@
 PORTNAME=	translate-toolkit
 PORTVERSION=	3.12.2
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	PYPI \
 		https://github.com/translate/translate/releases/download/${PORTVERSION}/
@@ -22,7 +23,7 @@ RUN_DEPENDS=	bash:shells/bash \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR}
 
 USES=		gettext python shebangfix
-USE_PYTHON=	autoplist distutils noflavors
+USE_PYTHON=	autoplist noflavors pep517
 
 NO_ARCH=	yes
 
@@ -76,7 +77,7 @@ YAML_VARS=		MANPAGES+="po2yaml yaml2po"
 post-build:
 	@${MKDIR} ${WRKSRC}/manpages
 .for manpage in ${MANPAGES}
-	cd ${WRKSRC}/build/lib/translate/convert && ${SETENV} PYTHONPATH=${WRKSRC}/build/lib ${PYTHON_CMD} ${manpage}.py --man > ${WRKSRC}/manpages/${manpage}.1
+	cd ${WRKSRC}/build/lib/translate/convert && ${SETENVI} ${WRK_ENV} PYTHONPATH=${WRKSRC}/build/lib ${PYTHON_CMD} ${manpage}.py --man > ${WRKSRC}/manpages/${manpage}.1
 .endfor
 
 post-install:

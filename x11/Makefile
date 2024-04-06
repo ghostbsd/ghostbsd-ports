@@ -131,6 +131,7 @@
     SUBDIR += hs-xmobar
     SUBDIR += hsetroot
     SUBDIR += hybrid-bar
+    SUBDIR += hyprcursor
     SUBDIR += hypridle
     SUBDIR += hyprlock
     SUBDIR += hyprpaper
@@ -279,7 +280,6 @@
     SUBDIR += mlterm
     SUBDIR += mons
     SUBDIR += mrxvt
-    SUBDIR += mrxvt-devel
     SUBDIR += multi-aterm
     SUBDIR += mxascii
     SUBDIR += mxico
@@ -539,6 +539,7 @@
     SUBDIR += xcolors
     SUBDIR += xconfig
     SUBDIR += xconsole
+    SUBDIR += xcur2png
     SUBDIR += xcursorgen
     SUBDIR += xcut
     SUBDIR += xdg-desktop-portal-gnome

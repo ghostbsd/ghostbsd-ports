@@ -2,7 +2,6 @@
 
     SUBDIR += beebeep
     SUBDIR += biboumi
-    SUBDIR += cawbird
     SUBDIR += chatterino2
     SUBDIR += climm
     SUBDIR += coccinella
@@ -147,7 +146,6 @@
     SUBDIR += tdlib-purple
     SUBDIR += telegram-cli
     SUBDIR += telegram-desktop
-    SUBDIR += telegram-purple
     SUBDIR += telegramqml
     SUBDIR += teleirc
     SUBDIR += telepathy-accounts-signon

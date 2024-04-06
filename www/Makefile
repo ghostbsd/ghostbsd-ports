@@ -186,6 +186,7 @@
     SUBDIR += flexget
     SUBDIR += flickcurl
     SUBDIR += foreign-cdm
+    SUBDIR += forgejo
     SUBDIR += formication
     SUBDIR += foswiki
     SUBDIR += free-sa-devel
@@ -203,7 +204,6 @@
     SUBDIR += geckodriver
     SUBDIR += geneweb
     SUBDIR += geolizer
-    SUBDIR += get_flash_videos
     SUBDIR += ghostunnel
     SUBDIR += gist
     SUBDIR += gitea
@@ -239,7 +239,6 @@
     SUBDIR += gwsocket
     SUBDIR += h2c
     SUBDIR += h2o
-    SUBDIR += h2o-devel
     SUBDIR += habari
     SUBDIR += hiawatha
     SUBDIR += hiawatha-monitor
@@ -352,7 +351,6 @@
     SUBDIR += matomo
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
-    SUBDIR += mediawiki135
     SUBDIR += mediawiki139
     SUBDIR += mediawiki140
     SUBDIR += mediawiki141
@@ -472,7 +470,6 @@
     SUBDIR += nginx-vts-exporter
     SUBDIR += nift
     SUBDIR += node
-    SUBDIR += node16
     SUBDIR += node18
     SUBDIR += node20
     SUBDIR += node21
@@ -482,7 +479,6 @@
     SUBDIR += npapi-xine
     SUBDIR += npc
     SUBDIR += npm
-    SUBDIR += npm-node16
     SUBDIR += npm-node18
     SUBDIR += npm-node20
     SUBDIR += npm-node21
@@ -1507,14 +1503,18 @@
     SUBDIR += py-dj42-django-graphiql-debug-toolbar
     SUBDIR += py-dj42-django-guardian
     SUBDIR += py-dj42-django-js-asset
+    SUBDIR += py-dj42-django-modelcluster
     SUBDIR += py-dj42-django-mptt
     SUBDIR += py-dj42-django-multiselectfield
+    SUBDIR += py-dj42-django-otp
+    SUBDIR += py-dj42-django-permissionedforms
     SUBDIR += py-dj42-django-prometheus
     SUBDIR += py-dj42-django-redis
     SUBDIR += py-dj42-django-rich
     SUBDIR += py-dj42-django-tables2
     SUBDIR += py-dj42-django-taggit
     SUBDIR += py-dj42-django-timezone-field
+    SUBDIR += py-dj42-django-treebeard
     SUBDIR += py-dj42-djangoql
     SUBDIR += py-dj42-djangorestframework
     SUBDIR += py-dj42-djangorestframework-guardian
@@ -1537,6 +1537,7 @@
     SUBDIR += py-django-bootstrap4
     SUBDIR += py-django-braces
     SUBDIR += py-django-cacheops
+    SUBDIR += py-django-choices-field
     SUBDIR += py-django-ckeditor-5
     SUBDIR += py-django-classy-tags
     SUBDIR += py-django-cms
@@ -1621,6 +1622,7 @@
     SUBDIR += py-django-timezone-field
     SUBDIR += py-django-tinymce
     SUBDIR += py-django-treebeard
+    SUBDIR += py-django-unfold
     SUBDIR += py-django-voting
     SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
@@ -1750,6 +1752,7 @@
     SUBDIR += py-jonpy
     SUBDIR += py-jsonfield
     SUBDIR += py-kiss-headers
+    SUBDIR += py-laces
     SUBDIR += py-lektor
     SUBDIR += py-lesscpy
     SUBDIR += py-libsass
@@ -1840,6 +1843,7 @@
     SUBDIR += py-spyne
     SUBDIR += py-sseclient
     SUBDIR += py-starlette
+    SUBDIR += py-strawberry-graphql-django
     SUBDIR += py-swapper
     SUBDIR += py-textile
     SUBDIR += py-ticketutil
@@ -1909,6 +1913,7 @@
     SUBDIR += rearx
     SUBDIR += reddsaver
     SUBDIR += redmine50
+    SUBDIR += redmine51
     SUBDIR += rejik
     SUBDIR += remark42
     SUBDIR += reportmagic
@@ -1973,7 +1978,6 @@
     SUBDIR += rubygem-crass
     SUBDIR += rubygem-cssbundling-rails
     SUBDIR += rubygem-cssbundling-rails-rails70
-    SUBDIR += rubygem-cssbundling-rails13-rails70
     SUBDIR += rubygem-cuba
     SUBDIR += rubygem-d3_rails
     SUBDIR += rubygem-davclient
@@ -2010,7 +2014,6 @@
     SUBDIR += rubygem-faraday-retry1
     SUBDIR += rubygem-faraday0
     SUBDIR += rubygem-faraday1
-    SUBDIR += rubygem-faraday14
     SUBDIR += rubygem-faraday_middleware
     SUBDIR += rubygem-faraday_middleware0
     SUBDIR += rubygem-faye
@@ -2329,6 +2332,7 @@
     SUBDIR += smarty
     SUBDIR += smarty2
     SUBDIR += smarty3
+    SUBDIR += smarty4
     SUBDIR += smb_auth
     SUBDIR += snarf
     SUBDIR += so
@@ -2372,9 +2376,7 @@
     SUBDIR += thumbnail_index
     SUBDIR += thundercache
     SUBDIR += tidy
-    SUBDIR += tidy-devel
     SUBDIR += tidy-html5
-    SUBDIR += tidy-lib
     SUBDIR += tikiwiki
     SUBDIR += tinymce
     SUBDIR += tinyproxy
@@ -2523,7 +2525,6 @@
     SUBDIR += xurls
     SUBDIR += yabb
     SUBDIR += yarn
-    SUBDIR += yarn-node16
     SUBDIR += yarn-node18
     SUBDIR += yarn-node20
     SUBDIR += yarn-node21
@@ -2531,7 +2532,6 @@
     SUBDIR += yaws
     SUBDIR += you-get
     SUBDIR += yourls
-    SUBDIR += youtube_dl
     SUBDIR += yt-dlp
     SUBDIR += ytdl
     SUBDIR += yuicompressor

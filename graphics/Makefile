@@ -812,7 +812,6 @@
     SUBDIR += png2html
     SUBDIR += png2ico
     SUBDIR += pngcheck
-    SUBDIR += pngcrush
     SUBDIR += pnglite
     SUBDIR += pngnq
     SUBDIR += pngquant

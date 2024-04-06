@@ -1,7 +1,7 @@
 PORTNAME=	khronos-texture
-DISTVERSION=	4.3.1
-CATEGORIES=	graphics
 DISTVERSIONPREFIX=	v
+DISTVERSION=	4.3.2
+CATEGORIES=	graphics
 
 MAINTAINER=	vvd@FreeBSD.org
 COMMENT=	Khronos Texture is a container for textures for OpenGL/Vulkan/etc
@@ -12,8 +12,6 @@ LICENSE=	APACHE20
 BUILD_DEPENDS=	bash:shells/bash
 
 USES=		cmake compiler:c++11-lib python:build
-
-CMAKE_OFF=	FMT_INSTALL
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	KhronosGroup
@@ -26,6 +24,7 @@ OPTIONS_EXCLUDE+=		${${ARCH} != armv6 && ${ARCH} != armv7 && ${ARCH} != aarch64:
 OPTIONS_DEFAULT_aarch64=	NEON
 OPTIONS_DEFAULT_amd64=		SSE2
 OPTIONS_DEFAULT_armv7=		NEON
+OPTIONS_DEFAULT_OTHER_ARCHS=	NONE
 
 AVX2_DESC=		Use the AVX2 instruction set
 AVX2_CMAKE_ON=		-DASTCENC_ISA_AVX2:BOOL=ON -DBASISU_SUPPORT_SSE:BOOL=ON

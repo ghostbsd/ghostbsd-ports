@@ -348,6 +348,7 @@
     SUBDIR += libconvolve
     SUBDIR += libcoverart
     SUBDIR += libdiscid
+    SUBDIR += libdjinterop
     SUBDIR += libdssialsacompat
     SUBDIR += libebur128
     SUBDIR += libechonest
@@ -576,6 +577,7 @@
     SUBDIR += paman
     SUBDIR += pamixer
     SUBDIR += paprefs
+    SUBDIR += pasystray
     SUBDIR += patchage
     SUBDIR += pavucontrol
     SUBDIR += pavucontrol-qt

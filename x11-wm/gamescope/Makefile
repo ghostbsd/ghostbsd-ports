@@ -76,7 +76,7 @@ post-configure:
 		--skip-subprojects/' ${BUILD_WRKSRC}/build.ninja
 .endif
 
-# XXX Drop after FreeBSD 13.2 EOL around 2024-05-01 (don't forget distinfo)
+# XXX Drop after FreeBSD 13.2 EOL around 2024-07-01 (don't forget distinfo)
 .if ${CXX} == c++ && exists(/usr/lib/libc++.so)
 .if !exists(/usr/include/c++/v1/__ranges/as_rvalue_view.h) || make(makesum) || make(fetch)
 BUILD_DEPENDS+=	${CMAKE_BIN}:devel/cmake-core
@@ -89,6 +89,7 @@ CMAKE_BIN=	${LOCALBASE}/bin/cmake
 GH_TUPLE+=	llvm:llvm-project:llvmorg-16.0.1:libcxx
 CXXFLAGS+=	-nostdinc++ -isystem${WRKDIR}/libcxx_prefix/include/c++/v1
 # Don't link against new libc++ as it's not necessary
+CXXFLAGS+=	-D_LIBCPP_HAS_NO_VERBOSE_ABORT_IN_LIBRARY
 #LDFLAGS+=	-nostdlib++ -L${WRKDIR}/libcxx_prefix/lib -l:libc++.a -lcxxrt
 
 pre-configure:	bundled-libcxx

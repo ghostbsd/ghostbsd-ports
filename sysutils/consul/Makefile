@@ -1,5 +1,5 @@
 PORTNAME=	consul
-DISTVERSION=	1.18.0
+DISTVERSION=	1.18.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 MASTER_SITES=	https://raw.githubusercontent.com/hashicorp/consul/${DISTVERSIONFULL}/

@@ -155,8 +155,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  but distfiles can be put on ftp sites and CDROMs.
 # FORBIDDEN		- Package build should not be attempted because of
 #				  security vulnerabilities.
-# LEGAL_TEXT	- Port has legal issues (e.g., special permission to distribute, lacks a license).
-# LEGAL_PACKAGE - Port has no legal issues but defines NO_PACKAGE
 # IGNORE		- Package build should be skipped entirely (e.g.
 #				  because of serious unfixable problems in the build,
 #				  because it cannot be manually fetched, etc).  Error
@@ -1574,7 +1572,7 @@ EXTRACT_SUFX?=			.tar.gz
 .    if defined(USE_LINUX_PREFIX)
 PREFIX=					${LINUXBASE}
 DATADIR?=				${PREFIX}/usr/share/${PORTNAME}
-DOCSDIR?=				${PREFIX}/usr/share/doc/${PORTNAME}-${PORTVERSION}
+DOCSDIR?=				${PREFIX}/usr/share/doc/${PORTNAME}-${DISTVERSION}
 NO_LICENSES_INSTALL=	yes
 NO_MTREE=				yes
 .    endif
@@ -1639,7 +1637,8 @@ PKG_NOTE_flavor=	${FLAVOR}
 .    endif
 
 WRK_ENV+=		HOME=${WRKDIR} \
-				PWD="$${PWD}"
+				PWD="$${PWD}" \
+				__MAKE_CONF=${NONEXISTENT}
 .    for e in OSVERSION PATH TERM TMPDIR \
 				UNAME_b UNAME_i UNAME_K UNAME_m UNAME_n \
 				UNAME_p UNAME_r UNAME_s UNAME_U UNAME_v
@@ -2017,8 +2016,7 @@ ERROR+=	"Unknown USES=${f:C/\:.*//}"
 .    endif
 
 .    if defined(USE_LOCALE)
-CONFIGURE_ENV+=	LANG=${USE_LOCALE} LC_ALL=${USE_LOCALE}
-MAKE_ENV+=		LANG=${USE_LOCALE} LC_ALL=${USE_LOCALE}
+WRK_ENV+=	LANG=${USE_LOCALE} LC_ALL=${USE_LOCALE}
 .    endif
 
 # Macro for doing in-place file editing using regexps.  REINPLACE_ARGS may only
@@ -2930,17 +2928,6 @@ IGNORE=		is marked as broken on ${OPSYS}: ${BROKEN_${OPSYS}}
 .        endif
 .      elif defined(FORBIDDEN)
 IGNORE=		is forbidden: ${FORBIDDEN}
-.      endif
-
-# Define the text to be output to LEGAL
-.      if defined(LEGAL_TEXT)
-LEGAL= ${LEGAL_TEXT}
-.      elif defined(RESTRICTED)
-LEGAL= ${RESTRICTED}
-.      elif defined(NO_CDROM)
-LEGAL= ${NO_CDROM}
-.      elif defined(NO_PACKAGE) && ! defined(LEGAL_PACKAGE)
-LEGAL= ${NO_PACKAGE}
 .      endif
 
 .      if (defined(MANUAL_PACKAGE_BUILD) && defined(PACKAGE_BUILDING))

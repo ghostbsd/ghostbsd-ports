@@ -1,6 +1,6 @@
 PORTNAME=	eza
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.18.5
+DISTVERSION=	0.18.9
 CATEGORIES=	sysutils
 
 MAINTAINER=	kdeguchi@sz.tokoha-u.ac.jp
@@ -22,8 +22,7 @@ CARGO_CRATES=	aho-corasick-1.0.5 \
 		android-tzdata-0.1.1 \
 		android_system_properties-0.1.5 \
 		anes-0.1.6 \
-		ansi_colours-1.2.2 \
-		ansiterm-0.12.2 \
+		ansi-width-0.1.0 \
 		anstream-0.6.11 \
 		anstyle-1.0.3 \
 		anstyle-parse-0.2.1 \
@@ -65,7 +64,7 @@ CARGO_CRATES=	aho-corasick-1.0.5 \
 		fastrand-2.0.0 \
 		filetime-0.2.22 \
 		form_urlencoded-1.0.1 \
-		git2-0.18.2 \
+		git2-0.18.3 \
 		glob-0.3.1 \
 		half-1.8.2 \
 		hashbrown-0.14.2 \
@@ -84,15 +83,16 @@ CARGO_CRATES=	aho-corasick-1.0.5 \
 		libc-0.2.153 \
 		libgit2-sys-0.16.2+1.7.2 \
 		libz-sys-1.1.2 \
-		line-wrap-0.1.1 \
+		line-wrap-0.2.0 \
 		linux-raw-sys-0.4.11 \
 		locale-0.2.2 \
-		log-0.4.20 \
+		log-0.4.21 \
 		matches-0.1.8 \
 		memchr-2.6.3 \
 		memoffset-0.9.0 \
 		natord-1.0.9 \
 		normalize-line-endings-0.3.0 \
+		nu-ansi-term-0.49.0 \
 		num-traits-0.2.14 \
 		number_prefix-0.4.0 \
 		once_cell-1.19.0 \
@@ -103,13 +103,14 @@ CARGO_CRATES=	aho-corasick-1.0.5 \
 		palette-0.7.5 \
 		palette_derive-0.7.5 \
 		partition-identity-0.3.0 \
+		path-clean-1.0.1 \
 		percent-encoding-2.3.1 \
 		phf-0.11.2 \
 		phf_generator-0.11.2 \
 		phf_macros-0.11.2 \
 		phf_shared-0.11.2 \
 		pkg-config-0.3.19 \
-		plist-1.6.0 \
+		plist-1.6.1 \
 		plotters-0.3.5 \
 		plotters-backend-0.3.5 \
 		plotters-svg-0.3.5 \
@@ -120,7 +121,7 @@ CARGO_CRATES=	aho-corasick-1.0.5 \
 		quote-1.0.33 \
 		rand-0.8.5 \
 		rand_core-0.6.4 \
-		rayon-1.8.1 \
+		rayon-1.10.0 \
 		rayon-core-1.12.1 \
 		redox_syscall-0.1.57 \
 		redox_syscall-0.3.5 \
@@ -129,7 +130,6 @@ CARGO_CRATES=	aho-corasick-1.0.5 \
 		regex-syntax-0.7.5 \
 		rustix-0.38.21 \
 		ryu-1.0.15 \
-		safemem-0.3.3 \
 		same-file-1.0.6 \
 		scopeguard-1.2.0 \
 		serde-1.0.188 \
@@ -162,7 +162,7 @@ CARGO_CRATES=	aho-corasick-1.0.5 \
 		unicode-width-0.1.11 \
 		url-2.2.1 \
 		utf8parse-0.2.1 \
-		uutils_term_grid-0.3.0 \
+		uutils_term_grid-0.6.0 \
 		uzers-0.11.3 \
 		vcpkg-0.2.12 \
 		wait-timeout-0.2.0 \

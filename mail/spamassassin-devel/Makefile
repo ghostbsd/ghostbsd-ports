@@ -1,6 +1,5 @@
 PORTNAME=	spamassassin
 PORTVERSION=	${SA_COMMIT_DATE}
-PORTREVISION=	2
 CATEGORIES?=	mail perl5
 PKGNAMESUFFIX=	-devel
 
@@ -10,8 +9,8 @@ WWW=		https://spamassassin.apache.org/
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	apache
-GH_TAGNAME=	11be30bbc
-SA_COMMIT_DATE=	2024.03.02
+GH_TAGNAME=	6e2be8ffc
+SA_COMMIT_DATE=	2024.04.02
 
 LICENSE=	APACHE20
 

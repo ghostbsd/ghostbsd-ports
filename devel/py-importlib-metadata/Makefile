@@ -1,5 +1,5 @@
 PORTNAME=	importlib-metadata
-DISTVERSION=	7.0.1
+DISTVERSION=	7.1.0
 CATEGORIES=	devel
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,5 +21,7 @@ USES=		python
 USE_PYTHON=	autoplist pep517 pytest
 
 NO_ARCH=	yes
+
+TESTING_UNSAFE=	ModuleNotFoundError: No module named 'pyfakefs'
 
 .include <bsd.port.mk>
