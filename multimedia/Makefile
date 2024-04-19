@@ -183,6 +183,7 @@
     SUBDIR += librtmp
     SUBDIR += libtheora
     SUBDIR += libtuner
+    SUBDIR += libudfread
     SUBDIR += libuvc
     SUBDIR += libv4l
     SUBDIR += libva
@@ -217,7 +218,6 @@
     SUBDIR += minisatip
     SUBDIR += minitube
     SUBDIR += mjpegtools
-    SUBDIR += mjpg-streamer
     SUBDIR += mkclean
     SUBDIR += mkvalidator
     SUBDIR += mkvtoolnix

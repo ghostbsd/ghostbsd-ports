@@ -14,11 +14,14 @@ LICENSE_FILE=	${WRKSRC}/COPYING.GPL
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
 		itstool:textproc/itstool \
+		xmllint:textproc/libxml2 \
+		xsltproc:textproc/libxslt \
 		yelp-xsl>=0:textproc/yelp-xsl
+RUN_DEPENDS=	xmllint:textproc/libxml2 \
+		xsltproc:textproc/libxslt
 
-USES=		gettext gnome localbase meson pathfix pkgconfig python \
+USES=		localbase meson pkgconfig python \
 		shebangfix tar:xz
-USE_GNOME=	libxml2 libxslt
 SHEBANG_FILES=	tools/yelp-build.in tools/yelp-check.in tools/yelp-new.in
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}

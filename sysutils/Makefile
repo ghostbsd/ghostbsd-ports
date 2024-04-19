@@ -808,7 +808,6 @@
     SUBDIR += msiklm
     SUBDIR += msktutil
     SUBDIR += mstflint
-    SUBDIR += msyslog
     SUBDIR += mtm
     SUBDIR += mtpfs
     SUBDIR += mtxorbd

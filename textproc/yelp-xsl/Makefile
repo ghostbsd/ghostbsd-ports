@@ -16,9 +16,7 @@ BUILD_DEPENDS=	itstool:textproc/itstool
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake gnome localbase pathfix \
-		pkgconfig tar:xz
-USE_GNOME=	libxml2 libxslt
+USES=		pathfix tar:xz
 GNU_CONFIGURE=	yes
 NO_ARCH=	yes
 

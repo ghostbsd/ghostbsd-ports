@@ -405,7 +405,6 @@
     SUBDIR += libnumbertext
     SUBDIR += libnxml
     SUBDIR += libodfgen01
-    SUBDIR += libparsifal
     SUBDIR += libqxp
     SUBDIR += librevenge
     SUBDIR += libsass
@@ -1750,6 +1749,7 @@
     SUBDIR += rubygem-colored
     SUBDIR += rubygem-colored2
     SUBDIR += rubygem-commonmarker
+    SUBDIR += rubygem-commonmarker0
     SUBDIR += rubygem-creole
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
@@ -1997,7 +1997,6 @@
     SUBDIR += sowing
     SUBDIR += spellutils
     SUBDIR += sphinxsearch
-    SUBDIR += spiff
     SUBDIR += splitpatch
     SUBDIR += sq-hunspell
     SUBDIR += sr-aspell
