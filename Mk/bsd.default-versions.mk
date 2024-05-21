@@ -56,7 +56,7 @@ FPC_DEFAULT?=		3.2.2
 .  else
 FPC_DEFAULT?=		3.3.1
 .  endif
-# Possible values: 9, 10, 11, 12, 13, 14
+# Possible values: 9, 10, 11, 12, 13, 14, 15
 # (Any other version is completely unsupported and not meant for general use.)
 GCC_DEFAULT?=		13
 # Possible values: 10
@@ -87,7 +87,7 @@ LIBRSVG2_DEFAULT?=	rust
 .  else
 LIBRSVG2_DEFAULT?=	legacy
 .  endif
-# Possible values: c7
+# Possible values: c7 rl9
 LINUX_DEFAULT?=		c7
 # Possible values: 11, 12, 13, 14, 15, 16, 17, -devel (to be used when non-base compiler is required)
 LLVM_DEFAULT?=		15
@@ -105,7 +105,7 @@ MONO_DEFAULT?=		5.20
 MYSQL_DEFAULT?=		8.0
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
-# Possible value: 18, 20, 21, current, lts (Note: current = 21 and lts = 20)
+# Possible value: 18, 20, 21, 22, current, lts (Note: current = 22 and lts = 20)
 NODEJS_DEFAULT?=	lts
 # Possible value: 25, 26
 OPENLDAP_DEFAULT?=	26

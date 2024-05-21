@@ -1,5 +1,5 @@
 PORTNAME=	laspy
-DISTVERSION=	2.5.2
+DISTVERSION=	2.5.3
 CATEGORIES=	misc
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -26,6 +26,6 @@ USE_PYTHON=	pep517 concurrent autoplist pytest # tests can't find the module las
 
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 
-NOARCH=		yes
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

@@ -5,19 +5,105 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
-20240409:
-  AFFECTS: x11-servers/xwayland-devel
-  AUTHOR: jbeich@FreeBSD.org
+20240521:
+  AFFECTS: www/gitlab
+  AUTHOR: mfechner@FreeBSD.org
 
-  xwayland-devel has dropped HiDPI patches thus currently incompatible
-  with stable/legacy versions of wlroots. Only affects builds when
-  /usr/local/bin/Xwayland is already installed. Doesn't affect
-  hyprland and sway-devel or non-wlroots compositors.
+  Make sure you upgrade first to 16.11.x before you upgrade to the today
+  released version 17.0.0.
 
-  If you use portmaster:
-    # portmaster -o x11-servers/xwayland-devel x11-servers/xwayland
-  If you use portupgrade:
-    # portupgrade -o x11-servers/xwayland-devel x11-servers/xwayland
+  For more details see:
+  https://gitlab.fechner.net/mfechner/Gitlab-docu/-/blob/master/update/16.11-17.0-freebsd.md
+
+20240517:
+  AFFECTS: comms/tio
+  AUTHOR: diizzy@FreeBSD.org
+
+  As of 3.1 upstream have reworked configuration file layout and syntax
+  so older configurations will not work.
+
+  For more details, see
+
+  https://github.com/tio/tio/releases/tag/v3.1
+
+20240513:
+  AFFECTS: users of security/libressl
+  AUTHOR: brnrd@FreeBSD.org
+
+  The port has been updated to the latest stable version 3.9 of LibreSSL.
+  The shared library versions of the libraries have been bumped.
+
+  After upgrading, manually update all packages that depend on any of the
+  libraries provided by LibreSSL (libssl, libcrypto and libtls) since the
+  versions of these libraries have changed. Normally, you can obtain the
+  list of dependent software by running the following command:
+
+  # pkg info -r libressl
+
+  Then you should rebuild all ports depending on libressl to avoid dangling
+  shared library dependencies.
+
+20240509:
+  AFFECTS: databases/timescaledb
+  AUTHOR: kbowling@FreeBSD.org
+
+  The Foreign Key storage in hypertables has changed in an incompatible way,
+  after runing ALTER EXTENSION, you must run the SQL script here:
+  https://github.com/timescale/timescaledb-extras/blob/master/utils/2.15.X-fix_hypertable_foreign_keys.sql
+
+  For more details, see
+
+  https://github.com/timescale/timescaledb/pull/6797
+
+20240508:
+  AFFECTS: www/oauth2-proxy
+  AUTHOR: netchild@FreeBSD.org
+
+  The start script is converted to be instance aware.  To use it:
+   - cp /usr/local/etc/oauth2-proxy.cfg.sample /usr/local/etc/oauth2-proxy-myapp.cfg
+   - vi /usr/local/etc/oauth2-proxy-myapp.cfg
+   - ln -s oauth2_proxy /usr/local/etc/rc.d/oauth2_proxy_myapp
+   - sysctl oauth2_proxy_myapp_enable=YES
+   - service oauth2_proxy_myapp start
+  This allows to easily start multiple instances on the same system.
+
+  As part of this, the start script was renamed to oauth2_proxy. This only
+  affects manual restarts, no change in rc.conf is needed.
+
+20240430:
+  AFFECTS: audio/py-pyradio
+  AUTHOR: nivit@FreeBSD.org
+
+  The new version of Pyradio moves some data files to new locations.
+  To see what it really does, run pyradio from a terminal the first time.
+  Besides that, the recordings are moved/saved into ~/pyradio-recordings.
+  You can change that directory in the config file.
+
+  For more details, see
+
+  https://github.com/coderholic/pyradio/releases/tag/0.9.3
+
+20240423:
+  AFFECTS: textproc/vale
+  AUTHOR: bofh@FreeBSD.org
+
+  When upgrading to v3.0.0, the vocabularies need to be moved from
+  $StylesPath/Vocab to $StylesPath/config/vocabularies.
+
+20240421:
+  AFFECTS: www/gitlab-ce
+  AUTHOR: mfechner@FreeBSD.org
+
+  With the upgrade to version 16.11 the default path for gitlab-ce changed:
+  /usr/local/www/gitlab-ce -> /usr/local/www/gitlab
+  Make sure you follow the upgrade manual very carefully:
+  https://gitlab.fechner.net/mfechner/Gitlab-docu/-/blob/master/update/16.10-16.11-freebsd.md
+
+  The gitlab port also got a new flavor gitlab@ee to make the Gitlab
+  Enterprise Edition available (you will need a license for it).
+  Please note, that the ee flavor is a draft, but any feedback is welcome.
+  See also the installation and upgrade manual for more details.
+  https://gitlab.fechner.net/mfechner/Gitlab-docu/-/blob/master/install/16.11-freebsd.md
 
 20240408:
   AFFECTS: users of databases/p5-DBD-mysql

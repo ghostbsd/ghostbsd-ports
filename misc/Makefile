@@ -22,6 +22,7 @@
     SUBDIR += bb
     SUBDIR += bbjd
     SUBDIR += bdelta
+    SUBDIR += bedrust
     SUBDIR += bestfit
     SUBDIR += bible-kjv
     SUBDIR += biblesync
@@ -109,7 +110,6 @@
     SUBDIR += figlet
     SUBDIR += figlet-fonts
     SUBDIR += findutils
-    SUBDIR += firestring
     SUBDIR += flag
     SUBDIR += flashlight
     SUBDIR += fortune-mod-bible
@@ -200,6 +200,7 @@
     SUBDIR += iso-codes
     SUBDIR += jargon
     SUBDIR += jbidwatcher
+    SUBDIR += jirust
     SUBDIR += jojodiff
     SUBDIR += json-tui
     SUBDIR += kbdscan
@@ -240,6 +241,7 @@
     SUBDIR += libpri
     SUBDIR += librepo
     SUBDIR += libsolv
+    SUBDIR += libspnav
     SUBDIR += libsupertone
     SUBDIR += libsweep-lidar
     SUBDIR += libutf
@@ -402,6 +404,7 @@
     SUBDIR += py-SQSnobFit
     SUBDIR += py-SimpleSoapy
     SUBDIR += py-SoapySDR
+    SUBDIR += py-accelerate
     SUBDIR += py-alive-progress
     SUBDIR += py-apache-beam
     SUBDIR += py-ascii-magic
@@ -409,6 +412,7 @@
     SUBDIR += py-boost-histogram
     SUBDIR += py-censys
     SUBDIR += py-cinder
+    SUBDIR += py-codecarbon
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored
     SUBDIR += py-crudini
@@ -528,6 +532,7 @@
     SUBDIR += qt6-examples
     SUBDIR += qt6ct
     SUBDIR += quantum++
+    SUBDIR += quary
     SUBDIR += randomx
     SUBDIR += raspberrypi-gpioshutdown
     SUBDIR += raspberrypi-userland

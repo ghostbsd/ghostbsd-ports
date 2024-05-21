@@ -1,6 +1,6 @@
 PORTNAME=	twitch-tui
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.6.6
+DISTVERSION=	2.6.10
 CATEGORIES=	net-p2p
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -31,7 +31,6 @@ CARGO_CRATES=	addr2line-0.20.0 \
 		anstyle-wincon-3.0.1 \
 		autocfg-1.1.0 \
 		backtrace-0.3.68 \
-		base64-0.21.7 \
 		base64-0.22.0 \
 		bit_field-0.10.2 \
 		bitflags-1.3.2 \
@@ -114,7 +113,7 @@ CARGO_CRATES=	addr2line-0.20.0 \
 		getrandom-0.2.10 \
 		gif-0.12.0 \
 		gimli-0.27.3 \
-		h2-0.3.24 \
+		h2-0.4.4 \
 		half-2.2.1 \
 		hashbrown-0.12.3 \
 		hashbrown-0.14.0 \
@@ -122,12 +121,13 @@ CARGO_CRATES=	addr2line-0.20.0 \
 		hermit-abi-0.3.2 \
 		hex-0.4.3 \
 		home-0.5.5 \
-		http-0.2.9 \
-		http-body-0.4.5 \
+		http-1.1.0 \
+		http-body-1.0.0 \
+		http-body-util-0.1.1 \
 		httparse-1.8.0 \
-		httpdate-1.0.3 \
-		hyper-0.14.27 \
-		hyper-tls-0.5.0 \
+		hyper-1.3.1 \
+		hyper-tls-0.6.0 \
+		hyper-util-0.1.3 \
 		iana-time-zone-0.1.57 \
 		iana-time-zone-haiku-0.1.2 \
 		ident_case-1.0.1 \
@@ -202,10 +202,11 @@ CARGO_CRATES=	addr2line-0.20.0 \
 		regex-1.10.3 \
 		regex-automata-0.4.5 \
 		regex-syntax-0.8.2 \
-		reqwest-0.11.24 \
+		reqwest-0.12.4 \
 		rustc-demangle-0.1.23 \
 		rustix-0.38.31 \
-		rustls-pemfile-1.0.4 \
+		rustls-pemfile-2.1.2 \
+		rustls-pki-types-1.4.1 \
 		rustversion-1.0.14 \
 		rustyline-10.1.1 \
 		ryu-1.0.15 \
@@ -214,13 +215,13 @@ CARGO_CRATES=	addr2line-0.20.0 \
 		scopeguard-1.2.0 \
 		security-framework-2.9.2 \
 		security-framework-sys-2.9.1 \
-		serde-1.0.196 \
-		serde_derive-1.0.196 \
+		serde-1.0.199 \
+		serde_derive-1.0.199 \
 		serde_json-1.0.113 \
 		serde_spanned-0.6.5 \
 		serde_urlencoded-0.7.1 \
-		serde_with-3.6.0 \
-		serde_with_macros-3.6.0 \
+		serde_with-3.8.1 \
+		serde_with_macros-3.8.1 \
 		sharded-slab-0.1.4 \
 		shell-words-1.1.0 \
 		signal-hook-0.3.17 \
@@ -228,9 +229,8 @@ CARGO_CRATES=	addr2line-0.20.0 \
 		signal-hook-registry-1.4.1 \
 		simd-adler32-0.3.7 \
 		slab-0.4.8 \
-		smallvec-1.11.0 \
+		smallvec-1.13.2 \
 		smawk-0.3.1 \
-		socket2-0.4.9 \
 		socket2-0.5.5 \
 		spin-0.9.8 \
 		stability-0.1.1 \
@@ -256,7 +256,7 @@ CARGO_CRATES=	addr2line-0.20.0 \
 		time-macros-0.2.11 \
 		tinyvec-1.6.0 \
 		tinyvec_macros-0.1.1 \
-		tokio-1.36.0 \
+		tokio-1.37.0 \
 		tokio-macros-2.2.0 \
 		tokio-native-tls-0.3.1 \
 		tokio-stream-0.1.14 \
@@ -266,6 +266,8 @@ CARGO_CRATES=	addr2line-0.20.0 \
 		toml-0.8.9 \
 		toml_datetime-0.6.5 \
 		toml_edit-0.21.1 \
+		tower-0.4.13 \
+		tower-layer-0.3.2 \
 		tower-service-0.3.2 \
 		tracing-0.1.37 \
 		tracing-core-0.1.31 \
@@ -277,7 +279,7 @@ CARGO_CRATES=	addr2line-0.20.0 \
 		unicode-linebreak-0.1.5 \
 		unicode-normalization-0.1.22 \
 		unicode-segmentation-1.11.0 \
-		unicode-width-0.1.11 \
+		unicode-width-0.1.12 \
 		url-2.4.0 \
 		utf8parse-0.2.1 \
 		valuable-0.1.0 \
@@ -293,7 +295,7 @@ CARGO_CRATES=	addr2line-0.20.0 \
 		wasm-bindgen-macro-support-0.2.87 \
 		wasm-bindgen-shared-0.2.87 \
 		web-sys-0.3.64 \
-		webbrowser-0.8.12 \
+		webbrowser-1.0.0 \
 		webp-animation-0.9.0 \
 		weezl-0.1.7 \
 		winapi-0.3.9 \
@@ -329,7 +331,7 @@ CARGO_CRATES=	addr2line-0.20.0 \
 		windows_x86_64_msvc-0.48.2 \
 		windows_x86_64_msvc-0.52.0 \
 		winnow-0.5.10 \
-		winreg-0.50.0 \
+		winreg-0.52.0 \
 		zune-inflate-0.2.54
 
 OPENSSLINC=	/usr/include

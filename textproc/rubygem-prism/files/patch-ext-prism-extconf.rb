@@ -1,11 +1,11 @@
---- ext/prism/extconf.rb.orig	2024-04-06 20:48:24 UTC
+--- ext/prism/extconf.rb.orig	2024-05-17 12:26:22 UTC
 +++ ext/prism/extconf.rb
-@@ -45,7 +45,7 @@ def make(target)
- # by this script.`
- def make(target)
+@@ -50,7 +50,7 @@ def make(env, target)
    Dir.chdir(File.expand_path("../..", __dir__)) do
--    system(RUBY_PLATFORM.include?("openbsd") ? "gmake" : "make", target, exception: true)
-+    system((RUBY_PLATFORM.include?("freebsd") || RUBY_PLATFORM.include?("openbsd")) ? "gmake" : "make", target, exception: true)
-   end
- end
- 
+     system(
+       env,
+-      RUBY_PLATFORM.include?("openbsd") ? "gmake" : "make",
++      (RUBY_PLATFORM.include?("freebsd") || RUBY_PLATFORM.include?("openbsd")) ? "gmake" : "make",
+       target,
+       exception: true
+     )

@@ -7,7 +7,6 @@
     SUBDIR += axfr2acl
     SUBDIR += bind-tools
     SUBDIR += bind9-devel
-    SUBDIR += bind916
     SUBDIR += bind918
     SUBDIR += bindgraph
     SUBDIR += blocky
@@ -67,7 +66,6 @@
     SUBDIR += dynip
     SUBDIR += encrypted-dns-server
     SUBDIR += fastresolve
-    SUBDIR += firedns
     SUBDIR += flamethrower
     SUBDIR += fpdns
     SUBDIR += gdnsd2
@@ -100,6 +98,9 @@
     SUBDIR += libnspsl
     SUBDIR += libpsl
     SUBDIR += linux-c7-libasyncns
+    SUBDIR += linux-rl9-libasyncns
+    SUBDIR += linux-rl9-libidn2
+    SUBDIR += linux-rl9-libpsl
     SUBDIR += lua-resty-dns
     SUBDIR += luaunbound
     SUBDIR += mDNSResponder_nss

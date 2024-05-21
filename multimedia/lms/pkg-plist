@@ -29,7 +29,7 @@ lib/liblmssubsonic.so
 %%DATADIR%%/approot/error.xml
 %%DATADIR%%/approot/explore.xml
 %%DATADIR%%/approot/images/unknown-artist.jpg
-%%DATADIR%%/approot/images/unknown-cover.jpg
+%%DATADIR%%/approot/images/unknown-cover.svg
 %%DATADIR%%/approot/login.xml
 %%DATADIR%%/approot/main.xml
 %%DATADIR%%/approot/mediaplayer.xml
@@ -42,7 +42,6 @@ lib/liblmssubsonic.so
 %%DATADIR%%/approot/playqueue.xml
 %%DATADIR%%/approot/%%CMAKE_BUILD_TYPE%%.xml
 %%DATADIR%%/approot/%%CMAKE_BUILD_TYPE%%s.xml
-%%DATADIR%%/approot/search.xml
 %%DATADIR%%/approot/settings.xml
 %%DATADIR%%/approot/tracklist.xml
 %%DATADIR%%/approot/tracklists.xml

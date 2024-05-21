@@ -1,6 +1,6 @@
 PORTNAME=	narrowlink
 DISTVERSION=	0.2.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -15,6 +15,8 @@ BROKEN_powerpc64le=	build breaks due to panic in the ring crate: alled `Option::
 USES=		cargo
 USE_RC_SUBR=	narrowlink-agent narrowlink-gateway
 USE_GITHUB=	yes
+
+RUSTFLAGS=	${ARCH:S/i386/YES/:C/^[a-z].*//:S/YES/-C target-feature=+sse,+sse2/} # add sse sse2 target-features only on i386
 
 CARGO_CRATES=	addr2line-0.21.0 \
 		adler-1.0.2 \

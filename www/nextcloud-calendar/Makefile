@@ -1,13 +1,14 @@
 PORTNAME=	calendar
-PORTVERSION=	4.6.7
+PORTVERSION=	4.7.4
 DISTVERSIONPREFIX=	v
+PORTREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	Calendar app for Nextcloud
 WWW=		https://apps.nextcloud.com/apps/calendar
 
-NEXTCLOUD_RUN_DEPENDS= 25
+NEXTCLOUD_RUN_DEPENDS= 26
 
 USES=		cpe nextcloud php:flavors
 

@@ -1,5 +1,5 @@
 PORTNAME=	freerdp
-DISTVERSION=	2.11.6
+DISTVERSION=	2.11.7
 CATEGORIES=	net comms
 MASTER_SITES=	https://pub.freerdp.com/releases/ \
 		https://github.com/FreeRDP/FreeRDP/releases/download/${DISTVERSION}/
@@ -115,7 +115,7 @@ OPENH264_LIB_DEPENDS=	libopenh264.so:multimedia/openh264
 OPENH264_CMAKE_BOOL=	WITH_OPENH264
 
 # LoadLibraryA("libpcsclite.so")
-PCSC_LIB_DEPENDS=	libpcsclite.so:devel/pcsc-lite
+PCSC_RUN_DEPENDS=	${LOCALBASE}/lib/libpcsclite.so:devel/pcsc-lite
 PCSC_CMAKE_BOOL=	WITH_PCSC
 
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio

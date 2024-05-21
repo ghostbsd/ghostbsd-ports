@@ -1,3 +1,1769 @@
+  <vuln vid="9bcff2c4-1779-11ef-b489-b42e991fc52e">
+    <topic>Openfire administration console authentication bypass</topic>
+    <affects>
+      <package>
+	<name>openfire</name>
+	<range><lt>4.6.8</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="http://packetstormsecurity.com/files/173607/Openfire-Authentication-Bypass-Remote-Code-Execution.html">
+	  <p>Openfire&apos;s administrative console, a web-based
+	application, was found to be vulnerable to a path traversal attack
+	via the setup environment.  This permitted an unauthenticated user
+	to use the unauthenticated Openfire Setup Environment in an already
+	configured Openfire environment to access restricted pages in the
+	Openfire Admin Console reserved for administrative users.  This
+	vulnerability affects all versions of Openfire that have been
+	released since April 2015, starting with version 3.10.0.  The problem
+	has been patched in Openfire release 4.7.5 and 4.6.8, and further
+	improvements will be included in the yet-to-be released first version
+	on the 4.8 branch (which is expected to be version 4.8.0).  Users
+	are advised to upgrade.  If an Openfire upgrade isnt available for
+	a specific release, or isnt quickly actionable, users may see the
+	linked github advisory (GHSA-gw42-f939-fhvm) for mitigation advice.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-32315</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-32315</url>
+    </references>
+    <dates>
+      <discovery>2023-05-26</discovery>
+      <entry>2024-05-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e020b0fd-1751-11ef-a490-84a93843eb75">
+    <topic>Roundcube -- Cross-site scripting vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>roundcube</name>
+	<range><lt>1.6.7,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Roundcube project reports:</p>
+	<blockquote cite="https://roundcube.net/news/2024/05/19/security-updates-1.6.7-and-1.5.7">
+	  <p>cross-site scripting (XSS) vulnerability in handling SVG
+	    animate attributes.</p>
+	  <p>cross-site scripting (XSS) vulnerability in handling list
+	    columns from user preferences.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://roundcube.net/news/2024/05/19/security-updates-1.6.7-and-1.5.7</url>
+    </references>
+    <dates>
+      <discovery>2024-05-19</discovery>
+      <entry>2024-05-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d58455cc-159e-11ef-83d8-4ccc6adda413">
+    <topic>qt5-webengine -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>qt5-webengine</name>
+	<range><lt>5.15.16.p9_2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<blockquote cite="https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=87-based">
+	  <p>Backports for 2 security bugs in Chromium:</p>
+	  <ul>
+	    <li>CVE-2024-3157: Out of bounds write in Compositing</li>
+	    <li>CVE-2024-3516: Heap buffer overflow in ANGLE</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-3157</cvename>
+      <cvename>CVE-2024-3516</cvename>
+      <url>https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=87-based</url>
+    </references>
+    <dates>
+      <discovery>2024-04-16</discovery>
+      <entry>2024-05-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f393b5a7-1535-11ef-8064-c5610a6efffb">
+    <topic>Arti -- Security issues related to circuit construction</topic>
+    <affects>
+      <package>
+	<name>arti</name>
+	<range><lt>1.2.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Tor Project reports:</p>
+	<blockquote cite="https://blog.torproject.org/arti_1_2_3_released/">
+		<p>
+			When building anonymizing circuits to or from an onion
+			service with 'lite' vanguards (the default) enabled, the
+			circuit manager code would build the circuits with one
+			hop too few.
+		</p>
+		<p>
+			When 'full' vanguards are enabled, some circuits are
+			supposed to be built with an extra hop to minimize the
+			linkability of the guard nodes. In some circumstances,
+			the circuit manager would build circuits with one hop
+			too few, making it easier for an adversary to discover
+			the L2 and L3 guards of the affected clients and
+			services.
+		</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-35313</cvename>
+      <url>https://gitlab.torproject.org/tpo/core/arti/-/issues/1400</url>
+      <cvename>CVE-2024-35312</cvename>
+      <url>https://gitlab.torproject.org/tpo/core/arti/-/issues/1409</url>
+    </references>
+    <dates>
+      <discovery>2024-05-14</discovery>
+      <entry>2024-05-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b88aa380-1442-11ef-a490-84a93843eb75">
+    <topic>OpenSSL -- Denial of Service vulnerability</topic>
+    <affects>
+      <package>
+	<name>openssl</name>
+	<range><lt>3.0.13_4,1</lt></range>
+      </package>
+      <package>
+	<name>openssl31</name>
+	<range><lt>3.1.5_4</lt></range>
+      </package>
+      <package>
+	<name>openssl32</name>
+	<range><lt>3.2.1_4</lt></range>
+      </package>
+      <package>
+	<name>openssl33</name>
+	<range><lt>3.3.0_1</lt></range>
+      </package>
+      <package>
+	<name>openssl-quictls</name>
+	<range><lt>3.0.13_4</lt></range>
+      </package>
+      <package>
+	<name>openssl31-quictls</name>
+	<range><lt>3.1.5_4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL project reports:</p>
+	<blockquote cite="https://www.openssl.org/news/secadv/20240516.txt">
+	  <p>Excessive time spent checking DSA keys and parameters (Low)</p>
+	  <p>Checking excessively long DSA keys or parameters may be very
+	    slow.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-4603</cvename>
+      <url>https://www.openssl.org/news/secadv/20240516.txt</url>
+    </references>
+    <dates>
+      <discovery>2024-05-16</discovery>
+      <entry>2024-05-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a431676c-f86c-4371-b48a-b7d2b0bec3a3">
+    <topic>electron29 -- setuid() does not affect libuv's internal io_uring</topic>
+    <affects>
+      <package>
+	<name>electron29</name>
+	<range><lt>29.4.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v29.4.0">
+	  <p>This update fixes the following vulnerability:</p>
+	  <ul>
+	    <li>Backported fix for CVE-2024-22017.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-22017</cvename>
+      <url>https://github.com/advisories/GHSA-vr4q-vx84-9g5x</url>
+    </references>
+    <dates>
+      <discovery>2024-05-15</discovery>
+      <entry>2024-05-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c6f03ea6-12de-11ef-83d8-4ccc6adda413">
+    <topic>qt6-webengine -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>qt6-webengine</name>
+	<range><lt>6.7.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Qt qtwebengine-chromium repo reports:</p>
+	<blockquote cite="https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=118-based">
+	  <p>Backports for 16 security bugs in Chromium:</p>
+	  <ul>
+	    <li>CVE-2024-2625: Object lifecycle issue in V8</li>
+	    <li>CVE-2024-2626: Out of bounds read in Swiftshader</li>
+	    <li>CVE-2024-2885: Use after free in Dawn</li>
+	    <li>CVE-2024-2887: Type Confusion in WebAssembly</li>
+	    <li>CVE-2024-3157: Out of bounds write in Compositing</li>
+	    <li>CVE-2024-3159: Out of bounds memory access in V8</li>
+	    <li>CVE-2024-3516: Heap buffer overflow in ANGLE</li>
+	    <li>CVE-2024-3837: Use after free in QUIC</li>
+	    <li>CVE-2024-3839: Out of bounds read in Fonts</li>
+	    <li>CVE-2024-3914: Use after free in V8</li>
+	    <li>CVE-2024-3840: Insufficient policy enforcement in Site Isolation</li>
+	    <li>CVE-2024-4058: Type Confusion in ANGLE</li>
+	    <li>CVE-2024-4060: Use after free in Dawn</li>
+	    <li>CVE-2024-4331: Use after free in Picture In Picture</li>
+	    <li>CVE-2024-4368: Use after free in Dawn</li>
+	    <li>CVE-2024-4671: Use after free in Visuals</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-2625</cvename>
+      <cvename>CVE-2024-2626</cvename>
+      <cvename>CVE-2024-2885</cvename>
+      <cvename>CVE-2024-2887</cvename>
+      <cvename>CVE-2024-3157</cvename>
+      <cvename>CVE-2024-3159</cvename>
+      <cvename>CVE-2024-3516</cvename>
+      <cvename>CVE-2024-3837</cvename>
+      <cvename>CVE-2024-3839</cvename>
+      <cvename>CVE-2024-3914</cvename>
+      <cvename>CVE-2024-3840</cvename>
+      <cvename>CVE-2024-4058</cvename>
+      <cvename>CVE-2024-4060</cvename>
+      <cvename>CVE-2024-4331</cvename>
+      <cvename>CVE-2024-4368</cvename>
+      <cvename>CVE-2024-4671</cvename>
+      <url>https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=118-based</url>
+    </references>
+    <dates>
+      <discovery>2024-04-03</discovery>
+      <entry>2024-05-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e79cc4e2-12d7-11ef-83d8-4ccc6adda413">
+    <topic>qt6-base (core module) -- Invalid pointer in QStringConverter</topic>
+    <affects>
+      <package>
+	<name>qt6-base</name>
+	<range><ge>6.5.0</ge><le>6.5.5</le></range>
+	<range><ge>6.6.0</ge><lt>6.7.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Andy Shaw reports:</p>
+	<blockquote cite="https://www.qt.io/blog/security-advisory-qstringconverter">
+	  <p>QStringConverter has an invalid pointer being passed as a callback
+	    which can allow modification of the stack. Qt itself is not vulnerable
+	    to remote attack however an application using QStringDecoder either
+	    directly or indirectly can be vulnerable.</p>
+	  <p>This requires:</p>
+	  <ol>
+	    <li>the attacker be able to tell the application a specific codec to use</li>
+	    <li>the attacker be able to feed the application data in a specific way to cause the desired modification</li>
+	    <li>the attacker what in the stack will get modified, which requires knowing the build of the application (and not all builds will be vulnerable)</li>
+	    <li>the modification do anything in particular that is useful to the attacker, besides maybe crashing the application</li>
+	  </ol>
+	  <p>Qt does not automatically use any of those codecs, so this needs the application
+	    to implement something using QStringDecoder to be vulnerable.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-33861</cvename>
+      <url>https://www.qt.io/blog/security-advisory-qstringconverter</url>
+    </references>
+    <dates>
+      <discovery>2024-05-02</discovery>
+      <entry>2024-05-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f2d8342f-1134-11ef-8791-6805ca2fa271">
+    <topic>dnsdist -- Transfer requests received over DoH can lead to a denial of service</topic>
+    <affects>
+      <package>
+	<name>dnsdist</name>
+	<range><lt>1.9.4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PowerDNS Security Advisory reports:</p>
+	<blockquote cite="https://dnsdist.org/security-advisories/index.html">
+	  <p>When incoming DNS over HTTPS support is enabled using the nghttp2 provider,
+	    and queries are routed to a tcp-only or DNS over TLS backend, an attacker can
+	    trigger an assertion failure in DNSdist by sending a request for a zone transfer (AXFR
+	    or IXFR) over DNS over HTTPS, causing the process to stop and thus leading to a
+	    Denial of Service. DNS over HTTPS is not enabled by default, and backends are using
+	    plain DNS (Do53) by default.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-25581</cvename>
+      <url>https://dnsdist.org/security-advisories/powerdns-advisory-for-dnsdist-2024-03.html</url>
+    </references>
+    <dates>
+      <discovery>2024-05-13</discovery>
+      <entry>2024-05-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5afd64ae-122a-11ef-8eed-1c697a616631">
+    <topic>Intel CPUs -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>cpu-microcode-intel</name>
+	<range><lt>20240514</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Intel reports:</p>
+	<blockquote cite="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01036.html">
+	 <p>
+	  Potential security vulnerabilities in some Intel Trust Domain
+	  Extensions (TDX) module software may allow escalation of
+	  privilege. Improper input validation in some Intel TDX module
+	  software before version 1.5.05.46.698 may allow a privileged user to
+	  potentially enable escalation of privilege via local access.  Intel
+	  is releasing firmware updates to mitigate these potential
+	  vulnerabilities.
+	 </p>
+	</blockquote>
+	<blockquote cite="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01051.html">
+	 <p>
+	  A potential security vulnerability in some Intel Processors may
+	  allow information disclosure.  Hardware logic contains race
+	  conditions in some Intel Processors that may allow an authenticated
+	  user to potentially enable partial information disclosure via local
+	  access. Intel is releasing microcode updates to mitigate this
+	  potential vulnerability.
+	 </p>
+	</blockquote>
+	<blockquote cite="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01052.html">
+	 <p>
+	  A potential security vulnerability in Intel Core Ultra Processors
+	  may allow denial of service.  Sequence of processor instructions
+	  leads to unexpected behavior in Intel Core Ultra Processors may
+	  allow an authenticated user to potentially enable denial of service
+	  via local access.  Intel is releasing microcode updates to mitigate
+	  this potential vulnerability.
+	 </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-45745</cvename>
+      <cvename>CVE-2023-45733</cvename>
+      <cvename>CVE-2023-46103</cvename>
+      <url>https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/releases/tag/microcode-20240514</url>
+    </references>
+    <dates>
+      <discovery>2024-05-14</discovery>
+      <entry>2024-05-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8e0e8b56-11c6-11ef-9f97-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>124.0.6367.207</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>124.0.6367.207</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_13.html">
+	 <p>This update includes 1 security fix:</p>
+	 <ul>
+	    <li>[339458194] High CVE-2024-4761: Out of bounds write in V8. Reported by Anonymous on 2024-05-09</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-4761</cvename>
+      <url>https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_13.html</url>
+    </references>
+    <dates>
+      <discovery>2024-05-13</discovery>
+      <entry>2024-05-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d3847eba-114b-11ef-9c21-901b0e9408dc">
+    <topic>go -- net: malformed DNS message can cause infinite loop</topic>
+    <affects>
+      <package>
+	<name>go122</name>
+	<range><lt>1.22.3</lt></range>
+      </package>
+      <package>
+	<name>go121</name>
+	<range><lt>1.21.10</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Go project reports:</p>
+	<blockquote cite="https://go.dev/issue/66754">
+	  <p>net: malformed DNS message can cause infinite loop</p>
+	  <p>A malformed DNS message in response to a query can cause
+	  the Lookup functions to get stuck in an infinite loop.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-24788</cvename>
+      <url>https://go.dev/issue/66754</url>
+    </references>
+    <dates>
+      <discovery>2024-04-25</discovery>
+      <entry>2024-05-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3cf8ea44-1029-11ef-9f97-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>124.0.6367.201</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>124.0.6367.201</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_9.html">
+	 <p>This update includes 1 security fix:</p>
+	 <ul>
+	    <li>[339266700] High CVE-2024-4671: Use after free in Visuals. Reported by Anonymous on 2024-05-07</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-4671</cvename>
+      <url>https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_9.html</url>
+    </references>
+    <dates>
+      <discovery>2024-05-09</discovery>
+      <entry>2024-05-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d53c30c1-0d7b-11ef-ba02-6cc21735f730">
+    <topic>PostgreSQL server -- Potentially allowing authenicated database users to see data that they shouldn't.</topic>
+    <affects>
+      <package>
+	<name>postgresql-server</name>
+	<range><lt>16.3</lt></range>
+	<range><lt>15.7</lt></range>
+	<range><lt>14.12</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PostgreSQL project reports:</p>
+	<blockquote cite="https://www.postgresql.org/support/security/CVE-2024-4317/">
+	  <p>
+	    A security vulnerability was found in the system views pg_stats_ext
+	    and pg_stats_ext_exprs, potentially allowing authenticated database
+	    users to see data they shouldn't.  If this is of concern in your
+	    installation, run the SQL script /usr/local/share/postgresql/fix-CVE-2024-4317.sql
+	    for each of your databases. See the link for details.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-4317</cvename>
+      <url>https://www.postgresql.org/support/security/CVE-2024-4317/</url>
+    </references>
+    <dates>
+      <discovery>2024-05-09</discovery>
+      <entry>2024-05-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ee6936da-0ddd-11ef-9c21-901b0e9408dc">
+    <topic>tailscale -- Insufficient inbound packet filtering in subnet routers and exit nodes</topic>
+    <affects>
+      <package>
+	<name>tailscale</name>
+	<range><lt>1.66.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Tailscale team reports:</p>
+	<blockquote cite="https://tailscale.com/security-bulletins#ts-2024-005">
+	  <p>In Tailscale versions earlier than 1.66.0, exit nodes,
+	  subnet routers, and app connectors, could allow inbound
+	  connections to other tailnet nodes from their local area
+	  network (LAN). This vulnerability only affects Linux exit
+	  nodes, subnet routers, and app connectors in tailnets where
+	  ACLs allow "src": "*", such as with default ACLs.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://tailscale.com/security-bulletins#ts-2024-005</url>
+    </references>
+    <dates>
+      <discovery>2024-05-08</discovery>
+      <entry>2024-05-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ec994672-5284-49a5-a7fc-93c02126e5fb">
+    <topic>electron29 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>electron29</name>
+	<range><lt>29.3.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v29.3.3">
+	  <p>This update fixes the following vulnerabilities:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2024-3914.</li>
+	    <li>Security: backported fix for CVE-2024-4558.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-3914</cvename>
+      <url>https://github.com/advisories/GHSA-jv87-hfr8-8j2r</url>
+      <cvename>CVE-2024-4558</cvename>
+      <url>https://github.com/advisories/GHSA-r4j8-j63p-24j8</url>
+    </references>
+    <dates>
+      <discovery>2024-05-09</discovery>
+      <entry>2024-05-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fbc2c629-0dc5-11ef-9850-001b217b3468">
+    <topic>Gitlab -- vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>16.11.0</ge><lt>16.11.2</lt></range>
+	<range><ge>16.10.0</ge><lt>16.10.5</lt></range>
+	<range><ge>10.6.0</ge><lt>16.9.7</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2024/05/08/patch-release-gitlab-16-11-2-released/">
+	  <p>ReDoS in branch search when using wildcards</p>
+	  <p>ReDoS in markdown render pipeline</p>
+	  <p>Redos on Discord integrations</p>
+	  <p>Redos on Google Chat Integration</p>
+	  <p>Denial of Service Attack via Pin Menu</p>
+	  <p>DoS by filtering tags and branches via the API</p>
+	  <p>MR approval via CSRF in SAML SSO</p>
+	  <p>Banned user from groups can read issues updates via the api</p>
+	  <p>Require confirmation before linking JWT identity</p>
+	  <p>View confidential issues title and description of any public project via export</p>
+	  <p>SSRF via Github importer</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-2878</cvename>
+      <cvename>CVE-2024-2651</cvename>
+      <cvename>CVE-2023-6682</cvename>
+      <cvename>CVE-2023-6688</cvename>
+      <cvename>CVE-2024-2454</cvename>
+      <cvename>CVE-2024-4539</cvename>
+      <cvename>CVE-2024-4597</cvename>
+      <cvename>CVE-2024-1539</cvename>
+      <cvename>CVE-2024-1211</cvename>
+      <cvename>CVE-2024-3976</cvename>
+      <cvename>CVE-2023-6195</cvename>
+      <url>https://about.gitlab.com/releases/2024/05/08/patch-release-gitlab-16-11-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2024-05-08</discovery>
+      <entry>2024-05-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="059a99a9-45e0-492b-b9f9-5a79573c8eb6">
+    <topic>electron29 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>electron29</name>
+	<range><lt>29.3.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v29.3.2">
+	  <p>This update fixes the following vulnerabilities:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2024-4060.</li>
+	    <li>Security: backported fix for CVE-2024-4058.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-4060</cvename>
+      <url>https://github.com/advisories/GHSA-4qw6-vwc8-mh38</url>
+      <cvename>CVE-2024-4058</cvename>
+      <url>https://github.com/advisories/GHSA-23rw-79p3-xgcm</url>
+    </references>
+    <dates>
+      <discovery>2024-05-03</discovery>
+      <entry>2024-05-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f69415aa-086e-11ef-9f97-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>124.0.6367.118</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>124.0.6367.118</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_30.html">
+	 <p>This update includes 2 security fixes:</p>
+	 <ul>
+	    <li>[335003891] High CVE-2024-4331: Use after free in Picture In Picture. Reported by Zhenghang Xiao (@Kipreyyy) on 2024-04-16</li>
+	    <li>[333508731] High CVE-2024-4368: Use after free in Dawn. Reported by wgslfuzz on 2024-04-09</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-4058</cvename>
+      <cvename>CVE-2024-4059</cvename>
+      <cvename>CVE-2024-4060</cvename>
+      <url>https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_30.html</url>
+    </references>
+    <dates>
+      <discovery>2024-04-30</discovery>
+      <entry>2024-05-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4a1e2bad-0836-11ef-9fd2-1c697a616631">
+    <topic>R -- arbitrary code execution vulnerability</topic>
+    <affects>
+      <package>
+	<name>R</name>
+	<range><lt>4.4.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>HiddenLayer Research reports:</p>
+	<blockquote cite="https://hiddenlayer.com/research/r-bitrary-code-execution/">
+	  <p>Deserialization of untrusted data can occur in the R statistical programming language, enabling a maliciously crafted RDS (R Data Serialization) formatted file or R package to run arbitrary code on an end user's system.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-27322</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-27322</url>
+    </references>
+    <dates>
+      <discovery>2024-04-29</discovery>
+      <entry>2024-05-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="da4adc02-07f4-11ef-960d-5404a68ad561">
+    <topic>hcode -- buffer overflow in mail.c</topic>
+    <affects>
+      <package>
+	<name>ko-hcode</name>
+	<range><lt>2.1.3_2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The openSUSE project reports:</p>
+	<blockquote cite="https://bugzilla.suse.com/show_bug.cgi?id=1223534">
+	  <p>The problematic function in question is putSDN() in mail.c. The static variable `cp` is used as an index for a fixed-sized buffer `ibuf`. There is a range check: `if ( cp >= HDR_BUF_LEN ) ...` but under certain circumstances, cp can be incremented beyond the buffer size, leading to a buffer overwrite</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-34020</cvename>
+      <url>https://bugzilla.suse.com/show_bug.cgi?id=1223534</url>
+    </references>
+    <dates>
+      <discovery>2024-04-29</discovery>
+      <entry>2024-05-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5da8b1e6-0591-11ef-9e00-080027957747">
+    <topic>GLPI -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><lt>10.0.15,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>GLPI team reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/releases/tag/10.0.15">
+	  <p>GLPI 10.0.15 Changelog</p>
+	  <ul>
+	    <li>[SECURITY - high] Authenticated SQL injection from map search (CVE-2024-31456)</li>
+	    <li>[SECURITY - high] Account takeover via SQL Injection in saved searches feature (CVE-2024-29889)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-31456</cvename>
+      <cvename>CVE-2024-29889</cvename>
+      <url>https://github.com/glpi-project/glpi/releases/tag/10.0.15</url>
+    </references>
+    <dates>
+      <discovery>2024-04-03</discovery>
+      <entry>2024-04-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b3affee8-04d1-11ef-8928-901b0ef714d4">
+    <topic>py-social-auth-app-django -- Improper Handling of Case Sensitivity</topic>
+    <affects>
+      <package>
+	<name>py38-social-auth-app-django</name>
+	<name>py39-social-auth-app-django</name>
+	<name>py310-social-auth-app-django</name>
+	<name>py311-social-auth-app-django</name>
+	<range><lt>5.4.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>GitHub Advisory Database:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2024-32879">
+	  <p>Python Social Auth is a social authentication/registration mechanism. Prior to version 5.4.1, due to default case-insensitive collation in MySQL or MariaDB databases, third-party authentication user IDs are not case-sensitive and could cause different IDs to match. This issue has been addressed by a fix released in version 5.4.1. An immediate workaround would be to change collation of the affected field.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-32879</cvename>
+      <url>https://github.com/python-social-auth/social-app-django/security/advisories/GHSA-2gr8-3wc7-xhj3</url>
+    </references>
+    <dates>
+      <discovery>2024-04-24</discovery>
+      <entry>2024-04-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7a42852d-0347-11ef-9f97-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>124.0.6367.78</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>124.0.6367.78</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_24.html">
+	 <p>This update includes 4 security fixes:</p>
+	 <ul>
+	    <li>[332546345] Critical CVE-2024-4058: Type Confusion in ANGLE. Reported by Toan (suto) Pham and Bao (zx) Pham of Qrious Secure on 2024-04-02</li>
+	    <li>[333182464] High CVE-2024-4059: Out of bounds read in V8 API. Reported by Eirik on 2024-04-08</li>
+	    <li>[333420620] High CVE-2024-4060: Use after free in Dawn. Reported by wgslfuzz on 2024-04-09</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-4058</cvename>
+      <cvename>CVE-2024-4059</cvename>
+      <cvename>CVE-2024-4060</cvename>
+      <url>https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_24.html</url>
+    </references>
+    <dates>
+      <discovery>2024-04-24</discovery>
+      <entry>2024-04-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="10e86b16-6836-11ee-b06f-0050569ceb3a">
+    <topic>Unallowed PHP script execution in GLPI</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><lt>10.0.10,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>From the GLPI 10.0.10 Changelog:</p>
+	<blockquote
+	cite="https://github.com/glpi-project/glpi/releases/tag/10.0.10">
+	<p>You will find below security issues fixed in this bugfixes version:
+	[SECURITY - Critical] Unallowed PHP script execution (CVE-2023-42802).</p>
+	</blockquote>
+	<p>The mentioned CVE is invalid</p>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-42802</cvename>
+      <url>https://github.com/glpi-project/glpi/releases/tag/10.0.10</url>
+    </references>
+    <dates>
+      <discovery>2023-09-27</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="894f2491-6834-11ee-b06f-0050569ceb3a">
+    <topic>glpi-project -- SQL injection in ITIL actors in GLPI</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><ge>10.0.8,1</ge><lt>10.0.10,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/security/advisories/GHSA-x3jp-69f2-p84w">
+	  <p>GLPI stands for Gestionnaire Libre de Parc Informatique is a Free
+	Asset and IT Management Software package, that provides ITIL Service
+	Desk features, licenses tracking and software auditing.  The ITIL
+	actors input field from the Ticket form can be used to perform a
+	SQL injection.  Users are advised to upgrade to version 10.0.10.
+	There are no known workarounds for this vulnerability.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-42461</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-42461</url>
+    </references>
+    <dates>
+      <discovery>2023-09-27</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="54e5573a-6834-11ee-b06f-0050569ceb3a">
+    <topic>Phishing through a login page malicious URL in GLPI</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><ge>10.0.8,1</ge><lt>10.0.10,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/security/advisories/GHSA-2hcg-75jj-hghp">
+	  <p>GLPI stands for Gestionnaire Libre de Parc Informatique is a Free
+	Asset and IT Management Software package, that provides ITIL Service
+	Desk features, licenses tracking and software auditing.  The lack
+	of path filtering on the GLPI URL may allow an attacker to transmit
+	a malicious URL of login page that can be used to attempt a phishing
+	attack on user credentials.  Users are advised to upgrade to version
+	10.0.10.  There are no known workarounds for this vulnerability.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-41888</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-41888</url>
+    </references>
+    <dates>
+      <discovery>2023-09-27</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="20302cbc-6834-11ee-b06f-0050569ceb3a">
+    <topic>Users login enumeration by unauthenticated user in GLPI</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><lt>10.0.10,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/security/advisories/GHSA-5cf4-6q6r-49x9">
+	  <p>GLPI stands for Gestionnaire Libre de Parc Informatique is a Free
+	Asset and IT Management Software package, that provides ITIL Service
+	Desk features, licenses tracking and software auditing.  An
+	unauthenticated user can enumerate users logins.  Users are advised
+	to upgrade to version 10.0.10.  There are no known workarounds for
+	this vulnerability.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-41323</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-41323</url>
+    </references>
+    <dates>
+      <discovery>2023-09-27</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ae8b1445-6833-11ee-b06f-0050569ceb3a">
+    <topic>Privilege Escalation from technician to super-admin in GLPI</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><ge>9.1.0,1</ge><lt>10.0.10,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/security/advisories/GHSA-9j8m-7563-8xvr">
+	  <p>GLPI stands for Gestionnaire Libre de Parc Informatique is a Free
+	Asset and IT Management Software package, that provides ITIL Service
+	Desk features, licenses tracking and software auditing.  A user
+	with write access to another user can make requests to change the
+	latter&apos;s password and then take control of their account.
+	Users are advised to upgrade to version 10.0.10.  There are no known
+	work around for this vulnerability.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-41322</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-41322</url>
+    </references>
+    <dates>
+      <discovery>2023-09-27</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6851f3bb-6833-11ee-b06f-0050569ceb3a">
+    <topic>Sensitive fields enumeration through API in GLPI</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><ge>9.1.1,1</ge><lt>10.0.10,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/security/advisories/GHSA-3fxw-j5rj-w836">
+	  <p>GLPI stands for Gestionnaire Libre de Parc Informatique is a Free
+	Asset and IT Management Software package, that provides ITIL Service
+	Desk features, licenses tracking and software auditing.  An API
+	user can enumerate sensitive fields values on resources on which
+	he has read access.  Users are advised to upgrade to version 10.0.10.
+	There are no known workarounds for this vulnerability.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-41321</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-41321</url>
+    </references>
+    <dates>
+      <discovery>2023-09-27</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="df71f5aa-6831-11ee-b06f-0050569ceb3a">
+    <topic>File deletion through document upload process in GLPI</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><ge>10.0.0,1</ge><lt>10.0.10,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/security/advisories/GHSA-hm76-jh96-7j75">
+	  <p>GLPI stands for Gestionnaire Libre de Parc Informatique is a Free
+	Asset and IT Management Software package, that provides ITIL Service
+	Desk features, licenses tracking and software auditing.  The document
+	upload process can be diverted to delete some files.  Users are
+	advised to upgrade to version 10.0.10.  There are no known workarounds
+	for this vulnerability.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-42462</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-42462</url>
+    </references>
+    <dates>
+      <discovery>2023-09-27</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="95c4ec45-6831-11ee-b06f-0050569ceb3a">
+    <topic>Account takeover through API in GLPI</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><ge>9.3.0,1</ge><lt>10.0.10,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/security/advisories/GHSA-58wj-8jhx-jpm3">
+	  <p>GLPI stands for Gestionnaire Libre de Parc Informatique is a Free
+	Asset and IT Management Software package, that provides ITIL Service
+	Desk features, licenses tracking and software auditing.  An API
+	user that have read access on users resource can steal accounts of
+	other users.  Users are advised to upgrade to version 10.0.10.
+	There are no known workarounds for this vulnerability.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-41324</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-41324</url>
+    </references>
+    <dates>
+      <discovery>2023-09-27</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="040e69f1-6831-11ee-b06f-0050569ceb3a">
+    <topic>Account takeover via Kanban feature in GLPI</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><ge>9.5.0,1</ge><lt>10.0.10,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/security/advisories/GHSA-5wj6-hp4c-j5q9">
+	  <p>GLPI stands for Gestionnaire Libre de Parc Informatique is a Free
+	Asset and IT Management Software package, that provides ITIL Service
+	Desk features, licenses tracking and software auditing.  A logged
+	user from any profile can hijack the Kanban feature to alter any
+	user field, and end-up with stealing its account.  Users are advised
+	to upgrade to version 10.0.10.  There are no known workarounds for
+	this vulnerability.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-41326</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-41326</url>
+    </references>
+    <dates>
+      <discovery>2023-09-27</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6f6518ab-6830-11ee-b06f-0050569ceb3a">
+    <topic>Account takeover via SQL Injection in UI layout preferences in GLPI</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><ge>10.0.0,1</ge><lt>10.0.10,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/security/advisories/GHSA-mv2r-gpw3-g476">
+	  <p>GLPI stands for Gestionnaire Libre de Parc Informatique is a Free
+	Asset and IT Management Software package, that provides ITIL Service
+	Desk features, licenses tracking and software auditing.  UI layout
+	preferences management can be hijacked to lead to SQL injection.
+	This injection can be use to takeover an administrator account.
+	Users are advised to upgrade to version 10.0.10.  There are no known
+	workarounds for this vulnerability.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-41320</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-41320</url>
+    </references>
+    <dates>
+      <discovery>2023-09-27</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="257e1bf0-682f-11ee-b06f-0050569ceb3a">
+    <topic>GLPI vulnerable to SQL injection via dashboard administration</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><ge>9.5.0,1</ge><lt>10.0.9,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/releases/tag/10.0.9">
+	  <p>GLPI is a Free Asset and IT Management Software package, Data center
+	management, ITIL Service Desk, licenses tracking and software
+	auditing.  An administrator can trigger SQL injection via dashboards
+	administration.  This vulnerability has been patched in version
+	10.0.9.
+	</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-37278</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-37278</url>
+    </references>
+    <dates>
+      <discovery>2023-07-13</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="40173815-6827-11ee-b06f-0050569ceb3a">
+    <topic>GLPI vulnerable to unauthorized access to User data</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><lt>10.0.8,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/releases/tag/10.0.8">
+	  <p>GLPI is a free asset and IT management software package.  Versions
+	of the software starting with 0.68 and prior to 10.0.8 have an
+	incorrect rights check on a on a file accessible by an authenticated
+	user.  This allows access to the list of all users and their personal
+	information.  Users should upgrade to version 10.0.8 to receive a
+	patch.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-34106</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-34106</url>
+    </references>
+    <dates>
+      <discovery>2023-07-05</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1fe40200-6823-11ee-b06f-0050569ceb3a">
+    <topic>GLPI vulnerable to unauthorized access to KnowbaseItem data</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><ge>9.2.0,1</ge><lt>10.0.8,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/releases/tag/10.0.8">
+	  <p>GLPI is a free asset and IT management software package.  Versions
+	of the software starting with 9.2.0 and prior to 10.0.8 have an
+	incorrect rights check on a on a file accessible by an authenticated
+	user, allows access to the view all KnowbaseItems.  Version 10.0.8
+	has a patch for this issue.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-34107</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-34107</url>
+    </references>
+    <dates>
+      <discovery>2023-07-05</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b14a6ddc-6821-11ee-b06f-0050569ceb3a">
+    <topic>GLPI vulnerable to reflected XSS in search pages</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><ge>9.4.0,1</ge><lt>10.0.8,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/releases/tag/10.0.8">
+	  <p>GLPI is a free asset and IT management software package.  Starting
+	in version 9.4.0 and prior to version 10.0.8, a malicious link can
+	be crafted by an unauthenticated user that can exploit a reflected
+	XSS in case any authenticated user opens the crafted link.  Users
+	should upgrade to version 10.0.8 to receive a patch.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-34244</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-34244</url>
+    </references>
+    <dates>
+      <discovery>2023-07-05</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="95fde6bc-6821-11ee-b06f-0050569ceb3a">
+    <topic>GLPI vulnerable to unauthenticated access to Dashboard data</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><ge>9.5.0,1</ge><lt>10.0.8,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/releases/tag/10.0.8">
+	  <p>GLPI is a free asset and IT management software package.  Starting
+	in version 9.5.0 and prior to version 10.0.8, an incorrect rights
+	check on a file allows an unauthenticated user to be able to access
+	dashboards data.  Version 10.0.8 contains a patch for this issue.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-35940</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-35940</url>
+    </references>
+    <dates>
+      <discovery>2023-07-05</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="717efd8a-6821-11ee-b06f-0050569ceb3a">
+    <topic>GLPI vulnerable to unauthorized access to Dashboard data</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><ge>9.5.0,1</ge><lt>10.0.8,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/releases/tag/10.0.8">
+	  <p>GLPI is a free asset and IT management software package.  Starting
+	in version 9.5.0 and prior to version 10.0.8, an incorrect rights
+	check on a on a file accessible by an authenticated user (or not
+	for certain actions), allows a threat actor to interact, modify,
+	or see Dashboard data.  Version 10.0.8 contains a patch for this
+	issue.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-35939</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-35939</url>
+    </references>
+    <dates>
+      <discovery>2023-07-05</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="548a4163-6821-11ee-b06f-0050569ceb3a">
+    <topic>GLPI vulnerable to SQL injection through Computer Virtual Machine information</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><lt>10.0.8,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/releases/tag/10.0.8">
+	  <p>GLPI is a free asset and IT management software package.  Starting
+	in version 0.80 and prior to version 10.0.8, Computer Virtual Machine
+	form and GLPI inventory request can be used to perform a SQL injection
+	attack.  Version 10.0.8 has a patch for this issue.  As a workaround,
+	one may disable native inventory.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-36808</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-36808</url>
+    </references>
+    <dates>
+      <discovery>2023-07-05</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e44e5ace-6820-11ee-b06f-0050569ceb3a">
+    <topic>GLPI vulnerable to SQL injection via inventory agent request</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><ge>10.0.0,1</ge><lt>10.0.8,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/releases/tag/10.0.8">
+	  <p>GLPI is a free asset and IT management software package.  Starting
+	in version 10.0.0 and prior to version 10.0.8, GLPI inventory
+	endpoint can be used to drive a SQL injection attack.  By default,
+	GLPI inventory endpoint requires no authentication.  Version 10.0.8
+	has a patch for this issue.  As a workaround, one may disable native
+	inventory.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-35924</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-35924</url>
+    </references>
+    <dates>
+      <discovery>2023-07-05</discovery>
+      <entry>2023-10-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bdfa6c04-027a-11ef-9c21-901b0e9408dc">
+    <topic>py-matrix-synapse -- weakness in auth chain indexing allows DoS</topic>
+    <affects>
+      <package>
+	<name>py38-matrix-synapse</name>
+	<name>py39-matrix-synapse</name>
+	<name>py310-matrix-synapse</name>
+	<name>py311-matrix-synapse</name>
+	<range><lt>1.105.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Matrix developers report:</p>
+	<blockquote cite="https://element.io/blog/security-release-synapse-1-105-1/">
+	  <p>Weakness in auth chain indexing allows DoS from remote
+	  room members through disk fill and high CPU usage. (High severity)</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-31208</cvename>
+      <url>https://element.io/blog/security-release-synapse-1-105-1/</url>
+      <url>https://github.com/element-hq/synapse/security/advisories/GHSA-3h7q-rfh9-xm4v</url>
+    </references>
+    <dates>
+      <discovery>2024-04-23</discovery>
+      <entry>2024-04-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b857606c-0266-11ef-8681-001b217b3468">
+    <topic>Gitlab -- vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>16.11.0</ge><lt>16.11.1</lt></range>
+	<range><ge>16.10.0</ge><lt>16.10.4</lt></range>
+	<range><ge>7.8.0</ge><lt>16.9.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2024/04/24/patch-release-gitlab-16-11-1-released/">
+	  <p>GitLab account takeover, under certain conditions, when using Bitbucket as an OAuth provider</p>
+	  <p>Path Traversal leads to DoS and Restricted File Read</p>
+	  <p>Unauthenticated ReDoS in FileFinder when using wildcard filters in project file search</p>
+	  <p>Personal Access Token scopes not honoured by GraphQL subscriptions</p>
+	  <p>Domain based restrictions bypass using a crafted email address</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-4024</cvename>
+      <cvename>CVE-2024-2434</cvename>
+      <cvename>CVE-2024-2829</cvename>
+      <cvename>CVE-2024-4006</cvename>
+      <cvename>CVE-2024-1347</cvename>
+      <url>https://about.gitlab.com/releases/2024/04/24/patch-release-gitlab-16-11-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2024-04-24</discovery>
+      <entry>2024-04-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1af16f2b-023c-11ef-8791-6805ca2fa271">
+    <topic>powerdns-recursor -- denial of service</topic>
+    <affects>
+      <package>
+	<name>powerdns-recursor</name>
+	<range><lt>5.0.4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PowerDNS Team reports:</p>
+	<blockquote cite="https://blog.powerdns.com/2024/04/24/powerdns-recursor-4-8-8-4-9-5-5-0-4-released">
+	  <p>PowerDNS Security Advisory 2024-02: if recursive forwarding is configured,
+	   crafted responses can lead to a denial of service in Recursor</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-25583</cvename>
+      <url>https://docs.powerdns.com/recursor/security-advisories/powerdns-advisory-2024-02.html</url>
+    </references>
+    <dates>
+      <discovery>2024-04-24</discovery>
+      <entry>2024-04-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bb49f1fa-00da-11ef-92b7-589cfc023192">
+    <topic>GLPI -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><lt>10.0.13,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>GLPI team reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/releases/tag/10.0.13">
+	  <p>GLPI 10.0.13 Changelog</p>
+	  <ul>
+	    <li>[SECURITY - high] SQL Injection in through the search engine (CVE-2024-27096)</li>
+	    <li>[SECURITY - moderate] Blind SSRF using Arbitrary Object Instantiation (CVE-2024-27098)</li>
+	    <li>[SECURITY - moderate] Stored XSS in dashboards (CVE-2024-27104)</li>
+	    <li>[SECURITY - moderate] Reflected XSS in debug mode (CVE-2024-27914)</li>
+	    <li>[SECURITY - moderate] Sensitive fields access through dropdowns (CVE-2024-27930)</li>
+	    <li>[SECURITY - moderate] Users emails enumeration (CVE-2024-27937)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-27096</cvename>
+      <cvename>CVE-2024-27098</cvename>
+      <cvename>CVE-2024-27104</cvename>
+      <cvename>CVE-2024-27914</cvename>
+      <cvename>CVE-2024-27930</cvename>
+      <cvename>CVE-2024-27937</cvename>
+      <url>https://github.com/glpi-project/glpi/releases/tag/10.0.13</url>
+    </references>
+    <dates>
+      <discovery>2024-03-13</discovery>
+      <entry>2024-04-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="faccf131-00d9-11ef-92b7-589cfc023192">
+    <topic>GLPI -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><lt>10.0.12,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>GLPI team reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/releases/tag/10.0.12">
+	  <p>GLPI 10.0.12 Changelog</p>
+	  <ul>
+	    <li>[SECURITY - moderate] Reflected XSS in reports pages (CVE-2024-23645)</li>
+	    <li>[SECURITY - moderate] LDAP Injection during authentication (CVE-2023-51446)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-23645</cvename>
+      <cvename>CVE-2023-51446</cvename>
+      <url>https://github.com/glpi-project/glpi/releases/tag/10.0.12</url>
+    </references>
+    <dates>
+      <discovery>2024-02-01</discovery>
+      <entry>2024-04-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ed688880-00c4-11ef-92b7-589cfc023192">
+    <topic>GLPI -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><lt>10.0.11,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>GLPI team reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/releases/tag/10.0.11">
+	  <p>GLPI 10.0.11 Changelog</p>
+	  <ul>
+	    <li>[SECURITY - moderate] Authenticated SQL Injection (CVE-2023-43813)</li>
+	    <li>[SECURITY - high] SQL injection through inventory agent request (CVE-2023-46727)</li>
+	    <li>[SECURITY - high] Remote code execution from LDAP server configuration form on PHP 7.4 (CVE-2023-46726)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-43813</cvename>
+      <cvename>CVE-2023-46727</cvename>
+      <cvename>CVE-2023-46726</cvename>
+      <url>https://github.com/glpi-project/glpi/releases/tag/10.0.11</url>
+    </references>
+    <dates>
+      <discovery>2023-12-13</discovery>
+      <entry>2024-04-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2ce1a2f1-0177-11ef-a45e-08002784c58d">
+    <topic>ruby -- Arbitrary memory address read vulnerability with Regex search</topic>
+    <affects>
+      <package>
+	<name>ruby</name>
+	<range><ge>3.1.0,1</ge><lt>3.1.5,1</lt></range>
+	<range><ge>3.2.0,1</ge><lt>3.2.4,1</lt></range>
+	<range><ge>3.3.0,1</ge><lt>3.3.1,1</lt></range>
+      </package>
+      <package>
+	<name>ruby31</name>
+	<range><ge>3.1.0,1</ge><lt>3.1.5,1</lt></range>
+      </package>
+      <package>
+	<name>ruby32</name>
+	<range><ge>3.2.0,1</ge><lt>3.2.4,1</lt></range>
+      </package>
+      <package>
+	<name>ruby33</name>
+	<range><ge>3.3.0,1</ge><lt>3.3.1,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>sp2ip reports:</p>
+	<blockquote cite="https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/">
+	  <p>
+	    If attacker-supplied data is provided to the Ruby regex
+	    compiler, it is possible to extract arbitrary heap data
+	    relative to the start of the text, including pointers and
+	    sensitive strings.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-27282</cvename>
+      <url>https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/</url>
+    </references>
+    <dates>
+      <discovery>2024-04-23</discovery>
+      <entry>2024-04-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="304d92c3-00c5-11ef-bd52-080027bff743">
+	<topic>sdl2_sound -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>sdl2_sound</name>
+	<range><lt>2.0.2_1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>GitHub Security Lab reports:</p>
+	<blockquote cite="https://securitylab.github.com/advisories/GHSL-2023-145_GHSL-2023-151_stb_image_h/">
+	  <p>stb_image.h and stb_vorbis libraries contain several memory access violations of different severity</p>
+	  <ol>
+		<li>Wild address read in stbi__gif_load_next (GHSL-2023-145).</li>
+		<li>Multi-byte read heap buffer overflow in stbi__vertical_flip (GHSL-2023-146).</li>
+		<li>Disclosure of uninitialized memory in stbi__tga_load (GHSL-2023-147).</li>
+		<li>Double-free in stbi__load_gif_main_outofmem (GHSL-2023-148).</li>
+		<li>Null pointer dereference in stbi__convert_format (GHSL-2023-149).</li>
+		<li>Possible double-free or memory leak in stbi__load_gif_main (GHSL-2023-150).</li>
+		<li>Null pointer dereference because of an uninitialized variable (GHSL-2023-151).</li>
+		<li>0 byte write heap buffer overflow in start_decoder (GHSL-2023-165)</li>
+		<li>Multi-byte write heap buffer overflow in start_decoder (GHSL-2023-166)</li>
+		<li>Heap buffer out of bounds write in start_decoder (GHSL-2023-167)</li>
+		<li>Off-by-one heap buffer write in start_decoder (GHSL-2023-168)</li>
+		<li>Attempt to free an uninitialized memory pointer in vorbis_deinit (GHSL-2023-169)</li>
+		<li>Null pointer dereference in vorbis_deinit (GHSL-2023-170)</li>
+		<li>Out of bounds heap buffer write (GHSL-2023-171)</li>
+		<li>Wild address read in vorbis_decode_packet_rest (GHSL-2023-172)</li>
+	  </ol>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-45676</cvename>
+      <cvename>CVE-2023-45677</cvename>
+      <cvename>CVE-2023-45680</cvename>
+      <cvename>CVE-2023-45681</cvename>
+      <cvename>CVE-2023-45682</cvename>
+	  <url>https://securitylab.github.com/advisories/GHSL-2023-145_GHSL-2023-151_stb_image_h/</url>
+    </references>
+    <dates>
+      <discovery>2023-10-20</discovery>
+      <entry>2024-04-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9bed230f-ffc8-11ee-8e76-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>124.0.6367.60</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>124.0.6367.60</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_16.html">
+	 <p>This update includes 23 security fixes:</p>
+	 <ul>
+	    <li>[331358160] High CVE-2024-3832: Object corruption in V8. Reported by Man Yue Mo of GitHub Security Lab on 2024-03-27</li>
+	    <li>[331383939] High CVE-2024-3833: Object corruption in WebAssembly. Reported by Man Yue Mo of GitHub Security Lab on 2024-03-27</li>
+	    <li>[330759272] High CVE-2024-3914: Use after free in V8. Reported by Seunghyun Lee (@0x10n) of KAIST Hacking Lab, via Pwn2Own 2024 on 2024-03-21</li>
+	    <li>[326607008] High CVE-2024-3834: Use after free in Downloads. Reported by ChaobinZhang on 2024-02-24</li>
+	    <li>[41491379] Medium CVE-2024-3837: Use after free in QUIC. Reported by {rotiple, dch3ck} of CW Research Inc. on 2024-01-15</li>
+	    <li>[328278717] Medium CVE-2024-3838: Inappropriate implementation in Autofill. Reported by Ardyan Vicky Ramadhan on 2024-03-06</li>
+	    <li>[41491859] Medium CVE-2024-3839: Out of bounds read in Fonts. Reported by Ronald Crane (Zippenhop LLC) on 2024-01-16</li>
+	    <li>[41493458] Medium CVE-2024-3840: Insufficient policy enforcement in Site Isolation. Reported by Ahmed ElMasry on 2024-01-22</li>
+	    <li>[330376742] Medium CVE-2024-3841: Insufficient data validation in Browser Switcher. Reported by Oleg on 2024-03-19</li>
+	    <li>[41486690] Medium CVE-2024-3843: Insufficient data validation in Downloads. Reported by Azur on 2023-12-24</li>
+	    <li>[40058873] Low CVE-2024-3844: Inappropriate implementation in Extensions. Reported by Alesandro Ortiz on 2022-02-23</li>
+	    <li>[323583084] Low CVE-2024-3845: Inappropriate implementation in Network. Reported by Daniel Baulig on 2024-02-03</li>
+	    <li>[40064754] Low CVE-2024-3846: Inappropriate implementation in Prompts. Reported by Ahmed ElMasry on 2023-05-23</li>
+	    <li>[328690293] Low CVE-2024-3847: Insufficient policy enforcement in WebUI. Reported by Yan Zhu on 2024-03-08</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-3832</cvename>
+      <cvename>CVE-2024-3833</cvename>
+      <cvename>CVE-2024-3914</cvename>
+      <cvename>CVE-2024-3834</cvename>
+      <cvename>CVE-2024-3837</cvename>
+      <cvename>CVE-2024-3838</cvename>
+      <cvename>CVE-2024-3839</cvename>
+      <cvename>CVE-2024-3840</cvename>
+      <cvename>CVE-2024-3841</cvename>
+      <cvename>CVE-2024-3843</cvename>
+      <cvename>CVE-2024-3844</cvename>
+      <cvename>CVE-2024-3845</cvename>
+      <cvename>CVE-2024-3846</cvename>
+      <cvename>CVE-2024-3847</cvename>
+      <url>https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_16.html</url>
+    </references>
+    <dates>
+      <discovery>2024-04-16</discovery>
+      <entry>2024-04-21</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="ecafc4af-fe8a-11ee-890c-08002784c58d">
     <topic>clamav -- Possible crash in the HTML file parser that could cause a denial-of-service (DoS) condition</topic>
     <affects>

@@ -1,5 +1,5 @@
 PORTNAME=	gitlab-shell
-PORTVERSION=	14.34.0
+PORTVERSION=	14.35.0
 DISTVERSIONPREFIX=	v
 PORTREVISION=	1
 CATEGORIES=	devel
@@ -39,10 +39,17 @@ DIST_SUBDIR=	go/${PKGORIGIN:S,/,_,g}/${DISTNAME}
 EXTRACT_ONLY+=	${DISTFILES:N*.mod\:*:N*.mod:C/:.*//}
 _USES_fetch+=	800:go-post-fetch
 go-post-fetch:
-	@${ECHO_MSG} "===> Fetching ${GO_MODNAME} dependencies";
-	@(cd ${DISTDIR}/${DIST_SUBDIR}; \
-		[ -e go.mod ] || ${RLN} ${GO_MODFILE} go.mod; \
-		${SETENV} ${GO_ENV} GOPROXY=${GO_GOPROXY} ${GO_CMD} mod download -x all)
+	@if [ ! -e ${DISTDIR}/${DIST_SUBDIR}/.go-post-fetch-done ]; then\
+		${ECHO_MSG} "Copy go.mod as go mod download will modify it, which breaks checksum check" ;\
+		(cd ${DISTDIR}/${DIST_SUBDIR}; ${CP} go.mod go.mod.orig) ;\
+		${ECHO_MSG} "===> Fetching ${GO_MODNAME} dependencies";\
+		(cd ${DISTDIR}/${DIST_SUBDIR}; \
+			[ -e go.mod ] || ${RLN} ${GO_MODFILE} go.mod; \
+			${SETENV} ${GO_ENV} GOPROXY=${GO_GOPROXY} ${GO_CMD} mod download -x all) ;\
+		${ECHO_MSG} "Restore previous go.mod" ;\
+		(cd ${DISTDIR}/${DIST_SUBDIR}; ${MV} go.mod.orig go.mod) ;\
+		${TOUCH} ${DISTDIR}/${DIST_SUBDIR}/.go-post-fetch-done;\
+	fi;
 # ---------------------------
 
 VARLOGDIR=	/var/log/gitlab-shell
@@ -50,6 +57,7 @@ VARLOGDIR=	/var/log/gitlab-shell
 PLIST_FILES+=	"@dir(git,,755) ${VARLOGDIR}"
 
 post-patch:
+	${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|" ${WRKSRC}/config.yml.example
 	${MV} ${WRKSRC}/config.yml.example ${WRKSRC}/config.yml.sample
 	${CP} ${WRKSRC}/config.yml.sample ${WRKSRC}/config.yml
 	${REINPLACE_CMD} -e 's|VERSION_STRING :=.*|VERSION_STRING := v${PORTVERSION}|g' ${WRKSRC}/Makefile
@@ -77,4 +85,11 @@ post-install:
 		${SED} -E -e '/sample$$/ s#^#@sample #; \
 		s#${DATADIR_REL}/bin#@(,,555) ${DATADIR_REL}/bin#; ' >> ${TMPPLIST}
 
-.include <bsd.port.mk>
+go-pre-delete-distfiles:
+	@if [ -e ${DISTDIR}/${DIST_SUBDIR}/.go-post-fetch-done ]; then\
+		${RM} ${DISTDIR}/${DIST_SUBDIR}/.go-post-fetch-done || ${TRUE};\
+	fi
+
+.include <bsd.port.pre.mk>
+delete-distfiles: go-pre-delete-distfiles
+.include <bsd.port.post.mk>

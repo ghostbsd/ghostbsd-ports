@@ -97,6 +97,9 @@
     SUBDIR += linux-c7-pango
     SUBDIR += linux-c7-qt-x11
     SUBDIR += linux-c7-tk85
+    SUBDIR += linux-rl9-gtk2
+    SUBDIR += linux-rl9-gtk3
+    SUBDIR += linux-rl9-pango
     SUBDIR += movingmotif
     SUBDIR += mowitz
     SUBDIR += mygui
@@ -118,7 +121,6 @@
     SUBDIR += p5-Alien-wxWidgets
     SUBDIR += p5-Gtk2
     SUBDIR += p5-Gtk2-Chmod
-    SUBDIR += p5-Gtk2-Ex-Dialogs
     SUBDIR += p5-Gtk2-Ex-FormFactory
     SUBDIR += p5-Gtk2-Ex-PodViewer
     SUBDIR += p5-Gtk2-Ex-Simple-List
@@ -141,7 +143,6 @@
     SUBDIR += p5-Tk-Date
     SUBDIR += p5-Tk-DynaTabFrame
     SUBDIR += p5-Tk-Enscript
-    SUBDIR += p5-Tk-FileDialog
     SUBDIR += p5-Tk-FontDialog
     SUBDIR += p5-Tk-GBARR
     SUBDIR += p5-Tk-Getopt
@@ -219,6 +220,7 @@
     SUBDIR += rubygem-uh
     SUBDIR += rubygem-vte3
     SUBDIR += rubygem-vte4
+    SUBDIR += scenefx
     SUBDIR += scintilla
     SUBDIR += sdl_pango
     SUBDIR += shared-desktop-ontologies
