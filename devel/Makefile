@@ -887,6 +887,7 @@
     SUBDIR += gogs
     SUBDIR += golangci-lint
     SUBDIR += golint
+    SUBDIR += gomigrate
     SUBDIR += google-cloud-cpp
     SUBDIR += google-perftools
     SUBDIR += google-styleguide
@@ -1717,8 +1718,11 @@
     SUBDIR += ocaml-cfg
     SUBDIR += ocaml-classes
     SUBDIR += ocaml-cmdliner
+    SUBDIR += ocaml-compiler-libs
     SUBDIR += ocaml-cppo
     SUBDIR += ocaml-csexp
+    SUBDIR += ocaml-cstruct
+    SUBDIR += ocaml-domain-name
     SUBDIR += ocaml-dune
     SUBDIR += ocaml-extlib
     SUBDIR += ocaml-findlib
@@ -1731,13 +1735,18 @@
     SUBDIR += ocaml-magic
     SUBDIR += ocaml-mtime
     SUBDIR += ocaml-ocamlbuild
+    SUBDIR += ocaml-ocplib-endian
     SUBDIR += ocaml-opam
     SUBDIR += ocaml-ounit
     SUBDIR += ocaml-parmap
+    SUBDIR += ocaml-parsexp
     SUBDIR += ocaml-pcre
     SUBDIR += ocaml-pcre2
     SUBDIR += ocaml-pomap
+    SUBDIR += ocaml-ppx_derivers
+    SUBDIR += ocaml-ppx_sexp_conv
     SUBDIR += ocaml-ppx-tools
+    SUBDIR += ocaml-ppxlib
     SUBDIR += ocaml-re
     SUBDIR += ocaml-react
     SUBDIR += ocaml-res
@@ -1747,6 +1756,7 @@
     SUBDIR += ocaml-sem
     SUBDIR += ocaml-seq
     SUBDIR += ocaml-sexplib0
+    SUBDIR += ocaml-sexplib
     SUBDIR += ocaml-stdio
     SUBDIR += ocaml-topkg
     SUBDIR += ocaml-type_conv
@@ -4141,6 +4151,7 @@
     SUBDIR += pecl-yac
     SUBDIR += pecl-yaconf
     SUBDIR += pecl-zookeeper
+    SUBDIR += peg.el
     SUBDIR += pegtl
     SUBDIR += pep8
     SUBDIR += performance
@@ -4674,7 +4685,6 @@
     SUBDIR += py-distlib
     SUBDIR += py-distributed
     SUBDIR += py-dj42-django-rq
-    SUBDIR += py-dj42-graphene-django
     SUBDIR += py-django-rq
     SUBDIR += py-dm-tree
     SUBDIR += py-docformatter
@@ -4837,6 +4847,7 @@
     SUBDIR += py-grab
     SUBDIR += py-graphene
     SUBDIR += py-graphene-django
+    SUBDIR += py-graphene-django300
     SUBDIR += py-graphene-sqlalchemy
     SUBDIR += py-graphene2
     SUBDIR += py-graphql-core
