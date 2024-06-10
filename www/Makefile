@@ -175,6 +175,7 @@
     SUBDIR += faup
     SUBDIR += fcgi
     SUBDIR += fcgiwrap
+    SUBDIR += feroxbuster
     SUBDIR += ffproxy
     SUBDIR += ffsend
     SUBDIR += fgallery
@@ -381,7 +382,6 @@
     SUBDIR += mod_auth_mellon
     SUBDIR += mod_auth_mysql2
     SUBDIR += mod_auth_mysql_another
-    SUBDIR += mod_auth_openid
     SUBDIR += mod_auth_openidc
     SUBDIR += mod_auth_pam2
     SUBDIR += mod_auth_pgsql2
@@ -1392,7 +1392,6 @@
     SUBDIR += pear-Services_urlTea
     SUBDIR += pear-Structures_DataGrid_Renderer_Flexy
     SUBDIR += pear-Structures_DataGrid_Renderer_Pager
-    SUBDIR += pear-Structures_DataGrid_Renderer_Smarty
     SUBDIR += pear-Text_Wiki
     SUBDIR += pear-UDDI
     SUBDIR += pear-XML_GRDDL
@@ -2263,7 +2262,6 @@
     SUBDIR += rubygem-robots
     SUBDIR += rubygem-roda
     SUBDIR += rubygem-rqrcode
-    SUBDIR += rubygem-rqrcode2
     SUBDIR += rubygem-rqrcode_core
     SUBDIR += rubygem-rss
     SUBDIR += rubygem-rtlit

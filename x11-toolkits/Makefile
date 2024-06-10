@@ -222,6 +222,7 @@
     SUBDIR += rubygem-vte4
     SUBDIR += scenefx
     SUBDIR += scintilla
+    SUBDIR += sdl2_pango
     SUBDIR += sdl_pango
     SUBDIR += shared-desktop-ontologies
     SUBDIR += skinlf
@@ -244,6 +245,7 @@
     SUBDIR += vte3
     SUBDIR += wlroots
     SUBDIR += wlroots-devel
+    SUBDIR += wlroots-hyprland
     SUBDIR += wlroots015
     SUBDIR += wlroots016
     SUBDIR += wmapp

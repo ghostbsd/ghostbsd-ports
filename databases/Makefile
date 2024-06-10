@@ -705,6 +705,7 @@
     SUBDIR += proftpd-mod_sql_postgres
     SUBDIR += proftpd-mod_sql_sqlite
     SUBDIR += proftpd-mod_sql_tds
+    SUBDIR += prometheus-postgres-exporter
     SUBDIR += prometheus-postgresql-adapter
     SUBDIR += proxysql
     SUBDIR += pspg
@@ -949,7 +950,6 @@
     SUBDIR += rubygem-fabrication
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-flipper-active_record
-    SUBDIR += rubygem-flipper-active_record-rails61
     SUBDIR += rubygem-flipper-active_record-rails70
     SUBDIR += rubygem-gdbm
     SUBDIR += rubygem-globalid
@@ -1005,17 +1005,16 @@
     SUBDIR += rubygem-redis-client
     SUBDIR += rubygem-redis-cluster-client
     SUBDIR += rubygem-redis-clustering
-    SUBDIR += rubygem-redis-clustering50
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis-namespace110
     SUBDIR += rubygem-redis4
-    SUBDIR += rubygem-redis50
     SUBDIR += rubygem-ruby-mysql
     SUBDIR += rubygem-scenic61
     SUBDIR += rubygem-sdbm
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
     SUBDIR += rubygem-sqlite3-ruby
+    SUBDIR += rubygem-sqlite31
     SUBDIR += rubygem-state_machines-activemodel
     SUBDIR += rubygem-state_machines-activerecord
     SUBDIR += rubygem-state_machines-activerecord08

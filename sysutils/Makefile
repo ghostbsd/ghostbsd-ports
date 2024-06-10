@@ -627,6 +627,7 @@
     SUBDIR += jdupes
     SUBDIR += jest
     SUBDIR += jkill
+    SUBDIR += joshuto
     SUBDIR += jps
     SUBDIR += jruls
     SUBDIR += jstest-gtk
@@ -1063,6 +1064,7 @@
     SUBDIR += polkit
     SUBDIR += polkit-gnome
     SUBDIR += polkit-qt-1
+    SUBDIR += popeye
     SUBDIR += pot
     SUBDIR += potnet
     SUBDIR += poweralertd
@@ -1223,6 +1225,7 @@
     SUBDIR += rex
     SUBDIR += rhc
     SUBDIR += rinse
+    SUBDIR += rkbin
     SUBDIR += rmlint
     SUBDIR += rocinante
     SUBDIR += rocr
@@ -1236,7 +1239,6 @@
     SUBDIR += rsyncbackup
     SUBDIR += rsyncrypto
     SUBDIR += rsyslog8
-    SUBDIR += rtsx-kmod
     SUBDIR += rtty
     SUBDIR += rubygem-backup
     SUBDIR += rubygem-bolt
@@ -1528,6 +1530,7 @@
     SUBDIR += u-boot-nanopi-neo2
     SUBDIR += u-boot-nanopi-r2s
     SUBDIR += u-boot-nanopi-r4s
+    SUBDIR += u-boot-nanopi-r5s
     SUBDIR += u-boot-olimex-a20-som-evb
     SUBDIR += u-boot-olinuxino-lime
     SUBDIR += u-boot-olinuxino-lime2

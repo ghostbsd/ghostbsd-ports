@@ -112,6 +112,8 @@ OPENLDAP_DEFAULT?=	26
 # Possible values: 5.34, 5.36, 5.38, devel
 .  if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
+# When changing the default here, make sure the DEPRECATED/EXPIRATION lines in
+# the older Perl 5 ports are uncommented at the same time.
 PERL5_DEFAULT?=		5.36
 .  elif !defined(PERL5_DEFAULT)
 # There's no need to replace development versions, like "5.23" with "devel"
@@ -135,7 +137,7 @@ PYCRYPTOGRAPHY_DEFAULT?=	rust
 PYCRYPTOGRAPHY_DEFAULT?=	legacy
 .  endif
 # Possible values: 3.8, 3.9, 3.10, 3.11
-PYTHON_DEFAULT?=	3.9
+PYTHON_DEFAULT?=	3.11
 # Possible values: 2.7
 PYTHON2_DEFAULT?=	2.7
 # Possible values: 3.1, 3.2, 3.3

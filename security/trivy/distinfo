@@ -1,5 +1,5 @@
-TIMESTAMP = 1716207083
-SHA256 (go/security_trivy/trivy-v0.51.2/v0.51.2.mod) = 122e72bc67122a132941bb75b8ee8349bb2b29522aae4dbc3d80ed268722e913
-SIZE (go/security_trivy/trivy-v0.51.2/v0.51.2.mod) = 22463
-SHA256 (go/security_trivy/trivy-v0.51.2/v0.51.2.zip) = 345ec95eddd47a557dafa569a8126dc65cadbfcf0b0e1c060b12badf7c142a88
-SIZE (go/security_trivy/trivy-v0.51.2/v0.51.2.zip) = 57889604
+TIMESTAMP = 1717485996
+SHA256 (go/security_trivy/trivy-v0.52.0/v0.52.0.mod) = 2734a1718949207d7108157bca96a9f87c96400550269ee9dabdc6d230451bcd
+SIZE (go/security_trivy/trivy-v0.52.0/v0.52.0.mod) = 22373
+SHA256 (go/security_trivy/trivy-v0.52.0/v0.52.0.zip) = b2bc578f40d4becbb66626cd342ff42183482568fe2d30bbb02a5a772a9e54d4
+SIZE (go/security_trivy/trivy-v0.52.0/v0.52.0.zip) = 58068882
