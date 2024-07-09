@@ -1,5 +1,5 @@
 PORTNAME=	ghostbsd-pkg-conf
-PORTVERSION=	23.06.05
+PORTVERSION=	24.07.09
 CATEGORIES=	misc
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
