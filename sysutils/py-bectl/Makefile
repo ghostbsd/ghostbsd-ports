@@ -1,5 +1,5 @@
 PORTNAME=	bectl
-PORTVERSION=	0.5
+PORTVERSION=	0.6
 CATEGORIES=	sysutils
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -8,7 +8,7 @@ COMMENT=	GhostBSD bectl Python module
 
 LICENSE=	BSD2CLAUSE
 
-USES=		python:3.7+
+USES=		python:3.9+
 USE_PYTHON=	distutils autoplist
 
 USE_GITHUB=	yes
