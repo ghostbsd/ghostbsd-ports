@@ -1,5 +1,5 @@
 PORTNAME=	networkmgr
-DISTVERSION=	6.4
+DISTVERSION=	6.5
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	ericbsd@FreeBSD.org
