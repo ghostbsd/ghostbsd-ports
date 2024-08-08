@@ -1,5 +1,6 @@
     COMMENT = Emulators for other operating systems
 
+    SUBDIR += 86Box
     SUBDIR += adamem
     SUBDIR += almostti
     SUBDIR += anese
@@ -115,7 +116,6 @@
     SUBDIR += qemu-powernv
     SUBDIR += qemu-user-static
     SUBDIR += qemu-user-static-devel
-    SUBDIR += qemu7
     SUBDIR += qemu8
     SUBDIR += qmc2
     SUBDIR += quasi88

@@ -1,4 +1,4 @@
---- content/browser/utility_process_host.cc.orig	2024-05-23 20:04:36 UTC
+--- content/browser/utility_process_host.cc.orig	2024-07-31 14:19:23 UTC
 +++ content/browser/utility_process_host.cc
 @@ -61,7 +61,7 @@
  #include "content/browser/v8_snapshot_files.h"
@@ -9,7 +9,7 @@
  #include "base/files/file_util.h"
  #include "base/files/scoped_file.h"
  #include "base/pickle.h"
-@@ -75,7 +75,7 @@
+@@ -74,7 +74,7 @@
  #include "services/network/public/mojom/network_service.mojom.h"
  #endif
  
@@ -18,7 +18,7 @@
  #include "base/task/sequenced_task_runner.h"
  #include "components/viz/host/gpu_client.h"
  #include "media/capture/capture_switches.h"
-@@ -86,7 +86,7 @@ namespace content {
+@@ -85,7 +85,7 @@ namespace content {
  
  namespace {
  
@@ -45,18 +45,8 @@
    allowed_gpu_ = true;
  #endif
  }
-@@ -349,6 +349,9 @@ bool UtilityProcessHost::StartProcess() {
-       switches::kFailAudioStreamCreation,
-       switches::kMuteAudio,
-       switches::kUseFileForFakeAudioCapture,
-+#if BUILDFLAG(IS_BSD)
-+      switches::kAudioBackend,
-+#endif
- #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || \
-     BUILDFLAG(IS_SOLARIS)
-       switches::kAlsaInputDevice,
-@@ -409,7 +412,7 @@ bool UtilityProcessHost::StartProcess() {
-     file_data_->files_to_preload.merge(GetV8SnapshotFilesToPreload());
+@@ -408,7 +408,7 @@ bool UtilityProcessHost::StartProcess() {
+     file_data_->files_to_preload.merge(GetV8SnapshotFilesToPreload(*cmd_line));
  #endif  // BUILDFLAG(IS_POSIX)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -64,7 +54,7 @@
      // The network service should have access to the parent directories
      // necessary for its usage.
      if (sandbox_type_ == sandbox::mojom::Sandbox::kNetwork) {
-@@ -420,13 +423,13 @@ bool UtilityProcessHost::StartProcess() {
+@@ -419,13 +419,13 @@ bool UtilityProcessHost::StartProcess() {
      }
  #endif  // BUILDFLAG(IS_LINUX)
  

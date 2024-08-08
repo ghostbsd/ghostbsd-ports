@@ -88,6 +88,7 @@
     SUBDIR += dijo
     SUBDIR += dive
     SUBDIR += dlib-models
+    SUBDIR += dlpack
     SUBDIR += dnetc
     SUBDIR += dotenv-linter
     SUBDIR += dtach
@@ -248,7 +249,6 @@
     SUBDIR += libxdf
     SUBDIR += lifelines
     SUBDIR += lightgbm
-    SUBDIR += lingoteach
     SUBDIR += llama-cpp
     SUBDIR += locale-en_DK
     SUBDIR += localedata
@@ -279,6 +279,7 @@
     SUBDIR += mtx
     SUBDIR += mxnet
     SUBDIR += najitool
+    SUBDIR += navi
     SUBDIR += ncnn
     SUBDIR += netron
     SUBDIR += nms
@@ -288,6 +289,7 @@
     SUBDIR += numchar
     SUBDIR += nut
     SUBDIR += ola
+    SUBDIR += ollama
     SUBDIR += ompl
     SUBDIR += ondir
     SUBDIR += onnx
@@ -388,6 +390,7 @@
     SUBDIR += php81-calendar
     SUBDIR += php82-calendar
     SUBDIR += php83-calendar
+    SUBDIR += php84-calendar
     SUBDIR += pinfo
     SUBDIR += pipe
     SUBDIR += posixtestsuite
@@ -413,11 +416,11 @@
     SUBDIR += py-ast-comments
     SUBDIR += py-boost-histogram
     SUBDIR += py-censys
-    SUBDIR += py-cinder
     SUBDIR += py-codecarbon
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored
     SUBDIR += py-crudini
+    SUBDIR += py-datasets
     SUBDIR += py-detecta
     SUBDIR += py-dictdiffer
     SUBDIR += py-eemeter
@@ -440,12 +443,14 @@
     SUBDIR += py-icoextract
     SUBDIR += py-instructor
     SUBDIR += py-ipyfastscape
+    SUBDIR += py-jiwer
     SUBDIR += py-kartograph
     SUBDIR += py-laspy
     SUBDIR += py-lazrs
     SUBDIR += py-lightgbm
     SUBDIR += py-lightning-utilities
     SUBDIR += py-litellm
+    SUBDIR += py-llama-cpp-python
     SUBDIR += py-llm
     SUBDIR += py-llm-claude-3
     SUBDIR += py-log_symbols
@@ -456,6 +461,7 @@
     SUBDIR += py-mmsegmentation
     SUBDIR += py-molequeue
     SUBDIR += py-mxnet
+    SUBDIR += py-natten
     SUBDIR += py-npTDMS
     SUBDIR += py-numcodecs
     SUBDIR += py-onnx
@@ -465,6 +471,7 @@
     SUBDIR += py-openpaperwork-core
     SUBDIR += py-openpaperwork-gtk
     SUBDIR += py-openvdb
+    SUBDIR += py-optuna
     SUBDIR += py-orange3-associate
     SUBDIR += py-orange3-datafusion
     SUBDIR += py-orange3-educational

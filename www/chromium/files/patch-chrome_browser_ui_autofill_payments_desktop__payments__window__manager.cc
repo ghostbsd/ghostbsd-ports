@@ -1,6 +1,6 @@
---- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc.orig	2024-05-21 18:07:39 UTC
+--- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc.orig	2024-07-30 11:12:21 UTC
 +++ chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc
-@@ -44,7 +44,7 @@ gfx::Rect GetPopupSizeForVcn3ds() {
+@@ -49,7 +49,7 @@ gfx::Rect GetPopupSizeForVcn3ds() {
  DesktopPaymentsWindowManager::DesktopPaymentsWindowManager(
      ContentAutofillClient* client)
      : client_(CHECK_DEREF(client)) {
@@ -9,7 +9,7 @@
    scoped_observation_.Observe(BrowserList::GetInstance());
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
  }
-@@ -72,7 +72,7 @@ void DesktopPaymentsWindowManager::WebContentsDestroye
+@@ -109,7 +109,7 @@ void DesktopPaymentsWindowManager::WebContentsDestroye
    }
  }
  

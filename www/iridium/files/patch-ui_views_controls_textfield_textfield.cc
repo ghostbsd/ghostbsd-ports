@@ -1,6 +1,6 @@
---- ui/views/controls/textfield/textfield.cc.orig	2024-02-04 14:46:08 UTC
+--- ui/views/controls/textfield/textfield.cc.orig	2024-08-01 05:47:53 UTC
 +++ ui/views/controls/textfield/textfield.cc
-@@ -81,7 +81,7 @@
+@@ -91,7 +91,7 @@
  #include "base/win/win_util.h"
  #endif
  
@@ -9,7 +9,7 @@
  #include "ui/base/ime/linux/text_edit_command_auralinux.h"
  #include "ui/base/ime/text_input_flags.h"
  #include "ui/linux/linux_ui.h"
-@@ -176,7 +176,7 @@ bool IsControlKeyModifier(int flags) {
+@@ -189,7 +189,7 @@ bool IsControlKeyModifier(int flags) {
  // Control-modified key combination, but we cannot extend it to other platforms
  // as Control has different meanings and behaviors.
  // https://crrev.com/2580483002/#msg46
@@ -36,16 +36,16 @@
    // Skip any accelerator handling that conflicts with custom keybindings.
    auto* linux_ui = ui::LinuxUi::instance();
    std::vector<ui::TextEditCommandAuraLinux> commands;
-@@ -1941,7 +1941,7 @@ bool Textfield::ShouldDoLearning() {
+@@ -1997,7 +1997,7 @@ bool Textfield::ShouldDoLearning() {
    return false;
  }
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- // TODO(https://crbug.com/952355): Implement this method to support Korean IME
+ // TODO(crbug.com/41452689): Implement this method to support Korean IME
  // reconversion feature on native text fields (e.g. find bar).
  bool Textfield::SetCompositionFromExistingText(
-@@ -2437,14 +2437,14 @@ ui::TextEditCommand Textfield::GetCommandForKeyEvent(
+@@ -2501,14 +2501,14 @@ ui::TextEditCommand Textfield::GetCommandForKeyEvent(
  #endif
          return ui::TextEditCommand::DELETE_BACKWARD;
        }

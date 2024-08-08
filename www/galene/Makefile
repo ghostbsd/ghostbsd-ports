@@ -1,5 +1,5 @@
 PORTNAME=	galene
-DISTVERSION=	0.9
+DISTVERSION=	0.9.1
 CATEGORIES=	www net-im
 
 MAINTAINER=	bapt@FreeBSD.org

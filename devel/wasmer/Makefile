@@ -1,6 +1,6 @@
 PORTNAME=	wasmer
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.3.1
+DISTVERSION=	4.3.5
 CATEGORIES=	devel
 
 MAINTAINER=	kjozic@gmail.com
@@ -10,8 +10,8 @@ WWW=		https://wasmer.io/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=	aarch64 amd64
-ONLY_FOR_ARCHS_REASON=	only aarch64 and amd64 are supported so far
+ONLY_FOR_ARCHS=	amd64
+ONLY_FOR_ARCHS_REASON=	only amd64 works so far (with some issues)
 
 BUILD_DEPENDS=	bash>0:shells/bash \
 		libffi>0:devel/libffi \
@@ -26,8 +26,8 @@ CARGO_BUILD=	no
 CARGO_INSTALL=	no
 
 MAKE_ENV+=	ENABLE_CRANELIFT=1 \
-		ENABLE_LLVM=1 \
-		ENABLE_SINGLEPASS=1
+		ENABLE_LLVM=0 \
+		ENABLE_SINGLEPASS=0
 
 ALL_TARGET=	build-wasmer
 

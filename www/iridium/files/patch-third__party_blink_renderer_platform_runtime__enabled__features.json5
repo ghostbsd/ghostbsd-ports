@@ -1,6 +1,42 @@
---- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2024-02-04 14:46:08 UTC
+--- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2024-08-01 05:47:53 UTC
 +++ third_party/blink/renderer/platform/runtime_enabled_features.json5
-@@ -1997,7 +1997,7 @@
+@@ -324,7 +324,7 @@
+       name: "AppTitle",
+       status: "experimental",
+       origin_trial_feature_name: "AppTitle",
+-      origin_trial_os: ["win", "mac", "linux", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd"],
+       base_feature: "WebAppEnableAppTitle",
+     },
+     {
+@@ -1534,7 +1534,7 @@
+       status: "test",
+       base_feature: "none",
+       origin_trial_feature_name: "FedCmContinueOnBundle",
+-      origin_trial_os: ["win", "mac", "linux", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd"],
+       origin_trial_allows_third_party: true,
+     },
+     {
+@@ -1551,7 +1551,7 @@
+       status: "test",
+       base_feature: "none",
+       origin_trial_feature_name: "FedCmButtonMode",
+-      origin_trial_os: ["win", "mac", "linux", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd"],
+       origin_trial_allows_third_party: true,
+     },
+     {
+@@ -1596,7 +1596,7 @@
+       base_feature: "none",
+       public: true,
+       origin_trial_feature_name: "FedCmMultipleIdentityProviders",
+-      origin_trial_os: ["win", "mac", "linux", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd"],
+       origin_trial_allows_third_party: true,
+     },
+     {
+@@ -1934,7 +1934,7 @@
        base_feature_status: "enabled",
        copied_from_base_feature_if: "overridden",
        origin_trial_feature_name: "FullscreenPopupWindows",
@@ -9,25 +45,43 @@
      },
      {
        name: "GamepadButtonAxisEvents",
-@@ -2920,7 +2920,7 @@
-       name: "PaymentHandlerMinimalHeaderUX",
-       origin_trial_feature_name: "PaymentHandlerMinimalHeaderUX",
-       origin_trial_allows_third_party: true,
+@@ -3011,7 +3011,7 @@
+       // Tracking bug for the implementation: https://crbug.com/1462930
+       name: "PermissionElement",
+       origin_trial_feature_name: "PermissionElement",
+-      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos", "openbsd", "freebsd"],
+       status: "experimental",
+       public: true,
+       base_feature_status: "enabled",
+@@ -3146,7 +3146,7 @@
+     {
+       name: "PrivateNetworkAccessPermissionPrompt",
+       origin_trial_feature_name: "PrivateNetworkAccessPermissionPrompt",
 -      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos"],
 +      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos", "openbsd", "freebsd"],
        status: "stable",
-     },
-     {
-@@ -3967,7 +3967,7 @@
+       public: true,
+       base_feature: "none",
+@@ -4122,7 +4122,7 @@
        name: "UnrestrictedSharedArrayBuffer",
        base_feature: "none",
        origin_trial_feature_name: "UnrestrictedSharedArrayBuffer",
 -      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos"],
 +      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos", "openbsd", "freebsd"],
      },
+     // Enables using policy-controlled feature "usb-unrestricted" to allow
+     // isolated context to access protected USB interface classes and to
+@@ -4291,7 +4291,7 @@
      {
-       // This flag makes IDL reflected attributes with the "URL" IDL attribute
-@@ -4185,12 +4185,12 @@
+       name: "WebAppScopeExtensions",
+       origin_trial_feature_name: "WebAppScopeExtensions",
+-      origin_trial_os: ["win", "mac", "linux", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd"],
+       status: "experimental",
+       base_feature: "none",
+     },
+@@ -4334,7 +4334,7 @@
        status: "experimental",
        base_feature: "none",
        origin_trial_feature_name: "WebAppUrlHandling",
@@ -35,10 +89,4 @@
 +      origin_trial_os: ["win", "mac", "linux", "openbsd", "freebsd"],
      },
      {
-       name: "WebAppWindowControlsOverlay",
-       origin_trial_feature_name: "WebAppWindowControlsOverlay",
--      origin_trial_os: ["win", "mac", "linux", "chromeos"],
-+      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd"],
-       status: "stable",
-       base_feature: "none",
-     },
+       // WebAssembly JS Promise Integration,

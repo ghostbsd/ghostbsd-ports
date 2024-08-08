@@ -1,6 +1,5 @@
 PORTNAME=	gnutls
-DISTVERSION=	3.8.5
-PORTREVISION=	1
+DISTVERSION=	3.8.6
 CATEGORIES=	security net
 MASTER_SITES=	GNUPG/${PORTNAME}/v${DISTVERSION:R}
 
@@ -21,26 +20,27 @@ LIB_DEPENDS=	libgmp.so:math/gmp \
 USES=		compiler:c11 cpe gmake iconv libtool localbase makeinfo \
 		pkgconfig tar:xz
 CPE_VENDOR=	gnu
-
-GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 USE_LDCONFIG=	yes
 
-INFO=		gnutls
-INSTALL_TARGET=	install-strip
-TEST_TARGET=	check
-LDFLAGS=	-Wl,--undefined-version
-MAKE_ENV=	MAKEINFOFLAGS=--no-split
-
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-rpath \
-		--with-system-priority-file=${PREFIX}/etc/gnutls/config \
+		--enable-ld-version-script \
+		--enable-openssl-compatibility \
 		--with-default-trust-store-dir=/etc/ssl/certs \
+		--with-system-priority-file=${PREFIX}/etc/gnutls/config \
 		--without-brotli \
 		--without-included-libtasn1 \
-		--without-zstd \
 		--without-tpm \
 		--without-tpm2 \
-		--enable-ld-version-script
+		--without-zstd
+
+MAKE_ENV=	MAKEINFOFLAGS=--no-split
+INSTALL_TARGET=	install-strip
+TEST_TARGET=	check
+
+LDFLAGS+=	-Wl,--undefined-version
+
+INFO=		gnutls
 
 OPTIONS_DEFINE=		DANE EXAMPLES IDN KTLS MAN3 NLS P11KIT SRP
 OPTIONS_DEFAULT=	IDN KTLS MAN3 P11KIT
@@ -61,12 +61,12 @@ IDN_CONFIGURE_WITH=	idn
 KTLS_CONFIGURE_ENABLE=	ktls
 
 NLS_USES=		gettext
+NLS_CONFIGURE_OFF=	ac_cv_lib_intl_gettext=no
 NLS_CONFIGURE_ENABLE=	nls
-NLS_CONFIGURE_OFF= 	ac_cv_lib_intl_gettext=no
 
 P11KIT_LIB_DEPENDS=	libp11-kit.so:security/p11-kit
-P11KIT_CONFIGURE_WITH=	p11-kit
 P11KIT_CONFIGURE_ON=	--with-default-trust-store-pkcs11="pkcs11:model=p11-kit-trust;manufacturer=PKCS%2311%20Kit"
+P11KIT_CONFIGURE_WITH=	p11-kit
 
 SRP_CONFIGURE_ENABLE=	srp-authentication
 

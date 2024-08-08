@@ -1,6 +1,6 @@
---- components/supervised_user/core/common/pref_names.h.orig	2024-04-23 07:42:17 UTC
+--- components/supervised_user/core/common/pref_names.h.orig	2024-07-31 14:19:23 UTC
 +++ components/supervised_user/core/common/pref_names.h
-@@ -131,7 +131,7 @@ inline constexpr char kFirstTimeInterstitialBannerStat
+@@ -137,7 +137,7 @@ inline constexpr char kFirstTimeInterstitialBannerStat
      "profile.managed.banner_state";
  
  #if BUILDFLAG(ENABLE_EXTENSIONS)

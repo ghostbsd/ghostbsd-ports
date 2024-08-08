@@ -100,15 +100,15 @@ KDE_PLASMA5_VERSION?=		5.27.11
 KDE_PLASMA5_BRANCH?=		stable
 
 # Next KDE Plasma desktop
-KDE_PLASMA6_VERSION?=		6.0.4
+KDE_PLASMA6_VERSION?=		6.1.2
 KDE_PLASMA6_BRANCH?=		stable
 
 # Current KDE frameworks.
-KDE_FRAMEWORKS5_VERSION?=	5.115.0
+KDE_FRAMEWORKS5_VERSION?=	5.116.0
 KDE_FRAMEWORKS5_BRANCH?=	stable
 
 # Next KDE Frameworks (Qt6 based)
-KDE_FRAMEWORKS6_VERSION?=	6.2.0
+KDE_FRAMEWORKS6_VERSION?=	6.3.0
 KDE_FRAMEWORKS6_BRANCH?=	stable
 
 # Current KDE applications.
@@ -403,7 +403,6 @@ kde-bookmarks_LIB=		libKF${_KDE_VERSION}Bookmarks.so
 
 kde-breeze-icons_PORT=		x11-themes/kf${_KDE_VERSION}-breeze-icons
 kde-breeze-icons_PATH=		${KDE_PREFIX}/share/icons/breeze/index.theme
-kde-breeze-icons_TYPE=		run
 
 kde-codecs_PORT=		textproc/kf${_KDE_VERSION}-kcodecs
 kde-codecs_LIB=			libKF${_KDE_VERSION}Codecs.so
@@ -436,7 +435,8 @@ kde-dnssd_LIB=			libKF${_KDE_VERSION}DNSSD.so
 kde-doctools_PORT=		devel/kf${_KDE_VERSION}-kdoctools
 kde-doctools_PATH=		${KDE_PREFIX}/bin/meinproc${_KDE_VERSION}
 
-kde-ecm_PORT=			devel/kf${_KDE_VERSION}-extra-cmake-modules
+# Use ECM from KDE Frameworks 6 for everything
+kde-ecm_PORT=			devel/kf6-extra-cmake-modules
 kde-ecm_PATH=			${LOCALBASE}/share/ECM/cmake/ECMConfig.cmake
 
 kde-emoticons_PORT=		x11-themes/kf${_KDE_VERSION}-kemoticons

@@ -1,21 +1,11 @@
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h.orig	2024-02-04 14:46:08 UTC
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h.orig	2024-08-01 05:47:53 UTC
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h
-@@ -107,7 +107,7 @@ PartitionPageShift() {
-   return 18;  // 256 KiB
- }
- #elif (BUILDFLAG(IS_APPLE) && defined(ARCH_CPU_64_BITS)) || \
--    (BUILDFLAG(IS_LINUX) && defined(ARCH_CPU_ARM64))
-+    ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && defined(ARCH_CPU_ARM64))
- PA_ALWAYS_INLINE PAGE_ALLOCATOR_CONSTANTS_DECLARE_CONSTEXPR size_t
- PartitionPageShift() {
-   return PageAllocationGranularityShift() + 2;
-@@ -309,7 +309,8 @@ constexpr size_t kNumPools = kMaxPoolHandle - 1;
+@@ -329,7 +329,7 @@ PA_DEFINE_OPERATORS_FOR_FLAGS(PoolHandleMask);
  // 8GB for each of the glued pools).
- #if BUILDFLAG(HAS_64_BIT_POINTERS)
- #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS) || \
--    BUILDFLAG(ENABLE_POINTER_COMPRESSION)
-+    BUILDFLAG(ENABLE_POINTER_COMPRESSION) || \
-+    BUILDFLAG(IS_BSD)
+ #if PA_BUILDFLAG(HAS_64_BIT_POINTERS)
+ #if PA_BUILDFLAG(IS_ANDROID) || PA_BUILDFLAG(IS_IOS) || \
+-    PA_BUILDFLAG(ENABLE_POINTER_COMPRESSION)
++    PA_BUILDFLAG(ENABLE_POINTER_COMPRESSION) || PA_BUILDFLAG(IS_BSD)
  constexpr size_t kPoolMaxSize = 8 * kGiB;
  #else
  constexpr size_t kPoolMaxSize = 16 * kGiB;

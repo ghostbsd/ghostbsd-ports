@@ -1,4 +1,4 @@
---- components/password_manager/core/browser/password_manager_client.h.orig	2024-05-23 20:04:36 UTC
+--- components/password_manager/core/browser/password_manager_client.h.orig	2024-07-31 14:19:23 UTC
 +++ components/password_manager/core/browser/password_manager_client.h
 @@ -30,7 +30,7 @@
  #include "net/cert/cert_status_flags.h"

@@ -1,6 +1,6 @@
---- ui/ozone/platform/wayland/host/wayland_window.cc.orig	2024-05-23 20:04:36 UTC
+--- ui/ozone/platform/wayland/host/wayland_window.cc.orig	2024-07-31 14:19:23 UTC
 +++ ui/ozone/platform/wayland/host/wayland_window.cc
-@@ -294,7 +294,7 @@ void WaylandWindow::OnPointerFocusChanged(bool focused
+@@ -295,7 +295,7 @@ void WaylandWindow::OnPointerFocusChanged(bool focused
    // Whenever the window gets the pointer focus back, the cursor shape must be
    // updated. Otherwise, it is invalidated upon wl_pointer::leave and is not
    // restored by the Wayland compositor.
@@ -18,7 +18,7 @@
    auto async_cursor = WaylandAsyncCursor::FromPlatformCursor(platform_cursor);
  
    if (async_cursor_ == async_cursor) {
-@@ -776,7 +776,7 @@ std::string WaylandWindow::WindowStates::ToString() co
+@@ -766,7 +766,7 @@ std::string WaylandWindow::WindowStates::ToString() co
    } else {
      base::TrimString(states, " ", &states);
    }
@@ -27,7 +27,7 @@
    states += "; tiled_edges: ";
    std::string tiled = "";
    if (tiled_edges.left) {
-@@ -1258,12 +1258,12 @@ void WaylandWindow::UpdateCursorShape(scoped_refptr<Bi
+@@ -1256,12 +1256,12 @@ void WaylandWindow::UpdateCursorShape(scoped_refptr<Bi
          cursor->bitmaps(), hotspot_in_dips,
          std::ceil(cursor->cursor_image_scale_factor()));
    }

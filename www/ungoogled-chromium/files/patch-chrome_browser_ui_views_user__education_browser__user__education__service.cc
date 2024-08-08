@@ -1,6 +1,6 @@
---- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2024-05-23 20:04:36 UTC
+--- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2024-07-31 14:19:23 UTC
 +++ chrome/browser/ui/views/user_education/browser_user_education_service.cc
-@@ -794,7 +794,7 @@ void MaybeRegisterChromeFeaturePromos(
+@@ -996,7 +996,7 @@ void MaybeRegisterChromeFeaturePromos(
                      FeaturePromoSpecification::AcceleratorInfo())
                      .SetBubbleArrow(HelpBubbleArrow::kTopLeft)));
  

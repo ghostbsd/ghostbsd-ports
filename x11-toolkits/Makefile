@@ -4,6 +4,7 @@
     SUBDIR += Xaw3d
     SUBDIR += Xmt
     SUBDIR += amtk
+    SUBDIR += aquamarine
     SUBDIR += blt
     SUBDIR += bwidget
     SUBDIR += color-widgets-qt5
@@ -203,6 +204,7 @@
     SUBDIR += qt6-virtualkeyboard
     SUBDIR += qt6pas
     SUBDIR += qtermwidget
+    SUBDIR += qtermwidget-qt5
     SUBDIR += qwt5-qt5
     SUBDIR += qwt6
     SUBDIR += redkite
@@ -244,10 +246,10 @@
     SUBDIR += vte
     SUBDIR += vte3
     SUBDIR += wlroots
-    SUBDIR += wlroots-devel
     SUBDIR += wlroots-hyprland
     SUBDIR += wlroots015
     SUBDIR += wlroots016
+    SUBDIR += wlroots017
     SUBDIR += wmapp
     SUBDIR += wxgtk30
     SUBDIR += wxgtk32

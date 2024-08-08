@@ -21,7 +21,6 @@
     SUBDIR += astroid
     SUBDIR += automx
     SUBDIR += autorespond
-    SUBDIR += avenger
     SUBDIR += balsa
     SUBDIR += batv-milter
     SUBDIR += bayespam
@@ -187,6 +186,7 @@
     SUBDIR += libsrs2
     SUBDIR += libsrs_alt
     SUBDIR += libvmime
+    SUBDIR += linux-r7-organizer-pro
     SUBDIR += listadmin
     SUBDIR += lmtp2nntp
     SUBDIR += lookout
@@ -459,6 +459,7 @@
     SUBDIR += pear-Net_Cyrus
     SUBDIR += pear-Net_IMAP
     SUBDIR += pear-Net_LMTP
+    SUBDIR += pecl-imap
     SUBDIR += pecl-mailparse
     SUBDIR += perdition
     SUBDIR += pflogsumm

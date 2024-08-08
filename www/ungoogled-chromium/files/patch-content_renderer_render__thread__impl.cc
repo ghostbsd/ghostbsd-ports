@@ -1,6 +1,6 @@
---- content/renderer/render_thread_impl.cc.orig	2024-05-23 20:04:36 UTC
+--- content/renderer/render_thread_impl.cc.orig	2024-07-31 14:19:23 UTC
 +++ content/renderer/render_thread_impl.cc
-@@ -206,6 +206,8 @@
+@@ -213,6 +213,8 @@
  
  #if BUILDFLAG(IS_APPLE)
  #include <malloc/malloc.h>
@@ -27,7 +27,7 @@
        base::FeatureList::IsEnabled(media::kVaapiVideoEncodeLinux) &&
  #else
        !cmd_line->HasSwitch(switches::kDisableAcceleratedVideoEncode) &&
-@@ -1751,7 +1753,7 @@ std::unique_ptr<CodecFactory> RenderThreadImpl::Create
+@@ -1760,7 +1762,7 @@ std::unique_ptr<CodecFactory> RenderThreadImpl::Create
      bool enable_video_encode_accelerator) {
    mojo::PendingRemote<media::mojom::VideoEncodeAcceleratorProvider>
        vea_provider;

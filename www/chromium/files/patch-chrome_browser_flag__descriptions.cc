@@ -1,6 +1,6 @@
---- chrome/browser/flag_descriptions.cc.orig	2024-05-21 18:07:39 UTC
+--- chrome/browser/flag_descriptions.cc.orig	2024-07-30 11:12:21 UTC
 +++ chrome/browser/flag_descriptions.cc
-@@ -2868,7 +2868,7 @@ const char kCbdTimeframeRequiredDescription[] =
+@@ -2963,7 +2963,7 @@ const char kCbdTimeframeRequiredDescription[] =
      "value to the list.";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -9,7 +9,16 @@
  const char kPolicyIndicationForManagedDefaultSearchName[] =
      "Enable policy indication for managed Default Search provider";
  const char kPolicyIndicationForManagedDefaultSearchDescription[] =
-@@ -3171,7 +3171,7 @@ const char kSiteInstanceGroupsForDataUrlsDescription[]
+@@ -3281,7 +3281,7 @@ const char kShowAutofillTypePredictionsDescription[] =
+     "text.";
+ 
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ const char kShowFeaturedEnterpriseSiteSearchName[] =
+     "Show featured Enterprise site search engines in Omnibox";
+ const char kShowFeaturedEnterpriseSiteSearchDescription[] =
+@@ -3318,7 +3318,7 @@ const char kSiteInstanceGroupsForDataUrlsDescription[]
      "but in the same SiteInstanceGroup, and thus the same process.";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -18,7 +27,7 @@
  const char kSiteSearchSettingsPolicyName[] = "Enable SiteSearchSettings policy";
  const char kSiteSearchSettingsPolicyDescription[] =
      "Allow site search engines to be defined by the SiteSearchSettings policy.";
-@@ -7443,7 +7443,7 @@ const char kLacrosMergeIcuDataFileDescription[] =
+@@ -7719,7 +7719,7 @@ const char kLacrosMergeIcuDataFileDescription[] =
      "Enables sharing common areas of icudtl.dat between Ash and Lacros.";
  #endif  // #if BUILDFLAG(IS_CHROMEOS_LACROS)
  
@@ -27,7 +36,7 @@
  const char kGetAllScreensMediaName[] = "GetAllScreensMedia API";
  const char kGetAllScreensMediaDescription[] =
      "When enabled, the getAllScreensMedia API for capturing multiple screens "
-@@ -7709,7 +7709,7 @@ const char kV4L2FlatStatefulVideoDecoderDescription[] 
+@@ -7970,7 +7970,7 @@ const char kV4L2FlatStatefulVideoDecoderDescription[] 
  
  // Linux -----------------------------------------------------------------------
  
@@ -36,25 +45,42 @@
  const char kOzonePlatformHintChoiceDefault[] = "Default";
  const char kOzonePlatformHintChoiceAuto[] = "Auto";
  const char kOzonePlatformHintChoiceX11[] = "X11";
-@@ -7757,7 +7757,7 @@ const char kZeroCopyVideoCaptureDescription[] =
+@@ -7992,6 +7992,17 @@ const char kPulseaudioLoopbackForScreenShareName[] =
+ const char kPulseaudioLoopbackForScreenShareDescription[] =
+     "Enable system audio sharing when screen sharing on Linux with pulseaudio.";
+ 
++#if BUILDFLAG(IS_BSD)
++const char kAudioBackendName[] =
++    "Audio Backend";
++const char kAudioBackendDescription[] =
++#if BUILDFLAG(IS_OPENBSD)
++    "Select the desired audio backend to use. The default is sndio.";
++#elif BUILDFLAG(IS_FREEBSD)
++    "Select the desired audio backend to use. The default will automatically "
++    "enumerate through the supported backends.";
++#endif
++#endif
+ #endif  // BUILDFLAG(IS_LINUX)
+ 
+ // All views-based platforms --------------------------------------------------
+@@ -8018,14 +8029,14 @@ const char kZeroCopyVideoCaptureDescription[] =
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  const char kFollowingFeedSidepanelName[] = "Following feed in the sidepanel";
  const char kFollowingFeedSidepanelDescription[] =
      "Enables the following feed in the sidepanel.";
-@@ -7770,7 +7770,7 @@ const char kEnableProtoApiForClassifyUrlDescription[] 
-     "Calls to Classify URL RPC will use Protocol Buffer format in resposnes, "
-     "instead of JSON.";
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
+         //  BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  const char kEnableNetworkServiceSandboxName[] =
      "Enable the network service sandbox.";
  const char kEnableNetworkServiceSandboxDescription[] =
-@@ -7802,7 +7802,7 @@ const char kWebBluetoothConfirmPairingSupportDescripti
+@@ -8057,7 +8068,7 @@ const char kWebBluetoothConfirmPairingSupportDescripti
      "Bluetooth";
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
  
@@ -63,17 +89,17 @@
  const char kSkipUndecryptablePasswordsName[] =
      "Skip undecryptable passwords to use the available decryptable "
      "passwords.";
-@@ -7918,7 +7918,7 @@ const char kElementCaptureDescription[] =
+@@ -8207,7 +8218,7 @@ const char kElementCaptureDescription[] =
  
  #if BUILDFLAG(IS_WIN) ||                                      \
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || \
--    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
  const char kUIDebugToolsName[] = "Debugging tools for UI";
  const char kUIDebugToolsDescription[] =
      "Enables additional keyboard shortcuts to help debugging.";
-@@ -7975,7 +7975,7 @@ const char kComposeProactiveNudgeDescription[] =
-     "Enables proactive nudging for Compose";
+@@ -8274,7 +8285,7 @@ const char kComposePoliteNudgeDescription[] =
+     "available to interact with.";
  #endif  // BUILDFLAG(ENABLE_COMPOSE)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)

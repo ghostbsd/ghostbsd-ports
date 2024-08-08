@@ -1,5 +1,5 @@
 PORTNAME=	zathura-pdf-mupdf
-DISTVERSION=	0.4.2
+DISTVERSION=	0.4.4
 CATEGORIES=	graphics
 MASTER_SITES=	https://pwmt.org/projects/zathura-pdf-mupdf/download/
 
@@ -10,14 +10,15 @@ WWW=		https://pwmt.org/projects/zathura-pdf-mupdf/
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	zathura:graphics/zathura
+BUILD_DEPENDS=	appstream-util:devel/appstream-glib \
+		zathura:graphics/zathura
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libgirara-gtk3.so:x11-toolkits/girara \
 		libmupdf.so:graphics/mupdf
 RUN_DEPENDS=	zathura:graphics/zathura
 
-USES=		compiler:c11 desktop-file-utils gnome jpeg meson pkgconfig \
-		tar:xz
+USES=		compiler:c++17-lang desktop-file-utils gnome jpeg localbase \
+		meson pkgconfig tar:xz
 USE_GNOME=	cairo glib20
 
 CONFLICTS_INSTALL=	zathura-pdf-poppler

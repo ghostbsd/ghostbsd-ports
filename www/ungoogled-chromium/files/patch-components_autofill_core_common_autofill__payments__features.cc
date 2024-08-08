@@ -1,8 +1,8 @@
---- components/autofill/core/common/autofill_payments_features.cc.orig	2024-05-23 20:04:36 UTC
+--- components/autofill/core/common/autofill_payments_features.cc.orig	2024-07-31 14:19:23 UTC
 +++ components/autofill/core/common/autofill_payments_features.cc
-@@ -272,7 +272,7 @@ BASE_FEATURE(kAutofillEnableVirtualCards,
+@@ -248,7 +248,7 @@ BASE_FEATURE(kAutofillSyncEwalletAccounts,
  bool ShouldShowImprovedUserConsentForCreditCardSave() {
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || \
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_BSD) || \

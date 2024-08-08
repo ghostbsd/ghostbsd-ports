@@ -55,7 +55,6 @@
     SUBDIR += benthos
     SUBDIR += bindtest
     SUBDIR += binkd
-    SUBDIR += bird
     SUBDIR += bird2
     SUBDIR += bittwist
     SUBDIR += bmon
@@ -236,7 +235,6 @@
     SUBDIR += hanstunnel
     SUBDIR += haproxy
     SUBDIR += haproxy-devel
-    SUBDIR += haproxy20
     SUBDIR += haproxy22
     SUBDIR += haproxy24
     SUBDIR += haproxy25
@@ -249,6 +247,7 @@
     SUBDIR += honeyd
     SUBDIR += hostapd
     SUBDIR += hostapd-devel
+    SUBDIR += hostapd210
     SUBDIR += hostapd29
     SUBDIR += hping3
     SUBDIR += hsflowd
@@ -514,7 +513,6 @@
     SUBDIR += ndproxy
     SUBDIR += neatvnc
     SUBDIR += nemesis
-    SUBDIR += nepenthes
     SUBDIR += net6
     SUBDIR += netatalk3
     SUBDIR += netcat
@@ -540,7 +538,6 @@
     SUBDIR += nng
     SUBDIR += norm
     SUBDIR += nqptp
-    SUBDIR += ns3
     SUBDIR += nsq
     SUBDIR += nss-pam-ldapd
     SUBDIR += nss-pam-ldapd-sasl
@@ -999,6 +996,9 @@
     SUBDIR += php83-ldap
     SUBDIR += php83-soap
     SUBDIR += php83-sockets
+    SUBDIR += php84-ldap
+    SUBDIR += php84-soap
+    SUBDIR += php84-sockets
     SUBDIR += phpldapadmin
     SUBDIR += pichi
     SUBDIR += pimcommon
@@ -1029,6 +1029,7 @@
     SUBDIR += py-DTLSSocket
     SUBDIR += py-GeoIP2
     SUBDIR += py-aiocoap
+    SUBDIR += py-aiohappyeyeballs
     SUBDIR += py-aiohttp-socks
     SUBDIR += py-amqp
     SUBDIR += py-amqplib
@@ -1085,6 +1086,7 @@
     SUBDIR += py-netaddr
     SUBDIR += py-netif
     SUBDIR += py-netifaces
+    SUBDIR += py-netifaces-plus
     SUBDIR += py-netsnmpagent
     SUBDIR += py-nnpy
     SUBDIR += py-ntplib
@@ -1369,6 +1371,7 @@
     SUBDIR += rubygem-oauth21
     SUBDIR += rubygem-octokit
     SUBDIR += rubygem-octokit4
+    SUBDIR += rubygem-octokit8
     SUBDIR += rubygem-octopress-deploy
     SUBDIR += rubygem-omniauth-auth0
     SUBDIR += rubygem-omniauth-authentiq
@@ -1497,6 +1500,7 @@
     SUBDIR += speedtest
     SUBDIR += speedtest-go
     SUBDIR += spiritvnc
+    SUBDIR += spoofdpi
     SUBDIR += spoofer
     SUBDIR += spread
     SUBDIR += spread-j

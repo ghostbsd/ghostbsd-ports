@@ -69,7 +69,6 @@
     SUBDIR += lunar
     SUBDIR += moettf
     SUBDIR += muni
-    SUBDIR += oicq
     SUBDIR += opencc
     SUBDIR += opendesktop-fonts
     SUBDIR += oto
@@ -127,7 +126,6 @@
     SUBDIR += sourcehanserif-sc-otf
     SUBDIR += sourcehanserif-tc-otf
     SUBDIR += taipeisanstc
-    SUBDIR += tin
     SUBDIR += tintin++
     SUBDIR += ttf2pt1
     SUBDIR += ttfm

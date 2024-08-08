@@ -1,6 +1,6 @@
---- components/supervised_user/core/common/features.cc.orig	2024-05-23 20:04:36 UTC
+--- components/supervised_user/core/common/features.cc.orig	2024-07-31 14:19:23 UTC
 +++ components/supervised_user/core/common/features.cc
-@@ -62,7 +62,7 @@ BASE_FEATURE(kUpdatedSupervisedUserExtensionApprovalSt
+@@ -59,7 +59,7 @@ BASE_FEATURE(kUpdatedSupervisedUserExtensionApprovalSt
               "UpdatedSupervisedUserExtensionApprovalStrings",
               base::FEATURE_DISABLED_BY_DEFAULT);
  
@@ -9,7 +9,7 @@
  BASE_FEATURE(kEnableExtensionsPermissionsForSupervisedUsersOnDesktop,
               "EnableExtensionsPermissionsForSupervisedUsersOnDesktop",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -73,7 +73,7 @@ bool IsSupervisedUserSkipParentApprovalToInstallExtens
+@@ -74,7 +74,7 @@ bool IsSupervisedUserSkipParentApprovalToInstallExtens
  #if BUILDFLAG(IS_CHROMEOS)
    return base::FeatureList::IsEnabled(
        kEnableSupervisedUserSkipParentApprovalToInstallExtensions);
@@ -18,3 +18,12 @@
    bool skipParentApprovalEnabled = base::FeatureList::IsEnabled(
        kEnableSupervisedUserSkipParentApprovalToInstallExtensions);
    bool permissionExtensionsForSupervisedUsersEnabled =
+@@ -101,7 +101,7 @@ BASE_FEATURE(kCustomWebSignInInterceptForSupervisedUse
+              "CustomWebSignInInterceptForSupervisedUsers",
+              base::FEATURE_DISABLED_BY_DEFAULT);
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ BASE_FEATURE(kHideGuestModeForSupervisedUsers,
+              "HideGuestModeForSupervisedUsers",
+              base::FEATURE_DISABLED_BY_DEFAULT);

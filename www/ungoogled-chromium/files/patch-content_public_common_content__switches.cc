@@ -1,6 +1,6 @@
---- content/public/common/content_switches.cc.orig	2024-05-23 20:04:36 UTC
+--- content/public/common/content_switches.cc.orig	2024-07-31 14:19:23 UTC
 +++ content/public/common/content_switches.cc
-@@ -362,6 +362,8 @@ const char kEnableIsolatedWebAppsInRenderer[] =
+@@ -352,6 +352,8 @@ const char kEnableIsolatedWebAppsInRenderer[] =
  // builds.
  const char kEnableLogging[]                 = "enable-logging";
  
@@ -11,7 +11,7 @@
  // the connection type.
 @@ -993,7 +995,7 @@ const char kPreventResizingContentsForTesting[] =
  
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)

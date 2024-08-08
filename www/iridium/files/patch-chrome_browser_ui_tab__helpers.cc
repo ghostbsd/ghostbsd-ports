@@ -1,16 +1,16 @@
---- chrome/browser/ui/tab_helpers.cc.orig	2024-02-04 14:46:08 UTC
+--- chrome/browser/ui/tab_helpers.cc.orig	2024-08-01 05:47:53 UTC
 +++ chrome/browser/ui/tab_helpers.cc
-@@ -225,7 +225,7 @@
+@@ -243,7 +243,7 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/ui/blocked_content/framebust_block_tab_helper.h"
  #include "chrome/browser/ui/browser_finder.h"
  #include "chrome/browser/ui/hats/hats_helper.h"
-@@ -658,12 +658,12 @@ void TabHelpers::AttachTabHelpers(WebContents* web_con
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+@@ -721,12 +721,12 @@ void TabHelpers::AttachTabHelpers(WebContents* web_con
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
 -    (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))

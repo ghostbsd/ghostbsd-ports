@@ -1,6 +1,6 @@
---- chrome/browser/supervised_user/supervised_user_extensions_delegate_impl.cc.orig	2024-04-19 13:02:56 UTC
+--- chrome/browser/supervised_user/supervised_user_extensions_delegate_impl.cc.orig	2024-07-30 11:12:21 UTC
 +++ chrome/browser/supervised_user/supervised_user_extensions_delegate_impl.cc
-@@ -180,7 +180,7 @@ void SupervisedUserExtensionsDelegateImpl::RequestExte
+@@ -196,7 +196,7 @@ void SupervisedUserExtensionsDelegateImpl::RequestExte
        return;
      }
    }

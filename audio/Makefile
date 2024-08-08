@@ -35,7 +35,6 @@
     SUBDIR += asmixer
     SUBDIR += asterisk-espeak
     SUBDIR += asterisk-flite
-    SUBDIR += asunder
     SUBDIR += atracdenc
     SUBDIR += atunes
     SUBDIR += aubio
@@ -71,7 +70,6 @@
     SUBDIR += bslizr-lv2
     SUBDIR += cadence
     SUBDIR += calf-lv2
-    SUBDIR += cam
     SUBDIR += cantata
     SUBDIR += caps-lv2
     SUBDIR += caps-plugins
@@ -134,7 +132,6 @@
     SUBDIR += elisa
     SUBDIR += emms
     SUBDIR += enscribe
-    SUBDIR += epos-devel
     SUBDIR += eq10q-lv2
     SUBDIR += espeak-ng
     SUBDIR += espressivo-lv2
@@ -390,7 +387,6 @@
     SUBDIR += libshairport
     SUBDIR += libshout
     SUBDIR += libsidplay
-    SUBDIR += libsidplay2
     SUBDIR += libsidplayfp
     SUBDIR += libsmf
     SUBDIR += libsndfile
@@ -494,7 +490,6 @@
     SUBDIR += mp3guessenc
     SUBDIR += mp3lint
     SUBDIR += mp3mover
-    SUBDIR += mp3plot
     SUBDIR += mp3riot
     SUBDIR += mp3splt
     SUBDIR += mp3stat
@@ -540,8 +535,6 @@
     SUBDIR += openal-soft
     SUBDIR += opencore-amr
     SUBDIR += openspc
-    SUBDIR += optimfrog
-    SUBDIR += optimfrog-sse2
     SUBDIR += opus
     SUBDIR += opus-tools
     SUBDIR += opusfile
@@ -700,7 +693,6 @@
     SUBDIR += raul
     SUBDIR += rawrec
     SUBDIR += re
-    SUBDIR += rebot3
     SUBDIR += resid
     SUBDIR += rexima
     SUBDIR += rezound
@@ -743,8 +735,6 @@
     SUBDIR += shntool
     SUBDIR += shortwave
     SUBDIR += shuriken
-    SUBDIR += sidplay
-    SUBDIR += sidplay2
     SUBDIR += sidplayer
     SUBDIR += sidplayfp
     SUBDIR += simplemod
@@ -802,7 +792,6 @@
     SUBDIR += synthpod-lv2
     SUBDIR += synthv1-lv2
     SUBDIR += taglib
-    SUBDIR += taglookup
     SUBDIR += tagutil
     SUBDIR += tamgamp-lv2
     SUBDIR += tap-plugins
@@ -890,6 +879,7 @@
     SUBDIR += xsynth-dssi
     SUBDIR += xuidesigner
     SUBDIR += xwave
+    SUBDIR += xwax
     SUBDIR += yell
     SUBDIR += ympd
     SUBDIR += yoshimi
