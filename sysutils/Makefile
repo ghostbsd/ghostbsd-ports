@@ -241,7 +241,6 @@
     SUBDIR += consolehm
     SUBDIR += consolekit2
     SUBDIR += consul
-    SUBDIR += consul_exporter
     SUBDIR += consul-alerts
     SUBDIR += consul-replicate
     SUBDIR += consul_exporter

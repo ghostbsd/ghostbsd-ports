@@ -11,7 +11,7 @@ COMMENT=	Mate configuration system
 LICENSE=	BSD
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}python-distutils-extra>=2.15:devel/py-python-distutils-extra@${PY_FLAVOR}
-RUN_DEPENDS=	wmctrl:x11/wmctrl
+RUN_DEPENDS=	wmctrl:x11/wmctrl-fork
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
