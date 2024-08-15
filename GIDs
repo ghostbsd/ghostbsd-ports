@@ -321,7 +321,7 @@ _wsdd:*:370:
 # free: 378
 # free: 379
 spoofdpi:*:380:
-# free: 381
+hydroxide:*:381:
 # free: 382
 # free: 383
 # free: 384
@@ -481,7 +481,7 @@ valkey:*:537:
 # free: 538
 # free: 539
 # free: 540
-# free: 541
+ipfixcol2:*:541:
 _flowd:*:542:
 ejabberd:*:543:
 # free: 544

@@ -107,6 +107,7 @@
     SUBDIR += R-cran-praise
     SUBDIR += R-cran-prettycode
     SUBDIR += R-cran-prettyunits
+    SUBDIR += R-cran-profvis
     SUBDIR += R-cran-progress
     SUBDIR += R-cran-progressr
     SUBDIR += R-cran-promises
@@ -143,6 +144,7 @@
     SUBDIR += R-cran-timechange
     SUBDIR += R-cran-tinytest
     SUBDIR += R-cran-tzdb
+    SUBDIR += R-cran-urlchecker
     SUBDIR += R-cran-usethis
     SUBDIR += R-cran-uuid
     SUBDIR += R-cran-vcd
@@ -454,6 +456,7 @@
     SUBDIR += color
     SUBDIR += colorgcc
     SUBDIR += colormake
+    SUBDIR += comlin
     SUBDIR += commit-patch
     SUBDIR += commitizen
     SUBDIR += commoncpp
@@ -987,6 +990,7 @@
     SUBDIR += hyprlang
     SUBDIR += hyprutils
     SUBDIR += hyprwayland-scanner
+    SUBDIR += iaito
     SUBDIR += ice
     SUBDIR += ice37
     SUBDIR += icestorm
@@ -1679,6 +1683,7 @@
     SUBDIR += myrepos
     SUBDIR += nana
     SUBDIR += nano-signal-slot
+    SUBDIR += nanobind
     SUBDIR += nanopb
     SUBDIR += nant
     SUBDIR += nasm
@@ -6093,6 +6098,7 @@
     SUBDIR += pybind11-json
     SUBDIR += pybugz
     SUBDIR += pycanberra
+    SUBDIR += pycdc
     SUBDIR += pycharm-ce
     SUBDIR += pycharm-pro
     SUBDIR += pycomposefile

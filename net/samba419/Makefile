@@ -4,7 +4,7 @@ CATEGORIES?=			net
 MASTER_SITES=			SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=			${SAMBA4_DISTNAME}
 
-MAINTAINER=			mikael@FreeBSD.org
+MAINTAINER=			samba@FreeBSD.org
 COMMENT=			Free SMB/CIFS and AD/DC server and client for Unix
 WWW=				https://gitlab.com/samba-freebsd/
 
@@ -191,11 +191,11 @@ BUILD_DEPENDS+=			libarchive>=3.1.2:archivers/libarchive
 RUN_DEPENDS+=			libarchive>=3.1.2:archivers/libarchive
 
 ### Bundled libraries
-SAMBA4_BUNDLED_CMOCKA=		yes
-SAMBA4_BUNDLED_TALLOC=		yes
-SAMBA4_BUNDLED_TEVENT=		yes
-SAMBA4_BUNDLED_TDB=		yes
-SAMBA4_BUNDLED_LDB=		yes
+SAMBA4_BUNDLED_CMOCKA?=		yes
+SAMBA4_BUNDLED_TALLOC?=		yes
+SAMBA4_BUNDLED_TEVENT?=		yes
+SAMBA4_BUNDLED_TDB?=		yes
+SAMBA4_BUNDLED_LDB?=		yes
 # cmocka
 .if defined(SAMBA4_BUNDLED_CMOCKA) && ${SAMBA4_BUNDLED_CMOCKA} == yes
 SAMBA4_BUNDLED_LIBS+=		cmocka

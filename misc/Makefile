@@ -8,6 +8,7 @@
     SUBDIR += adios2
     SUBDIR += aichat
     SUBDIR += air
+    SUBDIR += alpaca
     SUBDIR += amanda-client
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
@@ -217,6 +218,7 @@
     SUBDIR += kf6-purpose
     SUBDIR += kgeography
     SUBDIR += klettres
+    SUBDIR += koboldcpp
     SUBDIR += kookbook
     SUBDIR += ktouch
     SUBDIR += kwordquiz
@@ -464,6 +466,7 @@
     SUBDIR += py-natten
     SUBDIR += py-npTDMS
     SUBDIR += py-numcodecs
+    SUBDIR += py-ollama
     SUBDIR += py-onnx
     SUBDIR += py-onnx-tf
     SUBDIR += py-openai
@@ -477,6 +480,7 @@
     SUBDIR += py-orange3-educational
     SUBDIR += py-orange3-network
     SUBDIR += py-orange3-timeseries
+    SUBDIR += py-oterm
     SUBDIR += py-palettable
     SUBDIR += py-papermill
     SUBDIR += py-pexpect

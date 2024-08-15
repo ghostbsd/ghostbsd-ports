@@ -1,3 +1,415 @@
+  <vuln vid="9d8e9952-5a42-11ef-a219-1c697a616631">
+    <topic>Intel CPUs -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>cpu-microcode-intel</name>
+	<range><lt>20240813</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Intel reports:</p>
+	<blockquote cite="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01083.html">
+	 <p>
+	  A potential security vulnerability in SMI Transfer monitor (STM) may
+	  allow escalation of privilege.  Intel has released microcode updates
+	  to mitigate this potential vulnerability.
+	 </p>
+	</blockquote>
+	<blockquote cite="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01118.html">
+	 <p>
+	  A potential security vulnerability in some 3rd Generation Intel Xeon
+	  Scalable Processors may allow denial of service.  Intel has released
+	  microcode updates to mitigate this potential vulnerability.
+	 </p>
+	</blockquote>
+	<blockquote cite="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01100.html">
+	 <p>
+	  A potential security vulnerability in some 3rd, 4th, and 5th
+	  Generation Intel Xeon Processors may allow escalation of privilege.
+	  Intel has released firmware updates to mitigate this potential
+	  vulnerability.
+	 </p>
+	</blockquote>
+	<blockquote cite="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01038.html">
+	 <p>
+	  A potential security vulnerability in the Intel Core Ultra Processor
+	  stream cache mechanism may allow escalation of privilege.  Intel has
+	  released microcode updates to mitigate this potential vulnerability.
+	 </p>
+	</blockquote>
+	<blockquote cite="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01046.html">
+	 <p>
+	  A potential security vulnerability in some Intel Processor stream
+	  cache mechanisms may allow escalation of privilege.  Intel has
+	  released microcode updates to mitigate this potential vulnerability.
+	 </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-24853</cvename>
+      <cvename>CVE-2024-25939</cvename>
+      <cvename>CVE-2024-24980</cvename>
+      <cvename>CVE-2023-42667</cvename>
+      <cvename>CVE-2023-49141</cvename>
+      <url>https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/releases/tag/microcode-20240813</url>
+    </references>
+    <dates>
+      <discovery>2024-08-13</discovery>
+      <entry>2024-08-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5d7939f6-5989-11ef-9793-b42e991fc52e">
+    <topic>firefox -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mozilla</name>
+	<range><lt>129.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security@mozilla.org reports:</p>
+	<blockquote cite="https://bugzilla.mozilla.org/show_bug.cgi?id=1905691">
+	<ul>
+	<li>
+	  CVE-2024-7531: Calling `PK11_Encrypt()` in NSS using
+	  CKM_CHACHA20 and the same buffer for input and output can
+	  result in plaintext on an Intel Sandy Bridge processor. In
+	  Firefox this only affects the QUIC header protection
+	  feature when the connection is using the ChaCha20-Poly1305
+	  cipher suite. The most likely outcome is connection
+	  failure, but if the connection persists despite the high
+	  packet loss it could be possible for a network observer to
+	  identify packets as coming from the same source despite a
+	  network path change. This vulnerability affects Firefox
+	  &lt; 129, Firefox ESR &lt; 115.14, and Firefox ESR &lt;
+	  128.1.
+	</li>
+	<li>
+	  CVE-2024-7529: The date picker could partially obscure
+	  security prompts. This could be used by a malicious site
+	  to trick a user into granting permissions. This
+	  vulnerability affects Firefox &lt; 129, Firefox ESR &lt;
+	  115.14, Firefox ESR &lt; 128.1, Thunderbird &lt; 128.1,
+	  and Thunderbird &lt; 115.14.
+	</li>
+	<li>
+	  CVE-2024-7525: It was possible for a web extension with
+	  minimal permissions to create a `StreamFilter` which could
+	  be used to read and modify the response body of requests
+	  on any site. This vulnerability affects Firefox &lt; 129,
+	  Firefox ESR &lt; 115.14, Firefox ESR &lt; 128.1,
+	  Thunderbird &lt; 128.1, and Thunderbird &lt; 115.14.
+	</li>
+	<li>
+	  CVE-2024-7522: Editor code failed to check an attribute
+	  value. This could have led to an out-of-bounds read. This
+	  vulnerability affects Firefox &lt; 129, Firefox ESR &lt;
+	  115.14, Firefox ESR &lt; 128.1, Thunderbird &lt; 128.1, and
+	  Thunderbird &lt; 115.14.
+	</li>
+	<li>
+	  CVE-2024-7520: A type confusion bug in WebAssembly could
+	  be leveraged by an attacker to potentially achieve code
+	  execution. This vulnerability affects Firefox &lt; 129,
+	  Firefox ESR &lt; 128.1, and Thunderbird &lt; 128.1.
+	</li>
+	<li>
+	  CVE-2024-7521: Incomplete WebAssembly exception handing
+	  could have led to a use-after-free. This vulnerability
+	  affects Firefox &lt; 129, Firefox ESR &lt; 115.14,
+	  Firefox ESR &lt; 128.1, Thunderbird &lt; 128.1, and
+	  Thunderbird &lt; 115.14.
+	</li>
+	<li>
+	  CVE-2024-7530: Incorrect garbage collection interaction
+	  could have led to a use-after-free. This vulnerability
+	  affects Firefox &lt; 129.
+	</li>
+	<li>
+	  CVE-2024-7528: Incorrect garbage collection interaction in
+	  IndexedDB could have led to a use-after-free. This
+	  vulnerability affects Firefox &lt; 129,
+	  Firefox ESR &lt; 128.1, and Thunderbird &lt; 128.1.
+	</li>
+	<li>
+	  CVE-2024-7527: Unexpected marking work at the start of
+	  sweeping could have led to a use-after-free. This
+	  vulnerability affects Firefox &lt; 129,
+	  Firefox ESR &lt; 115.14, Firefox ESR &lt; 128.1,
+	  Thunderbird &lt; 128.1, and Thunderbird &lt; 115.14.
+	</li>
+	</ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-7531</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-7531</url>
+      <cvename>CVE-2024-7529</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-7529</url>
+      <cvename>CVE-2024-7525</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-7525</url>
+      <cvename>CVE-2024-7522</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-7522</url>
+      <cvename>CVE-2024-7520</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-7520</url>
+      <cvename>CVE-2024-7521</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-7521</url>
+      <cvename>CVE-2024-7530</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-7530</url>
+      <cvename>CVE-2024-7528</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-7528</url>
+      <cvename>CVE-2024-7527</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-7527</url>
+    </references>
+    <dates>
+      <discovery>2024-08-06</discovery>
+      <entry>2024-08-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="587ed8ac-5957-11ef-854a-001e676bf734">
+    <topic>OpenHAB CometVisu addon -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>openhab-addons</name>
+	<range><lt>4.2.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>OpenHAB reports:</p>
+	<blockquote cite="https://github.com/openhab/openhab-distro/releases/tag/4.2.1">
+	  <p>This patch release addresses the following security advisories:</p>
+<ul>
+<li>SSRF/XSS (CometVisu) - <a href="https://github.com/openhab/openhab-webui/security/advisories/GHSA-v7gr-mqpj-wwh3">GHSA-v7gr-mqpj-wwh3</a></li>
+<li>Sensitive information disclosure (CometVisu) - <a href="https://github.com/openhab/openhab-webui/security/advisories/GHSA-3g4c-hjhr-73rj">GHSA-3g4c-hjhr-73rj</a></li>
+<li>RCE through path traversal (CometVisu) - <a href="https://github.com/openhab/openhab-webui/sec
+urity/advisories/GHSA-f729-58x4-gqgf">GHSA-f729-58x4-gqgf</a></li>
+<li>Path traversal (CometVisu) - <a href="https://github.com/openhab/openhab-webui/security/advisories/GHSA-pcwp-26pw-j98w">GHSA-pcwp-26pw-j98w</a></li>
+</ul>
+<p>
+All of these are related to the CometVisu add-on for openHAB - if you are a user of CometVisu, we strongly recommend to upgrade your system to openHAB 4.2.1 in order to fix those vulnerabilities.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/openhab/openhab-distro/releases/tag/4.2.1</url>
+      <url>https://github.com/openhab/openhab-webui/security/advisories/GHSA-v7gr-mqpj-wwh3</url>
+      <url>https://github.com/openhab/openhab-webui/security/advisories/GHSA-3g4c-hjhr-73rj</url>
+      <url>https://github.com/openhab/openhab-webui/security/advisories/GHSA-f729-58x4-gqgf</url>
+      <url>https://github.com/openhab/openhab-webui/security/advisories/GHSA-pcwp-26pw-j98w</url>
+    </references>
+    <dates>
+      <discovery>2024-08-09</discovery>
+      <entry>2024-08-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d2723b0f-58d9-11ef-b611-84a93843eb75">
+    <topic>Vaultwarden -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>vaultwarden</name>
+	<range><lt>1.32.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>SO-AND-SO reports:</p>
+	<blockquote cite="https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.0">
+	  <p>This release has several CVE Reports fixed and we recommend
+	    everybody to update to the latest version as soon as possible.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-39924</cvename>
+      <cvename>CVE-2024-39925</cvename>
+      <cvename>CVE-2024-39926</cvename>
+      <url>https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.0</url>
+    </references>
+    <dates>
+      <discovery>2024-08-11</discovery>
+      <entry>2024-08-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7d631146-5769-11ef-b618-1c697a616631">
+    <topic>AMD CPUs -- Guest Memory Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>cpu-microcode-amd</name>
+	<range><lt>20240810</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>AMD reports:</p>
+	<blockquote cite="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-7014.html">
+	  <p>
+	   Researchers from IOActive have reported that it may be possible for
+	   an attacker with ring 0 access to modify the configuration of System
+	   Management Mode (SMM) even when SMM Lock is enabled.  Improper
+	   validation in a model specific register (MSR) could allow a malicious
+	   program with ring0 access to modify SMM configuration while SMI lock
+	   is enabled, potentially leading to arbitrary code execution.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-31315</cvename>
+      <url>https://www.amd.com/en/resources/product-security/bulletin/amd-sb-7014.html</url>
+    </references>
+    <dates>
+      <discovery>2024-08-09</discovery>
+      <entry>2024-08-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5776cc4f-5717-11ef-b611-84a93843eb75">
+    <topic>Roundcube -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>roundcube</name>
+	<range><lt>1.6.8,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Roundcube project reports:</p>
+	<blockquote cite="https://roundcube.net/news/2024/08/04/security-updates-1.6.8-and-1.5.8">
+	  <p>XSS vulnerability in post-processing of sanitized HTML content [CVE-2024-42009]</p>
+	  <p>XSS vulnerability in serving of attachments other than HTML or SVG [CVE-2024-42008]</p>
+	  <p>information leak (access to remote content) via insufficient CSS filtering [CVE-2024-42010]</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-42009</cvename>
+      <cvename>CVE-2024-42008</cvename>
+      <cvename>CVE-2024-42010</cvename>
+      <url>https://roundcube.net/news/2024/08/04/security-updates-1.6.8-and-1.5.8</url>
+    </references>
+    <dates>
+      <discovery>2024-08-04</discovery>
+      <entry>2024-08-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="aa1c7af9-570e-11ef-a43e-b42e991fc52e">
+    <topic>mozilla firefox -- protocol information guessing</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>127.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security@mozilla.org reports:</p>
+	<blockquote cite="https://bugzilla.mozilla.org/show_bug.cgi?id=1883693">
+	  <p>By monitoring the time certain operations take, an attacker could
+	have guessed which external protocol handlers were functional on a
+	user&apos;s system.  This vulnerability affects Firefox &lt; 127,
+	Firefox ESR &lt; 115.12, and Thunderbird &lt; 115.12.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-5690</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-5690</url>
+    </references>
+    <dates>
+      <discovery>2024-06-11</discovery>
+      <entry>2024-08-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8c342a6c-563f-11ef-a77e-901b0e9408dc">
+    <topic>soft-serve -- Remote code execution vulnerability</topic>
+    <affects>
+      <package>
+	<name>soft-serve</name>
+	<range><lt>0.7.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>soft-serve team reports:</p>
+	<blockquote cite="https://github.com/charmbracelet/soft-serve/security/advisories/GHSA-m445-w3xr-vp2f">
+	  <p>Arbitrary code execution by crafting git ssh requests</p>
+	  <p>It is possible for a user who can commit files to a
+	  repository hosted by Soft Serve to execute arbitrary code
+	  via environment manipulation and Git.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-41956</cvename>
+      <url>https://github.com/charmbracelet/soft-serve/security/advisories/GHSA-m445-w3xr-vp2f</url>
+    </references>
+    <dates>
+      <discovery>2024-08-01</discovery>
+      <entry>2024-08-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="48e6d514-5568-11ef-af48-6cc21735f730">
+    <topic>PostgreSQL -- Prevent unauthorized code execution during pg_dump</topic>
+    <affects>
+      <package>
+	<name>postgresql-client</name>
+	<range><lt>16.4</lt></range>
+	<range><lt>15.8</lt></range>
+	<range><lt>14.13</lt></range>
+	<range><lt>13.16</lt></range>
+	<range><lt>12.20</lt></range>
+      </package>
+      <package>
+	<name>postgresql-server</name>
+	<range><lt>16.4</lt></range>
+	<range><lt>15.8</lt></range>
+	<range><lt>14.13</lt></range>
+	<range><lt>13.16</lt></range>
+	<range><lt>12.20</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PostgreSQL project reports:</p>
+	<blockquote cite="https://www.postgresql.org/support/security/CVE-2024-7348/">
+	   <p>
+	     An attacker able to create and drop non-temporary objects could
+	     inject SQL code that would be executed by a concurrent pg_dump
+	     session with the privileges of the role running pg_dump
+	     (which is often a superuser). The attack involves replacing a
+	     sequence or similar object with a view or foreign table that will
+	     execute malicious code. To prevent this, introduce a new server
+	     parameter restrict_nonsystem_relation_kind that can disable
+	     expansion of non-builtin views as well as access to foreign
+	     tables, and teach pg_dump to set it when available. Note that the
+	     attack is prevented only if both pg_dump and the server it is
+	     dumping from are new enough to have this fix.
+	   </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-7348</cvename>
+      <url>https://www.postgresql.org/support/security/CVE-2024-7348/</url>
+    </references>
+    <dates>
+      <discovery>2024-08-08</discovery>
+      <entry>2024-08-08</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="db8fa362-0ccb-4aa8-9220-72b7763e9a4a">
     <topic>jenkins -- multiple vulnerabilities</topic>
     <affects>

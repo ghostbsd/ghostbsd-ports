@@ -1111,6 +1111,7 @@
     SUBDIR += qposases
     SUBDIR += qrupdate
     SUBDIR += qtiplot-doc
+    SUBDIR += quich
     SUBDIR += qwtplot3d
     SUBDIR += qxfun
     SUBDIR += randlib
