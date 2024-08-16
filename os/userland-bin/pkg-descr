@@ -1,4 +1,0 @@
-This FreeBSD OS port installs the binaries that are included in the /bin and
-/usr/bin directories, minus the compilers and other development related tools.
-
-WWW: https://www.freebsd.org

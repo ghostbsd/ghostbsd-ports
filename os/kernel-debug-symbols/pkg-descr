@@ -1,4 +1,0 @@
-This FreeBSD OS port installs the debugging symbols for kernel built with
-WITNESS and other debugging features enabled.
-
-WWW: https://www.freebsd.org

@@ -1,6 +1,0 @@
-This FreeBSD OS port installs the userland tests located in /usr/tests.
-
-This is normally used for running in development environments and/or as part
-of a CI framework.
-
-WWW: https://www.freebsd.org

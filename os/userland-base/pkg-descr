@@ -1,8 +1,0 @@
-This FreeBSD OS port installs the directories and files that are apart of
-/usr/share as well as /libexec and /usr/libexec. It is part of the 'userland'
-metapackage, and is normally installed as part of its dependancy chain.
-
-This package includes the 'base-update' command, which can be used to safely
-update your base-package system.
-
-WWW: https://www.freebsd.org

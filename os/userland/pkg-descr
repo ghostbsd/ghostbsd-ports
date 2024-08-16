@@ -1,5 +1,0 @@
-This FreeBSD OS port installs the userland meta-package. This package
-installs the other OS dependancies to give you a fully functional FreeBSD
-environment, suitable for both a host system and jails.
-
-WWW: https://www.freebsd.org

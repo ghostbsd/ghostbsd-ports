@@ -1,5 +1,0 @@
-This FreeBSD OS port installs the 32bit Compat libraries in /usr/lib32, for
-amd64 hosts. This port is not required for normal runtime of 64bit host
-systems.
-
-WWW: https://www.freebsd.org

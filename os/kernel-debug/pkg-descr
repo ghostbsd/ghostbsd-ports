@@ -1,7 +1,0 @@
-This FreeBSD OS port installs the debugging kernel in /boot/kernel-debug.
-This kernel can be selected at boot-up to run with WITNESS and other debugging
-features enabled.
-
-This is not required for jails or other chroot environments.
-
-WWW: https://www.freebsd.org

@@ -2591,7 +2591,7 @@ VALID_CATEGORIES+= accessibility afterstep arabic archivers astro audio \
 	kde ${_KDE_CATEGORIES_SUPPORTED} kld korean \
 	lang linux lisp \
 	mail mate math mbone misc multimedia \
-	net net-im net-mgmt net-p2p net-vpn news os \
+	net net-im net-mgmt net-p2p net-vpn news \
 	parallel pear perl5 plan9 polish ports-mgmt portuguese \
 	print python ruby rubygems russian \
 	scheme science security shells spanish sysutils \

@@ -1,5 +1,0 @@
-This FreeBSD OS port installs the static userland binaries in /rescue, which
-can be used in single-user mode or in other instances where system libraries
-have been corrupted.
-
-WWW: https://www.freebsd.org

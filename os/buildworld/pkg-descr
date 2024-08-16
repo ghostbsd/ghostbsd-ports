@@ -1,9 +1,0 @@
-This FreeBSD OS port performs the 'buildworld' portion of the base build.
-The resulting world is packaged and stored as a .txz file in /usr/dist/.
-
-This .txz file is used by other OS ports in the packaging process for the
-userland. This package does not need to be installed for runtime, but may
-be helpful to feed into other programs that can make use of a tarball of
-world, I.E. jail managers, Poudriere and similar.
-
-WWW: https://www.freebsd.org

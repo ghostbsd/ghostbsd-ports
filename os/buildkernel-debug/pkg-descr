@@ -1,8 +1,0 @@
-This FreeBSD OS port performs the 'buildkernel' portion of the base build,
-using the default KERNCONF with WITNESS and other debugging explicitly enabled.
-The resulting kernel is packaged and stored as a .txz file in /usr/dist/.
-
-This .txz file is used by other OS ports in the packaging process for the
-kernel. This package does not need to be installed for runtime.
-
-WWW: https://www.freebsd.org

@@ -1,5 +1,0 @@
-This FreeBSD OS port installs the default kernel in /boot/kernel.
-
-This is not required for jails or other chroot environments.
-
-WWW: https://www.freebsd.org
