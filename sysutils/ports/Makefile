@@ -2,16 +2,14 @@
 
 PORTNAME=	ports
 PORTVERSION=	${PORTPKG_PORTVERSION}
-CATEGORIES=	os
+CATEGORIES=sysutils
 DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
 COMMENT=	FreeBSD ports tree
 
-RUN_DEPENDS=	/usr/bin/clang:os/userland-devtools@${OS_FLAVOR}
-
-USES=	os:flavors
+USES=	os
 
 PREFIX=/
 BASE_PORTSDIR?=	/usr/ports

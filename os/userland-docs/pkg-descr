@@ -1,6 +1,0 @@
-This FreeBSD OS port installs the userland man pages, as well as info files.
-
-This package is not required for runtime and can be ignored if space
-is at a premium.
-
-WWW: https://www.freebsd.org

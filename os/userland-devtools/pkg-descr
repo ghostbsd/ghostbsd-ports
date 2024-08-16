@@ -1,9 +1,0 @@
-This FreeBSD OS port installs programs, libraries, and header files that are
-used to build other software. Some major programs like clang, make, and lldb
-are included. If you want to build and/or compile anything, you will need to
-install this port.
-
-Restricted jails may want to skip this port, to minimize the arsenal available
-to intruders.
-
-WWW: https://www.freebsd.org

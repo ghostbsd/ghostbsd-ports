@@ -1,6 +1,0 @@
-This FreeBSD OS port installs the critical runtime libraries, such as RTLD,
-libc, libm and others. This package should be updated after the kernel, but before
-other userland packages. This updating best-practice is enforced when using the
-'base-update' tool for updating.
-
-WWW: https://www.freebsd.org

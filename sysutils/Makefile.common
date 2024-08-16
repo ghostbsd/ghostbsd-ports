@@ -1,0 +1,1 @@
+PORTPKG_PORTVERSION!=	date "+%y.%m.%d"

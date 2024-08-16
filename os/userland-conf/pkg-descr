@@ -1,9 +1,0 @@
-This FreeBSD OS port installs the configuration files that are included
-in the /etc directory. These files are updated when using 'pkg upgrade' or
-the 'base-update' system utility. Files that are unable to be merged
-automatically can be interactively updated using the 'base-update merge'
-command.
-
-WARNING: Removing this package will delete your configuration files in /etc!
-
-WWW: https://www.freebsd.org
