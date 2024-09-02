@@ -206,10 +206,10 @@
     SUBDIR += mysql2pgsql
     SUBDIR += mysql80-client
     SUBDIR += mysql80-server
-    SUBDIR += mysql81-client
-    SUBDIR += mysql81-server
     SUBDIR += mysql84-client
     SUBDIR += mysql84-server
+    SUBDIR += mysql90-client
+    SUBDIR += mysql90-server
     SUBDIR += mysqlbackup
     SUBDIR += mysqldump-secure
     SUBDIR += mysqlreport
@@ -833,7 +833,6 @@
     SUBDIR += py-redis
     SUBDIR += py-redis2
     SUBDIR += py-redis3
-    SUBDIR += py-redis4
     SUBDIR += py-rrdtool
     SUBDIR += py-schemachange
     SUBDIR += py-sispy
@@ -885,6 +884,7 @@
     SUBDIR += redis-devel
     SUBDIR += redis62
     SUBDIR += redis70
+    SUBDIR += redis72
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += redisjson

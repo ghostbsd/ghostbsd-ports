@@ -30,7 +30,6 @@
     SUBDIR += R-cran-png
     SUBDIR += R-cran-qcc
     SUBDIR += R-cran-ragg
-    SUBDIR += R-cran-rgdal
     SUBDIR += R-cran-s2
     SUBDIR += R-cran-scales
     SUBDIR += R-cran-shape
@@ -515,7 +514,6 @@
     SUBDIR += libvisual04
     SUBDIR += libvisual04-plugins
     SUBDIR += libwmf
-    SUBDIR += libwmf-nox11
     SUBDIR += libwpg03
     SUBDIR += libxisf
     SUBDIR += libyuv
@@ -586,7 +584,6 @@
     SUBDIR += metapixel
     SUBDIR += milton
     SUBDIR += minder
-    SUBDIR += ming
     SUBDIR += mirtk
     SUBDIR += movit
     SUBDIR += mozjpeg

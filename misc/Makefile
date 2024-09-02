@@ -172,6 +172,7 @@
     SUBDIR += gnu-watch
     SUBDIR += gnuls
     SUBDIR += gobuster
+    SUBDIR += gollama
     SUBDIR += gone
     SUBDIR += gplink
     SUBDIR += gpsim
@@ -295,6 +296,7 @@
     SUBDIR += ompl
     SUBDIR += ondir
     SUBDIR += onnx
+    SUBDIR += ooo
     SUBDIR += opencyc
     SUBDIR += openhab
     SUBDIR += openhab-addons
@@ -639,6 +641,7 @@
     SUBDIR += unclutter
     SUBDIR += unclutter-xfixes
     SUBDIR += unicode-emoji
+    SUBDIR += units
     SUBDIR += upclient
     SUBDIR += urh
     SUBDIR += usbids
@@ -652,6 +655,7 @@
     SUBDIR += vera
     SUBDIR += vfc
     SUBDIR += vifm
+    SUBDIR += vifm-colors
     SUBDIR += visp
     SUBDIR += viz
     SUBDIR += vote

@@ -48,7 +48,6 @@
     SUBDIR += ansible-sshjail
     SUBDIR += ansible-sysrc
     SUBDIR += anvil
-    SUBDIR += apache-mesos
     SUBDIR += apachetop
     SUBDIR += apcctrl
     SUBDIR += apcpwr
@@ -131,7 +130,6 @@
     SUBDIR += battray
     SUBDIR += bchunk
     SUBDIR += beadm
-    SUBDIR += beadm-devel
     SUBDIR += beats7
     SUBDIR += beats8
     SUBDIR += bfs
@@ -983,6 +981,7 @@
     SUBDIR += parafly
     SUBDIR += parallel
     SUBDIR += parkverbot
+    SUBDIR += pass-coffin
     SUBDIR += pass-otp
     SUBDIR += pass-secrets
     SUBDIR += pass-update
@@ -1182,6 +1181,7 @@
     SUBDIR += py-scarab
     SUBDIR += py-supervisor
     SUBDIR += py-tarsnapper
+    SUBDIR += py-tldr
     SUBDIR += py-tmuxp
     SUBDIR += py-upt
     SUBDIR += py-upt-cpan
@@ -1373,6 +1373,8 @@
     SUBDIR += schedutils
     SUBDIR += schilyutils
     SUBDIR += screen
+    SUBDIR += screen49
+    SUBDIR += screen50
     SUBDIR += screen-devel
     SUBDIR += screenfetch
     SUBDIR += screenie
@@ -1526,6 +1528,7 @@
     SUBDIR += u-boot-bananapim2
     SUBDIR += u-boot-beaglebone
     SUBDIR += u-boot-bhyve-arm64
+    SUBDIR += u-boot-bhyve-riscv
     SUBDIR += u-boot-chip
     SUBDIR += u-boot-clearfog
     SUBDIR += u-boot-cubieboard
