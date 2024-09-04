@@ -1073,6 +1073,7 @@
     SUBDIR += polkit-gnome
     SUBDIR += polkit-qt-1
     SUBDIR += popeye
+    SUBDIR += ports
     SUBDIR += pot
     SUBDIR += potnet
     SUBDIR += poweralertd
