@@ -1,6 +1,7 @@
 PORTNAME=	asm-lsp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.8.0
+DISTVERSION=	0.9.0
+PORTREVISION=	1
 CATEGORIES=	lang
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -43,7 +44,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		cfg-if-1.0.0 \
 		chrono-0.4.38 \
 		colored-2.1.0 \
-		compile_commands-0.2.0 \
+		compile_commands-0.3.0 \
 		core-foundation-0.9.4 \
 		core-foundation-sys-0.8.7 \
 		cpp_demangle-0.4.3 \
@@ -281,8 +282,5 @@ OPENSSLINC=	/usr/include
 OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/${PORTNAME}
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>

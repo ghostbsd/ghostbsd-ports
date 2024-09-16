@@ -507,8 +507,6 @@
     SUBDIR += libsixel
     SUBDIR += libspiro
     SUBDIR += libspng
-    SUBDIR += libsvg
-    SUBDIR += libsvg-cairo
     SUBDIR += libsvgtiny
     SUBDIR += libvisual
     SUBDIR += libvisual04
@@ -989,6 +987,7 @@
     SUBDIR += py-rasterio
     SUBDIR += py-rasterstats
     SUBDIR += py-rawkit
+    SUBDIR += py-rawpy
     SUBDIR += py-rich-pixels
     SUBDIR += py-s2
     SUBDIR += py-scikit-image
@@ -1008,6 +1007,7 @@
     SUBDIR += py-urbansim
     SUBDIR += py-utm
     SUBDIR += py-vecrec
+    SUBDIR += py-vispy
     SUBDIR += py-visvis
     SUBDIR += py-wand
     SUBDIR += py-webcolors
@@ -1154,7 +1154,6 @@
     SUBDIR += ssocr
     SUBDIR += sswf
     SUBDIR += stamp
-    SUBDIR += svg2png
     SUBDIR += svgalib
     SUBDIR += svgbob
     SUBDIR += svgpp

@@ -348,6 +348,7 @@
     SUBDIR += c4core
     SUBDIR += calibrator
     SUBDIR += caliper
+    SUBDIR += camp
     SUBDIR += capnproto
     SUBDIR += capnproto1
     SUBDIR += capslock
@@ -629,7 +630,6 @@
     SUBDIR += efl
     SUBDIR += egypt
     SUBDIR += eiffelstudio
-    SUBDIR += electron27
     SUBDIR += electron29
     SUBDIR += electron30
     SUBDIR += electron31
@@ -837,6 +837,7 @@
     SUBDIR += git-tui
     SUBDIR += git-workspace
     SUBDIR += gitaly
+    SUBDIR += gitea-act_runner
     SUBDIR += gitflow
     SUBDIR += gitg
     SUBDIR += github-backup-utils
@@ -2208,6 +2209,7 @@
     SUBDIR += p5-Data-Capture
     SUBDIR += p5-Data-ClearSilver-HDF
     SUBDIR += p5-Data-Clone
+    SUBDIR += p5-Data-Cmp
     SUBDIR += p5-Data-Compare
     SUBDIR += p5-Data-Diver
     SUBDIR += p5-Data-Dmp
@@ -2241,6 +2243,7 @@
     SUBDIR += p5-Data-MessagePack
     SUBDIR += p5-Data-MessagePack-Stream
     SUBDIR += p5-Data-Miscellany
+    SUBDIR += p5-Data-ModeMerge
     SUBDIR += p5-Data-Model
     SUBDIR += p5-Data-Munge
     SUBDIR += p5-Data-Object
@@ -2295,7 +2298,12 @@
     SUBDIR += p5-Data-RoundRobin
     SUBDIR += p5-Data-Rx
     SUBDIR += p5-Data-SExpression
+    SUBDIR += p5-Data-Sah
+    SUBDIR += p5-Data-Sah-Coerce
+    SUBDIR += p5-Data-Sah-DefaultValue
+    SUBDIR += p5-Data-Sah-Filter
     SUBDIR += p5-Data-Sah-Normalize
+    SUBDIR += p5-Data-Sah-Resolve
     SUBDIR += p5-Data-Section
     SUBDIR += p5-Data-Section-Simple
     SUBDIR += p5-Data-Serializable
@@ -2787,6 +2795,7 @@
     SUBDIR += p5-IPC-SharedCache
     SUBDIR += p5-IPC-ShellCmd
     SUBDIR += p5-IPC-Signal
+    SUBDIR += p5-IPC-System-Options
     SUBDIR += p5-IPC-System-Simple
     SUBDIR += p5-IRI
     SUBDIR += p5-Import-Base
@@ -2829,6 +2838,7 @@
     SUBDIR += p5-Keyword-Pluggable
     SUBDIR += p5-Keyword-Simple
     SUBDIR += p5-LV
+    SUBDIR += p5-Language-Expr
     SUBDIR += p5-Lexical-Alias
     SUBDIR += p5-Lexical-Import
     SUBDIR += p5-Lexical-Persistence
@@ -2993,6 +3003,7 @@
     SUBDIR += p5-Module-Math-Depends
     SUBDIR += p5-Module-Metadata
     SUBDIR += p5-Module-Path
+    SUBDIR += p5-Module-Path-More
     SUBDIR += p5-Module-Pluggable
     SUBDIR += p5-Module-Pluggable-Fast
     SUBDIR += p5-Module-Pluggable-Ordered
@@ -3310,6 +3321,7 @@
     SUBDIR += p5-Pragmatic
     SUBDIR += p5-Proc-BackOff
     SUBDIR += p5-Proc-Background
+    SUBDIR += p5-Proc-ChildError
     SUBDIR += p5-Proc-Daemon
     SUBDIR += p5-Proc-FastSpawn
     SUBDIR += p5-Proc-Find-Parents
@@ -3407,6 +3419,7 @@
     SUBDIR += p5-Scalar-String
     SUBDIR += p5-Scalar-Util-LooksLikeNumber
     SUBDIR += p5-Scalar-Util-Numeric
+    SUBDIR += p5-Scalar-Util-Numeric-PP
     SUBDIR += p5-Scope-Container
     SUBDIR += p5-Scope-Guard
     SUBDIR += p5-Scope-Upper
@@ -3801,6 +3814,7 @@
     SUBDIR += p5-Time-Crontab
     SUBDIR += p5-Time-Duration
     SUBDIR += p5-Time-Duration-Parse
+    SUBDIR += p5-Time-Duration-Parse-AsHash
     SUBDIR += p5-Time-Elapsed
     SUBDIR += p5-Time-Format
     SUBDIR += p5-Time-HiRes
@@ -3923,6 +3937,7 @@
     SUBDIR += p5-latest
     SUBDIR += p5-lexical-underscore
     SUBDIR += p5-lib-abs
+    SUBDIR += p5-lib-filter
     SUBDIR += p5-libalarm
     SUBDIR += p5-libxml-enno
     SUBDIR += p5-local-lib
@@ -3947,6 +3962,7 @@
     SUBDIR += p5-self-init
     SUBDIR += p5-strictures
     SUBDIR += p5-subatom
+    SUBDIR += p5-subroutines
     SUBDIR += p5-subversion
     SUBDIR += p5-superclass
     SUBDIR += p5-syntax
@@ -4356,6 +4372,7 @@
     SUBDIR += py-argcomplete
     SUBDIR += py-argh
     SUBDIR += py-argparse
+    SUBDIR += py-argparse-manpage
     SUBDIR += py-argparse_addons
     SUBDIR += py-args
     SUBDIR += py-ariadne
@@ -4988,6 +5005,7 @@
     SUBDIR += py-itanium_demangler
     SUBDIR += py-itemadapter
     SUBDIR += py-itemloaders
+    SUBDIR += py-iterable-io
     SUBDIR += py-iteration-utilities
     SUBDIR += py-itertree
     SUBDIR += py-itypes
@@ -5121,6 +5139,7 @@
     SUBDIR += py-lunardate
     SUBDIR += py-lxml
     SUBDIR += py-lxml-stubs
+    SUBDIR += py-lxml5
     SUBDIR += py-mac-vendor-lookup
     SUBDIR += py-macholib
     SUBDIR += py-magic
@@ -5235,6 +5254,11 @@
     SUBDIR += py-opengrok-tools
     SUBDIR += py-openstacksdk
     SUBDIR += py-opentelemetry-api
+    SUBDIR += py-opentelemetry-exporter-otlp
+    SUBDIR += py-opentelemetry-exporter-otlp-proto-common
+    SUBDIR += py-opentelemetry-exporter-otlp-proto-grpc
+    SUBDIR += py-opentelemetry-exporter-otlp-proto-http
+    SUBDIR += py-opentelemetry-proto
     SUBDIR += py-opentelemetry-sdk
     SUBDIR += py-opentelemetry-semantic-conventions
     SUBDIR += py-opentracing
@@ -5247,6 +5271,7 @@
     SUBDIR += py-ordered-set
     SUBDIR += py-ordereddict
     SUBDIR += py-orderedmultidict
+    SUBDIR += py-orderly-set
     SUBDIR += py-orjson
     SUBDIR += py-os-brick
     SUBDIR += py-os-client-config
@@ -5460,6 +5485,7 @@
     SUBDIR += py-pydocstyle
     SUBDIR += py-pydrive
     SUBDIR += py-pyee
+    SUBDIR += py-pyee11
     SUBDIR += py-pyelftools
     SUBDIR += py-pyface
     SUBDIR += py-pyfakefs
@@ -5659,6 +5685,7 @@
     SUBDIR += py-pytz
     SUBDIR += py-pytz-deprecation-shim
     SUBDIR += py-pytzdata
+    SUBDIR += py-pyuca
     SUBDIR += py-pyudev
     SUBDIR += py-pyupgrade
     SUBDIR += py-pyusb
@@ -5797,6 +5824,7 @@
     SUBDIR += py-sh
     SUBDIR += py-shapely
     SUBDIR += py-shellingham
+    SUBDIR += py-shpyx
     SUBDIR += py-shtab
     SUBDIR += py-signalr-client-aio
     SUBDIR += py-simple-parsing
@@ -5809,7 +5837,6 @@
     SUBDIR += py-simpy
     SUBDIR += py-single-version
     SUBDIR += py-sip
-    SUBDIR += py-sip4
     SUBDIR += py-six
     SUBDIR += py-smmap
     SUBDIR += py-snakeviz
@@ -6189,6 +6216,7 @@
     SUBDIR += rabs
     SUBDIR += radare2
     SUBDIR += radian
+    SUBDIR += radicle
     SUBDIR += ragel
     SUBDIR += raknet
     SUBDIR += random123
@@ -6612,6 +6640,7 @@
     SUBDIR += rubygem-aws-sdk-paymentcryptographydata
     SUBDIR += rubygem-aws-sdk-pcaconnectorad
     SUBDIR += rubygem-aws-sdk-pcaconnectorscep
+    SUBDIR += rubygem-aws-sdk-pcs
     SUBDIR += rubygem-aws-sdk-personalize
     SUBDIR += rubygem-aws-sdk-personalizeevents
     SUBDIR += rubygem-aws-sdk-personalizeruntime
@@ -6971,11 +7000,13 @@
     SUBDIR += rubygem-cucumber
     SUBDIR += rubygem-cucumber-ci-environment
     SUBDIR += rubygem-cucumber-core
+    SUBDIR += rubygem-cucumber-core13
     SUBDIR += rubygem-cucumber-cucumber-expressions
     SUBDIR += rubygem-cucumber-messages
     SUBDIR += rubygem-cucumber-messages22
     SUBDIR += rubygem-cucumber-messages23
     SUBDIR += rubygem-cucumber-messages24
+    SUBDIR += rubygem-cucumber-messages25
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
     SUBDIR += rubygem-cucumber-wire
@@ -6991,6 +7022,7 @@
     SUBDIR += rubygem-ddmemoize
     SUBDIR += rubygem-ddmetrics
     SUBDIR += rubygem-ddplugin
+    SUBDIR += rubygem-dead_end
     SUBDIR += rubygem-deb_version
     SUBDIR += rubygem-debase-ruby_core_source
     SUBDIR += rubygem-debug
@@ -7212,7 +7244,6 @@
     SUBDIR += rubygem-grape-route-helpers
     SUBDIR += rubygem-grape-swagger
     SUBDIR += rubygem-grape-swagger-entity
-    SUBDIR += rubygem-grape-swagger20
     SUBDIR += rubygem-grape1
     SUBDIR += rubygem-grape20
     SUBDIR += rubygem-grape_logging
@@ -7291,7 +7322,6 @@
     SUBDIR += rubygem-json-canonicalization
     SUBDIR += rubygem-json-schema
     SUBDIR += rubygem-json1
-    SUBDIR += rubygem-json26
     SUBDIR += rubygem-json_pure
     SUBDIR += rubygem-json_pure1
     SUBDIR += rubygem-json_schema
@@ -7345,6 +7375,7 @@
     SUBDIR += rubygem-metaid
     SUBDIR += rubygem-metasm
     SUBDIR += rubygem-method_source
+    SUBDIR += rubygem-metrics
     SUBDIR += rubygem-micromachine
     SUBDIR += rubygem-middleware
     SUBDIR += rubygem-mini_histogram
@@ -7465,6 +7496,7 @@
     SUBDIR += rubygem-packwerk
     SUBDIR += rubygem-packwerk-extensions
     SUBDIR += rubygem-pagy
+    SUBDIR += rubygem-pagy6
     SUBDIR += rubygem-paint
     SUBDIR += rubygem-pairing_heap
     SUBDIR += rubygem-parser
@@ -7655,7 +7687,6 @@
     SUBDIR += rubygem-semi_semantic
     SUBDIR += rubygem-semver2
     SUBDIR += rubygem-semver_dialects
-    SUBDIR += rubygem-semver_dialects2
     SUBDIR += rubygem-semverse
     SUBDIR += rubygem-sentry-rails
     SUBDIR += rubygem-sentry-raven

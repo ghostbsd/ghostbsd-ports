@@ -1,3 +1,3 @@
-TIMESTAMP = 1722249084
-SHA256 (rubygem/aws-sdk-codecommit-1.72.0.gem) = db642ca21ff9863068d75a18d5c4620ba74bcacf2ddbc9ad548cb8ca118469ff
-SIZE (rubygem/aws-sdk-codecommit-1.72.0.gem) = 119296
+TIMESTAMP = 1726081215
+SHA256 (rubygem/aws-sdk-codecommit-1.74.0.gem) = e8bb9fa3f9e87b4002a16a870aa1f47f3c562a74a5f67d9edba4d1b98cf01984
+SIZE (rubygem/aws-sdk-codecommit-1.74.0.gem) = 119808

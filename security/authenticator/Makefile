@@ -1,8 +1,9 @@
 PORTNAME=	authenticator
 DISTVERSION=	4.4.0
+PORTREVISION=	1
 CATEGORIES=	security
 
-MAINTAINER=	jbeich@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Generate Two-Factor Codes
 WWW=		https://gitlab.gnome.org/World/Authenticator
 

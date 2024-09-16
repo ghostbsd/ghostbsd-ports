@@ -1,6 +1,6 @@
 PORTNAME=	diesel
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.2.3
+DISTVERSION=	2.2.4
 PORTREVISION=	1
 CATEGORIES=	databases
 PKGNAMESUFFIX=	-cli
@@ -39,12 +39,12 @@ CARGO_CRATES=	aho-corasick-1.1.3 \
 		block-buffer-0.10.4 \
 		bumpalo-3.16.0 \
 		byteorder-1.5.0 \
-		cc-1.1.14 \
+		cc-1.1.15 \
 		cfg-if-1.0.0 \
 		chrono-0.4.38 \
 		clap-4.5.16 \
 		clap_builder-4.5.15 \
-		clap_complete-4.5.23 \
+		clap_complete-4.5.24 \
 		clap_derive-4.5.13 \
 		clap_lex-0.7.2 \
 		cmake-0.1.51 \
@@ -76,7 +76,7 @@ CARGO_CRATES=	aho-corasick-1.1.3 \
 		iana-time-zone-haiku-0.1.2 \
 		ident_case-1.0.1 \
 		idna-0.5.0 \
-		indexmap-2.4.0 \
+		indexmap-2.5.0 \
 		insta-1.39.0 \
 		ipnet-2.9.0 \
 		ipnetwork-0.20.0 \
@@ -103,7 +103,7 @@ CARGO_CRATES=	aho-corasick-1.1.3 \
 		num-integer-0.1.46 \
 		num-traits-0.2.19 \
 		once_cell-1.19.0 \
-		openssl-src-300.3.1+3.3.1 \
+		openssl-src-300.3.2+3.3.2 \
 		openssl-sys-0.9.103 \
 		overload-0.1.1 \
 		parking_lot-0.12.3 \
@@ -129,7 +129,7 @@ CARGO_CRATES=	aho-corasick-1.1.3 \
 		regex-automata-0.4.7 \
 		regex-syntax-0.6.29 \
 		regex-syntax-0.8.4 \
-		rustix-0.38.34 \
+		rustix-0.38.35 \
 		ryu-1.0.18 \
 		scheduled-thread-pool-0.2.7 \
 		scopeguard-1.2.0 \
@@ -144,7 +144,7 @@ CARGO_CRATES=	aho-corasick-1.1.3 \
 		smallvec-1.13.2 \
 		strsim-0.11.1 \
 		subtle-2.6.1 \
-		syn-2.0.75 \
+		syn-2.0.77 \
 		tempfile-3.12.0 \
 		thiserror-1.0.63 \
 		thiserror-impl-1.0.63 \
@@ -202,8 +202,5 @@ PLIST_FILES=	bin/${PORTNAME}
 post-patch:
 	${CP} ${FILESDIR}/bindings_8_0_35_powerpc64_freebsd.rs \
 		${WRKSRC}/cargo-crates/mysqlclient-sys-0.4.1/bindings/
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>

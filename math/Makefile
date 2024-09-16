@@ -998,8 +998,10 @@
     SUBDIR += py-ml-dtypes
     SUBDIR += py-mnnpy
     SUBDIR += py-moarchiving
+    SUBDIR += py-modin
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
+    SUBDIR += py-narwhals
     SUBDIR += py-ndindex
     SUBDIR += py-networkx
     SUBDIR += py-nevergrad
