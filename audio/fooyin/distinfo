@@ -1,3 +1,5 @@
-TIMESTAMP = 1726851165
-SHA256 (fooyin-fooyin-v0.7.0_GH0.tar.gz) = d4cf2d3dee717330109313f1ad3d11cc185a3af48310aad50854bdebc5ceba90
-SIZE (fooyin-fooyin-v0.7.0_GH0.tar.gz) = 1575492
+TIMESTAMP = 1727459191
+SHA256 (fooyin-fooyin-v0.7.2_GH0.tar.gz) = a5552e0a3ae1e706315b8dbecd84571b6f46de666407cbe5686169d36b2a3dca
+SIZE (fooyin-fooyin-v0.7.2_GH0.tar.gz) = 1592767
+SHA256 (a96eacd6d75dc353557a1f2361b8f780455c9cf0.patch) = b7ab53bf882b2de8463f1b70d4a2160e0abb5543fb9e0dc79912e86dadf140a9
+SIZE (a96eacd6d75dc353557a1f2361b8f780455c9cf0.patch) = 1600
