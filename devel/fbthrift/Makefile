@@ -1,6 +1,7 @@
 PORTNAME=	fbthrift
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2024.09.23.00
+DISTVERSION=	2024.09.30.00
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,6 +10,8 @@ WWW=		https://github.com/facebook/fbthrift
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_aarch64=	compilation fails, see https://github.com/facebook/fbthrift/issues/623
 
 BUILD_DEPENDS=	range-v3>0:devel/range-v3
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs \

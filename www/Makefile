@@ -371,7 +371,6 @@
     SUBDIR += mitmproxy
     SUBDIR += mknmz-wwwoffle
     SUBDIR += mnogosearch
-    SUBDIR += mod_amazon_proxy
     SUBDIR += mod_asn
     SUBDIR += mod_auth_cas
     SUBDIR += mod_auth_cookie_mysql2
@@ -429,6 +428,7 @@
     SUBDIR += mod_wsgi4
     SUBDIR += mod_xsendfile
     SUBDIR += mohawk
+    SUBDIR += moin2
     SUBDIR += moinmoin
     SUBDIR += moinmoincli
     SUBDIR += mongoose
@@ -437,6 +437,7 @@
     SUBDIR += moodle42
     SUBDIR += moodle43
     SUBDIR += moodle44
+    SUBDIR += moodle45
     SUBDIR += morty
     SUBDIR += multisort
     SUBDIR += multiwatch
@@ -1468,6 +1469,7 @@
     SUBDIR += py-bjoern
     SUBDIR += py-bleach
     SUBDIR += py-bokeh
+    SUBDIR += py-bootstrap-flask
     SUBDIR += py-boto3
     SUBDIR += py-botocore-stubs
     SUBDIR += py-bottle
@@ -1550,6 +1552,7 @@
     SUBDIR += py-django-formset-js-improved
     SUBDIR += py-django-formtools
     SUBDIR += py-django-graphiql-debug-toolbar
+    SUBDIR += py-django-graphql-jwt
     SUBDIR += py-django-gravatar2
     SUBDIR += py-django-guardian
     SUBDIR += py-django-hashid-field
@@ -1713,6 +1716,7 @@
     SUBDIR += py-grafana-dashboard-manager
     SUBDIR += py-graphite-api
     SUBDIR += py-grequests
+    SUBDIR += py-grimoirelab
     SUBDIR += py-grip
     SUBDIR += py-gunicorn
     SUBDIR += py-h2
@@ -2333,11 +2337,9 @@
     SUBDIR += rustypaste-cli
     SUBDIR += s
     SUBDIR += sabredav
-    SUBDIR += sahi
     SUBDIR += samdruckerserver
     SUBDIR += sarg
     SUBDIR += scloader
-    SUBDIR += screego
     SUBDIR += script4rss
     SUBDIR += seahub
     SUBDIR += searx
@@ -2379,7 +2381,6 @@
     SUBDIR += srt
     SUBDIR += stagit
     SUBDIR += stork
-    SUBDIR += subsonic-standalone
     SUBDIR += suitecrm
     SUBDIR += suphp
     SUBDIR += surf
@@ -2390,7 +2391,6 @@
     SUBDIR += tclwebtest
     SUBDIR += tdiary
     SUBDIR += tdom
-    SUBDIR += template_
     SUBDIR += templatelite
     SUBDIR += tgpt
     SUBDIR += thirtybees
@@ -2398,7 +2398,6 @@
     SUBDIR += threema-web
     SUBDIR += thttpd
     SUBDIR += thumbnail_index
-    SUBDIR += thundercache
     SUBDIR += tidy
     SUBDIR += tidy-html5
     SUBDIR += tikiwiki
@@ -2411,6 +2410,7 @@
     SUBDIR += tomcat-native
     SUBDIR += tomcat-native2
     SUBDIR += tomcat101
+    SUBDIR += tomcat110
     SUBDIR += tomcat9
     SUBDIR += tomee
     SUBDIR += tor-browser

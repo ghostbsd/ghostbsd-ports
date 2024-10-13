@@ -91,10 +91,6 @@
     SUBDIR += backupuser
     SUBDIR += bacnet-stack-apps
     SUBDIR += bacula-libs3
-    SUBDIR += bacula11-client
-    SUBDIR += bacula11-client-static
-    SUBDIR += bacula11-docs
-    SUBDIR += bacula11-server
     SUBDIR += bacula13-client
     SUBDIR += bacula13-client-static
     SUBDIR += bacula13-docs
@@ -103,10 +99,6 @@
     SUBDIR += bacula15-client-static
     SUBDIR += bacula15-docs
     SUBDIR += bacula15-server
-    SUBDIR += bacula9-client
-    SUBDIR += bacula9-client-static
-    SUBDIR += bacula9-docs
-    SUBDIR += bacula9-server
     SUBDIR += baloo-widgets
     SUBDIR += bamf
     SUBDIR += bareos-client
@@ -133,7 +125,6 @@
     SUBDIR += beats7
     SUBDIR += beats8
     SUBDIR += bfs
-    SUBDIR += bhyve+
     SUBDIR += bhyve-firmware
     SUBDIR += bhyve-rc
     SUBDIR += bhyvemgr
@@ -264,6 +255,7 @@
     SUBDIR += cramfs
     SUBDIR += crashme
     SUBDIR += crate
+    SUBDIR += createrepo_c
     SUBDIR += cronic
     SUBDIR += cronolog
     SUBDIR += cronolog-devel
@@ -466,6 +458,7 @@
     SUBDIR += fusefs-libs
     SUBDIR += fusefs-libs3
     SUBDIR += fusefs-lkl
+    SUBDIR += fusefs-mergerfs
     SUBDIR += fusefs-mhddfs
     SUBDIR += fusefs-mp3fs
     SUBDIR += fusefs-nbt

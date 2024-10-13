@@ -77,9 +77,9 @@ IMAGEMAGICK_DEFAULT?=	7
 JAVA_DEFAULT?=		8
 # Possible values: 3.4.0, 3.99
 .  if (defined(WANT_LAZARUS_DEVEL) && !empty(WANT_LAZARUS_DEVEL)) || ${ARCH:Maarch64}
-LAZARUS_DEFAULT?=	3.99
+LAZARUS_DEFAULT?=	4.99
 .  else
-LAZARUS_DEFAULT?=	3.4.0
+LAZARUS_DEFAULT?=	3.6.0
 .  endif
 # Possible values: rust, legacy
 .  if empty(ARCH:Naarch64:Namd64:Narmv7:Ni386:Npowerpc64:Npowerpc64le:Npowerpc:Nriscv64)
@@ -126,7 +126,7 @@ _PERL5_FROM_BIN!=	${LOCALBASE}/bin/perl -e 'printf "%vd\n", $$^V;'
 _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .  endif
-# Possible values: 12, 13, 14, 15, 16
+# Possible values: 12, 13, 14, 15, 16, 17
 PGSQL_DEFAULT?=		16
 # Possible values: 8.1, 8.2, 8.3, 8.4
 PHP_DEFAULT?=		8.2
