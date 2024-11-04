@@ -1,6 +1,6 @@
 PORTNAME=	deno
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.0.0
+DISTVERSION=	2.0.4
 CATEGORIES=	www
 
 MAINTAINER=	mikael@FreeBSD.org
@@ -60,6 +60,6 @@ post-patch:
 	${CP} ${WRKSRC}/cargo-crates/deno_core_icudata-0.0.73/src/icudtl.dat ${WRKSRC}/cargo-crates/v8-${V8_VERS}/third_party/icu/common/
 
 do-install:
-	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/${CARGO_BUILD_TARGET}/*/deno ${STAGEDIR}${LOCALBASE}/bin
+	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/*/deno ${STAGEDIR}${LOCALBASE}/bin
 
 .include <bsd.port.mk>

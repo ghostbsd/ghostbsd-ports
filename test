@@ -1,0 +1,5 @@
+network={
+	ssid="ericbsd"
+	#psk="hacker4jesus7"
+	psk=c423d66bc4121dd3d24fa204df40988a59a418158cc3cee6b8ff2d43d12d99e0
+}

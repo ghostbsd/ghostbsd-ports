@@ -1,5 +1,5 @@
-TIMESTAMP = 1725603137
-SHA256 (go/misc_gollama/gollama-v1.27.4/v1.27.4.mod) = 582794340cde8daed7eaa46cb5f6205bd9c1dc378ab9b1c300f15883ac9d803a
-SIZE (go/misc_gollama/gollama-v1.27.4/v1.27.4.mod) = 2668
-SHA256 (go/misc_gollama/gollama-v1.27.4/v1.27.4.zip) = 60dd85d532c343f90ab71d07e80698642e9748a3a664a1a969bad9911cf4e5a8
-SIZE (go/misc_gollama/gollama-v1.27.4/v1.27.4.zip) = 1488070
+TIMESTAMP = 1730092973
+SHA256 (go/misc_gollama/gollama-v1.27.15/v1.27.15.mod) = 13984e94f6d53291714025cb644a60b6326f16d6168e2f74182e1becd7484f55
+SIZE (go/misc_gollama/gollama-v1.27.15/v1.27.15.mod) = 2669
+SHA256 (go/misc_gollama/gollama-v1.27.15/v1.27.15.zip) = 966725fbaf6e7b5938b0b06058f042fcd45fe436acd9c9eac95271907218dbd9
+SIZE (go/misc_gollama/gollama-v1.27.15/v1.27.15.zip) = 1489332

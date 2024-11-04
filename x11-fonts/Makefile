@@ -145,6 +145,7 @@
     SUBDIR += intel-one-mono
     SUBDIR += intlfonts
     SUBDIR += iosevka
+    SUBDIR += iosevka-comfy
     SUBDIR += isabella
     SUBDIR += jetbrains-mono
     SUBDIR += jf-openhuninn
