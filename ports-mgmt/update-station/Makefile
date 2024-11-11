@@ -13,7 +13,8 @@ RUN_DEPENDS=	sudo:security/sudo \
 		${LOCALBASE}/etc/pkg/repos/GhostBSD.conf.ca:misc/ghostbsd-pkg-conf \
 		${PYTHON_PKGNAMEPREFIX}bectl>=0.1:sysutils/py-bectl@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>=0.1:www/py-requests@${PY_FLAVOR} \
-		ghostbsd-update-scripts>=0:misc/ghostbsd-update-scripts
+		ghostbsd-update-scripts>=0:misc/ghostbsd-update-scripts \
+		${PYTHON_PKGNAMEPREFIX}python-distutils-extra>=2.15:devel/py-python-distutils-extra@${PY_FLAVOR}
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
