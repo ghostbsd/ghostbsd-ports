@@ -22,6 +22,6 @@ GH_ACCOUNT=	GhostBSD
 
 USES =		python:3.9+ gnome gettext-tools
 USE_PYTHON=	distutils
-USE_GNOME=	pygobject3 
+USE_GNOME=	pygobject3 intltool 
 
 .include <bsd.port.mk>
