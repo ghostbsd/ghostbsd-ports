@@ -18,6 +18,6 @@ RUN_DEPENDS=	update-station:ports-mgmt/update-station \
 		software-station:ports-mgmt/software-station \
 		fish:shells/fish \
 		webcamd:multimedia/webcamd \
-		${LOCALBASE}/sbin/automount:sysutils/automount
+		${LOCALBASE}/sbin/automount:filesystems/automount
 
 .include <bsd.port.mk>
