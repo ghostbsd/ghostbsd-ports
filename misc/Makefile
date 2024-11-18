@@ -95,7 +95,6 @@
     SUBDIR += dtach
     SUBDIR += dvorak7min
     SUBDIR += dynomite
-    SUBDIR += e2fsprogs-libblkid
     SUBDIR += e2fsprogs-libuuid
     SUBDIR += ecflow
     SUBDIR += edfbrowser
@@ -278,7 +277,6 @@
     SUBDIR += mmv
     SUBDIR += mnn
     SUBDIR += molequeue
-    SUBDIR += morse
     SUBDIR += mtx
     SUBDIR += mxnet
     SUBDIR += najitool
@@ -461,6 +459,7 @@
     SUBDIR += py-llm-claude-3
     SUBDIR += py-log_symbols
     SUBDIR += py-mffpy
+    SUBDIR += py-mixpanel
     SUBDIR += py-mmcv
     SUBDIR += py-mmdet
     SUBDIR += py-mmengine
@@ -491,6 +490,7 @@
     SUBDIR += py-pkbar
     SUBDIR += py-placekey
     SUBDIR += py-polars
+    SUBDIR += py-posthog
     SUBDIR += py-powerline-status
     SUBDIR += py-progressbar
     SUBDIR += py-progressbar2

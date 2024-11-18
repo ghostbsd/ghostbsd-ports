@@ -159,6 +159,7 @@
     SUBDIR += hydroxide
     SUBDIR += ifile
     SUBDIR += im
+    SUBDIR += imap-tools
     SUBDIR += imapdedup
     SUBDIR += imapfilter
     SUBDIR += imapsync

@@ -204,6 +204,7 @@
     SUBDIR += libzen
     SUBDIR += linux-c7-libtheora
     SUBDIR += linux-c7-libv4l
+    SUBDIR += linux-rl9-aom
     SUBDIR += linux-rl9-ffmpeg
     SUBDIR += linux-rl9-gstreamer1
     SUBDIR += linux-rl9-gstreamer1-libav
@@ -212,6 +213,7 @@
     SUBDIR += linux-rl9-libva
     SUBDIR += linux-rl9-libvdpau
     SUBDIR += linux-rl9-libvpx
+    SUBDIR += linux-rl9-qt5-qtmultimedia
     SUBDIR += linux-tsmuxer
     SUBDIR += linux_dvbwrapper-kmod
     SUBDIR += livego

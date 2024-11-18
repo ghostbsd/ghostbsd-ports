@@ -249,6 +249,8 @@
     SUBDIR += linux-nvidia-libs-470
     SUBDIR += linux-rl9-libxkbcommon
     SUBDIR += linux-rl9-pixman
+    SUBDIR += linux-rl9-qt5-qtx11extras
+    SUBDIR += linux-rl9-xcb-util
     SUBDIR += linux-rl9-xorg-libs
     SUBDIR += listres
     SUBDIR += lsw

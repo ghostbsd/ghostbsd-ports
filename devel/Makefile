@@ -282,7 +282,6 @@
     SUBDIR += aws-sdk-php
     SUBDIR += axmldec
     SUBDIR += ayatana-ido
-    SUBDIR += b2
     SUBDIR += babelflow
     SUBDIR += babeltrace
     SUBDIR += bacnet-stack
@@ -514,6 +513,7 @@
     SUBDIR += ctypes.sh
     SUBDIR += cunit
     SUBDIR += cut
+    SUBDIR += cutelee
     SUBDIR += cutils
     SUBDIR += cutter
     SUBDIR += cvise
@@ -640,6 +640,7 @@
     SUBDIR += electron30
     SUBDIR += electron31
     SUBDIR += electron32
+    SUBDIR += electron33
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -693,7 +694,6 @@
     SUBDIR += firmware-utils
     SUBDIR += fistgen
     SUBDIR += flatbuffers
-    SUBDIR += flatbuffers205
     SUBDIR += flatcc
     SUBDIR += flatzebra
     SUBDIR += flex-sdk
@@ -798,7 +798,6 @@
     SUBDIR += gengetopt
     SUBDIR += genht
     SUBDIR += genie
-    SUBDIR += genromfs
     SUBDIR += getoptions
     SUBDIR += gettext
     SUBDIR += gettext-lint
@@ -942,7 +941,6 @@
     SUBDIR += guile-lib
     SUBDIR += gum
     SUBDIR += gumbo
-    SUBDIR += gvfs
     SUBDIR += gvp
     SUBDIR += gwenhywfar
     SUBDIR += gwenhywfar-fox16
@@ -1210,7 +1208,6 @@
     SUBDIR += libayatana-indicator
     SUBDIR += libb2
     SUBDIR += libbacktrace
-    SUBDIR += libbde
     SUBDIR += libbegemot
     SUBDIR += libbfd
     SUBDIR += libbinio
@@ -1223,6 +1220,7 @@
     SUBDIR += libcdb
     SUBDIR += libcds
     SUBDIR += libcfu
+    SUBDIR += libchdr
     SUBDIR += libchipcard
     SUBDIR += libcidr
     SUBDIR += libcii
@@ -1293,12 +1291,6 @@
     SUBDIR += libfort
     SUBDIR += libfortuna
     SUBDIR += libfreefare
-    SUBDIR += libfsapfs
-    SUBDIR += libfsext
-    SUBDIR += libfsfat
-    SUBDIR += libfshfs
-    SUBDIR += libfsntfs
-    SUBDIR += libfsxfs
     SUBDIR += libftdi
     SUBDIR += libftdi1
     SUBDIR += libfwnt
@@ -1360,7 +1352,6 @@
     SUBDIR += libmcfp
     SUBDIR += libmill
     SUBDIR += libmimedir
-    SUBDIR += libmodi
     SUBDIR += libmowgli
     SUBDIR += libmowgli2
     SUBDIR += libmpcbdm
@@ -1532,6 +1523,7 @@
     SUBDIR += linux-c7-systemd-libs
     SUBDIR += linux-c7-zlib-devel
     SUBDIR += linux-ltp
+    SUBDIR += linux-pvs-studio
     SUBDIR += linux-rl9-dbus-libs
     SUBDIR += linux-rl9-devtools
     SUBDIR += linux-rl9-elfutils-libelf
@@ -1551,6 +1543,11 @@
     SUBDIR += linux-rl9-nspr
     SUBDIR += linux-rl9-ocl-icd
     SUBDIR += linux-rl9-orc
+    SUBDIR += linux-rl9-qt5
+    SUBDIR += linux-rl9-qt5-qtbase
+    SUBDIR += linux-rl9-qt5-qtdeclarative
+    SUBDIR += linux-rl9-qt5-qtscript
+    SUBDIR += linux-rl9-qt5-qttools
     SUBDIR += linux-rl9-strace
     SUBDIR += linux-rl9-systemd-libs
     SUBDIR += linux-sublime-merge
@@ -4527,6 +4524,7 @@
     SUBDIR += py-azure-synapse-artifacts
     SUBDIR += py-azure-synapse-managedprivateendpoints
     SUBDIR += py-azure-synapse-spark
+    SUBDIR += py-b2
     SUBDIR += py-b2sdk
     SUBDIR += py-babel
     SUBDIR += py-babelfish
@@ -4605,6 +4603,7 @@
     SUBDIR += py-cerberus
     SUBDIR += py-cereslib
     SUBDIR += py-certsrv
+    SUBDIR += py-cf-xarray
     SUBDIR += py-cffi
     SUBDIR += py-cfgv
     SUBDIR += py-cfn-lint
@@ -4889,16 +4888,11 @@
     SUBDIR += py-frictionless-ckan-mapper
     SUBDIR += py-frozendict
     SUBDIR += py-frozenlist
-    SUBDIR += py-fs
-    SUBDIR += py-fs2
-    SUBDIR += py-fsspec
-    SUBDIR += py-fsspec-xrootd
     SUBDIR += py-fudge
     SUBDIR += py-funcparserlib
     SUBDIR += py-funcsigs
     SUBDIR += py-funcy
     SUBDIR += py-furl
-    SUBDIR += py-fusepy
     SUBDIR += py-future
     SUBDIR += py-futurist
     SUBDIR += py-fuzzywuzzy
@@ -4907,7 +4901,6 @@
     SUBDIR += py-game_sdl2
     SUBDIR += py-gapic-generator
     SUBDIR += py-gast
-    SUBDIR += py-gcsfs
     SUBDIR += py-gelidum
     SUBDIR += py-genson
     SUBDIR += py-genty
@@ -5148,7 +5141,6 @@
     SUBDIR += py-libusb1
     SUBDIR += py-libversion
     SUBDIR += py-libvirt
-    SUBDIR += py-libzfs
     SUBDIR += py-lief
     SUBDIR += py-line-profiler
     SUBDIR += py-linear-tsv
@@ -5157,7 +5149,6 @@
     SUBDIR += py-littleutils
     SUBDIR += py-livemark
     SUBDIR += py-lizard
-    SUBDIR += py-llfuse
     SUBDIR += py-llvmcpy
     SUBDIR += py-llvmlite
     SUBDIR += py-lml
@@ -5535,7 +5526,6 @@
     SUBDIR += py-pyee11
     SUBDIR += py-pyelftools
     SUBDIR += py-pyface
-    SUBDIR += py-pyfakefs
     SUBDIR += py-pyfcm
     SUBDIR += py-pyflakes
     SUBDIR += py-pyformance
@@ -5667,6 +5657,8 @@
     SUBDIR += py-pytest-qt
     SUBDIR += py-pytest-random-order
     SUBDIR += py-pytest-randomly
+    SUBDIR += py-pytest-recorder
+    SUBDIR += py-pytest-recording
     SUBDIR += py-pytest-regressions
     SUBDIR += py-pytest-regtest
     SUBDIR += py-pytest-relaxed
@@ -5834,7 +5826,6 @@
     SUBDIR += py-rush
     SUBDIR += py-rx
     SUBDIR += py-rx1
-    SUBDIR += py-s3fs
     SUBDIR += py-saneyaml
     SUBDIR += py-sarge
     SUBDIR += py-sarif-om
@@ -5939,6 +5930,7 @@
     SUBDIR += py-sysv_ipc
     SUBDIR += py-tables
     SUBDIR += py-tabulate
+    SUBDIR += py-tabulate2
     SUBDIR += py-tabulator
     SUBDIR += py-tailer
     SUBDIR += py-tapi
@@ -8178,7 +8170,6 @@
     SUBDIR += tclreadline
     SUBDIR += tclthread
     SUBDIR += tcltls
-    SUBDIR += tclvfs
     SUBDIR += tclxml
     SUBDIR += tdl
     SUBDIR += template-glib

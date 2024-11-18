@@ -76,7 +76,6 @@
     SUBDIR += ccsrch
     SUBDIR += certmgr
     SUBDIR += certspotter
-    SUBDIR += cfs
     SUBDIR += cfssl
     SUBDIR += cfv
     SUBDIR += chaosreader
@@ -95,7 +94,6 @@
     SUBDIR += clamav-lts
     SUBDIR += clamav-unofficial-sigs
     SUBDIR += clamd-stream-client
-    SUBDIR += clamfs
     SUBDIR += clamsmtp
     SUBDIR += clamtk
     SUBDIR += cloak
@@ -170,6 +168,7 @@
     SUBDIR += fwknop
     SUBDIR += fwlogwatch
     SUBDIR += gcr
+    SUBDIR += gcr3
     SUBDIR += gef
     SUBDIR += git-credential-azure
     SUBDIR += git-credential-gopass
@@ -202,7 +201,6 @@
     SUBDIR += gpgme
     SUBDIR += gpgme-cpp
     SUBDIR += gpgme-qt
-    SUBDIR += gpgme-qt-headers
     SUBDIR += gsa
     SUBDIR += gsad
     SUBDIR += gsasl
@@ -359,6 +357,7 @@
     SUBDIR += linux-rl9-nettle
     SUBDIR += linux-rl9-nss
     SUBDIR += linux-rl9-p11-kit
+    SUBDIR += linux-rl9-trousers
     SUBDIR += local-php-security-checker
     SUBDIR += logcheck
     SUBDIR += lua-argon2
@@ -926,7 +925,6 @@
     SUBDIR += py-cybox
     SUBDIR += py-detect-secrets
     SUBDIR += py-dfdatetime
-    SUBDIR += py-dfvfs
     SUBDIR += py-dfwinreg
     SUBDIR += py-dirhash
     SUBDIR += py-django-auth-kerberos
@@ -1241,6 +1239,7 @@
     SUBDIR += rubygem-sshkit
     SUBDIR += rubygem-sslshake
     SUBDIR += rubygem-ssrf_filter
+    SUBDIR += rubygem-ssrf_filter10
     SUBDIR += rubygem-timfel-krb5
     SUBDIR += rubygem-tpm-key_attestation
     SUBDIR += rubygem-twitter_oauth
