@@ -1,3 +1,244 @@
+  <vuln vid="7d7a28cd-7f5a-450a-852f-c49aaab3fa7e">
+    <topic>keycloak -- Multiple security fixes</topic>
+    <affects>
+      <package>
+	<name>keycloak</name>
+	<range><lt>26.0.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Keycloak reports:</p>
+	<blockquote cite="https://www.keycloak.org/2024/11/keycloak-2606-released.html">
+	  <p>This update includes 5 security fixes:</p>
+	  <ul>
+	    <li>CVE-2024-10451: Sensitive Data Exposure in Keycloak Build Process</li>
+	    <li>CVE-2024-10270: Potential Denial of Service</li>
+	    <li>CVE-2024-10492: Keycloak path trasversal</li>
+	    <li>CVE-2024-9666: Keycloak proxy header handling Denial-of-Service (DoS) vulnerability</li>
+	    <li>CVE-2024-10039: Bypassing mTLS validation</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-9666</cvename>
+      <cvename>CVE-2021-10039</cvename>
+      <cvename>CVE-2021-10270</cvename>
+      <cvename>CVE-2021-10451</cvename>
+      <cvename>CVE-2021-10492</cvename>
+    </references>
+    <dates>
+      <discovery>2024-11-22</discovery>
+      <entry>2024-11-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2263ea04-ac81-11ef-998c-2cf05da270f3">
+    <topic>Gitlab -- vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>17.6.0</ge><lt>17.6.1</lt></range>
+	<range><ge>17.5.0</ge><lt>17.5.3</lt></range>
+	<range><ge>8.12.0</ge><lt>17.4.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2024/11/26/patch-release-gitlab-17-6-1-released/">
+	  <p>Privilege Escalation via LFS Tokens</p>
+	  <p>DoS through uncontrolled resource consumption when viewing a maliciously crafted cargo.toml file</p>
+	  <p>Unintended Access to Usage Data via Scoped Tokens</p>
+	  <p>Gitlab DOS via Harbor registry integration</p>
+	  <p>Resource exhaustion and denial of service with test_report API calls</p>
+	  <p>Streaming endpoint did not invalidate tokens after revocation</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-8114</cvename>
+      <cvename>CVE-2024-8237</cvename>
+      <cvename>CVE-2024-11669</cvename>
+      <cvename>CVE-2024-8177</cvename>
+      <cvename>CVE-2024-11828</cvename>
+      <cvename>CVE-2024-11668</cvename>
+      <url>https://about.gitlab.com/releases/2024/11/26/patch-release-gitlab-17-6-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2024-11-26</discovery>
+      <entry>2024-11-27</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9dfca0cd-ab09-11ef-8c1c-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>131.0.6778.85</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>131.0.6778.85</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/11/stable-channel-update-for-desktop_19.html">
+	 <p>This update includes 3 security fixes:</p>
+	 <ul>
+	    <li>[377384894] High CVE-2024-11395: Type Confusion in V8. Reported by Anonymous on 2024-11-05</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-11395</cvename>
+      <url>https://chromereleases.googleblog.com/2024/11/stable-channel-update-for-desktop_19.html</url>
+    </references>
+    <dates>
+      <discovery>2024-11-19</discovery>
+      <entry>2024-11-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="889eddee-a964-11ef-b680-4ccc6adda413">
+    <topic>qt6-webengine -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>qt6-webengine</name>
+	<range><lt>6.7.3_2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Qt qtwebengine-chromium repo reports:</p>
+	<blockquote cite="https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=118-based">
+	  <p>Backports for 16 security bugs in Chromium:</p>
+	  <ul>
+	    <li>CVE-2024-9120: Use after free in Dawn</li>
+	    <li>CVE-2024-9122: Type Confusion in V8</li>
+	    <li>CVE-2024-9123: Integer overflow in Skia</li>
+	    <li>CVE-2024-9369: Insufficient data validation in Mojo</li>
+	    <li>CVE-2024-9602: Type confusion in V8</li>
+	    <li>CVE-2024-9603: Type confusion in V8</li>
+	    <li>CVE-2024-9965: Insufficient data validation in DevTools</li>
+	    <li>CVE-2024-9966: Inappropriate implementation in Navigations</li>
+	    <li>CVE-2024-10229: Inappropriate implementation in Extensions</li>
+	    <li>CVE-2024-10230: Type confusion in V8</li>
+	    <li>CVE-2024-10231: Type confusion in V8</li>
+	    <li>CVE-2024-10487: Out of bounds write in Dawn</li>
+	    <li>CVE-2024-10827: Use after free in Serial</li>
+	    <li>CVE-2024-45490: Negative length in libexpat</li>
+	    <li>CVE-2024-45491: Integer overflow in libexpat</li>
+	    <li>CVE-2024-45492: Integer overflow in libexpat</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-9120</cvename>
+      <cvename>CVE-2024-9122</cvename>
+      <cvename>CVE-2024-9123</cvename>
+      <cvename>CVE-2024-9369</cvename>
+      <cvename>CVE-2024-9602</cvename>
+      <cvename>CVE-2024-9603</cvename>
+      <cvename>CVE-2024-9965</cvename>
+      <cvename>CVE-2024-9966</cvename>
+      <cvename>CVE-2024-10229</cvename>
+      <cvename>CVE-2024-10230</cvename>
+      <cvename>CVE-2024-10231</cvename>
+      <cvename>CVE-2024-10487</cvename>
+      <cvename>CVE-2024-10827</cvename>
+      <cvename>CVE-2024-45490</cvename>
+      <cvename>CVE-2024-45491</cvename>
+      <cvename>CVE-2024-45492</cvename>
+      <url>https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=118-based</url>
+    </references>
+    <dates>
+      <discovery>2024-09-26</discovery>
+      <entry>2024-11-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="16e472d5-a8aa-11ef-b680-4ccc6adda413">
+    <topic>qt5-webengine -- Use after free in Serial</topic>
+    <affects>
+      <package>
+	<name>qt5-webengine</name>
+	<range><lt>5.15.18p5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Qt qtwebengine-chromium repo reports:</p>
+	<blockquote cite="https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=87-based">
+	  <p>Backports for 1 security bug in Chromium:</p>
+	  <ul>
+	    <li>CVE-2024-10827: Use after free in Serial</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-10827</cvename>
+      <url>https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=87-based</url>
+    </references>
+    <dates>
+      <discovery>2024-10-24</discovery>
+      <entry>2024-11-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="141f2a22-a6a7-11ef-b282-0c9d92850f7a">
+    <topic>xorg server -- _XkbSetCompatMap vulnerability</topic>
+    <affects>
+      <package>
+	<name>xorg-server</name>
+	<range><lt>21.1.14,1</lt></range>
+      </package>
+      <package>
+	<name>xwayland</name>
+	<range><lt>24.1.4,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The X.Org project reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2024-October/003545.html">
+	  <ul>
+	    <li>
+	      CVE-2024-9632: Heap buffer Heap-based buffer overflow
+		privilege escalation in _XkbSetCompatMap
+
+	      <p>The _XkbSetCompatMap() function attempts to resize
+		the `sym_interpret` buffer.
+
+		However, It didn't update its size properly.
+		It updated `num_si` only, without updating `size_si`.
+
+		This may lead to local privilege escalation if the
+		server is run as root or remote code execution
+		(e.g. x11 over ssh).</p>
+	    </li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-9632</cvename>
+      <url>https://lists.x.org/archives/xorg-announce/2024-October/003545.html</url>
+    </references>
+    <dates>
+      <discovery>2024-10-29</discovery>
+      <entry>2024-11-19</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="28ffa931-a510-11ef-8109-b42e991fc52e">
     <topic>mongodb -- Buffer over-reads in MongoDB Server</topic>
     <affects>
@@ -36,6 +277,33 @@
     <dates>
       <discovery>2024-11-14</discovery>
       <entry>2024-11-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="efd4537e-a5e8-11ef-bedb-180373b66b37">
+    <topic>Vaultwarden -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>vaultwarden</name>
+	<range><lt>1.32.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Vaultwarden project reports:</p>
+	<blockquote cite="https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.5">
+	  <p>This release further fixed some CVE Reports reported by a third
+	  party security auditor and we recommend everybody to update to the
+	  latest version as soon as possible.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.5</url>
+    </references>
+    <dates>
+      <discovery>2024-11-11</discovery>
+      <entry>2024-11-18</entry>
     </dates>
   </vuln>
 

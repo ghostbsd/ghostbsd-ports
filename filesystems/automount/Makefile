@@ -1,5 +1,6 @@
 PORTNAME=	automount
 DISTVERSION=	1.7.9
+PORTREVISION=	1
 CATEGORIES=	filesystems sysutils
 
 MAINTAINER=	vermaden@interia.pl
@@ -8,8 +9,7 @@ WWW=		https://github.com/vermaden/automount/
 
 LICENSE=	BSD2CLAUSE
 
-USE_GITHUB=     yes
-GH_ACCOUNT=     GhostBSD
+CONFLICTS_INSTALL=	devd-mount	# Competing devd rules
 
 PLIST_FILES=	sbin/automount \
 		etc/devd/automount_devd.conf \

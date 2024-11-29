@@ -188,6 +188,7 @@
     SUBDIR += mongodb60
     SUBDIR += mongodb70
     SUBDIR += mongodb80
+    SUBDIR += mongosh
     SUBDIR += movine
     SUBDIR += mroonga
     SUBDIR += mtop
@@ -756,6 +757,7 @@
     SUBDIR += py-carbon
     SUBDIR += py-cassandra-driver
     SUBDIR += py-couchdb
+    SUBDIR += py-cymysql
     SUBDIR += py-databases
     SUBDIR += py-dbf
     SUBDIR += py-dbt-core
