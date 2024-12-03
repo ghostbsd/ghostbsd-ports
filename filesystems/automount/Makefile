@@ -5,11 +5,13 @@ CATEGORIES=	filesystems sysutils
 
 MAINTAINER=	vermaden@interia.pl
 COMMENT=	FreeBSD's devd(8) based automount solution
-WWW=		https://github.com/vermaden/automount/
 
 LICENSE=	BSD2CLAUSE
 
 CONFLICTS_INSTALL=	devd-mount	# Competing devd rules
+
+USE_GITHUB=     yes
+GH_ACCOUNT=     GhostBSD
 
 PLIST_FILES=	sbin/automount \
 		etc/devd/automount_devd.conf \
@@ -18,6 +20,7 @@ PLIST_FILES=	sbin/automount \
 
 SUB_FILES=	pkg-install
 NO_BUILD=	yes
+NO_ARCH=	yes
 
 OPTIONS_DEFINE=		NTFS3G EXT4 EXFAT HFS
 OPTIONS_DEFAULT=	NTFS3G EXT4 EXFAT HFS
