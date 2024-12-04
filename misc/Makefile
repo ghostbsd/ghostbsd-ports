@@ -169,7 +169,6 @@
     SUBDIR += gnome-mime-data
     SUBDIR += gnome-user-docs
     SUBDIR += gnu-watch
-    SUBDIR += gnuls
     SUBDIR += gobuster
     SUBDIR += gollama
     SUBDIR += gone

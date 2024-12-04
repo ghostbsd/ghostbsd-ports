@@ -295,9 +295,9 @@
     SUBDIR += kf5-kjsembed
     SUBDIR += kineto
     SUBDIR += kiwix-tools
-    SUBDIR += kohana
     SUBDIR += ladybird
     SUBDIR += lagrange
+    SUBDIR += lexbor
     SUBDIR += libapreq2
     SUBDIR += libdatachannel
     SUBDIR += libdom
@@ -481,7 +481,6 @@
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
-    SUBDIR += npapi-xine
     SUBDIR += npc
     SUBDIR += npm
     SUBDIR += npm-node18
@@ -2041,6 +2040,7 @@
     SUBDIR += rubygem-faraday-follow_redirects-gitlab
     SUBDIR += rubygem-faraday-gitlab
     SUBDIR += rubygem-faraday-http-cache
+    SUBDIR += rubygem-faraday-http-cache-gitlab
     SUBDIR += rubygem-faraday-httpclient
     SUBDIR += rubygem-faraday-httpclient1
     SUBDIR += rubygem-faraday-multipart
