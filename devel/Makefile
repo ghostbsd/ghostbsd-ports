@@ -1794,7 +1794,6 @@
     SUBDIR += ocaml-rresult
     SUBDIR += ocaml-sdl
     SUBDIR += ocaml-sem
-    SUBDIR += ocaml-seq
     SUBDIR += ocaml-sexplib
     SUBDIR += ocaml-sexplib0
     SUBDIR += ocaml-stdio
@@ -4583,6 +4582,7 @@
     SUBDIR += py-cabby
     SUBDIR += py-cached-property
     SUBDIR += py-cachetools
+    SUBDIR += py-cachey
     SUBDIR += py-cacheyou
     SUBDIR += py-cachy
     SUBDIR += py-cadquery-pywrap
@@ -7449,6 +7449,7 @@
     SUBDIR += rubygem-libyajl2
     SUBDIR += rubygem-license_finder
     SUBDIR += rubygem-licensee
+    SUBDIR += rubygem-licensee-gitlab
     SUBDIR += rubygem-listen
     SUBDIR += rubygem-little-plugger
     SUBDIR += rubygem-local_time
@@ -8071,7 +8072,6 @@
     SUBDIR += serdisplib
     SUBDIR += sfml
     SUBDIR += sfml1
-    SUBDIR += sfml251
     SUBDIR += sfsexp
     SUBDIR += sgb
     SUBDIR += shadered

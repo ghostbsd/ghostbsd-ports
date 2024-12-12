@@ -143,6 +143,7 @@
     SUBDIR += dolibarr16
     SUBDIR += dolibarr17
     SUBDIR += dolibarr18
+    SUBDIR += dolibarr19
     SUBDIR += domoticz
     SUBDIR += domoticz-devel
     SUBDIR += dooble
@@ -266,6 +267,7 @@
     SUBDIR += httpclient
     SUBDIR += httpcore
     SUBDIR += httptunnel
+    SUBDIR += httpx
     SUBDIR += httrack
     SUBDIR += hurl
     SUBDIR += hypermail
@@ -288,6 +290,7 @@
     SUBDIR += kanboard
     SUBDIR += kannel
     SUBDIR += kannel-sqlbox
+    SUBDIR += katana
     SUBDIR += kcgi
     SUBDIR += kdsoap
     SUBDIR += kf5-khtml
@@ -1484,6 +1487,7 @@
     SUBDIR += py-cachecontrol
     SUBDIR += py-cachelib
     SUBDIR += py-caldav
+    SUBDIR += py-calibreweb
     SUBDIR += py-channels
     SUBDIR += py-channels-redis
     SUBDIR += py-cheroot
@@ -1750,7 +1754,7 @@
     SUBDIR += py-httpretty
     SUBDIR += py-httptools
     SUBDIR += py-httpx
-    SUBDIR += py-httpx-gssapi
+    SUBDIR += py-httpx_gssapi
     SUBDIR += py-httpx-oauth
     SUBDIR += py-httpx-socks
     SUBDIR += py-httpx-ws

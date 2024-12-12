@@ -4,7 +4,7 @@ DISTVERSION=	${ELECTRON_VER}
 PULSEMV=	16
 PULSEV=		${PULSEMV}.1
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v33.2.1/:chromium \
+MASTER_SITES=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v33.3.0/:chromium \
 		https://freedesktop.org/software/pulseaudio/releases/:pulseaudio
 PKGNAMESUFFIX=	${ELECTRON_VER_MAJOR}
 DISTFILES=	chromium-${CHROMIUM_VER}${EXTRACT_SUFX}.0:chromium \
@@ -85,7 +85,6 @@ GH_TUPLE=	nodejs:node:v${NODE_VER}:node \
 		EngFlow:reclient-configs:${ENGFLOW_RECLIENT_CONFIGS_VER}:reclient_configs
 USE_GL=		gbm gl glesv2
 USE_GNOME=	atk cairo gdkpixbuf2 gtk30 libxml2 libxslt pango
-USE_LDCONFIG=	${DATADIR}
 USE_XORG=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xrandr \
 		xrender xscrnsaver xtst
 
@@ -101,6 +100,7 @@ POST_BUILD_DIST_TARGETS=electron_dist_zip electron_chromedriver_zip \
 
 DATADIR=	${PREFIX}/share/${PORTNAME}${PKGNAMESUFFIX}
 BINARY_ALIAS=	python3=${PYTHON_CMD}
+BUNDLE_LIBS=	yes
 
 NO_WRKSUBDIR=	yes
 WRKSRC_SUBDIR=	src
@@ -220,7 +220,7 @@ SNDIO_VARS=		GN_ARGS+=use_sndio=true
 SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 
 # See ${WRKSRC}/electron/DEPS for CHROMIUM_VER
-CHROMIUM_VER=			130.0.6723.137
+CHROMIUM_VER=			130.0.6723.152
 # See ${WRKSRC}/electron/DEPS for NODE_VER
 NODE_VER=			20.18.1
 # See ${WRKSRC}/electron/DEPS for NAN_VER
