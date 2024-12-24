@@ -75,6 +75,7 @@
     SUBDIR += bareos20-webui
     SUBDIR += bareos21-webui
     SUBDIR += bareos22-webui
+    SUBDIR += bareos23-webui
     SUBDIR += beehive
     SUBDIR += bluefish
     SUBDIR += bozohttpd
@@ -108,6 +109,8 @@
     SUBDIR += civetweb
     SUBDIR += ckeditor
     SUBDIR += cl-lml
+    SUBDIR += cl-lml-ccl
+    SUBDIR += cl-lml-clisp
     SUBDIR += cl-lml-sbcl
     SUBDIR += clearsilver
     SUBDIR += closure-compiler
@@ -362,6 +365,7 @@
     SUBDIR += mediawiki139
     SUBDIR += mediawiki141
     SUBDIR += mediawiki142
+    SUBDIR += mediawiki143
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -1503,6 +1507,7 @@
     SUBDIR += py-daphne
     SUBDIR += py-dash
     SUBDIR += py-dj-database-url
+    SUBDIR += py-dj50-channels
     SUBDIR += py-dj50-django-auth-ldap
     SUBDIR += py-dj50-django-choices-field
     SUBDIR += py-dj50-django-cors-headers
@@ -2245,6 +2250,7 @@
     SUBDIR += rubygem-rack22
     SUBDIR += rubygem-rack_csrf
     SUBDIR += rubygem-rackup
+    SUBDIR += rubygem-rackup21
     SUBDIR += rubygem-rails-settings-cached
     SUBDIR += rubygem-rails-settings-cached-rails5
     SUBDIR += rubygem-rails-settings-cached-rails50

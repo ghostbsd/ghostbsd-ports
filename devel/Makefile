@@ -189,6 +189,7 @@
     SUBDIR += apache-commons-io
     SUBDIR += apache-commons-jxpath
     SUBDIR += apache-log4j2
+    SUBDIR += apache-orc
     SUBDIR += apache-rat
     SUBDIR += aphpbreakdown
     SUBDIR += aphpunit
@@ -411,18 +412,32 @@
     SUBDIR += cityhash
     SUBDIR += cjose
     SUBDIR += cl-alexandria
+    SUBDIR += cl-alexandria-ccl
+    SUBDIR += cl-alexandria-clisp
     SUBDIR += cl-alexandria-sbcl
     SUBDIR += cl-asdf
+    SUBDIR += cl-asdf-ccl
+    SUBDIR += cl-asdf-clisp
+    SUBDIR += cl-asdf-sbcl
     SUBDIR += cl-cffi
+    SUBDIR += cl-freebsd-asdf-init
     SUBDIR += cl-infix
+    SUBDIR += cl-infix-ccl
+    SUBDIR += cl-infix-clisp
     SUBDIR += cl-infix-sbcl
     SUBDIR += cl-port
     SUBDIR += cl-port-sbcl
     SUBDIR += cl-split-sequence
+    SUBDIR += cl-split-sequence-ccl
+    SUBDIR += cl-split-sequence-clisp
     SUBDIR += cl-split-sequence-sbcl
     SUBDIR += cl-trivial-features
+    SUBDIR += cl-trivial-features-ccl
+    SUBDIR += cl-trivial-features-clisp
     SUBDIR += cl-trivial-features-sbcl
     SUBDIR += cl-trivial-gray-streams
+    SUBDIR += cl-trivial-gray-streams-ccl
+    SUBDIR += cl-trivial-gray-streams-clisp
     SUBDIR += cl-trivial-gray-streams-sbcl
     SUBDIR += clazy
     SUBDIR += cld2
@@ -4196,6 +4211,7 @@
     SUBDIR += pecl-json_post
     SUBDIR += pecl-msgpack
     SUBDIR += pecl-mustache
+    SUBDIR += pecl-pcov
     SUBDIR += pecl-protobuf
     SUBDIR += pecl-psr
     SUBDIR += pecl-raphf2
@@ -4383,6 +4399,7 @@
     SUBDIR += py-apipkg
     SUBDIR += py-apispec
     SUBDIR += py-apispec-webframeworks
+    SUBDIR += py-app-model
     SUBDIR += py-appdirs
     SUBDIR += py-applicationinsights
     SUBDIR += py-apptools
@@ -4584,6 +4601,7 @@
     SUBDIR += py-cachetools
     SUBDIR += py-cachey
     SUBDIR += py-cacheyou
+    SUBDIR += py-cachier
     SUBDIR += py-cachy
     SUBDIR += py-cadquery-pywrap
     SUBDIR += py-calver
@@ -4653,6 +4671,7 @@
     SUBDIR += py-cluster
     SUBDIR += py-cmd2
     SUBDIR += py-cmdtest
+    SUBDIR += py-cobble
     SUBDIR += py-codecov
     SUBDIR += py-codegen
     SUBDIR += py-cog
@@ -5001,6 +5020,7 @@
     SUBDIR += py-importlib-metadata6
     SUBDIR += py-importlib-metadata7
     SUBDIR += py-importlib-resources
+    SUBDIR += py-in-n-out
     SUBDIR += py-incremental
     SUBDIR += py-infinity
     SUBDIR += py-inflect
@@ -5214,6 +5234,7 @@
     SUBDIR += py-mondrian
     SUBDIR += py-mongokit
     SUBDIR += py-monkeytype
+    SUBDIR += py-monotable
     SUBDIR += py-monotonic
     SUBDIR += py-monty
     SUBDIR += py-more-itertools
@@ -5392,6 +5413,7 @@
     SUBDIR += py-pew
     SUBDIR += py-pex
     SUBDIR += py-phabricator
+    SUBDIR += py-phmdoctest
     SUBDIR += py-phonenumbers
     SUBDIR += py-phply
     SUBDIR += py-phpserialize
@@ -5510,10 +5532,12 @@
     SUBDIR += py-pycognito
     SUBDIR += py-pycompilation
     SUBDIR += py-pycomplete
+    SUBDIR += py-pyconify
     SUBDIR += py-pycparser
     SUBDIR += py-pycrdt
     SUBDIR += py-pycrdt-websocket
     SUBDIR += py-pydantic
+    SUBDIR += py-pydantic-compat
     SUBDIR += py-pydantic-core
     SUBDIR += py-pydantic-extra-types
     SUBDIR += py-pydantic-settings
@@ -5670,6 +5694,7 @@
     SUBDIR += py-pytest-regtest
     SUBDIR += py-pytest-relaxed
     SUBDIR += py-pytest-remotedata
+    SUBDIR += py-pytest-repeat
     SUBDIR += py-pytest-rerunfailures
     SUBDIR += py-pytest-ruff
     SUBDIR += py-pytest-runner
@@ -5929,6 +5954,7 @@
     SUBDIR += py-strictyaml
     SUBDIR += py-stringbrewer
     SUBDIR += py-stringcase
+    SUBDIR += py-stringzilla
     SUBDIR += py-structlog
     SUBDIR += py-subprocess-tee
     SUBDIR += py-subversion
@@ -8268,6 +8294,7 @@
     SUBDIR += umlgraph
     SUBDIR += undead
     SUBDIR += unibilium
+    SUBDIR += unit-otel
     SUBDIR += universal-ctags
     SUBDIR += unordered-dense
     SUBDIR += upnp

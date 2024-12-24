@@ -1,6 +1,5 @@
 PORTNAME=	ox
-DISTVERSION=	0.6.6
-PORTREVISION=	2
+DISTVERSION=	0.7.5
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-text-editor
 
@@ -10,6 +9,8 @@ WWW=		https://github.com/curlpipe/ox/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	compilation fails, see https://github.com/zhiburt/ptyprocess/issues/17
 
 USES=		cargo
 
