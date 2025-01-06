@@ -15,7 +15,10 @@ LICENSE_COMB=	multi
 
 CONFLICTS?=	bareos20-server bareos21-server bareos22-server bareos23-server
 
-BUILD_DEPENDS+=	tl-expected>0:devel/tl-expected \
+BUILD_DEPENDS+=	utf8cpp>0:devel/utf8cpp \
+		microsoft-gsl>0:devel/microsoft-gsl \
+		xxhash>0:devel/xxhash \
+		tl-expected>0:devel/tl-expected \
 		cli11>0:devel/cli11
 LIB_DEPENDS+=	liblzo2.so:archivers/lzo2 \
 		libjansson.so:devel/jansson \
@@ -189,8 +192,6 @@ MP1+=	bsmtp.1 bregex.1 bwild.1 bareos-tray-monitor.1
 MAKE_ENV+=	MAN8="${MP8}" MAN1="${MP1}"
 
 post-patch:
-	@${REINPLACE_CMD}  '136,141d' ${WRKSRC}/CMakeLists.txt
-	@${REINPLACE_CMD}  '202d' ${WRKSRC}/CMakeLists.txt
 .if ${PKGNAMESUFFIX} == "-server"
 	@${REINPLACE_CMD}  '51d' ${WRKSRC}/core/src/plugins/CMakeLists.txt
 .endif

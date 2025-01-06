@@ -787,6 +787,7 @@
     SUBDIR += pc-pdfviewer
     SUBDIR += partio
     SUBDIR += pastel
+    SUBDIR += pcdtojpeg
     SUBDIR += pcl-pointclouds
     SUBDIR += pdf2svg
     SUBDIR += pdfpc
