@@ -1,5 +1,5 @@
 PORTNAME=	ghostbsd-utils
-PORTVERSION=	22.10.11
+PORTVERSION=	24.01.1
 PORTREVISION=	0
 CATEGORIES=	sysutils
 
@@ -17,7 +17,6 @@ RUN_DEPENDS=	update-station:ports-mgmt/update-station \
 		networkmgr:net-mgmt/networkmgr \
 		software-station:ports-mgmt/software-station \
 		fish:shells/fish \
-		webcamd:multimedia/webcamd \
-		${LOCALBASE}/sbin/automount:filesystems/automount
+		webcamd:multimedia/webcamd
 
 .include <bsd.port.mk>
