@@ -1,5 +1,5 @@
 PORTNAME=	cargo-about
-DISTVERSION=	0.6.5
+DISTVERSION=	0.6.6
 PORTREVISION=	1
 CATEGORIES=	devel
 
@@ -290,5 +290,12 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		zstd-sys-2.0.13+zstd.1.5.6
 
 PLIST_FILES=	bin/${PORTNAME}
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc
+LIB_DEPENDS+=	libatomic.so:lang/gcc${GCC_DEFAULT}
+LDFLAGS+=	-L/usr/local/lib/gcc${GCC_DEFAULT} -latomic
+.endif
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	mutmut
-DISTVERSION=	3.2.0
+DISTVERSION=	3.2.3
 CATEGORIES=	devel
 #MASTER_SITES=	PYPI # no tests
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -32,5 +32,7 @@ GH_ACCOUNT=	boxed
 NO_ARCH=	yes
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
+
+# tests as of 3.2.3: 102 passed in 1.74s
 
 .include <bsd.port.mk>

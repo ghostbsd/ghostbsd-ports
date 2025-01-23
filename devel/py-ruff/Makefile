@@ -1,5 +1,6 @@
 PORTNAME=	ruff
-DISTVERSION=	0.8.3
+DISTVERSION=	0.9.2
+PORTREVISION=	1
 CATEGORIES=	devel python
 #MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -31,13 +32,14 @@ CARGO_CRATES=	adler-1.0.2 \
 		android_system_properties-0.1.5 \
 		anes-0.1.6 \
 		annotate-snippets-0.6.1 \
-		annotate-snippets-0.9.2 \
-		anstream-0.6.13 \
-		anstyle-1.0.8 \
+		anstream-0.6.18 \
+		anstyle-1.0.10 \
+		anstyle-lossy-1.1.3 \
 		anstyle-parse-0.2.3 \
 		anstyle-query-1.0.2 \
-		anstyle-wincon-3.0.2 \
-		anyhow-1.0.94 \
+		anstyle-svg-0.1.7 \
+		anstyle-wincon-3.0.6 \
+		anyhow-1.0.95 \
 		append-only-vec-0.1.5 \
 		arc-swap-1.7.1 \
 		argfile-0.2.1 \
@@ -48,10 +50,10 @@ CARGO_CRATES=	adler-1.0.2 \
 		base64-0.22.0 \
 		bincode-1.3.3 \
 		bitflags-1.3.2 \
-		bitflags-2.6.0 \
+		bitflags-2.7.0 \
 		block-buffer-0.10.4 \
 		boxcar-0.2.7 \
-		bstr-1.11.0 \
+		bstr-1.11.3 \
 		bumpalo-3.16.0 \
 		byteorder-1.5.0 \
 		cachedir-0.3.1 \
@@ -60,26 +62,26 @@ CARGO_CRATES=	adler-1.0.2 \
 		castaway-0.2.3 \
 		cc-1.2.2 \
 		cfg-if-1.0.0 \
-		cfg_aliases-0.1.1 \
 		cfg_aliases-0.2.1 \
 		chic-1.2.2 \
-		chrono-0.4.38 \
+		chrono-0.4.39 \
 		ciborium-0.2.2 \
 		ciborium-io-0.2.2 \
 		ciborium-ll-0.2.2 \
-		clap-4.5.23 \
-		clap_builder-4.5.23 \
+		clap-4.5.26 \
+		clap_builder-4.5.26 \
 		clap_complete-4.5.2 \
 		clap_complete_command-0.6.1 \
 		clap_complete_nushell-4.5.2 \
-		clap_derive-4.5.18 \
+		clap_derive-4.5.24 \
 		clap_lex-0.7.4 \
-		clearscreen-3.0.0 \
+		clearscreen-4.0.1 \
 		codspeed-2.7.2 \
 		codspeed-criterion-compat-2.7.2 \
 		colorchoice-1.0.0 \
-		colored-2.1.0 \
-		compact_str-0.8.0 \
+		colored-2.2.0 \
+		colored-3.0.0 \
+		compact_str-0.8.1 \
 		console-0.15.8 \
 		console_error_panic_hook-0.1.7 \
 		console_log-1.0.0 \
@@ -108,9 +110,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		digest-0.10.7 \
 		dir-test-0.4.1 \
 		dir-test-macros-0.4.1 \
-		dirs-4.0.0 \
 		dirs-5.0.1 \
-		dirs-sys-0.3.7 \
 		dirs-sys-0.4.1 \
 		displaydoc-0.2.5 \
 		doc-comment-0.3.3 \
@@ -120,12 +120,15 @@ CARGO_CRATES=	adler-1.0.2 \
 		either-1.11.0 \
 		encode_unicode-0.3.6 \
 		env_filter-0.1.0 \
-		env_logger-0.11.5 \
+		env_home-0.1.0 \
+		env_logger-0.11.6 \
 		equivalent-1.0.1 \
 		errno-0.3.8 \
+		escape8259-0.5.3 \
+		escargot-0.5.13 \
 		etcetera-0.8.0 \
 		fastrand-2.1.1 \
-		fern-0.7.0 \
+		fern-0.7.1 \
 		filetime-0.2.25 \
 		flate2-1.0.28 \
 		fnv-1.0.7 \
@@ -135,7 +138,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		generic-array-0.14.7 \
 		getopts-0.2.21 \
 		getrandom-0.2.14 \
-		glob-0.3.1 \
+		glob-0.3.2 \
 		globset-0.4.15 \
 		globwalk-0.9.1 \
 		half-2.4.1 \
@@ -145,6 +148,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		heck-0.5.0 \
 		hermit-abi-0.3.9 \
 		home-0.5.9 \
+		html-escape-0.2.13 \
 		humantime-2.1.0 \
 		iana-time-zone-0.1.60 \
 		iana-time-zone-haiku-0.1.2 \
@@ -169,15 +173,17 @@ CARGO_CRATES=	adler-1.0.2 \
 		indoc-2.0.5 \
 		inotify-0.10.2 \
 		inotify-sys-0.1.5 \
-		insta-1.41.1 \
+		insta-1.42.0 \
 		insta-cmd-0.6.0 \
 		instant-0.1.12 \
 		is-docker-0.2.0 \
 		is-macro-0.3.7 \
 		is-terminal-0.4.12 \
 		is-wsl-0.4.0 \
+		is_terminal_polyfill-1.70.1 \
 		itertools-0.10.5 \
 		itertools-0.13.0 \
+		itertools-0.14.0 \
 		itoa-1.0.11 \
 		jobserver-0.1.32 \
 		jod-thread-0.1.2 \
@@ -185,20 +191,21 @@ CARGO_CRATES=	adler-1.0.2 \
 		kqueue-1.0.8 \
 		kqueue-sys-1.0.4 \
 		lazy_static-1.4.0 \
-		libc-0.2.167 \
-		libcst-1.5.1 \
-		libcst_derive-1.4.0 \
+		libc-0.2.169 \
+		libcst-1.6.0 \
+		libcst_derive-1.6.0 \
 		libmimalloc-sys-0.1.39 \
 		libredox-0.1.3 \
+		libtest-mimic-0.7.3 \
 		linked-hash-map-0.5.6 \
 		linux-raw-sys-0.4.14 \
 		litemap-0.7.3 \
 		lock_api-0.4.11 \
 		log-0.4.22 \
-		lsp-server-0.7.7 \
+		lsp-server-0.7.8 \
 		matchers-0.1.0 \
 		matches-0.1.10 \
-		matchit-0.8.5 \
+		matchit-0.8.6 \
 		memchr-2.7.4 \
 		mimalloc-0.1.43 \
 		minicov-0.3.5 \
@@ -207,19 +214,21 @@ CARGO_CRATES=	adler-1.0.2 \
 		mio-1.0.2 \
 		natord-1.0.9 \
 		newtype-uuid-1.1.3 \
-		nix-0.28.0 \
 		nix-0.29.0 \
 		nom-7.1.3 \
+		normalize-line-endings-0.3.0 \
 		notify-7.0.0 \
 		notify-types-1.0.0 \
 		nu-ansi-term-0.46.0 \
 		nu-ansi-term-0.50.1 \
 		num-traits-0.2.18 \
+		num_cpus-1.16.0 \
 		number_prefix-0.4.0 \
 		once_cell-1.20.2 \
 		oorandom-11.1.3 \
 		option-ext-0.2.0 \
 		ordermap-0.5.4 \
+		os_pipe-1.2.1 \
 		os_str_bytes-7.0.0 \
 		overload-0.1.1 \
 		parking_lot-0.12.3 \
@@ -251,13 +260,13 @@ CARGO_CRATES=	adler-1.0.2 \
 		predicates-core-1.0.8 \
 		predicates-tree-1.0.11 \
 		pretty_assertions-1.4.1 \
-		proc-macro2-1.0.92 \
+		proc-macro2-1.0.93 \
 		pyproject-toml-0.13.4 \
 		quick-junit-0.5.1 \
 		quick-xml-0.37.1 \
 		quickcheck-1.0.3 \
 		quickcheck_macros-1.0.0 \
-		quote-1.0.37 \
+		quote-1.0.38 \
 		rand-0.8.5 \
 		rand_chacha-0.3.1 \
 		rand_core-0.6.4 \
@@ -288,16 +297,16 @@ CARGO_CRATES=	adler-1.0.2 \
 		scoped-tls-1.0.1 \
 		scopeguard-1.2.0 \
 		seahash-4.1.0 \
-		serde-1.0.215 \
+		serde-1.0.217 \
 		serde-wasm-bindgen-0.6.5 \
-		serde_derive-1.0.215 \
+		serde_derive-1.0.217 \
 		serde_derive_internals-0.29.0 \
-		serde_json-1.0.133 \
+		serde_json-1.0.135 \
 		serde_repr-0.1.19 \
 		serde_spanned-0.6.7 \
 		serde_test-1.0.177 \
-		serde_with-3.11.0 \
-		serde_with_macros-3.11.0 \
+		serde_with-3.12.0 \
+		serde_with_macros-3.12.0 \
 		sha2-0.10.8 \
 		sharded-slab-0.1.7 \
 		shellexpand-3.1.0 \
@@ -305,6 +314,8 @@ CARGO_CRATES=	adler-1.0.2 \
 		similar-2.6.0 \
 		siphasher-0.3.11 \
 		smallvec-1.13.2 \
+		snapbox-0.6.21 \
+		snapbox-macros-0.3.10 \
 		spin-0.9.8 \
 		stable_deref_trait-1.2.0 \
 		static_assertions-1.1.0 \
@@ -315,20 +326,22 @@ CARGO_CRATES=	adler-1.0.2 \
 		strum_macros-0.26.4 \
 		subtle-2.5.0 \
 		syn-1.0.109 \
-		syn-2.0.90 \
+		syn-2.0.96 \
 		synstructure-0.13.1 \
 		tempfile-3.14.0 \
+		termcolor-1.4.1 \
 		terminal_size-0.4.0 \
-		terminfo-0.8.0 \
+		terminfo-0.9.0 \
 		termtree-0.4.1 \
 		test-case-3.3.1 \
 		test-case-core-3.3.1 \
 		test-case-macros-3.3.1 \
 		thiserror-1.0.67 \
-		thiserror-2.0.6 \
+		thiserror-2.0.11 \
 		thiserror-impl-1.0.67 \
-		thiserror-impl-2.0.6 \
+		thiserror-impl-2.0.11 \
 		thread_local-1.1.8 \
+		threadpool-1.8.1 \
 		tikv-jemalloc-sys-0.6.0+5.3.0-1-ge13ca993e8ccb9ba9847cc330696e02839f328f7 \
 		tikv-jemallocator-0.6.0 \
 		tinystr-0.7.6 \
@@ -346,6 +359,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		tracing-log-0.2.0 \
 		tracing-subscriber-0.3.19 \
 		tracing-tree-0.4.0 \
+		tryfn-0.2.3 \
 		typed-arena-2.0.2 \
 		typenum-1.17.0 \
 		ucd-trie-0.1.6 \
@@ -366,16 +380,18 @@ CARGO_CRATES=	adler-1.0.2 \
 		url-2.5.4 \
 		urlencoding-2.1.3 \
 		utf16_iter-1.0.5 \
+		utf8-width-0.1.7 \
 		utf8_iter-1.0.4 \
 		utf8parse-0.2.1 \
-		uuid-1.11.0 \
-		uuid-macro-internal-1.11.0 \
+		uuid-1.11.1 \
+		uuid-macro-internal-1.11.1 \
 		valuable-0.1.0 \
 		version-ranges-0.1.1 \
 		version_check-0.9.4 \
 		vt100-0.15.2 \
 		vte-0.11.1 \
 		vte_generate_state_changes-0.1.1 \
+		wait-timeout-0.2.0 \
 		walkdir-2.5.0 \
 		wasi-0.11.0+wasi-snapshot-preview1 \
 		wasm-bindgen-0.2.97 \
@@ -389,7 +405,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		web-sys-0.3.74 \
 		web-time-1.1.0 \
 		webpki-roots-0.26.1 \
-		which-6.0.1 \
+		which-7.0.1 \
 		wild-2.2.1 \
 		winapi-0.3.9 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
@@ -421,7 +437,6 @@ CARGO_CRATES=	adler-1.0.2 \
 		write16-1.0.0 \
 		writeable-0.5.5 \
 		yansi-1.0.1 \
-		yansi-term-0.1.2 \
 		yoke-0.7.4 \
 		yoke-derive-0.7.4 \
 		zerocopy-0.7.32 \
@@ -435,7 +450,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		zstd-0.11.2+zstd.1.5.2 \
 		zstd-safe-5.0.2+zstd.1.5.2 \
 		zstd-sys-2.0.11+zstd.1.5.6 \
-		salsa,salsa-macro-rules,salsa-macros@git+https://github.com/salsa-rs/salsa.git?rev=254c749b02cde2fd29852a7463a33e800b771758\#254c749b02cde2fd29852a7463a33e800b771758 \
+		salsa,salsa-macro-rules,salsa-macros@git+https://github.com/salsa-rs/salsa.git?rev=88a1d7774d78f048fbd77d40abca9ebd729fd1f0\#88a1d7774d78f048fbd77d40abca9ebd729fd1f0 \
 		lsp-types@git+https://github.com/astral-sh/lsp-types.git?rev=3512a9f\#3512a9f33eadc5402cfab1b8f7340824c8ca1439
 
 CARGO_BUILD=	no

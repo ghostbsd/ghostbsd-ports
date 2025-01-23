@@ -71,8 +71,6 @@
     SUBDIR += badwolf
     SUBDIR += baikal
     SUBDIR += bareos-webui
-    SUBDIR += bareos20-webui
-    SUBDIR += bareos21-webui
     SUBDIR += bareos22-webui
     SUBDIR += bareos23-webui
     SUBDIR += beehive
@@ -362,7 +360,6 @@
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
     SUBDIR += mediawiki139
-    SUBDIR += mediawiki141
     SUBDIR += mediawiki142
     SUBDIR += mediawiki143
     SUBDIR += mergelog
@@ -467,6 +464,7 @@
     SUBDIR += nextcloud-deck
     SUBDIR += nextcloud-forms
     SUBDIR += nextcloud-groupfolders
+    SUBDIR += nextcloud-news
     SUBDIR += nextcloud-notes
     SUBDIR += nextcloud-tasks
     SUBDIR += nghttp2
@@ -1342,6 +1340,7 @@
     SUBDIR += p5-Woothee
     SUBDIR += p5-WordPress-XMLRPC
     SUBDIR += p5-Yahoo-Search
+    SUBDIR += p5-Zonemaster-GUI
     SUBDIR += p5-chklinks
     SUBDIR += p5-jQuery-File-Upload
     SUBDIR += p5-libapreq2
@@ -1521,6 +1520,7 @@
     SUBDIR += py-dj50-django-tables2
     SUBDIR += py-dj50-django-taggit
     SUBDIR += py-dj50-django-timezone-field
+    SUBDIR += py-dj50-django-tree-queries
     SUBDIR += py-dj50-djangorestframework
     SUBDIR += py-dj50-drf-spectacular
     SUBDIR += py-dj50-drf-spectacular-sidecar
@@ -1629,6 +1629,7 @@
     SUBDIR += py-django-templatetag-sugar
     SUBDIR += py-django-timezone-field
     SUBDIR += py-django-tinymce
+    SUBDIR += py-django-tree-queries
     SUBDIR += py-django-treebeard
     SUBDIR += py-django-unfold
     SUBDIR += py-django-voting
@@ -2566,8 +2567,7 @@
     SUBDIR += webgrind
     SUBDIR += webhook
     SUBDIR += webinject
-    SUBDIR += webkit2-gtk3
-    SUBDIR += webkit2-gtk4
+    SUBDIR += webkit2-gtk
     SUBDIR += weblint++
     SUBDIR += webpy
     SUBDIR += webresolve

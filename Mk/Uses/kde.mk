@@ -100,7 +100,7 @@ KDE_PLASMA5_VERSION?=		5.27.11
 KDE_PLASMA5_BRANCH?=		stable
 
 # Next KDE Plasma desktop
-KDE_PLASMA6_VERSION?=		6.2.4
+KDE_PLASMA6_VERSION?=		6.2.5
 KDE_PLASMA6_BRANCH?=		stable
 
 # Current KDE frameworks.
@@ -274,7 +274,7 @@ _USE_KDE_BOTH=		akonadi libkcddb libkcompactdisc libkdcraw libkdegames \
 # that our list of frameworks matches the structure offered upstream.
 _USE_FRAMEWORKS_TIER1=	apidox archive attica breeze-icons codecs config \
 			coreaddons dbusaddons dnssd holidays i18n idletime itemmodels \
-			itemviews kirigami2 kquickcharts oxygen-icons5 plotting prison \
+			itemviews kirigami2 kquickcharts plotting prison \
 			qqc2-desktop-style solid sonnet syntaxhighlighting \
 			threadweaver wayland widgetsaddons windowsystem
 # NOT LISTED TIER1: modemmanagerqt networkmanagerqt (not applicable)
@@ -313,7 +313,7 @@ _USE_FRAMEWORKS6_ALL=	ecm colorscheme \
 			plasma-wayland-protocols \
 			texttemplate \
 			userfeedback \
-			${_USE_FRAMEWORKS_TIER1:Noxygen-icons5:Nwayland} \
+			${_USE_FRAMEWORKS_TIER1:Nwayland} \
 			${_USE_FRAMEWORKS_TIER2} \
 			${_USE_FRAMEWORKS_TIER3:Nemoticons:Ndesignerplugin:Nactivities:Nactivities-stats:Ninit:Nplasma-framework:Nxmlrpcclient:Nkpipewire} \
 			${_USE_FRAMEWORKS_TIER4} \
@@ -402,7 +402,8 @@ kde-baloo_LIB=			libKF${_KDE_VERSION}Baloo.so
 kde-bookmarks_PORT=		devel/kf${_KDE_VERSION}-kbookmarks
 kde-bookmarks_LIB=		libKF${_KDE_VERSION}Bookmarks.so
 
-kde-breeze-icons_PORT=		x11-themes/kf${_KDE_VERSION}-breeze-icons
+# Use the latest icons from KDE Frameworks 6
+kde-breeze-icons_PORT=		x11-themes/kf6-breeze-icons
 kde-breeze-icons_PATH=		${KDE_PREFIX}/share/icons/breeze/index.theme
 
 kde-codecs_PORT=		textproc/kf${_KDE_VERSION}-kcodecs
@@ -541,10 +542,6 @@ kde-notifications_LIB=		libKF${_KDE_VERSION}Notifications.so
 
 kde-notifyconfig_PORT=		devel/kf${_KDE_VERSION}-knotifyconfig
 kde-notifyconfig_LIB=		libKF${_KDE_VERSION}NotifyConfig.so
-
-kde-oxygen-icons5_PORT=		x11-themes/kf${_KDE_VERSION}-oxygen-icons5
-kde-oxygen-icons5_PATH=		${KDE_PREFIX}/share/icons/oxygen/index.theme
-kde-oxygen-icons5_TYPE=		run
 
 kde-oxygen-sounds_PORT=		audio/plasma${_KDE_VERSION}-oxygen-sounds
 kde-oxygen-sounds_PATH=		${KDE_PREFIX}/share/sounds/Oxygen-Sys-Log-In.ogg
@@ -801,9 +798,7 @@ kde-xdg-desktop-portal-kde_PATH=	${KDE_PREFIX}/lib/libexec/xdg-desktop-portal-kd
 kde-plasma5support_PORT=	devel/plasma${_KDE_VERSION}-plasma5support
 kde-plasma5support_LIB=		libPlasma5Support.so
 
-kde-kirigami-addons_PORT5=	x11-toolkits/kirigami-addons
-kde-kirigami-addons_PORT6=	x11-toolkits/kirigami-addons-devel
-kde-kirigami-addons_PORT=	${kde-kirigami-addons_PORT${_KDE_VERSION}}
+kde-kirigami-addons_PORT=	x11-toolkits/kirigami-addons-qt${_KDE_VERSION}
 kde-kirigami-addons_PATH=	${QT_QMLDIR}/org/kde/kirigamiaddons/components/libcomponentsplugin.so
 
 kde-globalacceld_PORT=		x11/plasma${_KDE_VERSION}-kglobalacceld

@@ -568,6 +568,7 @@
     SUBDIR += linux-rl9-webp
     SUBDIR += lua-gd
     SUBDIR += luminance-qt5
+    SUBDIR += lunasvg
     SUBDIR += lux
     SUBDIR += lximage-qt
     SUBDIR += magnum
@@ -841,6 +842,8 @@
     SUBDIR += plantuml
     SUBDIR += plasma-kmod
     SUBDIR += plotutils
+    SUBDIR += plutosvg
+    SUBDIR += plutovg
     SUBDIR += png
     SUBDIR += png++
     SUBDIR += png2html
@@ -980,6 +983,7 @@
     SUBDIR += py-pygeos
     SUBDIR += py-pyglet
     SUBDIR += py-pyglet1
+    SUBDIR += py-pyglm
     SUBDIR += py-pygltflib
     SUBDIR += py-pygraph
     SUBDIR += py-pygraphviz
@@ -1018,6 +1022,7 @@
     SUBDIR += py-spectra
     SUBDIR += py-sqlalchemy-imageattach
     SUBDIR += py-svg.path
+    SUBDIR += py-svgelements
     SUBDIR += py-svgwrite
     SUBDIR += py-termtosvg
     SUBDIR += py-tifffile

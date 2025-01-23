@@ -1,8 +1,8 @@
 PORTNAME=	virtualbox-ose
 DISTVERSION=	5.2.44
-PORTREVISION?=	6
+PORTREVISION?=	7
 CATEGORIES=	emulators
-MASTER_SITES=	https://download.virtualbox.com/virtualbox/${DISTVERSION}/
+MASTER_SITES=	https://download.virtualbox.org/virtualbox/${DISTVERSION}/
 PKGNAMESUFFIX?=	-additions-legacy
 DISTNAME=	VirtualBox-${DISTVERSION}
 
@@ -133,10 +133,6 @@ post-patch:
 .endif
 .if ${PORT_OPTIONS:MPAE}
 	@${ECHO_CMD} 'VBOX_FREEBSD = -DPAE' >> ${WRKSRC}/LocalConfig.kmk
-.endif
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400093
-	@${REINPLACE_CMD} -e 's|enum vtype|enum enum_vtype_uint8|g' \
-		${WRKSRC}/src/VBox/Additions/freebsd/vboxvfs/vboxvfs*.[ch]
 .endif
 
 post-patch-X11-on:

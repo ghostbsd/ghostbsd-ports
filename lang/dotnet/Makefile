@@ -1,7 +1,6 @@
 PORTNAME=	dotnet
 DISTVERSIONPREFIX=	v
-DISTVERSION=	${DOTNETVERSION}.0
-PORTREVISION=	2
+DISTVERSION=	${DOTNETVERSION}.1
 CATEGORIES=	lang devel
 MASTER_SITES=	https://github.com/dotnet/dotnet/releases/download/${DISTVERSIONPREFIX}${DISTVERSION}/release.json?dummy=/:dotnetmanifest \
 		https://github.com/sec/dotnet-core-freebsd-source-build/releases/download/9.0.0-rc.2-native/:bootstrap
@@ -49,8 +48,8 @@ BOOTSTRAP_SOURCEBUILT_ARTIFACTS_DISTNAME=	Private.SourceBuilt.Artifacts.${BOOTST
 BOOTSTRAP_SDK_DISTNAME=				dotnet-sdk-${BOOTSTRAP_SDKVERSION}${BOOTSTRAP_SDKVERSIONBINSUFFIX}-freebsd-${DOTNET_ARCH}
 
 DOTNETVERSION=		9.0
-SDKVERSION=		${DOTNETVERSION}.100
-SDKVERSIONSUFFIX=	-rtm.24529.1
+SDKVERSION=		${DOTNETVERSION}.102
+SDKVERSIONSUFFIX=	-rtm.24610.9
 SDK_DISTNAME=		dotnet-sdk-${SDKVERSION}-${SDK_RID}
 SDK_RID=		freebsd.${_OSVERSION_MAJOR}-${DOTNET_ARCH}
 DOTNET_ARCH=		${ARCH:S|amd64|x64|:C|aarch64|arm64|}
@@ -100,16 +99,16 @@ do-build:
 		-maxcpucount:${MAKE_JOBS_NUMBER}
 
 do-install:
-	${MKDIR} ${STAGEDIR}${PREFIX}/dotnet
-	${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${WRKSRC}/artifacts/assets/Release/${SDK_DISTNAME}${EXTRACT_SUFX} -C ${STAGEDIR}${PREFIX}/dotnet ${EXTRACT_AFTER_ARGS}
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${WRKSRC}/artifacts/assets/Release/${SDK_DISTNAME}${EXTRACT_SUFX} -C ${STAGEDIR}${DATADIR} ${EXTRACT_AFTER_ARGS}
 	${FIND} ${WRKSRC}/artifacts/packages/Release -name "*freebsd*.nupkg" -exec \
-		${INSTALL_DATA} {} ${STAGEDIR}${PREFIX}/dotnet/library-packs/ \;
+		${INSTALL_DATA} {} ${STAGEDIR}${DATADIR}/library-packs/ \;
 
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/dotnet/sdk/${SDKVERSION}/AppHostTemplate/apphost
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/dotnet/packs/Microsoft.NETCore.App.Host.${SDK_RID}/${DISTVERSION}/runtimes/${SDK_RID}/native/apphost
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/dotnet/packs/Microsoft.NETCore.App.Host.${SDK_RID}/${DISTVERSION}/runtimes/${SDK_RID}/native/singlefilehost
-	${FIND} ${STAGEDIR}${PREFIX}/dotnet -name "*.so" -exec ${STRIP_CMD} -s "{}" ";"
+	${STRIP_CMD} ${STAGEDIR}${DATADIR}/sdk/${SDKVERSION}/AppHostTemplate/apphost
+	${STRIP_CMD} ${STAGEDIR}${DATADIR}/packs/Microsoft.NETCore.App.Host.${SDK_RID}/${DISTVERSION}/runtimes/${SDK_RID}/native/apphost
+	${STRIP_CMD} ${STAGEDIR}${DATADIR}/packs/Microsoft.NETCore.App.Host.${SDK_RID}/${DISTVERSION}/runtimes/${SDK_RID}/native/singlefilehost
+	${FIND} ${STAGEDIR}${DATADIR} -name "*.so" -exec ${STRIP_CMD} -s "{}" ";"
 
-	${RLN} ${STAGEDIR}${PREFIX}/dotnet/dotnet ${STAGEDIR}${PREFIX}/bin/dotnet
+	${RLN} ${STAGEDIR}${DATADIR}/dotnet ${STAGEDIR}${PREFIX}/bin/dotnet
 
 .include <bsd.port.post.mk>

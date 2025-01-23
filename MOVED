@@ -3821,7 +3821,7 @@ security/gnome-ssh-askpass||2025-01-01|Has expired: Uses deprecated gtk2 library
 comms/concordance||2025-01-01|Has expired: Logitech Harmony were officially discontinued in 2021, last major product in 2019
 lang/parrot||2025-01-01|Has expired: Development stopped in 2017
 net-im/purple-plugin-pack||2025-01-01|Has expired: Uses deprecated gtk2 libraries
-security/sssd|security/sssd2|2025-01-01|Has expired: Not supported, please use deve/sssd2
+security/sssd|security/sssd2|2025-01-01|Has expired: Not supported, please use security/sssd2
 databases/ldb22||2025-01-01|Has expired: Required only by security/sssd, which expires on 2024-12-31
 databases/postgresql12-contrib||2025-01-01|Has expired: PostgreSQL-12 is end-of-life
 databases/postgresql12-client||2025-01-01|Has expired: PostgreSQL-12 is end-of-life
@@ -3891,7 +3891,6 @@ devel/py-jailconf||2025-01-02|Unknown, port deleted long time ago, entry added t
 devel/py-zeep||2025-01-02|Unknown, port deleted long time ago, entry added to clean up portscout.freebsd.org
 devel/rubygem-acts-as-taggable-on||2025-01-02|Unknown, port deleted long time ago, entry added to clean up portscout.freebsd.org
 devel/rubygem-google-apis-serviceusage_v1_041||2025-01-02|Unknown, port deleted long time ago, entry added to clean up portscout.freebsd.org
-devel/rubygem-validates_timeliness7||2025-01-02|Unknown, port deleted long time ago, entry added to clean up portscout.freebsd.org
 devel/sublime-merge||2025-01-02|Unknown, port deleted long time ago, entry added to clean up portscout.freebsd.org
 devel/vulkan-validation-layers||2025-01-02|Unknown, port deleted long time ago, entry added to clean up portscout.freebsd.org
 devel/xlocale||2025-01-02|Unknown, port deleted long time ago, entry added to clean up portscout.freebsd.org
@@ -4000,3 +3999,44 @@ deskutils/copyq@qt6|deskutils/copyq|2025-01-02|Flavorization has been removed. C
 devel/py-pyls-black||2025-01-04|Repository has been archived by the owner. Use textproc/py-python-lsp-black instead
 net-im/telegram-desktop@qt5|net-im/telegram-desktop|2025-01-05|Flavorization has been removed. Qt 5.x has been long deprecated upstream. Please use unflavored net-im/telegram-desktop port based on Qt 6.x instead
 net-im/telegram-desktop@qt6|net-im/telegram-desktop|2025-01-05|Flavorization has been removed. Continue to enjoy net-im/telegram-desktop based on Qt 6.x as usual
+deskutils/iconbrowser|deskutils/elementary-iconbrowser|2025-01-06|Switch to reverse domain name notation
+devel/py-Products.ExternalEditor||2025-01-11|Remove leaf zope ports that have no sense in absence of zope itself
+devel/py-Products.PloneLanguageTool||2025-01-11|Remove leaf zope ports that have no sense in absence of zope itself
+devel/py-collective.monkeypatcher||2025-01-11|Remove leaf zope ports that have no sense in absence of zope itself
+devel/py-diazo||2025-01-11|Remove leaf zope ports that have no sense in absence of zope itself
+devel/py-repoze.xmliter||2025-01-11|Remove leaf zope ports that have no sense in absence of zope itself
+mail/py-Products.SecureMailHost||2025-01-11|Remove leaf zope ports that have no sense in absence of zope itself
+devel/py-repoze.sphinx.autointerface||2025-01-11|Remove leaf zope ports that have no sense in absence of zope itself
+devel/py-ExtensionClass||2025-01-11|Remove leaf zope ports that have no sense in absence of zope itself
+security/py-RestrictedPython||2025-01-11|Remove leaf zope ports that have no sense in absence of zope itself
+sysutils/py-zdaemon||2025-01-11|Remove leaf zope ports that have no sense in absence of zope itself
+devel/py-DateTime||2025-01-11|Remove leaf zope ports that have no sense in absence of zope itself
+devel/py-zclockfile|devel/py-zc.lockfile|2025-01-11|Switch consumers to latest package version
+devel/elixir-hex||2025-01-11|No longer used by any consumers, newer versions are expected to be installed per-user by mix
+devel/elixir-make||2025-01-11|No longer used by any consumers, newer versions are expected to be installed per-user by mix
+audio/gqradio||2025-01-13|Has expired: BKTR devices are not supported anymore
+x11-themes/kf5-breeze-icons|x11-themes/kf6-breeze-icons|2025-01-15|Replaced by the KF6 version
+x11-themes/kf5-oxygen-icons5|x11-themes/oxygen-icons|2025-01-15|Rename in accordance with the upstream
+devel/raknet||2025-01-15|Has expired: Unmaintained upstream, only builds with EOL toolchain
+devel/pas2dox||2025-01-15|Has expired: doesn't compile with moddern clang and gcc, upstream last updated it in 2003
+x11-toolkits/kirigami-addons|x11-toolkits/kirigami-addons-qt5|2025-01-16|Moved to have symmetric names with Qt6
+x11-toolkits/kirigami-addons-devel|x11-toolkits/kirigami-addons-qt6|2025-01-16|Moved to have symmetric names with Qt6
+audio/guitarix-lv2||2025-01-18|Has expired: Broken for more than a year
+net/libproxy-duktape||2025-01-19|Completely rewritten, plugins now built directly into the library
+net/libproxy-gnome3||2025-01-19|Completely rewritten, plugins now built directly into the library
+net/libproxy-kde||2025-01-19|Completely rewritten, plugins now built directly into the library
+net/libproxy-pacrunner||2025-01-19|Completely rewritten, plugins now built directly into the library
+net/libproxy-perl||2025-01-19|Completely rewritten, plugins now built directly into the library
+net/libproxy-python||2025-01-19|Completely rewritten, plugins now built directly into the library
+net/libproxy-webkit3||2025-01-19|Completely rewritten, plugins now built directly into the library
+www/webkit2-gtk3|www/webkit2-gtk@40|2025-01-20|Flavoured
+www/webkit2-gtk4|www/webkit2-gtk@60|2025-01-20|Flavoured
+sysutils/bareos21-traymonitor||2025-01-21|Has expired: not supported upstream
+www/bareos20-webui||2025-01-21|Has expired: not supported upstream
+www/bareos21-webui||2025-01-21|Has expired: not supported upstream
+sysutils/bareos20-traymonitor||2025-01-21|Has expired: not supported upstream
+sysutils/bareos20-client||2025-01-21|Has expired: not supported upstream
+sysutils/bareos20-server||2025-01-21|Has expired: not supported upstream
+sysutils/bareos21-client||2025-01-21|Has expired: not supported upstream
+sysutils/bareos21-server||2025-01-21|Has expired: not supported upstream
+www/mediawiki141||2025-01-22|Has expired: EOL upstream

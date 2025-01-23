@@ -1,6 +1,7 @@
 PORTNAME=	typstyle
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.12.13
+DISTVERSION=	0.12.14
+PORTREVISION=	1
 CATEGORIES=	lang
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -198,6 +199,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		inotify-0.9.6 \
 		inotify-sys-0.1.5 \
 		insta-1.41.1 \
+		insta-cmd-0.6.0 \
 		instant-0.1.13 \
 		ipnet-2.10.1 \
 		is-terminal-0.4.13 \

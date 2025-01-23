@@ -1,6 +1,7 @@
 PORTNAME=	gitleaks
 DISTVERSIONPREFIX=	v
-DISTVERSION=	8.21.3
+DISTVERSION=	8.23.1
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,7 +11,7 @@ WWW=		https://github.com/zricethezav/gitleaks
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:modules
+USES=		go:1.23,modules
 USE_GITHUB=	nodefault
 GH_TUPLE=	golang:sys:v0.6.0:sys
 
