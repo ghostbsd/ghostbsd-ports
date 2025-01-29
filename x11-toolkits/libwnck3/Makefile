@@ -20,8 +20,10 @@ USES+=		bison gettext gnome localbase meson pkgconfig \
 USE_GNOME=	cairo gdkpixbuf2 gtk30  introspection:build
 USE_XORG=	xext xrender xres x11
 USE_LDCONFIG=	yes
+LDFLAGS+=	-Wl,--allow-shlib-undefined
 MESON_ARGS=	-Dgtk_doc=false \
-		-Dinstall_tools=false
+		-Dinstall_tools=false \
+		-Dintrospection=enabled
 
 OPTIONS_DEFINE=	STARTUP
 OPTIONS_DEFAULT=STARTUP
