@@ -56,14 +56,9 @@ EOT
 [ -z "${dp_LICENSE}" ] || echo "licenses: [ ${dp_LICENSE} ]"
 [ -z "${dp_USERS}" ] || echo "users: [ ${dp_USERS} ]"
 [ -z "${dp_GROUPS}" ] || echo "groups: [ ${dp_GROUPS} ]"
-if [ -n "${dp_NO_ARCH}" -a -z "${dp_ABISTRING}" ] ; then
-	echo "arch : $(${dp_PKG_BIN} config abi | tr '[:upper:]' '[:lower:]' | cut -d: -f1,2):*"
-	echo "abi : $(${dp_PKG_BIN} config abi | cut -d: -f1,2):*"
-elif [ -n "${dp_ABISTRING}" ] ; then
-	echo "arch : $(echo ${dp_ABISTRING} | tr '[:upper:]' '[:lower:]')"
-	echo "abi : $(echo ${dp_ABISTRING})"
-fi
-[ -n "${dp_VITAL}" ] && echo "vital: true"
+[ -n "${dp_NO_ARCH}" ] && echo "arch : $(${dp_PKG_BIN} config abi | tr '[:upper:]' '[:lower:]' | cut -d: -f1,2):*"
+[ -n "${dp_NO_ARCH}" ] && echo "abi : $(${dp_PKG_BIN} config abi | cut -d: -f1,2):*"
+[ -n "${dp_VITAL}" ] && echo "vital : true"
 
 # Then the key/values sections
 echo "deps: { "

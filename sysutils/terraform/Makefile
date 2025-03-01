@@ -1,6 +1,6 @@
 PORTNAME=	terraform
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.10.3
+DISTVERSION=	1.10.4
 PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://raw.githubusercontent.com/${GH_ACCOUNT}/${GH_PROJECT}/${DISTVERSIONFULL}/:gomod
@@ -21,7 +21,7 @@ MAINTAINER=	dutra@FreeBSD.org
 COMMENT=	Provides a common configuration to launch infrastructure
 WWW=		https://terraform.io/
 
-USES=		cpe go:1.22,modules
+USES=		cpe go:1.23,modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	hashicorp
 GH_PROJECT=	terraform

@@ -51,6 +51,7 @@ ICU_MAKE_ARGS_OFF=	boost.locale.icu=off
 .include "${.CURDIR}/../boost-all/compiled.mk"
 
 MAKE_ARGS+=	--without-python
+MAKE_ARGS+=	--without-mpi
 MAKE_ARGS+=	${MAKE_ARGS_${CHOSEN_COMPILER_TYPE}}
 MAKE_ARGS_gcc=	xdll-path=${_GCC_RUNTIME}
 ALL_TARGET=	stage
@@ -63,14 +64,17 @@ PLIST_SUB+=	SFE=""
 .else
 MAKE_ARGS+=	boost.stacktrace.from_exception=off
 PLIST_SUB+=	SFE="@comment "
-
 .endif
 
 .if ${ARCH:Marmv?}
 pre-configure:
 	${REINPLACE_CMD} -e 's,@progbits,%progbits,' \
+		${WRKSRC}/boost/interprocess/interprocess_printers.hpp \
+		${WRKSRC}/boost/json/detail/gdb_printers.hpp \
 		${WRKSRC}/boost/outcome/experimental/status-code/status_code.hpp \
-		${WRKSRC}/boost/outcome/outcome_gdb.h
+		${WRKSRC}/boost/outcome/outcome_gdb.h \
+		${WRKSRC}/boost/unordered/unordered_printers.hpp \
+		${WRKSRC}/libs/json/pretty_printers/generate-gdb-header.py
 .endif
 
 do-install:

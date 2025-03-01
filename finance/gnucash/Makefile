@@ -1,8 +1,11 @@
 PORTNAME=	gnucash
 PORTVERSION=	5.10
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	finance gnome
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20%28stable%29/${PORTVERSION}
+
+PATCH_SITES=	https://github.com/Gnucash/gnucash/commit/
+PATCHFILES=	579eed1facc0f7834ea70b1a342ebca0f125d788.patch:-p1
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Quicken-like money and finance manager

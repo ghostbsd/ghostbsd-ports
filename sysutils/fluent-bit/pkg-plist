@@ -157,6 +157,7 @@ include/fluent-bit/flb_utf8.h
 include/fluent-bit/flb_utils.h
 include/fluent-bit/flb_version.h
 include/fluent-bit/flb_worker.h
+include/fluent-bit/flb_zstd.h
 include/fluent-bit/tls/flb_tls.h
 include/fluent-bit/tls/flb_tls_info.h
 include/fluent-bit/wasm/flb_wasm.h
@@ -168,6 +169,7 @@ include/monkey/mk_core/mk_event.h
 include/monkey/mk_core/mk_event_epoll.h
 include/monkey/mk_core/mk_event_kqueue.h
 include/monkey/mk_core/mk_event_libevent.h
+include/monkey/mk_core/mk_event_poll.h
 include/monkey/mk_core/mk_event_select.h
 include/monkey/mk_core/mk_file.h
 include/monkey/mk_core/mk_getopt.h

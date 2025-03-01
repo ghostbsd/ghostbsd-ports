@@ -167,7 +167,6 @@
     SUBDIR += pangolin
     SUBDIR += pangomm
     SUBDIR += pangox-compat
-    SUBDIR += plasma5-kdeplasma-addons
     SUBDIR += plasma6-kdeplasma-addons
     SUBDIR += plib
     SUBDIR += py-AnyQt
@@ -236,7 +235,7 @@
     SUBDIR += rubygem-uh
     SUBDIR += rubygem-vte3
     SUBDIR += rubygem-vte4
-    SUBDIR += scenefx
+    SUBDIR += scenefx02
     SUBDIR += scintilla
     SUBDIR += sdl2_pango
     SUBDIR += sdl_pango
@@ -249,7 +248,6 @@
     SUBDIR += tix
     SUBDIR += tk-wrapper
     SUBDIR += tk86
-    SUBDIR += tk87
     SUBDIR += tk90
     SUBDIR += tkdnd
     SUBDIR += tkshape
@@ -260,9 +258,9 @@
     SUBDIR += viewklass
     SUBDIR += vte
     SUBDIR += vte3
-    SUBDIR += wlroots
     SUBDIR += wlroots015
     SUBDIR += wlroots017
+    SUBDIR += wlroots018
     SUBDIR += wmapp
     SUBDIR += wxgtk30
     SUBDIR += wxgtk32

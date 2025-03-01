@@ -1,5 +1,5 @@
-TIMESTAMP = 1732456443
-SHA256 (go/www_pydio-cells/cells-v4.4.7/v4.4.7.mod) = d55b521752d3838fa6fad159766f41ecb682d38a1eb9faa10f849b14907191cb
-SIZE (go/www_pydio-cells/cells-v4.4.7/v4.4.7.mod) = 26524
-SHA256 (go/www_pydio-cells/cells-v4.4.7/v4.4.7.zip) = d05fc16249218ec1ac27da1888394a459adfadbded8222ebd9b8ef65973cfddd
-SIZE (go/www_pydio-cells/cells-v4.4.7/v4.4.7.zip) = 58624330
+TIMESTAMP = 1740504326
+SHA256 (go/www_pydio-cells/cells-v4.4.10/v4.4.10.mod) = 96a76541467652972d654a0ebbc2198f57816c7bc7189e9059b1e4335fa3b51f
+SIZE (go/www_pydio-cells/cells-v4.4.10/v4.4.10.mod) = 26383
+SHA256 (go/www_pydio-cells/cells-v4.4.10/v4.4.10.zip) = bcf36e3b9c66c212348b589f3e2be4117a0d3b77ad5de5e5164221855ee24bd9
+SIZE (go/www_pydio-cells/cells-v4.4.10/v4.4.10.zip) = 58992250

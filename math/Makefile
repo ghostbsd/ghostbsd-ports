@@ -3,7 +3,6 @@
     SUBDIR += 4ti2
     SUBDIR += GiNaC
     SUBDIR += Imath
-    SUBDIR += PDL
     SUBDIR += R
     SUBDIR += R-cran-ADGofTest
     SUBDIR += R-cran-Amelia
@@ -565,6 +564,7 @@
     SUBDIR += octave-forge-bsltl
     SUBDIR += octave-forge-cfitsio
     SUBDIR += octave-forge-cgi
+    SUBDIR += octave-forge-chartjs
     SUBDIR += octave-forge-civil-engineering
     SUBDIR += octave-forge-coder
     SUBDIR += octave-forge-communications
@@ -817,6 +817,24 @@
     SUBDIR += p5-Number-Uncertainty
     SUBDIR += p5-Number-WithError
     SUBDIR += p5-Number-WithError-LaTeX
+    SUBDIR += p5-PDL
+    SUBDIR += p5-PDL-DateTime
+    SUBDIR += p5-PDL-Fit
+    SUBDIR += p5-PDL-GSL
+    SUBDIR += p5-PDL-Graphics-IIS
+    SUBDIR += p5-PDL-Graphics-Limits
+    SUBDIR += p5-PDL-Graphics-PLplot
+    SUBDIR += p5-PDL-IO-Browser
+    SUBDIR += p5-PDL-IO-Dicom
+    SUBDIR += p5-PDL-IO-ENVI
+    SUBDIR += p5-PDL-IO-GD
+    SUBDIR += p5-PDL-IO-HDF
+    SUBDIR += p5-PDL-IO-IDL
+    SUBDIR += p5-PDL-LinearAlgebra
+    SUBDIR += p5-PDL-Minuit
+    SUBDIR += p5-PDL-Opt-Simplex
+    SUBDIR += p5-PDL-Perldl2
+    SUBDIR += p5-PDL-Transform-Proj4
     SUBDIR += p5-Parse-Range
     SUBDIR += p5-Roman
     SUBDIR += p5-Set-IntSpan
@@ -855,6 +873,7 @@
     SUBDIR += paritwine
     SUBDIR += parmetis
     SUBDIR += parmgridgen
+    SUBDIR += pcalc
     SUBDIR += pdal
     SUBDIR += pear-Math_BigInteger
     SUBDIR += pear-Math_Combinatorics
@@ -889,6 +908,7 @@
     SUBDIR += primesum
     SUBDIR += primme
     SUBDIR += prng
+    SUBDIR += proxsuite
     SUBDIR += pspp
     SUBDIR += psurface
     SUBDIR += py-CyLP
@@ -939,6 +959,7 @@
     SUBDIR += py-cvxpy
     SUBDIR += py-cyipopt
     SUBDIR += py-cypari2
+    SUBDIR += py-daqp
     SUBDIR += py-deap
     SUBDIR += py-dgl
     SUBDIR += py-diffcp

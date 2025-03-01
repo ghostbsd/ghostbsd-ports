@@ -353,7 +353,7 @@
     SUBDIR += libkcddb
     SUBDIR += libkcompactdisc
     SUBDIR += libkeyfinder
-    SUBDIR += liblastfm-qt5
+    SUBDIR += liblastfm
     SUBDIR += liblo
     SUBDIR += liblscp
     SUBDIR += libltc
@@ -419,6 +419,8 @@
     SUBDIR += linux-rl9-opus
     SUBDIR += linux-rl9-pulseaudio-libs
     SUBDIR += linux-rl9-pulseaudio-utils
+    SUBDIR += linux-rl9-sdl2_mixer
+    SUBDIR += linux-rl9-sdl_sound
     SUBDIR += linuxsampler
     SUBDIR += linuxwave
     SUBDIR += liquidsfz
@@ -523,6 +525,7 @@
     SUBDIR += nyquist
     SUBDIR += oaml
     SUBDIR += ocp
+    SUBDIR += odin2-synthesizer
     SUBDIR += ogg2mp3
     SUBDIR += openal-soft
     SUBDIR += opencore-amr
@@ -594,9 +597,6 @@
     SUBDIR += pipewire-module-xrdp
     SUBDIR += pipewire-spa-oss
     SUBDIR += pithos
-    SUBDIR += plasma5-kpipewire
-    SUBDIR += plasma5-oxygen-sounds
-    SUBDIR += plasma5-plasma-pa
     SUBDIR += plasma6-kpipewire
     SUBDIR += plasma6-ocean-sound-theme
     SUBDIR += plasma6-oxygen-sounds
@@ -739,6 +739,7 @@
     SUBDIR += sonata
     SUBDIR += songrec
     SUBDIR += sonic-visualiser
+    SUBDIR += sonicradio
     SUBDIR += sonivox
     SUBDIR += sonivox-eas
     SUBDIR += sorcer-lv2
@@ -747,6 +748,7 @@
     SUBDIR += soundtouch
     SUBDIR += soundtracker
     SUBDIR += sox
+    SUBDIR += sox-noise
     SUBDIR += spc2it
     SUBDIR += spectacle-lv2
     SUBDIR += spectmorph
@@ -845,6 +847,7 @@
     SUBDIR += wavplay
     SUBDIR += webrtc-audio-processing
     SUBDIR += webrtc-audio-processing0
+    SUBDIR += webrtc-audio-processing2
     SUBDIR += welle.io
     SUBDIR += whysynth
     SUBDIR += wildmidi

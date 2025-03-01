@@ -4384,6 +4384,7 @@ create-manifest.${sp}:
 			dp_USERS='${USERS:u:S/$/,/}'                          \
 			dp_VITAL='${PKGVITAL}'                                \
 			dp_WWW='${WWW}'                                       \
+			dp_VITAL='${VITAL${_SP.${sp}}}'                       \
 			${PKG_NOTES_ENV.${sp}}                                \
 			${SH} ${SCRIPTSDIR}/create-manifest.sh
 .    endfor

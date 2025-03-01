@@ -30,6 +30,7 @@
     SUBDIR += ksh
     SUBDIR += ksh-devel
     SUBDIR += ksh93
+    SUBDIR += libpowershell-native
     SUBDIR += mksh
     SUBDIR += modernish
     SUBDIR += murex
@@ -50,11 +51,13 @@
     SUBDIR += p5-Term-ShellUI
     SUBDIR += pdksh
     SUBDIR += pear-PHP_Shell
+    SUBDIR += powershell
     SUBDIR += psh
     SUBDIR += rc
     SUBDIR += rubygem-shellwords
     SUBDIR += rush
     SUBDIR += sash
+    SUBDIR += schemesh
     SUBDIR += scponly
     SUBDIR += sheldon
     SUBDIR += shell-hist
@@ -75,5 +78,6 @@
     SUBDIR += zsh-fast-syntax-highlighting
     SUBDIR += zsh-navigation-tools
     SUBDIR += zsh-syntax-highlighting
+    SUBDIR += zsh-you-should-use
 
 .include <bsd.port.subdir.mk>

@@ -1,6 +1,15 @@
---- CMakeLists.txt.orig	2021-11-05 17:23:17 UTC
-+++ CMakeLists.txt
-@@ -521,6 +521,7 @@ endif(WITH_LIBDB)
+--- CMakeLists.txt.orig	2024-06-28 10:29:41.000000000 +0300
++++ CMakeLists.txt	2025-02-17 19:34:42.145248000 +0300
+@@ -374,7 +374,7 @@
+ # ICU started shipping pkg-config files but it's not present
+ # on many systems, if we don't find the pkg-config
+ # file then let's fallback on a manual check
+-pkg_check_modules(ICU icu-i18n)
++pkg_check_modules(ICU icu-i18n icu-uc)
+ 
+ if(NOT ICU_FOUND)
+ 	CHECK_INCLUDE_FILE(unicode/ucol.h HAVE_UNICODE_UCOL_H)
+@@ -549,6 +549,7 @@
  # ******************************
  
  set(CMAKE_REQUIRED_LIBRARIES "-liconv")

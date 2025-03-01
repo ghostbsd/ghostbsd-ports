@@ -46,7 +46,7 @@
     SUBDIR += dhall
     SUBDIR += dlang-tools
     SUBDIR += dotnet
-    SUBDIR += dotnet-runtime
+    SUBDIR += dotnet-host
     SUBDIR += dotnet8
     SUBDIR += duktape
     SUBDIR += duktape-lib
@@ -217,7 +217,6 @@
     SUBDIR += neocmakelsp
     SUBDIR += nesasm
     SUBDIR += newlisp
-    SUBDIR += nhc98
     SUBDIR += nickle
     SUBDIR += nim
     SUBDIR += njs
@@ -230,6 +229,7 @@
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
     SUBDIR += ocaml-camlidl
+    SUBDIR += odin
     SUBDIR += oo2c
     SUBDIR += opencoarrays
     SUBDIR += opensycl
@@ -314,6 +314,7 @@
     SUBDIR += python39
     SUBDIR += qmasm
     SUBDIR += quickjs
+    SUBDIR += quickjs-ng
     SUBDIR += quilc
     SUBDIR += racket
     SUBDIR += racket-minimal
@@ -336,7 +337,6 @@
     SUBDIR += rust
     SUBDIR += rust-bootstrap
     SUBDIR += rust-nightly
-    SUBDIR += rust182
     SUBDIR += rustpython
     SUBDIR += s7
     SUBDIR += s7-nrepl
@@ -378,7 +378,6 @@
     SUBDIR += tcl-manual
     SUBDIR += tcl-wrapper
     SUBDIR += tcl86
-    SUBDIR += tcl87
     SUBDIR += tcl90
     SUBDIR += tclX
     SUBDIR += tolua

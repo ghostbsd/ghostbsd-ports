@@ -2,6 +2,7 @@
 
     SUBDIR += 7-zip
     SUBDIR += 9e
+    SUBDIR += R-cran-brotli
     SUBDIR += R-cran-zip
     SUBDIR += advancecomp
     SUBDIR += amigadepacker
@@ -10,7 +11,6 @@
     SUBDIR += arc
     SUBDIR += arj
     SUBDIR += ark
-    SUBDIR += ark-devel
     SUBDIR += arqiver
     SUBDIR += atool
     SUBDIR += bicom
@@ -228,6 +228,7 @@
     SUBDIR += qpress
     SUBDIR += quazip
     SUBDIR += rar
+    SUBDIR += rar-i386
     SUBDIR += rpm2cpio
     SUBDIR += rpm4
     SUBDIR += rubygem-archive-zip

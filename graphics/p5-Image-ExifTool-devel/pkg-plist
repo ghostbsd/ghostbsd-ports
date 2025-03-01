@@ -180,6 +180,7 @@ bin/exiftool
 %%SITE_PERL%%/Image/ExifTool/PhotoCD.pm
 %%SITE_PERL%%/Image/ExifTool/PhotoMechanic.pm
 %%SITE_PERL%%/Image/ExifTool/Photoshop.pm
+%%SITE_PERL%%/Image/ExifTool/Plot.pm
 %%SITE_PERL%%/Image/ExifTool/PostScript.pm
 %%SITE_PERL%%/Image/ExifTool/PrintIM.pm
 %%SITE_PERL%%/Image/ExifTool/Protobuf.pm
@@ -212,10 +213,10 @@ bin/exiftool
 %%SITE_PERL%%/Image/ExifTool/Text.pm
 %%SITE_PERL%%/Image/ExifTool/Theora.pm
 %%SITE_PERL%%/Image/ExifTool/Torrent.pm
+%%SITE_PERL%%/Image/ExifTool/Trailer.pm
 %%SITE_PERL%%/Image/ExifTool/Unknown.pm
 %%SITE_PERL%%/Image/ExifTool/VCard.pm
 %%SITE_PERL%%/Image/ExifTool/Validate.pm
-%%SITE_PERL%%/Image/ExifTool/Vivo.pm
 %%SITE_PERL%%/Image/ExifTool/Vorbis.pm
 %%SITE_PERL%%/Image/ExifTool/WPG.pm
 %%SITE_PERL%%/Image/ExifTool/WTV.pm
@@ -383,6 +384,7 @@ bin/exiftool
 %%PERL5_MAN3%%/Image::ExifTool::PhotoCD.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::PhotoMechanic.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::Photoshop.3.gz
+%%PERL5_MAN3%%/Image::ExifTool::Plot.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::PostScript.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::PrintIM.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::Protobuf.3.gz
@@ -414,10 +416,10 @@ bin/exiftool
 %%PERL5_MAN3%%/Image::ExifTool::Text.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::Theora.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::Torrent.3.gz
+%%PERL5_MAN3%%/Image::ExifTool::Trailer.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::Unknown.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::VCard.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::Validate.3.gz
-%%PERL5_MAN3%%/Image::ExifTool::Vivo.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::Vorbis.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::WPG.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::WTV.3.gz

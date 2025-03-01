@@ -446,8 +446,8 @@ openbao:*:482:482:daemon:0:0:OpenBao Daemon:/nonexistent:/usr/sbin/nologin
 # free: 497
 rustypaste:*:498:498::0:0:Minimal file upload/pastebin service:/nonexistent:/usr/sbin/nologin
 # free: 499
-# free: 500
-# free: 501
+qw:*:500:500::0:0:QuakeWorld Server:/nonexistent:/usr/sbin/nologin
+qwfwd:*:501:501::0:0:QuakeWorld Proxy:/nonexistent:/usr/sbin/nologin
 # free: 502
 # free: 503
 # free: 504
@@ -811,7 +811,7 @@ opensearch:*:855:855::0:0:opensearch user:/nonexistent:/usr/sbin/nologin
 # free: 861
 # free: 862
 # free: 863
-# free: 864
+mediamtx:*:864:864::0:0:mediamtx:/nonexistent:/usr/sbin/nologin
 z2m:*:865:865::0:0:zigbee2mqtt:/usr/local/z2m:/usr/sbin/nologin
 # free: 866
 sqlpage:*:867:867::0:0:SQLPage:/nonexistent:/usr/sbin/nologin

@@ -1,6 +1,5 @@
 PORTNAME=	curl
-PORTVERSION=	8.11.1
-PORTREVISION=	1
+PORTVERSION=	8.12.1
 CATEGORIES=	ftp net www
 MASTER_SITES=	https://curl.se/download/ \
 		https://github.com/curl/curl/releases/download/curl-${PORTVERSION:S|.|_|g}/
@@ -13,7 +12,7 @@ WWW=		https://curl.se/ \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cpe libtool localbase pathfix perl5 shebangfix tar:xz
+USES=		cpe libtool localbase:ldflags pathfix perl5 shebangfix tar:xz
 USE_PERL5=	build
 
 CONFIGURE_ARGS=	--disable-test-bundles \
@@ -29,6 +28,7 @@ CONFIGURE_ARGS=	--disable-test-bundles \
 		--enable-netrc \
 		--enable-openssl-auto-load-config \
 		--enable-progress-meter \
+		--enable-ssls-export \
 		--with-zsh-functions-dir=${LOCALBASE}/share/zsh/site-functions \
 		--without-ca-bundle \
 		--without-ca-path \
@@ -151,7 +151,7 @@ SMTP_CONFIGURE_ENABLE=	smtp
 STATIC_CONFIGURE_ENABLE=static
 TELNET_CONFIGURE_ENABLE=telnet
 TFTP_CONFIGURE_ENABLE=	tftp
-THREADED_RESOLVER_CONFIGURE_ENABLE=	pthreads threaded-resolver
+THREADED_RESOLVER_CONFIGURE_ENABLE=	threaded-resolver
 TLS_SRP_CONFIGURE_ENABLE=	tls-srp
 WEBSOCKET_CONFIGURE_ENABLE=	websockets
 WOLFSSL_CONFIGURE_WITH=	wolfssl
@@ -180,6 +180,6 @@ post-install-DOCS-on:
 
 post-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
-	cd ${WRKSRC}/docs/examples/ && ${INSTALL_DATA} Makefile.example Makefile.mk README.md *.c *.cpp ${STAGEDIR}${EXAMPLESDIR}/
+	cd ${WRKSRC}/docs/examples/ && ${INSTALL_DATA} Makefile.example README.md *.c *.cpp ${STAGEDIR}${EXAMPLESDIR}/
 
 .include <bsd.port.post.mk>
