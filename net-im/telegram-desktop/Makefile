@@ -112,11 +112,7 @@ CMAKE_ARGS+=	-DCMAKE_CC_COMPILER_LAUNCHER="${LOCALBASE}/bin/ccache" \
 .endif
 
 .if ${OPSYS} == FreeBSD && ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} < 190
-<<<<<<< HEAD
-EXTRA_PATCHES=	${PATCHDIR}/extrapatch-Telegram_lib__base_base_qt_qt__compare.h
-=======
 EXTRA_PATCHES=		${PATCHDIR}/extrapatch-Telegram_lib__base_base_qt_qt__compare.h
->>>>>>> freebsd/main
 .endif
 
 post-extract:
