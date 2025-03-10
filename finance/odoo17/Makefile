@@ -1,5 +1,6 @@
 PORTNAME=	odoo
 PORTVERSION=	17.0.20250108
+PORTREVISION=	1
 CATEGORIES=	finance www
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 PKGNAMESUFFIX=  17
@@ -9,6 +10,9 @@ COMMENT=	Suite of web based open source business apps
 WWW=		https://www.odoo.com
 
 LICENSE=	LGPL3
+
+DEPRECATED=	Depends on expired print/py-pypdf2
+EXPIRATION_DATE=2025-03-31
 
 USE_GITHUB=	yes
 GH_TAGNAME=	a2657d18e61fa22619702b35a56376991d18cf80

@@ -1,5 +1,6 @@
     COMMENT = Miscellaneous utilities
 
+    SUBDIR += R-cran-gapminder
     SUBDIR += R-cran-mime
     SUBDIR += R-cran-optimx
     SUBDIR += R-cran-xfun
@@ -438,6 +439,7 @@
     SUBDIR += py-files-to-prompt
     SUBDIR += py-fleep
     SUBDIR += py-fuzzy
+    SUBDIR += py-gguf
     SUBDIR += py-gluoncv
     SUBDIR += py-gluonnlp
     SUBDIR += py-halo

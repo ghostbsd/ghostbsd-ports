@@ -404,7 +404,6 @@
     SUBDIR += flog
     SUBDIR += flowgger
     SUBDIR += fluent-bit
-    SUBDIR += fluxengine
     SUBDIR += fonteditfs
     SUBDIR += foremost
     SUBDIR += fortunelock
@@ -649,6 +648,7 @@
     SUBDIR += lmon
     SUBDIR += lnav
     SUBDIR += loaders-update
+    SUBDIR += localsearch
     SUBDIR += lockfile-progs
     SUBDIR += loganalyzer
     SUBDIR += logrotate
@@ -899,7 +899,6 @@
     SUBDIR += parkverbot
     SUBDIR += pass-coffin
     SUBDIR += pass-otp
-    SUBDIR += pass-secrets
     SUBDIR += pass-update
     SUBDIR += password-store
     SUBDIR += passwordsafe
@@ -1401,9 +1400,6 @@
     SUBDIR += toshctl
     SUBDIR += touchegg
     SUBDIR += toybox
-    SUBDIR += tracker
-    SUBDIR += tracker-miners
-    SUBDIR += tracker3
     SUBDIR += tree
     SUBDIR += triton
     SUBDIR += trueos-libqt5

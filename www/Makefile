@@ -219,7 +219,6 @@
     SUBDIR += gitlab-workhorse
     SUBDIR += glassfish
     SUBDIR += glassfish4
-    SUBDIR += glewlwyd
     SUBDIR += glpi
     SUBDIR += gnome-user-share
     SUBDIR += go-www
@@ -1438,6 +1437,7 @@
     SUBDIR += phprecipebook
     SUBDIR += phpsysinfo
     SUBDIR += phpvirtualbox
+    SUBDIR += phpvirtualbox-70
     SUBDIR += phpvirtualbox-legacy
     SUBDIR += piwigo
     SUBDIR += plasma6-plasma-browser-integration

@@ -16,6 +16,7 @@
     SUBDIR += R-cran-htmlTable
     SUBDIR += R-cran-htmltools
     SUBDIR += R-cran-hunspell
+    SUBDIR += R-cran-litedown
     SUBDIR += R-cran-markdown
     SUBDIR += R-cran-openxlsx
     SUBDIR += R-cran-pystr
@@ -74,6 +75,7 @@
     SUBDIR += az-aspell
     SUBDIR += bar
     SUBDIR += bat
+    SUBDIR += bat-extras
     SUBDIR += bbe
     SUBDIR += be-aspell
     SUBDIR += belr
@@ -1337,6 +1339,7 @@
     SUBDIR += py-asonic
     SUBDIR += py-autopep8
     SUBDIR += py-awesome-slugify
+    SUBDIR += py-backrefs
     SUBDIR += py-bibtexparser
     SUBDIR += py-bracex
     SUBDIR += py-cchardet
@@ -1543,7 +1546,6 @@
     SUBDIR += py-pygments
     SUBDIR += py-pygtail
     SUBDIR += py-pyhamcrest
-    SUBDIR += py-pyjade
     SUBDIR += py-pykwalify
     SUBDIR += py-pylons-sphinx-themes
     SUBDIR += py-pyls-spyder
@@ -1674,6 +1676,7 @@
     SUBDIR += py-textract
     SUBDIR += py-texttable
     SUBDIR += py-textual
+    SUBDIR += py-textual-autocomplete
     SUBDIR += py-textwrap3
     SUBDIR += py-three-merge
     SUBDIR += py-tika-client
@@ -1908,6 +1911,7 @@
     SUBDIR += rubygem-nokogiri-diff
     SUBDIR += rubygem-nokogumbo
     SUBDIR += rubygem-octopress-escape-code
+    SUBDIR += rubygem-opensearch-ruby-gitlab
     SUBDIR += rubygem-opml
     SUBDIR += rubygem-org-ruby
     SUBDIR += rubygem-ox
@@ -1943,7 +1947,6 @@
     SUBDIR += rubygem-representable
     SUBDIR += rubygem-reverse_markdown
     SUBDIR += rubygem-rexml
-    SUBDIR += rubygem-rexml-gitlab
     SUBDIR += rubygem-ri_cal
     SUBDIR += rubygem-rly
     SUBDIR += rubygem-rmmseg-cpp
@@ -2223,7 +2226,6 @@
     SUBDIR += ytt
     SUBDIR += zed
     SUBDIR += zenxml
-    SUBDIR += zorba
     SUBDIR += zq
     SUBDIR += zu-aspell
     SUBDIR += zu-hunspell

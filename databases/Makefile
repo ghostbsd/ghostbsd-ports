@@ -557,6 +557,7 @@
     SUBDIR += pg_repack
     SUBDIR += pg_similarity
     SUBDIR += pg_stat_kcache
+    SUBDIR += pg_store_plans
     SUBDIR += pg_tileserv
     SUBDIR += pgaccess
     SUBDIR += pgadmin3
@@ -575,6 +576,7 @@
     SUBDIR += pgpool-II-43
     SUBDIR += pgpool-II-44
     SUBDIR += pgpool-II-45
+    SUBDIR += pgpool-II-46
     SUBDIR += pgreplay
     SUBDIR += pgroonga
     SUBDIR += pgrouting
@@ -642,7 +644,6 @@
     SUBDIR += plpgsql_check
     SUBDIR += pointcloud
     SUBDIR += postgis-jdbc
-    SUBDIR += postgis31
     SUBDIR += postgis33
     SUBDIR += postgis34
     SUBDIR += postgis35
@@ -1078,7 +1079,6 @@
     SUBDIR += symphytum
     SUBDIR += tarantool
     SUBDIR += tarantool-c
-    SUBDIR += tarantool2
     SUBDIR += tcl-Mysql
     SUBDIR += tcl-lmdb
     SUBDIR += tcl-sqlite3
