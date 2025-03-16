@@ -267,6 +267,7 @@
     SUBDIR += daggy
     SUBDIR += damager
     SUBDIR += dar
+    SUBDIR += data-prepper
     SUBDIR += dateutils
     SUBDIR += dc3dd
     SUBDIR += dcfldd

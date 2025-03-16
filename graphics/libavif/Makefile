@@ -1,11 +1,7 @@
 PORTNAME=	libavif
-PORTVERSION=	1.1.1
+PORTVERSION=	1.2.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	graphics
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	e649830525d3.patch:-p1 # https://github.com/AOMediaCodec/libavif/pull/2607
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for encoding and decoding .avif files
@@ -26,10 +22,12 @@ CMAKE_OFF=	AVIF_BUILD_EXAMPLES
 CMAKE_ON=	AVIF_BUILD_APPS
 CMAKE_TESTING_ARGS=	-DAVIF_GTEST:STRING=SYSTEM
 CMAKE_TESTING_ON=	AVIF_BUILD_TESTS
+LDFLAGS+=	-lm
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	AOMediaCodec
+GH_TUPLE=	kmurray:libargparse:ee74d1b:kmurray_libargparse/../.build/_deps/libargparse-src
 
 CPE_VENDOR=	aomedia
 
