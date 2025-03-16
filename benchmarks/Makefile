@@ -94,7 +94,6 @@
     SUBDIR += scimark2c
     SUBDIR += scimark4c
     SUBDIR += shellbench
-    SUBDIR += siege
     SUBDIR += sipp
     SUBDIR += slowloris
     SUBDIR += smhasher
