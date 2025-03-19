@@ -870,6 +870,7 @@
     SUBDIR += xmmix
     SUBDIR += xmp
     SUBDIR += xoscope
+    SUBDIR += xsynth
     SUBDIR += xsynth-dssi
     SUBDIR += xuidesigner
     SUBDIR += xwave

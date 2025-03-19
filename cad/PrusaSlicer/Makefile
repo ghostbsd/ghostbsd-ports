@@ -54,12 +54,11 @@ CPE_VENDOR=	prusa3d
 USE_GITHUB=	yes
 GH_ACCOUNT=	prusa3d
 USE_GL=		gl glu glew
-USE_GNOME=	gtk30 pango atk cairo gdkpixbuf2 glib20
+USE_GNOME=	gtk30 pango atk cairo gdkpixbuf glib20
 USE_WX=		3.2
 USE_XORG=	x11
 
-CMAKE_ARGS+=	-DCMAKE_FIND_DEBUG_MODE=TRUE \
-		-DwxWidgets_CONFIG_EXECUTABLE="${WX_CONFIG}" \
+CMAKE_ARGS+=	-DwxWidgets_CONFIG_EXECUTABLE="${WX_CONFIG}" \
 		-DSLIC3R_GTK=3 \
 		-DSLIC3R_FHS=1 \
 		-DSLIC3R_PCH=OFF \

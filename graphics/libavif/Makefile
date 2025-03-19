@@ -64,7 +64,7 @@ LIBYUV_LIB_DEPENDS=	libyuv.so:graphics/libyuv
 MANPAGES_BUILD_DEPENDS=	pandoc:textproc/hs-pandoc
 MANPAGES_CMAKE_BOOL=	AVIF_BUILD_MAN_PAGES
 PIXBUF_CMAKE_BOOL=	AVIF_BUILD_GDK_PIXBUF
-PIXBUF_USE=		GNOME=gdkpixbuf2
+PIXBUF_USE=		GNOME=gdkpixbuf
 PIXBUF_USES=		gnome
 RAV1E_CMAKE_OFF=	-DAVIF_CODEC_RAV1E:STRING=OFF
 RAV1E_CMAKE_ON=		-DAVIF_CODEC_RAV1E:STRING=SYSTEM
@@ -72,5 +72,9 @@ RAV1E_LIB_DEPENDS=	librav1e.so:multimedia/librav1e
 SVTAV1_CMAKE_OFF=	-DAVIF_CODEC_SVT:STRING=OFF
 SVTAV1_CMAKE_ON=	-DAVIF_CODEC_SVT:STRING=SYSTEM
 SVTAV1_LIB_DEPENDS=	libSvtAv1Enc.so:multimedia/svt-av1
+
+post-patch:
+# Clean up bundled libraries
+	@${RM} -r ${WRKSRC}/third_party/libyuv/
 
 .include <bsd.port.mk>
