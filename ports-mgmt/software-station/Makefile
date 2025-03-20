@@ -1,5 +1,6 @@
 PORTNAME=	software-station
 PORTVERSION=	2.0
+PORTREVISION=	1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
@@ -17,7 +18,7 @@ RUN_DEPENDS=	sudo:security/sudo \
 
 USES =		python:3.9+ gnome gettext-tools
 USE_PYTHON=	distutils noflavors
-USE_GNOME=	pygobject3 intltool
+USE_GNOME=	pygobject3 intltool gdkpixbufextra
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
