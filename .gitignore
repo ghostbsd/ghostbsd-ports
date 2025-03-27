@@ -12,3 +12,4 @@ Mk/bsd.overlay.mk
 *.orig
 *.sw[p-z]
 .idea
+*.core
