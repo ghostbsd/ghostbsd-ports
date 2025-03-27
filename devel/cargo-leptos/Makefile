@@ -1,6 +1,6 @@
 PORTNAME=	cargo-leptos
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.31
+DISTVERSION=	0.2.32
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -661,6 +661,12 @@ PLIST_FILES=	bin/${PORTNAME}
 
 .if ${ARCH} == powerpc
 LTO_UNSAFE=	yes
+.endif
+
+# attempt to fix on i386: ld: error: undefined symbol: __atomic_fetch_add_8
+.if ${ARCH} == i386 && !${CFLAGS:M-march=*}
+CFLAGS+=	-march=i586
+CXXFLAGS+=	-march=i586
 .endif
 
 .include <bsd.port.mk>

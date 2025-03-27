@@ -2118,7 +2118,6 @@
     SUBDIR += rubygem-fuzzyurl
     SUBDIR += rubygem-geminabox
     SUBDIR += rubygem-gitlab-flowdock-git-hook
-    SUBDIR += rubygem-gitlab-gollum-lib
     SUBDIR += rubygem-gitlab-gollum-rugged_adapter
     SUBDIR += rubygem-gitlab-turbolinks-classic
     SUBDIR += rubygem-goldfinger
@@ -2445,7 +2444,6 @@
     SUBDIR += snarf
     SUBDIR += so
     SUBDIR += sogo
-    SUBDIR += sogo-activesync
     SUBDIR += sogo2
     SUBDIR += sogo2-activesync
     SUBDIR += spawn-fcgi
@@ -2639,8 +2637,8 @@
     SUBDIR += yaws
     SUBDIR += you-get
     SUBDIR += yourls
+    SUBDIR += youtube
     SUBDIR += yt-dlp
-    SUBDIR += ytdl
     SUBDIR += yuicompressor
     SUBDIR += zenphoto
     SUBDIR += zerowait-httpd

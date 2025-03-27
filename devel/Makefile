@@ -4825,7 +4825,6 @@
     SUBDIR += py-easyprocess
     SUBDIR += py-editables
     SUBDIR += py-editdistance
-    SUBDIR += py-eggtestinfo
     SUBDIR += py-ejson
     SUBDIR += py-enlighten
     SUBDIR += py-entrypoint2
@@ -5627,7 +5626,6 @@
     SUBDIR += py-pyrepl
     SUBDIR += py-pyrfc3339
     SUBDIR += py-pyright
-    SUBDIR += py-pyro
     SUBDIR += py-pyroma
     SUBDIR += py-pyrsistent
     SUBDIR += py-pyscaffold
@@ -5889,7 +5887,6 @@
     SUBDIR += py-semver
     SUBDIR += py-sentry-sdk
     SUBDIR += py-serializable
-    SUBDIR += py-serpent
     SUBDIR += py-session-info
     SUBDIR += py-setoptconf
     SUBDIR += py-setproctitle
@@ -6278,6 +6275,7 @@
     SUBDIR += pythontidy
     SUBDIR += pytype
     SUBDIR += qbe
+    SUBDIR += qbs
     SUBDIR += qca
     SUBDIR += qconf
     SUBDIR += qcoro
@@ -7277,8 +7275,8 @@
     SUBDIR += rubygem-flipper
     SUBDIR += rubygem-flipper-active_support_cache_store
     SUBDIR += rubygem-flipper-active_support_cache_store-rails70
+    SUBDIR += rubygem-flipper-gitlab
     SUBDIR += rubygem-flipper-ui
-    SUBDIR += rubygem-flipper026
     SUBDIR += rubygem-fluent-logger
     SUBDIR += rubygem-fog
     SUBDIR += rubygem-fog-core
@@ -8092,6 +8090,7 @@
     SUBDIR += rust-mode
     SUBDIR += rust-script
     SUBDIR += rustc-demangle
+    SUBDIR += rustup-init
     SUBDIR += rvi
     SUBDIR += rvm
     SUBDIR += rxcpp
@@ -8363,11 +8362,13 @@
     SUBDIR += wasi-compiler-rt17
     SUBDIR += wasi-compiler-rt18
     SUBDIR += wasi-compiler-rt19
+    SUBDIR += wasi-compiler-rt20
     SUBDIR += wasi-libc
     SUBDIR += wasi-libcxx
     SUBDIR += wasi-libcxx17
     SUBDIR += wasi-libcxx18
     SUBDIR += wasi-libcxx19
+    SUBDIR += wasi-libcxx20
     SUBDIR += wasm3
     SUBDIR += wasmer
     SUBDIR += websocketpp

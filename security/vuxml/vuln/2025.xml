@@ -1,3 +1,166 @@
+  <vuln vid="1daa2814-0a6c-11f0-b4e4-2cf05da270f3">
+    <topic>Gitlab -- Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>17.10.0</ge><lt>17.10.1</lt></range>
+	<range><ge>17.9.0</ge><lt>17.9.3</lt></range>
+	<range><ge>12.10.0</ge><lt>17.8.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2025/03/26/patch-release-gitlab-17-10-1-released/">
+	  <p>Cross-site Scripting (XSS) through merge-request error messages</p>
+	  <p>Cross-site Scripting (XSS) through improper rendering of certain file types</p>
+	  <p>Admin Privileges Persists After Role is Revoked</p>
+	  <p>External user can access internal projects</p>
+	  <p>Prompt injection in Amazon Q integration may allow unauthorized actions</p>
+	  <p>Uncontrolled Resource Consumption via a maliciously crafted terraform file in merge request</p>
+	  <p>Maintainer can inject shell code in Harbor project name configuration when using helper scripts</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-2255</cvename>
+      <cvename>CVE-2025-0811</cvename>
+      <cvename>CVE-2025-2242</cvename>
+      <cvename>CVE-2024-12619</cvename>
+      <cvename>CVE-2024-10307</cvename>
+      <cvename>CVE-2024-9773</cvename>
+      <url>https://about.gitlab.com/releases/2025/03/26/patch-release-gitlab-17-10-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2025-03-26</discovery>
+      <entry>2025-03-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="964aa5da-f094-47fe-9ebd-2142f9157440">
+    <topic>electron{33,34} -- Type Confusion in V8</topic>
+    <affects>
+      <package>
+	<name>electron33</name>
+	<range><lt>33.4.6</lt></range>
+      </package>
+      <package>
+	<name>electron34</name>
+	<range><lt>34.3.4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v33.4.6">
+	  <p>This update fixes the following vulnerability:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2025-1920.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-1920</cvename>
+      <url>https://github.com/advisories/GHSA-fhwv-7gx3-h767</url>
+    </references>
+    <dates>
+      <discovery>2025-03-20</discovery>
+      <entry>2025-03-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a58fdfef-07c6-11f0-8688-4ccc6adda413">
+    <topic>qt5-webengine -- Use after free in Compositing</topic>
+    <affects>
+      <package>
+	<name>qt5-webengine</name>
+	<range><lt>5.15.18p7</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Qt qtwebengine-chromium repo reports:</p>
+	<blockquote cite="https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=87-based">
+	  <p>Backports for 1 security bug in Chromium:</p>
+	  <ul>
+	    <li>CVE-2024-12694: Use after free in Compositing</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-12694</cvename>
+      <url>https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=87-based</url>
+    </references>
+    <dates>
+      <discovery>2025-02-14</discovery>
+      <entry>2025-03-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="26f6733d-06a9-11f0-ba0b-641c67a117d8">
+    <topic>www/varnish7 -- client-side desync vulnerability</topic>
+    <affects>
+      <package>
+	<name>varnish7</name>
+	<range><lt>7.6.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Varnish Development Team reports:</p>
+	<blockquote cite="https://varnish-cache.org/security/VSV00015.html#vsv00015">
+	<p>A client-side desync vulnerability can be triggered in Varnish Cache
+	   and Varnish Enterprise. This vulnerability can be triggered under
+	   specific circumstances involving malformed HTTP/1 requests.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-30346</cvename>
+      <url>https://varnish-cache.org/security/VSV00015.html#vsv00015</url>
+    </references>
+    <dates>
+      <discovery>2024-12-17</discovery>
+      <entry>2025-03-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9456d4e9-055f-11f0-85f3-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>134.0.6998.117</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>134.0.6998.117</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2025/03/stable-channel-update-for-desktop_19.html">
+	 <p>This update includes 2 security fixes:</p>
+	 <ul>
+	    <li>[401029609] Critical CVE-2025-2476: Use after free in Lens. Reported by SungKwon Lee of Enki Whitehat on 2025-03-05</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-2476</cvename>
+      <url>https://chromereleases.googleblog.com/2025/03/stable-channel-update-for-desktop_19.html</url>
+    </references>
+    <dates>
+      <discovery>2025-03-19</discovery>
+      <entry>2025-03-20</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="2ac2ddc2-0051-11f0-8673-f02f7432cf97">
   <topic>php -- Multiple vulnerabilities</topic>
   <affects>

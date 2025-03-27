@@ -107,6 +107,7 @@
     SUBDIR += exercism
     SUBDIR += explosions
     SUBDIR += ezc3d
+    SUBDIR += fabric
     SUBDIR += far2l
     SUBDIR += fastscapelib
     SUBDIR += felis
@@ -560,6 +561,7 @@
     SUBDIR += quantum++
     SUBDIR += quary
     SUBDIR += randomx
+    SUBDIR += rash
     SUBDIR += raspberrypi-gpioshutdown
     SUBDIR += raspbsd-led
     SUBDIR += ree

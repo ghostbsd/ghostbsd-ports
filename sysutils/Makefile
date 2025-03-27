@@ -986,7 +986,6 @@
     SUBDIR += powerman
     SUBDIR += powermon
     SUBDIR += pp
-    SUBDIR += pprotectd
     SUBDIR += prips
     SUBDIR += procenv
     SUBDIR += process-viewer
