@@ -2,7 +2,7 @@ PORTNAME=	pc-networkmanager
 PORTVERSION=	201806271233
 CATEGORIES=	sysutils
 
-MAINTAINER=	kris@ixsystems.com
+MAINTAINER=	jt@obs-sec.com
 COMMENT=	TrueOS Qt based network manager
 WWW=		https://github.com/trueos/pc-networkmanager
 

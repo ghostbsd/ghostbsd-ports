@@ -5,6 +5,55 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20250404:
+  AFFECTS: users of jetbrains-clion
+  AUTHOR: fernape@FreeBSD.org
+
+  The jetbrains-clion update to 2024.3.5 might fail under certain circumstances
+  that are not clear. If this happens users are encouraged to check the contents
+  of ~/.config/JetBrains/CLion2024.3/clion64.vmoptions and ensure that the
+  following option IS NOT present:
+
+  -Didea.suppressed.plugins.set.selector=radler
+
+  If it is, change the value to:
+
+  -Didea.suppressed.plugins.set.selector=classic
+
+  References:
+    https://youtrack.jetbrains.com/issue/CPP-44041#focus=Comments-27-11819516.0-0
+    https://youtrack.jetbrains.com/issue/IJPL-175884/Start-Failed#focus=Comments-27-11425743.0-0
+
+20250402:
+  AFFECTS: users of devel/glib20 and devel/gobject-introspection building outside of Poudriere
+  AUTHOR: arrowd@FreeBSD.org
+
+  New versions of glib started to require gobject-introspection as a build
+  dependency, while gobject-introspection requires glib to build. This forms a
+  dependency cycle that is dealt with by introducing the @bootstrap flavor for
+  mentioned ports. This solution is suggested by the upstream as well, see
+  https://discourse.gnome.org/t/dealing-with-glib-and-gobject-introspection-circular-dependency/18701
+
+  When building devel/glib20 in Poudriere no manual intervention is required.
+  The devel/glib20@bootstrap gets built first and provides for
+  devel/gobject-introspection@bootstrap. This in turn provides for a normal
+  devel/glib20 build, which finally fulfills a dependency for normal devel/gobject-introspection
+
+  Users that are building outside of the isolated environments will be ending
+  up with useless glib-bootstrap and gobject-introspection-bootstrap packages
+  installed after each update. These can be removed with
+
+  pkg remove glib-bootstrap gobject-introspection-bootstrap
+
+20250327:
+  AFFECTS: users of thunderbird
+  AUTHOR: cmt@FreeBSD.org
+
+  The mail/thunderbird port switched to Thunderbird's new release train,
+  with frequent major releases (ca. 4-weeks-cycle). Users wanting to
+  stay with the 128-releases for now and the ESR releases in general
+  should switch to the mail/thunderbird-esr port.
+
 20250325:
   AFFECTS: users of TeX*
   AUTHOR: bofh@FreeBSD.org

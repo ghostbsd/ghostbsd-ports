@@ -204,7 +204,6 @@
     SUBDIR += iso-codes
     SUBDIR += jargon
     SUBDIR += jbidwatcher
-    SUBDIR += jirust
     SUBDIR += jojodiff
     SUBDIR += json-tui
     SUBDIR += kbdscan
@@ -515,6 +514,7 @@
     SUBDIR += py-pytorch-lightning
     SUBDIR += py-pyviz-comms
     SUBDIR += py-safetensors
+    SUBDIR += py-schedulefree
     SUBDIR += py-scikit-fusion
     SUBDIR += py-scikit-quant
     SUBDIR += py-serverfiles

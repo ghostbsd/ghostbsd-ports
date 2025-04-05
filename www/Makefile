@@ -101,7 +101,6 @@
     SUBDIR += cgiwrap
     SUBDIR += checkbot
     SUBDIR += chisel
-    SUBDIR += choqok
     SUBDIR += chpasswd
     SUBDIR += chrome-gnome-shell
     SUBDIR += chromium
@@ -151,6 +150,7 @@
     SUBDIR += domoticz-devel
     SUBDIR += dooble
     SUBDIR += dot-http
+    SUBDIR += dothttp
     SUBDIR += dpp
     SUBDIR += drill
     SUBDIR += drupal10
@@ -223,6 +223,7 @@
     SUBDIR += glassfish4
     SUBDIR += glpi
     SUBDIR += gnome-user-share
+    SUBDIR += go-anubis
     SUBDIR += go-www
     SUBDIR += gobuffalo
     SUBDIR += gohugo
@@ -1600,7 +1601,6 @@
     SUBDIR += py-django-hashid-field
     SUBDIR += py-django-haystack
     SUBDIR += py-django-hierarkey
-    SUBDIR += py-django-hijack
     SUBDIR += py-django-htmlmin
     SUBDIR += py-django-htmx
     SUBDIR += py-django-i18nfield
@@ -1668,6 +1668,7 @@
     SUBDIR += py-django42
     SUBDIR += py-django50
     SUBDIR += py-django51
+    SUBDIR += py-django52
     SUBDIR += py-django_compressor
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangoql
@@ -1721,7 +1722,6 @@
     SUBDIR += py-flask-restful
     SUBDIR += py-flask-restx
     SUBDIR += py-flask-script
-    SUBDIR += py-flask-security
     SUBDIR += py-flask-session
     SUBDIR += py-flask-simpleldap
     SUBDIR += py-flask-smorest
@@ -1977,7 +1977,6 @@
     SUBDIR += radicale
     SUBDIR += rearx
     SUBDIR += reddsaver
-    SUBDIR += redmine50
     SUBDIR += redmine51
     SUBDIR += redmine60
     SUBDIR += rejik
