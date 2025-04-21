@@ -1,3 +1,197 @@
+  <vuln vid="06269ae8-1e0d-11f0-ad0b-b42e991fc52e">
+    <topic>Erlang -- Erlang/OTP SSH Vulnerable to Pre-Authentication RCE</topic>
+    <affects>
+      <package>
+	<name>erlang</name>
+	<range><lt>26.2.5.11</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime21</name>
+	<range><lt>25.3.2.20</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime22</name>
+	<range><lt>25.3.2.20</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime23</name>
+	<range><lt>25.3.2.20</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime24</name>
+	<range><lt>25.3.2.20</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime25</name>
+	<range><lt>25.3.2.20</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime26</name>
+	<range><lt>26.2.5.11</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime27</name>
+	<range><lt>27.3.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/erlang/otp/commit/0fcd9c56524b28615e8ece65fc0c3f66ef6e4c12">
+	<p>
+	Erlang/OTP is a set of libraries for the Erlang
+	programming language. Prior to versions OTP-27.3.3,
+	OTP-26.2.5.11, and OTP-25.3.2.20, a SSH server may allow
+	an attacker to perform unauthenticated remote code
+	execution (RCE). By exploiting a flaw in SSH protocol
+	message handling, a malicious actor could gain
+	unauthorized access to affected systems and execute
+	arbitrary commands without valid credentials. This issue
+	is patched in versions OTP-27.3.3, OTP-26.2.5.11, and
+	OTP-25.3.2.20. A temporary workaround involves disabling
+	the SSH server or to prevent access via firewall rules.
+	</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-32433</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-32433</url>
+    </references>
+    <dates>
+      <discovery>2025-04-16</discovery>
+      <entry>2025-04-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1b8d502e-1cfd-11f0-944d-901b0e9408dc">
+    <topic>ejabberd -- mod_muc_occupantid: Fix handling multiple occupant-id</topic>
+    <affects>
+      <package>
+	<name>ejabberd</name>
+	<range><lt>25.04</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>ejabberd team reports:</p>
+	<blockquote cite="https://www.process-one.net/blog/ejabberd-25-04/#occupantid">
+	  <p>Fixed issue with handling of user provided occupant-id in
+	  messages and presences sent to muc room. Server was
+	  replacing just first instance of occupant-id with its own
+	  version, leaving other ones untouched. That would mean that
+	  depending on order in which clients send occupant-id, they
+	  could see value provided by sender, and that could be used
+	  to spoof as different sender.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://www.process-one.net/blog/ejabberd-25-04/#occupantid</url>
+    </references>
+    <dates>
+      <discovery>2025-04-16</discovery>
+      <entry>2025-04-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bf5d29ea-1a93-11f0-8cb5-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>135.0.7049.95</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>135.0.7049.95</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2025/04/stable-channel-update-for-desktop_15.html">
+	 <p>This update includes 2 security fixes:</p>
+	 <ul>
+	    <li>[409619251] Critical CVE-2025-3619: Heap buffer overflow in Codecs. Reported by Elias Hohl on 2025-04-09</li>
+	    <li>[405292639] High CVE-2025-3620: Use after free in USB. Reported by @retsew0x01 on 2025-03-21</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-3619</cvename>
+      <cvename>CVE-2025-3620</cvename>
+      <url>https://chromereleases.googleblog.com/2025/04/stable-channel-update-for-desktop_15.html</url>
+    </references>
+    <dates>
+      <discovery>2025-04-15</discovery>
+      <entry>2025-04-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="030778d5-19cc-11f0-8cb5-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>135.0.7049.84</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>135.0.7049.84</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2025/04/stable-channel-update-for-desktop_8.html">
+	 <p>This update includes 2 security fixes:</p>
+	 <ul>
+	    <li>[405140652] High CVE-2025-3066: Use after free in Site Isolation. Reported by Sven Dysthe (@svn-dys) on 2025-03-21</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-3066</cvename>
+      <url>https://chromereleases.googleblog.com/2025/04/stable-channel-update-for-desktop_8.html</url>
+    </references>
+    <dates>
+      <discovery>2025-04-08</discovery>
+      <entry>2025-04-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e9b8e519-0d50-11f0-86d8-901b0e934d69">
+    <topic>py-matrix-synapse -- federation denial of service via malformed events</topic>
+    <affects>
+      <package>
+	<name>py38-matrix-synapse</name>
+	<name>py39-matrix-synapse</name>
+	<name>py310-matrix-synapse</name>
+	<name>py311-matrix-synapse</name>
+	<range><lt>1.127.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>element-hq/synapse developers report:</p>
+	<blockquote cite="https://github.com/element-hq/synapse/security/advisories/GHSA-v56r-hwv5-mxg6">
+	  <p>A malicious server can craft events which, when received, prevent Synapse version up to 1.127.0 from federating with other servers. The vulnerability has been exploited in the wild.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-30355</cvename>
+      <url>https://github.com/element-hq/synapse/security/advisories/GHSA-v56r-hwv5-mxg6</url>
+    </references>
+    <dates>
+      <discovery>2025-03-26</discovery>
+      <entry>2025-03-26</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="45276ea6-1653-4240-9986-ccfc6fec7ece">
     <topic>jenkins -- multiple vulnerabilities</topic>
     <affects>
@@ -141,7 +335,7 @@
   </vuln>
 
   <vuln vid="315f568e-13c8-11f0-a5bd-b42e991fc52e">
-    <topic>Mozilla -- privilege scalation attack</topic>
+    <topic>Mozilla -- privilege escalation attack</topic>
     <affects>
       <package>
 	<name>firefox</name>
@@ -690,7 +884,7 @@
   </vuln>
 
   <vuln vid="ea51e89a-116c-11f0-8b2c-b42e991fc52e">
-    <topic>Mozilla -- privilege scalation attack</topic>
+    <topic>Mozilla -- privilege escalation attack</topic>
     <affects>
       <package>
 	<name>firefox</name>
@@ -902,7 +1096,7 @@
   </vuln>
 
   <vuln vid="a93a1d2a-109d-11f0-8195-b42e991fc52e">
-    <topic>mozilla -- 64 bit JIT WASM read on left over memroy</topic>
+    <topic>mozilla -- 64 bit JIT WASM read on left over memory</topic>
     <affects>
       <package>
 	<name>firefox</name>
@@ -1234,12 +1428,35 @@
 	<blockquote cite="https://forum.suricata.io/t/suricata-7-0-9-released/5495">
 	  <p>Multiple vulnerabilities</p>
 	</blockquote>
-	<p>These CVEs have been reserved and no details have been yet provided.</p>
 	<ul>
-	  <li>CVE-2025-29915: Severity HIGH</li>
-	  <li>CVE-2025-29916: Severity Moderate</li>
-	  <li>CVE-2025-29917: Severity HIGH</li>
-	  <li>CVE-2025-29918: Severity HIGH</li>
+	<li>
+	CVE-2025-29915: Severity HIGH. The AF_PACKET defrag option
+	is enabled by default and allows AF_PACKET to re-assemble
+	fragmented packets before reaching Suricata. However the
+	default packet size in Suricata is based on the network
+	interface MTU which leads to Suricata seeing truncated
+	packets.
+	</li>
+	<li>
+	CVE-2025-29916: Severity Moderate. Datasets declared in
+	rules have an option to specify the `hashsize` to use.
+	This size setting isn't properly limited, so the hash
+	table allocation can be large. Untrusted rules can lead to
+	large memory allocations, potentially leading to denial of
+	service due to resource starvation
+	</li>
+	<li>
+	CVE-2025-29917: Severity HIGH. The bytes setting in the
+	decode_base64 keyword is not properly limited. Due to
+	this, signatures using the keyword and setting can cause
+	large memory allocations of up to 4 GiB per thread.
+	</li>
+	<li>
+	CVE-2025-29918: Severity HIGH. A PCRE rule can be written
+	that leads to an infinite loop when negated PCRE is used.
+	Packet processing thread becomes stuck in infinite loop
+	limiting visibility and availability in inline mode.
+	</li>
 	</ul>
 	</body>
     </description>
