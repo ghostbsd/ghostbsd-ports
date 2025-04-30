@@ -6,8 +6,8 @@ case $2 in
 POST-INSTALL)
 	if grep -Fxq "#greeter-session=example-gtk-gnome" ${PREFIX}/etc/lightdm/lightdm.conf
 	then
-		echo ":: Setting lightdm-gtk-greeter as greeter session in ${PREFIX}/etc/lightdm/lightdm.conf"
-		/usr/bin/sed -i ".bak" "s/^#greeter-session=example-gtk-gnome$/greeter-session=lightdm-gtk-greeter/g" \
+		echo ":: Setting slick-greeter as greeter session in ${PREFIX}/etc/lightdm/lightdm.conf"
+		/usr/bin/sed -i ".bak" "s/^#greeter-session=example-gtk-gnome$/greeter-session=slick-greeter/g" \
 			${PREFIX}/etc/lightdm/lightdm.conf
 	else
 		echo ":: A greeter has already been configured in ${PREFIX}/etc/lightdm/lightdm.conf"
