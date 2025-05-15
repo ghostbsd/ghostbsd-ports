@@ -86,7 +86,7 @@ MY_DEPENDS=	gitaly>=${GITLAB_VERSION}:devel/gitaly \
 	rubygem-akismet>=3.0<4.0:devel/rubygem-akismet \
 	rubygem-invisible_captcha>=2.1.0<2.2.0:graphics/rubygem-invisible_captcha \
 	rubygem-devise-two-factor41-rails70>=4.1.1<4.2:security/rubygem-devise-two-factor41-rails70 \
-	rubygem-rqrcode>=2.2.0<3:www/rubygem-rqrcode \
+	rubygem-rqrcode-gitlab>=2.2.0<3:www/rubygem-rqrcode-gitlab \
 	rubygem-validates_hostname>=1.0.13<1.1.0:dns/rubygem-validates_hostname \
 	rubygem-rubyzip>=2.3.2<2.4:archivers/rubygem-rubyzip \
 	rubygem-acme-client-gitlab>=2.0.21<3:security/rubygem-acme-client-gitlab \
@@ -101,7 +101,7 @@ MY_DEPENDS=	gitaly>=${GITLAB_VERSION}:devel/gitaly \
 	rubygem-grape-swagger-entity>=0.5.5<0.6:devel/rubygem-grape-swagger-entity \
 	rubygem-grape-path-helpers>=2.0.1<2.1:devel/rubygem-grape-path-helpers \
 	rubygem-rack-cors>=2.0.1<2.1:www/rubygem-rack-cors \
-	rubygem-graphql>=2.4.11<2.5:devel/rubygem-graphql \
+	rubygem-graphql>=2.4.13<2.5:devel/rubygem-graphql \
 	rubygem-apollo_upload_server>=2.1.6<2.2:net/rubygem-apollo_upload_server \
 	rubygem-ffaker>=2.24.0<3:devel/rubygem-ffaker \
 	rubygem-hashie>=5.0.0<5.1:devel/rubygem-hashie \
@@ -159,7 +159,7 @@ MY_DEPENDS=	gitaly>=${GITLAB_VERSION}:devel/gitaly \
 	rubygem-gitlab-glfm-markdown>=0.0.29<0.1:textproc/rubygem-gitlab-glfm-markdown \
 	rubygem-tanuki_emoji>=0.13<1:graphics/rubygem-tanuki_emoji \
 	rubygem-unicode-emoji>=4.0.4<5:devel/rubygem-unicode-emoji \
-	rubygem-icalendar>=2.10.3<2.11:devel/rubygem-icalendar \
+	rubygem-icalendar-gitlab>=2.10.3<2.11:devel/rubygem-icalendar-gitlab \
 	rubygem-diffy>=3.4<4:textproc/rubygem-diffy \
 	rubygem-rack22>=2.2.13,3<2.3,3:www/rubygem-rack22 \
 	rubygem-rack-timeout>=0.7.0<0.8:www/rubygem-rack-timeout \
@@ -301,7 +301,7 @@ MY_DEPENDS=	gitaly>=${GITLAB_VERSION}:devel/gitaly \
 	rubygem-ed25519>=1.3.0<1.4:security/rubygem-ed25519 \
 	rubygem-cvss-suite>=3.3.0<3.4:security/rubygem-cvss-suite \
 	rubygem-arr-pm>=0.0.12<0.1:devel/rubygem-arr-pm \
-	rubygem-devfile>=0.4.0<0.5:net/rubygem-devfile \
+	rubygem-devfile>=0.4.3<0.5:net/rubygem-devfile \
 	rubygem-CFPropertyList-gitlab>=3.0.7<3.1:devel/rubygem-CFPropertyList-gitlab \
 	rubygem-app_store_connect>=0:net/rubygem-app_store_connect \
 	rubygem-telesignenterprise>=2.2<3:devel/rubygem-telesignenterprise \

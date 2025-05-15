@@ -164,6 +164,7 @@ include/folly/chrono/Hardware.h
 include/folly/cli/NestedCommandLineApp.h
 include/folly/cli/ProgramOptions.h
 include/folly/codec/Uuid.h
+include/folly/codec/hex.h
 include/folly/compression/Compression.h
 include/folly/compression/CompressionContextPool.h
 include/folly/compression/CompressionContextPoolSingletons.h
@@ -323,6 +324,7 @@ include/folly/crypto/Blake2xb.h
 include/folly/crypto/LtHash-inl.h
 include/folly/crypto/LtHash.h
 include/folly/crypto/detail/LtHashInternal.h
+include/folly/debugging/exception_tracer/Compatibility.h
 include/folly/debugging/exception_tracer/ExceptionAbi.h
 include/folly/debugging/exception_tracer/ExceptionCounterLib.h
 include/folly/debugging/exception_tracer/ExceptionTracer.h

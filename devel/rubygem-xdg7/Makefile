@@ -14,12 +14,16 @@ LICENSE_NAME=	Hippocratic License 2.1.0
 LICENSE_FILE=	${WRKSRC}/LICENSE.adoc
 LICENSE_PERMS=	auto-accept dist-mirror pkg-mirror
 
-BROKEN_RUBY31=	yes
-
 USES=		gem
 
 NO_ARCH=	yes
 
 PORTSCOUT=	limit:^7\.
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${RUBY_VER} >= 3.3
+BROKEN=	ruby 3.3 and later is not supported
+.endif
+
+.include <bsd.port.post.mk>

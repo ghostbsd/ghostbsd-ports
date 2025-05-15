@@ -1,6 +1,6 @@
 PORTNAME=	julia
 DISTVERSION=	1.10.3
-PORTREVISION=	6
+PORTREVISION=	7
 DISTVERSIONSUFFIX=	-full
 CATEGORIES=	lang math
 MASTER_SITES=	https://github.com/JuliaLang/${PORTNAME}/releases/download/v${DISTVERSION}/
@@ -28,7 +28,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 DEPRECATED=	Depends on expired security/mbedtls2
-EXPIRATION_DATE=2025-03-31
+EXPIRATION_DATE=2025-06-30
 
 ONLY_FOR_ARCHS=		amd64
 ONLY_FOR_ARCHS_REASON=	Has not been ported to this platform for freebsd

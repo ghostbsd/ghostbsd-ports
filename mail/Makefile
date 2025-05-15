@@ -80,6 +80,7 @@
     SUBDIR += cyrus-imapd25
     SUBDIR += cyrus-imapd30
     SUBDIR += cyrus-imapd310
+    SUBDIR += cyrus-imapd312
     SUBDIR += cyrus-imapd32
     SUBDIR += cyrus-imapd34
     SUBDIR += cyrus-imapd36
@@ -187,6 +188,7 @@
     SUBDIR += libspf2
     SUBDIR += libsrs2
     SUBDIR += libsrs_alt
+    SUBDIR += libtlsrpt
     SUBDIR += libvmime
     SUBDIR += linux-r7-organizer
     SUBDIR += linux-r7-organizer-pro
@@ -529,7 +531,6 @@
     SUBDIR += py-mailnag
     SUBDIR += py-mailsuite
     SUBDIR += py-managesieve3
-    SUBDIR += py-milter
     SUBDIR += py-notmuch
     SUBDIR += py-notmuch2
     SUBDIR += py-offlineimap3
@@ -537,6 +538,7 @@
     SUBDIR += py-premailer
     SUBDIR += py-pyisemail
     SUBDIR += py-pymailq
+    SUBDIR += py-pymilter
     SUBDIR += py-pysasl
     SUBDIR += py-pyspf
     SUBDIR += py-python-slimta

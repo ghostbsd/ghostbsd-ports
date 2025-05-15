@@ -74,6 +74,7 @@
     SUBDIR += cargo-audit
     SUBDIR += ccrypt
     SUBDIR += ccsrch
+    SUBDIR += certificate_maker
     SUBDIR += certmgr
     SUBDIR += certspotter
     SUBDIR += cfssl
@@ -100,6 +101,7 @@
     SUBDIR += clamtk
     SUBDIR += cloak
     SUBDIR += cops
+    SUBDIR += cosign
     SUBDIR += courier-authlib
     SUBDIR += courier-authlib-base
     SUBDIR += courierpassd
@@ -186,6 +188,7 @@
     SUBDIR += gnupg1
     SUBDIR += gnutls
     SUBDIR += go-cve-dictionary
+    SUBDIR += go-tuf
     SUBDIR += gokart
     SUBDIR += gokey
     SUBDIR += gonepass
@@ -229,7 +232,6 @@
     SUBDIR += hs-cryptol
     SUBDIR += hydra
     SUBDIR += hyperhotp
-    SUBDIR += i2p
     SUBDIR += i2pd
     SUBDIR += iaikpkcs11wrapper
     SUBDIR += iddawc
@@ -327,7 +329,6 @@
     SUBDIR += libtatsu
     SUBDIR += libtomcrypt
     SUBDIR += libu2f-host
-    SUBDIR += libuecc
     SUBDIR += libwhisker
     SUBDIR += libxcrypt
     SUBDIR += libyubikey
@@ -356,7 +357,6 @@
     SUBDIR += linux-rl9-libsecret
     SUBDIR += linux-rl9-libssh
     SUBDIR += linux-rl9-libtasn1
-    SUBDIR += linux-rl9-libxcrypt
     SUBDIR += linux-rl9-nettle
     SUBDIR += linux-rl9-nss
     SUBDIR += linux-rl9-p11-kit
@@ -400,6 +400,7 @@
     SUBDIR += ncrack
     SUBDIR += ncrypt
     SUBDIR += nebula
+    SUBDIR += netbird
     SUBDIR += nettle
     SUBDIR += nextcloud-end_to_end_encryption
     SUBDIR += nextcloud-passman
@@ -630,6 +631,7 @@
     SUBDIR += p5-Crypt-SmbHash
     SUBDIR += p5-Crypt-Sodium
     SUBDIR += p5-Crypt-Solitaire
+    SUBDIR += p5-Crypt-SysRandom
     SUBDIR += p5-Crypt-TEA
     SUBDIR += p5-Crypt-T_e_a
     SUBDIR += p5-Crypt-Tea_JS
@@ -1105,6 +1107,7 @@
     SUBDIR += ratproxy
     SUBDIR += rats
     SUBDIR += rcracki_mt
+    SUBDIR += rekor
     SUBDIR += reop
     SUBDIR += rhash
     SUBDIR += rhonabwy
@@ -1318,6 +1321,7 @@
     SUBDIR += ssh-multiadd
     SUBDIR += ssh-tools
     SUBDIR += ssh-vault
+    SUBDIR += sshesame
     SUBDIR += sshguard
     SUBDIR += sshpass
     SUBDIR += ssl-admin
@@ -1352,6 +1356,7 @@
     SUBDIR += testssl.sh
     SUBDIR += tfhe
     SUBDIR += theonionbox
+    SUBDIR += timestamp-authority
     SUBDIR += tinc
     SUBDIR += tinc-devel
     SUBDIR += tinyca
@@ -1367,6 +1372,7 @@
     SUBDIR += tpm2-tss
     SUBDIR += transcrypt
     SUBDIR += trezord
+    SUBDIR += trillian
     SUBDIR += tripwire
     SUBDIR += trivy
     SUBDIR += trousers
@@ -1398,7 +1404,6 @@
     SUBDIR += wazuh-server
     SUBDIR += webfwlog
     SUBDIR += webtunnel-tor
-    SUBDIR += weggli
     SUBDIR += whatweb
     SUBDIR += wipe
     SUBDIR += wolfssh

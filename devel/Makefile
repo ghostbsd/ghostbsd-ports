@@ -200,6 +200,7 @@
     SUBDIR += apache-rat
     SUBDIR += aphpbreakdown
     SUBDIR += aphpunit
+    SUBDIR += api-linter
     SUBDIR += api-sanity-autotest
     SUBDIR += apitrace
     SUBDIR += app-builder
@@ -393,7 +394,6 @@
     SUBDIR += ccache-static
     SUBDIR += ccache4
     SUBDIR += cccc
-    SUBDIR += ccdoc
     SUBDIR += ccls
     SUBDIR += cctz
     SUBDIR += cdecl
@@ -504,7 +504,6 @@
     SUBDIR += covtool
     SUBDIR += cpan-upload
     SUBDIR += cpan-upload-http
-    SUBDIR += cpp-hocon
     SUBDIR += cpp-netlib
     SUBDIR += cpp-utilities
     SUBDIR += cpp2py
@@ -690,6 +689,8 @@
     SUBDIR += etcd32
     SUBDIR += etcd33
     SUBDIR += etcd34
+    SUBDIR += etcd35
+    SUBDIR += etcd36
     SUBDIR += etl
     SUBDIR += evcxr-jupyter
     SUBDIR += evdev-proto
@@ -726,6 +727,7 @@
     SUBDIR += folly
     SUBDIR += forge
     SUBDIR += forge-devel
+    SUBDIR += fortran-stdlib
     SUBDIR += fortran-utils
     SUBDIR += fortytwo-encore
     SUBDIR += fossil
@@ -954,7 +956,9 @@
     SUBDIR += grcov
     SUBDIR += grex
     SUBDIR += grpc
+    SUBDIR += grpc-gateway
     SUBDIR += gsettings-desktop-schemas
+    SUBDIR += gsl-lite
     SUBDIR += gsoap
     SUBDIR += gstreamer1-plugins-soup
     SUBDIR += gtgt
@@ -1196,7 +1200,6 @@
     SUBDIR += lazygit
     SUBDIR += lcov
     SUBDIR += leaktracer
-    SUBDIR += leatherman
     SUBDIR += lefthook
     SUBDIR += leiningen
     SUBDIR += lemon
@@ -1719,6 +1722,7 @@
     SUBDIR += nanopb
     SUBDIR += nant
     SUBDIR += nasm
+    SUBDIR += nativefiledialog-extended
     SUBDIR += naturaldocs
     SUBDIR += ncc
     SUBDIR += ncnf
@@ -2554,6 +2558,7 @@
     SUBDIR += p5-Env-PS1
     SUBDIR += p5-Env-Path
     SUBDIR += p5-Error-Helper
+    SUBDIR += p5-Escape-Houdini
     SUBDIR += p5-Eval-Closure
     SUBDIR += p5-Eval-Context
     SUBDIR += p5-Eval-LineNumbers
@@ -4017,7 +4022,6 @@
     SUBDIR += p5-subversion
     SUBDIR += p5-superclass
     SUBDIR += p5-syntax
-    SUBDIR += p5-threads
     SUBDIR += p5-threads-shared
     SUBDIR += p5-true
     SUBDIR += p5-uni-perl
@@ -4333,9 +4337,11 @@
     SUBDIR += projectcenter
     SUBDIR += protobuf
     SUBDIR += protobuf-c
+    SUBDIR += protobuf-go
     SUBDIR += protobuf-java
     SUBDIR += protobuf25
     SUBDIR += protobuf3
+    SUBDIR += protoc-gen-go-grpc
     SUBDIR += prototool
     SUBDIR += protozero
     SUBDIR += pructl
@@ -4840,6 +4846,7 @@
     SUBDIR += py-epc
     SUBDIR += py-epdb
     SUBDIR += py-epsilon
+    SUBDIR += py-etcd3gw
     SUBDIR += py-etils
     SUBDIR += py-etuples
     SUBDIR += py-evdev
@@ -5233,6 +5240,7 @@
     SUBDIR += py-memory-allocator
     SUBDIR += py-memory-profiler
     SUBDIR += py-mergedeep
+    SUBDIR += py-merossiot
     SUBDIR += py-methodtools
     SUBDIR += py-microversion-parse
     SUBDIR += py-milc
@@ -6283,6 +6291,7 @@
     SUBDIR += qcoro
     SUBDIR += qgit
     SUBDIR += qjson
+    SUBDIR += qlementine
     SUBDIR += qmake
     SUBDIR += qschematic
     SUBDIR += qscintilla2
@@ -7428,6 +7437,7 @@
     SUBDIR += rubygem-i18n
     SUBDIR += rubygem-i18n_data
     SUBDIR += rubygem-icalendar
+    SUBDIR += rubygem-icalendar-gitlab
     SUBDIR += rubygem-ice_cube
     SUBDIR += rubygem-ice_nine
     SUBDIR += rubygem-inflecto
@@ -7601,6 +7611,7 @@
     SUBDIR += rubygem-opentelemetry-common
     SUBDIR += rubygem-opentelemetry-exporter-otlp
     SUBDIR += rubygem-opentelemetry-helpers-mysql
+    SUBDIR += rubygem-opentelemetry-helpers-sql
     SUBDIR += rubygem-opentelemetry-helpers-sql-obfuscation
     SUBDIR += rubygem-opentelemetry-instrumentation-action_mailer
     SUBDIR += rubygem-opentelemetry-instrumentation-action_pack
@@ -8054,7 +8065,6 @@
     SUBDIR += rubygem-web-console3-rails5
     SUBDIR += rubygem-web-console3-rails50
     SUBDIR += rubygem-web-console3-rails52
-    SUBDIR += rubygem-webby
     SUBDIR += rubygem-webfinger
     SUBDIR += rubygem-webpacker-rails60
     SUBDIR += rubygem-webpacker-rails61
@@ -8069,6 +8079,7 @@
     SUBDIR += rubygem-xdg
     SUBDIR += rubygem-xdg2
     SUBDIR += rubygem-xdg7
+    SUBDIR += rubygem-xdg8
     SUBDIR += rubygem-xorcist
     SUBDIR += rubygem-xpath
     SUBDIR += rubygem-xxhash

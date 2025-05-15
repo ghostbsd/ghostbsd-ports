@@ -1,6 +1,5 @@
 PORTNAME=	vscode
-DISTVERSION=	1.99.2
-PORTREVISION=	1
+DISTVERSION=	1.100.1
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:node_modules
 DISTFILES=	vscode-node-modules-${DISTVERSION}${EXTRACT_SUFX}:node_modules \
@@ -70,7 +69,7 @@ USES=		desktop-file-utils gl gmake gnome iconv:wchar_t jpeg \
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	4949701c880d4bdb949e3c0e6b400288da7f474b
+SOURCE_COMMIT_HASH=	91fa95bccb027ece6a968589bb1d662fa9c8e170
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -278,7 +277,7 @@ do-test:
 # unit tests
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ./scripts/test.sh --build || ${TRUE}
 # UI smoke tests
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} yarn smoketest
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} npm run smoketest
 
 build-remote-extension-host: configure pre-build
 # setup download cache for node

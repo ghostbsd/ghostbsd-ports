@@ -718,9 +718,7 @@
     SUBDIR += prometheus-postgresql-adapter
     SUBDIR += proxysql
     SUBDIR += pspg
-    SUBDIR += puppetdb-terminus7
     SUBDIR += puppetdb-terminus8
-    SUBDIR += puppetdb7
     SUBDIR += puppetdb8
     SUBDIR += puredb
     SUBDIR += pxlib
@@ -742,7 +740,6 @@
     SUBDIR += py-asyncmy
     SUBDIR += py-asyncpg
     SUBDIR += py-berkeleydb
-    SUBDIR += py-carbon
     SUBDIR += py-cassandra-driver
     SUBDIR += py-couchdb
     SUBDIR += py-cymysql
@@ -875,13 +872,14 @@
     SUBDIR += redis-devel
     SUBDIR += redis62
     SUBDIR += redis72
+    SUBDIR += redis74
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += redisjson
-    SUBDIR += replibyte
     SUBDIR += retcl
     SUBDIR += rocksdb
     SUBDIR += rocksdb-jni
+    SUBDIR += rocksdb9
     SUBDIR += rqlite
     SUBDIR += rrdman
     SUBDIR += rrdmerge

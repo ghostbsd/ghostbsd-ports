@@ -615,9 +615,9 @@ _PYTHONPKGLIST=	${WRKDIR}/.PLIST.pymodtmp
 
 # cryptography* support
 .  if ${PYCRYPTOGRAPHY_DEFAULT} == rust
-CRYPTOGRAPHY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=42.0.8,1:security/py-cryptography@${PY_FLAVOR}
+CRYPTOGRAPHY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=44.0.2,1:security/py-cryptography@${PY_FLAVOR}
 .  else
-CRYPTOGRAPHY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography-legacy>=3.4.8_1,1:security/py-cryptography-legacy@${PY_FLAVOR}
+CRYPTOGRAPHY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography-legacy>=3.4.8_3,1:security/py-cryptography-legacy@${PY_FLAVOR}
 .  endif
 
 .  if defined(_PYTHON_FEATURE_CRYPTOGRAPHY_BUILD)
@@ -857,6 +857,7 @@ PY_SETUPTOOLS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAV
 .  if ${PYTHON_REL} < 31100
 PY_EXCEPTIONGROUP=	${PYTHON_PKGNAMEPREFIX}exceptiongroup>=1.1.1:devel/py-exceptiongroup@${PY_FLAVOR}
 PY_TOMLI=	${PYTHON_PKGNAMEPREFIX}tomli>=2.0.2<3:textproc/py-tomli@${PY_FLAVOR}
+PY_TYPING_EXTENSIONS=	${PYTHON_PKGNAMEPREFIX}typing-extensions>0:devel/py-typing-extensions@${PY_FLAVOR}
 .  endif
 
 .  if ${PYTHON_REL} >= 30000

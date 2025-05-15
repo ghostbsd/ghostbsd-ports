@@ -56,7 +56,7 @@ FPC_DEFAULT?=		3.3.1
 .  else
 FPC_DEFAULT?=		3.2.3
 .  endif
-# Possible values: 11, 12, 13, 14, 15
+# Possible values: 11, 12, 13, 14, 15, 16
 # (Any other version is completely unsupported and not meant for general use.)
 GCC_DEFAULT?=		13
 # Possible values: 10
@@ -118,7 +118,7 @@ OPENLDAP_DEFAULT?=	26
     defined(PACKAGE_BUILDING))
 # When changing the default here, make sure the DEPRECATED/EXPIRATION lines in
 # the older Perl 5 ports are uncommented at the same time.
-PERL5_DEFAULT?=		5.36
+PERL5_DEFAULT?=		5.40
 .  elif !defined(PERL5_DEFAULT)
 # There's no need to replace development versions, like "5.23" with "devel"
 # because 1) nobody is supposed to use it outside of poudriere, and 2) it must
@@ -131,7 +131,7 @@ _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .  endif
 # Possible values: 13, 14, 15, 16, 17
-PGSQL_DEFAULT?=		16
+PGSQL_DEFAULT?=		17
 # Possible values: 8.1, 8.2, 8.3, 8.4
 PHP_DEFAULT?=		8.3
 # Possible values: rust, legacy
@@ -145,7 +145,7 @@ PYTHON_DEFAULT?=	3.11
 # Possible values: 2.7
 PYTHON2_DEFAULT?=	2.7
 # Possible values: 3.2, 3.3, 3.4, 3.5
-RUBY_DEFAULT?=		3.2
+RUBY_DEFAULT?=		3.3
 # Possible values: rust, rust-nightly
 RUST_DEFAULT?=		rust
 # Possible values: 4.16, 4.19, 4.20
