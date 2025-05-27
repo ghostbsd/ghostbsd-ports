@@ -1,3 +1,271 @@
+  <vuln vid="e587b52d-38ac-11f0-b7b6-dcfe074bd614">
+    <topic>cpython -- Use-after-free in &quot;unicode_escape&quot; decoder with error handler</topic>
+    <affects>
+      <package>
+	<name>python39</name>
+	<range><lt>3.9.22</lt></range>
+      </package>
+      <package>
+	<name>python310</name>
+	<range><lt>3.10.17</lt></range>
+      </package>
+      <package>
+	<name>python311</name>
+	<range><lt>3.11.12</lt></range>
+      </package>
+      <package>
+	<name>python312</name>
+	<range><lt>3.12.10</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>cna@python.org reports:</p>
+	<blockquote cite="https://github.com/python/cpython/commit/69b4387f78f413e8c47572a85b3478c47eba8142">
+	  <p>There is an issue in CPython when using
+	`bytes.decode(&quot;unicode_escape&quot;,
+	error=&quot;ignore|replace&quot;)`.  If you are not using the
+	&quot;unicode_escape&quot; encoding or an error handler your
+	usage is not affected.  To work-around this issue you may stop
+	using the error= handler and instead wrap the bytes.decode()
+	call in a try-except catching the DecodeError.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-4516</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-4516</url>
+    </references>
+    <dates>
+      <discovery>2025-05-15</discovery>
+      <entry>2025-05-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5baa64d6-37ee-11f0-a116-8447094a420f">
+    <topic>OpenSSL -- Inverted security logic in x509 app</topic>
+    <affects>
+      <package>
+	<name>openssl35</name>
+	<range><lt>3.5.0_1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL project reports:</p>
+	<blockquote cite="https://openssl-library.org/news/secadv/20250522.txt">
+	  <p>The x509 application adds trusted use instead of rejected use (low)</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-4575</cvename>
+      <url>https://openssl-library.org/news/secadv/20250522.txt</url>
+    </references>
+    <dates>
+      <discovery>2025-05-23</discovery>
+      <entry>2025-05-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6529e5e7-36d5-11f0-8f57-b42e991fc52e">
+    <topic>Firefox -- memory corruption due to race condition</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>137.0.2,2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security@mozilla.org reports:</p>
+	<blockquote cite="https://bugzilla.mozilla.org/show_bug.cgi?id=1951554">
+	  <p>A race condition existed in nsHttpTransaction that could
+	  have been exploited to cause memory corruption, potentially
+	  leading to an exploitable condition.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-3608</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-3608</url>
+    </references>
+    <dates>
+      <discovery>2025-04-15</discovery>
+      <entry>2025-05-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a1a1b0c2-3791-11f0-8600-2cf05da270f3">
+    <topic>Gitlab -- vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>18.0.0</ge><lt>18.0.1</lt></range>
+	<range><ge>17.11.0</ge><lt>17.11.3</lt></range>
+	<range><ge>10.2.0</ge><lt>17.10.7</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2025/05/21/patch-release-gitlab-18-0-1-released/">
+	  <p>Unprotected large blob endpoint in GitLab allows Denial of Service</p>
+	  <p>Improper XPath validation allows modified SAML response to bypass 2FA requirement</p>
+	  <p>A Discord webhook integration may cause DoS</p>
+	  <p>Unbounded Kubernetes cluster tokens may lead to DoS</p>
+	  <p>Unvalidated notes position may lead to Denial of Service</p>
+	  <p>Hidden/masked variables may get exposed in the UI</p>
+	  <p>Two-factor authentication requirement bypass</p>
+	  <p>View full email addresses that should be partially obscured</p>
+	  <p>Branch name confusion in confidential MRs</p>
+	  <p>Unauthorized access to job data via a GraphQL query</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-0993</cvename>
+      <cvename>CVE-2024-12093</cvename>
+      <cvename>CVE-2024-7803</cvename>
+      <cvename>CVE-2025-3111</cvename>
+      <cvename>CVE-2025-2853</cvename>
+      <cvename>CVE-2025-4979</cvename>
+      <cvename>CVE-2025-0605</cvename>
+      <cvename>CVE-2025-0679</cvename>
+      <cvename>CVE-2024-9163</cvename>
+      <cvename>CVE-2025-1110</cvename>
+      <url>https://about.gitlab.com/releases/2025/05/21/patch-release-gitlab-18-0-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2025-05-21</discovery>
+      <entry>2025-05-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4abd86c1-366d-11f0-9c0c-000c29ffbb6c">
+    <topic>screen -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>screen</name>
+	<range><lt>5.0.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The screen project reports:</p>
+	<blockquote cite="https://lists.gnu.org/archive/html/info-gnu/2025-05/msg00002.html">
+	  <p>Multiple security issues in screen.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-46805</cvename>
+      <cvename>CVE-2025-46804</cvename>
+      <cvename>CVE-2025-46803</cvename>
+      <cvename>CVE-2025-46802</cvename>
+      <cvename>CVE-2025-23395</cvename>
+      <url>https://lists.gnu.org/archive/html/info-gnu/2025-05/msg00002.html</url>
+    </references>
+    <dates>
+      <discovery>2025-05-12</discovery>
+      <entry>2025-05-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="07560111-34cc-11f0-af94-b42e991fc52e">
+    <topic>firefox -- out-of-bounds read/write</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>138.0.4,2</lt></range>
+      </package>
+      <package>
+	<name>firefox-esr</name>
+	<range><lt>128.10.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security@mozilla.org reports:</p>
+	<blockquote cite="https://bugzilla.mozilla.org/show_bug.cgi?id=1966614">
+	  <p>An attacker was able to perform an out-of-bounds read or
+	  write on a JavaScript object by confusing array index sizes.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-4918</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-4918</url>
+      <cvename>CVE-2025-4919</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-4919</url>
+    </references>
+    <dates>
+      <discovery>2025-05-17</discovery>
+      <entry>2025-05-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="46594aa3-32f7-11f0-a116-8447094a420f">
+    <topic>WeeChat -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>weechat</name>
+	<range><lt>4.6.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Weechat project reports:</p>
+	<blockquote cite="https://weechat.org/doc/weechat/security/">
+	  <p>Multiple integer and buffer overflows in WeeChat core.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://weechat.org/doc/weechat/security/</url>
+    </references>
+    <dates>
+      <discovery>2025-05-11</discovery>
+      <entry>2025-05-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="79400d31-3166-11f0-8cb5-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>136.0.7103.113</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>136.0.7103.113</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2025/05/stable-channel-update-for-desktop_14.html">
+	 <p>This update includes 4 security fixes:</p>
+	 <ul>
+	    <li>[415810136] High CVE-2025-4664: Insufficient policy enforcement in Loader. Source: X post from @slonser_ on 2025-05-05</li>
+	    <li>[412578726] High CVE-2025-4609: Incorrect handle provided in unspecified circumstances in Mojo. Reported by Micky on 2025-04-22</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-4664</cvename>
+      <cvename>CVE-2025-4609</cvename>
+      <url>https://chromereleases.googleblog.com/2025/05/stable-channel-update-for-desktop_14.html</url>
+    </references>
+    <dates>
+      <discovery>2025-05-14</discovery>
+      <entry>2025-05-15</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="52efdd56-30bd-11f0-81be-b42e991fc52e">
     <topic>Mozilla -- memory safety bugs</topic>
     <affects>

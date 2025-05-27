@@ -256,6 +256,7 @@
     SUBDIR += lightgbm
     SUBDIR += linux-c7-sdl12-extralibs
     SUBDIR += linux-rl9-sdl12-extralibs
+    SUBDIR += linux-rl9-sdl20-extralibs
     SUBDIR += llama-cpp
     SUBDIR += locale-en_DK
     SUBDIR += localedata
@@ -449,6 +450,7 @@
     SUBDIR += py-gluonnlp
     SUBDIR += py-gpiozero
     SUBDIR += py-halo
+    SUBDIR += py-hf-xet
     SUBDIR += py-hist
     SUBDIR += py-histoprint
     SUBDIR += py-huepy

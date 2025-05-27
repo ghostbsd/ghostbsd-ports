@@ -1,7 +1,7 @@
 PORTNAME=	cdo
-PORTVERSION=	2.5.0
+PORTVERSION=	2.5.2
 CATEGORIES=	science
-MASTER_SITES=	https://code.mpimet.mpg.de/attachments/download/29786/ \
+MASTER_SITES=	https://code.mpimet.mpg.de/attachments/download/29938/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -26,8 +26,8 @@ CONFIGURE_ENV=	PYTHON=${PYTHON_CMD}
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 MAKE_JOBS_UNSAFE=	yes
-TESTING_UNSAFE=		765 tests fail
 TEST_TARGET=	check
+TESTING_UNSAFE=	765 tests fail
 USE_CXXSTD=	c++20
 USE_LDCONFIG=	yes
 
