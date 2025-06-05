@@ -1,9 +1,10 @@
 PORTNAME=	mprocs
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.3
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
-MAINTAINER=	DtxdF@disroot.org
+MAINTAINER=	dtxdf@FreeBSD.org
 COMMENT=	Run multiple commands in parallel
 WWW=		https://github.com/pvolok/mprocs/
 

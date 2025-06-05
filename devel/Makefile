@@ -1532,7 +1532,6 @@
     SUBDIR += linux-c7-elfutils-libs
     SUBDIR += linux-c7-icu
     SUBDIR += linux-c7-libaio
-    SUBDIR += linux-c7-libgfortran
     SUBDIR += linux-c7-libglade2
     SUBDIR += linux-c7-libpciaccess
     SUBDIR += linux-c7-libsigc++20
@@ -1556,10 +1555,8 @@
     SUBDIR += linux-rl9-highway
     SUBDIR += linux-rl9-icu
     SUBDIR += linux-rl9-libevent
-    SUBDIR += linux-rl9-libgfortran
     SUBDIR += linux-rl9-libpciaccess
     SUBDIR += linux-rl9-libsigc++20
-    SUBDIR += linux-rl9-libsoup
     SUBDIR += linux-rl9-libthai
     SUBDIR += linux-rl9-libtool-ltdl
     SUBDIR += linux-rl9-libunistring
@@ -4694,6 +4691,7 @@
     SUBDIR += py-cobble
     SUBDIR += py-codegen
     SUBDIR += py-cog
+    SUBDIR += py-collections-extended
     SUBDIR += py-colorama
     SUBDIR += py-colored-traceback
     SUBDIR += py-coloredlogs
@@ -4838,6 +4836,7 @@
     SUBDIR += py-editables
     SUBDIR += py-editdistance
     SUBDIR += py-ejson
+    SUBDIR += py-eliot
     SUBDIR += py-enlighten
     SUBDIR += py-entrypoint2
     SUBDIR += py-entrypoints
@@ -5783,6 +5782,7 @@
     SUBDIR += py-pyudev
     SUBDIR += py-pyupgrade
     SUBDIR += py-pyusb
+    SUBDIR += py-pyutil
     SUBDIR += py-pyvisa
     SUBDIR += py-pyvisa-py
     SUBDIR += py-pyxb-x
