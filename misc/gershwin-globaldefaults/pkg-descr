@@ -1,0 +1,5 @@
+Gershwin GlobalDefaults provides system-wide default preferences for GNUstep
+applications, installed under /System/Library/Preferences. These defaults
+include settings for NSGlobalDomain and specific applications such as
+GWorkspace, ensuring a consistent user experience across the Gershwin desktop
+environment.

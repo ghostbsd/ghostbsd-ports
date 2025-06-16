@@ -66,6 +66,8 @@
     SUBDIR += ganttproject
     SUBDIR += gcal
     SUBDIR += genius
+    SUBDIR += gershwin-workspace
+    SUBDIR += gershwin-systempreferences
     SUBDIR += glabels
     SUBDIR += gnome-calendar
     SUBDIR += gnome-characters
