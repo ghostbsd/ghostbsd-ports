@@ -1,0 +1,7 @@
+Workspace is the official Gershwin workspace manager. It is fork of GWorkspace
+which is a clone of NeXT's workspace manager. Workspace is probably one of the
+most useful and usable workspace managers available on any platform, owing to
+its well-designed interface and the natural, consistent design that it inherits
+from the GNUstep framework.
+
+LICENSE: GPL2 or later

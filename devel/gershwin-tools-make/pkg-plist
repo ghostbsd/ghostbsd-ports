@@ -1,0 +1,165 @@
+/System/Library/Documentation/man/man1/debugapp.1.gz
+/System/Library/Documentation/man/man1/gnustep-config.1.gz
+/System/Library/Documentation/man/man1/gnustep-tests.1.gz
+/System/Library/Documentation/man/man1/openapp.1.gz
+/System/Library/Documentation/man/man1/opentool.1.gz
+/System/Library/Documentation/man/man7/GNUstep.7.gz
+/System/Library/Documentation/man/man7/library-combo.7.gz
+/System/Library/Makefiles/GNUstep-reset.sh
+/System/Library/Makefiles/GNUstep.csh
+/System/Library/Makefiles/GNUstep.sh
+/System/Library/Makefiles/Instance/Documentation/autogsdoc.make
+/System/Library/Makefiles/Instance/Documentation/gsdoc.make
+/System/Library/Makefiles/Instance/Documentation/install_files.make
+/System/Library/Makefiles/Instance/Documentation/javadoc.make
+/System/Library/Makefiles/Instance/Documentation/latex.make
+/System/Library/Makefiles/Instance/Documentation/texi.make
+/System/Library/Makefiles/Instance/Shared/bundle.make
+/System/Library/Makefiles/Instance/Shared/headers.make
+/System/Library/Makefiles/Instance/Shared/java.make
+/System/Library/Makefiles/Instance/Shared/pkgconfig.make
+/System/Library/Makefiles/Instance/Shared/stamp-string.make
+/System/Library/Makefiles/Instance/Shared/strings.make
+/System/Library/Makefiles/Instance/application.make
+/System/Library/Makefiles/Instance/bundle.make
+/System/Library/Makefiles/Instance/clibrary.make
+/System/Library/Makefiles/Instance/ctool.make
+/System/Library/Makefiles/Instance/documentation.make
+/System/Library/Makefiles/Instance/framework.make
+/System/Library/Makefiles/Instance/gswapp.make
+/System/Library/Makefiles/Instance/gswbundle.make
+/System/Library/Makefiles/Instance/java-tool.make
+/System/Library/Makefiles/Instance/java.make
+/System/Library/Makefiles/Instance/library.make
+/System/Library/Makefiles/Instance/objc.make
+/System/Library/Makefiles/Instance/palette.make
+/System/Library/Makefiles/Instance/resource-set.make
+/System/Library/Makefiles/Instance/rules.make
+/System/Library/Makefiles/Instance/service.make
+/System/Library/Makefiles/Instance/subproject.make
+/System/Library/Makefiles/Instance/test-application.make
+/System/Library/Makefiles/Instance/test-library.make
+/System/Library/Makefiles/Instance/test-tool.make
+/System/Library/Makefiles/Instance/tool.make
+/System/Library/Makefiles/Master/application.make
+/System/Library/Makefiles/Master/bundle.make
+/System/Library/Makefiles/Master/clibrary.make
+/System/Library/Makefiles/Master/ctool.make
+/System/Library/Makefiles/Master/deb.make
+/System/Library/Makefiles/Master/documentation.make
+/System/Library/Makefiles/Master/framework.make
+/System/Library/Makefiles/Master/gswapp.make
+/System/Library/Makefiles/Master/gswbundle.make
+/System/Library/Makefiles/Master/java-tool.make
+/System/Library/Makefiles/Master/java.make
+/System/Library/Makefiles/Master/library.make
+/System/Library/Makefiles/Master/nsis.make
+/System/Library/Makefiles/Master/objc.make
+/System/Library/Makefiles/Master/palette.make
+/System/Library/Makefiles/Master/parallel-subdirectories.make
+/System/Library/Makefiles/Master/resource-set.make
+/System/Library/Makefiles/Master/rpm.make
+/System/Library/Makefiles/Master/rules.make
+/System/Library/Makefiles/Master/serial-subdirectories.make
+/System/Library/Makefiles/Master/service.make
+/System/Library/Makefiles/Master/source-distribution.make
+/System/Library/Makefiles/Master/subproject.make
+/System/Library/Makefiles/Master/test-application.make
+/System/Library/Makefiles/Master/test-library.make
+/System/Library/Makefiles/Master/test-tool.make
+/System/Library/Makefiles/Master/tool.make
+/System/Library/Makefiles/TestFramework/GNUmakefile.in
+/System/Library/Makefiles/TestFramework/ObjectTesting.h
+/System/Library/Makefiles/TestFramework/README
+/System/Library/Makefiles/TestFramework/Summary.sh
+/System/Library/Makefiles/TestFramework/Testing.h
+/System/Library/Makefiles/TestFramework/example1.m
+/System/Library/Makefiles/TestFramework/example2.m
+/System/Library/Makefiles/TestFramework/example3.m
+/System/Library/Makefiles/TestFramework/example4.m
+/System/Library/Makefiles/TestFramework/example5.m
+/System/Library/Makefiles/TestFramework/example6.m
+/System/Library/Makefiles/TestFramework/example7.m
+/System/Library/Makefiles/TestFramework/example8.m
+/System/Library/Makefiles/TestFramework/example9.m
+/System/Library/Makefiles/aggregate.make
+/System/Library/Makefiles/app-wrapper.template
+/System/Library/Makefiles/application.make
+/System/Library/Makefiles/bake_debian_files.sh
+/System/Library/Makefiles/bundle.make
+/System/Library/Makefiles/clean_cpu.sh
+/System/Library/Makefiles/clean_os.sh
+/System/Library/Makefiles/clean_vendor.sh
+/System/Library/Makefiles/clibrary.make
+/System/Library/Makefiles/common.make
+/System/Library/Makefiles/config-noarch.make
+/System/Library/Makefiles/config.guess
+/System/Library/Makefiles/config.make
+/System/Library/Makefiles/config.sub
+/System/Library/Makefiles/cpu.sh
+/System/Library/Makefiles/ctool.make
+/System/Library/Makefiles/documentation.make
+/System/Library/Makefiles/empty.make
+/System/Library/Makefiles/executable.template
+/System/Library/Makefiles/filesystem.csh
+/System/Library/Makefiles/filesystem.make
+/System/Library/Makefiles/filesystem.sh
+/System/Library/Makefiles/fixpath.sh
+/System/Library/Makefiles/framework.make
+/System/Library/Makefiles/gnustep-make-help
+/System/Library/Makefiles/gswapp.make
+/System/Library/Makefiles/gswbundle.make
+/System/Library/Makefiles/install-sh
+/System/Library/Makefiles/java-executable.template
+/System/Library/Makefiles/java-tool.make
+/System/Library/Makefiles/java.make
+/System/Library/Makefiles/jni.make
+/System/Library/Makefiles/library-combo.make
+/System/Library/Makefiles/library.make
+/System/Library/Makefiles/messages.make
+/System/Library/Makefiles/mkinstalldirs
+/System/Library/Makefiles/names.make
+/System/Library/Makefiles/native-library.make
+/System/Library/Makefiles/nsi-app.template
+/System/Library/Makefiles/objc.make
+/System/Library/Makefiles/os.sh
+/System/Library/Makefiles/palette.make
+/System/Library/Makefiles/parallel-subdirectories.make
+/System/Library/Makefiles/print_unique_pathlist.sh
+/System/Library/Makefiles/relative_path.sh
+/System/Library/Makefiles/resource-set.make
+/System/Library/Makefiles/rules.make
+/System/Library/Makefiles/serial-subdirectories.make
+/System/Library/Makefiles/service.make
+/System/Library/Makefiles/spec-rules.template
+/System/Library/Makefiles/strip_makefiles.sh
+/System/Library/Makefiles/subproject.make
+/System/Library/Makefiles/tar-exclude-list
+/System/Library/Makefiles/target.make
+/System/Library/Makefiles/test-application.make
+/System/Library/Makefiles/test-library.make
+/System/Library/Makefiles/test-tool.make
+/System/Library/Makefiles/tool.make
+/System/Library/Makefiles/vendor.sh
+/System/Library/Preferences/GNUstep.conf
+/System/Library/Tools/debugapp
+/System/Library/Tools/gnustep-config
+/System/Library/Tools/gnustep-tests
+/System/Library/Tools/openapp
+/System/Library/Tools/opentool
+@dir /System/Library/Documentation/man/man1
+@dir /System/Library/Documentation/man/man7
+@dir /System/Library/Documentation/man
+@dir /System/Library/Documentation
+@dir /System/Library/Makefiles/Additional
+@dir /System/Library/Makefiles/Auxiliary
+@dir /System/Library/Makefiles/Instance/Documentation
+@dir /System/Library/Makefiles/Instance/Shared
+@dir /System/Library/Makefiles/Instance
+@dir /System/Library/Makefiles/Master
+@dir /System/Library/Makefiles/TestFramework
+@dir /System/Library/Makefiles
+@dir /System/Library/Preferences
+@dir /System/Library/Tools
+@dir /System/Library
+@dir /System

@@ -14,6 +14,8 @@
     SUBDIR += fox17
     SUBDIR += fxscintilla
     SUBDIR += gdl
+    SUBDIR += gershwin-libs-back
+    SUBDIR += gershwin-libs-gui
     SUBDIR += girara
     SUBDIR += gnome-pty-helper
     SUBDIR += gnustep-back

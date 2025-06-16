@@ -1,0 +1,7 @@
+/etc/sudoers.d/10_gnustep_env_keep
+/etc/sudoers.d/10_gnustep_secure_path
+bin/gershwin-x11
+etc/gtk-2.0/gtkrc
+etc/gtk-3.0/settings.ini
+share/xsessions/gershwin.desktop
+@dir /etc/sudoers.d

@@ -156,6 +156,7 @@
     SUBDIR += g810-led
     SUBDIR += gedkeeper
     SUBDIR += geekcode
+    SUBDIR += gershwin-globaldefaults
     SUBDIR += getopt
     SUBDIR += ghostbsd-pkg-conf
     SUBDIR += ghostbsd-update-scripts

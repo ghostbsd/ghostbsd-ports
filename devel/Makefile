@@ -821,6 +821,7 @@
     SUBDIR += genht
     SUBDIR += genie
     SUBDIR += getoptions
+    SUBDIR += gershwin-tools-make
     SUBDIR += gettext
     SUBDIR += gettext-lint
     SUBDIR += gettext-msghack

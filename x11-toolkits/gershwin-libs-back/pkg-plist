@@ -1,0 +1,46 @@
+/System/Library/Bundles/libgnustep-back-032.bundle/Resources/English.lproj/nfontFaceNames.strings
+/System/Library/Bundles/libgnustep-back-032.bundle/Resources/Info-gnustep.plist
+/System/Library/Bundles/libgnustep-back-032.bundle/Resources/Swedish.lproj/nfontFaceNames.strings
+/System/Library/Bundles/libgnustep-back-032.bundle/libgnustep-back-032
+/System/Library/Bundles/libgnustep-back-032.bundle/stamp.make
+/System/Library/Documentation/man/man1/gpbs.1.gz
+/System/Library/Fonts/Helvetica.nfont/FontInfo.plist
+/System/Library/Fonts/Helvetica.nfont/n019003l.afm
+/System/Library/Fonts/Helvetica.nfont/n019003l.pfb
+/System/Library/Fonts/Helvetica.nfont/n019003l.pfm
+/System/Library/Fonts/Helvetica.nfont/n019004l.afm
+/System/Library/Fonts/Helvetica.nfont/n019004l.pfb
+/System/Library/Fonts/Helvetica.nfont/n019004l.pfm
+/System/Library/Fonts/Helvetica.nfont/n019023l.afm
+/System/Library/Fonts/Helvetica.nfont/n019023l.pfb
+/System/Library/Fonts/Helvetica.nfont/n019023l.pfm
+/System/Library/Fonts/Helvetica.nfont/n019024l.afm
+/System/Library/Fonts/Helvetica.nfont/n019024l.pfb
+/System/Library/Fonts/Helvetica.nfont/n019024l.pfm
+/System/Library/Fonts/Helvetica.nfont/n019043l.afm
+/System/Library/Fonts/Helvetica.nfont/n019043l.pfb
+/System/Library/Fonts/Helvetica.nfont/n019043l.pfm
+/System/Library/Fonts/Helvetica.nfont/n019044l.afm
+/System/Library/Fonts/Helvetica.nfont/n019044l.pfb
+/System/Library/Fonts/Helvetica.nfont/n019044l.pfm
+/System/Library/Fonts/Helvetica.nfont/n019063l.afm
+/System/Library/Fonts/Helvetica.nfont/n019063l.pfb
+/System/Library/Fonts/Helvetica.nfont/n019063l.pfm
+/System/Library/Fonts/Helvetica.nfont/n019064l.afm
+/System/Library/Fonts/Helvetica.nfont/n019064l.pfb
+/System/Library/Fonts/Helvetica.nfont/n019064l.pfm
+/System/Library/Tools/gpbs
+libdata/ldconfig/gershwin-libs-back
+@dir /System/Library/Bundles/libgnustep-back-032.bundle/Resources/English.lproj
+@dir /System/Library/Bundles/libgnustep-back-032.bundle/Resources/Swedish.lproj
+@dir /System/Library/Bundles/libgnustep-back-032.bundle/Resources
+@dir /System/Library/Bundles/libgnustep-back-032.bundle
+@dir /System/Library/Bundles
+@dir /System/Library/Documentation/man/man1
+@dir /System/Library/Documentation/man
+@dir /System/Library/Documentation
+@dir /System/Library/Fonts/Helvetica.nfont
+@dir /System/Library/Fonts
+@dir /System/Library/Tools
+@dir /System/Library
+@dir /System
