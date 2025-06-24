@@ -1,5 +1,5 @@
 PORTNAME=	ghostbsd-gershwin-settings
-DISTVERSION=	20250615
+DISTVERSION=	2025062102
 CATEGORIES=	x11
 
 MAINTAINER=	jpm820@proton.me
@@ -12,29 +12,27 @@ USES=		uidfix
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	gershwin-os
-GH_TAGNAME=	a30a073
+GH_TAGNAME=	8d285f0
 
 NO_ARCH=	yes
 NO_BUILD=	yes
 
 do-install:
-	# Install bin script
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/gershwin-x11 ${STAGEDIR}${PREFIX}/bin/gershwin-x11
+	@${MKDIR} ${STAGEDIR}${PREFIX}
 
-	# Install GTK settings
-	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/gtk-2.0
-	${INSTALL_DATA} ${WRKSRC}/etc/gtk-2.0/gtkrc ${STAGEDIR}${PREFIX}/etc/gtk-2.0/gtkrc
+	# Recursively install bin/ scripts
+	@cd ${WRKSRC}/bin && \
+		${FIND} . -type d -exec ${MKDIR} "${STAGEDIR}${PREFIX}/bin/{}" \; && \
+		${FIND} . -type f -exec ${INSTALL_SCRIPT} "{}" "${STAGEDIR}${PREFIX}/bin/{}" \;
 
-	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/gtk-3.0
-	${INSTALL_DATA} ${WRKSRC}/etc/gtk-3.0/settings.ini ${STAGEDIR}${PREFIX}/etc/gtk-3.0/settings.ini
+	# Recursively install etc files
+	@cd ${WRKSRC}/etc && \
+		${FIND} . -type d -exec ${MKDIR} "${STAGEDIR}${PREFIX}/etc/{}" \; && \
+		${FIND} . -type f -exec ${INSTALL_DATA} "{}" "${STAGEDIR}${PREFIX}/etc/{}" \;
 
-	# Install sudoers snippets
-	@${MKDIR} ${STAGEDIR}/etc/sudoers.d
-	${INSTALL_DATA} ${WRKSRC}/etc/sudoers.d/10_gnustep_env_keep ${STAGEDIR}/etc/sudoers.d/
-	${INSTALL_DATA} ${WRKSRC}/etc/sudoers.d/10_gnustep_secure_path ${STAGEDIR}/etc/sudoers.d/
-
-	# Install X session desktop entry
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/xsessions
-	${INSTALL_DATA} ${WRKSRC}/share/xsessions/gershwin.desktop ${STAGEDIR}${PREFIX}/share/xsessions/
+	# Recursively install share files
+	@cd ${WRKSRC}/share && \
+		${FIND} . -type d -exec ${MKDIR} "${STAGEDIR}${PREFIX}/share/{}" \; && \
+		${FIND} . -type f -exec ${INSTALL_DATA} "{}" "${STAGEDIR}${PREFIX}/share/{}" \;
 
 .include <bsd.port.mk>
