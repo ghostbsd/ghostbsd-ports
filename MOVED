@@ -4324,6 +4324,8 @@ graphics/linux-rl9-webp|graphics/linux-rl9-imageformats-libs|2025-04-21|Merged i
 textproc/py-grapheme||2025-04-21|Has expired: Upstream is inactive for 4 years
 devel/p5-threads|lang/perl5.36|2025-04-24|part of Perl core since 5.7.3, the port was from 5.27.8
 databases/replibyte||2025-04-26|incompatible rust 1.86.0 and seems to be dead upstream
+x11/nvidia-secondary-driver|x11/nvidia-driver|2025-04-26|Dead after nvidia-hybrid-graphics was removed
+x11/nvidia-secondary-driver-390|x11/nvidia-driver-390|2025-04-26|Dead after nvidia-hybrid-graphics was removed
 net-im/chatterino2||2025-04-27|Has expired: Broken for more than a month with no available fixes
 shells/oil|shells/oils|2025-04-27|Project was renamed upstream
 security/weggli||2025-04-28|Has expired: Upstream inactive as last release was in 2022
@@ -4470,8 +4472,6 @@ sysutils/py-upt-cpan||2025-06-02|Has expired: Depends on expired sysutils/py-upt
 sysutils/py-upt-freebsd||2025-06-02|Has expired: Depends on expired sysutils/py-upt
 sysutils/py-upt-rubygems||2025-06-02|Has expired: Depends on expired sysutils/py-upt
 sysutils/py-upt-pypi||2025-06-02|Has expired: Depends on expired sysutils/py-upt
-devel/py-pytest-cases||2025-06-02|Has expired: Depends on expired devel/py-makefun
-devel/py-decopatch||2025-06-02|Has expired: Depends on expired devel/py-makefun
 graphics/rubygem-ezprint||2025-06-02|Has expired: Depends on expired graphics/rubygem-pdfkit
 databases/datasette||2025-06-02|Has expired: Depends on expired devel/py-pytest-runner
 www/py-pydrive2||2025-06-02|Has expired: Depends on expired security/py-oauth2client
@@ -4482,7 +4482,6 @@ misc/mxnet||2025-06-02|Has expired: Project has been retired by Apache, see http
 sysutils/py-upt||2025-06-02|Has expired: Depends on expired misc/py-spdx-lookup
 misc/py-spdx-lookup||2025-06-02|Has expired: Upstream repository has been archived on Nov 13, 2020
 misc/py-spdx||2025-06-02|Has expired: Upstream repository has been archived on Nov 13, 2020
-devel/py-makefun||2025-06-02|Has expired: Depends on expired devel/py-pytest-runner
 security/mbedtls2||2025-06-02|Has expired: Upstream support ends at the end of 2024
 graphics/rubygem-pdfkit||2025-06-02|Has expired: Depends on expired converters/wkhtmltopdf
 security/racoon2||2025-06-02|Has expired: Requested removal by PR/286981
@@ -4493,6 +4492,71 @@ security/py-oauth2client||2025-06-02|Has expired: Deprecated by upstream. Use se
 math/py-grandalf||2025-06-02|Has expired: Depends on expired devel/py-pytest-runner
 multimedia/py-ffmpeg-python||2025-06-02|Has expired: Depends on expired devel/py-pytest-runner
 science/py-DendroPy||2025-06-02|Has expired: Depends on expired devel/py-pytest-runner
-devel/linux-rl9-libsoup|devel/linux_base-rl9|2025-06-04|Merged into devel/linux_base-rl9
+devel/linux-rl9-libsoup|emulators/linux_base-rl9|2025-06-04|Merged into emulators/linux_base-rl9
 games/hedgewars-server||2025-06-04|Depends on expired lang/ghc810, does not build with newer GHCs
 lang/ghc810||2025-06-04|Old version, unsupported upstream
+audio/mp3check||2025-06-06|Has expired: Depends on expired audio/id3tool
+audio/id3tool||2025-06-06|Has expired: Can't read ID3v2 tags which have been around for 20+ years and discontinued in 2005 feature-wise according to readme file
+science/py-pysal||2025-06-06|Has expired: Depends on expired math/py-spvcm
+textproc/xincluder||2025-06-06|Has expired: Depends on expiring java/jdom
+math/py-spvcm||2025-06-06|Has expired: Upstream repository has been archived on Jul 9, 2024
+sysutils/screen50|sysutils/screen|2025-06-09|Replace the screen metaport with screen50, renaming screen50 to screen
+x11/cde-25|x11/cde|2025-06-09|Replace the cde metaport with cde-25, renaming cde-25 to cde
+x11-toolkits/scenefx02|x11-toolkits/scenefx03|2025-06-09|No consumers in ports
+archivers/linux-rl9-brotli|emulators/linux_base-rl9|2025-06-10|Merged into emulators/linux_base-rl9
+devel/linux-rl9-libunistring|emulators/linux_base-rl9|2025-06-10|Merged into emulators/linux_base-rl9
+dns/linux-rl9-libidn2|emulators/linux_base-rl9|2025-06-10|Merged into emulators/linux_base-rl9
+dns/linux-rl9-libpsl|emulators/linux_base-rl9|2025-06-10|Merged into emulators/linux_base-rl9
+databases/linux-rl9-sqlite3|emulators/linux_base-rl9|2025-06-10|Merged into emulators/linux_base-rl9
+x11-fonts/gentium-plus|x11-fonts/gentium|2025-06-10|Renamed to track upstream changes
+net/rabbiteer|net/amqpcat|2025-06-10|No longer maintained, use net/amqpcat instead as a functional replacement
+editors/gnome-latex|editors/enter-tex|2025-06-10|Renamed uspstream
+net/landrop||2025-06-14|Has expired: Unmaintained version and the newer version turned to close source
+lang/frawk||2025-06-15|Abandoned upstream; fails to build; was labeled broken for over a year
+science/R-cran-eco||2025-06-16|Has expired: Unsupported upstream
+devel/bugzilla44||2025-06-16|Has expired: Upstream support ended 20250103
+german/bugzilla44||2025-06-16|Removed, localized version of devel/bugzilla44
+japanese/bugzilla44||2025-06-16|Removed, localized version of devel/bugzilla44
+russian/bugzilla44||2025-06-16|Removed, localized version of devel/bugzilla44
+sysutils/plasma6-drkonqi||2025-06-17|Removed, requires Systemd
+devel/artifactory||2025-06-17|Has expired: Outdated with known vulnerabilities and marked as forbidden in 2023
+devel/m17n-inscript2||2025-06-23|Now included in devel/m17n-db
+devel/py-pytest4-cov||2025-06-23|Has expired: Depends on expiring devel/py-pytest4
+devel/py-spyder-unittest||2025-06-23|Has expired: Depends on expiring devel/spyder
+comms/py-pynitrokey||2025-06-23|Has expired: Depends on expiring comms/py-spsdk
+devel/bit||2025-06-23|Has expired: Upstream ceased development
+biology/py-orange3-single-cell||2025-06-23|Has expired: Depends on expired math/py-fastdtw and expiring misc/orange3
+biology/py-orange3-bioinformatics||2025-06-23|Has expired: Depends on expiring misc/orange3
+textproc/py-orange3-text||2025-06-23|Has expired: Depends on expiring misc/orange3
+misc/py-orange3-datafusion||2025-06-23|Has expired: Depends on expiring misc/orange3
+misc/py-orange3-timeseries||2025-06-23|Has expired: Depends on expiring misc/orange3
+misc/py-orange3-educational||2025-06-23|Has expired: Depends on expiring misc/orange3
+misc/py-orange3-associate||2025-06-23|Has expired: Depends on expiring misc/orange3
+misc/py-orange3-network||2025-06-23|Has expired: Depends on expiring misc/orange3
+www/onionshare||2025-06-23|Has expired: Depends on expired devel/py-atomicwrites
+deskutils/py-todoman||2025-06-23|Has expired: Depends on expired devel/py-atomicwrites
+deskutils/py-khard||2025-06-23|Has expired: Depends on expired devel/py-atomicwrites
+deskutils/py-khal||2025-06-23|Has expired: Depends on expired devel/py-atomicwrites
+devel/py-pytest-relaxed||2025-06-23|Has expired: Depends on expiring devel/py-pytest4
+devel/py-pytest4-flakes||2025-06-23|Has expired: Depends on expiring devel/py-pytest4
+devel/py-pytest-pep8||2025-06-23|Has expired: Depends on expiring devel/py-pytest4
+devel/py-pytest4-cache||2025-06-23|Has expired: Depends on expiring devel/py-pytest4
+devel/py-pytest4||2025-06-23|Has expired: Depends on expired devel/py-atomicwrites
+math/py-fastdtw||2025-06-23|Has expired: Depends on expired devel/py-pytest-runner
+devel/spyder||2025-06-23|Has expired: Depends on expired devel/py-atomicwrites
+misc/orange3||2025-06-23|Has expired: Depends on expiring devel/py-orange-canvas-core
+devel/py-orange-widget-base||2025-06-23|Has expired: Depends on expiring devel/py-orange-canvas-core
+devel/py-orange-canvas-core||2025-06-23|Has expired: Depends on expired misc/py-dictdiffer
+misc/py-dictdiffer||2025-06-23|Has expired: Depends on expired devel/py-pytest-runner
+net-im/biboumi||2025-06-23|Has expired: Depends on expired security/botan2
+sysutils/daggy||2025-06-23|Has expired: Depends on expired security/botan2
+java/jdom||2025-06-23|Has expired: Depends on exired java/jaxen
+java/jaxen||2025-06-23|Has expired: Outdated, unsupported upstream and unmaintained in tree for years
+devel/py-atomicwrites||2025-06-23|Has expired: Upstream repository has been archived on Jul 16, 2022. Upstream suggests os.replace and os.rename instead
+devel/py-pytest-runner||2025-06-23|Has expired: pytest-runner depends on deprecated features of setuptools
+x11-toolkits/scenefx03|x11-toolkits/scenefx04|2025-06-24|No consumers in ports
+net/ziina|net/zmate|2025-06-24|Renamed upstream
+security/py-gpgme|security/py-gpg|2025-06-24|Gpgme Python bindings have been split into a separate project
+security/gpgme-cpp|security/gpgmepp|2025-06-24|Gpgme C++ bindings have been split into a separate project
+security/gpgme-qt@qt5|security/qgpgme@qt5|2025-06-24|Gpgme Qt5 bindings have been split into a separate project
+security/gpgme-qt@qt6|security/qgpgme@qt6|2025-06-24|Gpgme Qt6 bindings have been split into a separate project

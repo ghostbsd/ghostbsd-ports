@@ -17,6 +17,7 @@
     SUBDIR += akonadi-search
     SUBDIR += alligator
     SUBDIR += aluminum
+    SUBDIR += amqpcat
     SUBDIR += aoe
     SUBDIR += apache-commons-net
     SUBDIR += apinger
@@ -109,6 +110,7 @@
     SUBDIR += dante
     SUBDIR += daq
     SUBDIR += datapipe
+    SUBDIR += dataplaneapi
     SUBDIR += dbeacon
     SUBDIR += delegate
     SUBDIR += deltachat-rpc-server
@@ -243,13 +245,10 @@
     SUBDIR += hanstunnel
     SUBDIR += haproxy
     SUBDIR += haproxy-devel
-    SUBDIR += haproxy22
     SUBDIR += haproxy24
-    SUBDIR += haproxy25
     SUBDIR += haproxy26
-    SUBDIR += haproxy27
     SUBDIR += haproxy28
-    SUBDIR += haproxy29
+    SUBDIR += haproxy30
     SUBDIR += hblock
     SUBDIR += hexinject
     SUBDIR += hlmaster
@@ -266,6 +265,7 @@
     SUBDIR += httpry
     SUBDIR += icmpinfo
     SUBDIR += icpld
+    SUBDIR += identme
     SUBDIR += ifdepd
     SUBDIR += iffinder
     SUBDIR += ifstat
@@ -360,7 +360,6 @@
     SUBDIR += l2tpd
     SUBDIR += ladvd
     SUBDIR += lambdamoo
-    SUBDIR += landrop
     SUBDIR += latd
     SUBDIR += lavinmq
     SUBDIR += ldap-stats
@@ -1209,7 +1208,6 @@
     SUBDIR += quagga
     SUBDIR += quiche
     SUBDIR += quoted
-    SUBDIR += rabbiteer
     SUBDIR += rabbitmq
     SUBDIR += rabbitmq-c
     SUBDIR += rabbitmqadmin
@@ -1294,6 +1292,7 @@
     SUBDIR += rubygem-fog-aliyun-gitlab
     SUBDIR += rubygem-fog-atmos
     SUBDIR += rubygem-fog-aws
+    SUBDIR += rubygem-fog-aws-gitlab
     SUBDIR += rubygem-fog-aws328
     SUBDIR += rubygem-fog-azure
     SUBDIR += rubygem-fog-brightbox
@@ -1309,6 +1308,7 @@
     SUBDIR += rubygem-fog-internet-archive
     SUBDIR += rubygem-fog-joyent
     SUBDIR += rubygem-fog-local
+    SUBDIR += rubygem-fog-local-gitlab
     SUBDIR += rubygem-fog-openstack
     SUBDIR += rubygem-fog-ovirt
     SUBDIR += rubygem-fog-powerdns
@@ -1366,6 +1366,7 @@
     SUBDIR += rubygem-google-cloud-trace-v1
     SUBDIR += rubygem-google-cloud-trace-v2
     SUBDIR += rubygem-grpc
+    SUBDIR += rubygem-grpc-gitlab
     SUBDIR += rubygem-grpc-tools
     SUBDIR += rubygem-grpc_reflection
     SUBDIR += rubygem-hangouts-chat
@@ -1713,9 +1714,9 @@
     SUBDIR += zapret
     SUBDIR += zebra-server
     SUBDIR += zerotier
-    SUBDIR += ziina
     SUBDIR += zillion
     SUBDIR += zmap
+    SUBDIR += zmate
     SUBDIR += zsync
     SUBDIR += zyre
 

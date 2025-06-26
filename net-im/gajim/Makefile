@@ -1,5 +1,6 @@
 PORTNAME=	gajim
 DISTVERSION=	2.0.2
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	https://gajim.org/downloads/${DISTVERSION:R}/
 
@@ -42,6 +43,6 @@ OPTIONS_DEFAULT=DBUS OPENGPG
 OPENGPG_DESC=	GPG encryption per XEP-0373
 
 DBUS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>=0.82.2:devel/py-dbus@${PY_FLAVOR}
-OPENGPG_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gpgme>0:security/py-gpgme@${PY_FLAVOR}
+OPENGPG_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gpg>=2.0.0:security/py-gpg@${PY_FLAVOR}
 
 .include <bsd.port.mk>

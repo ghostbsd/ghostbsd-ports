@@ -311,8 +311,8 @@ velbustcpd:*:367:
 sshesame:*:368:
 neo4j:*:369:
 _wsdd:*:370:
-# free: 371
-# free: 372
+reposilite:*:371:
+beam:*:372:
 # free: 373
 # free: 374
 # free: 375
@@ -337,7 +337,7 @@ ldap:*:389:
 # free: 394
 # free: 395
 # free: 396
-# free: 397
+rtorrent:*:397:
 tiarra:*:398:
 # free: 399
 # free: 400
@@ -775,9 +775,9 @@ cirrus:*:828:
 # free: 831
 beehive:*:832:
 # free: 833
-# free: 834
-# free: 835
-# free: 836
+pocket-id:*:834:
+filebrowser:*:835:
+tinyauth:*:836:
 # free: 837
 # free: 838
 # free: 839

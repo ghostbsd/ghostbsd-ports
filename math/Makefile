@@ -975,12 +975,12 @@
     SUBDIR += py-evalidate
     SUBDIR += py-faiss
     SUBDIR += py-fastcluster
-    SUBDIR += py-fastdtw
     SUBDIR += py-fenics-basix
     SUBDIR += py-fenics-ffcx
     SUBDIR += py-fenics-ufl
     SUBDIR += py-flax
     SUBDIR += py-formulaic
+    SUBDIR += py-formulaic-contrasts
     SUBDIR += py-fpylll
     SUBDIR += py-fraction
     SUBDIR += py-fsph
@@ -1052,6 +1052,7 @@
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
     SUBDIR += py-patsy
+    SUBDIR += py-pcodec
     SUBDIR += py-pdal
     SUBDIR += py-permutation
     SUBDIR += py-petsc4py
@@ -1119,7 +1120,6 @@
     SUBDIR += py-spopt
     SUBDIR += py-spot
     SUBDIR += py-spreg
-    SUBDIR += py-spvcm
     SUBDIR += py-squarify
     SUBDIR += py-ssm
     SUBDIR += py-statsmodels

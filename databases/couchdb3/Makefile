@@ -1,6 +1,6 @@
 PORTNAME=	couchdb3
 DISTVERSION=	3.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	APACHE/couchdb/source/${DISTVERSION}
 DISTNAME=	apache-couchdb-${DISTVERSION}
@@ -11,6 +11,9 @@ WWW=		https://couchdb.apache.org/
 
 LICENSE=	APACHE20 BSD3CLAUSE ISCL OFL11 WTFPL
 LICENSE_COMB=	multi
+
+# not supported upstream
+NOT_FOR_ARCHS=	i386
 
 BUILD_DEPENDS=	erlang-runtime${_ERLVER}>=${_ERLVER}.0:lang/erlang-runtime${_ERLVER} \
 		rebar:devel/rebar

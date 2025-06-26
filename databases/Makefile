@@ -112,6 +112,7 @@
     SUBDIR += kdb
     SUBDIR += kexi
     SUBDIR += keydb
+    SUBDIR += kuzu
     SUBDIR += kyotocabinet
     SUBDIR += kyototycoon
     SUBDIR += ldb25
@@ -131,6 +132,7 @@
     SUBDIR += libgda5-mysql
     SUBDIR += libgda5-postgresql
     SUBDIR += libgda5-ui
+    SUBDIR += libgda6
     SUBDIR += libgdamm5
     SUBDIR += libhsclient
     SUBDIR += libiodbc
@@ -149,7 +151,6 @@
     SUBDIR += linux-oracle-instantclient-basic
     SUBDIR += linux-oracle-instantclient-sdk
     SUBDIR += linux-rl9-libtracker-sparql
-    SUBDIR += linux-rl9-sqlite3
     SUBDIR += liquibase
     SUBDIR += litestream
     SUBDIR += lmdb
@@ -174,6 +175,8 @@
     SUBDIR += mariadb106-server
     SUBDIR += mariadb114-client
     SUBDIR += mariadb114-server
+    SUBDIR += mariadb118-client
+    SUBDIR += mariadb118-server
     SUBDIR += mdbtools
     SUBDIR += mdbx
     SUBDIR += mdcached
@@ -1029,6 +1032,7 @@
     SUBDIR += rubygem-ruby-mysql
     SUBDIR += rubygem-sdbm
     SUBDIR += rubygem-seed-fu
+    SUBDIR += rubygem-seed-fu-gitlab
     SUBDIR += rubygem-solid_cable
     SUBDIR += rubygem-solid_cable-rails72
     SUBDIR += rubygem-solid_cache
@@ -1039,7 +1043,9 @@
     SUBDIR += rubygem-sqlite3-ruby
     SUBDIR += rubygem-sqlite31
     SUBDIR += rubygem-state_machines-activemodel
+    SUBDIR += rubygem-state_machines-activemodel-gitlab
     SUBDIR += rubygem-state_machines-activerecord
+    SUBDIR += rubygem-state_machines-activerecord-gitlab
     SUBDIR += rubygem-state_machines-activerecord08
     SUBDIR += rubygem-tarantool
     SUBDIR += rubygem-trilogy

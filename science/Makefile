@@ -12,7 +12,6 @@
     SUBDIR += R-cran-bayesm
     SUBDIR += R-cran-cmprsk
     SUBDIR += R-cran-e1071
-    SUBDIR += R-cran-eco
     SUBDIR += R-cran-epicalc
     SUBDIR += R-cran-etm
     SUBDIR += R-cran-fastICA
@@ -412,7 +411,6 @@
     SUBDIR += py-pyphot
     SUBDIR += py-pyprecice
     SUBDIR += py-pyqubo
-    SUBDIR += py-pysal
     SUBDIR += py-pyscf
     SUBDIR += py-pyteomics
     SUBDIR += py-qcelemental

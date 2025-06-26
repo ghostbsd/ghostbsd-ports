@@ -1,6 +1,7 @@
 PORTNAME=	gotify-server
 PORTVERSION=	2.6.3
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/mfechner/freebsd-net-gotify-server/raw/refs/heads/main/:yarn_cache
 DISTNAME=	server
@@ -11,6 +12,8 @@ COMMENT=	Simple server for sending and receiving messages
 WWW=		https://github.com/gotify/server
 
 LICENSE=	MIT
+
+BROKEN_i386=	Build does not succeed (timeout in poudriere)
 
 BUILD_DEPENDS=	yarn${NODEJS_SUFFIX}>=1.10.0:www/yarn${NODEJS_SUFFIX} \
 		

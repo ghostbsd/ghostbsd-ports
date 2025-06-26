@@ -83,7 +83,6 @@
     SUBDIR += fpc-devel-source
     SUBDIR += fpc-docs
     SUBDIR += fpc-source
-    SUBDIR += frawk
     SUBDIR += fsharp
     SUBDIR += fth
     SUBDIR += gambit-c
@@ -374,6 +373,7 @@
     SUBDIR += squeak
     SUBDIR += squirrel
     SUBDIR += starlark-rust
+    SUBDIR += swift510
     SUBDIR += swipl
     SUBDIR += tauthon
     SUBDIR += tcbasic

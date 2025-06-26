@@ -42,6 +42,7 @@
     SUBDIR += dnsproxy
     SUBDIR += dnsrecon
     SUBDIR += dnsreflector
+    SUBDIR += dnssec-rr
     SUBDIR += dnstable
     SUBDIR += dnstable-convert
     SUBDIR += dnstop
@@ -94,8 +95,6 @@
     SUBDIR += libpsl
     SUBDIR += linux-c7-libasyncns
     SUBDIR += linux-rl9-libasyncns
-    SUBDIR += linux-rl9-libidn2
-    SUBDIR += linux-rl9-libpsl
     SUBDIR += lua-resty-dns
     SUBDIR += luaunbound
     SUBDIR += mDNSResponder_nss
@@ -222,6 +221,7 @@
     SUBDIR += rubygem-simpleidn
     SUBDIR += rubygem-simpleidn02
     SUBDIR += rubygem-validates_hostname
+    SUBDIR += rubygem-validates_hostname-gitlab
     SUBDIR += rubygem-zonefile
     SUBDIR += samba-nsupdate
     SUBDIR += scavenge

@@ -1,5 +1,5 @@
 PORTNAME=	curl
-PORTVERSION=	8.14.0
+PORTVERSION=	8.14.1
 CATEGORIES=	ftp net www
 MASTER_SITES=	https://curl.se/download/ \
 		https://github.com/curl/curl/releases/download/curl-${PORTVERSION:S|.|_|g}/
@@ -81,7 +81,6 @@ SMB_DESC=	SMB/CIFS support
 SMTP_DESC=	SMTP/SMTPS support
 THREADED_RESOLVER_DESC=	Threaded DNS resolver
 TLS_SRP_DESC=	TLS-SRP (Secure Remote Password) support
-WEBSOCKET_DESC=	WebSocket support
 
 ALTSVC_CONFIGURE_ENABLE=alt-svc
 BROTLI_CONFIGURE_WITH=	brotli

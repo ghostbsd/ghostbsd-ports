@@ -314,7 +314,6 @@
     SUBDIR += opennn
     SUBDIR += openr2
     SUBDIR += openvdb
-    SUBDIR += orange3
     SUBDIR += orville-write
     SUBDIR += osinfo-db
     SUBDIR += ossp-uuid
@@ -434,7 +433,6 @@
     SUBDIR += py-crudini
     SUBDIR += py-datasets
     SUBDIR += py-detecta
-    SUBDIR += py-dictdiffer
     SUBDIR += py-eemeter
     SUBDIR += py-einops
     SUBDIR += py-emoji
@@ -488,11 +486,6 @@
     SUBDIR += py-openpaperwork-gtk
     SUBDIR += py-openvdb
     SUBDIR += py-optuna
-    SUBDIR += py-orange3-associate
-    SUBDIR += py-orange3-datafusion
-    SUBDIR += py-orange3-educational
-    SUBDIR += py-orange3-network
-    SUBDIR += py-orange3-timeseries
     SUBDIR += py-oterm
     SUBDIR += py-palettable
     SUBDIR += py-papermill
@@ -563,6 +556,7 @@
     SUBDIR += qt6ct
     SUBDIR += quantum++
     SUBDIR += quary
+    SUBDIR += radio_datetime_analyzer
     SUBDIR += randomx
     SUBDIR += rash
     SUBDIR += raspberrypi-gpioshutdown
@@ -586,6 +580,7 @@
     SUBDIR += rubygem-iesd
     SUBDIR += rubygem-mime-types
     SUBDIR += rubygem-mime-types-data
+    SUBDIR += rubygem-mime-types-gitlab
     SUBDIR += rubygem-mimemagic
     SUBDIR += rubygem-octicons
     SUBDIR += rubygem-rabbit
@@ -597,6 +592,7 @@
     SUBDIR += seabios
     SUBDIR += sent
     SUBDIR += seq2
+    SUBDIR += sff
     SUBDIR += sfm
     SUBDIR += shared-mime-info
     SUBDIR += shc

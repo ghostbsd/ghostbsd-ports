@@ -189,11 +189,10 @@
     SUBDIR += py-multiqc
     SUBDIR += py-newick
     SUBDIR += py-ont-fast5-api
-    SUBDIR += py-orange3-bioinformatics
-    SUBDIR += py-orange3-single-cell
     SUBDIR += py-pandas-charm
     SUBDIR += py-py2bit
     SUBDIR += py-pybigwig
+    SUBDIR += py-pydeseq2
     SUBDIR += py-pyfaidx
     SUBDIR += py-pyrodigal
     SUBDIR += py-pysam

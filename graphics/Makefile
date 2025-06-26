@@ -92,6 +92,7 @@
     SUBDIR += cadubi
     SUBDIR += cairo
     SUBDIR += cairomm
+    SUBDIR += cairomm11
     SUBDIR += cal3d
     SUBDIR += camerakit
     SUBDIR += catimg
@@ -291,6 +292,7 @@
     SUBDIR += goocanvasmm2
     SUBDIR += goom
     SUBDIR += gource
+    SUBDIR += gowall
     SUBDIR += goxel
     SUBDIR += gpaint
     SUBDIR += gphoto2
@@ -618,10 +620,15 @@
     SUBDIR += nsxiv
     SUBDIR += nurbs++
     SUBDIR += nvidia-drm-510-kmod
+    SUBDIR += nvidia-drm-510-kmod-devel
     SUBDIR += nvidia-drm-515-kmod
+    SUBDIR += nvidia-drm-515-kmod-devel
     SUBDIR += nvidia-drm-61-kmod
+    SUBDIR += nvidia-drm-61-kmod-devel
     SUBDIR += nvidia-drm-66-kmod
+    SUBDIR += nvidia-drm-66-kmod-devel
     SUBDIR += nvidia-drm-kmod
+    SUBDIR += nvidia-drm-kmod-devel
     SUBDIR += nvidia-texture-tools
     SUBDIR += ocaml-cairo
     SUBDIR += ocaml-images

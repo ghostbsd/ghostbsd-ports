@@ -1,11 +1,12 @@
 PORTNAME=	mame
 DISTVERSION=	0.277
+PORTREVISION=	1
 CATEGORIES=	emulators games
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES=	b4e1f5f1b50fd3402232dd0385cac021ba488db6.patch:-p1 # Only link asmjit if native DRCs are built.
 
-MAINTAINER=	agh@riseup.net
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	MAME: a multi-purpose emulation framework
 WWW=		https://mamedev.org/
 
