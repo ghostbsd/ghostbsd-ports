@@ -1,5 +1,5 @@
 PORTNAME=	tools-make
-DISTVERSION=	2025062101
+DISTVERSION=	20250628
 CATEGORIES=	devel gnustep
 PKGNAMEPREFIX=	gershwin-
 
@@ -24,11 +24,8 @@ pre-configure:
 	${CP} ${FILESDIR}/GNUstep.conf ${WRKSRC}/FilesystemLayouts/gershwin
 
 CONFIGURE_ARGS+= \
-	--with-thread-lib=-pthread \
 	--with-config-file=/System/Library/Preferences/GNUstep.conf \
 	--with-layout=gershwin \
-	--enable-objc-nonfragile-abi \
-	--enable-native-objc-exceptions \
 	--with-library-combo=ng-gnu-gnu
 
 GNU_CONFIGURE_PREFIX= ${GNUSTEP_PREFIX}

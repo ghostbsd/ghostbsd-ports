@@ -1,0 +1,150 @@
+/System/Library/Themes/Rik.theme/Resources/Info-gnustep.plist
+/System/Library/Themes/Rik.theme/Resources/ThemeColors.clr
+/System/Library/Themes/Rik.theme/Resources/ThemeExtraColors.clr
+/System/Library/Themes/Rik.theme/Resources/ThemeExtraHighlightedColors.clr
+/System/Library/Themes/Rik.theme/Resources/ThemeExtraSelectedColors.clr
+/System/Library/Themes/Rik.theme/Resources/ThemeIcon.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/GSSearch.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/GSStop.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_3DArrowDown.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_3DArrowLeft.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_3DArrowRight.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_3DArrowRightH.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_3DArrowUp.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ApplicationFolder.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ArrowDown.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ArrowDownH.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ArrowLeft.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ArrowLeftH.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ArrowRight.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ArrowRightH.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ArrowUp.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ArrowUpH.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_Close.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_CloseBroken.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_CloseBroken.tif
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_CloseBrokenH.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_CloseH.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_Desktop.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_DocsFolder.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_DownloadFolder.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_Folder.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_GSFolder.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_Home.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_Home2_48.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_HomeDirectory.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ImageFolder.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_LibraryFolder.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_Miniaturize.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_MiniaturizeH.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_MultipleSelection.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_MusicFolder.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_Nibble.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ProgressIndeterminate_1.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ProgressIndeterminate_2.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ProgressIndeterminate_3.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ProgressIndeterminate_4.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ProgressIndeterminate_5.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_ProgressIndeterminate_6.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_RadioOff.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_RadioOn.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_RecyclerEmpty.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_RecyclerFull.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_Root_Apple.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_Root_PC.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_SwitchOff.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_SwitchOn.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_TabDownSelectedLeft.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_TabDownSelectedRight.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_TabDownSelectedToUnSelectedJunction.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_TabDownUnSelectedJunction.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_TabDownUnSelectedLeft.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_TabDownUnSelectedRight.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_TabDownUnSelectedToSelectedJunction.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_TabSelectedLeft.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_TabSelectedRight.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_TabSelectedToUnSelectedJunction.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_TabUnSelectedJunction.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_TabUnSelectedLeft.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_TabUnSelectedRight.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_TabUnSelectedToSelectedJunction.png
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_Tile.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_Unknown.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_UnknownApplication.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_UnknownTool.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_VideoFolder.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_copyCursor.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_linkCursor.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/common_noCursor.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.AClock/AClock.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Cynthiune/Cynthiune-song-48.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Cynthiune/Cynthiune.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.GSPdf/FileEPS.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.GSPdf/FilePDF.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.GSPdf/FilePS.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.LaternaMagica/laternamagica_48.tif
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Terminal/Terminal.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Terminal/Terminal_with_Rik_Logo.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper/FileIcon.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper/FileIcon_7zip.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper/FileIcon_ace.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper/FileIcon_arj.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper/FileIcon_bz2.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper/FileIcon_gz.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper/FileIcon_lha.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper/FileIcon_lzx.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper/FileIcon_rar.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper/FileIcon_tar.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper/FileIcon_xz.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper/FileIcon_zip.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper/FileIcon_zoo.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper/zipper.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep-nonfsf.Gemas/FileIcon_.c.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep-nonfsf.Gemas/FileIcon_.cc.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep-nonfsf.Gemas/FileIcon_.gsmarkup.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep-nonfsf.Gemas/FileIcon_.h.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep-nonfsf.Gemas/FileIcon_.m.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep-nonfsf.Gemas/FileIcon_.mm.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep-nonfsf.Gemas/FileIcon_.plist.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep-nonfsf.Gemas/FileIcon_.strings.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep-nonfsf.Gemas/FileIcon_makefile.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.FSNode/HardDisk.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.GWorkspace.MDFinder/SavedSearch.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.GWorkspace.Recycler/Recycler.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.GWorkspace/FileManager.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.GWorkspace/LiveSearchFolder.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.ProjectCenter/ProjectCenter.editor/Resources/FileC.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.ProjectCenter/ProjectCenter.editor/Resources/FileH.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.ProjectCenter/ProjectCenter.editor/Resources/FileM.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.SystemPreferences/SystemPreferences.tiff
+/System/Library/Themes/Rik.theme/Resources/ThemePreview.png
+/System/Library/Themes/Rik.theme/Resources/ThemeTiles/GSTabViewBackgroundTabFill.9.png
+/System/Library/Themes/Rik.theme/Resources/ThemeTiles/GSTabViewBottomBackgroundTabFill.9.png
+/System/Library/Themes/Rik.theme/Resources/ThemeTiles/GSTabViewBottomSelectedTabFill.9.png
+/System/Library/Themes/Rik.theme/Resources/ThemeTiles/GSTabViewBottomUnSelectedTabFill.9.png
+/System/Library/Themes/Rik.theme/Resources/ThemeTiles/GSTabViewSelectedTabFill.9.png
+/System/Library/Themes/Rik.theme/Resources/ThemeTiles/GSTabViewUnSelectedTabFill.9.png
+/System/Library/Themes/Rik.theme/Rik
+/System/Library/Themes/Rik.theme/stamp.make
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.AClock
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Cynthiune
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.GSPdf
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.LaternaMagica
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Terminal
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gap.Zipper
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep-nonfsf.Gemas
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.FSNode
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.GWorkspace
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.GWorkspace.MDFinder
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.GWorkspace.Recycler
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.ProjectCenter/ProjectCenter.editor/Resources
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.ProjectCenter/ProjectCenter.editor
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.ProjectCenter
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages/org.gnustep.SystemPreferences
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeImages
+@dir /System/Library/Themes/Rik.theme/Resources/ThemeTiles
+@dir /System/Library/Themes/Rik.theme/Resources
+@dir /System/Library/Themes/Rik.theme
+@dir /System/Library/Themes
+@dir /System/Library
+@dir /System

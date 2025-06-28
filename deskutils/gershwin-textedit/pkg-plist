@@ -1,0 +1,51 @@
+/Applications/TextEdit.app/Resources/ApplicationScripting.xlp
+/Applications/TextEdit.app/Resources/Edit.tiff
+/Applications/TextEdit.app/Resources/EditTitle.tiff
+/Applications/TextEdit.app/Resources/Encodings.txt
+/Applications/TextEdit.app/Resources/English.lproj/Document.gorm/data.classes
+/Applications/TextEdit.app/Resources/English.lproj/Document.gorm/data.info
+/Applications/TextEdit.app/Resources/English.lproj/Document.gorm/objects.gorm
+/Applications/TextEdit.app/Resources/English.lproj/Edit.gorm/data.classes
+/Applications/TextEdit.app/Resources/English.lproj/Edit.gorm/data.info
+/Applications/TextEdit.app/Resources/English.lproj/Edit.gorm/objects.gorm
+/Applications/TextEdit.app/Resources/English.lproj/EncodingAccessory.gorm/data.classes
+/Applications/TextEdit.app/Resources/English.lproj/EncodingAccessory.gorm/objects.gorm
+/Applications/TextEdit.app/Resources/English.lproj/FindPanel.gorm/data.classes
+/Applications/TextEdit.app/Resources/English.lproj/FindPanel.gorm/objects.gorm
+/Applications/TextEdit.app/Resources/English.lproj/FindPanel.strings
+/Applications/TextEdit.app/Resources/English.lproj/Info.gorm/data.classes
+/Applications/TextEdit.app/Resources/English.lproj/Info.gorm/data.info
+/Applications/TextEdit.app/Resources/English.lproj/Info.gorm/objects.gorm
+/Applications/TextEdit.app/Resources/English.lproj/LinkPanel.gorm/data.classes
+/Applications/TextEdit.app/Resources/English.lproj/LinkPanel.gorm/data.info
+/Applications/TextEdit.app/Resources/English.lproj/LinkPanel.gorm/objects.gorm
+/Applications/TextEdit.app/Resources/English.lproj/Localizable.strings
+/Applications/TextEdit.app/Resources/English.lproj/Preferences.gorm/data.classes
+/Applications/TextEdit.app/Resources/English.lproj/Preferences.gorm/data.info
+/Applications/TextEdit.app/Resources/English.lproj/Preferences.gorm/objects.gorm
+/Applications/TextEdit.app/Resources/English.lproj/StylesPanel.gorm/data.classes
+/Applications/TextEdit.app/Resources/English.lproj/StylesPanel.gorm/data.info
+/Applications/TextEdit.app/Resources/English.lproj/StylesPanel.gorm/objects.gorm
+/Applications/TextEdit.app/Resources/Info-gnustep.plist
+/Applications/TextEdit.app/Resources/ScriptingInfo.plist
+/Applications/TextEdit.app/Resources/TextEdit.desktop
+/Applications/TextEdit.app/Resources/rtf.tiff
+/Applications/TextEdit.app/Resources/rtfd.tiff
+/Applications/TextEdit.app/Resources/text.tiff
+/Applications/TextEdit.app/TextEdit
+/Applications/TextEdit.app/stamp.make
+/Library/Tools/TextEdit
+@dir /Applications/TextEdit.app/Resources/English.lproj/Document.gorm
+@dir /Applications/TextEdit.app/Resources/English.lproj/Edit.gorm
+@dir /Applications/TextEdit.app/Resources/English.lproj/EncodingAccessory.gorm
+@dir /Applications/TextEdit.app/Resources/English.lproj/FindPanel.gorm
+@dir /Applications/TextEdit.app/Resources/English.lproj/Info.gorm
+@dir /Applications/TextEdit.app/Resources/English.lproj/LinkPanel.gorm
+@dir /Applications/TextEdit.app/Resources/English.lproj/Preferences.gorm
+@dir /Applications/TextEdit.app/Resources/English.lproj/StylesPanel.gorm
+@dir /Applications/TextEdit.app/Resources/English.lproj
+@dir /Applications/TextEdit.app/Resources
+@dir /Applications/TextEdit.app
+@dir /Applications
+@dir /Library/Tools
+@dir /Library

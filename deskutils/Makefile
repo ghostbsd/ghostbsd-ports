@@ -68,6 +68,7 @@
     SUBDIR += genius
     SUBDIR += gershwin-workspace
     SUBDIR += gershwin-systempreferences
+    SUBDIR += gershwin-textedit
     SUBDIR += glabels
     SUBDIR += gnome-calendar
     SUBDIR += gnome-characters

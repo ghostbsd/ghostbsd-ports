@@ -1,5 +1,5 @@
 PORTNAME=	libs-gui
-DISTVERSION=	20250615
+DISTVERSION=	20250628
 CATEGORIES=	x11-toolkits gnustep
 PKGNAMEPREFIX=	gershwin-
 
@@ -24,7 +24,7 @@ USE_GERSHWIN=	base build
 USE_XORG=	x11 xt
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	gershwin-os
+GH_ACCOUNT=	gershwin-desktop
 GH_TAGNAME= 81f1a5b
 
 GNU_CONFIGURE=	yes
