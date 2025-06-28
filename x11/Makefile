@@ -92,6 +92,7 @@
     SUBDIR += fuzzel
     SUBDIR += gbsddialog
     SUBDIR += gdm
+    SUBDIR += gershwin-terminal
     SUBDIR += ghostbsd-gershwin-settings
     SUBDIR += ghostbsd-cinnamon-settings
     SUBDIR += ghostbsd-common-settings
