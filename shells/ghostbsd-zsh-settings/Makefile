@@ -1,6 +1,6 @@
 PORTNAME=	ghostbsd-zsh-settings
 PORTVERSION=	0.1
-CATEGORIES=	x11
+CATEGORIES=	shells
 
 MAINTAINER=	jpm820@proton.me
 COMMENT=	GhostBSD integration settings for the zsh shell
