@@ -1,17 +1,17 @@
 PORTNAME=	ghostbsd-gershwin-settings
-DISTVERSION=	2025062102
+DISTVERSION=	20250628
 CATEGORIES=	x11
 
 MAINTAINER=	jpm820@proton.me
 COMMENT=	GhostBSD integration settings for the Gershwin desktop
-WWW=		https://github.com/gershwin-os/ghostbsd-gershwin-settings
+WWW=		https://github.com/gershwin-desktop/ghostbsd-gershwin-settings
 
 LICENSE=	BSD2CLAUSE
 
 USES=		uidfix
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	gershwin-os
+GH_ACCOUNT=	gershwin-desktop
 GH_TAGNAME=	8d285f0
 
 NO_ARCH=	yes

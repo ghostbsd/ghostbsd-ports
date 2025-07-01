@@ -821,6 +821,8 @@
     SUBDIR += genht
     SUBDIR += genie
     SUBDIR += getoptions
+    SUBDIR += gershwin-apps-gorm
+    SUBDIR += gershwin-apps-projectcenter
     SUBDIR += gershwin-tools-make
     SUBDIR += gettext
     SUBDIR += gettext-lint
