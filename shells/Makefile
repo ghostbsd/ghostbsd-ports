@@ -22,6 +22,7 @@
     SUBDIR += etsh
     SUBDIR += fd
     SUBDIR += fish
+    SUBDIR += ghostbsd-zsh-settings
     SUBDIR += git-prompt.zsh
     SUBDIR += heirloom-sh
     SUBDIR += ibsh
