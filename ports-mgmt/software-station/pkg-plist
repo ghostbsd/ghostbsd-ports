@@ -1,9 +1,10 @@
 bin/software-station
 etc/sudoers.d/software-station
-%%PYTHON_SITELIBDIR%%/__pycache__/software_station_pkg%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/__pycache__/software_station_pkg%%PYTHON_EXT_SUFFIX%%.pyc
-%%PYTHON_SITELIBDIR%%/__pycache__/software_station_xpm%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/__pycache__/software_station_xpm%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/software_station-2.0-py%%PYTHON_VER%%.egg-info/PKG-INFO
+%%PYTHON_SITELIBDIR%%/software_station-2.0-py%%PYTHON_VER%%.egg-info/SOURCES.txt
+%%PYTHON_SITELIBDIR%%/software_station-2.0-py%%PYTHON_VER%%.egg-info/dependency_links.txt
+%%PYTHON_SITELIBDIR%%/software_station-2.0-py%%PYTHON_VER%%.egg-info/requires.txt
+%%PYTHON_SITELIBDIR%%/software_station-2.0-py%%PYTHON_VER%%.egg-info/top_level.txt
 %%PYTHON_SITELIBDIR%%/software_station_pkg.py
 %%PYTHON_SITELIBDIR%%/software_station_xpm.py
 share/applications/software-station.desktop
