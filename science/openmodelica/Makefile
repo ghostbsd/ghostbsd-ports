@@ -1,6 +1,7 @@
 PORTNAME=	openmodelica
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.25.1
+PORTREVISION=	1
 CATEGORIES=	science cad java
 DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
@@ -32,7 +33,7 @@ LIB_DEPENDS=	libboost_filesystem.so:devel/boost-libs \
 		libcurl.so:ftp/curl \
 		libicuuc.so:devel/icu \
 		libosg.so:graphics/osg \
-		libuuid.so:misc/e2fsprogs-libuuid
+		libuuid.so:misc/libuuid
 RUN_DEPENDS=	bash:shells/bash \
 		gmake:devel/gmake
 

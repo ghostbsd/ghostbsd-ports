@@ -353,6 +353,7 @@
     SUBDIR += krfb
     SUBDIR += krill
     SUBDIR += ksmtp
+    SUBDIR += ktcplist
     SUBDIR += ktnef
     SUBDIR += kube-apiserver
     SUBDIR += kube-controller-manager
@@ -389,6 +390,7 @@
     SUBDIR += libgrss
     SUBDIR += libgweather
     SUBDIR += libgweather4
+    SUBDIR += libifconfig
     SUBDIR += libilbc
     SUBDIR += libiscsi
     SUBDIR += libkgapi
@@ -521,7 +523,6 @@
     SUBDIR += ndproxy
     SUBDIR += neatvnc
     SUBDIR += nemesis
-    SUBDIR += net6
     SUBDIR += netatalk3
     SUBDIR += netatalk4
     SUBDIR += netcat
@@ -797,7 +798,6 @@
     SUBDIR += p5-Net-SMS-Mollie
     SUBDIR += p5-Net-SMS-PChome
     SUBDIR += p5-Net-SNPP
-    SUBDIR += p5-Net-SPDY
     SUBDIR += p5-Net-SSH
     SUBDIR += p5-Net-SSH-Expect
     SUBDIR += p5-Net-SSH-Mechanize
@@ -1525,7 +1525,6 @@
     SUBDIR += sniffnet
     SUBDIR += sniproxy
     SUBDIR += sntop
-    SUBDIR += sobby
     SUBDIR += socat
     SUBDIR += sock
     SUBDIR += socketapi
@@ -1653,7 +1652,6 @@
     SUBDIR += vnstat
     SUBDIR += vortex
     SUBDIR += vpp
-    SUBDIR += vtun
     SUBDIR += wackamole
     SUBDIR += wakeonlan
     SUBDIR += wangle
@@ -1714,7 +1712,6 @@
     SUBDIR += zapret
     SUBDIR += zebra-server
     SUBDIR += zerotier
-    SUBDIR += zillion
     SUBDIR += zmap
     SUBDIR += zmate
     SUBDIR += zsync

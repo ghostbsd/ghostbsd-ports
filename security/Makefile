@@ -282,11 +282,11 @@
     SUBDIR += lasso
     SUBDIR += lastpass-cli
     SUBDIR += lego
+    SUBDIR += lfacme
     SUBDIR += libaegis
     SUBDIR += libargon2
     SUBDIR += libassuan
     SUBDIR += libcaes
-    SUBDIR += libcryptui
     SUBDIR += libdecaf
     SUBDIR += libecc
     SUBDIR += libfcrypto
@@ -323,7 +323,6 @@
     SUBDIR += libscep
     SUBDIR += libscrypt
     SUBDIR += libsecret
-    SUBDIR += libsectok
     SUBDIR += libsodium
     SUBDIR += libssh
     SUBDIR += libssh2
@@ -1025,6 +1024,7 @@
     SUBDIR += py-pyelliptic
     SUBDIR += py-pyhanko
     SUBDIR += py-pyhanko-certvalidator
+    SUBDIR += py-pyhanko-cli
     SUBDIR += py-pykeepass
     SUBDIR += py-pykeepass-cache
     SUBDIR += py-pylibacl
@@ -1281,7 +1281,6 @@
     SUBDIR += seccure
     SUBDIR += seclists
     SUBDIR += secpanel
-    SUBDIR += sectok
     SUBDIR += secure_delete
     SUBDIR += sedutil
     SUBDIR += sequoia

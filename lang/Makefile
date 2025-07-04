@@ -176,12 +176,6 @@
     SUBDIR += librep
     SUBDIR += libstdc++_stldoc_4.2.2
     SUBDIR += linux-c7-tcl85
-    SUBDIR += linux-dotnet-cli
-    SUBDIR += linux-dotnet-runtime
-    SUBDIR += linux-dotnet-sdk
-    SUBDIR += linux-dotnet10-runtime
-    SUBDIR += linux-dotnet11-runtime
-    SUBDIR += linux-dotnet11-sdk
     SUBDIR += linux-j
     SUBDIR += linux-rl9-python3
     SUBDIR += linux-rl9-tcl86
@@ -272,6 +266,7 @@
     SUBDIR += perl5-devel
     SUBDIR += perl5.38
     SUBDIR += perl5.40
+    SUBDIR += perl5.42
     SUBDIR += petite-chez
     SUBDIR += pfe
     SUBDIR += pharo
@@ -369,7 +364,6 @@
     SUBDIR += spidermonkey128
     SUBDIR += spidermonkey78
     SUBDIR += spidermonkey91
-    SUBDIR += spl
     SUBDIR += squeak
     SUBDIR += squirrel
     SUBDIR += starlark-rust

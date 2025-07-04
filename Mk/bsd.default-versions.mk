@@ -109,11 +109,11 @@ MONO_DEFAULT?=		5.20
 MYSQL_DEFAULT?=		8.0
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
-# Possible value: 18, 20, 22, 23, 24, current, lts (Note: current = 24 and lts = 22)
+# Possible value: 18, 20, 22, 24, current, lts (Note: current = 24 and lts = 22)
 NODEJS_DEFAULT?=	lts
 # Possible value: 25, 26
 OPENLDAP_DEFAULT?=	26
-# Possible values: 5.38, 5.40, devel
+# Possible values: 5.38, 5.40, 5.42, devel
 .  if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
 # When changing the default here, make sure the DEPRECATED/EXPIRATION lines in

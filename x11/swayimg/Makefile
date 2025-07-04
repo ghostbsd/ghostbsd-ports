@@ -1,6 +1,6 @@
 PORTNAME=	swayimg
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.2
+DISTVERSION=	4.3
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -31,12 +31,6 @@ PLIST_FILES=	bin/${PORTNAME} \
 		share/icons/hicolor/256x256/apps/${PORTNAME}.png \
 		${DATADIR}/${PORTNAME}rc \
 		${NULL}
-
-# XXX Drop after FreeBSD 13.4 EOL around 2026-01-31
-# https://cgit.freebsd.org/src/commit/?id=af93fea71038
-.if !exists(/usr/include/sys/timerfd.h)
-LIB_DEPENDS+=	libepoll-shim.so:devel/libepoll-shim
-.endif
 
 OPTIONS_DEFINE=	AVIF BASH GIF HEIF JPEG JSON JXL LIBEXIF LIBRSVG2 \
 		OPENEXR PNG RAW SIXEL TIFF WEBP ZSH

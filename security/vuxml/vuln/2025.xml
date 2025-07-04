@@ -1,3 +1,444 @@
+  <vuln vid="24f4b495-56a1-11f0-9621-93abbef07693">
+    <topic>sudo -- privilege escalation vulnerability through host and chroot options</topic>
+    <affects>
+      <package>
+	<name>sudo</name>
+	<range><lt>1.9.17p1</lt></range>
+      </package>
+      <package>
+	<name>sudo-sssd</name>
+	<range><lt>1.9.17p1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Todd C. Miller reports, crediting Rich Mirch from Stratascale Cyber Research Unit (CRU):</p>
+	<blockquote cite="https://www.sudo.ws/releases/stable/">
+	  <p>Sudo 1.9.17p1:</p>
+	  <ul>
+	    <li>
+	      Fixed CVE-2025-32462. Sudo's -h (--host) option could be specified
+	      when running a command or editing a file. This could enable a
+	      local privilege escalation attack if the sudoers file allows the
+	      user to run commands on a different host. For more information,
+	      see Local Privilege Escalation via host option.
+	    </li>
+	    <li>
+	      Fixed CVE-2025-32463. An attacker can leverage sudo's -R
+	      (--chroot) option to run arbitrary commands as root, even if they
+	      are not listed in the sudoers file. The chroot support has been
+	      deprecated an will be removed entirely in a future release. For
+	      more information, see Local Privilege Escalation via chroot
+	      option.
+	    </li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-32462</cvename>
+      <cvename>CVE-2025-32463</cvename>
+      <url>https://www.sudo.ws/releases/stable/</url>
+      <url>https://www.stratascale.com/vulnerability-alert-CVE-2025-32462-sudo-host</url>
+      <url>https://www.stratascale.com/vulnerability-alert-CVE-2025-32463-sudo-chroot</url>
+    </references>
+    <dates>
+      <discovery>2025-04-01</discovery>
+      <entry>2025-07-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8df49466-5664-11f0-943a-18c04d5ea3dc">
+    <topic>xorg server -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>xorg-server</name>
+	<name>xephyr</name>
+	<name>xorg-vfbserver</name>
+	<range><lt>21.1.18,1</lt></range>
+      </package>
+      <package>
+	<name>xorg-nextserver</name>
+	<range><lt>21.1.18,2</lt></range>
+      </package>
+      <package>
+	<name>xwayland</name>
+	<range><lt>24.1.8,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The X.Org project reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2025-February/003584.html">
+	  <ul>
+	    <li>
+	      CVE-2025-49176: Integer overflow in Big Requests Extension
+	      <p>The Big Requests extension allows requests larger than the 16-bit length
+	      limit.
+	      It uses integers for the request length and checks for the size not to
+	      exceed the maxBigRequestSize limit, but does so after translating the
+	      length to integer by multiplying the given size in bytes by 4.
+	      In doing so, it might overflow the integer size limit before actually
+	      checking for the overflow, defeating the purpose of the test.</p>
+	    </li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-49176</cvename>
+      <url>https://lists.x.org/archives/xorg/2025-June/062055.html</url>
+    </references>
+    <dates>
+      <discovery>2025-06-17</discovery>
+      <entry>2025-07-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b14cabf7-5663-11f0-943a-18c04d5ea3dc">
+    <topic>xorg server -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>xorg-server</name>
+	<name>xephyr</name>
+	<name>xorg-vfbserver</name>
+	<range><lt>21.1.17,1</lt></range>
+      </package>
+      <package>
+	<name>xorg-nextserver</name>
+	<range><lt>21.1.17,2</lt></range>
+      </package>
+      <package>
+	<name>xwayland</name>
+	<range><lt>24.1.7,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The X.Org project reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2025-February/003584.html">
+	  <ul>
+	    <li>
+	      CVE-2025-49175: Out-of-bounds access in X Rendering extension (Animated cursors)
+	      <p>The X Rendering extension allows creating animated cursors providing a
+	      list of cursors.
+	      By default, the Xserver assumes at least one cursor is provided while a
+	      client may actually pass no cursor at all, which causes an out-of-bound
+	      read creating the animated cursor and a crash of the Xserver.</p>
+	    </li>
+	    <li>
+	      CVE-2025-49177: Data leak in XFIXES Extension 6 (XFixesSetClientDisconnectMode)
+
+	      <p>The handler of XFixesSetClientDisconnectMode does not check the client
+	      request length.
+	      A client could send a shorter request and read data from a former
+	      request.</p>
+	    </li>
+	    <li>
+	      CVE-2025-49178: Unprocessed client request via bytes to ignore
+
+	      <p>When reading requests from the clients, the input buffer might be shared
+	      and used between different clients.
+	      If a given client sends a full request with non-zero bytes to ignore,
+	      the bytes to ignore may still be non-zero even though the request is
+	      full, in which case the buffer could be shared with another client who's
+	      request will not be processed because of those bytes to ignore, leading
+	      to a possible hang of the other client request.</p>
+	    </li>
+	    <li>
+	      CVE-2025-49179: Integer overflow in X Record extension
+
+	      <p>The RecordSanityCheckRegisterClients() function in the X Record extension
+	      implementation of the Xserver checks for the request length, but does not
+	      check for integer overflow.
+	      A client might send a very large value for either the number of clients
+	      or the number of protocol ranges that will cause an integer overflow in
+	      the request length computation, defeating the check for request length.</p>
+	    </li>
+	    <li>
+	      CVE-2025-49180: Integer overflow in RandR extension (RRChangeProviderProperty)
+
+	      <p>A client might send a request causing an integer overflow when computing
+	      the total size to allocate in RRChangeProviderProperty().</p>
+	    </li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-49175</cvename>
+      <cvename>CVE-2025-49177</cvename>
+      <cvename>CVE-2025-49178</cvename>
+      <cvename>CVE-2025-49179</cvename>
+      <cvename>CVE-2025-49180</cvename>
+      <url>https://lists.x.org/archives/xorg/2025-June/062055.html</url>
+    </references>
+    <dates>
+      <discovery>2025-06-17</discovery>
+      <entry>2025-07-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6b1b8989-55b0-11f0-ac64-589cfc10a551">
+    <topic>podman -- TLS connection used to pull VM images was not validated</topic>
+    <affects>
+      <package>
+	<name>podman</name>
+	<range><lt>5.5.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>RedHat, Inc. reports:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2025-6032">
+	  <p>A flaw was found in Podman.  The podman machine init command fails to verify the TLS
+	  certificate when downloading the VM images from an OCI registry.  This issue results
+	  in a Man In The Middle attack.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-6032</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-6032</url>
+    </references>
+    <dates>
+      <discovery>2025-06-30</discovery>
+      <entry>2025-06-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5e64770c-52aa-11f0-b522-b42e991fc52e">
+    <topic>MongoDB -- Running certain aggregation operations with the SBE engine may lead to unexpected behavior</topic>
+    <affects>
+      <package>
+	<name>mongodb60</name>
+	<range><lt>6.0.21</lt></range>
+      </package>
+      <package>
+	<name>mongodb70</name>
+	<range><lt>7.0.17</lt></range>
+      </package>
+      <package>
+	<name>mongodb80</name>
+	<range><lt>8.0.4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>cna@mongodb.com reports:</p>
+	<blockquote cite="https://jira.mongodb.org/browse/SERVER-106746">
+	  <p>An authenticated user may trigger a use after free that may result
+	in MongoDB Server crash and other unexpected behavior, even if the
+	user does not have authorization to shut down a server.  The crash
+	is triggered on affected versions by issuing an aggregation framework
+	operation using a specific combination of rarely-used aggregation
+	pipeline expressions.  This issue affects MongoDB Server v6.0 version
+	prior to 6.0.21, MongoDB Server v7.0 version prior to 7.0.17 and
+	MongoDB Server v8.0 version prior to 8.0.4 when the SBE engine is
+	enabled.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-6706</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-6706</url>
+    </references>
+    <dates>
+      <discovery>2025-06-26</discovery>
+      <entry>2025-06-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5cd2bd2b-52aa-11f0-b522-b42e991fc52e">
+    <topic>MongoDB -- Race condition in privilege cache invalidation cycle</topic>
+    <affects>
+      <package>
+	<name>mongodb50</name>
+	<range><lt>5.0.31</lt></range>
+      </package>
+      <package>
+	<name>mongodb60</name>
+	<range><lt>6.0.24</lt></range>
+      </package>
+      <package>
+	<name>mongodb70</name>
+	<range><lt>7.0.21</lt></range>
+      </package>
+      <package>
+	<name>mongodb80</name>
+	<range><lt>8.0.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>NVD reports:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2025-6707">
+	  <p>Under certain conditions, an authenticated user request
+	    may execute with stale privileges following an intentional
+	    change by an authorized administrator.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-6707</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-6707</url>
+    </references>
+    <dates>
+      <discovery>2025-06-26</discovery>
+      <entry>2025-06-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5b87eef6-52aa-11f0-b522-b42e991fc52e">
+    <topic>MongoDB -- Pre-Authentication Denial of Service Vulnerability in MongoDB Server&apos;s OIDC Authentication</topic>
+    <affects>
+      <package>
+	<name>mongodb60</name>
+	<range><lt>6.0.21</lt></range>
+      </package>
+      <package>
+	<name>mongodb70</name>
+	<range><lt>7.0.17</lt></range>
+      </package>
+      <package>
+	<name>mongodb80</name>
+	<range><lt>8.0.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>NVD reports:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2025-6709">
+	  <p>The MongoDB Server is susceptible to a denial of service
+	    vulnerability due to improper handling of specific date
+	    values in JSON input when using OIDC authentication.
+	    This can be reproduced using the mongo shell to send a
+	    malicious JSON payload leading to an invariant failure
+	    and server crash. </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-6709</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-6709</url>
+    </references>
+    <dates>
+      <discovery>2025-06-26</discovery>
+      <entry>2025-06-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="59ed4b19-52aa-11f0-b522-b42e991fc52e">
+    <topic>MongoDB -- Pre-authentication Denial of Service Stack Overflow Vulnerability in JSON Parsing via Excessive Recursion in MongoDB</topic>
+    <affects>
+      <package>
+	<name>mongodb70</name>
+	<range><lt>7.0.17</lt></range>
+      </package>
+      <package>
+	<name>mongodb80</name>
+	<range><lt>8.0.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>cna@mongodb.com reports:</p>
+	<blockquote cite="https://jira.mongodb.org/browse/SERVER-106749">
+	  <p>MongoDB Server may be susceptible to stack overflow due to JSON
+	parsing mechanism, where specifically crafted JSON inputs may induce
+	unwarranted levels of recursion, resulting in excessive stack space
+	consumption.  Such inputs can lead to a stack overflow that causes
+	the server to crash which could occur pre-authorisation.  This issue
+	affects MongoDB Server v7.0 versions prior to 7.0.17 and MongoDB
+	Server v8.0 versions prior to 8.0.5.
+	The same issue affects MongoDB Server v6.0 versions prior to 6.0.21,
+	but an attacker can only induce denial of service after authenticating.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-6710</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-6710</url>
+    </references>
+    <dates>
+      <discovery>2025-06-26</discovery>
+      <entry>2025-06-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e26608ff-5266-11f0-b522-b42e991fc52e">
+    <topic>kanboard -- Password Reset Poisoning via Host Header Injection</topic>
+    <affects>
+      <package>
+	<name>kanboard</name>
+	<range><lt>1.2.45</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>GitHub Security Advisories reports:</p>
+	<blockquote cite="null">
+	<p>
+	Kanboard allows password reset emails to be sent with URLs
+	derived from the unvalidated Host header when the
+	application_url configuration is unset (default behavior).
+	This allows an attacker to craft a malicious password
+	reset link that leaks the token to an attacker-controlled
+	domain. If a victim (including an administrator) clicks
+	the poisoned link, their account can be taken over. This
+	affects all users who initiate a password reset while
+	application_url is not set.
+	</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-52560</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-52560</url>
+    </references>
+    <dates>
+      <discovery>2025-06-26</discovery>
+      <entry>2025-06-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d45dabd9-5232-11f0-9ca4-2cf05da270f3">
+    <topic>Gitlab -- Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>18.1.0</ge><lt>18.1.1</lt></range>
+	<range><ge>18.0.0</ge><lt>18.0.3</lt></range>
+	<range><ge>16.10.0</ge><lt>17.11.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2025/06/25/patch-release-gitlab-18-1-1-released/">
+	  <p>Denial of Service impacts GitLab CE/EE</p>
+	  <p>Missing Authentication issue impacts GitLab CE/EE</p>
+	  <p>Improper access control issue impacts GitLab CE/EE</p>
+	  <p>Elevation of Privilege impacts GitLab CE/EE</p>
+	  <p>Improper access control issue impacts GitLab EE</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-3279</cvename>
+      <cvename>CVE-2025-1754</cvename>
+      <cvename>CVE-2025-5315</cvename>
+      <cvename>CVE-2025-2938</cvename>
+      <cvename>CVE-2025-5846</cvename>
+      <url>https://about.gitlab.com/releases/2025/06/25/patch-release-gitlab-18-1-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2025-06-25</discovery>
+      <entry>2025-06-26</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="03ba1cdd-4faf-11f0-af06-00a098b42aeb">
     <topic>cisco -- OpenH264 Decoding Functions Heap Overflow Vulnerability</topic>
     <affects>

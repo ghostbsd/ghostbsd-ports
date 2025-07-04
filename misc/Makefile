@@ -98,7 +98,6 @@
     SUBDIR += dtach
     SUBDIR += dvorak7min
     SUBDIR += dynomite
-    SUBDIR += e2fsprogs-libuuid
     SUBDIR += ecflow
     SUBDIR += edfbrowser
     SUBDIR += edflib
@@ -252,6 +251,7 @@
     SUBDIR += libsupertone
     SUBDIR += libsweep-lidar
     SUBDIR += libutf
+    SUBDIR += libuuid
     SUBDIR += libxdf
     SUBDIR += lifelines
     SUBDIR += lightgbm

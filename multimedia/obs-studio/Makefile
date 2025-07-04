@@ -1,6 +1,6 @@
 PORTNAME=	obs-studio
 DISTVERSION=	31.0.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -14,6 +14,7 @@ WWW=		https://obsproject.com/ \
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BROKEN=		fails due to incompability of devel/boost-libs>=1.87 and devel/websocketpp<=0.82_2, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287916
 BROKEN_armv7=	compilation fails: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned int') [-Werror,-Wformat] (32-builds aren't supported, see issue 10481)
 BROKEN_i386=	link fails: relocation R_386_PC32 cannot be used against symbol 'strlist_split'; recompile with -fPIC, see https://github.com/obsproject/obs-studio/issues/10481
 
@@ -50,7 +51,7 @@ LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libxcb-render-util.so:x11/xcb-util-renderutil \
 		libxcb-util.so:x11/xcb-util \
 		libxkbcommon.so:x11/libxkbcommon \
-		libuuid.so:misc/e2fsprogs-libuuid \
+		libuuid.so:misc/libuuid \
 		libva.so:multimedia/libva
 
 USES=		cmake compiler:c++17-lang desktop-file-utils gl gnome lua luajit \

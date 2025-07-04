@@ -1,6 +1,6 @@
 PORTNAME=	itstool
 PORTVERSION=	2.0.7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://files.itstool.org/itstool/
 
@@ -10,8 +10,8 @@ WWW=		https://itstool.org/
 
 LICENSE=	GPLv3
 
-BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2.py:textproc/py-libxml2@${PY_FLAVOR}
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2.py:textproc/py-libxml2@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}libxml2-python>0:textproc/libxml2-python@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}libxml2-python>0:textproc/libxml2-python@${PY_FLAVOR}
 
 USES=		python tar:bzip2
 GNU_CONFIGURE=	yes

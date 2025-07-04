@@ -1,6 +1,6 @@
 PORTNAME=	e2fsprogs
 PORTVERSION=	1.47.2
-PORTREVISION?=	1	# NOTE: when bumping PORTREVISION, also bump ../e2fsprogs/Makefile!
+PORTREVISION?=	2	# NOTE: when bumping PORTREVISION, also bump ../e2fsprogs/Makefile!
 CATEGORIES?=	filesystems sysutils
 MASTER_SITES=	KERNEL_ORG/linux/kernel/people/tytso/${PORTNAME}/v${PORTVERSION}
 
@@ -26,13 +26,11 @@ USE_LDCONFIG=	${PREFIX}/lib/e2fsprogs
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 
-# while we use the system blkid, we need to --enable-libblkid
-# so that the tools get built:
 CONFIGURE_ARGS?=--disable-fsck \
 		--disable-e2initrd-helper \
 		--disable-libuuid \
 		--disable-uuidd \
-		--enable-libblkid \
+		--disable-libblkid \
 		--enable-elf-shlibs \
 		--libdir='${PREFIX}/lib/e2fsprogs/' \
 		--includedir='${PREFIX}/include/e2fsprogs/' \
@@ -81,8 +79,8 @@ NLS_USES=		gettext iconv:build
 BASHTESTS_BUILD_DEPENDS=	${BASH_CMD}:shells/bash
 BASH_CMD=	${LOCALBASE}/bin/bash
 
-LIB_DEPENDS+=	libblkid.so:filesystems/e2fsprogs-libblkid
-LIB_DEPENDS+=	libuuid.so:misc/e2fsprogs-libuuid
+LIB_DEPENDS+=	libblkid.so:filesystems/libblkid \
+		libuuid.so:misc/libuuid
 
 LIBUNWIND_LIB_DEPENDS=	libunwind.so:devel/libunwind
 LIBUNWIND_LIBS+=	-L${LOCALBASE}/lib -lunwind
@@ -150,6 +148,7 @@ post-extract: # the symlink RELEASE-NOTES is stale in v1.47.1 and v1.47.2 tarbal
 	${RLN} ${WRKSRC}/doc/RelNotes/v1.47.2.txt ${WRKSRC}/RELEASE-NOTES
 
 post-patch::
+	${TOUCH} ${WRKSRC}/tests/r_corrupt_fs/is_slow_test
 .if !empty(DISTFILES)
 	@${REINPLACE_CMD} -e 's/<malloc\.h>/<stdlib.h>/' ${WRKSRC}/*/*.c
 	@${REINPLACE_CMD} -e 's,/etc/blkid.tab,${ETCDIR}/blkid.tab,' ${WRKSRC}/misc/blkid* ${WRKSRC}/lib/blkid/blkidP.h
@@ -243,7 +242,7 @@ _check_target=SKIP_SLOW_TESTS= check
 _check_timeout=7200
 .else
 _check_target=check
-_check_timeout=180
+_check_timeout=600
 .endif
 
 .if ${PORT_OPTIONS:MLIBUNWIND}
@@ -316,9 +315,6 @@ post-install:
 .endfor
 .endif
 	# remove or relocate files installed by other ports already, or shadowing system files:
-	cd ${STAGEDIR}${PREFIX} && \
-		${XARGS} <${FILESDIR}/unwanted ${RM} && \
-		${RMDIR} include/e2fsprogs/blkid
 	${MV} ${STAGEDIR}${PREFIX}/bin/compile_et ${STAGEDIR}${PREFIX}/bin/e2fsprogs-compile_et
 	${MV} ${STAGEDIR}${PREFIX}/share/man/man1/compile_et.1 ${STAGEDIR}${PREFIX}/share/man/man1/e2fsprogs-compile_et.1
 	${MKDIR} ${STAGEDIR}${DATADIR}/et/
