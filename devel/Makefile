@@ -596,6 +596,7 @@
     SUBDIR += deheader
     SUBDIR += delta
     SUBDIR += delve
+    SUBDIR += demumble
     SUBDIR += deployer
     SUBDIR += derelict-sdl2
     SUBDIR += derelict-util
@@ -4284,6 +4285,16 @@
     SUBDIR += php84-sysvsem
     SUBDIR += php84-sysvshm
     SUBDIR += php84-tokenizer
+    SUBDIR += php85-ffi
+    SUBDIR += php85-gettext
+    SUBDIR += php85-intl
+    SUBDIR += php85-pcntl
+    SUBDIR += php85-readline
+    SUBDIR += php85-shmop
+    SUBDIR += php85-sysvmsg
+    SUBDIR += php85-sysvsem
+    SUBDIR += php85-sysvshm
+    SUBDIR += php85-tokenizer
     SUBDIR += phpunit10
     SUBDIR += phpunit11
     SUBDIR += phpunit12
@@ -5849,6 +5860,7 @@
     SUBDIR += py-rfc3339-validator
     SUBDIR += py-rfc3986-validator
     SUBDIR += py-rich-click
+    SUBDIR += py-rich-toolkit
     SUBDIR += py-riot
     SUBDIR += py-robotframework
     SUBDIR += py-robotframework-assertion-engine

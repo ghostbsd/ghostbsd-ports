@@ -456,6 +456,7 @@
     SUBDIR += openssl31-quictls
     SUBDIR += openssl32
     SUBDIR += openssl33
+    SUBDIR += openssl33-quictls
     SUBDIR += openssl34
     SUBDIR += openssl35
     SUBDIR += openvas
@@ -838,6 +839,8 @@
     SUBDIR += php83-sodium
     SUBDIR += php84-filter
     SUBDIR += php84-sodium
+    SUBDIR += php85-filter
+    SUBDIR += php85-sodium
     SUBDIR += picocrypt
     SUBDIR += picosha2
     SUBDIR += pidgin-encryption

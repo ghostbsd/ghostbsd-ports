@@ -425,6 +425,7 @@
     SUBDIR += mod_php82
     SUBDIR += mod_php83
     SUBDIR += mod_php84
+    SUBDIR += mod_php85
     SUBDIR += mod_proctitle
     SUBDIR += mod_qos
     SUBDIR += mod_realdoc
@@ -1434,6 +1435,9 @@
     SUBDIR += php84-opcache
     SUBDIR += php84-session
     SUBDIR += php84-tidy
+    SUBDIR += php85-opcache
+    SUBDIR += php85-session
+    SUBDIR += php85-tidy
     SUBDIR += phpbb3
     SUBDIR += phpfpmtop
     SUBDIR += phpgroupware
@@ -2506,6 +2510,7 @@
     SUBDIR += surf
     SUBDIR += swiggle
     SUBDIR += sws
+    SUBDIR += tailwindcss3
     SUBDIR += tcexam
     SUBDIR += tclhttpd
     SUBDIR += tclwebtest
