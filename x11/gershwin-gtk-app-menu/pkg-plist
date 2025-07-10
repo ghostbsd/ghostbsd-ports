@@ -1,0 +1,14 @@
+include/appmenu-gtk-parser/appmenu-gtk-action-group.h
+include/appmenu-gtk-parser/appmenu-gtk-menu-shell.h
+include/appmenu-gtk-parser/appmenu-gtk-parser.h
+lib/gtk-2.0/modules/libappmenu-gtk-module.so
+lib/gtk-3.0/modules/libappmenu-gtk-module.so
+lib/libappmenu-gtk2-parser.so
+lib/libappmenu-gtk2-parser.so.0
+lib/libappmenu-gtk2-parser.so.25.04
+lib/libappmenu-gtk3-parser.so
+lib/libappmenu-gtk3-parser.so.0
+lib/libappmenu-gtk3-parser.so.25.04
+libdata/pkgconfig/appmenu-gtk2-parser.pc
+libdata/pkgconfig/appmenu-gtk3-parser.pc
+share/glib-2.0/schemas/org.appmenu.gtk-module.gschema.xml

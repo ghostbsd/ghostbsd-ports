@@ -219,16 +219,6 @@
 /System/Applications/GWorkspace.app/Resources/tiffPboard.tiff
 /System/Applications/GWorkspace.app/Resources/watch.tiff
 /System/Applications/GWorkspace.app/stamp.make
-/System/Applications/Recycler.app/Recycler
-/System/Applications/Recycler.app/Resources/English.lproj/Localizable.strings
-/System/Applications/Recycler.app/Resources/English.lproj/PreferencesWin.gorm/data.classes
-/System/Applications/Recycler.app/Resources/English.lproj/PreferencesWin.gorm/objects.gorm
-/System/Applications/Recycler.app/Resources/English.lproj/StartAppWin.gorm/data.classes
-/System/Applications/Recycler.app/Resources/English.lproj/StartAppWin.gorm/objects.gorm
-/System/Applications/Recycler.app/Resources/Info-gnustep.plist
-/System/Applications/Recycler.app/Resources/Recycler.desktop
-/System/Applications/Recycler.app/Resources/Recycler.tiff
-/System/Applications/Recycler.app/stamp.make
 /System/Library/Bundles/AppViewer.inspector/AppViewer
 /System/Library/Bundles/AppViewer.inspector/Resources/English.lproj/Help.rtfd/TXT.rtf
 /System/Library/Bundles/AppViewer.inspector/Resources/English.lproj/Help.rtfd/dummy.tiff
@@ -518,7 +508,6 @@
 /System/Library/Libraries/libOperation.so.1
 /System/Library/Libraries/libOperation.so.1.0.0
 /System/Library/Tools/GWorkspace
-/System/Library/Tools/Recycler
 /System/Library/Tools/ddbd
 /System/Library/Tools/fswatcher
 /System/Library/Tools/lsfupdater
@@ -572,11 +561,6 @@ libdata/ldconfig/gershwin-workspace
 @dir /System/Applications/GWorkspace.app/Resources/Spanish.lproj
 @dir /System/Applications/GWorkspace.app/Resources
 @dir /System/Applications/GWorkspace.app
-@dir /System/Applications/Recycler.app/Resources/English.lproj/PreferencesWin.gorm
-@dir /System/Applications/Recycler.app/Resources/English.lproj/StartAppWin.gorm
-@dir /System/Applications/Recycler.app/Resources/English.lproj
-@dir /System/Applications/Recycler.app/Resources
-@dir /System/Applications/Recycler.app
 @dir /System/Applications
 @dir /System/Library/Bundles/AppViewer.inspector/Resources/English.lproj/Help.rtfd
 @dir /System/Library/Bundles/AppViewer.inspector/Resources/English.lproj
