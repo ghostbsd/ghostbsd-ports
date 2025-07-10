@@ -92,7 +92,10 @@
     SUBDIR += fuzzel
     SUBDIR += gbsddialog
     SUBDIR += gdm
+    SUBDIR += gershwin-appmenu-registrar
+    SUBDIR += gershwin-gtk-app-menu
     SUBDIR += gershwin-terminal
+    SUBDIR += gershwin-xfce4-appmenu-plugin
     SUBDIR += ghostbsd-gershwin-settings
     SUBDIR += ghostbsd-cinnamon-settings
     SUBDIR += ghostbsd-common-settings
