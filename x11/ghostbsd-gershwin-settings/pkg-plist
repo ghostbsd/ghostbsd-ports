@@ -3,5 +3,7 @@ etc/gtk-2.0/gtkrc
 etc/gtk-3.0/settings.ini
 etc/sudoers.d/10_gershwin_env_keep
 etc/sudoers.d/10_gershwin_secure_path
+etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
+etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml
 share/fish/functions/gershwin_env.fish
 share/xsessions/gershwin.desktop

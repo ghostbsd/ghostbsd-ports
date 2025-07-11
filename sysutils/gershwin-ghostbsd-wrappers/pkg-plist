@@ -1,0 +1,30 @@
+/Applications/Backups.app/Backups
+/Applications/Backups.app/Resources/Backups.desktop
+/Applications/Backups.app/Resources/Backups.png
+/Applications/Backups.app/Resources/Info-gnustep.plist
+/Applications/Backups.app/stamp.make
+/Applications/Software.app/Resources/Info-gnustep.plist
+/Applications/Software.app/Resources/Software.desktop
+/Applications/Software.app/Resources/Software.png
+/Applications/Software.app/Software
+/Applications/Software.app/stamp.make
+/Applications/Updater.app/Resources/Info-gnustep.plist
+/Applications/Updater.app/Resources/Updater.desktop
+/Applications/Updater.app/Resources/Updater.png
+/Applications/Updater.app/Updater
+/Applications/Updater.app/stamp.make
+/Library/Tools/Backups
+/Library/Tools/Backups-CLI
+/Library/Tools/Software
+/Library/Tools/Software-CLI
+/Library/Tools/Updater
+/Library/Tools/Updater-CLI
+@dir /Applications/Backups.app/Resources
+@dir /Applications/Backups.app
+@dir /Applications/Software.app/Resources
+@dir /Applications/Software.app
+@dir /Applications/Updater.app/Resources
+@dir /Applications/Updater.app
+@dir /Applications
+@dir /Library/Tools
+@dir /Library

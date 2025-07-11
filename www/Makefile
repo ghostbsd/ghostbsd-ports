@@ -213,6 +213,7 @@
     SUBDIR += geckodriver
     SUBDIR += geneweb
     SUBDIR += geolizer
+    SUBDIR += gershwin-firefox-wrapper
     SUBDIR += ghostunnel
     SUBDIR += gist
     SUBDIR += gitea

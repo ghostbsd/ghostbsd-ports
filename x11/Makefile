@@ -93,6 +93,7 @@
     SUBDIR += gbsddialog
     SUBDIR += gdm
     SUBDIR += gershwin-appmenu-registrar
+    SUBDIR += gershwin-desktop
     SUBDIR += gershwin-gtk-app-menu
     SUBDIR += gershwin-terminal
     SUBDIR += gershwin-xfce4-appmenu-plugin

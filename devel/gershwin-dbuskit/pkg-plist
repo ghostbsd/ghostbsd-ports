@@ -1,0 +1,56 @@
+/System/Library/Bundles/DBusMenu.bundle/DBusMenu
+/System/Library/Bundles/DBusMenu.bundle/Resources/Info-gnustep.plist
+/System/Library/Bundles/DBusMenu.bundle/Resources/com.canonical.dbusmenu.xml
+/System/Library/Bundles/DBusMenu.bundle/stamp.make
+/System/Library/Frameworks/DBusKit.framework/DBusKit
+/System/Library/Frameworks/DBusKit.framework/Headers
+/System/Library/Frameworks/DBusKit.framework/Resources
+/System/Library/Frameworks/DBusKit.framework/Versions/0/DBusKit
+/System/Library/Frameworks/DBusKit.framework/Versions/0/Headers/DBusKit.h
+/System/Library/Frameworks/DBusKit.framework/Versions/0/Headers/DKCommon.h
+/System/Library/Frameworks/DBusKit.framework/Versions/0/Headers/DKNotificationCenter.h
+/System/Library/Frameworks/DBusKit.framework/Versions/0/Headers/DKNumber.h
+/System/Library/Frameworks/DBusKit.framework/Versions/0/Headers/DKPort.h
+/System/Library/Frameworks/DBusKit.framework/Versions/0/Headers/DKPortNameServer.h
+/System/Library/Frameworks/DBusKit.framework/Versions/0/Headers/DKProxy.h
+/System/Library/Frameworks/DBusKit.framework/Versions/0/Headers/DKStruct.h
+/System/Library/Frameworks/DBusKit.framework/Versions/0/Headers/DKVariant.h
+/System/Library/Frameworks/DBusKit.framework/Versions/0/Headers/NSConnection+DBus.h
+/System/Library/Frameworks/DBusKit.framework/Versions/0/Resources/Info-gnustep.plist
+/System/Library/Frameworks/DBusKit.framework/Versions/0/libDBusKit.so
+/System/Library/Frameworks/DBusKit.framework/Versions/0/libDBusKit.so.0
+/System/Library/Frameworks/DBusKit.framework/Versions/0/libDBusKit.so.0.2
+/System/Library/Frameworks/DBusKit.framework/Versions/Current
+/System/Library/Frameworks/DBusKit.framework/libDBusKit.so
+/System/Library/Headers/DBusKit
+/System/Library/Headers/DBusMenu/DKDBusMenu.h
+/System/Library/Headers/DBusMenu/DKMenuProxy.h
+/System/Library/Headers/DBusMenu/DKMenuRegistry.h
+/System/Library/Libraries/gnustep-base/Versions/1.31/Resources/NSUserNotification.bundle/NSUserNotification
+/System/Library/Libraries/gnustep-base/Versions/1.31/Resources/NSUserNotification.bundle/Resources/Info-gnustep.plist
+/System/Library/Libraries/gnustep-base/Versions/1.31/Resources/NSUserNotification.bundle/stamp.make
+/System/Library/Libraries/libDBusKit.so
+/System/Library/Libraries/libDBusKit.so.0
+/System/Library/Libraries/libDBusKit.so.0.2
+/System/Library/Tools/dk_make_protocol
+@dir /System/Library/Bundles/DBusMenu.bundle/Resources
+@dir /System/Library/Bundles/DBusMenu.bundle
+@dir /System/Library/Bundles
+@dir /System/Library/Frameworks/DBusKit.framework/Versions/0/Headers
+@dir /System/Library/Frameworks/DBusKit.framework/Versions/0/Resources
+@dir /System/Library/Frameworks/DBusKit.framework/Versions/0
+@dir /System/Library/Frameworks/DBusKit.framework/Versions
+@dir /System/Library/Frameworks/DBusKit.framework
+@dir /System/Library/Frameworks
+@dir /System/Library/Headers/DBusMenu
+@dir /System/Library/Headers
+@dir /System/Library/Libraries/gnustep-base/Versions/1.31/Resources/NSUserNotification.bundle/Resources
+@dir /System/Library/Libraries/gnustep-base/Versions/1.31/Resources/NSUserNotification.bundle
+@dir /System/Library/Libraries/gnustep-base/Versions/1.31/Resources
+@dir /System/Library/Libraries/gnustep-base/Versions/1.31
+@dir /System/Library/Libraries/gnustep-base/Versions
+@dir /System/Library/Libraries/gnustep-base
+@dir /System/Library/Libraries
+@dir /System/Library/Tools
+@dir /System/Library
+@dir /System
