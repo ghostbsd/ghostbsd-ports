@@ -1,0 +1,11 @@
+/Applications/Firefox.app/Firefox
+/Applications/Firefox.app/Resources/Firefox.desktop
+/Applications/Firefox.app/Resources/Firefox.png
+/Applications/Firefox.app/Resources/Info-gnustep.plist
+/Applications/Firefox.app/stamp.make
+/Library/Tools/Firefox
+@dir /Applications/Firefox.app/Resources
+@dir /Applications/Firefox.app
+@dir /Applications
+@dir /Library/Tools
+@dir /Library
