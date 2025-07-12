@@ -1,5 +1,5 @@
 PORTNAME=	gershwin-desktop
-PORTVERSION=	1.0
+PORTVERSION=	20250712
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,6 +16,10 @@ RUN_DEPENDS=	gershwin-globaldefaults>0:misc/gershwin-globaldefaults \
 		gershwin-libs-gui>0:x11-toolkits/gershwin-libs-gui \
 		gershwin-libs-back>0:x11-toolkits/gershwin-libs-back \
 		gershwin-workspace>0:deskutils/gershwin-workspace \
+		gershwin-dbuskit>0:devel/gershwin-dbuskit \
+		gershwin-appmenu-registrar>0:x11/gershwin-appmenu-registrar \
+		gershwin-appmenu-gtk-module>0:x11/gershwin-gtk-app-menu \
+		gershwin-xfce4-appmenu-plugin>0:x11/gershwin-xfce4-appmenu-plugin \
 		gershwin-rik-theme>0:x11-themes/gershwin-rik-theme \
 		gershwin-systempreferences>0:deskutils/gershwin-systempreferences \
 		gershwin-terminal>0:x11/gershwin-terminal \
