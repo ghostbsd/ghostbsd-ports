@@ -1,5 +1,5 @@
 PORTNAME=       appmenu-gtk-module
-DISTVERSION=    20250708
+DISTVERSION=    20250711
 CATEGORIES=     x11
 PKGNAMEPREFIX=	gershwin-
 
@@ -9,6 +9,8 @@ WWW=            https://gitlab.com/vala-panel-project/vala-panel-appmenu/-/tree/
 
 LICENSE=        LGPL3
 LICENSE_FILE=   ${WRKSRC}/subprojects/appmenu-gtk-module/LICENSE
+
+LIB_DEPENDS=    libbamf3.so:sysutils/bamf
 
 USES=		meson gnome pkgconfig vala:build
 CONFLICTS=	gtk-app-menu
@@ -29,6 +31,7 @@ GH_TAGNAME=     4c00900
 post-extract:
 	@${CP} ${FILESDIR}/meson.build ${WRKSRC}/meson.build
 	@${CP} ${FILESDIR}/gtk-meson.build ${WRKSRC}/subprojects/appmenu-gtk-module/meson.build
+	@${CP} ${FILESDIR}/translator-meson.build ${WRKSRC}/subprojects/appmenu-glib-translator/meson.build
 
 USE_GNOME=      gtk30 glib20 gtk20 gdkpixbuf
 GLIB_SCHEMAS=   org.appmenu.gtk-module.gschema.xml

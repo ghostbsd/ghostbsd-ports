@@ -1,5 +1,5 @@
 PORTNAME=       appmenu-registrar
-DISTVERSION=    20250708
+DISTVERSION=    20250711
 CATEGORIES=     x11
 PKGNAMEPREFIX=	gershwin-
 
@@ -9,6 +9,8 @@ WWW=            https://gitlab.com/vala-panel-project/vala-panel-appmenu/-/tree/
 
 LICENSE=        LGPL3
 LICENSE_FILE=   ${WRKSRC}/LICENSE
+
+LIB_DEPENDS=    libbamf3.so:sysutils/bamf
 
 USES=   meson gnome pkgconfig gettext vala:build
 CONFLICTS=	appmenu-registrar

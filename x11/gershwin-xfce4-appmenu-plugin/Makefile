@@ -1,5 +1,5 @@
 PORTNAME=       xfce4-appmenu-plugin
-DISTVERSION=    20250708
+DISTVERSION=    20250711
 CATEGORIES=     x11
 PKGNAMEPREFIX=	gershwin-
 
@@ -10,6 +10,7 @@ WWW=            https://gitlab.com/vala-panel-project/vala-panel-appmenu
 LICENSE=        LGPL3
 LICENSE_FILE=   ${WRKSRC}/LICENSE
 
+LIB_DEPENDS=    libbamf3.so:sysutils/bamf
 RUN_DEPENDS=    gershwin-appmenu-registrar>=0:x11/gershwin-appmenu-registrar \
 		gershwin-appmenu-gtk-module>=0:x11/gershwin-gtk-app-menu
 
@@ -35,5 +36,6 @@ GH_TAGNAME=     4c00900
 post-extract:
 	@${CP} ${FILESDIR}/meson.build ${WRKSRC}/meson.build
 	@${CP} ${FILESDIR}/lib-meson.build ${WRKSRC}/lib/meson.build
+	@${CP} ${FILESDIR}/translator-meson.build ${WRKSRC}/subprojects/appmenu-glib-translator/meson.build
 
 .include <bsd.port.mk>
