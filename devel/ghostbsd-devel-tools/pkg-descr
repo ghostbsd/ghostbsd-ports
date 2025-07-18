@@ -1,0 +1,20 @@
+GhostBSD development tools is a meta port that bundles all the essential
+tools needed for developing GhostBSD. This package provides a convenient
+one-stop installation for setting up a complete development environment.
+
+The included tools are:
+- git: Version control system for tracking changes and collaborating
+- nano: Simple command-line text editor
+- vim: Advanced text editor with extensive features
+- gpg: GNU Privacy Guard for signing commits and encrypting files
+- shellcheck: Shell script analysis and linting tool
+- portlint: FreeBSD ports Makefile quality checker
+- setuptools: Python package development utilities
+- poudriere: FreeBSD package building and testing framework
+- python-distutils-extra: Additional Python packaging utilities
+- pylint: Python source code analyzer for finding bugs and style issues
+
+This meta port simplifies the setup process for new GhostBSD developers
+by installing all necessary development utilities with a single command.
+
+WWW: https://github.com/ghostbsd/ghostbsd-ports
