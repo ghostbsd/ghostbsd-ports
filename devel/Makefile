@@ -835,6 +835,7 @@
     SUBDIR += gh
     SUBDIR += ghidra
     SUBDIR += ghostie
+    SUBDIR += ghostbsd-devel-tools
     SUBDIR += ghq
     SUBDIR += ghub
     SUBDIR += ghub-devel
