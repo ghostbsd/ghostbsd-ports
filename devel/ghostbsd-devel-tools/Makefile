@@ -19,7 +19,8 @@ RUN_DEPENDS=	git>0:devel/git \
 		py311-setuptools>0:devel/py-setuptools \
 		poudriere>0:ports-mgmt/poudriere \
 		python-distutils-extra>0:devel/py-python-distutils-extra \
-		pylint>0:devel/pylint
+		pylint>0:devel/pylint \
+		transmission-utils>0:net-p2p/transmission-utils
 
 USES=		metaport
 

@@ -13,6 +13,7 @@ The included tools are:
 - poudriere: FreeBSD package building and testing framework
 - python-distutils-extra: Additional Python packaging utilities
 - pylint: Python source code analyzer for finding bugs and style issues
+- transmission-utils: Command-line utilities for BitTorrent protocol
 
 This meta port simplifies the setup process for new GhostBSD developers
 by installing all necessary development utilities with a single command.
