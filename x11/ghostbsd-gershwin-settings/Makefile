@@ -1,5 +1,5 @@
 PORTNAME=	ghostbsd-gershwin-settings
-DISTVERSION=	20250710
+DISTVERSION=	20250722
 CATEGORIES=	x11
 
 MAINTAINER=	jpm820@proton.me
@@ -12,7 +12,7 @@ USES=		uidfix
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	gershwin-desktop
-GH_TAGNAME=	e28831e
+GH_TAGNAME=	c383fb3
 
 NO_ARCH=	yes
 NO_BUILD=	yes
