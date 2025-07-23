@@ -97,9 +97,9 @@
     SUBDIR += gershwin-gtk-app-menu
     SUBDIR += gershwin-terminal
     SUBDIR += gershwin-xfce4-appmenu-plugin
-    SUBDIR += ghostbsd-gershwin-settings
     SUBDIR += ghostbsd-cinnamon-settings
     SUBDIR += ghostbsd-common-settings
+    SUBDIR += ghostbsd-gershwin-settings
     SUBDIR += ghostbsd-gnome-settings
     SUBDIR += ghostbsd-mate
     SUBDIR += ghostbsd-mate-settings
@@ -608,6 +608,7 @@
     SUBDIR += xkeycaps
     SUBDIR += xkeywrap
     SUBDIR += xkill
+    SUBDIR += xlibre
     SUBDIR += xload
     SUBDIR += xloadimage
     SUBDIR += xlockmore
