@@ -1,0 +1,6 @@
+Gershwin Developer Dependencies
+
+This metaport installs all the necessary dependencies for Gershwin
+development, including Objective-C runtime, graphics libraries,
+audio libraries, build tools, and various support libraries
+commonly used in GNUstep and Objective-C development environments.
