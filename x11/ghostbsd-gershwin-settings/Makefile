@@ -12,7 +12,7 @@ USES=		uidfix
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	gershwin-desktop
-GH_TAGNAME=	c383fb3
+GH_TAGNAME=	0fb9100
 
 NO_ARCH=	yes
 NO_BUILD=	yes
