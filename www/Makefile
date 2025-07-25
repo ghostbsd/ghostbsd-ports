@@ -31,6 +31,7 @@
     SUBDIR += amphetadesk
     SUBDIR += analog
     SUBDIR += angie
+    SUBDIR += angie-console-light
     SUBDIR += angie-module-auth-jwt
     SUBDIR += angie-module-auth-spnego
     SUBDIR += angie-module-brotli
@@ -154,6 +155,7 @@
     SUBDIR += dothttp
     SUBDIR += dpp
     SUBDIR += drill
+    SUBDIR += drogon
     SUBDIR += drupal10
     SUBDIR += drupal11
     SUBDIR += drupal7
@@ -185,6 +187,7 @@
     SUBDIR += ffproxy
     SUBDIR += fgallery
     SUBDIR += filebrowser
+    SUBDIR += filepizza
     SUBDIR += filtron
     SUBDIR += firedm
     SUBDIR += firefox
@@ -251,6 +254,7 @@
     SUBDIR += habari
     SUBDIR += hiawatha
     SUBDIR += hiawatha-monitor
+    SUBDIR += homepage
     SUBDIR += homer-web
     SUBDIR += hotcrp
     SUBDIR += hs-DAV
@@ -281,6 +285,7 @@
     SUBDIR += igal2
     SUBDIR += ikiwiki
     SUBDIR += ilias
+    SUBDIR += imaginary
     SUBDIR += iridium
     SUBDIR += janus
     SUBDIR += jericho-html
@@ -355,6 +360,7 @@
     SUBDIR += luakit-devel
     SUBDIR += lux
     SUBDIR += lychee
+    SUBDIR += lycheeorg
     SUBDIR += lynx
     SUBDIR += lynx-current
     SUBDIR += lzr
@@ -370,6 +376,7 @@
     SUBDIR += mediawiki139
     SUBDIR += mediawiki142
     SUBDIR += mediawiki143
+    SUBDIR += mediawiki144
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -1903,6 +1910,7 @@
     SUBDIR += py-restclient
     SUBDIR += py-rfc3986
     SUBDIR += py-rfc3987
+    SUBDIR += py-rfc3987-syntax
     SUBDIR += py-rollbar
     SUBDIR += py-routes
     SUBDIR += py-rules
@@ -2512,6 +2520,7 @@
     SUBDIR += swiggle
     SUBDIR += sws
     SUBDIR += tailwindcss3
+    SUBDIR += tailwindcss4
     SUBDIR += tcexam
     SUBDIR += tclhttpd
     SUBDIR += tclwebtest
