@@ -1,7 +1,7 @@
 # Created by:	Eric Turgeon ericturgeon@ghostbsd.org
 
 PORTNAME=	station-tweak
-PORTVERSION=	0.7
+PORTVERSION=	0.8
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
