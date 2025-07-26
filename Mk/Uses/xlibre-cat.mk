@@ -85,6 +85,9 @@ EXTRACT_SUFX?=		.tar.bz2
 .  endif
 
 DIST_SUBDIR=	xlibre/${_XLIBRE_CAT}
+.  if !empty(PKGNAMEPREFIX) && ${PKGNAMEPREFIX} == xlibre- && ${_XLIBRE_CAT} == driver
+DIST_SUBDIR=	xorg/${_XLIBRE_CAT}
+.  endif
 
 .  if ${_XLIBRE_BUILDSYS} == meson
 .include "${USESDIR}/meson.mk"
@@ -146,10 +149,16 @@ CFLAGS+=	-Werror=uninitialized
 .    if ${_XLIBRE_BUILDSYS} == meson
 # Put special stuff for meson here
 #FIXME: This is a hack until the upstream fixes the default module folder!
+.      if empty(PKGNAMEPREFIX) || ${PKGNAMEPREFIX} != xlibre-
 MESON_ARGS+= -Dxorg-module-dir='${PREFIX}/${MODULEDIR}'
+.      endif
 .    else
 #FIXME: This is a hack until the upstream fixes the default module folder!
+
+.      if empty(PKGNAMEPREFIX) || ${PKGNAMEPREFIX} != xlibre-
 CONFIGURE_ARGS+= --with-xorg-module-dir='${PREFIX}/${MODULEDIR}'
+.      endif
+
 CONFIGURE_ENV+=	PKG_CONFIG_PATH=${PREFIX}/libdata/pkgconfig/ \
 		DRIVER_MAN_SUFFIX=4x DRIVER_MAN_DIR='$$(mandir)/man4'
 AUTORECONF_ARGS+= -I ${PREFIX}/share/aclocal

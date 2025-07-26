@@ -41,6 +41,10 @@ XLIBRE_MODULES=	xlibre-server \
 xlibre-server_LIB_PC_DEPENDS=	${PREFIX}/libdata/pkgconfig/xorg-server.pc:x11-servers/xlibre-server
 xlibre-macros_BUILD_DEPENDS=	${PREFIX}/libdata/pkgconfig/xorg-macros.pc:devel/xorg-macros
 
+.  if ${USE_XORG:Mxlibre-server}
+CONFLICTS_BUILD+=xorg-server
+.  endif
+
 # Add explicit X options to avoid problems with false positives in configure
 .  if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS+=--x-libraries=${PREFIX}/lib --x-includes=${PREFIX}/include
