@@ -16,12 +16,29 @@ WWW=		https://www.xrdp.org/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+FLAVORS=	xorg xlibre
+FLAVOR?=	${FLAVORS:[1]}
+
 BUILD_DEPENDS=	nasm:devel/nasm
 RUN_DEPENDS=	xauth:x11/xauth
 
 USES=		autoreconf libtool:build localbase pkgconfig xorg
 USE_LDCONFIG=	yes
-USE_XORG=	xorgproto xorg-server
+USE_XORG=	xorgproto
+
+.if ${FLAVOR} == xlibre
+PKGNAMEPREFIX=		xlibre-
+USES+=			xlibre
+USE_XLIBRE+=		xlibre-server
+CONFIGURE_ARGS+=	--enable-strict-locations --sysconfdir=/etc
+CONFLICTS_BUILD+=	xorg-server
+EXTRA_PATCHES=		${PATCHDIR}/extra-patch-configure.ac \
+			${PATCHDIR}/extra-patch-module_rdpClientCon.c
+.else
+USE_XORG+=		xorg-server
+CONFLICTS_BUILD+=	xlibre-server
+.endif
+
 USE_GITHUB=	yes
 
 GH_ACCOUNT=	neutrinolabs
