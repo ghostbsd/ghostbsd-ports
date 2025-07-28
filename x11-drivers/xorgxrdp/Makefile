@@ -33,11 +33,9 @@ PKGNAMEPREFIX=		xlibre-
 USES+=			xlibre
 USE_XLIBRE+=		xlibre-server
 CONFIGURE_ARGS+=	--enable-strict-locations --sysconfdir=/etc
-CONFLICTS_BUILD+=	xorg-server
 EXTRA_PATCHES=		${PATCHDIR}/extra-patch-xrdpkeyb_rdpKeyboard.c
 .else
 USE_XORG+=		xorg-server
-CONFLICTS_BUILD+=	xlibre-server
 .endif
 
 XRDPVER=		0.10.4

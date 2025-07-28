@@ -1,7 +1,6 @@
-PORTNAME=	xlibre
-PORTVERSION=	1
+PORTNAME=	xlibre-minimal
+PORTVERSION=	0.1
 CATEGORIES=	x11 x11-servers
-PKGNAMESUFFIX=	-minimal
 
 MAINTAINER=	b-aazbsd.proton.me
 COMMENT=	XLibre + X.Org minimal distribution metaport

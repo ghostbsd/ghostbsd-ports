@@ -15,7 +15,7 @@ OPTIONS_DEFAULT=	XLIBRE
 XLIBRE_DESC=	Use the XLibre X server.
 XORG_DESC=	Use the X.Org X server.
 
-XLIBRE_RUN_DEPENDS=	Xorg:x11/xorg-minimal \
+XLIBRE_RUN_DEPENDS=	Xorg:x11/xlibre-minimal \
 			xlibre-xf86-input-joystick>0:x11-drivers/xlibre-xf86-input-joystick \
 			xlibre-xf86-input-keyboard>0:x11-drivers/xlibre-xf86-input-keyboard \
 			xlibre-xf86-input-mouse>0:x11-drivers/xlibre-xf86-input-mouse \
