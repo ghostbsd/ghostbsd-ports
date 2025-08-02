@@ -17,7 +17,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:misc/hicolor-icon-them
 USES=		gettext-tools gnome python shebangfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
-USE_GNOME=	pygobject3
+USE_GNOME=	pygobject3 intltool
 USE_PYTHON=	distutils noflavors
 SHEBANG_GLOB=	*.py
 
