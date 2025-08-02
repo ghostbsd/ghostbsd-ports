@@ -1,10 +1,10 @@
 PORTNAME=	gershwin-desktop
-PORTVERSION=	20250712
+PORTVERSION=	20250722
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jpm820@proton.me
 COMMENT=	GNUstep Gershwin desktop environment meta port
 WWW=		https://github.com/gershwin-desktop/gershwin-desktop
 
@@ -28,6 +28,7 @@ RUN_DEPENDS=	gershwin-globaldefaults>0:misc/gershwin-globaldefaults \
 		ghostbsd-wallpapers>0:x11-themes/ghostbsd-wallpapers \
 		ghostbsd-xfce-themes>0:x11-themes/ghostbsd-xfce-themes \
 		ghostbsd-zsh-settings>0:shells/ghostbsd-zsh-settings \
+		wmctrl-fork>0:x11/wmctrl-fork \
 		xfce4-wm>0:x11-wm/xfce4-wm \
 		xfce4-panel>0:x11-wm/xfce4-panel \
 		xfce4-pulseaudio-plugin>0:audio/xfce4-pulseaudio-plugin

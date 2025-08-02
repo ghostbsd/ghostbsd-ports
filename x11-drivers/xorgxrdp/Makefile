@@ -1,7 +1,7 @@
 PORTNAME=	xorgxrdp
 DISTVERSION=	0.10.4
 # Be sure to bump PORTREVISION after xorg-server update to force rebuild
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-drivers
 MASTER_SITES=	https://github.com/neutrinolabs/${PORTNAME}/releases/download/v${DISTVERSION}/ \
 		https://github.com/neutrinolabs/xrdp/releases/download/v${XRDPVER}/:xrdp
@@ -38,7 +38,7 @@ EXTRA_PATCHES=		${PATCHDIR}/extra-patch-xrdpkeyb_rdpKeyboard.c
 USE_XORG+=		xorg-server
 .endif
 
-XRDPVER=		0.10.4
+XRDPVER=		0.10.4.1
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	XRDP_CFLAGS=-I${WRKDIR}/xrdp-${XRDPVER}/common

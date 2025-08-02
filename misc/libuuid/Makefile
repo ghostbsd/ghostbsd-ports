@@ -1,6 +1,7 @@
 PORTNAME=	libuuid
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.41.1
+PORTREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	arrowd@FreeBSD.org
@@ -17,6 +18,7 @@ GH_ACCOUNT=	util-linux
 GH_PROJECT=	util-linux
 
 USE_LDCONFIG=	yes
+HAS_SYMBOL_VERSION=	${PREFIX}/lib/libuuid.so.1.3.0
 # disable all Meson features because the project has gazillion of them and we only need one
 MESON_ARGS=	--auto-features=disabled \
 		-Dallow-32bit-time=true \
