@@ -7,7 +7,16 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.Org syscons display driver
 WWW=		https://github.com/rayddteam/xf86-video-scfb
 
+FLAVORS=	xorg xlibre
+FLAVOR?=	${FLAVORS:[1]}
+
+.if ${FLAVOR} == xlibre
+PKGNAMEPREFIX=	xlibre-
+USES=		xlibre-cat:driver
+.else
 USES=		xorg-cat:driver
+.endif
+
 PLIST_FILES=	lib/xorg/modules/drivers/scfb_drv.so \
 		share/man/man4/scfb.4x.gz
 
