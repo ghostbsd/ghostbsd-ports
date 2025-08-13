@@ -1,5 +1,6 @@
 PORTNAME=	ghostbsd-xfce4
 PORTVERSION=	4.20
+PORTREVISION=	1
 CATEGORIES=	x11 xfce
 
 MAINTAINER=	goddard1905@gmail.com
@@ -39,7 +40,6 @@ RUN_DEPENDS=	xfwm4:x11-wm/xfce4-wm \
 		xfce4-weather-plugin>0:misc/xfce4-weather-plugin \
 		xfce4-whiskermenu-plugin>0:x11/xfce4-whiskermenu-plugin \
 		xfce4-xkb-plugin>0:deskutils/xfce4-xkb-plugin \
-		ghostbsd-xfce-settings>0:x11/ghostbsd-xfce-settings \
 		ghostbsd-wallpapers25>0:x11-themes/ghostbsd-wallpapers25 \
 		xfce4-appfinder:misc/xfce4-appfinder \
 		greybird-theme>0:x11-themes/greybird-theme \
