@@ -5,7 +5,7 @@ on:
     types:
       - opened
     branches:
-      - 'master'
+      - 'main'
 
 # map fields with customized labels
 env:
