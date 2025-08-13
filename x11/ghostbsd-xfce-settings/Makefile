@@ -1,5 +1,5 @@
 PORTNAME=	ghostbsd-xfce-settings
-PORTVERSION=	25.01.3
+PORTVERSION=	25.02.0
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon@ghostbsd.org
@@ -7,7 +7,8 @@ COMMENT=	GhostBSD xfce settings in installed mode
 
 LICENSE=	BSD
 
-RUN_DEPENDS=	ghostbsd-wallpapers25>0:x11-themes/ghostbsd-wallpapers25
+RUN_DEPENDS=	ghostbsd-wallpapers25>0:x11-themes/ghostbsd-wallpapers25 \
+		ghostbsd-xfce>0:x11/ghostbsd-xfce
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
