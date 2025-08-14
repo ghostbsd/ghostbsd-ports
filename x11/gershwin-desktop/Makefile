@@ -1,5 +1,5 @@
 PORTNAME=	gershwin-desktop
-PORTVERSION=	20250722
+PORTVERSION=	20250814
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -25,7 +25,7 @@ RUN_DEPENDS=	gershwin-globaldefaults>0:misc/gershwin-globaldefaults \
 		gershwin-terminal>0:x11/gershwin-terminal \
 		gershwin-textedit>0:deskutils/gershwin-textedit \
 		ghostbsd-gershwin-settings>0:x11/ghostbsd-gershwin-settings \
-		ghostbsd-wallpapers>0:x11-themes/ghostbsd-wallpapers \
+		ghostbsd-wallpapers25>0:x11-themes/ghostbsd-wallpapers25 \
 		ghostbsd-xfce-themes>0:x11-themes/ghostbsd-xfce-themes \
 		ghostbsd-zsh-settings>0:shells/ghostbsd-zsh-settings \
 		wmctrl-fork>0:x11/wmctrl-fork \
