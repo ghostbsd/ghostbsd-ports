@@ -1,4 +1,3 @@
-
 PORTNAME=	ghostbsd-mate
 PORTVERSION=	1.28.2
 PORTREVISION=	3
@@ -26,7 +25,6 @@ RUN_DEPENDS=	mate-terminal:x11/mate-terminal \
 		ghostbsd-mate-settings>0:x11/ghostbsd-mate-settings \
 		ghostbsd-wallpapers25>0:x11-themes/ghostbsd-wallpapers25 \
 		ghostbsd-gtk-themes>0:x11-themes/ghostbsd-gtk-themes \
-		mate-applet-appmenu>0:x11/mate-applet-appmenu \
 		ghostbsd-fonts>0:x11-fonts/ghostbsd-fonts
 
 USES=		metaport mate
