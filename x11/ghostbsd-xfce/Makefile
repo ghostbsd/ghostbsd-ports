@@ -41,6 +41,7 @@ RUN_DEPENDS=	xfwm4:x11-wm/xfce4-wm \
 		xfce4-whiskermenu-plugin>0:x11/xfce4-whiskermenu-plugin \
 		xfce4-xkb-plugin>0:deskutils/xfce4-xkb-plugin \
 		ghostbsd-wallpapers25>0:x11-themes/ghostbsd-wallpapers25 \
+		ghostbsd-gtk-themes>0:x11-themes/ghostbsd-gtk-themes \
 		xfce4-appfinder:misc/xfce4-appfinder \
 		greybird-theme>0:x11-themes/greybird-theme \
 		adwaita-icon-theme>0:x11-themes/adwaita-icon-theme \

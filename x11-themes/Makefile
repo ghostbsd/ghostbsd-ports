@@ -43,6 +43,7 @@
     SUBDIR += fvwm-themes
     SUBDIR += gershwin-rik-theme
     SUBDIR += ghostbsd-icons
+    SUBDIR += ghostbsd-gtk-themes
     SUBDIR += ghostbsd-mate-themes
     SUBDIR += ghostbsd-xfce-themes
     SUBDIR += ghostbsd-wallpapers
