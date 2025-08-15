@@ -11,6 +11,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
 NO_BUILD=	yes
+NO_ARCH=	yes
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/themes/
