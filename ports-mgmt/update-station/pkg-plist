@@ -1,5 +1,6 @@
 bin/update-station
 etc/sudoers.d/update-station
+etc/xdg/autostart/update-station.desktop
 %%PYTHON_SITELIBDIR%%/update_station/__init__.py
 %%PYTHON_SITELIBDIR%%/update_station/__pycache__/__init__%%PYTHON_TAG%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/update_station/__pycache__/__init__%%PYTHON_TAG%%.pyc
