@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ghostbsd-drivers
-PORTVERSION=	20.12
+PORTVERSION=	25.08
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	eturgeon@ixsystems.com
