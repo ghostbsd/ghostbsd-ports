@@ -26,10 +26,12 @@
     SUBDIR += UniversalFeedCreator
     SUBDIR += adguardhome
     SUBDIR += adjuster
+    SUBDIR += agate
     SUBDIR += alef-webfont
     SUBDIR += amfora
     SUBDIR += amphetadesk
     SUBDIR += analog
+    SUBDIR += angelfish
     SUBDIR += angie
     SUBDIR += angie-console-light
     SUBDIR += angie-module-auth-jwt
@@ -101,6 +103,7 @@
     SUBDIR += cgi-lib.pl
     SUBDIR += cgicc
     SUBDIR += cgiwrap
+    SUBDIR += chawan
     SUBDIR += checkbot
     SUBDIR += chisel
     SUBDIR += chpasswd
@@ -220,6 +223,7 @@
     SUBDIR += ghostunnel
     SUBDIR += gist
     SUBDIR += gitea
+    SUBDIR += github-release-monitor
     SUBDIR += gitlab
     SUBDIR += gitlab-pages
     SUBDIR += gitlab-workhorse
@@ -374,7 +378,6 @@
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
     SUBDIR += mediawiki139
-    SUBDIR += mediawiki142
     SUBDIR += mediawiki143
     SUBDIR += mediawiki144
     SUBDIR += mergelog
@@ -485,6 +488,7 @@
     SUBDIR += nextcloud-tasks
     SUBDIR += nghttp2
     SUBDIR += nginx
+    SUBDIR += nginx-acme
     SUBDIR += nginx-devel
     SUBDIR += nginx-full
     SUBDIR += nginx-lite
@@ -500,7 +504,6 @@
     SUBDIR += node24
     SUBDIR += nostromo
     SUBDIR += novnc
-    SUBDIR += novnc-websockify
     SUBDIR += npc
     SUBDIR += npm
     SUBDIR += npm-node18
@@ -1443,7 +1446,6 @@
     SUBDIR += php84-opcache
     SUBDIR += php84-session
     SUBDIR += php84-tidy
-    SUBDIR += php85-opcache
     SUBDIR += php85-session
     SUBDIR += php85-tidy
     SUBDIR += phpbb3
@@ -1837,6 +1839,7 @@
     SUBDIR += py-legacy-cgi
     SUBDIR += py-lektor
     SUBDIR += py-lesscpy
+    SUBDIR += py-lia-web
     SUBDIR += py-libsass
     SUBDIR += py-limits
     SUBDIR += py-livereload
@@ -1980,7 +1983,6 @@
     SUBDIR += py-wikitools
     SUBDIR += py-woob
     SUBDIR += py-woob-qt
-    SUBDIR += py-wsaccel
     SUBDIR += py-wsgidav
     SUBDIR += py-xandikos
     SUBDIR += py-xyzservices
@@ -2646,7 +2648,6 @@
     SUBDIR += web2ldap
     SUBDIR += webalizer
     SUBDIR += webbrowser
-    SUBDIR += webcopy
     SUBDIR += webcrawl
     SUBDIR += webfs
     SUBDIR += webgrind

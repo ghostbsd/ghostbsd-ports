@@ -164,6 +164,7 @@
     SUBDIR += docbookrx
     SUBDIR += docproj
     SUBDIR += docproj-fonts-cjk
+    SUBDIR += doxx
     SUBDIR += dsssl-docbook-modular
     SUBDIR += dtd-catalogs
     SUBDIR += dtd2relax
@@ -446,6 +447,7 @@
     SUBDIR += linuxdoc
     SUBDIR += linuxdoc-tools
     SUBDIR += localize
+    SUBDIR += logseq
     SUBDIR += lookatme
     SUBDIR += loook
     SUBDIR += lowdown
@@ -1441,6 +1443,7 @@
     SUBDIR += py-langdetect
     SUBDIR += py-langid
     SUBDIR += py-language-data
+    SUBDIR += py-language-tags
     SUBDIR += py-laserhammer
     SUBDIR += py-latexcodec
     SUBDIR += py-license-expression
@@ -1463,6 +1466,7 @@
     SUBDIR += py-mdit-py-plugins
     SUBDIR += py-mdurl
     SUBDIR += py-mdx_wikilink_plus
+    SUBDIR += py-meilisearch
     SUBDIR += py-merge3
     SUBDIR += py-mike
     SUBDIR += py-misaka
@@ -1593,9 +1597,12 @@
     SUBDIR += py-rich-rst
     SUBDIR += py-rnc2rng
     SUBDIR += py-roman-numerals-py
+    SUBDIR += py-rouge-score
     SUBDIR += py-rst2ansi
     SUBDIR += py-rst2html5
+    SUBDIR += py-sacremoses
     SUBDIR += py-scour
+    SUBDIR += py-segments
     SUBDIR += py-segno
     SUBDIR += py-sense2vec
     SUBDIR += py-sentencepiece
@@ -2185,7 +2192,6 @@
     SUBDIR += xmlada
     SUBDIR += xmlcatmgr
     SUBDIR += xmlcharent
-    SUBDIR += xmlenc
     SUBDIR += xmlf90
     SUBDIR += xmlformat
     SUBDIR += xmlgen

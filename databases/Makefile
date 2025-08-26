@@ -48,6 +48,7 @@
     SUBDIR += db
     SUBDIR += db18
     SUBDIR += db5
+    SUBDIR += dbeaver
     SUBDIR += dbf
     SUBDIR += dbh
     SUBDIR += dbixx
@@ -66,6 +67,7 @@
     SUBDIR += firebird30-server
     SUBDIR += firebird40-client
     SUBDIR += firebird40-server
+    SUBDIR += fmptools
     SUBDIR += fortytwo-bdb
     SUBDIR += foundationdb71-client
     SUBDIR += foundationdb71-server
@@ -168,8 +170,6 @@
     SUBDIR += mariadb-java-client
     SUBDIR += mariadb1011-client
     SUBDIR += mariadb1011-server
-    SUBDIR += mariadb105-client
-    SUBDIR += mariadb105-server
     SUBDIR += mariadb106-client
     SUBDIR += mariadb106-server
     SUBDIR += mariadb114-client
@@ -182,7 +182,6 @@
     SUBDIR += memcached
     SUBDIR += metabase
     SUBDIR += mongodb-tools
-    SUBDIR += mongodb50
     SUBDIR += mongodb60
     SUBDIR += mongodb70
     SUBDIR += mongodb80
@@ -195,7 +194,7 @@
     SUBDIR += mysql-connector-c++
     SUBDIR += mysql-connector-j
     SUBDIR += mysql-connector-java51
-    SUBDIR += mysql-connector-odbc-80
+    SUBDIR += mysql-connector-odbc
     SUBDIR += mysql2pgsql
     SUBDIR += mysql80-client
     SUBDIR += mysql80-server
@@ -516,8 +515,6 @@
     SUBDIR += pear-DB_Table
     SUBDIR += pear-DB_ldap
     SUBDIR += pear-DB_ldap2
-    SUBDIR += pear-DoctrineCommon
-    SUBDIR += pear-DoctrineDBAL
     SUBDIR += pear-Horde_Db
     SUBDIR += pear-Horde_HashTable
     SUBDIR += pear-Horde_Imsp
@@ -660,6 +657,7 @@
     SUBDIR += postgis33
     SUBDIR += postgis34
     SUBDIR += postgis35
+    SUBDIR += postgis36
     SUBDIR += postgresql-cstore_fdw
     SUBDIR += postgresql-idn
     SUBDIR += postgresql-jdbc
@@ -898,6 +896,7 @@
     SUBDIR += redis62
     SUBDIR += redis72
     SUBDIR += redis74
+    SUBDIR += redis80
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += redisjson
@@ -909,7 +908,6 @@
     SUBDIR += rrdman
     SUBDIR += rrdmerge
     SUBDIR += rrdtool
-    SUBDIR += rrdtool12
     SUBDIR += ruby-bdb
     SUBDIR += ruby-qdbm
     SUBDIR += ruby-tokyocabinet
@@ -957,6 +955,7 @@
     SUBDIR += rubygem-bdb1
     SUBDIR += rubygem-bigrecord
     SUBDIR += rubygem-brpoplpush-redis_script
+    SUBDIR += rubygem-click_house-client
     SUBDIR += rubygem-couchrest
     SUBDIR += rubygem-dalli
     SUBDIR += rubygem-data_objects
@@ -1025,6 +1024,7 @@
     SUBDIR += rubygem-openid-redis-store
     SUBDIR += rubygem-paranoia
     SUBDIR += rubygem-pg
+    SUBDIR += rubygem-pg-gitlab
     SUBDIR += rubygem-pg_array_parser
     SUBDIR += rubygem-pg_query
     SUBDIR += rubygem-pghero
@@ -1113,6 +1113,7 @@
     SUBDIR += tcl-sqlite3
     SUBDIR += tdb
     SUBDIR += tdb1410
+    SUBDIR += tdb1413
     SUBDIR += tdbc
     SUBDIR += tile38
     SUBDIR += tiledb
@@ -1130,6 +1131,7 @@
     SUBDIR += valkey
     SUBDIR += vfront
     SUBDIR += virtualpg
+    SUBDIR += weaviate
     SUBDIR += webdis
     SUBDIR += wfb2sql
     SUBDIR += xapian-bindings

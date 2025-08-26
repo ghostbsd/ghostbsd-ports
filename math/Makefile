@@ -25,7 +25,6 @@
     SUBDIR += R-cran-Matching
     SUBDIR += R-cran-MatrixModels
     SUBDIR += R-cran-NMF
-    SUBDIR += R-cran-RSvgDevice
     SUBDIR += R-cran-RcppArmadillo
     SUBDIR += R-cran-RcppEigen
     SUBDIR += R-cran-RcppRoll
@@ -609,6 +608,10 @@
     SUBDIR += octave-forge-ltfat
     SUBDIR += octave-forge-mapping
     SUBDIR += octave-forge-matgeom
+    SUBDIR += octave-forge-mboct-fem-pkg
+    SUBDIR += octave-forge-mboct-mbdyn-pkg
+    SUBDIR += octave-forge-mboct-numerical-pkg
+    SUBDIR += octave-forge-mboct-octave-pkg
     SUBDIR += octave-forge-mccabe-thiele
     SUBDIR += octave-forge-mechanics
     SUBDIR += octave-forge-miscellaneous
@@ -1222,6 +1225,7 @@
     SUBDIR += stanmath
     SUBDIR += stp
     SUBDIR += suitesparse
+    SUBDIR += suitesparse-Example
     SUBDIR += suitesparse-amd
     SUBDIR += suitesparse-btf
     SUBDIR += suitesparse-camd

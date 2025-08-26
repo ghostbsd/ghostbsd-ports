@@ -1,6 +1,5 @@
     COMMENT = Astronomical ports
 
-    SUBDIR += R-cran-maptools
     SUBDIR += accrete
     SUBDIR += astrometry
     SUBDIR += astroterm
@@ -130,6 +129,7 @@
     SUBDIR += sunclock
     SUBDIR += sunwait
     SUBDIR += swe
+    SUBDIR += traccar
     SUBDIR += viking
     SUBDIR += wcslib
     SUBDIR += weather

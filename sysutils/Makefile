@@ -446,8 +446,12 @@
     SUBDIR += gdu
     SUBDIR += genimage
     SUBDIR += genisoimage
+<<<<<<< HEAD
     SUBDIR += gershwin-gbi-wrapper
     SUBDIR += gershwin-ghostbsd-wrappers
+=======
+    SUBDIR += geomman
+>>>>>>> freebsd/main
     SUBDIR += getdelta
     SUBDIR += geteltorito
     SUBDIR += getssl
@@ -522,6 +526,7 @@
     SUBDIR += httplog
     SUBDIR += hw-probe
     SUBDIR += hwstat
+    SUBDIR += hyprpolkitagent
     SUBDIR += i2c-tools
     SUBDIR += i7z
     SUBDIR += iat
@@ -713,7 +718,6 @@
     SUBDIR += memdump
     SUBDIR += memfetch
     SUBDIR += memtest86
-    SUBDIR += memtest86+
     SUBDIR += memtester
     SUBDIR += metalog
     SUBDIR += mfid
@@ -749,6 +753,7 @@
     SUBDIR += mstflint
     SUBDIR += mtm
     SUBDIR += mtxorbd
+    SUBDIR += mult
     SUBDIR += multitail
     SUBDIR += munin-common
     SUBDIR += munin-contrib
@@ -1256,6 +1261,7 @@
     SUBDIR += rubygem-win32-file-stat
     SUBDIR += rubygem-winrm
     SUBDIR += rubygem-winrm-elevated
+    SUBDIR += rubygem-winrm-elevated-gitlab
     SUBDIR += rubygem-yell
     SUBDIR += runas
     SUBDIR += rundeck
@@ -1301,7 +1307,7 @@
     SUBDIR += seatd
     SUBDIR += seatools
     SUBDIR += sec
-    SUBDIR += sedutil
+    SUBDIR += sensors
     SUBDIR += sensu-go
     SUBDIR += serf
     SUBDIR += setcdboot
@@ -1375,6 +1381,7 @@
     SUBDIR += szyszka
     SUBDIR += tai64nfrac
     SUBDIR += tailspin
+    SUBDIR += tarbsd-builder
     SUBDIR += tarsnap
     SUBDIR += tarsnap-gui
     SUBDIR += tarsnap-periodic
@@ -1538,6 +1545,7 @@
     SUBDIR += usrinfo
     SUBDIR += utcount
     SUBDIR += vagrant
+    SUBDIR += vagrant-gitlab
     SUBDIR += vbetool
     SUBDIR += vchanger
     SUBDIR += vcp

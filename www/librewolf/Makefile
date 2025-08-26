@@ -1,5 +1,5 @@
 PORTNAME=	librewolf
-DISTVERSION=	140.0.4
+DISTVERSION=	142.0
 LWPATCH=	-1
 DISTVERSIONSUFFIX=	${LWPATCH}.source
 CATEGORIES=	www wayland
@@ -13,7 +13,7 @@ LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.112:security/nss \
+		nss>=3.114:security/nss \
 		icu>=76.1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
 		harfbuzz>=10.1.0:print/harfbuzz \
@@ -72,14 +72,10 @@ MOZ_OPTIONS=	--enable-application=browser \
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == i386
-BUILD_DEPENDS+=	node${NODEJS_VERSION}>=24:www/node${NODEJS_VERSION}
-USES+=		nodejs:24,build,env
-.  if ${MACHINE_CPU:Msse2}
+.if ${ARCH} == i386 && ${MACHINE_CPU:Msse2}
 # is not enabled on i386 by default
 # Fix for error: always_inline function '_mm_setzero_si64' requires target feature 'sse2'
 CFLAGS_i386+=	-msse2
-.  endif
 .endif
 
 .if ${ARCH} == amd64

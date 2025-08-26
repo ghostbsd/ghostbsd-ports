@@ -1,5 +1,5 @@
 PORTNAME=	compat14x
-PORTVERSION=	14.2.1402000.20250721
+PORTVERSION=	14.2.1402000.20250811
 CATEGORIES=	misc
 MASTER_SITES=	LOCAL/arrowd
 PKGNAMESUFFIX=	-${ARCH}
@@ -20,6 +20,8 @@ USE_LDCONFIG=	${TARGET_DIR}
 
 COMPAT_LIBS=	libasn1.so.11 \
 		libcom_err.so.5 \
+		libcrypto.so.30 \
+		libgssapi.so.10 \
 		libgssapi_krb5.so.10 \
 		libgssapi_ntlm.so.10 \
 		libgssapi_spnego.so.10 \
@@ -36,6 +38,8 @@ COMPAT_LIBS=	libasn1.so.11 \
 		libprivateheimipcc.so.11 \
 		libprivateheimipcs.so.11 \
 		libroken.so.11 \
+		libssl.so.30 \
+		libutil.so.9 \
 		libwind.so.11
 
 OPTIONS_DEFINE=	COMPAT32

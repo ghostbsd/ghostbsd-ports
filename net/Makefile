@@ -17,6 +17,8 @@
     SUBDIR += akonadi-search
     SUBDIR += alligator
     SUBDIR += aluminum
+    SUBDIR += amnezia-kmod
+    SUBDIR += amnezia-tools
     SUBDIR += amqpcat
     SUBDIR += aoe
     SUBDIR += apache-commons-net
@@ -115,6 +117,7 @@
     SUBDIR += dbeacon
     SUBDIR += delegate
     SUBDIR += deltachat-rpc-server
+    SUBDIR += devfile
     SUBDIR += deviceatlas-enterprise-c
     SUBDIR += dgd
     SUBDIR += dgd-kernel
@@ -158,7 +161,6 @@
     SUBDIR += file2pcap
     SUBDIR += findmtu
     SUBDIR += findomain
-    SUBDIR += flower
     SUBDIR += foreman-proxy
     SUBDIR += fort
     SUBDIR += fping
@@ -443,7 +445,6 @@
     SUBDIR += libzmq3
     SUBDIR += libzmq4
     SUBDIR += liferea
-    SUBDIR += linknx
     SUBDIR += linphone
     SUBDIR += linux-c7-avahi-libs
     SUBDIR += linux-c7-openldap
@@ -593,7 +594,6 @@
     SUBDIR += openvswitch
     SUBDIR += ortp
     SUBDIR += osrtspproxy
-    SUBDIR += ossp-sa
     SUBDIR += owamp
     SUBDIR += p5-Acme-HTTP
     SUBDIR += p5-AddressBook
@@ -1560,6 +1560,7 @@
     SUBDIR += sup
     SUBDIR += svnup
     SUBDIR += syncthing
+    SUBDIR += syncthing1
     SUBDIR += tableutil
     SUBDIR += tac_plus4
     SUBDIR += tacacs

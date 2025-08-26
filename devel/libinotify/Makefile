@@ -1,6 +1,6 @@
 PORTNAME=	libinotify
 PORTVERSION=	20240724
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/libinotify-kqueue/libinotify-kqueue/releases/download/${PORTVERSION}/
 
@@ -19,10 +19,10 @@ INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
 
 .if exists(/usr/include/sys/inotify.h)
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-libinotify.pc.in
+
 post-install:
-	${INSTALL_DATA} /usr/include/sys/inotify.h ${STAGEDIR}${PREFIX}/include/sys/
-	${SED} -e '/Libs:/d' -e '/Cflags:/d' ${WRKSRC}/libinotify.pc \
-		> ${STAGEDIR}${PREFIX}/libdata/pkgconfig/libinotify.pc
+	${INSTALL_DATA} ${FILESDIR}/inotify.h ${STAGEDIR}${PREFIX}/include/sys/inotify.h
 .endif
 
 .include <bsd.port.mk>

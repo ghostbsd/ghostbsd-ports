@@ -1,5 +1,5 @@
 PORTNAME=	botan
-DISTVERSION=	3.8.1
+DISTVERSION=	3.9.0
 CATEGORIES=	security
 MASTER_SITES=	http://botan.randombit.net/releases/
 PKGNAMESUFFIX=	${_BOTANMAJOR}
@@ -38,7 +38,7 @@ LDFLAGS+=		-pthread
 
 DOCSDIR=	${LOCALBASE}/share/doc/${PORTNAME}-${PORTVERSION}
 
-_SOABIVER=	8
+_SOABIVER=	9
 _BOTANMAJOR=	${DISTVERSION:S/./ /g:[1]}
 _SHLIBVER=	${DISTVERSION:S/./ /g:[2]}
 _SHLIBVERPATCH=	${DISTVERSION:S/./ /g:[3]}
@@ -81,8 +81,8 @@ CHOSEN_COMPILER_TYPE=	clang
 CONFIGURE_ARGS+=	--cc-abi="-march=armv8-a+crypto"
 .elif ${ARCH:Mpowerpc64*}
 CONFIGURE_ARGS+=	--cpu="ppc64"
-.if !defined(MACHINE_CPU) || (defined(MACHINE_CPU) && !${MACHINE_ABI:Mvsx2})
-CONFIGURE_ARGS+=	--disable-powercrypto
+.if !defined(MACHINE_CPU) || (defined(MACHINE_CPU) && !${MACHINE_CPU:Mvsx2})
+CONFIGURE_ARGS+=	--disable-modules=aes_power8,ghash_cpu
 .endif
 .endif
 
