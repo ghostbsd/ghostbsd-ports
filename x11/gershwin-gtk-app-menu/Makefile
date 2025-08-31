@@ -1,5 +1,5 @@
 PORTNAME=       appmenu-gtk-module
-DISTVERSION=    20250711
+DISTVERSION=    20250830
 CATEGORIES=     x11
 PKGNAMEPREFIX=	gershwin-
 
@@ -26,7 +26,7 @@ MESON_ARGS=     -Dappmenu-gtk-module=enabled \
 USE_GITHUB=     yes
 GH_ACCOUNT=     gershwin-desktop
 GH_PROJECT=     vala-panel-appmenu
-GH_TAGNAME=     4c00900
+GH_TAGNAME=     42a924d
 
 post-extract:
 	@${CP} ${FILESDIR}/meson.build ${WRKSRC}/meson.build

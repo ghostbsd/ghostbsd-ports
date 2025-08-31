@@ -1204,7 +1204,6 @@
 /System/Library/Tools/make_services
 /System/Library/Tools/say
 /System/Library/Tools/set_show_service
-libdata/ldconfig/gershwin-libs-gui
 @dir /System/Applications/GSSpeechServer.app/Resources
 @dir /System/Applications/GSSpeechServer.app
 @dir /System/Applications
