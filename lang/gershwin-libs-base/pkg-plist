@@ -915,7 +915,6 @@
 /System/Library/Tools/plutil
 /System/Library/Tools/sfparse
 /System/Library/Tools/xmlparse
-libdata/ldconfig/gershwin-libs-base
 @dir /System/Library/DTDs
 @dir /System/Library/Documentation/man/man1
 @dir /System/Library/Documentation/man/man8

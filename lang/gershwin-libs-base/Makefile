@@ -1,5 +1,5 @@
 PORTNAME=	libs-base
-DISTVERSION=	20250615
+DISTVERSION=	20250830
 CATEGORIES=	lang devel gnustep
 PKGNAMEPREFIX=	gershwin-
 
@@ -22,7 +22,7 @@ RUN_DEPENDS=	${GNUSTEP_PREFIX}System/Library/Makefiles/GNUstep.sh:devel/gershwin
 USE_GNOME=	libxml2 libxslt
 USE_GITHUB=	yes
 GH_ACCOUNT=	gnustep
-GH_TAGNAME=	d147fba
+GH_TAGNAME=	6307e47
 USE_GERSHWIN=	build
 USE_LDCONFIG=	${GNUSTEP_SYSTEM_LIBRARIES}
 CONFLICTS=	gnustep-base
