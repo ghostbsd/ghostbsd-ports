@@ -84,5 +84,6 @@
     SUBDIR += synth
     SUBDIR += update-station
     SUBDIR += wanted-ports
+    SUBDIR += zig2tuple
 
 .include <bsd.port.subdir.mk>
