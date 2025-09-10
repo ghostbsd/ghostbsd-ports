@@ -1,5 +1,5 @@
 PORTNAME=	gershwin-rik-theme
-DISTVERSION=	20250722
+DISTVERSION=	20250909
 CATEGORIES=	x11-themes gnustep
 
 MAINTAINER=	jpm820@proton.me
@@ -13,6 +13,6 @@ USE_GERSHWIN=	back build gui
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	gershwin-desktop
-GH_TAGNAME=	1ff2993
+GH_TAGNAME=	e6bfc05
 
 .include <bsd.port.mk>
