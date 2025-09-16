@@ -446,12 +446,9 @@
     SUBDIR += gdu
     SUBDIR += genimage
     SUBDIR += genisoimage
-<<<<<<< HEAD
     SUBDIR += gershwin-gbi-wrapper
     SUBDIR += gershwin-ghostbsd-wrappers
-=======
     SUBDIR += geomman
->>>>>>> freebsd/main
     SUBDIR += getdelta
     SUBDIR += geteltorito
     SUBDIR += getssl
@@ -530,6 +527,7 @@
     SUBDIR += i2c-tools
     SUBDIR += i7z
     SUBDIR += iat
+    SUBDIR += ictree
     SUBDIR += imgurbash2
     SUBDIR += immortal
     SUBDIR += incron
@@ -620,6 +618,7 @@
     SUBDIR += kustomize
     SUBDIR += kvmclock-kmod
     SUBDIR += lava
+    SUBDIR += lazyssh
     SUBDIR += lbl-cf
     SUBDIR += lbl-hf
     SUBDIR += lcdproc
@@ -742,6 +741,7 @@
     SUBDIR += monit
     SUBDIR += monitord
     SUBDIR += monitorix
+    SUBDIR += moor
     SUBDIR += moreutils
     SUBDIR += most
     SUBDIR += mountsmb2
@@ -774,6 +774,7 @@
     SUBDIR += netevent
     SUBDIR += nfcutils
     SUBDIR += ngbuddy
+    SUBDIR += nginx-ui
     SUBDIR += nitro
     SUBDIR += nitrogen
     SUBDIR += nix
@@ -1450,6 +1451,7 @@
     SUBDIR += u-boot-a13-olinuxino
     SUBDIR += u-boot-a64-olinuxino
     SUBDIR += u-boot-bananapi
+    SUBDIR += u-boot-bananapi-r2-pro
     SUBDIR += u-boot-bananapim2
     SUBDIR += u-boot-beaglebone
     SUBDIR += u-boot-bhyve-arm64

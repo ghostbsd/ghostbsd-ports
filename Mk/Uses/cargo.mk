@@ -97,7 +97,7 @@ WRKSRC_crate_${_crate}=	${WRKDIR}/${_wrksrc}
 
 CARGO_BUILDDEP?=	yes
 .  if ${CARGO_BUILDDEP:tl} == "yes"
-BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.88.0:lang/${RUST_DEFAULT}
+BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.89.0:lang/${RUST_DEFAULT}
 .  elif ${CARGO_BUILDDEP:tl} == "any-version"
 BUILD_DEPENDS+=	${RUST_DEFAULT}>=0:lang/${RUST_DEFAULT}
 .  endif
@@ -128,7 +128,7 @@ CARGO_ENV+= \
 	CARGO_TARGET_DIR=${CARGO_TARGET_DIR} \
 	RUSTC=${RUSTC} \
 	RUSTDOC=${RUSTDOC} \
-	RUSTFLAGS="${RUSTFLAGS} ${LDFLAGS:C/.+/-C link-args=&/}"
+	RUSTFLAGS="${RUSTFLAGS} -C ar=${AR} -C linker=${CC} ${LDFLAGS:C/.+/-C link-args=&/}"
 
 .  if ${ARCH} != powerpc64le
 CARGO_ENV+=	RUST_BACKTRACE=1

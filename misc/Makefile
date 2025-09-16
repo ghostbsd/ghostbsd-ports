@@ -123,6 +123,7 @@
     SUBDIR += fortune-mod-epictetus
     SUBDIR += fortune-mod-freebsd-classic
     SUBDIR += fortune-mod-futurama
+    SUBDIR += fortune-mod-mormon
     SUBDIR += fortune-mod-psalms
     SUBDIR += fortuneit
     SUBDIR += fq
@@ -158,6 +159,7 @@
     SUBDIR += geekcode
     SUBDIR += gershwin-globaldefaults
     SUBDIR += getopt
+    SUBDIR += ggml
     SUBDIR += ghostbsd-pkg-conf
     SUBDIR += ghostbsd-update-scripts
     SUBDIR += gimp-help-en
@@ -446,14 +448,19 @@
     SUBDIR += py-ezc3d
     SUBDIR += py-facenet-pytorch
     SUBDIR += py-fast-histogram
+    SUBDIR += py-fastmcp
     SUBDIR += py-fastscapelib
     SUBDIR += py-files-to-prompt
     SUBDIR += py-fleep
     SUBDIR += py-fuzzy
     SUBDIR += py-gguf
     SUBDIR += py-google-ai-generativelanguage
+    SUBDIR += py-google-genai
     SUBDIR += py-gpiozero
+    SUBDIR += py-gymnasium
     SUBDIR += py-halo
+    SUBDIR += py-haystack_ai
+    SUBDIR += py-haystack_experimental
     SUBDIR += py-hf-doc-builder
     SUBDIR += py-hf-xet
     SUBDIR += py-hist
@@ -480,11 +487,13 @@
     SUBDIR += py-lightgbm
     SUBDIR += py-lightning-utilities
     SUBDIR += py-litellm
+    SUBDIR += py-litellm-proxy-extras
     SUBDIR += py-llama-cpp-python
     SUBDIR += py-llm
     SUBDIR += py-llm-claude-3
     SUBDIR += py-log_symbols
     SUBDIR += py-mcp
+    SUBDIR += py-mem0ai
     SUBDIR += py-mffpy
     SUBDIR += py-mixpanel
     SUBDIR += py-mmcv
@@ -530,6 +539,7 @@
     SUBDIR += py-pytorch
     SUBDIR += py-pytorch-lightning
     SUBDIR += py-pyviz-comms
+    SUBDIR += py-runloop-api-client
     SUBDIR += py-safetensors
     SUBDIR += py-sagemaker
     SUBDIR += py-sagemaker-core

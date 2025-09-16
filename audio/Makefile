@@ -852,6 +852,7 @@
     SUBDIR += webrtc-audio-processing0
     SUBDIR += webrtc-audio-processing2
     SUBDIR += welle.io
+    SUBDIR += whisper.cpp
     SUBDIR += whysynth
     SUBDIR += wildmidi
     SUBDIR += wmix
