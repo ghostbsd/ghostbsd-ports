@@ -1,3 +1,211 @@
+  <vuln vid="c2253bff-9952-11f0-b6e2-6805ca2fa271">
+    <topic>dnsdist -- Denial of service via crafted DoH exchange</topic>
+    <affects>
+      <package>
+	<name>dnsdist</name>
+	<range><lt>2.0.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security@open-xchange.com reports:</p>
+	<blockquote cite="https://dnsdist.org/security-advisories/powerdns-advisory-for-dnsdist-2025-05.html">
+	  <p>In some circumstances, when DNSdist is configured to use the nghttp2
+	     library to process incoming DNS over HTTPS queries, an attacker
+	     might be able to cause a denial of service by crafting a DoH exchange
+	     that triggers an unbounded I/O read loop, causing an unexpected
+	     consumption of CPU resources. The offending code was introduced in
+	     DNSdist 1.9.0-alpha1 so previous versions are not affected.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-30187</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-30187</url>
+    </references>
+    <dates>
+      <discovery>2025-09-18</discovery>
+      <entry>2025-09-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="57b54de1-85a5-439a-899e-75d19cbdff54">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>140.0.7339.207</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>140.0.7339.207</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2025/09/stable-channel-update-for-desktop_23.html">
+	 <p>This update includes 4 security fixes:</p>
+	 <ul>
+	    <li>[430336833] High CVE-2025-10890: Side-channel information leakage in V8. Reported by Mate Marjanović (SharpEdged) on 2025-07-09</li>
+	    <li>[443765373] High CVE-2025-10891: Integer overflow in V8. Reported by Google Big Sleep on 2025-09-09</li>
+	    <li>[444048019] High CVE-2025-10892: Integer overflow in V8. Reported by Google Big Sleep on 2025-09-10</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-10890</cvename>
+      <cvename>CVE-2025-10891</cvename>
+      <cvename>CVE-2025-10892</cvename>
+      <url>https://chromereleases.googleblog.com/2025/09/stable-channel-update-for-desktop_23.html</url>
+    </references>
+    <dates>
+      <discovery>2025-09-23</discovery>
+      <entry>2025-09-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6904ba53-22ff-4478-bfae-059dc2eefee1">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>140.0.7339.185</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>140.0.7339.185</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2025/09/stable-channel-update-for-desktop_17.html">
+	 <p>This update includes 4 security fixes:</p>
+	 <ul>
+	    <li>[445380761] High CVE-2025-10585: Type Confusion in V8. Reported by Google Threat Analysis Group on 2025-09-16</li>
+	    <li>[435875050] High CVE-2025-10500: Use after free in Dawn. Reported by Giunash (Gyujeong Jin) on 2025-08-03</li>
+	    <li>[440737137] High CVE-2025-10501: Use after free in WebRTC. Reported by sherkito on 2025-08-23</li>
+	    <li>[438038775] High CVE-2025-10502: Heap buffer overflow in ANGLE. Reported by Google Big Sleep on 2025-08-12</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-10585</cvename>
+      <cvename>CVE-2025-10500</cvename>
+      <cvename>CVE-2025-10501</cvename>
+      <cvename>CVE-2025-10502</cvename>
+      <url>https://chromereleases.googleblog.com/2025/09/stable-channel-update-for-desktop_17.html</url>
+    </references>
+    <dates>
+      <discovery>2025-09-17</discovery>
+      <entry>2025-09-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b51a4121-9607-11f0-becf-00a098b42aeb">
+    <topic>PCRE2: heap-buffer-overflow read in match_ref due to missing boundary restoration in SCS</topic>
+    <affects>
+      <package>
+	<name>pcre2</name>
+	<range><eq>10.45</eq></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/PCRE2Project/pcre2/commit/a141712e5967d448c7ce13090ab530c8e3d82254">
+	  <p>The PCRE2 library is a set of C functions that implement regular
+	expression pattern matching.  In version 10.45, a heap-buffer-overflow
+	read vulnerability exists in the PCRE2 regular expression matching
+	engine, specifically within the handling of the (*scs:...) (Scan
+	SubString) verb when combined with (*ACCEPT) in src/pcre2_match.c.
+	This vulnerability may potentially lead to information disclosure
+	if the out-of-bounds data read during the memcmp affects the final
+	match result in a way observable by the attacker.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-58050</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-58050</url>
+    </references>
+    <dates>
+      <discovery>2025-08-27</discovery>
+      <entry>2025-09-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="744966b3-93d8-11f0-b8da-589cfc10a551">
+    <topic>expat -- dynamic memory allocations issue</topic>
+    <affects>
+      <package>
+	<name>expat2</name>
+	<range><lt>2.7.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>expat security advisory:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2025-59375">
+	  <p>libexpat allows attackers to trigger large dynamic memory allocations
+	  via a small document that is submitted for parsing.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-59375</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-59375</url>
+    </references>
+    <dates>
+      <discovery>2025-09-17</discovery>
+      <entry>2025-09-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b9b668f0-96ec-4568-b618-2edea45d6933">
+    <topic>jenkins -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>jenkins</name>
+	<range><lt>2.528</lt></range>
+      </package>
+      <package>
+	<name>jenkins-lts</name>
+	<range><lt>2.516.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory:</p>
+	<blockquote cite="https://www.jenkins.io/security/advisory/2025-09-17/">
+	  <h1>Description</h1>
+	  <h5>(High) SECURITY-3618 / CVE-2025-5115</h5>
+	  <p>HTTP/2 denial of service vulnerability in bundled Jetty</p>
+	  <h5>(Medium) SECURITY-3594 / CVE-2025-59474</h5>
+	  <p>Missing permission check allows obtaining agent names</p>
+	  <h5>(Medium) SECURITY-3625 / CVE-2025-59475</h5>
+	  <p> Missing permission check in authenticated users' profile menu</p>
+	  <h5>(Medium) SECURITY-3424 / CVE-2025-59476</h5>
+	  <p>Log message injection vulnerability</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-5115</cvename>
+      <cvename>CVE-2025-59474</cvename>
+      <cvename>CVE-2025-59475</cvename>
+      <cvename>CVE-2025-59476</cvename>
+      <url>https://www.jenkins.io/security/advisory/2025-09-17/</url>
+    </references>
+    <dates>
+      <discovery>2025-09-17</discovery>
+      <entry>2025-09-17</entry>
+  </dates>
+  </vuln>
+
   <vuln vid="f6ca7c47-9190-11f0-b8da-589cfc10a551">
     <topic>unit-java -- security vulnerability</topic>
     <affects>

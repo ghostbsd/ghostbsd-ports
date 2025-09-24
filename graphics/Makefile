@@ -155,6 +155,7 @@
     SUBDIR += drm-61-kmod
     SUBDIR += drm-66-kmod
     SUBDIR += drm-kmod
+    SUBDIR += drm-latest-kmod
     SUBDIR += drm_info
     SUBDIR += dspdfviewer
     SUBDIR += dssim
@@ -892,6 +893,7 @@
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
     SUBDIR += py-actdiag
+    SUBDIR += py-agx-emulsion
     SUBDIR += py-albucore
     SUBDIR += py-albumentations
     SUBDIR += py-altair
@@ -1250,6 +1252,7 @@
     SUBDIR += waifu2x-converter-cpp
     SUBDIR += waifu2x-ncnn-vulkan
     SUBDIR += wallhaven-cli
+    SUBDIR += wallust
     SUBDIR += wayland
     SUBDIR += wayland-protocols
     SUBDIR += wayland-utils

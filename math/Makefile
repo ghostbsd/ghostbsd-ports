@@ -1001,6 +1001,7 @@
     SUBDIR += py-hdmedians
     SUBDIR += py-hepstats
     SUBDIR += py-heyoka
+    SUBDIR += py-highspy
     SUBDIR += py-hmmlearn
     SUBDIR += py-hypernetx
     SUBDIR += py-igraph
@@ -1266,6 +1267,7 @@
     SUBDIR += tinyexpr
     SUBDIR += tinymt
     SUBDIR += tlapack
+    SUBDIR += tlfloat
     SUBDIR += tmv
     SUBDIR += tomsfastmath
     SUBDIR += topaz

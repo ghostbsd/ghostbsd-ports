@@ -302,6 +302,7 @@
     SUBDIR += diskcheckd
     SUBDIR += diskimage-tools
     SUBDIR += diskonaut
+    SUBDIR += diskroaster
     SUBDIR += diskscrub
     SUBDIR += diskus
     SUBDIR += dmg2img
@@ -353,6 +354,7 @@
     SUBDIR += egress-monitor
     SUBDIR += eject
     SUBDIR += eksctl
+    SUBDIR += elephant
     SUBDIR += elfx86exts
     SUBDIR += endian
     SUBDIR += enteruser
@@ -1033,6 +1035,7 @@
     SUBDIR += pxattr
     SUBDIR += py-ansible-compat
     SUBDIR += py-ansible-core
+    SUBDIR += py-ansible-core219
     SUBDIR += py-ansible-lint
     SUBDIR += py-ansible-runner
     SUBDIR += py-appjail-gui
@@ -1076,6 +1079,7 @@
     SUBDIR += py-ioztat
     SUBDIR += py-jailconf
     SUBDIR += py-keep
+    SUBDIR += py-kubernetes
     SUBDIR += py-leviathan
     SUBDIR += py-liquidctl
     SUBDIR += py-mitogen
@@ -1352,6 +1356,7 @@
     SUBDIR += ssd_report
     SUBDIR += sshsudo
     SUBDIR += ssync
+    SUBDIR += stackit
     SUBDIR += stalepid
     SUBDIR += stepsync
     SUBDIR += storcli

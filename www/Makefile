@@ -217,6 +217,7 @@
     SUBDIR += gallery2
     SUBDIR += garage
     SUBDIR += gatling
+    SUBDIR += gatus
     SUBDIR += gauche-makiki
     SUBDIR += geckodriver
     SUBDIR += geneweb
@@ -1658,6 +1659,7 @@
     SUBDIR += py-django-post_office
     SUBDIR += py-django-prometheus
     SUBDIR += py-django-pyscss
+    SUBDIR += py-django-q2
     SUBDIR += py-django-radius
     SUBDIR += py-django-ranged-response
     SUBDIR += py-django-recaptcha
@@ -1829,6 +1831,7 @@
     SUBDIR += py-httpx_gssapi
     SUBDIR += py-hypercorn
     SUBDIR += py-hyperframe
+    SUBDIR += py-hyperkitty
     SUBDIR += py-hyperlink
     SUBDIR += py-inlinestyler
     SUBDIR += py-internetarchive
@@ -1844,6 +1847,7 @@
     SUBDIR += py-libsass
     SUBDIR += py-limits
     SUBDIR += py-livereload
+    SUBDIR += py-mailman-hyperkitty
     SUBDIR += py-mechanicalsoup
     SUBDIR += py-mechanize
     SUBDIR += py-multidict
@@ -1853,6 +1857,7 @@
     SUBDIR += py-nicegui
     SUBDIR += py-nicegui-highcharts
     SUBDIR += py-nicegui-nogui
+    SUBDIR += py-nikola
     SUBDIR += py-niquests
     SUBDIR += py-notebook
     SUBDIR += py-onetimepass
@@ -1917,6 +1922,7 @@
     SUBDIR += py-rfc3986
     SUBDIR += py-rfc3987
     SUBDIR += py-rfc3987-syntax
+    SUBDIR += py-robot-detection
     SUBDIR += py-rollbar
     SUBDIR += py-routes
     SUBDIR += py-rules
@@ -1931,6 +1937,7 @@
     SUBDIR += py-selenium-wire
     SUBDIR += py-semiphemeral
     SUBDIR += py-sentinelhub
+    SUBDIR += py-sherlock-project
     SUBDIR += py-simple-websocket
     SUBDIR += py-slimit
     SUBDIR += py-slumber
@@ -1949,6 +1956,7 @@
     SUBDIR += py-textile
     SUBDIR += py-ticketutil
     SUBDIR += py-tornado
+    SUBDIR += py-torrequest
     SUBDIR += py-treq
     SUBDIR += py-ttrv
     SUBDIR += py-tuir

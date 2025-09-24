@@ -385,6 +385,7 @@
     SUBDIR += cask
     SUBDIR += catch
     SUBDIR += catch2
+    SUBDIR += catppuccin-whiskers
     SUBDIR += cbang
     SUBDIR += cbfmt
     SUBDIR += cbmc
@@ -662,6 +663,7 @@
     SUBDIR += electron35
     SUBDIR += electron36
     SUBDIR += electron37
+    SUBDIR += electron38
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -4845,6 +4847,7 @@
     SUBDIR += py-dukpy
     SUBDIR += py-dulwich
     SUBDIR += py-dunamai
+    SUBDIR += py-durationpy
     SUBDIR += py-durus
     SUBDIR += py-dynrules
     SUBDIR += py-e3-core
@@ -6091,6 +6094,7 @@
     SUBDIR += py-tree-format
     SUBDIR += py-tree-sitter
     SUBDIR += py-tree-sitter-languages
+    SUBDIR += py-tree-sitter023
     SUBDIR += py-treelib
     SUBDIR += py-trimesh
     SUBDIR += py-trove-classifiers
@@ -6405,6 +6409,7 @@
     SUBDIR += recycle
     SUBDIR += redasm
     SUBDIR += redo
+    SUBDIR += reflect-cpp
     SUBDIR += reflection-cpp
     SUBDIR += regexx
     SUBDIR += regexxer
@@ -8270,6 +8275,7 @@
     SUBDIR += spr
     SUBDIR += spread-sheet-widget
     SUBDIR += srecord
+    SUBDIR += srell
     SUBDIR += sse2neon
     SUBDIR += st
     SUBDIR += stack
@@ -8278,6 +8284,7 @@
     SUBDIR += statik
     SUBDIR += statsvn
     SUBDIR += stb
+    SUBDIR += stc
     SUBDIR += stdman
     SUBDIR += stdx-allocator
     SUBDIR += stfl
