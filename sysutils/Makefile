@@ -534,6 +534,7 @@
     SUBDIR += infracost
     SUBDIR += initool
     SUBDIR += inotify-tools
+    SUBDIR += install-station
     SUBDIR += installwatch
     SUBDIR += intel-epct
     SUBDIR += intel-nvmupdate-100g
