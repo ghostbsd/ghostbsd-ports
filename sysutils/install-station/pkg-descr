@@ -1,0 +1,4 @@
+install-station is the new installer for GhostBSD.
+
+It is a strip down version focused on disk and partition editing, with user and
+system setup deferred to "Setup Station" after the initial installation.
