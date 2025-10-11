@@ -1,6 +1,6 @@
 PORTNAME=	signal-desktop
 DISTVERSIONPREFIX=	v
-DISTVERSION=	7.70.0
+DISTVERSION=	7.72.1
 PORTREVISION=	2
 CATEGORIES=	net-im
 MASTER_SITES=	LOCAL/mikael/signal-desktop/:npm \
@@ -54,7 +54,7 @@ LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libxkbcommon.so:x11/libxkbcommon \
 		libxshmfence.so:x11/libxshmfence
 
-USES=		desktop-file-utils gettext-runtime gl gnome jpeg nodejs:20,build pkgconfig ssl xorg
+USES=		desktop-file-utils gettext-runtime gl gnome jpeg nodejs:22,build pkgconfig ssl xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	signalapp
 GH_PROJECT=	Signal-Desktop

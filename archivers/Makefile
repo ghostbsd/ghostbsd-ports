@@ -279,6 +279,7 @@
     SUBDIR += unlzx
     SUBDIR += unmakeself
     SUBDIR += unmass
+    SUBDIR += unpackerr
     SUBDIR += unrar
     SUBDIR += unrar-iconv
     SUBDIR += unrpa

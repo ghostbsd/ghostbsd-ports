@@ -13,6 +13,7 @@
     SUBDIR += R-cran-jose
     SUBDIR += R-cran-jquerylib
     SUBDIR += R-cran-miniUI
+    SUBDIR += R-cran-pixture
     SUBDIR += R-cran-pkgdown
     SUBDIR += R-cran-rvest
     SUBDIR += R-cran-scrapeR
@@ -153,6 +154,7 @@
     SUBDIR += dolibarr18
     SUBDIR += dolibarr19
     SUBDIR += dolibarr20
+    SUBDIR += dolibarr21
     SUBDIR += domoticz
     SUBDIR += domoticz-devel
     SUBDIR += dooble
@@ -464,6 +466,7 @@
     SUBDIR += moodle44
     SUBDIR += moodle45
     SUBDIR += moodle50
+    SUBDIR += moodle51
     SUBDIR += morty
     SUBDIR += multisort
     SUBDIR += multiwatch
@@ -512,6 +515,7 @@
     SUBDIR += npm-node22
     SUBDIR += npm-node24
     SUBDIR += nyxt
+    SUBDIR += oatpp
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
     SUBDIR += offpunk
@@ -1529,6 +1533,7 @@
     SUBDIR += py-cssutils
     SUBDIR += py-daphne
     SUBDIR += py-dash
+    SUBDIR += py-ddgs
     SUBDIR += py-dj-database-url
     SUBDIR += py-dj51-channels
     SUBDIR += py-dj51-channels-redis
@@ -1563,25 +1568,36 @@
     SUBDIR += py-dj51-social-auth-app-django
     SUBDIR += py-dj51-strawberry-graphql-django
     SUBDIR += py-dj52-channels
+    SUBDIR += py-dj52-channels-redis
+    SUBDIR += py-dj52-django-allauth
+    SUBDIR += py-dj52-django-auditlog
     SUBDIR += py-dj52-django-auth-ldap
+    SUBDIR += py-dj52-django-celery-results
     SUBDIR += py-dj52-django-choices-field
+    SUBDIR += py-dj52-django-compression-middleware
     SUBDIR += py-dj52-django-cors-headers
     SUBDIR += py-dj52-django-debug-toolbar
+    SUBDIR += py-dj52-django-extensions
     SUBDIR += py-dj52-django-filter
+    SUBDIR += py-dj52-django-guardian
     SUBDIR += py-dj52-django-htmx
     SUBDIR += py-dj52-django-js-asset
     SUBDIR += py-dj52-django-mptt
+    SUBDIR += py-dj52-django-multiselectfield
     SUBDIR += py-dj52-django-prometheus
     SUBDIR += py-dj52-django-redis
     SUBDIR += py-dj52-django-rich
+    SUBDIR += py-dj52-django-soft-delete
     SUBDIR += py-dj52-django-storages
     SUBDIR += py-dj52-django-stubs-ext
     SUBDIR += py-dj52-django-tables2
     SUBDIR += py-dj52-django-taggit
     SUBDIR += py-dj52-django-timezone-field
     SUBDIR += py-dj52-djangorestframework
+    SUBDIR += py-dj52-djangorestframework-guardian
     SUBDIR += py-dj52-drf-spectacular
     SUBDIR += py-dj52-drf-spectacular-sidecar
+    SUBDIR += py-dj52-drf-writable-nested
     SUBDIR += py-dj52-social-auth-app-django
     SUBDIR += py-dj52-strawberry-graphql-django
     SUBDIR += py-django-admin-rangefilter
@@ -1716,6 +1732,7 @@
     SUBDIR += py-dropbox
     SUBDIR += py-dtflickr
     SUBDIR += py-enmerkar
+    SUBDIR += py-essentials-openapi
     SUBDIR += py-fake-useragent
     SUBDIR += py-falcon
     SUBDIR += py-fastapi
@@ -1815,6 +1832,7 @@
     SUBDIR += py-htmldate
     SUBDIR += py-httmock
     SUBDIR += py-http-parser
+    SUBDIR += py-http-sf
     SUBDIR += py-httpbin
     SUBDIR += py-httpcore
     SUBDIR += py-httpie
@@ -1874,6 +1892,7 @@
     SUBDIR += py-postorius
     SUBDIR += py-praw
     SUBDIR += py-prawcore
+    SUBDIR += py-primp
     SUBDIR += py-priority
     SUBDIR += py-priority1
     SUBDIR += py-protego
@@ -2235,6 +2254,7 @@
     SUBDIR += rubygem-json-jwt-gitlab
     SUBDIR += rubygem-jsonb_accessor
     SUBDIR += rubygem-jwt
+    SUBDIR += rubygem-jwt2
     SUBDIR += rubygem-kamal
     SUBDIR += rubygem-kaminari
     SUBDIR += rubygem-kaminari-actionview
@@ -2318,6 +2338,7 @@
     SUBDIR += rubygem-protocol-rack
     SUBDIR += rubygem-protocol-websocket
     SUBDIR += rubygem-puma
+    SUBDIR += rubygem-puma6
     SUBDIR += rubygem-puma_worker_killer
     SUBDIR += rubygem-pusher-client
     SUBDIR += rubygem-rabbirack
@@ -2344,7 +2365,6 @@
     SUBDIR += rubygem-rack_csrf
     SUBDIR += rubygem-rackup
     SUBDIR += rubygem-rackup10
-    SUBDIR += rubygem-rackup21
     SUBDIR += rubygem-rails-gitlab
     SUBDIR += rubygem-rails-settings-cached
     SUBDIR += rubygem-rails-settings-cached-rails5

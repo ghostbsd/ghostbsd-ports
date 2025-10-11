@@ -321,6 +321,7 @@
     SUBDIR += py-dipy
     SUBDIR += py-dlib
     SUBDIR += py-dwave-cloud-client
+    SUBDIR += py-dwave-gate
     SUBDIR += py-dwave-greedy
     SUBDIR += py-dwave-hybrid
     SUBDIR += py-dwave-inspector
@@ -369,6 +370,7 @@
     SUBDIR += py-meshio
     SUBDIR += py-mmcif
     SUBDIR += py-mmtf-python
+    SUBDIR += py-mne
     SUBDIR += py-molmod
     SUBDIR += py-mp-api
     SUBDIR += py-mpcontribs-client
@@ -376,6 +378,7 @@
     SUBDIR += py-mplhep-data
     SUBDIR += py-mrchem
     SUBDIR += py-ncrystal
+    SUBDIR += py-neo
     SUBDIR += py-netCDF4
     SUBDIR += py-netcdf-flattener
     SUBDIR += py-nglview
@@ -407,6 +410,7 @@
     SUBDIR += py-pymatgen-analysis-alloys
     SUBDIR += py-pymbd
     SUBDIR += py-pymol
+    SUBDIR += py-pynrrd
     SUBDIR += py-pyosf
     SUBDIR += py-pyphot
     SUBDIR += py-pyprecice

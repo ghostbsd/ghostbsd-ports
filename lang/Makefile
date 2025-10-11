@@ -291,6 +291,7 @@
     SUBDIR += ptoc
     SUBDIR += purescript
     SUBDIR += py-dhall
+    SUBDIR += py-gherkin-official
     SUBDIR += py-hy
     SUBDIR += py-lupa
     SUBDIR += py-sly
@@ -383,6 +384,7 @@
     SUBDIR += tolua++
     SUBDIR += trealla-prolog
     SUBDIR += tuareg-mode.el
+    SUBDIR += typescript
     SUBDIR += typstfmt
     SUBDIR += typstyle
     SUBDIR += ucc

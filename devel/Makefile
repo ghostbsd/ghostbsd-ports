@@ -989,6 +989,7 @@
     SUBDIR += hgsvn
     SUBDIR += highlighterkit
     SUBDIR += highway
+    SUBDIR += hivex
     SUBDIR += hoel
     SUBDIR += hotspot
     SUBDIR += hp48cc
@@ -1056,6 +1057,7 @@
     SUBDIR += inilike
     SUBDIR += iniparser
     SUBDIR += initutil
+    SUBDIR += inja
     SUBDIR += injeqt
     SUBDIR += intel-graphics-compiler
     SUBDIR += interactive_rebase_tool
@@ -1837,6 +1839,7 @@
     SUBDIR += oniguruma
     SUBDIR += open-beagle
     SUBDIR += open62541
+    SUBDIR += openapi
     SUBDIR += openapi-tui
     SUBDIR += opencl
     SUBDIR += opencl-clang
@@ -1847,6 +1850,7 @@
     SUBDIR += openocd-devel
     SUBDIR += opentelemetry-cpp
     SUBDIR += opentelemetry-proto
+    SUBDIR += oq
     SUBDIR += orc
     SUBDIR += orcania
     SUBDIR += osc
@@ -4455,6 +4459,7 @@
     SUBDIR += py-async_generator
     SUBDIR += py-async_timeout
     SUBDIR += py-asynctest
+    SUBDIR += py-atom
     SUBDIR += py-atomiclong
     SUBDIR += py-atpublic
     SUBDIR += py-attr
@@ -4466,6 +4471,7 @@
     SUBDIR += py-automaton
     SUBDIR += py-autopage
     SUBDIR += py-autoprop
+    SUBDIR += py-autoray
     SUBDIR += py-avocado-framework
     SUBDIR += py-avro
     SUBDIR += py-awesomeversion
@@ -4611,7 +4617,6 @@
     SUBDIR += py-buildbot-console-view
     SUBDIR += py-buildbot-grid-view
     SUBDIR += py-buildbot-pkg
-    SUBDIR += py-buildbot-react-console-view
     SUBDIR += py-buildbot-waterfall-view
     SUBDIR += py-buildbot-worker
     SUBDIR += py-buildbot-wsgi-dashboards
@@ -4652,6 +4657,7 @@
     SUBDIR += py-cfgv
     SUBDIR += py-cfn-lint
     SUBDIR += py-cftime
+    SUBDIR += py-cgen
     SUBDIR += py-chai
     SUBDIR += py-chainmap
     SUBDIR += py-characteristic
@@ -4770,6 +4776,7 @@
     SUBDIR += py-cython-test-exception-raiser
     SUBDIR += py-cytoolz
     SUBDIR += py-d2to1
+    SUBDIR += py-dacite
     SUBDIR += py-daemon
     SUBDIR += py-daemon-runner
     SUBDIR += py-daemonize
@@ -4869,6 +4876,7 @@
     SUBDIR += py-epc
     SUBDIR += py-epdb
     SUBDIR += py-epsilon
+    SUBDIR += py-essentials
     SUBDIR += py-etcd3gw
     SUBDIR += py-etils
     SUBDIR += py-etuples
@@ -5248,10 +5256,12 @@
     SUBDIR += py-lxml5
     SUBDIR += py-mac-vendor-lookup
     SUBDIR += py-macholib
+    SUBDIR += py-madoka
     SUBDIR += py-magic
     SUBDIR += py-magnet2torrent
     SUBDIR += py-mailcap-fix
     SUBDIR += py-makefun
+    SUBDIR += py-mando
     SUBDIR += py-manuel
     SUBDIR += py-marisa-trie
     SUBDIR += py-marrow.mailer
@@ -5268,6 +5278,7 @@
     SUBDIR += py-mediapy
     SUBDIR += py-medikit
     SUBDIR += py-memory-allocator
+    SUBDIR += py-memory-graph
     SUBDIR += py-memory-profiler
     SUBDIR += py-mergedeep
     SUBDIR += py-merossiot
@@ -5346,6 +5357,12 @@
     SUBDIR += py-objsize
     SUBDIR += py-oci
     SUBDIR += py-odfpy
+    SUBDIR += py-odoo-addon-openupgrade-framework16
+    SUBDIR += py-odoo-addon-openupgrade-framework17
+    SUBDIR += py-odoo-addon-openupgrade-framework18
+    SUBDIR += py-odoo-addon-openupgrade-scripts16
+    SUBDIR += py-odoo-addon-openupgrade-scripts17
+    SUBDIR += py-odoo-addon-openupgrade-scripts18
     SUBDIR += py-offtrac
     SUBDIR += py-olefile
     SUBDIR += py-omegaconf
@@ -5384,6 +5401,7 @@
     SUBDIR += py-opentelemetry-semantic-conventions
     SUBDIR += py-opentelemetry-util-http
     SUBDIR += py-opentracing
+    SUBDIR += py-openupgradelib
     SUBDIR += py-opster
     SUBDIR += py-optik
     SUBDIR += py-optree
@@ -5482,6 +5500,7 @@
     SUBDIR += py-phply
     SUBDIR += py-phpserialize
     SUBDIR += py-phx-class-registry
+    SUBDIR += py-pick
     SUBDIR += py-pid
     SUBDIR += py-pika
     SUBDIR += py-pika-pool
@@ -5528,6 +5547,7 @@
     SUBDIR += py-poetry-types
     SUBDIR += py-poetry2setup
     SUBDIR += py-polib
+    SUBDIR += py-pondpond
     SUBDIR += py-pooch
     SUBDIR += py-pop
     SUBDIR += py-pop-config
@@ -5905,6 +5925,7 @@
     SUBDIR += py-robotframework-seleniumlibrary
     SUBDIR += py-robotframework-stacktrace
     SUBDIR += py-robotremoteserver
+    SUBDIR += py-rodi
     SUBDIR += py-rope
     SUBDIR += py-rose
     SUBDIR += py-rpcq
@@ -6166,6 +6187,9 @@
     SUBDIR += py-userpath
     SUBDIR += py-usort
     SUBDIR += py-uuid7
+    SUBDIR += py-uv
+    SUBDIR += py-uv-build
+    SUBDIR += py-uv-bump
     SUBDIR += py-uv-dynamic-versioning
     SUBDIR += py-uvloop
     SUBDIR += py-validate-pyproject
@@ -7462,6 +7486,7 @@
     SUBDIR += rubygem-googleapis-common-protos
     SUBDIR += rubygem-googleapis-common-protos-gitlab
     SUBDIR += rubygem-googleapis-common-protos-types
+    SUBDIR += rubygem-googleapis-common-protos-types-gitlab
     SUBDIR += rubygem-graf
     SUBDIR += rubygem-grape
     SUBDIR += rubygem-grape-entity
@@ -7600,6 +7625,7 @@
     SUBDIR += rubygem-marcel
     SUBDIR += rubygem-memo_wise
     SUBDIR += rubygem-memoist
+    SUBDIR += rubygem-memoist3
     SUBDIR += rubygem-memoizable
     SUBDIR += rubygem-memoize
     SUBDIR += rubygem-memory_profiler
@@ -7928,6 +7954,7 @@
     SUBDIR += rubygem-scientist
     SUBDIR += rubygem-sd_notify
     SUBDIR += rubygem-sdoc
+    SUBDIR += rubygem-semantic_logger
     SUBDIR += rubygem-semantic_puppet
     SUBDIR += rubygem-semantic_range
     SUBDIR += rubygem-semi_semantic
@@ -8037,6 +8064,7 @@
     SUBDIR += rubygem-syntax_tree
     SUBDIR += rubygem-sysinfo
     SUBDIR += rubygem-syslog
+    SUBDIR += rubygem-syslog_protocol
     SUBDIR += rubygem-systemu
     SUBDIR += rubygem-table_print
     SUBDIR += rubygem-tdiff
@@ -8285,6 +8313,7 @@
     SUBDIR += statsvn
     SUBDIR += stb
     SUBDIR += stc
+    SUBDIR += stdgenerator
     SUBDIR += stdman
     SUBDIR += stdx-allocator
     SUBDIR += stfl
@@ -8431,7 +8460,6 @@
     SUBDIR += ut
     SUBDIR += utf8cpp
     SUBDIR += uthash
-    SUBDIR += util-linux
     SUBDIR += uv
     SUBDIR += uvwasi
     SUBDIR += valgrind
