@@ -15,6 +15,7 @@
     SUBDIR += R-cran-miniUI
     SUBDIR += R-cran-pixture
     SUBDIR += R-cran-pkgdown
+    SUBDIR += R-cran-revealjs
     SUBDIR += R-cran-rvest
     SUBDIR += R-cran-scrapeR
     SUBDIR += R-cran-selectr
@@ -1519,6 +1520,7 @@
     SUBDIR += py-cachelib
     SUBDIR += py-caldav
     SUBDIR += py-calibreweb
+    SUBDIR += py-chalice
     SUBDIR += py-channels
     SUBDIR += py-channels-redis
     SUBDIR += py-cheroot
@@ -1733,6 +1735,7 @@
     SUBDIR += py-dtflickr
     SUBDIR += py-enmerkar
     SUBDIR += py-essentials-openapi
+    SUBDIR += py-extruct
     SUBDIR += py-fake-useragent
     SUBDIR += py-falcon
     SUBDIR += py-fastapi
@@ -1919,6 +1922,8 @@
     SUBDIR += py-qh3
     SUBDIR += py-qt5-webengine
     SUBDIR += py-qt6-webengine
+    SUBDIR += py-quart
+    SUBDIR += py-quart-trio
     SUBDIR += py-quilt3
     SUBDIR += py-readability-lxml
     SUBDIR += py-recaptcha
@@ -2036,6 +2041,7 @@
     SUBDIR += quark
     SUBDIR += qutebrowser
     SUBDIR += radicale
+    SUBDIR += rdrview
     SUBDIR += rearx
     SUBDIR += reddsaver
     SUBDIR += redmine51
@@ -2338,6 +2344,7 @@
     SUBDIR += rubygem-protocol-rack
     SUBDIR += rubygem-protocol-websocket
     SUBDIR += rubygem-puma
+    SUBDIR += rubygem-puma-gitlab
     SUBDIR += rubygem-puma6
     SUBDIR += rubygem-puma_worker_killer
     SUBDIR += rubygem-pusher-client
@@ -2482,6 +2489,7 @@
     SUBDIR += rubygem-turbolinks
     SUBDIR += rubygem-turbolinks-source
     SUBDIR += rubygem-typhoeus
+    SUBDIR += rubygem-typhoeus14
     SUBDIR += rubygem-uglifier
     SUBDIR += rubygem-underscore-rails
     SUBDIR += rubygem-unicorn
@@ -2644,6 +2652,7 @@
     SUBDIR += unit-ruby
     SUBDIR += unit-wasm
     SUBDIR += unitc
+    SUBDIR += urlfinder
     SUBDIR += uwebsockets
     SUBDIR += uwsgi
     SUBDIR += uwsgitop

@@ -8,6 +8,7 @@ DISTNAME=	django_haystack-${PORTVERSION}
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pluggable search for Django
 WWW=		https://haystacksearch.org/ \
+		https://django-haystack.readthedocs.io/en/master/ \
 		https://github.com/django-haystack/django-haystack
 
 LICENSE=	BSD3CLAUSE
@@ -23,11 +24,5 @@ USES=		python
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
-
-OPTIONS_DEFINE=	ELASTIC
-OPTIONS_DEFAULT=ELASTIC
-ELASTIC_DESC=	Elasticsearch support
-
-ELASTIC_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}elasticsearch7>=5<8:textproc/py-elasticsearch7@${PY_FLAVOR}
 
 .include <bsd.port.mk>

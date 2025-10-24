@@ -5338,7 +5338,9 @@ show-warnings:
 	@${ECHO_MSG} "${m}" | ${FMT_80}
 	@${ECHO_MSG}
 .      endfor
+.      if ${WARNING_WAIT} != 0
 	@sleep ${WARNING_WAIT}
+.      endif
 .    endif
 
 .    if defined(ERROR)
@@ -5364,7 +5366,7 @@ show-dev-warnings:
 .        endfor
 .        if defined(DEV_WARNING_FATAL)
 	@${FALSE}
-.        else
+.        elif ${DEV_WARNING_WAIT} != 0
 	@sleep ${DEV_WARNING_WAIT}
 .        endif
 .      endif

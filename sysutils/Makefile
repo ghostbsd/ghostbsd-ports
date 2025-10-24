@@ -371,6 +371,7 @@
     SUBDIR += evtviewer
     SUBDIR += exa
     SUBDIR += extipl
+    SUBDIR += extrace
     SUBDIR += eza
     SUBDIR += ezjail
     SUBDIR += f-upgrade
@@ -415,6 +416,7 @@
     SUBDIR += fortunelock
     SUBDIR += fpart
     SUBDIR += framework-system
+    SUBDIR += framework-tool-tui
     SUBDIR += frand
     SUBDIR += freebsd-bsdlabel
     SUBDIR += freebsd-fdisk
@@ -433,6 +435,8 @@
     SUBDIR += ftwin
     SUBDIR += fvcool
     SUBDIR += fwup
+    SUBDIR += fwupd
+    SUBDIR += fwupd-efi
     SUBDIR += fx
     SUBDIR += g15daemon
     SUBDIR += gaffitter
@@ -480,6 +484,7 @@
     SUBDIR += gobi_loader
     SUBDIR += gomi
     SUBDIR += gomplate
+    SUBDIR += gonzo
     SUBDIR += google-compute-engine-oslogin
     SUBDIR += gotop
     SUBDIR += govmomi

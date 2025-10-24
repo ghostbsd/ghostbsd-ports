@@ -1,11 +1,13 @@
 PORTNAME=	github-copilot-cli
-DISTVERSION=	0.0.337
+DISTVERSION=	0.0.342
 CATEGORIES=	misc # machine-learning
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} ${NODE_HEADERS}${EXTRACT_SUFX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	GitHub Copilot CLI brings the power of the coding agent to terminal
 WWW=		https://github.com/github/copilot-cli
+
+BROKEN_i386=	fails to package due to sharp-freebsd-x64.node file in the plist
 
 FETCH_DEPENDS=	npm:www/npm
 BUILD_DEPENDS=	npm:www/npm \
@@ -35,7 +37,6 @@ do-fetch:
 do-build:
 	@${SETENV} HOME=${WRKDIR} npm rebuild --prefix ${WRKSRC} -g ${PACKAGE_NAME}@${DISTVERSION} && \
 	(cd ${WRKSRC}/lib/node_modules/${PACKAGE_NAME}/node_modules/node-pty && ${SETENV} HOME=${WRKDIR} npm_config_tarball=${DISTDIR}/${NODE_HEADERS}${EXTRACT_SUFX} npm run install) && \
-	(cd ${WRKSRC}/lib/node_modules/${PACKAGE_NAME}/node_modules/keytar-forked-forked && ${SETENV} HOME=${WRKDIR} npm run install) && \
 	(cd ${WRKSRC}/lib/node_modules/${PACKAGE_NAME}/node_modules/sharp/src && ${SETENV} HOME=${WRKDIR} PYTHON=${PYTHON_CMD} node-gyp rebuild) && \
 	${RM} -rf \
 		${WRKSRC}/lib/node_modules/${PACKAGE_NAME}/node_modules/sharp/src/build/Release/obj.target \
