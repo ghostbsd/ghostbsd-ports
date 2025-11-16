@@ -408,6 +408,7 @@
     SUBDIR += cgdb
     SUBDIR += cgit
     SUBDIR += cgprof
+    SUBDIR += chai
     SUBDIR += charva
     SUBDIR += check
     SUBDIR += checkbashisms
@@ -610,6 +611,7 @@
     SUBDIR += dev86
     SUBDIR += devhelp
     SUBDIR += devtodo
+    SUBDIR += dfuzzer
     SUBDIR += dia2code
     SUBDIR += dill
     SUBDIR += ding-libs
@@ -661,10 +663,10 @@
     SUBDIR += egypt
     SUBDIR += eiffelstudio
     SUBDIR += electron34
-    SUBDIR += electron35
     SUBDIR += electron36
     SUBDIR += electron37
     SUBDIR += electron38
+    SUBDIR += electron39
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -916,8 +918,8 @@
     SUBDIR += gnustep-make
     SUBDIR += go-bindata
     SUBDIR += go-bindata-assetfs
-    SUBDIR += go-git
     SUBDIR += go-critic
+    SUBDIR += go-git
     SUBDIR += go-mode.el
     SUBDIR += go-perf
     SUBDIR += go-tools
@@ -1846,6 +1848,7 @@
     SUBDIR += opencl-clang
     SUBDIR += opencvs
     SUBDIR += opendht
+    SUBDIR += openfec
     SUBDIR += opengrok
     SUBDIR += openocd
     SUBDIR += openocd-devel
@@ -4758,7 +4761,6 @@
     SUBDIR += py-crosshair-tool
     SUBDIR += py-cson
     SUBDIR += py-csv23
-    SUBDIR += py-ctags
     SUBDIR += py-ctypesgen
     SUBDIR += py-cucumber-expressions
     SUBDIR += py-cucumber-tag-expressions
@@ -5051,6 +5053,7 @@
     SUBDIR += py-hgtools
     SUBDIR += py-hidraw
     SUBDIR += py-hishel
+    SUBDIR += py-hishel0
     SUBDIR += py-holidays
     SUBDIR += py-hologram
     SUBDIR += py-homebase
@@ -5333,6 +5336,7 @@
     SUBDIR += py-mypy_extensions
     SUBDIR += py-mystic
     SUBDIR += py-naiveBayesClassifier
+    SUBDIR += py-namex
     SUBDIR += py-nanobind
     SUBDIR += py-nanotime
     SUBDIR += py-natsort
@@ -5622,6 +5626,7 @@
     SUBDIR += py-pycognito
     SUBDIR += py-pycompilation
     SUBDIR += py-pycomplete
+    SUBDIR += py-pycomposefile
     SUBDIR += py-pyconify
     SUBDIR += py-pycparser
     SUBDIR += py-pycrdt
@@ -5665,7 +5670,6 @@
     SUBDIR += py-pyinstaller
     SUBDIR += py-pyinstaller-hooks-contrib
     SUBDIR += py-pyintelowl
-    SUBDIR += py-pyjq
     SUBDIR += py-pyjsparser
     SUBDIR += py-pykdtree
     SUBDIR += py-pylama
@@ -6160,7 +6164,6 @@
     SUBDIR += py-types-retry
     SUBDIR += py-types-setuptools
     SUBDIR += py-types-toml
-    SUBDIR += py-types-ujson
     SUBDIR += py-typeshed-client
     SUBDIR += py-typing-extensions
     SUBDIR += py-typing-inspect
@@ -6346,7 +6349,6 @@
     SUBDIR += pycanberra
     SUBDIR += pycdc
     SUBDIR += pycharm
-    SUBDIR += pycomposefile
     SUBDIR += pycos
     SUBDIR += pycount
     SUBDIR += pydbus-common
@@ -6364,7 +6366,6 @@
     SUBDIR += pyside6
     SUBDIR += pyside6-tools
     SUBDIR += pystring
-    SUBDIR += pysvn
     SUBDIR += pythontidy
     SUBDIR += pytype
     SUBDIR += qbe
@@ -6922,6 +6923,7 @@
     SUBDIR += rubygem-aws-sdk-route53recoverycontrolconfig
     SUBDIR += rubygem-aws-sdk-route53recoveryreadiness
     SUBDIR += rubygem-aws-sdk-route53resolver
+    SUBDIR += rubygem-aws-sdk-rtbfabric
     SUBDIR += rubygem-aws-sdk-s3
     SUBDIR += rubygem-aws-sdk-s3-gitlab
     SUBDIR += rubygem-aws-sdk-s3control
@@ -7398,7 +7400,7 @@
     SUBDIR += rubygem-forwardable
     SUBDIR += rubygem-forwardable-extended
     SUBDIR += rubygem-fugit
-    SUBDIR += rubygem-fugit111
+    SUBDIR += rubygem-fugit-gitlab
     SUBDIR += rubygem-fuubar
     SUBDIR += rubygem-fuzzy_match
     SUBDIR += rubygem-gapic-common
@@ -7586,6 +7588,7 @@
     SUBDIR += rubygem-json-canonicalization
     SUBDIR += rubygem-json-gitlab
     SUBDIR += rubygem-json-schema
+    SUBDIR += rubygem-json-schema-gitlab
     SUBDIR += rubygem-json1
     SUBDIR += rubygem-json_pure
     SUBDIR += rubygem-json_pure1
@@ -7621,6 +7624,7 @@
     SUBDIR += rubygem-logger-gitlab
     SUBDIR += rubygem-logger15
     SUBDIR += rubygem-logging
+    SUBDIR += rubygem-logging-gitlab
     SUBDIR += rubygem-logster
     SUBDIR += rubygem-loquacious
     SUBDIR += rubygem-lrama
@@ -7630,6 +7634,7 @@
     SUBDIR += rubygem-manpages
     SUBDIR += rubygem-map
     SUBDIR += rubygem-marcel
+    SUBDIR += rubygem-marcel-gitlab
     SUBDIR += rubygem-memo_wise
     SUBDIR += rubygem-memoist
     SUBDIR += rubygem-memoist3
@@ -7670,7 +7675,7 @@
     SUBDIR += rubygem-msgpack
     SUBDIR += rubygem-mspec
     SUBDIR += rubygem-multi_json
-    SUBDIR += rubygem-multi_json114
+    SUBDIR += rubygem-multi_json-gitlab
     SUBDIR += rubygem-multi_test
     SUBDIR += rubygem-murmurhash3
     SUBDIR += rubygem-mustache
@@ -8184,9 +8189,9 @@
     SUBDIR += rubygem-versionomy
     SUBDIR += rubygem-view_component-rails-gitlab
     SUBDIR += rubygem-virtus
-    SUBDIR += rubygem-vite_rails-rails70
+    SUBDIR += rubygem-vite_rails-gitlab
     SUBDIR += rubygem-vite_ruby
-    SUBDIR += rubygem-vite_ruby33
+    SUBDIR += rubygem-vite_ruby-gitlab
     SUBDIR += rubygem-warbler
     SUBDIR += rubygem-warden
     SUBDIR += rubygem-warning
@@ -8437,6 +8442,7 @@
     SUBDIR += tinycbor
     SUBDIR += tinygo
     SUBDIR += tinylaf
+    SUBDIR += tinyopt
     SUBDIR += tinysparql
     SUBDIR += tkcon
     SUBDIR += tkcvs
@@ -8478,6 +8484,7 @@
     SUBDIR += ultragetopt
     SUBDIR += umbrello
     SUBDIR += umlgraph
+    SUBDIR += umpire
     SUBDIR += undead
     SUBDIR += unibilium
     SUBDIR += unit-otel

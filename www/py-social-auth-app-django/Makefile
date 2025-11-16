@@ -1,5 +1,6 @@
 PORTNAME=	social-auth-app-django
 DISTVERSION=	5.4.3
+PORTREVISION=	1
 CATEGORIES=	www security python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -19,7 +20,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django42>=3.2:www/py-django42@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}social-auth-core>=4.4<5:security/py-social-auth-core@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mock>0:devel/py-mock@${PY_FLAVOR}
 
-USES=		python:3.9+
+USES=		python
 USE_GITHUB=	yes
 GH_ACCOUNT=	python-social-auth
 GH_PROJECT=	social-app-django

@@ -181,6 +181,7 @@
     SUBDIR += git-remote-gcrypt
     SUBDIR += git-secret
     SUBDIR += gitjacker
+    SUBDIR += gitlab-analyzers-secrets
     SUBDIR += globalprotect-openconnect
     SUBDIR += gnome-keyring
     SUBDIR += gnupg
@@ -639,6 +640,7 @@
     SUBDIR += p5-Crypt-Twofish2
     SUBDIR += p5-Crypt-Twofish_PP
     SUBDIR += p5-Crypt-URandom
+    SUBDIR += p5-Crypt-URandom-Token
     SUBDIR += p5-Crypt-UnixCrypt
     SUBDIR += p5-Crypt-UnixCrypt_XS
     SUBDIR += p5-Crypt-X509
@@ -1001,7 +1003,6 @@
     SUBDIR += py-oauthlib
     SUBDIR += py-omemo-dr
     SUBDIR += py-openssh-wrapper
-    SUBDIR += py-openssl
     SUBDIR += py-oscrypto
     SUBDIR += py-ospd-openvas
     SUBDIR += py-paramiko
@@ -1034,6 +1035,7 @@
     SUBDIR += py-pylibacl
     SUBDIR += py-pymacaroons
     SUBDIR += py-pynacl
+    SUBDIR += py-pyopenssl
     SUBDIR += py-pyotp
     SUBDIR += py-pyotp2289
     SUBDIR += py-pysaml2
@@ -1118,7 +1120,6 @@
     SUBDIR += rekor
     SUBDIR += reop
     SUBDIR += rhash
-    SUBDIR += rhonabwy
     SUBDIR += ridl
     SUBDIR += rifiuti2
     SUBDIR += rkhunter

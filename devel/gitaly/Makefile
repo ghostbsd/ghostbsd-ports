@@ -19,13 +19,15 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libiconv.so:converters/libiconv \
 		libpcre2-8.so:devel/pcre2
 
-USES=		cpe gmake go:modules,no_targets,1.23 iconv pkgconfig
+USES=		cpe gmake go:modules,no_targets,1.24 iconv pkgconfig
 
 CPE_VENDOR=	gitlab
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
-GL_TUPLE=	gitlab-org:git:v${GITLAB_GIT_VERSION}:_build/_build/deps/git-v${GITLAB_GIT_VERSION_SHORT}
+GL_TUPLE=	gitlab-org:git:v${GITLAB_GIT_VERSION}:git_dep/_build/deps/git-v${GITLAB_GIT_VERSION_SHORT} \
+		gitlab-org:git:${GITLAB_GIT_MASTER_VERSION}:git_master_dep/_build/deps/git-master
+
 GO_MOD_DIST=	gitlab
 GO_MODULE=	gitlab.com/gitlab-org/gitaly/v18
 
@@ -40,7 +42,6 @@ post-patch:
 	${MV} ${WRKSRC}/config.toml.example ${WRKSRC}/config.toml.sample
 
 do-install:
-	${MKDIR} ${STAGEDIR}${DATADIR}
 	${MKDIR} ${STAGEDIR}${DATADIR}/bin
 	${FIND} ${WRKSRC} -name '*.orig' -delete
 	(cd ${WRKSRC}/_build/bin/ && ${COPYTREE_BIN} .  ${STAGEDIR}${DATADIR}/bin && \

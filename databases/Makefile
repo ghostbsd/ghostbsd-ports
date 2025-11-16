@@ -57,7 +57,6 @@
     SUBDIR += duckdb
     SUBDIR += ejdb
     SUBDIR += emacsql
-    SUBDIR += erlfdb
     SUBDIR += evolution-data-server
     SUBDIR += fastdb
     SUBDIR += firebird30-client
@@ -66,10 +65,6 @@
     SUBDIR += firebird40-server
     SUBDIR += fmptools
     SUBDIR += fortytwo-bdb
-    SUBDIR += foundationdb71-client
-    SUBDIR += foundationdb71-server
-    SUBDIR += foundationdb73-client
-    SUBDIR += foundationdb73-server
     SUBDIR += frece
     SUBDIR += freetds
     SUBDIR += freetds-devel
@@ -179,7 +174,6 @@
     SUBDIR += memcached
     SUBDIR += metabase
     SUBDIR += mongodb-tools
-    SUBDIR += mongodb60
     SUBDIR += mongodb70
     SUBDIR += mongodb80
     SUBDIR += mongosh
@@ -199,6 +193,8 @@
     SUBDIR += mysql84-server
     SUBDIR += mysql91-client
     SUBDIR += mysql91-server
+    SUBDIR += mysql94-client
+    SUBDIR += mysql94-server
     SUBDIR += mysqlbackup
     SUBDIR += mysqldump-secure
     SUBDIR += mysqlreport
@@ -730,6 +726,7 @@
     SUBDIR += powa-archivist
     SUBDIR += powa-web
     SUBDIR += powerarchitect
+    SUBDIR += prisma-engines
     SUBDIR += proftpd-mod_sql_mysql
     SUBDIR += proftpd-mod_sql_odbc
     SUBDIR += proftpd-mod_sql_postgres
@@ -757,6 +754,7 @@
     SUBDIR += py-aiosql
     SUBDIR += py-aiosqlite
     SUBDIR += py-alembic
+    SUBDIR += py-anysqlite
     SUBDIR += py-apache-arrow
     SUBDIR += py-apsw
     SUBDIR += py-asyncmy
@@ -823,7 +821,6 @@
     SUBDIR += py-psycopg2cffi
     SUBDIR += py-pum
     SUBDIR += py-pyarrow
-    SUBDIR += py-pycql
     SUBDIR += py-pylibmc
     SUBDIR += py-pymemcache
     SUBDIR += py-pymongo
@@ -1040,6 +1037,7 @@
     SUBDIR += rubygem-red-arrow
     SUBDIR += rubygem-red-arrow-dataset
     SUBDIR += rubygem-red-arrow-flight
+    SUBDIR += rubygem-red-arrow-flight-sql
     SUBDIR += rubygem-red-gandiva
     SUBDIR += rubygem-red-parquet
     SUBDIR += rubygem-redis
@@ -1137,6 +1135,7 @@
     SUBDIR += unixODBC
     SUBDIR += usql
     SUBDIR += valkey
+    SUBDIR += valkey8
     SUBDIR += vfront
     SUBDIR += virtualpg
     SUBDIR += weaviate

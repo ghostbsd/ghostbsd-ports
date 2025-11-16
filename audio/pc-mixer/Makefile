@@ -1,6 +1,6 @@
 PORTNAME=	pc-mixer
-PORTVERSION=	20180328
-PORTREVISION=	2
+PORTVERSION=	20171212
+PORTREVISION=	4
 CATEGORIES=	audio
 
 MAINTAINER=	jmaloney@ixsystems.com
@@ -9,20 +9,21 @@ WWW=		https://github.com/trueos/pc-mixer
 
 LICENSE=	BSD2CLAUSE
 
-MAKE_ARGS=      PREFIX=${STAGEDIR}${PREFIX}
+DEPRECATED=	Abandoned upstream and depends on deprecated QT5
+EXPIRATION_DATE=2025-12-31
+
+MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}
 
 MAKE_JOBS_UNSAFE=yes
-ONLY_FOR_ARCHS= amd64
-USE_LDCONFIG=   yes
 USES=		compiler:c++11-lang gl qmake qt:5 shebangfix tar:xz
 USE_LDCONFIG=	yes
 USE_QT=		core gui network svg linguist \
 		buildtools x11extras widgets multimedia
 USE_GL+=	gl
 
-WRKSRC_SUBDIR=  src-qt5
+WRKSRC_SUBDIR=	src-qt5
 
-QMAKE_ARGS=     CONFIG+="configure"
+QMAKE_ARGS=	CONFIG+="configure"
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	trueos

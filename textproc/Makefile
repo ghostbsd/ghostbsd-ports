@@ -234,6 +234,7 @@
     SUBDIR += gdome2
     SUBDIR += gh-grep
     SUBDIR += git-chglog
+    SUBDIR += gitlab-code-parser
     SUBDIR += gitlab-elasticsearch-indexer
     SUBDIR += gitlab-zoekt-indexer
     SUBDIR += gl-aspell
@@ -1404,6 +1405,7 @@
     SUBDIR += py-genshi
     SUBDIR += py-gensim
     SUBDIR += py-gi-docgen
+    SUBDIR += py-gladtex
     SUBDIR += py-graphemeu
     SUBDIR += py-grep-ast
     SUBDIR += py-griffe
@@ -1449,6 +1451,7 @@
     SUBDIR += py-language-data
     SUBDIR += py-language-tags
     SUBDIR += py-laserhammer
+    SUBDIR += py-latex2mathml
     SUBDIR += py-latexcodec
     SUBDIR += py-license-expression
     SUBDIR += py-line-protocol-parser
@@ -1932,6 +1935,7 @@
     SUBDIR += rubygem-nokogiri-diff
     SUBDIR += rubygem-octopress-escape-code
     SUBDIR += rubygem-opensearch-ruby-gitlab
+    SUBDIR += rubygem-openvox-strings
     SUBDIR += rubygem-opml
     SUBDIR += rubygem-org-ruby
     SUBDIR += rubygem-ox

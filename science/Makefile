@@ -64,6 +64,7 @@
     SUBDIR += coordgenlibs
     SUBDIR += cp2k
     SUBDIR += cp2k-data
+    SUBDIR += cpcmx
     SUBDIR += csvtk
     SUBDIR += dakota
     SUBDIR += dalton
@@ -210,6 +211,7 @@
     SUBDIR += netcdf-fortran
     SUBDIR += nifticlib
     SUBDIR += nlcglib
+    SUBDIR += numsa
     SUBDIR += nwchem
     SUBDIR += nwchem-data
     SUBDIR += ocean
@@ -351,7 +353,7 @@
     SUBDIR += py-h5netcdf
     SUBDIR += py-h5py
     SUBDIR += py-h5pyd
-    SUBDIR += py-hiphive
+    SUBDIR += py-hiPhive
     SUBDIR += py-hoomd-blue
     SUBDIR += py-icet
     SUBDIR += py-inequality
@@ -416,6 +418,7 @@
     SUBDIR += py-pyphot
     SUBDIR += py-pyprecice
     SUBDIR += py-pyqubo
+    SUBDIR += py-pysal
     SUBDIR += py-pyscf
     SUBDIR += py-pyteomics
     SUBDIR += py-qcelemental

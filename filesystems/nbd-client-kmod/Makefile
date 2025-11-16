@@ -1,6 +1,5 @@
 PORTNAME=	nbd-client
-DISTVERSION=	g20251023
-PORTREVISION=	1
+DISTVERSION=	g20251109
 CATEGORIES=	filesystems
 PKGNAMESUFFIX=	-kmod
 
@@ -19,7 +18,7 @@ USES=		kmod ssl uidfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	ryan-moeller
 GH_PROJECT=	kernel-nbd-client
-GH_TAGNAME=	e5ab6371101c35a0b96e3459adca5beff2983e94
+GH_TAGNAME=	184c7fe76c2de5a19da1db03642195d8c5adf31b
 USE_RC_SUBR=	gnbd
 
 MAKE_ENV=	GEOM_CLASS_DIR="${PREFIX}/lib/geom" \
