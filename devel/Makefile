@@ -1031,6 +1031,7 @@
     SUBDIR += hyprlang
     SUBDIR += hyprutils
     SUBDIR += hyprwayland-scanner
+    SUBDIR += hyprwire
     SUBDIR += iaito
     SUBDIR += ice
     SUBDIR += ice37
@@ -6515,6 +6516,7 @@
     SUBDIR += rubygem-actionview71
     SUBDIR += rubygem-actionview72
     SUBDIR += rubygem-actionview80
+    SUBDIR += rubygem-actionview81
     SUBDIR += rubygem-active_hash
     SUBDIR += rubygem-active_scaffold
     SUBDIR += rubygem-activejob-gitlab
@@ -6528,6 +6530,7 @@
     SUBDIR += rubygem-activejob71
     SUBDIR += rubygem-activejob72
     SUBDIR += rubygem-activejob80
+    SUBDIR += rubygem-activejob81
     SUBDIR += rubygem-activemessaging
     SUBDIR += rubygem-activerecord-deprecated_finders
     SUBDIR += rubygem-activesupport-gitlab
@@ -6541,6 +6544,7 @@
     SUBDIR += rubygem-activesupport71
     SUBDIR += rubygem-activesupport72
     SUBDIR += rubygem-activesupport80
+    SUBDIR += rubygem-activesupport81
     SUBDIR += rubygem-airborne
     SUBDIR += rubygem-akismet
     SUBDIR += rubygem-algebrick
@@ -7576,6 +7580,7 @@
     SUBDIR += rubygem-jbuilder-rails71
     SUBDIR += rubygem-jbuilder-rails72
     SUBDIR += rubygem-jbuilder-rails80
+    SUBDIR += rubygem-jbuilder-rails81
     SUBDIR += rubygem-jekyll-coffeescript
     SUBDIR += rubygem-jenkins_api_client
     SUBDIR += rubygem-jeweler
@@ -8058,6 +8063,7 @@
     SUBDIR += rubygem-sprockets-rails-rails71
     SUBDIR += rubygem-sprockets-rails-rails72
     SUBDIR += rubygem-sprockets-rails-rails80
+    SUBDIR += rubygem-sprockets-rails-rails81
     SUBDIR += rubygem-sprockets-sass
     SUBDIR += rubygem-sprockets2
     SUBDIR += rubygem-sprockets3
@@ -8202,6 +8208,7 @@
     SUBDIR += rubygem-web-console-rails71
     SUBDIR += rubygem-web-console-rails72
     SUBDIR += rubygem-web-console-rails80
+    SUBDIR += rubygem-web-console-rails81
     SUBDIR += rubygem-web-console2
     SUBDIR += rubygem-web-console3-rails5
     SUBDIR += rubygem-web-console3-rails50

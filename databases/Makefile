@@ -898,6 +898,7 @@
     SUBDIR += redis72
     SUBDIR += redis74
     SUBDIR += redis80
+    SUBDIR += redis82
     SUBDIR += redis_exporter
     SUBDIR += redisjson
     SUBDIR += retcl
@@ -926,6 +927,7 @@
     SUBDIR += rubygem-activemodel71
     SUBDIR += rubygem-activemodel72
     SUBDIR += rubygem-activemodel80
+    SUBDIR += rubygem-activemodel81
     SUBDIR += rubygem-activerecord-explain-analyze
     SUBDIR += rubygem-activerecord-gitlab
     SUBDIR += rubygem-activerecord-import
@@ -943,6 +945,7 @@
     SUBDIR += rubygem-activerecord71
     SUBDIR += rubygem-activerecord72
     SUBDIR += rubygem-activerecord80
+    SUBDIR += rubygem-activerecord81
     SUBDIR += rubygem-after_commit_queue
     SUBDIR += rubygem-amalgalite
     SUBDIR += rubygem-arel
@@ -1004,6 +1007,7 @@
     SUBDIR += rubygem-globalid-rails71
     SUBDIR += rubygem-globalid-rails72
     SUBDIR += rubygem-globalid-rails80
+    SUBDIR += rubygem-globalid-rails81
     SUBDIR += rubygem-google-cloud-datastore
     SUBDIR += rubygem-google-cloud-datastore-v1
     SUBDIR += rubygem-google-cloud-firestore
@@ -1063,10 +1067,13 @@
     SUBDIR += rubygem-seed-fu-gitlab
     SUBDIR += rubygem-solid_cable
     SUBDIR += rubygem-solid_cable-rails72
+    SUBDIR += rubygem-solid_cable-rails80
     SUBDIR += rubygem-solid_cache
     SUBDIR += rubygem-solid_cache-rails72
+    SUBDIR += rubygem-solid_cache-rails80
     SUBDIR += rubygem-solid_queue
     SUBDIR += rubygem-solid_queue-rails72
+    SUBDIR += rubygem-solid_queue-rails80
     SUBDIR += rubygem-sqlite3
     SUBDIR += rubygem-sqlite3-ruby
     SUBDIR += rubygem-sqlite31

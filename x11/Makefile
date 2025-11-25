@@ -150,6 +150,7 @@
     SUBDIR += hypridle
     SUBDIR += hyprland-guiutils
     SUBDIR += hyprland-qtutils
+    SUBDIR += hyprlauncher
     SUBDIR += hyprlock
     SUBDIR += hyprls
     SUBDIR += hyprpaper

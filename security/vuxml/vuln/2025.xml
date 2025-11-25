@@ -1,3 +1,253 @@
+  <vuln vid="b6835edf-c6c8-11f0-8471-74563cf9e4e9">
+    <topic>GnuTLS -- Stack write buffer overflow</topic>
+    <affects>
+      <package>
+	<name>gnutls</name>
+	<range><lt>3.8.11</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>GnuTLS reports:</p>
+	<blockquote cite="https://gnutls.org/security-new.html#GNUTLS-SA-2025-11-18">
+	  <p>When a PKCS#11 token is initialized with gnutls_pkcs11_token_init function
+	    and it is passed a token label longer than 32 characters, it may write past
+	    the boundary of stack allocated memory.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-9820</cvename>
+      <url>https://gnutls.org/security-new.html#GNUTLS-SA-2025-11-18</url>
+    </references>
+    <dates>
+      <discovery>2025-11-18</discovery>
+      <entry>2025-11-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ca5d4e87-c465-11f0-b3f7-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>142.0.7444.175</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>142.0.7444.175</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2025/11/stable-channel-update-for-desktop_17.html">
+	 <p>This update includes 2 security fixes:</p>
+	 <ul>
+	    <li>[460017370] High CVE-2025-13223: Type Confusion in V8. Reported by Clément Lecigne of Google's Threat Analysis Group on 2025-11-12</li>
+	    <li>[450328966] High CVE-2025-13224: Type Confusion in V8. Reported by Google Big Sleep on 2025-10-09</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-13223</cvename>
+      <cvename>CVE-2025-13224</cvename>
+      <url>https://chromereleases.googleblog.com/2025/11/stable-channel-update-for-desktop_17.html</url>
+    </references>
+    <dates>
+      <discovery>2025-11-17</discovery>
+      <entry>2025-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1a46e84d-c406-11f0-b513-0da7be77c170">
+    <topic>pkcs11-helper -- deserialize buffer overflow</topic>
+    <affects>
+      <package>
+	<name>pkcs11-helper</name>
+	<range><lt>1.31.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Alon Bar-Lev reports:</p>
+	<blockquote cite="https://github.com/OpenSC/pkcs11-helper/releases/tag/pkcs11-helper-1.31.0">
+	  <p>util: fix deserialize buffer overflow. thanks to Aarnav Bos.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/OpenSC/pkcs11-helper/releases/tag/pkcs11-helper-1.31.0</url>
+    </references>
+    <dates>
+      <discovery>2025-11-10</discovery>
+      <entry>2025-11-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="50a0c266-c3ff-11f0-b513-0da7be77c170">
+    <topic>OpenVPN -- avoid buffer overread parsing routes or endpoints</topic>
+    <affects>
+      <package>
+	<name>openvpn-devel</name>
+	<range><lt>g20251117,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mikhail Khachaiants reports:</p>
+	<blockquote cite="https://github.com/OpenVPN/openvpn/commit/f1b851dae60eb1e277315dfe6265e3a58660b16a">
+	  <p>socket: reject mismatched address family in get_addr_generic.</p>
+	  <p>Add a family check to prevent copying address data of the wrong type,
+	    which could cause buffer over-read when parsing routes or endpoints.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-12106</cvename>
+      <url>https://github.com/OpenVPN/openvpn/commit/f1b851dae60eb1e277315dfe6265e3a58660b16a</url>
+    </references>
+    <dates>
+      <discovery>2025-10-18</discovery>
+      <entry>2025-11-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="17a40d76-c3fd-11f0-b513-0da7be77c170">
+    <topic>OpenVPN -- HMAC verification on source IP address ineffective</topic>
+    <affects>
+      <package>
+	<name>openvpn</name>
+	<range><lt>2.6.16</lt></range>
+      </package>
+      <package>
+	<name>openvpn-devel</name>
+	<range><lt>g20251117,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Arne Schwabe reports:</p>
+	<blockquote cite="https://github.com/OpenVPN/openvpn/commit/fa6a1824b0f37bff137204156a74ca28cf5b6f83">
+	  <p>Fix memcmp check for the hmac verification in the 3way handshake being inverted
+	  This is a stupid mistake but causes all hmac cookies to be accepted,
+	  thus breaking source IP address validation.	As a consequence, TLS
+	  sessions can be openend and state can be consumed in the server from
+	    IP addresses that did not initiate an initial connection.</p>
+	  <p>While at it, fix check to only allow [t-2;t] timeslots, disallowing
+	    HMACs coming in from a future timeslot.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-13086</cvename>
+      <url>https://github.com/OpenVPN/openvpn/commit/fa6a1824b0f37bff137204156a74ca28cf5b6f83</url>
+    </references>
+    <dates>
+      <discovery>2025-10-27</discovery>
+      <entry>2025-11-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fa433f05-c217-11f0-82ac-901b0edee044">
+    <topic>py-pdfminer.six -- Arbitrary Code Execution in pdfminer.six via Crafted PDF Input</topic>
+    <affects>
+     <package>
+       <name>py310-pdfminer.six</name>
+       <name>py311-pdfminer.six</name>
+       <name>py312-pdfminer.six</name>
+       <name>py313-pdfminer.six</name>
+       <name>py313t-pdfminer.six</name>
+       <name>py314-pdfminer.six</name>
+       <range><lt>20251107</lt></range>
+     </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Pieter Marsman reports:</p>
+	<blockquote cite="https://github.com/pdfminer/pdfminer.six/security/advisories/GHSA-wf5f-4jwr-ppcp">
+	  <p>pdfminer.six will execute arbitrary code from a malicious pickle file if provided with a malicious PDF file. The CMapDB._load_data() function in pdfminer.six uses pickle.loads() to deserialize pickle files. These pickle files are supposed to be part of the pdfminer.six distribution stored in the cmap/ directory, but a malicious PDF can specify an alternative directory and filename as long as the filename ends in .pickle.gz. A malicious, zipped pickle file can then contain code which will automatically execute when the PDF is processed.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-64512</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-64512</url>
+    </references>
+    <dates>
+      <discovery>2025-11-07</discovery>
+      <entry>2025-11-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bf6c9252-c2ec-11f0-8372-98b78501ef2a">
+    <topic>sudo-rs -- Authenticating user not recorded properly in timestamp</topic>
+    <affects>
+    <package>
+	<name>sudo-rs</name>
+	<range><ge>0.2.5</ge><lt>0.2.10</lt></range>
+	</package>
+	<package>
+	<name>sudo-rs-coexist</name>
+	<range><ge>0.2.5</ge><lt>0.2.10</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Trifecta Tech Foundation reports:</p>
+	<blockquote cite="https://github.com/trifectatechfoundation/sudo-rs/security/advisories/GHSA-q428-6v73-fc4q">
+	  <p>With Defaults targetpw (or Defaults rootpw) enabled, the password of the
+	  target account (or root account) instead of the invoking user is used for authentication.
+	  sudo-rs prior to 0.2.10 incorrectly recorded the invoking user’s UID instead of the
+	  authenticated-as user's UID in the authentication timestamp. Any later sudo invocation
+	  on the same terminal while the timestamp was still valid would use that timestamp,
+	  potentially bypassing new authentication even if the policy would have required it.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-64517</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2025-64517</url>
+    </references>
+    <dates>
+      <discovery>2025-11-12</discovery>
+      <entry>2025-11-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c1ceaaea-c2e7-11f0-8372-98b78501ef2a">
+    <topic>sudo-rs -- Partial password reveal when password timeout occurs</topic>
+    <affects>
+    <package>
+	<name>sudo-rs</name>
+	<range><ge>0.2.7</ge><lt>0.2.10</lt></range>
+    </package>
+    <package>
+	<name>sudo-rs-coexist</name>
+	<range><ge>0.2.7</ge><lt>0.2.10</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Trifecta Tech Foundation reports:</p>
+	<blockquote cite="https://github.com/trifectatechfoundation/sudo-rs/security/advisories/GHSA-c978-wq47-pvvw">
+	  <p>When typing partial passwords but not pressing return for a long time,
+	  a password timeout can occur. When this happens, the keys pressed are
+	  replayed onto the console.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-64170</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2025-64170</url>
+    </references>
+    <dates>
+      <discovery>2025-11-12</discovery>
+      <entry>2025-11-16</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="364e5fa4-c178-11f0-b614-b42e991fc52e">
     <topic>PostgreSQL -- Multiple vulnerabilities</topic>
     <affects>
