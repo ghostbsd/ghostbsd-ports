@@ -1,6 +1,6 @@
 --- configure.ac.orig	2024-12-15 06:13:44 UTC
 +++ configure.ac
-@@ -115,6 +115,16 @@ AC_SEARCH_LIBS([shm_open], [rt])
+@@ -115,6 +115,19 @@ AC_SEARCH_LIBS([shm_open], [rt])
  # shm_open may not be in the C library
  AC_SEARCH_LIBS([shm_open], [rt])
  
@@ -10,7 +10,10 @@
 +AC_CHECK_DECL([dixGetDisplayName],
 +    [AC_DEFINE([HAS_DIX_GET_DISPLAY_NAME], [1], [support display getter])],
 +    [],
-+    [[#include <dix.h>]])
++    [[
++    #include <xorg-server.h>
++    #include <dix.h>
++    ]])
 +CFLAGS="$CFLAGS_sav"
 +
 +

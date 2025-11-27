@@ -85,6 +85,7 @@ EXTRACT_SUFX?=		.tar.bz2
 .  endif
 
 DIST_SUBDIR=	xlibre/${_XLIBRE_CAT}
+# Do not set the DIST_SUBDIR to xlibre for XLibre flavors of 3rd party ports.
 .  if !empty(PKGNAMEPREFIX) && ${PKGNAMEPREFIX} == xlibre- && ${_XLIBRE_CAT} == driver
 DIST_SUBDIR=	xorg/${_XLIBRE_CAT}
 .  endif
@@ -103,14 +104,19 @@ IGNORE=		unknown build system specified via xlibre-cat:${xlibre-cat_ARGS:ts,}
 # We make a best guess for GH_PROJECT.
 USE_GITHUB?=		yes
 GH_ACCOUNT?=		X11Libre
-.  if ${_XLIBRE_CAT} == driver
+
+# Do not set the GitHub upstream for XLibre flavors of 3rd party ports.
+.  if empty(PKGNAMEPREFIX) || ${PKGNAMEPREFIX} != xlibre-
+.   if ${_XLIBRE_CAT} == driver
 # Removes the xlibre- suffix from the PORTNAME
 GH_PROJECT?=		${PORTNAME:tl:C/xlibre-//}
-.  elif ${_XLIBRE_CAT} == server
+GH_TAGNAME?=	${PORTNAME}-${PORTVERSION}
+.   elif ${_XLIBRE_CAT} == server
 GH_PROJECT?=		xserver
 GH_TAGNAME?=	xlibre-xserver-${PORTVERSION}
-.  else
+.   else
 GH_PROJECT?=		${PORTNAME:tl}
+.   endif
 .  endif
 
 .  if ${_XLIBRE_BUILDSYS} == meson
@@ -153,12 +159,6 @@ CFLAGS+=	-Werror=uninitialized
 MESON_ARGS+= -Dxorg-module-dir='${PREFIX}/${MODULEDIR}'
 .      endif
 .    else
-#FIXME: This is a hack until the upstream fixes the default module folder!
-
-.      if empty(PKGNAMEPREFIX) || ${PKGNAMEPREFIX} != xlibre-
-CONFIGURE_ARGS+= --with-xorg-module-dir='${PREFIX}/${MODULEDIR}'
-.      endif
-
 CONFIGURE_ENV+=	PKG_CONFIG_PATH=${PREFIX}/libdata/pkgconfig/ \
 		DRIVER_MAN_SUFFIX=4x DRIVER_MAN_DIR='$$(mandir)/man4'
 AUTORECONF_ARGS+= -I ${PREFIX}/share/aclocal

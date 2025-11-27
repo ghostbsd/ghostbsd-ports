@@ -25,9 +25,8 @@ USE_XORG=	ice sm x11 xau xcb xdmcp xext xft xmu xrandr xrender xt
 
 .if ${FLAVOR} == xlibre
 PKGNAMEPREFIX=	xlibre-
-USES+=xlibre
+USES+=		xlibre
 USE_XLIBRE+=	xlibre-server
-CONFLICTS_BUILD+=	xorg-server
 .else
 USE_XORG+=	xorg-server
 CONFLICTS_BUILD+=	xlibre-server

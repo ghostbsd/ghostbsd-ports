@@ -19,9 +19,23 @@ LIB_DEPENDS=	libcanberra.so:audio/libcanberra \
 		libxkbcommon.so:x11/libxkbcommon \
 		libxkbfile.so:x11/libxkbfile
 RUN_DEPENDS=	noto-emoji>0:x11-fonts/noto-emoji \
-		xdg-user-dir:devel/xdg-user-dirs \
-		xf86-input-evdev>0:x11-drivers/xf86-input-evdev \
+		xdg-user-dir:devel/xdg-user-dirs
+
+FLAVORS=	xorg xlibre
+FLAVOR?=	${FLAVORS:[1]}
+
+.if ${FLAVOR} == xlibre
+PKGNAMEPREFIX=		xlibre-plasma${_KDE_VERSION}-
+BUILD_DEPENDS+=	xlibre-xf86-input-evdev>0:x11-drivers/xlibre-xf86-input-evdev \
+		xlibre-xf86-input-libinput>0:x11-drivers/xlibre-xf86-input-libinput
+RUN_DEPENDS+=	xlibre-xf86-input-evdev>0:x11-drivers/xlibre-xf86-input-evdev \
+		xlibre-xf86-input-libinput>0:x11-drivers/xlibre-xf86-input-libinput
+.else
+BUILD_DEPENDS+=	xf86-input-evdev>0:x11-drivers/xf86-input-evdev \
 		xf86-input-libinput>0:x11-drivers/xf86-input-libinput
+RUN_DEPENDS+=	xf86-input-evdev>0:x11-drivers/xf86-input-evdev \
+		xf86-input-libinput>0:x11-drivers/xf86-input-libinput
+.endif
 
 USES=		cmake gettext gl gnome kde:6 pkgconfig python qt:6 tar:xz xorg
 USE_GL=		gl opengl
