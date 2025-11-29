@@ -1,0 +1,7 @@
+Setup Station is a first-boot configuration utility for GhostBSD that guides
+users through essential system setup tasks during their initial startup.
+
+The tool provides an automated, user-friendly interface for configuring
+critical system settings, ensuring a smooth onboarding experience for new
+GhostBSD installations. It features multi-language support and integrates
+with GhostBSD's installation infrastructure.

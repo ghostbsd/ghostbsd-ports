@@ -1332,6 +1332,7 @@
     SUBDIR += serf
     SUBDIR += setcdboot
     SUBDIR += setsid
+    SUBDIR += setup-station
     SUBDIR += sg3_utils
     SUBDIR += shlock
     SUBDIR += shmcat
