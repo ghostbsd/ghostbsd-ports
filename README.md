@@ -31,7 +31,7 @@ To seek available packages from the command line, options include [pkg-search(8)
 
 For information about contributing to FreeBSD ports, see the [Porter's Handbook](https://docs.freebsd.org/en/books/porters-handbook/).
 
-Note: the size of this tree **will grow** significantly through normal usage! Distribution files accumulate in `/usr/ports/distfiles` – this directory can be occasionally cleaned without ill-effect. Buliding ports will use much space in work subdirectories – when these work files are no longer required, you can `make clean`. 
+Note: the size of this tree **will grow** significantly through normal usage! Distribution files accumulate in `/usr/ports/distfiles` – this directory can be occasionally cleaned without ill-effect. Building ports will use much space in work subdirectories – when these work files are no longer required, you can `make clean`. 
 
 ### [Instructions for keeping GhostBSD ports current with FreeBSD ports.](https://forums.ghostbsd.org/d/60-guide-to-maintain-ghostbsd-ports-current-with-freebsd-ports/)
 
