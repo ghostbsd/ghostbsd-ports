@@ -1,8 +1,10 @@
 bin/xconfig
 etc/X11/cardDetect/XF86Config.amdgpu
+etc/X11/cardDetect/XF86Config.bhyve
 etc/X11/cardDetect/XF86Config.dual
 etc/X11/cardDetect/XF86Config.hyperv
 etc/X11/cardDetect/XF86Config.intel
+etc/X11/cardDetect/XF86Config.kaveri
 etc/X11/cardDetect/XF86Config.qemu
 etc/X11/cardDetect/XF86Config.radeonkms
 etc/X11/cardDetect/XF86Config.safe
