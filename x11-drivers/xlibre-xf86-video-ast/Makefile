@@ -1,5 +1,5 @@
 PORTNAME=	xlibre-xf86-video-ast
-PORTVERSION=	1.1.5
+PORTVERSION=	1.2.0.1
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	b-aazbsd@proton.me
@@ -11,10 +11,13 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 CONFLICTS_INSTALL=	xf86-video-ast
 
-GH_TAGNAME=	e86afcc
 USES=		xlibre-cat:driver
 INSTALL_TARGET=	install-strip
 
 PLIST_FILES=	${MODULEDIR}/drivers/ast_drv.so
 
+THIS_OPSYS!=	uname -s
+.if ${THIS_OPSYS}==DragonFly
+CFLAGS+=	-Wno-maybe-uninitialized
+.endif
 .include <bsd.port.mk>

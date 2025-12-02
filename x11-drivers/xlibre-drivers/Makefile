@@ -10,13 +10,15 @@ LICENSE=	none
 
 USES=		metaport
 
+THIS_OPSYS!=	uname -s
+
 .include "../../x11-servers/xlibre-server/Makefile.version"
 MODULEDIR=	${PREFIX}/lib/xorg/modules/xlibre-${XLIBRE_MJR_VER}/
-OLDMODULEDIR=	${PREFIX}/lib/xorg/modules/
+XORG_MODULEDIR=	${PREFIX}/lib/xorg/modules/
 VIDEODIR=	${MODULEDIR}/drivers
 INPUTDIR=	${MODULEDIR}/input
-OLDVIDEODIR=	${OLDMODULEDIR}/drivers
-OLDINPUTDIR=	${OLDMODULEDIR}/input
+XORG_VIDEODIR=	${XORG_MODULEDIR}/drivers
+XORG_INPUTDIR=	${XORG_MODULEDIR}/input
 
 INPUT_DRIVERS=		elographics \
 			evdev \
@@ -47,8 +49,14 @@ ${a:tu}_DESC=		Install ${a} ${type} driver
 . endfor
 .endfor
 
-OPTIONS_DEFINE_amd64=	AMDGPU ATI INTEL VMMOUSE VMWARE
-OPTIONS_DEFAULT_amd64=	VESA
+.if ${THIS_OPSYS}==DragonFly
+AMD64=x86_64
+.else
+AMD64=amd64
+.endif
+
+OPTIONS_DEFINE_${AMD64}=	AMDGPU ATI INTEL VMMOUSE VMWARE
+OPTIONS_DEFAULT_${AMD64}=	VESA
 
 #OPTIONS_DEFINE_i386:=	${OPTIONS_DEFINE_amd64} GEODE
 #OPTIONS_DEFAULT_i386:=	${OPTIONS_DEFAULT_amd64}
@@ -67,7 +75,7 @@ NONXLIBRE=	scfb egalax #geode
 .include <bsd.port.options.mk>
 
 # Manual add arch specific drivers so they be added to depend lines.
-.if ${ARCH}==i386 || ${ARCH}==amd64
+.if ${ARCH}==i386 || ${ARCH}==${AMD64}
 INPUT_DRIVERS+=	vmmouse
 VIDEO_DRIVERS+=	amdgpu ati intel vmware
 .endif
@@ -82,7 +90,7 @@ VIDEO_DRIVERS+=	amdgpu ati intel vmware
 .   if ${QUIRKS:M${i}\:*:C/.*://} != ""
 RUN_DEPENDS+=	${${type:tu}DIR}/${QUIRKS:M${i}\:*:C/.*://}_drv.so:x11-drivers/xlibre-xf86-${type}-${i}
 .   elif ${NONXLIBRE:M${i}}
-RUN_DEPENDS+=	${OLD${type:tu}DIR}/${i}_drv.so:x11-drivers/xf86-${type}-${i}@xlibre
+RUN_DEPENDS+=	${XORG_${type:tu}DIR}/${i}_drv.so:x11-drivers/xf86-${type}-${i}@xlibre
 .   else
 RUN_DEPENDS+=	${${type:tu}DIR}/${i}_drv.so:x11-drivers/xlibre-xf86-${type}-${i}
 .   endif

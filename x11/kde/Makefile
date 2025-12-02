@@ -6,8 +6,20 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Plasma Desktop and Applications (meta port)
 WWW=		https://www.kde.org
 
-RUN_DEPENDS=	kde-baseapps>=${KDE_APPLICATIONS_VERSION}:x11/kde-baseapps \
-		plasma6-plasma>=${KDE_PLASMA_VERSION}:x11/plasma6-plasma
+FLAVORS=	xorg xlibre
+FLAVOR?=	${FLAVORS:[1]}
+
+RUN_DEPENDS=	kde-baseapps>=${KDE_APPLICATIONS_VERSION}:x11/kde-baseapps
+
+.if ${FLAVOR} == xlibre
+PKGNAMEPREFIX:=		xlibre-
+RUN_DEPENDS=	xlibre-plasma6-plasma>=${KDE_PLASMA_VERSION}:x11/plasma6-plasma@xlibre
+CONFLICTS=	plasma6-plasma
+.else
+RUN_DEPENDS=	plasma6-plasma>=${KDE_PLASMA_VERSION}:x11/plasma6-plasma
+CONFLICTS=	xlibre-plasma6-plasma
+.endif
+
 
 USES=		kde:6 metaport qt:6
 
@@ -23,5 +35,7 @@ MPV_USE=	KDE=phonon-mpv
 
 VLC_DESC=	VLC backend (depends on Qt5 packages)
 VLC_USE=	KDE=phonon-vlc
+
+BROKEN_DragonFly= BROKEN due to missing dependencies in DPorts
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	xlibre-xf86-input-evdev
-PORTVERSION=	2.10.6
+PORTVERSION=	2.11.0.2
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	b-aazbsd@proton.me
@@ -14,9 +14,12 @@ CONFLICTS_INSTALL=	xf86-input-evdev
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 LIB_DEPENDS=	libevdev.so:devel/libevdev \
 		libmtdev.so:devel/libmtdev
-RUN_DEPENDS=	webcamd>=3.1.0.1:multimedia/webcamd
 
-GH_TAGNAME=	0b5b97b
+THIS_OPSYS!=	uname -s
+.if ${THIS_OPSYS}!=DragonFly
+RUN_DEPENDS=	webcamd>=3.1.0.1:multimedia/webcamd
+.endif
+
 USES=		pathfix xlibre-cat:driver
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ENV=	UDEV_CFLAGS=" " UDEV_LIBS=" "
