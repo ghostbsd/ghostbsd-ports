@@ -1,5 +1,5 @@
 PORTNAME=	install-station
-PORTVERSION=	0.3
+PORTVERSION=	0.4
 CATEGORIES=	sysutils
 
 MAINTAINER=	ericturgeon@ghostbsd.org
