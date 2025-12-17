@@ -11,12 +11,7 @@ LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/GPL
 
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
-
-THIS_OPSYS!=	uname -s
-
-.if ${THIS_OPSYS}!=DragonFly
 RUN_DEPENDS=	webcamd>=3.1.0.1:multimedia/webcamd
-.endif
 
 CONFLICTS_INSTALL=	xf86-input-wacom
 
@@ -37,12 +32,6 @@ DEBUG_CONFIGURE_ENABLE=debug
 
 TEST_CONFIGURE_ENABLE=unit-tests
 TEST_ALL_TARGET=check
-
-#post-patch:
-#	@${REINPLACE_CMD} \
-#		-e 's/dir=.*xorg-server/& \
-#			--define-variable prefix="$$prefix"/' \
-#		${WRKSRC}/configure
 
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/X11/xorg.conf.d

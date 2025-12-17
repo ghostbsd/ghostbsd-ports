@@ -11,7 +11,7 @@ WWW=		https://soju.im
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.23,modules,no_targets sqlite:3
+USES=		go:modules,no_targets sqlite:3
 USE_GITHUB=	nodefault
 GH_TUPLE=	golang:sys:v0.30.0:sys
 

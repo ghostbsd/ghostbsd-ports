@@ -25,7 +25,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 NOT_FOR_ARCHS=	aarch64
 NOT_FOR_ARCHS_REASON=	fails to fetch: v0.0.1-go1.23.8.freebsd-arm64.lock: no locks available
 
-USES=		cpe go:1.23,modules
+USES=		cpe go:modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	etcd-io
 GO_MODULE=	go.etcd.io/etcd/v3

@@ -13,7 +13,7 @@ WWW=		https://quobix.com/vacuum/ \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.23,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/daveshanley/vacuum
 

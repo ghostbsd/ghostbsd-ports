@@ -1,7 +1,6 @@
 PORTNAME=	wtf
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.47.0
-PORTREVISION=	1
+DISTVERSION=	0.47.1
 CATEGORIES=	sysutils
 PKGNAMEPREFIX=	go-
 
@@ -12,7 +11,7 @@ WWW=		https://wtfutil.com
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
-USES=		cpe go:1.25,modules
+USES=		cpe go:1.25+,modules
 
 GO_MODULE=      github.com/wtfutil/wtf
 GO_BUILDFLAGS=	-ldflags "-X main.version=${DISTVERSION}"

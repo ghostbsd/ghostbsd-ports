@@ -10,7 +10,7 @@ WWW=		https://revive.run
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.23,modules
+USES=		go:modules
 
 _BUILD_VERSION=	${DISTVERSION}
 _BUILD_COMMIT=	e1d05f7

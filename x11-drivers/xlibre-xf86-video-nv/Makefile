@@ -17,8 +17,4 @@ USES=		tar:xz xlibre-cat:driver
 
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
-THIS_OPSYS!=	uname -s
-.if ${THIS_OPSYS}==DragonFly
-CFLAGS+=	-Wno-maybe-uninitialized
-.endif
 .include <bsd.port.mk>

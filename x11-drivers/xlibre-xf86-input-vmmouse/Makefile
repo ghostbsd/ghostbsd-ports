@@ -1,6 +1,5 @@
 PORTNAME=	xlibre-xf86-input-vmmouse
 PORTVERSION=	13.2.0.2
-PORTREVISION=	1
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	b-aazbsd@proton.me
@@ -16,22 +15,9 @@ USES=		gmake xlibre-cat:driver
 
 GH_TAGNAME=	fa6a064
 
-THIS_OPSYS!=	uname -s
-
-.if ${THIS_OPSYS}==DragonFly
-AMD64=x86_64
-.else
-AMD64=amd64
-.endif
-
-ONLY_FOR_ARCHS=	${AMD64} i386
+ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	vmmouse protocol is only supported on x86-compatible architectures
 
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
-
-.if ${THIS_OPSYS}==DragonFly
-CONFIGURE_ARGS+=	--with-hal-callouts-dir=${PREFIX}/libexec/hal/scripts
-PLIST_FILES+=		libexec/hal/scripts/hal-probe-vmmouse
-.endif
 
 .include <bsd.port.mk>

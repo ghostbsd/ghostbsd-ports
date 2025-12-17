@@ -1,6 +1,6 @@
 PORTNAME=	filebrowser-quantum
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.1
+DISTVERSION=	1.0.3
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	LOCAL/dtxdf/${PORTNAME}/
@@ -14,7 +14,7 @@ WWW=		https://filebrowserquantum.com \
 
 LICENSE=	APACHE20
 
-USES=		go:1.25,modules
+USES=		go:1.25+,modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	gtsteffaniak
 GH_PROJECT=	filebrowser

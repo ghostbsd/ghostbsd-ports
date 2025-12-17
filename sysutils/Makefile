@@ -362,7 +362,6 @@
     SUBDIR += env4801
     SUBDIR += envconsul
     SUBDIR += epazote
-    SUBDIR += equinix-metal-cli
     SUBDIR += erdtree
     SUBDIR += etcmerge
     SUBDIR += ethname
@@ -584,6 +583,7 @@
     SUBDIR += jdupes
     SUBDIR += jest
     SUBDIR += jkill
+    SUBDIR += jmore
     SUBDIR += joshuto
     SUBDIR += jps
     SUBDIR += jruls

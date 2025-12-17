@@ -407,7 +407,6 @@
     SUBDIR += runner
     SUBDIR += rxvt-unicode
     SUBDIR += sakura
-    SUBDIR += salut
     SUBDIR += sandbar
     SUBDIR += sbxkb
     SUBDIR += screen-message

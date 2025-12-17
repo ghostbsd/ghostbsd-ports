@@ -410,6 +410,7 @@
     SUBDIR += torrus
     SUBDIR += triton-guesttools
     SUBDIR += unbound_exporter
+    SUBDIR += unifi10
     SUBDIR += unifi9
     SUBDIR += victoria-logs
     SUBDIR += victoria-metrics

@@ -11,7 +11,7 @@ WWW=		https://github.com/element-hq/dendrite
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cpe go:1.23,modules
+USES=		cpe go:modules
 CPE_VENDOR=	matrix
 PLIST_SUB=	PORTNAME=${PORTNAME}
 USE_RC_SUBR=	${PORTNAME}

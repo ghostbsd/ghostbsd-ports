@@ -11,7 +11,7 @@ WWW=		https://github.com/fabiolb/fabio
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.23,modules
+USES=		go:modules
 
 USE_RC_SUBR=	fabio
 

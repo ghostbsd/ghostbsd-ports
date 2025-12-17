@@ -1,5 +1,5 @@
 PORTNAME=	arti
-DISTVERSION=	1.7.0
+DISTVERSION=	1.8.0
 PORTREVISION=	1
 CATEGORIES=	security
 
@@ -24,7 +24,7 @@ PLIST_SUB=	USERS="${USERS}" GROUPS="${GROUPS}"
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.torproject.org
 GL_ACCOUNT=	tpo/core
-GL_TAGNAME=	c0e88ed299458b6e050584a2045a026cd49714c9
+GL_TAGNAME=	6c79dfb9a31e2fdde6230da4edcb71cc082ca7d9
 CARGO_INSTALL=	no
 default_DESCR=	${.CURDIR}/pkg-descr
 full_DESCR=	${.CURDIR}/pkg-descr-full

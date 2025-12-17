@@ -10,7 +10,7 @@ WWW=		https://www.controltheory.com/gonzo/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.23,modules
+USES=		go:modules
 
 #NOT_FOR_ARCHS=	armv6 armv7 i386
 

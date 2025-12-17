@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	terraform:sysutils/terraform
 
-USES=		go:1.23,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/runatlantis/atlantis
 CGO_ENABLED=	0

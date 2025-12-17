@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	chafa:graphics/chafa \
 		fzf:textproc/fzf
 
-USES=		go:1.23,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/r3tr0ananas/wallhaven-cli/v2
 GO_TARGET=	./wallhaven

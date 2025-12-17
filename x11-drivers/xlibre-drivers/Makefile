@@ -10,8 +10,6 @@ LICENSE=	none
 
 USES=		metaport
 
-THIS_OPSYS!=	uname -s
-
 .include "../../x11-servers/xlibre-server/Makefile.version"
 MODULEDIR=	${PREFIX}/lib/xorg/modules/xlibre-${XLIBRE_MJR_VER}/
 XORG_MODULEDIR=	${PREFIX}/lib/xorg/modules/
@@ -49,40 +47,26 @@ ${a:tu}_DESC=		Install ${a} ${type} driver
 . endfor
 .endfor
 
-.if ${THIS_OPSYS}==DragonFly
-AMD64=x86_64
-.else
-AMD64=amd64
-.endif
-
-OPTIONS_DEFINE_${AMD64}=	AMDGPU ATI INTEL VMMOUSE VMWARE
-OPTIONS_DEFAULT_${AMD64}=	VESA
-
-#OPTIONS_DEFINE_i386:=	${OPTIONS_DEFINE_amd64} GEODE
-#OPTIONS_DEFAULT_i386:=	${OPTIONS_DEFAULT_amd64}
+OPTIONS_DEFINE_amd64=	AMDGPU ATI INTEL VMMOUSE VMWARE
+OPTIONS_DEFAULT_amd64=	VESA
 
 AMDGPU_DESC=		Install amdgpu video driver
 ATI_DESC=		Install ati (radeon) video driver
-#GEODE_DESC=		Install geode video driver
 INTEL_DESC=		Install intel video driver
 VMMOUSE_DESC=		Install vmmouse input driver
 VMWARE_DESC=		Install vmware video driver
 
 # these drivers have a different module name compared to the plugin they install
 QUIRKS=		keyboard:kbd
-NONXLIBRE=	scfb egalax #geode
+NONXLIBRE=	scfb egalax
 
 .include <bsd.port.options.mk>
 
 # Manual add arch specific drivers so they be added to depend lines.
-.if ${ARCH}==i386 || ${ARCH}==${AMD64}
+.if ${ARCH}==i386 || ${ARCH}==amd64
 INPUT_DRIVERS+=	vmmouse
 VIDEO_DRIVERS+=	amdgpu ati intel vmware
 .endif
-
-#.if ${ARCH}==i386
-#VIDEO_DRIVERS+= geode
-#.endif
 
 .for type in input video
 . for i in ${${type:tu}_DRIVERS}
@@ -90,7 +74,7 @@ VIDEO_DRIVERS+=	amdgpu ati intel vmware
 .   if ${QUIRKS:M${i}\:*:C/.*://} != ""
 RUN_DEPENDS+=	${${type:tu}DIR}/${QUIRKS:M${i}\:*:C/.*://}_drv.so:x11-drivers/xlibre-xf86-${type}-${i}
 .   elif ${NONXLIBRE:M${i}}
-RUN_DEPENDS+=	${XORG_${type:tu}DIR}/${i}_drv.so:x11-drivers/xf86-${type}-${i}@xlibre
+# RUN_DEPENDS+=	${XORG_${type:tu}DIR}/${i}_drv.so:x11-drivers/xf86-${type}-${i}@xlibre
 .   else
 RUN_DEPENDS+=	${${type:tu}DIR}/${i}_drv.so:x11-drivers/xlibre-xf86-${type}-${i}
 .   endif

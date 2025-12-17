@@ -246,6 +246,7 @@
     SUBDIR += haproxy26
     SUBDIR += haproxy28
     SUBDIR += haproxy30
+    SUBDIR += haproxy33
     SUBDIR += hblock
     SUBDIR += hexinject
     SUBDIR += hlmaster
@@ -1076,6 +1077,7 @@
     SUBDIR += py-haproxy-log-analysis
     SUBDIR += py-haproxyctl
     SUBDIR += py-httpstat
+    SUBDIR += py-icmplib
     SUBDIR += py-ifaddr
     SUBDIR += py-impacket
     SUBDIR += py-iplib
@@ -1097,7 +1099,6 @@
     SUBDIR += py-msrplib
     SUBDIR += py-ndg-httpsclient
     SUBDIR += py-netaddr
-    SUBDIR += py-netif
     SUBDIR += py-netifaces
     SUBDIR += py-netifaces-plus
     SUBDIR += py-netsnmpagent
@@ -1132,6 +1133,7 @@
     SUBDIR += py-pysmb
     SUBDIR += py-pysocks
     SUBDIR += py-pystun
+    SUBDIR += py-pystun3
     SUBDIR += py-python-barbicanclient
     SUBDIR += py-python-bitcoinrpc
     SUBDIR += py-python-cinderclient
@@ -1236,6 +1238,7 @@
     SUBDIR += read_bbrlog
     SUBDIR += realtek-re-kmod
     SUBDIR += realtek-re-kmod198
+    SUBDIR += realtek-rge-kmod
     SUBDIR += reaver
     SUBDIR += recvnet
     SUBDIR += redir
@@ -1495,6 +1498,7 @@
     SUBDIR += samba419
     SUBDIR += samba420
     SUBDIR += samba422
+    SUBDIR += samba423
     SUBDIR += samplicator
     SUBDIR += savvycan
     SUBDIR += sbm

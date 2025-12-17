@@ -14,7 +14,7 @@ BUILD_DEPENDS=	pcsc-lite>0:devel/pcsc-lite
 LIB_DEPENDS=	libpcsclite.so:devel/pcsc-lite
 RUN_DEPENDS=	step:security/step-cli
 
-USES=		go:1.22,modules
+USES=		go:modules
 
 USE_RC_SUBR=	step_ca
 

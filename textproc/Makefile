@@ -493,7 +493,6 @@
     SUBDIR += ml-aspell
     SUBDIR += ml1
     SUBDIR += mn-aspell
-    SUBDIR += moar
     SUBDIR += modlogan
     SUBDIR += moor
     SUBDIR += mp_doccer
@@ -1724,6 +1723,7 @@
     SUBDIR += py-uc-micro-py
     SUBDIR += py-ucl
     SUBDIR += py-ufal.udpipe
+    SUBDIR += py-unicode-segmentation-rs
     SUBDIR += py-unicodeitplus
     SUBDIR += py-untangle
     SUBDIR += py-urlscan
@@ -1750,6 +1750,7 @@
     SUBDIR += py-xmlschema
     SUBDIR += py-yapf
     SUBDIR += py-youseedee
+    SUBDIR += py-zensical
     SUBDIR += py-zope.i18nmessageid
     SUBDIR += py-zpt
     SUBDIR += qprint
@@ -2018,6 +2019,7 @@
     SUBDIR += rubygem-syntax
     SUBDIR += rubygem-termcolor
     SUBDIR += rubygem-terminal-table
+    SUBDIR += rubygem-terminal-table3
     SUBDIR += rubygem-terser
     SUBDIR += rubygem-text
     SUBDIR += rubygem-tidy_ffi
@@ -2151,6 +2153,7 @@
     SUBDIR += txt2html
     SUBDIR += txt2man
     SUBDIR += txt2tags
+    SUBDIR += typos
     SUBDIR += typst
     SUBDIR += uchardet
     SUBDIR += ucto

@@ -1,7 +1,7 @@
 PORTNAME=	oq
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.0.20
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	hoanga@gmail.com
@@ -11,7 +11,7 @@ WWW=		https://github.com/plutov/oq
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.25,modules
+USES=		go:1.25+,modules
 GO_MODULE=	github.com/plutov/oq
 
 PLIST_FILES=	bin/${PORTNAME}

@@ -1,5 +1,6 @@
 PORTNAME=	slurm
 DISTVERSION=	25.11.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.schedmd.com/slurm/
 PKGNAMESUFFIX=	-wlm
@@ -93,7 +94,7 @@ IPMI_LIB_DEPENDS=	libfreeipmi.so:sysutils/freeipmi \
 			libipmimonitoring.so:sysutils/freeipmi
 IPMI_CONFIGURE_WITH=	freeipmi
 
-_ARCH=	${ARCH:S|aarch64|aarch64elf|:S|amd64|elf_amd64|:S|powerpc64|elf64ppc|:S|powerpc64le|elf64lppc|:S|riscv64|elf64lriscv|}
+_ARCH=	${ARCH:S|aarch64|aarch64elf|:S|amd64|elf_amd64|:S|powerpc64le|elf64lppc|:S|powerpc64|elf64ppc|:S|riscv64|elf64lriscv|}
 
 # SLURM's configure enables interactive jobs if pty.h exists.  Replacing
 # #include <pty.h> with appropriate headers will therefore not work, so instead

@@ -1,5 +1,5 @@
-TIMESTAMP = 1763088666
-SHA256 (go/devel_golangci-lint/golangci-lint-v2.6.1/v2.6.1.mod) = c19f7f73548d53c6955c46c101a278c345ffb0425f77e1b510d753c78edfd3e7
-SIZE (go/devel_golangci-lint/golangci-lint-v2.6.1/v2.6.1.mod) = 9783
-SHA256 (go/devel_golangci-lint/golangci-lint-v2.6.1/v2.6.1.zip) = 62c98ac60c240d22f83ba038d7a4e9578bd6db9609c9b8f2601c508122922ad3
-SIZE (go/devel_golangci-lint/golangci-lint-v2.6.1/v2.6.1.zip) = 1909442
+TIMESTAMP = 1765372577
+SHA256 (go/devel_golangci-lint/golangci-lint-v2.7.2/v2.7.2.mod) = 80d7c51f8f5cf9c1f598b2ef62ab3dab9c16fd922a568fb19b78e00f2ab43145
+SIZE (go/devel_golangci-lint/golangci-lint-v2.7.2/v2.7.2.mod) = 9852
+SHA256 (go/devel_golangci-lint/golangci-lint-v2.7.2/v2.7.2.zip) = 4bab6fedf8c25b6134484b1ebe09d6f8ed1019d1c0d42038f22cb221e0684d17
+SIZE (go/devel_golangci-lint/golangci-lint-v2.7.2/v2.7.2.zip) = 1938593

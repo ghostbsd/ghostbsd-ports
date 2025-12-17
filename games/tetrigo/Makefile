@@ -11,7 +11,7 @@ WWW=		https://github.com/Broderick-Westrope/tetrigo
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		go:1.23,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/Broderick-Westrope/tetrigo
 GO_TARGET=	./cmd/${PORTNAME}

@@ -561,6 +561,7 @@
     SUBDIR += pgbarman
     SUBDIR += pgbouncer
     SUBDIR += pgdbf
+    SUBDIR += pgjwt
     SUBDIR += pgloader3
     SUBDIR += pglogical
     SUBDIR += pgmetrics
@@ -570,11 +571,13 @@
     SUBDIR += pgpool-II-44
     SUBDIR += pgpool-II-45
     SUBDIR += pgpool-II-46
+    SUBDIR += pgpool-II-47
     SUBDIR += pgreplay
     SUBDIR += pgroonga
     SUBDIR += pgrouting
     SUBDIR += pgsanity
     SUBDIR += pgschema
+    SUBDIR += pgsql-http
     SUBDIR += pgtcl
     SUBDIR += pgtop
     SUBDIR += pguri
@@ -764,6 +767,7 @@
     SUBDIR += py-couchdb
     SUBDIR += py-cymysql
     SUBDIR += py-databases
+    SUBDIR += py-databricks-sql-connector
     SUBDIR += py-datafusion
     SUBDIR += py-dbf
     SUBDIR += py-dbt-core
@@ -839,7 +843,9 @@
     SUBDIR += py-redis
     SUBDIR += py-redis2
     SUBDIR += py-redis5
+    SUBDIR += py-redis6
     SUBDIR += py-redisvl
+    SUBDIR += py-redshift-connector
     SUBDIR += py-rrdtool
     SUBDIR += py-schemachange
     SUBDIR += py-sispy
@@ -1123,6 +1129,7 @@
     SUBDIR += tcl-lmdb
     SUBDIR += tcl-sqlite3
     SUBDIR += tdb
+    SUBDIR += tdb1
     SUBDIR += tdb1410
     SUBDIR += tdb1413
     SUBDIR += tdbc

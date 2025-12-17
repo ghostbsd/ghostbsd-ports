@@ -1,7 +1,7 @@
 PORTNAME=	nginx-ui
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.2.0-patch.1
-PORTREVISION=	2
+DISTVERSION=	2.2.1
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	LOCAL/dtxdf/${PORTNAME}/
 DISTFILES=	${PORTNAME}-${DISTVERSIONPREFIX}${DISTVERSION}.frontend${EXTRACT_SUFX} \
@@ -14,7 +14,7 @@ WWW=		https://nginxui.com
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.25,modules
+USES=		go:1.25+,modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	0xJacky
 
@@ -37,7 +37,7 @@ BUILD_DATE=	$$(date -u +%s)
 
 # Run 'git checkout ${DISTVERSIONPREFIX}${DISTVERSION} && git rev-parse HEAD'
 # in the NGINX UI repository to get the value of GITID.
-GITID=		372af98307df195a061c650c43505fed42fa279b
+GITID=		fdea3940d86459661166ef2c7a00204544ed9b9b
 
 post-extract:
 	@${MKDIR} ${WRKSRC}/vendor

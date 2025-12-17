@@ -1,6 +1,6 @@
 PORTNAME=	sqlpage
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.39.1
+DISTVERSION=	0.40.0
 PORTREVISION=	1
 CATEGORIES=	www databases
 MASTER_SITES=	https://cdn.jsdelivr.net/npm/:npm

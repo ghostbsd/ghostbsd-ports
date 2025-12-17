@@ -1,5 +1,5 @@
 PORTNAME=	postfix
-DISTVERSION=	3.10.5
+DISTVERSION=	3.10.6
 PORTREVISION?=	0
 PORTEPOCH=	1
 CATEGORIES=	mail
@@ -262,8 +262,10 @@ POSTFIX_CCARGS+=	-DDEF_SERVER_SASL_TYPE=\\\"dovecot\\\"
 .endif
 
 .if ${PORT_OPTIONS:MSASLKRB5}
-POSTFIX_AUXLIBS+=	-lkrb5 -lhx509 -lcrypto -lcrypt -lcom_err -lasn1 \
-			-lroken
+POSTFIX_AUXLIBS+=      -lkrb5 -lcrypto -lcrypt -lcom_err
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
+POSTFIX_AUXLIBS+=      -lasn1 -lhx509 -lroken
+.endif
 .endif
 
 .if ${PORT_OPTIONS:MSASLKMIT}

@@ -15,7 +15,7 @@ LICENSE_COMB=	dual
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE.MIT
 LICENSE_FILE_MPL20=	${WRKSRC}/LICENSE.MPLv2.0
 
-USES=		go:1.23,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/mjl-/mox
 

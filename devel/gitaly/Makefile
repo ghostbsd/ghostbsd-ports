@@ -4,6 +4,8 @@ DISTVERSION=	${GITLAB_VERSION}
 PORTREVISION=	${GITLAB_PORTREVISION} # modify it in www/gitlab/Makefile.common
 CATEGORIES=	devel
 
+PATCH_SITES=	https://gitlab.com/gitlab-org/gitaly/-/merge_requests/
+PATCHFILES+=	8309.patch:-p1 # https://gitlab.com/gitlab-org/gitaly/-/merge_requests/8309, Fix build on i386 system
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Smart reverse proxy for GitLab
 WWW=		https://gitlab.com/gitlab-org/gitaly
@@ -19,7 +21,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libiconv.so:converters/libiconv \
 		libpcre2-8.so:devel/pcre2
 
-USES=		cpe gmake go:modules,no_targets,1.24 iconv pkgconfig
+USES=		cpe gmake go:modules,no_targets iconv pkgconfig
 
 CPE_VENDOR=	gitlab
 

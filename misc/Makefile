@@ -14,7 +14,6 @@
     SUBDIR += amanda-client
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
-    SUBDIR += amazon-qldb-shell
     SUBDIR += ansiweather
     SUBDIR += apparix
     SUBDIR += arrow-datafusion
@@ -67,6 +66,7 @@
     SUBDIR += compat12x
     SUBDIR += compat13x
     SUBDIR += compat14x
+    SUBDIR += compat15x
     SUBDIR += compat4x
     SUBDIR += compat5x
     SUBDIR += compat6x
@@ -171,6 +171,7 @@
     SUBDIR += gimp-help-en
     SUBDIR += github-copilot-cli
     SUBDIR += github-copilot-language-server
+    SUBDIR += gitlogue
     SUBDIR += gkrellm-gamma
     SUBDIR += gkrellm-xkb
     SUBDIR += gkrellmbgchg2
@@ -192,6 +193,7 @@
     SUBDIR += gpsim
     SUBDIR += granulate
     SUBDIR += grc
+    SUBDIR += grok-cli
     SUBDIR += gwhich
     SUBDIR += hashdb
     SUBDIR += hello
@@ -563,6 +565,10 @@
     SUBDIR += py-safetensors
     SUBDIR += py-sagemaker
     SUBDIR += py-sagemaker-core
+    SUBDIR += py-sagemaker-mlops
+    SUBDIR += py-sagemaker-serve
+    SUBDIR += py-sagemaker-shim
+    SUBDIR += py-sagemaker-train
     SUBDIR += py-schedulefree
     SUBDIR += py-scikit-fusion
     SUBDIR += py-scikit-quant
@@ -594,6 +600,7 @@
     SUBDIR += py-transformers
     SUBDIR += py-tvm
     SUBDIR += py-uhi
+    SUBDIR += py-uuid-utils
     SUBDIR += py-vaderSentiment
     SUBDIR += py-wandb
     SUBDIR += py-wurlitzer
@@ -699,6 +706,7 @@
     SUBDIR += tkregexp
     SUBDIR += tkrunit
     SUBDIR += tlci
+    SUBDIR += tlm
     SUBDIR += toilet
     SUBDIR += translate
     SUBDIR += trurl

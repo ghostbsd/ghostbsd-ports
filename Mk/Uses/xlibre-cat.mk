@@ -33,12 +33,12 @@
 #
 #
 #
-#.MAINTAINER:	b-aazbsd.proton.me
+#.MAINTAINER:	b-aazbsd@proton.me
 
 .if !defined(_INCLUDE_USES_XLIBRE_CAT_MK)
 _INCLUDE_USES_XLIBRE_CAT_MK=yes
 
-######_XLIBRE_CATEGORIES=	app data doc driver font lib proto util
+#_XLIBRE_CATEGORIES=	app data doc driver font lib proto util
 _XLIBRE_CATEGORIES=	driver server
 _XLIBRE_BUILDSYSTEMS=	autotools meson
 
@@ -107,16 +107,16 @@ GH_ACCOUNT?=		X11Libre
 
 # Do not set the GitHub upstream for XLibre flavors of 3rd party ports.
 .  if empty(PKGNAMEPREFIX) || ${PKGNAMEPREFIX} != xlibre-
-.   if ${_XLIBRE_CAT} == driver
+.    if ${_XLIBRE_CAT} == driver
 # Removes the xlibre- suffix from the PORTNAME
 GH_PROJECT?=		${PORTNAME:tl:C/xlibre-//}
 GH_TAGNAME?=	${PORTNAME}-${PORTVERSION}
-.   elif ${_XLIBRE_CAT} == server
+.    elif ${_XLIBRE_CAT} == server
 GH_PROJECT?=		xserver
 GH_TAGNAME?=	xlibre-xserver-${PORTVERSION}
-.   else
+.    else
 GH_PROJECT?=		${PORTNAME:tl}
-.   endif
+.    endif
 .  endif
 
 .  if ${_XLIBRE_BUILDSYS} == meson
@@ -128,23 +128,26 @@ GH_PROJECT?=		${PORTNAME:tl}
 .  endif
 
 #
-## All xlibre ports needs pkgconfig to build, but some ports look for pkgconfig
-## and then continue the build.
+# All xlibre ports needs pkgconfig to build, but some ports look for pkgconfig
+# and then continue the build.
+#
 .include "${USESDIR}/pkgconfig.mk"
 
 #
-## All xlibre ports need xorg-macros except for the server.
+# All xlibre ports need xorg-macros except for the server.
+#
+
 .  if ${PORTNAME} != xorg-macros && ${_XLIBRE_CAT} != server
 USE_XLIBRE+=      xlibre-macros
 .  endif
 
-#####.  if ${_XLIBRE_CAT} == app
-###### Nothing at the moment
-#####
-#####.  elif ${_XLIBRE_CAT} == data
-###### Nothing at the moment.
-
-#####.  elif ${_XLIBRE_CAT} == driver
+#.  if ${_XLIBRE_CAT} == app
+# Nothing at the moment
+#
+#.  elif ${_XLIBRE_CAT} == data
+# Nothing at the moment.
+#
+#.  elif ${_XLIBRE_CAT} == driver
 
 .  if ${_XLIBRE_CAT} == driver
 .include "../../x11-servers/xlibre-server/Makefile.version"
@@ -169,37 +172,38 @@ INSTALL_TARGET=	install-strip
 # XLibre does not (yet) host any category other than drivers and the server so
 # there is no need to check for them.
 
-#####.  elif ${_XLIBRE_CAT} == font
-#####FONTNAME?=	${PORTNAME:C/.*-//g:S/type/Type/:S/ttf/TTF/:S/speedo/Speedo/}
-#####.    if ${_XLIBRE_BUILDSYS} == meson
-###### Put special stuff for meson here
-#####.    else
-#####CONFIGURE_ARGS+=	--with-fontrootdir=${PREFIX}/share/fonts
-#####CONFIGURE_ENV+=	FONTROOTDIR=${PREFIX}/share/fonts
-#####.    endif
-#####.    if !defined(NOFONT)
-#####.include "${USESDIR}/fonts.mk"
-#####BUILD_DEPENDS+=	mkfontscale>=0:x11-fonts/mkfontscale \
-#####		bdftopcf:x11-fonts/bdftopcf
-#####PLIST_FILES+=	"@comment ${FONTSDIR}/fonts.dir" \
-#####		"@comment ${FONTSDIR}/fonts.scale"
-#####.    endif
-#####
-#####.  elif ${_XLIBRE_CAT} == lib
-#####CFLAGS+=	-Werror=uninitialized
-#####.include "${USESDIR}/pathfix.mk"
-#####.    if ${_XLIBRE_BUILDSYS} == meson
-###### put meson stuff here
-#####.    else
-#####libtool_ARGS?=	# empty
-#####.include "${USESDIR}/libtool.mk"
-#####USE_LDCONFIG=	yes
-#####CONFIGURE_ARGS+=--enable-malloc0returnsnull
-#####.    endif
-#####
-#####.  elif ${_XLIBRE_CAT} == proto
-#####.include "${USESDIR}/pathfix.mk"
-#####
+
+#.  elif ${_XLIBRE_CAT} == font
+#FONTNAME?=	${PORTNAME:C/.*-//g:S/type/Type/:S/ttf/TTF/:S/speedo/Speedo/}
+#.    if ${_XLIBRE_BUILDSYS} == meson
+# Put special stuff for meson here
+#.    else
+#CONFIGURE_ARGS+=	--with-fontrootdir=${PREFIX}/share/fonts
+#CONFIGURE_ENV+=	FONTROOTDIR=${PREFIX}/share/fonts
+#.    endif
+#.    if !defined(NOFONT)
+#.include "${USESDIR}/fonts.mk"
+#BUILD_DEPENDS+=	mkfontscale>=0:x11-fonts/mkfontscale \
+#		bdftopcf:x11-fonts/bdftopcf
+#PLIST_FILES+=	"@comment ${FONTSDIR}/fonts.dir" \
+#		"@comment ${FONTSDIR}/fonts.scale"
+#.    endif
+#
+#.  elif ${_XLIBRE_CAT} == lib
+#CFLAGS+=	-Werror=uninitialized
+#.include "${USESDIR}/pathfix.mk"
+#.    if ${_XLIBRE_BUILDSYS} == meson
+# put meson stuff here
+#.    else
+#libtool_ARGS?=	# empty
+#.include "${USESDIR}/libtool.mk"
+#USE_LDCONFIG=	yes
+#CONFIGURE_ARGS+=--enable-malloc0returnsnull
+#.    endif
+#
+#.  elif ${_XLIBRE_CAT} == proto
+#.include "${USESDIR}/pathfix.mk"
+#
 
 .  endif # ${_XLIBRE_CAT} == <category>
 

@@ -1,6 +1,5 @@
 PORTNAME=	xlibre-xf86-video-mga
 PORTVERSION=	2.1.0.1
-PORTREVISION=	1
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	b-aazbsd@proton.me

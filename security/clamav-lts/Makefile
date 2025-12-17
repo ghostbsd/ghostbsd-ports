@@ -1,12 +1,12 @@
 PORTNAME=	clamav
 DISTVERSION=	1.4.3
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.clamav.net/downloads/production/
 PKGNAMESUFFIX=	-lts
 
-MAINTAINER=	yasu@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open-source (GPL) anti-virus engine (LTS Feature Release)
 WWW=		https://www.clamav.net/
 
