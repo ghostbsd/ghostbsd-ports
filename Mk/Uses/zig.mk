@@ -2,6 +2,9 @@
 #
 # Feature:	zig
 # Usage:	USES=zig
+# Valid ARGS:	(none), XYZ
+#
+# XYZ		Specify alternative Zig compiler version
 
 # Variables, which can be set by the port:
 #
@@ -18,16 +21,22 @@
 .if !defined(_INCLUDE_USES_ZIG_MK)
 _INCLUDE_USES_ZIG_MK=    yes
 
-.  if !empty(zig_ARGS)
-IGNORE=		USES=zig does not accept arguments
-.    endif
+# Check arguments sanity
+.  if !empty(zig_ARGS:N[0-9][0-9][0-9])
+IGNORE=	USES=zig has invalid arguments: ${zig_ARGS:N[0-9][0-9][0-9]}
+.  endif
 
 .sinclude "${MASTERDIR}/Makefile.zig"
 
 ZIG_CMD?=	zig
-ZIG_PORT?=	lang/zig
+ZIG_PORT?=	lang/zig${zig_ARGS}
 ZIG_DEPSDIR=	${WRKDIR}/zig-packages
 ZIG_TMPDEPSDIR=	${WRKDIR}/zig-packages-tmp
+
+# Check alternative Zig version if requested
+.  if ${zig_ARGS} && !exists(${PORTSDIR}/${ZIG_PORT})
+IGNORE?= USES=zig has invalid version number: ${zig_ARGS}
+.  endif
 
 ZIG_CPUTYPE_DEFAULT=	${ARCH:S/amd64/x86_64/}
 ZIG_CPUTYPE?=		${CPUTYPE:U${ZIG_CPUTYPE_DEFAULT}}
@@ -70,7 +79,13 @@ zig-pre-extract:
 .  for z in ${ZIG_TUPLE}
 .    for group url dir in ${z:S/:/ /g:tw}
 	${MAKE} -C ${.CURDIR} do-extract EXTRACT_ONLY=${url:T} WRKDIR=${ZIG_TMPDEPSDIR}
-	${MV} ${ZIG_TMPDEPSDIR}/* ${ZIG_DEPSDIR}/${dir}
+	# In some cases the distfile holds files at the top level of the archive,
+	# s we have to move ${ZIG_TMPDEPSDIR} itself, not its contents.
+	if [ "$$(${FIND} ${ZIG_TMPDEPSDIR} -depth 1 -type f)" ]; then \
+		${MV} ${ZIG_TMPDEPSDIR} ${ZIG_DEPSDIR}/${dir}; \
+	else \
+		${MV} ${ZIG_TMPDEPSDIR}/* ${ZIG_DEPSDIR}/${dir}; \
+	fi
 .    endfor
 .  endfor
 	@${RMDIR} ${ZIG_TMPDEPSDIR}

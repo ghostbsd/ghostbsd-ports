@@ -6,6 +6,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Plasma Desktop
 
 BUILD_DEPENDS=	wayland-protocols>=0:graphics/wayland-protocols \
+		xf86-input-libinput>0:x11-drivers/xf86-input-libinput \
 		libinput>0:x11/libinput
 LIB_DEPENDS=	libcanberra.so:audio/libcanberra \
 		libicuuc.so:devel/icu \
@@ -18,28 +19,6 @@ LIB_DEPENDS=	libcanberra.so:audio/libcanberra \
 		libxkbfile.so:x11/libxkbfile
 RUN_DEPENDS=	noto-emoji>0:x11-fonts/noto-emoji \
 		xdg-user-dir:devel/xdg-user-dirs
-
-FLAVORS=	xorg xlibre
-FLAVOR?=	${FLAVORS:[1]}
-
-.if ${FLAVOR} == xlibre
-PKGNAMEPREFIX=	xlibre-plasma${_KDE_VERSION}-
-BUILD_DEPENDS+=	xlibre-xf86-input-evdev>0:x11-drivers/xlibre-xf86-input-evdev \
-		xlibre-xf86-input-libinput>0:x11-drivers/xlibre-xf86-input-libinput
-RUN_DEPENDS+=	xlibre-xf86-input-evdev>0:x11-drivers/xlibre-xf86-input-evdev \
-		xlibre-xf86-input-libinput>0:x11-drivers/xlibre-xf86-input-libinput
-
-CONFLICTS=	xf86-input-evdev \
-		xf86-input-libinput
-.else
-BUILD_DEPENDS+=	xf86-input-evdev>0:x11-drivers/xf86-input-evdev \
-		xf86-input-libinput>0:x11-drivers/xf86-input-libinput
-RUN_DEPENDS+=	xf86-input-evdev>0:x11-drivers/xf86-input-evdev \
-		xf86-input-libinput>0:x11-drivers/xf86-input-libinput
-
-CONFLICTS=	xlibre-xf86-input-evdev \
-		xlibre-xf86-input-libinput
-.endif
 
 USES=		cmake gettext gl gnome kde:6 pkgconfig python qt:6 tar:xz xorg
 USE_GL=		gl opengl
@@ -57,7 +36,8 @@ USE_KDE=	activities activities-stats attica auth baloo bookmarks \
 USE_QT=		5compat base declarative svg wayland
 USE_XORG=	x11 xcb xcursor xext xfixes xi xrender
 
-OPTIONS_DEFINE=		SDL
+OPTIONS_DEFINE=		SDL X11
+OPTIONS_DEFAULT=	X11
 OPTIONS_GROUP=		IM
 IM_DESC=		Input Method Support
 OPTIONS_GROUP_IM=	IBUS SCIM
@@ -75,5 +55,7 @@ SDL_DESC=		Enable gamecontroller System Settings module
 SDL_USES=		sdl
 SDL_USE=		sdl=sdl2
 SDL_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_SDL2
+
+X11_RUN_DEPENDS=	xf86-input-libinput>0:x11-drivers/xf86-input-libinput
 
 .include <bsd.port.mk>

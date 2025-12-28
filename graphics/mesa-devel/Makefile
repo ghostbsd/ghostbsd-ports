@@ -1,7 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	25.3-branchpoint-2458
-DISTVERSIONSUFFIX=	-gca96f8517cc
-PORTREVISION=	1
+DISTVERSION=	25.3-branchpoint-2836
+DISTVERSIONSUFFIX=	-gb3c983b8ddc
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -22,6 +21,7 @@ ONLY_FOR_ARCHS_REASON=	Limited scope: no old drivers and no software rendering. 
 			See also https://mesamatrix.net/
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyyaml>0:devel/py-pyyaml@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}packaging>0:devel/py-packaging@${PY_FLAVOR} \
 		libglvnd>=1.3.2:graphics/libglvnd \
 		${PYTHON_PKGNAMEPREFIX}mako>0:textproc/py-mako@${PY_FLAVOR}
 LIB_DEPENDS=	libdrm.so:graphics/libdrm \

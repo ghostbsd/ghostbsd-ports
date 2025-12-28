@@ -2240,6 +2240,7 @@
     SUBDIR += p5-Daemon-Control
     SUBDIR += p5-Dancer-Debug
     SUBDIR += p5-Dancer-Logger-Syslog
+    SUBDIR += p5-Dancer2-Plugin-LogReport
     SUBDIR += p5-Danga-Socket
     SUBDIR += p5-Danga-Socket-Callback
     SUBDIR += p5-Data-ACL
@@ -2967,7 +2968,9 @@
     SUBDIR += p5-Log-Message-Simple
     SUBDIR += p5-Log-Minimal
     SUBDIR += p5-Log-Report
+    SUBDIR += p5-Log-Report-Lexicon
     SUBDIR += p5-Log-Report-Optional
+    SUBDIR += p5-Log-Report-Template
     SUBDIR += p5-Log-Simple
     SUBDIR += p5-Log-Trace
     SUBDIR += p5-Log-TraceMessages
@@ -5030,6 +5033,7 @@
     SUBDIR += py-grpc-stubs
     SUBDIR += py-grpcio
     SUBDIR += py-grpcio-gcp
+    SUBDIR += py-grpcio-reflection
     SUBDIR += py-grpcio-status
     SUBDIR += py-grpcio-tools
     SUBDIR += py-gs_api_client
@@ -7268,6 +7272,7 @@
     SUBDIR += rubygem-cucumber
     SUBDIR += rubygem-cucumber-ci-environment
     SUBDIR += rubygem-cucumber-ci-environment10
+    SUBDIR += rubygem-cucumber-ci-environment11
     SUBDIR += rubygem-cucumber-core
     SUBDIR += rubygem-cucumber-cucumber-expressions
     SUBDIR += rubygem-cucumber-cucumber-expressions17
