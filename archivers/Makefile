@@ -161,10 +161,6 @@
     SUBDIR += php-lz4
     SUBDIR += php-snappy
     SUBDIR += php-zstd
-    SUBDIR += php81-bz2
-    SUBDIR += php81-phar
-    SUBDIR += php81-zip
-    SUBDIR += php81-zlib
     SUBDIR += php82-bz2
     SUBDIR += php82-phar
     SUBDIR += php82-zip
@@ -192,7 +188,6 @@
     SUBDIR += py-blosc
     SUBDIR += py-blosc2
     SUBDIR += py-borgbackup
-    SUBDIR += py-borgbackup12
     SUBDIR += py-brotli
     SUBDIR += py-brotlicffi
     SUBDIR += py-brotlipy

@@ -1,5 +1,5 @@
 PORTNAME=	mac
-PORTVERSION=	11.90
+PORTVERSION=	11.91
 CATEGORIES=	audio
 MASTER_SITES=	https://www.monkeysaudio.com/files/
 DISTNAME=	${PORTNAME:tu}_${PORTVERSION:S|.||}_SDK
@@ -15,6 +15,7 @@ USES=		cmake dos2unix zip
 
 DOS2UNIX_FILES=	Shared/*.h \
 		Source/Console/*.cpp \
+		Source/MACLib/Prepare.cpp \
 		Source/Shared/*.cpp \
 		Source/Shared/*.h
 

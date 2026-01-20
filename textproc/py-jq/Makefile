@@ -1,5 +1,5 @@
 PORTNAME=	jq
-PORTVERSION=	1.10.2
+PORTVERSION=	1.11.0
 PORTREVISION=	0
 CATEGORIES=	textproc python
 #MASTER_SITES=	PYPI LOCAL/mandree:mandree
@@ -28,7 +28,7 @@ MAKE_ENV+=	JQPY_USE_SYSTEM_LIBS=1
 
 USES=		localbase python
 USE_GITHUB=	yes
-USE_PYTHON=	autoplist cython3 distutils
+USE_PYTHON=	autoplist cython distutils
 
 GH_ACCOUNT=	mwilliamson
 GH_PROJECT=	jq.py

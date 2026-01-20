@@ -133,7 +133,7 @@ PLIST_SUB+=	SAPI_INC=""
 PLIST_SUB+=	SAPI_INC="@comment "
 .  endif
 
-.  if (${OSVERSION} >= 1500000 && ${SSL_DEFAULT} == base) || (${SSL_DEFAULT:Mopenssl*} && ${OPENSSL_SHLIBVER} >= 15) && empty(PORT_OPTIONS:MZTS)
+.  if ((${OSVERSION} >= 1500059 && ${SSL_DEFAULT} == base) || (${SSL_DEFAULT:Mopenssl*} && ${OPENSSL_SHLIBVER} >= 15)) && empty(PORT_OPTIONS:MZTS)
 CONFIGURE_ARGS+=	--with-openssl-argon2
 .  else
 LIB_DEPENDS+=		libargon2.so:security/libargon2
@@ -202,7 +202,7 @@ COMMENT=	The ${PHP_MODNAME} shared extension for php
 USES+=		php:ext,noflavors
 PHP_MODNAME=	${PKGNAMESUFFIX:S/-//}
 PHP_VER=	84
-IGNORE_WITH_PHP=	81 82 83 85
+IGNORE_WITH_PHP=	82 83 85
 
 EXTSUBDIR=	${DISTNAME}/ext/${PHP_MODNAME}
 WRKSRC=		${WRKDIR}/${EXTSUBDIR}

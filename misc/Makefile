@@ -322,8 +322,6 @@
     SUBDIR += opencyc
     SUBDIR += openhab
     SUBDIR += openhab-addons
-    SUBDIR += openhab2
-    SUBDIR += openhab2-addons
     SUBDIR += openhantek
     SUBDIR += openhmd
     SUBDIR += openmvg
@@ -413,7 +411,6 @@
     SUBDIR += pecl-timezonedb
     SUBDIR += perkeep
     SUBDIR += pfm
-    SUBDIR += php81-calendar
     SUBDIR += php82-calendar
     SUBDIR += php83-calendar
     SUBDIR += php84-calendar
@@ -458,6 +455,7 @@
     SUBDIR += py-eemeter
     SUBDIR += py-einops
     SUBDIR += py-emoji
+    SUBDIR += py-equinox
     SUBDIR += py-ezc3d
     SUBDIR += py-facenet-pytorch
     SUBDIR += py-fast-histogram
@@ -492,7 +490,9 @@
     SUBDIR += py-langchain-openai
     SUBDIR += py-langchain-tests
     SUBDIR += py-langchain-text-splitters
+    SUBDIR += py-langgraph
     SUBDIR += py-langgraph-checkpoint
+    SUBDIR += py-langgraph-prebuilt
     SUBDIR += py-langgraph-sdk
     SUBDIR += py-langsmith
     SUBDIR += py-laspy
@@ -541,6 +541,7 @@
     SUBDIR += py-pkbar
     SUBDIR += py-placekey
     SUBDIR += py-polars
+    SUBDIR += py-polars-runtime
     SUBDIR += py-posthog
     SUBDIR += py-powerline-status
     SUBDIR += py-progressbar

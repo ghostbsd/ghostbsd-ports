@@ -1,3 +1,33 @@
+  <vuln vid="963f4e9d-e4d5-11f0-984f-b42e991fc52e">
+    <topic>Forgejo -- Symbolic Link (Symlink) Following</topic>
+    <affects>
+    <package>
+	<name>forgejo</name>
+	<range><lt>13.0.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/13.0.2.md reports:</p>
+	<blockquote cite="https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/13.0.2.md">
+	  <p>Forgejo before 13.0.2 allows attackers to write to
+	  unintended files, and possibly obtain server shell access,
+	  because of mishandling of out-of-repository symlink
+	  destinations for template repositories.  This is also fixed
+	  for 11 LTS in 11.0.7 and later.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-68937</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2025-68937</url>
+    </references>
+    <dates>
+      <discovery>2025-12-25</discovery>
+      <entry>2025-12-29</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="bf854a37-e180-11f0-ac0c-5404a68ad561">
     <topic>fluidsynth -- Use after free when using DLS files</topic>
     <affects>
@@ -1075,7 +1105,7 @@
       </package>
       <package>
 	<name>python312</name>
-	<range><ge>0</ge></range>
+	<range><ge>3.12.0</ge><lt>3.12.12_3</lt></range>
       </package>
       <package>
 	<name>python313</name>
@@ -1111,6 +1141,7 @@
     <dates>
       <discovery>2024-05-23</discovery>
       <entry>2025-12-08</entry>
+      <modified>2026-01-03</modified>
     </dates>
   </vuln>
 
@@ -1840,7 +1871,7 @@ This issue has been patched in version 2.25.2.</p>
        <name>py313-pdfminer.six</name>
        <name>py313t-pdfminer.six</name>
        <name>py314-pdfminer.six</name>
-       <range><lt>20251107</lt></range>
+       <range><lt>20251230</lt></range>
      </package>
     </affects>
     <description>
@@ -1858,6 +1889,7 @@ This issue has been patched in version 2.25.2.</p>
     <dates>
       <discovery>2025-11-07</discovery>
       <entry>2025-11-17</entry>
+      <modified>2025-12-30</modified>
     </dates>
   </vuln>
 
@@ -7852,11 +7884,11 @@ This issue has been patched in version 2.25.2.</p>
   </vuln>
 
   <vuln vid="b0a3466f-5efc-11f0-ae84-99047d0a6bcc">
-    <topic>libxslt -- unmaintained, with multiple unfixed vulnerabilities</topic>
+    <topic>libxslt -- multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>libxslt</name>
-	<range><lt>1.1.43_2</lt></range> <!-- adjust should libxslt ever be fixed -->
+	<range><lt>1.1.44</lt></range> <!-- may not fix all issues -->
       </package>
       <package>
 	<name>linux-c7-libxslt</name>
@@ -7893,11 +7925,18 @@ This issue has been patched in version 2.25.2.</p>
 	  <a href="https://gitlab.gnome.org/Teams/Releng/security/-/wikis/2025#libxml2-and-libxslt">
 	    https://gitlab.gnome.org/Teams/Releng/security/-/wikis/2025#libxml2-and-libxslt</a>
 	</p>
-	</body>
+	<p>Iván Chavero reports vs. v1.1.44:</p>
+	<blockquote cite="https://gitlab.gnome.org/GNOME/libxslt/-/blob/v1.1.45/NEWS?ref_type=tags#L23">
+	  <p>[CVE-2025-11731] Fix: End function node ancestor search at document</p>
+	</blockquote>
+      </body>
     </description>
     <references>
-      <cvename>CVE-2025-7424</cvename>
-      <cvename>CVE-2025-7425</cvename>
+      <cvename>CVE-2025-7424</cvename> <!-- fixed in libxslt 1.1.44 -->
+      <cvename>CVE-2025-7425</cvename> <!-- fixed in libxml2 2.15.0 -->
+      <cvename>CVE-2025-9714</cvename> <!-- false positive, .../issues/148 -->
+      <cvename>CVE-2025-11731</cvename> <!-- added 2026-01-02 -->
+      <url>https://gitlab.gnome.org/GNOME/libxslt/-/blob/v1.1.45/NEWS?ref_type=tags#L1</url>
       <url>https://gitlab.gnome.org/Teams/Releng/security/-/wikis/2025#libxml2-and-libxslt</url>
       <url>https://gitlab.gnome.org/GNOME/libxslt/-/issues/139</url>
       <url>https://gitlab.gnome.org/GNOME/libxslt/-/issues/140</url>
@@ -7908,6 +7947,7 @@ This issue has been patched in version 2.25.2.</p>
     <dates>
       <discovery>2025-04-10</discovery>
       <entry>2025-07-12</entry>
+      <modified>2026-01-02</modified>
     </dates>
   </vuln>
 

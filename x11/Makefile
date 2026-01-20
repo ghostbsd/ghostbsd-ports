@@ -79,7 +79,6 @@
     SUBDIR += elementary-terminal
     SUBDIR += emprint
     SUBDIR += erun
-    SUBDIR += eterm
     SUBDIR += evilvte
     SUBDIR += evtest
     SUBDIR += eww
@@ -109,6 +108,7 @@
     SUBDIR += ghostbsd-slim-theme
     SUBDIR += ghostbsd-xfce
     SUBDIR += ghostbsd-xfce-settings
+    SUBDIR += ghostty
     SUBDIR += glcapsviewer
     SUBDIR += gmrun
     SUBDIR += gnome
@@ -143,13 +143,13 @@
     SUBDIR += habak
     SUBDIR += hamclock
     SUBDIR += hhpc
+    SUBDIR += histui
     SUBDIR += hs-xmobar
     SUBDIR += hsetroot
     SUBDIR += hybrid-bar
     SUBDIR += hyprcursor
     SUBDIR += hypridle
     SUBDIR += hyprland-guiutils
-    SUBDIR += hyprland-qtutils
     SUBDIR += hyprlauncher
     SUBDIR += hyprlock
     SUBDIR += hyprls
@@ -390,6 +390,7 @@
     SUBDIR += qt5-qev
     SUBDIR += qt5-x11extras
     SUBDIR += qterminal
+    SUBDIR += quickshell
     SUBDIR += remontoire
     SUBDIR += rendercheck
     SUBDIR += rgb
@@ -705,7 +706,6 @@
     SUBDIR += xwatchwin
     SUBDIR += xwayland-run
     SUBDIR += xwayland-satellite
-    SUBDIR += xwaylandvideobridge
     SUBDIR += xwd
     SUBDIR += xwininfo
     SUBDIR += xwinwrap

@@ -71,8 +71,7 @@
     SUBDIR += get_iplayer
     SUBDIR += gmmlib
     SUBDIR += gmp-api
-    SUBDIR += gpac-libgpac
-    SUBDIR += gpac-mp4box
+    SUBDIR += gpac
     SUBDIR += gpodder
     SUBDIR += gst123
     SUBDIR += gstreamer1
@@ -373,6 +372,7 @@
     SUBDIR += tivodecode
     SUBDIR += totem
     SUBDIR += totem-pl-parser
+    SUBDIR += tsduck
     SUBDIR += tvheadend
     SUBDIR += ustreamer
     SUBDIR += uvg266

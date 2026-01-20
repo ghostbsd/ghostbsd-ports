@@ -42,7 +42,7 @@
     SUBDIR += crystal
     SUBDIR += csharp-mode.el
     SUBDIR += cython
-    SUBDIR += cython3
+    SUBDIR += cython0
     SUBDIR += dhall
     SUBDIR += dlang-tools
     SUBDIR += dotnet
@@ -106,6 +106,7 @@
     SUBDIR += ghc92
     SUBDIR += ghc94
     SUBDIR += ghc96
+    SUBDIR += ghc98
     SUBDIR += gir-to-d
     SUBDIR += gjs
     SUBDIR += gleam
@@ -124,10 +125,6 @@
     SUBDIR += gnustep-base
     SUBDIR += go
     SUBDIR += go-devel
-    SUBDIR += go120
-    SUBDIR += go121
-    SUBDIR += go122
-    SUBDIR += go123
     SUBDIR += go124
     SUBDIR += go125
     SUBDIR += gomacro
@@ -168,6 +165,7 @@
     SUBDIR += kefir
     SUBDIR += kf5-kross
     SUBDIR += kotlin
+    SUBDIR += kotlin22
     SUBDIR += kturtle
     SUBDIR += lafontaine
     SUBDIR += lci
@@ -273,8 +271,6 @@
     SUBDIR += pfe
     SUBDIR += pharo
     SUBDIR += php-mode.el
-    SUBDIR += php81
-    SUBDIR += php81-extensions
     SUBDIR += php82
     SUBDIR += php82-extensions
     SUBDIR += php83
@@ -367,11 +363,9 @@
     SUBDIR += smlnj
     SUBDIR += snobol4
     SUBDIR += solidity
-    SUBDIR += spidermonkey102
     SUBDIR += spidermonkey115
     SUBDIR += spidermonkey128
     SUBDIR += spidermonkey140
-    SUBDIR += spidermonkey78
     SUBDIR += squeak
     SUBDIR += squirrel
     SUBDIR += starlark-rust
