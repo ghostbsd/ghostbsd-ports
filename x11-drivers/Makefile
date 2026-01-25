@@ -44,6 +44,7 @@
     SUBDIR += xlibre-xf86-video-nv
     SUBDIR += xlibre-xf86-video-qxl
     SUBDIR += xlibre-xf86-video-scfb
+    SUBDIR += xlibre-xf86-video-vbox
     SUBDIR += xlibre-xf86-video-vesa
     SUBDIR += xlibre-xf86-video-vmware
     SUBDIR += xorg-drivers
