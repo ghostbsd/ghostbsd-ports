@@ -1,0 +1,2 @@
+This package contains the XLibre xf86-video-vbox driver for VirtualBox
+guest systems, providing accelerated graphics support for X11.
