@@ -15,10 +15,6 @@ ONLY_FOR_ARCHS_REASON=	VirtualBox graphics is only supported on x86-compatible a
 USES=		pathfix xlibre-cat:driver
 USE_XORG=	pciaccess
 
-CONFLICTS_INSTALL=	virtualbox-ose-additions-72 \
-			virtualbox-ose-additions-71 \
-			virtualbox-ose-additions-70 \
-			virtualbox-ose-additions-legacy \
-			virtualbox-ose-additions
+CONFLICTS_INSTALL=	virtualbox-ose-additions*
 
 .include <bsd.port.mk>
