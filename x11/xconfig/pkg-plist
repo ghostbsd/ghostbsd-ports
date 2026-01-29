@@ -1,4 +1,5 @@
 bin/xconfig
+etc/rc.d/xconfig
 etc/X11/cardDetect/XF86Config.amdgpu
 etc/X11/cardDetect/XF86Config.bhyve
 etc/X11/cardDetect/XF86Config.dual
