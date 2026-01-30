@@ -15,6 +15,8 @@
 /System/Library/Documentation/man/man3/dispatch_semaphore_create.3
 /System/Library/Documentation/man/man3/dispatch_source_create.3
 /System/Library/Documentation/man/man3/dispatch_time.3
+/System/Library/Headers/Block.h
+/System/Library/Headers/Block_private.h
 /System/Library/Headers/dispatch/base.h
 /System/Library/Headers/dispatch/benchmark.h
 /System/Library/Headers/dispatch/block.h
@@ -43,6 +45,7 @@
 /System/Library/Headers/os/generic_unix_base.h
 /System/Library/Headers/os/generic_win_base.h
 /System/Library/Headers/os/object.h
+/System/Library/Libraries/libBlocksRuntime.so
 /System/Library/Libraries/libdispatch.so
 /System/Library/Libraries/libdispatch.so.1
 /System/Library/Libraries/libdispatch.so.1.3

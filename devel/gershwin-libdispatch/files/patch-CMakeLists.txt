@@ -8,14 +8,10 @@
 
  # NOTE(abdulras) this is the CMake supported way to control whether we generate
  # shared or static libraries.  This impacts the behaviour of `add_library` in
-@@ -191,6 +192,10 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL Android)
+@@ -191,6 +192,6 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL Android)
 
  if(NOT CMAKE_SYSTEM_NAME STREQUAL Android)
    find_package(LibRT)
-+endif()
-+
-+if(CMAKE_SYSTEM_NAME STREQUAL FreeBSD)
-+  find_package(BlocksRuntime)
  endif()
 
  check_function_exists(_pthread_workqueue_init HAVE__PTHREAD_WORKQUEUE_INIT)
