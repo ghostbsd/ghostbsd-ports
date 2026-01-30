@@ -1,6 +1,6 @@
 PORTNAME=	mise
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2026.1.4
+DISTVERSION=	2026.1.8
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -63,12 +63,12 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		autocfg-1.5.0 \
 		aws-config-1.8.12 \
 		aws-credential-types-1.2.11 \
-		aws-lc-fips-sys-0.13.10 \
-		aws-lc-rs-1.15.2 \
-		aws-lc-sys-0.35.0 \
-		aws-runtime-1.5.17 \
+		aws-lc-fips-sys-0.13.11 \
+		aws-lc-rs-1.15.4 \
+		aws-lc-sys-0.37.0 \
+		aws-runtime-1.5.18 \
 		aws-sdk-s3-1.119.0 \
-		aws-sdk-sts-1.95.0 \
+		aws-sdk-sts-1.96.0 \
 		aws-sigv4-1.3.7 \
 		aws-smithy-async-1.2.7 \
 		aws-smithy-checksums-0.63.12 \
@@ -76,14 +76,15 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		aws-smithy-http-0.62.6 \
 		aws-smithy-http-client-1.1.5 \
 		aws-smithy-json-0.61.9 \
-		aws-smithy-observability-0.1.5 \
+		aws-smithy-observability-0.2.0 \
 		aws-smithy-query-0.60.9 \
-		aws-smithy-runtime-1.9.5 \
-		aws-smithy-runtime-api-1.9.3 \
-		aws-smithy-types-1.3.5 \
+		aws-smithy-runtime-1.9.8 \
+		aws-smithy-runtime-api-1.10.0 \
+		aws-smithy-types-1.3.6 \
 		aws-smithy-xml-0.60.13 \
 		aws-types-1.3.11 \
 		backtrace-0.3.76 \
+		backtrace-ext-0.2.1 \
 		base16ct-0.2.0 \
 		base64-0.13.1 \
 		base64-0.21.7 \
@@ -117,14 +118,14 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		calm_io-0.1.1 \
 		calmio_filters-0.1.0 \
 		cbc-0.1.2 \
-		cc-1.2.52 \
+		cc-1.2.54 \
 		cesu8-1.1.0 \
 		cexpr-0.6.0 \
 		cfg-if-1.0.4 \
 		cfg_aliases-0.2.1 \
 		chacha20-0.9.1 \
 		chacha20poly1305-0.10.1 \
-		chrono-0.4.42 \
+		chrono-0.4.43 \
 		chrono-tz-0.9.0 \
 		chrono-tz-build-0.3.0 \
 		ci_info-0.14.15 \
@@ -134,7 +135,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		clap-sort-1.0.3 \
 		clap_builder-4.5.54 \
 		clap_derive-4.5.49 \
-		clap_lex-0.7.6 \
+		clap_lex-0.7.7 \
 		clru-0.6.2 \
 		cmake-0.1.57 \
 		color-eyre-0.6.5 \
@@ -142,9 +143,9 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		color-print-proc-macro-0.3.7 \
 		color-spantrace-0.3.0 \
 		colorchoice-1.0.4 \
-		colored-3.0.0 \
+		colored-3.1.1 \
 		combine-4.6.7 \
-		comfy-table-7.2.1 \
+		comfy-table-7.2.2 \
 		compression-codecs-0.4.36 \
 		compression-core-0.4.31 \
 		confique-0.3.1 \
@@ -237,19 +238,19 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		errno-0.3.14 \
 		errno-dragonfly-0.1.2 \
 		exec-0.3.1 \
-		expr-lang-0.3.2 \
+		expr-lang-1.1.0 \
 		eyre-0.6.12 \
 		faster-hex-0.10.0 \
 		fastrand-2.3.0 \
 		ff-0.13.1 \
 		fiat-crypto-0.2.9 \
-		filetime-0.2.26 \
+		filetime-0.2.27 \
 		filetime_creation-0.2.0 \
 		find-crate-0.6.3 \
-		find-msvc-tools-0.1.7 \
+		find-msvc-tools-0.1.8 \
 		fixedbitset-0.5.7 \
 		flagset-0.4.7 \
-		flate2-1.1.5 \
+		flate2-1.1.8 \
 		fluent-0.16.1 \
 		fluent-bundle-0.15.3 \
 		fluent-langneg-0.13.1 \
@@ -280,60 +281,61 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		getset-0.1.6 \
 		ghash-0.5.1 \
 		gimli-0.32.3 \
-		gix-0.77.0 \
-		gix-actor-0.37.1 \
-		gix-archive-0.26.0 \
-		gix-attributes-0.29.0 \
+		gix-0.78.0 \
+		gix-actor-0.38.0 \
+		gix-archive-0.27.0 \
+		gix-attributes-0.30.0 \
 		gix-bitmap-0.2.15 \
-		gix-blame-0.7.0 \
-		gix-chunk-0.4.12 \
-		gix-command-0.6.5 \
-		gix-commitgraph-0.31.0 \
-		gix-config-0.50.0 \
-		gix-config-value-0.16.0 \
-		gix-credentials-0.34.1 \
-		gix-date-0.12.1 \
-		gix-diff-0.57.1 \
-		gix-dir-0.19.0 \
-		gix-discover-0.45.0 \
-		gix-features-0.45.2 \
-		gix-filter-0.24.1 \
-		gix-fs-0.18.2 \
-		gix-glob-0.23.0 \
-		gix-hash-0.21.2 \
-		gix-hashtable-0.11.0 \
-		gix-ignore-0.18.0 \
-		gix-index-0.45.1 \
-		gix-lock-20.0.1 \
-		gix-mailmap-0.29.0 \
-		gix-negotiate-0.25.0 \
-		gix-object-0.54.1 \
-		gix-odb-0.74.0 \
-		gix-pack-0.64.1 \
-		gix-packetline-0.20.0 \
-		gix-path-0.10.22 \
-		gix-pathspec-0.14.0 \
-		gix-prompt-0.12.0 \
-		gix-protocol-0.55.0 \
+		gix-blame-0.8.0 \
+		gix-chunk-0.5.0 \
+		gix-command-0.7.0 \
+		gix-commitgraph-0.32.0 \
+		gix-config-0.51.0 \
+		gix-config-value-0.17.0 \
+		gix-credentials-0.35.0 \
+		gix-date-0.13.0 \
+		gix-diff-0.58.0 \
+		gix-dir-0.20.0 \
+		gix-discover-0.46.0 \
+		gix-error-0.0.0 \
+		gix-features-0.46.0 \
+		gix-filter-0.25.0 \
+		gix-fs-0.19.0 \
+		gix-glob-0.24.0 \
+		gix-hash-0.22.0 \
+		gix-hashtable-0.12.0 \
+		gix-ignore-0.19.0 \
+		gix-index-0.46.0 \
+		gix-lock-21.0.0 \
+		gix-mailmap-0.30.0 \
+		gix-negotiate-0.26.0 \
+		gix-object-0.55.0 \
+		gix-odb-0.75.0 \
+		gix-pack-0.65.0 \
+		gix-packetline-0.21.0 \
+		gix-path-0.11.0 \
+		gix-pathspec-0.15.0 \
+		gix-prompt-0.13.0 \
+		gix-protocol-0.56.0 \
 		gix-quote-0.6.1 \
-		gix-ref-0.57.0 \
-		gix-refspec-0.35.0 \
-		gix-revision-0.39.0 \
-		gix-revwalk-0.25.0 \
-		gix-sec-0.12.2 \
-		gix-shallow-0.7.0 \
-		gix-status-0.24.0 \
-		gix-submodule-0.24.0 \
-		gix-tempfile-20.0.1 \
+		gix-ref-0.58.0 \
+		gix-refspec-0.36.0 \
+		gix-revision-0.40.0 \
+		gix-revwalk-0.26.0 \
+		gix-sec-0.13.0 \
+		gix-shallow-0.8.0 \
+		gix-status-0.25.0 \
+		gix-submodule-0.25.0 \
+		gix-tempfile-21.0.0 \
 		gix-trace-0.1.17 \
-		gix-transport-0.52.1 \
-		gix-traverse-0.51.1 \
-		gix-url-0.34.0 \
+		gix-transport-0.53.0 \
+		gix-traverse-0.52.0 \
+		gix-url-0.35.0 \
 		gix-utils-0.3.1 \
-		gix-validate-0.10.1 \
-		gix-worktree-0.46.0 \
-		gix-worktree-state-0.24.0 \
-		gix-worktree-stream-0.26.0 \
+		gix-validate-0.11.0 \
+		gix-worktree-0.47.0 \
+		gix-worktree-state-0.25.0 \
+		gix-worktree-stream-0.27.0 \
 		glob-0.3.3 \
 		globset-0.4.18 \
 		globwalk-0.9.1 \
@@ -360,7 +362,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		http-body-util-0.1.3 \
 		httparse-1.10.1 \
 		httpdate-1.0.3 \
-		human_format-1.2.0 \
+		human_format-1.2.1 \
 		humansize-2.1.3 \
 		hyper-0.14.32 \
 		hyper-1.8.1 \
@@ -395,13 +397,14 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		indicatif-0.18.3 \
 		indoc-2.0.7 \
 		inout-0.1.4 \
-		insta-1.46.0 \
+		insta-1.46.1 \
 		intl-memoizer-0.5.3 \
 		intl_pluralrules-7.0.2 \
 		io-close-0.3.7 \
 		io_tee-0.1.1 \
 		ipnet-2.11.0 \
 		iri-string-0.7.10 \
+		is_ci-1.2.0 \
 		is_terminal_polyfill-1.70.2 \
 		itertools-0.10.5 \
 		itertools-0.13.0 \
@@ -414,10 +417,10 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		jni-0.21.1 \
 		jni-sys-0.3.0 \
 		jobserver-0.1.34 \
-		js-sys-0.3.83 \
-		json-number-0.4.9 \
+		js-sys-0.3.85 \
+		json-number-0.4.10 \
 		json-syntax-0.12.5 \
-		junction-1.3.0 \
+		junction-1.4.1 \
 		jwt-0.16.0 \
 		kdl-6.5.0 \
 		kstring-2.0.2 \
@@ -434,9 +437,8 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		libbz2-rs-sys-0.2.2 \
 		libc-0.2.180 \
 		libloading-0.8.9 \
-		libm-0.2.15 \
+		libm-0.2.16 \
 		libredox-0.1.12 \
-		libz-rs-sys-0.5.5 \
 		linux-raw-sys-0.11.0 \
 		litemap-0.8.1 \
 		litrs-1.0.0 \
@@ -450,11 +452,11 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		lru-0.12.5 \
 		lru-slab-0.1.2 \
 		lua-src-548.1.2 \
-		luajit-src-210.6.5+7152e15 \
+		luajit-src-210.6.6+707c12b \
 		lzma-rs-0.3.0 \
 		lzma-rust-0.1.7 \
 		lzma-rust2-0.13.0 \
-		lzma-rust2-0.15.6 \
+		lzma-rust2-0.15.7 \
 		lzma-sys-0.1.20 \
 		matchers-0.2.0 \
 		maybe-async-0.2.10 \
@@ -487,7 +489,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		num-bigint-0.4.6 \
 		num-bigint-dig-0.8.6 \
 		num-complex-0.4.6 \
-		num-conv-0.1.0 \
+		num-conv-0.2.0 \
 		num-integer-0.1.46 \
 		num-iter-0.1.45 \
 		num-rational-0.4.2 \
@@ -510,7 +512,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		openssl-0.10.75 \
 		openssl-macros-0.1.1 \
 		openssl-probe-0.1.6 \
-		openssl-probe-0.2.0 \
+		openssl-probe-0.2.1 \
 		openssl-sys-0.9.111 \
 		option-ext-0.2.0 \
 		ordered-float-2.10.1 \
@@ -557,7 +559,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		portable-atomic-util-0.2.4 \
 		potential_utf-0.1.4 \
 		powerfmt-0.2.0 \
-		ppmd-rust-1.3.0 \
+		ppmd-rust-1.4.0 \
 		ppv-lite86-0.2.21 \
 		pretty_assertions-1.4.1 \
 		prettyplease-0.2.37 \
@@ -566,8 +568,8 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		proc-macro-error-attr-1.0.4 \
 		proc-macro-error-attr2-2.0.0 \
 		proc-macro-error2-2.0.1 \
-		proc-macro2-1.0.105 \
-		prodash-30.0.1 \
+		proc-macro2-1.0.106 \
+		prodash-31.0.0 \
 		prost-0.13.5 \
 		prost-build-0.13.5 \
 		prost-derive-0.13.5 \
@@ -581,14 +583,14 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		quinn-0.11.9 \
 		quinn-proto-0.11.13 \
 		quinn-udp-0.5.14 \
-		quote-1.0.43 \
+		quote-1.0.44 \
 		r-efi-5.3.0 \
 		rand-0.8.5 \
 		rand-0.9.2 \
 		rand_chacha-0.3.1 \
 		rand_chacha-0.9.0 \
 		rand_core-0.6.4 \
-		rand_core-0.9.3 \
+		rand_core-0.9.5 \
 		redox_syscall-0.5.18 \
 		redox_syscall-0.7.0 \
 		redox_users-0.5.2 \
@@ -611,10 +613,10 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		rops-0.1.6 \
 		rowan-0.15.17 \
 		rsa-0.9.10 \
-		rust-embed-8.9.0 \
-		rust-embed-impl-8.9.0 \
-		rust-embed-utils-8.9.0 \
-		rustc-demangle-0.1.26 \
+		rust-embed-8.11.0 \
+		rust-embed-impl-8.11.0 \
+		rust-embed-utils-8.11.0 \
+		rustc-demangle-0.1.27 \
 		rustc-hash-1.1.0 \
 		rustc-hash-2.1.1 \
 		rustc_version-0.4.1 \
@@ -623,11 +625,11 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		rustls-0.21.12 \
 		rustls-0.23.36 \
 		rustls-native-certs-0.8.3 \
-		rustls-pki-types-1.13.2 \
+		rustls-pki-types-1.14.0 \
 		rustls-platform-verifier-0.6.2 \
 		rustls-platform-verifier-android-0.1.1 \
 		rustls-webpki-0.101.7 \
-		rustls-webpki-0.103.8 \
+		rustls-webpki-0.103.9 \
 		rustversion-1.0.22 \
 		ryu-1.0.22 \
 		ryu-js-0.2.2 \
@@ -684,7 +686,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		shlex-1.3.0 \
 		sigchld-0.2.4 \
 		signal-hook-0.3.18 \
-		signal-hook-0.4.1 \
+		signal-hook-0.4.3 \
 		signal-hook-registry-1.4.8 \
 		signature-2.2.0 \
 		sigstore-0.12.1 \
@@ -701,7 +703,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		snafu-0.8.9 \
 		snafu-derive-0.8.9 \
 		socket2-0.5.10 \
-		socket2-0.6.1 \
+		socket2-0.6.2 \
 		spin-0.9.8 \
 		spki-0.7.3 \
 		stable_deref_trait-1.2.1 \
@@ -710,6 +712,9 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		strum-0.27.2 \
 		strum_macros-0.27.2 \
 		subtle-2.6.1 \
+		supports-color-3.0.2 \
+		supports-hyperlinks-3.2.0 \
+		supports-unicode-3.0.0 \
 		syn-1.0.109 \
 		syn-2.0.114 \
 		sync_wrapper-1.0.2 \
@@ -729,14 +734,15 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		test-log-macros-0.2.19 \
 		testing_table-0.3.0 \
 		text-size-1.1.1 \
+		textwrap-0.16.2 \
 		thiserror-1.0.69 \
-		thiserror-2.0.17 \
+		thiserror-2.0.18 \
 		thiserror-impl-1.0.69 \
-		thiserror-impl-2.0.17 \
+		thiserror-impl-2.0.18 \
 		thread_local-1.1.9 \
-		time-0.3.44 \
-		time-core-0.1.6 \
-		time-macros-0.2.24 \
+		time-0.3.46 \
+		time-core-0.1.8 \
+		time-macros-0.2.26 \
 		tinystr-0.8.2 \
 		tinyvec-1.10.0 \
 		tinyvec_macros-0.1.1 \
@@ -755,7 +761,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		toml_edit-0.22.27 \
 		toml_write-0.1.2 \
 		tough-0.21.0 \
-		tower-0.5.2 \
+		tower-0.5.3 \
 		tower-http-0.6.8 \
 		tower-layer-0.3.3 \
 		tower-service-0.3.3 \
@@ -778,6 +784,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		unicase-2.9.0 \
 		unicode-bom-2.0.3 \
 		unicode-ident-1.0.22 \
+		unicode-linebreak-0.1.5 \
 		unicode-normalization-0.1.25 \
 		unicode-segmentation-1.12.0 \
 		unicode-width-0.1.14 \
@@ -790,11 +797,11 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		untrusted-0.9.0 \
 		url-2.5.8 \
 		urlencoding-2.1.3 \
-		usage-lib-2.11.0 \
+		usage-lib-2.15.0 \
 		utf8-decode-1.0.1 \
 		utf8_iter-1.0.4 \
 		utf8parse-0.2.2 \
-		uuid-1.19.0 \
+		uuid-1.20.0 \
 		valuable-0.1.1 \
 		vcpkg-0.2.15 \
 		version_check-0.9.5 \
@@ -805,14 +812,14 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		walkdir-2.5.0 \
 		want-0.3.1 \
 		wasi-0.11.1+wasi-snapshot-preview1 \
-		wasip2-1.0.1+wasi-0.2.4 \
-		wasm-bindgen-0.2.106 \
-		wasm-bindgen-futures-0.4.56 \
-		wasm-bindgen-macro-0.2.106 \
-		wasm-bindgen-macro-support-0.2.106 \
-		wasm-bindgen-shared-0.2.106 \
+		wasip2-1.0.2+wasi-0.2.9 \
+		wasm-bindgen-0.2.108 \
+		wasm-bindgen-futures-0.4.58 \
+		wasm-bindgen-macro-0.2.108 \
+		wasm-bindgen-macro-support-0.2.108 \
+		wasm-bindgen-shared-0.2.108 \
 		wasm-streams-0.4.2 \
-		web-sys-0.3.83 \
+		web-sys-0.3.85 \
 		web-time-1.1.0 \
 		webbrowser-1.0.6 \
 		webpki-root-certs-1.0.5 \
@@ -884,7 +891,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		winnow-0.7.14 \
 		winsafe-0.0.19 \
 		wiremock-0.6.5 \
-		wit-bindgen-0.46.0 \
+		wit-bindgen-0.51.0 \
 		writeable-0.6.2 \
 		x25519-dalek-2.0.1 \
 		x509-cert-0.2.5 \
@@ -896,8 +903,8 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		yansi-1.0.1 \
 		yoke-0.8.1 \
 		yoke-derive-0.8.1 \
-		zerocopy-0.8.33 \
-		zerocopy-derive-0.8.33 \
+		zerocopy-0.8.34 \
+		zerocopy-derive-0.8.34 \
 		zerofrom-0.1.6 \
 		zerofrom-derive-0.1.6 \
 		zeroize-1.8.2 \
@@ -910,7 +917,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		zip-6.0.0 \
 		zipsign-api-0.1.5 \
 		zlib-rs-0.5.5 \
-		zmij-1.0.13 \
+		zmij-1.0.17 \
 		zopfli-0.8.3 \
 		zstd-0.13.3 \
 		zstd-safe-7.2.4 \

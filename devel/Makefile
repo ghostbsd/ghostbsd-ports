@@ -733,6 +733,7 @@
     SUBDIR += freebsd-gcc12
     SUBDIR += freebsd-gcc13
     SUBDIR += freebsd-gcc14
+    SUBDIR += freebsd-gcc15
     SUBDIR += freebsd-git-devtools
     SUBDIR += freebsd-nvme-shim
     SUBDIR += freebsd-sysroot
@@ -1894,6 +1895,7 @@
     SUBDIR += p5-Alien-Base-ModuleBuild
     SUBDIR += p5-Alien-Build
     SUBDIR += p5-Alien-LibGumbo
+    SUBDIR += p5-Alien-Role-Dino
     SUBDIR += p5-Alien-SDL
     SUBDIR += p5-Alien-cmake3
     SUBDIR += p5-Alzabo
@@ -5210,6 +5212,7 @@
     SUBDIR += py-klepto
     SUBDIR += py-knack
     SUBDIR += py-l18n
+    SUBDIR += py-lap
     SUBDIR += py-lark
     SUBDIR += py-launchpadlib
     SUBDIR += py-lazr.config
@@ -7399,6 +7402,7 @@
     SUBDIR += rubygem-fcntl
     SUBDIR += rubygem-ffaker
     SUBDIR += rubygem-ffi
+    SUBDIR += rubygem-ffi16
     SUBDIR += rubygem-ffi-compiler
     SUBDIR += rubygem-ffi-libarchive
     SUBDIR += rubygem-ffi-win32-extensions
