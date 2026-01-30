@@ -223,6 +223,7 @@
     SUBDIR += hexl
     SUBDIR += hidden-lake
     SUBDIR += highwayhash
+    SUBDIR += himitsu
     SUBDIR += hitch
     SUBDIR += hockeypuck
     SUBDIR += honeytrap
@@ -1071,6 +1072,7 @@
     SUBDIR += py-scrypt
     SUBDIR += py-secure
     SUBDIR += py-securesystemslib
+    SUBDIR += py-serpico
     SUBDIR += py-service-identity
     SUBDIR += py-signedjson
     SUBDIR += py-signxml

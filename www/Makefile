@@ -80,7 +80,6 @@
     SUBDIR += badwolf
     SUBDIR += baikal
     SUBDIR += bareos-webui
-    SUBDIR += bareos22-webui
     SUBDIR += bareos23-webui
     SUBDIR += bareos24-webui
     SUBDIR += beehive
@@ -1718,6 +1717,7 @@
     SUBDIR += py-fastapi-sso
     SUBDIR += py-feedgen
     SUBDIR += py-feedgenerator
+    SUBDIR += py-flatnotes
     SUBDIR += py-flasgger
     SUBDIR += py-flask
     SUBDIR += py-flask-admin
@@ -2551,6 +2551,7 @@
     SUBDIR += suitecrm
     SUBDIR += suphp
     SUBDIR += surf
+    SUBDIR += surge
     SUBDIR += swiggle
     SUBDIR += sws
     SUBDIR += tailwindcss3

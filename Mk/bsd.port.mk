@@ -1662,6 +1662,10 @@ QA_ENV+=		USESSHAREDMIMEINFO=yes
 .    if !empty(USES:Mterminfo)
 QA_ENV+=		USESTERMINFO=yes
 .    endif
+.    if !empty(USES:Mpython*)
+QA_ENV+=		USESPYTHON=yes \
+				PYTHONPREFIX_SITELIBDIR=${PYTHONPREFIX_SITELIBDIR}
+.    endif
 
 CO_ENV+=		STAGEDIR=${STAGEDIR} \
 				PREFIX=${PREFIX} \

@@ -89,6 +89,7 @@
     SUBDIR += bsd-spell
     SUBDIR += c2html
     SUBDIR += ca-aspell
+    SUBDIR += caps-log
     SUBDIR += cast2gif
     SUBDIR += castxml
     SUBDIR += catdoc
@@ -296,6 +297,7 @@
     SUBDIR += htmltolatex
     SUBDIR += humanzip
     SUBDIR += hunspell
+    SUBDIR += hus-aspell
     SUBDIR += hy-aspell
     SUBDIR += hyperestraier
     SUBDIR += hyphen
@@ -485,6 +487,7 @@
     SUBDIR += meilisearch
     SUBDIR += meld
     SUBDIR += metauml
+    SUBDIR += mg-aspell
     SUBDIR += mgdiff
     SUBDIR += mi-aspell
     SUBDIR += miller
