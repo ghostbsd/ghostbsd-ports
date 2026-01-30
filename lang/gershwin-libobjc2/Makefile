@@ -10,11 +10,12 @@ WWW=		https://github.com/gnustep/libobjc2
 LICENSE=	MIT
 
 BUILD_DEPENDS=	${LOCALBASE}/include/tsl/robin_map.h:devel/robin-map \
-		gershwin-libdispatch>0:devel/gershwin-libdispatch
+		gershwin-libdispatch>0:devel/gershwin-libdispatch \
+		gershwin-tools-make>0:devel/gershwin-tools-make
 
 CONFLICTS_INSTALL=	libobjc2
 
-USES=		cmake compiler objc:compiler
+USES=		cmake compiler objc:compiler gershwin
 USE_LDCONFIG=	/System/Library/Libraries
 NO_MTREE=	yes
 
@@ -22,8 +23,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	gnustep
 GH_TAGNAME=	4148a3d06381658b5c4f8b6401aee68d6852a123
 
-CFLAGS+=	-I/System/Library/Headers
-LDFLAGS+=	-lm -L/System/Library/Libraries
+LDFLAGS+=	-lm
 
 CMAKE_ARGS+=	-DGNUSTEP_INSTALL_TYPE=SYSTEM \
 		-DCMAKE_BUILD_TYPE=Release \
