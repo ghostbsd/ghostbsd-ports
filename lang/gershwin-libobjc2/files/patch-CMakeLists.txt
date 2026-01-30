@@ -35,3 +35,14 @@
  set_target_properties(objc PROPERTIES
  	LINKER_LANGUAGE C
  	SOVERSION ${libobjc_VERSION}
+@@ -266,8 +256,10 @@ if (NOT EMBEDDED_BLOCKS_RUNTIME)
+ 	# Check if the blocks runtime exports _Block_use_RR2
+ 	set(CMAKE_REQUIRED_LIBRARIES ${BlocksRuntime_LIBRARIES})
+ 	set(CMAKE_REQUIRED_INCLUDES ${BlocksRuntime_INCLUDE_DIR})
++	set(CMAKE_REQUIRED_LINK_OPTIONS "-L/System/Library/Libraries")
+ 	check_symbol_exists(_Block_use_RR2 "Block_private.h" HAVE_BLOCK_USE_RR2)
+ 	unset(CMAKE_REQUIRED_LIBRARIES)
++	unset(CMAKE_REQUIRED_LINK_OPTIONS)
+ 	unset(CMAKE_REQUIRED_INCLUDES)
+
+ 	if (NOT HAVE_BLOCK_USE_RR2)
