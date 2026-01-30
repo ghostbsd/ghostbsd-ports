@@ -26,8 +26,8 @@
 
  if (WIN32)
  	set(OLD_ABI_COMPAT_DEFAULT false)
-@@ -187,8 +179,6 @@ if (WIN32 AND NOT MINGW)
- 	target_link_libraries(objc ntdll.dll)
+@@ -185,8 +177,6 @@ if (NOT EMBEDDED_BLOCKS_RUNTIME)
+ 	target_link_libraries(objc PUBLIC BlocksRuntime::BlocksRuntime)
  endif()
 
 -target_link_libraries(objc PRIVATE tsl::robin_map)
