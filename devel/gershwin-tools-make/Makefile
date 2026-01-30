@@ -11,7 +11,7 @@ LICENSE=	GPLv3
 
 BUILD_DEPENDS=	gershwin-libdispatch>0:devel/gershwin-libdispatch
 
-USES=		gershwin objc
+USES=		gershwin objc:compiler
 CONFLICTS=	gnustep-make
 GNU_CONFIGURE=	yes
 

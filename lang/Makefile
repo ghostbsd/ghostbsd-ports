@@ -101,6 +101,7 @@
     SUBDIR += gcc16-devel
     SUBDIR += gcc6-aux
     SUBDIR += gershwin-libs-base
+    SUBDIR += gershwin-libobjc2
     SUBDIR += gforth
     SUBDIR += ghc
     SUBDIR += ghc92

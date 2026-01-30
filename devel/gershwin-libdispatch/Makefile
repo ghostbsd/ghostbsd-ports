@@ -1,5 +1,5 @@
 PORTNAME=	libdispatch
-DISTVERSION=	6.1.1
+DISTVERSION=	20260129
 CATEGORIES=	devel
 PKGNAMEPREFIX=	gershwin-
 
@@ -19,7 +19,7 @@ NO_MTREE=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	swiftlang
 GH_PROJECT=	swift-corelibs-libdispatch
-GH_TAGNAME=	swift-${DISTVERSION}-RELEASE
+GH_TAGNAME=	swift-6.1.1-RELEASE
 
 CMAKE_ARGS=	-DCMAKE_INSTALL_PREFIX=/System/Library \
 		-DCMAKE_INSTALL_LIBDIR=/System/Library/Libraries \
@@ -31,7 +31,6 @@ CMAKE_ARGS=	-DCMAKE_INSTALL_PREFIX=/System/Library \
 		-DCMAKE_C_COMPILER=clang \
 		-DCMAKE_CXX_COMPILER=clang++
 
-PLIST_SUB=	PORTVERSION=${DISTVERSION}
 
 .include <bsd.port.options.mk>
 

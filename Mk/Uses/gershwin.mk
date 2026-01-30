@@ -22,6 +22,7 @@ DEFAULT_LIBVERSION?=	0.0.1
 GNUSTEP_SYSTEM_ROOT=		${GNUSTEP_PREFIX}System
 GNUSTEP_MAKEFILES=		${GNUSTEP_SYSTEM_ROOT}/Library/Makefiles
 GNUSTEP_SYSTEM_LIBRARIES=	${GNUSTEP_SYSTEM_ROOT}/Library/Libraries
+GNUSTEP_SYSTEM_HEADERS=		${GNUSTEP_SYSTEM_ROOT}/Library/Headers
 GNUSTEP_SYSTEM_TOOLS=		${GNUSTEP_SYSTEM_ROOT}/Library/Tools
 
 GNUSTEP_LOCAL_ROOT=		${GNUSTEP_PREFIX}Local
@@ -76,6 +77,12 @@ MAKE_ENV+=	PATH="${PATH}" GNUSTEP_MAKEFILES="${GNUSTEP_MAKEFILES}"
 MAKE_ENV+=	GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
 CONFIGURE_ENV+=	PATH="${PATH}" GNUSTEP_MAKEFILES="${GNUSTEP_MAKEFILES}"
 BUILD_DEPENDS+=	gershwin-tools-make>0:devel/gershwin-tools-make
+# Use gershwin-libobjc2 instead of regular libobjc2
+LIB_DEPENDS+=	libobjc.so.4.6:lang/gershwin-libobjc2
+OBJCFLAGS+=	-I${GNUSTEP_SYSTEM_HEADERS}
+LDFLAGS+=	-L${GNUSTEP_SYSTEM_LIBRARIES}
+# Set up objc compiler without pulling in regular libobjc2
+objc_ARGS=	compiler
 .include "${USESDIR}/objc.mk"
 .    endif
 
