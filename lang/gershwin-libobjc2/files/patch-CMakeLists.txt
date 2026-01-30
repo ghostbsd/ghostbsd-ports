@@ -26,7 +26,7 @@
 
  if (WIN32)
  	set(OLD_ABI_COMPAT_DEFAULT false)
-@@ -227,8 +219,6 @@ if (WIN32 AND NOT MINGW)
+@@ -187,8 +179,6 @@ if (WIN32 AND NOT MINGW)
  	target_link_libraries(objc ntdll.dll)
  endif()
 
@@ -35,7 +35,7 @@
  set_target_properties(objc PROPERTIES
  	LINKER_LANGUAGE C
  	SOVERSION ${libobjc_VERSION}
-@@ -260,8 +250,10 @@ if (NOT EMBEDDED_BLOCKS_RUNTIME)
+@@ -220,8 +210,10 @@ if (NOT EMBEDDED_BLOCKS_RUNTIME)
  	# Check if the blocks runtime exports _Block_use_RR2
  	set(CMAKE_REQUIRED_LIBRARIES ${BlocksRuntime_LIBRARIES})
  	set(CMAKE_REQUIRED_INCLUDES ${BlocksRuntime_INCLUDE_DIR})
