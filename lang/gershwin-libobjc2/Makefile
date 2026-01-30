@@ -32,6 +32,7 @@ CMAKE_ARGS+=	-DGNUSTEP_INSTALL_TYPE=SYSTEM \
 		-DEMBEDDED_BLOCKS_RUNTIME=OFF \
 		-DBlocksRuntime_INCLUDE_DIR=/System/Library/Headers \
 		-DBlocksRuntime_LIBRARIES=/System/Library/Libraries/libBlocksRuntime.so \
+		-DCMAKE_REQUIRED_LINK_OPTIONS="-L/System/Library/Libraries" \
 		-DLIB_INSTALL_PATH=/System/Library/Libraries \
 		-DLOCALBASE=${LOCALBASE}
 
