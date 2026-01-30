@@ -1,4 +1,7 @@
 @comment Gershwin libdispatch installs to /System/Library
+/System/Library/Headers/Block.h
+/System/Library/Headers/Block_private.h
+/System/Library/Libraries/libBlocksRuntime.so
 /System/Library/Documentation/man/man3/dispatch.3
 /System/Library/Documentation/man/man3/dispatch_after.3
 /System/Library/Documentation/man/man3/dispatch_api.3
