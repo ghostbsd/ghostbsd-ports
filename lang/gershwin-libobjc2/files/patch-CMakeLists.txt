@@ -1,41 +1,7 @@
 --- CMakeLists.txt.orig	2025-01-29 00:00:00 UTC
 +++ CMakeLists.txt
-@@ -34,6 +34,8 @@ INCLUDE (CheckCXXSourceCompiles)
- INCLUDE (FetchContent)
- INCLUDE (CheckSymbolExists)
-
-+include_directories(${LOCALBASE}/include)
-+
- set(libobjc_VERSION 4.6)
-
-
-@@ -97,16 +99,6 @@ if (WIN32 AND NOT CYGWIN)
- 	list(APPEND libobjc_CXX_SRCS win32/safewindows.cc)
- endif ()
-
--find_package(tsl-robin-map)
--
--if (NOT tsl-robin-map_FOUND)
--	FetchContent_Declare(
--		robinmap
--		GIT_REPOSITORY https://github.com/Tessil/robin-map/
--		GIT_TAG        v1.4.0)
--
--	FetchContent_MakeAvailable(robinmap)
--endif()
-
- if (WIN32)
- 	set(OLD_ABI_COMPAT_DEFAULT false)
-@@ -185,8 +177,6 @@ if (NOT EMBEDDED_BLOCKS_RUNTIME)
- 	target_link_libraries(objc PUBLIC BlocksRuntime::BlocksRuntime)
- endif()
-
--target_link_libraries(objc PRIVATE tsl::robin_map)
--
- set_target_properties(objc PROPERTIES
- 	LINKER_LANGUAGE C
- 	SOVERSION ${libobjc_VERSION}
-@@ -214,6 +204,7 @@ if (NOT EMBEDDED_BLOCKS_RUNTIME)
+@@ -264,6 +264,7 @@ if (NOT EMBEDDED_BLOCKS_RUNTIME)
+ 	# Check if the blocks runtime exports _Block_use_RR2
  	set(CMAKE_REQUIRED_LIBRARIES ${BlocksRuntime_LIBRARIES})
  	set(CMAKE_REQUIRED_INCLUDES ${BlocksRuntime_INCLUDE_DIR})
 +	set(CMAKE_REQUIRED_LINK_OPTIONS "-L/System/Library/Libraries")
