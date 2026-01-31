@@ -1,25 +1,15 @@
 --- CMakeLists.txt.orig	2025-01-29 00:00:00 UTC
 +++ CMakeLists.txt
-@@ -5,6 +5,15 @@ project(libobjc
- 	DESCRIPTION "GNUstep Objective-C runtime"
- 	LANGUAGES C CXX OBJC OBJCXX ASM)
-
-+# Gershwin: Force install paths for SYSTEM install type
-+if (GNUSTEP_INSTALL_TYPE STREQUAL "SYSTEM")
-+	set(LIB_INSTALL_PATH "System/Library/Libraries" CACHE PATH "Library install path" FORCE)
-+	set(HEADER_INSTALL_PATH "System/Library/Headers" CACHE PATH "Header install path" FORCE)
-+	set(PC_INSTALL_PATH "System/Library/Libraries/pkgconfig" CACHE PATH "Pkgconfig install path" FORCE)
-+	set(CMAKE_INSTALL_PATH "System/Library/Libraries/cmake/libobjc" CACHE PATH "CMake config install path" FORCE)
-+endif()
-+
- set(libobjc_VERSION 4.6)
-
- set(CMAKE_C_STANDARD 11)
-@@ -264,6 +273,7 @@ if (NOT EMBEDDED_BLOCKS_RUNTIME)
- 	# Check if the blocks runtime exports _Block_use_RR2
- 	set(CMAKE_REQUIRED_LIBRARIES ${BlocksRuntime_LIBRARIES})
- 	set(CMAKE_REQUIRED_INCLUDES ${BlocksRuntime_INCLUDE_DIR})
-+	set(CMAKE_REQUIRED_LINK_OPTIONS "-L/System/Library/Libraries")
- 	check_symbol_exists(_Block_use_RR2 "Block_private.h" HAVE_BLOCK_USE_RR2)
- 	unset(CMAKE_REQUIRED_LIBRARIES)
- 	unset(CMAKE_REQUIRED_INCLUDES)
+@@ -357,6 +357,12 @@
+ 		"Subdirectory of the root prefix where libraries are installed.")
+ 	SET(HEADER_INSTALL_PATH "include")
+ 	SET(PC_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX})
++elseif (${GNUSTEP_INSTALL_TYPE} STREQUAL "SYSTEM")
++	# Gershwin: Force install paths for SYSTEM install type
++	SET(LIB_INSTALL_PATH "System/Library/Libraries" CACHE PATH "Library install path" FORCE)
++	SET(BIN_INSTALL_PATH "System/Library/Libraries" CACHE PATH "Binary install path" FORCE)
++	SET(HEADER_INSTALL_PATH "System/Library/Headers" CACHE PATH "Header install path" FORCE)
++	SET(PC_INSTALL_PREFIX "/" CACHE PATH "Pkgconfig install prefix" FORCE)
+ else ()
+ 	execute_process(
+         COMMAND ${GNUSTEP_CONFIG} --variable=GNUSTEP_${GNUSTEP_INSTALL_TYPE}_LIBRARIES
