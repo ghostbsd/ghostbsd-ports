@@ -1,10 +1,6 @@
-/System/Library/Headers/Block.h
-/System/Library/Headers/Block_private.h
 /System/Library/Headers/objc/Availability.h
 /System/Library/Headers/objc/Object.h
 /System/Library/Headers/objc/Protocol.h
-/System/Library/Headers/objc/blocks_private.h
-/System/Library/Headers/objc/blocks_runtime.h
 /System/Library/Headers/objc/capabilities.h
 /System/Library/Headers/objc/developer.h
 /System/Library/Headers/objc/encoding.h
@@ -14,6 +10,7 @@
 /System/Library/Headers/objc/objc-arc.h
 /System/Library/Headers/objc/objc-auto.h
 /System/Library/Headers/objc/objc-class.h
+/System/Library/Headers/objc/objc-config.h
 /System/Library/Headers/objc/objc-exception.h
 /System/Library/Headers/objc/objc-runtime.h
 /System/Library/Headers/objc/objc-visibility.h
@@ -21,6 +18,10 @@
 /System/Library/Headers/objc/runtime-deprecated.h
 /System/Library/Headers/objc/runtime.h
 /System/Library/Headers/objc/slot.h
+/System/Library/Libraries/cmake/libobjc/libobjcConfig.cmake
+/System/Library/Libraries/cmake/libobjc/libobjcConfigVersion.cmake
+/System/Library/Libraries/cmake/libobjc/libobjcTargets-release.cmake
+/System/Library/Libraries/cmake/libobjc/libobjcTargets.cmake
 /System/Library/Libraries/libobjc.so
 /System/Library/Libraries/libobjc.so.%%SHLIB_MAJOR%%
 /System/Library/Libraries/libobjc.so.%%SHLIB_MAJOR%%.%%SHLIB_MINOR%%
