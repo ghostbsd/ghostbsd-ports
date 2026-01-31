@@ -15,8 +15,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/tsl/robin_map.h:devel/robin-map \
 
 CONFLICTS_INSTALL=	libobjc2
 
-USES=		cmake compiler objc:compiler gershwin
-MAKEFILE=	# Override gershwin.mk's GNUmakefile setting - this port uses cmake
+USES=		cmake compiler objc:compiler
 USE_LDCONFIG=	/System/Library/Libraries
 NO_MTREE=	yes
 
