@@ -25,6 +25,7 @@ GH_TAGNAME=	4148a3d06381658b5c4f8b6401aee68d6852a123
 
 LDFLAGS+=	-lm
 
+CMAKE_INSTALL_PREFIX=	/
 CMAKE_ARGS+=	-DGNUSTEP_INSTALL_TYPE=SYSTEM \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DCMAKE_C_COMPILER=clang \
@@ -32,9 +33,7 @@ CMAKE_ARGS+=	-DGNUSTEP_INSTALL_TYPE=SYSTEM \
 		-DEMBEDDED_BLOCKS_RUNTIME=OFF \
 		-DBlocksRuntime_INCLUDE_DIR=/System/Library/Headers \
 		-DBlocksRuntime_LIBRARIES=/System/Library/Libraries/libBlocksRuntime.so \
-		-DCMAKE_REQUIRED_LINK_OPTIONS="-L/System/Library/Libraries" \
-		-DLIB_INSTALL_PATH=/System/Library/Libraries \
-		-DLOCALBASE=${LOCALBASE}
+		-DCMAKE_REQUIRED_LINK_OPTIONS="-L/System/Library/Libraries"
 
 LDFLAGS_armv7=	-Wl,-znotext
 SSP_UNSAFE=	yes
