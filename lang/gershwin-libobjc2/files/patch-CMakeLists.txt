@@ -1,6 +1,21 @@
 --- CMakeLists.txt.orig	2025-01-29 00:00:00 UTC
 +++ CMakeLists.txt
-@@ -264,6 +264,7 @@ if (NOT EMBEDDED_BLOCKS_RUNTIME)
+@@ -5,6 +5,15 @@ project(libobjc
+ 	DESCRIPTION "GNUstep Objective-C runtime"
+ 	LANGUAGES C CXX OBJC OBJCXX ASM)
+
++# Gershwin: Force install paths for SYSTEM install type
++if (GNUSTEP_INSTALL_TYPE STREQUAL "SYSTEM")
++	set(LIB_INSTALL_PATH "System/Library/Libraries" CACHE PATH "Library install path" FORCE)
++	set(HEADER_INSTALL_PATH "System/Library/Headers" CACHE PATH "Header install path" FORCE)
++	set(PC_INSTALL_PATH "System/Library/Libraries/pkgconfig" CACHE PATH "Pkgconfig install path" FORCE)
++	set(CMAKE_INSTALL_PATH "System/Library/Libraries/cmake/libobjc" CACHE PATH "CMake config install path" FORCE)
++endif()
++
+ set(libobjc_VERSION 4.6)
+
+ set(CMAKE_C_STANDARD 11)
+@@ -264,6 +273,7 @@ if (NOT EMBEDDED_BLOCKS_RUNTIME)
  	# Check if the blocks runtime exports _Block_use_RR2
  	set(CMAKE_REQUIRED_LIBRARIES ${BlocksRuntime_LIBRARIES})
  	set(CMAKE_REQUIRED_INCLUDES ${BlocksRuntime_INCLUDE_DIR})
