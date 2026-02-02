@@ -50,3 +50,13 @@
 /System/Library/Libraries/libdispatch.so.1
 /System/Library/Libraries/libdispatch.so.1.3
 /System/Library/Libraries/pkgconfig/libdispatch.pc
+@dir /System/Library/Libraries/pkgconfig
+@dir /System/Library/Libraries
+@dir /System/Library/Headers/os
+@dir /System/Library/Headers/dispatch
+@dir /System/Library/Headers
+@dir /System/Library/Documentation/man/man3
+@dir /System/Library/Documentation/man
+@dir /System/Library/Documentation
+@dir /System/Library
+@dir /System

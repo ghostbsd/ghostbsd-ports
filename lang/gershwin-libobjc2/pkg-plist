@@ -26,3 +26,11 @@
 /System/Library/Libraries/libobjc.so.%%SHLIB_MAJOR%%
 /System/Library/Libraries/libobjc.so.%%SHLIB_MAJOR%%.%%SHLIB_MINOR%%
 /System/Library/Libraries/pkgconfig/libobjc.pc
+@dir /System/Library/Libraries/pkgconfig
+@dir /System/Library/Libraries/cmake/libobjc
+@dir /System/Library/Libraries/cmake
+@dir /System/Library/Libraries
+@dir /System/Library/Headers/objc
+@dir /System/Library/Headers
+@dir /System/Library
+@dir /System
