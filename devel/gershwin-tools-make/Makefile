@@ -30,7 +30,7 @@ CONFIGURE_ARGS+= \
 	--with-layout=gershwin \
 	--with-library-combo=ng-gnu-gnu \
 	--with-objc-lib-flag=" " \
-	LDFLAGS="-L/System/Library/Libraries" \
+	LDFLAGS="-L/System/Library/Libraries -Wl,-rpath,/System/Library/Libraries" \
 	CPPFLAGS="-I/System/Library/Headers" \
 	libobjc_LIBS=" "
 

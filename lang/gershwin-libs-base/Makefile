@@ -17,6 +17,8 @@ LIB_DEPENDS=	libffi.so:devel/libffi \
 
 USES=		pkgconfig iconv gnome gershwin
 
+GNU_CONFIGURE=	yes
+
 RUN_DEPENDS=	${GNUSTEP_PREFIX}System/Library/Makefiles/GNUstep.sh:devel/gershwin-tools-make
 
 USE_GNOME=	libxml2 libxslt
@@ -27,6 +29,9 @@ USE_GERSHWIN=	build
 USE_LDCONFIG=	${GNUSTEP_SYSTEM_LIBRARIES}
 CONFLICTS=	gnustep-base
 
+# The patch-configure file forces GS_NONFRAGILE=1 because configure's runtime
+# test for non-fragile ABI fails in poudriere (libobjc.so not in ldconfig hints).
+# Common cache variables (gs_cv_objc_works, etc.) are set in gershwin.mk.
 CONFIGURE_ARGS+=	--with-dispatch-include=/System/Library/Headers \
 			--with-dispatch-library=/System/Library/Libraries
 

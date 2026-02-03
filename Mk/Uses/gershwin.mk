@@ -45,7 +45,7 @@ MAKE_ARGS+=messages=yes
 MAKE_ARGS+=LDFLAGS='-fuse-ld=gold'
 BUILD_DEPENDS+=         ${LOCALBASE}/bin/ld.gold:devel/binutils
 .  else
-MAKE_ARGS+=LDFLAGS='-fuse-ld=${OBJC_LLD}'
+MAKE_ARGS+=LDFLAGS='-fuse-ld=lld'
 .  endif
 
 MAKEFILE=	GNUmakefile
@@ -70,20 +70,28 @@ LIB_DEPENDS+=	libgnustep-base.so:lang/gershwin-libs-base
 
 .    if ${USE_GERSHWIN:Mbuild}
 PATH:=	${GNUSTEP_SYSTEM_TOOLS}:${GNUSTEP_LOCAL_TOOLS}:${PATH}
-MAKE_ENV+=	PATH="${PATH}" GNUSTEP_MAKEFILES="${GNUSTEP_MAKEFILES}"
+MAKE_ENV+=	PATH="${PATH}" GNUSTEP_MAKEFILES="${GNUSTEP_MAKEFILES}" \
+		LD_LIBRARY_PATH="${GNUSTEP_SYSTEM_LIBRARIES}:${GNUSTEP_LOCAL_LIBRARIES}"
 # All GNUstep things installed from ports should be in the System domain.
 # Things installed from source can then freely live in the Local domain without
 # conflicts.
 MAKE_ENV+=	GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
-CONFIGURE_ENV+=	PATH="${PATH}" GNUSTEP_MAKEFILES="${GNUSTEP_MAKEFILES}"
+CONFIGURE_ENV+=	PATH="${PATH}" GNUSTEP_MAKEFILES="${GNUSTEP_MAKEFILES}" \
+		LD_LIBRARY_PATH="${GNUSTEP_SYSTEM_LIBRARIES}:${GNUSTEP_LOCAL_LIBRARIES}"
 BUILD_DEPENDS+=	gershwin-tools-make>0:devel/gershwin-tools-make
 # Use gershwin-libobjc2 instead of regular libobjc2
 LIB_DEPENDS+=	libobjc.so.4.6:lang/gershwin-libobjc2
 OBJCFLAGS+=	-I${GNUSTEP_SYSTEM_HEADERS}
-LDFLAGS+=	-L${GNUSTEP_SYSTEM_LIBRARIES}
-# Set up objc compiler without pulling in regular libobjc2
-objc_ARGS=	compiler
-.include "${USESDIR}/objc.mk"
+LDFLAGS+=	-L${GNUSTEP_SYSTEM_LIBRARIES} -Wl,-rpath,${GNUSTEP_SYSTEM_LIBRARIES}
+# Set up objc compiler env vars (self-contained, no objc.mk dependency)
+CONFIGURE_ENV+=	OBJC="${CC}" OBJCFLAGS="${OBJCFLAGS}" LDFLAGS="${LDFLAGS}"
+MAKE_ENV+=	OBJC="${CC}" OBJCFLAGS="${OBJCFLAGS}"
+# Cache variables for configure runtime tests that may fail in poudriere
+# because /System/Library/Libraries is not in ldconfig hints and LD_LIBRARY_PATH
+# doesn't work reliably. These tell configure the ObjC compiler works and
+# supports -fconstant-string-class (both true for clang + libobjc2).
+CONFIGURE_ARGS+=	gs_cv_objc_works=yes \
+			gs_cv_objc_compiler_supports_constant_string_class=yes
 .    endif
 
 .    if ${USE_GERSHWIN:Mgui}

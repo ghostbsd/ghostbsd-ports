@@ -57,5 +57,7 @@ CXXFLAGS+=	-stdlib=libstdc++
 
 post-install:
 	${LN} -sf libobjc.so.${SHLIB_MAJOR}.${SHLIB_MINOR} ${STAGEDIR}/System/Library/Libraries/libobjc.so.${SHLIB_MAJOR}
+	${MKDIR} ${STAGEDIR}${PREFIX}/libdata/ldconfig
+	${ECHO} "/System/Library/Libraries" > ${STAGEDIR}${PREFIX}/libdata/ldconfig/gershwin
 
 .include <bsd.port.post.mk>

@@ -26,6 +26,7 @@
 /System/Library/Libraries/libobjc.so.%%SHLIB_MAJOR%%
 /System/Library/Libraries/libobjc.so.%%SHLIB_MAJOR%%.%%SHLIB_MINOR%%
 /System/Library/Libraries/pkgconfig/libobjc.pc
+libdata/ldconfig/gershwin
 @dir /System/Library/Libraries/pkgconfig
 @dir /System/Library/Libraries/cmake/libobjc
 @dir /System/Library/Libraries/cmake
