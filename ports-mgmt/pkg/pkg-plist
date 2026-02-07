@@ -5,17 +5,16 @@ etc/periodic/security/405.pkg-base-audit
 etc/periodic/security/410.pkg-audit
 etc/periodic/security/460.pkg-checksum
 etc/periodic/weekly/400.status-pkg
-%%ETCDIR%%.conf.sample
+@sample etc/pkg.conf.sample
 include/pkg.h
 include/pkg/audit.h
+include/pkg/vec.h
 lib/libpkg.a
 lib/libpkg.so
 lib/libpkg.so.4
-libdata/ldconfig/pkg
 libdata/pkgconfig/pkg.pc
 sbin/pkg
 sbin/pkg-static
-%%PORTDOCS%%%%DOCSDIR%%/NEWS
 share/man/man3/pkg_create.3.gz
 share/man/man3/pkg_printf.3.gz
 share/man/man3/pkg_repo_create.3.gz
@@ -45,6 +44,7 @@ share/man/man8/pkg-query.8.gz
 share/man/man8/pkg-register.8.gz
 share/man/man8/pkg-remove.8.gz
 share/man/man8/pkg-repo.8.gz
+share/man/man8/pkg-repositories.8.gz
 share/man/man8/pkg-rquery.8.gz
 share/man/man8/pkg-search.8.gz
 share/man/man8/pkg-set.8.gz
@@ -55,6 +55,7 @@ share/man/man8/pkg-static.8.gz
 share/man/man8/pkg-stats.8.gz
 share/man/man8/pkg-triggers.8.gz
 share/man/man8/pkg-unlock.8.gz
+share/man/man8/pkg-unregister.8.gz
 share/man/man8/pkg-update.8.gz
 share/man/man8/pkg-updating.8.gz
 share/man/man8/pkg-upgrade.8.gz
