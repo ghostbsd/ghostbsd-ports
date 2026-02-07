@@ -1,0 +1,9 @@
+--- Tools/isowrite-helper/GNUmakefile.orig	2026-02-06 11:00:00.000000000 +0000
++++ Tools/isowrite-helper/GNUmakefile	2026-02-06 11:00:00.000000000 +0000
+@@ -5,6 +5,5 @@ TOOL_NAME = isowrite-helper
+ isowrite-helper_OBJC_FILES = main.m
+
+-isowrite-helper_INSTALL_DIR = $(GNUSTEP_SYSTEM_TOOLS)
+-
++# Let GNUstep handle the install path properly for DESTDIR support
+ include $(GNUSTEP_MAKEFILES)/tool.make

@@ -39,14 +39,6 @@ MAKE_ENV+=	ADDITIONAL_${a}="${ADDITIONAL_${a}} ${${a}}"
 MAKE_ENV+=	ADDITIONAL_${a}="${ADDITIONAL_${a}}"
 .  endfor
 MAKE_ARGS+=messages=yes
-# BFD ld can't link Objective-C programs for some reason.  Most things are fine
-# with LLD, but the things that don't (e.g. sope) need gold.
-.  if defined(LLD_UNSAFE)
-MAKE_ARGS+=LDFLAGS='-fuse-ld=gold'
-BUILD_DEPENDS+=         ${LOCALBASE}/bin/ld.gold:devel/binutils
-.  else
-MAKE_ARGS+=LDFLAGS='-fuse-ld=lld'
-.  endif
 
 MAKEFILE=	GNUmakefile
 #MAKE_ENV+=	GNUSTEP_CONFIG_FILE=${PORTSDIR}/devel/gershwin-tools-make/files/GNUstep.conf
@@ -80,11 +72,16 @@ CONFIGURE_ENV+=	PATH="${PATH}" GNUSTEP_MAKEFILES="${GNUSTEP_MAKEFILES}" \
 		LD_LIBRARY_PATH="${GNUSTEP_SYSTEM_LIBRARIES}:${GNUSTEP_LOCAL_LIBRARIES}"
 BUILD_DEPENDS+=	gershwin-tools-make>0:devel/gershwin-tools-make
 # Use gershwin-libobjc2 instead of regular libobjc2
+# libobjc2 requires libBlocksRuntime from gershwin-libdispatch (not the system one)
+# Use BUILD_DEPENDS for libdispatch to avoid finding system /usr/lib/libBlocksRuntime.so
 LIB_DEPENDS+=	libobjc.so.4.6:lang/gershwin-libobjc2
+BUILD_DEPENDS+=	/System/Library/Libraries/libBlocksRuntime.so:devel/gershwin-libdispatch
+RUN_DEPENDS+=	/System/Library/Libraries/libBlocksRuntime.so:devel/gershwin-libdispatch
 OBJCFLAGS+=	-I${GNUSTEP_SYSTEM_HEADERS}
 LDFLAGS+=	-L${GNUSTEP_SYSTEM_LIBRARIES} -Wl,-rpath,${GNUSTEP_SYSTEM_LIBRARIES}
 # Set up objc compiler env vars (self-contained, no objc.mk dependency)
-CONFIGURE_ENV+=	OBJC="${CC}" OBJCFLAGS="${OBJCFLAGS}" LDFLAGS="${LDFLAGS}"
+CONFIGURE_ENV+=	OBJC="${CC}" OBJCFLAGS="${OBJCFLAGS}" LDFLAGS="${LDFLAGS}" \
+		LIBS="-L${GNUSTEP_SYSTEM_LIBRARIES} -Wl,-rpath,${GNUSTEP_SYSTEM_LIBRARIES}"
 MAKE_ENV+=	OBJC="${CC}" OBJCFLAGS="${OBJCFLAGS}"
 # Cache variables for configure runtime tests that may fail in poudriere
 # because /System/Library/Libraries is not in ldconfig hints and LD_LIBRARY_PATH

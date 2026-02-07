@@ -1,5 +1,6 @@
 /System/Library/Preferences/GlobalDefaults/NSGlobalDomain.plist
-/System/Library/Preferences/GlobalDefaults/org.gnustep.GWorkspace.plist
+/System/Library/Preferences/GlobalDefaults/Terminal.plist
+/System/Library/Preferences/GlobalDefaults/org.gnustep.Workspace.plist
 @dir /System/Library/Preferences/GlobalDefaults
 @dir /System/Library/Preferences
 @dir /System/Library

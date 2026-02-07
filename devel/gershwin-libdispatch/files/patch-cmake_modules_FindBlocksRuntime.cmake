@@ -8,13 +8,13 @@
 +              Block.h
              HINTS
 -              ${CMAKE_INSTALL_FULL_INCLUDEDIR})
-+              /usr/include ${CMAKE_INSTALL_FULL_INCLUDEDIR})
++              /System/Library/Headers ${CMAKE_INSTALL_FULL_INCLUDEDIR})
    find_library(BlocksRuntime_LIBRARIES
                 NAMES
                   BlocksRuntime libBlocksRuntime
                 HINTS
 -                 ${CMAKE_INSTALL_FULL_LIBDIR})
-+                 /usr/lib ${CMAKE_INSTALL_FULL_LIBDIR})
++                 /System/Library/Libraries ${CMAKE_INSTALL_FULL_LIBDIR})
 
    include(FindPackageHandleStandardArgs)
    find_package_handle_standard_args(BlocksRuntime

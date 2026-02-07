@@ -818,10 +818,6 @@
     SUBDIR += genht
     SUBDIR += genie
     SUBDIR += getoptions
-    SUBDIR += gershwin-apps-gorm
-    SUBDIR += gershwin-apps-projectcenter
-    SUBDIR += gershwin-developer
-    SUBDIR += gershwin-dbuskit
     SUBDIR += gershwin-libdispatch
     SUBDIR += gershwin-tools-make
     SUBDIR += gettext

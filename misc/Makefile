@@ -162,8 +162,8 @@
     SUBDIR += g810-led
     SUBDIR += gedkeeper
     SUBDIR += geekcode
-    SUBDIR += gershwin-globaldefaults
     SUBDIR += gemini-cli
+    SUBDIR += gershwin-system
     SUBDIR += getopt
     SUBDIR += ggml
     SUBDIR += ghostbsd-pkg-conf

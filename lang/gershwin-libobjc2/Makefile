@@ -35,7 +35,9 @@ CMAKE_ARGS+=	-DGNUSTEP_INSTALL_TYPE=SYSTEM \
 		-DBlocksRuntime_LIBRARIES=/System/Library/Libraries/libBlocksRuntime.so \
 		-DCMAKE_REQUIRED_LINK_OPTIONS="-L/System/Library/Libraries" \
 		-DLIB_INSTALL_PATH=System/Library/Libraries \
-		-DHEADER_INSTALL_PATH=System/Library/Headers
+		-DHEADER_INSTALL_PATH=System/Library/Headers \
+		-DCMAKE_INSTALL_RPATH=/System/Library/Libraries \
+		-DCMAKE_BUILD_RPATH=/System/Library/Libraries
 
 LDFLAGS_armv7=	-Wl,-znotext
 SSP_UNSAFE=	yes

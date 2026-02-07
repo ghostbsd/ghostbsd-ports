@@ -1,224 +1,224 @@
-/System/Applications/GWorkspace.app/GWorkspace
-/System/Applications/GWorkspace.app/Resources/BrasilPortuguese.lproj/Localizable.strings
-/System/Applications/GWorkspace.app/Resources/CellHighlight.tiff
-/System/Applications/GWorkspace.app/Resources/CellHighlight_osx.tiff
-/System/Applications/GWorkspace.app/Resources/ComputeSize.tiff
-/System/Applications/GWorkspace.app/Resources/ComputeSize_dimm.tiff
-/System/Applications/GWorkspace.app/Resources/Date-0.tiff
-/System/Applications/GWorkspace.app/Resources/Date-1.tiff
-/System/Applications/GWorkspace.app/Resources/Date-2.tiff
-/System/Applications/GWorkspace.app/Resources/Date-3.tiff
-/System/Applications/GWorkspace.app/Resources/Date-4.tiff
-/System/Applications/GWorkspace.app/Resources/Date-5.tiff
-/System/Applications/GWorkspace.app/Resources/Date-6.tiff
-/System/Applications/GWorkspace.app/Resources/Date-7.tiff
-/System/Applications/GWorkspace.app/Resources/Date-8.tiff
-/System/Applications/GWorkspace.app/Resources/Date-9.tiff
-/System/Applications/GWorkspace.app/Resources/Date-Colon.tiff
-/System/Applications/GWorkspace.app/Resources/Date.tiff
-/System/Applications/GWorkspace.app/Resources/Dimple.tiff
-/System/Applications/GWorkspace.app/Resources/DragableDocument.tiff
-/System/Applications/GWorkspace.app/Resources/Dutch.lproj/Localizable.strings
-/System/Applications/GWorkspace.app/Resources/English.lproj/BrowserViewerPref.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/BrowserViewerPref.gorm/data.info
-/System/Applications/GWorkspace.app/Resources/English.lproj/BrowserViewerPref.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/DefEditorPref.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/DefEditorPref.gorm/data.info
-/System/Applications/GWorkspace.app/Resources/English.lproj/DefEditorPref.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/DefSortOrderPref.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/DefSortOrderPref.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/DesktopPref.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/DesktopPref.gorm/data.info
-/System/Applications/GWorkspace.app/Resources/English.lproj/DesktopPref.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/FindModuleView.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/FindModuleView.gorm/data.info
-/System/Applications/GWorkspace.app/Resources/English.lproj/FindModuleView.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/Finder.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/Finder.gorm/data.info
-/System/Applications/GWorkspace.app/Resources/English.lproj/Finder.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/BViewer.rtfd/TXT.rtf
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/BViewer.rtfd/browsing.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/BViewer.rtfd/dummy.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/BViewer.rtfd/views.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Desktop.rtfd/FileManager.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Desktop.rtfd/TXT.rtf
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Dock.rtfd/TXT.rtf
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Dock.rtfd/dock.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Dock.rtfd/dummy.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Fiend.rtfd/Fiend-Develop.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Fiend.rtfd/Fiend-menu.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Fiend.rtfd/TXT.rtf
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Fiend.rtfd/dummy.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/GWorkspace.rtfd/FileManager.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/GWorkspace.rtfd/TXT.rtf
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/History.rtfd/FileManager.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/History.rtfd/TXT.rtf
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Inspector.rtfd/TXT.rtf
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Inspector.rtfd/dummy.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Preferences.rtfd/TXT.rtf
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Preferences.rtfd/dummy.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Recycler.rtfd/Recycler-content.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Recycler.rtfd/Recycler-drag.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Recycler.rtfd/Recycler.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Recycler.rtfd/RecyclerFull.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Recycler.rtfd/TXT.rtf
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/Recycler.rtfd/dummy.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/RunExternal.rtfd/Run-panel.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/RunExternal.rtfd/TXT.rtf
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/RunExternal.rtfd/dummy.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/TabbedShelf.rtfd/TXT.rtf
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/TabbedShelf.rtfd/TabbedShelf-develop.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/Help/TabbedShelf.rtfd/dummy.tiff
-/System/Applications/GWorkspace.app/Resources/English.lproj/HiddenFilesPref.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/HiddenFilesPref.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/HistoryPref.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/HistoryPref.gorm/data.info
-/System/Applications/GWorkspace.app/Resources/English.lproj/HistoryPref.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/IconsPref.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/IconsPref.gorm/data.info
-/System/Applications/GWorkspace.app/Resources/English.lproj/IconsPref.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/LSFEditor.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/LSFEditor.gorm/data.info
-/System/Applications/GWorkspace.app/Resources/English.lproj/LSFEditor.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/LSFolder.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/LSFolder.gorm/data.info
-/System/Applications/GWorkspace.app/Resources/English.lproj/LSFolder.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/Localizable.strings
-/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.gorm/data.info
-/System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/OperationPrefs.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/OperationPrefs.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/PrefWindow.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/PrefWindow.gorm/data.info
-/System/Applications/GWorkspace.app/Resources/English.lproj/PrefWindow.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.gorm/data.info
-/System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/SearchResults.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/SearchResults.gorm/data.info
-/System/Applications/GWorkspace.app/Resources/English.lproj/SearchResults.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/ShelfPref.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/ShelfPref.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/StartAppWin.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/StartAppWin.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/English.lproj/XTermPref.gorm/data.classes
-/System/Applications/GWorkspace.app/Resources/English.lproj/XTermPref.gorm/data.info
-/System/Applications/GWorkspace.app/Resources/English.lproj/XTermPref.gorm/objects.gorm
-/System/Applications/GWorkspace.app/Resources/Esperanto.lproj/Localizable.strings
-/System/Applications/GWorkspace.app/Resources/FFArrow.tiff
-/System/Applications/GWorkspace.app/Resources/FFArrow_disabled.tiff
-/System/Applications/GWorkspace.app/Resources/FileIcon_WebLink.tiff
-/System/Applications/GWorkspace.app/Resources/FileManager.tiff
-/System/Applications/GWorkspace.app/Resources/French.lproj/Localizable.strings
-/System/Applications/GWorkspace.app/Resources/GWorkspace.desktop
-/System/Applications/GWorkspace.app/Resources/GWorkspaceInfo.plist
-/System/Applications/GWorkspace.app/Resources/German.lproj/Localizable.strings
-/System/Applications/GWorkspace.app/Resources/Hungarian.lproj/Localizable.strings
-/System/Applications/GWorkspace.app/Resources/Info-gnustep.plist
-/System/Applications/GWorkspace.app/Resources/Italian.lproj/Localizable.strings
-/System/Applications/GWorkspace.app/Resources/Japanese.lproj/Localizable.strings
-/System/Applications/GWorkspace.app/Resources/Kill.tiff
-/System/Applications/GWorkspace.app/Resources/LED-0.tiff
-/System/Applications/GWorkspace.app/Resources/LED-1.tiff
-/System/Applications/GWorkspace.app/Resources/LED-2.tiff
-/System/Applications/GWorkspace.app/Resources/LED-3.tiff
-/System/Applications/GWorkspace.app/Resources/LED-4.tiff
-/System/Applications/GWorkspace.app/Resources/LED-5.tiff
-/System/Applications/GWorkspace.app/Resources/LED-6.tiff
-/System/Applications/GWorkspace.app/Resources/LED-7.tiff
-/System/Applications/GWorkspace.app/Resources/LED-8.tiff
-/System/Applications/GWorkspace.app/Resources/LED-9.tiff
-/System/Applications/GWorkspace.app/Resources/LED-AM.tiff
-/System/Applications/GWorkspace.app/Resources/LED-Colon.tiff
-/System/Applications/GWorkspace.app/Resources/LED-PM.tiff
-/System/Applications/GWorkspace.app/Resources/LED.tiff
-/System/Applications/GWorkspace.app/Resources/LeftArr.tiff
-/System/Applications/GWorkspace.app/Resources/LiveSearchFolder.tiff
-/System/Applications/GWorkspace.app/Resources/Magnify.tiff
-/System/Applications/GWorkspace.app/Resources/MagnifyGlas.tiff
-/System/Applications/GWorkspace.app/Resources/Magnify_16.tiff
-/System/Applications/GWorkspace.app/Resources/Magnify_24.tiff
-/System/Applications/GWorkspace.app/Resources/Magnify_32.tiff
-/System/Applications/GWorkspace.app/Resources/Magnify_48.tiff
-/System/Applications/GWorkspace.app/Resources/Mask.tiff
-/System/Applications/GWorkspace.app/Resources/Month-1.tiff
-/System/Applications/GWorkspace.app/Resources/Month-10.tiff
-/System/Applications/GWorkspace.app/Resources/Month-11.tiff
-/System/Applications/GWorkspace.app/Resources/Month-12.tiff
-/System/Applications/GWorkspace.app/Resources/Month-2.tiff
-/System/Applications/GWorkspace.app/Resources/Month-3.tiff
-/System/Applications/GWorkspace.app/Resources/Month-4.tiff
-/System/Applications/GWorkspace.app/Resources/Month-5.tiff
-/System/Applications/GWorkspace.app/Resources/Month-6.tiff
-/System/Applications/GWorkspace.app/Resources/Month-7.tiff
-/System/Applications/GWorkspace.app/Resources/Month-8.tiff
-/System/Applications/GWorkspace.app/Resources/Month-9.tiff
-/System/Applications/GWorkspace.app/Resources/Month.tiff
-/System/Applications/GWorkspace.app/Resources/Norvegian.lproj/Localizable.strings
-/System/Applications/GWorkspace.app/Resources/Pboard.tiff
-/System/Applications/GWorkspace.app/Resources/Polish.lproj/Localizable.strings
-/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/Localizable.strings
-/System/Applications/GWorkspace.app/Resources/REWArrow.tiff
-/System/Applications/GWorkspace.app/Resources/REWArrow_disabled.tiff
-/System/Applications/GWorkspace.app/Resources/RightArr.tiff
-/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Localizable.strings
-/System/Applications/GWorkspace.app/Resources/SlideMask.tiff
-/System/Applications/GWorkspace.app/Resources/SmallCellHighlight.tiff
-/System/Applications/GWorkspace.app/Resources/SmallCellHighlightSmall.tiff
-/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Localizable.strings
-/System/Applications/GWorkspace.app/Resources/TileHighlight.tiff
-/System/Applications/GWorkspace.app/Resources/Weekday-0.tiff
-/System/Applications/GWorkspace.app/Resources/Weekday-1.tiff
-/System/Applications/GWorkspace.app/Resources/Weekday-2.tiff
-/System/Applications/GWorkspace.app/Resources/Weekday-3.tiff
-/System/Applications/GWorkspace.app/Resources/Weekday-4.tiff
-/System/Applications/GWorkspace.app/Resources/Weekday-5.tiff
-/System/Applications/GWorkspace.app/Resources/Weekday-6.tiff
-/System/Applications/GWorkspace.app/Resources/Weekday.tiff
-/System/Applications/GWorkspace.app/Resources/add.tiff
-/System/Applications/GWorkspace.app/Resources/anim-logo-0.tiff
-/System/Applications/GWorkspace.app/Resources/anim-logo-1.tiff
-/System/Applications/GWorkspace.app/Resources/anim-logo-2.tiff
-/System/Applications/GWorkspace.app/Resources/anim-logo-3.tiff
-/System/Applications/GWorkspace.app/Resources/anim-logo-4.tiff
-/System/Applications/GWorkspace.app/Resources/anim-logo-5.tiff
-/System/Applications/GWorkspace.app/Resources/anim-logo-6.tiff
-/System/Applications/GWorkspace.app/Resources/anim-logo-7.tiff
-/System/Applications/GWorkspace.app/Resources/colorPboard.tiff
-/System/Applications/GWorkspace.app/Resources/common_ArrowLeftH.tiff
-/System/Applications/GWorkspace.app/Resources/common_ArrowRightH.tiff
-/System/Applications/GWorkspace.app/Resources/filecontsPboard.tiff
-/System/Applications/GWorkspace.app/Resources/gormPboard.tiff
-/System/Applications/GWorkspace.app/Resources/littleArrowDown.tiff
-/System/Applications/GWorkspace.app/Resources/littleArrowRight.tiff
-/System/Applications/GWorkspace.app/Resources/magnify_small.tiff
-/System/Applications/GWorkspace.app/Resources/page.tiff
-/System/Applications/GWorkspace.app/Resources/pause.tiff
-/System/Applications/GWorkspace.app/Resources/play.tiff
-/System/Applications/GWorkspace.app/Resources/remove.tiff
-/System/Applications/GWorkspace.app/Resources/rtfPboard.tiff
-/System/Applications/GWorkspace.app/Resources/rtfdPboard.tiff
-/System/Applications/GWorkspace.app/Resources/stop.tiff
-/System/Applications/GWorkspace.app/Resources/stop_16.tiff
-/System/Applications/GWorkspace.app/Resources/stop_24.tiff
-/System/Applications/GWorkspace.app/Resources/stop_32.tiff
-/System/Applications/GWorkspace.app/Resources/stop_48.tiff
-/System/Applications/GWorkspace.app/Resources/stop_small.tiff
-/System/Applications/GWorkspace.app/Resources/stringPboard.tiff
-/System/Applications/GWorkspace.app/Resources/switchMultiple.tiff
-/System/Applications/GWorkspace.app/Resources/switchOff.tiff
-/System/Applications/GWorkspace.app/Resources/switchOn.tiff
-/System/Applications/GWorkspace.app/Resources/tabSelectedLeft.tiff
-/System/Applications/GWorkspace.app/Resources/tabSelectedRight.tiff
-/System/Applications/GWorkspace.app/Resources/tabSelectedToUnSelectedJunction.tiff
-/System/Applications/GWorkspace.app/Resources/tabUnSelectToSelectedJunction.tiff
-/System/Applications/GWorkspace.app/Resources/tabUnSelectedJunction.tiff
-/System/Applications/GWorkspace.app/Resources/tabUnSelectedLeft.tiff
-/System/Applications/GWorkspace.app/Resources/tabUnSelectedRight.tiff
-/System/Applications/GWorkspace.app/Resources/tiffPboard.tiff
-/System/Applications/GWorkspace.app/Resources/watch.tiff
-/System/Applications/GWorkspace.app/stamp.make
+/System/Applications/Workspace.app/Workspace
+/System/Applications/Workspace.app/Resources/BrasilPortuguese.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/CellHighlight.tiff
+/System/Applications/Workspace.app/Resources/CellHighlight_osx.tiff
+/System/Applications/Workspace.app/Resources/ComputeSize.tiff
+/System/Applications/Workspace.app/Resources/ComputeSize_dimm.tiff
+/System/Applications/Workspace.app/Resources/Date-0.tiff
+/System/Applications/Workspace.app/Resources/Date-1.tiff
+/System/Applications/Workspace.app/Resources/Date-2.tiff
+/System/Applications/Workspace.app/Resources/Date-3.tiff
+/System/Applications/Workspace.app/Resources/Date-4.tiff
+/System/Applications/Workspace.app/Resources/Date-5.tiff
+/System/Applications/Workspace.app/Resources/Date-6.tiff
+/System/Applications/Workspace.app/Resources/Date-7.tiff
+/System/Applications/Workspace.app/Resources/Date-8.tiff
+/System/Applications/Workspace.app/Resources/Date-9.tiff
+/System/Applications/Workspace.app/Resources/Date-Colon.tiff
+/System/Applications/Workspace.app/Resources/Date.tiff
+/System/Applications/Workspace.app/Resources/Dimple.tiff
+/System/Applications/Workspace.app/Resources/DragableDocument.tiff
+/System/Applications/Workspace.app/Resources/Dutch.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/English.lproj/BrowserViewerPref.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/BrowserViewerPref.gorm/data.info
+/System/Applications/Workspace.app/Resources/English.lproj/BrowserViewerPref.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/DefEditorPref.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/DefEditorPref.gorm/data.info
+/System/Applications/Workspace.app/Resources/English.lproj/DefEditorPref.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/DefSortOrderPref.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/DefSortOrderPref.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/DesktopPref.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/DesktopPref.gorm/data.info
+/System/Applications/Workspace.app/Resources/English.lproj/DesktopPref.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/FindModuleView.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/FindModuleView.gorm/data.info
+/System/Applications/Workspace.app/Resources/English.lproj/FindModuleView.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/Finder.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/Finder.gorm/data.info
+/System/Applications/Workspace.app/Resources/English.lproj/Finder.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/Help/BViewer.rtfd/TXT.rtf
+/System/Applications/Workspace.app/Resources/English.lproj/Help/BViewer.rtfd/browsing.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/BViewer.rtfd/dummy.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/BViewer.rtfd/views.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Desktop.rtfd/FileManager.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Desktop.rtfd/TXT.rtf
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Dock.rtfd/TXT.rtf
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Dock.rtfd/dock.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Dock.rtfd/dummy.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Fiend.rtfd/Fiend-Develop.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Fiend.rtfd/Fiend-menu.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Fiend.rtfd/TXT.rtf
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Fiend.rtfd/dummy.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Workspace.rtfd/FileManager.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Workspace.rtfd/TXT.rtf
+/System/Applications/Workspace.app/Resources/English.lproj/Help/History.rtfd/FileManager.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/History.rtfd/TXT.rtf
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Inspector.rtfd/TXT.rtf
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Inspector.rtfd/dummy.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Preferences.rtfd/TXT.rtf
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Preferences.rtfd/dummy.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Recycler.rtfd/Recycler-content.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Recycler.rtfd/Recycler-drag.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Recycler.rtfd/Recycler.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Recycler.rtfd/RecyclerFull.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Recycler.rtfd/TXT.rtf
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Recycler.rtfd/dummy.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/RunExternal.rtfd/Run-panel.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/RunExternal.rtfd/TXT.rtf
+/System/Applications/Workspace.app/Resources/English.lproj/Help/RunExternal.rtfd/dummy.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/TabbedShelf.rtfd/TXT.rtf
+/System/Applications/Workspace.app/Resources/English.lproj/Help/TabbedShelf.rtfd/TabbedShelf-develop.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/TabbedShelf.rtfd/dummy.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/HiddenFilesPref.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/HiddenFilesPref.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/HistoryPref.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/HistoryPref.gorm/data.info
+/System/Applications/Workspace.app/Resources/English.lproj/HistoryPref.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/IconsPref.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/IconsPref.gorm/data.info
+/System/Applications/Workspace.app/Resources/English.lproj/IconsPref.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/LSFEditor.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/LSFEditor.gorm/data.info
+/System/Applications/Workspace.app/Resources/English.lproj/LSFEditor.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/LSFolder.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/LSFolder.gorm/data.info
+/System/Applications/Workspace.app/Resources/English.lproj/LSFolder.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/English.lproj/OpenWith.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/OpenWith.gorm/data.info
+/System/Applications/Workspace.app/Resources/English.lproj/OpenWith.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/OperationPrefs.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/OperationPrefs.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/PrefWindow.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/PrefWindow.gorm/data.info
+/System/Applications/Workspace.app/Resources/English.lproj/PrefWindow.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/RunExternal.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/RunExternal.gorm/data.info
+/System/Applications/Workspace.app/Resources/English.lproj/RunExternal.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/SearchResults.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/SearchResults.gorm/data.info
+/System/Applications/Workspace.app/Resources/English.lproj/SearchResults.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/ShelfPref.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/ShelfPref.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/StartAppWin.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/StartAppWin.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/English.lproj/XTermPref.gorm/data.classes
+/System/Applications/Workspace.app/Resources/English.lproj/XTermPref.gorm/data.info
+/System/Applications/Workspace.app/Resources/English.lproj/XTermPref.gorm/objects.gorm
+/System/Applications/Workspace.app/Resources/Esperanto.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/FFArrow.tiff
+/System/Applications/Workspace.app/Resources/FFArrow_disabled.tiff
+/System/Applications/Workspace.app/Resources/FileIcon_WebLink.tiff
+/System/Applications/Workspace.app/Resources/FileManager.tiff
+/System/Applications/Workspace.app/Resources/French.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/Workspace.desktop
+/System/Applications/Workspace.app/Resources/WorkspaceInfo.plist
+/System/Applications/Workspace.app/Resources/German.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/Hungarian.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/Info-gnustep.plist
+/System/Applications/Workspace.app/Resources/Italian.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/Japanese.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/Kill.tiff
+/System/Applications/Workspace.app/Resources/LED-0.tiff
+/System/Applications/Workspace.app/Resources/LED-1.tiff
+/System/Applications/Workspace.app/Resources/LED-2.tiff
+/System/Applications/Workspace.app/Resources/LED-3.tiff
+/System/Applications/Workspace.app/Resources/LED-4.tiff
+/System/Applications/Workspace.app/Resources/LED-5.tiff
+/System/Applications/Workspace.app/Resources/LED-6.tiff
+/System/Applications/Workspace.app/Resources/LED-7.tiff
+/System/Applications/Workspace.app/Resources/LED-8.tiff
+/System/Applications/Workspace.app/Resources/LED-9.tiff
+/System/Applications/Workspace.app/Resources/LED-AM.tiff
+/System/Applications/Workspace.app/Resources/LED-Colon.tiff
+/System/Applications/Workspace.app/Resources/LED-PM.tiff
+/System/Applications/Workspace.app/Resources/LED.tiff
+/System/Applications/Workspace.app/Resources/LeftArr.tiff
+/System/Applications/Workspace.app/Resources/LiveSearchFolder.tiff
+/System/Applications/Workspace.app/Resources/Magnify.tiff
+/System/Applications/Workspace.app/Resources/MagnifyGlas.tiff
+/System/Applications/Workspace.app/Resources/Magnify_16.tiff
+/System/Applications/Workspace.app/Resources/Magnify_24.tiff
+/System/Applications/Workspace.app/Resources/Magnify_32.tiff
+/System/Applications/Workspace.app/Resources/Magnify_48.tiff
+/System/Applications/Workspace.app/Resources/Mask.tiff
+/System/Applications/Workspace.app/Resources/Month-1.tiff
+/System/Applications/Workspace.app/Resources/Month-10.tiff
+/System/Applications/Workspace.app/Resources/Month-11.tiff
+/System/Applications/Workspace.app/Resources/Month-12.tiff
+/System/Applications/Workspace.app/Resources/Month-2.tiff
+/System/Applications/Workspace.app/Resources/Month-3.tiff
+/System/Applications/Workspace.app/Resources/Month-4.tiff
+/System/Applications/Workspace.app/Resources/Month-5.tiff
+/System/Applications/Workspace.app/Resources/Month-6.tiff
+/System/Applications/Workspace.app/Resources/Month-7.tiff
+/System/Applications/Workspace.app/Resources/Month-8.tiff
+/System/Applications/Workspace.app/Resources/Month-9.tiff
+/System/Applications/Workspace.app/Resources/Month.tiff
+/System/Applications/Workspace.app/Resources/Norvegian.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/Pboard.tiff
+/System/Applications/Workspace.app/Resources/Polish.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/Portuguese.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/REWArrow.tiff
+/System/Applications/Workspace.app/Resources/REWArrow_disabled.tiff
+/System/Applications/Workspace.app/Resources/RightArr.tiff
+/System/Applications/Workspace.app/Resources/Romanian.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/SlideMask.tiff
+/System/Applications/Workspace.app/Resources/SmallCellHighlight.tiff
+/System/Applications/Workspace.app/Resources/SmallCellHighlightSmall.tiff
+/System/Applications/Workspace.app/Resources/Spanish.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/TileHighlight.tiff
+/System/Applications/Workspace.app/Resources/Weekday-0.tiff
+/System/Applications/Workspace.app/Resources/Weekday-1.tiff
+/System/Applications/Workspace.app/Resources/Weekday-2.tiff
+/System/Applications/Workspace.app/Resources/Weekday-3.tiff
+/System/Applications/Workspace.app/Resources/Weekday-4.tiff
+/System/Applications/Workspace.app/Resources/Weekday-5.tiff
+/System/Applications/Workspace.app/Resources/Weekday-6.tiff
+/System/Applications/Workspace.app/Resources/Weekday.tiff
+/System/Applications/Workspace.app/Resources/add.tiff
+/System/Applications/Workspace.app/Resources/anim-logo-0.tiff
+/System/Applications/Workspace.app/Resources/anim-logo-1.tiff
+/System/Applications/Workspace.app/Resources/anim-logo-2.tiff
+/System/Applications/Workspace.app/Resources/anim-logo-3.tiff
+/System/Applications/Workspace.app/Resources/anim-logo-4.tiff
+/System/Applications/Workspace.app/Resources/anim-logo-5.tiff
+/System/Applications/Workspace.app/Resources/anim-logo-6.tiff
+/System/Applications/Workspace.app/Resources/anim-logo-7.tiff
+/System/Applications/Workspace.app/Resources/colorPboard.tiff
+/System/Applications/Workspace.app/Resources/common_ArrowLeftH.tiff
+/System/Applications/Workspace.app/Resources/common_ArrowRightH.tiff
+/System/Applications/Workspace.app/Resources/filecontsPboard.tiff
+/System/Applications/Workspace.app/Resources/gormPboard.tiff
+/System/Applications/Workspace.app/Resources/littleArrowDown.tiff
+/System/Applications/Workspace.app/Resources/littleArrowRight.tiff
+/System/Applications/Workspace.app/Resources/magnify_small.tiff
+/System/Applications/Workspace.app/Resources/page.tiff
+/System/Applications/Workspace.app/Resources/pause.tiff
+/System/Applications/Workspace.app/Resources/play.tiff
+/System/Applications/Workspace.app/Resources/remove.tiff
+/System/Applications/Workspace.app/Resources/rtfPboard.tiff
+/System/Applications/Workspace.app/Resources/rtfdPboard.tiff
+/System/Applications/Workspace.app/Resources/stop.tiff
+/System/Applications/Workspace.app/Resources/stop_16.tiff
+/System/Applications/Workspace.app/Resources/stop_24.tiff
+/System/Applications/Workspace.app/Resources/stop_32.tiff
+/System/Applications/Workspace.app/Resources/stop_48.tiff
+/System/Applications/Workspace.app/Resources/stop_small.tiff
+/System/Applications/Workspace.app/Resources/stringPboard.tiff
+/System/Applications/Workspace.app/Resources/switchMultiple.tiff
+/System/Applications/Workspace.app/Resources/switchOff.tiff
+/System/Applications/Workspace.app/Resources/switchOn.tiff
+/System/Applications/Workspace.app/Resources/tabSelectedLeft.tiff
+/System/Applications/Workspace.app/Resources/tabSelectedRight.tiff
+/System/Applications/Workspace.app/Resources/tabSelectedToUnSelectedJunction.tiff
+/System/Applications/Workspace.app/Resources/tabUnSelectToSelectedJunction.tiff
+/System/Applications/Workspace.app/Resources/tabUnSelectedJunction.tiff
+/System/Applications/Workspace.app/Resources/tabUnSelectedLeft.tiff
+/System/Applications/Workspace.app/Resources/tabUnSelectedRight.tiff
+/System/Applications/Workspace.app/Resources/tiffPboard.tiff
+/System/Applications/Workspace.app/Resources/watch.tiff
+/System/Applications/Workspace.app/stamp.make
 /System/Library/Bundles/AppViewer.inspector/AppViewer
 /System/Library/Bundles/AppViewer.inspector/Resources/English.lproj/Help.rtfd/TXT.rtf
 /System/Library/Bundles/AppViewer.inspector/Resources/English.lproj/Help.rtfd/dummy.tiff
@@ -507,60 +507,60 @@
 /System/Library/Libraries/libOperation.so
 /System/Library/Libraries/libOperation.so.1
 /System/Library/Libraries/libOperation.so.1.0.0
-/System/Library/Tools/GWorkspace
+/System/Library/Tools/Workspace
 /System/Library/Tools/ddbd
 /System/Library/Tools/fswatcher
 /System/Library/Tools/lsfupdater
 /System/Library/Tools/searchtool
 /System/Library/Tools/wopen
 libdata/ldconfig/gershwin-workspace
-@dir /System/Applications/GWorkspace.app/Resources/BrasilPortuguese.lproj
-@dir /System/Applications/GWorkspace.app/Resources/Dutch.lproj
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/BrowserViewerPref.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/DefEditorPref.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/DefSortOrderPref.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/DesktopPref.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/FindModuleView.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/Finder.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/Help/BViewer.rtfd
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/Help/Desktop.rtfd
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/Help/Dock.rtfd
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/Help/Fiend.rtfd
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/Help/GWorkspace.rtfd
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/Help/History.rtfd
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/Help/Inspector.rtfd
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/Help/Preferences.rtfd
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/Help/Recycler.rtfd
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/Help/RunExternal.rtfd
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/Help/TabbedShelf.rtfd
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/Help
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/HiddenFilesPref.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/HistoryPref.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/IconsPref.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/LSFEditor.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/LSFolder.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/OperationPrefs.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/PrefWindow.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/RunExternal.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/SearchResults.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/ShelfPref.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/StartAppWin.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj/XTermPref.gorm
-@dir /System/Applications/GWorkspace.app/Resources/English.lproj
-@dir /System/Applications/GWorkspace.app/Resources/Esperanto.lproj
-@dir /System/Applications/GWorkspace.app/Resources/French.lproj
-@dir /System/Applications/GWorkspace.app/Resources/German.lproj
-@dir /System/Applications/GWorkspace.app/Resources/Hungarian.lproj
-@dir /System/Applications/GWorkspace.app/Resources/Italian.lproj
-@dir /System/Applications/GWorkspace.app/Resources/Japanese.lproj
-@dir /System/Applications/GWorkspace.app/Resources/Norvegian.lproj
-@dir /System/Applications/GWorkspace.app/Resources/Polish.lproj
-@dir /System/Applications/GWorkspace.app/Resources/Portuguese.lproj
-@dir /System/Applications/GWorkspace.app/Resources/Romanian.lproj
-@dir /System/Applications/GWorkspace.app/Resources/Spanish.lproj
-@dir /System/Applications/GWorkspace.app/Resources
-@dir /System/Applications/GWorkspace.app
+@dir /System/Applications/Workspace.app/Resources/BrasilPortuguese.lproj
+@dir /System/Applications/Workspace.app/Resources/Dutch.lproj
+@dir /System/Applications/Workspace.app/Resources/English.lproj/BrowserViewerPref.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/DefEditorPref.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/DefSortOrderPref.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/DesktopPref.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/FindModuleView.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/Finder.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/Help/BViewer.rtfd
+@dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Desktop.rtfd
+@dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Dock.rtfd
+@dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Fiend.rtfd
+@dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Workspace.rtfd
+@dir /System/Applications/Workspace.app/Resources/English.lproj/Help/History.rtfd
+@dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Inspector.rtfd
+@dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Preferences.rtfd
+@dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Recycler.rtfd
+@dir /System/Applications/Workspace.app/Resources/English.lproj/Help/RunExternal.rtfd
+@dir /System/Applications/Workspace.app/Resources/English.lproj/Help/TabbedShelf.rtfd
+@dir /System/Applications/Workspace.app/Resources/English.lproj/Help
+@dir /System/Applications/Workspace.app/Resources/English.lproj/HiddenFilesPref.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/HistoryPref.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/IconsPref.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/LSFEditor.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/LSFolder.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/OpenWith.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/OperationPrefs.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/PrefWindow.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/RunExternal.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/SearchResults.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/ShelfPref.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/StartAppWin.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj/XTermPref.gorm
+@dir /System/Applications/Workspace.app/Resources/English.lproj
+@dir /System/Applications/Workspace.app/Resources/Esperanto.lproj
+@dir /System/Applications/Workspace.app/Resources/French.lproj
+@dir /System/Applications/Workspace.app/Resources/German.lproj
+@dir /System/Applications/Workspace.app/Resources/Hungarian.lproj
+@dir /System/Applications/Workspace.app/Resources/Italian.lproj
+@dir /System/Applications/Workspace.app/Resources/Japanese.lproj
+@dir /System/Applications/Workspace.app/Resources/Norvegian.lproj
+@dir /System/Applications/Workspace.app/Resources/Polish.lproj
+@dir /System/Applications/Workspace.app/Resources/Portuguese.lproj
+@dir /System/Applications/Workspace.app/Resources/Romanian.lproj
+@dir /System/Applications/Workspace.app/Resources/Spanish.lproj
+@dir /System/Applications/Workspace.app/Resources
+@dir /System/Applications/Workspace.app
 @dir /System/Applications
 @dir /System/Library/Bundles/AppViewer.inspector/Resources/English.lproj/Help.rtfd
 @dir /System/Library/Bundles/AppViewer.inspector/Resources/English.lproj

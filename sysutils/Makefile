@@ -453,8 +453,6 @@
     SUBDIR += gdu
     SUBDIR += genimage
     SUBDIR += genisoimage
-    SUBDIR += gershwin-gbi-wrapper
-    SUBDIR += gershwin-ghostbsd-wrappers
     SUBDIR += geomman
     SUBDIR += getdelta
     SUBDIR += geteltorito

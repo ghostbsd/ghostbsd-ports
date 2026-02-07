@@ -1,0 +1,13 @@
+--- Tools/dsutil/GNUmakefile.orig	2026-02-06 11:00:00.000000000 +0000
++++ Tools/dsutil/GNUmakefile	2026-02-06 11:00:00.000000000 +0000
+@@ -23,8 +23,8 @@
+ # Custom man page installation
+ after-install::
+ 	@echo "Installing man pages..."
+-	@$(MKDIRS) $(GNUSTEP_SYSTEM_LIBRARY)/Documentation/man/man1
++	@$(MKDIRS) $(DESTDIR)$(GNUSTEP_SYSTEM_LIBRARY)/Documentation/man/man1
+ 	@for manpage in $(MAN1_PAGES); do \
+-	  $(INSTALL_DATA) $$manpage $(GNUSTEP_SYSTEM_LIBRARY)/Documentation/man/man1/$$manpage; \
++	  $(INSTALL_DATA) $$manpage $(DESTDIR)$(GNUSTEP_SYSTEM_LIBRARY)/Documentation/man/man1/$$manpage; \
+ 	done
+ 	@echo "Ensuring no .desktop files are installed for dsutil..."

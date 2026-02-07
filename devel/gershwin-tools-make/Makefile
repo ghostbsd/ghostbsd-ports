@@ -29,6 +29,7 @@ CONFIGURE_ARGS+= \
 	--with-config-file=/System/Library/Preferences/GNUstep.conf \
 	--with-layout=gershwin \
 	--with-library-combo=ng-gnu-gnu \
+	--enable-objc-nonfragile-abi \
 	--with-objc-lib-flag=" " \
 	LDFLAGS="-L/System/Library/Libraries -Wl,-rpath,/System/Library/Libraries" \
 	CPPFLAGS="-I/System/Library/Headers" \

@@ -1,5 +1,5 @@
 PORTNAME=	gershwin-terminal
-DISTVERSION=	20250722
+DISTVERSION=	20260129
 CATEGORIES=	x11 gnustep
 
 MAINTAINER=	jpm820@proton.me
@@ -14,7 +14,7 @@ USE_GERSHWIN=	back build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	gershwin-desktop
-GH_TAGNAME=	60759a8
+GH_TAGNAME=	71124e3
 
 MAKE_ARGS+=	Terminal_TOOL_LIBS='${ICONV_LIB} -lutil'
 
