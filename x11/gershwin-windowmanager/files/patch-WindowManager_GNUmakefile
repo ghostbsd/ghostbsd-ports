@@ -1,0 +1,13 @@
+--- WindowManager/GNUmakefile.orig	2026-02-07 14:00:00.000000000 +0000
++++ WindowManager/GNUmakefile	2026-02-07 14:01:00.000000000 +0000
+@@ -8,6 +8,10 @@ DEPENDENCIES = XCBKit
+
+ # XCBKit is declared as a dependency above; no standalone target here.
+
++# Add parent directory to include path to find XCBKit headers
++ADDITIONAL_CPPFLAGS += -I..
++ADDITIONAL_LDFLAGS += -L../XCBKit/XCBKit.framework
++
+ APP_NAME = WindowManager
+ $(APP_NAME)_APPLICATION_ICON = WindowManager.png
+ $(APP_NAME)_RESOURCE_FILES = WindowManager.png

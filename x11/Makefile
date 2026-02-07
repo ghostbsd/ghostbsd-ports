@@ -95,6 +95,7 @@
     SUBDIR += gdm
     SUBDIR += gershwin
     SUBDIR += gershwin-terminal
+    SUBDIR += gershwin-windowmanager
     SUBDIR += ghostbsd-cinnamon-settings
     SUBDIR += ghostbsd-common-settings
     SUBDIR += ghostbsd-gershwin-settings

@@ -23,6 +23,7 @@ RUN_DEPENDS=	gershwin-system>0:misc/gershwin-system \
 		gershwin-systempreferences>0:deskutils/gershwin-systempreferences \
 		gershwin-textedit>0:deskutils/gershwin-textedit \
 		gershwin-terminal>0:x11/gershwin-terminal \
+		gershwin-windowmanager>0:x11/gershwin-windowmanager
 
 USES=		metaport
 
