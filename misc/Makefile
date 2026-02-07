@@ -163,6 +163,7 @@
     SUBDIR += gedkeeper
     SUBDIR += geekcode
     SUBDIR += gemini-cli
+    SUBDIR += gershwin-assets
     SUBDIR += gershwin-system
     SUBDIR += getopt
     SUBDIR += ggml

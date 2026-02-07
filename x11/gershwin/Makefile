@@ -11,6 +11,7 @@ WWW=		https://github.com/gershwin-desktop/gershwin-desktop
 LICENSE=	BSD3CLAUSE
 
 RUN_DEPENDS=	gershwin-system>0:misc/gershwin-system \
+		gershwin-assets>0:misc/gershwin-assets \
 		gershwin-libdispatch>0:devel/gershwin-libdispatch \
 		gershwin-tools-make>0:devel/gershwin-tools-make \
 		gershwin-libobjc2>0:lang/gershwin-libobjc2 \
