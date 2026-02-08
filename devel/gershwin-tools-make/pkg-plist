@@ -116,6 +116,7 @@
 /System/Library/Makefiles/jni.make
 /System/Library/Makefiles/library-combo.make
 /System/Library/Makefiles/library.make
+/System/Library/Makefiles/lsan-suppressions
 /System/Library/Makefiles/messages.make
 /System/Library/Makefiles/mkinstalldirs
 /System/Library/Makefiles/names.make

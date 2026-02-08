@@ -1,0 +1,81 @@
+/System/Library/CoreServices/Applications/WindowManager.app/Resources/Info-gnustep.plist
+/System/Library/CoreServices/Applications/WindowManager.app/Resources/WindowManager.desktop
+/System/Library/CoreServices/Applications/WindowManager.app/Resources/WindowManager.png
+/System/Library/CoreServices/Applications/WindowManager.app/WindowManager
+/System/Library/CoreServices/Applications/WindowManager.app/stamp.make
+/System/Library/Frameworks/XCBKit.framework/Headers
+/System/Library/Frameworks/XCBKit.framework/Resources
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBAttributesReply.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBConnection.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBCursor.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBFrame.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBGeometryReply.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBKit.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBQueryTreeReply.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBRegion.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBReply.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBScreen.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBSelection.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBShape.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBTitleBar.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBVisual.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/XCBWindow.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/enums/EEwmh.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/enums/EIcccm.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/enums/EMousePosition.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/enums/ERequests.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/enums/EResizeDirection.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/enums/ETitleBarColor.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/enums/EXErrorMessages.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/functions/Comparators.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/functions/Transformers.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/protocols/client/Client.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/protocols/server/Server.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/services/EWMHService.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/services/ICCCMService.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/services/TitleBarSettingsService.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/services/XCBAtomService.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/utils/CairoDrawer.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/utils/CairoSurfacesSet.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/utils/XCBCreateWindowTypeRequest.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/utils/XCBEvent.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/utils/XCBShape.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/utils/XCBWindowTypeResponse.h
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Resources/Info-gnustep.plist
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Resources/close.png
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Resources/max.png
+/System/Library/Frameworks/XCBKit.framework/Versions/0/Resources/min.png
+/System/Library/Frameworks/XCBKit.framework/Versions/0/XCBKit
+/System/Library/Frameworks/XCBKit.framework/Versions/0/libXCBKit.so
+/System/Library/Frameworks/XCBKit.framework/Versions/0/libXCBKit.so.0
+/System/Library/Frameworks/XCBKit.framework/Versions/0/libXCBKit.so.0.0.18
+/System/Library/Frameworks/XCBKit.framework/Versions/Current
+/System/Library/Frameworks/XCBKit.framework/XCBKit
+/System/Library/Frameworks/XCBKit.framework/libXCBKit.so
+/System/Library/Headers/XCBKit
+/System/Library/Libraries/libXCBKit.so
+/System/Library/Libraries/libXCBKit.so.0
+/System/Library/Libraries/libXCBKit.so.0.0.18
+/System/Library/Tools/WindowManager
+@dir /System/Library/CoreServices/Applications/WindowManager.app/Resources
+@dir /System/Library/CoreServices/Applications/WindowManager.app
+@dir /System/Library/CoreServices/Applications
+@dir /System/Library/CoreServices
+@dir /System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/enums
+@dir /System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/functions
+@dir /System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/protocols/client
+@dir /System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/protocols/server
+@dir /System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/protocols
+@dir /System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/services
+@dir /System/Library/Frameworks/XCBKit.framework/Versions/0/Headers/utils
+@dir /System/Library/Frameworks/XCBKit.framework/Versions/0/Headers
+@dir /System/Library/Frameworks/XCBKit.framework/Versions/0/Resources
+@dir /System/Library/Frameworks/XCBKit.framework/Versions/0
+@dir /System/Library/Frameworks/XCBKit.framework/Versions
+@dir /System/Library/Frameworks/XCBKit.framework
+@dir /System/Library/Frameworks
+@dir /System/Library/Headers
+@dir /System/Library/Libraries
+@dir /System/Library/Tools
+@dir /System/Library
+@dir /System

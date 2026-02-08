@@ -1,0 +1,10 @@
+--- GNUmakefile.orig	2026-02-07 20:00:00.000000000 +0000
++++ GNUmakefile	2026-02-07 20:01:00.000000000 +0000
+@@ -14,6 +14,7 @@ WindowManager: XCBKit
+ 	$(MAKE) -C WindowManager -f GNUmakefile
+
+ install: WindowManager
++	$(MAKE) -C XCBKit -f GNUmakefile install
+ 	$(MAKE) -C WindowManager -f GNUmakefile install
+
+ clean:
