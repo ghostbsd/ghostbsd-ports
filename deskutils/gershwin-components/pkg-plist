@@ -18,6 +18,11 @@
 /System/Applications/SudoAskPass.app/Resources/SudoAskPass.desktop
 /System/Applications/SudoAskPass.app/SudoAskPass
 /System/Applications/SudoAskPass.app/stamp.make
+/System/Library/CoreServices/Applications/LoginWindow.app/LoginWindow
+/System/Library/CoreServices/Applications/LoginWindow.app/Resources/Info-gnustep.plist
+/System/Library/CoreServices/Applications/LoginWindow.app/Resources/Info.plist
+/System/Library/CoreServices/Applications/LoginWindow.app/Resources/LoginWindow.desktop
+/System/Library/CoreServices/Applications/LoginWindow.app/stamp.make
 /System/Library/CoreServices/Applications/Menu.app/Menu
 /System/Library/CoreServices/Applications/Menu.app/Resources/Info-gnustep.plist
 /System/Library/CoreServices/Applications/Menu.app/Resources/Info.plist
@@ -26,11 +31,17 @@
 /System/Library/CoreServices/Applications/Menu.app/stamp.make
 /System/Library/Libraries/nss_gershwin.so.1
 /System/Library/Menu/StatusItems/SystemMonitor.bundle/Resources/Info-gnustep.plist
+/System/Library/Menu/StatusItems/SystemMonitor.bundle/Resources/Info.plist
 /System/Library/Menu/StatusItems/SystemMonitor.bundle/SystemMonitor
 /System/Library/Menu/StatusItems/SystemMonitor.bundle/stamp.make
 /System/Library/Menu/StatusItems/TimeDisplay.bundle/Resources/Info-gnustep.plist
+/System/Library/Menu/StatusItems/TimeDisplay.bundle/Resources/Info.plist
 /System/Library/Menu/StatusItems/TimeDisplay.bundle/TimeDisplay
 /System/Library/Menu/StatusItems/TimeDisplay.bundle/stamp.make
+/System/Library/Tools/Console
+/System/Library/Tools/LoginWindow
+/System/Library/Tools/Processes
+/System/Library/Tools/SudoAskPass
 /System/Library/Tools/appwrap
 /System/Library/Tools/dscli
 /System/Library/Tools/dshelper
@@ -45,13 +56,20 @@ etc/rc.d/loginwindow
 @dir /System/Applications/Processes.app
 @dir /System/Applications/SudoAskPass.app/Resources
 @dir /System/Applications/SudoAskPass.app
+@dir /System/Applications
+@dir /System/Library/CoreServices/Applications/LoginWindow.app/Resources
+@dir /System/Library/CoreServices/Applications/LoginWindow.app
 @dir /System/Library/CoreServices/Applications/Menu.app/Resources
 @dir /System/Library/CoreServices/Applications/Menu.app
 @dir /System/Library/CoreServices/Applications
 @dir /System/Library/CoreServices
+@dir /System/Library/Libraries
 @dir /System/Library/Menu/StatusItems/SystemMonitor.bundle/Resources
 @dir /System/Library/Menu/StatusItems/SystemMonitor.bundle
 @dir /System/Library/Menu/StatusItems/TimeDisplay.bundle/Resources
 @dir /System/Library/Menu/StatusItems/TimeDisplay.bundle
 @dir /System/Library/Menu/StatusItems
 @dir /System/Library/Menu
+@dir /System/Library/Tools
+@dir /System/Library
+@dir /System

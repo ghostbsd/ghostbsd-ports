@@ -1,5 +1,5 @@
-/System/Applications/Workspace.app/Workspace
 /System/Applications/Workspace.app/Resources/BrasilPortuguese.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/CD.icns
 /System/Applications/Workspace.app/Resources/CellHighlight.tiff
 /System/Applications/Workspace.app/Resources/CellHighlight_osx.tiff
 /System/Applications/Workspace.app/Resources/ComputeSize.tiff
@@ -19,6 +19,7 @@
 /System/Applications/Workspace.app/Resources/Dimple.tiff
 /System/Applications/Workspace.app/Resources/DragableDocument.tiff
 /System/Applications/Workspace.app/Resources/Dutch.lproj/Localizable.strings
+/System/Applications/Workspace.app/Resources/Eject.icns
 /System/Applications/Workspace.app/Resources/English.lproj/BrowserViewerPref.gorm/data.classes
 /System/Applications/Workspace.app/Resources/English.lproj/BrowserViewerPref.gorm/data.info
 /System/Applications/Workspace.app/Resources/English.lproj/BrowserViewerPref.gorm/objects.gorm
@@ -49,8 +50,6 @@
 /System/Applications/Workspace.app/Resources/English.lproj/Help/Fiend.rtfd/Fiend-menu.tiff
 /System/Applications/Workspace.app/Resources/English.lproj/Help/Fiend.rtfd/TXT.rtf
 /System/Applications/Workspace.app/Resources/English.lproj/Help/Fiend.rtfd/dummy.tiff
-/System/Applications/Workspace.app/Resources/English.lproj/Help/Workspace.rtfd/FileManager.tiff
-/System/Applications/Workspace.app/Resources/English.lproj/Help/Workspace.rtfd/TXT.rtf
 /System/Applications/Workspace.app/Resources/English.lproj/Help/History.rtfd/FileManager.tiff
 /System/Applications/Workspace.app/Resources/English.lproj/Help/History.rtfd/TXT.rtf
 /System/Applications/Workspace.app/Resources/English.lproj/Help/Inspector.rtfd/TXT.rtf
@@ -69,6 +68,8 @@
 /System/Applications/Workspace.app/Resources/English.lproj/Help/TabbedShelf.rtfd/TXT.rtf
 /System/Applications/Workspace.app/Resources/English.lproj/Help/TabbedShelf.rtfd/TabbedShelf-develop.tiff
 /System/Applications/Workspace.app/Resources/English.lproj/Help/TabbedShelf.rtfd/dummy.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Workspace.rtfd/FileManager.tiff
+/System/Applications/Workspace.app/Resources/English.lproj/Help/Workspace.rtfd/TXT.rtf
 /System/Applications/Workspace.app/Resources/English.lproj/HiddenFilesPref.gorm/data.classes
 /System/Applications/Workspace.app/Resources/English.lproj/HiddenFilesPref.gorm/objects.gorm
 /System/Applications/Workspace.app/Resources/English.lproj/HistoryPref.gorm/data.classes
@@ -111,8 +112,6 @@
 /System/Applications/Workspace.app/Resources/FileIcon_WebLink.tiff
 /System/Applications/Workspace.app/Resources/FileManager.tiff
 /System/Applications/Workspace.app/Resources/French.lproj/Localizable.strings
-/System/Applications/Workspace.app/Resources/Workspace.desktop
-/System/Applications/Workspace.app/Resources/WorkspaceInfo.plist
 /System/Applications/Workspace.app/Resources/German.lproj/Localizable.strings
 /System/Applications/Workspace.app/Resources/Hungarian.lproj/Localizable.strings
 /System/Applications/Workspace.app/Resources/Info-gnustep.plist
@@ -155,6 +154,7 @@
 /System/Applications/Workspace.app/Resources/Month-8.tiff
 /System/Applications/Workspace.app/Resources/Month-9.tiff
 /System/Applications/Workspace.app/Resources/Month.tiff
+/System/Applications/Workspace.app/Resources/Network.icns
 /System/Applications/Workspace.app/Resources/Norvegian.lproj/Localizable.strings
 /System/Applications/Workspace.app/Resources/Pboard.tiff
 /System/Applications/Workspace.app/Resources/Polish.lproj/Localizable.strings
@@ -176,6 +176,9 @@
 /System/Applications/Workspace.app/Resources/Weekday-5.tiff
 /System/Applications/Workspace.app/Resources/Weekday-6.tiff
 /System/Applications/Workspace.app/Resources/Weekday.tiff
+/System/Applications/Workspace.app/Resources/Workspace.desktop
+/System/Applications/Workspace.app/Resources/Workspace.png
+/System/Applications/Workspace.app/Resources/WorkspaceInfo.plist
 /System/Applications/Workspace.app/Resources/add.tiff
 /System/Applications/Workspace.app/Resources/anim-logo-0.tiff
 /System/Applications/Workspace.app/Resources/anim-logo-1.tiff
@@ -218,6 +221,7 @@
 /System/Applications/Workspace.app/Resources/tabUnSelectedRight.tiff
 /System/Applications/Workspace.app/Resources/tiffPboard.tiff
 /System/Applications/Workspace.app/Resources/watch.tiff
+/System/Applications/Workspace.app/Workspace
 /System/Applications/Workspace.app/stamp.make
 /System/Library/Bundles/AppViewer.inspector/AppViewer
 /System/Library/Bundles/AppViewer.inspector/Resources/English.lproj/Help.rtfd/TXT.rtf
@@ -342,6 +346,7 @@
 /System/Library/Bundles/SoundViewer.inspector/Resources/stop.tiff
 /System/Library/Bundles/SoundViewer.inspector/SoundViewer
 /System/Library/Bundles/SoundViewer.inspector/stamp.make
+/System/Library/Documentation/man/man1/dsutil.1
 /System/Library/Frameworks/FSNode.framework/FSNode
 /System/Library/Frameworks/FSNode.framework/Headers
 /System/Library/Frameworks/FSNode.framework/Resources
@@ -492,12 +497,20 @@
 /System/Library/Headers/DBKit/DBKFixLenRecordsFile.h
 /System/Library/Headers/DBKit/DBKPathsTree.h
 /System/Library/Headers/DBKit/DBKVarLenRecordsFile.h
+/System/Library/Headers/DSStore/DSBuddyAllocator.h
+/System/Library/Headers/DSStore/DSStore.h
+/System/Library/Headers/DSStore/DSStoreCodecs.h
+/System/Library/Headers/DSStore/DSStoreEntry.h
+/System/Library/Headers/DSStore/SimpleColor.h
 /System/Library/Headers/FSNode
 /System/Library/Headers/Inspector
 /System/Library/Headers/Operation
 /System/Library/Libraries/libDBKit.so
 /System/Library/Libraries/libDBKit.so.0
-/System/Library/Libraries/libDBKit.so.%%LIBVERSION%%
+/System/Library/Libraries/libDBKit.so.0.0.1
+/System/Library/Libraries/libDSStore.so
+/System/Library/Libraries/libDSStore.so.0
+/System/Library/Libraries/libDSStore.so.0.0.1
 /System/Library/Libraries/libFSNode.so
 /System/Library/Libraries/libFSNode.so.1
 /System/Library/Libraries/libFSNode.so.1.1.0
@@ -509,11 +522,13 @@
 /System/Library/Libraries/libOperation.so.1.0.0
 /System/Library/Tools/Workspace
 /System/Library/Tools/ddbd
+/System/Library/Tools/dsutil
 /System/Library/Tools/fswatcher
+/System/Library/Tools/isowrite-helper
 /System/Library/Tools/lsfupdater
 /System/Library/Tools/searchtool
+/System/Library/Tools/uitest
 /System/Library/Tools/wopen
-libdata/ldconfig/gershwin-workspace
 @dir /System/Applications/Workspace.app/Resources/BrasilPortuguese.lproj
 @dir /System/Applications/Workspace.app/Resources/Dutch.lproj
 @dir /System/Applications/Workspace.app/Resources/English.lproj/BrowserViewerPref.gorm
@@ -526,13 +541,13 @@ libdata/ldconfig/gershwin-workspace
 @dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Desktop.rtfd
 @dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Dock.rtfd
 @dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Fiend.rtfd
-@dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Workspace.rtfd
 @dir /System/Applications/Workspace.app/Resources/English.lproj/Help/History.rtfd
 @dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Inspector.rtfd
 @dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Preferences.rtfd
 @dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Recycler.rtfd
 @dir /System/Applications/Workspace.app/Resources/English.lproj/Help/RunExternal.rtfd
 @dir /System/Applications/Workspace.app/Resources/English.lproj/Help/TabbedShelf.rtfd
+@dir /System/Applications/Workspace.app/Resources/English.lproj/Help/Workspace.rtfd
 @dir /System/Applications/Workspace.app/Resources/English.lproj/Help
 @dir /System/Applications/Workspace.app/Resources/English.lproj/HiddenFilesPref.gorm
 @dir /System/Applications/Workspace.app/Resources/English.lproj/HistoryPref.gorm
@@ -633,6 +648,9 @@ libdata/ldconfig/gershwin-workspace
 @dir /System/Library/Bundles/SoundViewer.inspector/Resources
 @dir /System/Library/Bundles/SoundViewer.inspector
 @dir /System/Library/Bundles
+@dir /System/Library/Documentation/man/man1
+@dir /System/Library/Documentation/man
+@dir /System/Library/Documentation
 @dir /System/Library/Frameworks/FSNode.framework/Versions/1/Headers
 @dir /System/Library/Frameworks/FSNode.framework/Versions/1/Resources/English.lproj
 @dir /System/Library/Frameworks/FSNode.framework/Versions/1/Resources/French.lproj
@@ -663,6 +681,7 @@ libdata/ldconfig/gershwin-workspace
 @dir /System/Library/Frameworks/Operation.framework
 @dir /System/Library/Frameworks
 @dir /System/Library/Headers/DBKit
+@dir /System/Library/Headers/DSStore
 @dir /System/Library/Headers
 @dir /System/Library/Libraries
 @dir /System/Library/Tools
