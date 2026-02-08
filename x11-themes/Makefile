@@ -44,7 +44,7 @@
     SUBDIR += freebsd-8k-wallpapers
     SUBDIR += freebsd-8k-wallpapers-kde
     SUBDIR += fvwm-themes
-    SUBDIR += gershwin-rik-theme
+    SUBDIR += gershwin-eau-theme
     SUBDIR += ghostbsd-icons
     SUBDIR += ghostbsd-gtk-themes
     SUBDIR += ghostbsd-mate-themes

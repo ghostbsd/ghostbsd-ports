@@ -1,5 +1,5 @@
 PORTNAME=	libs-back
-DISTVERSION=	20250830
+DISTVERSION=	20260129
 CATEGORIES=	x11-toolkits gnustep
 PKGNAMEPREFIX=	gershwin-
 
@@ -26,17 +26,11 @@ USE_LDCONFIG=	${GNUSTEP_SYSTEM_LIBRARIES}
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	gnustep
-GH_TAGNAME=	e59d923
+GH_TAGNAME=	bf3b3ced525f08415a20d109f05be1f91492414c
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-graphics=cairo \
 		--disable-glitz
-
-# LLD 7 creates a library that does not work with FreeBSD (or OpenBSD) rtld -
-# it loads apparently without errors, but the global constructors are not
-# called.  It also appears to corrupt some internal state, as throwing an
-# exception causes a crash inside rtld.
-LLD_UNSAFE=     yes
 
 MAKE_FLAGS+=    OPTFLAG="${CFLAGS} -I${LOCALBASE}/include"
 BACKVERSION=    ${PORTVERSION:C/([0-9])*[.]([0-9]*).*/\1\2/1}

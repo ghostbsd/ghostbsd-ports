@@ -1,0 +1,13 @@
+--- DirectoryServices/dshelper/GNUmakefile.orig	2026-01-29 00:00:00 UTC
++++ DirectoryServices/dshelper/GNUmakefile
+@@ -19,8 +19,8 @@ GNUSTEP_INSTALLATION_DOMAIN = SYSTEM
+
+ # Install service files (platform-specific)
+ after-install::
+ ifeq ($(findstring freebsd,$(GNUSTEP_HOST_OS)),freebsd)
+-	$(MKINSTALLDIRS) /usr/local/etc/rc.d
+-	$(INSTALL) -m 555 dshelper.rc /usr/local/etc/rc.d/dshelper
++	$(MKINSTALLDIRS) $(DESTDIR)/usr/local/etc/rc.d
++	$(INSTALL) -m 555 dshelper.rc $(DESTDIR)/usr/local/etc/rc.d/dshelper
+ endif
+ ifeq ($(findstring linux,$(GNUSTEP_HOST_OS)),linux)

@@ -69,6 +69,7 @@
     SUBDIR += ganttproject
     SUBDIR += gcal
     SUBDIR += genius
+    SUBDIR += gershwin-components
     SUBDIR += gershwin-workspace
     SUBDIR += gershwin-systempreferences
     SUBDIR += gershwin-textedit

@@ -1,5 +1,5 @@
 PORTNAME=	libs-gui
-DISTVERSION=	20250909
+DISTVERSION=	20260129
 CATEGORIES=	x11-toolkits gnustep
 PKGNAMEPREFIX=	gershwin-
 
@@ -24,8 +24,8 @@ USE_GERSHWIN=	base build
 USE_XORG=	x11 xt
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	gershwin-desktop
-GH_TAGNAME=	e230acdbf14956152faecd4824d0115ac550e0fb
+GH_ACCOUNT=	gnustep
+GH_TAGNAME=	8be638c0b
 
 GNU_CONFIGURE=	yes
 
@@ -47,15 +47,9 @@ ASPELL_CONFIGURE_ENABLE=	aspell
 
 USE_LDCONFIG=	${GNUSTEP_SYSTEM_LIBRARIES}
 
-post-patch:
-	${REINPLACE_CMD} -e "s|doc=no|doc=yes|" ${WRKSRC}/GNUmakefile
-
 pre-configure:
 .for file in config.guess config.sub install-sh
 	@${CP} ${GNUSTEP_PREFIX}/System/Library/Makefiles/${file} ${WRKSRC}
 .endfor
-
-post-install-DOCS-off:
-	@${FIND} -d ${STAGEDIR}${PREFIX}/GNUstep/System/Library/Documentation -type d -empty -delete
 
 .include <bsd.port.mk>

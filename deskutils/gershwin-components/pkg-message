@@ -1,0 +1,20 @@
+[
+{ type: install
+  message: <<EOM
+To enable the Gershwin directory services helper daemon, add the following
+to /etc/rc.conf:
+
+    dshelper_enable="YES"
+
+To enable the Gershwin graphical login window, add the following
+to /etc/rc.conf:
+
+    loginwindow_enable="YES"
+
+Then start the services with:
+
+    service dshelper start
+    service loginwindow start
+EOM
+}
+]

@@ -1,0 +1,19 @@
+--- WindowManager/GNUmakefile.orig	2026-02-07 14:00:00.000000000 +0000
++++ WindowManager/GNUmakefile	2026-02-07 14:01:00.000000000 +0000
+@@ -8,6 +8,10 @@ DEPENDENCIES = XCBKit
+
+ # XCBKit is declared as a dependency above; no standalone target here.
+
++# Add parent directory to include path to find XCBKit headers
++ADDITIONAL_CPPFLAGS += -I..
++ADDITIONAL_LDFLAGS += -L../XCBKit/XCBKit.framework
++
+ APP_NAME = WindowManager
+ $(APP_NAME)_APPLICATION_ICON = WindowManager.png
+ $(APP_NAME)_RESOURCE_FILES = WindowManager.png
+@@ -56,4 +60,4 @@ include $(GNUSTEP_MAKEFILES)/application.make
+ # Custom target to modify Info-gnustep.plist after it's generated
+ after-WindowManager-all::
+ 	@echo "Modifying Info-gnustep.plist to use custom principal class..."
+-	@sed -i.bak 's/NSPrincipalClass = "NSApplication";/NSPrincipalClass = "UROSWMApplication";/' WindowManager.app/Resources/Info-gnustep.plist
++	@sed -i '' 's/NSPrincipalClass = "NSApplication";/NSPrincipalClass = "UROSWMApplication";/' WindowManager.app/Resources/Info-gnustep.plist

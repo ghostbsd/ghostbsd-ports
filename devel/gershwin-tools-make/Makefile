@@ -1,5 +1,5 @@
 PORTNAME=	tools-make
-DISTVERSION=	20250830
+DISTVERSION=	20260129
 CATEGORIES=	devel gnustep
 PKGNAMEPREFIX=	gershwin-
 
@@ -9,13 +9,15 @@ WWW=		http://www.gnustep.org/
 
 LICENSE=	GPLv3
 
-USES=		gershwin objc
+BUILD_DEPENDS=	gershwin-libdispatch>0:devel/gershwin-libdispatch
+
+USES=		gershwin objc:compiler
 CONFLICTS=	gnustep-make
 GNU_CONFIGURE=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	gnustep
-GH_TAGNAME=	214a57e
+GH_TAGNAME=	8964f83f4564c18efb73296bf2e75339c93665bf
 
 MAKE_FLAGS=	OPTFLAG="${CFLAGS}"
 CONFIGURE_ENV+=	INSTALL_PROGRAM="${INSTALL} -c" INSTALL_DATA="${INSTALL} -c"
@@ -26,7 +28,12 @@ pre-configure:
 CONFIGURE_ARGS+= \
 	--with-config-file=/System/Library/Preferences/GNUstep.conf \
 	--with-layout=gershwin \
-	--with-library-combo=ng-gnu-gnu
+	--with-library-combo=ng-gnu-gnu \
+	--enable-objc-nonfragile-abi \
+	--with-objc-lib-flag=" " \
+	LDFLAGS="-L/System/Library/Libraries -Wl,-rpath,/System/Library/Libraries" \
+	CPPFLAGS="-I/System/Library/Headers" \
+	libobjc_LIBS=" "
 
 GNU_CONFIGURE_PREFIX= ${GNUSTEP_PREFIX}
 NO_ARCH=	yes

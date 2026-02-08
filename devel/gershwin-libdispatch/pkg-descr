@@ -1,0 +1,4 @@
+Grand Central Dispatch (GCD or libdispatch) provides comprehensive
+support for concurrent code execution on multicore hardware.
+
+This is the Gershwin variant that installs to /System/Library.

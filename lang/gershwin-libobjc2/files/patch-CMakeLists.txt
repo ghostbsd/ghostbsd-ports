@@ -1,0 +1,15 @@
+--- CMakeLists.txt.orig	2025-01-29 00:00:00 UTC
++++ CMakeLists.txt
+@@ -357,6 +357,12 @@
+ 		"Subdirectory of the root prefix where libraries are installed.")
+ 	SET(HEADER_INSTALL_PATH "include")
+ 	SET(PC_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX})
++elseif (${GNUSTEP_INSTALL_TYPE} STREQUAL "SYSTEM")
++	# Gershwin: Force install paths for SYSTEM install type
++	SET(LIB_INSTALL_PATH "System/Library/Libraries" CACHE STRING "Library install path" FORCE)
++	SET(BIN_INSTALL_PATH "System/Library/Libraries" CACHE STRING "Binary install path" FORCE)
++	SET(HEADER_INSTALL_PATH "System/Library/Headers" CACHE STRING "Header install path" FORCE)
++	SET(PC_INSTALL_PREFIX "/" CACHE STRING "Pkgconfig install prefix" FORCE)
+ else ()
+ 	execute_process(
+         COMMAND ${GNUSTEP_CONFIG} --variable=GNUSTEP_${GNUSTEP_INSTALL_TYPE}_LIBRARIES

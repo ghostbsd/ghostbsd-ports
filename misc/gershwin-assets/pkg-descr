@@ -1,0 +1,7 @@
+Gershwin desktop assets provides fonts, wallpapers, and other graphical
+resources for the Gershwin desktop environment. Assets are installed under
+/System/Library to integrate with the GNUstep-based Gershwin desktop.
+
+Included assets:
+- Desktop wallpapers
+- Inter, Luxi, NimbusSans, and URW font families

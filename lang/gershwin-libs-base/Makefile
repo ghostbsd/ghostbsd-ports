@@ -1,5 +1,5 @@
 PORTNAME=	libs-base
-DISTVERSION=	20250830
+DISTVERSION=	20260129
 CATEGORIES=	lang devel gnustep
 PKGNAMEPREFIX=	gershwin-
 
@@ -17,6 +17,8 @@ LIB_DEPENDS=	libffi.so:devel/libffi \
 
 USES=		pkgconfig iconv gnome gershwin
 
+GNU_CONFIGURE=	yes
+
 RUN_DEPENDS=	${GNUSTEP_PREFIX}System/Library/Makefiles/GNUstep.sh:devel/gershwin-tools-make
 
 USE_GNOME=	libxml2 libxslt
@@ -26,6 +28,9 @@ GH_TAGNAME=	6307e47
 USE_GERSHWIN=	build
 USE_LDCONFIG=	${GNUSTEP_SYSTEM_LIBRARIES}
 CONFLICTS=	gnustep-base
+
+CONFIGURE_ARGS+=	--with-dispatch-include=/System/Library/Headers \
+			--with-dispatch-library=/System/Library/Libraries
 
 OPTIONS_DEFINE=		ICU GNUTLS
 OPTIONS_RADIO=		ZEROCONF

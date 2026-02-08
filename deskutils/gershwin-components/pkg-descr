@@ -1,0 +1,6 @@
+Gershwin Components is a collection of applications and preference panes
+for the Gershwin desktop environment on FreeBSD.
+
+Includes utilities for display, audio, network, keyboard, and other
+system administration tasks, as well as desktop environment components
+like the login window, menu system, and global shortcuts.

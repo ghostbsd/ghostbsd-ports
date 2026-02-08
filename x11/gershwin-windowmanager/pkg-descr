@@ -1,0 +1,6 @@
+Gershwin Window Manager is the window manager component of the Gershwin
+desktop environment. It combines the WindowManager (from gershwin-uroswm)
+and XCBKit components into a unified window management solution.
+
+The window manager provides traditional window management features with
+GNUstep/Objective-C integration for the Gershwin desktop.
