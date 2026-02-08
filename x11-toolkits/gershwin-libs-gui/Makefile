@@ -33,19 +33,14 @@ MAKE_FLAGS+=	OPTFLAG="${CFLAGS}"
 
 PLIST_SUB+=	BASEVERSION=${PORTVERSION:C/[.][0-9]*$//1}
 
-OPTIONS_DEFINE=	DOCS CUPS ASPELL
+OPTIONS_DEFINE=	CUPS ASPELL
 OPTIONS_DEFAULT=	CUPS
 OPTIONS_SUB=	yes
-
-DOCS_BUILD_DEPENDS=	texi2html:textproc/texi2html \
-			texi2pdf:print/texinfo
 
 CUPS_CONFIGURE_ENABLE=		cups
 CUPS_LIB_DEPENDS+=	libcups.so:print/cups
 ASPELL_LIB_DEPENDS=	libaspell.so:textproc/aspell
 ASPELL_CONFIGURE_ENABLE=	aspell
-
-USE_LDCONFIG=	${GNUSTEP_SYSTEM_LIBRARIES}
 
 pre-configure:
 .for file in config.guess config.sub install-sh
