@@ -1,0 +1,57 @@
+/System/Applications/Console.app/Console
+/System/Applications/Console.app/Resources/Console.desktop
+/System/Applications/Console.app/Resources/Console.gorm/data.classes
+/System/Applications/Console.app/Resources/Console.gorm/data.info
+/System/Applications/Console.app/Resources/Info-gnustep.plist
+/System/Applications/Console.app/stamp.make
+/System/Applications/LoginWindow.app/LoginWindow
+/System/Applications/LoginWindow.app/Resources/Info-gnustep.plist
+/System/Applications/LoginWindow.app/Resources/Info.plist
+/System/Applications/LoginWindow.app/Resources/LoginWindow.desktop
+/System/Applications/LoginWindow.app/stamp.make
+/System/Applications/Processes.app/Processes
+/System/Applications/Processes.app/Resources/Info-gnustep.plist
+/System/Applications/Processes.app/Resources/Processes.desktop
+/System/Applications/Processes.app/Resources/Processes.png
+/System/Applications/Processes.app/stamp.make
+/System/Applications/SudoAskPass.app/Resources/Info-gnustep.plist
+/System/Applications/SudoAskPass.app/Resources/SudoAskPass.desktop
+/System/Applications/SudoAskPass.app/SudoAskPass
+/System/Applications/SudoAskPass.app/stamp.make
+/System/Library/CoreServices/Applications/Menu.app/Menu
+/System/Library/CoreServices/Applications/Menu.app/Resources/Info-gnustep.plist
+/System/Library/CoreServices/Applications/Menu.app/Resources/Info.plist
+/System/Library/CoreServices/Applications/Menu.app/Resources/Menu.desktop
+/System/Library/CoreServices/Applications/Menu.app/Resources/Menu.png
+/System/Library/CoreServices/Applications/Menu.app/stamp.make
+/System/Library/Libraries/nss_gershwin.so.1
+/System/Library/Menu/StatusItems/SystemMonitor.bundle/Resources/Info-gnustep.plist
+/System/Library/Menu/StatusItems/SystemMonitor.bundle/SystemMonitor
+/System/Library/Menu/StatusItems/SystemMonitor.bundle/stamp.make
+/System/Library/Menu/StatusItems/TimeDisplay.bundle/Resources/Info-gnustep.plist
+/System/Library/Menu/StatusItems/TimeDisplay.bundle/TimeDisplay
+/System/Library/Menu/StatusItems/TimeDisplay.bundle/stamp.make
+/System/Library/Tools/appwrap
+/System/Library/Tools/dscli
+/System/Library/Tools/dshelper
+etc/rc.d/dshelper
+etc/rc.d/loginwindow
+@dir /System/Applications/Console.app/Resources/Console.gorm
+@dir /System/Applications/Console.app/Resources
+@dir /System/Applications/Console.app
+@dir /System/Applications/LoginWindow.app/Resources
+@dir /System/Applications/LoginWindow.app
+@dir /System/Applications/Processes.app/Resources
+@dir /System/Applications/Processes.app
+@dir /System/Applications/SudoAskPass.app/Resources
+@dir /System/Applications/SudoAskPass.app
+@dir /System/Library/CoreServices/Applications/Menu.app/Resources
+@dir /System/Library/CoreServices/Applications/Menu.app
+@dir /System/Library/CoreServices/Applications
+@dir /System/Library/CoreServices
+@dir /System/Library/Menu/StatusItems/SystemMonitor.bundle/Resources
+@dir /System/Library/Menu/StatusItems/SystemMonitor.bundle
+@dir /System/Library/Menu/StatusItems/TimeDisplay.bundle/Resources
+@dir /System/Library/Menu/StatusItems/TimeDisplay.bundle
+@dir /System/Library/Menu/StatusItems
+@dir /System/Library/Menu

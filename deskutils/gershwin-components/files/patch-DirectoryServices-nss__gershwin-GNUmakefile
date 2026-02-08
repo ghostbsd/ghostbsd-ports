@@ -1,0 +1,20 @@
+--- DirectoryServices/nss_gershwin/GNUmakefile.orig	2026-01-29 00:00:00 UTC
++++ DirectoryServices/nss_gershwin/GNUmakefile
+@@ -24,14 +24,11 @@ clean:
+ 	rm -f $(NSS_LIB) *.o
+
+ install: $(NSS_LIB)
+-	install -d $(INSTALL_DIR)
+-	install -m 755 $(NSS_LIB) $(INSTALL_DIR)/$(NSS_LIB)
++	install -d $(DESTDIR)$(INSTALL_DIR)
++	install -m 755 $(NSS_LIB) $(DESTDIR)$(INSTALL_DIR)/$(NSS_LIB)
+ ifeq ($(findstring linux,$(GNUSTEP_HOST_OS)),linux)
++ifndef DESTDIR
+ 	@echo "$(INSTALL_DIR)" > /etc/ld.so.conf.d/gershwin.conf
+ 	ldconfig
+ endif
+-ifeq ($(findstring freebsd,$(GNUSTEP_HOST_OS)),freebsd)
+-	install -d /usr/local/libdata/ldconfig
+-	@echo "$(INSTALL_DIR)" > /usr/local/libdata/ldconfig/gershwin
+-	ldconfig
+ endif
