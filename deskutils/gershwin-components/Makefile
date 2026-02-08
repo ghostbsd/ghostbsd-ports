@@ -47,6 +47,9 @@ do-install:
 	${MKDIR} ${STAGEDIR}/System/Library/CoreServices/Applications
 	${CP} -R ${WRKSRC}/Menu/Menu.app ${STAGEDIR}/System/Library/CoreServices/Applications/
 	${CP} ${WRKSRC}/Menu/Menu.png ${STAGEDIR}/System/Library/CoreServices/Applications/Menu.app/Resources/
+# Create Menu symlink in Tools directory (like other apps)
+	${MKDIR} ${STAGEDIR}/System/Library/Tools
+	${LN} -sf ../CoreServices/Applications/Menu.app/Menu ${STAGEDIR}/System/Library/Tools/Menu
 # Build and install Menu status item bundles
 	cd ${WRKSRC}/Menu/StatusItems/SystemMonitor && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} all || true
 	cd ${WRKSRC}/Menu/StatusItems/TimeDisplay && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} all || true
