@@ -1,6 +1,26 @@
 /System/Library/Preferences/GlobalDefaults/NSGlobalDomain.plist
 /System/Library/Preferences/GlobalDefaults/Terminal.plist
 /System/Library/Preferences/GlobalDefaults/org.gnustep.Workspace.plist
+/System/Library/Preferences/fonts.conf
+/System/Library/Preferences/GlobalShortcuts.plist
+/System/Library/Preferences/GNUstep.conf
+/System/Library/Scripts/Gershwin.sh
+/System/Library/Scripts/LoginWindow.sh
+/System/Library/Scripts/MountSystemImage.sh
+/System/Library/Scripts/SystemPrepare.sh
+/System/Library/Scripts/doit
+/System/Library/Scripts/installer-linux.sh
+/System/Library/Scripts/installer.sh
+/System/Library/Scripts/memtrace
+/System/Library/Scripts/vscode.sh
+/System/Library/Tools/debug
+/System/Library/User Template/.config/Code/User/mcp.json
+@dir /System/Library/User Template/.config/Code/User
+@dir /System/Library/User Template/.config/Code
+@dir /System/Library/User Template/.config
+@dir /System/Library/User Template
+@dir /System/Library/Tools
+@dir /System/Library/Scripts
 @dir /System/Library/Preferences/GlobalDefaults
 @dir /System/Library/Preferences
 @dir /System/Library
