@@ -1,5 +1,5 @@
 PORTNAME=	ghostbsd-slick-greeter-settings
-PORTVERSION=	1.6
+PORTVERSION=	26.01.0
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon@ghostbsd.org
