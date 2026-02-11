@@ -1,3 +1,2 @@
-These are  ghostbsd  lightdm slick greeter settings.
-
-WWW: http://www.ghostbsd.org/
+Configuration settings for LightDM slick greeter on GhostBSD.
+Provides custom theme and appearance settings for the login screen.

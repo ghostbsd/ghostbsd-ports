@@ -3,8 +3,10 @@ PORTNAME=	ghostbsd-wallpapers
 PORTVERSION=	26.01.0
 CATEGORIES=	x11-themes
 PKGNAMESUFFIX=	26
+
 MAINTAINER=	ericturgeon@ghostbsd.org
-COMMENT=	2026 GhostBSD wallpaper colection
+COMMENT=	2026 GhostBSD wallpaper collection
+WWW=		http://www.ghostbsd.org/
 
 LICENSE=	BSD
 

@@ -4,6 +4,7 @@ CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon@ghostbsd.org
 COMMENT=	GhostBSD lightdm slick greeter settings
+WWW=		http://www.ghostbsd.org/
 
 LICENSE=	BSD
 
@@ -11,6 +12,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
 NO_BUILD=	yes
+
+PLIST_FILES=	etc/lightdm/slick-greeter.conf.sample
 
 do-install:
 	${MKDIR} ${STAGEDIR}/${PREFIX}/etc/lightdm

@@ -4,6 +4,7 @@ CATEGORIES=	x11-themes
 
 MAINTAINER=	ericturgeon@ghostbsd.org
 COMMENT=	GhostBSD themes for mate flavour
+WWW=		http://www.ghostbsd.org/
 
 LICENSE=	BSD
 
