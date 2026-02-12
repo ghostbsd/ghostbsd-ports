@@ -1,22 +1,16 @@
-# New ports collection makefile for: ghostbsd wallpaers
-# Date created:        17 may 2015
-# Whom:                angelescuo@yahoo.com
-#
-# $FreeBSD$
-#
-
 PORTNAME=	ghostbsd-icons
-PORTVERSION=	1.8
+PORTVERSION=	26.01.0
 CATEGORIES=	x11-themes
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
 COMMENT=	GhostBSD icons for GTK DE
+WWW=		http://www.ghostbsd.org/
 
 LICENSE=	CCBYSA
 LICENSE_NAME=	CREATIVE COMMON
 LICENSE_FILE=	${FILESDIR}/LICENSE
 LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
-LICENSE_DISTFILES= ${DISTNAME}${EXTRACT_SUFX}
+LICENSE_DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
