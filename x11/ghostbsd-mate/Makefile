@@ -23,7 +23,7 @@ RUN_DEPENDS=	mate-terminal:x11/mate-terminal \
 		mate-user-guide>=1.22.0:misc/mate-user-guide \
 		mate-dock-applet>0:x11/mate-dock-applet \
 		ghostbsd-mate-settings>0:x11/ghostbsd-mate-settings \
-		ghostbsd-wallpapers25>0:x11-themes/ghostbsd-wallpapers26 \
+		ghostbsd-wallpapers26>0:x11-themes/ghostbsd-wallpapers26 \
 		ghostbsd-gtk-themes>0:x11-themes/ghostbsd-gtk-themes \
 		ghostbsd-fonts>0:x11-fonts/ghostbsd-fonts
 
