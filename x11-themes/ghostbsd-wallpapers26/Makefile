@@ -1,0 +1,24 @@
+
+PORTNAME=	ghostbsd-wallpapers
+PORTVERSION=	26.01.0
+CATEGORIES=	x11-themes
+PKGNAMESUFFIX=	26
+
+MAINTAINER=	ericturgeon@ghostbsd.org
+COMMENT=	2026 GhostBSD wallpaper collection
+WWW=		http://www.ghostbsd.org/
+
+LICENSE=	BSD
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	GhostBSD
+
+NO_BUILD=	yes
+
+do-install:
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/backgrounds/ghostbsd
+	${CP} -PR ${WRKSRC}/*.jpg ${STAGEDIR}${PREFIX}/share/backgrounds/ghostbsd
+	# ${CP} -PR ${WRKSRC}/*.png ${STAGEDIR}${PREFIX}/share/backgrounds/ghostbsd
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/mate-background-properties
+	${CP} -PR ${WRKSRC}/ghostbsd.xml ${STAGEDIR}${PREFIX}/share/mate-background-properties/ghostbsd${PKGNAMESUFFIX}.xml
+.include <bsd.port.mk>

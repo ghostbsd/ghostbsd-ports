@@ -1,17 +1,17 @@
 PORTNAME=	ghostbsd-mate-settings
-PORTVERSION=	25.01.1
+PORTVERSION=	26.01.0
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
 COMMENT=	GhostBSD mate settings in installed mode
+WWW=		http://www.ghostbsd.org/
 
 LICENSE=	BSD
 
+USES=		desktop-file-utils gnome
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
-
-RUN_DEPENDS=	glib-compile-schemas:devel/glib20 \
-		 dpkg:archivers/dpkg
+USE_GNOME=	glib20
 
 NO_BUILD=	yes
 
