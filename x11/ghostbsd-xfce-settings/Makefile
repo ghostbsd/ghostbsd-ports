@@ -1,5 +1,6 @@
 PORTNAME=	ghostbsd-xfce-settings
 PORTVERSION=	26.01.0
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon@ghostbsd.org
@@ -17,6 +18,6 @@ GH_ACCOUNT=	GhostBSD
 NO_BUILD=	yes
 
 do-install:
-	${MKDIR} ${STAGEDIR}/${PREFIX}/etc/xdg
-	${CP} -R ${WRKSRC}/etc/xdg/* ${STAGEDIR}/${PREFIX}/etc/xdg
+	${MKDIR} ${STAGEDIR}/${PREFIX}/share/ghostbsd/xfce-installed-settings/etc/xdg
+    ${CP} -R   ${WRKSRC}/etc/xdg/* ${STAGEDIR}/${PREFIX}/share/ghostbsd/xfce-installed-settings/etc/xdg
 .include <bsd.port.mk>

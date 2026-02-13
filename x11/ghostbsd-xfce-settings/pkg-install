@@ -1,0 +1,10 @@
+#!/bin/sh
+
+case "$2" in
+    POST-INSTALL)
+    # copy xdg
+    cp -af /usr/local/share/ghostbsd/xfce-installed-settings/etc/xdg/*   /usr/local/etc/xdg/
+    ;;
+esac
+
+exit 0
