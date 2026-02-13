@@ -1,5 +1,6 @@
 PORTNAME=	ghostbsd-mate-settings
 PORTVERSION=	26.01.0
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
@@ -12,6 +13,19 @@ USES=		desktop-file-utils gnome
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 USE_GNOME=	glib20
+
+GLIB_SCHEMAS=	92_org.gnome.desktop.screensaver.wallpaper.gschema.override \
+		92_org.mate.NotificationDaemon.gschema.override \
+		92_org.mate.caja.gschema.override \
+		92_org.mate.desktop.background.gschema.override \
+		92_org.mate.desktop.interface.gschema.override \
+		92_org.mate.font-rendering.gschema.override \
+		92_org.mate.marco.gschema.override \
+		92_org.mate.panel.menubar.gschema.override \
+		92_org.mate.peripherals-keyboard-xkb.kbd.gschema.override \
+		92_org.mate.peripherals-touchpad.gschema.override \
+		92_org.mate.session.gschema.override \
+		92_org.mate.terminal.gschema.override
 
 NO_BUILD=	yes
 
