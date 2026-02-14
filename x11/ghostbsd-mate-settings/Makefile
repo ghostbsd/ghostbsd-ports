@@ -1,6 +1,5 @@
 PORTNAME=	ghostbsd-mate-settings
-PORTVERSION=	26.01.0
-PORTREVISION=	1
+PORTVERSION=	26.01.1
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
@@ -23,6 +22,7 @@ GLIB_SCHEMAS=	92_org.gnome.desktop.screensaver.wallpaper.gschema.override \
 		92_org.mate.marco.gschema.override \
 		92_org.mate.panel.menubar.gschema.override \
 		92_org.mate.peripherals-keyboard-xkb.kbd.gschema.override \
+		92_org.mate.peripherals-mouse.gschema.override \
 		92_org.mate.peripherals-touchpad.gschema.override \
 		92_org.mate.session.gschema.override \
 		92_org.mate.terminal.gschema.override
