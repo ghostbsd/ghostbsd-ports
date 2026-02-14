@@ -1,6 +1,6 @@
 PORTNAME=	ghostbsd-xfce-settings
 PORTVERSION=	26.01.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon@ghostbsd.org
