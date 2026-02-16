@@ -1,7 +1,7 @@
 PORTNAME=	nerdctl
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.2.0
-PORTREVISION=	2
+DISTVERSION=	2.2.1
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	laurent.chardon@gmail.com
@@ -50,7 +50,6 @@ post-install:
 		> ${STAGEDIR}${PREFIX}/share/zsh/site-functions/_${PORTNAME}
 
 post-install-DOCS-on:
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} "README.md docs" ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>

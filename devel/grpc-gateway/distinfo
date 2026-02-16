@@ -1,5 +1,5 @@
-TIMESTAMP = 1769273910
-SHA256 (go/devel_grpc-gateway/grpc-gateway-v2.27.5/v2.27.5.mod) = e2dd77265af46372cb1aa161a6cda34e67645bab601d07b28e11eb22e3e49b7a
-SIZE (go/devel_grpc-gateway/grpc-gateway-v2.27.5/v2.27.5.mod) = 683
-SHA256 (go/devel_grpc-gateway/grpc-gateway-v2.27.5/v2.27.5.zip) = 47fc3e04c1de9d42b0bb2d22207a9774ea08637ea39df361b3acab68bd5a9a3e
-SIZE (go/devel_grpc-gateway/grpc-gateway-v2.27.5/v2.27.5.zip) = 1202795
+TIMESTAMP = 1770936986
+SHA256 (go/devel_grpc-gateway/grpc-gateway-v2.27.8/v2.27.8.mod) = 5517590244e573ac8f40ece29e1f4304fc912c5997c8d94a87fd6f52c6ad15e4
+SIZE (go/devel_grpc-gateway/grpc-gateway-v2.27.8/v2.27.8.mod) = 683
+SHA256 (go/devel_grpc-gateway/grpc-gateway-v2.27.8/v2.27.8.zip) = b3fb896e9a015ee13b3d9ff55230d251d696c632ce2deebfb0a0d823d923c065
+SIZE (go/devel_grpc-gateway/grpc-gateway-v2.27.8/v2.27.8.zip) = 1225969

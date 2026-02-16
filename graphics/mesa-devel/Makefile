@@ -1,7 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	26.0-branchpoint-44
-DISTVERSIONSUFFIX=	-g481df222095
-PORTREVISION=	1
+DISTVERSION=	26.0-branchpoint-1031
+DISTVERSIONSUFFIX=	-gb651fd90d2d
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -101,7 +100,7 @@ LLVM_CONFIGURE_ENV=	LLVM_CONFIG=${LLVM_CONFIG}
 LLVM_MESON_ENABLED=	llvm
 LLVM_MESON_TRUE=	amd-use-llvm
 
-LTO_MESON_TRUE=		b_lto
+LTO_MESON_TRUE=		b_lto allow-broken-lto
 
 OPENCL_DESC=		Heterogeneous computing via OpenCL (implies LLVM)
 OPENCL_BUILD_DEPENDS=	bindgen:devel/rust-bindgen-cli \

@@ -307,7 +307,6 @@
     SUBDIR += jose
     SUBDIR += jotta-cli
     SUBDIR += jrdesktop
-    SUBDIR += jsch
     SUBDIR += jumpgate
     SUBDIR += jwhois
     SUBDIR += k6
@@ -578,6 +577,7 @@
     SUBDIR += open-isns
     SUBDIR += openbgpd7
     SUBDIR += openbgpd8
+    SUBDIR += openbgpd9
     SUBDIR += openldap25-client
     SUBDIR += openldap25-server
     SUBDIR += openldap26-client
@@ -1195,7 +1195,6 @@
     SUBDIR += py-urlextract
     SUBDIR += py-urllib3
     SUBDIR += py-urllib3-future
-    SUBDIR += py-urllib31
     SUBDIR += py-whois
     SUBDIR += py-wmi-query
     SUBDIR += py-wsdd
@@ -1581,7 +1580,6 @@
     SUBDIR += tcpick
     SUBDIR += tcpillust
     SUBDIR += tcping
-    SUBDIR += tcpkali
     SUBDIR += tcplog_dumper
     SUBDIR += tcpmssd
     SUBDIR += tcpproxy

@@ -1,3 +1,642 @@
+  <vuln vid="590979aa-09f7-11f1-a730-5404a68ad561">
+    <topic>traefik -- TCP readTimeout bypass via STARTTLS on Postgres</topic>
+    <affects>
+    <package>
+	<name>traefik</name>
+	<range><lt>3.6.8</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The traefik project reports:</p>
+	<blockquote cite="https://github.com/traefik/traefik/security/advisories/GHSA-89p3-4642-cr2w">
+	  <p>There is a potential vulnerability in Traefik managing STARTTLS requests.
+	     An unauthenticated client can bypass Traefik entrypoint respondingTimeouts.readTimeout
+	     by sending the 8-byte Postgres SSLRequest (STARTTLS) prelude and then stalling,
+	     causing connections to remain open indefinitely, leading to a denial of service</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-25949</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-25949</url>
+    </references>
+    <dates>
+      <discovery>2026-02-11</discovery>
+      <entry>2026-02-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="17186409-09d2-11f1-a39c-b42e991fc52e">
+    <topic>munge -- CWE-787: Out-of-bounds Write</topic>
+    <affects>
+    <package>
+	<name>munge</name>
+	<range><lt>0.5.18</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://github.com/dun/munge/security/advisories/GHSA-r9cr-jf4v-75gh reports:</p>
+	<blockquote cite="https://github.com/dun/munge/security/advisories/GHSA-r9cr-jf4v-75gh">
+	  <p>MUNGE is an authentication service for creating and
+	  validating user credentials.  From 0.5 to 0.5.17, local
+	  attacker can exploit a buffer overflow vulnerability in
+	  munged (the MUNGE authentication daemon) to leak
+	  cryptographic key material from process memory.  With the
+	  leaked key material, the attacker could forge arbitrary
+	  MUNGE credentials to impersonate any user (including root)
+	  to services that rely on MUNGE for authentication.  The
+	  vulnerability allows a buffer overflow by sending a crafted
+	  message with an oversized address length field, corrupting
+	  munged's internal state and enabling extraction of the MAC
+	  subkey used for credential verification.  This vulnerability
+	  is fixed in 0.5.18.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-25506</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-25506</url>
+    </references>
+    <dates>
+      <discovery>2026-02-10</discovery>
+      <entry>2026-02-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="424d598b-09c4-11f1-85c5-a8a1599412c6">
+    <topic>chromium -- security fix</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>144.0.7559.75</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>144.0.7559.75</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2026/02/stable-channel-update-for-desktop_13.html">
+	 <p>This update includes 1 security fix:</p>
+	 <ul>
+	    <li>[483569511] High CVE-2026-2441: Use after free in CSS. Reported by Shaheen Fazim on 2026-02-11</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-2441</cvename>
+      <url>https://chromereleases.googleblog.com/2026/02/stable-channel-update-for-desktop_13.html</url>
+    </references>
+    <dates>
+      <discovery>2026-02-13</discovery>
+      <entry>2026-02-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="027c6c07-065b-11f1-baae-589cfc023192">
+    <topic>expat -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+       <name>expat</name>
+       <range><lt>2.7.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+      <p>expat team reports:</p>
+      <blockquote cite="https://github.com/libexpat/libexpat/blob/R_2_7_4/expat/Changes">
+       <p>Update contains 2 security fixes:</p>
+       <ul>
+       <li>CVE-2026-24515: NULL dereference in function XML_ExternalEntityParserCreate</li>
+       <li>CVE-2026-25210: missing check for integer overflow in function doContent</li>
+       </ul>
+      </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-24515</cvename>
+      <cvename>CVE-2026-25210</cvename>
+    </references>
+    <dates>
+      <discovery>2026-01-31</discovery>
+      <entry>2026-02-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e3afc190-0821-11f1-a857-6cc21735f730">
+    <topic>PostgreSQL -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+       <name>postgresql14-server</name>
+       <range><lt>14.21</lt></range>
+      </package>
+      <package>
+       <name>postgresql15-server</name>
+       <range><lt>15.16</lt></range>
+      </package>
+      <package>
+       <name>postgresql16-server</name>
+       <range><lt>16.12</lt></range>
+      </package>
+      <package>
+       <name>postgresql17-server</name>
+       <range><lt>17.8</lt></range>
+      </package>
+      <package>
+       <name>postgresql18-server</name>
+       <range><lt>18.2</lt></range>
+      </package>
+      <package>
+       <name>postgresql14-server</name>
+       <range><lt>14.21</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The PostgreSQL project reports:</p>
+	<blockquote cite="https://www.postgresql.org/about/news/postgresql-182-178-1612-1516-and-1421-released-3235/">
+	<p>
+	  Improper validation of type oidvector in PostgreSQL
+	  allows a database user to disclose a few bytes of server
+	  memory. We have not ruled out viability of attacks that
+	  arrange for presence of confidential information in
+	  disclosed bytes, but they seem unlikely.
+	</p>
+	<p>
+	  Missing validation of type of input in PostgreSQL
+	  intarray extension selectivity estimator function allows
+	  an object creator to execute arbitrary code as the
+	  operating system user running the database.
+	</p>
+	<p>
+	  Heap buffer overflow in PostgreSQL pgcrypto allows a
+	  ciphertext provider to execute arbitrary code as the
+	  operating system user running the database.
+	</p>
+	<p>
+	  Missing validation of multibyte character length in
+	  PostgreSQL text manipulation allows a database user to
+	  issue crafted queries that achieve a buffer overrun.
+	  That suffices to execute arbitrary code as the operating
+	  system user running the database.
+	</p>
+	<p>
+	  Heap buffer overflow in PostgreSQL pg_trgm allows a
+	  database user to achieve unknown impacts via a crafted
+	  input string. The attacker has limited control over the
+	  byte patterns to be written, but we have not ruled out
+	  the viability of attacks that lead to privilege
+	  escalation.
+	</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-2003</cvename>
+      <cvename>CVE-2026-2004</cvename>
+      <cvename>CVE-2026-2005</cvename>
+      <cvename>CVE-2026-2006</cvename>
+      <cvename>CVE-2026-2007</cvename>
+      <url>https://www.postgresql.org/about/news/postgresql-182-178-1612-1516-and-1421-released-3235/</url>
+    </references>
+    <dates>
+      <discovery>2026-02-12</discovery>
+      <entry>2026-02-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7f9bac32-0800-11f1-8a6f-b42e991fc52e">
+    <topic>MongoDB Server -- CWE-704 Incorrect Type Conversion or Cast</topic>
+    <affects>
+    <package>
+	<name>mongodb70</name>
+	<range><lt>7.0.29</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://jira.mongodb.org/browse/SERVER-113685 reports:</p>
+	<blockquote cite="https://jira.mongodb.org/browse/SERVER-113685">
+	  <p>An authorized user may disable the MongoDB server by
+	  issuing a query against a collection that contains an
+	  invalid compound wildcard index.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-25613</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-25613</url>
+    </references>
+    <dates>
+      <discovery>2026-02-10</discovery>
+      <entry>2026-02-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7b5671f9-0800-11f1-8a6f-b42e991fc52e">
+    <topic>MongoDB Server -- CWE-617 Reachable Assertion</topic>
+    <affects>
+    <package>
+	<name>mongodb80</name>
+	<range><lt>8.0.13</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://jira.mongodb.org/browse/SERVER-99119 reports:</p>
+	<blockquote cite="https://jira.mongodb.org/browse/SERVER-99119">
+	  <p>An authorized user may trigger a server crash by running
+	  a $geoNear pipeline with certain invalid index hints.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-25610</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-25610</url>
+    </references>
+    <dates>
+      <discovery>2026-02-10</discovery>
+      <entry>2026-02-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="77e32b14-0800-11f1-8a6f-b42e991fc52e">
+    <topic>MongoDB Server -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mongodb80</name>
+	<range><lt>8.0.18</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://jira.mongodb.org/browse/SERVER-114126 reports:</p>
+	<blockquote cite="https://jira.mongodb.org/browse/SERVER-114126">
+	  <p>Complex queries can cause excessive memory usage in
+	  MongoDB Query Planner resulting in an Out-Of-Memory
+	    Crash.</p>
+	</blockquote>
+	<p>https://jira.mongodb.org/browse/SERVER-102364 reports:</p>
+	<blockquote cite="https://jira.mongodb.org/browse/SERVER-102364">
+	  <p>MongoDB Server may experience an out-of-memory failure while
+	  evaluating expressions that produce deeply nested documents. The
+	  issue arises in recursive functions because the server does not
+	    periodically check the depth of the expression.</p>
+	</blockquote>
+	<p>https://jira.mongodb.org/browse/SERVER-113532 reports:</p>
+	<blockquote cite="https://jira.mongodb.org/browse/SERVER-113532">
+	  <p>Inserting certain large documents into a replica set could lead to
+	  replica set secondaries not being able to fetch the oplog from the
+	  primary. This could stall replication inside the replica set leading
+	    to server crash.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-1850</cvename>
+      <cvename>CVE-2026-1849</cvename>
+      <cvename>CVE-2026-1847</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-1850</url>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-1849</url>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-1847</url>
+    </references>
+    <dates>
+      <discovery>2026-02-10</discovery>
+      <entry>2026-02-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9d9940e7-071c-11f1-93ca-2cf05da270f3">
+    <topic>Gitlab -- vulnerabilities</topic>
+    <affects>
+<package>
+<name>gitlab-ce</name>
+<name>gitlab-ee</name>
+<range><ge>18.8.0</ge><lt>18.8.4</lt></range>
+<range><ge>18.7.0</ge><lt>18.7.4</lt></range>
+<range><ge>8.0.0</ge><lt>18.6.6</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2026/02/10/patch-release-gitlab-18-8-4-released/">
+	  <p>Incomplete Validation issue in Web IDE impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in GraphQL introspection impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in JSON validation middleware impacts GitLab CE/EE</p>
+	  <p>Cross-site Scripting issue in Code Flow impacts GitLab CE/EE</p>
+	  <p>HTML Injection issue in test case titles impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in Markdown processor impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in Markdown Preview impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in dashboard impacts GitLab EE</p>
+	  <p>Server-Side Request Forgery issue in Virtual Registry impacts GitLab EE</p>
+	  <p>Improper Validation issue in diff parser impacts GitLab CE/EE</p>
+	  <p>Server-Side Request Forgery issue in Git repository import impacts GitLab CE/EE</p>
+	  <p>Authorization Bypass issue in iterations API impacts GitLab EE</p>
+	  <p>Missing Authorization issue in GLQL API impacts GitLab CE/EE</p>
+	  <p>Stored HTML Injection issue in project label impacts GitLab CE/EE</p>
+	  <p>Authorization Bypass issue in Pipeline Schedules API impacts GitLab CE/EE</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-7659</cvename>
+      <cvename>CVE-2025-8099</cvename>
+      <cvename>CVE-2026-0958</cvename>
+      <cvename>CVE-2025-14560</cvename>
+      <cvename>CVE-2026-0595</cvename>
+      <cvename>CVE-2026-1458</cvename>
+      <cvename>CVE-2026-1456</cvename>
+      <cvename>CVE-2026-1387</cvename>
+      <cvename>CVE-2025-12575</cvename>
+      <cvename>CVE-2026-1094</cvename>
+      <cvename>CVE-2025-12073</cvename>
+      <cvename>CVE-2026-1080</cvename>
+      <cvename>CVE-2025-14592</cvename>
+      <cvename>CVE-2026-1282</cvename>
+      <cvename>CVE-2025-14594</cvename>
+      <url>https://about.gitlab.com/releases/2026/02/10/patch-release-gitlab-18-8-4-released/</url>
+    </references>
+    <dates>
+      <discovery>2026-02-10</discovery>
+      <entry>2026-02-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8d8012e5-0705-11f1-8148-bc241121aa0a">
+    <topic>FreeBSD -- blocklistd(8) socket leak</topic>
+    <affects>
+      <package>
+	<name>FreeBSD</name>
+	<range><ge>15.0</ge><lt>15.0_3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>Due to a programming error, blocklistd leaks a socket descriptor
+	for each adverse event report it receives.</p>
+	<p>Once a certain number of leaked sockets is reached, blocklistd
+	becomes unable to run the helper script: a child process is forked,
+	but this child dereferences a null pointer and crashes before it
+	is able to exec the helper.  At this point, blocklistd still records
+	adverse events but is unable to block new addresses or unblock
+	addresses whose database entries have expired.</p>
+	<p>Once a second, much higher number of leaked sockets is reached,
+	blocklistd becomes unable to receive new adverse event reports.</p>
+	<h1>Impact:</h1>
+	<p>An attacker may take advantage of this by triggering a large
+	number of adverse events from sacrificial IP addresses to effectively
+	disable blocklistd before launching an attack.</p>
+	<p>Even in the absence of attacks or probes by would-be attackers,
+	adverse events will occur regularly in the course of normal operations,
+	and blocklistd will gradually run out file descriptors and become
+	ineffective.</p>
+	<p>The accumulation of open sockets may have knock-on effects on other
+	parts of the system, resulting in a general slowdown until blocklistd
+	is restarted.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-2261</cvename>
+      <freebsdsa>SA-26:03.blocklistd</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-02-10</discovery>
+      <entry>2026-02-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9bc5a730-0585-11f1-85c5-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>144.0.7559.132</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>144.0.7559.132</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2026/02/stable-channel-update-for-desktop.html">
+	 <p>This update includes 2 security fixes:</p>
+	 <ul>
+	    <li>[478942410] High CVE-2026-1861: Heap buffer overflow in libvpx. Reported by Google on 2026-01-26</li>
+	    <li>[479726070] High CVE-2026-1862: Type Confusion in V8. Reported by Chaoyuan Peng (@ret2happy) on 2026-01-29</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-1861</cvename>
+      <cvename>CVE-2026-1862</cvename>
+      <url>https://chromereleases.googleblog.com/2026/02/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2026-02-03</discovery>
+      <entry>2026-02-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f301a241-04d3-11f1-a38c-8447094a420f">
+    <topic>Roundcube -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>roundcube-php82</name>
+	<name>roundcube-php83</name>
+	<name>roundcube-php84</name>
+	<name>roundcube-php85</name>
+	<range><lt>1.6.13,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Roundcube project reports:</p>
+	<blockquote cite="https://github.com/roundcube/roundcubemail/releases/tag/1.6.13">
+	  <p>Unspecified CSS injection vulnerability.</p>
+	  <p>Remote image blocking bypass via SVG content.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/roundcube/roundcubemail/releases/tag/1.6.13</url>
+    </references>
+    <dates>
+      <discovery>2026-02-08</discovery>
+      <entry>2026-02-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="73ff246b-04b2-11f1-84fc-4ccc6adda413">
+    <topic>qt6-webengine -- multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>qt6-pdf</name>
+<name>qt6-webengine</name>
+<range><lt>6.10.2</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Qt qtwebengine-chromium repo reports:</p>
+	<blockquote cite="https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=134-based">
+	  <p>Backports for 7 security bugs in Chromium:</p>
+	  <ul>
+	    <li>CVE-2025-13638: Prevent media element GC in callbacks in WebMediaPlayerMS</li>
+	    <li>CVE-2025-13639: Improve validation of SDP direction in remote description</li>
+	    <li>CVE-2025-13720: Avoid downcasting Hash and Integrity reports</li>
+	    <li>CVE-2025-14174: Metal: Don't use pixelsDepthPitch to size buffers</li>
+	    <li>CVE-2025-14765: Polyfill unary negation and abs for amd mesa frontend</li>
+	    <li>CVE-2026-0908: Use CheckedNumerics in HandleAllocator</li>
+	    <li>CVE-2026-1504: Block opaque 416 responses to non-range requests</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-13638</cvename>
+      <cvename>CVE-2025-13639</cvename>
+      <cvename>CVE-2025-13720</cvename>
+      <cvename>CVE-2025-14174</cvename>
+      <cvename>CVE-2025-14765</cvename>
+      <cvename>CVE-2026-0908</cvename>
+      <cvename>CVE-2026-1504</cvename>
+      <url>https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=134-based</url>
+    </references>
+    <dates>
+      <discovery>2026-02-02</discovery>
+      <entry>2026-02-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a6effa17-1fd4-4895-8471-d5c684d7807c">
+    <topic>navidrome -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>navidrome</name>
+	<range><lt>0.60.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>An XSS vulnerability in the frontend allows a malicious attacker to inject code through the comment metadata of a song to exfiltrate user credentials.</p>
+	<p>Authenticated users can crash the Navidrome server by supplying an excessively large size parameter to /rest/getCoverArt or to a shared-image URL (/share/img/{token}). When processing such requests, the server attempts to create an extremely large resized image, causing uncontrolled memory growth. This triggers the Linux OOM killer, terminates the Navidrome process, and results in a full service outage.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-25578</cvename>
+      <url>https://github.com/navidrome/navidrome/security/advisories/GHSA-rh3r-8pxm-hg4w</url>
+      <cvename>CVE-2026-25579</cvename>
+      <url>https://github.com/navidrome/navidrome/security/advisories/GHSA-hrr4-3wgr-68x3</url>
+    </references>
+    <dates>
+      <discovery>2026-02-03</discovery>
+      <entry>2026-02-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1a82bf18-0417-11f1-be6f-5404a68ad561">
+    <topic>traefik -- ACME TLS-ALPN fast path potential DoS</topic>
+    <affects>
+<package>
+<name>traefik</name>
+<range><lt>3.6.7</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The traefik project reports:</p>
+	<blockquote cite="https://github.com/traefik/traefik/security/advisories/GHSA-cwjm-3f7h-9hwq">
+	  <p>There is a potential vulnerability in Traefik ACME TLS certificates' automatic
+	  generation: the ACME TLS-ALPN fast path can allow unauthenticated clients to
+	  tie up goroutines and file descriptors indefinitely when the ACME TLS challenge
+	  is enabled.A malicious client can open many connections, send a minimal ClientHello
+	  with acme-tls/1, then stop responding, leading to denial of service of the entrypoint.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-22045</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-22045</url>
+    </references>
+    <dates>
+      <discovery>2026-01-15</discovery>
+      <entry>2026-02-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bfe9adc8-0224-11f1-8790-c5fb948922ad">
+    <topic>python -- several security vulnerabilities</topic>
+    <affects>
+      <package><name>python310</name> <range><ge>0</ge></range></package>
+      <package><name>python311</name> <range><lt>3.11.14_2</lt></range></package>
+      <package><name>python312</name> <range><lt>3.12.12_4</lt></range></package>
+      <package><name>python313</name> <range><lt>3.13.12</lt></range></package>
+      <package><name>python313t</name> <range><lt>3.13.12</lt></range></package>
+      <package><name>python314</name> <range><lt>3.14.3</lt></range></package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Python project announces a new release with several security fixes:</p>
+	<blockquote cite="https://docs.python.org/release/3.14.3/whatsnew/changelog.html">
+	  <ul>
+	    <li>CVE-2026-1299: gh-144125: BytesGenerator will now refuse to serialize (write) headers that are unsafely folded or delimited; see verify_generated_headers. (Contributed by Bas Bloemsaat and Petr Viktorin in gh-121650).</li>
+	    <li>gh-143935: Fixed a bug in the folding of comments when flattening an email message using a modern email policy. Comments consisting of a very long sequence of non-foldable characters could trigger a forced line wrap that omitted the required leading space on the continuation line, causing the remainder of the comment to be interpreted as a new header field. This enabled header injection with carefully crafted inputs.</li>
+	    <li>gh-143925: Reject control characters in data: URL media types.</li>
+	    <li>gh-143919: Reject control characters in http.cookies.Morsel fields and values.</li>
+	    <li>CVE-2026-0865: gh-143916: Reject C0 control characters within wsgiref.headers.Headers fields, values, and parameters.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-1299</cvename>
+      <cvename>CVE-2026-0865</cvename>
+      <url>https://docs.python.org/release/3.14.3/whatsnew/changelog.html</url>
+    </references>
+    <dates>
+      <discovery>2026-01-16</discovery>
+      <entry>2026-02-04</entry>
+      <modified>2026-02-13</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="232e16cc-fd83-11f0-981a-98b78501ef2a">
+    <topic>xrdp -- remote code execution</topic>
+    <affects>
+<package>
+<name>xrdp</name>
+<range><lt>0.10.5</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Denis Skvortsov, Security Researcher at Kaspersky reports:</p>
+	<blockquote cite="https://github.com/neutrinolabs/xrdp/security/advisories/GHSA-rwvg-gp87-gh6f">
+	  <p>xrdp before v0.10.5 contains an unauthenticated stack-based buffer overflow vulnerability. The issue stems from improper bounds checking when processing user domain information during the connection sequence. If exploited, the vulnerability could allow remote attackers to execute arbitrary code on the target system.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-68670</cvename>
+      <url>https://www.cve.org/CVERecord?id=CVE-2025-68670</url>
+    </references>
+    <dates>
+      <discovery>2025-12-06</discovery>
+      <entry>2026-01-27</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="8173e68a-88f3-4862-882c-6e58779d98e7">
     <topic>zeek -- potential DoS vulnerability</topic>
     <affects>

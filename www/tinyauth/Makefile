@@ -1,9 +1,11 @@
 PORTNAME=	tinyauth
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.0.1
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	LOCAL/dtxdf/${PORTNAME}/
+# For instructions on how to create assets:
+#   https://github.com/DtxdF/port-assets-makejails/tree/main/tinyauth
 DISTFILES=	${PORTNAME}-${DISTVERSIONPREFIX}${DISTVERSION}.frontend${EXTRACT_SUFX}
 
 MAINTAINER=	dtxdf@FreeBSD.org

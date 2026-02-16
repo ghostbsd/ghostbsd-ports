@@ -28,8 +28,7 @@ ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64 powerpc64le
 BUILD_DEPENDS=	zip:archivers/zip \
 		apache-ant>0:devel/apache-ant \
 		gradle62>=6.2:devel/gradle62 \
-		${JAVALIBDIR}/junit.jar:java/junit \
-		rubygem-getoptlong>0:devel/rubygem-getoptlong
+		${JAVALIBDIR}/junit.jar:java/junit
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
@@ -48,6 +47,8 @@ USE_XORG=	x11 xtst xxf86vm
 
 CFLAGS+=	-Wno-unused-command-line-argument \
 		-Wno-int-conversion
+# Suppress errors with lld >= 17 due to undefined symbols.
+LDFLAGS+=	-Wl,--undefined-version
 
 PLIST_SUB=	INSTALLDIR=${_INSTALLDIR}
 
@@ -88,14 +89,17 @@ _GRADLE_RUN=	${SETENV} ${_GRADLE_ENV} gradle62 --no-daemon
 
 _INSTALLDIR=	${PREFIX}/${PKGBASE}
 
-.include <bsd.port.options.mk>
+.include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
 
-# Suppress errors with lld >= 17 due to undefined symbols.
-LDFLAGS+=	-Wl,--undefined-version
+.if ${PORT_OPTIONS:MWEBKIT}
+. if ${RUBY_VER} >= 3.4
+BUILD_DEPENDS+=	rubygem-getoptlong>=0:devel/rubygem-getoptlong
+. endif
+.endif
 
 post-extract:
 	${MKDIR} ${WRKDIR}/jars
@@ -173,4 +177,4 @@ do-install:
 do-test-TEST-on:
 	@cd ${WRKSRC} && ${_GRADLE_RUN} check test
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

@@ -1,5 +1,6 @@
 PORTNAME=	devedeng
 DISTVERSION=	4.21.0
+PORTREVISION=	1
 CATEGORIES=	sysutils multimedia python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -12,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libcanberra.so:audio/libcanberra
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}urllib3>0:net/py-urllib3@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}cairo>0:graphics/py-cairo@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pycairo>0:graphics/py-pycairo@${PY_FLAVOR} \
 		ffmpeg>1.2.6:multimedia/ffmpeg \
 		dvdauthor:multimedia/dvdauthor \
 		vcdimager:multimedia/vcdimager \

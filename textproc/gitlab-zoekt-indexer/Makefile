@@ -1,6 +1,7 @@
 PORTNAME=	gitlab-zoekt-indexer
 PORTVERSION=	1.8.0
 DISTVERSIONPREFIX=	v
+PORTREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	mfechner@FreeBSD.org

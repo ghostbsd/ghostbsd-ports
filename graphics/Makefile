@@ -84,6 +84,7 @@
     SUBDIR += bitmap
     SUBDIR += blend2d
     SUBDIR += blender
+    SUBDIR += blender4
     SUBDIR += blender-doc
     SUBDIR += bmeps
     SUBDIR += bmp2html
@@ -681,6 +682,7 @@
     SUBDIR += openshadinglanguage
     SUBDIR += openslide
     SUBDIR += opensubdiv
+    SUBDIR += openusd
     SUBDIR += openvkl
     SUBDIR += openxr
     SUBDIR += optar
@@ -801,6 +803,7 @@
     SUBDIR += panoglview
     SUBDIR += panomatic
     SUBDIR += pc-pdfviewer
+    SUBDIR += papers
     SUBDIR += partio
     SUBDIR += pastel
     SUBDIR += pcdtojpeg
@@ -907,7 +910,6 @@
     SUBDIR += py-blockdiag
     SUBDIR += py-blockdiagcontrib-cisco
     SUBDIR += py-box2d-py
-    SUBDIR += py-cairo
     SUBDIR += py-cairocffi
     SUBDIR += py-cairosvg
     SUBDIR += py-cartopy
@@ -991,6 +993,7 @@
     SUBDIR += py-pointpats
     SUBDIR += py-projpicker
     SUBDIR += py-proplot
+    SUBDIR += py-pycairo
     SUBDIR += py-pycha
     SUBDIR += py-pycollada
     SUBDIR += py-pydot

@@ -1,7 +1,7 @@
 PORTNAME=	xorgxrdp
-DISTVERSION=	0.10.4
+DISTVERSION=	0.10.5
 # Be sure to bump PORTREVISION after xorg-server update to force rebuild
-PORTREVISION=	4
+PORTREVISION=	0
 CATEGORIES=	x11-drivers
 MASTER_SITES=	https://github.com/neutrinolabs/${PORTNAME}/releases/download/v${DISTVERSION}/ \
 		https://github.com/neutrinolabs/xrdp/releases/download/v${XRDPVER}/:xrdp
@@ -9,7 +9,12 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		xrdp-${XRDPVER}${EXTRACT_SUFX}:xrdp
 DIST_SUBDIR=	xrdp
 
-PATCH_SITES=	https://github.com/neutrinolabs/${GH_PROJECT}/commit/
+PATCH_SITES=	https://github.com/neutrinolabs/${PORTNAME}/commit/:commit \
+		https://github.com/neutrinolabs/${PORTNAME}/pull/:pull
+PATCHFILES+=	f5a07e9.patch:-p1:commit
+PATCHFILES+=	e1c82b4.patch:-p1:commit
+PATCHFILES+=	1c93081.patch:-p1:commit
+PATCHFILES+=	58e6a64.patch:-p1:commit
 
 MAINTAINER=	meta@FreeBSD.org
 COMMENT=	X.Org driver enabling use through an RDP session with xrdp
@@ -24,28 +29,34 @@ FLAVOR?=	${FLAVORS:[1]}
 BUILD_DEPENDS=	nasm:devel/nasm
 RUN_DEPENDS=	xauth:x11/xauth
 
-USES=		autoreconf libtool:build localbase pkgconfig xorg
+FLAVORS=	xorg xlibre
+FLAVOR?=	${FLAVORS:[1]}
+
+USES=		autoreconf libtool:build localbase pkgconfig
 USE_LDCONFIG=	yes
 USE_XORG=	xorgproto
 
 .if ${FLAVOR} == xlibre
-PKGNAMEPREFIX=		xlibre-
-USES+=			xlibre
-USE_XLIBRE+=		xlibre-server
-CONFIGURE_ARGS+=	--enable-strict-locations --sysconfdir=/etc
-EXTRA_PATCHES=		${PATCHDIR}/extra-patch-xrdpkeyb_rdpKeyboard.c \
-			${PATCHDIR}/extra-patch-configure.ac
+PKGNAMEPREFIX=	xlibre-
+USES+=		xlibre
+USE_XLIBRE+=	xlibre-server
+_XLIBRE_MAJOR_VER=	25
+_XMODDIR=	lib/xorg/modules/xlibre-${_XLIBRE_MAJOR_VER}
 .else
-USE_XORG+=		xorg-server
+USE_XORG=	xorg-server
+USES+=		xorg
+_XMODDIR=	lib/xorg/modules
 .endif
 
-XRDPVER=		0.10.4.1
+XRDPVER=		0.10.5
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	XRDP_CFLAGS=-I${WRKDIR}/xrdp-${XRDPVER}/common
 INSTALL_TARGET=	install-strip
 
 CONFLICTS=	xorgxrdp-devel
+
+PLIST_SUB+=	XMODDIR=${_XMODDIR}
 
 OPTIONS_DEFINE=		DEBUG DRI3
 OPTIONS_DEFAULT=	DRI3

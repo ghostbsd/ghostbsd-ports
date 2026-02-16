@@ -664,6 +664,7 @@
     SUBDIR += electron37
     SUBDIR += electron38
     SUBDIR += electron39
+    SUBDIR += electron40
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -734,7 +735,7 @@
     SUBDIR += freebsd-gcc13
     SUBDIR += freebsd-gcc14
     SUBDIR += freebsd-gcc15
-    SUBDIR += freebsd-git-devtools
+    SUBDIR += freebsd-git-arc
     SUBDIR += freebsd-nvme-shim
     SUBDIR += freebsd-sysroot
     SUBDIR += frink
@@ -995,6 +996,7 @@
     SUBDIR += hs-darcs
     SUBDIR += hs-ghc-events
     SUBDIR += hs-ghcprofview
+    SUBDIR += hs-ghcup
     SUBDIR += hs-git-annex
     SUBDIR += hs-git-brunch
     SUBDIR += hs-hadolint
@@ -1009,7 +1011,6 @@
     SUBDIR += hs-ormolu
     SUBDIR += hs-profiteur
     SUBDIR += hs-shake
-    SUBDIR += hs-spago
     SUBDIR += hs-threadscope
     SUBDIR += htable
     SUBDIR += hub
@@ -1674,6 +1675,7 @@
     SUBDIR += mergify
     SUBDIR += meson
     SUBDIR += meson-python
+    SUBDIR += mfc-candidates
     SUBDIR += microsoft-gsl
     SUBDIR += mill
     SUBDIR += mimalloc
@@ -1720,6 +1722,7 @@
     SUBDIR += newtonsoft-json
     SUBDIR += nextest
     SUBDIR += nextpnr
+    SUBDIR += nextpnr-devel
     SUBDIR += nexus2-oss
     SUBDIR += nimble
     SUBDIR += nini
@@ -4331,6 +4334,7 @@
     SUBDIR += premake4
     SUBDIR += premake5
     SUBDIR += priv_wrapper
+    SUBDIR += prjpeppercorn111
     SUBDIR += projectcenter
     SUBDIR += prometheus-cpp
     SUBDIR += protobuf
@@ -4362,7 +4366,6 @@
     SUBDIR += py-Jinja2
     SUBDIR += py-Jinja2-doc
     SUBDIR += py-Js2Py
-    SUBDIR += py-Levenshtein
     SUBDIR += py-PYB11Generator
     SUBDIR += py-PeachPy
     SUBDIR += py-PyExecJS
@@ -4787,6 +4790,7 @@
     SUBDIR += py-daemons
     SUBDIR += py-daiquiri
     SUBDIR += py-dal
+    SUBDIR += py-darkdetect
     SUBDIR += py-darts.util.lru
     SUBDIR += py-dask
     SUBDIR += py-dask-awkward
@@ -4804,6 +4808,7 @@
     SUBDIR += py-datrie
     SUBDIR += py-dbt-extractor
     SUBDIR += py-dbus
+    SUBDIR += py-dbus-deviation
     SUBDIR += py-ddsketch
     SUBDIR += py-ddt
     SUBDIR += py-ddtrace
@@ -5053,7 +5058,6 @@
     SUBDIR += py-hgtools
     SUBDIR += py-hidraw
     SUBDIR += py-hishel
-    SUBDIR += py-hishel0
     SUBDIR += py-holidays
     SUBDIR += py-hologram
     SUBDIR += py-homebase
@@ -5108,6 +5112,7 @@
     SUBDIR += py-ipython-pygments-lexers
     SUBDIR += py-ipython_genutils
     SUBDIR += py-ipywidgets
+    SUBDIR += py-isal
     SUBDIR += py-iso8601
     SUBDIR += py-isodate
     SUBDIR += py-isoduration
@@ -5220,6 +5225,7 @@
     SUBDIR += py-lazy_imports
     SUBDIR += py-lazy_loader
     SUBDIR += py-legacy-api-wrap
+    SUBDIR += py-levenshtein
     SUBDIR += py-libcst
     SUBDIR += py-libcst03
     SUBDIR += py-libevdev
@@ -5266,7 +5272,6 @@
     SUBDIR += py-lxml
     SUBDIR += py-lxml-html-clean
     SUBDIR += py-lxml-stubs
-    SUBDIR += py-lxml5
     SUBDIR += py-mac-vendor-lookup
     SUBDIR += py-macholib
     SUBDIR += py-madoka
@@ -5368,6 +5373,7 @@
     SUBDIR += py-notify2
     SUBDIR += py-num2words
     SUBDIR += py-numba
+    SUBDIR += py-nvidia-ml-py
     SUBDIR += py-objgraph
     SUBDIR += py-objprint
     SUBDIR += py-objsize
@@ -5708,6 +5714,7 @@
     SUBDIR += py-pyparsing2
     SUBDIR += py-pypemicro
     SUBDIR += py-pyperclip
+    SUBDIR += py-pyperclipimg
     SUBDIR += py-pyperf
     SUBDIR += py-pyperscan
     SUBDIR += py-pyplusplus
@@ -6001,6 +6008,7 @@
     SUBDIR += py-setuptools-pkg
     SUBDIR += py-setuptools-rust
     SUBDIR += py-setuptools-scm
+    SUBDIR += py-setuptools-scm8
     SUBDIR += py-setuptools44
     SUBDIR += py-setuptools58
     SUBDIR += py-setuptools_git_ls_files
@@ -6040,6 +6048,8 @@
     SUBDIR += py-sparse
     SUBDIR += py-speaklater
     SUBDIR += py-speg
+    SUBDIR += py-spin
+    SUBDIR += py-spy
     SUBDIR += py-spyder-kernels
     SUBDIR += py-sqids
     SUBDIR += py-sqlfluff
@@ -6146,6 +6156,7 @@
     SUBDIR += py-tree-sitter-languages
     SUBDIR += py-tree-sitter-python
     SUBDIR += py-tree-sitter-regex
+    SUBDIR += py-tree-sitter-sql
     SUBDIR += py-tree-sitter-yaml
     SUBDIR += py-tree-sitter023
     SUBDIR += py-treelib
@@ -6254,6 +6265,7 @@
     SUBDIR += py-vulture
     SUBDIR += py-wadler-lindig
     SUBDIR += py-wadllib
+    SUBDIR += py-wait-for-it
     SUBDIR += py-wait-for2
     SUBDIR += py-warlock
     SUBDIR += py-watchdog
@@ -6623,7 +6635,6 @@
     SUBDIR += rubygem-aws-sdk-apprunner
     SUBDIR += rubygem-aws-sdk-appstream
     SUBDIR += rubygem-aws-sdk-appsync
-    SUBDIR += rubygem-aws-sdk-apptest
     SUBDIR += rubygem-aws-sdk-arcregionswitch
     SUBDIR += rubygem-aws-sdk-arczonalshift
     SUBDIR += rubygem-aws-sdk-artifact
@@ -6750,7 +6761,6 @@
     SUBDIR += rubygem-aws-sdk-elasticloadbalancing
     SUBDIR += rubygem-aws-sdk-elasticloadbalancingv2
     SUBDIR += rubygem-aws-sdk-elasticsearchservice
-    SUBDIR += rubygem-aws-sdk-elastictranscoder
     SUBDIR += rubygem-aws-sdk-emr
     SUBDIR += rubygem-aws-sdk-emrcontainers
     SUBDIR += rubygem-aws-sdk-emrserverless
@@ -6797,7 +6807,6 @@
     SUBDIR += rubygem-aws-sdk-iotdeviceadvisor
     SUBDIR += rubygem-aws-sdk-iotevents
     SUBDIR += rubygem-aws-sdk-ioteventsdata
-    SUBDIR += rubygem-aws-sdk-iotfleethub
     SUBDIR += rubygem-aws-sdk-iotfleetwise
     SUBDIR += rubygem-aws-sdk-iotjobsdataplane
     SUBDIR += rubygem-aws-sdk-iotmanagedintegrations
@@ -6838,8 +6847,6 @@
     SUBDIR += rubygem-aws-sdk-lightsail
     SUBDIR += rubygem-aws-sdk-locationservice
     SUBDIR += rubygem-aws-sdk-lookoutequipment
-    SUBDIR += rubygem-aws-sdk-lookoutforvision
-    SUBDIR += rubygem-aws-sdk-lookoutmetrics
     SUBDIR += rubygem-aws-sdk-machinelearning
     SUBDIR += rubygem-aws-sdk-macie2
     SUBDIR += rubygem-aws-sdk-mailmanager
@@ -6921,8 +6928,6 @@
     SUBDIR += rubygem-aws-sdk-qapps
     SUBDIR += rubygem-aws-sdk-qbusiness
     SUBDIR += rubygem-aws-sdk-qconnect
-    SUBDIR += rubygem-aws-sdk-qldb
-    SUBDIR += rubygem-aws-sdk-qldbsession
     SUBDIR += rubygem-aws-sdk-quicksight
     SUBDIR += rubygem-aws-sdk-ram
     SUBDIR += rubygem-aws-sdk-rds
@@ -6939,7 +6944,6 @@
     SUBDIR += rubygem-aws-sdk-resourcegroupstaggingapi
     SUBDIR += rubygem-aws-sdk-resources
     SUBDIR += rubygem-aws-sdk-resources2
-    SUBDIR += rubygem-aws-sdk-robomaker
     SUBDIR += rubygem-aws-sdk-rolesanywhere
     SUBDIR += rubygem-aws-sdk-route53
     SUBDIR += rubygem-aws-sdk-route53domains
@@ -7269,19 +7273,14 @@
     SUBDIR += rubygem-csv
     SUBDIR += rubygem-cucumber
     SUBDIR += rubygem-cucumber-ci-environment
-    SUBDIR += rubygem-cucumber-ci-environment10
     SUBDIR += rubygem-cucumber-ci-environment11
     SUBDIR += rubygem-cucumber-core
     SUBDIR += rubygem-cucumber-core15
     SUBDIR += rubygem-cucumber-cucumber-expressions
-    SUBDIR += rubygem-cucumber-cucumber-expressions17
     SUBDIR += rubygem-cucumber-messages
-    SUBDIR += rubygem-cucumber-messages27
-    SUBDIR += rubygem-cucumber-messages28
-    SUBDIR += rubygem-cucumber-messages29
-    SUBDIR += rubygem-cucumber-messages30
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
+    SUBDIR += rubygem-cucumber-tag-expressions8
     SUBDIR += rubygem-cucumber-wire
     SUBDIR += rubygem-curses
     SUBDIR += rubygem-cyoi
@@ -7398,7 +7397,6 @@
     SUBDIR += rubygem-fcntl
     SUBDIR += rubygem-ffaker
     SUBDIR += rubygem-ffi
-    SUBDIR += rubygem-ffi16
     SUBDIR += rubygem-ffi-compiler
     SUBDIR += rubygem-ffi-libarchive
     SUBDIR += rubygem-ffi-win32-extensions
@@ -7416,7 +7414,6 @@
     SUBDIR += rubygem-flipper
     SUBDIR += rubygem-flipper-active_support_cache_store
     SUBDIR += rubygem-flipper-active_support_cache_store-rails-gitlab
-    SUBDIR += rubygem-flipper-active_support_cache_store-rails70
     SUBDIR += rubygem-flipper-gitlab
     SUBDIR += rubygem-flipper-ui
     SUBDIR += rubygem-fluent-logger
@@ -7560,8 +7557,8 @@
     SUBDIR += rubygem-hashdiff
     SUBDIR += rubygem-hashery
     SUBDIR += rubygem-hashie
-    SUBDIR += rubygem-hashie-gitlab
     SUBDIR += rubygem-hashie-forbidden_attributes
+    SUBDIR += rubygem-hashie-gitlab
     SUBDIR += rubygem-health_check
     SUBDIR += rubygem-health_check-rails-gitlab
     SUBDIR += rubygem-health_check-rails70
@@ -7656,6 +7653,7 @@
     SUBDIR += rubygem-licensee-gitlab
     SUBDIR += rubygem-lint_roller
     SUBDIR += rubygem-listen
+    SUBDIR += rubygem-listen-gitlab
     SUBDIR += rubygem-little-plugger
     SUBDIR += rubygem-local_time
     SUBDIR += rubygem-local_time-rails5
@@ -7830,7 +7828,6 @@
     SUBDIR += rubygem-packwerk
     SUBDIR += rubygem-packwerk-extensions
     SUBDIR += rubygem-pagy
-    SUBDIR += rubygem-pagy6
     SUBDIR += rubygem-paint
     SUBDIR += rubygem-pairing_heap
     SUBDIR += rubygem-paper_trail
@@ -8054,7 +8051,6 @@
     SUBDIR += rubygem-sidekiq-bulk
     SUBDIR += rubygem-sidekiq-cron
     SUBDIR += rubygem-sidekiq-cron-rails-gitlab
-    SUBDIR += rubygem-sidekiq-cron-rails70
     SUBDIR += rubygem-sidekiq-gitlab
     SUBDIR += rubygem-sidekiq-scheduler
     SUBDIR += rubygem-sidekiq-unique-jobs
@@ -8157,6 +8153,7 @@
     SUBDIR += rubygem-thor
     SUBDIR += rubygem-thor0
     SUBDIR += rubygem-thor12
+    SUBDIR += rubygem-thor14
     SUBDIR += rubygem-thread-local
     SUBDIR += rubygem-thread_safe
     SUBDIR += rubygem-thrift
@@ -8264,8 +8261,7 @@
     SUBDIR += rubygem-with_env
     SUBDIR += rubygem-wmi-lite
     SUBDIR += rubygem-xdg
-    SUBDIR += rubygem-xdg7
-    SUBDIR += rubygem-xdg8
+    SUBDIR += rubygem-xdg9
     SUBDIR += rubygem-xorcist
     SUBDIR += rubygem-xpath
     SUBDIR += rubygem-xxhash
@@ -8371,6 +8367,7 @@
     SUBDIR += sope
     SUBDIR += sope2
     SUBDIR += sord
+    SUBDIR += spago
     SUBDIR += spark
     SUBDIR += sparsebitset
     SUBDIR += sparsehash
@@ -8445,8 +8442,8 @@
     SUBDIR += tcl-memchan
     SUBDIR += tcl-mmap
     SUBDIR += tcl-signal
-    SUBDIR += tcl-trf
     SUBDIR += tcl-thread
+    SUBDIR += tcl-trf
     SUBDIR += tclap
     SUBDIR += tclap12
     SUBDIR += tclbsd
@@ -8545,6 +8542,7 @@
     SUBDIR += uvwasi
     SUBDIR += valgrind
     SUBDIR += valgrind-devel
+    SUBDIR += vali
     SUBDIR += vasm
     SUBDIR += vc
     SUBDIR += vc-intrinsics

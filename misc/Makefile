@@ -109,6 +109,7 @@
     SUBDIR += edflib
     SUBDIR += elki
     SUBDIR += elscreen
+    SUBDIR += emacs-libvterm
     SUBDIR += estic
     SUBDIR += exercism
     SUBDIR += explosions
@@ -424,6 +425,7 @@
     SUBDIR += pspresent
     SUBDIR += ptsort
     SUBDIR += pubs
+    SUBDIR += py-NATTEN
     SUBDIR += py-PyUserInput
     SUBDIR += py-PyWavefront
     SUBDIR += py-QSpectrumAnalyzer
@@ -519,7 +521,6 @@
     SUBDIR += py-molequeue
     SUBDIR += py-napari
     SUBDIR += py-napari-svg
-    SUBDIR += py-natten
     SUBDIR += py-npTDMS
     SUBDIR += py-npe2
     SUBDIR += py-numcodecs
@@ -726,7 +727,6 @@
     SUBDIR += urh
     SUBDIR += usbids
     SUBDIR += usbrh-libusb
-    SUBDIR += usd
     SUBDIR += utftools
     SUBDIR += utouch-kmod
     SUBDIR += valentina

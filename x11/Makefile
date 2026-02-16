@@ -399,7 +399,6 @@
     SUBDIR += rofi-emoji
     SUBDIR += rofi-file-browser-extended
     SUBDIR += rofi-pass
-    SUBDIR += rofi-wayland
     SUBDIR += roxterm
     SUBDIR += rsibreak
     SUBDIR += rubygem-gnome

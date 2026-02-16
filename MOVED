@@ -553,7 +553,6 @@ net-mgmt/zabbix52-java||2021-09-19|Has expired: Unsupported by upstream
 net-mgmt/zabbix52-proxy||2021-09-19|Has expired: Unsupported by upstream
 net-mgmt/zabbix52-server||2021-09-19|Has expired: Unsupported by upstream
 sysutils/roottail|sysutils/root-tail|2021-09-26|Renamed to match upstream naming
-devel/py-pyyaml-env-tag|devel/py-pyyaml_env_tag|2021-09-28|Renamed to match upstream naming
 mail/opensmtpd-devel|mail/opensmtpd|2021-09-28|Has expired: move to offical releases
 devel/erlang-exmpp||2021-09-30|Removed, last upstream patches over 10 years ago
 sysutils/showbeastie||2021-09-30|Broken on FreeBSD 12 and above since 2018
@@ -4296,7 +4295,7 @@ ports-mgmt/genplist||2025-04-04|Has expired: Unmaintained, obsoleted by "make ma
 databases/rubygem-scenic61||2025-04-04|Has expired: Uses EOL version 6.1.X of Rails
 devel/py-blist||2025-04-04|Has expired: Abandoned project, no consumers, no modern python support
 textproc/rubygem-case_transform61||2025-04-04|Has expired: Uses EOL version 6.1.X of Rails
-lang/python-doc-pdf-letter|lang/python-doc-pdf-a4|2025-04-09|Letter-size PDF no longer provided since 3.12
+lang/python-doc-pdf-letter||2025-04-09|Letter-size PDF no longer provided since 3.12
 net-im/py-punjab||2025-04-13|Has expired: Abandoned project, not compatible with decent python/twisted
 devel/linux-rl9-libsigsegv|emulators/linux_base-rl9|2025-04-15|Integrated into linux_base-rl9
 devel/linux-rl9-libatomic|devel/linux-rl9-devtools|2025-04-15|Integrated into linux-rl9-devtools
@@ -5076,7 +5075,6 @@ devel/fam||2026-01-11|Remove obsolete and unmaintained port
 lang/go122||2026-01-14|Has expired: Old version, unsupported upstream
 lang/go123||2026-01-14|Has expired: Old version, unsupported upstream
 devel/py-confusable_homoglyphs|devel/py-confusable-homoglyphs|2026-01-15|Rename to match upstream naming
-devel/py-pyyaml_env_tag|devel/py-pyyaml-env-tag|2026-01-15|Rename to match upstream naming
 www/py-aiohttp_cors|www/py-aiohttp-cors|2026-01-15|Rename to match upstream naming
 lang/cython3|lang/cython|2026-01-15|Remove obsoleted port. Use lang/cython instead
 multimedia/gpac-mp4box|multimedia/gpac|2026-01-15|Merge mp4box and libgpac and add gpac
@@ -5094,3 +5092,63 @@ www/bareos22-webui||2026-01-29|Has expired: not supported upstream
 sysutils/bareos22-client||2026-01-29|Has expired: not supported upstream
 sysutils/bareos22-traymonitor||2026-01-29|Has expired: not supported upstream
 sysutils/bareos22-server||2026-01-29|Has expired: not supported upstream
+multimedia/decord||2026-01-31|Doesn't build with ffmpeg>6; upstream is inactive for 4 years
+x11/rofi-wayland|x11/rofi|2026-01-31|Wayland bits are now part of the main port
+multimedia/py-decord||2026-01-31|Python bindings of multimedia/decord that was removed
+sysutils/wiimms||2026-02-01|Has expired: sysutils/wiimms has been abandoned for many years
+sysutils/burp-devel|sysutils/burp|2026-02-01|Has expired: 3.2.0 is the new stable version based on 3.1.4. Use sysutils/burp instead
+sysutils/stressdisk||2026-02-01|Has expired: dead upstream
+archivers/py-brotlipy|archivers/py-brotlicffi|2026-02-01|Has expired: This project has been archived. The maintainers of this project have marked this project as archived. No new releases are expected. Use archivers/py-brotlicffi instead
+x11-fonts/symbola||2026-02-01|Has expired: Unfetchable
+biology/snpeff||2026-02-01|Has expired: Unfetchable
+games/freeminer-default||2026-02-01|Has expired: depends on deprecated games/freeminer
+games/freeminer||2026-02-01|Has expired: dead upstream
+net/jsch||2026-02-01|Has expired: Upstream website does not exist. No ports depend on this. It does not compile on jdk21. See also: https://github.com/mwiede/jsch
+devel/rubygem-ffi16|devel/rubygem-ffi|2026-02-03|Remove obsoleted port. Use devel/rubygem-ffi instead
+devel/hs-spago|devel/spago|2026-02-03|Dropped the "hs-" prefix, the software is now written in Purescript
+lang/python-doc-pdf-a4||2026-02-05|A4-size PDF no longer provided since 3.13
+devel/rubygem-sidekiq-cron-rails70|devel/rubygem-sidekiq-cron-rails-gitlab|2026-02-05|Obsolete, please use devel/rubygem-sidekiq-cron-rails-gitlab instead
+devel/freebsd-git-devtools|devel/freebsd-git-arc|2026-02-06|Split into two separate ports: devel/freebsd-git-arc and devel/mfc-candidates to improve discoverability
+devel/py-Levenshtein|devel/py-levenshtein|2026-02-07|Rename to match upstream
+misc/py-natten|misc/py-NATTEN|2026-02-10|Rename to match name in PyPI
+net/tcpkali||2026-02-10|Upstream dead and compromised
+devel/py-hishel0|devel/py-hishel|2026-02-10|Remove obsoleted port. Use devel/py-hishel instead
+devel/py-lxml5|devel/py-lxml|2026-02-10|Remove obsoleted port. Use devel/py-lxml instead
+net/py-urllib31|net/py-urllib3|2026-02-10|Remove obsoleted port. Use net/py-urllib3 instead
+devel/rubygem-aws-sdk-apptest||2026-02-10|Remove obsoleted port
+devel/rubygem-aws-sdk-elastictranscoder||2026-02-10|Remove obsoleted port
+devel/rubygem-aws-sdk-iotfleethub||2026-02-10|Remove obsoleted port
+devel/rubygem-aws-sdk-lookoutforvision||2026-02-10|Remove obsoleted port
+devel/rubygem-aws-sdk-lookoutmetrics||2026-02-10|Remove obsoleted port
+devel/rubygem-aws-sdk-qldb||2026-02-10|Remove obsoleted port
+devel/rubygem-aws-sdk-qldbsession||2026-02-10|Remove obsoleted port
+devel/rubygem-aws-sdk-robomaker||2026-02-10|Remove obsoleted port
+devel/rubygem-cucumber-ci-environment10|devel/rubygem-cucumber-ci-environment|2026-02-10|Remove obsoleted port. Use devel/rubygem-cucumber-ci-environment instead
+devel/rubygem-cucumber-cucumber-expressions17|devel/rubygem-cucumber-cucumber-expressions|2026-02-10|Remove obsoleted port. Use devel/rubygem-cucumber-cucumber-expressions instead
+devel/rubygem-cucumber-messages27|devel/rubygem-cucumber-messages|2026-02-10|Remove obsoleted port. Use devel/rubygem-cucumber-messages instead
+devel/rubygem-cucumber-messages28|devel/rubygem-cucumber-messages|2026-02-10|Remove obsoleted port. Use devel/rubygem-cucumber-messages instead
+devel/rubygem-cucumber-messages29|devel/rubygem-cucumber-messages|2026-02-10|Remove obsoleted port. Use devel/rubygem-cucumber-messages instead
+devel/rubygem-cucumber-messages30|devel/rubygem-cucumber-messages|2026-02-10|Remove obsoleted port. Use devel/rubygem-cucumber-messages instead
+devel/rubygem-pagy6|devel/rubygem-pagy|2026-02-10|Remove obsoleted port. Use devel/rubygem-pagy instead
+devel/rubygem-xdg7|devel/rubygem-xdg|2026-02-10|Remove obsoleted port. Use devel/rubygem-xdg instead
+devel/rubygem-xdg8|devel/rubygem-xdg|2026-02-10|Remove obsoleted port. Use devel/rubygem-xdg instead
+textproc/rubygem-cucumber-gherkin34|textproc/rubygem-cucumber-gherkin|2026-02-10|Remove obsoleted port. Use textproc/rubygem-cucumber-gherkin instead
+textproc/rubygem-cucumber-html-formatter21|textproc/rubygem-cucumber-html-formatter|2026-02-10|Remove obsoleted port. Use textproc/rubygem-cucumber-html-formatter instead
+textproc/rubygem-loofah222|textproc/rubygem-loofah|2026-02-10|Remove obsoleted port. Use textproc/rubygem-loofah instead
+databases/rubygem-flipper-active_record-rails70|databases/rubygem-flipper-active_record|2026-02-10|Remove obsoleted port. Use databases/rubygem-flipper-active_record instead
+devel/rubygem-flipper-active_support_cache_store-rails70|devel/rubygem-flipper-active_support_cache_store|2026-02-10|Remove obsoleted port. Use devel/rubygem-flipper-active_support_cache_store instead
+sysutils/android-file-transfer-qt5||2026-02-11|Removed as qt5 is being deprecated
+databases/postgresql13-contrib||2026-02-12|Has expired: PostgreSQL-13 is end-of-life
+databases/postgresql13-client||2026-02-12|Has expired: PostgreSQL-13 is end-of-life
+databases/postgresql13-plperl||2026-02-12|Has expired: PostgreSQL-13 is end-of-life
+databases/postgresql13-pltcl||2026-02-12|Has expired: PostgreSQL-13 is end-of-life
+databases/postgresql13-plpython||2026-02-12|Has expired: PostgreSQL-13 is end-of-life
+databases/postgresql13-docs||2026-02-12|Has expired: PostgreSQL-13 is end-of-life
+databases/postgresql13-pgtcl||2026-02-12|Removed, PostgreSQL-13 is end-of-life
+databases/postgresql13-server||2026-02-12|Has expired: PostgreSQL-13 is end-of-life
+graphics/py-cairo|graphics/py-pycairo|2026-02-12|Use correct Python package name
+java/openjdk19||2026-02-14|Has expired: No longer supported by upstream
+emulators/firebird-emu|emulators/firebird|2026-02-14|Align with upstream project name
+security/openssl-quictls|security/openssl33-quictls|2026-02-14|Has expired: Upstream project has been archived, use security/openssl33-quictls
+misc/usd|graphics/openusd|2026-02-15|Rename to match upstream naming and moved to a more appropriate category
+www/py-django-statici18n|www/py-django_statici18n|2026-02-15|Rename to match upstream naming
