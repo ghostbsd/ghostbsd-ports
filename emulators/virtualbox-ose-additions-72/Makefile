@@ -19,6 +19,13 @@ BUILD_DEPENDS=	yasm:devel/yasm \
 		kmk:devel/kBuild \
 		xsltproc:textproc/libxslt
 
+FLAVORS=	xorg xlibre
+FLAVOR?=	${FLAVORS:[1]}
+
+.if ${FLAVOR} == xlibre
+PKGNAMEPREFIX=	xlibre-
+.endif
+
 USES=		compiler:c++17-lang cpe iconv kmod tar:bzip2
 CPE_VENDOR=	oracle
 CPE_PRODUCT=	vm_virtualbox
@@ -65,11 +72,18 @@ DBUS_CONFIGURE_OFF=	--disable-dbus
 DEBUG_CONFIGURE_ON=	--build-debug
 DEBUG_VARS=		KMK_BUILDTYPE=debug
 DEBUG_VARS_OFF=		KMK_BUILDTYPE=release
-X11_BUILD_DEPENDS=	${LOCALBASE}/include/xorg/compiler.h:x11-servers/xorg-server
 X11_RUN_DEPENDS=	xrandr:x11/xrandr
 X11_USES=		pkgconfig xorg
 X11_USE=		XORG=x11,xcursor,xext,xorgproto,xmu,xrandr,xt
 X11_VARS=		VBOX_WITH_X11=1
+.if ${FLAVOR} == xlibre
+X11_USES+=		xlibre
+X11_USE+=		XLIBRE=xlibre-server
+.else
+X11_USE+=		XORG=xorg-server
+CONFLICTS=		xlibre-server
+.endif
+
 
 .include <bsd.port.options.mk>
 
