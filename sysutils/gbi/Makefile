@@ -1,5 +1,5 @@
 PORTNAME=	gbi
-PORTVERSION=	10.9
+PORTVERSION=	11.0
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
