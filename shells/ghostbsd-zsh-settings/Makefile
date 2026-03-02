@@ -1,5 +1,5 @@
 PORTNAME=	ghostbsd-zsh-settings
-PORTVERSION=	0.1
+PORTVERSION=	0.2
 CATEGORIES=	shells
 
 MAINTAINER=	jpm820@proton.me
@@ -9,7 +9,8 @@ LICENSE=	BSD3CLAUSE
 
 RUN_DEPENDS=    zsh:shells/zsh \
 		${LOCALBASE}/share/zsh-autosuggestions/zsh-autosuggestions.zsh:shells/zsh-autosuggestions \
-		${LOCALBASE}/share/zsh/site-functions/_pkg:shells/zsh-completions
+		${LOCALBASE}/share/zsh/site-functions/_pkg:shells/zsh-completions \
+		${LOCALBASE}/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh:shells/zsh-fast-syntax-highlighting
 
 USES=		uidfix
 
