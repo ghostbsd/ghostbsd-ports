@@ -1,4 +1,4 @@
-PORTREVISION=	1
+PORTREVISION=	0
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -20,7 +20,6 @@ BUILD_DEPENDS=	p5-Archive-Zip>=0:archivers/p5-Archive-Zip \
 		cppunit-config:devel/cppunit \
 		dmake:devel/dmake \
 		gperf>=3.1:devel/gperf \
-		${LOCALBASE}/include/libcuckoo/cuckoohash_map.hh:devel/libcuckoo \
 		mdds>=${MDDS_VERSION}:devel/mdds \
 		gpatch:devel/patch \
 		${LOCALBASE}/include/sane/sane.h:graphics/sane-backends \
@@ -31,7 +30,8 @@ BUILD_DEPENDS=	p5-Archive-Zip>=0:archivers/p5-Archive-Zip \
 		gsed:textproc/gsed \
 		${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
 		coreutils>=8.23:sysutils/coreutils \
-		flex>=0.26:textproc/flex
+		flex>=0.26:textproc/flex \
+		frozen>=1:devel/frozen
 LIB_DEPENDS=	libzstd.so:archivers/zstd \
 		libapr-1.so:devel/apr1 \
 		libboost_date_time.so:devel/boost-libs \
@@ -113,7 +113,6 @@ DISTFILES+=	f543e6e2d7275557a839a164941c0a86e5f2c3f2a0042bfc434c88c6dde9e140-ope
 DISTFILES+=	afdko-4.0.3.tar.gz:src
 DISTFILES+=	antlr4-cpp-runtime-4.13.2-source.zip:src
 DISTFILES+=	dragonbox-1.1.3.tar.gz:src
-DISTFILES+=	frozen-1.2.0.tar.gz:src
 DISTFILES+=	phc-winner-argon2-20190702.tar.gz:src
 DISTFILES+=	skia-m142-f4ed99d2443962782cf5f8b4dd27179f131e7cbe.tar.xz:src
 DISTFILES+=	y-crdt-0.23.5.tar.gz:src
@@ -194,17 +193,9 @@ GTK4_LIB_DEPENDS=	libepoxy.so:graphics/libepoxy \
 GTK4_USE=	GNOME=gtk40
 
 JAVA_BUILD_DEPENDS=	ant:devel/apache-ant \
-			${JAVAJARDIR}/commons-codec.jar:java/apache-commons-codec \
-			${JAVAJARDIR}/commons-httpclient.jar:java/apache-commons-httpclient \
-			${JAVAJARDIR}/commons-lang3.jar:java/apache-commons-lang3 \
-			${JAVAJARDIR}/commons-logging.jar:java/apache-commons-logging \
 			${JAVAJARDIR}/junit.jar:java/junit
 JAVA_CATEGORIES=	java
 JAVA_CONFIGURE_ON=	--with-ant-home=${LOCALBASE}/share/java/apache-ant \
-			--with-commons-codec-jar=${JAVAJARDIR}/commons-codec.jar \
-			--with-commons-httpclient-jar=${JAVAJARDIR}/commons-httpclient.jar \
-			--with-commons-lang-jar=${JAVAJARDIR}/commons-lang3.jar \
-			--with-commons-logging-jar=${JAVAJARDIR}/commons-logging.jar \
 			--with-jdk-home="${JAVA_HOME}" \
 			--with-junit=${JAVAJARDIR}/junit.jar \
 			--with-hamcrest=${JAVAJARDIR}/hamcrest.jar \
@@ -308,7 +299,7 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--disable-mpl-subset \
 		--exec-prefix=${PREFIX} \
 		--with-boost=${LOCALBASE} \
-		--with-build-version="FreeBSD ports ${PKGVERSION}" \
+		--with-extra-buildid="FreeBSD ports ${PKGVERSION}" \
 		--with-external-dict-dir=${LOCALBASE}/share/hunspell \
 		--with-external-hyph-dir=${LOCALBASE}/share/hyphen \
 		--with-external-tar=${DISTDIR}/${DIST_SUBDIR} \
@@ -320,11 +311,10 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--with-system-argon2=no \
 		--with-system-afdko=no \
 		--with-system-cppunit \
-		--with-system-cuckoo \
 		--with-system-curl \
 		--with-system-dicts \
 		--with-system-dragonbox=no \
-		--with-system-frozen=no \
+		--with-system-frozen \
 		--with-system-gpgmepp \
 		--with-system-libfixmath=no \
 		--with-system-libs \

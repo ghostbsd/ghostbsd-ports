@@ -1,9 +1,9 @@
 PORTNAME=	moor
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.10.4
+DISTVERSION=	2.11.0
 CATEGORIES=	textproc
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Pager designed to do the right thing without any configuration
 WWW=		https://github.com/walles/moor
 

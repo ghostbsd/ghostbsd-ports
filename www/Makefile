@@ -26,6 +26,7 @@
     SUBDIR += R-cran-webutils
     SUBDIR += SNIP
     SUBDIR += UniversalFeedCreator
+    SUBDIR += access-log-exporter
     SUBDIR += adguardhome
     SUBDIR += adjuster
     SUBDIR += agate
@@ -203,6 +204,7 @@
     SUBDIR += flat-frog
     SUBDIR += flexget
     SUBDIR += flickcurl
+    SUBDIR += fmd-server
     SUBDIR += foreign-cdm
     SUBDIR += forgejo
     SUBDIR += forgejo-lts
@@ -473,6 +475,7 @@
     SUBDIR += mythplugin-mythweb
     SUBDIR += nanoblogger
     SUBDIR += nanoblogger-extra
+    SUBDIR += nbytes
     SUBDIR += ncgopher
     SUBDIR += neon
     SUBDIR += netrik
@@ -499,7 +502,6 @@
     SUBDIR += nginx-naxsi
     SUBDIR += nginx-prometheus-exporter
     SUBDIR += nginx-ultimate-bad-bot-blocker
-    SUBDIR += nginx-vts-exporter
     SUBDIR += nift
     SUBDIR += node
     SUBDIR += node20
@@ -1576,6 +1578,7 @@
     SUBDIR += py-dj52-laces
     SUBDIR += py-dj52-social-auth-app-django
     SUBDIR += py-dj52-strawberry-graphql-django
+    SUBDIR += py-dj60-django-stubs-ext
     SUBDIR += py-django-admin-rangefilter
     SUBDIR += py-django-advanced-filters
     SUBDIR += py-django-allauth
@@ -1670,7 +1673,6 @@
     SUBDIR += py-django-solo
     SUBDIR += py-django-sortedm2m
     SUBDIR += py-django-star-ratings
-    SUBDIR += py-django-statici18n
     SUBDIR += py-django-staticinline
     SUBDIR += py-django-storages
     SUBDIR += py-django-stubs-ext
@@ -1692,6 +1694,7 @@
     SUBDIR += py-django52
     SUBDIR += py-django60
     SUBDIR += py-django_compressor
+    SUBDIR += py-django_statici18n
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangoql
     SUBDIR += py-djangorestframework
@@ -2005,6 +2008,7 @@
     SUBDIR += py-yarl
     SUBDIR += py-youtube-transcript-api
     SUBDIR += py-yt-dlp
+    SUBDIR += py-yt-dlp-ejs
     SUBDIR += pydio-cells
     SUBDIR += qdecoder
     SUBDIR += qhttpengine

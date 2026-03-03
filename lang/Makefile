@@ -19,6 +19,7 @@
     SUBDIR += c
     SUBDIR += cairo
     SUBDIR += cbmbasic
+    SUBDIR += cbqn
     SUBDIR += ccl
     SUBDIR += ceylon
     SUBDIR += cfortran
@@ -125,7 +126,6 @@
     SUBDIR += gnu-cobol
     SUBDIR += gnustep-base
     SUBDIR += go
-    SUBDIR += go-devel
     SUBDIR += go124
     SUBDIR += go125
     SUBDIR += go126

@@ -556,6 +556,7 @@
     SUBDIR += octave
     SUBDIR += octave-forge
     SUBDIR += octave-forge-actuarial
+    SUBDIR += octave-forge-apa
     SUBDIR += octave-forge-audio
     SUBDIR += octave-forge-automatic-differentiation
     SUBDIR += octave-forge-base
@@ -1288,6 +1289,7 @@
     SUBDIR += units
     SUBDIR += universal
     SUBDIR += unuran
+    SUBDIR += usearch
     SUBDIR += vampire
     SUBDIR += vdt
     SUBDIR += verdict
@@ -1298,6 +1300,7 @@
     SUBDIR += vtk9
     SUBDIR += wavelib
     SUBDIR += wcalc
+    SUBDIR += wide-integer
     SUBDIR += wxmaxima
     SUBDIR += xblas
     SUBDIR += xfce4-calculator-plugin

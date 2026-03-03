@@ -4907,7 +4907,6 @@ deskutils/showdown||2025-12-28|Broken and unmaintained upstream since 2022
 games/rlvm||2025-12-28|Broken for more than a year
 www/castor||2025-12-28|Abandoned upstream and fails to build with OpenSSL 3
 www/py-lia-web|www/py-cross-web|2025-12-29|Renamed to match upstream name
-security/clamtk||2025-12-31|Has expired: Maintainer has retired
 deskutils/charmtimetracker||2025-12-31|Has expired: Abandoned upstream, upstream repo archived Sep 24, 2023
 www/py-dj51-django-taggit||2025-12-31|Has expired: Extended support of Django 5.1 ends December 2025, upgrade to the Django 5.2+ version of this port. See https://www.djangoproject.com/download/
 www/py-dj51-django-filter||2025-12-31|Has expired: Extended support of Django 5.1 ends December 2025, upgrade to the Django 5.2+ version of this port. See https://www.djangoproject.com/download/
@@ -5152,3 +5151,11 @@ emulators/firebird-emu|emulators/firebird|2026-02-14|Align with upstream project
 security/openssl-quictls|security/openssl33-quictls|2026-02-14|Has expired: Upstream project has been archived, use security/openssl33-quictls
 misc/usd|graphics/openusd|2026-02-15|Rename to match upstream naming and moved to a more appropriate category
 www/py-django-statici18n|www/py-django_statici18n|2026-02-15|Rename to match upstream naming
+graphics/imlib2-jxl|graphics/imlib2|2026-02-28|Has expired: jxl support is handled by graphics/imlib2 and it is enabled by default
+graphics/imlib2-webp|graphics/imlib2|2026-02-28|Has expired: webp support is handled by graphics/imlib2 and it is enabled by default
+devel/godot35|devel/godot|2026-02-28|Has expired: Legacy version should have been removed with devel/godot35-tools, consider migrating to devel/godot
+www/nginx-vts-exporter|www/nginx-prometheus-exporter|2026-02-28|Has expired: Upstream is unmaintained; use www/nginx-prometheus-exporter instead
+net/unison240||2026-02-28|Has expired: Legacy release unsupported by upstream
+security/owasp-dependency-check||2026-02-28|Has expired: This port is 9 major versions and almost 8 years behind on upstream. No maintainer. No users in the ports tree. Does not compile with jdk11+
+lang/go-devel|lang/go|2026-03-01|Has expired: Old version of Go. Use the go package (lang/go) instead
+devel/tbb|devel/onetbb|2026-03-01|Has expired: Project moved to devel/onetbb

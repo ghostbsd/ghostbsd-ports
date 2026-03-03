@@ -1,5 +1,5 @@
-TIMESTAMP = 1770977172
-SHA256 (go/security_vuls/vuls-v0.38.0/v0.38.0.mod) = 3d52a87786e6c98f2caab18730192ab0e83434235619cdfb9da0f2da586f89f8
-SIZE (go/security_vuls/vuls-v0.38.0/v0.38.0.mod) = 21407
-SHA256 (go/security_vuls/vuls-v0.38.0/v0.38.0.zip) = 8de30ebdd42c3e4c6219ce354430dad4ff8c318b14b344079eac1a54acb027e7
-SIZE (go/security_vuls/vuls-v0.38.0/v0.38.0.zip) = 1370490
+TIMESTAMP = 1772545663
+SHA256 (go/security_vuls/vuls-v0.38.5/v0.38.5.mod) = 1156c2afda575234eaba65ec6f4b9357bbf7115c567c47516a971d52f68deb58
+SIZE (go/security_vuls/vuls-v0.38.5/v0.38.5.mod) = 21409
+SHA256 (go/security_vuls/vuls-v0.38.5/v0.38.5.zip) = d160f8bbe0030d39328e6e9a20fbd9c631fc129bb85288c6412279b6d6a99698
+SIZE (go/security_vuls/vuls-v0.38.5/v0.38.5.zip) = 1372670

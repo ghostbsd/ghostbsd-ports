@@ -84,8 +84,8 @@
     SUBDIR += bitmap
     SUBDIR += blend2d
     SUBDIR += blender
-    SUBDIR += blender4
     SUBDIR += blender-doc
+    SUBDIR += blender4
     SUBDIR += bmeps
     SUBDIR += bmp2html
     SUBDIR += bonzomatic
@@ -346,6 +346,7 @@
     SUBDIR += gwenview
     SUBDIR += h3
     SUBDIR += halftone
+    SUBDIR += hdr_histogram
     SUBDIR += hdr_tools
     SUBDIR += heimer
     SUBDIR += hiptext
@@ -373,8 +374,6 @@
     SUBDIR += imageworsener
     SUBDIR += imc
     SUBDIR += imlib2
-    SUBDIR += imlib2-jxl
-    SUBDIR += imlib2-webp
     SUBDIR += imlib2_loaders
     SUBDIR += impressive
     SUBDIR += imv
@@ -576,6 +575,7 @@
     SUBDIR += linux-rl9-vulkan
     SUBDIR += linux-rl9-wayland
     SUBDIR += lua-gd
+    SUBDIR += lua-qrencode
     SUBDIR += luminance-qt5
     SUBDIR += lunasvg
     SUBDIR += lux
@@ -1060,6 +1060,7 @@
     SUBDIR += py-vecrec
     SUBDIR += py-vispy
     SUBDIR += py-visvis
+    SUBDIR += py-vulkan
     SUBDIR += py-wand
     SUBDIR += py-webcolors
     SUBDIR += py-willow

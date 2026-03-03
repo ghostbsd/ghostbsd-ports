@@ -1,5 +1,5 @@
-TIMESTAMP = 1759143121
-SHA256 (go/security_sops/sops-v3.11.0/v3.11.0.mod) = 69862f627ea2ed62ee3b56e47cbb2990567bbb8e12ae95fc815a64c221cfc6de
-SIZE (go/security_sops/sops-v3.11.0/v3.11.0.mod) = 7615
-SHA256 (go/security_sops/sops-v3.11.0/v3.11.0.zip) = 57325e22cb15f60fbc4fd4c4f15c35f4ef7771e10930d8b77239be3fb031ecdc
-SIZE (go/security_sops/sops-v3.11.0/v3.11.0.zip) = 330857
+TIMESTAMP = 1771838803
+SHA256 (go/security_sops/sops-v3.12.1/v3.12.1.mod) = 21fc22baa3cfa1890dadd26873fd162cd2057fe39d8b079cb90a9b3c38545b67
+SIZE (go/security_sops/sops-v3.12.1/v3.12.1.mod) = 8149
+SHA256 (go/security_sops/sops-v3.12.1/v3.12.1.zip) = d18718f0c90cd1b4c6e7ac81b6b6894a11aac3843129b0cda8ec4c984ca3c5fb
+SIZE (go/security_sops/sops-v3.12.1/v3.12.1.zip) = 344019

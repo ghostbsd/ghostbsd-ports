@@ -846,6 +846,7 @@
     SUBDIR += wasabi
     SUBDIR += wavbreaker
     SUBDIR += wavegain
+    SUBDIR += waves
     SUBDIR += wavetral
     SUBDIR += wavpack
     SUBDIR += wavplay

@@ -542,6 +542,8 @@
     SUBDIR += pg.el
     SUBDIR += pgFormatter
     SUBDIR += pg_activity
+    SUBDIR += pg_auto_failover
+    SUBDIR += pg_auto_failover-devel
     SUBDIR += pg_citus
     SUBDIR += pg_cron
     SUBDIR += pg_dirtyread
@@ -860,6 +862,7 @@
     SUBDIR += py-sqloxide
     SUBDIR += py-sqlparse
     SUBDIR += py-sqlrelay
+    SUBDIR += py-squall-sql
     SUBDIR += py-tableschema
     SUBDIR += py-tarantool
     SUBDIR += py-tiledb
@@ -1080,6 +1083,7 @@
     SUBDIR += rubygem-state_machines-activerecord08
     SUBDIR += rubygem-tarantool
     SUBDIR += rubygem-trilogy
+    SUBDIR += sabiql
     SUBDIR += sequeler
     SUBDIR += sfcgal
     SUBDIR += sharedance

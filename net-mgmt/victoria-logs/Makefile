@@ -1,7 +1,6 @@
 PORTNAME=	victoria-logs
-PORTVERSION=	1.45.0
+PORTVERSION=	1.47.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	samm@FreeBSD.org
@@ -11,7 +10,7 @@ WWW=		https://victoriametrics.com/products/victorialogs/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		gmake go:1.25+,modules,no_targets
+USES=		gmake go:1.26+,modules,no_targets
 
 # we have to use github, as goproxy tags are wrong
 # see https://github.com/VictoriaMetrics/VictoriaLogs/issues/1071
@@ -31,17 +30,21 @@ MAKE_ENV=	BUILDINFO_TAG=tags-v${PORTVERSION}-victorialogs \
 ALL_TARGET=	${PORTNAME}-pure vlogscli-pure vmalert-pure
 
 SUB_LIST+=	VICTORIA_DATA=${VICTORIA_DATA} \
+		VICTORIA_GROUP=${GROUPS} \
 		VICTORIA_LOGS=${VICTORIA_LOGS} \
+		VICTORIA_RUN=${VICTORIA_RUN} \
 		VICTORIA_USER=${USERS}
 
 USERS=		victoria-logs
 GROUPS=		victoria-logs
 VICTORIA_DATA?=	/var/db/victoria-logs
 VICTORIA_LOGS?=	/var/log/victoria_logs
+VICTORIA_RUN?=	/var/run/victoria_logs
 
 PLIST_SUB+=	VICTORIA_DATA=${VICTORIA_DATA} \
 		VICTORIA_GROUP=${GROUPS} \
 		VICTORIA_LOGS=${VICTORIA_LOGS} \
+		VICTORIA_RUN=${VICTORIA_RUN} \
 		VICTORIA_USER=${USERS}
 
 OPTIONS_DEFINE=	DOCS
@@ -52,7 +55,8 @@ do-install:
 		${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${INSTALL_PROGRAM} ${INSTALL_WRKSRC}/bin/vlogscli-pure \
 		${STAGEDIR}${PREFIX}/bin/vlogscli
-	@${MKDIR} ${STAGEDIR}${VICTORIA_DATA} ${STAGEDIR}${VICTORIA_LOGS}
+	@${MKDIR} ${STAGEDIR}${VICTORIA_DATA} ${STAGEDIR}${VICTORIA_LOGS} \
+		${STAGEDIR}${VICTORIA_RUN}
 
 do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

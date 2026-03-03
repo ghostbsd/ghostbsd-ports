@@ -153,6 +153,7 @@
     SUBDIR += hyprls
     SUBDIR += hyprpaper
     SUBDIR += hyprpicker
+    SUBDIR += hyprshutdown
     SUBDIR += hyprviz
     SUBDIR += i3bar-river
     SUBDIR += i3blocks
@@ -483,6 +484,7 @@
     SUBDIR += wallutils
     SUBDIR += wapanel
     SUBDIR += watershot
+    SUBDIR += waveterm
     SUBDIR += way-displays
     SUBDIR += waybar
     SUBDIR += waycheck

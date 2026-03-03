@@ -1,10 +1,9 @@
 PORTNAME=	gitlogue
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.7.0 # make patch cargo-crates
-PORTREVISION=	1
+DISTVERSION=	0.8.0 # make patch cargo-crates
 CATEGORIES=	misc
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Watch your git commit history in a cinematic view
 WWW=		https://github.com/unhappychoice/gitlogue
 
