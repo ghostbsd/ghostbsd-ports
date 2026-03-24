@@ -251,6 +251,7 @@
     SUBDIR += gotty
     SUBDIR += gpx2map
     SUBDIR += grafana
+    SUBDIR += grafanactl
     SUBDIR += grails
     SUBDIR += gregarius
     SUBDIR += groupoffice
@@ -1478,6 +1479,7 @@
     SUBDIR += py-Tenjin
     SUBDIR += py-WebError
     SUBDIR += py-WebFlash
+    SUBDIR += py-a2wsgi
     SUBDIR += py-adblock
     SUBDIR += py-advocate
     SUBDIR += py-aiobreaker
@@ -1499,6 +1501,7 @@
     SUBDIR += py-autobahn
     SUBDIR += py-azure-common
     SUBDIR += py-azure-storage
+    SUBDIR += py-baize
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
     SUBDIR += py-betamax
@@ -2031,6 +2034,7 @@
     SUBDIR += reddsaver
     SUBDIR += redmine51
     SUBDIR += redmine60
+    SUBDIR += redmine61
     SUBDIR += rejik
     SUBDIR += remark42
     SUBDIR += reportmagic
@@ -2446,6 +2450,7 @@
     SUBDIR += rubygem-ruby-readability
     SUBDIR += rubygem-savon
     SUBDIR += rubygem-sawyer
+    SUBDIR += rubygem-sawyer-gitlab
     SUBDIR += rubygem-select2-rails
     SUBDIR += rubygem-selenium-webdriver
     SUBDIR += rubygem-semantic-ui-sass
@@ -2669,6 +2674,7 @@
     SUBDIR += vger
     SUBDIR += vigil
     SUBDIR += vimb
+    SUBDIR += vinyl09
     SUBDIR += visitors
     SUBDIR += volta
     SUBDIR += vultr-cli
@@ -2678,6 +2684,7 @@
     SUBDIR += wabt
     SUBDIR += wasm-bindgen-cli
     SUBDIR += wasm-pack
+    SUBDIR += wasmtime
     SUBDIR += waterfox
     SUBDIR += web2ldap
     SUBDIR += webalizer

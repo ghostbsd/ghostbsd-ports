@@ -38,6 +38,7 @@
     SUBDIR += R-cran-acepack
     SUBDIR += R-cran-admisc
     SUBDIR += R-cran-alabama
+    SUBDIR += R-cran-ankiR
     SUBDIR += R-cran-ash
     SUBDIR += R-cran-assertthat
     SUBDIR += R-cran-backports
@@ -312,6 +313,7 @@
     SUBDIR += ecos
     SUBDIR += edenmath
     SUBDIR += eigen3
+    SUBDIR += eigen5
     SUBDIR += eispack
     SUBDIR += elan
     SUBDIR += elemental
@@ -1146,6 +1148,7 @@
     SUBDIR += py-theano
     SUBDIR += py-timple
     SUBDIR += py-topologic
+    SUBDIR += py-torchsde
     SUBDIR += py-triangle
     SUBDIR += py-umap-learn
     SUBDIR += py-uncertainties

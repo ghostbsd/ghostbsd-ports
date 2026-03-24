@@ -1,5 +1,6 @@
 PORTNAME=	cargo-about
 DISTVERSION=	0.8.4
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,6 +12,8 @@ LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
 LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
+
+BROKEN_i386=		ld: error: undefined symbol: __atomic_load
 
 BUILD_DEPENDS=	rust>1.85:lang/rust
 LIB_DEPENDS=	libzstd.so:archivers/zstd

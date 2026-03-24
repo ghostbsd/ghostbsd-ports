@@ -446,6 +446,7 @@
     SUBDIR += madronalib
     SUBDIR += malint
     SUBDIR += mamba
+    SUBDIR += maolan
     SUBDIR += mate-media
     SUBDIR += mclk-lv2
     SUBDIR += mda-lv2
@@ -630,6 +631,7 @@
     SUBDIR += py-auditok
     SUBDIR += py-discid
     SUBDIR += py-discogs-client
+    SUBDIR += py-espeakng-loader
     SUBDIR += py-essentia
     SUBDIR += py-eyed3
     SUBDIR += py-fmoo-audiotools

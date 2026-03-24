@@ -8,6 +8,7 @@
     SUBDIR += antimony
     SUBDIR += apache-commons-jelly
     SUBDIR += asm-lsp
+    SUBDIR += asmc
     SUBDIR += asn1c
     SUBDIR += atlast
     SUBDIR += awka
@@ -126,7 +127,6 @@
     SUBDIR += gnu-cobol
     SUBDIR += gnustep-base
     SUBDIR += go
-    SUBDIR += go124
     SUBDIR += go125
     SUBDIR += go126
     SUBDIR += gomacro

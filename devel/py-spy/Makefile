@@ -1,5 +1,6 @@
 PORTNAME=	py-spy # despite its name this is NOT a Python package, but a Rust-based profiler for Python program
 PORTVERSION=	0.4.1
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI}
 MASTER_SITE_SUBDIR=	source/p/py_spy
@@ -11,6 +12,8 @@ WWW=		https://github.com/benfred/py-spy
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	fails to compile: attempt to compute `16_usize - 20_usize`, which would overflow
 
 USES=		cargo llvm
 
