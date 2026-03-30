@@ -1,5 +1,5 @@
 PORTNAME=	nmap
-PORTVERSION=	7.95.${NMAP_COMMIT_DATE}
+PORTVERSION=	7.100.${NMAP_COMMIT_DATE}
 PORTREVISION=	1
 CATEGORIES=	security
 PKGNAMESUFFIX=	-devel
@@ -30,8 +30,8 @@ EXTRACT_AFTER_ARGS=	--exclude ${GH_PROJECT_DEFAULT}-${GH_TAGNAME_EXTRACT}/mswin3
 			--no-same-owner --no-same-permissions
 
 USE_GITHUB=	yes
-GH_TAGNAME=	a5b332ccd
-NMAP_COMMIT_DATE=	20260128
+GH_TAGNAME=	6dac43b5d
+NMAP_COMMIT_DATE=	20260327
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=--without-localdirs \
@@ -40,6 +40,7 @@ CONFIGURE_ARGS=--without-localdirs \
 		--with-libpcre=${LOCALBASE} \
 		--with-liblua=included \
 		--without-nmap-update
+
 MAKE_JOBS_UNSAFE=	yes
 
 OPTIONS_DEFINE=	DOCS NLS PCAP SSH2 SSL

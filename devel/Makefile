@@ -241,6 +241,7 @@
     SUBDIR += aros-sdk
     SUBDIR += art
     SUBDIR += asfml
+    SUBDIR += asdf
     SUBDIR += asl
     SUBDIR += asmjit
     SUBDIR += asmx
@@ -298,6 +299,7 @@
     SUBDIR += bazel
     SUBDIR += bazel-buildtools
     SUBDIR += bazel5
+    SUBDIR += bazel7
     SUBDIR += bbparse
     SUBDIR += bcc
     SUBDIR += bcpp
@@ -729,6 +731,7 @@
     SUBDIR += fortytwo-encore
     SUBDIR += fossil
     SUBDIR += fossology-nomos-standalone
+    SUBDIR += foundry
     SUBDIR += fp16
     SUBDIR += fpp
     SUBDIR += freebsd-gcc12
@@ -966,6 +969,7 @@
     SUBDIR += gstreamer1-plugins-soup
     SUBDIR += gtgt
     SUBDIR += gtranslator
+    SUBDIR += gtkspellmm
     SUBDIR += guichan
     SUBDIR += guile-lib
     SUBDIR += gum
@@ -1663,6 +1667,7 @@
     SUBDIR += magit
     SUBDIR += makedepend
     SUBDIR += malloy
+    SUBDIR += manuals
     SUBDIR += marisa-trie
     SUBDIR += marl
     SUBDIR += massif-visualizer
@@ -4443,6 +4448,7 @@
     SUBDIR += py-ariadne
     SUBDIR += py-arpeggio
     SUBDIR += py-array-api-compat
+    SUBDIR += py-array-api-strict
     SUBDIR += py-arrow
     SUBDIR += py-asciimatics
     SUBDIR += py-asgi-lifespan
@@ -8504,6 +8510,7 @@
     SUBDIR += subversion-lts
     SUBDIR += subversive
     SUBDIR += sunpromake
+    SUBDIR += superhtml
     SUBDIR += sv
     SUBDIR += svk
     SUBDIR += svn2git

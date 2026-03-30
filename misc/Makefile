@@ -248,6 +248,7 @@
     SUBDIR += lazyread
     SUBDIR += lbann
     SUBDIR += lc
+    SUBDIR += lean-ctx
     SUBDIR += lesspipe
     SUBDIR += lf
     SUBDIR += libad9361-iio

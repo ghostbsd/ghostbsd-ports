@@ -6,12 +6,15 @@ MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	absl-py-${PORTVERSION}
 
-MAINTAINER=	amzo1337@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Abseil Python Common Libraries
 WWW=		https://github.com/abseil/abseil-py
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Use devel/py-absl-py
+EXPIRATION_DATE=2026-03-31
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR}
 

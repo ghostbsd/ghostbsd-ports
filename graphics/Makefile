@@ -577,7 +577,6 @@
     SUBDIR += linux-rl9-wayland
     SUBDIR += lua-gd
     SUBDIR += lua-qrencode
-    SUBDIR += luminance-qt5
     SUBDIR += lunasvg
     SUBDIR += lux
     SUBDIR += lximage-qt
@@ -610,6 +609,7 @@
     SUBDIR += milton
     SUBDIR += minder
     SUBDIR += mirtk
+    SUBDIR += mmdr
     SUBDIR += movit
     SUBDIR += mozjpeg
     SUBDIR += mscgen
@@ -633,16 +633,22 @@
     SUBDIR += nsxiv
     SUBDIR += nurbs++
     SUBDIR += nvidia-drm-510-kmod
+    SUBDIR += nvidia-drm-510-kmod-580
     SUBDIR += nvidia-drm-510-kmod-devel
     SUBDIR += nvidia-drm-515-kmod
+    SUBDIR += nvidia-drm-515-kmod-580
     SUBDIR += nvidia-drm-515-kmod-devel
     SUBDIR += nvidia-drm-61-kmod
+    SUBDIR += nvidia-drm-61-kmod-580
     SUBDIR += nvidia-drm-61-kmod-devel
     SUBDIR += nvidia-drm-66-kmod
+    SUBDIR += nvidia-drm-66-kmod-580
     SUBDIR += nvidia-drm-66-kmod-devel
     SUBDIR += nvidia-drm-kmod
+    SUBDIR += nvidia-drm-kmod-580
     SUBDIR += nvidia-drm-kmod-devel
     SUBDIR += nvidia-drm-latest-kmod
+    SUBDIR += nvidia-drm-latest-kmod-580
     SUBDIR += nvidia-drm-latest-kmod-devel
     SUBDIR += nvidia-texture-tools
     SUBDIR += ocaml-cairo
@@ -855,6 +861,7 @@
     SUBDIR += pinta
     SUBDIR += pixd
     SUBDIR += pixelize
+    SUBDIR += pixelmosh
     SUBDIR += pixie
     SUBDIR += plantuml
     SUBDIR += plasma-kmod

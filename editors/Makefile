@@ -58,6 +58,7 @@
     SUBDIR += gnome-text-editor
     SUBDIR += gobby
     SUBDIR += gomate
+    SUBDIR += gram
     SUBDIR += gummi
     SUBDIR += helix
     SUBDIR += heme
@@ -208,6 +209,7 @@
     SUBDIR += marginalia.el
     SUBDIR += marker
     SUBDIR += markmywords
+    SUBDIR += marknote
     SUBDIR += mg
     SUBDIR += mickey
     SUBDIR += micro

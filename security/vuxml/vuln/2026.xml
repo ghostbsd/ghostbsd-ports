@@ -1,3 +1,467 @@
+  <vuln vid="09e36f7e-2b5b-11f1-852e-5404a68ad561">
+    <topic>traefik -- Multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>traefik</name>
+<range><lt>3.6.12</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The traefik project releases a new version addressing multiple CVEs:</p>
+	<blockquote cite="https://github.com/traefik/traefik/releases/tag/v3.6.12">
+	  <ul>
+	    <li>CVE-2026-33433 (BasicAuth/DigestAuth Identity Spoofing via Non-Canonical headerField)</li>
+	    <li>CVE-2026-33186 (authorization bypass via missing leading slash in :path)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-33433</cvename>
+      <cvename>CVE-2026-33186</cvename>
+      <url>https://github.com/traefik/traefik/releases/tag/v3.6.12</url>
+    </references>
+    <dates>
+      <discovery>2026-03-26</discovery>
+      <entry>2026-03-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="095e9db2-2b5b-11f1-9839-8447094a420f">
+    <topic>Roundcube -- SVG Attribute Bypass</topic>
+    <affects>
+      <package>
+	<name>roundcube-php82</name>
+	<name>roundcube-php83</name>
+	<name>roundcube-php84</name>
+	<name>roundcube-php85</name>
+	<range><lt>1.6.15,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Roundcube project reports:</p>
+	<blockquote cite="https://github.com/roundcube/roundcubemail/releases/tag/1.6.15">
+	  <p>.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/roundcube/roundcubemail/releases/tag/1.6.15</url>
+    </references>
+    <dates>
+      <discovery>2026-03-29</discovery>
+      <entry>2026-03-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b933083e-2b2e-11f1-b60a-2cf05da270f3">
+    <topic>Gitlab -- vulnerabilities</topic>
+    <affects>
+<package>
+<name>gitlab-ce</name>
+<name>gitlab-ee</name>
+<range><ge>18.10.0</ge><lt>18.10.1</lt></range>
+<range><ge>18.9.0</ge><lt>18.9.3</lt></range>
+<range><ge>7.11.0</ge><lt>18.8.7</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2026/03/25/patch-release-gitlab-18-10-1-released/">
+	  <p>Improper Handling of Parameters issue in Jira Connect installations impacts GitLab CE/EE</p>
+	  <p>Cross-Site Request Forgery issue in GLQL API impacts GitLab CE/EE</p>
+	  <p>HTML Injection in vulnerability report impacts GitLab EE</p>
+	  <p>Denial of Service issue in GraphQL API impacts GitLab CE/EE</p>
+	  <p>Improper Access Control issue in WebAuthn 2FA impacts GitLab CE/EE</p>
+	  <p>Improper Access Control issue in GraphQL query impacts GitLab EE</p>
+	  <p>Denial of Service issue in CI configuration processing impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in webhook configuration impacts GitLab CE/EE</p>
+	  <p>Cross-site Scripting issue in Mermaid diagram renderer impacts GitLab CE/EE</p>
+	  <p>Improper Access Control issue in Merge Requests impacts GitLab CE/EE</p>
+	  <p>Access Control issue in GraphQL API impacts GitLab EE</p>
+	  <p>Incorrect Authorization issue in authorization caching impacts GitLab EE</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-2370</cvename>
+      <cvename>CVE-2026-3857</cvename>
+      <cvename>CVE-2026-2995</cvename>
+      <cvename>CVE-2026-3988</cvename>
+      <cvename>CVE-2026-2745</cvename>
+      <cvename>CVE-2026-1724</cvename>
+      <cvename>CVE-2025-13436</cvename>
+      <cvename>CVE-2025-13078</cvename>
+      <cvename>CVE-2026-2973</cvename>
+      <cvename>CVE-2026-2726</cvename>
+      <cvename>CVE-2025-14595</cvename>
+      <cvename>CVE-2026-4363</cvename>
+      <url>https://about.gitlab.com/releases/2026/03/25/patch-release-gitlab-18-10-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2026-03-25</discovery>
+      <entry>2026-03-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="970fd0ec-26f5-11f1-a9b1-0cc47ada5f32">
+    <topic>jenkins -- multiple vulnerabilities</topic>
+    <affects>
+    <package>
+	<name>jenkins</name>
+	<range><lt>2.555</lt></range>
+    </package>
+    <package>
+	<name>jenkins-lts</name>
+	<range><lt>2.541.3</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory 2026-03-18:</p>
+	<blockquote cite="https://www.jenkins.io/security/advisory/2026-03-18/">
+	  <ul>
+	    <li>SECURITY-3657 / CVE-2026-33001: Arbitrary file write
+	    vulnerability through specially crafted archives in Jenkins
+	    (High)</li>
+	    <li>SECURITY-3674 / CVE-2026-33002: DNS rebinding vulnerability
+	    in WebSocket CLI origin validation in Jenkins (High)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-33001</cvename>
+      <cvename>CVE-2026-33002</cvename>
+      <url>https://www.jenkins.io/security/advisory/2026-03-18/</url>
+    </references>
+    <dates>
+      <discovery>2026-03-18</discovery>
+      <entry>2026-03-27</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="26c24872-2943-11f1-8461-b42e991fc52e">
+    <topic>Mozilla -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>149.0.0,2</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><lt>149.0.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>CVE-2026-4729: Memory safety bugs</p>
+	<p>CVE-2026-4728: Spoofing issue in the Privacy: Anti-Tracking
+	component.</p>
+	<p>CVE-2026-4727: Denial-of-service in the Libraries component
+	in NSS.</p>
+	<p>CVE-2026-4726: Denial-of-service in the XML component.</p>
+	<p>CVE-2026-4725: Sandbox escape due to use-after-free in the
+	Graphics: Canvas2D component.</p>
+	<p>CVE-2026-4724: Undefined behavior in the Audio/Video
+	component.</p>
+	<p>CVE-2026-4723: Use-after-free in the JavaScript Engine
+	component.</p>
+	<p>CVE-2026-4722: Privilege escalation in the IPC component.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-4729</cvename>
+      <cvename>CVE-2026-4728</cvename>
+      <cvename>CVE-2026-4727</cvename>
+      <cvename>CVE-2026-4726</cvename>
+      <cvename>CVE-2026-4725</cvename>
+      <cvename>CVE-2026-4724</cvename>
+      <cvename>CVE-2026-4723</cvename>
+      <cvename>CVE-2026-4722</cvename>
+    </references>
+    <dates>
+      <discovery>2026-03-24</discovery>
+      <entry>2026-03-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="32819a60-2943-11f1-8461-b42e991fc52e">
+    <topic>Mozilla -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>149.0.0,2</lt></range>
+      </package>
+      <package>
+	<name>firefox-esr</name>
+	<range><lt>140.9.0</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><lt>149.0.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>CVE-2026-4721: Memory safety bugs. Potential arbitrary code
+	execution.</p>
+	<p>CVE-2026-4709: Incorrect boundary conditions in the
+	Audio/Video: GMP component.</p>
+	<p>CVE-2026-4707: Incorrect boundary conditions in the Graphics:
+	Canvas2D component.</p>
+	<p>CVE-2026-4706: Incorrect boundary conditions in the Graphics:
+	Canvas2D component.</p>
+	<p>CVE-2026-4699: Incorrect boundary conditions in the Layout:
+	Text and Fonts component.</p>
+	<p>CVE-2026-4698: JIT miscompilation in the JavaScript Engine:
+	JIT component.</p>
+	<p>CVE-2026-4696: Use-after-free in the Layout: Text and Fonts
+	component.</p>
+	<p>CVE-2026-4694: Incorrect boundary conditions, integer
+	overflow in the Graphics component.</p>
+	<p>CVE-2026-4693: Incorrect boundary conditions in the
+	Audio/Video: Playback component.</p>
+	<p>CVE-2026-4692: Sandbox escape in the Responsive Design Mode
+	component.</p>
+	<p>CVE-2026-4691: Use-after-free in the CSS Parsing and
+	Computation component.</p>
+	<p>CVE-2026-4690: Sandbox escape due to integer overflow in the
+	XPCOM component.</p>
+	<p>CVE-2026-4689: Sandbox escape due to integer overflow in the
+	XPCOM component.</p>
+	<p>CVE-2026-4687: Sandbox escape in the Telemetry component.</p>
+	<p>CVE-2026-4686: Incorrect boundary conditions in the Graphics:
+	Canvas2D component.</p>
+	<p>CVE-2026-4685: Incorrect boundary conditions in the Graphics:
+	Canvas2D component.</p>
+	<p>CVE-2026-4684: Race condition, use-after-free in the
+	Graphics: WebRender component.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-4721</cvename>
+      <cvename>CVE-2026-4709</cvename>
+      <cvename>CVE-2026-4707</cvename>
+      <cvename>CVE-2026-4706</cvename>
+      <cvename>CVE-2026-4699</cvename>
+      <cvename>CVE-2026-4698</cvename>
+      <cvename>CVE-2026-4696</cvename>
+      <cvename>CVE-2026-4694</cvename>
+      <cvename>CVE-2026-4693</cvename>
+      <cvename>CVE-2026-4692</cvename>
+      <cvename>CVE-2026-4691</cvename>
+      <cvename>CVE-2026-4690</cvename>
+      <cvename>CVE-2026-4689</cvename>
+      <cvename>CVE-2026-4687</cvename>
+      <cvename>CVE-2026-4686</cvename>
+      <cvename>CVE-2026-4685</cvename>
+      <cvename>CVE-2026-4684</cvename>
+    </references>
+    <dates>
+      <discovery>2026-03-24</discovery>
+      <entry>2026-03-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6d445322-2945-11f1-8461-b42e991fc52e">
+    <topic>Mozilla -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>149.0.0,2</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><lt>149.0.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>CVE-2026-4688: Sandbox escape due to use-after-free in
+	Disability Access APIs.</p>
+	<p>CVE-2026-4695: Incorrect boundary conditions in the
+	Audio/Video: Web Codecs component.</p>
+	<p>CVE-2026-4697: Incorrect boundary conditions in the
+	Audio/Video: Web Codecs component.</p>
+	<p>CVE-2026-4700: Mitigation bypass in the Networking: HTTP
+	component.</p>
+	<p>CVE-2026-4701: Use-after-free in the JavaScript Engine
+	component.</p>
+	<p>CVE-2026-4702: JIT miscompilation in the JavaScript Engine
+	component.</p>
+	<p>CVE-2026-4704: Denial-of-service in the WebRTC: Signaling
+	component.</p>
+	<p>CVE-2026-4705: Undefined behavior in the WebRTC: Signaling
+	component.</p>
+	<p>CVE-2026-4708: Incorrect boundary conditions in the Graphics
+	component.</p>
+	<p>CVE-2026-4710: Incorrect boundary conditions in the
+	Audio/Video component.</p>
+	<p>CVE-2026-4711: Use-after-free in the Widget: Cocoa
+	component.</p>
+	<p>CVE-2026-4712: Information disclosure in the Widget: Cocoa
+	component.</p>
+	<p>CVE-2026-4713: Incorrect boundary conditions in the Graphics
+	component.</p>
+	<p>CVE-2026-4714: Incorrect boundary conditions in the
+	Audio/Video component.</p>
+	<p>CVE-2026-4715: Uninitialized memory in the Graphics: Canvas2D
+	component.</p>
+	<p>CVE-2026-4716: Incorrect boundary conditions and
+	uninitialized memory in the JavaScript Engine.</p>
+	<p>CVE-2026-4717: Privilege escalation in the Netmonitor
+	component.</p>
+	<p>CVE-2026-4718: Undefined behavior in the WebRTC: Signaling
+	component.</p>
+	<p>CVE-2026-4719: Incorrect boundary conditions in the Graphics:
+	Text component.</p>
+	<p>CVE-2026-4720: Memory safety bugs</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-4688</cvename>
+      <cvename>CVE-2026-4695</cvename>
+      <cvename>CVE-2026-4697</cvename>
+      <cvename>CVE-2026-4700</cvename>
+      <cvename>CVE-2026-4701</cvename>
+      <cvename>CVE-2026-4702</cvename>
+      <cvename>CVE-2026-4704</cvename>
+      <cvename>CVE-2026-4705</cvename>
+      <cvename>CVE-2026-4708</cvename>
+      <cvename>CVE-2026-4710</cvename>
+      <cvename>CVE-2026-4711</cvename>
+      <cvename>CVE-2026-4712</cvename>
+      <cvename>CVE-2026-4713</cvename>
+      <cvename>CVE-2026-4714</cvename>
+      <cvename>CVE-2026-4715</cvename>
+      <cvename>CVE-2026-4716</cvename>
+      <cvename>CVE-2026-4717</cvename>
+      <cvename>CVE-2026-4718</cvename>
+      <cvename>CVE-2026-4719</cvename>
+      <cvename>CVE-2026-4720</cvename>
+    </references>
+    <dates>
+      <discovery>2026-03-24</discovery>
+      <entry>2026-03-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="733febba-28d2-11f1-b35e-bc241121aa0a">
+    <topic>FreeBSD -- Remote code execution via RPCSEC_GSS packet validation</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.0</ge><lt>15.0_5</lt></range>
+	<range><ge>14.4</ge><lt>14.4_1</lt></range>
+	<range><ge>14.3</ge><lt>14.3_10</lt></range>
+	<range><ge>13.5</ge><lt>13.5_11</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>Each RPCSEC_GSS data packet is validated by a routine which
+	  checks a signature in the packet.  This routine copies a portion
+	  of the packet into a stack buffer, but fails to ensure that the
+	  buffer is sufficiently large, and a malicious client can trigger a
+	  stack overflow.  Notably, this does not require the client to
+	  authenticate itself first.</p>
+	<h1>Impact:</h1>
+	  <p>As kgssapi.ko's RPCSEC_GSS implementation is vulnerable, remote
+	  code execution in the kernel is possible by an authenticated user
+	  that is able to send packets to the kernel's NFS server while
+	  kgssapi.ko is loaded into the kernel.</p>
+	  <p>In userspace, applications which have librpcgss_sec loaded and run
+	  an RPC server are vulnerable to remote code execution from any
+	  client able to send it packets.  We are not aware of any such
+	  applications in the FreeBSD base system.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-4747</cvename>
+      <freebsdsa>SA-26:08.rpcsec_gss</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-03-25</discovery>
+      <entry>2026-03-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="11bf64f0-28d2-11f1-b35e-bc241121aa0a">
+    <topic>FreeBSD -- Remote denial of service via null pointer dereference</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.0</ge><lt>15.0_5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>On a system exposing an NVMe/TCP target, a remote client can
+	  trigger a kernel panic by sending a CONNECT command for an I/O queue
+	  with a bogus or stale CNTLID.</p>
+	<h1>Impact:</h1>
+	  <p>An attacker with network access to the NVMe/TCP target can
+	  trigger an unauthenticated Denial of Service condition on the
+	  affected machine.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-4652</cvename>
+      <freebsdsa>SA-26:07.nvmf</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-03-25</discovery>
+      <entry>2026-03-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7aa913e9-28d1-11f1-b35e-bc241121aa0a">
+    <topic>FreeBSD -- TCP: remotely exploitable DoS vector (mbuf leak)</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.0</ge><lt>15.0_5</lt></range>
+	<range><ge>14.4</ge><lt>14.4_1</lt></range>
+	<range><ge>14.3</ge><lt>14.3_10</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>When a challenge ACK is to be sent tcp_respond() constructs and
+	  sends the challenge ACK and consumes the mbuf that is passed in.
+	  When no challenge ACK should be sent the function returns and leaks
+	  the mbuf.</p>
+	<h1>Impact:</h1>
+	  <p>If an attacker is either on path with an established TCP
+	  connection, or can themselves establish a TCP connection, to an
+	  affected FreeBSD machine, they can easily craft and send packets
+	  which meet the challenge ACK criteria and cause the FreeBSD host
+	  to leak an mbuf for each crafted packet in excess of the configured
+	  rate limit settings i.e.  with default settings, crafted packets
+	  in excess of the first 5 sent within a 1s period will leak an mbuf.</p>
+	  <p>Technically, off-path attackers can also exploit this problem by
+	  guessing the IP addresses, TCP port numbers and in some cases the
+	  sequence numbers of established connections and spoofing packets
+	  towards a FreeBSD machine, but this is harder to do effectively.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-4247</cvename>
+      <freebsdsa>SA-26:06.tcp</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-03-25</discovery>
+      <entry>2026-03-26</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="07d6b170-fed8-4ee2-ba96-b6d61b6d6a26">
     <topic>chromium -- security fixes</topic>
     <affects>
