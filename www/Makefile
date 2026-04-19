@@ -185,6 +185,7 @@
     SUBDIR += eolie
     SUBDIR += ephemera
     SUBDIR += epiphany
+    SUBDIR += evcc
     SUBDIR += fabio
     SUBDIR += falkon
     SUBDIR += fancybox
@@ -237,7 +238,6 @@
     SUBDIR += gitlab-workhorse
     SUBDIR += glance
     SUBDIR += glassfish
-    SUBDIR += glassfish4
     SUBDIR += glpi
     SUBDIR += gnome-user-share
     SUBDIR += go-anubis
@@ -245,7 +245,6 @@
     SUBDIR += gobuffalo
     SUBDIR += gohugo
     SUBDIR += googlebook_dl
-    SUBDIR += googler
     SUBDIR += gophernicus
     SUBDIR += gopherus
     SUBDIR += gotty
@@ -311,6 +310,7 @@
     SUBDIR += joomla4
     SUBDIR += joomla5
     SUBDIR += jwt-cli
+    SUBDIR += kamal-proxy
     SUBDIR += kanboard
     SUBDIR += kannel
     SUBDIR += kannel-sqlbox
@@ -386,6 +386,7 @@
     SUBDIR += matomo
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
+    SUBDIR += mcp-server-browserbase
     SUBDIR += mediawiki143
     SUBDIR += mediawiki144
     SUBDIR += mediawiki145
@@ -520,7 +521,6 @@
     SUBDIR += nyxt
     SUBDIR += oatpp
     SUBDIR += oauth2-proxy
-    SUBDIR += obhttpd
     SUBDIR += offpunk
     SUBDIR += oneshot
     SUBDIR += onionbalance
@@ -1527,6 +1527,7 @@
     SUBDIR += py-channels-redis
     SUBDIR += py-cheroot
     SUBDIR += py-cherrypy
+    SUBDIR += py-cherrypy-cors
     SUBDIR += py-cinemagoer
     SUBDIR += py-cross-web
     SUBDIR += py-crossplane
@@ -1538,6 +1539,7 @@
     SUBDIR += py-cssutils
     SUBDIR += py-daphne
     SUBDIR += py-dash
+    SUBDIR += py-dash-bootstrap-components
     SUBDIR += py-ddgs
     SUBDIR += py-dj-database-url
     SUBDIR += py-dj52-channels
@@ -1549,6 +1551,7 @@
     SUBDIR += py-dj52-django-choices-field
     SUBDIR += py-dj52-django-compression-middleware
     SUBDIR += py-dj52-django-cors-headers
+    SUBDIR += py-dj52-django-crispy-forms
     SUBDIR += py-dj52-django-debug-toolbar
     SUBDIR += py-dj52-django-extensions
     SUBDIR += py-dj52-django-filter
@@ -1593,7 +1596,6 @@
     SUBDIR += py-django-autocomplete-light
     SUBDIR += py-django-bakery
     SUBDIR += py-django-bitfield
-    SUBDIR += py-django-bleach
     SUBDIR += py-django-bootstrap3
     SUBDIR += py-django-bootstrap4
     SUBDIR += py-django-braces
@@ -1612,7 +1614,6 @@
     SUBDIR += py-django-cors-headers
     SUBDIR += py-django-countries
     SUBDIR += py-django-crispy-forms
-    SUBDIR += py-django-cron
     SUBDIR += py-django-csp
     SUBDIR += py-django-debreach
     SUBDIR += py-django-debug-toolbar
@@ -1675,12 +1676,10 @@
     SUBDIR += py-django-soft-delete
     SUBDIR += py-django-solo
     SUBDIR += py-django-sortedm2m
-    SUBDIR += py-django-star-ratings
     SUBDIR += py-django-staticinline
     SUBDIR += py-django-storages
     SUBDIR += py-django-stubs-ext
     SUBDIR += py-django-tables2
-    SUBDIR += py-django-tagging
     SUBDIR += py-django-taggit
     SUBDIR += py-django-tasks
     SUBDIR += py-django-tastypie
@@ -1785,10 +1784,12 @@
     SUBDIR += py-google-cloud-bigquery-storage
     SUBDIR += py-google-cloud-bigtable
     SUBDIR += py-google-cloud-compute
+    SUBDIR += py-google-cloud-container
     SUBDIR += py-google-cloud-core
     SUBDIR += py-google-cloud-datastore
     SUBDIR += py-google-cloud-dlp
     SUBDIR += py-google-cloud-logging
+    SUBDIR += py-google-cloud-monitoring
     SUBDIR += py-google-cloud-resource-manager
     SUBDIR += py-google-cloud-speech
     SUBDIR += py-google-cloud-storage
@@ -1797,6 +1798,7 @@
     SUBDIR += py-google-cloud-translate
     SUBDIR += py-google-cloud-vision
     SUBDIR += py-google-resumable-media
+    SUBDIR += py-googlemaps
     SUBDIR += py-grafana-dashboard-manager
     SUBDIR += py-granian
     SUBDIR += py-graphite-api
@@ -1882,6 +1884,7 @@
     SUBDIR += py-primp
     SUBDIR += py-priority
     SUBDIR += py-priority1
+    SUBDIR += py-prometheus-fastapi-instrumentator
     SUBDIR += py-protego
     SUBDIR += py-proxy.py
     SUBDIR += py-proxy_tools
@@ -1915,7 +1918,6 @@
     SUBDIR += py-requests
     SUBDIR += py-requests-aws4auth
     SUBDIR += py-requests-cache
-    SUBDIR += py-requests-cache0
     SUBDIR += py-requests-cache93
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
@@ -1950,6 +1952,7 @@
     SUBDIR += py-sherlock-project
     SUBDIR += py-simple-websocket
     SUBDIR += py-slimit
+    SUBDIR += py-slowapi
     SUBDIR += py-slumber
     SUBDIR += py-social-auth-app-django
     SUBDIR += py-sockjs-tornado
@@ -1971,7 +1974,6 @@
     SUBDIR += py-ttrv
     SUBDIR += py-tuir
     SUBDIR += py-turbogears2
-    SUBDIR += py-tvdb_api
     SUBDIR += py-twill
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlman
@@ -2213,6 +2215,7 @@
     SUBDIR += rubygem-http-accept
     SUBDIR += rubygem-http-cookie
     SUBDIR += rubygem-http-form_data
+    SUBDIR += rubygem-http-form_data2
     SUBDIR += rubygem-http3
     SUBDIR += rubygem-http4
     SUBDIR += rubygem-http_router
@@ -2558,6 +2561,7 @@
     SUBDIR += srg
     SUBDIR += srt
     SUBDIR += stagit
+    SUBDIR += static-api
     SUBDIR += stork
     SUBDIR += suitecrm
     SUBDIR += suphp
@@ -2673,6 +2677,7 @@
     SUBDIR += vertx
     SUBDIR += vger
     SUBDIR += vigil
+    SUBDIR += vikunja
     SUBDIR += vimb
     SUBDIR += vinyl09
     SUBDIR += visitors
@@ -2720,6 +2725,7 @@
     SUBDIR += wuzz
     SUBDIR += wwwoffle
     SUBDIR += xapian-omega
+    SUBDIR += xapian-omega14
     SUBDIR += xcaddy
     SUBDIR += xfce4-smartbookmark-plugin
     SUBDIR += xh
@@ -2742,8 +2748,8 @@
     SUBDIR += yuicompressor
     SUBDIR += zenphoto
     SUBDIR += zerowait-httpd
-    SUBDIR += zine-ssg
     SUBDIR += zgrab2
+    SUBDIR += zine-ssg
     SUBDIR += zola
     SUBDIR += zoraxy
 

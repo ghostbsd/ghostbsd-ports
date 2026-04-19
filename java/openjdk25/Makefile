@@ -101,7 +101,7 @@ MAKE_ENV=	CLASSPATH="" \
 		JAVA_HOME="" \
 		LD_LIBRARY_PATH="" \
 		LOG=cmdlines \
-		MAKEFLAGS=""
+		MAKEFLAGS="CONF_CHECK=ignore"
 
 .if ${FLAVOR:Mjre*}
 ALL_TARGET=	legacy-images

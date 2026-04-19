@@ -1,5 +1,5 @@
 PORTNAME=	dnstracer
-DISTVERSION=	1.2.4
+DISTVERSION=	1.2.5
 CATEGORIES=	dns
 MASTER_SITES=	CRATESIO
 PKGNAMESUFFIX=	-rs
@@ -14,7 +14,5 @@ LICENSE=	MIT
 USES=		cargo
 
 PLIST_FILES=	bin/dnstracer
-
-# make cargo-crates > Makefile.crates
 
 .include <bsd.port.mk>

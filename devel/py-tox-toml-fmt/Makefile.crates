@@ -9,7 +9,7 @@ CARGO_CRATES=	addr-0.15.6 \
 		anstyle-query-1.1.5 \
 		anstyle-wincon-3.0.11 \
 		any_ascii-0.1.7 \
-		anyhow-1.0.101 \
+		anyhow-1.0.102 \
 		async-trait-0.1.89 \
 		atomic-0.6.1 \
 		atomic-waker-1.1.2 \
@@ -19,17 +19,17 @@ CARGO_CRATES=	addr-0.15.6 \
 		bit-set-0.5.3 \
 		bit-vec-0.6.3 \
 		bitflags-1.3.2 \
-		bitflags-2.10.0 \
+		bitflags-2.11.0 \
 		block-buffer-0.10.4 \
-		bumpalo-3.19.1 \
+		bumpalo-3.20.2 \
 		bytemuck-1.25.0 \
 		bytes-1.11.1 \
-		cc-1.2.55 \
+		cc-1.2.56 \
 		cfg-if-1.0.4 \
 		cfg_aliases-0.2.1 \
-		chrono-0.4.43 \
-		clap-4.5.58 \
-		clap_builder-4.5.58 \
+		chrono-0.4.44 \
+		clap-4.5.60 \
+		clap_builder-4.5.60 \
 		clap_derive-4.5.55 \
 		clap_lex-1.0.0 \
 		colorchoice-1.0.4 \
@@ -55,15 +55,15 @@ CARGO_CRATES=	addr-0.15.6 \
 		find-msvc-tools-0.1.9 \
 		foldhash-0.1.5 \
 		form_urlencoded-1.2.2 \
-		futures-0.3.31 \
-		futures-channel-0.3.31 \
-		futures-core-0.3.31 \
-		futures-executor-0.3.31 \
-		futures-io-0.3.31 \
-		futures-macro-0.3.31 \
-		futures-sink-0.3.31 \
-		futures-task-0.3.31 \
-		futures-util-0.3.31 \
+		futures-0.3.32 \
+		futures-channel-0.3.32 \
+		futures-core-0.3.32 \
+		futures-executor-0.3.32 \
+		futures-io-0.3.32 \
+		futures-macro-0.3.32 \
+		futures-sink-0.3.32 \
+		futures-task-0.3.32 \
+		futures-util-0.3.32 \
 		generic-array-0.14.7 \
 		getrandom-0.2.17 \
 		getrandom-0.3.4 \
@@ -100,12 +100,12 @@ CARGO_CRATES=	addr-0.15.6 \
 		is_terminal_polyfill-1.70.2 \
 		itertools-0.14.0 \
 		itoa-1.0.17 \
-		js-sys-0.3.85 \
+		js-sys-0.3.91 \
 		leb128fmt-0.1.0 \
 		lexical-sort-0.3.1 \
-		libc-0.2.181 \
-		libredox-0.1.12 \
-		linux-raw-sys-0.11.0 \
+		libc-0.2.182 \
+		libredox-0.1.14 \
+		linux-raw-sys-0.12.1 \
 		litemap-0.8.1 \
 		lock_api-0.4.14 \
 		log-0.4.29 \
@@ -126,22 +126,22 @@ CARGO_CRATES=	addr-0.15.6 \
 		pest_derive-2.8.6 \
 		pest_generator-2.8.6 \
 		pest_meta-2.8.6 \
-		pin-project-1.1.10 \
-		pin-project-internal-1.1.10 \
-		pin-project-lite-0.2.16 \
+		pin-project-1.1.11 \
+		pin-project-internal-1.1.11 \
+		pin-project-lite-0.2.17 \
 		pin-utils-0.1.0 \
 		portable-atomic-1.13.1 \
 		potential_utf-0.1.4 \
 		ppv-lite86-0.2.21 \
 		prettyplease-0.2.37 \
 		proc-macro2-1.0.106 \
-		psl-2.1.189 \
+		psl-2.1.195 \
 		psl-types-2.0.11 \
-		pyo3-0.28.0 \
-		pyo3-build-config-0.28.0 \
-		pyo3-ffi-0.28.0 \
-		pyo3-macros-0.28.0 \
-		pyo3-macros-backend-0.28.0 \
+		pyo3-0.28.2 \
+		pyo3-build-config-0.28.2 \
+		pyo3-ffi-0.28.2 \
+		pyo3-macros-0.28.2 \
+		pyo3-macros-backend-0.28.2 \
 		quinn-0.11.9 \
 		quinn-proto-0.11.13 \
 		quinn-udp-0.5.14 \
@@ -154,12 +154,12 @@ CARGO_CRATES=	addr-0.15.6 \
 		redox_users-0.5.2 \
 		regex-1.12.3 \
 		regex-automata-0.4.14 \
-		regex-syntax-0.8.9 \
+		regex-syntax-0.8.10 \
 		reqwest-0.12.28 \
 		ring-0.17.14 \
 		rustc-hash-2.1.1 \
-		rustix-1.1.3 \
-		rustls-0.23.36 \
+		rustix-1.1.4 \
+		rustls-0.23.37 \
 		rustls-native-certs-0.8.3 \
 		rustls-pki-types-1.14.0 \
 		rustls-webpki-0.103.9 \
@@ -167,8 +167,8 @@ CARGO_CRATES=	addr-0.15.6 \
 		ryu-1.0.23 \
 		schannel-0.1.28 \
 		scopeguard-1.2.0 \
-		security-framework-3.5.1 \
-		security-framework-sys-2.15.0 \
+		security-framework-3.7.0 \
+		security-framework-sys-2.17.0 \
 		semver-1.0.27 \
 		serde-1.0.228 \
 		serde_core-1.0.228 \
@@ -187,11 +187,11 @@ CARGO_CRATES=	addr-0.15.6 \
 		stable_deref_trait-1.2.1 \
 		strsim-0.11.1 \
 		subtle-2.6.1 \
-		syn-2.0.115 \
+		syn-2.0.117 \
 		sync_wrapper-1.0.2 \
 		synstructure-0.13.2 \
-		target-lexicon-0.13.4 \
-		tempfile-3.25.0 \
+		target-lexicon-0.13.5 \
+		tempfile-3.26.0 \
 		thiserror-2.0.18 \
 		thiserror-impl-2.0.18 \
 		tinystr-0.8.2 \
@@ -201,9 +201,9 @@ CARGO_CRATES=	addr-0.15.6 \
 		tokio-macros-2.6.0 \
 		tokio-rustls-0.26.4 \
 		tokio-util-0.7.18 \
-		toml-1.0.0+spec-1.1.0 \
+		toml-1.0.3+spec-1.1.0 \
 		toml_datetime-1.0.0+spec-1.1.0 \
-		toml_parser-1.0.7+spec-1.1.0 \
+		toml_parser-1.0.9+spec-1.1.0 \
 		toml_writer-1.0.6+spec-1.1.0 \
 		tower-0.4.13 \
 		tower-0.5.3 \
@@ -218,28 +218,28 @@ CARGO_CRATES=	addr-0.15.6 \
 		try-lock-0.2.5 \
 		typenum-1.19.0 \
 		ucd-trie-0.1.7 \
-		unicode-ident-1.0.23 \
+		unicode-ident-1.0.24 \
 		unicode-segmentation-1.12.0 \
 		unicode-xid-0.2.6 \
 		untrusted-0.9.0 \
 		url-2.5.8 \
 		utf8_iter-1.0.4 \
 		utf8parse-0.2.2 \
-		uuid-1.20.0 \
+		uuid-1.21.0 \
 		version_check-0.9.5 \
 		want-0.3.1 \
 		wasi-0.11.1+wasi-snapshot-preview1 \
 		wasip2-1.0.2+wasi-0.2.9 \
 		wasip3-0.4.0+wasi-0.3.0-rc-2026-01-06 \
-		wasm-bindgen-0.2.108 \
-		wasm-bindgen-futures-0.4.58 \
-		wasm-bindgen-macro-0.2.108 \
-		wasm-bindgen-macro-support-0.2.108 \
-		wasm-bindgen-shared-0.2.108 \
+		wasm-bindgen-0.2.114 \
+		wasm-bindgen-futures-0.4.64 \
+		wasm-bindgen-macro-0.2.114 \
+		wasm-bindgen-macro-support-0.2.114 \
+		wasm-bindgen-shared-0.2.114 \
 		wasm-encoder-0.244.0 \
 		wasm-metadata-0.244.0 \
 		wasmparser-0.244.0 \
-		web-sys-0.3.85 \
+		web-sys-0.3.91 \
 		web-time-1.1.0 \
 		windows-core-0.62.2 \
 		windows-implement-0.60.2 \
@@ -279,8 +279,8 @@ CARGO_CRATES=	addr-0.15.6 \
 		writeable-0.6.2 \
 		yoke-0.8.1 \
 		yoke-derive-0.8.1 \
-		zerocopy-0.8.39 \
-		zerocopy-derive-0.8.39 \
+		zerocopy-0.8.40 \
+		zerocopy-derive-0.8.40 \
 		zerofrom-0.1.6 \
 		zerofrom-derive-0.1.6 \
 		zeroize-1.8.2 \
@@ -288,4 +288,4 @@ CARGO_CRATES=	addr-0.15.6 \
 		zerovec-0.11.5 \
 		zerovec-derive-0.11.2 \
 		zmij-1.0.21 \
-		tombi-accessor,tombi-ast,tombi-ast-editor,tombi-cache,tombi-comment-directive,tombi-comment-directive-serde,tombi-comment-directive-store,tombi-config,tombi-date-time,tombi-diagnostic,tombi-document,tombi-document-tree,tombi-formatter,tombi-future,tombi-json,tombi-json-lexer,tombi-json-syntax,tombi-json-value,tombi-lexer,tombi-parser,tombi-regex,tombi-rg-tree,tombi-schema-store,tombi-severity-level,tombi-syntax,tombi-text,tombi-toml-text,tombi-toml-version,tombi-uri,tombi-validator,tombi-version-sort,tombi-x-keyword@git+https://github.com/tombi-toml/tombi?tag=v0.7.28\#749df5d762ec02cc6d960f37dbaeaf060ebaf1d5
+		tombi-accessor,tombi-ast,tombi-ast-editor,tombi-cache,tombi-comment-directive,tombi-comment-directive-serde,tombi-comment-directive-store,tombi-config,tombi-date-time,tombi-diagnostic,tombi-document,tombi-document-tree,tombi-formatter,tombi-future,tombi-json,tombi-json-lexer,tombi-json-syntax,tombi-json-value,tombi-lexer,tombi-parser,tombi-regex,tombi-rg-tree,tombi-schema-store,tombi-severity-level,tombi-syntax,tombi-text,tombi-toml-text,tombi-toml-version,tombi-uri,tombi-validator,tombi-version-sort,tombi-x-keyword@git+https://github.com/tombi-toml/tombi?tag=v0.8.0\#a46abd1e69cc36bba19f01cedf52eb7009ac83d7

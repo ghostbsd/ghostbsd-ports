@@ -1,7 +1,6 @@
 PORTNAME=	proxysql
-PORTVERSION=	3.0.6
+PORTVERSION=	3.0.7
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	zi@FreeBSD.org
@@ -11,20 +10,19 @@ WWW=		https://www.proxysql.com/
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	aclocal:devel/automake \
-		autoreconf:devel/autoconf \
-		bash:shells/bash \
+BUILD_DEPENDS=	bash:shells/bash \
 		cmake:devel/cmake-core \
 		ggrep:textproc/gnugrep \
 		libgcrypt>0:security/libgcrypt \
-		libtoolize:devel/libtool \
 		libevent>0:devel/libevent \
 		gnutls>0:security/gnutls
 LIB_DEPENDS=	libuuid.so:misc/libuuid
 RUN_DEPENDS=	libgcrypt>0:security/libgcrypt \
 		gnutls>0:security/gnutls
 
-USES=		bison:build compiler:c++11-lang gmake libtool perl5 pkgconfig python:build ssl
+USES=		autoreconf:build bison:build compiler:c++11-lang gmake \
+		libtool perl5 pkgconfig python:build ssl
+USE_CSTD=	gnu11
 USE_PERL5=	build
 USE_GCC=	yes
 MAKE_ENV=	GIT_VERSION_BASE="${PORTVERSION}" SOURCE_DATE_EPOCH="$$(date +%s)"

@@ -1,5 +1,6 @@
 PORTNAME=	electric
 DISTVERSION=	9.08.1
+PORTREVISION=	1
 CATEGORIES=	cad java
 MASTER_SITES=	GNU \
 		https://www.staticfreesoft.com/:1 \

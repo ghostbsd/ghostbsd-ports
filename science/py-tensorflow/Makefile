@@ -1,6 +1,7 @@
 PORTNAME=	tensorflow
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.21.0
+PORTREVISION=	2
 CATEGORIES=	science python # machine-learning
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DIST_SUBDIR=	${PORTNAME}
@@ -16,7 +17,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 ONLY_FOR_ARCHS=	amd64
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}grpcio-tools>=1.22.0:devel/py-grpcio-tools@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}numpy>=1.22.0:math/py-numpy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy1>=1.22.0:math/py-numpy1@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR} \
 		bash:shells/bash \
 		bazel:devel/bazel7 \
@@ -26,8 +27,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}grpcio-tools>=1.22.0:devel/py-grpcio-tools
 		pybind11>=2.6.2:devel/pybind11 \
 		swig:devel/swig \
 		xxd:sysutils/xxd
-LIB_DEPENDS=	libgpr.so:devel/grpc \
-		libpng.so:graphics/png \
+LIB_DEPENDS=	libpng.so:graphics/png \
 		libsnappy.so:archivers/snappy \
 		libabsl_base.so:devel/abseil \
 		libsqlite3.so:databases/sqlite3 \
@@ -45,7 +45,7 @@ RUN_DEPENDS=	pybind11>=2.6.2:devel/pybind11 \
 		${PYTHON_PKGNAMEPREFIX}gast>=0.2.1:devel/py-gast@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}google-pasta>=0.1.1:devel/py-google-pasta@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}h5py>=2.9.0:science/py-h5py@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}numpy>=1.22.0:math/py-numpy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy1>=1.22.0:math/py-numpy1@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}packaging>=21.3:devel/py-packaging@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>=2.21.0:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}protobuf>=3.20.3:devel/py-protobuf@${PY_FLAVOR} \
@@ -53,7 +53,9 @@ RUN_DEPENDS=	pybind11>=2.6.2:devel/pybind11 \
 		${PYTHON_PKGNAMEPREFIX}termcolor>=1.1.0:devel/py-termcolor@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}typing-extensions>=3.6.6:devel/py-typing-extensions@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wrapt>=1.11.0:devel/py-wrapt@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}grpcio>=1.24.3:devel/py-grpcio@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}grpcio>=1.24.3:devel/py-grpcio@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}ml-dtypes>=0.3.1:math/py-ml-dtypes@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}opt-einsum>=3.3.0:math/py-opt-einsum@${PY_FLAVOR}
 
 USES=		java jpeg perl5 python shebangfix ssl
 JAVA_VERSION=	21
@@ -71,7 +73,7 @@ OPTIONS_DEFINE=			CPU_OPTS XLA
 OPTIONS_RADIO=			PARALLEL_JOBS
 OPTIONS_RADIO_PARALLEL_JOBS=	JOBS_1 JOBS_HALF JOBS_ALL
 PARALLEL_JOBS_DESC=		How many jobs to run during build?
-OPTIONS_DEFAULT=		JOBS_HALF
+OPTIONS_DEFAULT=		JOBS_ALL
 
 JOBS_1_DESC=			Run one job
 JOBS_1_VARS=			TF_JOBS_NUMBER=1
@@ -134,6 +136,7 @@ post-patch:
 
 	@${REINPLACE_CMD} "s#%%BAZEL_DIR%%#${WRKDIR}#" ${WRKDIR}/bazelrc
 	@${REINPLACE_CMD} "s#%%BAZEL_DIST%%#${WRKDIR}#" ${WRKDIR}/bazelrc
+	@${REINPLACE_CMD} "s#%%WRKSRC%%#${WRKSRC}#" ${WRKDIR}/bazelrc
 	@${REINPLACE_CMD} "s#%%JAVA_HOME%%#${JAVA_HOME}#" ${WRKDIR}/bazelrc
 
 	# copy the toolchain over
@@ -155,11 +158,23 @@ post-patch:
 		${WRKSRC}/WORKSPACE
 
 	# Fix Python runtime headers: replace rules_python CC toolchain alias with
-	# a direct cc_library pointing to the system Python headers.
+	# a direct cc_library using a symlink to the system Python headers.
 	@${REINPLACE_CMD} \
 		"s|%%PYTHON_INCLUDEDIR%%|${PYTHON_INCLUDEDIR}|g" \
-		${WRKDIR}/bazelrc \
-		${WRKSRC}/third_party/xla/third_party/python_runtime/BUILD.bazel
+		${WRKDIR}/bazelrc
+	@${CP} ${PATCHDIR}/pthreadpool-freebsd-alloca.patch \
+		${WRKSRC}/third_party/xla/third_party/pthreadpool/freebsd_alloca.patch
+	@${CP} ${PATCHDIR}/xnnpack-freebsd-mmap.patch \
+		${WRKSRC}/third_party/xla/third_party/xnnpack/freebsd_mmap.patch
+	@${CP} ${PATCHDIR}/protobuf-freebsd-upb.patch \
+		${WRKSRC}/third_party/xla/third_party/protobuf/freebsd_upb.patch
+	@${CP} ${PATCHDIR}/cpuinfo-freebsd-alwayslink.patch \
+		${WRKSRC}/third_party/cpuinfo/cpuinfo_freebsd_alwayslink.patch
+	@${CP} ${PATCHDIR}/grpc-no-go-sdk.patch \
+		${WRKSRC}/third_party/xla/third_party/grpc/grpc_no_go.patch
+
+	@${LN} -sf ${PYTHON_INCLUDEDIR} \
+		${WRKSRC}/third_party/xla/third_party/python_runtime/python_include
 
 	# Create pypi hub stub (FreeBSD has no platform wheels in requirements_lock)
 	@${MKDIR} ${WRKSRC}/bazel_pypi_hub
@@ -168,12 +183,13 @@ post-patch:
 	@${PRINTF} 'def install_deps(**kwargs):\n    pass\n' \
 		> ${WRKSRC}/bazel_pypi_hub/requirements.bzl
 	@${TOUCH} ${WRKSRC}/bazel_pypi_hub/WORKSPACE
-.for _pypi_pkg in absl_py astor astunparse dill flatbuffers gast h5py jax \
+.for _pypi_pkg in absl_py astor astunparse auditwheel dill flatbuffers gast h5py jax \
     keras lit ml_dtypes opt_einsum packaging portpicker protobuf requests \
     scipy setuptools tblib termcolor typing_extensions wheel wrapt zstandard
 	@${MKDIR} ${WRKSRC}/bazel_pypi_hub/${_pypi_pkg}
 	@${PRINTF} 'package(default_visibility = ["//visibility:public"])\npy_library(name = "pkg", srcs = [])\npy_library(name = "lib", srcs = [])\npy_library(name = "whl", srcs = [])\nalias(name = "${_pypi_pkg}", actual = ":pkg")\n' \
 		> ${WRKSRC}/bazel_pypi_hub/${_pypi_pkg}/BUILD.bazel
+	@${TOUCH} ${WRKSRC}/bazel_pypi_hub/${_pypi_pkg}/WORKSPACE
 .endfor
 	# numpy needs extra cc_library for numpy_headers used by C++ deps
 	@${MKDIR} ${WRKSRC}/bazel_pypi_hub/numpy
@@ -186,6 +202,7 @@ post-patch:
 		${WRKSRC}/bazel_pypi_hub/numpy/site-packages/numpy/core/include
 	@${PRINTF} 'package(default_visibility = ["//visibility:public"])\npy_library(name = "pkg", srcs = [])\npy_library(name = "lib", srcs = [])\nalias(name = "numpy", actual = ":pkg")\ncc_library(\n    name = "numpy_headers",\n    hdrs = glob(["include/**/*.h"]),\n    includes = ["include"],\n)\n' \
 		> ${WRKSRC}/bazel_pypi_hub/numpy/BUILD.bazel
+	@${TOUCH} ${WRKSRC}/bazel_pypi_hub/numpy/WORKSPACE
 
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} \
@@ -207,7 +224,7 @@ do-configure:
 		TF_IGNORE_MAX_BAZEL_VERSION=1 \
 		CC_OPT_FLAGS="-march=${CPU_TARGET} -I${LOCALBASE}/include" \
 		PREFIX="${LOCALBASE}" \
-		TF_SYSTEM_LIBS="astor_archive astunparse_archive boringssl com_github_googlecloudplatform_google_cloud_cpp com_github_grpc_grpc \
+		TF_SYSTEM_LIBS="astor_archive astunparse_archive boringssl com_github_googlecloudplatform_google_cloud_cpp \
 				com_googlesource_code_re2 curl cython dill_archive functools32_archive gast_archive \
 				gif hwloc icu jsoncpp_git libjpeg_turbo nasm org_sqlite pasta png pybind11 six_archive snappy \
 				tblib_archive termcolor_archive typing_extensions_archive wrapt zlib" \
@@ -271,5 +288,22 @@ do-install:
 post-install: # autoplist: thousands of files, all under ${PYTHON_SITELIBDIR}
 	@cd ${STAGEDIR}${PREFIX} && \
 		${FIND} ${PYTHON_SITELIBDIR:C|^${LOCALBASE}/||} -type f -or -type l | ${GREP} -v "egg-info/" >> ${TMPPLIST}
+
+do-test:
+	@cd ${WRKSRC} && \
+		bazel --bazelrc="${WRKDIR}/bazelrc" ${BAZEL_BOOT} test \
+		--jobs ${TF_JOBS_NUMBER} ${BAZEL_COPT} --host_copt="-I${LOCALBASE}/include" \
+		--host_linkopt="-L${LOCALBASE}/lib -lexecinfo" ${BAZEL_LINKOPT} --copt="-I${LOCALBASE}/include" \
+		--verbose_failures \
+		--distdir=${WRKDIR}/bazel-dist \
+		--test_output=errors \
+		--keep_going \
+		//tensorflow/python/autograph/...
+
+test-quick: build
+	@cd ${TEST_WRKSRC} && \
+		${SETENV} ${TEST_ENV} ${PYTHON_CMD} ${FILESDIR}/example-quick-training.py
+
+# tests as of 2.21.0: Executed 76 out of 76 tests: 76 tests pass.
 
 .include <bsd.port.mk>

@@ -292,7 +292,7 @@ MY_DEPENDS=	gitaly>=${GITLAB_VERSION}:devel/gitaly \
 	rubygem-grape_logging-gitlab>=1.8.4<2.0:devel/rubygem-grape_logging-gitlab \
 	rubygem-gitlab-net-dns>=0.15.0<0.16:dns/rubygem-gitlab-net-dns \
 	rubygem-countries>=4.1.3<4.2.0:devel/rubygem-countries \
-	rubygem-retriable>=3.1.2<3.2.0:devel/rubygem-retriable \
+	rubygem-retriable-gitlab>=3.1.2<3.2.0:devel/rubygem-retriable-gitlab \
 	rubygem-lru_redux>0:devel/rubygem-lru_redux \
 	rubygem-mail-gitlab>=2.9.0<2.9.1:mail/rubygem-mail-gitlab \
 	rubygem-lockbox>=1.4.1<1.5:security/rubygem-lockbox \

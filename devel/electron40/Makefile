@@ -1,7 +1,6 @@
 PORTNAME=	electron
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${ELECTRON_VER}
-PORTREVISION=	1
 PULSEMV=	16
 PULSEV=		${PULSEMV}.1
 CATEGORIES=	devel
@@ -327,6 +326,8 @@ post-extract:
 		${WRKSRC}/esbuild
 
 pre-patch:
+	${REINPLACE_CMD} -e 's|src/third_party/angle/src|src/third_party/angle|' \
+		${WRKSRC}/electron/patches/config.json
 	${SH} ${FILESDIR}/apply-electron-patches.sh ${WRKSRC}
 	# ${FIND} ${WRKSRC} -type f -name '*.orig' -print -delete
 	# ${FIND} ${WRKSRC} -type f -name '*~' -print -delete

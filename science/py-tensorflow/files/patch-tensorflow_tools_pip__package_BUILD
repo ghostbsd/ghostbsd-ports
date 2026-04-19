@@ -1,6 +1,6 @@
---- tensorflow/tools/pip_package/BUILD.orig	2026-03-22 23:01:32.877130000 -0700
-+++ tensorflow/tools/pip_package/BUILD	2026-03-22 23:01:32.877162000 -0700
-@@ -323,12 +323,14 @@
+--- tensorflow/tools/pip_package/BUILD.orig	2026-03-04 21:33:50 UTC
++++ tensorflow/tools/pip_package/BUILD
+@@ -323,12 +323,14 @@ tf_wheel(
          "@platforms//os:macos": "macosx",
          "@platforms//os:windows": "win",
          "@platforms//os:linux": "linux",

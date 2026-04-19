@@ -1,5 +1,5 @@
 PORTNAME=	horizon
-PORTVERSION=	25.5.1
+PORTVERSION=	25.7.1
 CATEGORIES=	www python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -57,7 +57,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Babel>=2.6.0:devel/py-babel@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}xstatic-bootstrap-scss>=3.3.7.1:devel/py-xstatic-bootstrap-scss@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}xstatic-bootswatch>=3.3.7.0:devel/py-xstatic-bootswatch@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}xstatic-d3>=3.5.17.0:devel/py-xstatic-d3@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}xstatic-font-awesome>=4.7.0.0:devel/py-xstatic-font-awesome@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}xstatic-font-awesome>=6.2.1.2:devel/py-xstatic-font-awesome@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}xstatic-hogan>=2.0.0.2:devel/py-xstatic-hogan@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}xstatic-jasmine>=2.4.1.1:devel/py-xstatic-jasmine@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}xstatic-jquery>=3.5.1.1:devel/py-xstatic-jquery@${PY_FLAVOR} \

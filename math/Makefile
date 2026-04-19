@@ -948,6 +948,9 @@
     SUBDIR += py-annoy
     SUBDIR += py-apgl
     SUBDIR += py-arviz
+    SUBDIR += py-arviz-base
+    SUBDIR += py-arviz-plots
+    SUBDIR += py-arviz-stats
     SUBDIR += py-arybo
     SUBDIR += py-autograd
     SUBDIR += py-awkward
@@ -1013,6 +1016,7 @@
     SUBDIR += py-highspy
     SUBDIR += py-hmmlearn
     SUBDIR += py-hypernetx
+    SUBDIR += py-ibis-framework
     SUBDIR += py-igraph
     SUBDIR += py-iminuit
     SUBDIR += py-intspan
@@ -1063,6 +1067,7 @@
     SUBDIR += py-numpy
     SUBDIR += py-numpy-groupies
     SUBDIR += py-numpy-stl
+    SUBDIR += py-numpy1
     SUBDIR += py-openTSNE
     SUBDIR += py-opt-einsum
     SUBDIR += py-or-tools

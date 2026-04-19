@@ -1,16 +1,13 @@
 PORTNAME=	github-copilot-cli
-DISTVERSION=	1.0.12
+DISTVERSION=	1.0.27
 PORTEPOCH=	1
 CATEGORIES=	misc # machine-learning
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
-DIST_SUBDIR=	${PORTNAME}
+DIST_SUBDIR=	${PORTNAME}-x # -x is to see if it would fix checksum errors
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	GitHub Copilot CLI brings the power of the coding agent to terminal
 WWW=		https://github.com/github/copilot-cli
-
-ONLY_FOR_ARCHS=		aarch64 amd64
-ONLY_FOR_ARCHS_REASON=	binaries are installed in folders with architecture encoded in them, patches are welcome to fix this limitation
 
 FLAVORS=	script binary
 FLAVOR?=	${FLAVORS:[1]}
@@ -19,7 +16,8 @@ binary_PKGNAMESUFFIX=	-bin
 binary_COMMENT=	GitHub Copilot CLI - standalone binary (no npm dependencies)
 binary_PLIST=	${.CURDIR}/pkg-plist.binary
 
-FETCH_DEPENDS=	npm:www/npm \
+FETCH_DEPENDS=	flock:sysutils/flock \
+		npm:www/npm \
 		jq:textproc/jq \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 
@@ -30,6 +28,8 @@ PACKAGE_NAME=	@github/copilot
 DD=		${DISTDIR}/${DIST_SUBDIR}
 
 FETCH_SCRIPT=	${PORTSDIR}/Tools/scripts/npmjs-fetch-with-dependencies.sh
+
+FETCH_LOCKFILE=	${DD}/fetch.lock
 
 .if ${FLAVOR} == script
 DISTFILES+=	${NODE_HEADERS}${EXTRACT_SUFX}
@@ -44,6 +44,7 @@ RUN_DEPENDS=	libsecret>0:security/libsecret \
 USES=		nodejs:run pkgconfig python:build
 
 .elif ${FLAVOR} == binary
+BROKEN=		See if the binary flavor somehow causes fetch failures
 DISTFILES+=	${NODE_HEADERS}${EXTRACT_SUFX}
 
 BUILD_DEPENDS=	npm:www/npm \
@@ -79,7 +80,8 @@ USES=		nodejs:build pkgconfig python:build
 
 NODE_HEADERS=	node-v22.19.0-headers
 
-JS_ARCH=	${ARCH:S/amd64/x64/:S/aarch64/arm64/}
+NODE_ARCH=	${ARCH:S/amd64/x64/:S/aarch64/arm64/:S/i386/ia32/:S/powerpc64le/ppc64le/:S/powerpc64/ppc64/:C/armv[67]/arm/} # modeled after electron.mk
+PLIST_SUB=	NODE_ARCH=${NODE_ARCH}
 
 DEP_MODULES=			pty sharp keytar node_addon_api
 dep_pty_npm_name=		@devm33/node-pty
@@ -95,44 +97,43 @@ dep_node_addon_api_version=	8.5.0
 DISTFILES+=	${dep:S/_/-/g}-${dep_${dep}_version}${EXTRACT_SUFX}
 .endfor
 
-PLIST_SUB=	JS_ARCH=${JS_ARCH}
-
 do-fetch:
 	@${MKDIR} ${DD}
-	@if ! [ -f ${DD}/${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} ]; then \
+	@exec 9>${FETCH_LOCKFILE} && flock -x 9 && \
+	if ! [ -f ${DD}/${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} ]; then \
 		${ECHO} "====> Fetching ${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}" && \
 		${SETENV} TMPDIR=${WRKDIR} LOCALBASE=${LOCALBASE} ${FETCH_SCRIPT} \
 			${PACKAGE_NAME} ${DISTVERSION} \
 			${FILESDIR}/package-lock.json \
 			${DD}/${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}; \
-	fi
-	@if ! [ -f ${DD}/${NODE_HEADERS}${EXTRACT_SUFX} ]; then \
+	fi && \
+	if ! [ -f ${DD}/${NODE_HEADERS}${EXTRACT_SUFX} ]; then \
 		${ECHO} "====> Fetching ${NODE_HEADERS}${EXTRACT_SUFX}" && \
 		${FETCH_CMD} -q https://nodejs.org/download/release/v22.19.0/${NODE_HEADERS}${EXTRACT_SUFX} \
 			-o ${DD}/${NODE_HEADERS}${EXTRACT_SUFX}; \
-	fi
-	@if ! [ -f ${DD}/pty-${dep_pty_version}${EXTRACT_SUFX} ]; then \
+	fi && \
+	if ! [ -f ${DD}/pty-${dep_pty_version}${EXTRACT_SUFX} ]; then \
 		${ECHO} "====> Fetching dependency pty" && \
 		${SETENV} TMPDIR=${WRKDIR} LOCALBASE=${LOCALBASE} ${FETCH_SCRIPT} \
 			${dep_pty_npm_name} ${dep_pty_version} \
 			${FILESDIR}/package-lock-pty.json \
 			${DD}/pty-${dep_pty_version}${EXTRACT_SUFX}; \
-	fi
-	@if ! [ -f ${DD}/sharp-${dep_sharp_version}${EXTRACT_SUFX} ]; then \
+	fi && \
+	if ! [ -f ${DD}/sharp-${dep_sharp_version}${EXTRACT_SUFX} ]; then \
 		${ECHO} "====> Fetching dependency sharp" && \
 		${SETENV} TMPDIR=${WRKDIR} LOCALBASE=${LOCALBASE} ${FETCH_SCRIPT} \
 			${dep_sharp_npm_name} ${dep_sharp_version} \
 			${FILESDIR}/package-lock-sharp.json \
 			${DD}/sharp-${dep_sharp_version}${EXTRACT_SUFX}; \
-	fi
-	@if ! [ -f ${DD}/keytar-${dep_keytar_version}${EXTRACT_SUFX} ]; then \
+	fi && \
+	if ! [ -f ${DD}/keytar-${dep_keytar_version}${EXTRACT_SUFX} ]; then \
 		${ECHO} "====> Fetching dependency keytar" && \
 		${SETENV} TMPDIR=${WRKDIR} LOCALBASE=${LOCALBASE} ${FETCH_SCRIPT} \
 			${dep_keytar_npm_name} ${dep_keytar_version} \
 			${FILESDIR}/package-lock-keytar.json \
 			${DD}/keytar-${dep_keytar_version}${EXTRACT_SUFX}; \
-	fi
-	@if ! [ -f ${DD}/node-addon-api-${dep_node_addon_api_version}${EXTRACT_SUFX} ]; then \
+	fi && \
+	if ! [ -f ${DD}/node-addon-api-${dep_node_addon_api_version}${EXTRACT_SUFX} ]; then \
 		${ECHO} "====> Fetching dependency node-addon-api" && \
 		${SETENV} TMPDIR=${WRKDIR} LOCALBASE=${LOCALBASE} ${FETCH_SCRIPT} \
 			${dep_node_addon_api_npm_name} ${dep_node_addon_api_version} \
@@ -165,8 +166,8 @@ do-build:
 	@cd ${WRKDIR}/sharp-${dep_sharp_version}/node_modules/${dep_sharp_npm_name}/src && \
 		${SETENV} HOME=${WRKDIR} PYTHON=${PYTHON_CMD} CXXFLAGS="-I${LOCALBASE}/include" \
 			node-gyp configure build --nodedir=${WRKDIR}/node-v22.19.0 && \
-		${MKDIR} ${WRKSRC}/node_modules/@img/sharp-freebsd-x64 && \
-		${CP} build/Release/sharp-freebsd-x64.node ${WRKSRC}/node_modules/@img/sharp-freebsd-x64/sharp.node
+		${MKDIR} ${WRKSRC}/node_modules/${PACKAGE_NAME}/node_modules/@img/sharp-freebsd-${NODE_ARCH} && \
+		${CP} build/Release/sharp-freebsd-${NODE_ARCH}.node ${WRKSRC}/node_modules/${PACKAGE_NAME}/node_modules/@img/sharp-freebsd-${NODE_ARCH}/sharp.node
 	@${ECHO_MSG} "====> Building keytar..."
 	@cd ${WRKDIR}/keytar-${dep_keytar_version}/node_modules/${dep_keytar_npm_name} && \
 		${SETENV} HOME=${WRKDIR} CFLAGS="-I${LOCALBASE}/include" CXXFLAGS="-I${LOCALBASE}/include" \
@@ -174,11 +175,6 @@ do-build:
 		${CP} build/Release/keytar.node ${WRKSRC}/node_modules/${PACKAGE_NAME}/prebuilds/freebsd-x64/
 .if ${FLAVOR} == binary
 	@${ECHO_MSG} "====> Creating copilot bundle (includes node runtime)..."
-	# Copy @img/sharp-freebsd-x64 into copilot's node_modules so it is findable
-	# after extraction to the cache dir (node resolves it relative to app.js)
-	@${MKDIR} ${WRKSRC}/node_modules/${PACKAGE_NAME}/node_modules/@img
-	@${CP} -r ${WRKSRC}/node_modules/@img/sharp-freebsd-x64 \
-		${WRKSRC}/node_modules/${PACKAGE_NAME}/node_modules/@img/
 	# Embed the node runtime so it runs without a system node installation
 	@${CP} ${LOCALBASE}/bin/node ${WRKSRC}/node_modules/${PACKAGE_NAME}/node
 	@cd ${WRKSRC}/node_modules/${PACKAGE_NAME} && \

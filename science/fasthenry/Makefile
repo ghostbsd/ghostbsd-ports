@@ -1,5 +1,6 @@
 PORTNAME=	fasthenry
 DISTVERSION=	3.0wr-031424
+PORTREVISION=	1
 CATEGORIES=	science cad
 MASTER_SITES=	http://www.wrcad.com/ftp/pub/
 
@@ -9,22 +10,26 @@ WWW=		https://www.rle.mit.edu/cpg/research_codes.htm
 
 LICENSE=	MIT
 
-USES=			gmake
-USE_GCC=		yes
+USES=		gmake
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	config
+CONFIGURE_ARGS=		freebsd
 
 # Fix build with clang11
 CFLAGS+=	-fcommon
 # Use malloc
 CFLAGS+=	-DNO_SBRK
 
-BINARY_ALIAS=		gcc=gcc${GCC_DEFAULT} make=gmake
+BINARY_ALIAS=	make=gmake
 
-WRKSRC=			${WRKDIR}/fasthenry-3.0wr
+WRKSRC=		${WRKDIR}/fasthenry-3.0wr
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
+
+post-patch:
+	@${REINPLACE_CMD} -Ee '/CFLAGS =/{s/=/+=/;}' \
+	${WRKSRC}/src/sparse/Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/fasthenry ${STAGEDIR}${PREFIX}/bin/

@@ -8,7 +8,8 @@ DISTFILES=	pydantic_core-${PORTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Core functionality for Pydantic validation and serialization
-WWW=		https://github.com/pydantic/pydantic-core
+WWW=		https://github.com/pydantic/pydantic/tree/main/pydantic-core \
+		https://github.com/pydantic/pydantic
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

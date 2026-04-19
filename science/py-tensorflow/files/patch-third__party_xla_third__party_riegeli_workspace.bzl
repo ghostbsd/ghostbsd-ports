@@ -1,4 +1,4 @@
---- third_party/xla/third_party/riegeli/workspace.bzl.orig2025-01-01 00:00:00 UTC
+--- third_party/xla/third_party/riegeli/workspace.bzl.orig	2026-03-04 21:33:50 UTC
 +++ third_party/xla/third_party/riegeli/workspace.bzl
 @@ -8,4 +8,5 @@ def repo():
          sha256 = "f63337f63f794ba9dc7dd281b20af3d036dfe0c1a5a4b7b8dc20b39f7e323b97",

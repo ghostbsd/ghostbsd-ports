@@ -4,7 +4,7 @@
 PORTNAME=	RStudio
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2025.09.2+418
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	devel math java
 MASTER_SITES=	https://s3.amazonaws.com/rstudio-buildtools/dictionaries/:dictionaries \
 		https://rstudio-buildtools.s3.amazonaws.com/rstudio-buildtools/:gin \
@@ -24,6 +24,9 @@ WWW=		https://www.rstudio.com/ \
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=	Depends on expired devel/electron37
+EXPIRATION_DATE=2026-06-30
 
 BROKEN_i386=	fails to resolve 'org.rstudio.studio.client.workbench.views.vcs.common.diff.LineActionButtonRenderer.GrayResources' via deferred binding
 

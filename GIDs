@@ -340,7 +340,7 @@ ldap:*:389:
 rtorrent:*:397:
 tiarra:*:398:
 # free: 399
-# free: 400
+evcc:*:400:
 # free: 401
 # free: 402
 # free: 403

@@ -1,3 +1,3 @@
-TIMESTAMP = 1771421760
-SHA256 (django_allauth-65.14.3.tar.gz) = 548eef76ab85f6e48f46f98437abf22acf0e834f73e9915fb6cc3f31a0dcdf4d
-SIZE (django_allauth-65.14.3.tar.gz) = 2029142
+TIMESTAMP = 1775587650
+SHA256 (django_allauth-65.15.1.tar.gz) = 94c5b9df0c3458019613983ba9e938518acf5c2e4cc6e0f262fc3684ffe45a95
+SIZE (django_allauth-65.15.1.tar.gz) = 2216647

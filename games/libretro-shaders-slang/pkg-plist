@@ -1281,8 +1281,10 @@
 %%DATADIR%%/bezel/scanline-classic/COPYING
 %%DATADIR%%/bezel/scanline-classic/NEWS
 %%DATADIR%%/bezel/scanline-classic/README.md
+%%DATADIR%%/bezel/scanline-classic/config/options.skel.cfg
 %%DATADIR%%/bezel/scanline-classic/doc/PARAMETERS.md
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/arcade/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/arcade/nvs.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/3do-240p.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/3do-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/3do-us.slangp
@@ -1290,6 +1292,7 @@
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/aaa-generic-ntsc-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/aaa-generic-ntscj-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/aaa-generic-pal-composite.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/famicom.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/gen.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/md-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/md.slangp
@@ -1297,6 +1300,9 @@
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/n64-us.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/n64.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/nes-eu.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/nes-gb.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/nes.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/pce.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/pceav.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/consumer/psx-eu.slangp
@@ -1332,6 +1338,10 @@
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/aaa-generic-ntscj-svideo.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/aaa-generic-pal-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/aaa-generic-pal-rgb.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/famicom-av.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/famicom-c1.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/famicom-titler.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/famicom.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/gen.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/md-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/md.slangp
@@ -1339,6 +1349,8 @@
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/n64-us.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/n64.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/nes-eu.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/nes.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/pce.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/pceav.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/psx-eu.slangp
@@ -1358,6 +1370,7 @@
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/tg16.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-hdr/professional/tg16av.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/arcade/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/arcade/nvs.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/3do-240p.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/3do-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/3do-us.slangp
@@ -1365,6 +1378,7 @@
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/aaa-generic-ntsc-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/aaa-generic-ntscj-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/aaa-generic-pal-composite.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/famicom.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/gen.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/md-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/md.slangp
@@ -1372,6 +1386,9 @@
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/n64-us.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/n64.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/nes-eu.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/nes-gb.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/nes.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/pce.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/pceav.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/consumer/psx-eu.slangp
@@ -1407,6 +1424,10 @@
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/aaa-generic-ntscj-svideo.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/aaa-generic-pal-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/aaa-generic-pal-rgb.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/famicom-av.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/famicom-c1.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/famicom-titler.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/famicom.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/gen.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/md-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/md.slangp
@@ -1414,6 +1435,8 @@
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/n64-us.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/n64.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/nes-eu.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/nes.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/pce.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/pceav.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/psx-eu.slangp
@@ -1433,6 +1456,7 @@
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/tg16.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/fhd-sdr/professional/tg16av.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/arcade/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/arcade/nvs.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/3do-240p.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/3do-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/3do-us.slangp
@@ -1440,6 +1464,7 @@
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/aaa-generic-ntsc-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/aaa-generic-ntscj-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/aaa-generic-pal-composite.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/famicom.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/gen.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/md-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/md.slangp
@@ -1447,6 +1472,9 @@
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/n64-us.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/n64.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/nes-eu.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/nes-gb.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/nes.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/pce.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/pceav.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/consumer/psx-eu.slangp
@@ -1482,6 +1510,10 @@
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/aaa-generic-ntscj-svideo.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/aaa-generic-pal-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/aaa-generic-pal-rgb.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/famicom-av.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/famicom-c1.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/famicom-titler.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/famicom.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/gen.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/md-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/md.slangp
@@ -1489,6 +1521,8 @@
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/n64-us.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/n64.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/nes-eu.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/nes.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/pce.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/pceav.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/psx-eu.slangp
@@ -1508,6 +1542,7 @@
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/tg16.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-lcd/professional/tg16av.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/arcade/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/arcade/nvs.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/3do-240p.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/3do-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/3do-us.slangp
@@ -1515,6 +1550,7 @@
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/aaa-generic-ntsc-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/aaa-generic-ntscj-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/aaa-generic-pal-composite.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/famicom.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/gen.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/md-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/md.slangp
@@ -1522,6 +1558,9 @@
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/n64-us.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/n64.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/nes-eu.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/nes-gb.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/nes.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/pce.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/pceav.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/consumer/psx-eu.slangp
@@ -1557,6 +1596,10 @@
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/aaa-generic-ntscj-svideo.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/aaa-generic-pal-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/aaa-generic-pal-rgb.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/famicom-av.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/famicom-c1.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/famicom-titler.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/famicom.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/gen.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/md-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/md.slangp
@@ -1564,6 +1607,8 @@
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/n64-us.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/n64.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/nes-eu.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/nes.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/pce.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/pceav.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/psx-eu.slangp
@@ -1583,6 +1628,7 @@
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/tg16.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/steamdeck-oled-native/professional/tg16av.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/arcade/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/arcade/nvs.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/3do-240p.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/3do-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/3do-us.slangp
@@ -1590,6 +1636,7 @@
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/aaa-generic-ntsc-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/aaa-generic-ntscj-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/aaa-generic-pal-composite.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/famicom.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/gen.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/md-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/md.slangp
@@ -1597,6 +1644,9 @@
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/n64-us.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/n64.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/nes-eu.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/nes-gb.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/nes.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/pce.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/pceav.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/consumer/psx-eu.slangp
@@ -1632,6 +1682,10 @@
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/aaa-generic-ntscj-svideo.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/aaa-generic-pal-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/aaa-generic-pal-rgb.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/famicom-av.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/famicom-c1.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/famicom-titler.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/famicom.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/gen.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/md-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/md.slangp
@@ -1639,6 +1693,8 @@
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/n64-us.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/n64.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/nes-eu.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/nes.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/pce.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/pceav.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/psx-eu.slangp
@@ -1658,6 +1714,7 @@
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/tg16.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-hdr/professional/tg16av.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/arcade/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/arcade/nvs.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/3do-240p.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/3do-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/3do-us.slangp
@@ -1665,6 +1722,7 @@
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/aaa-generic-ntsc-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/aaa-generic-ntscj-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/aaa-generic-pal-composite.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/famicom.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/gen.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/md-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/md.slangp
@@ -1672,6 +1730,9 @@
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/n64-us.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/n64.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/nes-eu.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/nes-gb.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/nes.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/pce.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/pceav.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/consumer/psx-eu.slangp
@@ -1707,6 +1768,10 @@
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/aaa-generic-ntscj-svideo.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/aaa-generic-pal-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/aaa-generic-pal-rgb.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/famicom-av.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/famicom-c1.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/famicom-titler.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/famicom.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/gen.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/md-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/md.slangp
@@ -1714,6 +1779,8 @@
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/n64-us.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/n64.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/nes-eu.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/nes.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/pce.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/pceav.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/psx-eu.slangp
@@ -1733,6 +1800,7 @@
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/tg16.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-sdr/professional/tg16av.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/arcade/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/arcade/nvs.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/3do-240p.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/3do-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/3do-us.slangp
@@ -1740,6 +1808,7 @@
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/aaa-generic-ntsc-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/aaa-generic-ntscj-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/aaa-generic-pal-composite.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/famicom.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/gen.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/md-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/md.slangp
@@ -1747,6 +1816,9 @@
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/n64-us.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/n64.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/nes-eu.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/nes-gb.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/nes.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/pce.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/pceav.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/consumer/psx-eu.slangp
@@ -1782,6 +1854,10 @@
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/aaa-generic-ntscj-svideo.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/aaa-generic-pal-composite.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/aaa-generic-pal-rgb.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/famicom-av.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/famicom-c1.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/famicom-titler.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/famicom.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/gen.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/md-eu.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/md.slangp
@@ -1789,6 +1865,8 @@
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/n64-us.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/n64.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/neogeo.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/nes-eu.slangp
+%%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/nes.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/pce.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/pceav.slangp
 %%DATADIR%%/bezel/scanline-classic/presets/uhd-4k-wcg/professional/psx-eu.slangp
@@ -1838,7 +1916,10 @@
 %%DATADIR%%/bezel/scanline-classic/shaders/display-component.slang
 %%DATADIR%%/bezel/scanline-classic/shaders/display-rgb-bandlimit.slang
 %%DATADIR%%/bezel/scanline-classic/shaders/display-svideo.slang
+%%DATADIR%%/bezel/scanline-classic/shaders/famicom-rgb.slang
+%%DATADIR%%/bezel/scanline-classic/shaders/famicom-special.slang
 %%DATADIR%%/bezel/scanline-classic/shaders/filter.h
+%%DATADIR%%/bezel/scanline-classic/shaders/filter.slang
 %%DATADIR%%/bezel/scanline-classic/shaders/frame.slang
 %%DATADIR%%/bezel/scanline-classic/shaders/frameh.slang
 %%DATADIR%%/bezel/scanline-classic/shaders/framev.slang
@@ -1875,6 +1956,9 @@
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/menu-digital-video-upsample-hdr.slang
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/menu-digital-video-upsample-sdr.slang
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/menu-digital-video-upsample-wcg.slang
+%%DATADIR%%/bezel/scanline-classic/shaders/menus/menu-famicom-hdr.slang
+%%DATADIR%%/bezel/scanline-classic/shaders/menus/menu-famicom-sdr.slang
+%%DATADIR%%/bezel/scanline-classic/shaders/menus/menu-famicom-wcg.slang
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/menu-hdr.slang
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/menu-rf-direct-hdr.slang
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/menu-rf-direct-sdr.slang
@@ -1901,6 +1985,7 @@
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/digital-upsample.inc
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/display-rgb.inc
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/factory-geometry.inc
+%%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/famicom.inc
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/limiter.inc
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/mask.inc
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/output-bezel.inc
@@ -1908,6 +1993,9 @@
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/output-color-wcg.inc
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/output-color.inc
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/output-curve.inc
+%%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/output-tonemap-hdr.inc
+%%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/output-tonemap-sdr.inc
+%%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/output-tonemap-wcg.inc
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/output-tonemap.inc
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/phosphor.inc
 %%DATADIR%%/bezel/scanline-classic/shaders/menus/parameters/rf.inc
@@ -2470,6 +2558,7 @@
 %%DATADIR%%/crt/crt-guest-advanced-fastest.slangp
 %%DATADIR%%/crt/crt-guest-advanced-hd.slangp
 %%DATADIR%%/crt/crt-guest-advanced-ntsc.slangp
+%%DATADIR%%/crt/crt-guest-advanced-pal.slangp
 %%DATADIR%%/crt/crt-guest-advanced.slangp
 %%DATADIR%%/crt/crt-hyllian-3d.slangp
 %%DATADIR%%/crt/crt-hyllian-fast.slangp
@@ -2865,6 +2954,7 @@
 %%DATADIR%%/crt/shaders/guest/advanced/crt-guest-advanced-ntsc-pass1.slang
 %%DATADIR%%/crt/shaders/guest/advanced/crt-guest-advanced-ntsc-pass2.slang
 %%DATADIR%%/crt/shaders/guest/advanced/crt-guest-advanced.slang
+%%DATADIR%%/crt/shaders/guest/advanced/custom-fast-sharpen-pal.slang
 %%DATADIR%%/crt/shaders/guest/advanced/custom-fast-sharpen.slang
 %%DATADIR%%/crt/shaders/guest/advanced/deconvergence-ntsc.slang
 %%DATADIR%%/crt/shaders/guest/advanced/deconvergence.slang
@@ -2873,6 +2963,8 @@
 %%DATADIR%%/crt/shaders/guest/advanced/grade/pre-shaders-afterglow-grade-old.slang
 %%DATADIR%%/crt/shaders/guest/advanced/grade/pre-shaders-afterglow-grade.slang
 %%DATADIR%%/crt/shaders/guest/advanced/grade/readme_grade.txt
+%%DATADIR%%/crt/shaders/guest/advanced/interlace-ntsc.slang
+%%DATADIR%%/crt/shaders/guest/advanced/linearize-ntsc-new.slang
 %%DATADIR%%/crt/shaders/guest/advanced/linearize-ntsc.slang
 %%DATADIR%%/crt/shaders/guest/advanced/linearize.slang
 %%DATADIR%%/crt/shaders/guest/advanced/lut/inv-trinitron-lut.png
@@ -2882,6 +2974,9 @@
 %%DATADIR%%/crt/shaders/guest/advanced/ntsc/ntsc-pass1.slang
 %%DATADIR%%/crt/shaders/guest/advanced/ntsc/ntsc-pass2.slang
 %%DATADIR%%/crt/shaders/guest/advanced/ntsc/ntsc-pass3.slang
+%%DATADIR%%/crt/shaders/guest/advanced/pal/pal-pass1.slang
+%%DATADIR%%/crt/shaders/guest/advanced/pal/pal-pass2.slang
+%%DATADIR%%/crt/shaders/guest/advanced/pal/pal-pass3.slang
 %%DATADIR%%/crt/shaders/guest/advanced/pre-shaders-afterglow.slang
 %%DATADIR%%/crt/shaders/guest/advanced/stock.slang
 %%DATADIR%%/crt/shaders/guest/fast/bloom_horizontal.slang
@@ -2908,6 +3003,13 @@
 %%DATADIR%%/crt/shaders/guest/hd/linearize-hd.slang
 %%DATADIR%%/crt/shaders/guest/hd/pre-shaders-afterglow.slang
 %%DATADIR%%/crt/shaders/guest/hd/stock.slang
+%%DATADIR%%/crt/shaders/guest/pre-scaler-presets/scalefx-horizontal.slangp
+%%DATADIR%%/crt/shaders/guest/pre-scaler-presets/scalefx.slangp
+%%DATADIR%%/crt/shaders/guest/pre-scaler-presets/super-xbr-sharp.slangp
+%%DATADIR%%/crt/shaders/guest/pre-scaler-presets/super-xbr-smooth.slangp
+%%DATADIR%%/crt/shaders/guest/pre-scaler-presets/xbr-lv2.slangp
+%%DATADIR%%/crt/shaders/guest/pre-scaler-presets/xbr-lv3-horizontal.slangp
+%%DATADIR%%/crt/shaders/guest/pre-scaler-presets/xbr-lv3.slangp
 %%DATADIR%%/crt/shaders/hyllian/crt-hyllian-3d.slang
 %%DATADIR%%/crt/shaders/hyllian/crt-hyllian-base.slang
 %%DATADIR%%/crt/shaders/hyllian/crt-hyllian-fast.slang
@@ -3308,6 +3410,14 @@
 %%DATADIR%%/edge-smoothing/scalenx/shaders/scale2xplus.slang
 %%DATADIR%%/edge-smoothing/scalenx/shaders/scale3x.slang
 %%DATADIR%%/edge-smoothing/scalenx/shaders/scale3xSFX.slang
+%%DATADIR%%/edge-smoothing/vectorscale/shaders/cell-graph.slang
+%%DATADIR%%/edge-smoothing/vectorscale/shaders/cell-rasterizer.slang
+%%DATADIR%%/edge-smoothing/vectorscale/shaders/init-positions.slang
+%%DATADIR%%/edge-smoothing/vectorscale/shaders/optimize-energy.slang
+%%DATADIR%%/edge-smoothing/vectorscale/shaders/resolve-crossings.slang
+%%DATADIR%%/edge-smoothing/vectorscale/shaders/similarity-graph.slang
+%%DATADIR%%/edge-smoothing/vectorscale/shaders/update-tjunction.slang
+%%DATADIR%%/edge-smoothing/vectorscale/vectorscale.slangp
 %%DATADIR%%/edge-smoothing/xbr/README.md
 %%DATADIR%%/edge-smoothing/xbr/hybrid-jinc2-xbr-lv2.slangp
 %%DATADIR%%/edge-smoothing/xbr/other presets/2xBR-lv1-multipass.slangp

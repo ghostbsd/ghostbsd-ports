@@ -44,8 +44,8 @@ EBUR128_DEFAULT?=	rust
 .  else
 EBUR128_DEFAULT?=	legacy
 .  endif
-# Possible_values: full canna nox devel_full devel_nox
-#EMACS_DEFAULT?=	let the flavor be the default if not explicitly set
+# Possible values: full canna nox wayland devel_full devel_nox (default: nox)
+#EMACS_DEFAULT?=	nox
 # Possible values: 3.0, 4.0
 FIREBIRD_DEFAULT?=	3.0
 # Possible values: gfortran
@@ -73,11 +73,13 @@ GUILE_DEFAULT?=		2.2
 # Format:	     version[-flavor]
 # Examples:	     6-nox11, 7
 IMAGEMAGICK_DEFAULT?=	7
-# Possible values: 8, 11, 17, 21, 22, 23, 24, 25
-.  if ${ARCH:Marmv*}
+# Possible values: 8, 11, 17, 21, 23, 24, 25
+.  if ${ARCH:Marmv*} || ${ARCH} == powerpc
 JAVA_DEFAULT?=		11
-.  else
+.  elif ${ARCH:Mi386}
 JAVA_DEFAULT?=		21
+.  else
+JAVA_DEFAULT?=		25
 .  endif
 # Possible values: 4.6, 4.99
 .  if (defined(WANT_LAZARUS_DEVEL) && !empty(WANT_LAZARUS_DEVEL)) || ${ARCH:Maarch64} || ${ARCH:Mpowerpc*}
@@ -109,7 +111,7 @@ LUAJIT_DEFAULT?=	luajit
 .  endif
 # Possible values: 5.10, 5.20, 6.8
 MONO_DEFAULT?=		5.20
-# Possible values: 8.0, 8.4, 9.1, 9.4, 9.6, 10.6m, 10.11m, 11.4m, 11.8m
+# Possible values: 8.0, 8.4, 9.6, 10.6m, 10.11m, 11.4m, 11.8m
 MYSQL_DEFAULT?=		8.4
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
@@ -156,7 +158,7 @@ RUST_DEFAULT?=		rust
 SAMBA_DEFAULT?=		4.16
 # When updating this, please also update the same list in ssl.mk and the checks
 # for USES=ssl in qa.sh!
-# Possible values: base, openssl, openssl111, openssl33, openssl34, openssl35,
+# Possible values: base, openssl, openssl111, openssl34, openssl35,
 # openssl36, libressl, libressl-devel
 .  if !defined(SSL_DEFAULT)
 #	If no preference was set, check for an installed base version

@@ -1,0 +1,13 @@
+Obtained from:	https://github.com/pdm-project/pdm/commit/4f30a9228cb9ad50588ecd32f0f5a960408c9621
+
+--- pyproject.toml.orig	2026-03-24 07:21:59 UTC
++++ pyproject.toml
+@@ -31,7 +31,7 @@ dependencies = [
+     "shellingham>=1.3.2",
+     "python-dotenv>=0.15",
+     "resolvelib>=1.1",
+-    "installer<0.8,>=0.7",
++    "installer>=0.7",
+     "truststore>=0.10.4; python_version >= \"3.10\"",
+     "tomli>=1.1.0; python_version < \"3.11\"",
+     "importlib-metadata>=3.6; python_version < \"3.10\"",

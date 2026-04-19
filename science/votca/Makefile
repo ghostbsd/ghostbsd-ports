@@ -1,7 +1,6 @@
 PORTNAME=	votca
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2025.1
-PORTREVISION=	1
+DISTVERSION=	2026
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -32,7 +31,7 @@ LIB_DEPENDS=	libboost_program_options.so:devel/boost-libs \
 		libsz.so:science/libaec \
 		libxc.so:science/libxc
 RUN_DEPENDS=	bash:shells/bash \
-		${PYNUMPY} \
+		${PYTHON_PKGNAMEPREFIX}numpy1>=1.16:math/py-numpy1@${PY_FLAVOR} \
 		${PY_DEPENDS}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
 
@@ -42,8 +41,7 @@ USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 
 SHEBANG_GLOB=	*.sh *.pl *.py
-SHEBANG_FILES=	csg/scripts/csg_call csg/scripts/csg_inverse \
-		tools/scripts/votca_compare tools/scripts/votca_help2doc \
+SHEBANG_FILES=	tools/scripts/votca_compare tools/scripts/votca_help2doc \
 		xtp/scripts/xtp_update_mapfile xtp/scripts/xtp_basisset xtp/share/benchmark/xtp_benchmark xtp/scripts/xtp_autogen_mapping \
 		xtp/scripts/xtp_modify_jobfile \
 		xtp/scripts/xtp_qmmm2qm
@@ -73,6 +71,6 @@ do-test: # several tests fail, see https://github.com/votca/votca/issues/1098
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} ${ALL_TARGET} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} test
 
-# tests as of 2025.1: 100% tests passed, 0 tests failed out of 249
+# tests as of 2026: 100% tests passed, 0 tests failed out of 248
 
 .include <bsd.port.mk>

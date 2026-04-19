@@ -1,4 +1,4 @@
---- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2026-03-24 16:59:08 UTC
+--- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2026-04-15 12:07:04 UTC
 +++ chrome/browser/ui/webui/management/management_ui_handler.cc
 @@ -69,7 +69,7 @@
  #include "ui/base/l10n/l10n_util.h"

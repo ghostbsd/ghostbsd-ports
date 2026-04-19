@@ -3,7 +3,7 @@ PORTVERSION=	1.5.2
 CATEGORIES=	editors kde
 MASTER_SITES=	KDE/stable/marknote/
 
-MAINTAINER=	kde@FreeBSD
+MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Simple markdown note management app
 WWW=		https://apps.kde.org/marknote/
 

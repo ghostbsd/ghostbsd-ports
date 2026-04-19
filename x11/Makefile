@@ -307,7 +307,6 @@
     SUBDIR += mkcomposecache
     SUBDIR += mlterm
     SUBDIR += mons
-    SUBDIR += mrxvt
     SUBDIR += mxascii
     SUBDIR += mxico
     SUBDIR += nezd

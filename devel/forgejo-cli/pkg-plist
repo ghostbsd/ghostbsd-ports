@@ -1,0 +1,4 @@
+bin/fj
+share/bash-completion/completions/fj
+share/fish/completions/fj.fish
+share/zsh/site-functions/_fj

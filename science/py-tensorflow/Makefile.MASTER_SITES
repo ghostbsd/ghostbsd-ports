@@ -70,7 +70,26 @@ clang+llvm-18.1.8-x86_64-linux-gnu-ubuntu-18.04.tar.xz:clang18 \
 x86_64_ubuntu18_gcc8.4-0.2.1.tar.xz:gcc_sysroot \
 cpython-3.11.13+20250808-x86_64-unknown-linux-gnu-install_only.tar.gz:cpython311 \
 libtinfo.so.5:libtinfo \
-copyright.txt:libtinfo_cp
+copyright.txt:libtinfo_cp \
+v1.74.0.tar.gz:grpc_src \
+28e9d1f26771c6517c3b4be10254887673c940189.zip:googletest_src \
+4de3c74cf21a9958c1cf26d8993c55c6e0d28b49.tar.gz:envoy_api_src \
+v1.2.1.zip:protoc_gen_validate_src \
+bazel-gazelle-v0.37.0.tar.gz:bazel_gazelle_src \
+rules_java-8.7.0.tar.gz:rules_java_870 \
+7.0.2.tar.gz:rules_proto_702 \
+v2.35.0.tar.gz:google_cloud_cpp_src \
+d198303a4319092ab31895c4b98d64174ebe8872.tar.gz:bazel_compdb_src \
+6360e96b5cf8e5980c887ce58ef727e53d77243a.tar.gz:c_ares_src \
+3a472e524827f72d1ad621c4983dd5af54c46776.tar.gz:cncf_xds_src \
+12235e24652fc7f809373e7c11a5f73c5763fc4c.tar.gz:benchmark \
+1f95f8083066f5b38fd2db172e7e7f9aa7c49d2d.tar.gz:libprotobuf_mutator_src \
+5501a1a255805e0be83a41348bb5f2630d5ed6b3.tar.gz:opencensus_cpp_src \
+ced79860f8c8a091a2eabfee6d47783f828a9b59.tar.gz:opentelemetry_cpp_src \
+v0.3.0.tar.gz:opencensus_proto_src \
+rules_cc-0.0.17.tar.gz:rules_cc_017 \
+rules_shell-v0.3.0.tar.gz:rules_shell_030 \
+0.8.0.tar.gz:yaml_cpp_src
 
 MASTER_SITES+=https://github.com/bazelbuild/platforms/releases/download/0.0.11/:platforms \
 https://github.com/bazelbuild/apple_support/releases/download/1.24.5/:apple \
@@ -144,4 +163,22 @@ https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/:clang18 \
 https://storage.googleapis.com/ml-sysroot-testing/x86_64/:gcc_sysroot \
 https://github.com/astral-sh/python-build-standalone/releases/download/20250808/:cpython311 \
 https://storage.googleapis.com/ml-sysroot-testing/libtinfo/:libtinfo \
-https://storage.googleapis.com/ml-sysroot-testing/libtinfo/:libtinfo_cp
+https://storage.googleapis.com/ml-sysroot-testing/libtinfo/:libtinfo_cp \
+https://github.com/grpc/grpc/archive/refs/tags/:grpc_src \
+https://github.com/google/googletest/archive/:googletest_src \
+https://github.com/envoyproxy/data-plane-api/archive/:envoy_api_src \
+https://github.com/bufbuild/protoc-gen-validate/archive/refs/tags/:protoc_gen_validate_src \
+https://github.com/bazelbuild/bazel-gazelle/releases/download/v0.37.0/:bazel_gazelle_src \
+https://github.com/bazelbuild/rules_java/releases/download/8.7.0/:rules_java_870 \
+https://github.com/bazelbuild/rules_proto/archive/refs/tags/:rules_proto_702 \
+https://github.com/googleapis/google-cloud-cpp/archive/refs/tags/:google_cloud_cpp_src \
+https://github.com/grailbio/bazel-compilation-database/archive/:bazel_compdb_src \
+https://github.com/c-ares/c-ares/archive/:c_ares_src \
+https://github.com/cncf/xds/archive/:cncf_xds_src \
+https://github.com/google/libprotobuf-mutator/archive/:libprotobuf_mutator_src \
+https://github.com/census-instrumentation/opencensus-cpp/archive/:opencensus_cpp_src \
+https://github.com/open-telemetry/opentelemetry-cpp/archive/:opentelemetry_cpp_src \
+https://github.com/census-instrumentation/opencensus-proto/archive/refs/tags/:opencensus_proto_src \
+https://github.com/bazelbuild/rules_cc/releases/download/0.0.17/:rules_cc_017 \
+https://github.com/bazelbuild/rules_shell/releases/download/v0.3.0/:rules_shell_030 \
+https://github.com/jbeder/yaml-cpp/archive/refs/tags/:yaml_cpp_src

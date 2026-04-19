@@ -11,7 +11,7 @@
 %%CGI%%%%WWWDIR%%/header.html
 %%CGI%%%%WWWDIR%%/index.html
 %%CGI%%%%WWWDIR%%/nut-banner.png
-%%CGI%%%%WWWDIR%%/nut-logo.png
+%%CGI%%%%WWWDIR%%/nut-logo-60x60.png
 %%ETCDIR%%/cmdvartab
 %%ETCDIR%%/driver.list
 @sample %%ETCDIR%%/nut.conf.sample
@@ -48,7 +48,7 @@ lib/libnutclient.so.2.1.0
 lib/libupsclient.a
 lib/libupsclient.so
 lib/libupsclient.so.7
-lib/libupsclient.so.7.0.0
+lib/libupsclient.so.7.1.0
 lib/libnutclientstub.a
 lib/libnutclientstub.so
 lib/libnutclientstub.so.1
@@ -170,6 +170,20 @@ lib/libnutscan.so.4.1.0
 %%MANPAGES%%%%DEV%%share/man/man3/%%NUT_USER%%client_tcp_set_ssl_keyfile.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/%%NUT_USER%%client_tcp_set_ssl_keypass.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/%%NUT_USER%%client_tcp_set_ssl_try.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/%%NUT_USER%%scan_upslog_cookie.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/%%NUT_USER%%scan_upslog_get_debug_level.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/%%NUT_USER%%scan_upslog_getproctag.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/%%NUT_USER%%scan_upslog_set_debug_level.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/%%NUT_USER%%scan_upslog_setprocname.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/%%NUT_USER%%scan_upslog_setproctag.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/%%NUT_USER%%scan_upslog_start_sync.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/upscli_upslog_cookie.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/upscli_upslog_get_debug_level.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/upscli_upslog_getproctag.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/upscli_upslog_set_debug_level.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/upscli_upslog_setprocname.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/upscli_upslog_setproctag.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/upscli_upslog_start_sync.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/libnutclient.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/libnutclient_commands.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/libnutclient_devices.3.gz
@@ -238,7 +252,6 @@ lib/libnutscan.so.4.1.0
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_disconnect.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_fd.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_get.3.gz
-%%MANPAGES%%%%DEV%%share/man/man3/upscli_get_debug_level.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_get_default_connect_timeout.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_init.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_init_default_connect_timeout.3.gz
@@ -246,10 +259,11 @@ lib/libnutscan.so.4.1.0
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_list_start.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_readline.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_readline_timeout.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/upscli_readline_timeout_may_disconnect.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/upscli_sendline_timeout_may_disconnect.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_report_build_details.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_sendline.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_sendline_timeout.3.gz
-%%MANPAGES%%%%DEV%%share/man/man3/upscli_set_debug_level.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_set_default_connect_timeout.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_splitaddr.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_splitname.3.gz

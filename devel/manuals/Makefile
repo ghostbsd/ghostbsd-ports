@@ -17,7 +17,7 @@ LIB_DEPENDS=	libgom-1.0.so:databases/gom \
 		libwebkitgtk-6.0.so:www/webkit2-gtk@60 \
 		libfoundry-1.so:devel/foundry
 
-USES=		compiler:c11 gettext-tools gnome meson \
+USES=		compiler:c11 desktop-file-utils gettext-tools gnome meson \
 		pkgconfig tar:xz
 USE_GNOME=	glib20 gtk40 libadwaita
 GLIB_SCHEMAS=	app.devsuite.Manuals.gschema.xml

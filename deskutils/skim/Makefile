@@ -1,6 +1,6 @@
 PORTNAME=	skim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.0.1
+DISTVERSION=	4.6.0
 CATEGORIES=	deskutils
 PKGNAMESUFFIX=	-fuzzy-finder
 
@@ -42,15 +42,16 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		bit-set-0.5.3 \
 		bit-vec-0.6.3 \
 		bitflags-1.3.2 \
-		bitflags-2.11.0 \
+		bitflags-2.11.1 \
 		block-buffer-0.10.4 \
 		bstr-1.12.1 \
 		bumpalo-3.20.2 \
 		bytemuck-1.25.0 \
+		byteorder-1.5.0 \
 		bytes-1.11.1 \
 		cast-0.3.0 \
 		castaway-0.2.4 \
-		cc-1.2.58 \
+		cc-1.2.60 \
 		cfg-if-1.0.4 \
 		cfg_aliases-0.1.1 \
 		cfg_aliases-0.2.1 \
@@ -60,11 +61,11 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		ciborium-ll-0.2.2 \
 		clap-4.6.0 \
 		clap_builder-4.6.0 \
-		clap_complete-4.6.0 \
+		clap_complete-4.6.2 \
 		clap_complete_nushell-4.6.0 \
 		clap_derive-4.6.0 \
 		clap_lex-1.1.0 \
-		clap_mangen-0.2.33 \
+		clap_mangen-0.3.0 \
 		color-eyre-0.6.5 \
 		color-spantrace-0.3.0 \
 		colorchoice-1.0.5 \
@@ -109,7 +110,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		euclid-0.22.14 \
 		eyre-0.6.12 \
 		fancy-regex-0.11.0 \
-		fastrand-2.3.0 \
+		fastrand-2.4.1 \
 		filedescriptor-0.8.3 \
 		find-msvc-tools-0.1.9 \
 		finl_unicode-1.4.0 \
@@ -117,7 +118,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		fnv-1.0.7 \
 		foldhash-0.1.5 \
 		foldhash-0.2.0 \
-		frizbee-0.8.3 \
+		frizbee-0.9.0 \
 		futures-0.3.32 \
 		futures-channel-0.3.32 \
 		futures-core-0.3.32 \
@@ -131,20 +132,22 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		getrandom-0.3.4 \
 		getrandom-0.4.2 \
 		gimli-0.32.3 \
-		gungraun-0.17.2 \
-		gungraun-macros-0.7.2 \
-		gungraun-runner-0.17.2 \
+		gnuplot-0.0.46 \
+		gungraun-0.18.1 \
+		gungraun-macros-0.8.0 \
+		gungraun-runner-0.18.1 \
 		half-2.7.1 \
 		hashbrown-0.15.5 \
 		hashbrown-0.16.1 \
+		hashbrown-0.17.0 \
 		heck-0.5.0 \
 		hex-0.4.3 \
 		id-arena-2.3.0 \
 		ident_case-1.0.1 \
 		indenter-0.3.4 \
-		indexmap-2.13.0 \
+		indexmap-2.14.0 \
 		indoc-2.0.7 \
-		insta-1.47.0 \
+		insta-1.47.2 \
 		instability-0.3.12 \
 		interprocess-2.4.0 \
 		is_terminal_polyfill-1.70.2 \
@@ -153,20 +156,20 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		itoa-1.0.18 \
 		jiff-0.2.23 \
 		jiff-static-0.2.23 \
-		js-sys-0.3.92 \
+		js-sys-0.3.95 \
 		kanal-0.1.1 \
 		kasuari-0.4.12 \
 		lab-0.11.0 \
 		lazy_static-1.5.0 \
 		leb128fmt-0.1.0 \
-		libc-0.2.183 \
+		libc-0.2.185 \
 		libmimalloc-sys-0.1.44 \
 		line-clipping-0.3.7 \
 		linux-raw-sys-0.12.1 \
 		litrs-1.0.0 \
 		lock_api-0.4.14 \
 		log-0.4.29 \
-		lru-0.16.3 \
+		lru-0.16.4 \
 		mac_address-1.1.8 \
 		memchr-2.8.0 \
 		memmem-0.1.1 \
@@ -219,9 +222,9 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		r-efi-5.3.0 \
 		r-efi-6.0.0 \
 		rand-0.8.5 \
-		rand-0.10.0 \
+		rand-0.10.1 \
 		rand_core-0.6.4 \
-		rand_core-0.10.0 \
+		rand_core-0.10.1 \
 		ratatui-0.30.0 \
 		ratatui-core-0.1.0 \
 		ratatui-crossterm-0.1.0 \
@@ -229,28 +232,32 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		ratatui-termwiz-0.1.0 \
 		ratatui-widgets-0.3.0 \
 		raw-cpuid-11.6.0 \
-		rayon-1.11.0 \
+		rayon-1.12.0 \
 		rayon-core-1.13.0 \
 		recvmsg-1.0.0 \
 		redox_syscall-0.5.18 \
 		regex-1.12.3 \
 		regex-automata-0.4.14 \
 		regex-syntax-0.8.10 \
-		roff-1.1.0 \
-		ron-0.12.0 \
+		roff-1.1.1 \
+		ron-0.12.1 \
 		rustc-demangle-0.1.27 \
 		rustc_version-0.4.1 \
 		rustix-1.1.4 \
 		rustversion-1.0.22 \
 		ryu-1.0.23 \
 		same-file-1.0.6 \
+		scc-2.4.0 \
 		scopeguard-1.2.0 \
-		semver-1.0.27 \
+		sdd-3.0.10 \
+		semver-1.0.28 \
 		serde-1.0.228 \
 		serde_core-1.0.228 \
 		serde_derive-1.0.228 \
 		serde_json-1.0.149 \
-		serial2-0.2.34 \
+		serial2-0.2.36 \
+		serial_test-3.4.0 \
+		serial_test_derive-3.4.0 \
 		sha2-0.10.9 \
 		sharded-slab-0.1.7 \
 		shared_library-0.1.9 \
@@ -286,14 +293,14 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		tinytemplate-1.2.1 \
 		tinyvec-1.11.0 \
 		tinyvec_macros-0.1.1 \
-		tokio-1.50.0 \
-		tokio-macros-2.6.1 \
+		tokio-1.51.1 \
+		tokio-macros-2.7.0 \
 		tokio-util-0.7.18 \
 		tracing-0.1.44 \
 		tracing-core-0.1.36 \
 		tracing-error-0.2.1 \
 		tracing-subscriber-0.3.23 \
-		tui-term-0.3.2 \
+		tui-term-0.3.4 \
 		typeid-1.0.3 \
 		typenum-1.19.0 \
 		ucd-trie-0.1.7 \
@@ -316,14 +323,14 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		wasi-0.11.1+wasi-snapshot-preview1 \
 		wasip2-1.0.2+wasi-0.2.9 \
 		wasip3-0.4.0+wasi-0.3.0-rc-2026-01-06 \
-		wasm-bindgen-0.2.115 \
-		wasm-bindgen-macro-0.2.115 \
-		wasm-bindgen-macro-support-0.2.115 \
-		wasm-bindgen-shared-0.2.115 \
+		wasm-bindgen-0.2.118 \
+		wasm-bindgen-macro-0.2.118 \
+		wasm-bindgen-macro-support-0.2.118 \
+		wasm-bindgen-shared-0.2.118 \
 		wasm-encoder-0.244.0 \
 		wasm-metadata-0.244.0 \
 		wasmparser-0.244.0 \
-		web-sys-0.3.92 \
+		web-sys-0.3.95 \
 		wezterm-bidi-0.2.3 \
 		wezterm-blob-leases-0.1.1 \
 		wezterm-color-types-0.3.0 \
@@ -355,8 +362,8 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		wit-bindgen-rust-macro-0.51.0 \
 		wit-component-0.244.0 \
 		wit-parser-0.244.0 \
-		zerocopy-0.8.47 \
-		zerocopy-derive-0.8.47 \
+		zerocopy-0.8.48 \
+		zerocopy-derive-0.8.48 \
 		zmij-1.0.21
 
 PLIST_FILES=	bin/sk

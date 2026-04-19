@@ -1,7 +1,6 @@
 PORTNAME=	pytorch
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.10.0
-PORTREVISION=	2
+DISTVERSION=	2.11.0
 CATEGORIES=	misc # machine-learning
 MASTER_SITES=	https://github.com/pytorch/pytorch/releases/download/v${DISTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -24,7 +23,7 @@ BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 		cmake:devel/cmake-core \
 		gmake:devel/gmake \
 		pybind11>0:devel/pybind11 \
-		${PYNUMPY} \
+		${PYTHON_PKGNAMEPREFIX}numpy1>=1.16:math/py-numpy1@${PY_FLAVOR} \
 		${LOCALBASE}/include/fxdiv.h:devel/fxdiv \
 		${PYTHON_PKGNAMEPREFIX}filelock>0:sysutils/py-filelock@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}fsspec>0:filesystems/py-fsspec@${PY_FLAVOR} \
@@ -49,7 +48,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}filelock>0:sysutils/py-filelock@${PY_FLAVOR}
 		${PYTHON_PKGNAMEPREFIX}fsspec>0:filesystems/py-fsspec@${PY_FLAVOR}  \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}networkx>0:math/py-networkx@${PY_FLAVOR} \
-		${PYNUMPY} \
+		${PYTHON_PKGNAMEPREFIX}numpy1>=1.16:math/py-numpy1@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sympy>=1.13.3:math/py-sympy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}typing-extensions>=4.10.0:devel/py-typing-extensions@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyyaml>0:devel/py-pyyaml@${PY_FLAVOR}
@@ -66,7 +65,7 @@ PYDISTUTILS_PKGNAME=	torch
 PEP517_INSTALL_CMD=	${PYTHON_CMD} -m installer --destdir ${STAGEDIR} --prefix ${PREFIX} ${BUILD_WRKSRC}/dist/torch-${DISTVERSION}*.whl
 
 USE_GITHUB=	nodefault
-GH_TUPLE=	pytorch:cpuinfo:1e83a2f:cpuinfo/cpuinfo-with-freebsd-support # https://github.com/pytorch/cpuinfo/pull/230/commits
+GH_TUPLE=	pytorch:cpuinfo:bc3c01e:cpuinfo/cpuinfo-with-freebsd-support # https://github.com/pytorch/cpuinfo/pull/230/commits
 
 MAKE_ENV=	USE_NINJA=no # ninja breaks for some reason
 MAKE_ENV+=	BUILD_TEST=0 # ninja breaks for some reason
@@ -100,6 +99,9 @@ post-patch:
 		${RM} -r third_party/cpuinfo third_party/fbgemm/external/cpuinfo && \
 		${CP} -r cpuinfo-with-freebsd-support third_party/cpuinfo && \
 		${CP} -r cpuinfo-with-freebsd-support third_party/fbgemm/external/cpuinfo
+	# change hardcoded compiler in torch/_inductor/config.py
+	@${REINPLACE_CMD} -e 's|"g++"|"${CXX}"|' \
+		${WRKSRC}/torch/_inductor/config.py
 
 do-install: # port should be moved to 'torch', but keep this for now with the hardcoded 'torch' name
 	@${MKDIR} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
@@ -125,6 +127,6 @@ fix-plist: # remove the stray %%PYTHON_SITELIBDIR%%/caffe2 file
 	@${REINPLACE_CMD} -e "s|.*/caffe2$$||" ${TMPPLIST}
 
 do-test:
-	cd ${TEST_WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHON_CMD} run_test.py
+	@cd ${TEST_WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHON_CMD} run_test.py
 
 .include <bsd.port.mk>
