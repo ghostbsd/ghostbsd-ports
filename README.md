@@ -1,9 +1,6 @@
-This repository combines: 
+This repository is a tracking fork of the FreeBSD ports collection that includes GhostBSD-specific ports such as themes, wallpapers, drivers, and system tools.
 
-* the FreeBSD ports collection
-* PkgBase-oriented GhostBSD ports.
-
-The combination allows simplified, coherent updates to the (base) operating system and other installed software. 
+The combination allows simplified, coherent updates to GhostBSD and other installed software. 
 
 For an easy-to-use web-based interface to the FreeBSD ports collection, please see [FreshPorts](https://www.freshports.org/). For more general information, see [Installing Applications: Packages and Ports](https://docs.freebsd.org/en/books/handbook/ports/) in the FreeBSD Handbook, or the [ports(7)](https://www.freebsd.org/cgi/man.cgi?query=ports&sektion=7&manpath=FreeBSD) manual page (man ports). These will explain how to use ports and packages.
 
@@ -33,9 +30,12 @@ For information about contributing to FreeBSD ports, see the [Porter's Handbook]
 
 Note: the size of this tree **will grow** significantly through normal usage! Distribution files accumulate in `/usr/ports/distfiles` – this directory can be occasionally cleaned without ill-effect. Building ports will use much space in work subdirectories – when these work files are no longer required, you can `make clean`. 
 
-### [Instructions for keeping GhostBSD ports current with FreeBSD ports.](https://ghostbsd-documentation-portal.readthedocs.io/en/latest/contributor/maintenance-release/maintaining-ports-tree.html)
+### Useful links
 
-### To use the hook from FreeBSD adapted for GhostBSD.
+- [Keeping GhostBSD ports current with FreeBSD ports](https://ghostbsd-documentation-portal.readthedocs.io/en/latest/contributor/maintenance-release/maintaining-ports-tree.html)
+- [FreeBSD Porter's Handbook](https://docs.freebsd.org/en/books/porters-handbook/)
+
+### To use the hook from FreeBSD adapted for GhostBSD
 
 ```
 git config --add core.hooksPath .hooks
