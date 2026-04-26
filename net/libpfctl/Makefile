@@ -23,7 +23,9 @@ PLIST_FILES=	\
 
 .include <bsd.port.pre.mk>
 
-.if ${OSREL} == "16.0"
+.if ${OSREL} == "15.1"
+DISTFILES=	libpfctl-15.0_${_LIBPFCTL_REV}.tar.gz
+.elif ${OSREL} == "16.0"
 DISTFILES=	libpfctl-${_LIBPFCTL_HASH}.tar.gz
 .else
 DISTFILES=	libpfctl-${OSREL}_${_LIBPFCTL_REV}.tar.gz
