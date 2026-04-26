@@ -35,7 +35,7 @@ Note: the size of this tree **will grow** significantly through normal usage! Di
 - [Keeping GhostBSD ports current with FreeBSD ports](https://ghostbsd-documentation-portal.readthedocs.io/en/latest/contributor/maintenance-release/maintaining-ports-tree.html)
 - [FreeBSD Porter's Handbook](https://docs.freebsd.org/en/books/porters-handbook/)
 
-### To use the hook from FreeBSD adapted for GhostBSD
+### Using the FreeBSD hook adapted for GhostBSD
 
 ```
 git config --add core.hooksPath .hooks
