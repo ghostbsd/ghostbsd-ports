@@ -1,0 +1,7 @@
+llvm%%LLVM_SUFFIX%%/lib/libLLVM-%%LLVM_MAJOR%%.so
+llvm%%LLVM_SUFFIX%%/lib/libLLVM-%%LLVM_RELEASE%%.so
+llvm%%LLVM_SUFFIX%%/lib/libLLVM.so
+llvm%%LLVM_SUFFIX%%/lib/libLTO.so
+llvm%%LLVM_SUFFIX%%/lib/libLTO.so.%%LLVM_MAJOR%%
+llvm%%LLVM_SUFFIX%%/lib/libRemarks.so
+llvm%%LLVM_SUFFIX%%/lib/libRemarks.so.%%LLVM_MAJOR%%

@@ -120,15 +120,24 @@ _LLVM_MK_SUFFIX_${_ver}?=	${_ver}
 
 # === define variables to depend on and export ===
 _LLVM_MK_PORT=		devel/llvm${_LLVM_MK_SUFFIX_${_LLVM_MK_VERSION}}
+# GhostBSD: lib mode uses lightweight -libs port for shared libs only (do not remove)
+_LLVM_MK_PORT_LIBS=	devel/llvm${_LLVM_MK_SUFFIX_${_LLVM_MK_VERSION}}-libs
 _LLVM_MK_LIBLLVM=	libLLVM-${_LLVM_MK_VERSION}.so
 _LLVM_MK_PATH=		llvm-config${_LLVM_MK_SUFFIX_${_LLVM_MK_VERSION}}
 _LLVM_MK_PREFIX=	${PREFIX}/llvm${_LLVM_MK_SUFFIX_${_LLVM_MK_VERSION}}
 
 # == add actual dependencies ===
+# GhostBSD: lib mode uses the lightweight -libs port at runtime,
+# but still needs full llvm for build (headers, llvm-config) (do not remove)
 _LLVM_MK_PATH_lib=	${_LLVM_MK_LIBLLVM}
 .  for _mode in ${_LLVM_MK_MODES}
 _LLVM_MK_PATH_${_mode}?=	${_LLVM_MK_PATH}
+.    if ${_mode} == lib
+BUILD_DEPENDS+=		${_LLVM_MK_PATH}:${_LLVM_MK_PORT}
+${_mode:tu}_DEPENDS+=	${_LLVM_MK_PATH_${_mode}}:${_LLVM_MK_PORT_LIBS}
+.    else
 ${_mode:tu}_DEPENDS+=	${_LLVM_MK_PATH_${_mode}}:${_LLVM_MK_PORT}
+.    endif
 .  endfor
 
 # == export config ===

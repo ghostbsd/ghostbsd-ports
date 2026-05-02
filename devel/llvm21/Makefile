@@ -1,6 +1,6 @@
 PORTNAME=	llvm
 DISTVERSION=	21.1.8
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION}/
 #MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/
@@ -14,7 +14,9 @@ WWW=		https://llvm.org/
 
 .include "${.CURDIR}/../llvm-devel/Makefile.LICENSE"
 
-LIB_DEPENDS=	libzstd.so:archivers/zstd
+# GhostBSD: depend on llvm-libs for shared library split (do not remove)
+LIB_DEPENDS=	libzstd.so:archivers/zstd \
+		libLLVM-${LLVM_MAJOR}.so:devel/llvm${LLVM_MAJOR}-libs
 
 FLAVORS=	default lite
 FLAVOR?=	${FLAVORS:[1]}
@@ -521,6 +523,14 @@ post-patch-LLD-on:
 	    ${WRKSRC}/lld/docs/conf.py
 
 post-install:
+# GhostBSD: remove shared libs now provided by devel/llvm21-libs (do not remove)
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLLVM.so.${LLVM_MAJOR_MINOR}
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLTO.so.${LLVM_MAJOR_MINOR}
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libRemarks.so.${LLVM_MAJOR_MINOR}
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLLVM-${LLVM_MAJOR}.so
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLLVM.so
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLTO.so
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libRemarks.so
 	${INSTALL_SCRIPT} ${WRKDIR}/llvm-wrapper.sh \
 	    ${STAGEDIR}${PREFIX}/bin/${FIRST_COMMAND}${LLVM_SUFFIX}
 .for command in ${COMMANDS:C/^/XXXX/1:NXXXX*}

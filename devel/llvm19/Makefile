@@ -1,6 +1,6 @@
 PORTNAME=	llvm
 DISTVERSION=	19.1.7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION}/
 #MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/
@@ -14,7 +14,9 @@ WWW=		https://llvm.org/
 
 .include "${.CURDIR}/../llvm-devel/Makefile.LICENSE"
 
-LIB_DEPENDS=	libzstd.so:archivers/zstd
+# GhostBSD: depend on llvm-libs for shared library split (do not remove)
+LIB_DEPENDS=	libzstd.so:archivers/zstd \
+		libLLVM-${LLVM_MAJOR}.so:devel/llvm${LLVM_MAJOR}-libs
 
 FLAVORS=	default lite
 FLAVOR?=	${FLAVORS:[1]}
@@ -518,6 +520,14 @@ post-install:
 	${LN} -f ${STAGEDIR}${PREFIX}/bin/${FIRST_COMMAND}${LLVM_SUFFIX} \
 	    ${STAGEDIR}${PREFIX}/bin/${command}${LLVM_SUFFIX}
 .endfor
+# GhostBSD: remove shared libs now provided by devel/llvm19-libs (do not remove)
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLLVM-${LLVM_MAJOR}.so
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLLVM.so
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLLVM.so.${LLVM_MAJOR_MINOR}
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLTO.so
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLTO.so.${LLVM_MAJOR_MINOR}
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libRemarks.so
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libRemarks.so.${LLVM_MAJOR_MINOR}
 
 post-install-DOCS-on:
 	${RM} -r ${STAGEDIR}${DOCSDIR}

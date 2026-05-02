@@ -5197,9 +5197,7 @@ llvm%%LLVM_SUFFIX%%/lib/cmake/llvm/llvm-driver-template.cpp.in
 %%STATIC_LIBS%%%%FLANG%%llvm%%LLVM_SUFFIX%%/lib/libFortranRuntime.a
 %%STATIC_LIBS%%%%FLANG%%llvm%%LLVM_SUFFIX%%/lib/libFortranSemantics.a
 %%STATIC_LIBS%%%%FLANG%%llvm%%LLVM_SUFFIX%%/lib/libFortran_main.a
-llvm%%LLVM_SUFFIX%%/lib/libLLVM-%%LLVM_MAJOR%%.so
-llvm%%LLVM_SUFFIX%%/lib/libLLVM-%%LLVM_RELEASE%%.so
-llvm%%LLVM_SUFFIX%%/lib/libLLVM.so
+@comment libLLVM*.so now provided by devel/llvm15-libs
 %%STATIC_LIBS%%llvm%%LLVM_SUFFIX%%/lib/libLLVMAggressiveInstCombine.a
 %%STATIC_LIBS%%llvm%%LLVM_SUFFIX%%/lib/libLLVMAnalysis.a
 %%STATIC_LIBS%%llvm%%LLVM_SUFFIX%%/lib/libLLVMAsmParser.a
@@ -5276,8 +5274,7 @@ llvm%%LLVM_SUFFIX%%/lib/libLLVM.so
 %%STATIC_LIBS%%llvm%%LLVM_SUFFIX%%/lib/libLLVMWindowsManifest.a
 %%STATIC_LIBS%%llvm%%LLVM_SUFFIX%%/lib/libLLVMXRay.a
 %%STATIC_LIBS%%llvm%%LLVM_SUFFIX%%/lib/libLLVMipo.a
-llvm%%LLVM_SUFFIX%%/lib/libLTO.so
-llvm%%LLVM_SUFFIX%%/lib/libLTO.so.%%LLVM_MAJOR%%
+@comment libLTO.so now provided by devel/llvm15-libs
 %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIR.so
 %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIR.so.%%LLVM_MAJOR%%
 %%STATIC_LIBS%%%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIRAMDGPUDialect.a
@@ -5510,8 +5507,7 @@ llvm%%LLVM_SUFFIX%%/lib/libLTO.so.%%LLVM_MAJOR%%
 %%STATIC_LIBS%%%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIRX86VectorDialect.a
 %%STATIC_LIBS%%%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIRX86VectorToLLVMIRTranslation.a
 %%STATIC_LIBS%%%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIRX86VectorTransforms.a
-llvm%%LLVM_SUFFIX%%/lib/libRemarks.so
-llvm%%LLVM_SUFFIX%%/lib/libRemarks.so.%%LLVM_MAJOR%%
+@comment libRemarks.so now provided by devel/llvm15-libs
 %%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libarcher.so
 %%STATIC_LIBS%%%%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libarcher_static.a
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang-cpp.so
