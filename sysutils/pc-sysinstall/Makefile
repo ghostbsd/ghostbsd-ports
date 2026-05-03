@@ -1,5 +1,5 @@
 PORTNAME=	pc-sysinstall
-PORTVERSION=	2026041500
+PORTVERSION=	2026050300
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 
@@ -17,6 +17,6 @@ MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}
 USE_GITHUB=	yes
 GH_ACCOUNT=	ghostbsd
 GH_PROJECT=	pc-sysinstall
-GH_TAGNAME=	ac6b1ae
+GH_TAGNAME=	5bdd05e
 
 .include <bsd.port.mk>
