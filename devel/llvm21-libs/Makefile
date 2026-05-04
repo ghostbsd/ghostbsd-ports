@@ -1,7 +1,7 @@
 # GhostBSD: standalone port providing LLVM runtime shared libraries.
-# This is based on devel/llvm21 (default flavor) but only installs
-# libLLVM, libLTO, and libRemarks.  Builds with identical options and
-# patches so the resulting .so files are ABI-compatible with the full port.
+# This is based on devel/llvm21 (default flavor) but only installs .so files.
+# Builds with identical options and patches so the resulting shared
+# libraries are ABI-compatible with the full port.
 PORTNAME=	llvm
 DISTVERSION=	21.1.8
 CATEGORIES=	devel
@@ -164,11 +164,20 @@ CMAKE_BUILD_TYPE=	RelWithDebInfo
 STRIP=
 .endif
 
-PLIST_SUB+=	LLVM_MAJOR=${LLVM_MAJOR} \
+PLIST_SUB+=	CONFIGURE_TARGET=${CONFIGURE_TARGET} \
+		LLVM_MAJOR=${LLVM_MAJOR} \
 		LLVM_MAJOR_MINOR=${LLVM_MAJOR_MINOR} \
+		LLVM_RELEASE=${LLVM_RELEASE} \
 		LLVM_SUFFIX=${LLVM_SUFFIX}
 
 .include <bsd.port.options.mk>
+
+# Comment out plist entries for unsupported options.
+.for opt in ${_ALL_OPTIONS}
+.if !${OPTIONS_DEFINE:M${opt}}
+PLIST_SUB+=	${opt}="@comment "
+.endif
+.endfor
 
 # keep in sync with /usr/src/lib/clang/clang.build.mk
 # ----------- start of sync block ------------------
@@ -283,20 +292,15 @@ post-patch-LLD-on:
 	${REINPLACE_CMD} -e "s|'indexsidebar.html'|['indexsidebar.html']|" \
 	    ${WRKSRC}/lld/docs/conf.py
 
-# Only install the shared libraries (libLLVM, libLTO, libRemarks).
+# Only install shared libraries (.so files).
 post-install:
 	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/bin
 	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/include
-	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/lib/cmake
-	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/lib/clang
 	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/libexec
-	@${FIND} ${STAGEDIR}${LLVM_PREFIX}/lib -name "*.a" -delete
-	@${FIND} ${STAGEDIR}${LLVM_PREFIX}/lib -name "*.so*" \
-		! -name "libLLVM*" ! -name "libLTO*" ! -name "libRemarks*" -delete
-	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/lib/python*
-	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/lib/${CONFIGURE_TARGET}
 	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/share
 	@${RM} -r ${STAGEDIR}${PREFIX}/bin
 	@${RM} -r ${STAGEDIR}${PREFIX}/share
+	@${FIND} ${STAGEDIR}${LLVM_PREFIX}/lib -type f ! -name "*.so" ! -name "*.so.*" -delete
+	@${FIND} ${STAGEDIR}${LLVM_PREFIX}/lib -type d -empty -delete
 
 .include <bsd.port.post.mk>

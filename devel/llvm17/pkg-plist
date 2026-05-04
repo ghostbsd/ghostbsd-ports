@@ -143,7 +143,7 @@ bin/sancov%%LLVM_SUFFIX%%
 %%PYCLANG%%llvm%%LLVM_SUFFIX%%/%%PYTHON_SITELIBDIR%%/clang/cindex.py
 %%PYCLANG%%llvm%%LLVM_SUFFIX%%/%%PYTHON_SITELIBDIR%%/clang/enumerations.py
 %%LLDB%%llvm%%LLVM_SUFFIX%%/%%PYTHON_SITELIBDIR%%/lldb/__init__.py
-%%LLDB%%llvm%%LLVM_SUFFIX%%/%%PYTHON_SITELIBDIR%%/lldb/_lldb%%PYTHON_TAG%%%%PYTHON_ABIVER%%.so
+@comment %%LLDB%%llvm%%LLVM_SUFFIX%%/%%PYTHON_SITELIBDIR%%/lldb/_lldb%%PYTHON_TAG%%%%PYTHON_ABIVER%%.so now provided by devel/llvm17-libs
 %%LLDB%%llvm%%LLVM_SUFFIX%%/%%PYTHON_SITELIBDIR%%/lldb/embedded_interpreter.py
 %%LLDB%%llvm%%LLVM_SUFFIX%%/%%PYTHON_SITELIBDIR%%/lldb/formatters/Logger.py
 %%LLDB%%llvm%%LLVM_SUFFIX%%/%%PYTHON_SITELIBDIR%%/lldb/formatters/__init__.py
@@ -5590,7 +5590,7 @@ llvm%%LLVM_SUFFIX%%/include/llvm/XRay/YAMLXRayRecord.h
 %%POLLY%%llvm%%LLVM_SUFFIX%%/include/polly/isl/vec.h
 %%POLLY%%llvm%%LLVM_SUFFIX%%/include/polly/isl/version.h
 %%POLLY%%llvm%%LLVM_SUFFIX%%/include/polly/isl/vertices.h
-%%POLLY%%llvm%%LLVM_SUFFIX%%/lib/LLVMPolly.so
+@comment %%POLLY%%llvm%%LLVM_SUFFIX%%/lib/LLVMPolly.so now provided by devel/llvm17-libs
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/clang/%%LLVM_MAJOR%%/include/__clang_cuda_builtin_vars.h
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/clang/%%LLVM_MAJOR%%/include/__clang_cuda_cmath.h
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/clang/%%LLVM_MAJOR%%/include/__clang_cuda_complex_builtins.h
@@ -5983,8 +5983,8 @@ llvm%%LLVM_SUFFIX%%/include/llvm/XRay/YAMLXRayRecord.h
 %%STATIC_LIBS%%llvm%%LLVM_SUFFIX%%/lib/libLLVMXRay.a
 %%STATIC_LIBS%%llvm%%LLVM_SUFFIX%%/lib/libLLVMipo.a
 @comment libLTO.so now provided by devel/llvm17-libs
-%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIR.so
-%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIR.so.%%LLVM_MAJOR%%
+@comment %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIR.so now provided by devel/llvm17-libs
+@comment %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIR.so.%%LLVM_MAJOR%% now provided by devel/llvm17-libs
 %%STATIC_LIBS%%%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIRAMDGPUDialect.a
 %%STATIC_LIBS%%%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIRAMDGPUToROCDL.a
 %%STATIC_LIBS%%%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIRAMDGPUTransforms.a
@@ -6277,13 +6277,13 @@ llvm%%LLVM_SUFFIX%%/include/llvm/XRay/YAMLXRayRecord.h
 %%STATIC_LIBS%%%%POLLY%%llvm%%LLVM_SUFFIX%%/lib/libPolly.a
 %%STATIC_LIBS%%%%POLLY%%llvm%%LLVM_SUFFIX%%/lib/libPollyISL.a
 @comment libRemarks.so now provided by devel/llvm17-libs
-%%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libarcher.so
+@comment %%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libarcher.so now provided by devel/llvm17-libs
 %%STATIC_LIBS%%%%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libarcher_static.a
-%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang-cpp.so
-%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang-cpp.so.%%LLVM_MAJOR%%
-%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so
-%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so.%%LLVM_MAJOR%%
-%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so.%%LLVM_RELEASE%%
+@comment %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang-cpp.so now provided by devel/llvm17-libs
+@comment %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang-cpp.so.%%LLVM_MAJOR%% now provided by devel/llvm17-libs
+@comment %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so now provided by devel/llvm17-libs
+@comment %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so.%%LLVM_MAJOR%% now provided by devel/llvm17-libs
+@comment %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so.%%LLVM_RELEASE%% now provided by devel/llvm17-libs
 %%STATIC_LIBS%%%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangAPINotes.a
 %%STATIC_LIBS%%%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangARCMigrate.a
 %%STATIC_LIBS%%%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangAST.a
@@ -6378,28 +6378,28 @@ llvm%%LLVM_SUFFIX%%/include/llvm/XRay/YAMLXRayRecord.h
 %%STATIC_LIBS%%%%EXTRAS%%llvm%%LLVM_SUFFIX%%/lib/libfindAllSymbols.a
 %%STATIC_LIBS%%%%FLANG%%llvm%%LLVM_SUFFIX%%/lib/libflangFrontend.a
 %%STATIC_LIBS%%%%FLANG%%llvm%%LLVM_SUFFIX%%/lib/libflangFrontendTool.a
-%%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libgomp.so
-%%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libiomp5.so
+@comment %%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libgomp.so now provided by devel/llvm17-libs
+@comment %%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libiomp5.so now provided by devel/llvm17-libs
 %%STATIC_LIBS%%%%LLD%%llvm%%LLVM_SUFFIX%%/lib/liblldCOFF.a
 %%STATIC_LIBS%%%%LLD%%llvm%%LLVM_SUFFIX%%/lib/liblldCommon.a
 %%STATIC_LIBS%%%%LLD%%llvm%%LLVM_SUFFIX%%/lib/liblldELF.a
 %%STATIC_LIBS%%%%LLD%%llvm%%LLVM_SUFFIX%%/lib/liblldMachO.a
 %%STATIC_LIBS%%%%LLD%%llvm%%LLVM_SUFFIX%%/lib/liblldMinGW.a
 %%STATIC_LIBS%%%%LLD%%llvm%%LLVM_SUFFIX%%/lib/liblldWasm.a
-%%LLDB%%llvm%%LLVM_SUFFIX%%/lib/liblldb.so
-%%LLDB%%llvm%%LLVM_SUFFIX%%/lib/liblldb.so.%%LLVM_MAJOR%%
-%%LLDB%%llvm%%LLVM_SUFFIX%%/lib/liblldb.so.%%LLVM_RELEASE%%
-%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_async_runtime.so
-%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_async_runtime.so.%%LLVM_MAJOR%%
-%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_c_runner_utils.so
-%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_c_runner_utils.so.%%LLVM_MAJOR%%
-%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_float16_utils.so
-%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_float16_utils.so.%%LLVM_MAJOR%%
-%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_runner_utils.so
-%%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_runner_utils.so.%%LLVM_MAJOR%%
-%%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libomp.so
-%%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libomptarget.so
-%%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libomptarget.so.%%LLVM_MAJOR%%
+@comment %%LLDB%%llvm%%LLVM_SUFFIX%%/lib/liblldb.so now provided by devel/llvm17-libs
+@comment %%LLDB%%llvm%%LLVM_SUFFIX%%/lib/liblldb.so.%%LLVM_MAJOR%% now provided by devel/llvm17-libs
+@comment %%LLDB%%llvm%%LLVM_SUFFIX%%/lib/liblldb.so.%%LLVM_RELEASE%% now provided by devel/llvm17-libs
+@comment %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_async_runtime.so now provided by devel/llvm17-libs
+@comment %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_async_runtime.so.%%LLVM_MAJOR%% now provided by devel/llvm17-libs
+@comment %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_c_runner_utils.so now provided by devel/llvm17-libs
+@comment %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_c_runner_utils.so.%%LLVM_MAJOR%% now provided by devel/llvm17-libs
+@comment %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_float16_utils.so now provided by devel/llvm17-libs
+@comment %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_float16_utils.so.%%LLVM_MAJOR%% now provided by devel/llvm17-libs
+@comment %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_runner_utils.so now provided by devel/llvm17-libs
+@comment %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_runner_utils.so.%%LLVM_MAJOR%% now provided by devel/llvm17-libs
+@comment %%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libomp.so now provided by devel/llvm17-libs
+@comment %%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libomptarget.so now provided by devel/llvm17-libs
+@comment %%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libomptarget.so.%%LLVM_MAJOR%% now provided by devel/llvm17-libs
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libscanbuild/__init__.py
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libscanbuild/analyze.py
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libscanbuild/arguments.py
@@ -6411,7 +6411,7 @@ llvm%%LLVM_SUFFIX%%/include/llvm/XRay/YAMLXRayRecord.h
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libscanbuild/resources/selectable.js
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libscanbuild/resources/sorttable.js
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libscanbuild/shell.py
-%%LLDB%%llvm%%LLVM_SUFFIX%%/lib/lua/5.3/lldb.so
+@comment %%LLDB%%llvm%%LLVM_SUFFIX%%/lib/lua/5.3/lldb.so now provided by devel/llvm17-libs
 %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/objects-Release/obj.MLIRCAPIArith/Arith.cpp.o
 %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/objects-Release/obj.MLIRCAPIAsync/Async.cpp.o
 %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/objects-Release/obj.MLIRCAPIAsync/AsyncPasses.cpp.o

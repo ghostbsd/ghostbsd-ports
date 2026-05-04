@@ -1,7 +1,7 @@
 # GhostBSD: standalone port providing LLVM runtime shared libraries.
-# This is a copy of devel/llvm19 that only installs libLLVM, libLTO,
-# and libRemarks.  It builds with identical options and patches so the
-# resulting .so files are ABI-compatible with the full port.
+# This is a copy of devel/llvm19 that only installs .so files.
+# It builds with identical options and patches so the resulting
+# shared libraries are ABI-compatible with the full port.
 PORTNAME=	llvm
 DISTVERSION=	19.1.7
 CATEGORIES=	devel
@@ -98,6 +98,9 @@ OPTIONS_EXCLUDE_armv7=	COMPILER_RT
 OPTIONS_DEFINE+=	EXTRAS LLDB MLIR OPENMP POLLY
 OPTIONS_DEFAULT+=	COMPILER_RT EXTRAS LLDB MLIR OPENMP POLLY
 OPTIONS_DEFINE_amd64=	GOLD
+OPTIONS_DEFINE_powerpc=	GOLD
+OPTIONS_DEFINE_powerpc64=	GOLD
+OPTIONS_DEFINE_powerpc64le=	GOLD
 OPTIONS_DEFAULT_amd64+=	GOLD
 
 _OPTIONS_EXCLUDE_ptr32=	MLIR OPENMP POLLY
@@ -155,11 +158,20 @@ CMAKE_BUILD_TYPE=	RelWithDebInfo
 STRIP=
 .endif
 
-PLIST_SUB+=	LLVM_MAJOR=${LLVM_MAJOR} \
+PLIST_SUB+=	CONFIGURE_TARGET=${CONFIGURE_TARGET} \
+		LLVM_MAJOR=${LLVM_MAJOR} \
 		LLVM_MAJOR_MINOR=${LLVM_MAJOR_MINOR} \
+		LLVM_RELEASE=${LLVM_RELEASE} \
 		LLVM_SUFFIX=${LLVM_SUFFIX}
 
 .include <bsd.port.options.mk>
+
+# Comment out plist entries for unsupported options.
+.for opt in ${_ALL_OPTIONS}
+.if !${OPTIONS_DEFINE:M${opt}}
+PLIST_SUB+=	${opt}="@comment "
+.endif
+.endfor
 
 # keep in sync with /usr/src/lib/clang/clang.build.mk
 # ----------- start of sync block ------------------
@@ -267,21 +279,16 @@ post-patch-CLANG-on:
 	    ${WRKSRC}/clang/tools/clang-format/clang-format-sublime.py \
 	    ${WRKSRC}/clang/tools/clang-format/git-clang-format
 
-# Only install the shared libraries (libLLVM, libLTO, libRemarks).
+# Only install shared libraries (.so files).
 # Remove everything else produced by the full build.
 post-install:
 	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/bin
 	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/include
-	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/lib/cmake
-	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/lib/clang
 	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/libexec
-	@${FIND} ${STAGEDIR}${LLVM_PREFIX}/lib -name "*.a" -delete
-	@${FIND} ${STAGEDIR}${LLVM_PREFIX}/lib -name "*.so*" \
-		! -name "libLLVM*" ! -name "libLTO*" ! -name "libRemarks*" -delete
-	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/lib/python*
-	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/lib/${CONFIGURE_TARGET}
 	@${RM} -r ${STAGEDIR}${LLVM_PREFIX}/share
 	@${RM} -r ${STAGEDIR}${PREFIX}/bin
 	@${RM} -r ${STAGEDIR}${PREFIX}/share
+	@${FIND} ${STAGEDIR}${LLVM_PREFIX}/lib -type f ! -name "*.so" ! -name "*.so.*" -delete
+	@${FIND} ${STAGEDIR}${LLVM_PREFIX}/lib -type d -empty -delete
 
 .include <bsd.port.post.mk>
