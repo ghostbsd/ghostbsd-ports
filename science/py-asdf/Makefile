@@ -1,5 +1,5 @@
 PORTNAME=	asdf
-PORTVERSION=	5.2.0
+PORTVERSION=	5.3.0
 CATEGORIES=	science python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -26,7 +26,8 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fsspec>=2022.8.2:filesystems/py-fsspec@${PY
 		${PYTHON_PKGNAMEPREFIX}lz4>=0.10:archivers/py-lz4@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psutil>=0:sysutils/py-psutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytest-doctestplus>=0:devel/py-pytest-doctestplus@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pytest-remotedata>=0:devel/py-pytest-remotedata@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}pytest-remotedata>=0:devel/py-pytest-remotedata@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}syrupy>=5.1:devel/py-syrupy@${PY_FLAVOR}
 # fsspec[http]
 TEST_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}aiohttp>=0:www/py-aiohttp@${PY_FLAVOR}
 

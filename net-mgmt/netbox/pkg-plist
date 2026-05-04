@@ -162,6 +162,7 @@
 %%DATADIR%%/core/tests/test_filtersets.py
 %%DATADIR%%/core/tests/test_models.py
 %%DATADIR%%/core/tests/test_openapi_schema.py
+%%DATADIR%%/core/tests/test_tables.py
 %%DATADIR%%/core/tests/test_views.py
 %%DATADIR%%/core/ui/__init__.py
 %%DATADIR%%/core/ui/panels.py
@@ -275,6 +276,7 @@
 %%DATADIR%%/dcim/migrations/0225_gfk_indexes.py
 %%DATADIR%%/dcim/migrations/0226_add_mptt_tree_indexes.py
 %%DATADIR%%/dcim/migrations/0226_modulebay_rebuild_tree.py
+%%DATADIR%%/dcim/migrations/0227_alter_interface_speed_bigint.py
 %%DATADIR%%/dcim/migrations/__init__.py
 %%DATADIR%%/dcim/migrations/initial_data/module_type_profiles/cpu.json
 %%DATADIR%%/dcim/migrations/initial_data/module_type_profiles/expansion_card.json
@@ -312,12 +314,14 @@
 %%DATADIR%%/dcim/tables/template_code.py
 %%DATADIR%%/dcim/tests/__init__.py
 %%DATADIR%%/dcim/tests/test_api.py
+%%DATADIR%%/dcim/tests/test_cable_profiles.py
 %%DATADIR%%/dcim/tests/test_cablepaths.py
 %%DATADIR%%/dcim/tests/test_cablepaths2.py
 %%DATADIR%%/dcim/tests/test_filtersets.py
 %%DATADIR%%/dcim/tests/test_forms.py
 %%DATADIR%%/dcim/tests/test_models.py
 %%DATADIR%%/dcim/tests/test_natural_ordering.py
+%%DATADIR%%/dcim/tests/test_tables.py
 %%DATADIR%%/dcim/tests/test_views.py
 %%DATADIR%%/dcim/tests/utils.py
 %%DATADIR%%/dcim/ui/__init__.py
@@ -1100,7 +1104,6 @@
 %%DATADIR%%/project-static/dist/roboto-mono-latin-700-QNNSSZIK.woff2
 %%DATADIR%%/project-static/dist/roboto-mono-latin-700italic-KTWD2UYU.woff
 %%DATADIR%%/project-static/dist/roboto-mono-latin-700italic-WWLRMKIN.woff2
-%%DATADIR%%/project-static/docs/.info
 %%DATADIR%%/project-static/eslint.config.js
 %%DATADIR%%/project-static/img/logo_netbox_bright_teal.svg
 %%DATADIR%%/project-static/img/logo_netbox_dark_teal.svg
@@ -1230,6 +1233,7 @@
 %%DATADIR%%/templates/core/datasource.html
 %%DATADIR%%/templates/core/datasource/attrs/ignore_rules.html
 %%DATADIR%%/templates/core/datasource/attrs/source_url.html
+%%DATADIR%%/templates/core/htmx/system_db_schema.html
 %%DATADIR%%/templates/core/inc/config_data.html
 %%DATADIR%%/templates/core/inc/datafile_panel.html
 %%DATADIR%%/templates/core/inc/plugin_installation.html
@@ -1669,6 +1673,8 @@
 %%DATADIR%%/tenancy/tests/__init__.py
 %%DATADIR%%/tenancy/tests/test_api.py
 %%DATADIR%%/tenancy/tests/test_filtersets.py
+%%DATADIR%%/tenancy/tests/test_models.py
+%%DATADIR%%/tenancy/tests/test_tables.py
 %%DATADIR%%/tenancy/tests/test_views.py
 %%DATADIR%%/tenancy/ui/__init__.py
 %%DATADIR%%/tenancy/ui/panels.py
@@ -1890,6 +1896,7 @@
 %%DATADIR%%/utilities/testing/api.py
 %%DATADIR%%/utilities/testing/base.py
 %%DATADIR%%/utilities/testing/filtersets.py
+%%DATADIR%%/utilities/testing/tables.py
 %%DATADIR%%/utilities/testing/utils.py
 %%DATADIR%%/utilities/testing/views.py
 %%DATADIR%%/utilities/tests/__init__.py
@@ -1970,6 +1977,7 @@
 %%DATADIR%%/virtualization/tests/test_api.py
 %%DATADIR%%/virtualization/tests/test_filtersets.py
 %%DATADIR%%/virtualization/tests/test_models.py
+%%DATADIR%%/virtualization/tests/test_tables.py
 %%DATADIR%%/virtualization/tests/test_views.py
 %%DATADIR%%/virtualization/ui/__init__.py
 %%DATADIR%%/virtualization/ui/panels.py
@@ -2074,6 +2082,7 @@
 %%DATADIR%%/wireless/tests/__init__.py
 %%DATADIR%%/wireless/tests/test_api.py
 %%DATADIR%%/wireless/tests/test_filtersets.py
+%%DATADIR%%/wireless/tests/test_tables.py
 %%DATADIR%%/wireless/tests/test_views.py
 %%DATADIR%%/wireless/ui/__init__.py
 %%DATADIR%%/wireless/ui/panels.py

@@ -1,6 +1,5 @@
 PORTNAME=	numba-stats
-PORTVERSION=	1.11.0
-PORTREVISION=	1
+PORTVERSION=	1.12.0
 CATEGORIES=	math python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -31,5 +30,9 @@ TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 NO_ARCH=	yes
 
 BINARY_ALIAS=	python=${PYTHON_CMD} # for tests
+
+# tests as of 1.12.0:
+# Results (40.41s):
+#      576 passed
 
 .include <bsd.port.mk>

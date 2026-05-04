@@ -30,6 +30,8 @@ CMAKE_ARGS=	-DClang_DIR:PATH="${LLVM_PREFIX}/lib/cmake/clang" \
 		-DBUILD_TESTS:BOOL=false
 CONFIGURE_ENV=	LLVM_INSTALL_DIR="${LLVM_PREFIX}/lib/cmake/llvm"
 
+BINARY_ALIAS=	sphinx-build=sphinx-build-${PYTHON_VER}
+
 WRKSRC_SUBDIR=	sources/shiboken6
 PLIST_SUB=	PYTHON_MAJOR_VER=${PYTHON_MAJOR_VER} \
 		SHLIB_VER=${DISTVERSION:R} \

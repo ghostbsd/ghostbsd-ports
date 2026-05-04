@@ -1943,7 +1943,6 @@ sysutils/etcupdate||2023-03-21|Part of the base system since FreeBSD 10.0
 devel/freebsd-gcc6||2023-03-22|No longer able to build base system, use GCC 9 or later instead
 net/rubygem-gitlab-omniauth-openid-connect|net/rubygem-omniauth_openid_connect|2023-03-22|Obsolete use net/rubygem-omniauth_openid_connect instead
 japanese/mutt-devel||2023-03-25|Has expired: Broken since 2019
-audio/amarok||2023-03-31|Has expired: No longer actively maintained upstream
 audio/cd2mp3||2023-03-31|Has expired: Depends on deprecated port audio/dagrab, consider using audio/abcde or audio/cyanrip
 audio/cmp3||2023-03-31|Has expired: Abandonware, no development in 20 years. Please consider using audio/cmus or audio/musicpd
 audio/cpige||2023-03-31|Has expired: Doesn't work, newer versions also fails
@@ -5247,7 +5246,21 @@ graphics/libkdcraw@qt5|graphics/libkdcraw-qt5|2026-04-16|Unflavorize; keep the l
 graphics/libkdcraw@qt6|graphics/libkdcraw|2026-04-16|Unflavorize; only Qt6 is supported from now
 audio/libkcompactdisc||2026-04-16|Development discontinued, not shipped with KDE Gear since 26.04
 multimedia/dvdstyler||2026-04-16|Dead upstream
-emulators/emu64||2026-04-16|Broken, fails to build
 databases/py-sqlglotrs|databases/py-sqlglotc|2026-04-18|Remove obsoleted port. Use databases/py-sqlglotc instead
 devel/py-prettytable0|devel/py-prettytable|2026-04-18|Remove obsoleted port. Use devel/py-prettytable instead
 www/py-requests-cache0|www/py-requests-cache|2026-04-18|Remove obsoleted port. Use www/py-requests-cache instead
+sysutils/py-azure-cli-base||2026-04-21|Remove obsoleted port
+games/coronapoker||2026-04-25|Remove for security concerns: downloads closed source binary modules, should not be restored unless https://github.com/tonikelope/coronapoker/issues/7 is addressed
+sysutils/py-ioztat|filesystems/py-ioztat|2026-04-27|Move to more appropriate category
+misc/py-aider-chat||2026-04-27|Upstream project has stopped active releases and doesn't match ports dependencies
+emulators/virtualbox-ose-additions-nox11-legacy|emulators/virtualbox-ose-additions-legacy@nox11|2026-04-30|Converted to a flavorized port
+emulators/virtualbox-ose-additions-nox11|emulators/virtualbox-ose-additions@nox11|2026-04-30|Converted to a flavorized port
+emulators/virtualbox-ose-additions-nox11-70|emulators/virtualbox-ose-additions-70@nox11|2026-04-30|Converted to a flavorized port
+emulators/virtualbox-ose-additions-nox11-71|emulators/virtualbox-ose-additions-71@nox11|2026-04-30|Converted to a flavorized port
+emulators/virtualbox-ose-additions-nox11-72|emulators/virtualbox-ose-additions-72@nox11|2026-04-30|Converted to a flavorized port
+emulators/virtualbox-ose-nox11-legacy|emulators/virtualbox-ose-legacy@nox11|2026-04-30|Converted to a flavorized port
+emulators/virtualbox-ose-nox11|emulators/virtualbox-ose@nox11|2026-04-30|Converted to a flavorized port
+emulators/virtualbox-ose-nox11-70|emulators/virtualbox-ose-70@nox11|2026-04-30|Converted to a flavorized port
+emulators/virtualbox-ose-nox11-71|emulators/virtualbox-ose-71@nox11|2026-04-30|Converted to a flavorized port
+emulators/virtualbox-ose-nox11-72|emulators/virtualbox-ose-72@nox11|2026-04-30|Converted to a flavorized port
+databases/kuzu|databases/ladybug|2026-05-03|Upstream abandoned, project continuing under new name

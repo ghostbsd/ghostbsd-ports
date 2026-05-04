@@ -1,19 +1,15 @@
 PORTNAME=	capnproto
-DISTVERSION=	1.3.0
-PORTREVISION=	1
+DISTVERSION=	1.4.0
 CATEGORIES=	devel
 MASTER_SITES=	https://capnproto.org/
 DISTNAME=	${PORTNAME}-c++-${DISTVERSION}
 
-MAINTAINER=	felix@userspace.com.au
+MAINTAINER=	diizzy@FreeBSD.org
 COMMENT=	Serialization/RPC system
 WWW=		https://capnproto.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
-
-BROKEN_FreeBSD_15=	kqueue regression
-BROKEN_FreeBSD_16=	kqueue regression
 
 USES=		cmake:testing compiler:c++14-lang cpe pathfix ssl
 USE_LDCONFIG=	yes

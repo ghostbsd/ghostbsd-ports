@@ -1,5 +1,5 @@
 PORTNAME=	bullet_train-super_load_and_authorize_resource
-PORTVERSION=	1.43.0
+PORTVERSION=	1.44.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 

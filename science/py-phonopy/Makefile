@@ -1,6 +1,5 @@
 PORTNAME=	phonopy
-DISTVERSION=	3.4.0
-PORTREVISION=	1
+DISTVERSION=	3.5.1
 CATEGORIES=	science python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -35,19 +34,9 @@ TEST_WRKSRC=	${WRKSRC}/test
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/phonopy/_phonopy${PYTHON_TAG}.so
 
-# tests as of 3.0.1: (see https://github.com/phonopy/phonopy/issues/739)
-# Results (47.21s):
-#         26 failed
-#        183 passed
-#          6 skipped
-#         53 warnings
-#        272 errors
-
-# tests as of 3.4.0:
-# Results (59.91s):
-#        380 failed
-#       1997 passed
-#         22 skipped
-#         52 warnings
+# tests as of 3.5.1:
+# Results (64.10s (0:01:04)):
+#      880 passed
+#       22 skipped
 
 .include <bsd.port.mk>

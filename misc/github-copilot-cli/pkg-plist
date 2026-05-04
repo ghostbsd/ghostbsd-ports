@@ -22,6 +22,7 @@ lib/node_modules/@github/copilot/copilot-sdk/sdkProtocolVersion.d.ts
 lib/node_modules/@github/copilot/copilot-sdk/session.d.ts
 lib/node_modules/@github/copilot/copilot-sdk/telemetry.d.ts
 lib/node_modules/@github/copilot/copilot-sdk/types.d.ts
+lib/node_modules/@github/copilot/definitions/ambient/github-context.yaml
 lib/node_modules/@github/copilot/definitions/code-review.agent.yaml
 lib/node_modules/@github/copilot/definitions/configure-copilot.agent.yaml
 lib/node_modules/@github/copilot/definitions/explore.agent.yaml
@@ -29,6 +30,7 @@ lib/node_modules/@github/copilot/definitions/research.agent.yaml
 lib/node_modules/@github/copilot/definitions/rubber-duck.agent.yaml
 lib/node_modules/@github/copilot/definitions/task.agent.yaml
 lib/node_modules/@github/copilot/index.js
+lib/node_modules/@github/copilot/node_modules/@img/sharp-freebsd-%%NODE_ARCH%%/sharp.node
 lib/node_modules/@github/copilot/npm-loader.js
 lib/node_modules/@github/copilot/npm-loader.js.orig
 lib/node_modules/@github/copilot/prebuilds/freebsd-%%NODE_ARCH%%/keytar.node
@@ -95,5 +97,4 @@ lib/node_modules/@github/copilot/tree-sitter-tsx.wasm
 lib/node_modules/@github/copilot/tree-sitter-typescript.wasm
 lib/node_modules/@github/copilot/tree-sitter.wasm
 lib/node_modules/@github/copilot/worker/conoutSocketWorker.js
-lib/node_modules/@github/copilot/node_modules/@img/sharp-freebsd-%%NODE_ARCH%%/sharp.node
 @dir lib/node_modules/@github/copilot/ripgrep/bin

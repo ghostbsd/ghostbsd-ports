@@ -1,5 +1,6 @@
 PORTNAME=	ugene
 PORTVERSION=	53.1
+PORTREVISION=	1
 CATEGORIES=	biology science
 
 MAINTAINER=	makc@FreeBSD.org
@@ -9,12 +10,12 @@ WWW=		https://ugene.net/
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-IGNORE_aarch64=	fails to build: https://bugs.freebsd.org/293379
-
+LIB_DEPENDS=	libhts.so:biology/htslib
 RUN_DEPENDS=	bash:shells/bash
 
 USES=		cmake compiler:c++14-lang desktop-file-utils gl \
-		localbase:ldflags qt:5 shared-mime-info shebangfix xorg
+		localbase:ldflags pkgconfig qt:5 shared-mime-info \
+		shebangfix xorg
 USE_GL=		gl glu
 USE_QT=		buildtools:build linguisttools:build qmake:build \
 		core gui network networkauth printsupport \

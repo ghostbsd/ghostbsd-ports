@@ -1,5 +1,5 @@
 PORTNAME=	latex2mathml
-PORTVERSION=	3.79.0
+PORTVERSION=	3.81.0
 CATEGORIES=	textproc python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -9,7 +9,6 @@ COMMENT=	Pure Python library for LaTeX to MathML conversion
 WWW=		https://github.com/roniemartinez/latex2mathml
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}hatchling>=0:devel/py-hatchling@${PY_FLAVOR}
 

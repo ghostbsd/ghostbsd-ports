@@ -123,6 +123,7 @@
     SUBDIR += converseen
     SUBDIR += corrupter
     SUBDIR += cptutils
+    SUBDIR += crucible
     SUBDIR += crw
     SUBDIR += ctl
     SUBDIR += curator
@@ -1214,6 +1215,7 @@
     SUBDIR += skanpage
     SUBDIR += skia
     SUBDIR += spirv-cross
+    SUBDIR += spirv-headers
     SUBDIR += spirv-tools
     SUBDIR += springgraph
     SUBDIR += squish
@@ -1265,6 +1267,7 @@
     SUBDIR += vips
     SUBDIR += visprint
     SUBDIR += viu
+    SUBDIR += vkrunner
     SUBDIR += volpack
     SUBDIR += vp
     SUBDIR += vpaint

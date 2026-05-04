@@ -32,4 +32,11 @@ USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
 
+OPTIONS_DEFINE=	PLUS
+PLUS_DESC=	Extra features
+
+PLUS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}astropy>=0,2:astro/py-astropy@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}dask-geopandas>=0:devel/py-dask-geopandas@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}h3>=0:graphics/py-h3@${PY_FLAVOR}
+
 .include <bsd.port.mk>

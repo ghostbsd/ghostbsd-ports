@@ -26,11 +26,6 @@ if ! command -v "$GO_CMD" >/dev/null 2>&1; then
 	exit 1
 fi
 
-# make GoLang proxy to ingest the new version
-echo "==> submitting the new version $VERSION to GoLang proxy"
-GOPROXY=proxy.golang.org $GO_CMD list -m github.com/$GH_ACCOUNT_FORK/ollama@v$VERSION
-exit 1
-
 echo "updating $GH_PROJECT to version $VERSION"
 
 # remove old dirs
@@ -56,6 +51,9 @@ cp -r \
 
 # apply freebsd compatibility patch
 (patch-no-backup-1 < ../files/freebsd-compatibility.patch) || { echo "error: failed to apply freebsd compatibility patch"; exit 1; }
+
+# change import path to the fork
+grep -rl ollama/ollama | xargs sed -i '' -e 's|ollama/ollama|yurivict/ollama|g'
 
 # it should be buildable at this point
 

@@ -25,7 +25,7 @@ USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
 
-OPTIONS_DEFINE=	BIGQUERY DATABRICKS DUCKDB OPENAI PANDAS POSTGRES REDSHIFT
+OPTIONS_DEFINE=	BIGQUERY DATABRICKS DUCKDB OPENAI PANDAS POSTGRES REDSHIFT SNOWFLAKE
 BIGQUERY_DESC=	BigQuery support
 DATABRICKS_DESC=Databricks support
 DUCKDB_DESC=	DuckDB support
@@ -34,6 +34,7 @@ OPENAI_DESC=	OpenAI support
 PANDAS_DESC=	Pandas support
 POSTGRES_DESC=	PostgreSQL support
 REDSHIFT_DESC=	Amazon Redshift support
+SNOWFLAKE_DESC=	Snowflake support
 
 BIGQUERY_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}google-cloud-bigquery>=3<4:www/py-google-cloud-bigquery@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}google-cloud-bigquery-storage>=2<3:www/py-google-cloud-bigquery-storage@${PY_FLAVOR}
@@ -43,5 +44,7 @@ OPENAI_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}openai>=1.30<3:misc/py-openai@${PY_FL
 PANDAS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pandas>=2,1<4,1:math/py-pandas@${PY_FLAVOR}
 POSTGRES_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psycopg2>=2.8<3:databases/py-psycopg2@${PY_FLAVOR}
 REDSHIFT_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}redshift-connector>=2.1.1<2.2.0:databases/py-redshift-connector@${PY_FLAVOR}
+SNOWFLAKE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}keyring>=23.1.0,1<26.0.0,1:security/py-keyring@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}snowflake-connector-python>=3.10.0<4.4:databases/py-snowflake-connector-python@${PY_FLAVOR}
 
 .include <bsd.port.mk>

@@ -35,6 +35,8 @@ USE_PYTHON=			autoplist pep517
 PEP517_BUILD_CONFIG_SETTING=	-Csetup-args="-Dsystem-freetype=true" \
 				-Csetup-args="-Dsystem-qhull=true"
 
+BINARY_ALIAS=	pybind11-config=pybind11-config-${PYTHON_VER}
+
 PLIST_SUB=	VER=${PORTVERSION}
 PORTEXAMPLES=	*
 

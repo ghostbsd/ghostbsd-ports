@@ -26,6 +26,8 @@ WRKSRC_SUBDIR=	python
 
 CPE_VENDOR=	google
 
+PORTSCOUT=	limit:^[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9]$$
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	google
 

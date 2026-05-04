@@ -48,6 +48,7 @@ TEST_ARGS=	--pyargs scipy
 PYTEST_BROKEN_TESTS=	test_threading
 
 BINARY_ALIAS=	cython=cython-${PYTHON_VER} \
+		f2py=f2py-${PYTHON_VER} \
 		pybind11-config=pybind11-config-${PYTHON_VER} \
 		pythran=pythran-${PYTHON_VER}
 

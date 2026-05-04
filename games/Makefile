@@ -161,7 +161,6 @@
     SUBDIR += connectagram
     SUBDIR += connectfive
     SUBDIR += construo
-    SUBDIR += coronapoker
     SUBDIR += corsix-th
     SUBDIR += cosmosmash
     SUBDIR += cowsay
@@ -675,6 +674,7 @@
     SUBDIR += nextgo
     SUBDIR += nexuiz
     SUBDIR += nighthawk
+    SUBDIR += nile
     SUBDIR += nimuh
     SUBDIR += ninix-aya
     SUBDIR += njam

@@ -541,6 +541,7 @@ FreeCAD/Mod/CAM/Path/Dressup/Gui/Boundary.py
 FreeCAD/Mod/CAM/Path/Dressup/Gui/DogboneII.py
 FreeCAD/Mod/CAM/Path/Dressup/Gui/Dragknife.py
 FreeCAD/Mod/CAM/Path/Dressup/Gui/LeadInOut.py
+FreeCAD/Mod/CAM/Path/Dressup/Gui/Mirror.py
 FreeCAD/Mod/CAM/Path/Dressup/Gui/Preferences.py
 FreeCAD/Mod/CAM/Path/Dressup/Gui/RampEntry.py
 FreeCAD/Mod/CAM/Path/Dressup/Gui/TagPreferences.py
@@ -1771,6 +1772,7 @@ FreeCAD/Mod/Mesh/Init.py
 FreeCAD/Mod/Mesh/InitGui.py
 FreeCAD/Mod/Mesh/MeshEnums.py
 FreeCAD/Mod/Mesh/MeshTestsApp.py
+FreeCAD/Mod/Mesh/MeshTestsGui.py
 FreeCAD/Mod/MeshPart/Init.py
 FreeCAD/Mod/MeshPart/InitGui.py
 FreeCAD/Mod/MeshPart/MeshFlatteningCommand.py
@@ -1876,6 +1878,7 @@ FreeCAD/Mod/PartDesign/PartDesignTests/TestPrimitive.py
 FreeCAD/Mod/PartDesign/PartDesignTests/TestRevolve.py
 FreeCAD/Mod/PartDesign/PartDesignTests/TestShapeBinder.py
 FreeCAD/Mod/PartDesign/PartDesignTests/TestSketch.py
+FreeCAD/Mod/PartDesign/PartDesignTests/TestSuppressed.py
 FreeCAD/Mod/PartDesign/PartDesignTests/TestThickness.py
 FreeCAD/Mod/PartDesign/PartDesignTests/TestTopologicalNamingProblem.py
 FreeCAD/Mod/PartDesign/PartDesignTests/__init__.py

@@ -31,8 +31,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy1>=1.16:math/py-numpy1@${PY_FLAVOR} \
 USES=		compiler:c++11-lang python shebangfix
 USE_PYTHON=	autoplist cython pep517
 
-BINARY_ALIAS=	python=${PYTHON_CMD} \
-		python3=${PYTHON_CMD}
+BINARY_ALIAS=	cython=cython-${PYTHON_VER} \
+		python=${PYTHON_CMD} \
+		python3=${PYTHON_CMD} \
+		pythran=pythran-${PYTHON_VER}
 
 post-install:
 	@${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR}/skimage -name "*.so" -exec ${STRIP_CMD} {} \;

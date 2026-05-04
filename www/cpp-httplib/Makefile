@@ -1,6 +1,6 @@
 PORTNAME=	cpp-httplib
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.40.0
+DISTVERSION=	0.43.2
 CATEGORIES=	www devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -32,7 +32,7 @@ PLIST_FILES=	include/httplib.h \
 		lib/cmake/httplib/httplibConfigVersion.cmake \
 		lib/cmake/httplib/httplibTargets.cmake
 
-CONFLICTS_BUILD=	googletest # should be CONFLICTS_TEST
+#CONFLICTS_BUILD=	googletest # should be CONFLICTS_TEST
 
 OPTIONS_DEFINE=		BROTLI SSL
 OPTIONS_DEFAULT=	BROTLI SSL

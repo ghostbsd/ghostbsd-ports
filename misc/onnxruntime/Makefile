@@ -1,6 +1,6 @@
 PORTNAME=	onnxruntime
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.24.4
+DISTVERSION=	1.25.1
 CATEGORIES=	misc # machine-learning
 DIST_SUBDIR=	${PORTNAME}
 
@@ -43,7 +43,7 @@ BINARY_ALIAS=	patch=gpatch
 
 DEPS_FILE=	${WRKSRC}/cmake/deps.txt
 
-#CONFLICTS_BUILD=	abseil benchmark nsync googletest dlpack flatbuffers gsl mimalloc \
+CONFLICTS_BUILD=	abseil benchmark nsync googletest dlpack flatbuffers gsl mimalloc \
 			nlohmann-json onnx protobuf psimd pthreadpool pybind11 re2
 
 dev-update-deps-in-makefiles: extract # this should be run when the port is updated

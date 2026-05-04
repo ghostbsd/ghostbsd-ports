@@ -16,7 +16,7 @@ DISTFILES=	\
 		v1.0.250325.1.zip:microsoft_wil \
 		v2.1.1.zip:mimalloc \
 		boost-1.82.0.zip:mp11 \
-		v1.20.1.zip:onnx \
+		v1.21.0.zip:onnx \
 		d5dce67db7c2e64b07e055571f5ec06f7f254de2.zip:onnx_tensorrt \
 		v21.12.zip:protobuf \
 		protoc-21.12-win64.zip:protoc_win64 \
@@ -36,7 +36,7 @@ DISTFILES=	\
 		c24b7bab0c12f53da76d0c31b03b9f0f8ec8f3b4.zip:extensions \
 		v1.613.1.zip:directx_headers \
 		v1.12.0.zip:cudnn_frontend \
-		13c1635a14574ebb7116b56a69f5519301417fda.zip:dawn \
+		ec7b457e5bb1fcec6f59733c4f3dd84d2f885a38.zip:dawn \
 		v1.20.0.tar.gz:kleidiai \
 		2f10c9a8d32f81ffeeb6d4885a29cc35d2b0da87.zip:kleidiai_qmx \
 		duktape-2.7.0.tar.xz:duktape \

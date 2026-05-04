@@ -19,6 +19,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy1>=1.16:math/py-numpy1@${PY_FLAVOR}
 USES=		python
 USE_PYTHON=	autoplist cython pep517
 
+BINARY_ALIAS=	cython=cython-${PYTHON_VER}
+
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/pywt/_extensions/*.so
 

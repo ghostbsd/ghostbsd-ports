@@ -339,6 +339,7 @@
     SUBDIR += boxed-cpp
     SUBDIR += boxfort
     SUBDIR += bpython
+    SUBDIR += brpc
     SUBDIR += brz
     SUBDIR += bsdbuild
     SUBDIR += bsdcflow
@@ -537,6 +538,7 @@
     SUBDIR += csoap
     SUBDIR += cssc
     SUBDIR += ctags
+    SUBDIR += ctags-lsp
     SUBDIR += ctre
     SUBDIR += ctypes.sh
     SUBDIR += cunit
@@ -744,6 +746,7 @@
     SUBDIR += freebsd-gcc14
     SUBDIR += freebsd-gcc15
     SUBDIR += freebsd-git-arc
+    SUBDIR += freebsd-git-pr
     SUBDIR += freebsd-nvme-shim
     SUBDIR += freebsd-sysroot
     SUBDIR += frink
@@ -896,6 +899,7 @@
     SUBDIR += gitolite2
     SUBDIR += gitoxide
     SUBDIR += gitqlient
+    SUBDIR += gittop
     SUBDIR += gittrac
     SUBDIR += gitty
     SUBDIR += gitu
@@ -1212,6 +1216,8 @@
     SUBDIR += laminar
     SUBDIR += lasi
     SUBDIR += lazygit
+    SUBDIR += lazymake
+    SUBDIR += lazyworktree
     SUBDIR += lcov
     SUBDIR += leaktracer
     SUBDIR += lefthook
@@ -1956,6 +1962,7 @@
     SUBDIR += p5-App-SD
     SUBDIR += p5-App-SVN-Bisect
     SUBDIR += p5-App-Trace
+    SUBDIR += p5-App-Yath-Script
     SUBDIR += p5-App-cpanminus
     SUBDIR += p5-App-cpanminus-reporter
     SUBDIR += p5-App-cpanoutdated
@@ -2757,6 +2764,7 @@
     SUBDIR += p5-Getopt-Long
     SUBDIR += p5-Getopt-Long-Descriptive
     SUBDIR += p5-Getopt-Tabular
+    SUBDIR += p5-Getopt-Yath
     SUBDIR += p5-Git-PurePerl
     SUBDIR += p5-Git-Repository
     SUBDIR += p5-Git-Repository-Plugin-Log
@@ -4327,6 +4335,7 @@
     SUBDIR += phpunit10
     SUBDIR += phpunit11
     SUBDIR += phpunit12
+    SUBDIR += phpunit13
     SUBDIR += phpunit8
     SUBDIR += phpunit9
     SUBDIR += physfs
@@ -4452,6 +4461,7 @@
     SUBDIR += py-argcomplete
     SUBDIR += py-argh
     SUBDIR += py-argparse
+    SUBDIR += py-argparse-dataclass
     SUBDIR += py-argparse-manpage
     SUBDIR += py-argparse_addons
     SUBDIR += py-args
@@ -4534,6 +4544,7 @@
     SUBDIR += py-azure-mgmt-consumption
     SUBDIR += py-azure-mgmt-containerinstance
     SUBDIR += py-azure-mgmt-containerregistry
+    SUBDIR += py-azure-mgmt-containerregistrytasks
     SUBDIR += py-azure-mgmt-containerservice
     SUBDIR += py-azure-mgmt-core
     SUBDIR += py-azure-mgmt-cosmosdb
@@ -4599,6 +4610,7 @@
     SUBDIR += py-azure-multiapi-storage
     SUBDIR += py-azure-storage-blob
     SUBDIR += py-azure-storage-common
+    SUBDIR += py-azure-storage-file-datalake
     SUBDIR += py-azure-storage-file-share
     SUBDIR += py-azure-storage-queue
     SUBDIR += py-azure-synapse-accesscontrol
@@ -4657,6 +4669,7 @@
     SUBDIR += py-buildbot-wsgi-dashboards
     SUBDIR += py-buildbot-www
     SUBDIR += py-bullet3
+    SUBDIR += py-bump-my-version
     SUBDIR += py-bump2version
     SUBDIR += py-bytecode
     SUBDIR += py-cabby
@@ -4757,6 +4770,7 @@
     SUBDIR += py-commandlines
     SUBDIR += py-commentjson
     SUBDIR += py-commoncode
+    SUBDIR += py-conda-inject
     SUBDIR += py-condense-json
     SUBDIR += py-conditional
     SUBDIR += py-confection
@@ -4894,6 +4908,7 @@
     SUBDIR += py-dotmap
     SUBDIR += py-dotted
     SUBDIR += py-dotty-dict
+    SUBDIR += py-dpath
     SUBDIR += py-dpcontracts
     SUBDIR += py-dtfabric
     SUBDIR += py-dukpy
@@ -5630,6 +5645,7 @@
     SUBDIR += py-pre-commit
     SUBDIR += py-pre-commit-hooks
     SUBDIR += py-prefixed
+    SUBDIR += py-prek
     SUBDIR += py-preshed
     SUBDIR += py-preshed3
     SUBDIR += py-pretend
@@ -6039,6 +6055,7 @@
     SUBDIR += py-scikit-build-core
     SUBDIR += py-scooby
     SUBDIR += py-scripttest
+    SUBDIR += py-scverse-misc
     SUBDIR += py-seedir
     SUBDIR += py-selection
     SUBDIR += py-semantic-version
@@ -6046,6 +6063,7 @@
     SUBDIR += py-sentry-sdk
     SUBDIR += py-serializable
     SUBDIR += py-session-info
+    SUBDIR += py-session-info2
     SUBDIR += py-setoptconf
     SUBDIR += py-setproctitle
     SUBDIR += py-setupmeta
@@ -6149,6 +6167,7 @@
     SUBDIR += py-taskflow
     SUBDIR += py-taskgroup
     SUBDIR += py-tasklib
+    SUBDIR += py-tatsu
     SUBDIR += py-tblib
     SUBDIR += py-tdworkflow
     SUBDIR += py-telepath
@@ -6177,6 +6196,7 @@
     SUBDIR += py-threema-msgapi
     SUBDIR += py-thrift
     SUBDIR += py-thriftpy2
+    SUBDIR += py-throttler
     SUBDIR += py-tiamat
     SUBDIR += py-time-machine
     SUBDIR += py-timelib
@@ -6860,6 +6880,7 @@
     SUBDIR += rubygem-aws-sdk-inspector
     SUBDIR += rubygem-aws-sdk-inspector2
     SUBDIR += rubygem-aws-sdk-inspectorscan
+    SUBDIR += rubygem-aws-sdk-interconnect
     SUBDIR += rubygem-aws-sdk-internetmonitor
     SUBDIR += rubygem-aws-sdk-invoicing
     SUBDIR += rubygem-aws-sdk-iot
@@ -6919,6 +6940,7 @@
     SUBDIR += rubygem-aws-sdk-marketplacecatalog
     SUBDIR += rubygem-aws-sdk-marketplacecommerceanalytics
     SUBDIR += rubygem-aws-sdk-marketplacedeployment
+    SUBDIR += rubygem-aws-sdk-marketplacediscovery
     SUBDIR += rubygem-aws-sdk-marketplaceentitlementservice
     SUBDIR += rubygem-aws-sdk-marketplacemetering
     SUBDIR += rubygem-aws-sdk-marketplacereporting
@@ -7018,6 +7040,7 @@
     SUBDIR += rubygem-aws-sdk-s3
     SUBDIR += rubygem-aws-sdk-s3-gitlab
     SUBDIR += rubygem-aws-sdk-s3control
+    SUBDIR += rubygem-aws-sdk-s3files
     SUBDIR += rubygem-aws-sdk-s3outposts
     SUBDIR += rubygem-aws-sdk-s3tables
     SUBDIR += rubygem-aws-sdk-s3vectors
@@ -7353,6 +7376,7 @@
     SUBDIR += rubygem-cucumber-tag-expressions
     SUBDIR += rubygem-cucumber-tag-expressions8
     SUBDIR += rubygem-cucumber-wire
+    SUBDIR += rubygem-cucumber10
     SUBDIR += rubygem-curses
     SUBDIR += rubygem-cyoi
     SUBDIR += rubygem-daemon_controller
@@ -7660,6 +7684,7 @@
     SUBDIR += rubygem-io-console
     SUBDIR += rubygem-io-endpoint
     SUBDIR += rubygem-io-event
+    SUBDIR += rubygem-io-event-gitlab
     SUBDIR += rubygem-io-like
     SUBDIR += rubygem-io-nonblock
     SUBDIR += rubygem-io-stream
@@ -7960,6 +7985,7 @@
     SUBDIR += rubygem-pairing_heap
     SUBDIR += rubygem-paper_trail
     SUBDIR += rubygem-parser
+    SUBDIR += rubygem-parser-gitlab
     SUBDIR += rubygem-pastel
     SUBDIR += rubygem-patch_finder
     SUBDIR += rubygem-pathname
@@ -8681,6 +8707,7 @@
     SUBDIR += vc-intrinsics
     SUBDIR += vcglib
     SUBDIR += vdf
+    SUBDIR += vectorscan
     SUBDIR += venom
     SUBDIR += vera++
     SUBDIR += vexcl
