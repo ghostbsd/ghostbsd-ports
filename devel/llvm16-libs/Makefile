@@ -4,6 +4,7 @@
 # libraries are ABI-compatible with the full port.
 PORTNAME=	llvm
 DISTVERSION=	16.0.6
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/ \
 		https://${PRE_}releases.llvm.org/${LLVM_RELEASE}${RCDIR}/

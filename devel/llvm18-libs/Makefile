@@ -4,6 +4,7 @@
 # libraries are ABI-compatible with the full port.
 PORTNAME=	llvm
 DISTVERSION=	18.1.8
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/
 PKGNAMESUFFIX=	${LLVM_SUFFIX}-libs
