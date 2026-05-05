@@ -74,6 +74,7 @@ CMAKE_ARGS+=	-DLLVM_ENABLE_LIBEDIT=OFF
 CMAKE_ARGS+=	-DLLVM_VERSION_SUFFIX=
 
 # Same options as devel/llvm22 default flavor
+OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	BE_AMDGPU BE_WASM CLANG COMPILER_RT LLD
 OPTIONS_SINGLE=		BACKENDS
 OPTIONS_SINGLE_BACKENDS=BE_FREEBSD BE_NATIVE BE_STANDARD
@@ -173,13 +174,6 @@ PLIST_SUB+=	CONFIGURE_TARGET=${CONFIGURE_TARGET} \
 		LLVM_SUFFIX=${LLVM_SUFFIX}
 
 .include <bsd.port.options.mk>
-
-# Comment out plist entries for unsupported options.
-.for opt in ${_ALL_OPTIONS}
-.if !${OPTIONS_DEFINE:M${opt}}
-PLIST_SUB+=	${opt}="@comment "
-.endif
-.endfor
 
 # keep in sync with /usr/src/lib/clang/clang.build.mk
 # ----------- start of sync block ------------------

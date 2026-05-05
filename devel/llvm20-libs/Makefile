@@ -76,6 +76,7 @@ CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=OFF
 CMAKE_ARGS+=	-DLLVM_VERSION_SUFFIX=
 
 # Same options as devel/llvm20 default flavor
+OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	BE_AMDGPU BE_WASM CLANG COMPILER_RT LLD
 OPTIONS_SINGLE=		BACKENDS
 OPTIONS_SINGLE_BACKENDS=BE_FREEBSD BE_NATIVE BE_STANDARD
@@ -150,6 +151,7 @@ LLDB_CMAKE_ON= \
 	-DCURSES_NCURSES_LIBRARY=/usr/lib/libncurses.so \
 	-DPANEL_LIBRARIES=/usr/lib/libpanel.so
 LLDB_DESC=		Install lldb, the LLVM debugger
+LLDB_PLIST_SUB=		PYTHON_ABIVER=${PYTHON_ABIVER}
 LLDB_IMPLIES=		CLANG
 LLDB_USES=		gnome lua:54 libedit
 LLDB_USE=		gnome=libxml2
@@ -174,13 +176,6 @@ PLIST_SUB+=	CONFIGURE_TARGET=${CONFIGURE_TARGET} \
 		LLVM_SUFFIX=${LLVM_SUFFIX}
 
 .include <bsd.port.options.mk>
-
-# Comment out plist entries for unsupported options.
-.for opt in ${_ALL_OPTIONS}
-.if !${OPTIONS_DEFINE:M${opt}}
-PLIST_SUB+=	${opt}="@comment "
-.endif
-.endfor
 
 # keep in sync with /usr/src/lib/clang/clang.build.mk
 # ----------- start of sync block ------------------
