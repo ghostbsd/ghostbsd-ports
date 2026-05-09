@@ -77,9 +77,6 @@ ALL_TARGET=	backend
 # Go binaries are statically linked
 STRIP=		#
 
-DAEMONARGS=	-S -l \$${forgejo_facility} -s \$${forgejo_priority} -T \
-		\$${name}
-SUB_LIST+=	DAEMONARGS="${DAEMONARGS}"
 
 # The provided Makefile does not include an install target.
 do-install:

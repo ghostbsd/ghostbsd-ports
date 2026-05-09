@@ -5264,3 +5264,28 @@ emulators/virtualbox-ose-nox11-70|emulators/virtualbox-ose-70@nox11|2026-04-30|C
 emulators/virtualbox-ose-nox11-71|emulators/virtualbox-ose-71@nox11|2026-04-30|Converted to a flavorized port
 emulators/virtualbox-ose-nox11-72|emulators/virtualbox-ose-72@nox11|2026-04-30|Converted to a flavorized port
 databases/kuzu|databases/ladybug|2026-05-03|Upstream abandoned, project continuing under new name
+lang/elm||2026-05-04|Has expired: Depends on a deprecated compiler's version
+ports-mgmt/portsnap||2026-05-04|Has expired: portsnap infrastructure will be removed after the EOL of 13.x
+lang/ruby32||2026-05-04|Has expired: Please migrate to newer version. Ruby 3.2 is expected to reach its EoL on March 31, 2026
+lang/ghc92||2026-05-04|Has expired: Old version
+math/xgraph||2026-05-04|Has expired: Obsolete software, unmaintained upstream
+dns/samba-nsupdate||2026-05-04|Has expired: dns/samba-nsupdate has been abandoned for many years; use dns/bind-tools for DNS updates with GSS-TSIG
+astro/mymoon||2026-05-04|Has expired: mastersite disappeared
+games/flightgear-mb339-pan||2026-05-04|Has expired: Upstream is inactive for 15+ years
+x11/urxvt-perls||2026-05-04|Has expired: Upstream repository archived in 2021
+sysutils/cfengine-masterfiles322||2026-05-04|Has expired: No longer supported by upstream
+sysutils/cfengine322||2026-05-04|Has expired: No longer supported by upstream
+sysutils/cfengine321||2026-05-04|Has expired: No longer supported by upstream
+sysutils/cfengine-masterfiles321||2026-05-04|Has expired: No longer supported by upstream
+sysutils/cfengine323||2026-05-04|Has expired: No longer supported by upstream
+sysutils/cfengine-masterfiles323||2026-05-04|Has expired: No longer supported by upstream
+security/openssl111||2026-05-04|Has expired: End-of-life since 2023-09-11, see https://www.openssl.org/blog/blog/2023/09/11/eol-111/  port will be removed when FreeBSD 13 is EoL
+security/ktls_isa-l_crypto-kmod||2026-05-05|Removed, is only for FreeBSD 13
+graphics/drm-510-kmod||2026-05-05|Removed, is only for FreeBSD 13
+graphics/nvidia-drm-510-kmod||2026-05-05|Removed, is only for FreeBSD 13
+graphics/nvidia-drm-510-kmod-580||2026-05-05|Removed, is only for FreeBSD 13
+graphics/nvidia-drm-510-kmod-devel||2026-05-05|Removed, is only for FreeBSD 13
+mail/archiveopteryx-devel|mail/archiveopteryx|2026-05-06|Remove obsoleted port. Use mail/archiveopteryx instead
+devel/kyua||2026-05-07|Removed, kyua from base must be used for FreeBSD 14.x and newer
+devel/sd-mux-ctrl||2026-05-08|Has expired: Upstream project is unmaintained as the Tizen project is no longer active
+devel/py-rednose||2026-05-08|Has expired: Depends on unmaintained nosetests

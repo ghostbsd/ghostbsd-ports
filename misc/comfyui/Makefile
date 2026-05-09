@@ -1,6 +1,7 @@
 PORTNAME=	comfyui
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.20.1
+PORTREVISION=	1
 CATEGORIES=	misc python # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -24,7 +25,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiohttp>=3.11.8:www/py-aiohttp@${PY_FLAVOR} 
 		${PYTHON_PKGNAMEPREFIX}filelock>0:sysutils/py-filelock@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}glfw>0:graphics/py-glfw@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}kornia>=0.7.1:graphics/py-kornia@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}numpy1>=1.25.0:math/py-numpy1@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.25.0:math/py-numpy@${PY_FLAVOR} \
 		${PY_PILLOW} \
 		${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pydantic-settings>=2.0:devel/py-pydantic-settings@${PY_FLAVOR} \

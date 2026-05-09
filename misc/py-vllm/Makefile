@@ -1,5 +1,6 @@
 PORTNAME=	vllm
 DISTVERSION=	0.19.0
+PORTREVISION=	1
 CATEGORIES=	misc python # machine-learning
 MASTER_SITES=	PYPI \
 		https://github.com/uxlfoundation/oneDNN/archive/refs/tags/:onednn_src
@@ -48,7 +49,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiohttp>=3.13.3:www/py-aiohttp@${PY_FLAVOR} 
 		${PYTHON_PKGNAMEPREFIX}model-hosting-container-standards>=0.1.13:misc/py-model-hosting-container-standards@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}msgspec>0:devel/py-msgspec@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ninja>=1.13:devel/py-ninja@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}numpy1>=1.25:math/py-numpy1@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.25:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}openai>=2.0.0:misc/py-openai@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}openai-harmony>=0.0.3:misc/py-openai-harmony@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}opentelemetry-api>=1.27.0:devel/py-opentelemetry-api@${PY_FLAVOR} \

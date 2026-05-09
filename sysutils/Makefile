@@ -185,16 +185,10 @@
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
     SUBDIR += cfengine-masterfiles-lts
-    SUBDIR += cfengine-masterfiles321
-    SUBDIR += cfengine-masterfiles322
-    SUBDIR += cfengine-masterfiles323
     SUBDIR += cfengine-masterfiles324
     SUBDIR += cfengine-masterfiles325
     SUBDIR += cfengine-masterfiles326
     SUBDIR += cfengine-masterfiles327
-    SUBDIR += cfengine321
-    SUBDIR += cfengine322
-    SUBDIR += cfengine323
     SUBDIR += cfengine324
     SUBDIR += cfengine325
     SUBDIR += cfengine326
@@ -406,6 +400,7 @@
     SUBDIR += finfo
     SUBDIR += firstboot-cloudsetup
     SUBDIR += firstboot-freebsd-update
+    SUBDIR += firstboot-pkg-upgrade
     SUBDIR += firstboot-pkgs
     SUBDIR += flasher
     SUBDIR += flashrom
@@ -1036,6 +1031,7 @@
     SUBDIR += procmap
     SUBDIR += procs
     SUBDIR += progress
+    SUBDIR += prokshy
     SUBDIR += pslist
     SUBDIR += psmisc
     SUBDIR += pstack

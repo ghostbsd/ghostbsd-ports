@@ -60,7 +60,6 @@
     SUBDIR += elixir-devel
     SUBDIR += elixir-mode.el
     SUBDIR += elk
-    SUBDIR += elm
     SUBDIR += emacs-lisp-intro
     SUBDIR += emilua
     SUBDIR += erlang
@@ -109,7 +108,6 @@
     SUBDIR += gershwin-libobjc2
     SUBDIR += gforth
     SUBDIR += ghc
-    SUBDIR += ghc92
     SUBDIR += ghc94
     SUBDIR += ghc96
     SUBDIR += ghc98
@@ -331,7 +329,6 @@
     SUBDIR += rhino
     SUBDIR += rizin
     SUBDIR += rizin-cutter
-    SUBDIR += ruby32
     SUBDIR += ruby33
     SUBDIR += ruby34
     SUBDIR += ruby40

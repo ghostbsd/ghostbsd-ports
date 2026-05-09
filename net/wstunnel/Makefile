@@ -1,6 +1,6 @@
 PORTNAME=	wstunnel
 DISTVERSIONPREFIX=	v
-DISTVERSION=	10.5.3
+DISTVERSION=	10.5.5
 CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -303,8 +303,6 @@ CARGO_CRATES=	ahash-0.8.12 \
 		rustls-native-certs-0.8.3 \
 		rustls-pemfile-2.2.0 \
 		rustls-pki-types-1.14.1 \
-		rustls-platform-verifier-0.7.0 \
-		rustls-platform-verifier-android-0.1.1 \
 		rustls-webpki-0.103.13 \
 		rustversion-1.0.22 \
 		ryu-1.0.23 \
@@ -426,7 +424,6 @@ CARGO_CRATES=	ahash-0.8.12 \
 		wasm-metadata-0.244.0 \
 		wasmparser-0.244.0 \
 		web-time-1.1.0 \
-		webpki-root-certs-1.0.7 \
 		widestring-1.2.1 \
 		winapi-0.2.8 \
 		winapi-0.3.9 \

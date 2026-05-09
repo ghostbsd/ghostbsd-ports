@@ -3,7 +3,7 @@ DISTVERSIONPREFIX=	v
 DISTVERSION=		3.7.1
 CATEGORIES=		devel
 
-MAINTAINER=		dch@FreeBSD.org
+MAINTAINER=		ports@FreeBSD.org
 COMMENT=		C++11 header-only toml parser & encoder
 WWW=		https://github.com/ToruNiina/toml11
 

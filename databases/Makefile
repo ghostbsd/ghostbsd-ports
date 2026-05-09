@@ -751,6 +751,7 @@
     SUBDIR += py-anysqlite
     SUBDIR += py-apache-arrow
     SUBDIR += py-apsw
+    SUBDIR += py-apswutils
     SUBDIR += py-asyncmy
     SUBDIR += py-asyncpg
     SUBDIR += py-berkeleydb
@@ -863,6 +864,7 @@
     SUBDIR += py-sqlite-fts4
     SUBDIR += py-sqlite-migrate
     SUBDIR += py-sqlite-utils
+    SUBDIR += py-sqlite-vec
     SUBDIR += py-sqlite3
     SUBDIR += py-sqlmodel
     SUBDIR += py-sqlobject

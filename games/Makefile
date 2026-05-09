@@ -269,7 +269,6 @@
     SUBDIR += flightgear
     SUBDIR += flightgear-aircraft
     SUBDIR += flightgear-data
-    SUBDIR += flightgear-mb339-pan
     SUBDIR += flobopuyo
     SUBDIR += flyhard
     SUBDIR += flying

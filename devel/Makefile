@@ -1208,7 +1208,6 @@
     SUBDIR += kronosnet
     SUBDIR += ktextaddons
     SUBDIR += kunifiedpush
-    SUBDIR += kyua
     SUBDIR += lab
     SUBDIR += lace
     SUBDIR += lace14
@@ -1680,6 +1679,7 @@
     SUBDIR += magic_enum
     SUBDIR += magit
     SUBDIR += makedepend
+    SUBDIR += maki
     SUBDIR += malloy
     SUBDIR += manuals
     SUBDIR += marisa-trie
@@ -4489,6 +4489,7 @@
     SUBDIR += py-async-lru
     SUBDIR += py-async_generator
     SUBDIR += py-async_timeout
+    SUBDIR += py-asyncstdlib
     SUBDIR += py-asynctest
     SUBDIR += py-atom
     SUBDIR += py-atomiclong
@@ -4541,6 +4542,7 @@
     SUBDIR += py-azure-mgmt-cdn
     SUBDIR += py-azure-mgmt-cognitiveservices
     SUBDIR += py-azure-mgmt-compute
+    SUBDIR += py-azure-mgmt-compute34
     SUBDIR += py-azure-mgmt-consumption
     SUBDIR += py-azure-mgmt-containerinstance
     SUBDIR += py-azure-mgmt-containerregistry
@@ -4850,6 +4852,7 @@
     SUBDIR += py-datadog
     SUBDIR += py-dataflows-tabulator
     SUBDIR += py-datapackage
+    SUBDIR += py-datashape
     SUBDIR += py-datasette
     SUBDIR += py-datatest
     SUBDIR += py-dateparser
@@ -4961,11 +4964,13 @@
     SUBDIR += py-fam
     SUBDIR += py-fastbencode
     SUBDIR += py-fastcache
+    SUBDIR += py-fastcore
     SUBDIR += py-fasteners
     SUBDIR += py-fastentrypoints
     SUBDIR += py-fastf1
     SUBDIR += py-fastimport
     SUBDIR += py-fastjsonschema
+    SUBDIR += py-fastlite
     SUBDIR += py-fastnumbers
     SUBDIR += py-fastprogress
     SUBDIR += py-fastuuid
@@ -5078,6 +5083,7 @@
     SUBDIR += py-grimoirelab-toolkit
     SUBDIR += py-grizzled
     SUBDIR += py-grpc-google-iam-v1
+    SUBDIR += py-grpc-interceptor
     SUBDIR += py-grpc-stubs
     SUBDIR += py-grpcio
     SUBDIR += py-grpcio-gcp
@@ -5606,6 +5612,8 @@
     SUBDIR += py-pkgconfig
     SUBDIR += py-plac
     SUBDIR += py-plan
+    SUBDIR += py-plaster
+    SUBDIR += py-plaster-pastedeploy
     SUBDIR += py-platformdirs
     SUBDIR += py-plette
     SUBDIR += py-plex
@@ -5707,6 +5715,7 @@
     SUBDIR += py-pycompilation
     SUBDIR += py-pycomplete
     SUBDIR += py-pycomposefile
+    SUBDIR += py-pyconfigurator
     SUBDIR += py-pyconify
     SUBDIR += py-pycparser
     SUBDIR += py-pycrdt
@@ -5793,6 +5802,7 @@
     SUBDIR += py-pyrepl
     SUBDIR += py-pyrfc3339
     SUBDIR += py-pyright
+    SUBDIR += py-pyroaring
     SUBDIR += py-pyroma
     SUBDIR += py-pyrsistent
     SUBDIR += py-pyscaffold
@@ -5982,7 +5992,6 @@
     SUBDIR += py-recordclass
     SUBDIR += py-recurring-ical-events
     SUBDIR += py-red-black-tree-mod
-    SUBDIR += py-rednose
     SUBDIR += py-reedsolo
     SUBDIR += py-referencing
     SUBDIR += py-regress
@@ -6068,6 +6077,7 @@
     SUBDIR += py-setproctitle
     SUBDIR += py-setupmeta
     SUBDIR += py-setuptools
+    SUBDIR += py-setuptools-changelog-shortener
     SUBDIR += py-setuptools-declarative-requirements
     SUBDIR += py-setuptools-dso
     SUBDIR += py-setuptools-gettext
@@ -6440,6 +6450,7 @@
     SUBDIR += py-zconfig
     SUBDIR += py-zfp
     SUBDIR += py-zict
+    SUBDIR += py-zipkin
     SUBDIR += py-zipp
     SUBDIR += py-zope.component
     SUBDIR += py-zope.configuration
@@ -8456,7 +8467,6 @@
     SUBDIR += sccs
     SUBDIR += schilybase
     SUBDIR += scons
-    SUBDIR += sd-mux-ctrl
     SUBDIR += sdbus-cpp
     SUBDIR += sdl12
     SUBDIR += sdl12-compat
@@ -8470,6 +8480,7 @@
     SUBDIR += sedsed
     SUBDIR += seer-gdb
     SUBDIR += selene
+    SUBDIR += sem
     SUBDIR += semver
     SUBDIR += sentry-cli
     SUBDIR += serd
