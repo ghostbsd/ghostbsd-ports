@@ -1,0 +1,9 @@
+[
+{ type: install
+  message: <<EOM
+For backlight control to work, your user must be a member of the "video" group:
+
+    pw groupmod video -m <username>
+EOM
+}
+]
