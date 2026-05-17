@@ -45,7 +45,7 @@
 +			continue;
 +
 +		path = g_build_filename (GCM_BACKLIGHT_HELPER_DEV_LOCATION, de->d_name, NULL);
-+		fd = open (path, O_RDWR);
++		fd = open (path, O_RDONLY);
 +		if (fd < 0) {
 +			g_free (path);
 +			continue;
