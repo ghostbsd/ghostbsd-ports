@@ -191,7 +191,7 @@
 +	}
 +
 +	/* SetBrightness */
-+	if (set_brightness != -1) {
++	if (set_brightness > 0) {
 +		if (!gcm_backlight_helper_set_brightness (device_path, set_brightness)) {
 +			g_print ("%s\n", _("Could not set the value of the backlight"));
 +			retval = GCM_BACKLIGHT_HELPER_EXIT_CODE_FAILED;
