@@ -1,4 +1,5 @@
 bin/install-station
+etc/rc.d/install_station
 lib/install-station/backend-query/detect-laptop.sh
 lib/install-station/backend-query/detect-nics.sh
 lib/install-station/backend-query/detect-scheme.sh
