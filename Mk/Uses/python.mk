@@ -871,7 +871,7 @@ PY_BACKPORTS.ZSTD=	${PYTHON_PKGNAMEPREFIX}backports.zstd>=1.0.0:devel/py-backpor
 
 .  if ${PYTHON_REL} < 31100
 PY_EXCEPTIONGROUP=	${PYTHON_PKGNAMEPREFIX}exceptiongroup>=1.1.1:devel/py-exceptiongroup@${PY_FLAVOR}
-PY_TOMLI=		${PYTHON_PKGNAMEPREFIX}tomli>=2.3<3:textproc/py-tomli@${PY_FLAVOR}
+PY_TOMLI=		${PYTHON_PKGNAMEPREFIX}tomli>=2.4<3:textproc/py-tomli@${PY_FLAVOR}
 PY_TYPING_EXTENSIONS=	${PYTHON_PKGNAMEPREFIX}typing-extensions>0:devel/py-typing-extensions@${PY_FLAVOR}
 .  endif
 

@@ -212,9 +212,9 @@
       "license": "MIT"
     },
     "node_modules/keytar/node_modules/node-abi": {
-      "version": "3.89.0",
-      "resolved": "https://registry.npmjs.org/node-abi/-/node-abi-3.89.0.tgz",
-      "integrity": "sha512-6u9UwL0HlAl21+agMN3YAMXcKByMqwGx+pq+P76vii5f7hTPtKDp08/H9py6DY+cfDw7kQNTGEj/rly3IgbNQA==",
+      "version": "3.92.0",
+      "resolved": "https://registry.npmjs.org/node-abi/-/node-abi-3.92.0.tgz",
+      "integrity": "sha512-KdHvFWZjEKDf0cakgFjebl371GPsISX2oZHcuyKqM7DtogIsHrqKeLTo8wBHxaXRAQlY2PsPlZmfo+9ZCxEREQ==",
       "license": "MIT",
       "dependencies": {
         "semver": "^7.3.5"

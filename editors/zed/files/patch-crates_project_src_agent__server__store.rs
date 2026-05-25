@@ -1,6 +1,6 @@
---- crates/project/src/agent_server_store.rs.orig	2026-04-15 21:06:43 UTC
+--- crates/project/src/agent_server_store.rs.orig	2026-05-06 20:35:33 UTC
 +++ crates/project/src/agent_server_store.rs
-@@ -1189,6 +1189,8 @@ impl ExternalAgentServer for LocalExtensionArchiveAgen
+@@ -1192,6 +1192,8 @@ impl ExternalAgentServer for LocalExtensionArchiveAgen
                  "linux"
              } else if cfg!(target_os = "windows") {
                  "windows"
@@ -9,7 +9,7 @@
              } else {
                  anyhow::bail!("unsupported OS");
              };
-@@ -1377,6 +1379,8 @@ impl ExternalAgentServer for LocalRegistryArchiveAgent
+@@ -1380,6 +1382,8 @@ impl ExternalAgentServer for LocalRegistryArchiveAgent
                  "linux"
              } else if cfg!(target_os = "windows") {
                  "windows"

@@ -1,4 +1,4 @@
---- crates/zed/src/main.rs.orig	2026-04-15 21:06:43 UTC
+--- crates/zed/src/main.rs.orig	2026-05-06 20:35:33 UTC
 +++ crates/zed/src/main.rs
 @@ -13,6 +13,7 @@ use collections::HashMap;
  use client::{Client, ProxySettings, RefreshLlmTokenListener, UserStore, parse_zed_link};
@@ -8,7 +8,7 @@
  use crashes::InitCrashHandler;
  use db::kvp::{GlobalKeyValueStore, KeyValueStore};
  use editor::Editor;
-@@ -192,6 +193,7 @@ fn main() {
+@@ -194,6 +195,7 @@ fn main() {
      }
  
      // `zed --crash-handler` Makes zed operate in minidump crash handler mode
@@ -16,15 +16,15 @@
      if let Some(socket) = &args.crash_handler {
          crashes::crash_server(socket.as_path());
          return;
-@@ -336,6 +338,7 @@ fn main() {
+@@ -338,6 +340,7 @@ fn main() {
          KeyValueStore::from_app_db(&app_db),
      ));
- 
+     let background_executor = app.background_executor();
 +    #[cfg(not(target_os = "freebsd"))]
      crashes::init(
          InitCrashHandler {
              session_id,
-@@ -570,6 +573,7 @@ fn main() {
+@@ -574,6 +577,7 @@ fn main() {
          cx.subscribe(&user_store, {
              let telemetry = telemetry.clone();
              move |_, evt: &client::user::Event, _| match evt {
@@ -32,7 +32,7 @@
                  client::user::Event::PrivateUserInfoUpdated => {
                      crashes::set_user_info(crashes::UserInfo {
                          metrics_id: telemetry.metrics_id().map(|s| s.to_string()),
-@@ -615,6 +619,7 @@ fn main() {
+@@ -619,6 +623,7 @@ fn main() {
          auto_update::init(client.clone(), cx);
          dap_adapters::init(cx);
          auto_update_ui::init(cx);

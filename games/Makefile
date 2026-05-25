@@ -161,7 +161,6 @@
     SUBDIR += connectagram
     SUBDIR += connectfive
     SUBDIR += construo
-    SUBDIR += coronapoker
     SUBDIR += corsix-th
     SUBDIR += cosmosmash
     SUBDIR += cowsay
@@ -270,7 +269,6 @@
     SUBDIR += flightgear
     SUBDIR += flightgear-aircraft
     SUBDIR += flightgear-data
-    SUBDIR += flightgear-mb339-pan
     SUBDIR += flobopuyo
     SUBDIR += flyhard
     SUBDIR += flying
@@ -675,6 +673,7 @@
     SUBDIR += nextgo
     SUBDIR += nexuiz
     SUBDIR += nighthawk
+    SUBDIR += nile
     SUBDIR += nimuh
     SUBDIR += ninix-aya
     SUBDIR += njam

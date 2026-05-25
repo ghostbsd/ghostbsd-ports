@@ -12,7 +12,6 @@
     SUBDIR += antivirus-milter
     SUBDIR += anubis
     SUBDIR += archiveopteryx
-    SUBDIR += archiveopteryx-devel
     SUBDIR += archivesmtp
     SUBDIR += archmbox
     SUBDIR += ask

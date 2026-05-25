@@ -198,6 +198,7 @@
     SUBDIR += filebrowser
     SUBDIR += filebrowser-quantum
     SUBDIR += filepizza
+    SUBDIR += fileserv
     SUBDIR += filtron
     SUBDIR += firedm
     SUBDIR += firefox
@@ -209,6 +210,9 @@
     SUBDIR += foreign-cdm
     SUBDIR += forgejo
     SUBDIR += forgejo-lts
+    SUBDIR += forgejo11
+    SUBDIR += forgejo14
+    SUBDIR += forgejo15
     SUBDIR += formication
     SUBDIR += foswiki
     SUBDIR += free-sa-devel
@@ -371,6 +375,7 @@
     SUBDIR += lua-resty-session3
     SUBDIR += luakit
     SUBDIR += luakit-devel
+    SUBDIR += lubelogger
     SUBDIR += lux
     SUBDIR += lychee
     SUBDIR += lycheeorg
@@ -469,6 +474,7 @@
     SUBDIR += moodle45
     SUBDIR += moodle50
     SUBDIR += moodle51
+    SUBDIR += moodle52
     SUBDIR += morty
     SUBDIR += multisort
     SUBDIR += multiwatch
@@ -510,6 +516,7 @@
     SUBDIR += node22
     SUBDIR += node24
     SUBDIR += node25
+    SUBDIR += node26
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += npc
@@ -518,6 +525,7 @@
     SUBDIR += npm-node22
     SUBDIR += npm-node24
     SUBDIR += npm-node25
+    SUBDIR += npm-node26
     SUBDIR += nyxt
     SUBDIR += oatpp
     SUBDIR += oauth2-proxy
@@ -1469,6 +1477,7 @@
     SUBDIR += pocket-id
     SUBDIR += podcastamatic
     SUBDIR += pomerium
+    SUBDIR += pomerium-envoy-custom
     SUBDIR += pound
     SUBDIR += privatebin
     SUBDIR += privoxy
@@ -1576,6 +1585,7 @@
     SUBDIR += py-dj52-django-timezone-field
     SUBDIR += py-dj52-django-treebeard
     SUBDIR += py-dj52-django-treenode
+    SUBDIR += py-dj52-django-unfold
     SUBDIR += py-dj52-djangorestframework
     SUBDIR += py-dj52-djangorestframework-guardian
     SUBDIR += py-dj52-drf-spectacular
@@ -1607,6 +1617,7 @@
     SUBDIR += py-django-cms
     SUBDIR += py-django-compression-middleware
     SUBDIR += py-django-configurations
+    SUBDIR += py-django-configurator
     SUBDIR += py-django-constance
     SUBDIR += py-django-contact-form
     SUBDIR += py-django-context-decorator
@@ -1714,6 +1725,7 @@
     SUBDIR += py-dtflickr
     SUBDIR += py-enmerkar
     SUBDIR += py-essentials-openapi
+    SUBDIR += py-exa-py
     SUBDIR += py-extruct
     SUBDIR += py-fake-useragent
     SUBDIR += py-falcon
@@ -1721,6 +1733,7 @@
     SUBDIR += py-fastapi-sso
     SUBDIR += py-feedgen
     SUBDIR += py-feedgenerator
+    SUBDIR += py-firecrawl-py
     SUBDIR += py-flasgger
     SUBDIR += py-flask
     SUBDIR += py-flask-admin
@@ -1870,6 +1883,7 @@
     SUBDIR += py-onetimepass
     SUBDIR += py-openbrokerapi
     SUBDIR += py-pafy
+    SUBDIR += py-parallel-web
     SUBDIR += py-paste
     SUBDIR += py-pastedeploy
     SUBDIR += py-path-and-address
@@ -1901,6 +1915,7 @@
     SUBDIR += py-pysmartdl
     SUBDIR += py-python-digitalocean
     SUBDIR += py-python-dotenv
+    SUBDIR += py-python-fasthtml
     SUBDIR += py-python-multipart
     SUBDIR += py-pyweblib
     SUBDIR += py-pywebview-gtk
@@ -2245,6 +2260,7 @@
     SUBDIR += rubygem-jquery-turbolinks
     SUBDIR += rubygem-jquery-ui-rails-rails4
     SUBDIR += rubygem-jruby-rack
+    SUBDIR += rubygem-js-routes
     SUBDIR += rubygem-jsbundling-rails
     SUBDIR += rubygem-jsbundling-rails-rails70
     SUBDIR += rubygem-jsbundling-rails-rails71
@@ -2351,25 +2367,31 @@
     SUBDIR += rubygem-rack
     SUBDIR += rubygem-rack-accept
     SUBDIR += rubygem-rack-attack
+    SUBDIR += rubygem-rack-attack-gitlab
     SUBDIR += rubygem-rack-cache
     SUBDIR += rubygem-rack-contrib
     SUBDIR += rubygem-rack-cors
+    SUBDIR += rubygem-rack-gitlab
     SUBDIR += rubygem-rack-mount
     SUBDIR += rubygem-rack-openid
     SUBDIR += rubygem-rack-protection
+    SUBDIR += rubygem-rack-protection-gitlab
     SUBDIR += rubygem-rack-protection1
     SUBDIR += rubygem-rack-protection2
     SUBDIR += rubygem-rack-protection3
     SUBDIR += rubygem-rack-proxy
     SUBDIR += rubygem-rack-session
+    SUBDIR += rubygem-rack-session-gitlab
     SUBDIR += rubygem-rack-session10
     SUBDIR += rubygem-rack-ssl
     SUBDIR += rubygem-rack-test
+    SUBDIR += rubygem-rack-test-gitlab
     SUBDIR += rubygem-rack-timeout
     SUBDIR += rubygem-rack16
     SUBDIR += rubygem-rack22
     SUBDIR += rubygem-rack_csrf
     SUBDIR += rubygem-rackup
+    SUBDIR += rubygem-rackup-gitlab
     SUBDIR += rubygem-rackup10
     SUBDIR += rubygem-rails-gitlab
     SUBDIR += rubygem-rails-settings-cached
@@ -2739,6 +2761,7 @@
     SUBDIR += yarn-node22
     SUBDIR += yarn-node24
     SUBDIR += yarn-node25
+    SUBDIR += yarn-node26
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get

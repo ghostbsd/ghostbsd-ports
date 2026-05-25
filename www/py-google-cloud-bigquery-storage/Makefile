@@ -27,4 +27,13 @@ USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
 
+OPTIONS_DEFINE=	FASTAVRO PANDAS PYARROW
+FASTAVRO_DESC=	Avro support via fastavro
+PANDAS_DESC=	DataFrame support via pandas
+PYARROW_DESC=	Apache Arrow support via pyarrow
+
+FASTAVRO_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fastavro>=1.1.0:textproc/py-fastavro@${PY_FLAVOR}
+PANDAS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pandas>=1.1.3,1:math/py-pandas@${PY_FLAVOR}
+PYARROW_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyarrow>=3.0.0:databases/py-pyarrow@${PY_FLAVOR}
+
 .include <bsd.port.mk>

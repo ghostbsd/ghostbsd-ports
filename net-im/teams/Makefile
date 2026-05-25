@@ -1,6 +1,6 @@
 PORTNAME=	teams
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.7.12
+DISTVERSION=	2.8.0
 PORTREVISION=	2
 CATEGORIES=	net-im
 
@@ -11,8 +11,8 @@ WWW=		https://github.com/IsmaelMartinez/teams-for-linux
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
-USES=		desktop-file-utils electron:39 localbase:ldflags \
-		nodejs:22,build python:build
+USES=		desktop-file-utils electron:41 localbase:ldflags \
+		nodejs:24,build python:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	IsmaelMartinez

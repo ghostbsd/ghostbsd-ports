@@ -22,4 +22,9 @@ USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
 
+OPTIONS_DEFINE=	COLLATION
+COLLATION_DESC=	Collation support via PyICU
+
+COLLATION_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyicu>=0:devel/py-pyicu@${PY_FLAVOR}
+
 .include <bsd.port.mk>

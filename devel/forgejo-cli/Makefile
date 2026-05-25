@@ -1,10 +1,11 @@
 PORTNAME=	forgejo-cli
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.5.0
+PORTREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	https://codeberg.org/forgejo-contrib/${PORTNAME}/archive/ \
+MASTER_SITES=	https://codeberg.org/forgejo-contrib/${PORTNAME}/archive/${DISTVERSIONFULL}${EXTRACT_SUFX}?dummy=/ \
 		LOCAL/jrm:comp
-DISTFILES=	${DISTVERSIONFULL}${EXTRACT_SUFX} \
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		fj-comp-${DISTVERSIONFULL}${EXTRACT_SUFX}:comp
 
 MAINTAINER=	jrm@FreeBSD.org
@@ -21,11 +22,12 @@ LIB_DEPENDS=	libgit2.so:devel/libgit2 \
 
 USES=		cargo ssl
 
-CARGO_ENV=	LIBGIT2_SYS_USE_PKG_CONFIG=1 \
-		LIBSSH2_SYS_USE_PKG_CONFIG=1 \
-		OPENSSL_DIR=${OPENSSLBASE}
-
 WRKSRC=		${WRKDIR}/${PORTNAME}
+
+PLIST_FILES=	bin/fj \
+		share/bash-completion/completions/fj \
+		share/fish/completions/fj.fish \
+		share/zsh/site-functions/_fj
 
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/bash-completion/completions \

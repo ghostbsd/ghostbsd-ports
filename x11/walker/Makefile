@@ -1,6 +1,6 @@
 PORTNAME=	walker
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.16.0
+DISTVERSION=	2.16.2
 CATEGORIES=	x11 wayland
 PKGNAMESUFFIX=	-launcher
 
@@ -12,7 +12,8 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	protoc:devel/protobuf
-LIB_DEPENDS=	libpoppler-glib.so:graphics/poppler-glib \
+LIB_DEPENDS=	libgraphene-1.0.so:graphics/graphene \
+		libpoppler-glib.so:graphics/poppler-glib \
 		libgtk4-layer-shell.so:x11-toolkits/gtk4-layer-shell
 RUN_DEPENDS=	elephant:sysutils/elephant
 

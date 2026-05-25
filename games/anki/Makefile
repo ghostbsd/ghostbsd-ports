@@ -1,6 +1,6 @@
 PORTNAME=	anki
 DISTVERSION=	25.09.2
-PORTREVISION=	6
+PORTREVISION=	7
 # Don't forget to update ${_MY_BUILDHASH} if DISTVERSION changes
 CATEGORIES=	games education python
 MASTER_SITES=	LOCAL/kai/:yarncache
@@ -13,7 +13,7 @@ WWW=		https://apps.ankiweb.net/
 LICENSE=	AGPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-NOT_FOR_ARCHS=	armv6 armv7 i386 mips powerpc
+NOT_FOR_ARCHS=	armv6 armv7 i386 powerpc
 NOT_FOR_ARCHS_REASON=	the provided build system written in Rust (= runner) accepts only 64-bit systems.
 
 BUILD_DEPENDS=	protoc:devel/protobuf \
@@ -63,6 +63,7 @@ CARGO_TARGET_DIR=	${WRKSRC}/out/rust
 
 # Variables used by the "runner" build system
 MAKE_ENV+=	NODE_BINARY=${LOCALBASE}/bin/node \
+		NODE_OPTIONS=--max-old-space-size=1024 \
 		OFFLINE_BUILD=1 \
 		PROTOC_BINARY=${LOCALBASE}/bin/protoc \
 		PYTHON_BINARY=${PYTHON_CMD} \

@@ -185,16 +185,10 @@
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
     SUBDIR += cfengine-masterfiles-lts
-    SUBDIR += cfengine-masterfiles321
-    SUBDIR += cfengine-masterfiles322
-    SUBDIR += cfengine-masterfiles323
     SUBDIR += cfengine-masterfiles324
     SUBDIR += cfengine-masterfiles325
     SUBDIR += cfengine-masterfiles326
     SUBDIR += cfengine-masterfiles327
-    SUBDIR += cfengine321
-    SUBDIR += cfengine322
-    SUBDIR += cfengine323
     SUBDIR += cfengine324
     SUBDIR += cfengine325
     SUBDIR += cfengine326
@@ -406,6 +400,7 @@
     SUBDIR += finfo
     SUBDIR += firstboot-cloudsetup
     SUBDIR += firstboot-freebsd-update
+    SUBDIR += firstboot-pkg-upgrade
     SUBDIR += firstboot-pkgs
     SUBDIR += flasher
     SUBDIR += flashrom
@@ -819,6 +814,7 @@
     SUBDIR += nvimpager
     SUBDIR += nvme-cli
     SUBDIR += nvramtool
+    SUBDIR += nvtop
     SUBDIR += oak
     SUBDIR += obliterate
     SUBDIR += oc
@@ -1035,6 +1031,7 @@
     SUBDIR += procmap
     SUBDIR += procs
     SUBDIR += progress
+    SUBDIR += prokshy
     SUBDIR += pslist
     SUBDIR += psmisc
     SUBDIR += pstack
@@ -1060,7 +1057,6 @@
     SUBDIR += py-appjail-gui
     SUBDIR += py-azure-cli
     SUBDIR += py-azure-cli-acr
-    SUBDIR += py-azure-cli-base
     SUBDIR += py-azure-cli-core
     SUBDIR += py-azure-cli-telemetry
     SUBDIR += py-bectl
@@ -1075,6 +1071,7 @@
     SUBDIR += py-croniter2
     SUBDIR += py-dbuild
     SUBDIR += py-debian-inspector
+    SUBDIR += py-dex
     SUBDIR += py-dict-toolbox
     SUBDIR += py-diffoscope
     SUBDIR += py-director
@@ -1090,6 +1087,7 @@
     SUBDIR += py-focker
     SUBDIR += py-glances
     SUBDIR += py-google-compute-engine
+    SUBDIR += py-greaseweazle
     SUBDIR += py-hared
     SUBDIR += py-hcloud
     SUBDIR += py-healthchecks
@@ -1097,7 +1095,6 @@
     SUBDIR += py-howdoi
     SUBDIR += py-hpilo
     SUBDIR += py-iowait
-    SUBDIR += py-ioztat
     SUBDIR += py-jailconf
     SUBDIR += py-keep
     SUBDIR += py-kubernetes
@@ -1319,6 +1316,7 @@
     SUBDIR += rw-tui
     SUBDIR += s-tui
     SUBDIR += s6
+    SUBDIR += s6-frontend
     SUBDIR += s6-rc
     SUBDIR += safe-rm
     SUBDIR += safecat
@@ -1431,6 +1429,7 @@
     SUBDIR += tarsnap-gui
     SUBDIR += tarsnap-periodic
     SUBDIR += tartarus
+    SUBDIR += taws
     SUBDIR += tbku
     SUBDIR += tclsyslog
     SUBDIR += tcplist
@@ -1622,6 +1621,7 @@
     SUBDIR += wait_on
     SUBDIR += waitforssh
     SUBDIR += walk
+    SUBDIR += wander
     SUBDIR += watchcat
     SUBDIR += watchfolder
     SUBDIR += watchman

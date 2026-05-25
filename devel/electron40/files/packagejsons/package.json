@@ -14,6 +14,7 @@
     "@electron/typescript-definitions": "^9.1.5",
     "@octokit/rest": "^20.1.2",
     "@primer/octicons": "^10.0.0",
+    "@sentry/cli": "1.72.0",
     "@types/minimist": "^1.2.5",
     "@types/node": "^24.9.0",
     "@types/semver": "^7.5.8",
@@ -84,7 +85,7 @@
     "gn-typescript-definitions": "npm run create-typescript-definitions && node script/cp.mjs electron.d.ts",
     "pre-flight": "pre-flight",
     "gn-check": "node ./script/gn-check.js",
-    "gn-format": "python3 script/run-gn-format.py",
+    "gn-format": "node ./script/lint.js --gn --fix",
     "precommit": "lint-staged",
     "preinstall": "node -e 'process.exit(0)'",
     "pretest": "npm run create-typescript-definitions",
@@ -115,7 +116,7 @@
     ],
     "*.{gn,gni}": [
       "npm run gn-check",
-      "npm run gn-format"
+      "node ./script/lint.js --gn --fix --only --"
     ],
     "*.py": [
       "node script/lint.js --py --fix --only --"
@@ -149,6 +150,9 @@
     "spec/fixtures/native-addon/*"
   ],
   "dependenciesMeta": {
+    "@sentry/cli": {
+      "built": true
+    },
     "abstract-socket": {
       "built": true
     }

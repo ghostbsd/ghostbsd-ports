@@ -60,6 +60,8 @@ post-patch:
 		${WRKSRC}/Makefile
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/*
+.for f in yosys yosys-filterlib
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/$f
+.endfor
 
 .include <bsd.port.mk>

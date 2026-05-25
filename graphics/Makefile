@@ -123,6 +123,7 @@
     SUBDIR += converseen
     SUBDIR += corrupter
     SUBDIR += cptutils
+    SUBDIR += crucible
     SUBDIR += crw
     SUBDIR += ctl
     SUBDIR += curator
@@ -154,7 +155,7 @@
     SUBDIR += drawing
     SUBDIR += drawio
     SUBDIR += drawpile
-    SUBDIR += drm-510-kmod
+    SUBDIR += drawy
     SUBDIR += drm-515-kmod
     SUBDIR += drm-61-kmod
     SUBDIR += drm-66-kmod
@@ -633,9 +634,6 @@
     SUBDIR += npretty
     SUBDIR += nsxiv
     SUBDIR += nurbs++
-    SUBDIR += nvidia-drm-510-kmod
-    SUBDIR += nvidia-drm-510-kmod-580
-    SUBDIR += nvidia-drm-510-kmod-devel
     SUBDIR += nvidia-drm-515-kmod
     SUBDIR += nvidia-drm-515-kmod-580
     SUBDIR += nvidia-drm-515-kmod-devel
@@ -1214,6 +1212,7 @@
     SUBDIR += skanpage
     SUBDIR += skia
     SUBDIR += spirv-cross
+    SUBDIR += spirv-headers
     SUBDIR += spirv-tools
     SUBDIR += springgraph
     SUBDIR += squish
@@ -1265,6 +1264,7 @@
     SUBDIR += vips
     SUBDIR += visprint
     SUBDIR += viu
+    SUBDIR += vkrunner
     SUBDIR += volpack
     SUBDIR += vp
     SUBDIR += vpaint

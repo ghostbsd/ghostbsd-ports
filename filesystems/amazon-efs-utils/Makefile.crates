@@ -15,19 +15,19 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		aws-config-1.8.15 \
 		aws-credential-types-1.2.14 \
 		aws-lc-fips-sys-0.13.14 \
-		aws-lc-rs-1.16.2 \
-		aws-lc-sys-0.39.1 \
+		aws-lc-rs-1.16.3 \
+		aws-lc-sys-0.40.0 \
 		aws-runtime-1.7.2 \
-		aws-sdk-cloudwatch-1.109.0 \
-		aws-sdk-cloudwatchlogs-1.125.0 \
+		aws-sdk-cloudwatch-1.109.1 \
+		aws-sdk-cloudwatchlogs-1.126.0 \
 		aws-sdk-s3-1.129.0 \
 		aws-sdk-sso-1.97.0 \
 		aws-sdk-ssooidc-1.99.0 \
-		aws-sdk-sts-1.101.0 \
+		aws-sdk-sts-1.102.0 \
 		aws-sigv4-1.4.2 \
 		aws-smithy-async-1.2.14 \
-		aws-smithy-cbor-0.61.6 \
-		aws-smithy-checksums-0.64.6 \
+		aws-smithy-cbor-0.61.7 \
+		aws-smithy-checksums-0.64.7 \
 		aws-smithy-compression-0.1.6 \
 		aws-smithy-eventstream-0.60.20 \
 		aws-smithy-http-0.63.6 \
@@ -37,8 +37,9 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		aws-smithy-observability-0.2.6 \
 		aws-smithy-protocol-test-0.63.14 \
 		aws-smithy-query-0.60.15 \
-		aws-smithy-runtime-1.10.3 \
-		aws-smithy-runtime-api-1.11.6 \
+		aws-smithy-runtime-1.11.1 \
+		aws-smithy-runtime-api-1.12.0 \
+		aws-smithy-runtime-api-macros-1.0.0 \
 		aws-smithy-types-1.4.7 \
 		aws-smithy-xml-0.60.15 \
 		aws-types-1.3.14 \
@@ -50,15 +51,16 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		bindgen-0.72.1 \
 		bitflags-0.9.1 \
 		bitflags-1.3.2 \
-		bitflags-2.11.0 \
+		bitflags-2.11.1 \
 		block-buffer-0.10.4 \
+		block-buffer-0.12.0 \
 		bs58-0.5.1 \
 		bumpalo-3.20.2 \
 		byteorder-1.5.0 \
 		bytes-1.11.1 \
 		bytes-utils-0.1.4 \
 		cbor-diag-0.1.12 \
-		cc-1.2.59 \
+		cc-1.2.60 \
 		cexpr-0.6.0 \
 		cfg-if-1.0.4 \
 		chacha20-0.10.0 \
@@ -73,6 +75,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		clap_lex-0.3.3 \
 		cmake-0.1.58 \
 		const-oid-0.9.6 \
+		const-oid-0.10.2 \
 		core-foundation-0.10.1 \
 		core-foundation-sys-0.8.7 \
 		cpufeatures-0.2.17 \
@@ -89,6 +92,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		crypto-bigint-0.4.9 \
 		crypto-bigint-0.5.5 \
 		crypto-common-0.1.7 \
+		crypto-common-0.2.1 \
 		dashmap-6.1.0 \
 		data-encoding-2.10.0 \
 		der-0.6.1 \
@@ -99,6 +103,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		diff-0.1.13 \
 		difflib-0.4.0 \
 		digest-0.10.7 \
+		digest-0.11.2 \
 		displaydoc-0.2.5 \
 		downcast-0.11.0 \
 		dunce-1.0.5 \
@@ -143,6 +148,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		hashbrown-0.14.5 \
 		hashbrown-0.15.5 \
 		hashbrown-0.16.1 \
+		hashbrown-0.17.0 \
 		heck-0.4.1 \
 		heck-0.5.0 \
 		hermit-abi-0.1.19 \
@@ -158,10 +164,11 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		httparse-1.10.1 \
 		httpdate-1.0.3 \
 		humantime-2.3.0 \
+		hybrid-array-0.4.10 \
 		hyper-0.14.32 \
 		hyper-1.9.0 \
 		hyper-rustls-0.24.2 \
-		hyper-rustls-0.27.7 \
+		hyper-rustls-0.27.9 \
 		hyper-util-0.1.20 \
 		iana-time-zone-0.1.65 \
 		iana-time-zone-haiku-0.1.2 \
@@ -175,18 +182,18 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		id-arena-2.3.0 \
 		idna-1.1.0 \
 		idna_adapter-1.2.1 \
-		indexmap-2.13.1 \
+		indexmap-2.14.0 \
 		ipnet-2.12.0 \
 		is-terminal-0.4.17 \
 		itertools-0.10.5 \
 		itertools-0.13.0 \
 		itoa-1.0.18 \
 		jobserver-0.1.34 \
-		js-sys-0.3.94 \
+		js-sys-0.3.95 \
 		lazy_static-0.2.11 \
 		lazy_static-1.5.0 \
 		leb128fmt-0.1.0 \
-		libc-0.2.184 \
+		libc-0.2.185 \
 		libloading-0.8.9 \
 		linux-raw-sys-0.12.1 \
 		litemap-0.8.2 \
@@ -195,10 +202,9 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		log-0.4.29 \
 		log-mdc-0.1.0 \
 		log4rs-1.4.0 \
-		lru-0.12.5 \
-		lru-0.16.3 \
+		lru-0.16.4 \
 		matchers-0.2.0 \
-		md-5-0.10.6 \
+		md-5-0.11.0 \
 		memchr-1.0.2 \
 		memchr-2.8.0 \
 		memoffset-0.7.1 \
@@ -252,15 +258,15 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		quote-1.0.45 \
 		r-efi-5.3.0 \
 		r-efi-6.0.0 \
-		rand-0.10.0 \
-		rand-0.8.5 \
-		rand-0.9.2 \
+		rand-0.8.6 \
+		rand-0.9.4 \
+		rand-0.10.1 \
 		rand_chacha-0.3.1 \
 		rand_chacha-0.9.0 \
-		rand_core-0.10.0 \
 		rand_core-0.6.4 \
 		rand_core-0.9.5 \
-		rayon-1.11.0 \
+		rand_core-0.10.1 \
+		rayon-1.12.0 \
 		rayon-core-1.13.0 \
 		redox_syscall-0.5.18 \
 		regex-1.12.3 \
@@ -276,11 +282,11 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		rustc_version-0.4.1 \
 		rustix-1.1.4 \
 		rustls-0.21.12 \
-		rustls-0.23.37 \
+		rustls-0.23.38 \
 		rustls-native-certs-0.8.3 \
 		rustls-pki-types-1.14.0 \
 		rustls-webpki-0.101.7 \
-		rustls-webpki-0.103.10 \
+		rustls-webpki-0.103.12 \
 		rustversion-1.0.22 \
 		ryu-1.0.23 \
 		s2n-tls-0.3.36 \
@@ -306,7 +312,9 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		serial_test-3.4.0 \
 		serial_test_derive-3.4.0 \
 		sha1-0.10.6 \
+		sha1-0.11.0 \
 		sha2-0.10.9 \
+		sha2-0.11.0 \
 		sharded-slab-0.1.7 \
 		shlex-1.3.0 \
 		signal-hook-registry-1.4.8 \
@@ -320,8 +328,8 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		spki-0.6.0 \
 		stable_deref_trait-1.2.1 \
 		static_assertions-1.1.0 \
-		strsim-0.10.0 \
 		strsim-0.8.0 \
+		strsim-0.10.0 \
 		strum_macros-0.27.2 \
 		subtle-2.6.1 \
 		syn-1.0.109 \
@@ -350,7 +358,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		tinystr-0.8.3 \
 		tinyvec-1.11.0 \
 		tinyvec_macros-0.1.1 \
-		tokio-1.51.1 \
+		tokio-1.52.1 \
 		tokio-macros-2.7.0 \
 		tokio-rustls-0.24.1 \
 		tokio-rustls-0.26.4 \
@@ -366,7 +374,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		tracing-subscriber-0.3.23 \
 		try-lock-0.2.5 \
 		typemap-ors-1.0.0 \
-		typenum-1.19.0 \
+		typenum-1.20.0 \
 		unicode-ident-1.0.24 \
 		unicode-segmentation-1.13.2 \
 		unicode-width-0.1.14 \
@@ -378,7 +386,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		url-2.5.8 \
 		urlencoding-2.1.3 \
 		utf8_iter-1.0.4 \
-		uuid-1.23.0 \
+		uuid-1.23.1 \
 		valuable-0.1.1 \
 		vec_map-0.8.2 \
 		version_check-0.9.5 \
@@ -386,12 +394,12 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		vsimd-0.8.0 \
 		want-0.3.1 \
 		wasi-0.11.1+wasi-snapshot-preview1 \
-		wasip2-1.0.2+wasi-0.2.9 \
+		wasip2-1.0.3+wasi-0.2.9 \
 		wasip3-0.4.0+wasi-0.3.0-rc-2026-01-06 \
-		wasm-bindgen-0.2.117 \
-		wasm-bindgen-macro-0.2.117 \
-		wasm-bindgen-macro-support-0.2.117 \
-		wasm-bindgen-shared-0.2.117 \
+		wasm-bindgen-0.2.118 \
+		wasm-bindgen-macro-0.2.118 \
+		wasm-bindgen-macro-support-0.2.118 \
+		wasm-bindgen-shared-0.2.118 \
 		wasm-encoder-0.244.0 \
 		wasm-metadata-0.244.0 \
 		wasmparser-0.244.0 \
@@ -422,6 +430,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		windows_x86_64_gnullvm-0.52.6 \
 		windows_x86_64_msvc-0.52.6 \
 		wit-bindgen-0.51.0 \
+		wit-bindgen-0.57.1 \
 		wit-bindgen-core-0.51.0 \
 		wit-bindgen-rust-0.51.0 \
 		wit-bindgen-rust-macro-0.51.0 \

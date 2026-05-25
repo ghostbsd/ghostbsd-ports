@@ -1,4 +1,5 @@
 bin/setup-station-init
+etc/rc.d/initial_setup
 %%PYTHON_SITELIBDIR%%/setup_station/__init__.py
 %%PYTHON_SITELIBDIR%%/setup_station/__pycache__/__init__%%PYTHON_TAG%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/setup_station/__pycache__/__init__%%PYTHON_TAG%%.pyc

@@ -4,7 +4,7 @@ CATEGORIES=	misc python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	dch@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Interact with Large Language Models by API, or locally
 WWW=		https://llm.datasette.io/ \
 		https://github.com/simonw/llm
