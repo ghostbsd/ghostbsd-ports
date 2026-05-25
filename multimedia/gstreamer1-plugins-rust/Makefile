@@ -1,6 +1,5 @@
 PORTNAME=	gstreamer1-plugins-rust
 DISTVERSION=	${gst-rust_VERSION}
-PORTREVISION=	2
 CATEGORIES=	multimedia
 
 MAINTAINER=	multimedia@FreeBSD.org
@@ -16,7 +15,8 @@ LICENSE_FILE_MPL20=	${WRKSRC}/LICENSE-MPL-2.0
 BUILD_DEPENDS=	cargo-cbuild:devel/cargo-c \
 		${PY_TOMLI}
 
-USES=		cargo gnome gstreamer meson pkgconfig python:build shebangfix ssl
+USES=		cargo gnome gstreamer llvm:build,noexport meson \
+		pkgconfig python:build shebangfix ssl
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.freedesktop.org
 GL_ACCOUNT=	gstreamer

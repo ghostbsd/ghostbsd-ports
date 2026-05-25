@@ -158,6 +158,7 @@
     SUBDIR += drawy
     SUBDIR += drm-515-kmod
     SUBDIR += drm-61-kmod
+    SUBDIR += drm-612-kmod
     SUBDIR += drm-66-kmod
     SUBDIR += drm-kmod
     SUBDIR += drm-latest-kmod
@@ -661,6 +662,7 @@
     SUBDIR += oidn
     SUBDIR += okular
     SUBDIR += open3d
+    SUBDIR += openboard
     SUBDIR += opencollada
     SUBDIR += opencolorio
     SUBDIR += opencolorio-tools
@@ -935,6 +937,7 @@
     SUBDIR += py-djvulibre
     SUBDIR += py-easyocr
     SUBDIR += py-exifread
+    SUBDIR += py-exiv2
     SUBDIR += py-f3d
     SUBDIR += py-face_recognition
     SUBDIR += py-face_recognition_models

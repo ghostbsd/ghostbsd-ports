@@ -1,6 +1,6 @@
---- cmake/cpu_extension.cmake.orig	2026-04-03 01:57:10 UTC
-+++ cmake/cpu_extension.cmake
-@@ -20,6 +20,11 @@ set (ENABLE_NUMA TRUE)
+--- cmake/cpu_extension.cmake.orig	2026-05-14 23:50:01.854145000 +0200
++++ cmake/cpu_extension.cmake	2026-05-14 23:50:01.866986000 +0200
+@@ -20,6 +20,11 @@
  
  set (ENABLE_NUMA TRUE)
  
@@ -12,7 +12,40 @@
  #
  # Check the compile flags
  #
-@@ -33,12 +38,25 @@ if (NOT MACOSX_FOUND)
+@@ -31,16 +36,23 @@
+         "-fopenmp"
+         "-DVLLM_CPU_EXTENSION")
+ 
+-    # locate PyTorch's libgomp (e.g. site-packages/torch.libs/libgomp-947d5fa1.so.1.0.0)
+-    # and create a local shim dir with it
+-    vllm_prepare_torch_gomp_shim(VLLM_TORCH_GOMP_SHIM_DIR)
++    if (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++        find_library(OPEN_MP
++            NAMES omp
++            REQUIRED
++        )
++    else()
++        # locate PyTorch's libgomp (e.g. site-packages/torch.libs/libgomp-947d5fa1.so.1.0.0)
++        # and create a local shim dir with it
++        vllm_prepare_torch_gomp_shim(VLLM_TORCH_GOMP_SHIM_DIR)
+ 
+-    find_library(OPEN_MP
+-        NAMES gomp
+-        PATHS ${VLLM_TORCH_GOMP_SHIM_DIR}
+-        NO_DEFAULT_PATH
+-        REQUIRED
+-    )
++        find_library(OPEN_MP
++            NAMES gomp
++            PATHS ${VLLM_TORCH_GOMP_SHIM_DIR}
++            NO_DEFAULT_PATH
++            REQUIRED
++        )
++    endif()
+     # Set LD_LIBRARY_PATH to include the shim dir at build time to use the same libgomp as PyTorch
+     if (OPEN_MP)
+         set(ENV{LD_LIBRARY_PATH} "${VLLM_TORCH_GOMP_SHIM_DIR}:$ENV{LD_LIBRARY_PATH}")
+@@ -48,11 +60,25 @@
  endif()
  
  if (NOT MACOSX_FOUND)
@@ -28,7 +61,7 @@
 +        set(_cpuinfo_path "/compat/linux/proc/cpuinfo")
 +    else()
 +        set(_cpuinfo_path "")
-     endif()
++    endif()
 +    if (_cpuinfo_path)
 +        execute_process(COMMAND cat ${_cpuinfo_path}
 +                        RESULT_VARIABLE CPUINFO_RET
@@ -38,12 +71,24 @@
 +        endif()
 +    else()
 +        message(STATUS "No cpuinfo available; relying on CMAKE_SYSTEM_PROCESSOR for ISA detection")
-+        set(CPUINFO "")
-+    endif()
++        set(CPUINFO " ")
++        set(_USE_SYSPROCESSOR_ISA TRUE)
+     endif()
  endif()
  
- 
-@@ -91,9 +109,10 @@ if (CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64|amd64" OR E
+@@ -101,14 +127,22 @@
+     if (ENABLE_ARM_BF16)
+         set(ARM_BF16_FOUND ON)
+         message(STATUS "ARM BF16 support enabled via VLLM_CPU_ARM_BF16 environment variable")
++    endif()
++    # Override ISA based on CMAKE_SYSTEM_PROCESSOR when cpuinfo not available
++    if(_USE_SYSPROCESSOR_ISA)
++        if(CMAKE_SYSTEM_PROCESSOR MATCHES "powerpc64le|powerpc64|powerpc")
++            set(POWER9_FOUND ON)
++            message(STATUS "Detected ${CMAKE_SYSTEM_PROCESSOR}; enabling POWER9 ISA")
++        endif()
+     endif()
+ endif()
  
  if (CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64|amd64" OR ENABLE_X86_ISA)
      set(ENABLE_X86_ISA ON)
@@ -57,7 +102,7 @@
      endif()
      list(APPEND CXX_COMPILE_FLAGS "-mf16c")
      list(APPEND CXX_COMPILE_FLAGS_AVX512 ${CXX_COMPILE_FLAGS})
-@@ -407,9 +426,15 @@ if (ENABLE_X86_ISA)
+@@ -446,9 +486,15 @@
      message(STATUS "CPU extension (AVX512F) source files: ${VLLM_EXT_SRC_AVX512}")
      message(STATUS "CPU extension (AVX2) source files: ${VLLM_EXT_SRC_AVX2}")
  

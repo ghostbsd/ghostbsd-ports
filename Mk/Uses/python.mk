@@ -341,7 +341,7 @@ ZEROREGS_UNSAFE=	yes
 # What Python version and what Python interpreters are currently supported?
 # When adding a version, please keep the comment in
 # Mk/bsd.default-versions.mk in sync.
-_PYTHON_VERSIONS=		3.11 3.12 3.13 3.13t 3.14 3.10 2.7 # preferred first
+_PYTHON_VERSIONS=		3.11 3.12 3.13 3.13t 3.14 3.15 3.10 2.7 # preferred first
 _PYTHON_PORTBRANCH=		3.11		# ${_PYTHON_VERSIONS:[1]}
 _PYTHON_BASECMD=		${LOCALBASE}/bin/python
 _PYTHON_RELPORTDIR=		lang/python
@@ -632,7 +632,7 @@ _PYTHONPKGLIST=	${WRKDIR}/.PLIST.pymodtmp
 
 # cryptography* support
 .  if ${PYCRYPTOGRAPHY_DEFAULT} == rust
-CRYPTOGRAPHY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=46.0.7,1<47,1:security/py-cryptography@${PY_FLAVOR}
+CRYPTOGRAPHY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=48.0.0,1<49,1:security/py-cryptography@${PY_FLAVOR}
 .  else
 CRYPTOGRAPHY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography-legacy>=3.4.8_3,1:security/py-cryptography-legacy@${PY_FLAVOR}
 .  endif

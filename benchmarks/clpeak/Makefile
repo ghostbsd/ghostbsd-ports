@@ -1,5 +1,5 @@
 PORTNAME=	clpeak
-DISTVERSION=	2.0.3
+DISTVERSION=	2.0.9
 CATEGORIES=	benchmarks
 
 MAINTAINER=	jbeich@FreeBSD.org

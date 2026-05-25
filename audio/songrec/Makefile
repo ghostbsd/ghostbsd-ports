@@ -1,6 +1,5 @@
 PORTNAME=	songrec
-DISTVERSION=	0.6.9
-PORTREVISION=	1
+DISTVERSION=	0.7.3
 CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -71,7 +70,6 @@ CARGO_CRATES=	adler2-2.0.1 \
 		cfg-if-1.0.4 \
 		cfg_aliases-0.2.1 \
 		chacha20-0.10.0 \
-		chfft-0.3.4 \
 		chrono-0.4.44 \
 		clang-sys-1.8.1 \
 		clap-4.6.1 \
@@ -84,7 +82,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		convert_case-0.8.0 \
 		cookie-factory-0.3.3 \
 		core-foundation-sys-0.8.7 \
-		coreaudio-rs-0.14.1 \
+		coreaudio-rs-0.14.2 \
 		cpufeatures-0.3.0 \
 		crc32fast-1.5.0 \
 		crossbeam-utils-0.8.21 \
@@ -232,6 +230,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		png-0.18.1 \
 		polling-3.11.0 \
 		prettyplease-0.2.37 \
+		primal-check-0.3.4 \
 		proc-macro-crate-3.5.0 \
 		proc-macro2-1.0.106 \
 		pulsectl-rs-0.3.2 \
@@ -240,6 +239,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		r-efi-6.0.0 \
 		rand-0.10.1 \
 		rand_core-0.10.1 \
+		realfft-3.5.0 \
 		redox_users-0.5.2 \
 		regex-1.12.3 \
 		regex-automata-0.4.14 \
@@ -248,6 +248,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		roff-1.1.1 \
 		rustc-hash-2.1.2 \
 		rustc_version-0.4.1 \
+		rustfft-6.4.1 \
 		rustix-1.1.4 \
 		rustversion-1.0.22 \
 		ryu-1.0.23 \
@@ -269,6 +270,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		smallvec-1.15.1 \
 		soup3-0.8.0 \
 		soup3-sys-0.8.0 \
+		strength_reduce-0.2.4 \
 		strsim-0.11.1 \
 		sval-2.18.0 \
 		sval_buffer-2.18.0 \
@@ -307,6 +309,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		tracing-attributes-0.1.31 \
 		tracing-core-0.1.36 \
 		trait-variant-0.1.2 \
+		transpose-0.2.3 \
 		typeid-1.0.3 \
 		uds_windows-1.2.1 \
 		unicode-ident-1.0.24 \
@@ -359,7 +362,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		windows_x86_64_gnullvm-0.42.2 \
 		windows_x86_64_msvc-0.42.2 \
 		winnow-0.7.15 \
-		winnow-1.0.1 \
+		winnow-1.0.2 \
 		wit-bindgen-0.51.0 \
 		wit-bindgen-0.57.1 \
 		wit-bindgen-core-0.51.0 \
@@ -375,14 +378,16 @@ CARGO_CRATES=	adler2-2.0.1 \
 		zvariant-5.10.0 \
 		zvariant_derive-5.10.0 \
 		zvariant_utils-3.3.0 \
-		cpal@git+https://github.com/RustAudio/cpal.git?rev=509e5bb\#509e5bba9dafb52c6e4a32492ccfb1933f1be9ed
+		cpal@git+https://github.com/RustAudio/cpal.git?rev=1c40a85\#1c40a85e2e74b376c6b35eef8d111586d426a61f
 
 PLIST_FILES=	bin/${PORTNAME}
 
 # known problem: The 'Audio input' combobox doesn't have any selections, see https://github.com/marin-m/SongRec/issues/115
 
 post-patch:
-	@${PATCH} -p0 -d ${WRKDIR}/cpal-509e5bba9dafb52c6e4a32492ccfb1933f1be9ed \
+	@${PATCH} -p0 -d ${WRKDIR}/cpal-1c40a85e2e74b376c6b35eef8d111586d426a61f \
 		< ${PATCHDIR}/cpal-alsa-estrpipe.patch
+	@${PATCH} -p0 -d ${WRKDIR}/cpal-1c40a85e2e74b376c6b35eef8d111586d426a61f \
+		< ${PATCHDIR}/cpal-frames-to-duration-bsd.patch
 
 .include <bsd.port.mk>

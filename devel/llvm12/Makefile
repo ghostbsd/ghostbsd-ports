@@ -1,6 +1,6 @@
 PORTNAME=	llvm
 DISTVERSION=	12.0.1
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/ \
 		https://${PRE_}releases.llvm.org/${LLVM_RELEASE}/${RCDIR}
@@ -289,7 +289,7 @@ FREEBSD_BACKENDS+=	WebAssembly
 NATIVE_BACKENDS+=	WebAssembly
 .endif
 STANDARD_BACKENDS=	${_FREEBSD_BACKENDS} AMDGPU AVR BPF Hexagon Lanai \
-			MSP430 NVPTX Sparc SystemZ WebAssembly XCore
+			Mips MSP430 NVPTX Sparc SystemZ WebAssembly XCore
 _BE_LIBS_COMMON=	CodeGen Desc Info
 _BE_LIBS_AArch64=	AsmParser Disassembler Utils
 _BE_LIBS_AMDGPU=	AsmParser Disassembler Utils

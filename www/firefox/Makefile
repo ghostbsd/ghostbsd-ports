@@ -1,10 +1,9 @@
 PORTNAME=	firefox
-DISTVERSION=	150.0.2
-PORTREVISION=	1
+DISTVERSION=	151.0.1
 PORTEPOCH=	2
 CATEGORIES=	www wayland
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}${DISTVERSIONSUFFIX}/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build2/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build1/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
@@ -12,7 +11,7 @@ COMMENT=	Web browser based on the browser portion of Mozilla
 WWW=		https://www.firefox.com/
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.122.2:security/nss \
+		nss>=3.123.1:security/nss \
 		libevent>=2.1.8:devel/libevent \
 		harfbuzz>=10.1.0:print/harfbuzz \
 		graphite2>=1.3.14:graphics/graphite2 \
@@ -54,8 +53,6 @@ post-extract:
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/browser/app/nsBrowserApp.cpp
-	@${REINPLACE_CMD} -e 's|wasm32-wasi|&p1|' \
-		${WRKSRC}/build/moz.configure/toolchain.configure
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/${MOZILLA_EXEC_NAME}.desktop ${STAGEDIR}${PREFIX}/share/applications

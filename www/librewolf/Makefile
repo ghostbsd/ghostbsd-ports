@@ -1,6 +1,6 @@
 PORTNAME=	librewolf
-DISTVERSION=	150.0.2
-LWPATCH=	-1
+DISTVERSION=	151.0.1
+LWPATCH=	-2
 DISTVERSIONSUFFIX=	${LWPATCH}.source
 CATEGORIES=	www wayland
 MASTER_SITES=	https://codeberg.org/api/packages/librewolf/generic/librewolf-source/${DISTVERSION}${LWPATCH}/
@@ -13,7 +13,7 @@ LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.122.0:security/nss \
+		nss>=3.123.1:security/nss \
 		icu>=76.1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
 		harfbuzz>=10.1.0:print/harfbuzz \
@@ -92,8 +92,6 @@ post-extract:
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/browser/app/nsBrowserApp.cpp
-	@${REINPLACE_CMD} -e 's|wasm32-wasi|&p1|' \
-		${WRKSRC}/build/moz.configure/toolchain.configure
 	@${RM} ${WRKSRC}/mozconfig
 
 post-install:

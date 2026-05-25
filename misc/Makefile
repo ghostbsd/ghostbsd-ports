@@ -15,6 +15,7 @@
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
     SUBDIR += ansiweather
+    SUBDIR += antigravity-cli
     SUBDIR += apparix
     SUBDIR += arrow-datafusion
     SUBDIR += artikulate
@@ -431,6 +432,7 @@
     SUBDIR += php83-calendar
     SUBDIR += php84-calendar
     SUBDIR += php85-calendar
+    SUBDIR += picoclaw
     SUBDIR += pinfo
     SUBDIR += pipe
     SUBDIR += posixtestsuite
@@ -601,6 +603,7 @@
     SUBDIR += py-sagemaker
     SUBDIR += py-sagemaker-core
     SUBDIR += py-sagemaker-mlops
+    SUBDIR += py-sagemaker-schema-inference-artifacts
     SUBDIR += py-sagemaker-serve
     SUBDIR += py-sagemaker-shim
     SUBDIR += py-sagemaker-train
@@ -682,6 +685,7 @@
     SUBDIR += rsclock
     SUBDIR += rtfm
     SUBDIR += rubygem-dotenv
+    SUBDIR += rubygem-dotenv-gitlab
     SUBDIR += rubygem-dotenv-rails
     SUBDIR += rubygem-dotenv-rails-rails4
     SUBDIR += rubygem-dotenv-rails-rails5

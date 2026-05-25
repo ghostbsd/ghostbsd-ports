@@ -56,7 +56,7 @@ FPC_DEFAULT?=		3.3.1
 .  else
 FPC_DEFAULT?=		3.2.3
 .  endif
-# Possible values: 12, 13, 14, 15, 16
+# Possible values: 12, 13, 14, 15, 16, 17
 # (Any other version is completely unsupported and not meant for general use.)
 GCC_DEFAULT?=		14
 # Possible values: 10
@@ -73,7 +73,7 @@ GUILE_DEFAULT?=		2.2
 # Format:	     version[-flavor]
 # Examples:	     6-nox11, 7
 IMAGEMAGICK_DEFAULT?=	7
-# Possible values: 8, 11, 17, 21, 23, 24, 25
+# Possible values: 8, 11, 17, 21, 24, 25
 .  if ${ARCH:Marmv*} || ${ARCH} == powerpc
 JAVA_DEFAULT?=		11
 .  elif ${ARCH:Mi386}

@@ -1,7 +1,14 @@
 PORTNAME=	llama-cpp
 DISTVERSIONPREFIX=	b
-DISTVERSION=	9033
+DISTVERSION=	9222
 CATEGORIES=	misc # machine-learning
+MASTER_SITES=	https://huggingface.co/buckets/ggml-org/llama-ui/resolve/${DISTVERSIONPREFIX}${DISTVERSION}/:webui
+DISTFILES=	index.html:webui \
+		bundle.js:webui \
+		bundle.css:webui \
+		loading.html:webui
+DIST_SUBDIR=	${PORTNAME}
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Facebook's LLaMA model in C/C++ # '
@@ -15,13 +22,13 @@ BROKEN_i386=	compilation fails, see https://github.com/ggerganov/llama.cpp/issue
 
 LIB_DEPENDS=	libggml-base.so:misc/ggml
 
-USES=		cmake:testing compiler:c++11-lang python:run shebangfix
+USES=		cmake:testing compiler:c++11-lang python:run shebangfix ssl
+
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	ggerganov
 GH_PROJECT=	llama.cpp
-GH_TUPLE=	nomic-ai:kompute:4565194:kompute/kompute
 
 SHEBANG_GLOB=	*.py
 
@@ -38,19 +45,21 @@ SUB_LIST=	USER=${USER}
 
 PLIST_SUB+=	DISTVERSION=${DISTVERSION}
 
-OPTIONS_DEFINE=		CURL EXAMPLES
-OPTIONS_DEFAULT=	CURL EXAMPLES
+OPTIONS_DEFINE=		EXAMPLES
+OPTIONS_DEFAULT=	EXAMPLES
 OPTIONS_SUB=		yes
-
-CURL_DESCR=		Use libcurl to download model from an URL
-CURL_CMAKE_BOOL=	LLAMA_CURL
-CURL_USES=		localbase
-CURL_LIB_DEPENDS=	libcurl.so:ftp/curl
 
 EXAMPLES_CMAKE_BOOL=	LLAMA_BUILD_EXAMPLES
 
 BINARY_ALIAS=	git=false \
 		python=${PYTHON_CMD} # for tests
+
+post-extract:
+	@${MKDIR} ${WRKSRC}/build/tools/ui/dist
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/index.html ${WRKSRC}/build/tools/ui/dist/index.html
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/bundle.js ${WRKSRC}/build/tools/ui/dist/bundle.js
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/bundle.css ${WRKSRC}/build/tools/ui/dist/bundle.css
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/loading.html ${WRKSRC}/build/tools/ui/dist/loading.html
 
 post-patch: # set version in the code
 	@${REINPLACE_CMD} \

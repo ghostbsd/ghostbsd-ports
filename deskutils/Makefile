@@ -86,21 +86,14 @@
     SUBDIR += gnome-planner
     SUBDIR += gnome-pomodoro
     SUBDIR += gnome-screenshot
-    SUBDIR += gnome-shell-extension-audio-output-switcher
     SUBDIR += gnome-shell-extension-coverflow
     SUBDIR += gnome-shell-extension-dashtodock
     SUBDIR += gnome-shell-extension-dashtopanel
-    SUBDIR += gnome-shell-extension-filesmenu
     SUBDIR += gnome-shell-extension-hidetopbar
     SUBDIR += gnome-shell-extension-lockkeys
     SUBDIR += gnome-shell-extension-manager
-    SUBDIR += gnome-shell-extension-mediaplayer
-    SUBDIR += gnome-shell-extension-panel-osd
     SUBDIR += gnome-shell-extension-recent-items
     SUBDIR += gnome-shell-extension-simple-weather
-    SUBDIR += gnome-shell-extension-trash
-    SUBDIR += gnome-shell-extension-weather
-    SUBDIR += gnome-shell-extension-windowoverlay-icons
     SUBDIR += gnome-shell-extra-extensions
     SUBDIR += gnome-sound-recorder
     SUBDIR += gnome-todo
@@ -115,7 +108,6 @@
     SUBDIR += gpicker
     SUBDIR += grantlee-editor
     SUBDIR += grantleetheme
-    SUBDIR += growl-for-linux
     SUBDIR += gsimplecal
     SUBDIR += gtimer
     SUBDIR += gucharmap
@@ -155,6 +147,7 @@
     SUBDIR += kmail
     SUBDIR += kmail-account-wizard
     SUBDIR += kodaskanna
+    SUBDIR += komodo
     SUBDIR += kongress
     SUBDIR += kontact
     SUBDIR += korganizer

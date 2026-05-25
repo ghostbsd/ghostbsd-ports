@@ -1,6 +1,6 @@
 PORTNAME=	llvm
 DISTVERSION=	15.0.7
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/ \
 		https://${PRE_}releases.llvm.org/${LLVM_RELEASE}${RCDIR}/
@@ -174,6 +174,7 @@ LLDB_CMAKE_ON= \
 	-DCURSES_CURSES_LIBRARY=/usr/lib/libcurses.so \
 	-DCURSES_FORM_LIBRARY=/usr/lib/libform.so \
 	-DCURSES_NCURSES_LIBRARY=/usr/lib/libncurses.so \
+	-DLLDB_ENABLE_LIBXML2=OFF \
 	-DPANEL_LIBRARIES=/usr/lib/libpanel.so
 LLDB_DESC=		Install lldb, the LLVM debugger
 LLDB_IMPLIES=		CLANG
@@ -351,7 +352,7 @@ FREEBSD_BACKENDS+=	WebAssembly
 NATIVE_BACKENDS+=	WebAssembly
 .endif
 STANDARD_BACKENDS=	${_FREEBSD_BACKENDS} AMDGPU AVR BPF Hexagon Lanai \
-			MSP430 NVPTX Sparc SystemZ VE WebAssembly XCore
+			Mips MSP430 NVPTX Sparc SystemZ VE WebAssembly XCore
 _BE_LIBS_COMMON=	CodeGen Desc Info
 _BE_LIBS_AArch64=	AsmParser Disassembler Utils
 _BE_LIBS_BACKWARDS_AArch64=Exegesis

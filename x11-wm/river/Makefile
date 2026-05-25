@@ -1,5 +1,5 @@
 PORTNAME=	river
-DISTVERSION=	0.4.3
+DISTVERSION=	0.4.5
 CATEGORIES=	x11-wm wayland
 MASTER_SITES=	https://codeberg.org/river/river/releases/download/v${DISTVERSION}/
 DISTFILES=	river-${DISTVERSIONFULL}${EXTRACT_SUFX}
@@ -12,8 +12,7 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSES/GPL-3.0-only.txt
 
 BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
-		wayland-protocols>0:graphics/wayland-protocols \
-		zig>=0.15.1:lang/zig
+		wayland-protocols>0:graphics/wayland-protocols
 LIB_DEPENDS=	libevdev.so:devel/libevdev \
 		libwayland-server.so:graphics/wayland \
 		libwlroots-0.20.so:x11-toolkits/wlroots020 \

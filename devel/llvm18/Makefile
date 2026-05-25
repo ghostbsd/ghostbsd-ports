@@ -1,6 +1,6 @@
 PORTNAME=	llvm
 DISTVERSION=	18.1.8
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/
 PKGNAMESUFFIX=	${LLVM_SUFFIX}
@@ -168,6 +168,7 @@ GOLD_DESC=		Build the LLVM Gold plugin for LTO
 GOLD_BUILD_DEPENDS=	${LOCALBASE}/bin/ld.gold:devel/binutils
 GOLD_CMAKE_ON=		-DLLVM_BINUTILS_INCDIR=${LOCALBASE}/include
 GOLD_EXTRA_PATCHES_OFF=	${PATCHDIR}/gold-off-llvm_tools_CMakeLists.txt
+GOLD_PLIST_FILES=	${LLVM_DIR}/lib/LLVMgold.so
 LIT_DESC=		Install lit and FileCheck test tools
 LIT_VARS=		_USES_PYTHON=python
 LLD_DESC=		Install lld, the LLVM linker
@@ -179,6 +180,7 @@ LLDB_CMAKE_ON= \
 	-DCURSES_CURSES_LIBRARY=/usr/lib/libcurses.so \
 	-DCURSES_FORM_LIBRARY=/usr/lib/libform.so \
 	-DCURSES_NCURSES_LIBRARY=/usr/lib/libncurses.so \
+	-DLLDB_ENABLE_LIBXML2=OFF \
 	-DPANEL_LIBRARIES=/usr/lib/libpanel.so
 LLDB_DESC=		Install lldb, the LLVM debugger
 LLDB_IMPLIES=		CLANG
@@ -364,7 +366,7 @@ FREEBSD_BACKENDS+=	WebAssembly
 NATIVE_BACKENDS+=	WebAssembly
 .endif
 STANDARD_BACKENDS=	${_FREEBSD_BACKENDS} AMDGPU AVR BPF Hexagon Lanai \
-			LoongArch MSP430 NVPTX SystemZ VE WebAssembly XCore
+			LoongArch Mips MSP430 NVPTX SystemZ VE WebAssembly XCore
 _BE_LIBS_COMMON=	CodeGen Desc Info
 _BE_LIBS_AArch64=	AsmParser Disassembler Utils
 _BE_LIBS_BACKWARDS_AArch64=Exegesis
