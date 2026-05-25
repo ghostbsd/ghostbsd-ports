@@ -1,25 +1,27 @@
 PORTNAME=	gumbo
-PORTVERSION=	0.13.0
+DISTVERSION=	0.13.2
+PORTREVISION=	2
 CATEGORIES=	devel textproc
-MASTER_SITES=	https://codeberg.org/grisha/gumbo-parser/archive/${PORTVERSION}${EXTRACT_SUFX}?dummy/
+MASTER_SITES=	https://codeberg.org/gumbo-parser/gumbo-parser/archive/${DISTVERSION}${EXTRACT_SUFX}?dummy/
 
-MAINTAINER=	bdrewery@FreeBSD.org
+MAINTAINER=	fsbruva@yahoo.com
 COMMENT=	Pure-C HTML5 parser
-WWW=		https://codeberg.org/grisha/gumbo-parser
+WWW=		https://codeberg.org/gumbo-parser/gumbo-parser/
 
 LICENSE=	APACHE20
 
-USES=		autoreconf gmake pathfix libtool
+USES=		meson pkgconfig
 USE_LDCONFIG=	yes
 
-GNU_CONFIGURE=	yes
+WRKSRC=		${WRKDIR}/gumbo-parser
 
-INSTALL_TARGET=	install-strip
+OPTIONS_DEFINE=		TEST
+OPTIONS_DEFAULT=	TEST
+TEST_BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtest_main.pc:devel/googletest
+TEST_MESON_TRUE=	tests
 
-post-extract:
-	${MV} ${WRKDIR}/gumbo-parser ${WRKDIR}/${PORTNAME}-${PORTVERSION}
-
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgumbo.so.3.0.0
+do-test-TEST-on:
+	cd ${BUILD_WRKSRC} && \
+		${SETENV} ${MAKE_ENV} meson test --print-errorlogs
 
 .include <bsd.port.mk>

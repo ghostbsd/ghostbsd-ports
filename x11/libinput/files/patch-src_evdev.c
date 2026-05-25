@@ -14,18 +14,18 @@ Also handle -EINVAL from cuse-based evdev backends in evdev_sync_device(),
 and replace the device fd with /dev/null on dispatch error to allow cuse
 backends to release the character device node on detach.
 
---- src/evdev.c.orig	2024-05-31 02:26:44 UTC
+--- src/evdev.c.orig	2026-04-02 01:04:12 UTC
 +++ src/evdev.c
-@@ -1104,7 +1104,7 @@
- 		evdev_device_dispatch_one(device, &ev);
- 	} while (rc == LIBEVDEV_READ_STATUS_SYNC);
+@@ -1007,7 +1007,7 @@ evdev_sync_device(struct libinput *libinput, struct ev
+
+ 	evdev_device_dispatch_frame(libinput, device, frame);
 
 -	return rc == -EAGAIN ? 0 : rc;
 +	return (rc == -EAGAIN || rc == -EINVAL) ? 0 : rc;
  }
 
  static inline void
-@@ -1177,6 +1177,17 @@
+@@ -1105,6 +1105,17 @@ evdev_device_dispatch(void *data)
 
  	if (rc != -EAGAIN && rc != -EINTR) {
  		libinput_remove_source(libinput, device->source);
@@ -43,15 +43,15 @@ backends to release the character device node on detach.
  		device->source = NULL;
  	}
  }
-@@ -2383,6 +2394,7 @@
+@@ -2251,6 +2262,7 @@
  	struct evdev_device *device = NULL;
  	int rc;
  	int fd = -1;
 +	struct udev_device *udev_device_refreshed = NULL;
  	int unhandled_device = 0;
  	const char *devnode = udev_device_get_devnode(udev_device);
- 	char *sysname = str_sanitize(udev_device_get_sysname(udev_device));
-@@ -2411,6 +2423,25 @@
+ 	_autofree_ char *sysname = str_sanitize(udev_device_get_sysname(udev_device));
+@@ -2278,6 +2290,25 @@
  		goto err;
  	}
 
@@ -77,7 +77,7 @@ backends to release the character device node on detach.
  	if (!evdev_device_have_same_syspath(udev_device, fd))
  		goto err;
 
-@@ -2479,6 +2510,8 @@
+@@ -2372,6 +2403,8 @@
 
  	evdev_notify_added_device(device);
 
@@ -85,12 +85,12 @@ backends to release the character device node on detach.
 +		udev_device_unref(udev_device_refreshed);
  	return device;
 
- err:
-@@ -2492,6 +2525,8 @@
-
- 	free(sysname);
+ err_notify:
+@@ -2388,5 +2421,7 @@
+ 		}
+ 	}
 
 +	if (udev_device_refreshed)
 +		udev_device_unref(udev_device_refreshed);
- 	return unhandled_device ? EVDEV_UNHANDLED_DEVICE :  NULL;
+ 	return unhandled_device ? EVDEV_UNHANDLED_DEVICE : NULL;
  }

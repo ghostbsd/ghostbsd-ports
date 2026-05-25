@@ -27,7 +27,7 @@ index 9f6292cb909de..89bf9995c1768 100644
                      ctx=node.ctx,
                  )
              )
-@@ -1035,8 +1035,8 @@
+@@ -1039,8 +1039,8 @@
                  else:
                      # Others
                      assert isinstance(target.slice, ast.Index)
@@ -35,10 +35,10 @@ index 9f6292cb909de..89bf9995c1768 100644
 -                    key = target.slice.value.s
 +                    assert isinstance(target.slice.value, ast.Constant)
 +                    key = target.slice.value.value
+             elif isinstance(target, ast.Attribute):
+                 assert isinstance(target.attr, str)
  
-             return name, key
- 
-@@ -1044,11 +1044,11 @@
+@@ -1051,11 +1051,11 @@
              value = node.value
              if isinstance(value, ast.List):
                  for v in value.elts:

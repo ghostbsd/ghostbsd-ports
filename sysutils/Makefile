@@ -120,6 +120,7 @@
     SUBDIR += beats91
     SUBDIR += beats92
     SUBDIR += beats93
+    SUBDIR += beats94
     SUBDIR += bfs
     SUBDIR += bhyve-firmware
     SUBDIR += bhyve-rc
@@ -135,6 +136,7 @@
     SUBDIR += bmd-plugin-hookcmd
     SUBDIR += boot-extract
     SUBDIR += bottom
+    SUBDIR += boxrun
     SUBDIR += bpytop
     SUBDIR += brasero
     SUBDIR += brename
@@ -460,6 +462,7 @@
     SUBDIR += ghostbsd-utils
     SUBDIR += gh-md-toc
     SUBDIR += gigolo
+    SUBDIR += gitlab-registry
     SUBDIR += gitwatch
     SUBDIR += gkfreq
     SUBDIR += gkleds2
@@ -517,6 +520,7 @@
     SUBDIR += hid-tools
     SUBDIR += highlnk
     SUBDIR += hilite
+    SUBDIR += hl
     SUBDIR += host-setup
     SUBDIR += hostctl
     SUBDIR += hourglass
@@ -679,6 +683,7 @@
     SUBDIR += logstash91
     SUBDIR += logstash92
     SUBDIR += logstash93
+    SUBDIR += logstash94
     SUBDIR += logtool
     SUBDIR += logwatch
     SUBDIR += loki
@@ -835,6 +840,7 @@
     SUBDIR += openvox-agent8
     SUBDIR += openvox-server8
     SUBDIR += osinfo-db-tools
+    SUBDIR += osquery
     SUBDIR += p5-App-Regather
     SUBDIR += p5-App-RunCron
     SUBDIR += p5-App-ZFSCurses
@@ -1052,6 +1058,7 @@
     SUBDIR += py-ansible-core218
     SUBDIR += py-ansible-core219
     SUBDIR += py-ansible-core220
+    SUBDIR += py-ansible-core221
     SUBDIR += py-ansible-lint
     SUBDIR += py-ansible-runner
     SUBDIR += py-appjail-gui
@@ -1394,6 +1401,7 @@
     SUBDIR += stalepid
     SUBDIR += stepsync
     SUBDIR += storcli
+    SUBDIR += storcli2
     SUBDIR += stow
     SUBDIR += stowES
     SUBDIR += stress

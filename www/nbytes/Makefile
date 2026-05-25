@@ -22,9 +22,9 @@ CMAKE_TESTING_ON=	NBYTES_ENABLE_TESTING
 USE_GITHUB=	yes
 GH_ACCOUNT=	nodejs
 
-# Remove after 13.5-RELEASE EoL
+# Remove after 14.3-RELEASE EoL (expected 2026-06-30)
 .if !exists(/usr/bin/clang-scan-deps)
-USES+=		llvm:build
+USES+=         llvm:build
 .endif
 
 .include <bsd.port.mk>

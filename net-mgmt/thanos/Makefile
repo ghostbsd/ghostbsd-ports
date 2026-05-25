@@ -1,7 +1,7 @@
 PORTNAME=	thanos
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.41.0
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	alven@FreeBSD.org
@@ -16,17 +16,16 @@ USES=		go:modules
 
 GO_MODULE=	github.com/thanos-io/thanos
 GO_TARGET=	./cmd/${PORTNAME}
-GO_BUILDFLAGS=	-tags slicelabels -ldflags "\
-		-s -w \
-		-X github.com/prometheus/common/version.Branch="master" \
+GO_BUILDFLAGS=	-tags slicelabels
+GO_LDFLAGS=	-X github.com/prometheus/common/version.Branch="master" \
 		-X github.com/prometheus/common/version.BuildDate=${BUILD_DATE} \
 		-X github.com/prometheus/common/version.BuildUser=${USER} \
 		-X github.com/prometheus/common/version.Revision=${REVISION} \
-		-X github.com/prometheus/common/version.Version=${DISTVERSION}"
+		-X github.com/prometheus/common/version.Version=${DISTVERSION}
 
 PLIST_FILES=	bin/${PORTNAME}
 
-BUILD_DATE=	$$(date +%d-%B-%Y)
+BUILD_DATE=	${:Udate +%F:sh}
 REVISION=	cb1396b9
 
 .include <bsd.port.mk>

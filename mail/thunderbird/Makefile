@@ -1,5 +1,5 @@
 PORTNAME=	thunderbird
-DISTVERSION=	150.0.2
+DISTVERSION=	151.0.1
 CATEGORIES=	mail news net-im wayland
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}${DISTVERSIONSUFFIX}/source \
 		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build1/source
@@ -10,7 +10,7 @@ COMMENT=	Mozilla Thunderbird is standalone mail and news that stands above
 WWW=		https://www.thunderbird.net/
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.122.2:security/nss \
+		nss>=3.123.1:security/nss \
 		libevent>=2.1.8:devel/libevent \
 		harfbuzz>=10.1.0:print/harfbuzz \
 		graphite2>=1.3.14:graphics/graphite2 \
@@ -60,8 +60,6 @@ post-extract:
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/comm/mail/app/nsMailApp.cpp
-	@${REINPLACE_CMD} -e 's|wasm32-wasi|&p1|' \
-		${WRKSRC}/build/moz.configure/toolchain.configure
 
 port-pre-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/defaults
