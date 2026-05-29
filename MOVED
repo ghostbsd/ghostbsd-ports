@@ -3327,7 +3327,6 @@ www/py-dj42-django-allauth|www/py-django-allauth|2024-06-15|Has expired: Obsolet
 www/py-dj42-django-crispy-forms|www/py-django-crispy-forms|2024-06-15|Has expired: Obsolete, please use www/py-django-crispy-forms instead
 www/py-dj42-django-modelcluster|www/py-django-modelcluster|2024-06-15|Has expired: Obsolete, please use www/py-django-modelcluster instead
 www/py-dj42-django-extensions|www/py-django-extensions|2024-06-15|Has expired: Obsolete, please use www/py-django-extensions instead
-www/py-dj42-djangorestframework|www/py-djangorestframework|2024-06-15|Has expired: Obsolete, please use www/py-djangorestframework instead
 www/py-dj42-django-debug-toolbar|www/py-django-debug-toolbar|2024-06-15|Has expired: Obsolete, please use www/py-django-debug-toolbar instead
 devel/rubygem-ddtrace|devel/rubygem-datadog|2024-06-18|Move devel/rubygem-ddtrace to devel/rubygem-datadog
 databases/py-sqlalchemy13||2024-06-24|Has expired: Upstream makred EOL in Release Status
@@ -4989,7 +4988,6 @@ textproc/xsv-rs||2025-12-31|Has expired: Abandoned, repo archived on Apr 24, 202
 lang/spidermonkey102||2025-12-31|Has expired: Old version, no more users in the ports tree
 devel/unit-otel||2025-12-31|Has expired: Upstream repo archived on Oct 8 2025
 devel/electron36||2025-12-31|Has expired: EOLed upstream, switch to newer version
-x11/xwaylandvideobridge||2025-12-31|Has expired: Project has been discontinued
 x11/hyprland-qtutils|x11/hyprland-guiutils|2025-12-31|Has expired: Superceded by hyprland-guiutils. Use x11/hyprland-guiutils instead
 www/servlet-api||2025-12-31|Has expired: Superseded upstream by newer versions many years ago
 databases/cockroach||2025-12-31|Has expired: Current versions are fully-proprietary software, see PR 272257
@@ -5315,3 +5313,7 @@ deskutils/gnome-shell-extension-mediaplayer||2026-05-18|Marked broken and upstre
 devel/rubygem-rugged17|devel/rubygem-rugged|2026-05-24|Use devel/rubygem-rugged instead
 www/rubygem-deckar01-task_list-gitlab|www/rubygem-deckar01-task_list|2026-05-24|Use www/rubygem-deckar01-task_list instead
 biology/p5-TrimGalore|biology/TrimGalore|2026-05-24|After V2.0 Trim Galore was rewrite in rust
+multimedia/mediaelch@qt5||2026-05-27|Unflavorize, remove Qt5 flavor
+multimedia/mediaelch@qt6|multimedia/mediaelch|2026-05-27|Unflavorize
+www/py-dj52-django-treenode|www/py-django-treenode|2026-05-28|Renamed after all Django consumers were switched from Django 4.2 to Django 5.2 to have a consistent naming scheme
+devel/devhelp|devel/manuals|2026-05-28|Has expired: Discontinued, use devel/manuals

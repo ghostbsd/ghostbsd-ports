@@ -359,6 +359,7 @@
     SUBDIR += bustle
     SUBDIR += byacc
     SUBDIR += byaccj
+    SUBDIR += c-stdaux
     SUBDIR += c2mdoc
     SUBDIR += c4core
     SUBDIR += calibrator
@@ -614,7 +615,6 @@
     SUBDIR += desed
     SUBDIR += desktop-file-utils
     SUBDIR += dev86
-    SUBDIR += devhelp
     SUBDIR += devtodo
     SUBDIR += dfuzzer
     SUBDIR += dia2code
@@ -4357,6 +4357,7 @@
     SUBDIR += picprog
     SUBDIR += pijul
     SUBDIR += pika
+    SUBDIR += pinact
     SUBDIR += pipelight
     SUBDIR += pipestatus
     SUBDIR += pire
@@ -4772,6 +4773,8 @@
     SUBDIR += py-cluster
     SUBDIR += py-cmd2
     SUBDIR += py-cmdtest
+    SUBDIR += py-cmeel
+    SUBDIR += py-cmeel-eigen
     SUBDIR += py-cobble
     SUBDIR += py-codegen
     SUBDIR += py-cogapp
@@ -4889,6 +4892,7 @@
     SUBDIR += py-decoratortools
     SUBDIR += py-deepdiff
     SUBDIR += py-deepmerge
+    SUBDIR += py-defusedcsv
     SUBDIR += py-defusedxml
     SUBDIR += py-demjson
     SUBDIR += py-dep-logic
@@ -4909,6 +4913,7 @@
     SUBDIR += py-distlib
     SUBDIR += py-distributed
     SUBDIR += py-dj52-django-rq
+    SUBDIR += py-dj52-graphene-django
     SUBDIR += py-dj52-strawberry-graphql
     SUBDIR += py-django-rq
     SUBDIR += py-dlinfo
@@ -5225,6 +5230,7 @@
     SUBDIR += py-jep
     SUBDIR += py-jinja2-ansible-filters
     SUBDIR += py-jinja2-time
+    SUBDIR += py-jinxed
     SUBDIR += py-jira
     SUBDIR += py-jitterentropy
     SUBDIR += py-jmespath
@@ -5439,6 +5445,7 @@
     SUBDIR += py-nbformat
     SUBDIR += py-nbval
     SUBDIR += py-nest-asyncio
+    SUBDIR += py-nest-asyncio2
     SUBDIR += py-ninja
     SUBDIR += py-node-semver
     SUBDIR += py-nodeenv
@@ -6178,6 +6185,7 @@
     SUBDIR += py-super-collections
     SUBDIR += py-sure
     SUBDIR += py-swagger-spec-validator
+    SUBDIR += py-swig
     SUBDIR += py-sybil
     SUBDIR += py-synr
     SUBDIR += py-syrupy
