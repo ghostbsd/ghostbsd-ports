@@ -261,6 +261,7 @@
     SUBDIR += rwpspread
     SUBDIR += semantik
     SUBDIR += sigi
+    SUBDIR += sigye
     SUBDIR += simpleagenda
     SUBDIR += skim
     SUBDIR += sliderule

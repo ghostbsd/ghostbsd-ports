@@ -1,3 +1,461 @@
+  <vuln vid="7ae38fde-5ab6-11f1-a242-10ffe07f9334">
+    <topic>mail/mailpit -- memory-exhaustion DoS via unbounded JSON body</topic>
+    <affects>
+      <package>
+	<name>mailpit</name>
+	<range><lt>1.30.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mailpit author reports:</p>
+	<blockquote cite="https://github.com/axllent/mailpit/releases/tag/v1.30.1">
+	  <p>Sibling-endpoint memory-exhaustion DoS via unbounded
+	  JSON body on /api/v1/messages, /api/v1/tags, and
+	  /api/v1/message/{id}/release</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-48824</cvename>
+      <url>https://github.com/axllent/mailpit/security/advisories/GHSA-28pq-6qxg-wg5r</url>
+    </references>
+    <dates>
+      <discovery>2026-05-28</discovery>
+      <entry>2026-05-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ca91c020-5820-11f1-b38d-9be2e6022e28">
+    <topic>OpenEXR -- 3.4.12 fixes multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>openexr</name>
+	<range><lt>3.4.12</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Cary Phillips reports:</p>
+	<blockquote cite="https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.4.12">
+	  <p>[The OpenEXR 3.4.12] release addresses the following security vulnerabilities:</p>
+	  <ul>
+	    <li>CVE-2026-45696 OpenEXR ht_undo_impl heap-buffer-overflow READ via codestream/channel width mismatch in HTJ2K decode</li>
+	    <li>CVE-2026-44663 Integer overflow in HTJ2K decoder ( ht_undo_impl ) leading to heap-buffer-overflow</li>
+	    <li>OSS-Fuzz 512895184 Null-dereference WRITE in Imf_4_0::TileProcess::run_decode</li>
+	    <li>OSS-fuzz 512314697 Direct-leak in internal_exr_add_part</li>
+	    <li>OSS-fuzz 508362159 Heap-buffer-overflow in DwaCompressor_uncompress</li>
+	    <li>OSS-fuzz 507413960 Heap-buffer-overflow in generic_unpack</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-45696</cvename>
+      <cvename>CVE-2026-44663</cvename>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.4.12</url>
+    </references>
+    <dates>
+      <discovery>2026-05-25</discovery>
+      <entry>2026-05-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="93576148-5a54-11f1-b886-4c526214c986">
+    <topic>Erlang/OTP -- TLS hostname verification bypass via Subject CommonName fallback and name constraints</topic>
+    <affects>
+      <package>
+	<name>erlang</name>
+	<range><ge>19.3</ge><lt>26.2.5.21,4</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime27</name>
+	<range><lt>27.3.4.12</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime28</name>
+	<range><lt>28.5.0.1</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime29</name>
+	<range><lt>29.0.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://github.com/erlang/otp/security/advisories/GHSA-22cw-4ph4-6447 reports:</p>
+	<blockquote cite="https://github.com/erlang/otp/security/advisories/GHSA-22cw-4ph4-6447">
+	  <p>Erlang/OTP's TLS hostname verification implements a legacy
+	  RFC 6125 fallback that checks the Subject CommonName when the
+	  Subject Alternative Name (SAN) extension is absent, rather
+	  than following RFC 9525 which requires validation to fail
+	  without SAN. Combined with weak handling of X.509 Name
+	  Constraints, this enables man-in-the-middle attacks when an
+	  attacker controls a DNS-constrained sub-CA and can intercept
+	  network traffic, allowing forgery of certificates for
+	  unauthorized domains.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-42790</cvename>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-22cw-4ph4-6447</url>
+    </references>
+    <dates>
+      <discovery>2026-05-27</discovery>
+      <entry>2026-05-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9357a450-5a54-11f1-b886-4c526214c986">
+    <topic>Erlang/OTP -- public_key accepts non-CA certificate as intermediate issuer</topic>
+    <affects>
+      <package>
+	<name>erlang</name>
+	<range><ge>17.0</ge><lt>26.2.5.21,4</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime27</name>
+	<range><lt>27.3.4.12</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime28</name>
+	<range><lt>28.5.0.1</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime29</name>
+	<range><lt>29.0.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://github.com/erlang/otp/security/advisories/GHSA-c99q-jmpx-v8qq reports:</p>
+	<blockquote cite="https://github.com/erlang/otp/security/advisories/GHSA-c99q-jmpx-v8qq">
+	  <p>Erlang/OTP's public_key application contains a
+	  path-validation flaw where non-CA certificates lacking
+	  keyUsage extensions can be accepted as intermediate issuers.
+	  An attacker with an end-entity certificate issued by a
+	  trusted CA can exploit this to forge arbitrary leaf
+	  certificates, allowing public_key:pkix_path_validation/3 to
+	  validate fraudulent certificate chains and potentially
+	  compromise systems relying on SSL/TLS validation.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-42789</cvename>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-c99q-jmpx-v8qq</url>
+    </references>
+    <dates>
+      <discovery>2026-05-27</discovery>
+      <entry>2026-05-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9357d6fb-5a54-11f1-b886-4c526214c986">
+    <topic>Erlang/OTP -- OCSP responder certificate accepted after expiry in public_key</topic>
+    <affects>
+      <package>
+	<name>erlang-runtime27</name>
+	<range><lt>27.3.4.12</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime28</name>
+	<range><lt>28.5.0.1</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime29</name>
+	<range><lt>29.0.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://github.com/erlang/otp/security/advisories/GHSA-cjxj-wj6x-3fff reports:</p>
+	<blockquote cite="https://github.com/erlang/otp/security/advisories/GHSA-cjxj-wj6x-3fff">
+	  <p>Erlang/OTP's public_key application fails to validate the
+	  validity period of OCSP responder certificates during
+	  response verification. An attacker possessing an expired
+	  OCSP responder's private key can forge responses that the
+	  system accepts as valid, potentially allowing acceptance of
+	  revoked TLS certificates in OCSP stapling scenarios or
+	  authentication bypass in applications using the
+	  public_key:pkix_ocsp_validate/5 API directly.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-42791</cvename>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-cjxj-wj6x-3fff</url>
+    </references>
+    <dates>
+      <discovery>2026-05-27</discovery>
+      <entry>2026-05-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9bcc3279-5901-11f1-b525-3c7c3fba4204">
+    <topic>Grafana -- Grafana MSSQL Data Source Plugin: Restriction Bypass Leading to OOM DoS</topic>
+    <affects>
+    <package>
+	<name>grafana</name>
+	<range><ge>11.6.0</ge><lt>11.6.14</lt></range>
+	<range><ge>12.1.0</ge><lt>12.1.10</lt></range>
+	<range><ge>12.2.0</ge><lt>12.2.8</lt></range>
+	<range><ge>12.3.0</ge><lt>12.3.6</lt></range>
+	<range><ge>12.4.0</ge><lt>12.4.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://grafana.com/security/security-advisories/cve-2026-33375 reports:</p>
+	<blockquote cite="https://grafana.com/security/security-advisories/cve-2026-33375">
+	  <p>The Grafana MSSQL data source plugin contains a logic flaw that
+	  allows a low-privileged user (Viewer) to bypass API restrictions
+	  and trigger a catastrophic Out-Of-Memory (OOM) memory exhaustion,
+	  crashing the host container.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-33375</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-33375</url>
+    </references>
+    <dates>
+      <discovery>2026-03-26</discovery>
+      <entry>2026-05-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="62717c0f-5901-11f1-b525-3c7c3fba4204">
+    <topic>Grafana -- Grafana Testdata datasource can issue unbounded memory allocations</topic>
+    <affects>
+    <package>
+	<name>grafana</name>
+	<range><ge>8.1.0</ge><lt>11.6.14</lt></range>
+	<range><ge>12.0.0</ge><lt>12.1.10</lt></range>
+	<range><ge>12.2.0</ge><lt>12.2.8</lt></range>
+	<range><ge>12.3.0</ge><lt>12.3.6</lt></range>
+	<range><ge>12.4.0</ge><lt>12.4.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://grafana.com/security/security-advisories/cve-2026-28375 reports:</p>
+	<blockquote cite="https://grafana.com/security/security-advisories/cve-2026-28375">
+	  <p>A testdata data-source can be used to trigger out-of-memory crashes in Grafana.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-28375</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-28375</url>
+    </references>
+    <dates>
+      <discovery>2026-03-27</discovery>
+      <entry>2026-05-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="138319f3-5901-11f1-b525-3c7c3fba4204">
+    <topic>Grafana -- OpenFeature evaluation API reads input data with no bounds</topic>
+    <affects>
+    <package>
+	<name>grafana</name>
+	<range><ge>12.1.0</ge><lt>12.1.10</lt></range>
+	<range><ge>12.2.0</ge><lt>12.2.8</lt></range>
+	<range><ge>12.3.0</ge><lt>12.3.6</lt></range>
+	<range><ge>12.4.0</ge><lt>12.4.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://grafana.com/security/security-advisories/cve-2026-27880 reports:</p>
+	<blockquote cite="https://grafana.com/security/security-advisories/cve-2026-27880">
+	  <p>The OpenFeature feature toggle evaluation endpoint reads unbounded
+	  values into memory, which can cause out-of-memory crashes.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-27880</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-27880</url>
+    </references>
+    <dates>
+      <discovery>2026-03-27</discovery>
+      <entry>2026-05-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c079e809-5900-11f1-b525-3c7c3fba4204">
+    <topic>Grafana -- Query resampling can cause unbounded memory allocations</topic>
+    <affects>
+    <package>
+	<name>grafana</name>
+	<range><ge>8.0.0</ge><lt>11.6.14</lt></range>
+	<range><ge>12.0.0</ge><lt>12.1.10</lt></range>
+	<range><ge>12.2.0</ge><lt>12.2.8</lt></range>
+	<range><ge>12.3.0</ge><lt>12.3.6</lt></range>
+	<range><ge>12.4.0</ge><lt>12.4.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://grafana.com/security/security-advisories/cve-2026-27879 reports:</p>
+	<blockquote cite="https://grafana.com/security/security-advisories/cve-2026-27879">
+	  <p>A resample query can be used to trigger out-of-memory crashes in Grafana.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-27879</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-27879</url>
+    </references>
+    <dates>
+      <discovery>2026-03-27</discovery>
+      <entry>2026-05-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6b2bf8e9-5900-11f1-b525-3c7c3fba4204">
+    <topic>Grafana -- Public dashboards discloses all direct mode datasources</topic>
+    <affects>
+    <package>
+	<name>grafana</name>
+	<range><ge>9.3.0</ge><lt>11.6.14</lt></range>
+	<range><ge>12.0.0</ge><lt>12.1.10</lt></range>
+	<range><ge>12.2.0</ge><lt>12.2.8</lt></range>
+	<range><ge>12.3.0</ge><lt>12.3.6</lt></range>
+	<range><ge>12.4.0</ge><lt>12.4.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://grafana.com/security/security-advisories/cve-2026-27877 reports:</p>
+	<blockquote cite="https://grafana.com/security/security-advisories/cve-2026-27877">
+	  <p>When using public dashboards and direct data-sources, all direct
+	  data-sources' passwords are exposed despite not being used in dashboards.
+
+	  No passwords of proxied data-sources are exposed.  We encourage all
+	  direct data-sources to be converted to proxied data-sources as far
+	  as possible to improve your deployments' security.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-27877</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-27877</url>
+    </references>
+    <dates>
+      <discovery>2026-03-27</discovery>
+      <entry>2026-05-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f45ad940-58ff-11f1-b525-3c7c3fba4204">
+    <topic>Grafana -- RCE on Grafana via sqlExpressions</topic>
+    <affects>
+    <package>
+	<name>grafana</name>
+	<range><ge>11.6.0</ge><lt>11.6.14</lt></range>
+	<range><ge>12.0.0</ge><lt>12.1.10</lt></range>
+	<range><ge>12.2.0</ge><lt>12.2.8</lt></range>
+	<range><ge>12.3.0</ge><lt>12.3.6</lt></range>
+	<range><ge>12.4.0</ge><lt>12.4.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://grafana.com/security/security-advisories/cve-2026-27876 reports:</p>
+	<blockquote cite="https://grafana.com/security/security-advisories/cve-2026-27876">
+	  <p>A chained attack via SQL Expressions and a Grafana Enterprise plugin
+	  can lead to a remote arbitrary code execution impact (RCE).  This
+	  is enabled by a feature in Grafana (OSS), so all users are always
+	  recommended to update to avoid future attack vectors going this
+	  path.
+
+	  Only instances with the sqlExpressions feature toggle enabled are
+	  vulnerable.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-27876</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-27876</url>
+    </references>
+    <dates>
+      <discovery>2026-03-27</discovery>
+      <entry>2026-05-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="83cd53f7-58ff-11f1-b525-3c7c3fba4204">
+    <topic>Grafana -- Public Dashboards time range restriction on annotations can be bypassed</topic>
+    <affects>
+    <package>
+	<name>grafana</name>
+	<range><ge>9.3.0</ge><lt>11.6.10</lt></range>
+	<range><ge>12.0.0</ge><lt>12.1.6</lt></range>
+	<range><ge>12.2.0</ge><lt>12.2.4</lt></range>
+	<range><ge>12.3.0</ge><lt>12.3.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://grafana.com/security/security-advisories/cve-2026-21722 reports:</p>
+	<blockquote cite="https://grafana.com/security/security-advisories/cve-2026-21722">
+	  <p>Public dashboards with annotations enabled did not limit their
+	  annotation timerange to the locked timerange of the public dashboard.
+	  This means one could read the entire history of annotations visible
+	  on the specific dashboard, even those outside the locked timerange.
+
+	  This did not leak any annotations that would not otherwise be visible
+	  on the public dashboard.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-21722</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-21722</url>
+    </references>
+    <dates>
+      <discovery>2026-02-12</discovery>
+      <entry>2026-05-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6cc28c49-58fe-11f1-b525-3c7c3fba4204">
+    <topic>Grafana -- XSS in Grafana Explore stack trace</topic>
+    <affects>
+    <package>
+	<name>grafana</name>
+	<range><ge>12.2.0</ge><lt>12.2.4</lt></range>
+	<range><ge>12.3.0</ge><lt>12.3.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://grafana.com/security/security-advisories/cve-2025-41117 reports:</p>
+	<blockquote cite="https://grafana.com/security/security-advisories/cve-2025-41117">
+	  <p>Stack traces in Grafana's Explore Traces view can be rendered as
+	  raw HTML, and thus inject malicious JavaScript in the browser.  This
+	  would require malicious JavaScript to be entered into the stack
+	  trace field.
+
+	  Only datasources with the Jaeger HTTP API appear to be affected;
+	  Jaeger gRPC and Tempo do not appear affected whatsoever.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-41117</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2025-41117</url>
+    </references>
+    <dates>
+      <discovery>2026-02-12</discovery>
+      <entry>2026-05-26</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="87ff1d7e-6b24-4a5b-9825-90dcda5ee119">
     <topic>jellyfin -- multiple vulnerabilities</topic>
     <affects>

@@ -128,6 +128,7 @@
     SUBDIR += R-cran-prodlim
     SUBDIR += R-cran-proxy
     SUBDIR += R-cran-psych
+    SUBDIR += R-cran-psychTools
     SUBDIR += R-cran-pwr
     SUBDIR += R-cran-quadprog
     SUBDIR += R-cran-qualityTools
@@ -642,6 +643,7 @@
     SUBDIR += octave-forge-nurbs
     SUBDIR += octave-forge-oct2mat
     SUBDIR += octave-forge-octave-pool
+    SUBDIR += octave-forge-octave_boost
     SUBDIR += octave-forge-octave_ffmpeg_free
     SUBDIR += octave-forge-octave_mermaid_js
     SUBDIR += octave-forge-octave_php_wrapper
