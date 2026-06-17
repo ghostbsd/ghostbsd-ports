@@ -75,6 +75,7 @@
     SUBDIR += couriergraph
     SUBDIR += crm114
     SUBDIR += cvsmail
+    SUBDIR += cyrus-imapd
     SUBDIR += cyrus-imapd25
     SUBDIR += cyrus-imapd30
     SUBDIR += cyrus-imapd310
@@ -634,6 +635,7 @@
     SUBDIR += rubygem-mailfactory
     SUBDIR += rubygem-mini_mime
     SUBDIR += rubygem-net-imap
+    SUBDIR += rubygem-net-imap-gitlab
     SUBDIR += rubygem-net-pop
     SUBDIR += rubygem-net-smtp
     SUBDIR += rubygem-pony

@@ -67,7 +67,7 @@ GCC_DEFAULT?=		14
 GHOSTSCRIPT_DEFAULT?=	10
 # Possible values: mesa-libs, mesa-devel
 GL_DEFAULT?=		mesa-libs
-# Possible values: 1.24, 1.25, 1.26
+# Possible values: 1.25, 1.26
 GO_DEFAULT?=		1.25
 # Possible values: 1.8, 2.2, 3.0
 GUILE_DEFAULT?=		2.2
@@ -77,7 +77,7 @@ GUILE_DEFAULT?=		2.2
 # Format:	     version[-flavor]
 # Examples:	     6-nox11, 7
 IMAGEMAGICK_DEFAULT?=	7
-# Possible values: 8, 11, 17, 21, 24, 25
+# Possible values: 8, 11, 17, 21, 25
 .  if ${ARCH:Marmv*} || ${ARCH} == powerpc
 JAVA_DEFAULT?=		11
 .  elif ${ARCH:Mi386}
@@ -85,11 +85,11 @@ JAVA_DEFAULT?=		21
 .  else
 JAVA_DEFAULT?=		25
 .  endif
-# Possible values: 4.6, 4.99
+# Possible values: 4.8, 4.99
 .  if (defined(WANT_LAZARUS_DEVEL) && !empty(WANT_LAZARUS_DEVEL)) || ${ARCH:Maarch64} || ${ARCH:Mpowerpc*}
 LAZARUS_DEFAULT?=	4.99
 .  else
-LAZARUS_DEFAULT?=	4.6
+LAZARUS_DEFAULT?=	4.8
 .  endif
 # Possible values: rust, legacy
 .  if empty(ARCH:Naarch64:Namd64:Narmv7:Ni386:Npowerpc64:Npowerpc64le:Npowerpc:Nriscv64)
@@ -105,7 +105,7 @@ LINUX_DEFAULT?=		rl9
 .  endif
 # Possible values: 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, -devel (to be used when non-base compiler is required)
 LLVM_DEFAULT?=		19
-# Possible values: 5.1, 5.2, 5.3, 5.4
+# Possible values: 5.1, 5.2, 5.3, 5.4, 5.5
 LUA_DEFAULT?=		5.4
 # Possible values: luajit, luajit-openresty
 .  if ${ARCH:Mpowerpc64*}

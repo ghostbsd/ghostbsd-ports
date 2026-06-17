@@ -196,7 +196,6 @@
     SUBDIR += fossmixer
     SUBDIR += freac
     SUBDIR += freealut
-    SUBDIR += freebsd-13-mixer
     SUBDIR += freedesktop-sound-theme
     SUBDIR += freepats
     SUBDIR += ft2-clone
@@ -383,6 +382,7 @@
     SUBDIR += libopenshot-audio
     SUBDIR += libopusenc
     SUBDIR += libremidi
+    SUBDIR += libresidfp
     SUBDIR += libsamplerate
     SUBDIR += libshout
     SUBDIR += libsidplay
@@ -786,7 +786,6 @@
     SUBDIR += subtui
     SUBDIR += suil
     SUBDIR += supercollider
-    SUBDIR += surge-synthesizer-lv2
     SUBDIR += surge-synthesizer-xt-lv2
     SUBDIR += swh-lv2
     SUBDIR += swhplugins

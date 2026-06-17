@@ -1,7 +1,7 @@
-TIMESTAMP = 1779649889
-SHA256 (radareorg-radare2-6.0.4_GH0.tar.gz) = 2aadf26066c396961949656f304cb5d99b76c88adbe30ad923db4e98b10f3bbc
-SIZE (radareorg-radare2-6.0.4_GH0.tar.gz) = 11670531
-SHA256 (radareorg-sdb-2.2.0_GH0.tar.gz) = 05b6fda41727e2d634bc0cdea0bccdc186b48cc9136b2367ab2a7358145fa8b4
-SIZE (radareorg-sdb-2.2.0_GH0.tar.gz) = 309395
-SHA256 (quickjs-ng-quickjs-7238ee64dbc2fbdea044555cda8cda78785a93ed_GH0.tar.gz) = 7c1adc7aa7b1ab0a7f0b0a9aaa24fd3c7a0691d8a6ba8cae886f29834f1bee02
-SIZE (quickjs-ng-quickjs-7238ee64dbc2fbdea044555cda8cda78785a93ed_GH0.tar.gz) = 780145
+TIMESTAMP = 1781355396
+SHA256 (radareorg-radare2-6.0.8_GH0.tar.gz) = 430692ae5d12531d14447b7ab4a0d83cb77e79aa18e7eae9355ea363618b779e
+SIZE (radareorg-radare2-6.0.8_GH0.tar.gz) = 11733217
+SHA256 (radareorg-sdb-2.3.0_GH0.tar.gz) = 4d569fe008b8088b5067419b2b54032a6e6f31c73cd5c4ef20c1ca2602c80da9
+SIZE (radareorg-sdb-2.3.0_GH0.tar.gz) = 311122
+SHA256 (quickjs-ng-quickjs-d405777f7eefa22c17c12970317ef3d6e7658f5a_GH0.tar.gz) = 982c29ec6833b3bebfe1c960506ec2b2dfc59087b78001979cde0f3471389504
+SIZE (quickjs-ng-quickjs-d405777f7eefa22c17c12970317ef3d6e7658f5a_GH0.tar.gz) = 788781

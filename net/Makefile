@@ -67,6 +67,8 @@
     SUBDIR += boinc-client
     SUBDIR += boinc_curses
     SUBDIR += boinctui
+    SUBDIR += bone-kmods
+    SUBDIR += bone-utils
     SUBDIR += bounce
     SUBDIR += bredbandskollen
     SUBDIR += brynet
@@ -347,7 +349,6 @@
     SUBDIR += knc
     SUBDIR += knxd
     SUBDIR += kontactinterface
-    SUBDIR += kpeoplevcard
     SUBDIR += kpimtextedit
     SUBDIR += krakend-ce
     SUBDIR += krdc
@@ -996,12 +997,12 @@
     SUBDIR += pear-XML_RPC
     SUBDIR += pear-XML_RPC2
     SUBDIR += pecl-amqp
-    SUBDIR += pecl-oauth2
     SUBDIR += pecl-radius
     SUBDIR += pecl-rdkafka
     SUBDIR += pecl-smbclient
     SUBDIR += pecl-xmlrpc
     SUBDIR += pen
+    SUBDIR += php-oauth
     SUBDIR += php82-ldap
     SUBDIR += php82-soap
     SUBDIR += php82-sockets
@@ -1343,7 +1344,6 @@
     SUBDIR += rubygem-fog-vsphere
     SUBDIR += rubygem-fog-xenserver
     SUBDIR += rubygem-gitaly
-    SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab-fog-azure-rm
     SUBDIR += rubygem-gitlab-gkg-proto
     SUBDIR += rubygem-gitlab-kas-grpc

@@ -51,6 +51,15 @@
 %%MANPAGES%%share/man/man1/glab-config-get.1.gz
 %%MANPAGES%%share/man/man1/glab-config-set.1.gz
 %%MANPAGES%%share/man/man1/glab-config.1.gz
+%%MANPAGES%%share/man/man1/glab-container-registry-repository-delete.1.gz
+%%MANPAGES%%share/man/man1/glab-container-registry-repository-list.1.gz
+%%MANPAGES%%share/man/man1/glab-container-registry-repository-view.1.gz
+%%MANPAGES%%share/man/man1/glab-container-registry-repository.1.gz
+%%MANPAGES%%share/man/man1/glab-container-registry-tag-delete.1.gz
+%%MANPAGES%%share/man/man1/glab-container-registry-tag-list.1.gz
+%%MANPAGES%%share/man/man1/glab-container-registry-tag-view.1.gz
+%%MANPAGES%%share/man/man1/glab-container-registry-tag.1.gz
+%%MANPAGES%%share/man/man1/glab-container-registry.1.gz
 %%MANPAGES%%share/man/man1/glab-deploy-key-add.1.gz
 %%MANPAGES%%share/man/man1/glab-deploy-key-delete.1.gz
 %%MANPAGES%%share/man/man1/glab-deploy-key-get.1.gz
@@ -145,7 +154,10 @@
 %%MANPAGES%%share/man/man1/glab-orbit-remote-status.1.gz
 %%MANPAGES%%share/man/man1/glab-orbit-remote-tools.1.gz
 %%MANPAGES%%share/man/man1/glab-orbit-remote.1.gz
+%%MANPAGES%%share/man/man1/glab-orbit-setup.1.gz
 %%MANPAGES%%share/man/man1/glab-orbit.1.gz
+%%MANPAGES%%share/man/man1/glab-packages-list.1.gz
+%%MANPAGES%%share/man/man1/glab-packages.1.gz
 %%MANPAGES%%share/man/man1/glab-release-create.1.gz
 %%MANPAGES%%share/man/man1/glab-release-delete.1.gz
 %%MANPAGES%%share/man/man1/glab-release-download.1.gz
@@ -164,8 +176,11 @@
 %%MANPAGES%%share/man/man1/glab-repo-members-remove.1.gz
 %%MANPAGES%%share/man/man1/glab-repo-members.1.gz
 %%MANPAGES%%share/man/man1/glab-repo-mirror.1.gz
+%%MANPAGES%%share/man/man1/glab-repo-prune.1.gz
 %%MANPAGES%%share/man/man1/glab-repo-publish-catalog.1.gz
 %%MANPAGES%%share/man/man1/glab-repo-publish.1.gz
+%%MANPAGES%%share/man/man1/glab-repo-remote-add.1.gz
+%%MANPAGES%%share/man/man1/glab-repo-remote.1.gz
 %%MANPAGES%%share/man/man1/glab-repo-search.1.gz
 %%MANPAGES%%share/man/man1/glab-repo-transfer.1.gz
 %%MANPAGES%%share/man/man1/glab-repo-update.1.gz
@@ -210,6 +225,7 @@
 %%MANPAGES%%share/man/man1/glab-securefile.1.gz
 %%MANPAGES%%share/man/man1/glab-skills-install.1.gz
 %%MANPAGES%%share/man/man1/glab-skills-list.1.gz
+%%MANPAGES%%share/man/man1/glab-skills-update.1.gz
 %%MANPAGES%%share/man/man1/glab-skills.1.gz
 %%MANPAGES%%share/man/man1/glab-snippet-create.1.gz
 %%MANPAGES%%share/man/man1/glab-snippet.1.gz
@@ -221,6 +237,7 @@
 %%MANPAGES%%share/man/man1/glab-stack-amend.1.gz
 %%MANPAGES%%share/man/man1/glab-stack-create.1.gz
 %%MANPAGES%%share/man/man1/glab-stack-first.1.gz
+%%MANPAGES%%share/man/man1/glab-stack-infer.1.gz
 %%MANPAGES%%share/man/man1/glab-stack-last.1.gz
 %%MANPAGES%%share/man/man1/glab-stack-list.1.gz
 %%MANPAGES%%share/man/man1/glab-stack-move.1.gz
@@ -249,6 +266,7 @@
 %%MANPAGES%%share/man/man1/glab-variable-update.1.gz
 %%MANPAGES%%share/man/man1/glab-variable.1.gz
 %%MANPAGES%%share/man/man1/glab-version.1.gz
+%%MANPAGES%%share/man/man1/glab-whatsnew.1.gz
 %%MANPAGES%%share/man/man1/glab-work-items-create.1.gz
 %%MANPAGES%%share/man/man1/glab-work-items-delete.1.gz
 %%MANPAGES%%share/man/man1/glab-work-items-list.1.gz

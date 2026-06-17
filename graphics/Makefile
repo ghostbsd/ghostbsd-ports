@@ -412,7 +412,6 @@
     SUBDIR += kdegraphics-mobipocket
     SUBDIR += kdegraphics-svgpart
     SUBDIR += kdegraphics-thumbnailers
-    SUBDIR += kdiagram
     SUBDIR += kdiagram-qt6
     SUBDIR += kealib
     SUBDIR += kf5-kimageformats
@@ -512,7 +511,6 @@
     SUBDIR += libnsgif
     SUBDIR += libopendrive
     SUBDIR += libopenraw
-    SUBDIR += libosmesa
     SUBDIR += libpano13
     SUBDIR += libpcd
     SUBDIR += libpgf
@@ -603,9 +601,6 @@
     SUBDIR += mesa-demos
     SUBDIR += mesa-devel
     SUBDIR += mesa-dri
-    SUBDIR += mesa-gallium-va
-    SUBDIR += mesa-gallium-vdpau
-    SUBDIR += mesa-gallium-xa
     SUBDIR += mesa-libs
     SUBDIR += metacam
     SUBDIR += metapixel
@@ -644,6 +639,9 @@
     SUBDIR += nvidia-drm-66-kmod
     SUBDIR += nvidia-drm-66-kmod-580
     SUBDIR += nvidia-drm-66-kmod-devel
+    SUBDIR += nvidia-drm-612-kmod
+    SUBDIR += nvidia-drm-612-kmod-580
+    SUBDIR += nvidia-drm-612-kmod-devel
     SUBDIR += nvidia-drm-kmod
     SUBDIR += nvidia-drm-kmod-580
     SUBDIR += nvidia-drm-kmod-devel
@@ -694,6 +692,7 @@
     SUBDIR += openvkl
     SUBDIR += openxr
     SUBDIR += optar
+    SUBDIR += optiimage
     SUBDIR += optipng
     SUBDIR += osg
     SUBDIR += ospray
@@ -1010,6 +1009,7 @@
     SUBDIR += py-pycairo
     SUBDIR += py-pycha
     SUBDIR += py-pycollada
+    SUBDIR += py-pydeck
     SUBDIR += py-pydot
     SUBDIR += py-pydotplus
     SUBDIR += py-pyepsg
@@ -1244,7 +1244,6 @@
     SUBDIR += timg
     SUBDIR += tintfu
     SUBDIR += tinyows
-    SUBDIR += tippecanoe
     SUBDIR += tkpng
     SUBDIR += togl
     SUBDIR += tslib

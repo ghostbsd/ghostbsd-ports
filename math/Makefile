@@ -408,7 +408,6 @@
     SUBDIR += hpipm
     SUBDIR += hptt
     SUBDIR += hs-Agda
-    SUBDIR += hs-syfco
     SUBDIR += hsl
     SUBDIR += hydrogen
     SUBDIR += hyperdeal
@@ -585,6 +584,7 @@
     SUBDIR += octave-forge-dicom
     SUBDIR += octave-forge-divand
     SUBDIR += octave-forge-doctest
+    SUBDIR += octave-forge-dsppack
     SUBDIR += octave-forge-econometrics
     SUBDIR += octave-forge-fda
     SUBDIR += octave-forge-femoctave
@@ -1059,6 +1059,7 @@
     SUBDIR += py-mnnpy
     SUBDIR += py-moarchiving
     SUBDIR += py-modin
+    SUBDIR += py-moocore
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
     SUBDIR += py-narwhals
@@ -1068,6 +1069,7 @@
     SUBDIR += py-nevergrad
     SUBDIR += py-nlopt
     SUBDIR += py-numba-stats
+    SUBDIR += py-numdifftools
     SUBDIR += py-numexpr
     SUBDIR += py-numpoly
     SUBDIR += py-numpy
@@ -1274,6 +1276,7 @@
     SUBDIR += sundials
     SUBDIR += superlu
     SUBDIR += superlu-dist
+    SUBDIR += superlu-mt
     SUBDIR += symengine
     SUBDIR += symfpu
     SUBDIR += symmetrica

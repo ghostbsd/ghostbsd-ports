@@ -1,5 +1,6 @@
 PORTNAME=	mame
-DISTVERSION=	0.287
+DISTVERSION=	0.288
+PORTREVISION=	1
 CATEGORIES=	emulators games
 
 MAINTAINER=	laurent@FreeBSD.org
@@ -68,6 +69,8 @@ MAKE_ENV=	FORCE_DRC_C_BACKEND=1 \
 		USE_SYSTEM_LIB_ZSTD=1 \
 		USE_TAPTUN=1
 
+# for LZMA AES support
+CFLAGS_armv7=	-march=armv8-a+aes
 CFLAGS_aarch64=	-march=armv8-a+crc+crypto
 
 EXTRACT_AFTER_ARGS=	${_DIST_EXCLUDES:S,^,--exclude ,}
@@ -106,7 +109,7 @@ SSE2_DESC=			Build with Streaming SIMD Extensions 2
 TOOLS_DESC=			Tools for archiving, development, and multimedia
 
 DEBUG_MAKE_ENV=				DEBUG=1 \
-					OPTIMIZE=g \
+					SYMBOLS=1 \
 					STRIP_SYMBOLS=0
 DEBUG_MAKE_ENV_OFF=			STRIP_SYMBOLS=1
 # Attempt to avoid address space exhaustion during linking, specifically
@@ -139,8 +142,7 @@ OPENMP_MAKE_ENV=			OPENMP=1
 OPENMP_MAKE_ENV_OFF=			OPENMP=0
 QTDEBUGGER_USES=			qt:6
 QTDEBUGGER_USE=				QT=base,tools:build
-QTDEBUGGER_MAKE_ENV=			QT_HOME="${PREFIX}" \
-					USE_QTDEBUG=1
+QTDEBUGGER_MAKE_ENV=			USE_QTDEBUG=1
 QTDEBUGGER_MAKE_ENV_OFF=		USE_QTDEBUG=0
 SIZE_OPTIMIZED_CFLAGS_MAKE_ENV=		OPTIMIZE=s
 SIZE_OPTIMIZED_CFLAGS_CXXFLAGS=		-Os
@@ -190,16 +192,12 @@ _TOOLS_MANUALS=		-name *.1 -depth 1 -type f -and -not -type d -and -not \
 MAKE_ENV+=		PTR64=1
 .endif
 
-.if ${ARCH} == aarch64 || ${ARCH} == armv7
-EXTRA_PATCHES+=		${PATCHDIR}/extra-patch-3rdparty_lzma_C_AesOpt.c
-.endif
-
 # Compiling with -pg (PROFILE) causes the linker to run out of memory on i386,
 # build with less profiling data:
 .if ${ARCH:Mi386}
-DEBUG_MAKE_ENV=		PROFILER=1
+DEBUG_MAKE_ENV+=	PROFILER=1
 .else
-DEBUG_MAKE_ENV=		PROFILE=1
+DEBUG_MAKE_ENV+=	PROFILE=1
 .endif
 
 .if empty(PORT_OPTIONS:MMAME) && empty(PORT_OPTIONS:MMAMENL) && \

@@ -1,6 +1,7 @@
 PORTNAME=	gitoxide
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.54.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -14,8 +15,9 @@ LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 
 LIB_DEPENDS=	libcurl.so:ftp/curl
 
-USES=		cargo
+USES=		cargo cpe
 
+CPE_VENDOR=	gitoxidelabs
 USE_GITHUB=	yes
 GH_ACCOUNT=	Byron
 

@@ -1,7 +1,7 @@
 PORTNAME=	electron
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${ELECTRON_VER}
-PORTREVISION=	4
+PORTREVISION=	5
 PULSEMV=	16
 PULSEV=		${PULSEMV}.1
 CATEGORIES=	devel
@@ -34,7 +34,7 @@ PATCH_DEPENDS=	git:devel/git \
 BUILD_DEPENDS=	gperf:devel/gperf \
 		bindgen:devel/rust-bindgen-cli \
 		yasm:devel/yasm \
-		${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri \
+		${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-libs \
 		rustc:lang/rust \
 		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat \
 		node${NODEJS_VERSION}>0:www/node${NODEJS_VERSION} \
@@ -317,7 +317,7 @@ pre-extract:
 	@${CAT} ${DISTDIR}/${DIST_SUBDIR}/chromium-${CHROMIUM_VER}${EXTRACT_SUFX}.? > \
 		${WRKSRC:H}/chromium-${CHROMIUM_VER}${EXTRACT_SUFX}
 	@cd ${WRKSRC:H} && \
-	${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} \
+	${SETENV} ${EXTRACT_ENV} ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} \
 		chromium-${CHROMIUM_VER}${EXTRACT_SUFX} ${EXTRACT_AFTER_ARGS}
 
 post-extract:

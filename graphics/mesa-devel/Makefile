@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	26.1-branchpoint-1876
-DISTVERSIONSUFFIX=	-gaddd09fb764
+DISTVERSION=	26.1-branchpoint-2867
+DISTVERSIONSUFFIX=	-gfd616bab71a
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -143,10 +143,11 @@ post-patch:
 		${WRKSRC}/bin/git_sha1_gen.py
 
 post-patch-COINST-on:
-	@${MV} ${WRKSRC}/src/util/00-${PORTNAME}-defaults.conf \
-		${WRKSRC}/src/util/00-${PKGBASE}-defaults.conf
-	@${MV} ${WRKSRC}/src/util/00-radv-defaults.conf \
-		${WRKSRC}/src/util/00-radv${PKGNAMESUFFIX}-defaults.conf
+	@(cd ${WRKSRC}/src/util; for f in 00-*-defaults.conf; do \
+		suffix=$${f#00-}; infix=$${suffix%-defaults.conf}; \
+		${MV} 00-$$infix-defaults.conf \
+			 00-$$infix${PKGNAMESUFFIX}-defaults.conf; \
+	done)
 
 post-install-COINST-on:
 	@${INSTALL_DATA} ${WRKDIR}/libmap.conf \

@@ -1,7 +1,7 @@
 PORTNAME=	joplin
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.6.14
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	deskutils
 PKGNAMESUFFIX=	-desktop
 DISTFILES=	${DEFAULT_PLUGINS_NODE_MODULES_FILE}:prefetch \
@@ -22,9 +22,10 @@ BUILD_DEPENDS=	7zz:archivers/7-zip \
 LIB_DEPENDS=	libvips.so:graphics/vips \
 		libsecret-1.so:security/libsecret
 
-USES=		cargo electron:40 gmake localbase:ldflags nodejs:24,build \
+USES=		cargo cpe electron:40 gmake localbase:ldflags nodejs:24,build \
 		python:build
 
+CPE_VENDOR=	joplinapp
 USE_GITHUB=	yes
 GH_ACCOUNT=	laurent22
 GH_TUPLE=	rollup:rollup:v4.9.1:rollup/rollup \

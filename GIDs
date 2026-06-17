@@ -331,7 +331,7 @@ zoraxy:*:386:
 goimapnotify:*:387:
 autopulse:*:388:
 ldap:*:389:
-# free: 390
+bunkerweb:*:390:
 # free: 391
 # free: 392
 # free: 393
@@ -440,7 +440,7 @@ stalwart:*:484:
 # free: 496
 # free: 497
 rustypaste:*:498:
-# free: 499
+microbin:*:499:
 qw:*:500:
 qwfwd:*:501:
 birdvty:*:502:

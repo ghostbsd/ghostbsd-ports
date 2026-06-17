@@ -69,6 +69,7 @@
     SUBDIR += aspell
     SUBDIR += aspell-ispell
     SUBDIR += ast-aspell
+    SUBDIR += ast-grep
     SUBDIR += augeas
     SUBDIR += az-aspell
     SUBDIR += bat
@@ -549,6 +550,7 @@
     SUBDIR += opensearch219
     SUBDIR += opensp
     SUBDIR += openvanilla-framework
+    SUBDIR += openvpn-status-parser
     SUBDIR += or-aspell
     SUBDIR += otree
     SUBDIR += ov
@@ -1360,6 +1362,7 @@
     SUBDIR += py-cloud_sptheme
     SUBDIR += py-cmarkgfm
     SUBDIR += py-collective.checkdocs
+    SUBDIR += py-commonmark
     SUBDIR += py-conllu
     SUBDIR += py-creole
     SUBDIR += py-cssselect2
@@ -1801,8 +1804,12 @@
     SUBDIR += re_graph
     SUBDIR += redet
     SUBDIR += redisearch
+    SUBDIR += redisearch2
     SUBDIR += redisearch20
     SUBDIR += redisearch22
+    SUBDIR += redisearch24
+    SUBDIR += redisearch26
+    SUBDIR += redisearch28
     SUBDIR += redland
     SUBDIR += redland-bindings
     SUBDIR += refdb

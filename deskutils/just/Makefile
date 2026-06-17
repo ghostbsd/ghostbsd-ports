@@ -1,5 +1,5 @@
 PORTNAME=	just
-DISTVERSION=	1.51.0
+DISTVERSION=	1.53.0
 CATEGORIES=	deskutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -18,7 +18,6 @@ GH_ACCOUNT=	casey
 
 CARGO_CRATES=	aho-corasick-1.1.4 \
 		android_system_properties-0.1.5 \
-		ansi_term-0.12.1 \
 		anstream-1.0.0 \
 		anstyle-1.0.14 \
 		anstyle-parse-1.0.0 \
@@ -27,23 +26,23 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		anyhow-1.0.102 \
 		arrayref-0.3.9 \
 		arrayvec-0.7.6 \
-		autocfg-1.5.0 \
-		bitflags-2.11.1 \
+		autocfg-1.5.1 \
+		bitflags-2.13.0 \
 		blake3-1.8.5 \
 		block-buffer-0.10.4 \
 		block2-0.6.2 \
 		bstr-1.12.1 \
-		bumpalo-3.20.2 \
+		bumpalo-3.20.3 \
 		bytecount-0.6.9 \
 		camino-1.2.2 \
-		cc-1.2.62 \
+		cc-1.2.64 \
 		cfg-if-1.0.4 \
 		cfg_aliases-0.2.1 \
 		chacha20-0.10.0 \
-		chrono-0.4.44 \
+		chrono-0.4.45 \
 		clap-4.6.1 \
 		clap_builder-4.6.0 \
-		clap_complete-4.6.4 \
+		clap_complete-4.6.5 \
 		clap_derive-4.6.1 \
 		clap_lex-1.1.0 \
 		clap_mangen-0.3.0 \
@@ -84,19 +83,20 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		iana-time-zone-haiku-0.1.2 \
 		id-arena-2.3.0 \
 		indexmap-2.14.0 \
-		is_executable-1.0.5 \
+		is_executable-1.0.6 \
 		is_terminal_polyfill-1.70.2 \
 		itoa-1.0.18 \
-		js-sys-0.3.98 \
+		js-sys-0.3.102 \
 		leb128fmt-0.1.0 \
 		lexiclean-0.0.1 \
 		libc-0.2.186 \
-		libredox-0.1.16 \
+		libredox-0.1.17 \
 		linux-raw-sys-0.12.1 \
-		log-0.4.29 \
-		memchr-2.8.0 \
+		log-0.4.32 \
+		memchr-2.8.2 \
 		memmap2-0.9.10 \
-		nix-0.31.2 \
+		nix-0.31.3 \
+		nu-ansi-term-0.50.3 \
 		num-traits-0.2.19 \
 		num_cpus-1.17.0 \
 		objc2-0.6.4 \
@@ -113,6 +113,7 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		proc-macro-error2-2.0.1 \
 		proc-macro2-1.0.106 \
 		pulldown-cmark-0.9.6 \
+		pulldown-cmark-0.13.4 \
 		pulldown-cmark-to-cmark-10.0.4 \
 		quote-1.0.45 \
 		r-efi-6.0.0 \
@@ -120,9 +121,9 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		rand_core-0.10.1 \
 		rayon-core-1.13.0 \
 		redox_users-0.5.2 \
-		regex-1.12.3 \
+		regex-1.12.4 \
 		regex-automata-0.4.14 \
-		regex-syntax-0.8.10 \
+		regex-syntax-0.8.11 \
 		roff-1.1.1 \
 		rustix-1.1.4 \
 		rustversion-1.0.22 \
@@ -131,19 +132,20 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		serde-1.0.228 \
 		serde_core-1.0.228 \
 		serde_derive-1.0.228 \
-		serde_json-1.0.149 \
+		serde_json-1.0.150 \
 		serde_yaml-0.9.34+deprecated \
 		sha2-0.10.9 \
 		shellexpand-3.1.2 \
 		shlex-1.3.0 \
-		similar-3.1.0 \
+		shlex-2.0.1 \
+		similar-3.1.1 \
 		slab-0.4.12 \
-		snafu-0.9.0 \
-		snafu-derive-0.9.0 \
+		snafu-0.9.1 \
+		snafu-derive-0.9.1 \
 		strsim-0.11.1 \
 		strum-0.28.0 \
 		strum_macros-0.28.0 \
-		syn-2.0.117 \
+		syn-2.0.118 \
 		tabled-0.18.0 \
 		tabled_derive-0.10.0 \
 		tempfile-3.27.0 \
@@ -152,47 +154,34 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		thiserror-2.0.18 \
 		thiserror-impl-2.0.18 \
 		typed-arena-2.0.2 \
-		typenum-1.20.0 \
+		typenum-1.20.1 \
 		unicase-2.9.0 \
 		unicode-ident-1.0.24 \
-		unicode-segmentation-1.13.2 \
+		unicode-segmentation-1.13.3 \
 		unicode-width-0.2.2 \
 		unicode-xid-0.2.6 \
 		unsafe-libyaml-0.2.11 \
 		utf8parse-0.2.2 \
-		uuid-1.23.1 \
+		uuid-1.23.3 \
 		version_check-0.9.5 \
 		wasi-0.11.1+wasi-snapshot-preview1 \
 		wasip2-1.0.1+wasi-0.2.4 \
 		wasip3-0.4.0+wasi-0.3.0-rc-2026-01-06 \
-		wasm-bindgen-0.2.121 \
-		wasm-bindgen-macro-0.2.121 \
-		wasm-bindgen-macro-support-0.2.121 \
-		wasm-bindgen-shared-0.2.121 \
+		wasm-bindgen-0.2.125 \
+		wasm-bindgen-macro-0.2.125 \
+		wasm-bindgen-macro-support-0.2.125 \
+		wasm-bindgen-shared-0.2.125 \
 		wasm-encoder-0.244.0 \
 		wasm-metadata-0.244.0 \
 		wasmparser-0.244.0 \
-		which-8.0.2 \
-		winapi-0.3.9 \
-		winapi-i686-pc-windows-gnu-0.4.0 \
-		winapi-x86_64-pc-windows-gnu-0.4.0 \
+		which-8.0.4 \
 		windows-core-0.62.2 \
 		windows-implement-0.60.2 \
 		windows-interface-0.59.3 \
 		windows-link-0.2.1 \
 		windows-result-0.4.1 \
 		windows-strings-0.5.1 \
-		windows-sys-0.60.2 \
 		windows-sys-0.61.2 \
-		windows-targets-0.53.5 \
-		windows_aarch64_gnullvm-0.53.1 \
-		windows_aarch64_msvc-0.53.1 \
-		windows_i686_gnu-0.53.1 \
-		windows_i686_gnullvm-0.53.1 \
-		windows_i686_msvc-0.53.1 \
-		windows_x86_64_gnu-0.53.1 \
-		windows_x86_64_gnullvm-0.53.1 \
-		windows_x86_64_msvc-0.53.1 \
 		wit-bindgen-0.46.0 \
 		wit-bindgen-0.51.0 \
 		wit-bindgen-core-0.51.0 \
