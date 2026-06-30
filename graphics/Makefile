@@ -19,6 +19,7 @@
     SUBDIR += R-cran-farver
     SUBDIR += R-cran-ggforce
     SUBDIR += R-cran-ggplot2
+    SUBDIR += R-cran-ggpolypath
     SUBDIR += R-cran-ggrepel
     SUBDIR += R-cran-gridBase
     SUBDIR += R-cran-gridExtra
@@ -38,6 +39,7 @@
     SUBDIR += R-cran-scales
     SUBDIR += R-cran-shape
     SUBDIR += R-cran-tweenr
+    SUBDIR += R-cran-venn
     SUBDIR += R-cran-viridis
     SUBDIR += R-cran-viridisLite
     SUBDIR += R-cran-visNetwork
@@ -636,12 +638,12 @@
     SUBDIR += nvidia-drm-61-kmod
     SUBDIR += nvidia-drm-61-kmod-580
     SUBDIR += nvidia-drm-61-kmod-devel
-    SUBDIR += nvidia-drm-66-kmod
-    SUBDIR += nvidia-drm-66-kmod-580
-    SUBDIR += nvidia-drm-66-kmod-devel
     SUBDIR += nvidia-drm-612-kmod
     SUBDIR += nvidia-drm-612-kmod-580
     SUBDIR += nvidia-drm-612-kmod-devel
+    SUBDIR += nvidia-drm-66-kmod
+    SUBDIR += nvidia-drm-66-kmod-580
+    SUBDIR += nvidia-drm-66-kmod-devel
     SUBDIR += nvidia-drm-kmod
     SUBDIR += nvidia-drm-kmod-580
     SUBDIR += nvidia-drm-kmod-devel
@@ -932,6 +934,7 @@
     SUBDIR += py-descartes
     SUBDIR += py-diplib
     SUBDIR += py-dj52-sorl-thumbnail
+    SUBDIR += py-dj60-sorl-thumbnail
     SUBDIR += py-django-easy-thumbnails
     SUBDIR += py-djvulibre
     SUBDIR += py-easyocr
@@ -973,6 +976,7 @@
     SUBDIR += py-kornia-rs
     SUBDIR += py-leather
     SUBDIR += py-lerc
+    SUBDIR += py-liffile
     SUBDIR += py-mapclassify
     SUBDIR += py-mayavi
     SUBDIR += py-mcomix

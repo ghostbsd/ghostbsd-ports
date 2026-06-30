@@ -5,6 +5,45 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20260628:
+  AFFECTS: users of www/gitea
+  AUTHOR: nxjoseph@FreeBSD.org
+
+  Gitea 1.26.3 tightens the fork pull request approval gate:
+  a pull request from a fork must now be merged before it can bypass
+  the approval gate (#38041). Review your workflow approval settings
+  if you rely on the previous behavior.
+  https://github.com/go-gitea/gitea/pull/38041
+
+20260626:
+  AFFECTS: net-mgmt/netbox
+  AUTHOR: kai@FreeBSD.org
+
+  1. With Release Netbox 4.6, Python 3.12 or newer is now required.
+
+     This was actually already the case with previous NetBox 4.5 release,
+     but it could be worked around using smaller patches to ensure
+     compatibility with older Python releases.
+
+  2. Please also check the pkg-message and the changelogs for further info.
+
+20260624
+  AFFECTS: Python users
+  AUTHOR: vishwin@FreeBSD.org
+
+  The default version of python has been switched to 3.12.
+
+  For ports users wanting to keep version 3.11 as default,
+  add DEFAULT_VERSIONS+= python=3.11 to make.conf
+
+  With packages, the following may ease the process:
+  # pkg set -p -n py311-:py312-
+  # pkg upgrade
+
+  If no longer required, Python 3.11 can be removed via
+  "pkg remove python311" and the directory /usr/local/lib/python3.11 can
+  then be deleted afterwards, if not empty.
+
 20260616:
   AFFECTS: Users of security/gnupg, security/gnupg25, security/gnupg1
   AUTHOR: adridg@FreeBSD.org

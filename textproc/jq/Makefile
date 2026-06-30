@@ -1,11 +1,12 @@
 PORTNAME=	jq
-DISTVERSION=	1.8.1
+DISTVERSION=	1.8.2
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/jqlang/${PORTNAME}/releases/download/${PORTNAME}-${DISTVERSION}/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Lightweight and flexible command-line JSON processor
-WWW=		https://jqlang.github.io/jq/
+WWW=		https://jqlang.github.io/jq/ \
+		https://github.com/jqlang/jq
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

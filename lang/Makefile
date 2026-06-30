@@ -112,6 +112,7 @@
     SUBDIR += gnat12
     SUBDIR += gnat13
     SUBDIR += gnat14
+    SUBDIR += gnat15
     SUBDIR += gnatcross-binutils-aarch64
     SUBDIR += gnatcross-sysroot-aarch64
     SUBDIR += gnatdroid-binutils
@@ -369,6 +370,7 @@
     SUBDIR += squirrel
     SUBDIR += starlark-rust
     SUBDIR += swift510
+    SUBDIR += swift6
     SUBDIR += swipl
     SUBDIR += tauthon
     SUBDIR += tcbasic

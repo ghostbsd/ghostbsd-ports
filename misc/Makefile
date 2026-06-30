@@ -9,7 +9,6 @@
     SUBDIR += adiak
     SUBDIR += adios2
     SUBDIR += aichat
-    SUBDIR += air
     SUBDIR += alpaca
     SUBDIR += amanda-client
     SUBDIR += amanda-perl-wrapper
@@ -54,6 +53,7 @@
     SUBDIR += chrono
     SUBDIR += cinnamon-translations
     SUBDIR += claude-code
+    SUBDIR += claude-code-legacy
     SUBDIR += clawhub
     SUBDIR += clex
     SUBDIR += clifm
@@ -180,6 +180,7 @@
     SUBDIR += ghostbsd-update-scripts
     SUBDIR += gimp-help-en
     SUBDIR += github-copilot-cli
+    SUBDIR += github-copilot-cli-legacy
     SUBDIR += github-copilot-language-server
     SUBDIR += gitlogue
     SUBDIR += gkrellm-gamma
@@ -205,6 +206,7 @@
     SUBDIR += granulate
     SUBDIR += grc
     SUBDIR += grizzly
+    SUBDIR += grok-build
     SUBDIR += grok-cli
     SUBDIR += gwhich
     SUBDIR += hashcards
@@ -452,11 +454,13 @@
     SUBDIR += py-SimpleSoapy
     SUBDIR += py-SoapySDR
     SUBDIR += py-accelerate
+    SUBDIR += py-aistudio-sdk
     SUBDIR += py-alive-progress
     SUBDIR += py-anthropic
     SUBDIR += py-apache-beam
     SUBDIR += py-ascii-magic
     SUBDIR += py-ast-comments
+    SUBDIR += py-bce-python-sdk
     SUBDIR += py-bitsandbytes
     SUBDIR += py-boost-histogram
     SUBDIR += py-censys
@@ -471,7 +475,9 @@
     SUBDIR += py-comfyui-frontend-package
     SUBDIR += py-comfyui-workflow-templates
     SUBDIR += py-comfyui-workflow-templates-core
+    SUBDIR += py-comfyui-workflow-templates-json
     SUBDIR += py-comfyui-workflow-templates-media-api
+    SUBDIR += py-comfyui-workflow-templates-media-assets-01
     SUBDIR += py-comfyui-workflow-templates-media-image
     SUBDIR += py-comfyui-workflow-templates-media-other
     SUBDIR += py-comfyui-workflow-templates-media-video
@@ -484,6 +490,7 @@
     SUBDIR += py-diffusers
     SUBDIR += py-eemeter
     SUBDIR += py-einops
+    SUBDIR += py-elevenlabs
     SUBDIR += py-emoji
     SUBDIR += py-equinox
     SUBDIR += py-evaluate
@@ -519,6 +526,8 @@
     SUBDIR += py-kokoro
     SUBDIR += py-langchain
     SUBDIR += py-langchain-anthropic
+    SUBDIR += py-langchain-classic
+    SUBDIR += py-langchain-community
     SUBDIR += py-langchain-core
     SUBDIR += py-langchain-google-genai
     SUBDIR += py-langchain-openai
@@ -549,11 +558,14 @@
     SUBDIR += py-mistral-common
     SUBDIR += py-mixpanel
     SUBDIR += py-ml-collections
+    SUBDIR += py-mlflow-skinny
+    SUBDIR += py-mlflow-tracing
     SUBDIR += py-mmcv
     SUBDIR += py-mmdet
     SUBDIR += py-mmengine
     SUBDIR += py-mmsegmentation
     SUBDIR += py-model-hosting-container-standards
+    SUBDIR += py-modelscope
     SUBDIR += py-molequeue
     SUBDIR += py-napari
     SUBDIR += py-napari-svg
@@ -572,6 +584,7 @@
     SUBDIR += py-openvdb
     SUBDIR += py-optuna
     SUBDIR += py-oterm
+    SUBDIR += py-paddlepaddle
     SUBDIR += py-palettable
     SUBDIR += py-papermill
     SUBDIR += py-pdd
@@ -605,6 +618,7 @@
     SUBDIR += py-safetensors
     SUBDIR += py-sagemaker
     SUBDIR += py-sagemaker-core
+    SUBDIR += py-sagemaker-mlflow
     SUBDIR += py-sagemaker-mlops
     SUBDIR += py-sagemaker-schema-inference-artifacts
     SUBDIR += py-sagemaker-serve
@@ -618,6 +632,7 @@
     SUBDIR += py-shap2
     SUBDIR += py-shell-gpt
     SUBDIR += py-sigopt
+    SUBDIR += py-skops
     SUBDIR += py-smdebug-rulesconfig
     SUBDIR += py-snakemake-interface-common
     SUBDIR += py-snakemake-interface-executor-plugins
@@ -646,6 +661,7 @@
     SUBDIR += py-torchvision
     SUBDIR += py-tqdm
     SUBDIR += py-transformers
+    SUBDIR += py-tritonclient
     SUBDIR += py-tvm
     SUBDIR += py-uhi
     SUBDIR += py-uuid-utils

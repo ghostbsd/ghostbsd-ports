@@ -4211,7 +4211,6 @@ www/py-flask-security||2025-03-31|Has expired: Depends on expired devel/py-pytes
 devel/py-aiocontextvars||2025-03-31|Has expired: Depends on expired devel/py-pytest-runner
 converters/libutf-8||2025-03-31|Has expired: Upstream disapeared and distfile is no more available
 science/py-moltemplate||2025-03-31|Has expired: Depends on expired devel/py-pytest-runner
-math/py-numdifftools||2025-03-31|Has expired: Depends on expired devel/py-pytest-runner
 graphics/py-pygal||2025-03-31|Has expired: Depends on expired devel/py-pytest-runner
 www/choqok||2025-03-31|Has expired: Project discontinued upstream
 net-p2p/vuze||2025-03-31|Has expired: Abandoned upstream
@@ -5327,7 +5326,6 @@ accessibility/libqaccessibilityclient@qt6|accessibility/libqaccessibilityclient|
 net/kpeoplevcard||2026-05-30|Removed, not needed anymore
 shells/agsh|shells/meka|2026-05-30|Project renamed upstream
 graphics/kdiagram||2026-05-31|Removed, not needed anymore
-archivers/rubygem-rubyzip2|archivers/rubygem-rubyzip|2026-05-31|Has expired: Outdated. Upstream disappeared
 japanese/p5-2chproxy||2026-05-31|Has expired: Abandoned, it is not compatible with the current servers, migrate to proxy2ch
 www/py-azure-storage||2026-05-31|Has expired: Deprecated by upstream. Use other py-azure-storage-* ports instead
 www/py-pyjwt1|www/py-pyjwt|2026-05-31|Has expired: Obsoleted. Use www/py-pyjwt instead
@@ -5351,3 +5349,33 @@ graphics/libosmesa||2026-06-15|EOLed upstream
 graphics/mesa-gallium-xa||2026-06-15|EOLed upstream
 lang/clover||2026-06-15|EOLed upstream
 java/aparapi||2026-06-15|Has expired: no maintainer, no users in the ports tree, java 8 only, last upstream commit was 10 years ago
+sysutils/docker|sysutils/docker-cli|2026-06-18|Reflect its actual content
+multimedia/dvbcut||2026-06-19|Broken for more than 6 months and upstream is dead
+games/cgoban||2026-06-19|Broken for more than a year and upstream is dead
+games/valyriatear||2026-06-19|Broken for more than a year and upstream is dead
+multimedia/nymphcast||2026-06-19|Broken for more than 6 months
+multimedia/obs-streamfx||2026-06-19|Broken for more than 6 months and upstream is dead
+net/aoe||2026-06-19|Broken for more than 6 months
+net/sems||2026-06-19|Port expired on 2025-12-31
+russian/stardict-bars||2026-06-19|Broken for years and unfetchable
+russian/stardict-computer||2026-06-19|Broken for years and unfetchable
+russian/stardict-dal||2026-06-19|Broken for years and unfetchable
+russian/stardict-engcom||2026-06-19|Broken for years and unfetchable
+russian/stardict-mueller7||2026-06-19|Broken for years and unfetchable
+russian/stardict-mueller7accent||2026-06-19|Broken for years and unfetchable
+russian/stardict-pc||2026-06-19|Broken for years and unfetchable
+sysutils/bsdstats||2026-06-19|Broken for more than 10 months
+textproc/stardict-dictd_mova||2026-06-19|Broken for years and unfetchable
+x11/taiga||2026-06-19|Broken for more than 6 months
+databases/py-apache-arrow|databases/py-pyarrow|2026-06-21|Remove in favor of py-pyarrow, which is the same project
+misc/air||2026-06-21|Upstream has disappeared
+sysutils/signond@qt5||2026-06-22|Unflavorize, remove Qt5 flavor
+sysutils/signond@qt6|sysutils/signond|2026-06-22|Unflavorize
+sysutils/signon-plugin-oauth2@qt5||2026-06-22|Unflavorize, remove Qt5 flavor
+sysutils/signon-plugin-oauth2@qt6|sysutils/signon-plugin-oauth2|2026-06-22|Unflavorize
+net-im/libaccounts-qt@qt5||2026-06-22|Unflavorize, remove Qt5 flavor
+net-im/libaccounts-qt@qt6|net-im/libaccounts-qt|2026-06-22|Unflavorize
+science/minc2|science/minc-tools|2026-06-24|Split into science/minc-tools and science/libminc
+www/xist|www/py-ll-xist|2026-06-24|Use correct Python package name
+net/seda||2026-06-26|Has expired: old, no users in the ports tree, unmaintained, uses long deprecated code removed in jdk25
+math/reduce|math/reduce-psl|2026-06-28|Remove duplicate port, use math/reduce-psl instead

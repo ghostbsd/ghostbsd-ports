@@ -1,6 +1,8 @@
 PORTNAME=	amule
-DISTVERSION=	3.0.0
+DISTVERSION=	3.0.1
 CATEGORIES=	net-p2p
+MASTER_SITES=	https://github.com/amule-org/amule/releases/download/${DISTVERSION}/
+DISTNAME=	aMule-${DISTVERSION}-src
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	All-platform P2P client based on eMule
@@ -9,24 +11,25 @@ WWW=		https://github.com/amule-project/amule
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/docs/COPYING
 
-LIB_DEPENDS=	libcryptopp.so:security/cryptopp \
-		libcurl.so:ftp/curl \
-		libzstd.so:archivers/zstd
+BUILD_DEPENDS=	cryptopp-modern>0:security/cryptopp-modern
+LIB_DEPENDS=	libcurl.so:ftp/curl
 
 USES=		cmake:testing gettext-runtime gnome localbase:ldflags pkgconfig \
 		readline
-USE_GITHUB=	yes
-GH_ACCOUNT=	amule-org
 USE_GNOME=	glib20
-USE_WX=		3.2
 USE_RC_SUBR=	amuled
+USE_WX=		3.2
 
 CMAKE_ON=	BUILD_ALC BUILD_ALCC BUILD_AMULECMD BUILD_DAEMON BUILD_ED2K \
 		BUILD_WXCAS
-CMAKE_OFF=	BUILD_TESTING ENABLE_IP2COUNTRY HAVE_BFD
+CMAKE_OFF=	BUILD_TESTING DEFAULT_VERSION_CHECK ENABLE_BFD ENABLE_CCACHE \
+		TRANSLATED_MANPAGES
 
-OPTIONS_DEFINE=			CAS DOCS FILEVIEW NLS UPNP WEBSERVER
-OPTIONS_DEFAULT=		AMULEGUI CAS FILEVIEW MONOLITHIC WEBSERVER
+WRKSRC=		${WRKDIR}/aMule-${DISTVERSION}
+
+OPTIONS_DEFINE=			CAS DOCS FILEVIEW GEOIP NLS UPNP WEBSERVER
+OPTIONS_DEFAULT=		AMULEGUI CAS FILEVIEW GEOIP MONOLITHIC \
+				WEBSERVER
 OPTIONS_MULTI=			COMPONENTS
 OPTIONS_MULTI_COMPONENTS=	AMULEGUI MONOLITHIC
 OPTIONS_SUB=			yes
@@ -42,6 +45,9 @@ CAS_LIB_DEPENDS=	libgd.so:graphics/gd
 CAS_CMAKE_BOOL=		BUILD_CAS
 
 FILEVIEW_CMAKE_BOOL=	BUILD_FILEVIEW
+
+GEOIP_LIB_DEPENDS=	libmaxminddb.so:net/libmaxminddb
+GEOIP_CMAKE_BOOL=	ENABLE_IP2COUNTRY
 
 MONOLITHIC_USES=	desktop-file-utils
 MONOLITHIC_CMAKE_BOOL=	BUILD_MONOLITHIC
@@ -64,10 +70,9 @@ PLIST_SUB+=	AMULESKIN=""
 PLIST_SUB+=	AMULESKIN="@comment "
 .endif
 
-# Fix segmentation fault, PR 266866
-# See also 5a19c08: ("security/cryptopp: Update to 8.7.0")
-.if ${ARCH} == i386 || ${ARCH} == amd64
-CXXFLAGS+=	-DCRYPTOPP_DISABLE_ASM
-.endif
+post-patch:
+	@${REINPLACE_CMD} -e 's|"aMule GIT"|"aMule ${DISTVERSION}"|g' \
+		-e 's|VERSION "GIT"|VERSION "${DISTVERSION}"|g' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>
