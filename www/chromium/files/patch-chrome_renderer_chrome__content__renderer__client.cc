@@ -1,6 +1,6 @@
---- chrome/renderer/chrome_content_renderer_client.cc.orig	2026-06-04 10:12:25 UTC
+--- chrome/renderer/chrome_content_renderer_client.cc.orig	2026-07-01 06:24:19 UTC
 +++ chrome/renderer/chrome_content_renderer_client.cc
-@@ -186,7 +186,7 @@
+@@ -187,7 +187,7 @@
  #include "v8/include/v8-isolate.h"
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

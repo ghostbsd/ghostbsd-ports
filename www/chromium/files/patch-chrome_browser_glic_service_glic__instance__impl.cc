@@ -1,4 +1,4 @@
---- chrome/browser/glic/service/glic_instance_impl.cc.orig	2026-06-04 10:12:25 UTC
+--- chrome/browser/glic/service/glic_instance_impl.cc.orig	2026-07-01 06:24:19 UTC
 +++ chrome/browser/glic/service/glic_instance_impl.cc
 @@ -18,7 +18,7 @@
  #include "chrome/browser/actor/actor_keyed_service_factory.h"
@@ -9,7 +9,7 @@
  #include "chrome/browser/enterprise/reporting/saas_usage/saas_usage_reporting_controller_factory.h"
  #endif
  #include "chrome/browser/glic/common/future_browser_features.h"
-@@ -141,7 +141,7 @@ EmbedderKey CreateSidePanelEmbedderKey(tabs::TabInterf
+@@ -132,7 +132,7 @@ EmbedderKey CreateSidePanelEmbedderKey(tabs::TabInterf
  
  enterprise_reporting::SaasUsageReportingController*
  GetSaasUsageReportingController(Profile* profile) {

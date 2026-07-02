@@ -1,6 +1,6 @@
---- chrome/common/chrome_switches.h.orig	2026-06-04 10:12:25 UTC
+--- chrome/common/chrome_switches.h.orig	2026-07-01 06:24:19 UTC
 +++ chrome/common/chrome_switches.h
-@@ -286,7 +286,7 @@ extern const char kDebugPrint[];
+@@ -288,7 +288,7 @@ extern const char kDebugPrint[];
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -9,7 +9,7 @@
  extern const char kGuest[];
  #endif
  
-@@ -308,7 +308,7 @@ extern const char kGlicGuestUrlPresetStaging[];
+@@ -312,7 +312,7 @@ extern const char kGlicGuestUrlPresetStaging[];
  extern const char kGlicGuestUrlPresetPreprod[];
  extern const char kGlicGuestUrlPresetProd[];
  

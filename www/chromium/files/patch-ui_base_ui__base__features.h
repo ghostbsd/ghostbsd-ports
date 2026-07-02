@@ -1,7 +1,7 @@
---- ui/base/ui_base_features.h.orig	2026-06-04 10:12:25 UTC
+--- ui/base/ui_base_features.h.orig	2026-07-01 06:24:19 UTC
 +++ ui/base/ui_base_features.h
-@@ -134,7 +134,7 @@ COMPONENT_EXPORT(UI_BASE_FEATURES)
- BASE_DECLARE_FEATURE(kWaylandSessionManagement);
+@@ -142,7 +142,7 @@ COMPONENT_EXPORT(UI_BASE_FEATURES)
+ BASE_DECLARE_FEATURE(kWaylandExternalBeginFrameSource);
  #endif  // BUILDFLAG(IS_OZONE)
  
 -#if BUILDFLAG(IS_LINUX)

@@ -1,6 +1,6 @@
 PORTNAME=	ncrystal
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.4.4
+DISTVERSION=	4.4.6
 CATEGORIES=	science # physics
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -16,18 +16,15 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 NOT_FOR_ARCHS=	armv7 i386 powerpc
 NOT_FOR_ARCHS_REASON=	NCrystal is no longer supported on 32bit systems
 
-USES=		cmake:testing python:build,test shebangfix
+USES=		cmake:testing python:build,test
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mctools
 
-SHEBANG_FILES=	tests/scripts/* \
-		tests/cmake/mctools_testlauncher.py
-
 CMAKE_TESTING_ON=	NCRYSTAL_ENABLE_TESTING \
 			NCRYSTAL_ENABLE_CORE_TEST
 
-# tests as of 4.4.4: 99% tests passed, 1 tests failed out of 129, see https://github.com/mctools/ncrystal/issues/355
+# tests as of 4.4.6: 100% tests passed, 0 tests failed out of 127
 
 .include <bsd.port.mk>

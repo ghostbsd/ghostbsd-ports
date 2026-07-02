@@ -13,7 +13,6 @@
     SUBDIR += argus-clients
     SUBDIR += arpscan
     SUBDIR += arpwatch
-    SUBDIR += arts++
     SUBDIR += bandwhich
     SUBDIR += bandwidthd
     SUBDIR += bgpq3
@@ -434,11 +433,6 @@
     SUBDIR += zabbix7-java
     SUBDIR += zabbix7-proxy
     SUBDIR += zabbix7-server
-    SUBDIR += zabbix72-agent
-    SUBDIR += zabbix72-frontend
-    SUBDIR += zabbix72-java
-    SUBDIR += zabbix72-proxy
-    SUBDIR += zabbix72-server
     SUBDIR += zabbix74-agent
     SUBDIR += zabbix74-frontend
     SUBDIR += zabbix74-java

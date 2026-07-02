@@ -1,6 +1,6 @@
---- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2026-06-04 10:12:25 UTC
+--- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2026-07-01 06:24:19 UTC
 +++ chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc
-@@ -324,7 +324,7 @@ bool WebAppUiManagerImpl::IsAppMigrationDialogShowing(
+@@ -325,7 +325,7 @@ bool WebAppUiManagerImpl::IsAppMigrationDialogShowing(
      return false;
    }
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \
@@ -9,7 +9,7 @@
    BrowserView* browser_view = BrowserView::GetBrowserViewForBrowser(window);
    return browser_view &&
           browser_view->GetProperty(kIsPwaUpdateDialogShowingKey) &&
-@@ -648,7 +648,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPromoForAppsLaun
+@@ -649,7 +649,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPromoForAppsLaun
      Browser* browser,
      Profile* profile,
      const std::string& app_id) {
@@ -18,7 +18,7 @@
    WebAppProvider* provider = WebAppProvider::GetForWebApps(profile);
    CHECK(provider);
  
-@@ -866,7 +866,7 @@ void WebAppUiManagerImpl::ClearWebAppSiteDataIfNeeded(
+@@ -867,7 +867,7 @@ void WebAppUiManagerImpl::ClearWebAppSiteDataIfNeeded(
    }
  }
  

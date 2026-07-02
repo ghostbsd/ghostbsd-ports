@@ -1,6 +1,6 @@
---- remoting/host/desktop_session_proxy.h.orig	2026-06-04 10:12:25 UTC
+--- remoting/host/desktop_session_proxy.h.orig	2026-07-01 06:24:19 UTC
 +++ remoting/host/desktop_session_proxy.h
-@@ -107,7 +107,7 @@ class DesktopSessionProxy
+@@ -108,7 +108,7 @@ class DesktopSessionProxy
    std::unique_ptr<UrlForwarderConfigurator> CreateUrlForwarderConfigurator();
    std::unique_ptr<RemoteWebAuthnStateChangeNotifier>
    CreateRemoteWebAuthnStateChangeNotifier();

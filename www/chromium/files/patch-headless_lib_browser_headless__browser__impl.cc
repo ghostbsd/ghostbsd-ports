@@ -1,4 +1,4 @@
---- headless/lib/browser/headless_browser_impl.cc.orig	2026-06-04 10:12:25 UTC
+--- headless/lib/browser/headless_browser_impl.cc.orig	2026-07-01 06:24:19 UTC
 +++ headless/lib/browser/headless_browser_impl.cc
 @@ -37,7 +37,7 @@
  #include "components/os_crypt/async/browser/keychain_key_provider.h"
@@ -9,7 +9,7 @@
  #include "base/command_line.h"
  #include "components/os_crypt/async/browser/freedesktop_secret_key_provider.h"
  #include "components/password_manager/core/browser/password_manager_switches.h"  // nogncheck
-@@ -411,7 +411,7 @@ void HeadlessBrowserImpl::CreateOSCryptAsync() {
+@@ -368,7 +368,7 @@ void HeadlessBrowserImpl::CreateOSCryptAsync() {
    providers.emplace_back(std::make_pair(
        /*precedence=*/10u,
        std::make_unique<os_crypt_async::KeychainKeyProvider>()));

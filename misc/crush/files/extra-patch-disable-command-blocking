@@ -1,8 +1,6 @@
-diff --git a/internal/agent/common_test.go b/internal/agent/common_test.go
-index 8eb0f10..568d615 100644
---- a/internal/agent/common_test.go
-+++ b/internal/agent/common_test.go
-@@ -166,7 +166,7 @@ func coderAgent(r *vcr.Recorder, env fakeEnv, large, small fantasy.LanguageModel
+--- internal/agent/common_test.go.orig	1979-11-29 15:00:00 UTC
++++ internal/agent/common_test.go
+@@ -167,7 +167,7 @@ func coderAgent(r *vcr.Recorder, env fakeEnv, large, s
  	}
  
  	allTools := []fantasy.AgentTool{
@@ -11,11 +9,9 @@ index 8eb0f10..568d615 100644
  		tools.NewDownloadTool(env.permissions, env.workingDir, r.GetDefaultClient()),
  		tools.NewEditTool(nil, env.permissions, env.history, *env.filetracker, env.workingDir),
  		tools.NewMultiEditTool(nil, env.permissions, env.history, *env.filetracker, env.workingDir),
-diff --git a/internal/agent/coordinator.go b/internal/agent/coordinator.go
-index 86ca09e..c07dd45 100644
---- a/internal/agent/coordinator.go
-+++ b/internal/agent/coordinator.go
-@@ -605,7 +605,7 @@ func (c *coordinator) buildTools(ctx context.Context, agent config.Agent, isSubA
+--- internal/agent/coordinator.go.orig	1979-11-29 15:00:00 UTC
++++ internal/agent/coordinator.go
+@@ -647,7 +647,7 @@ func (c *coordinator) buildTools(ctx context.Context, 
  
  	allTools = append(
  		allTools,
@@ -24,11 +20,9 @@ index 86ca09e..c07dd45 100644
  		tools.NewCrushInfoTool(c.cfg, c.lspManager, c.allSkills, c.activeSkills, c.skillTracker),
  		tools.NewCrushLogsTool(logFile),
  		tools.NewJobOutputTool(),
-diff --git a/internal/agent/tools/bash.go b/internal/agent/tools/bash.go
-index 6b91c58..b95bfe1 100644
---- a/internal/agent/tools/bash.go
-+++ b/internal/agent/tools/bash.go
-@@ -142,8 +142,11 @@ var bannedCommands = []string{
+--- internal/agent/tools/bash.go.orig	1979-11-29 15:00:00 UTC
++++ internal/agent/tools/bash.go
+@@ -145,8 +145,11 @@ var bannedCommands = []string{
  	"ufw",
  }
  
@@ -41,7 +35,7 @@ index 6b91c58..b95bfe1 100644
  	var out bytes.Buffer
  	if err := bashDescriptionTpl.Execute(&out, bashDescriptionData{
  		BannedCommands:  bannedCommandsStr,
-@@ -158,7 +161,10 @@ func bashDescription(attribution *config.Attribution, modelID string) string {
+@@ -162,7 +165,10 @@ func bashDescription(attribution *config.Attribution, 
  	return out.String()
  }
  
@@ -53,7 +47,7 @@ index 6b91c58..b95bfe1 100644
  	return []shell.BlockFunc{
  		shell.CommandsBlocker(bannedCommands),
  
-@@ -190,10 +196,10 @@ func blockFuncs() []shell.BlockFunc {
+@@ -194,10 +200,10 @@ func blockFuncs() []shell.BlockFunc {
  	}
  }
  
@@ -66,7 +60,7 @@ index 6b91c58..b95bfe1 100644
  		func(ctx context.Context, params BashParams, call fantasy.ToolCall) (fantasy.ToolResponse, error) {
  			if params.Command == "" {
  				return fantasy.NewTextErrorResponse("missing command"), nil
-@@ -247,7 +253,7 @@ func NewBashTool(permissions permission.Service, workingDir string, attribution
+@@ -251,7 +257,7 @@ func NewBashTool(permissions permission.Service, worki
  				bgManager := shell.GetBackgroundShellManager()
  				bgManager.Cleanup()
  				// Use background context so it continues after tool returns
@@ -75,7 +69,7 @@ index 6b91c58..b95bfe1 100644
  				if err != nil {
  					return fantasy.ToolResponse{}, fmt.Errorf("error starting background shell: %w", err)
  				}
-@@ -302,7 +308,7 @@ func NewBashTool(permissions permission.Service, workingDir string, attribution
+@@ -306,7 +312,7 @@ func NewBashTool(permissions permission.Service, worki
  			// Start with detached context so it can survive if moved to background
  			bgManager := shell.GetBackgroundShellManager()
  			bgManager.Cleanup()
@@ -84,11 +78,9 @@ index 6b91c58..b95bfe1 100644
  			if err != nil {
  				return fantasy.ToolResponse{}, fmt.Errorf("error starting shell: %w", err)
  			}
-diff --git a/internal/agent/tools/bash_test.go b/internal/agent/tools/bash_test.go
-index 40169e8..42b7426 100644
---- a/internal/agent/tools/bash_test.go
-+++ b/internal/agent/tools/bash_test.go
-@@ -115,7 +115,7 @@ func (m *recordingPermissionService) SubscribeNotifications(ctx context.Context)
+--- internal/agent/tools/bash_test.go.orig	1979-11-29 15:00:00 UTC
++++ internal/agent/tools/bash_test.go
+@@ -117,7 +117,7 @@ func newBashToolForTest(workingDir string) fantasy.Age
  func newBashToolForTest(workingDir string) fantasy.AgentTool {
  	permissions := &mockBashPermissionService{Broker: pubsub.NewBroker[permission.PermissionRequest]()}
  	attribution := &config.Attribution{TrailerStyle: config.TrailerStyleNone}
@@ -97,7 +89,7 @@ index 40169e8..42b7426 100644
  }
  
  func newBashToolWithRecordingPerms(workingDir string, allow bool) (fantasy.AgentTool, *recordingPermissionService) {
-@@ -124,7 +124,7 @@ func newBashToolWithRecordingPerms(workingDir string, allow bool) (fantasy.Agent
+@@ -126,7 +126,7 @@ func newBashToolWithRecordingPerms(workingDir string, 
  		allow:  allow,
  	}
  	attribution := &config.Attribution{TrailerStyle: config.TrailerStyleNone}
@@ -106,11 +98,9 @@ index 40169e8..42b7426 100644
  }
  
  func TestBashTool_ChainedCommandsRequirePermission(t *testing.T) {
-diff --git a/internal/config/config.go b/internal/config/config.go
-index fc3bab3..4a7f732 100644
---- a/internal/config/config.go
-+++ b/internal/config/config.go
-@@ -265,6 +265,7 @@ type Options struct {
+--- internal/config/config.go.orig	1979-11-29 15:00:00 UTC
++++ internal/config/config.go
+@@ -281,6 +281,7 @@ type Options struct {
  	Debug                bool        `json:"debug,omitempty" jsonschema:"description=Enable debug logging,default=false"`
  	DebugLSP             bool        `json:"debug_lsp,omitempty" jsonschema:"description=Enable debug logging for LSP servers,default=false"`
  	DisableAutoSummarize bool        `json:"disable_auto_summarize,omitempty" jsonschema:"description=Disable automatic conversation summarization,default=false"`

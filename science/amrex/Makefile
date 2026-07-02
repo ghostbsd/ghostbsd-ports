@@ -1,6 +1,5 @@
 PORTNAME=	amrex
-DISTVERSION=	26.06
-PORTREVISION=	1
+DISTVERSION=	26.07
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -82,6 +81,6 @@ PLIST_FILES+=	include/AMReX_MLEBABecLap.H \
 		include/AMReX_MLEBTensor_K.H
 .endif
 
-# tests as of 26.06: 100% tests passed, 0 tests failed out of 69
+# tests as of 26.07: 100% tests passed, 0 tests failed out of 71
 
 .include <bsd.port.mk>

@@ -1,4 +1,4 @@
---- chrome/browser/safe_browsing/security_settings_bundle_pref_change_handler.cc.orig	2026-06-04 10:12:25 UTC
+--- chrome/browser/safe_browsing/security_settings_bundle_pref_change_handler.cc.orig	2026-07-01 06:24:19 UTC
 +++ chrome/browser/safe_browsing/security_settings_bundle_pref_change_handler.cc
 @@ -11,7 +11,7 @@
  #include "components/safe_browsing/core/common/safe_browsing_prefs.h"
@@ -7,8 +7,8 @@
 -    BUILDFLAG(IS_MAC)
 +    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/safe_browsing/security_settings_bundle_toast_helper.h"
- #include "chrome/browser/ui/browser_finder.h"
  #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
+ #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 @@ -33,7 +33,7 @@ SecuritySettingsBundlePrefChangeHandler::
  void SecuritySettingsBundlePrefChangeHandler::
      MaybeShowEnhancedBundleSettingChangeNotification() {

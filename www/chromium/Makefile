@@ -1,5 +1,6 @@
 PORTNAME=	chromium
-PORTVERSION=	149.0.7827.196
+PORTVERSION=	150.0.7871.46
+PORTREVISION=	1
 PULSEMV=	16
 PULSEV=		${PULSEMV}.1
 CATEGORIES=	www wayland
@@ -10,7 +11,7 @@ DISTFILES=	${DISTNAME}-lite${EXTRACT_SUFX} \
 		pulseaudio-${PULSEV}.tar.gz:pulseaudio
 
 USE_GITHUB=	nodefault
-GH_TUPLE=	rollup:rollup:v4.22.4:rollup/rollup \
+GH_TUPLE=	rollup:rollup:v4.60.4:rollup/rollup \
 		evanw:esbuild:v${_ESBUILD_VERSION:sh}:esbuild/esbuild
 
 MAINTAINER=	chromium@FreeBSD.org
@@ -425,7 +426,7 @@ post-install-DRIVER-on:
 
 do-test-TEST-on:
 .for t in ${TEST_TARGETS}
-	cd ${WRKSRC}/out/${BUILDTYPE} && ${SETENV} LC_ALL=en_US.UTF-8 \
+	cd ${WRKSRC}/out/${BUILDTYPE} && \
 		./${t} --gtest_filter=-${EXCLUDE_${t}:ts:} || ${TRUE}
 .endfor
 

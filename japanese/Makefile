@@ -163,7 +163,6 @@
     SUBDIR += lynx
     SUBDIR += lynx-current
     SUBDIR += man
-    SUBDIR += man-doc
     SUBDIR += mecab
     SUBDIR += mecab-ipadic
     SUBDIR += mecab-ipadic-eucjp
@@ -290,7 +289,6 @@
     SUBDIR += wdic-fpw
     SUBDIR += web1913-fpw
     SUBDIR += webalizer
-    SUBDIR += wnn7egg
     SUBDIR += wordnet-fpw
     SUBDIR += wordpress
     SUBDIR += wwasw-fpw

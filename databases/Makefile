@@ -14,7 +14,6 @@
     SUBDIR += R-cran-pool
     SUBDIR += R-cran-sqldf
     SUBDIR += WWWdb
-    SUBDIR += adminer
     SUBDIR += adodb5
     SUBDIR += akonadi
     SUBDIR += apache-commons-dbutils
@@ -172,8 +171,6 @@
     SUBDIR += mariadb-java-client
     SUBDIR += mariadb1011-client
     SUBDIR += mariadb1011-server
-    SUBDIR += mariadb106-client
-    SUBDIR += mariadb106-server
     SUBDIR += mariadb114-client
     SUBDIR += mariadb114-server
     SUBDIR += mariadb118-client
@@ -203,8 +200,6 @@
     SUBDIR += mysql80-server
     SUBDIR += mysql84-client
     SUBDIR += mysql84-server
-    SUBDIR += mysql96-client
-    SUBDIR += mysql96-server
     SUBDIR += mysql97-client
     SUBDIR += mysql97-server
     SUBDIR += mysqlbackup
@@ -736,8 +731,6 @@
     SUBDIR += prometheus-postgresql-adapter
     SUBDIR += proxysql
     SUBDIR += pspg
-    SUBDIR += puppetdb-terminus8
-    SUBDIR += puppetdb8
     SUBDIR += puredb
     SUBDIR += pxlib
     SUBDIR += pxtools
@@ -776,7 +769,6 @@
     SUBDIR += py-duckdb
     SUBDIR += py-duckdb_engine
     SUBDIR += py-fakeredis
-    SUBDIR += py-fastparquet
     SUBDIR += py-fdb
     SUBDIR += py-firebirdsql
     SUBDIR += py-flask-pymongo

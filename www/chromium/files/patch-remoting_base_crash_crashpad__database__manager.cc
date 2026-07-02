@@ -1,4 +1,4 @@
---- remoting/base/crash/crashpad_database_manager.cc.orig	2026-06-04 10:12:25 UTC
+--- remoting/base/crash/crashpad_database_manager.cc.orig	2026-07-01 06:24:19 UTC
 +++ remoting/base/crash/crashpad_database_manager.cc
 @@ -24,7 +24,7 @@
  #if BUILDFLAG(IS_WIN)
@@ -14,7 +14,7 @@
  namespace {
  
 -#if !BUILDFLAG(IS_LINUX)
-+#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_BSD)
++#if !BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  const base::FilePath::CharType kChromotingCrashpadDatabasePath[] =
      FILE_PATH_LITERAL("crashpad");
  #endif

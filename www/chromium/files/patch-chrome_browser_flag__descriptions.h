@@ -1,8 +1,8 @@
---- chrome/browser/flag_descriptions.h.orig	2026-06-17 07:32:12 UTC
+--- chrome/browser/flag_descriptions.h.orig	2026-07-01 06:24:19 UTC
 +++ chrome/browser/flag_descriptions.h
-@@ -8588,6 +8588,18 @@ inline constexpr char kAndroidEntraSsoDescription[] =
-     "Enables native support for Entra SSO on Android provided by selected "
-     "Authentication Brokers.";
+@@ -8514,6 +8514,18 @@ inline constexpr char kEnableDlpFileSystemApiDescripti
+     "Enable DLP upload scan support for FileSystem API-backed cloud storage on "
+     "ChromeOS.";
  
 +#if BUILDFLAG(IS_BSD)
 +inline constexpr char kAudioBackendName[] =

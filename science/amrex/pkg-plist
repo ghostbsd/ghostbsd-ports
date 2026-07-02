@@ -195,6 +195,7 @@ include/AMReX_GpuLaunchMacrosC.nolint.H
 include/AMReX_GpuLaunchMacrosG.H
 include/AMReX_GpuLaunchMacrosG.nolint.H
 include/AMReX_GpuMemory.H
+include/AMReX_GpuParallelReduce.H
 include/AMReX_GpuPrint.H
 include/AMReX_GpuQualifiers.H
 include/AMReX_GpuRange.H
@@ -318,6 +319,13 @@ include/AMReX_PROB_AMR_F.H
 %%PARTICLES%%include/AMReX_ParGDB.H
 %%PARTICLES%%include/AMReX_ParIter.H
 include/AMReX_ParReduce.H
+include/AMReX_ParallelContext.H
+include/AMReX_ParallelDescriptor.H
+include/AMReX_ParallelReduce.H
+include/AMReX_ParmParse.H
+include/AMReX_Parser.H
+include/AMReX_Parser_Exe.H
+include/AMReX_Parser_Y.H
 %%PARTICLES%%include/AMReX_Particle.H
 %%PARTICLES%%include/AMReX_ParticleArray.H
 %%PARTICLES%%include/AMReX_ParticleBufferMap.H
@@ -325,6 +333,7 @@ include/AMReX_ParReduce.H
 %%PARTICLES%%include/AMReX_ParticleContainer.H
 %%PARTICLES%%include/AMReX_ParticleContainerBase.H
 %%PARTICLES%%include/AMReX_ParticleContainerI.H
+%%PARTICLES%%include/AMReX_ParticleHeader.H
 %%PARTICLES%%include/AMReX_ParticleIO.H
 %%PARTICLES%%include/AMReX_ParticleInit.H
 %%PARTICLES%%include/AMReX_ParticleInterpolators.H
@@ -338,13 +347,6 @@ include/AMReX_ParReduce.H
 %%PARTICLES%%include/AMReX_ParticleUtil.H
 %%PARTICLES%%include/AMReX_Particle_mod_K.H
 %%PARTICLES%%include/AMReX_Particles.H
-include/AMReX_ParallelContext.H
-include/AMReX_ParallelDescriptor.H
-include/AMReX_ParallelReduce.H
-include/AMReX_ParmParse.H
-include/AMReX_Parser.H
-include/AMReX_Parser_Exe.H
-include/AMReX_Parser_Y.H
 include/AMReX_Partition.H
 include/AMReX_Periodicity.H
 include/AMReX_PhysBCFunct.H

@@ -1,7 +1,6 @@
 PORTNAME=	crush
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.80.0
-PORTREVISION=	1
+DISTVERSION=	0.81.0
 CATEGORIES=	misc devel
 
 MAINTAINER=	tagattie@FreeBSD.org
@@ -17,8 +16,6 @@ USES=		go:1.26+,modules
 
 GO_MODULE=	github.com/charmbracelet/crush
 GO_LDFLAGS=	-w -X github.com/charmbracelet/crush/internal/version.Version=${DISTVERSION}
-
-PATCH_STRIP=	-p1
 
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	README.md

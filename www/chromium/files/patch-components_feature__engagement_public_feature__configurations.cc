@@ -1,4 +1,4 @@
---- components/feature_engagement/public/feature_configurations.cc.orig	2026-06-04 10:12:25 UTC
+--- components/feature_engagement/public/feature_configurations.cc.orig	2026-07-01 06:24:19 UTC
 +++ components/feature_engagement/public/feature_configurations.cc
 @@ -101,7 +101,7 @@ std::optional<FeatureConfig> CreateNewUserGestureInPro
  
@@ -18,7 +18,7 @@
    if (kIPHPasswordsManagementBubbleAfterSaveFeature.name == feature->name) {
      FeatureConfig config;
      config.valid = true;
-@@ -2190,7 +2190,8 @@ std::optional<FeatureConfig> GetClientSideFeatureConfi
+@@ -2259,7 +2259,8 @@ std::optional<FeatureConfig> GetClientSideFeatureConfi
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \

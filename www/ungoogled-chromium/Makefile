@@ -1,5 +1,5 @@
 PORTNAME=	ungoogled-chromium
-PORTVERSION=	149.0.7827.196
+PORTVERSION=	149.0.7827.200
 PULSEMV=	16
 PULSEV=		${PULSEMV}.1
 UGVERSION=	${DISTVERSION}-1
@@ -413,7 +413,7 @@ post-install-DRIVER-on:
 
 do-test-TEST-on:
 .for t in ${TEST_TARGETS}
-	cd ${WRKSRC}/out/${BUILDTYPE} && ${SETENV} LC_ALL=en_US.UTF-8 \
+	cd ${WRKSRC}/out/${BUILDTYPE} && \
 		./${t} --gtest_filter=-${EXCLUDE_${t}:ts:} || ${TRUE}
 .endfor
 

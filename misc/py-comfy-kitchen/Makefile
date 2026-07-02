@@ -1,6 +1,6 @@
 PORTNAME=	comfy-kitchen
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.14
+DISTVERSION=	0.2.16
 CATEGORIES=	misc python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -29,10 +29,10 @@ MAKE_ENV+=	COMFY_KITCHEN_NO_CUDA=1
 do-test:
 	@cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHON_CMD} -m pytest -v -rs
 
-tests as of 0.2.14:
-# Results (37.25s):
-#        176 passed
-#        370 skipped
-#          6 warnings
+tests as of 0.2.16:
+# Results (37.06s):
+#        178 passed
+#        377 skipped
+#          9 warnings
 
 .include <bsd.port.mk>

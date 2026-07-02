@@ -610,6 +610,7 @@ bin/comfyui
 %%DATADIR%%/comfy_execution/utils.py
 %%DATADIR%%/comfy_execution/validation.py
 %%DATADIR%%/comfy_extras/chainner_models/model_loading.py
+%%DATADIR%%/comfy_extras/color_util.py
 %%DATADIR%%/comfy_extras/frame_interpolation_models/film_net.py
 %%DATADIR%%/comfy_extras/frame_interpolation_models/ifnet.py
 %%DATADIR%%/comfy_extras/mediapipe/face_geometry.py
@@ -625,6 +626,7 @@ bin/comfyui
 %%DATADIR%%/comfy_extras/nodes_bernini.py
 %%DATADIR%%/comfy_extras/nodes_bg_removal.py
 %%DATADIR%%/comfy_extras/nodes_boogu.py
+%%DATADIR%%/comfy_extras/nodes_bounding_boxes.py
 %%DATADIR%%/comfy_extras/nodes_camera_trajectory.py
 %%DATADIR%%/comfy_extras/nodes_canny.py
 %%DATADIR%%/comfy_extras/nodes_cfg.py
@@ -662,6 +664,7 @@ bin/comfyui
 %%DATADIR%%/comfy_extras/nodes_image_compare.py
 %%DATADIR%%/comfy_extras/nodes_images.py
 %%DATADIR%%/comfy_extras/nodes_ip2p.py
+%%DATADIR%%/comfy_extras/nodes_json_prompt.py
 %%DATADIR%%/comfy_extras/nodes_kandinsky5.py
 %%DATADIR%%/comfy_extras/nodes_latent.py
 %%DATADIR%%/comfy_extras/nodes_load_3d.py
@@ -712,6 +715,7 @@ bin/comfyui
 %%DATADIR%%/comfy_extras/nodes_sd3.py
 %%DATADIR%%/comfy_extras/nodes_sdpose.py
 %%DATADIR%%/comfy_extras/nodes_sdupscale.py
+%%DATADIR%%/comfy_extras/nodes_seed.py
 %%DATADIR%%/comfy_extras/nodes_slg.py
 %%DATADIR%%/comfy_extras/nodes_stable3d.py
 %%DATADIR%%/comfy_extras/nodes_stable_cascade.py
