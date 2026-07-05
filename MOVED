@@ -5487,3 +5487,6 @@ sysutils/puppet8|sysutils/openvox-agent8|2026-07-01|Has expired: Discontinued, u
 databases/puppetdb8|databases/openvoxdb8|2026-07-01|Has expired: Discontinued, use databases/openvoxdb8
 databases/puppetdb-terminus8|databases/openvoxdb-terminus8|2026-07-01|Has expired: Discontinued, use databases/openvoxdb-terminus8
 sysutils/rubygem-puppetserver-ca|sysutils/rubygem-openvoxserver-ca|2026-07-01|Has expired: Discontinued, use sysutils/rubygem-openvoxserver-ca
+java/jd-gui|java/jd-gui-duo|2026-07-03|Switch to active fork and rename
+lang/perl5.38||2026-07-03|Has expired: Support ends three years after .0 release. Please upgrade to a more recent version of Perl
+graphics/gimp-jxl-plugin||2026-07-03|Integrated into graphics/gimp-app

@@ -4358,6 +4358,16 @@
     SUBDIR += php85-sysvsem
     SUBDIR += php85-sysvshm
     SUBDIR += php85-tokenizer
+    SUBDIR += php86-ffi
+    SUBDIR += php86-gettext
+    SUBDIR += php86-intl
+    SUBDIR += php86-pcntl
+    SUBDIR += php86-readline
+    SUBDIR += php86-shmop
+    SUBDIR += php86-sysvmsg
+    SUBDIR += php86-sysvsem
+    SUBDIR += php86-sysvshm
+    SUBDIR += php86-tokenizer
     SUBDIR += phpunit10
     SUBDIR += phpunit11
     SUBDIR += phpunit12

@@ -14,6 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	liblz4.so:archivers/liblz4
 
 USES=		php:ext
+IGNORE_WITH_PHP=	86
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	kjdev

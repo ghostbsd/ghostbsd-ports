@@ -145,6 +145,7 @@
     SUBDIR += distcache
     SUBDIR += diswall
     SUBDIR += doas
+    SUBDIR += dogtag-pki
     SUBDIR += dotdotpwn
     SUBDIR += dropbear
     SUBDIR += dsniff
@@ -844,6 +845,8 @@
     SUBDIR += php84-sodium
     SUBDIR += php85-filter
     SUBDIR += php85-sodium
+    SUBDIR += php86-filter
+    SUBDIR += php86-sodium
     SUBDIR += picocrypt
     SUBDIR += picosha2
     SUBDIR += pidgin-encryption

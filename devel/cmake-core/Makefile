@@ -1,6 +1,6 @@
 PORTNAME=	cmake
 DISTVERSION=	${_CMAKE_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-core
 
@@ -24,7 +24,8 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		librhash.so:security/rhash \
 		libuv.so:devel/libuv
 
-USES=		cmake:_internal compiler:c++17-lang cpe localbase ncurses ssl
+USES=		cmake:_internal compiler:c++17-lang cpe localbase python:env \
+		ncurses ssl
 CPE_VENDOR=	cmake_project
 
 HAS_CONFIGURE=	yes
@@ -84,6 +85,9 @@ post-patch:
 		${WRKSRC}/Modules/FindFLEX.cmake
 	@${REINPLACE_CMD} -e 's|/opt/kde4|${PREFIX}|g' \
 		${WRKSRC}/Modules/FindKDE4.cmake
+	@${REINPLACE_CMD} -e \
+		'/set(_$${_PYTHON_PREFIX}_VERSIONS 3/s/VERSIONS 3/VERSIONS ${PYTHON_VER} 3/' \
+		${WRKSRC}/Modules/FindPython/Support.cmake
 
 # cmake-gui(1) is installed by devel/cmake-gui. Remove the man page's source to
 # prevent it from being built/installed by devel/cmake.

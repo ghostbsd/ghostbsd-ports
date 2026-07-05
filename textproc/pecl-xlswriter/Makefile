@@ -14,6 +14,7 @@ LIB_DEPENDS=	libxlsxwriter.so:math/libxlsxwriter
 
 #USES=		localbase php:pecl ssl
 USES=		php:pecl ssl
+IGNORE_WITH_PHP=	86
 
 CFLAGS+=	-I${LOCALBASE}/include/minizip
 CONFIGURE_ARGS=	 --with-libxlsxwriter=${LOCALBASE} \

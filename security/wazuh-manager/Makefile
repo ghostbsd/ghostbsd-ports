@@ -80,19 +80,16 @@ EXTERNAL_DISTFILES=	audit-userspace.tar.gz:wazuh_sources \
 			sqlite.tar.gz:wazuh_sources \
 			zlib.tar.gz:wazuh_sources
 
-OPTIONS_DEFINE=	INOTIFY PRELUDE ZEROMQ
+OPTIONS_DEFINE=	INOTIFY ZEROMQ
 OPTIONS_GROUP_DATABASE=	MYSQL PGSQL
 OPTIONS_GROUP=		DATABASE
 
-PRELUDE_LIB_DEPENDS=	libprelude.so:security/libprelude
 ZEROMQ_LIB_DEPENDS=	libczmq.so:net/czmq
 
 INOTIFY_DESC=	Kevent based real time monitoring
-PRELUDE_DESC=	Sensor support from Prelude SIEM
 ZEROMQ_DESC=	ZeroMQ support
 
 ZEROMQ_MAKE_ENV=	USE_ZEROMQ=yes
-PRELUDE_MAKE_ENV=	USE_PRELUDE=yes
 INOTIFY_MAKE_ENV=	USE_INOTIFY=yes \
 			INOTIFY_LIB=${INOTIFY_LIB}
 INOTIFY_USES=	pkgconfig inotify

@@ -21,6 +21,7 @@
     SUBDIR += asbutton
     SUBDIR += asr-manpages
     SUBDIR += astc-encoder
+    SUBDIR += auto-tempo
     SUBDIR += bb
     SUBDIR += bbjd
     SUBDIR += bdelta
@@ -435,6 +436,7 @@
     SUBDIR += php83-calendar
     SUBDIR += php84-calendar
     SUBDIR += php85-calendar
+    SUBDIR += php86-calendar
     SUBDIR += picoclaw
     SUBDIR += pinfo
     SUBDIR += pipe
@@ -576,6 +578,7 @@
     SUBDIR += py-onnx
     SUBDIR += py-onnx-tf
     SUBDIR += py-onnxconverter-common
+    SUBDIR += py-onnxruntime
     SUBDIR += py-openai
     SUBDIR += py-openai-harmony
     SUBDIR += py-openai-whisper

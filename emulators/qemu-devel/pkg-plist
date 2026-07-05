@@ -13,6 +13,7 @@ bin/qemu-storage-daemon
 %%NO_X86_TARGETS%%bin/qemu-system-alpha
 %%NO_X86_TARGETS%%bin/qemu-system-avr
 %%NO_X86_TARGETS%%bin/qemu-system-arm
+%%NO_X86_TARGETS%%bin/qemu-system-hexagon
 %%NO_X86_TARGETS%%bin/qemu-system-hppa
 bin/qemu-system-i386
 %%NO_X86_TARGETS%%bin/qemu-system-loongarch64

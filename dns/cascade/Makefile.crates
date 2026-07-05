@@ -1,12 +1,11 @@
 CARGO_CRATES=	aho-corasick-1.1.4 \
-		allocator-api2-0.2.21 \
 		android_system_properties-0.1.5 \
 		anstream-1.0.0 \
 		anstyle-1.0.14 \
 		anstyle-parse-1.0.0 \
 		anstyle-query-1.1.5 \
 		anstyle-wincon-3.0.11 \
-		arc-swap-1.9.1 \
+		arc-swap-1.9.2 \
 		assert-json-diff-2.0.2 \
 		atomic-waker-1.1.2 \
 		autocfg-1.5.1 \
@@ -14,15 +13,16 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		axum-core-0.5.6 \
 		base64-0.22.1 \
 		bcder-0.7.7 \
+		bitflags-1.3.2 \
 		bitflags-2.13.0 \
 		bs58-0.5.1 \
 		bumpalo-3.20.3 \
 		bytes-1.12.0 \
-		camino-1.2.3 \
-		cc-1.2.64 \
+		camino-1.2.4 \
+		cc-1.2.65 \
 		cfg-if-1.0.4 \
 		cfg_aliases-0.2.1 \
-		chacha20-0.10.0 \
+		chacha20-0.10.1 \
 		chrono-0.4.45 \
 		clap-4.6.1 \
 		clap_builder-4.6.0 \
@@ -39,10 +39,11 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		darling-0.23.0 \
 		darling_core-0.23.0 \
 		darling_macro-0.23.0 \
+		defmt-1.1.1 \
+		defmt-macros-1.1.1 \
+		defmt-parser-1.0.0 \
 		deranged-0.5.8 \
 		displaydoc-0.2.6 \
-		domain-0.12.1 \
-		domain-macros-0.12.1 \
 		dtoa-1.0.11 \
 		dyn-clone-1.0.20 \
 		either-1.16.0 \
@@ -100,17 +101,17 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		is_ci-1.2.0 \
 		is_terminal_polyfill-1.70.2 \
 		itoa-1.0.18 \
-		jiff-0.2.28 \
-		jiff-static-0.2.28 \
-		jiff-tzdb-0.1.6 \
+		jiff-0.2.31 \
+		jiff-static-0.2.31 \
+		jiff-tzdb-0.1.7 \
 		jiff-tzdb-platform-0.1.3 \
-		js-sys-0.3.102 \
+		js-sys-0.3.103 \
 		lazy_static-1.5.0 \
 		libc-0.2.186 \
 		linux-raw-sys-0.12.1 \
 		litemap-0.8.2 \
 		lock_api-0.4.14 \
-		log-0.4.32 \
+		log-0.4.33 \
 		matchers-0.2.0 \
 		matchit-0.8.4 \
 		maybe-async-0.2.11 \
@@ -141,10 +142,10 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		proc-macro2-1.0.106 \
 		prometheus-client-0.24.1 \
 		prometheus-client-derive-encode-0.5.0 \
-		quote-1.0.45 \
+		quote-1.0.46 \
 		r-efi-6.0.0 \
 		r2d2-0.8.10 \
-		rand-0.10.1 \
+		rand-0.10.2 \
 		rand_core-0.10.1 \
 		rayon-1.12.0 \
 		rayon-core-1.13.0 \
@@ -157,9 +158,9 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		ring-0.17.14 \
 		rustc_version-0.4.1 \
 		rustix-1.1.4 \
-		rustls-0.23.40 \
+		rustls-0.23.41 \
 		rustls-pemfile-2.2.0 \
-		rustls-pki-types-1.14.1 \
+		rustls-pki-types-1.15.0 \
 		rustls-webpki-0.103.13 \
 		rustversion-1.0.22 \
 		ryu-1.0.23 \
@@ -196,10 +197,12 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		syslog-7.0.0 \
 		tempfile-3.27.0 \
 		terminal_size-0.4.4 \
+		thiserror-2.0.18 \
+		thiserror-impl-2.0.18 \
 		thread_local-1.1.9 \
-		time-0.3.49 \
+		time-0.3.53 \
 		time-core-0.1.9 \
-		time-macros-0.2.29 \
+		time-macros-0.2.31 \
 		tinystr-0.8.3 \
 		tinyvec-1.11.0 \
 		tinyvec_macros-0.1.1 \
@@ -228,17 +231,17 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		url-2.5.8 \
 		utf8_iter-1.0.4 \
 		utf8parse-0.2.2 \
-		uuid-1.23.3 \
+		uuid-1.23.4 \
 		valuable-0.1.1 \
 		vcpkg-0.2.15 \
 		want-0.3.1 \
 		wasi-0.11.1+wasi-snapshot-preview1 \
-		wasm-bindgen-0.2.125 \
-		wasm-bindgen-futures-0.4.75 \
-		wasm-bindgen-macro-0.2.125 \
-		wasm-bindgen-macro-support-0.2.125 \
-		wasm-bindgen-shared-0.2.125 \
-		web-sys-0.3.102 \
+		wasm-bindgen-0.2.126 \
+		wasm-bindgen-futures-0.4.76 \
+		wasm-bindgen-macro-0.2.126 \
+		wasm-bindgen-macro-support-0.2.126 \
+		wasm-bindgen-shared-0.2.126 \
+		web-sys-0.3.103 \
 		webpki-roots-1.0.8 \
 		windows-core-0.62.2 \
 		windows-implement-0.60.2 \
@@ -269,5 +272,6 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		zerovec-derive-0.11.3 \
 		zmij-1.0.21 \
 		kmip-ttlv@git+https://github.com/NLnetLabs/kmip-ttlv?branch=next\#295572e07feb30293462267db2de1640ba1bfabe \
+		domain-kmip@git+https://github.com/NLnetLabs/domain-kmip?branch=main\#632dfab6c191a2d191e7fc670e246d4e87da6bf7 \
 		kmip-protocol@git+https://github.com/NLnetLabs/kmip-protocol?branch=next\#2b0043846a7d2458f83a6a12e5e4fc656273e1fa \
-		domain-kmip@git+https://github.com/NLnetLabs/domain-kmip?branch=main\#bb0da8603febd184c2bae6998d81da81d8570c9c
+		domain,domain-macros@git+https://github.com/NLnetLabs/domain?branch=main\#bad0d400f44141f26f968a6435af9970e57e4cbf

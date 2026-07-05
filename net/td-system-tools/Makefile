@@ -1,5 +1,5 @@
 PORTNAME=	td-system-tools
-DISTVERSION=	2.7.4
+DISTVERSION=	2.7.7
 CATEGORIES=	net
 MASTER_SITES=	https://www.nntb.no/~dreibh/system-tools/download/
 
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 RUN_DEPENDS=	bash:shells/bash \
 		getopt>=0:misc/getopt
 
-USES=		cmake shebangfix tar:xz
+USES=		cmake gettext-runtime shebangfix tar:xz
 
 CFLAGS+=	-std=c23
 

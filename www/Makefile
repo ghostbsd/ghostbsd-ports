@@ -400,6 +400,7 @@
     SUBDIR += mediawiki143
     SUBDIR += mediawiki144
     SUBDIR += mediawiki145
+    SUBDIR += mediawiki146
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -455,6 +456,7 @@
     SUBDIR += mod_php83
     SUBDIR += mod_php84
     SUBDIR += mod_php85
+    SUBDIR += mod_php86
     SUBDIR += mod_proctitle
     SUBDIR += mod_qos
     SUBDIR += mod_realdoc
@@ -1463,6 +1465,8 @@
     SUBDIR += php84-tidy
     SUBDIR += php85-session
     SUBDIR += php85-tidy
+    SUBDIR += php86-session
+    SUBDIR += php86-tidy
     SUBDIR += phpbb3
     SUBDIR += phpfpmtop
     SUBDIR += phpgroupware

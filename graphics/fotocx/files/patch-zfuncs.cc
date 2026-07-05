@@ -1,6 +1,6 @@
---- zfuncs.cc.orig	2026-01-08 11:29:58 UTC
+--- zfuncs.cc.orig	2026-06-03 18:20:58 UTC
 +++ zfuncs.cc
-@@ -495,6 +495,7 @@ int zmalloc_test(int64 cc)
+@@ -498,6 +498,7 @@ int zmalloc_test(int64 cc)
  
  double realmemory()
  {
@@ -8,7 +8,7 @@
     FILE     *fid;
     ch       buff[100], *pp;
     double   rmem = 0;
-@@ -513,15 +514,45 @@ double realmemory()
+@@ -516,15 +517,45 @@ double realmemory()
     }
  
     fclose(fid);
@@ -54,7 +54,7 @@
     FILE     *fid;
     ch       buff[100], *pp;
     double   avmem = 0;
-@@ -546,6 +577,11 @@ double availmemory()
+@@ -549,6 +580,11 @@ double availmemory()
     }
  
     fclose(fid);
@@ -66,7 +66,7 @@
     return avmem;
  }
  
-@@ -798,7 +834,7 @@ void zappcrash(ch *format, ... )
+@@ -779,7 +815,7 @@ void zappcrash(ch *format, ... )
  
     uname(&unbuff);                                                                     //  get cpu arch. 32/64 bit
     arch = unbuff.machine;
@@ -75,7 +75,7 @@
     if (fid1) {
        ii = fscanf(fid1,"%s %s %s",OS1,OS2,OS3);
        pclose(fid1);
-@@ -1054,13 +1090,13 @@ double get_seconds(int init)
+@@ -1035,13 +1071,13 @@ double get_seconds(int init)
     static double  secs1 = 0, secs2, secs3;
  
     if (init == 0) {
@@ -91,8 +91,27 @@
        secs2 = time1.tv_sec;
        secs2 += time1.tv_nsec * 0.000000001;
        secs3 = secs2 - secs1;
-@@ -2015,6 +2051,10 @@ nextrec:
-    return pp3;                                                                         //  return logical record, null terminated
+@@ -1116,6 +1152,7 @@ double CPUtime()
+ 
+ int memused()
+ {
++#if defined(__linux__)
+    ch       buff1[100], buff2[1000];
+    ch       *pp = 0;
+    FILE     *fid;
+@@ -1142,6 +1179,10 @@ int memused()
+    }
+ 
+    return MB;
++#elif defined(__FreeBSD__)
++   struct rusage ru;
++   return getrusage(RUSAGE_SELF, &ru) ? 0 : (ru.ru_maxrss + 1023) / 1024;
++#endif
+ }
+ 
+ 
+@@ -2028,6 +2069,10 @@ int renamez(ch *file1, ch *file2)
+    return err;
  }
  
 +int get_nprocs()
@@ -102,7 +121,7 @@
  
  /**************************************************************************************/
  
-@@ -2209,7 +2249,7 @@ uint diskspace(ch *file)
+@@ -2106,7 +2151,7 @@ uint diskspace(ch *file)
     FILE     *fid;
  
     pp = zescape_quotes(file);
@@ -111,7 +130,7 @@
     zfree(pp);
  
     fid = popen(command,"r");
-@@ -4077,14 +4117,18 @@ ch * SearchWildCase(ch *wpath, int &uflag)
+@@ -3974,14 +4019,18 @@ ch * SearchWildCase(ch *wpath, int &uflag)
     flist and flist[*] are subjects for zfree().
  
     zfind() works for files containing quotes (")
@@ -131,7 +150,16 @@
     int      ii, jj, err, cc;
     glob_t   globdata;
     ch       *pp;
-@@ -6114,9 +6158,16 @@ int zinitapp(ch *appvers, int argc, ch *argv[])       
+@@ -5984,7 +6033,7 @@ int zinitapp(ch *appvers, int argc, ch *argv[])       
+    STATB       statB;
+    FILE        *fid;
+ 
+-   printf("current directory: %s\n",get_current_dir_name());                           //  do not CD $HOME                       26.4
++   printf("current directory: %s\n", getcwd(buff, sizeof buff));
+ 
+    startime = time(null);                                                              //  app start time, secs. since 1970
+ 
+@@ -6009,9 +6058,16 @@ int zinitapp(ch *appvers, int argc, ch *argv[])       
     if (argc > 1 && strmatchV(argv[1],"-ver","-v",null)) exit(0);                       //  exit if nothing else wanted
  
     progexe = 0;

@@ -1,13 +1,14 @@
---- deps/VectorSimilarity/src/VecSim/info_iterator.h.orig	2022-10-20 13:03:07 UTC
+--- deps/VectorSimilarity/src/VecSim/info_iterator.h.orig	2022-11-15 11:19:11 UTC
 +++ deps/VectorSimilarity/src/VecSim/info_iterator.h
-@@ -1,5 +1,6 @@
+@@ -6,6 +6,7 @@
+ 
  #pragma once
  #include <stdlib.h>
 +#include <stdint.h>
  #ifdef __cplusplus
  extern "C" {
  #endif
-@@ -21,7 +22,7 @@ typedef union {
+@@ -27,7 +28,7 @@ typedef union {
  typedef union {
      double floatingPointValue; // Floating point value. 64 bits float.
      int64_t integerValue;      // Integer value. Signed 64 bits integer.

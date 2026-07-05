@@ -13,6 +13,9 @@ WWW=		https://kivy.org/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+DEPRECATED=	Depends on expired lang/cython0
+EXPIRATION_DATE=2026-09-15
+
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}packaging>0:devel/py-packaging@${PY_FLAVOR}
 LIB_DEPENDS=	libmtdev.so:devel/libmtdev
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pygments>0:textproc/py-pygments@${PY_FLAVOR} \

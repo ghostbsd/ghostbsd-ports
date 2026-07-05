@@ -15,6 +15,7 @@ USES=		cpe php:flavors shebangfix
 USE_PHP=	ctype curl dom fileinfo filter gd iconv intl mbstring mcrypt \
 		memcache mysqli opcache pdo pdo_mysql posix readline session \
 		simplexml soap sockets sqlite3 tidy tokenizer xml zlib
+IGNORE_WITH_PHP=	86
 
 SHEBANG_FILES=	misc/log-analytics/import_logs.py
 NO_ARCH=	yes

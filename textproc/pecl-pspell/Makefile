@@ -12,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libaspell.so:textproc/aspell
 
 USES=		php:pecl
-IGNORE_WITH_PHP=	82 83
+IGNORE_WITH_PHP=	82 83 86
 
 TEST_TARGET=	test
 

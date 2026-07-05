@@ -1,6 +1,6 @@
 PORTNAME=	pipewire-spa-oss-ng
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.0
+DISTVERSION=	0.9.3
 CATEGORIES=	audio
 
 MAINTAINER=	kbowling@FreeBSD.org

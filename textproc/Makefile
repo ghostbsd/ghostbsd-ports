@@ -385,6 +385,7 @@
     SUBDIR += l2a
     SUBDIR += la-aspell
     SUBDIR += lacheck
+    SUBDIR += languagetool
     SUBDIR += lasem
     SUBDIR += latex-service
     SUBDIR += latex2html
@@ -1318,6 +1319,14 @@
     SUBDIR += php85-xmlreader
     SUBDIR += php85-xmlwriter
     SUBDIR += php85-xsl
+    SUBDIR += php86-ctype
+    SUBDIR += php86-dom
+    SUBDIR += php86-enchant
+    SUBDIR += php86-simplexml
+    SUBDIR += php86-xml
+    SUBDIR += php86-xmlreader
+    SUBDIR += php86-xmlwriter
+    SUBDIR += php86-xsl
     SUBDIR += pict
     SUBDIR += po4a
     SUBDIR += pod2mdoc
@@ -1370,6 +1379,7 @@
     SUBDIR += py-custom_inherit
     SUBDIR += py-cyclonedx-python-lib
     SUBDIR += py-dbfread
+    SUBDIR += py-deepsearch-glm
     SUBDIR += py-dialect
     SUBDIR += py-dict2xml
     SUBDIR += py-diff-match-patch

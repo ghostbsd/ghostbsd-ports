@@ -123,7 +123,7 @@ NINJA_DEFAULT?=		ninja
 NODEJS_DEFAULT?=	lts
 # Possible value: 25, 26
 OPENLDAP_DEFAULT?=	26
-# Possible values: 5.38, 5.40, 5.42, 5.44, devel
+# Possible values: 5.40, 5.42, 5.44, devel
 .  if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
 # When changing the default here, make sure the DEPRECATED/EXPIRATION lines in
@@ -142,7 +142,7 @@ PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .  endif
 # Possible values: 13, 14, 15, 16, 17, 18
 PGSQL_DEFAULT?=		18
-# Possible values: 8.2, 8.3, 8.4, 8.5
+# Possible values: 8.2, 8.3, 8.4, 8.5, 8.6
 PHP_DEFAULT?=		8.4
 # Possible values: rust, legacy
 .  if empty(ARCH:Naarch64:Namd64:Narmv7:Ni386:Npowerpc64:Npowerpc64le:Npowerpc:Nriscv64)

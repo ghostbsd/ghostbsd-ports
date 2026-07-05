@@ -13,7 +13,7 @@ LICENSE=	MPL20
 USES=		cpe php:web,flavors
 USE_PHP=	curl fileinfo filter gd json mysqli session spl xml xmlrpc \
 		xmlwriter zlib
-IGNORE_WITH_PHP=	82
+IGNORE_WITH_PHP=	82 86
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 

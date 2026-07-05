@@ -432,6 +432,7 @@ share/man/man7/esil.7.gz
 %%DATADIR%%/%%PORTVERSION%%/fcnsign/types-arm-ios-64.sdb
 %%DATADIR%%/%%PORTVERSION%%/fcnsign/types-darwin.sdb
 %%DATADIR%%/%%PORTVERSION%%/fcnsign/types-iokit.sdb
+%%DATADIR%%/%%PORTVERSION%%/fcnsign/types-jni.sdb
 %%DATADIR%%/%%PORTVERSION%%/fcnsign/types-linux.sdb
 %%DATADIR%%/%%PORTVERSION%%/fcnsign/types-windows.sdb
 %%DATADIR%%/%%PORTVERSION%%/fcnsign/types-x86-macos-64.sdb

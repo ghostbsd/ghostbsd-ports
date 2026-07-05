@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GCC:C|%SUBDIR%|${MASTER_SITE_SUBDIR}|}:gcc \
 MASTER_SITE_SUBDIR=	releases/gcc-${DISTVERSION}
 DISTFILES=	gcc-${DISTVERSION}.tar.xz:gcc
 
-MAINTAINER=	thierry@FreeBSD.org
+MAINTAINER=	ada@FreeBSD.org
 COMMENT=	GNAT (GNU Ada) compiler
 WWW=		https://www.gnu.org/software/gnat/
 

@@ -39,8 +39,10 @@ RAR_DESC=	RAR compression support
 
 ARJ_RUN_DEPENDS=	arj:archivers/arj
 LZO_RUN_DEPENDS=	lzop:archivers/lzop
-RAR_RUN_DEPENDS=	rar:archivers/rar \
-			unrar:archivers/unrar
+RAR_RUN_DEPENDS=	unrar:archivers/unrar \
+			${RAR_RUN_DEPENDS_${ARCH}}
+RAR_RUN_DEPENDS_amd64=	rar:archivers/rar
+RAR_RUN_DEPENDS_i386=	rar:archivers/rar-i386
 
 DOCS_BUILD_DEPENDS=	xsltproc:textproc/libxslt
 DOCS_CONFIGURE_ENABLE=	doc

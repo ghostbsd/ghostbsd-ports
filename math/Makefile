@@ -915,6 +915,8 @@
     SUBDIR += php84-gmp
     SUBDIR += php85-bcmath
     SUBDIR += php85-gmp
+    SUBDIR += php86-bcmath
+    SUBDIR += php86-gmp
     SUBDIR += physcalc
     SUBDIR += picosat
     SUBDIR += piranha

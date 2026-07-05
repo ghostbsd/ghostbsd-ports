@@ -1,6 +1,6 @@
 PORTNAME=	skim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.10.0
+DISTVERSION=	5.0.0
 CATEGORIES=	deskutils
 PKGNAMESUFFIX=	-fuzzy-finder
 
@@ -38,7 +38,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		approx-0.5.1 \
 		arbitrary-1.4.2 \
 		arg_enum_proc_macro-0.3.4 \
-		arrayvec-0.7.7 \
+		arrayvec-0.7.8 \
 		as-slice-0.2.1 \
 		assert_enum_variants-0.1.2 \
 		atomic-0.6.1 \
@@ -79,7 +79,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		ciborium-ll-0.2.2 \
 		clap-4.6.1 \
 		clap_builder-4.6.0 \
-		clap_complete-4.6.5 \
+		clap_complete-4.6.7 \
 		clap_complete_nushell-4.6.0 \
 		clap_derive-4.6.1 \
 		clap_lex-1.1.0 \
@@ -89,7 +89,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		color_quant-1.1.0 \
 		colorchoice-1.0.5 \
 		compact_str-0.9.1 \
-		console-0.16.3 \
+		console-0.16.4 \
 		convert_case-0.10.0 \
 		cpufeatures-0.2.17 \
 		cpufeatures-0.3.0 \
@@ -191,8 +191,8 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		itertools-0.13.0 \
 		itertools-0.14.0 \
 		itoa-1.0.18 \
-		jiff-0.2.29 \
-		jiff-static-0.2.29 \
+		jiff-0.2.31 \
+		jiff-static-0.2.31 \
 		jobserver-0.1.34 \
 		js-sys-0.3.103 \
 		kanal-0.1.1 \
@@ -290,7 +290,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		radium-0.7.0 \
 		rand-0.8.6 \
 		rand-0.9.4 \
-		rand-0.10.1 \
+		rand-0.10.2 \
 		rand_chacha-0.3.1 \
 		rand_chacha-0.9.0 \
 		rand_core-0.6.4 \
@@ -375,7 +375,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		thiserror-impl-2.0.18 \
 		thread_local-1.1.9 \
 		tiff-0.11.3 \
-		time-0.3.51 \
+		time-0.3.53 \
 		time-core-0.1.9 \
 		tinytemplate-1.2.1 \
 		tinyvec-1.11.0 \

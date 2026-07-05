@@ -14,6 +14,7 @@ USES=		localbase php:ext
 USE_GITHUB=	yes
 GH_PROJECT=	c${PORTNAME}
 USE_PHP=	mbstring pdo:build session:build
+IGNORE_WITH_PHP=	86
 
 CONFIGURE_ARGS=	--enable-phalcon
 

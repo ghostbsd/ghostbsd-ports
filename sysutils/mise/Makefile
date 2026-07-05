@@ -1,6 +1,6 @@
 PORTNAME=	mise
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2026.6.14
+DISTVERSION=	2026.7.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -62,7 +62,6 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		async-compression-0.4.42 \
 		async-fd-lock-0.2.0 \
 		async-once-cell-0.5.4 \
-		async-recursion-1.1.1 \
 		async-spooled-tempfile-0.1.0 \
 		async-trait-0.1.89 \
 		atomic-waker-1.1.2 \
@@ -385,6 +384,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		homedir-0.3.6 \
 		http-0.2.12 \
 		http-1.4.2 \
+		http-auth-0.1.10 \
 		http-body-0.4.6 \
 		http-body-1.0.1 \
 		http-body-util-0.1.3 \
@@ -438,6 +438,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		itertools-0.10.5 \
 		itertools-0.13.0 \
 		itertools-0.14.0 \
+		itertools-0.15.0 \
 		itoa-1.0.18 \
 		jiff-0.2.29 \
 		jiff-static-0.2.29 \
@@ -525,7 +526,6 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		num-traits-0.2.19 \
 		num_cpus-1.17.0 \
 		object-0.37.3 \
-		olpc-cjson-0.1.4 \
 		once_cell-1.21.4 \
 		once_cell_polyfill-1.70.2 \
 		opaque-debug-0.3.1 \
@@ -613,20 +613,20 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		rand_core-0.9.5 \
 		rand_core-0.10.1 \
 		rand_xorshift-0.4.0 \
-		rattler-0.44.4 \
-		rattler_cache-0.9.2 \
-		rattler_conda_types-0.47.1 \
+		rattler-0.45.0 \
+		rattler_cache-0.10.0 \
+		rattler_conda_types-0.47.2 \
 		rattler_digest-1.3.1 \
 		rattler_macros-1.1.1 \
-		rattler_menuinst-0.2.66 \
-		rattler_networking-0.28.1 \
-		rattler_package_streaming-0.26.4 \
+		rattler_menuinst-0.2.67 \
+		rattler_networking-0.29.0 \
+		rattler_package_streaming-0.26.5 \
 		rattler_pty-0.2.13 \
 		rattler_redaction-0.2.1 \
-		rattler_repodata_gateway-0.29.5 \
-		rattler_shell-0.27.6 \
-		rattler_solve-7.1.3 \
-		rattler_virtual_packages-3.0.1 \
+		rattler_repodata_gateway-0.29.6 \
+		rattler_shell-0.27.7 \
+		rattler_solve-7.2.0 \
+		rattler_virtual_packages-3.0.2 \
 		rayon-1.12.0 \
 		rayon-core-1.13.0 \
 		redox_syscall-0.5.18 \
@@ -642,7 +642,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		rend-0.5.3 \
 		reqwest-0.12.28 \
 		reqwest-0.13.4 \
-		resolvo-0.10.3 \
+		resolvo-0.11.1 \
 		retry-policies-0.5.2 \
 		ring-0.17.14 \
 		rkyv-0.8.16 \
@@ -702,7 +702,6 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		serde_ignored-0.1.14 \
 		serde_json-1.0.150 \
 		serde_json_canonicalizer-0.3.2 \
-		serde_plain-1.0.2 \
 		serde_regex-1.2.0 \
 		serde_repr-0.1.20 \
 		serde_spanned-0.6.9 \
@@ -731,14 +730,15 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		signal-hook-0.4.4 \
 		signal-hook-registry-1.4.8 \
 		signature-2.2.0 \
-		sigstore-bundle-0.8.0 \
-		sigstore-crypto-0.8.0 \
-		sigstore-merkle-0.8.0 \
-		sigstore-rekor-0.8.0 \
-		sigstore-trust-root-0.8.0 \
-		sigstore-tsa-0.8.0 \
-		sigstore-types-0.8.0 \
-		sigstore-verify-0.8.0 \
+		sigstore-bundle-0.10.0 \
+		sigstore-crypto-0.10.0 \
+		sigstore-merkle-0.10.0 \
+		sigstore-rekor-0.10.0 \
+		sigstore-trust-root-0.10.0 \
+		sigstore-tsa-0.10.0 \
+		sigstore-tuf-0.10.0 \
+		sigstore-types-0.10.0 \
+		sigstore-verify-0.10.0 \
 		simd-adler32-0.3.9 \
 		simd-json-0.17.0 \
 		simd_cesu8-1.1.1 \
@@ -749,8 +749,6 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		slab-0.4.12 \
 		slug-0.1.6 \
 		smallvec-1.15.2 \
-		snafu-0.8.9 \
-		snafu-derive-0.8.9 \
 		snap-1.1.1 \
 		socket2-0.6.4 \
 		socks-0.3.4 \
@@ -820,7 +818,6 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		toml_parser-1.1.2+spec-1.1.0 \
 		toml_write-0.1.2 \
 		toml_writer-1.1.1+spec-1.1.0 \
-		tough-0.22.0 \
 		tower-0.5.3 \
 		tower-http-0.6.11 \
 		tower-layer-0.3.3 \
@@ -833,7 +830,6 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		tracing-subscriber-0.3.23 \
 		try-lock-0.2.5 \
 		type-map-0.5.1 \
-		typed-path-0.9.3 \
 		typed-path-0.12.3 \
 		typeid-1.0.3 \
 		typenum-1.20.1 \
@@ -882,7 +878,6 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		wasm-bindgen-macro-0.2.125 \
 		wasm-bindgen-macro-support-0.2.125 \
 		wasm-bindgen-shared-0.2.125 \
-		wasm-streams-0.4.2 \
 		wasm-streams-0.5.0 \
 		wasmtimer-0.4.3 \
 		web-sys-0.3.102 \

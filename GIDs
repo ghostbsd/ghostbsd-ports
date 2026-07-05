@@ -744,7 +744,7 @@ healthchecks:*:790:
 # free: 799
 clickhouse:*:800:
 # free: 801
-# free: 802
+languagetool:*:802:
 # free: 803
 # free: 804
 # free: 805

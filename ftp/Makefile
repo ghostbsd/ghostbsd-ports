@@ -59,6 +59,8 @@
     SUBDIR += php84-ftp
     SUBDIR += php85-curl
     SUBDIR += php85-ftp
+    SUBDIR += php86-curl
+    SUBDIR += php86-ftp
     SUBDIR += phpwebftp
     SUBDIR += proftpd
     SUBDIR += proftpd-mod_vroot

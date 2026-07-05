@@ -217,6 +217,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		tree-sitter-elixir-0.3.5 \
 		tree-sitter-elm-5.9.0 \
 		tree-sitter-embedded-template-0.25.0 \
+		tree-sitter-fish-3.6.0 \
 		tree-sitter-fortran-0.5.1 \
 		tree-sitter-go-0.23.4 \
 		tree-sitter-haskell-0.23.1 \
@@ -325,4 +326,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		zerotrie-0.2.4 \
 		zerovec-0.11.6 \
 		zerovec-derive-0.11.3 \
-		zmij-1.0.21
+		zmij-1.0.21 \
+		zstd-0.13.3 \
+		zstd-safe-7.2.4 \
+		zstd-sys-2.0.16+zstd.1.5.7

@@ -3,7 +3,6 @@ DISTVERSION=	1.0.44
 CATEGORIES=	misc # machine-learning
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 DIST_SUBDIR=	${PORTNAME}-x # -x is to see if it would fix checksum errors
-PKGNAMESUFFIX=	-legacy
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	GitHub Copilot CLI brings the power of the coding agent to terminal
@@ -11,8 +10,8 @@ WWW=		https://github.com/github/copilot-cli
 
 FLAVORS=	script binary
 FLAVOR?=	${FLAVORS:[1]}
-script_PKGNAMESUFFIX=
-binary_PKGNAMESUFFIX=	-bin
+script_PKGNAMESUFFIX=	-legacy
+binary_PKGNAMESUFFIX=	-legacy-bin
 binary_COMMENT=	GitHub Copilot CLI - standalone binary (no npm dependencies)
 binary_PLIST=	${.CURDIR}/pkg-plist.binary
 

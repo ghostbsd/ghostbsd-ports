@@ -70,6 +70,7 @@ CARGO_CRATES=	ab_glyph-0.2.32 \
 		blake2b_simd-1.0.4 \
 		block-0.1.6 \
 		block-buffer-0.10.4 \
+		block-buffer-0.12.1 \
 		block2-0.5.1 \
 		block2-0.6.2 \
 		bs58-0.5.1 \
@@ -101,7 +102,7 @@ CARGO_CRATES=	ab_glyph-0.2.32 \
 		chacha20-0.10.0 \
 		chrono-0.4.45 \
 		chrono-tz-0.10.4 \
-		chumsky-0.12.0 \
+		chumsky-0.13.0 \
 		ciborium-0.2.2 \
 		ciborium-io-0.2.2 \
 		ciborium-ll-0.2.2 \
@@ -124,6 +125,7 @@ CARGO_CRATES=	ab_glyph-0.2.32 \
 		concurrent-queue-2.5.0 \
 		console-0.16.3 \
 		console_error_panic_hook-0.1.7 \
+		const-oid-0.10.2 \
 		constant_time_eq-0.3.1 \
 		constant_time_eq-0.4.2 \
 		convert_case-0.10.0 \
@@ -168,6 +170,7 @@ CARGO_CRATES=	ab_glyph-0.2.32 \
 		crossterm_winapi-0.9.1 \
 		crunchy-0.2.4 \
 		crypto-common-0.1.7 \
+		crypto-common-0.2.2 \
 		csscolorparser-0.6.2 \
 		csv-1.4.0 \
 		csv-core-0.1.13 \
@@ -192,6 +195,7 @@ CARGO_CRATES=	ab_glyph-0.2.32 \
 		derive_more-2.1.1 \
 		derive_more-impl-2.1.1 \
 		digest-0.10.7 \
+		digest-0.11.3 \
 		directories-next-2.0.0 \
 		dirs-6.0.0 \
 		dirs-sys-0.5.0 \
@@ -305,7 +309,7 @@ CARGO_CRATES=	ab_glyph-0.2.32 \
 		gpu-allocator-0.27.0 \
 		gpu-descriptor-0.3.2 \
 		gpu-descriptor-types-0.2.0 \
-		guillotiere-0.6.2 \
+		guillotiere-0.7.0 \
 		half-2.7.1 \
 		hash32-0.3.1 \
 		hashbrown-0.9.1 \
@@ -331,6 +335,7 @@ CARGO_CRATES=	ab_glyph-0.2.32 \
 		httparse-1.10.1 \
 		httpdate-1.0.3 \
 		humantime-2.3.0 \
+		hybrid-array-0.4.12 \
 		hyper-1.10.1 \
 		hyper-rustls-0.27.9 \
 		hyper-util-0.1.20 \
@@ -586,8 +591,8 @@ CARGO_CRATES=	ab_glyph-0.2.32 \
 		pxfm-0.1.29 \
 		quick-error-2.0.1 \
 		quick-xml-0.39.4 \
-		quinn-0.11.9 \
-		quinn-proto-0.11.14 \
+		quinn-0.11.11 \
+		quinn-proto-0.11.15 \
 		quinn-udp-0.5.14 \
 		quote-0.6.13 \
 		quote-1.0.45 \
@@ -628,9 +633,7 @@ CARGO_CRATES=	ab_glyph-0.2.32 \
 		refinery-macros-0.9.2 \
 		regalloc2-0.15.1 \
 		regex-1.12.4 \
-		regex-automata-0.3.9 \
 		regex-automata-0.4.14 \
-		regex-syntax-0.7.5 \
 		regex-syntax-0.8.11 \
 		renderdoc-sys-1.1.0 \
 		resolv-conf-0.7.6 \
@@ -641,7 +644,7 @@ CARGO_CRATES=	ab_glyph-0.2.32 \
 		ron-0.12.1 \
 		roots-0.0.8 \
 		roxmltree-0.20.0 \
-		rstar-0.12.2 \
+		rstar-0.13.0 \
 		rtrb-0.3.4 \
 		rusqlite-0.37.0 \
 		rust-argon2-2.1.0 \
@@ -694,6 +697,7 @@ CARGO_CRATES=	ab_glyph-0.2.32 \
 		serde_with-3.21.0 \
 		serde_with_macros-3.21.0 \
 		sha2-0.10.9 \
+		sha2-0.11.0 \
 		shaderc-0.10.1 \
 		shaderc-sys-0.10.1 \
 		sharded-slab-0.1.7 \

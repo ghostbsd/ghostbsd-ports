@@ -749,7 +749,7 @@ healthchecks:*:790:790::0:0:Open-source cron and background task monitoring serv
 # free: 799
 clickhouse:*:800:800::0:0:ClickHouse Daemon:/var/db/clickhouse:/usr/sbin/nologin
 # free: 801
-# free: 802
+languagetool:*:802:802::0:0:LanguageTool HTTP server:/nonexistent:/usr/sbin/nologin
 # free: 803
 # free: 804
 # free: 805

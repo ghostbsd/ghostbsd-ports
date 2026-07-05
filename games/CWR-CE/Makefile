@@ -1,11 +1,11 @@
 PORTNAME=	CWR-CE
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.01
+PORTREVISION=	1
 CATEGORIES=	games
 
 PATCH_SITES=	https://github.com/ocochard/CWR-CE/compare/
-PATCHFILES=	9abbdf2769f3008d76c47ac0af219388ff0323dc..b6c9690f03cf0abb6af577db7294b00c30f4172c.patch:-p1 \
-		b6c9690f03cf0abb6af577db7294b00c30f4172c..85dd554fc9e21312ee52d7f9eced6b171a6a892b.patch:-p1
+PATCHFILES=	9abbdf2769f3008d76c47ac0af219388ff0323dc..55e703228bf5649a6a847d724e94b97d94d7057f.patch:-p1
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	Arma: Cold War Assault - Remastered Community Edition

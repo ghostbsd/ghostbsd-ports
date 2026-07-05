@@ -15,6 +15,7 @@ LIB_DEPENDS=	libmemcached.so:databases/libmemcached
 
 USES=		cpe php:build,pecl pkgconfig
 USE_PHP=	session:build
+IGNORE_WITH_PHP=	86
 
 CONFIGURE_ARGS=	--enable-memcached-json \
 		--enable-memcached-protocol \

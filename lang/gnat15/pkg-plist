@@ -6525,11 +6525,11 @@
 %%GNAT%%/lib/libcc1.so.0.0.0
 %%GNAT%%/lib/libgcc_s.so
 %%GNAT%%/lib/libgcc_s.so.1
-%%GNAT%%/lib/libgomp.a
-%%GNAT%%/lib/libgomp.so
-%%GNAT%%/lib/libgomp.so.1
-%%GNAT%%/lib/libgomp.so.1.0.0
-%%GNAT%%/lib/libgomp.spec
+%%64BITS%%%%GNAT%%/lib/libgomp.a
+%%64BITS%%%%GNAT%%/lib/libgomp.so
+%%64BITS%%%%GNAT%%/lib/libgomp.so.1
+%%64BITS%%%%GNAT%%/lib/libgomp.so.1.0.0
+%%64BITS%%%%GNAT%%/lib/libgomp.spec
 %%GNAT%%/lib/libitm.a
 %%GNAT%%/lib/libitm.so
 %%GNAT%%/lib/libitm.so.1

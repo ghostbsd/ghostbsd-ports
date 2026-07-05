@@ -13,6 +13,9 @@ WWW=		https://www.breezy-vcs.org/
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
 
+DEPRECATED=	Depends on expired lang/cython0
+EXPIRATION_DATE=2026-09-15
+
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}configobj>=0:devel/py-configobj@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}configobj>=0:devel/py-configobj@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}fastbencode>=0:devel/py-fastbencode@${PY_FLAVOR} \

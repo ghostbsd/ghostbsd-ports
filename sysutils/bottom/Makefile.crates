@@ -154,7 +154,7 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		serde_derive-1.0.228 \
 		serde_derive_internals-0.29.1 \
 		serde_json-1.0.149 \
-		serde_spanned-1.0.4 \
+		serde_spanned-1.1.1 \
 		serial2-0.2.33 \
 		shared_library-0.1.9 \
 		shell-words-1.1.1 \
@@ -183,10 +183,10 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		time-core-0.1.8 \
 		time-macros-0.2.27 \
 		timeless-0.0.14-alpha \
-		toml_datetime-0.7.5+spec-1.1.0 \
-		toml_edit-0.24.0+spec-1.1.0 \
-		toml_parser-1.0.6+spec-1.1.0 \
-		toml_writer-1.0.6+spec-1.1.0 \
+		toml_datetime-1.1.1+spec-1.1.0 \
+		toml_edit-0.25.12+spec-1.1.0 \
+		toml_parser-1.1.2+spec-1.1.0 \
+		toml_writer-1.1.1+spec-1.1.0 \
 		typenum-1.19.0 \
 		unicode-ellipsis-0.5.0 \
 		unicode-ident-1.0.22 \
@@ -224,7 +224,7 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		windows_x86_64_gnu-0.53.1 \
 		windows_x86_64_gnullvm-0.53.1 \
 		windows_x86_64_msvc-0.53.1 \
-		winnow-0.7.14 \
+		winnow-1.0.3 \
 		winreg-0.10.1 \
 		wrapcenum-derive-0.4.1 \
 		zmij-1.0.19

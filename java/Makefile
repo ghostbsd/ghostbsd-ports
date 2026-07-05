@@ -51,7 +51,7 @@
     SUBDIR += jcalendar
     SUBDIR += jcckit
     SUBDIR += jcommon
-    SUBDIR += jd-gui
+    SUBDIR += jd-gui-duo
     SUBDIR += jdk11-doc
     SUBDIR += jdk8-doc
     SUBDIR += jflex

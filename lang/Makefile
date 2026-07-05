@@ -263,7 +263,6 @@
     SUBDIR += pbasic
     SUBDIR += pcc
     SUBDIR += perl5-devel
-    SUBDIR += perl5.38
     SUBDIR += perl5.40
     SUBDIR += perl5.42
     SUBDIR += perl5.44
@@ -279,6 +278,8 @@
     SUBDIR += php84-extensions
     SUBDIR += php85
     SUBDIR += php85-extensions
+    SUBDIR += php86
+    SUBDIR += php86-extensions
     SUBDIR += picoc
     SUBDIR += picolisp
     SUBDIR += pkl

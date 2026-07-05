@@ -20,7 +20,7 @@ CONFIGURE_ARGS=	--disable-maintainer-mode \
 		--docdir="${DOCSDIR}"
 
 INSTALL_TARGET=	install-strip
-TEST_TARGET=	check # 3 tests fail, see https://github.com/jqlang/jq/issues/2885
+TEST_TARGET=	check
 
 PORTDOCS=	*
 

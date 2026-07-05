@@ -1,6 +1,6 @@
 PORTNAME=	redisearch
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.6.4
+DISTVERSION=	2.6.5
 CATEGORIES=	textproc
 PKGNAMESUFFIX=	${DISTVERSION:R:S/.//}
 
@@ -24,7 +24,8 @@ USES=		cmake compiler localbase:ldflags
 USE_GITHUB=	yes
 GH_ACCOUNT=	RediSearch
 GH_PROJECT=	RediSearch
-GH_TUPLE=	RedisAI:VectorSimilarity:4e065d8:vectorsimilarity/deps/VectorSimilarity
+GH_TUPLE=	RedisAI:VectorSimilarity:4e065d8:vectorsimilarity/deps/VectorSimilarity \
+			RedisLabsModules:readies:d225f34:readies/deps/readies
 
 CMAKE_ARGS=	-DGIT_DESCRIBE_VERSION:STRING=${PKGVERSION} \
 		-DOS=freebsd
@@ -37,6 +38,7 @@ CONFLICTS_INSTALL=	redisearch*
 
 PLIST_FILES=	lib/${PORTNAME}${PKGNAMESUFFIX}.so
 
+CFLAGS+=	-DCLOCK_MONOTONIC_RAW=CLOCK_MONOTONIC -fPIC
 post-patch:
 	${ECHO_CMD} "find_package(CpuFeatures REQUIRED)" > ${WRKSRC}/deps/VectorSimilarity/cmake/cpu_features.cmake
 

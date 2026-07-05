@@ -5,6 +5,23 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20260702:
+  AFFECTS: users of databases/lmdb
+  AUTHOR: delphij@FreeBSD.org
+
+  LMDB 1.0 introduced an incompatible on-disk file format change.
+  Versions 0.9.x and 1.0.x databases are mutually incompatible.
+
+  Before upgrading, export all existing databases using the old v0.9
+  mdb_dump utility, then import them with the new v1.0 mdb_load after
+  upgrading.  There is no support for opening v0.9 database files
+  directly with LMDB 1.0.
+
+  Example migration procedure:
+  # mdb_dump -a /path/to/db > /tmp/mydb.dump
+  # pkg upgrade databases/lmdb
+  # mdb_load -f /tmp/mydb.dump /path/to/newdb
+
 20260630:
   AFFECTS: users of audio/murmur
   AUTHOR: vvd@FreeBSD.org

@@ -698,6 +698,7 @@
     SUBDIR += spampd
     SUBDIR += spamprobe
     SUBDIR += spamstats
+    SUBDIR += spf-tools
     SUBDIR += spfmilter
     SUBDIR += spfval
     SUBDIR += spmfilter

@@ -1,5 +1,5 @@
 PORTNAME=	memories
-PORTVERSION=	8.0.1
+PORTVERSION=	8.1.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www graphics
 MASTER_SITES?=	https://github.com/pulsejet/${PORTNAME}/releases/download/${DISTVERSIONPREFIX}${PORTVERSION}/
