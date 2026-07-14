@@ -1,5 +1,5 @@
 PORTNAME=		Ice
-PORTVERSION=		3.7.10
+PORTVERSION=		3.7.11
 DISTVERSIONPREFIX=	v
 CATEGORIES=		devel
 PKGNAMESUFFIX?=		37
@@ -127,7 +127,7 @@ do-test-TEST-on:
 .for CONFIG in ${CONFIGS}
 	@${ECHO} Testing configuration ${CONFIG}
 	cd ${BUILD_WRKSRC} && \
-		${SETENV} LC_ALL=en_US.UTF-8 ${PYTHON_CMD} ./allTests.py \
+		${PYTHON_CMD} ./allTests.py \
 		--config=${CONFIG} \
 		$$(${TEST} $$(${IS_JAILED_CMD}) -eq 1 \
 			&& ${ECHO} ${JAILED_FILTER})

@@ -1,5 +1,5 @@
 PORTNAME=	php82
-DISTVERSION=	8.2.31
+DISTVERSION=	8.2.32
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP/distributions
@@ -10,6 +10,9 @@ COMMENT=	PHP Scripting Language (8.2.X branch)
 WWW=		https://www.php.net/
 
 LICENSE=	PHP301
+
+DEPRECATED=		Upstream EOL reaches on 2026-12-31
+EXPIRATION_DATE=		2026-12-31
 
 USES+=		compiler:c11 cpe gnome localbase pkgconfig tar:xz
 CPE_PRODUCT=	php
@@ -174,7 +177,7 @@ COMMENT=	The ${PHP_MODNAME} shared extension for php
 USES+=		php:ext,noflavors
 PHP_MODNAME=	${PKGNAMESUFFIX:S/-//}
 PHP_VER=	82
-IGNORE_WITH_PHP=	83 84 85
+IGNORE_WITH_PHP=	83 84 85 86
 
 EXTSUBDIR=	${DISTNAME}/ext/${PHP_MODNAME}
 WRKSRC=		${WRKDIR}/${EXTSUBDIR}

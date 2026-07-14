@@ -1,7 +1,8 @@
 PORTNAME=	boringssl
-PORTVERSION=	0.20260508.0
+DISTVERSION=	0.20260616.0
+PORTREVISION=	1
 CATEGORIES=	security
-EXTRACT_ONLY=	${GH_ACCOUNT}-${PORTNAME}-${PORTVERSION}_GH0.tar.gz
+EXTRACT_ONLY=	${GH_ACCOUNT}-${PORTNAME}-${DISTVERSION}_GH0.tar.gz
 
 MAINTAINER=	osa@FreeBSD.org
 COMMENT=	Fork of OpenSSL
@@ -12,8 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cmake:insource cpe go:1.25,no_targets localbase perl5
 
-CONFLICTS_INSTALL=	libressl libressl-devel openssl openssl111 \
-			openssl3[23456] openssl-quictls openssl33-quictls
+CONFLICTS_INSTALL=	aws-lc libressl libressl-devel openssl openssl[34][0456]
 
 CPE_VENDOR=	google
 
@@ -34,10 +34,12 @@ MAKE_ENV+=	GOFLAGS=-mod=readonly \
 MASTER_SITES+=	https://proxy.golang.org/:gomods
 DISTFILES+=	filippo.io/edwards25519/@v/v1.2.0.zip:gomods \
 		filippo.io/edwards25519/@v/v1.2.0.mod:gomods \
-		golang.org/x/crypto/@v/v0.43.0.zip:gomods \
-		golang.org/x/crypto/@v/v0.43.0.mod:gomods \
-		golang.org/x/sys/@v/v0.37.0.zip:gomods \
-		golang.org/x/sys/@v/v0.37.0.mod:gomods
+		filippo.io/mldsa/@v/v0.0.0-20260215214346-43d0283efc3e.zip:gomods \
+		filippo.io/mldsa/@v/v0.0.0-20260215214346-43d0283efc3e.mod:gomods \
+		golang.org/x/crypto/@v/v0.52.0.zip:gomods \
+		golang.org/x/crypto/@v/v0.52.0.mod:gomods \
+		golang.org/x/sys/@v/v0.45.0.zip:gomods \
+		golang.org/x/sys/@v/v0.45.0.mod:gomods
 .endif
 
 post-install:

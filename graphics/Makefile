@@ -19,6 +19,7 @@
     SUBDIR += R-cran-farver
     SUBDIR += R-cran-ggforce
     SUBDIR += R-cran-ggplot2
+    SUBDIR += R-cran-ggpolypath
     SUBDIR += R-cran-ggrepel
     SUBDIR += R-cran-gridBase
     SUBDIR += R-cran-gridExtra
@@ -38,6 +39,7 @@
     SUBDIR += R-cran-scales
     SUBDIR += R-cran-shape
     SUBDIR += R-cran-tweenr
+    SUBDIR += R-cran-venn
     SUBDIR += R-cran-viridis
     SUBDIR += R-cran-viridisLite
     SUBDIR += R-cran-visNetwork
@@ -265,7 +267,6 @@
     SUBDIR += gimp-app
     SUBDIR += gimp-beautify-plugin
     SUBDIR += gimp-data-extras
-    SUBDIR += gimp-jxl-plugin
     SUBDIR += gimp-lensfun-plugin
     SUBDIR += gimp-lqr-plugin
     SUBDIR += gimp-refocus-plugin
@@ -412,7 +413,6 @@
     SUBDIR += kdegraphics-mobipocket
     SUBDIR += kdegraphics-svgpart
     SUBDIR += kdegraphics-thumbnailers
-    SUBDIR += kdiagram
     SUBDIR += kdiagram-qt6
     SUBDIR += kealib
     SUBDIR += kf5-kimageformats
@@ -512,7 +512,6 @@
     SUBDIR += libnsgif
     SUBDIR += libopendrive
     SUBDIR += libopenraw
-    SUBDIR += libosmesa
     SUBDIR += libpano13
     SUBDIR += libpcd
     SUBDIR += libpgf
@@ -603,9 +602,6 @@
     SUBDIR += mesa-demos
     SUBDIR += mesa-devel
     SUBDIR += mesa-dri
-    SUBDIR += mesa-gallium-va
-    SUBDIR += mesa-gallium-vdpau
-    SUBDIR += mesa-gallium-xa
     SUBDIR += mesa-libs
     SUBDIR += metacam
     SUBDIR += metapixel
@@ -641,6 +637,9 @@
     SUBDIR += nvidia-drm-61-kmod
     SUBDIR += nvidia-drm-61-kmod-580
     SUBDIR += nvidia-drm-61-kmod-devel
+    SUBDIR += nvidia-drm-612-kmod
+    SUBDIR += nvidia-drm-612-kmod-580
+    SUBDIR += nvidia-drm-612-kmod-devel
     SUBDIR += nvidia-drm-66-kmod
     SUBDIR += nvidia-drm-66-kmod-580
     SUBDIR += nvidia-drm-66-kmod-devel
@@ -694,6 +693,7 @@
     SUBDIR += openvkl
     SUBDIR += openxr
     SUBDIR += optar
+    SUBDIR += optiimage
     SUBDIR += optipng
     SUBDIR += osg
     SUBDIR += ospray
@@ -852,6 +852,8 @@
     SUBDIR += php84-gd
     SUBDIR += php85-exif
     SUBDIR += php85-gd
+    SUBDIR += php86-exif
+    SUBDIR += php86-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle
@@ -932,7 +934,7 @@
     SUBDIR += py-contextily
     SUBDIR += py-descartes
     SUBDIR += py-diplib
-    SUBDIR += py-dj52-sorl-thumbnail
+    SUBDIR += py-dj60-sorl-thumbnail
     SUBDIR += py-django-easy-thumbnails
     SUBDIR += py-djvulibre
     SUBDIR += py-easyocr
@@ -974,6 +976,7 @@
     SUBDIR += py-kornia-rs
     SUBDIR += py-leather
     SUBDIR += py-lerc
+    SUBDIR += py-liffile
     SUBDIR += py-mapclassify
     SUBDIR += py-mayavi
     SUBDIR += py-mcomix
@@ -1010,6 +1013,7 @@
     SUBDIR += py-pycairo
     SUBDIR += py-pycha
     SUBDIR += py-pycollada
+    SUBDIR += py-pydeck
     SUBDIR += py-pydot
     SUBDIR += py-pydotplus
     SUBDIR += py-pyepsg
@@ -1053,6 +1057,7 @@
     SUBDIR += py-rich-pixels
     SUBDIR += py-rlpycairo
     SUBDIR += py-s2
+    SUBDIR += py-sane
     SUBDIR += py-scikit-image
     SUBDIR += py-seqdiag
     SUBDIR += py-simplejpeg
@@ -1064,6 +1069,7 @@
     SUBDIR += py-svgwrite
     SUBDIR += py-term-image
     SUBDIR += py-termtosvg
+    SUBDIR += py-tesserocr
     SUBDIR += py-tifffile
     SUBDIR += py-tkcolorpicker
     SUBDIR += py-toyplot
@@ -1183,6 +1189,7 @@
     SUBDIR += satty
     SUBDIR += scale2x
     SUBDIR += scantailor
+    SUBDIR += scantpaper
     SUBDIR += scr2png
     SUBDIR += scrot
     SUBDIR += scwm-icons
@@ -1244,7 +1251,6 @@
     SUBDIR += timg
     SUBDIR += tintfu
     SUBDIR += tinyows
-    SUBDIR += tippecanoe
     SUBDIR += tkpng
     SUBDIR += togl
     SUBDIR += tslib

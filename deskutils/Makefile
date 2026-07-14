@@ -73,6 +73,7 @@
     SUBDIR += gershwin-workspace
     SUBDIR += gershwin-systempreferences
     SUBDIR += gershwin-textedit
+    SUBDIR += gitte
     SUBDIR += glabels
     SUBDIR += gnome-calendar
     SUBDIR += gnome-characters
@@ -103,6 +104,7 @@
     SUBDIR += gnote
     SUBDIR += gnotime
     SUBDIR += gnustep-wrapper
+    SUBDIR += gnutrition
     SUBDIR += go-for-it
     SUBDIR += goesimage
     SUBDIR += gpicker
@@ -291,6 +293,7 @@
     SUBDIR += tpb
     SUBDIR += treeline
     SUBDIR += treesheets
+    SUBDIR += uchmviewer
     SUBDIR += ultralist
     SUBDIR += virt-manager
     SUBDIR += vit

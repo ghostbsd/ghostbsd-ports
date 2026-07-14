@@ -1,9 +1,9 @@
 PORTNAME=	debootstrap
-PORTVERSION=	${DEB_VERSION}n${DEB_NMU}
-PORTREVISION=	5
+PORTVERSION=	1.0.143
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	DEBIAN
-DISTNAME=	${PORTNAME}_${DEB_VERSION}+nmu${DEB_NMU}+${DEB_REVISION}
+DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Install Debian or Ubuntu base system into a directory
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/debian/copyright
 
 RUN_DEPENDS=	${LOCALBASE}/share/keyrings/ubuntu-archive-keyring.gpg:security/ubuntu-keyring \
 		bash:shells/bash \
-		gpgv2:security/gnupg \
+		gpgv:security/gnupg \
 		gtar:archivers/gtar \
 		pcre2grep:devel/pcre2 \
 		wget:ftp/wget
@@ -27,12 +27,6 @@ NO_ARCH=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-# The +nmu suffix used by debian for "non maintainer uploads" of a Debian
-# native package doesn't play well with our versioning
-DEB_VERSION=	1.0.128
-DEB_NMU=	2
-DEB_REVISION=	deb12u2
-
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's,%%DATADIR%%,${DATADIR},g' \
@@ -42,6 +36,8 @@ post-patch:
 		${XARGS} ${REINPLACE_CMD} -e 's,/usr/share/keyrings,${LOCALBASE}/share/keyrings,g'
 
 post-install:
+	${FIND} ${STAGEDIR}${DATADIR} -name '*.bak' -delete
+	${FIND} ${STAGEDIR}${DATADIR} -name '*.orig' -delete
 	${INSTALL_MAN} ${WRKSRC}/debootstrap.8 \
 		${STAGEDIR}${PREFIX}/share/man/man8/debootstrap.8
 

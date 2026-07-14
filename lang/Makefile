@@ -37,14 +37,12 @@
     SUBDIR += clisp
     SUBDIR += clojure
     SUBDIR += clojure-mode.el
-    SUBDIR += clover
     SUBDIR += cocor
     SUBDIR += coffeescript
     SUBDIR += colm
     SUBDIR += cparser
     SUBDIR += crumb
     SUBDIR += crystal
-    SUBDIR += csharp-mode.el
     SUBDIR += cython
     SUBDIR += cython0
     SUBDIR += dhall
@@ -104,7 +102,6 @@
     SUBDIR += gershwin-libobjc2
     SUBDIR += gforth
     SUBDIR += ghc
-    SUBDIR += ghc94
     SUBDIR += ghc96
     SUBDIR += ghc98
     SUBDIR += gir-to-d
@@ -114,6 +111,7 @@
     SUBDIR += gnat12
     SUBDIR += gnat13
     SUBDIR += gnat14
+    SUBDIR += gnat15
     SUBDIR += gnatcross-binutils-aarch64
     SUBDIR += gnatcross-sysroot-aarch64
     SUBDIR += gnatdroid-binutils
@@ -183,6 +181,7 @@
     SUBDIR += lua52
     SUBDIR += lua53
     SUBDIR += lua54
+    SUBDIR += lua55
     SUBDIR += luajit
     SUBDIR += luajit-openresty
     SUBDIR += malbolge
@@ -264,9 +263,9 @@
     SUBDIR += pbasic
     SUBDIR += pcc
     SUBDIR += perl5-devel
-    SUBDIR += perl5.38
     SUBDIR += perl5.40
     SUBDIR += perl5.42
+    SUBDIR += perl5.44
     SUBDIR += petite-chez
     SUBDIR += pfe
     SUBDIR += pharo
@@ -279,6 +278,8 @@
     SUBDIR += php84-extensions
     SUBDIR += php85
     SUBDIR += php85-extensions
+    SUBDIR += php86
+    SUBDIR += php86-extensions
     SUBDIR += picoc
     SUBDIR += picolisp
     SUBDIR += pkl
@@ -309,6 +310,7 @@
     SUBDIR += python313
     SUBDIR += python313t
     SUBDIR += python314
+    SUBDIR += python314t
     SUBDIR += python315
     SUBDIR += qmasm
     SUBDIR += quickjs
@@ -362,13 +364,13 @@
     SUBDIR += smlnj
     SUBDIR += snobol4
     SUBDIR += solidity
-    SUBDIR += spidermonkey115
     SUBDIR += spidermonkey128
     SUBDIR += spidermonkey140
     SUBDIR += squeak
     SUBDIR += squirrel
     SUBDIR += starlark-rust
     SUBDIR += swift510
+    SUBDIR += swift6
     SUBDIR += swipl
     SUBDIR += tauthon
     SUBDIR += tcbasic

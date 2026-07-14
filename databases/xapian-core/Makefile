@@ -12,7 +12,7 @@ WWW=		https://xapian.org/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		compiler:c++17-lang libtool tar:xz
+USES=		compiler:c++17-lang cpe libtool tar:xz
 
 CONFIGURE_ARGS=	ac_cv_func_snprintf=snprintf
 GNU_CONFIGURE=	yes
@@ -21,6 +21,8 @@ USE_CXXSTD=	c++17
 USE_LDCONFIG=	yes
 
 CONFLICTS_INSTALL=	xapian-core14
+
+CPE_VENDOR=	xapian
 
 PORTSCOUT=	limitw:1,even
 

@@ -242,6 +242,7 @@ share/applications/blender.desktop
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/ky/LC_MESSAGES/blender.mo
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/languages
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/lt/LC_MESSAGES/blender.mo
+%%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/ml/LC_MESSAGES/blender.mo
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/ne/LC_MESSAGES/blender.mo
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/nl/LC_MESSAGES/blender.mo
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/pl/LC_MESSAGES/blender.mo
@@ -523,6 +524,7 @@ share/applications/blender.desktop
 %%CYCLES_OSL%%%%DATADIR%%/%%VER%%/scripts/addons_core/cycles/source/kernel/device/optix/kernel_osl.cu
 %%CYCLES_OSL%%%%DATADIR%%/%%VER%%/scripts/addons_core/cycles/source/kernel/device/optix/kernel_osl_camera.cu
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons_core/cycles/source/kernel/device/optix/kernel_shader_raytrace.cu
+%%CYCLES_OSL%%%%DATADIR%%/%%VER%%/scripts/addons_core/cycles/source/kernel/device/optix/services_optix.cu
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons_core/cycles/source/kernel/film/adaptive_sampling.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons_core/cycles/source/kernel/film/aov_passes.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons_core/cycles/source/kernel/film/cryptomatte_passes.h
@@ -709,7 +711,6 @@ share/applications/blender.desktop
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons_core/cycles/source/util/types_int4.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons_core/cycles/source/util/types_int8.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons_core/cycles/source/util/types_rgbe.h
-
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons_core/cycles/source/util/types_spectrum.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons_core/cycles/source/util/types_uchar2.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons_core/cycles/source/util/types_uchar3.h

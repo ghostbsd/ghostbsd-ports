@@ -22,7 +22,7 @@ _QT_MK_INCLUDED=	qt.mk
 
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=		5 6
-QT5_VERSION?=		5.15.18
+QT5_VERSION?=		5.15.19
 QT6_VERSION?=		6.11.1
 PYSIDE6_VERSION?=	6.11.1
 
@@ -121,11 +121,6 @@ QT_${dir}DIR=	${PREFIX}/${QT_${dir}DIR_REL}
 PLIST_SUB+=		QT_${dir}DIR="${QT_${dir}DIR_REL}"
 .    endif
 .  endfor
-
-# Suppress warnings from rcc about not using a UTF-8 locale.
-.  if ${_QT_VER:M6}
-USE_LOCALE?=		C.UTF-8
-.  endif
 
 CONFIGURE_ENV+=		QT_SELECT=${_QT_RELNAME}
 MAKE_ENV+=		QT_SELECT=${_QT_RELNAME}

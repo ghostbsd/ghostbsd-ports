@@ -1,5 +1,5 @@
 PORTNAME=	end_to_end_encryption
-PORTVERSION=	2.1.1
+PORTVERSION=	2.2.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
 
@@ -11,6 +11,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 NEXTCLOUD_RUN_DEPENDS=	33
 
-USES=		nextcloud php:flavors
+USES=		cpe nextcloud php:flavors
+
+CPE_VENDOR=	nextcloud
+CPE_PRODUCT=	end-to-end_encryption
 
 .include <bsd.port.mk>

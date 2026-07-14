@@ -1,6 +1,6 @@
 PORTNAME=	blender4
 DISTVERSION=	4.5.5
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics multimedia
 MASTER_SITES=	http://download.blender.org/source/ \
 		http://mirror.cs.umn.edu/blender.org/source/ \
@@ -31,7 +31,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR}
 # are set. We will pull boost in just to be on the safe side.
 
 USES=		cmake:noninja compiler:c++17-lang cpe eigen:3 jpeg llvm:build,run pkgconfig \
-		python:3.11 shebangfix tar:xz xorg
+		python shebangfix tar:xz xorg
+CPE_PRODUCT=	blender
 USE_XORG=	x11 xext xfixes xmu xrender
 
 SHEBANG_FILES=	scripts/modules/bl_i18n_utils/merge_po.py \
@@ -39,7 +40,8 @@ SHEBANG_FILES=	scripts/modules/bl_i18n_utils/merge_po.py \
 		scripts/modules/blend_render_info.py
 
 CMAKE_ARGS=	-DCMAKE_CXX_STANDARD:INTEGER=17 \
-		-DLLVM_CONFIG:STRING="${LOCALBASE}/bin/llvm-config${LLVM_VERSION}"
+		-DLLVM_CONFIG:STRING="${LOCALBASE}/bin/llvm-config${LLVM_VERSION}" \
+		-DPYTHON_VERSION:STRING=${PYTHON_VER}
 .if defined(WITH_DEBUG)
 CMAKE_ARGS+=	-DWITH_GHOST_DEBUG:BOOL=ON
 .endif

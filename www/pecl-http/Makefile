@@ -20,6 +20,7 @@ RUN_DEPENDS=	${LOCALBASE}/lib/php/${PHP_EXT_DIR}/raphf.so:devel/pecl-raphf2@${PH
 
 USES=		php:build,pecl
 USE_PHP=	iconv:build zlib:build
+IGNORE_WITH_PHP=	86
 
 CONFIGURE_SHELL=	${LOCALBASE}/bin/bash
 

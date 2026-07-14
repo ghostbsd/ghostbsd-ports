@@ -1,6 +1,6 @@
 PORTNAME=	kivy
 PORTVERSION=	2.3.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11-toolkits python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,6 +12,9 @@ WWW=		https://kivy.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Depends on expired lang/cython0
+EXPIRATION_DATE=2026-09-15
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}packaging>0:devel/py-packaging@${PY_FLAVOR}
 LIB_DEPENDS=	libmtdev.so:devel/libmtdev
@@ -52,7 +55,9 @@ SPELLING_DESC=	Spell checking support
 TEXT_DESC=	Text rendering support (compulsory)
 WINDOW_DESC=	Window support (compulsory)
 
-DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinxcontrib-jquery>0:textproc/py-sphinxcontrib-jquery@${PY_FLAVOR}
+DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinxcontrib-jquery>0:textproc/py-sphinxcontrib-jquery@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}sphinx_rtd_theme>0:textproc/py-sphinx_rtd_theme@${PY_FLAVOR}
+DOCS_MAKE_ENV=		READTHEDOCS=True
 ENCHANT_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}enchant>0:textproc/py-enchant@${PY_FLAVOR}
 GSTREAMER_MAKE_ENV=	USE_GSTREAMER=1
 GSTREAMER_MAKE_ENV_OFF=	USE_GSTREAMER=0

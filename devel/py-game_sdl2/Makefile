@@ -1,6 +1,6 @@
 PORTNAME=	game_sdl2
 PORTVERSION=	7.4.11
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	devel python
 MASTER_SITES=	http://www.renpy.org/dl/${PORTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,6 +12,9 @@ WWW=		https://github.com/renpy/pygame_sdl2
 
 LICENSE=	LGPL21+ ZLIB
 LICENSE_COMB=	multi
+
+DEPRECATED=	Depends on expired lang/cython0
+EXPIRATION_DATE=2026-09-15
 
 LIB_DEPENDS=	libpng.so:graphics/png
 

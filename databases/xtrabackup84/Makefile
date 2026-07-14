@@ -1,5 +1,5 @@
 PORTNAME=	xtrabackup84
-DISTVERSION=	8.4.0-5
+DISTVERSION=	8.4.0-6
 CATEGORIES=	databases
 MASTER_SITES=	https://downloads.percona.com/downloads/Percona-XtraBackup-8.4/Percona-XtraBackup-${DISTVERSION}/source/tarball/:percona
 DISTFILES=	${PPORTNAME}-${DISTVERSION}${EXTRACT_SUFX}:percona
@@ -28,6 +28,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 RUN_DEPENDS=	qpress:archivers/qpress
 
 USES=		bison cmake compiler:c++14-lang cpe pkgconfig ssl
+CPE_PRODUCT=	xtrabackup
 CPE_VENDOR=	percona
 CMAKE_ARGS=	-DBUILD_CONFIG:STRING=xtrabackup_release \
 		-DWITHOUT_COMPONENT_KEYRING_KMIP:STRING=yes \
@@ -68,5 +69,9 @@ pre-configure:
 post-stage:
 	@${RM} -r ${STAGEDIR}${PREFIX}/docs ${STAGEDIR}${PREFIX}/man
 	@${RMDIR} ${STAGEDIR}${PREFIX}/lib/plugin/debug
+
+do-test:
+	@cd ${WRKDIR} && ${PREFIX}/bin/xtrabackup --version
+	@${ECHO} "xtrabackup --version test passed (exit code 0)"
 
 .include <bsd.port.post.mk>

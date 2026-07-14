@@ -1,8 +1,7 @@
 PORTNAME=	asciinema
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.2.0
-PORTREVISION=	1
-CATEGORIES=	textproc python
+DISTVERSION=	3.2.1
+CATEGORIES=	textproc
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Tool for recording and sharing terminal sessions

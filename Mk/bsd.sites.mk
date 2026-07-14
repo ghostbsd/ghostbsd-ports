@@ -45,12 +45,7 @@ MASTER_SITE_AFTERSTEP+= \
 
 .if !defined(IGNORE_MASTER_SITE_APACHE)
 MASTER_SITE_APACHE+= \
-	https://dlcdn.apache.org/%SUBDIR%/ \
-	https://ftp.wayne.edu/apache/%SUBDIR%/ \
-	https://mirror.its.dal.ca/apache/%SUBDIR%/ \
-	http://mirror.cogentco.com/pub/apache/%SUBDIR%/ \
-	http://mirror.navercorp.com/apache/%SUBDIR%/ \
-	http://miroir.univ-lorraine.fr/apache/%SUBDIR%/
+	https://dlcdn.apache.org/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_APACHE_COMMONS_BINARIES)
@@ -902,7 +897,7 @@ MASTER_SITE_SOURCEFORGE+= ${p}://downloads.sourceforge.net/project/%SUBDIR%/
 .    for m in cfhcable cytranet deac-ams deac-fra deac-riga excellmedia \
 	freefr gigenet ixpeering jaist kumisystems liquidtelecom \
 	nchc netactuate netcologne onboardcloud phoenixnap \
-	razaoinfo sinalbr sitsa tenet ufpr versaweb
+	razaoinfo sinalbr sitsa tenet
 MASTER_SITE_SOURCEFORGE+= ${p}://${m}.dl.sourceforge.net/project/%SUBDIR%/
 .    endfor
 .  endfor

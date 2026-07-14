@@ -19,12 +19,16 @@
 
 PORTNAME=	webengine
 PORTVERSION=	${QT5_VERSION}${QT5_KDE_PATCH}
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	www
 PKGNAMEPREFIX=	qt5-
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt 5 library to render web content
+
+# Do not remove without approval from kde@
+DEPRECATED=	Based on outdated Chromium with security fixes up to 135.0.7049.95
+EXPIRATION_DATE=	2026-09-30
 
 BUILD_DEPENDS=	bison:devel/bison \
 		${LOCALBASE}/include/linux/input.h:devel/evdev-proto \

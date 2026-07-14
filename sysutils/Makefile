@@ -150,10 +150,10 @@
     SUBDIR += bsdinfo
     SUBDIR += bsdisks
     SUBDIR += bsdsensors
-    SUBDIR += bsdstats
     SUBDIR += bstack
     SUBDIR += btop
     SUBDIR += btsixad
+    SUBDIR += bttf
     SUBDIR += budgie-control-center
     SUBDIR += buildah
     SUBDIR += bulk_extractor
@@ -308,14 +308,17 @@
     SUBDIR += dmg2img
     SUBDIR += dmidecode
     SUBDIR += dnf
-    SUBDIR += docker
+    SUBDIR += docker-buildx
+    SUBDIR += docker-cli
     SUBDIR += docker-compose
     SUBDIR += docker-credential-pass
     SUBDIR += docker-machine
     SUBDIR += docker-registry
+    SUBDIR += dockerbox
     SUBDIR += doctl
     SUBDIR += doinkd
     SUBDIR += downtimed
+    SUBDIR += dpv
     SUBDIR += dsbbatmon
     SUBDIR += dsbdriverd
     SUBDIR += dsblogoutmgr
@@ -637,6 +640,7 @@
     SUBDIR += lcdproc
     SUBDIR += ldap-account-manager
     SUBDIR += ldapvi
+    SUBDIR += leaf
     SUBDIR += ledit
     SUBDIR += less
     SUBDIR += lfm
@@ -678,7 +682,6 @@
     SUBDIR += loganalyzer
     SUBDIR += logrotate
     SUBDIR += logstalgia
-    SUBDIR += logstash7
     SUBDIR += logstash8
     SUBDIR += logstash91
     SUBDIR += logstash92
@@ -687,6 +690,7 @@
     SUBDIR += logtool
     SUBDIR += logwatch
     SUBDIR += loki
+    SUBDIR += loki3
     SUBDIR += lookat
     SUBDIR += lr
     SUBDIR += lsblk
@@ -744,7 +748,6 @@
     SUBDIR += minipro
     SUBDIR += minirsyslogd
     SUBDIR += mise
-    SUBDIR += mixer
     SUBDIR += mkdesktop
     SUBDIR += mkfwimage
     SUBDIR += mkjail
@@ -990,6 +993,8 @@
     SUBDIR += php84-posix
     SUBDIR += php85-fileinfo
     SUBDIR += php85-posix
+    SUBDIR += php86-fileinfo
+    SUBDIR += php86-posix
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
@@ -1045,14 +1050,13 @@
     SUBDIR += pstree
     SUBDIR += puppet-lint
     SUBDIR += puppet-mode.el
-    SUBDIR += puppet8
-    SUBDIR += puppetserver8
     SUBDIR += pv
     SUBDIR += pwd_unmkdb
     SUBDIR += pwgen
     SUBDIR += pwol
     SUBDIR += pwsafe
     SUBDIR += pxattr
+    SUBDIR += py-GPUtil
     SUBDIR += py-ansible-compat
     SUBDIR += py-ansible-core
     SUBDIR += py-ansible-core218
@@ -1076,6 +1080,7 @@
     SUBDIR += py-cron-descriptor
     SUBDIR += py-croniter
     SUBDIR += py-croniter2
+    SUBDIR += py-datalad
     SUBDIR += py-dbuild
     SUBDIR += py-debian-inspector
     SUBDIR += py-dex
@@ -1183,6 +1188,7 @@
     SUBDIR += reoback
     SUBDIR += reproduce
     SUBDIR += reptyr
+    SUBDIR += reqlog
     SUBDIR += respond
     SUBDIR += rest-server
     SUBDIR += restic
@@ -1199,6 +1205,7 @@
     SUBDIR += root-tail
     SUBDIR += rovclock
     SUBDIR += rpi-firmware
+    SUBDIR += rpi-usbboot
     SUBDIR += rset
     SUBDIR += rshim-user-space
     SUBDIR += rsnapshot
@@ -1208,7 +1215,6 @@
     SUBDIR += rtkit-unix
     SUBDIR += rtty
     SUBDIR += rubygem-backup
-    SUBDIR += rubygem-bolt
     SUBDIR += rubygem-bosh-gen
     SUBDIR += rubygem-bundle-audit
     SUBDIR += rubygem-bundler
@@ -1273,7 +1279,6 @@
     SUBDIR += rubygem-parallel
     SUBDIR += rubygem-puppet_forge
     SUBDIR += rubygem-puppetfile-resolver
-    SUBDIR += rubygem-puppetserver-ca
     SUBDIR += rubygem-r10k
     SUBDIR += rubygem-redfish_client
     SUBDIR += rubygem-rubyipmi
@@ -1324,6 +1329,7 @@
     SUBDIR += s-tui
     SUBDIR += s6
     SUBDIR += s6-frontend
+    SUBDIR += s6-portable-utils
     SUBDIR += s6-rc
     SUBDIR += safe-rm
     SUBDIR += safecat

@@ -9,6 +9,7 @@ WWW=		https://pecl.php.net/package/msgpack
 LICENSE=	BSD3CLAUSE
 
 USES=		php:pecl
+IGNORE_WITH_PHP=	86
 
 OPTIONS_DEFINE=		OPCACHE
 OPTIONS_DEFAULT=	OPCACHE
