@@ -1,6 +1,6 @@
 Revert:		https://github.com/pyauth/python-pkcs11/commit/d45957fd94abfd01b47cbf6a5b96862cf542dfbb
 
---- pyproject.toml.orig	2025-06-22 05:22:53 UTC
+--- pyproject.toml.orig	2026-07-10 12:17:27 UTC
 +++ pyproject.toml
 @@ -1,5 +1,5 @@
  [build-system]
@@ -15,7 +15,7 @@ Revert:		https://github.com/pyauth/python-pkcs11/commit/d45957fd94abfd01b47cbf6a
  dependencies = ["asn1crypto>=1.5.1"]
 -license = "MIT"
 +license = {text = "MIT"}
- requires-python = ">=3.9"
+ requires-python = ">=3.10"
  dynamic = ["version"]
  
 @@ -49,11 +49,6 @@ combine-as-imports = true
@@ -28,12 +28,5 @@ Revert:		https://github.com/pyauth/python-pkcs11/commit/d45957fd94abfd01b47cbf6a
 -    {name = "pkcs11._pkcs11", sources = ["pkcs11/_pkcs11.pyx"]}
 -]
  
- [tool.cibuildwheel.linux]
- archs = ["auto64"]
-@@ -96,4 +91,4 @@ dev = [
-     { include-group = "release" },
- ]
- 
--[tool.setuptools_scm]
-\ No newline at end of file
-+[tool.setuptools_scm]
+ [tool.cibuildwheel]
+ skip = "cp3??t-*"

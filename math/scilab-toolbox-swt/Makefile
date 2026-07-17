@@ -1,6 +1,6 @@
 PORTNAME=	swt
 PORTVERSION=	0.3.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	http://atoms.scilab.org/toolboxes/swt/${PORTVERSION}/files/
 PKGNAMEPREFIX=	scilab-toolbox-
@@ -9,6 +9,9 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-3-src
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Scilab 1-D and 2-D Wavelet Toolbox
 WWW=		https://atoms.scilab.org/toolboxes/swt
+
+DEPRECATED=	Not actively maintained, version from 2016, did not keep up with upstream. Mail the maintainer if you use this.
+EXPIRATION_DATE=	2026-11-09
 
 BUILD_DEPENDS=	${SCILAB_CMD}:math/scilab
 RUN_DEPENDS:=	${BUILD_DEPENDS}

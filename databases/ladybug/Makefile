@@ -1,6 +1,6 @@
 PORTNAME=	ladybug
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.18.0
+DISTVERSION=	0.18.1
 CATEGORIES=	databases
 
 MAINTAINER=	mahlon@martini.nu
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libbrotlicommon.so:archivers/brotli \
 		libyyjson.so:devel/yyjson \
 		libzstd.so:archivers/zstd
 
-USES=		cmake ninja:build python:build
+USES=		cmake ninja:build python:build ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	ladybugdb
 USE_LDCONFIG=	yes

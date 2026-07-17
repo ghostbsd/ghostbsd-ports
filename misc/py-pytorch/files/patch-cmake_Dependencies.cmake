@@ -1,6 +1,6 @@
---- cmake/Dependencies.cmake.orig	2026-05-13 17:40:38 UTC
+--- cmake/Dependencies.cmake.orig	2026-07-08 17:44:27 UTC
 +++ cmake/Dependencies.cmake
-@@ -354,7 +354,7 @@ if(USE_NNPACK OR USE_PYTORCH_QNNPACK OR USE_XNNPACK)
+@@ -373,7 +373,7 @@ if(USE_NNPACK OR USE_PYTORCH_QNNPACK OR USE_XNNPACK)
        set(DISABLE_NNPACK_AND_FAMILY ON)
      endif()
    else()

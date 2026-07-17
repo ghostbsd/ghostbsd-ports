@@ -1,14 +1,15 @@
-bin/brave-browser
 /%%ETCDIR%%/policies/managed/brave.json
 /%%ETCDIR%%/policies/managed/webrtc.json
+bin/brave-browser
+share/appdata/brave-browser.appdata.xml
 share/applications/brave-browser.desktop
 share/applications/com.brave.Browser.desktop
-share/appdata/brave-browser.appdata.xml
 %%DATADIR%%/LICENSE
 %%DATADIR%%/MEIPreload/manifest.json
 %%DATADIR%%/MEIPreload/preloaded_data.pb
 %%DATADIR%%/PrivacySandboxAttestationsPreloaded/manifest.json
 %%DATADIR%%/PrivacySandboxAttestationsPreloaded/privacy-sandbox-attestations.dat
+%%DATADIR%%/apparmor.d/brave-browser-stable
 %%DATADIR%%/brave
 %%DATADIR%%/brave-browser
 %%DATADIR%%/brave_100_percent.pak
@@ -33,6 +34,7 @@ share/appdata/brave-browser.appdata.xml
 %%DATADIR%%/locales/az.pak
 %%DATADIR%%/locales/bg.pak
 %%DATADIR%%/locales/bn.pak
+%%DATADIR%%/locales/bs.pak
 %%DATADIR%%/locales/ca.pak
 %%DATADIR%%/locales/cs.pak
 %%DATADIR%%/locales/da.pak
@@ -108,6 +110,7 @@ share/appdata/brave-browser.appdata.xml
 %%DATADIR%%/resources/brave_extension/_locales/az/messages.json
 %%DATADIR%%/resources/brave_extension/_locales/bg/messages.json
 %%DATADIR%%/resources/brave_extension/_locales/bn/messages.json
+%%DATADIR%%/resources/brave_extension/_locales/bs/messages.json
 %%DATADIR%%/resources/brave_extension/_locales/ca/messages.json
 %%DATADIR%%/resources/brave_extension/_locales/cs/messages.json
 %%DATADIR%%/resources/brave_extension/_locales/da/messages.json
@@ -171,8 +174,6 @@ share/appdata/brave-browser.appdata.xml
 %%DATADIR%%/resources/brave_extension/_locales/zh_TW/messages.json
 %%DATADIR%%/v8_context_snapshot.bin
 %%DATADIR%%/vk_swiftshader_icd.json
-%%DATADIR%%/xdg-mime
-%%DATADIR%%/xdg-settings
 share/gnome-control-center/default-apps/brave-browser.xml
 share/icons/hicolor/128x128/apps/brave-browser.png
 share/icons/hicolor/16x16/apps/brave-browser.png

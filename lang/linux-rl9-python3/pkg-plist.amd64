@@ -58,9 +58,6 @@ usr/lib/python3.9/__pycache__/_strptime.cpython-39.pyc
 usr/lib/python3.9/__pycache__/_sysconfigdata__linux_i386-linux-gnu.cpython-39.opt-1.pyc
 usr/lib/python3.9/__pycache__/_sysconfigdata__linux_i386-linux-gnu.cpython-39.opt-2.pyc
 usr/lib/python3.9/__pycache__/_sysconfigdata__linux_i386-linux-gnu.cpython-39.pyc
-usr/lib/python3.9/__pycache__/_sysconfigdata_d_linux_i386-linux-gnu.cpython-39.opt-1.pyc
-usr/lib/python3.9/__pycache__/_sysconfigdata_d_linux_i386-linux-gnu.cpython-39.opt-2.pyc
-usr/lib/python3.9/__pycache__/_sysconfigdata_d_linux_i386-linux-gnu.cpython-39.pyc
 usr/lib/python3.9/__pycache__/_threading_local.cpython-39.opt-1.pyc
 usr/lib/python3.9/__pycache__/_threading_local.cpython-39.opt-2.pyc
 usr/lib/python3.9/__pycache__/_threading_local.cpython-39.pyc
@@ -543,7 +540,6 @@ usr/lib/python3.9/_pyio.py
 usr/lib/python3.9/_sitebuiltins.py
 usr/lib/python3.9/_strptime.py
 usr/lib/python3.9/_sysconfigdata__linux_i386-linux-gnu.py
-usr/lib/python3.9/_sysconfigdata_d_linux_i386-linux-gnu.py
 usr/lib/python3.9/_threading_local.py
 usr/lib/python3.9/_weakrefset.py
 usr/lib/python3.9/abc.py
@@ -2401,9 +2397,6 @@ usr/lib64/python3.9/__pycache__/_strptime.cpython-39.pyc
 usr/lib64/python3.9/__pycache__/_sysconfigdata__linux_x86_64-linux-gnu.cpython-39.opt-1.pyc
 usr/lib64/python3.9/__pycache__/_sysconfigdata__linux_x86_64-linux-gnu.cpython-39.opt-2.pyc
 usr/lib64/python3.9/__pycache__/_sysconfigdata__linux_x86_64-linux-gnu.cpython-39.pyc
-usr/lib64/python3.9/__pycache__/_sysconfigdata_d_linux_x86_64-linux-gnu.cpython-39.opt-1.pyc
-usr/lib64/python3.9/__pycache__/_sysconfigdata_d_linux_x86_64-linux-gnu.cpython-39.opt-2.pyc
-usr/lib64/python3.9/__pycache__/_sysconfigdata_d_linux_x86_64-linux-gnu.cpython-39.pyc
 usr/lib64/python3.9/__pycache__/_threading_local.cpython-39.opt-1.pyc
 usr/lib64/python3.9/__pycache__/_threading_local.cpython-39.opt-2.pyc
 usr/lib64/python3.9/__pycache__/_threading_local.cpython-39.pyc
@@ -2886,7 +2879,6 @@ usr/lib64/python3.9/_pyio.py
 usr/lib64/python3.9/_sitebuiltins.py
 usr/lib64/python3.9/_strptime.py
 usr/lib64/python3.9/_sysconfigdata__linux_x86_64-linux-gnu.py
-usr/lib64/python3.9/_sysconfigdata_d_linux_x86_64-linux-gnu.py
 usr/lib64/python3.9/_threading_local.py
 usr/lib64/python3.9/_weakrefset.py
 usr/lib64/python3.9/abc.py

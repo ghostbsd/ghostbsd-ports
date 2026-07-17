@@ -1,6 +1,6 @@
 PORTNAME=	php84
 DISTVERSION=	8.4.23
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP/distributions
 DISTNAME=	php-${DISTVERSION}
@@ -262,7 +262,7 @@ FLATFILE_CONFIGURE_ON=	--disable-flatfile
 GDBM_LIB_DEPENDS=	libgdbm.so:databases/gdbm
 GDBM_CONFIGURE_ARGS=	--with-gdbm=${LOCALBASE}
 INIFILE_CONFIGURE_OFF=	--disable-inifile
-LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb
+LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb0
 LMDB_CONFIGURE_ARGS=	--with-lmdb=${LOCALBASE}
 QDBM_LIB_DEPENDS=	libqdbm.so:databases/qdbm
 QDBM_CONFIGURE_ARGS=	--with-qdbm=${LOCALBASE}

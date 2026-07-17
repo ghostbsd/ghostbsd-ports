@@ -1,6 +1,6 @@
 PORTNAME=	autobahn
 DISTVERSIONPREFIX=	v
-DISTVERSION=	25.9.1
+DISTVERSION=	25.10.1
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -61,8 +61,8 @@ TWISTED_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}attrs>=20.3.0:devel/py-attrs@${PY_F
 .include <bsd.port.options.mk>
 
 post-patch:
-	@${REINPLACE_CMD} -e '/march=native/d' ${WRKSRC}/autobahn/nvx/_utf8validator.py
-	@${REINPLACE_CMD} -e 's|setuptools>=64|setuptools>=63|' ${WRKSRC}/pyproject.toml
+	@${REINPLACE_CMD} '/license-files/d; s|^license = "MIT"|license = { text = "MIT" }|; s|80.9.0|63|g' \
+		${WRKSRC}/pyproject.toml
 
 post-stage:
 .if ${ARCH} !=	armv7

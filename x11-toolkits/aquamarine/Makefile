@@ -37,7 +37,7 @@ PLIST_SUB=	SOVERSION_FULL=${DISTVERSION:C/-.*//} \
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == i386
+.if ${ARCH} == i386 || ${ARCH:Marmv?}
 EXTRA_PATCHES=	${PATCHDIR}/extra-patch-src_backend_Headless.cpp
 .endif
 

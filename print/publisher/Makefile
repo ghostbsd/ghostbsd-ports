@@ -1,6 +1,7 @@
 PORTNAME=	publisher
 DISTVERSIONPREFIX=	v
 DISTVERSION=	5.4.3
+PORTREVISION=	1
 CATEGORIES=	print
 
 MAINTAINER=	misterd@renderdata.pro

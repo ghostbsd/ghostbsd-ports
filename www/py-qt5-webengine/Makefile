@@ -12,6 +12,10 @@ WWW=		https://riverbankcomputing.com/software/pyqt
 
 LICENSE=	${PYQT5_LICENSE}
 
+# Do not remove without approval from kde@
+DEPRECATED=	Depends on deprecated Qt5 WebEngine
+EXPIRATION_DATE=	2026-09-30
+
 USES=		gl pyqt:5,dist python qt:5
 USE_GL=		gl
 USE_PYQT=	pyqt5 qtbuilder:build sip:build

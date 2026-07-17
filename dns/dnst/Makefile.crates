@@ -35,6 +35,8 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		crossbeam-utils-0.8.21 \
 		diff-0.1.13 \
 		displaydoc-0.2.5 \
+		domain-0.12.1 \
+		domain-macros-0.12.1 \
 		either-1.15.0 \
 		enum-display-derive-0.1.1 \
 		enum-ordinalize-4.3.2 \
@@ -244,7 +246,6 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		zerovec-0.11.6 \
 		zerovec-derive-0.11.3 \
 		zmij-1.0.21 \
-		domain-kmip@git+https://github.com/NLnetLabs/domain-kmip.git?branch=main\#efb1a8674ef034ebf45c8f205b7d9a53b36e5e1d \
 		kmip-ttlv@git+https://github.com/NLnetLabs/kmip-ttlv?branch=next\#295572e07feb30293462267db2de1640ba1bfabe \
 		kmip-protocol@git+https://github.com/NLnetLabs/kmip-protocol.git?branch=next\#48ba5093856a3be0e69cc4cc4b224419aa0737a7 \
-		domain,domain-macros@git+https://github.com/NLnetLabs/domain.git?branch=main\#06d0c57543add91876359df9de7d11f0d02b9cb2
+		domain-kmip@git+https://github.com/NLnetLabs/domain-kmip.git\#bb0da8603febd184c2bae6998d81da81d8570c9c

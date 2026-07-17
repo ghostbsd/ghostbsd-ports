@@ -8,6 +8,8 @@ WWW=		https://www.kde.org/
 
 LICENSE=	LGPL21
 
+CONFLICTS=	kf6-kmime
+
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/range/algorithm.hpp:devel/boost-libs
 
 USES=		cmake compiler:c++11-lib gettext kde:6 qt:6 tar:xz

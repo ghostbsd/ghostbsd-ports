@@ -1,6 +1,6 @@
 PORTNAME=	susshi
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.18.2
+DISTVERSION=	0.20.0
 PORTREVISION=	0
 CATEGORIES=	security
 
@@ -25,13 +25,16 @@ CARGO_CRATES=	adler2-2.0.1 \
 		anstyle-parse-1.0.0 \
 		anstyle-query-1.1.5 \
 		anstyle-wincon-3.0.11 \
-		anyhow-1.0.102 \
+		anyhow-1.0.103 \
+		approx-0.5.1 \
 		arboard-3.6.1 \
 		arc-swap-1.9.1 \
+		autocfg-1.5.1 \
 		base64-0.22.1 \
 		basic-toml-0.1.10 \
-		bitflags-2.11.0 \
-		block-buffer-0.10.4 \
+		bitflags-2.13.0 \
+		block-buffer-0.12.1 \
+		by_address-1.2.1 \
 		bytes-1.11.1 \
 		castaway-0.2.4 \
 		catppuccin-2.8.0 \
@@ -46,19 +49,20 @@ CARGO_CRATES=	adler2-2.0.1 \
 		clipboard-win-5.4.1 \
 		colorchoice-1.0.4 \
 		compact_str-0.9.0 \
+		const-oid-0.10.2 \
 		convert_case-0.10.0 \
-		cpufeatures-0.2.17 \
+		cpufeatures-0.3.0 \
 		crc32fast-1.5.0 \
 		crossterm-0.29.0 \
 		crossterm_winapi-0.9.1 \
-		crypto-common-0.1.7 \
+		crypto-common-0.2.2 \
 		darling-0.23.0 \
 		darling_core-0.23.0 \
 		darling_macro-0.23.0 \
 		deranged-0.5.8 \
 		derive_more-2.1.1 \
 		derive_more-impl-2.1.1 \
-		digest-0.10.7 \
+		digest-0.11.3 \
 		dirs-6.0.0 \
 		dirs-sys-0.5.0 \
 		dispatch2-0.3.0 \
@@ -68,6 +72,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		equivalent-1.0.2 \
 		errno-0.3.14 \
 		error-code-3.3.2 \
+		fast-srgb8-1.0.0 \
 		fastrand-2.3.0 \
 		find-crate-0.6.3 \
 		find-msvc-tools-0.1.9 \
@@ -79,15 +84,16 @@ CARGO_CRATES=	adler2-2.0.1 \
 		foldhash-0.1.5 \
 		foldhash-0.2.0 \
 		fuzzy-matcher-0.3.7 \
-		generic-array-0.14.7 \
 		gethostname-1.1.0 \
 		getrandom-0.2.17 \
 		getrandom-0.4.1 \
 		hashbrown-0.15.5 \
 		hashbrown-0.16.1 \
+		hashbrown-0.17.1 \
 		heck-0.5.0 \
 		http-1.4.0 \
 		httparse-1.10.1 \
+		hybrid-array-0.4.13 \
 		i18n-config-0.4.8 \
 		i18n-embed-0.16.0 \
 		i18n-embed-fl-0.10.0 \
@@ -105,20 +111,24 @@ CARGO_CRATES=	adler2-2.0.1 \
 		kasuari-0.4.11 \
 		leb128fmt-0.1.0 \
 		libc-0.2.186 \
+		libm-0.2.16 \
 		libredox-0.1.12 \
-		libssh2-sys-0.3.1 \
+		libssh2-sys-0.3.2 \
 		libz-sys-1.1.24 \
 		line-clipping-0.3.5 \
 		linux-raw-sys-0.12.1 \
 		litrs-1.0.0 \
 		lock_api-0.4.14 \
 		log-0.4.29 \
-		lru-0.16.3 \
+		lru-0.18.0 \
 		memchr-2.8.0 \
+		mime-0.3.17 \
+		mime_guess-2.0.5 \
 		miniz_oxide-0.8.9 \
 		mio-1.1.1 \
 		nix-0.31.3 \
 		num-conv-0.2.0 \
+		num-traits-0.2.19 \
 		num_threads-0.1.7 \
 		objc2-0.6.3 \
 		objc2-app-kit-0.3.2 \
@@ -132,6 +142,8 @@ CARGO_CRATES=	adler2-2.0.1 \
 		openssl-src-300.5.5+3.5.5 \
 		openssl-sys-0.9.111 \
 		option-ext-0.2.0 \
+		palette-0.7.6 \
+		palette_derive-0.7.6 \
 		parking_lot-0.12.5 \
 		parking_lot_core-0.9.12 \
 		percent-encoding-2.3.2 \
@@ -145,17 +157,17 @@ CARGO_CRATES=	adler2-2.0.1 \
 		proc-macro2-1.0.106 \
 		quote-1.0.45 \
 		r-efi-5.3.0 \
-		ratatui-0.30.0 \
-		ratatui-core-0.1.0 \
-		ratatui-crossterm-0.1.0 \
-		ratatui-widgets-0.3.0 \
+		ratatui-0.30.2 \
+		ratatui-core-0.1.2 \
+		ratatui-crossterm-0.1.2 \
+		ratatui-widgets-0.3.2 \
 		redox_syscall-0.5.18 \
 		redox_users-0.5.2 \
 		ring-0.17.14 \
 		roff-1.1.1 \
-		rust-embed-8.11.0 \
-		rust-embed-impl-8.11.0 \
-		rust-embed-utils-8.11.0 \
+		rust-embed-8.12.0 \
+		rust-embed-impl-8.12.0 \
+		rust-embed-utils-8.12.0 \
 		rustc-hash-2.1.2 \
 		rustc_version-0.4.1 \
 		rustix-1.1.4 \
@@ -173,7 +185,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		serde_derive-1.0.228 \
 		serde_json-1.0.150 \
 		serde_yaml_ng-0.10.0 \
-		sha2-0.10.9 \
+		sha2-0.11.0 \
 		shellexpand-3.1.2 \
 		shlex-1.3.0 \
 		signal-hook-0.3.18 \
@@ -181,11 +193,11 @@ CARGO_CRATES=	adler2-2.0.1 \
 		signal-hook-registry-1.4.8 \
 		simd-adler32-0.3.9 \
 		smallvec-1.15.1 \
-		ssh2-0.9.5 \
+		ssh2-0.9.6 \
 		static_assertions-1.1.0 \
 		strsim-0.11.1 \
-		strum-0.27.2 \
-		strum_macros-0.27.2 \
+		strum-0.28.0 \
+		strum_macros-0.28.0 \
 		subtle-2.6.1 \
 		syn-2.0.117 \
 		sys-locale-0.3.2 \
@@ -205,6 +217,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		unic-langid-impl-0.9.6 \
 		unic-langid-macros-0.9.6 \
 		unic-langid-macros-impl-0.9.6 \
+		unicase-2.9.0 \
 		unicode-ident-1.0.24 \
 		unicode-segmentation-1.12.0 \
 		unicode-truncate-2.0.1 \
@@ -217,7 +230,6 @@ CARGO_CRATES=	adler2-2.0.1 \
 		utf8-zero-0.8.1 \
 		utf8parse-0.2.2 \
 		vcpkg-0.2.15 \
-		version_check-0.9.5 \
 		walkdir-2.5.0 \
 		wasi-0.11.1+wasi-snapshot-preview1 \
 		wasip2-1.0.2+wasi-0.2.9 \

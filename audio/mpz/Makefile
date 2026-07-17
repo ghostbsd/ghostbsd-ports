@@ -1,5 +1,5 @@
 PORTNAME=	mpz
-PORTVERSION=	2.0.10
+PORTVERSION=	2.0.14
 CATEGORIES=	audio
 
 MAINTAINER=	danfe@FreeBSD.org
@@ -20,7 +20,8 @@ USE_GSTREAMER=	flac libav mpg123 ogg opus vorbis
 USE_QT=		buildtools:build qmake:build concurrent core dbus gui \
 		multimedia network widgets x11extras
 
-CMAKE_ON=	USE_QT5 USE_SYSTEM_LIBMPDCLIENT USE_SYSTEM_TAGLIB USE_SYSTEM_YAMLCPP
+CMAKE_ON=	USE_QT5 USE_SYSTEM_LIBMPDCLIENT USE_SYSTEM_TAGLIB \
+		USE_SYSTEM_YAMLCPP
 
 post-extract:
 	@${RM} -r ${WRKSRC}/3rdparty/[^q]*

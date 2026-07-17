@@ -2,7 +2,7 @@ PORTNAME=	lndir
 DISTVERSION=	1.0.5
 CATEGORIES=	devel
 
-MAINTAINER=	unixmania@gmail.com
+MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Create a shadow directory of symbolic links to another directory tree
 WWW=		https://gitlab.freedesktop.org/xorg/util/lndir/
 

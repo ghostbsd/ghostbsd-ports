@@ -3,7 +3,7 @@ PORTREVISION=	0
 CATEGORIES=	net-mgmt
 PKGNAMESUFFIX=	-frontend${PHP_PKGNAMESUFFIX}
 
-USES+=		cpe php:web,flavors
+USES+=		php:web,flavors
 USE_PHP=	bcmath ctype filter gd gettext ldap mbstring session \
 		simplexml sockets xml xmlreader xmlwriter
 

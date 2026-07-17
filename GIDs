@@ -541,7 +541,7 @@ avahi-autoipd:*:588:
 # free: 596
 # free: 597
 # free: 598
-# free: 599
+pkiuser:*:599:
 _xsi:*:600:
 _tss:*:601:
 _pkcs11:*:602:

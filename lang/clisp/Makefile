@@ -1,6 +1,6 @@
 PORTNAME=	clisp
 PORTVERSION=	2.49.95+20241228
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang lisp
 
 MAINTAINER=	kiri@TrueFC.org
@@ -66,7 +66,7 @@ SVM_DESC=	Support Vector Machine predictive analytics
 ZLIB_DESC=	Compress vectors
 
 ASDF_CONFIGURE_WITH=	module=asdf
-BDB_USES=		bdb
+BDB_USES=		bdb:18
 BDB_CONFIGURE_WITH=	module=berkeley-db
 BDB_CPPFLAGS=		-I${LOCALBASE}/include/db${BDB_VER}
 BDB_LDFLAGS=		-L${LOCALBASE}/lib/db${BDB_VER}

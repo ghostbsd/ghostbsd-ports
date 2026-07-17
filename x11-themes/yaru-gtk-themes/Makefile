@@ -2,7 +2,7 @@ PORTNAME=	yaru-gtk-themes
 DISTVERSION=	25.10.3
 CATEGORIES=	x11-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Default GTK theme for Ubuntu
 WWW=		https://github.com/ubuntu/yaru
 

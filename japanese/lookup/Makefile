@@ -18,8 +18,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-emacs=${EMACS_CMD} \
 		--with-lispdir=${PREFIX}/${EMACS_SITE_LISPDIR}
 
-CONFLICTS_INSTALL=	ja-lookup-emacs_*
-
 NO_ARCH=	yes
 
 INFO=		lookup
@@ -27,10 +25,8 @@ PORTDOCS=	AUTHORS ChangeLog NEWS README.md
 
 OPTIONS_DEFINE=	DOCS
 
-post-install:
-	@${FIND} ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}/lookup \
-		-name "*.elc" -delete
-	${MKDIR} ${STAGEDIR}${DOCSDIR}
+post-install-DOCS-on:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>

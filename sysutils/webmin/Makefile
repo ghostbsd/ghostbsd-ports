@@ -1,5 +1,5 @@
 PORTNAME=	webmin
-PORTVERSION=	2.610
+PORTVERSION=	2.651
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.webmin.com/updates/:up \
 		SF/webadmin/${PORTNAME}/${PORTVERSION}:sf
@@ -28,7 +28,8 @@ WEBMIN_MODULES=
 
 post-extract:
 	@${RM} ${WRKSRC}/mount/freebsd-mounts-? \
-		${WRKSRC}/webmin-gentoo-init
+		${WRKSRC}/webmin-gentoo-init \
+		${WRKSRC}/webmin-openrc-init
 	@if [ "${WEBMIN_MODULES}" != "" ]; then \
 		for webmin_module in ${WEBMIN_MODULES}; do \
 			${ECHO} "===> Unpacking updated module: $${webmin_module}"; \

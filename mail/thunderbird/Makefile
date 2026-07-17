@@ -1,9 +1,9 @@
 PORTNAME=	thunderbird
-DISTVERSION=	152.0.1
+DISTVERSION=	153.0
 PORTREVISION=	1
 CATEGORIES=	mail news net-im wayland
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}${DISTVERSIONSUFFIX}/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build3/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build2/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
@@ -11,7 +11,7 @@ COMMENT=	Mozilla Thunderbird is standalone mail and news that stands above
 WWW=		https://www.thunderbird.net/
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.124:security/nss \
+		nss>=3.125:security/nss \
 		libevent>=2.1.8:devel/libevent \
 		harfbuzz>=10.1.0:print/harfbuzz \
 		graphite2>=1.3.14:graphics/graphite2 \

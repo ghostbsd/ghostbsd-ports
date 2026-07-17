@@ -91,7 +91,7 @@ KDE_PLASMA5_VERSION?=		5.27.12
 KDE_PLASMA5_BRANCH?=		stable
 
 # Current KDE Plasma desktop.
-KDE_PLASMA6_VERSION?=		6.6.5
+KDE_PLASMA6_VERSION?=		6.6.6
 KDE_PLASMA6_BRANCH?=		stable
 
 # Legacy KDE frameworks (Qt5 based).
@@ -99,7 +99,7 @@ KDE_FRAMEWORKS5_VERSION?=	5.116.0
 KDE_FRAMEWORKS5_BRANCH?=	stable
 
 # Current KDE Frameworks (Qt6 based).
-KDE_FRAMEWORKS6_VERSION?=	6.27.0
+KDE_FRAMEWORKS6_VERSION?=	6.28.0
 KDE_FRAMEWORKS6_BRANCH?=	stable
 
 # Current KDE applications.

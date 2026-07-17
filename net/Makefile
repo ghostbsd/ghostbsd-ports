@@ -86,6 +86,7 @@
     SUBDIR += citrix_ica
     SUBDIR += cjdns
     SUBDIR += claws
+    SUBDIR += cliproxyapi
     SUBDIR += cloud-init
     SUBDIR += cloudflare-speed-cli
     SUBDIR += cloudflared
@@ -203,6 +204,7 @@
     SUBDIR += gnome-nettool
     SUBDIR += gnome-online-accounts
     SUBDIR += gnu-radius
+    SUBDIR += gnunet
     SUBDIR += go-bapu
     SUBDIR += go-cs
     SUBDIR += go-pkgsite
@@ -332,6 +334,7 @@
     SUBDIR += kf6-kcontacts
     SUBDIR += kf6-kdav
     SUBDIR += kf6-kholidays
+    SUBDIR += kf6-kmime
     SUBDIR += kf6-syndication
     SUBDIR += kget
     SUBDIR += kidentitymanagement
@@ -998,9 +1001,9 @@
     SUBDIR += pecl-radius
     SUBDIR += pecl-rdkafka
     SUBDIR += pecl-smbclient
-    SUBDIR += pecl-xmlrpc
     SUBDIR += pen
     SUBDIR += php-oauth
+    SUBDIR += php-xmlrpc
     SUBDIR += php82-ldap
     SUBDIR += php82-soap
     SUBDIR += php82-sockets
@@ -1033,7 +1036,6 @@
     SUBDIR += proftpd-mod_ldap
     SUBDIR += prosearch
     SUBDIR += proxy-suite
-    SUBDIR += proxychains
     SUBDIR += proxychains-ng
     SUBDIR += prrte
     SUBDIR += prtunnel
@@ -1414,8 +1416,10 @@
     SUBDIR += rubygem-netrc
     SUBDIR += rubygem-network_interface
     SUBDIR += rubygem-nkf
+    SUBDIR += rubygem-nkf-gitlab
     SUBDIR += rubygem-no_proxy_fix
     SUBDIR += rubygem-oauth
+    SUBDIR += rubygem-oauth-gitlab
     SUBDIR += rubygem-oauth-tty
     SUBDIR += rubygem-oauth0
     SUBDIR += rubygem-oauth2

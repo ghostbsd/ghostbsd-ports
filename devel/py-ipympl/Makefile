@@ -12,6 +12,7 @@ WWW=		https://github.com/matplotlib/ipympl
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BROKEN=		fails to build after recent update of jupyter ports
 IGNORE_i386=	jlpm/node hangs during build stage
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}hatch-jupyter-builder>=0.8.3:devel/py-hatch-jupyter-builder@${PY_FLAVOR} \

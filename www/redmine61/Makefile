@@ -1,5 +1,6 @@
 PORTNAME=	redmine
 PORTVERSION=	6.1.2
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://www.redmine.org/releases/
 PKGNAMESUFFIX=	61
@@ -50,7 +51,7 @@ RUN_DEPENDS=	rubygem-actionpack-xml_parser-rails72>=0:textproc/rubygem-actionpac
 		rubygem-rest-client>0:www/rubygem-rest-client \
 		rubygem-roadie-rails-rails72>=3.2.0:mail/rubygem-roadie-rails-rails72 \
 		rubygem-rotp>=5.0.0:devel/rubygem-rotp \
-		rubygem-rouge>=4.5.0:textproc/rubygem-rouge \
+		rubygem-rouge4>=4.5.0:textproc/rubygem-rouge4 \
 		rubygem-rqrcode>0:www/rubygem-rqrcode \
 		rubygem-rubocop-performance>=0:devel/rubygem-rubocop-performance \
 		rubygem-rubocop-rails>0:devel/rubygem-rubocop-rails \

@@ -1,5 +1,5 @@
 PORTNAME=	gucharmap
-PORTVERSION=	17.0.0 # must sync with textproc/UCD
+PORTVERSION=	17.0.2 # must sync with textproc/UCD
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome
 
@@ -11,7 +11,7 @@ LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	itstool:textproc/itstool \
-		UCD=17.0.0,2:textproc/UCD
+		UCD=18.0.0_1,2:textproc/UCD
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libpcre2-8.so:devel/pcre2
 

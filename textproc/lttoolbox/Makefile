@@ -1,5 +1,5 @@
 PORTNAME=	lttoolbox
-DISTVERSION=	3.8.2
+DISTVERSION=	3.8.3
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/apertium/${PORTNAME}/releases/download/v${DISTVERSION}/
 
@@ -11,7 +11,8 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	utf8cpp>=4.0.3:devel/utf8cpp
-LIB_DEPENDS=	libicuio.so:devel/icu
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
+		libicuio.so:devel/icu
 
 USES=		cmake compiler:c++14-lang gnome localbase pathfix pkgconfig \
 		tar:bz2

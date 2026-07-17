@@ -1,6 +1,5 @@
 PORTNAME=	libddwaf
-PORTVERSION=	1.30.1
-PORTREVISION=	1
+PORTVERSION=	2.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -21,6 +20,7 @@ LIB_DEPENDS=	libac.so:devel/libac \
 USES=		cmake compiler:c++20-lang localbase:ldflags
 
 CFLAGS+=	-I${LOCALBASE}/include/re2
+CMAKE_ARGS=	-DGIT_COMMIT="c5fdbb3375abc5d37f5d0a4ca2fd64d28d86a681"
 CMAKE_OFF=	LIBDDWAF_TESTING \
 		LIBDDWAF_TEST_COVERAGE
 CMAKE_ON=	LIBDDWAF_BUILD_SHARED \

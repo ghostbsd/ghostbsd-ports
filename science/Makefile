@@ -453,6 +453,7 @@
     SUBDIR += py-scikit-sparse
     SUBDIR += py-scimath
     SUBDIR += py-scipy
+    SUBDIR += py-scipy-stubs
     SUBDIR += py-scoria
     SUBDIR += py-sdf
     SUBDIR += py-seekpath

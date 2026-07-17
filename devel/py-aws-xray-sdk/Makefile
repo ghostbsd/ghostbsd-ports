@@ -1,9 +1,9 @@
 PORTNAME=	aws-xray-sdk
-PORTVERSION=	2.13.1
-PORTREVISION=	1
+PORTVERSION=	2.15.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	aws_xray_sdk-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	AWS X-Ray SDK for Python
@@ -21,5 +21,6 @@ USES=		python
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
+WRKSRC=		${WRKDIR}/aws-xray-sdk-${PORTVERSION}
 
 .include <bsd.port.mk>

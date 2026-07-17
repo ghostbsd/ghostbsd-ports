@@ -1,6 +1,5 @@
 PORTNAME=	vkrunner
-DISTVERSION=	g20260228
-PORTREVISION=	1
+DISTVERSION=	g20260605
 CATEGORIES=	graphics
 
 MAINTAINER=	olivier@FreeBSD.org
@@ -20,7 +19,7 @@ USES=		cargo
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.freedesktop.org
 GL_ACCOUNT=	mesa
-GL_TAGNAME=	7bb06ea50d5583f44362168bd6039d86ecd6aba7
+GL_TAGNAME=	4dff5e7f450d59e24be5b11f1898d2c3091d908b
 
 PLIST_FILES=	bin/vkrunner
 

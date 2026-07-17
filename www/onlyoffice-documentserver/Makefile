@@ -1,6 +1,7 @@
 PORTNAME=	onlyoffice-documentserver
 DISTVERSIONPREFIX=	v
 DISTVERSION=	9.4.0
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES+=	LOCAL/mikael/v8/:source1 \
 		https://nodejs.org/dist/v${_PKGFETCH_NODE_VERSION}/:source2 \
@@ -22,8 +23,8 @@ ONLY_FOR_ARCHS_REASON=	Upstream only supports amd64 and arm64
 # node version used with "npm install" inside ${WRKSRC}/yao-pkg
 # kept in sync with patch-build__tools_scripts_build__server.py and patch-document-server-package_Makefile
 _DS_BUILD=		129
-_PKGFETCH_NODE_VERSION=	24.15.0
-_NPM_CACHE_TAG=		${_DS_TAGNAME}-202606140107
+_PKGFETCH_NODE_VERSION=	24.18.0
+_NPM_CACHE_TAG=		${_DS_TAGNAME}-202607080141
 # end of cache build config
 
 _NODE_DISTFILE=		node-v${_PKGFETCH_NODE_VERSION}.tar.gz

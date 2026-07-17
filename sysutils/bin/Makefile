@@ -1,7 +1,6 @@
 PORTNAME=	bin
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.26.0
-PORTREVISION=	1
+DISTVERSION=	0.28.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	dtxdf@FreeBSD.org
@@ -10,7 +9,7 @@ COMMENT=	Effortless binary manager
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:modules
+USES=		go:1.26+,modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	marcosnils
 
@@ -27,7 +26,7 @@ PLIST_FILES=	bin/${PORTNAME}
 #
 # Run 'git checkout ${DISTVERSIONPREFIX}${DISTVERSION} && git rev-parse --short HEAD'
 # in the Bin repository to get the value of GITID.
-GITID=		9ae5fec462fcbe33a1388a6cd651f22ee845ac2b
+GITID=		3f85e583b8c22a29a241e64f4893084da9de173e
 
 BUILD_DATE=	$$(date -u "+%Y-%m-%dT%H:%M:%SZ")
 

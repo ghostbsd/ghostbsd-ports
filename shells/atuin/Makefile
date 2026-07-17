@@ -1,7 +1,7 @@
 PORTNAME=	atuin
 DISTVERSIONPREFIX=	v
-DISTVERSION=	18.16.1
-PORTREVISION=	1
+DISTVERSION=	18.17.0
+PORTREVISION=	0
 CATEGORIES=	shells
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -69,6 +69,7 @@ CARGO_CRATES=	aead-0.5.2 \
 		cfg_aliases-0.1.1 \
 		cfg_aliases-0.2.1 \
 		chacha20-0.9.1 \
+		chacha20-0.10.0 \
 		chrono-0.4.44 \
 		chrono-humanize-0.2.3 \
 		cipher-0.4.4 \
@@ -92,6 +93,7 @@ CARGO_CRATES=	aead-0.5.2 \
 		core-foundation-0.10.1 \
 		core-foundation-sys-0.8.7 \
 		cpufeatures-0.2.17 \
+		cpufeatures-0.3.0 \
 		crc-3.4.0 \
 		crc-catalog-2.4.0 \
 		crossbeam-channel-0.5.15 \
@@ -117,6 +119,7 @@ CARGO_CRATES=	aead-0.5.2 \
 		deranged-0.5.8 \
 		derive_more-2.1.1 \
 		derive_more-impl-2.1.1 \
+		deunicode-1.6.2 \
 		diff-0.1.13 \
 		digest-0.10.7 \
 		directories-6.0.0 \
@@ -145,6 +148,7 @@ CARGO_CRATES=	aead-0.5.2 \
 		eye_declare-0.5.1 \
 		eye_declare_macros-0.5.1 \
 		eyre-0.6.12 \
+		fake-5.1.0 \
 		fancy-regex-0.11.0 \
 		fast-srgb8-1.0.0 \
 		fastrand-2.3.0 \
@@ -318,6 +322,7 @@ CARGO_CRATES=	aead-0.5.2 \
 		parking_lot-0.12.5 \
 		parking_lot_core-0.9.12 \
 		password-hash-0.5.0 \
+		pastey-0.2.3 \
 		pathdiff-0.2.3 \
 		pbkdf2-0.12.2 \
 		pem-rfc7468-0.7.0 \
@@ -366,10 +371,12 @@ CARGO_CRATES=	aead-0.5.2 \
 		r-efi-6.0.0 \
 		rand-0.8.5 \
 		rand-0.9.2 \
+		rand-0.10.1 \
 		rand_chacha-0.3.1 \
 		rand_chacha-0.9.0 \
 		rand_core-0.6.4 \
 		rand_core-0.9.5 \
+		rand_core-0.10.1 \
 		rand_xoshiro-0.7.0 \
 		ratatui-0.30.0 \
 		ratatui-core-0.1.0 \
@@ -391,6 +398,7 @@ CARGO_CRATES=	aead-0.5.2 \
 		regex-syntax-0.8.10 \
 		reqwest-0.13.2 \
 		ring-0.17.14 \
+		rmcp-2.1.0 \
 		rmp-0.8.15 \
 		rpassword-7.4.0 \
 		rsa-0.9.10 \
@@ -414,6 +422,7 @@ CARGO_CRATES=	aead-0.5.2 \
 		schannel-0.1.29 \
 		schemars-0.9.0 \
 		schemars-1.2.1 \
+		schemars_derive-1.2.1 \
 		scopeguard-1.2.0 \
 		security-framework-3.7.0 \
 		security-framework-sys-2.17.0 \
@@ -421,6 +430,7 @@ CARGO_CRATES=	aead-0.5.2 \
 		serde-1.0.228 \
 		serde_core-1.0.228 \
 		serde_derive-1.0.228 \
+		serde_derive_internals-0.29.1 \
 		serde_json-1.0.149 \
 		serde_path_to_error-0.1.20 \
 		serde_regex-1.1.0 \
@@ -444,6 +454,7 @@ CARGO_CRATES=	aead-0.5.2 \
 		sketches-ddsketch-0.3.1 \
 		slab-0.4.12 \
 		smallvec-1.15.1 \
+		snowflake_uid-0.1.1 \
 		socket2-0.6.3 \
 		spin-0.9.8 \
 		spki-0.7.3 \

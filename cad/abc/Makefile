@@ -1,5 +1,5 @@
 PORTNAME=	abc
-DISTVERSION=	g20260618
+DISTVERSION=	g20260701
 PORTEPOCH=	1
 CATEGORIES=	cad
 
@@ -13,13 +13,12 @@ LICENSE_FILE=	${WRKSRC}/copyright.txt
 
 NOT_FOR_ARCHS=	armv7 i386
 NOT_FOR_ARCHS_REASON=	__int128 is not supported on this target
-
 BUILD_DEPENDS=	gmake:devel/gmake
 
 USES=		cmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	berkeley-abc
-GH_TAGNAME=	68bf7cba
+GH_TAGNAME=	f7c7cf00
 USE_LDCONFIG=	yes
 
 CMAKE_ON=	ABC_SKIP_TESTS

@@ -1,6 +1,6 @@
---- CMakeLists.txt.orig	2024-02-20 23:53:17 UTC
+--- CMakeLists.txt.orig	2025-12-01 12:53:35 UTC
 +++ CMakeLists.txt
-@@ -294,13 +294,13 @@ configure_package_config_file ("${PROJECT_SOURCE_DIR}/
+@@ -323,13 +323,13 @@ install (FILES "${OSL_PROJECT_CONFIG}" "${OSL_VERSION_
  install (FILES "${OSL_PROJECT_CONFIG}" "${OSL_VERSION_CONFIG}"
          DESTINATION "${OSL_CONFIG_INSTALL_DIR}")
  

@@ -1,7 +1,7 @@
 PORTNAME=	prometheus-collectd-exporter
 PORTVERSION=	0.5.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	41
+PORTREVISION=	42
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	dsp@php.net

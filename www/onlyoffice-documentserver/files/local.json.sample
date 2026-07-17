@@ -1,14 +1,6 @@
 {
   "services": {
     "CoAuthoring": {
-      "sql": {
-        "type": "postgres",
-        "dbHost": "localhost",
-        "dbPort": "5432",
-        "dbName": "onlyoffice",
-        "dbUser": "onlyoffice",
-        "dbPass": "onlyoffice"
-      },
       "token": {
         "enable": {
           "request": {
@@ -41,7 +33,7 @@
     }
   },
   "openpgpjs": {
-    "_comment": "https://helpcenter.onlyoffice.com/docs/installation/docs-developer-configuring.aspx#openpgpprotocol_block"
+    "_comment": "https://helpcenter.onlyoffice.com/docs/installation/docs-developer-configuring.aspx#openpgpprotocol_block",
     "encrypt": {
       "passwords": ["PGPguardsecretstring"]
     },
@@ -50,10 +42,13 @@
     }
   },
   "aesEncrypt": {
-    "_comment": "https://helpcenter.onlyoffice.com/docs/installation/docs-developer-configuring.aspx#aes256gcmalgorithm_block"
+    "_comment": "https://helpcenter.onlyoffice.com/docs/installation/docs-developer-configuring.aspx#aes256gcmalgorithm_block",
     "secret": "docpasswordsecretstring"
   },
-  "rabbitmq": {
-    "url": "amqp://onlyoffice:password@localhost"
+  "storage": {
+    "name": "storage-fs",
+    "fs": {
+      "secretString": "verysecretstring"
+    }
   }
 }

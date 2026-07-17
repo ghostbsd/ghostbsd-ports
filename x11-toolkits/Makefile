@@ -119,6 +119,8 @@
     SUBDIR += mygui-dummy
     SUBDIR += mygui-ogre
     SUBDIR += mygui-opengl
+    SUBDIR += mygui-opengl3
+    SUBDIR += mygui-opengles
     SUBDIR += nanogui
     SUBDIR += neXtaw
     SUBDIR += ntk
@@ -245,6 +247,7 @@
     SUBDIR += rubygem-vte3
     SUBDIR += rubygem-vte4
     SUBDIR += scenefx04
+    SUBDIR += scenefx05
     SUBDIR += sdl2_pango
     SUBDIR += sdl_pango
     SUBDIR += skinlf

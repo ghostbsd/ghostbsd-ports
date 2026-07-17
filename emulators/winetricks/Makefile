@@ -2,7 +2,7 @@ PORTNAME=	winetricks
 DISTVERSION=	20260125
 CATEGORIES=	emulators
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Easy way to work around problems in Wine
 WWW=		https://wiki.winehq.org/Winetricks
 

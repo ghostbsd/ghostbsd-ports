@@ -1,6 +1,6 @@
 PORTNAME=	lean4
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.31.0
+DISTVERSION=	4.32.0
 CATEGORIES=	math lang devel # lean4 is primarily a math theorem prover, but it is also a language and a development environment
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -16,12 +16,14 @@ BROKEN_i386=	linking fails: INTERNAL PANIC: out of memory (during: Linking runLi
 
 BUILD_DEPENDS=	bash:shells/bash \
 		cadical:math/cadical \
+		gsed:textproc/gsed \
 		leantar:math/leangz
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libuv.so:devel/libuv
 RUN_DEPENDS=	cadical:math/cadical \
 		leantar:math/leangz
-TEST_DEPENDS=	gtail:sysutils/coreutils
+TEST_DEPENDS=	gtail:sysutils/coreutils \
+		gsed:textproc/gsed
 
 USES=		cmake:noninja,testing compiler:c++14-lang gmake pkgconfig python:build # ninja fails + gmake scripts are included in the project
 
@@ -38,7 +40,8 @@ CMAKE_OFF=	USE_MIMALLOC \
 MAKE_ENV=	LD_LIBRARY_PATH=${BUILD_WRKSRC}/stage0/lib/lean
 
 BINARY_ALIAS=	make=${GMAKE} \
-		python=${PYTHON_CMD}
+		python=${PYTHON_CMD} \
+		sed=${LOCALBASE}/bin/gsed
 
 .include <bsd.port.pre.mk>
 

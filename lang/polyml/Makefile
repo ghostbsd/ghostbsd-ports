@@ -10,7 +10,7 @@ WWW=		https://www.polyml.org
 
 LICENSE=	LGPL21
 
-ONLY_FOR_ARCHS=	aarch64 amd64 i386
+ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64le powerpc64
 
 LIB_DEPENDS=	libffi.so:devel/libffi
 

@@ -1,6 +1,6 @@
---- dlls/wineoss.drv/oss.c.orig	2023-07-17 16:05:30.000000000 +0300
-+++ dlls/wineoss.drv/oss.c	2023-09-02 22:43:48.312607000 +0300
-@@ -145,17 +145,6 @@ static NTSTATUS oss_test_connect(void *args)
+--- dlls/wineoss.drv/oss.c.orig	2025-11-06 09:54:15 UTC
++++ dlls/wineoss.drv/oss.c
+@@ -155,17 +155,6 @@ static NTSTATUS oss_test_connect(void *args)
  
      close(mixer_fd);
  

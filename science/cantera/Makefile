@@ -1,6 +1,7 @@
 PORTNAME=	cantera
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.2.0
+PORTREVISION=	1
 CATEGORIES=	science # chemistry physics
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -27,6 +28,8 @@ LIB_DEPENDS=	libfmt.so:devel/libfmt \
 
 USES=		compiler:c++17-lang eigen:3 gettext-runtime localbase python scons
 USE_LDCONFIG=	yes
+
+PLIST_SUB=	PYTHON_ABIVER=${PYTHON_VERSION:C/python3\\.([0-9]+)/\\1/}
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	Cantera
@@ -93,7 +96,7 @@ do-install-PYTHON-on:
 	# strip
 	@${STRIP_CMD} \
 		${STAGEDIR}${PYTHON_SITELIBDIR}/cantera/_cantera.cpython-${PYTHON_SUFFIX}.so \
-		${STAGEDIR}${PREFIX}/lib/libcantera_python3_11.so
+		${STAGEDIR}${PREFIX}/lib/libcantera_python3_${PYTHON_VERSION:C/python3\\.([0-9]+)/\\1/}.so
 	# remove empty dirs
 	@${RMDIR} \
 		${STAGEDIR}${PYTHON_SITELIBDIR}/cantera/__pycache__ \

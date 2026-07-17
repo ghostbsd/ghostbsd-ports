@@ -127,8 +127,8 @@ share/applications/fotocx.desktop
 %%DATADIR%%/data/slideshow-tone.oga
 %%DATADIR%%/data/translations/$ AI prompts
 %%DATADIR%%/data/translations/$ language codes
+%%DATADIR%%/data/translations/$ translation procedures
 %%DATADIR%%/data/translations/$ undo-redo translations
-%%DATADIR%%/data/translations/gui_da
 %%DATADIR%%/data/translations/gui_de
 %%DATADIR%%/data/translations/gui_el
 %%DATADIR%%/data/translations/gui_en
@@ -138,22 +138,26 @@ share/applications/fotocx.desktop
 %%DATADIR%%/data/translations/gui_hu
 %%DATADIR%%/data/translations/gui_it
 %%DATADIR%%/data/translations/gui_ja
-%%DATADIR%%/data/translations/gui_nl
-%%DATADIR%%/data/translations/gui_no
 %%DATADIR%%/data/translations/gui_pl
 %%DATADIR%%/data/translations/gui_pt
 %%DATADIR%%/data/translations/gui_ro
 %%DATADIR%%/data/translations/gui_ru
-%%DATADIR%%/data/translations/gui_sv
 %%DATADIR%%/data/translations/gui_tr
 %%DATADIR%%/data/translations/gui_zh
 %%DATADIR%%/data/translations/ug_de
+%%DATADIR%%/data/translations/ug_el
 %%DATADIR%%/data/translations/ug_en
 %%DATADIR%%/data/translations/ug_es
+%%DATADIR%%/data/translations/ug_fi
 %%DATADIR%%/data/translations/ug_fr
+%%DATADIR%%/data/translations/ug_hu
 %%DATADIR%%/data/translations/ug_it
+%%DATADIR%%/data/translations/ug_ja
 %%DATADIR%%/data/translations/ug_pl
 %%DATADIR%%/data/translations/ug_pt
+%%DATADIR%%/data/translations/ug_ro
+%%DATADIR%%/data/translations/ug_ru
+%%DATADIR%%/data/translations/ug_tr
 %%DATADIR%%/data/translations/ug_zh
 %%DATADIR%%/data/widgets.css
 %%DATADIR%%/data/worldcities.txt

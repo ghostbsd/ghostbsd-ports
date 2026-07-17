@@ -993,6 +993,7 @@
     SUBDIR += py-joserfc
     SUBDIR += py-jwcrypto
     SUBDIR += py-k5test
+    SUBDIR += py-kdcproxy
     SUBDIR += py-keepkey
     SUBDIR += py-kerberos
     SUBDIR += py-keyring
@@ -1083,6 +1084,7 @@
     SUBDIR += py-ropgadget
     SUBDIR += py-ropper
     SUBDIR += py-rsa
+    SUBDIR += py-rtls
     SUBDIR += py-safe
     SUBDIR += py-scp
     SUBDIR += py-scramp
@@ -1116,6 +1118,7 @@
     SUBDIR += py-txtorcon
     SUBDIR += py-uhashring
     SUBDIR += py-unicode-show
+    SUBDIR += py-utls
     SUBDIR += py-vici
     SUBDIR += py-virustotal-api
     SUBDIR += py-volatility3

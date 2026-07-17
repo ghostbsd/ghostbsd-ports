@@ -1,6 +1,6 @@
---- tools/winebuild/res32.c
+--- tools/winebuild/res32.c.orig	2025-11-06 09:54:15 UTC
 +++ tools/winebuild/res32.c
-@@ -44,8 +44,6 @@
+@@ -44,8 +44,6 @@ struct resource
  {
      struct string_id type;
      struct string_id name;
@@ -9,7 +9,7 @@
      const void      *data;
      unsigned int     data_size;
      unsigned int     data_offset;
-@@ -158,6 +156,28 @@
+@@ -158,6 +156,28 @@ static void put_string( const struct string_id *str )
      }
  }
  
@@ -38,16 +38,16 @@
  /* check the file header */
  /* all values must be zero except header size */
  static int check_header(void)
-@@ -179,7 +199,7 @@
+@@ -179,7 +199,7 @@ static int check_header(void)
  }
  
  /* load the next resource from the current file */
-+static void load_next_resource( DLLSPEC *spec )
 -static void load_next_resource( DLLSPEC *spec, const char *name )
++static void load_next_resource( DLLSPEC *spec )
  {
      unsigned int hdr_size;
      struct resource *res = add_resource( spec );
-@@ -189,9 +209,6 @@
+@@ -189,9 +209,6 @@ static void load_next_resource( DLLSPEC *spec, const c
      if (hdr_size & 3) fatal_error( "%s header size not aligned\n", input_buffer_filename );
      if (hdr_size < 32) fatal_error( "%s invalid header size %u\n", input_buffer_filename, hdr_size );
  
@@ -57,21 +57,21 @@
      res->data = input_buffer + input_buffer_pos - 2*sizeof(unsigned int) + hdr_size;
      if ((const unsigned char *)res->data < input_buffer ||
          (const unsigned char *)res->data >= input_buffer + input_buffer_size)
-@@ -220,7 +237,7 @@
+@@ -220,7 +237,7 @@ int load_res32_file( const char *name, DLLSPEC *spec )
  
      if ((ret = check_header()))
      {
-+        while (input_buffer_pos < input_buffer_size) load_next_resource( spec );
 -        while (input_buffer_pos < input_buffer_size) load_next_resource( spec, name );
++        while (input_buffer_pos < input_buffer_size) load_next_resource( spec );
      }
      return ret;
  }
-@@ -473,7 +490,7 @@
+@@ -473,7 +490,7 @@ void output_resources( DLLSPEC *spec )
      {
-         output( "\n\t.align %d\n", get_alignment(4) );
+         output( "\n\t.balign 4\n" );
          output( ".L__wine_spec_res_%d:\n", i );
-+        dump_res_data( res );
 -        output( "\t.incbin \"%s\",%d,%d\n", res->input_name, res->input_offset, res->data_size );
++        dump_res_data( res );
      }
  
      if (!is_pe())

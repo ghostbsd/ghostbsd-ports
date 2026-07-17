@@ -1,10 +1,10 @@
 PORTNAME=	graylog
-DISTVERSION=	7.1.3
+DISTVERSION=	7.1.5
 CATEGORIES=	sysutils java
 MASTER_SITES=	https://downloads.graylog.org/releases/${PORTNAME}/ \
 		LOCAL/vvd
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	vvd@FreeBSD.org
 COMMENT=	Tool for centralized log collection
 WWW=		https://www.graylog.org/
 

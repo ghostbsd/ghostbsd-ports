@@ -1,4 +1,6 @@
-bin/bssl
+bin/aws-lc-bssl
+bin/aws-lc-c_rehash
+bin/aws-lc-openssl
 bin/c_rehash
 bin/openssl
 include/aws-lc/openssl/aead.h

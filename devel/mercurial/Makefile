@@ -1,5 +1,5 @@
 PORTNAME=	mercurial
-PORTVERSION=	7.1.2
+PORTVERSION=	7.2.3
 CATEGORIES=	devel python
 MASTER_SITES=	https://www.mercurial-scm.org/release/
 
@@ -59,9 +59,6 @@ PORTDOCS=	CONTRIBUTORS README.rst
 .if ${PYTHON_VER} != ${PYTHON_DEFAULT}
 PKGNAMEPREFIX=		${PYTHON_PKGNAMEPREFIX}
 .endif
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|setuptools>=64|setuptools|' ${WRKSRC}/pyproject.toml
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/*.1 ${STAGEDIR}${PREFIX}/share/man/man1/

@@ -1,5 +1,5 @@
-TIMESTAMP = 1771139824
-SHA256 (go/net-mgmt_thanos/thanos-v0.41.0/v0.41.0.mod) = 8b24db251c302de19fe0000df3200e8c811368b8cea8b2a5d4c9e4fc59e315bb
-SIZE (go/net-mgmt_thanos/thanos-v0.41.0/v0.41.0.mod) = 16824
-SHA256 (go/net-mgmt_thanos/thanos-v0.41.0/v0.41.0.zip) = 1353ce0f8b6b6792037894eed7b4cf5d14b0f27ff7fab32394dff66b0dcea373
-SIZE (go/net-mgmt_thanos/thanos-v0.41.0/v0.41.0.zip) = 30435339
+TIMESTAMP = 1783569220
+SHA256 (go/net-mgmt_thanos/thanos-v0.42.0/v0.42.0.mod) = 3f39278231afd0d161799d7346856ee27b1d9d5c1a61b48e10606091aa57d7ec
+SIZE (go/net-mgmt_thanos/thanos-v0.42.0/v0.42.0.mod) = 17279
+SHA256 (go/net-mgmt_thanos/thanos-v0.42.0/v0.42.0.zip) = 30392898f8439b94232bfe9d9d8caf2ad74579fdefece9f442653790d7bf847e
+SIZE (go/net-mgmt_thanos/thanos-v0.42.0/v0.42.0.zip) = 30525256

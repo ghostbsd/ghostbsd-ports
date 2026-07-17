@@ -1,6 +1,6 @@
---- Cargo.toml.orig	2025-09-06 09:23:21 UTC
+--- Cargo.toml.orig	2026-07-09 09:30:38 UTC
 +++ Cargo.toml
-@@ -138,7 +138,6 @@ git = ["git2"]
+@@ -140,7 +140,6 @@ git = ["git2"]
  [features]
  default = ["git"]
  git = ["git2"]

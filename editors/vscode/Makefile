@@ -2,10 +2,10 @@ PORTNAME=	vscode
 DISTVERSION=	${VSCODE_VERSION}
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:node_modules \
-		https://github.com/github/copilot-cli/releases/download/v${COPILOT_CLI_VER}/:copilot_cli
+		https://github.com/github/copilot-cli/releases/download/v${COPILOT_CLI_VERSION}/:copilot_cli
 DISTFILES=	vscode-node-modules-${DISTVERSION}${EXTRACT_SUFX}:node_modules \
 		vscode-marketplace-exts-${DISTVERSION}${EXTRACT_SUFX}:node_modules \
-		github-copilot-${COPILOT_CLI_VER}-linux-${ELECTRON_ARCH}.tgz:copilot_cli
+		github-copilot-${COPILOT_CLI_VERSION}-linux-${ELECTRON_ARCH}.tgz:copilot_cli
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	tagattie@FreeBSD.org
@@ -67,8 +67,7 @@ USES=		cargo desktop-file-utils display:test electron:42,build,test \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
-# See ${WRKSRC}/build/rspack/node_modules/@rspack/binding/package.json for rspack version
-GH_TUPLE=	web-infra-dev:rspack:v1.7.10:rspack/rspack
+GH_TUPLE=	web-infra-dev:rspack:v${RSPACK_VERSION}:rspack/rspack
 
 CARGO_CARGOTOML=${WRKSRC}/rspack/Cargo.toml
 CARGO_CARGOLOCK=${WRKSRC}/rspack/Cargo.lock
@@ -102,7 +101,6 @@ TEST_ENV=	${MAKE_ENV:C/TMPDIR=.*//} \
 		VSCODE_SKIP_PRELAUNCH=1
 
 UPSTREAM_ELECTRON_VER=	${ELECTRON_VER}
-COPILOT_CLI_VER=	1.0.65
 
 .include "Makefile.version"
 .include <bsd.port.pre.mk>
@@ -189,10 +187,12 @@ pre-build:
 	@for subdir in `${FIND} ${WRKSRC}/node_modules -type f -name binding.gyp -exec ${DIRNAME} {} ';'`; do \
 		${ECHO_MSG} "===>   Rebuilding native modules in $${subdir}"; \
 		cd $${subdir} && \
-		${SETENV} ${MAKE_ENV} \
-			npm_config_runtime=electron \
+		npm_env="npm_config_runtime=electron \
 			npm_config_target=${ELECTRON_VER} \
-			npm_config_nodedir=${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR}/node_headers \
+			npm_config_nodedir=${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR}/node_headers" && \
+		${SETENV} ${MAKE_ENV} $${npm_env} \
+			npm --userconfig=${WRKSRC}/.npmrc run install --if-present && \
+		${SETENV} ${MAKE_ENV} $${npm_env} \
 			node-gyp --userconfig=${WRKSRC}/.npmrc rebuild; \
 	done
 # rebuild native node modules in subdirectories
@@ -201,24 +201,30 @@ pre-build:
 			${ECHO_MSG} "===>   Rebuilding native modules in $${subdir}"; \
 			if [ "`${ECHO_CMD} $${subdir} | ${GREP} /build/`" ]; then \
 				cd $${subdir} && \
-				${SETENV} ${MAKE_ENV} \
-					npm_config_runtime=node \
+				npm_env="npm_config_runtime=node \
 					npm_config_target=${NODEJS_PORTVERSION} \
-					npm_config_nodedir=${LOCALBASE} \
+					npm_config_nodedir=${LOCALBASE}" && \
+				${SETENV} ${MAKE_ENV} $${npm_env} \
+					npm --userconfig=${WRKSRC}/build/.npmrc run install --if-present && \
+				${SETENV} ${MAKE_ENV} $${npm_env} \
 					node-gyp --userconfig=${WRKSRC}/build/.npmrc rebuild; \
 			elif [ "`${ECHO_CMD} $${subdir} | ${GREP} /remote/`" ]; then \
 				cd $${subdir} && \
-				${SETENV} ${MAKE_ENV} \
-					npm_config_runtime=node \
+				npm_env="npm_config_runtime=node \
 					npm_config_target=${NODEJS_PORTVERSION} \
-					npm_config_nodedir=${LOCALBASE} \
+					npm_config_nodedir=${LOCALBASE}" && \
+				${SETENV} ${MAKE_ENV} $${npm_env} \
+					npm --userconfig=${WRKSRC}/remote/.npmrc run install --if-present && \
+				${SETENV} ${MAKE_ENV} $${npm_env} \
 					node-gyp --userconfig=${WRKSRC}/remote/.npmrc rebuild; \
 			else \
 				cd $${subdir} && \
-				${SETENV} ${MAKE_ENV} \
-					npm_config_runtime=electron \
+				npm_env="npm_config_runtime=electron \
 					npm_config_target=${ELECTRON_VER} \
-					npm_config_nodedir=${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR}/node_headers \
+					npm_config_nodedir=${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR}/node_headers" && \
+				${SETENV} ${MAKE_ENV} $${npm_env} \
+					npm --userconfig=${WRKSRC}/.npmrc run install --if-present && \
+				${SETENV} ${MAKE_ENV} $${npm_env} \
 					node-gyp --userconfig=${WRKSRC}/.npmrc rebuild; \
 			fi; \
 		done; \
@@ -254,15 +260,12 @@ do-build:
 	@${FIND} ${WRKSRC} -type f \( -name '*.bak' -o -name '*.orig' -o -name '*~' \) -delete
 # build and package vscode
 	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} \
-		npm_config_runtime=electron \
+	npm_env="npm_config_runtime=electron \
 		npm_config_target=${ELECTRON_VER} \
-		npm_config_nodedir=${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR}/node_headers \
+		npm_config_nodedir=${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR}/node_headers" && \
+	${SETENV} ${MAKE_ENV} $${npm_env} \
 		npm --userconfig=${WRKSRC}/.npmrc run compile && \
-	${SETENV} ${MAKE_ENV} \
-		npm_config_runtime=electron \
-		npm_config_target=${ELECTRON_VER} \
-		npm_config_nodedir=${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR}/node_headers \
+	${SETENV} ${MAKE_ENV} $${npm_env} \
 		npm --userconfig=${WRKSRC}/.npmrc run gulp vscode-linux-${ELECTRON_ARCH}-min
 # move marketplace extensions
 	@${MV} ${WRKDIR}/builtInExtensions/* ${WRKDIR}/VSCode-linux-${ELECTRON_ARCH}/resources/app/extensions

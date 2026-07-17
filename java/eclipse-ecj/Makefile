@@ -1,6 +1,6 @@
 PORTNAME=	ecj
 PORTVERSION=	4.4.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	java devel
 MASTER_SITES=	http://download.eclipse.org/eclipse/downloads/drops4/R-${PORTVERSION}-${DROPDATE}/
 PKGNAMEPREFIX=	eclipse-
@@ -12,6 +12,9 @@ COMMENT=	Eclipse Java Compiler
 WWW=		https://www.eclipse.org/
 
 LICENSE=	EPL
+
+DEPRECATED=	No maintainer, last update was 2015, does not build with Java 11, only usage in the ports tree (math/scilab) was just deprecated. Mail the maintainer if you use this.
+EXPIRATION_DATE=	2026-11-09
 
 EXTRACT_CMD=	${TAR}
 EXTRACT_BEFORE_ARGS=	xf

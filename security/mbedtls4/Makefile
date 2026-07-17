@@ -1,15 +1,8 @@
 PORTNAME=	mbedtls
-DISTVERSION=	4.1.0
-PORTREVISION=	1
+DISTVERSION=	4.2.0
 CATEGORIES=	security devel
 MASTER_SITES=	https://github.com/Mbed-TLS/${PORTNAME}/releases/download/${DISTNAME}/
-PKGNAMESUFFIX=	4
-
-PATCH_SITES=	https://github.com/Mbed-TLS/${PORTNAME}/commit/
-PATCHFILES=	5fc28f401666f3ab3338168f6dcee71e6b468a4e.patch:-p1
-# Fix a TLS 1.2 client regression that caused valid ServerKeyExchange
-# signatures using rsa_pss_rsae_* to be rejected.
-# https://github.com/Mbed-TLS/mbedtls/issues/10668
+PKGNAMESUFFIX=	${DISTVERSION:R:R}
 
 MAINTAINER=	pkaipila@gmail.com
 COMMENT=	Embedded SSL/TLS and cryptography library
@@ -34,7 +27,7 @@ CMAKE_TESTING_JOBS=	1
 
 CONFLICTS_INSTALL=	mbedtls3
 
-PORTSCOUT=	limit:^${DISTVERSION:R:S/./\./g}\.
+PORTSCOUT=	limit:^${DISTVERSION:R:R:S/./\./g}\.
 
 PLIST_SUB=	DISTVERSION=${DISTVERSION}
 

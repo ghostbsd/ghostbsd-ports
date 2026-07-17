@@ -1866,6 +1866,8 @@ share/applications/emacsclient.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/track-changes.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/unsafep.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/unsafep.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/uuid.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/uuid.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/vtable.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/vtable.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/warnings.el.gz
@@ -1986,6 +1988,8 @@ share/applications/emacsclient.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/erc/erc-sasl.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/erc/erc-services.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/erc/erc-services.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/erc/erc-settings.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/erc/erc-settings.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/erc/erc-sound.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/erc/erc-sound.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/erc/erc-speedbar.el.gz

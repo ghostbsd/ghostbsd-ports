@@ -1,5 +1,5 @@
 PORTNAME=	fido2
-PORTVERSION=	2.2.0
+PORTVERSION=	2.2.1
 CATEGORIES=	security python
 MASTER_SITES=	PYPI \
 		https://github.com/Yubico/python-fido2/releases/download/${PORTVERSION}/

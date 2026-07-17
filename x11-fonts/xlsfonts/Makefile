@@ -1,5 +1,5 @@
 PORTNAME=	xlsfonts
-PORTVERSION=	1.0.8
+PORTVERSION=	1.0.9
 CATEGORIES=	x11-fonts
 
 MAINTAINER=	x11@FreeBSD.org
@@ -13,6 +13,5 @@ USES=		tar:xz xorg xorg-cat:app
 USE_XORG=	x11
 
 PLIST_FILES=	bin/xlsfonts share/man/man1/xlsfonts.1.gz
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 
 .include <bsd.port.mk>

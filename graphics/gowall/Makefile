@@ -1,7 +1,7 @@
 PORTNAME=	gowall
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 
 # Pull the patches that aren't upstreamed yet from my own fork
@@ -31,6 +31,8 @@ TESTING_UNSAFE=	yes
 PLIST_FILES=	bin/${PORTNAME}
 
 OPTIONS_DEFAULT=		ONNX PNGQUANT PREVIEW UPSCALE
+# misc/onnxruntime broken on i386
+OPTIONS_EXCLUDE_i386=		ONNX
 OPTIONS_GROUP=			COMPRESSION FEATURES OCR
 OPTIONS_GROUP_COMPRESSION=	PNGQUANT
 OPTIONS_GROUP_FEATURES=		ONNX PREVIEW UPSCALE
@@ -55,7 +57,7 @@ post-patch:
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == "i386"
+.if ${ARCH} == "i386" || ${ARCH:Marmv?}
 EXTRA_PATCHES=	${PATCHDIR}/i386/extra-patch-vendor_github.com_gen2brain_go-fitz_fitz__cgo.go
 .endif
 

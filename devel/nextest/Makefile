@@ -1,6 +1,6 @@
 PORTNAME=	nextest
 DISTVERSIONPREFIX=	cargo-nextest-
-DISTVERSION=	0.9.138
+DISTVERSION=	0.9.140
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -56,18 +56,18 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		bit-vec-0.6.3 \
 		bit-vec-0.8.0 \
 		bitflags-1.3.2 \
-		bitflags-2.11.1 \
+		bitflags-2.13.0 \
 		block-buffer-0.10.4 \
 		borrow-or-share-0.2.4 \
 		borsh-1.5.7 \
-		bstr-1.12.1 \
+		bstr-1.12.3 \
 		bumpalo-3.19.0 \
 		bytecount-0.6.9 \
 		bytemuck-1.24.0 \
 		byteorder-1.5.0 \
-		bytes-1.11.1 \
+		bytes-1.12.0 \
 		bytesize-2.3.1 \
-		camino-1.2.2 \
+		camino-1.2.4 \
 		camino-tempfile-1.4.1 \
 		camino-tempfile-ext-0.3.3 \
 		cargo-platform-0.3.0 \
@@ -77,6 +77,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		cfg-if-1.0.4 \
 		cfg_aliases-0.2.1 \
 		chacha20-0.10.0 \
+		char_index-0.1.5 \
 		chrono-0.4.45 \
 		clap-4.6.1 \
 		clap_builder-4.6.0 \
@@ -87,7 +88,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		color-spantrace-0.3.0 \
 		colorchoice-1.0.3 \
 		combine-4.6.7 \
-		config-0.15.23 \
+		config-0.15.25 \
 		console-0.16.3 \
 		console-api-0.9.0 \
 		console-subscriber-0.5.0 \
@@ -213,9 +214,10 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		iana-time-zone-0.1.63 \
 		iana-time-zone-haiku-0.1.2 \
 		id-arena-2.3.0 \
-		iddqd-0.4.4 \
+		iddqd-0.4.5 \
 		idna-1.1.0 \
 		idna_adapter-1.0.0 \
+		if_chain-1.0.3 \
 		ignore-0.4.23 \
 		include_dir-0.7.4 \
 		include_dir_macros-0.7.4 \
@@ -223,11 +225,12 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		indexmap-2.14.0 \
 		indicatif-0.18.4 \
 		indoc-2.0.7 \
-		insta-1.47.2 \
+		insta-1.48.0 \
 		ipnet-2.12.0 \
 		is_ci-1.2.0 \
 		is_terminal_polyfill-1.70.1 \
 		itertools-0.14.0 \
+		itertools-0.15.0 \
 		itoa-1.0.17 \
 		jni-0.22.4 \
 		jni-macros-0.22.4 \
@@ -235,7 +238,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		jni-sys-macros-0.4.1 \
 		jobserver-0.1.33 \
 		js-sys-0.3.91 \
-		jsonschema-0.46.5 \
+		jsonschema-0.46.8 \
 		lab-0.11.0 \
 		lazy_static-1.5.0 \
 		leb128fmt-0.1.0 \
@@ -270,6 +273,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		newtype-uuid-1.3.2 \
 		nix-0.29.0 \
 		nix-0.31.3 \
+		nohash-hasher-0.2.0 \
 		nom-7.1.3 \
 		num-0.4.3 \
 		num-bigint-0.4.6 \
@@ -329,10 +333,11 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		prost-0.14.1 \
 		prost-derive-0.14.1 \
 		prost-types-0.14.1 \
-		pulldown-cmark-0.13.3 \
+		pulldown-cmark-0.13.4 \
 		quick-error-1.2.3 \
-		quick-junit-0.6.0 \
+		quick-junit-0.6.1 \
 		quick-xml-0.38.4 \
+		quick-xml-0.41.0 \
 		quote-1.0.45 \
 		r-efi-5.3.0 \
 		r-efi-6.0.0 \
@@ -350,7 +355,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		redox_users-0.5.2 \
 		ref-cast-1.0.25 \
 		ref-cast-impl-1.0.25 \
-		referencing-0.46.5 \
+		referencing-0.46.8 \
 		regex-1.12.4 \
 		regex-automata-0.4.14 \
 		regex-syntax-0.8.11 \
@@ -361,7 +366,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		rustc_version-0.4.1 \
 		rustix-0.38.44 \
 		rustix-1.0.7 \
-		rustls-0.23.40 \
+		rustls-0.23.41 \
 		rustls-native-certs-0.8.3 \
 		rustls-pki-types-1.12.0 \
 		rustls-platform-verifier-0.7.0 \
@@ -421,18 +426,19 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		structmeta-derive-0.3.0 \
 		subtle-2.6.1 \
 		supports-color-3.0.2 \
-		supports-hyperlinks-3.1.0 \
+		supports-hyperlinks-3.2.0 \
 		supports-unicode-3.0.0 \
 		swrite-0.1.0 \
 		syn-1.0.109 \
 		syn-2.0.117 \
 		sync_wrapper-1.0.2 \
+		synoptic-2.2.9 \
 		tar-0.4.46 \
 		target-lexicon-0.13.3 \
 		target-spec-3.6.0 \
 		target-spec-miette-0.4.8 \
 		tempfile-3.20.0 \
-		terminal_size-0.4.3 \
+		terminal_size-0.4.4 \
 		terminfo-0.9.0 \
 		termios-0.3.3 \
 		termwiz-0.23.3 \

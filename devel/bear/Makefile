@@ -1,5 +1,5 @@
 PORTNAME=	bear
-DISTVERSION=	4.1.4
+DISTVERSION=	4.1.5
 CATEGORIES=	devel
 
 MAINTAINER=	aokblast@FreeBSD.org
@@ -22,11 +22,11 @@ do-install:
 
 do-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/CLAUDE.md ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/CODE_OF_CONDUCT.md ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/CONTRIBUTING.md ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/INSTALL.md ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/RELEASE.md ${STAGEDIR}${DOCSDIR}
 
 post-install:
 .for l in libexec/bear/bin/bear-driver libexec/bear/bin/bear-wrapper \

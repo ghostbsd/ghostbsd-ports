@@ -1,10 +1,10 @@
 bin/ssh-audit
-%%PYTHON_SITELIBDIR%%/ssh_audit-3.3.0.dist-info/LICENSE
-%%PYTHON_SITELIBDIR%%/ssh_audit-3.3.0.dist-info/METADATA
-%%PYTHON_SITELIBDIR%%/ssh_audit-3.3.0.dist-info/RECORD
-%%PYTHON_SITELIBDIR%%/ssh_audit-3.3.0.dist-info/WHEEL
-%%PYTHON_SITELIBDIR%%/ssh_audit-3.3.0.dist-info/entry_points.txt
-%%PYTHON_SITELIBDIR%%/ssh_audit-3.3.0.dist-info/top_level.txt
+%%PYTHON_SITELIBDIR%%/ssh_audit-3.9.0.dist-info/LICENSE
+%%PYTHON_SITELIBDIR%%/ssh_audit-3.9.0.dist-info/METADATA
+%%PYTHON_SITELIBDIR%%/ssh_audit-3.9.0.dist-info/RECORD
+%%PYTHON_SITELIBDIR%%/ssh_audit-3.9.0.dist-info/WHEEL
+%%PYTHON_SITELIBDIR%%/ssh_audit-3.9.0.dist-info/entry_points.txt
+%%PYTHON_SITELIBDIR%%/ssh_audit-3.9.0.dist-info/top_level.txt
 %%PYTHON_SITELIBDIR%%/ssh_audit/__init__.py
 %%PYTHON_SITELIBDIR%%/ssh_audit/__main__.py
 %%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/__init__%%PYTHON_TAG%%.opt-1.pyc
@@ -31,6 +31,8 @@ bin/ssh-audit
 %%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/gextest%%PYTHON_TAG%%.pyc
 %%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/globals%%PYTHON_TAG%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/globals%%PYTHON_TAG%%.pyc
+%%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/hardening_guides%%PYTHON_TAG%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/hardening_guides%%PYTHON_TAG%%.pyc
 %%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/hostkeytest%%PYTHON_TAG%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/hostkeytest%%PYTHON_TAG%%.pyc
 %%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/kexdh%%PYTHON_TAG%%.opt-1.pyc
@@ -47,14 +49,6 @@ bin/ssh-audit
 %%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/readbuf%%PYTHON_TAG%%.pyc
 %%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/software%%PYTHON_TAG%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/software%%PYTHON_TAG%%.pyc
-%%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/ssh1%%PYTHON_TAG%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/ssh1%%PYTHON_TAG%%.pyc
-%%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/ssh1_crc32%%PYTHON_TAG%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/ssh1_crc32%%PYTHON_TAG%%.pyc
-%%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/ssh1_kexdb%%PYTHON_TAG%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/ssh1_kexdb%%PYTHON_TAG%%.pyc
-%%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/ssh1_publickeymessage%%PYTHON_TAG%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/ssh1_publickeymessage%%PYTHON_TAG%%.pyc
 %%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/ssh2_kex%%PYTHON_TAG%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/ssh2_kex%%PYTHON_TAG%%.pyc
 %%PYTHON_SITELIBDIR%%/ssh_audit/__pycache__/ssh2_kexdb%%PYTHON_TAG%%.opt-1.pyc
@@ -81,6 +75,7 @@ bin/ssh-audit
 %%PYTHON_SITELIBDIR%%/ssh_audit/fingerprint.py
 %%PYTHON_SITELIBDIR%%/ssh_audit/gextest.py
 %%PYTHON_SITELIBDIR%%/ssh_audit/globals.py
+%%PYTHON_SITELIBDIR%%/ssh_audit/hardening_guides.py
 %%PYTHON_SITELIBDIR%%/ssh_audit/hostkeytest.py
 %%PYTHON_SITELIBDIR%%/ssh_audit/kexdh.py
 %%PYTHON_SITELIBDIR%%/ssh_audit/outputbuffer.py
@@ -89,10 +84,6 @@ bin/ssh-audit
 %%PYTHON_SITELIBDIR%%/ssh_audit/protocol.py
 %%PYTHON_SITELIBDIR%%/ssh_audit/readbuf.py
 %%PYTHON_SITELIBDIR%%/ssh_audit/software.py
-%%PYTHON_SITELIBDIR%%/ssh_audit/ssh1.py
-%%PYTHON_SITELIBDIR%%/ssh_audit/ssh1_crc32.py
-%%PYTHON_SITELIBDIR%%/ssh_audit/ssh1_kexdb.py
-%%PYTHON_SITELIBDIR%%/ssh_audit/ssh1_publickeymessage.py
 %%PYTHON_SITELIBDIR%%/ssh_audit/ssh2_kex.py
 %%PYTHON_SITELIBDIR%%/ssh_audit/ssh2_kexdb.py
 %%PYTHON_SITELIBDIR%%/ssh_audit/ssh2_kexparty.py
@@ -101,3 +92,4 @@ bin/ssh-audit
 %%PYTHON_SITELIBDIR%%/ssh_audit/timeframe.py
 %%PYTHON_SITELIBDIR%%/ssh_audit/utils.py
 %%PYTHON_SITELIBDIR%%/ssh_audit/writebuf.py
+share/man/man1/ssh-audit.1.gz

@@ -1,5 +1,5 @@
 PORTNAME=	qemu
-DISTVERSION=	11.0.1
+DISTVERSION=	11.0.2
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 DIST_SUBDIR=	qemu/${PORTVERSION}

@@ -1,5 +1,5 @@
 PORTNAME=	ruff
-DISTVERSION=	0.15.20
+DISTVERSION=	0.15.21
 CATEGORIES=	devel python
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -19,10 +19,12 @@ USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	astral-sh
 
-RUSTFLAGS=	${ARCH:S/i386/YES/:C/^[a-z].*//:S/YES/-C target-feature=+sse,+sse2/} # add sse sse2 target-features only on i386
+# add sse sse2 target-features only on i386
+RUSTFLAGS=	${ARCH:S/i386/YES/:C/^[a-z].*//:S/YES/-C target-feature=+sse,+sse2/}
 
 #CARGO_BUILD_ARGS=	--package=file://${WRKSRC}/crates/ruff_cli
 CARGO_INSTALL_PATH=	crates/ruff_cli
+CARGO_INSTALL=	no
 
 PROGS=		ruff \
 		ruff_dev \
@@ -35,6 +37,14 @@ PLIST_FILES=	${PROGS:S/^/bin\//} \
 		share/zsh/site-functions/_ruff
 
 PORTSCOUT=	limit:^.*0\.0\.2[56789].* # don't report before 0.0.25x+
+
+.include <bsd.port.pre.mk>
+
+# rustc runs out of address space during LTO otherwise
+.if ${ARCH:Marmv?}
+LTO_UNSAFE=	yes
+CARGO_ENV+=	CARGO_PROFILE_RELEASE_LTO=false
+.endif
 
 do-install:
 	# workaround for error: found a virtual manifest at `xx` instead of a package manifest
@@ -53,4 +63,4 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions
 	${WRKDIR}/target/release/${PORTNAME} generate-shell-completion zsh > ${STAGEDIR}${PREFIX}/share/zsh/site-functions/_${PORTNAME}
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

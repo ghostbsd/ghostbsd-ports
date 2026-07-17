@@ -1,6 +1,6 @@
 PORTNAME=	sphinx_material
 DISTVERSION=	0.0.36
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	textproc python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +12,7 @@ WWW=		https://bashtage.github.io/sphinx-material/
 LICENSE=	MIT
 
 # See https://github.com/bashtage/sphinx-material/issues/141
-DEPRECATED=	No longer maintained and does not work with Python 3.12
+DEPRECATED=	No longer maintained
 
 BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
@@ -28,10 +28,6 @@ PY_DEPENDS=	sphinx-build:textproc/py-sphinx@${PY_FLAVOR}	\
 USES=		python
 USE_PYTHON=	distutils
 
-.include <bsd.port.pre.mk>
+NO_ARCH=	yes
 
-.if ${PYTHON_REL} >= 31200
-BROKEN=		AttributeError: module 'configparser' has no attribute 'SafeConfigParser'.
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

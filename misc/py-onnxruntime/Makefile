@@ -17,6 +17,7 @@ BUILD_DEPENDS=	cmake:devel/cmake-core \
 		${PYTHON_PKGNAMEPREFIX}packaging>=0:devel/py-packaging@${PY_FLAVOR}
 
 USES=		compiler:c++17-lang python
+USE_PYTHON=	pep517
 
 # Build using the official build.py script
 do-build:

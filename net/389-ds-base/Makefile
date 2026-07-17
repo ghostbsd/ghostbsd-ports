@@ -1,6 +1,6 @@
 PORTNAME=	389-ds-base
 DISTVERSION=	3.2.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/389ds/389-ds-base/releases/download/${PORTNAME}-${DISTVERSION}/
 
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/crypt.h:security/libxcrypt \
 LIB_DEPENDS=	libcrack.so:security/cracklib \
 		libicui18n.so:devel/icu \
 		libjson-c.so:devel/json-c \
-		liblmdb.so:databases/lmdb \
+		liblmdb.so:databases/lmdb0 \
 		libnetsnmp.so:net-mgmt/net-snmp \
 		libnspr4.so:devel/nspr \
 		libnss3.so:security/nss \

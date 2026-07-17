@@ -1,6 +1,7 @@
 PORTNAME=	verilator
 DISTVERSIONPREFIX=	v
 DISTVERSION=	5.050
+PORTREVISION=	1
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -18,8 +19,9 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/ar:devel/binutils \
 		bash:shells/bash \
 		help2man:misc/help2man
 LIB_DEPENDS=	libsystemc.so:devel/systemc # systemc is only added to share/verilator/include/verilated.mk for use during verilation, verilator's own binaries aren't linked with systemc
-RUN_DEPENDS=	${LOCALBASE}/bin/ar:devel/binutils \
-		gmake:devel/gmake # verilator runs gmake for the --hierarchical option when the 'gmake' method is chosen
+RUN_DEPENDS=	${LOCALBASE}/bin/ar:devel/binutils
+RUN_REPENDS+=	gmake:devel/gmake # verilator runs gmake for the --hierarchical option when the 'gmake' method is chosen
+RUN_DEPENDS+=	liblz4>0:archivers/liblz4 # run-time error if the lz4 library is missing
 
 USES=		bison compiler:c++17-lang gmake localbase:ldflags perl5 \
 		python:build,run,test shebangfix tar:tgz

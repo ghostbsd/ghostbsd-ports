@@ -1,6 +1,6 @@
 PORTNAME=	moon
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.3.5
+DISTVERSION=	2.4.3
 CATEGORIES=	devel
 
 MAINTAINER=	olivier@FreeBSD.org
@@ -11,11 +11,11 @@ WWW=		https://moonrepo.dev/ \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BUILD_DEPENDS=	protoc:devel/protobuf
+
 USES=		cargo llvm ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	moonrepo
-
-BUILD_DEPENDS=	protoc:devel/protobuf
 
 CARGO_INSTALL_PATH=	crates/cli
 

@@ -78,6 +78,7 @@ libexec/git-core/git-fmt-merge-msg
 libexec/git-core/git-for-each-ref
 libexec/git-core/git-for-each-repo
 libexec/git-core/git-format-patch
+libexec/git-core/git-format-rev
 libexec/git-core/git-fsck
 libexec/git-core/git-fsck-objects
 libexec/git-core/git-fsmonitor--daemon
@@ -187,6 +188,7 @@ libexec/git-core/git-update-ref
 libexec/git-core/git-update-server-info
 libexec/git-core/git-upload-archive
 libexec/git-core/git-upload-pack
+libexec/git-core/git-url-parse
 libexec/git-core/git-var
 libexec/git-core/git-verify-commit
 libexec/git-core/git-verify-pack
@@ -273,6 +275,7 @@ share/man/man1/git-fmt-merge-msg.1.gz
 share/man/man1/git-for-each-ref.1.gz
 share/man/man1/git-for-each-repo.1.gz
 share/man/man1/git-format-patch.1.gz
+share/man/man1/git-format-rev.1.gz
 share/man/man1/git-fsck-objects.1.gz
 share/man/man1/git-fsck.1.gz
 share/man/man1/git-fsmonitor--daemon.1.gz
@@ -372,6 +375,7 @@ share/man/man1/git-update-ref.1.gz
 share/man/man1/git-update-server-info.1.gz
 share/man/man1/git-upload-archive.1.gz
 share/man/man1/git-upload-pack.1.gz
+share/man/man1/git-url-parse.1.gz
 share/man/man1/git-var.1.gz
 share/man/man1/git-verify-commit.1.gz
 share/man/man1/git-verify-pack.1.gz
@@ -931,6 +935,8 @@ share/man/man7/gitworkflows.7.gz
 %%DOCS%%%%DOCSDIR%%/RelNotes/2.52.0.adoc
 %%DOCS%%%%DOCSDIR%%/RelNotes/2.53.0.adoc
 %%DOCS%%%%DOCSDIR%%/RelNotes/2.54.0.adoc
+%%DOCS%%%%DOCSDIR%%/RelNotes/2.54.1.adoc
+%%DOCS%%%%DOCSDIR%%/RelNotes/2.55.0.adoc
 %%DOCS%%%%DOCSDIR%%/RelNotes/2.5.0.adoc
 %%DOCS%%%%DOCSDIR%%/RelNotes/2.5.1.adoc
 %%DOCS%%%%DOCSDIR%%/RelNotes/2.5.2.adoc
@@ -1112,6 +1118,8 @@ share/man/man7/gitworkflows.7.gz
 %%DOCS%%%%DOCSDIR%%/git-for-each-repo.html
 %%DOCS%%%%DOCSDIR%%/git-format-patch.adoc
 %%DOCS%%%%DOCSDIR%%/git-format-patch.html
+%%DOCS%%%%DOCSDIR%%/git-format-rev.adoc
+%%DOCS%%%%DOCSDIR%%/git-format-rev.html
 %%DOCS%%%%DOCSDIR%%/git-fsck-objects.adoc
 %%DOCS%%%%DOCSDIR%%/git-fsck-objects.html
 %%DOCS%%%%DOCSDIR%%/git-fsmonitor--daemon.adoc
@@ -1318,6 +1326,8 @@ share/man/man7/gitworkflows.7.gz
 %%DOCS%%%%DOCSDIR%%/git-upload-archive.html
 %%DOCS%%%%DOCSDIR%%/git-upload-pack.adoc
 %%DOCS%%%%DOCSDIR%%/git-upload-pack.html
+%%DOCS%%%%DOCSDIR%%/git-url-parse.adoc
+%%DOCS%%%%DOCSDIR%%/git-url-parse.html
 %%DOCS%%%%DOCSDIR%%/git-var.adoc
 %%DOCS%%%%DOCSDIR%%/git-var.html
 %%DOCS%%%%DOCSDIR%%/git-verify-commit.adoc

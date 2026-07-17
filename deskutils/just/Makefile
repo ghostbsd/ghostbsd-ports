@@ -1,5 +1,5 @@
 PORTNAME=	just
-DISTVERSION=	1.55.1
+DISTVERSION=	1.56.0
 CATEGORIES=	deskutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -24,7 +24,7 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		anstyle-query-1.1.5 \
 		anstyle-wincon-3.0.11 \
 		arrayref-0.3.9 \
-		arrayvec-0.7.7 \
+		arrayvec-0.7.8 \
 		autocfg-1.5.1 \
 		bitflags-2.13.0 \
 		blake3-1.8.5 \
@@ -34,14 +34,14 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		bumpalo-3.20.3 \
 		bytecount-0.6.9 \
 		camino-1.2.4 \
-		cc-1.2.65 \
+		cc-1.2.66 \
 		cfg-if-1.0.4 \
 		cfg_aliases-0.2.1 \
 		chacha20-0.10.1 \
 		chrono-0.4.45 \
 		clap-4.6.1 \
 		clap_builder-4.6.0 \
-		clap_complete-4.6.5 \
+		clap_complete-4.6.7 \
 		clap_derive-4.6.1 \
 		clap_lex-1.1.0 \
 		clap_mangen-0.3.0 \
@@ -50,9 +50,9 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		constant_time_eq-0.4.2 \
 		core-foundation-sys-0.8.7 \
 		cpufeatures-0.3.0 \
-		crossbeam-deque-0.8.6 \
-		crossbeam-epoch-0.9.18 \
-		crossbeam-utils-0.8.21 \
+		crossbeam-deque-0.8.7 \
+		crossbeam-epoch-0.9.20 \
+		crossbeam-utils-0.8.22 \
 		crypto-common-0.2.2 \
 		ctrlc-3.5.2 \
 		diff-0.1.13 \
@@ -85,12 +85,11 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		is_terminal_polyfill-1.70.2 \
 		itoa-1.0.18 \
 		js-sys-0.3.103 \
-		lexiclean-0.0.1 \
 		libc-0.2.186 \
-		libredox-0.1.17 \
+		libredox-0.1.18 \
 		linux-raw-sys-0.12.1 \
 		log-0.4.33 \
-		memchr-2.8.2 \
+		memchr-2.8.3 \
 		memmap2-0.9.11 \
 		nix-0.31.3 \
 		nu-ansi-term-0.50.3 \
@@ -113,16 +112,16 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		pulldown-cmark-to-cmark-10.0.4 \
 		quote-1.0.46 \
 		r-efi-6.0.0 \
-		rand-0.10.1 \
+		rand-0.10.2 \
 		rand_core-0.10.1 \
 		rayon-core-1.13.0 \
 		redox_users-0.5.2 \
-		regex-1.12.4 \
-		regex-automata-0.4.14 \
+		regex-1.13.0 \
+		regex-automata-0.4.15 \
 		regex-syntax-0.8.11 \
 		roff-1.1.1 \
 		rustix-1.1.4 \
-		rustversion-1.0.22 \
+		rustversion-1.0.23 \
 		ryu-1.0.23 \
 		semver-1.0.28 \
 		serde-1.0.228 \
@@ -132,7 +131,6 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		serde_yaml-0.9.34+deprecated \
 		sha2-0.11.0 \
 		shellexpand-3.1.2 \
-		shlex-1.3.0 \
 		shlex-2.0.1 \
 		similar-3.1.1 \
 		slab-0.4.12 \

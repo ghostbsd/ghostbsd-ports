@@ -1,0 +1,9 @@
+--- pyproject.toml.orig	2026-07-10 16:54:24 UTC
++++ pyproject.toml
+@@ -1,5 +1,5 @@
+ [build-system]
+ # setuptools>=77 is required for the SPDX ``license`` expression used in
+ # setup.py (see PEP 639).
+-requires = ["setuptools>=77"]
++requires = ["setuptools>=61"]
+ build-backend = "setuptools.build_meta"

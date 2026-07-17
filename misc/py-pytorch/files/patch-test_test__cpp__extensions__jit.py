@@ -1,6 +1,6 @@
---- test/test_cpp_extensions_jit.py.orig	2026-04-18 16:52:06 UTC
+--- test/test_cpp_extensions_jit.py.orig	2026-07-08 17:44:28 UTC
 +++ test/test_cpp_extensions_jit.py
-@@ -733,7 +733,8 @@ class TestCppExtensionJIT(common.TestCase):
+@@ -774,7 +774,8 @@ class TestCppExtensionJIT(common.TestCase):
          self.assertEqual(module.f(), 789)
  
      @unittest.skipIf(

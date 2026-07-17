@@ -1,6 +1,6 @@
 PORTNAME=	clickhouse
 DISTVERSIONPREFIX=	v
-DISTVERSION=	26.2.12.4
+DISTVERSION=	26.4.1.1141
 DISTVERSIONSUFFIX=-stable
 CATEGORIES=	databases
 DIST_SUBDIR=	${PORTNAME}
@@ -38,9 +38,7 @@ GH_TUPLE=
 USE_PERL5=	build
 USE_RC_SUBR=	${PORTNAME}
 
-SHEBANG_FILES=	tests/clickhouse-test \
-		tests/queries/0_stateless/02010_lc_native.python \
-		tests/queries/0_stateless/02203_shebang
+SHEBANG_FILES=	tests/clickhouse-test
 SHEBANG_GLOB=	*.expect *.py *.python *.sh
 SHEBANG_LANG=	clickhouse-local expect
 clickhouse-local_OLD_CMD=	/usr/bin/clickhouse-local

@@ -34,6 +34,7 @@
     SUBDIR += dnsdist
     SUBDIR += dnsenum
     SUBDIR += dnsflood
+    SUBDIR += dnsglobe
     SUBDIR += dnshistory
     SUBDIR += dnsjava
     SUBDIR += dnsjit

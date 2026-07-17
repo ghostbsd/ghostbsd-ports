@@ -1,6 +1,6 @@
 PORTNAME=	codex
 DISTVERSIONPREFIX=	rust-v
-DISTVERSION=	0.142.4
+DISTVERSION=	0.144.1
 CATEGORIES=	misc devel
 
 MAINTAINER=	tagattie@FreeBSD.org
@@ -146,6 +146,7 @@ post-patch:
 		${BUILD_WRKSRC}/core/tests/suite/network_approval.rs \
 		${BUILD_WRKSRC}/core/tests/suite/openai_file_mcp.rs \
 		${BUILD_WRKSRC}/core/tests/suite/subagent_notifications.rs \
+		${BUILD_WRKSRC}/core/tests/suite/token_budget.rs \
 		${BUILD_WRKSRC}/core/tests/suite/tools.rs \
 		${BUILD_WRKSRC}/core/tests/suite/unified_exec.rs \
 		${BUILD_WRKSRC}/exec-server/tests/exec_process.rs \

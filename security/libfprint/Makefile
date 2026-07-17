@@ -1,6 +1,7 @@
 PORTNAME=	libfprint
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.94.8
+DISTVERSION=	1.94.10
+PORTREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	danfe@FreeBSD.org
@@ -11,10 +12,9 @@ LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libgusb.so:devel/libgusb \
-		libnss3.so:security/nss \
 		libpixman-1.so:x11/pixman
 
-USES=		gnome meson pkgconfig python:env shebangfix
+USES=		gnome meson pkgconfig python:env shebangfix ssl
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.freedesktop.org
 USE_GNOME=	glib20

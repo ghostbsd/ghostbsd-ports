@@ -1,5 +1,5 @@
 PORTNAME=	librnd
-DISTVERSION=	4.4.0
+DISTVERSION=	4.5.0
 CATEGORIES=	cad
 MASTER_SITES=	http://www.repo.hu/projects/${PORTNAME}/releases/
 
@@ -31,7 +31,7 @@ BINARY_ALIAS=	make=${MAKE_CMD}
 PLIST_SUB=	SOVERSION=${DISTVERSION}
 
 OPTIONS_DEFINE=		DOCS GD GTK2 GTK2GL GTK4 MOTIF STROKE WGET
-OPTIONS_DEFAULT=	GD GTK2 GTK2GL STROKE WGET
+OPTIONS_DEFAULT=	GD GTK2 GTK2GL GTK4 MOTIF STROKE WGET
 OPTIONS_SUB=		yes
 
 GTK2GL_DESC=		GTK 2 GUI with OpenGL support
@@ -62,10 +62,10 @@ GTK4_USES=		gl gnome
 GTK4_USE=		GL=gl,glu \
 			GNOME=cairo,gdkpixbuf,gtk40
 GTK4_CONFIGURE_OFF=	--disable-hid_gtk4_gl
-MOTIF_BROKEN=		Fails to build
 MOTIF_USES=		motif
 MOTIF_USE=		XORG=x11,xinerama,xrender,xt
 MOTIF_CONFIGURE_OFF=	--disable-hid_lesstif
+MOTIF_CFLAGS=		-Wno-error=incompatible-function-pointer-types
 STROKE_LIB_DEPENDS=	libstroke.so:devel/libstroke
 STROKE_CONFIGURE_OFF=	--disable-stroke
 WGET_RUN_DEPENDS=	wget:ftp/wget

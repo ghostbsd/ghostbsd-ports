@@ -1,12 +1,11 @@
 PORTNAME=	pixelmosh
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.2.2
-PORTREVISION=	2
+DISTVERSION=	4.2.3
 CATEGORIES=	graphics
 
 MAINTAINER=	slowdive@me.com
 COMMENT=	PNG corrupter
-WWW=		https://github.com/charlesrocket/pixelmosh
+WWW=		https://codeberg.org/charlesrocket/pixelmosh
 
 LICENSE=	MIT
 
@@ -31,7 +30,7 @@ PLIST_FILES+=	share/applications/org.hellbyte.pixelmosh.desktop \
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/share/org.hellbyte.pixelmosh.desktop \
-		${STAGEDIR}${PREFIX}/share/applications
+		${STAGEDIR}${DESKTOPDIR}
 	${INSTALL_DATA} ${WRKSRC}/share/org.hellbyte.pixelmosh.png \
 		${STAGEDIR}${PREFIX}/share/pixmaps/org.hellbyte.pixelmosh.png
 .endif

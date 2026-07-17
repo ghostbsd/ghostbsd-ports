@@ -27,6 +27,7 @@ include/aws/crt/crypto/HMAC.h
 include/aws/crt/crypto/Hash.h
 include/aws/crt/crypto/SecureRandom.h
 include/aws/crt/crypto/SymmetricCipher.h
+include/aws/crt/endpoints/BddEngine.h
 include/aws/crt/endpoints/RuleEngine.h
 include/aws/crt/http/HttpConnection.h
 include/aws/crt/http/HttpConnectionManager.h
@@ -47,6 +48,8 @@ include/aws/crt/mqtt/Mqtt5Types.h
 include/aws/crt/mqtt/MqttClient.h
 include/aws/crt/mqtt/MqttConnection.h
 include/aws/crt/mqtt/MqttTypes.h
+include/aws/crt/s3/S3.h
+include/aws/crt/s3/S3BufferTicket.h
 include/aws/iot/Mqtt5Client.h
 include/aws/iot/MqttClient.h
 include/aws/iot/MqttCommon.h

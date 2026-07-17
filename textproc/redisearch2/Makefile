@@ -1,6 +1,6 @@
 PORTNAME=	redisearch
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.10.5
+DISTVERSION=	2.10.6
 CATEGORIES=	textproc
 PKGNAMESUFFIX=	${DISTVERSION:R:R}
 
@@ -17,6 +17,9 @@ LICENSE_FILE_RSALv2=	${WRKSRC}/licenses/RSALv2.txt
 LICENSE_FILE_SSPLv1=	${WRKSRC}/licenses/SSPLv1.txt
 LICENSE_PERMS_RSALv2=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_PERMS_SSPLv1=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+
+NOT_FOR_ARCHS=	i386
+NOT_FOR_ARCHS_REASON=	requires 64-bit architecture
 
 LIB_DEPENDS=	libcpu_features.so:devel/cpu_features
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/optional.hpp:devel/boost-libs

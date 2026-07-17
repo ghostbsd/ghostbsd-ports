@@ -6,9 +6,11 @@ include/waffle-1/waffle_surfaceless_egl.h
 include/waffle-1/waffle_version.h
 include/waffle-1/waffle_wayland.h
 include/waffle-1/waffle_x11_egl.h
+lib/cmake/Waffle/WaffleConfig.cmake
+lib/cmake/Waffle/WaffleConfigVersion.cmake
 lib/libwaffle-1.so
 lib/libwaffle-1.so.0
-lib/libwaffle-1.so.0.8.1
+lib/libwaffle-1.so.0.8.3
 libdata/pkgconfig/waffle-1.pc
 share/bash-completion/completions/wflinfo
 share/zsh/site-functions/_wflinfo
@@ -55,6 +57,8 @@ share/zsh/site-functions/_wflinfo
 %%PORTDOCS%%%%DOCSDIR%%/release-notes/waffle-1.7.2.md
 %%PORTDOCS%%%%DOCSDIR%%/release-notes/waffle-1.8.0.md
 %%PORTDOCS%%%%DOCSDIR%%/release-notes/waffle-1.8.1.md
+%%PORTDOCS%%%%DOCSDIR%%/release-notes/waffle-1.8.2.md
+%%PORTDOCS%%%%DOCSDIR%%/release-notes/waffle-1.8.3.md
 %%MANPAGES%%share/man/man1/wflinfo.1.gz
 %%MANPAGES%%share/man/man3/waffle_attrib_list.3.gz
 %%MANPAGES%%share/man/man3/waffle_attrib_list_get.3.gz

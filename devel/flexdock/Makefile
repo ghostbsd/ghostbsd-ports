@@ -1,6 +1,6 @@
 PORTNAME=	flexdock
 PORTVERSION=	1.2.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel java
 MASTER_SITES=	http://forge.scilab.org/index.php/p/${PORTNAME}/downloads/get/
 
@@ -11,8 +11,7 @@ WWW=		https://forge.scilab.org/index.php/p/flexdock/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		java:ant,run
-JAVA_VERSION=  8 # math/scilab needs java 8 compatible classes
+USES=		java:ant
 
 ALL_TARGET=	dist
 NO_ARCH=	yes

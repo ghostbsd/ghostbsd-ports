@@ -19,28 +19,11 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}colorama>=0:devel/py-colorama@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyyaml>=0:devel/py-pyyaml@${PY_FLAVOR}
 
-FLAVORS=	qt6 qt5
-FLAVOR?=	${FLAVORS:[1]}
-
-USES=		cpe desktop-file-utils python
-USE_PYQT=	webengine
+USES=		cpe desktop-file-utils python pyqt:6 qt:6
 USE_PYTHON=	autoplist noflavors pep517
-
-qt5_PKGNAMESUFFIX=	-qt5
-qt5_CONFLICTS_INSTALL=	${PORTNAME}
-
-qt6_CONFLICTS_INSTALL=	${PORTNAME}-qt5
-
-.if ${FLAVOR:U} == "qt5"
-USES+=		pyqt:5 qt:5
-USE_PYQT+=	pyqt5
-USE_QT=		sql-sqlite3
-.else
-USES+=		pyqt:6 qt:6
-USE_PYQT+=	pyqt6
+USE_PYQT=	webengine pyqt6
 USE_QT=		base declarative quick3d sqldriver-sqlite:run webengine \
 		websockets tools:build
-.endif
 
 NO_ARCH=	yes
 PLIST_FILES=	share/applications/${PORTNAME}-${PYTHON_VER}.desktop \

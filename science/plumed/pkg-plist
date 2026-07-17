@@ -299,6 +299,8 @@ lib/plumed/patches/gromacs-2024.3.diff/src/gromacs/taskassignment/include/gromac
 lib/plumed/patches/gromacs-2025.0.config
 lib/plumed/patches/gromacs-2025.0.diff/cmake/gmxManagePlumed.cmake
 lib/plumed/patches/gromacs-2025.0.diff/cmake/gmxManagePlumed.cmake.preplumed
+lib/plumed/patches/gromacs-2025.0.diff/src/gromacs/CMakeLists.txt
+lib/plumed/patches/gromacs-2025.0.diff/src/gromacs/CMakeLists.txt.preplumed
 lib/plumed/patches/gromacs-2025.0.diff/src/gromacs/applied_forces/plumed/plumedMDModule.cpp
 lib/plumed/patches/gromacs-2025.0.diff/src/gromacs/applied_forces/plumed/plumedMDModule.cpp.preplumed
 lib/plumed/patches/gromacs-2025.0.diff/src/gromacs/applied_forces/plumed/plumedOptions.cpp

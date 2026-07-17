@@ -1,5 +1,5 @@
 PORTNAME=	memcached
-DISTVERSION=	1.6.43
+DISTVERSION=	1.6.45
 CATEGORIES=	databases
 MASTER_SITES=	http://www.memcached.org/files/
 

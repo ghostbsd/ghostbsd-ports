@@ -2,7 +2,7 @@ PORTNAME=	qogir-icon-themes
 DISTVERSION=	2025-02-15
 CATEGORIES=	x11-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Flat colorful design icon theme for linux desktops
 WWW=		https://github.com/vinceliuice/Qogir-icon-theme
 

@@ -9,6 +9,9 @@ WWW=		https://cfengine.com/
 
 LICENSE=	GPLv3
 
+DEPRECATED=	EOL in 2026
+EXPIRATION_DATE=2026-10-01
+
 CPE_VENDOR=	gnu
 CPE_PRODUCT=	cfengine
 

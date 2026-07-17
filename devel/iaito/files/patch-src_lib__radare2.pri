@@ -1,6 +1,6 @@
---- src/lib_radare2.pri.orig	2024-05-24 00:09:14 UTC
+--- src/lib_radare2.pri.orig	2026-06-23 16:23:30 UTC
 +++ src/lib_radare2.pri
-@@ -78,8 +78,8 @@ win32 {
+@@ -76,8 +76,8 @@ win32 {
      equals(USE_PKGCONFIG, 1) {
          CONFIG += link_pkgconfig
         # PKGCONFIG += r_core

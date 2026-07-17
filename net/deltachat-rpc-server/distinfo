@@ -1,4 +1,4 @@
-TIMESTAMP = 1781033271
+TIMESTAMP = 1784136429
 SHA256 (rust/crates/addr2line-0.25.1.crate) = 1b5d307320b3181d6d7954e663bd7c774a838b8220fe0593c86d9fb09f498b4b
 SIZE (rust/crates/addr2line-0.25.1.crate) = 43134
 SHA256 (rust/crates/adler2-2.0.0.crate) = 512761e0bb2578dd7380c6baaa0f4ce03e84f95e960231d1dec8bf4d7d6e2627
@@ -1441,5 +1441,5 @@ SHA256 (rust/crates/zune-core-0.5.0.crate) = 111f7d9820f05fd715df3144e254d6fc02e
 SIZE (rust/crates/zune-core-0.5.0.crate) = 27393
 SHA256 (rust/crates/zune-jpeg-0.5.5.crate) = dc6fb7703e32e9a07fb3f757360338b3a567a5054f21b5f52a666752e333d58e
 SIZE (rust/crates/zune-jpeg-0.5.5.crate) = 77168
-SHA256 (chatmail-core-v2.52.0_GH0.tar.gz) = 97233a5b755ec67b6e980f44c89b9d370a980e77cf67b213fc4a4a09b1c146ae
-SIZE (chatmail-core-v2.52.0_GH0.tar.gz) = 3991551
+SHA256 (chatmail-core-v2.53.0_GH0.tar.gz) = ba675f8c5b65203557f919c3c75cf69ede9086dde2e0cf15925cd4c71b56968f
+SIZE (chatmail-core-v2.53.0_GH0.tar.gz) = 3990047

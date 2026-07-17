@@ -1,11 +1,11 @@
 PORTNAME=	apio
-DISTVERSION=	1.4.2
+DISTVERSION=	1.5.0
 CATEGORIES=	cad python
 MASTER_SITES=	PYPI
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Open source ecosystem for open FPGA boards
-WWW=		https://github.com/FPGAwars/apio/wiki
+WWW=		https://github.com/FPGAwars/apio
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

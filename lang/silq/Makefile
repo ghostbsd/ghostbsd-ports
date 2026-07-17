@@ -11,7 +11,7 @@ WWW=		https://silq.ethz.ch/
 LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=	amd64
+ONLY_FOR_ARCHS=	amd64 powerpc64le powerpc64
 ONLY_FOR_ARCHS_REASON=	unknown status of the D language compiler (lang/ldc) on ${ARCH}
 
 BUILD_DEPENDS=	ldmd2:lang/ldc

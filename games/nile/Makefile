@@ -3,7 +3,7 @@ DISTVERSIONPREFIX=	v
 DISTVERSION=	1.2.0
 CATEGORIES=	games
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Unofficial Amazon Games client
 WWW=		https://github.com/imLinguin/nile
 

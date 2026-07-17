@@ -1,7 +1,7 @@
 PORTNAME=	thanos
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.41.0
-PORTREVISION=	6
+DISTVERSION=	0.42.0
+PORTREVISION=	1
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	alven@FreeBSD.org
@@ -12,7 +12,7 @@ WWW=		https://thanos.io/ \
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:modules
+USES=		go:1.26+,modules
 
 GO_MODULE=	github.com/thanos-io/thanos
 GO_TARGET=	./cmd/${PORTNAME}
@@ -26,6 +26,6 @@ GO_LDFLAGS=	-X github.com/prometheus/common/version.Branch="master" \
 PLIST_FILES=	bin/${PORTNAME}
 
 BUILD_DATE=	${:Udate +%F:sh}
-REVISION=	cb1396b9
+REVISION=	0d7a3536
 
 .include <bsd.port.mk>

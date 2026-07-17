@@ -1014,6 +1014,7 @@ include/wine/windows/poppack.h
 include/wine/windows/powersetting.h
 include/wine/windows/powrprof.h
 include/wine/windows/prntvpt.h
+include/wine/windows/processsnapshot.h
 include/wine/windows/processthreadsapi.h
 include/wine/windows/profinfo.h
 include/wine/windows/proofofpossessioncookieinfo.h

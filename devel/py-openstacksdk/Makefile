@@ -1,5 +1,5 @@
 PORTNAME=	openstacksdk
-PORTVERSION=	4.13.0
+PORTVERSION=	4.17.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -25,10 +25,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}decorator>=4.4.1:devel/py-decorator@${PY_FLA
 		${PYTHON_PKGNAMEPREFIX}pbr>=2.0.0:devel/py-pbr@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}platformdirs>=3:devel/py-platformdirs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psutil>=3.2.2:sysutils/py-psutil@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pyyaml>=3.13:devel/py-pyyaml@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}typing-extensions>=4.12.0:devel/py-typing-extensions@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}pyyaml>=3.13:devel/py-pyyaml@${PY_FLAVOR}
 
-USES=		python shebangfix
+USES=		python:3.11+ shebangfix
 USE_PYTHON=	autoplist concurrent cryptography pep517
 
 NO_ARCH=	yes

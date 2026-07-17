@@ -34,6 +34,7 @@
     SUBDIR += emulationstation
     SUBDIR += emutos
     SUBDIR += es-de
+    SUBDIR += fab-agon-emulator
     SUBDIR += fbneo
     SUBDIR += fbsd-duckstation
     SUBDIR += fceux

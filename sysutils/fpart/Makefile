@@ -1,5 +1,5 @@
 PORTNAME=	fpart
-PORTVERSION=	1.7.0
+PORTVERSION=	1.7.1
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION} \
 		http://contribs.martymac.org/fpart/

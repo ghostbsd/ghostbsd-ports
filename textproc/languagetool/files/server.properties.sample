@@ -12,4 +12,9 @@
 #fasttextBinary=/usr/local/bin/fasttext
 
 # Limit maximum text length per check request (characters).
-#maxTextLength=50000
+maxTextLength=50000
+
+# Abort a single check that runs longer than this (milliseconds).
+# Guards against pathological requests (e.g. very long sentences)
+# exhausting the Java heap.
+maxCheckTimeMillis=60000

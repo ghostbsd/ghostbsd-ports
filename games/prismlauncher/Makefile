@@ -5,7 +5,7 @@ MASTER_SITES=	https://github.com/PrismLauncher/PrismLauncher/releases/download/$
 DISTNAME=	PrismLauncher-${DISTVERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Minecraft launcher with ability to manage multiple instances
 WWW=		https://prismlauncher.org/
 

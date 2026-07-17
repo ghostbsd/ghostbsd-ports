@@ -1,5 +1,5 @@
 PORTNAME=	liblo
-PORTVERSION=	0.35
+PORTVERSION=	0.36
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/radarsat1/liblo/releases/download/${PORTVERSION}/ \
 		SF

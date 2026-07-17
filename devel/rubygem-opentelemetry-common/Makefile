@@ -1,5 +1,5 @@
 PORTNAME=	opentelemetry-common
-PORTVERSION=	0.25.0
+PORTVERSION=	0.25.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 

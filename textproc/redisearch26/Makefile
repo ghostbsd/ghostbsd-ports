@@ -1,6 +1,6 @@
 PORTNAME=	redisearch
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.6.5
+DISTVERSION=	2.6.6
 CATEGORIES=	textproc
 PKGNAMESUFFIX=	${DISTVERSION:R:S/.//}
 
@@ -18,6 +18,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 LICENSE_PERMS_RSALv2=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_PERMS_SSPLv1=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
+NOT_FOR_ARCHS=	i386
+NOT_FOR_ARCHS_REASON=	requires 64-bit architecture
+
 LIB_DEPENDS=   libcpu_features.so:devel/cpu_features
 
 USES=		cmake compiler localbase:ldflags
@@ -25,7 +28,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	RediSearch
 GH_PROJECT=	RediSearch
 GH_TUPLE=	RedisAI:VectorSimilarity:4e065d8:vectorsimilarity/deps/VectorSimilarity \
-			RedisLabsModules:readies:d225f34:readies/deps/readies
+			RedisLabsModules:readies:59712b1:readies/deps/readies
 
 CMAKE_ARGS=	-DGIT_DESCRIBE_VERSION:STRING=${PKGVERSION} \
 		-DOS=freebsd

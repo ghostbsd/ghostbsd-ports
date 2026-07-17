@@ -320,10 +320,9 @@ include/thrift/lib/cpp2/detail/EventHandlerRuntime.h
 include/thrift/lib/cpp2/detail/Isset.h
 include/thrift/lib/cpp2/detail/meta.h
 include/thrift/lib/cpp2/dynamic/AccumulatingTypeSystem.h
+include/thrift/lib/cpp2/dynamic/AnnotationValue.h
 include/thrift/lib/cpp2/dynamic/Any.h
 include/thrift/lib/cpp2/dynamic/Binary.h
-include/thrift/lib/cpp2/dynamic/DynamicServiceSchema.h
-include/thrift/lib/cpp2/dynamic/DynamicServiceSchemaBuilder.h
 include/thrift/lib/cpp2/dynamic/DynamicValue.h
 include/thrift/lib/cpp2/dynamic/List.h
 include/thrift/lib/cpp2/dynamic/Map.h
@@ -332,10 +331,15 @@ include/thrift/lib/cpp2/dynamic/PruneOptions.h
 include/thrift/lib/cpp2/dynamic/SerializableRecord.h
 include/thrift/lib/cpp2/dynamic/SerializableTypeSystemBuilder.h
 include/thrift/lib/cpp2/dynamic/Serialization.h
+include/thrift/lib/cpp2/dynamic/ServiceCatalog.h
+include/thrift/lib/cpp2/dynamic/ServiceCatalogDigest.h
+include/thrift/lib/cpp2/dynamic/ServiceDescriptor.h
+include/thrift/lib/cpp2/dynamic/ServiceDescriptorBuilder.h
+include/thrift/lib/cpp2/dynamic/ServiceDescriptorSerialization.h
 include/thrift/lib/cpp2/dynamic/Set.h
 include/thrift/lib/cpp2/dynamic/String.h
 include/thrift/lib/cpp2/dynamic/Struct.h
-include/thrift/lib/cpp2/dynamic/SyntaxGraphServiceSchema.h
+include/thrift/lib/cpp2/dynamic/SyntaxGraphServiceDescriptor.h
 include/thrift/lib/cpp2/dynamic/TypeId.h
 include/thrift/lib/cpp2/dynamic/TypeSystem.h
 include/thrift/lib/cpp2/dynamic/TypeSystemBuilder.h
@@ -348,6 +352,7 @@ include/thrift/lib/cpp2/dynamic/detail/ConcreteSet.h
 include/thrift/lib/cpp2/dynamic/detail/ConcreteTypes.h
 include/thrift/lib/cpp2/dynamic/detail/Datum.h
 include/thrift/lib/cpp2/dynamic/detail/DatumHash.h
+include/thrift/lib/cpp2/dynamic/detail/DigestHasher.h
 include/thrift/lib/cpp2/dynamic/detail/ListIteratorBase.h
 include/thrift/lib/cpp2/dynamic/detail/SmallBuffer.h
 include/thrift/lib/cpp2/dynamic/detail/Traits.h
@@ -399,11 +404,14 @@ include/thrift/lib/cpp2/fast_thrift/connection/security/handler/FizzHandshakeHan
 include/thrift/lib/cpp2/fast_thrift/connection/security/handler/StopTLSV1Handler.h
 include/thrift/lib/cpp2/fast_thrift/connection/security/handler/TLSClassifier.h
 include/thrift/lib/cpp2/fast_thrift/connection/security/handler/TLSConfigHandler.h
+include/thrift/lib/cpp2/fast_thrift/connection/security/handler/TLSConnectionAdapter.h
+include/thrift/lib/cpp2/fast_thrift/connection/security/handler/TLSFinalizer.h
 include/thrift/lib/cpp2/fast_thrift/connection/security/util/StopTLSHelper.h
 include/thrift/lib/cpp2/fast_thrift/frame/ErrorCode.h
 include/thrift/lib/cpp2/fast_thrift/frame/FrameDescriptor.h
 include/thrift/lib/cpp2/fast_thrift/frame/FrameType.h
 include/thrift/lib/cpp2/fast_thrift/frame/handler/FrameCodecHandler.h
+include/thrift/lib/cpp2/fast_thrift/frame/handler/FrameWriteCompletionHandler.h
 include/thrift/lib/cpp2/fast_thrift/frame/read/DirectStreamMap.h
 include/thrift/lib/cpp2/fast_thrift/frame/read/FragmentState.h
 include/thrift/lib/cpp2/fast_thrift/frame/read/FrameMetadata.h
@@ -422,6 +430,7 @@ include/thrift/lib/cpp2/fast_thrift/frame/write/IntervalBatchingHandlerConfig.h
 include/thrift/lib/cpp2/fast_thrift/frame/write/PerStreamState.h
 include/thrift/lib/cpp2/fast_thrift/frame/write/SrptHeap.h
 include/thrift/lib/cpp2/fast_thrift/frame/write/handler/BatchingFrameHandler.h
+include/thrift/lib/cpp2/fast_thrift/frame/write/handler/FragmentCompletionTracker.h
 include/thrift/lib/cpp2/fast_thrift/frame/write/handler/FrameFragmentationHandler.h
 include/thrift/lib/cpp2/fast_thrift/frame/write/handler/FrameLengthEncoderHandler.h
 include/thrift/lib/cpp2/fast_thrift/frame/write/handler/IntervalBatchingFrameHandler.h
@@ -441,6 +450,7 @@ include/thrift/lib/cpp2/fast_thrift/rocket/client/handler/RocketClientConnection
 include/thrift/lib/cpp2/fast_thrift/rocket/client/handler/RocketClientFrameCodecHandler.h
 include/thrift/lib/cpp2/fast_thrift/rocket/client/handler/RocketClientRequestResponseHandler.h
 include/thrift/lib/cpp2/fast_thrift/rocket/client/handler/RocketClientSetupFrameHandler.h
+include/thrift/lib/cpp2/fast_thrift/rocket/client/handler/RocketClientStatsHandler.h
 include/thrift/lib/cpp2/fast_thrift/rocket/client/handler/RocketClientStreamStateHandler.h
 include/thrift/lib/cpp2/fast_thrift/rocket/common/TypeErasedPtr.h
 include/thrift/lib/cpp2/fast_thrift/rocket/common/handler/RocketMetricsHandler.h
@@ -516,6 +526,7 @@ include/thrift/lib/cpp2/fast_thrift/thrift/server/common/context/ThriftRequestCo
 include/thrift/lib/cpp2/fast_thrift/thrift/server/handler/ThriftServerConnectionCloseHandler.h
 include/thrift/lib/cpp2/fast_thrift/thrift/server/handler/ThriftServerConnectionContextHandler.h
 include/thrift/lib/cpp2/fast_thrift/thrift/server/handler/ThriftServerRequestContextHandler.h
+include/thrift/lib/cpp2/fast_thrift/thrift/server/handler/ThriftServerRequestHeadersHandler.h
 include/thrift/lib/cpp2/fast_thrift/thrift/server/handler/WriteBufferBackpressureHandler.h
 include/thrift/lib/cpp2/fast_thrift/thrift/server/test/common/TestServerConnection.h
 include/thrift/lib/cpp2/fast_thrift/thrift/server/util/FastHandlerCallback.h
@@ -825,6 +836,8 @@ include/thrift/lib/cpp2/test/util/TestHandler.h
 include/thrift/lib/cpp2/test/util/TestServerFactory.h
 include/thrift/lib/cpp2/test/util/TestThriftServerFactory.h
 include/thrift/lib/cpp2/test/util/TrackingTProcessorEventHandler.h
+include/thrift/lib/cpp2/transcode/Codec.h
+include/thrift/lib/cpp2/transcode/TranscodeErrc.h
 include/thrift/lib/cpp2/transport/core/ClientConnectionIf.h
 include/thrift/lib/cpp2/transport/core/EnvelopeUtil.h
 include/thrift/lib/cpp2/transport/core/ManagedConnectionIf.h
@@ -1032,6 +1045,8 @@ include/thrift/lib/python/capi/test/marshal_fixture.h
 include/thrift/lib/python/capi/types.h
 include/thrift/lib/python/client/OmniClient.h
 include/thrift/lib/python/client/RequestChannel.h
+include/thrift/lib/python/client/py_bridge/PyBridgeRequestChannel.h
+include/thrift/lib/python/client/py_bridge/PySender.h
 include/thrift/lib/python/client/ssl.h
 include/thrift/lib/python/client/test/client_event_handlers/handler.h
 include/thrift/lib/python/client/test/event_handler_helper.h

@@ -20,6 +20,9 @@ WWW=		https://otter-browser.org/
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+DEPRECATED=	Not ported to Qt6, depends on deprecated Qt5 WebEngine
+EXPIRATION_DATE=	2026-09-30
+
 LIB_DEPENDS=	libhunspell-1.7.so:textproc/hunspell
 
 USES=		cmake compiler:c++11-lib desktop-file-utils qt:5

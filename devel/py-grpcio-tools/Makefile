@@ -1,5 +1,5 @@
 PORTNAME=	grpcio-tools
-DISTVERSION=	1.81.1
+DISTVERSION=	1.82.1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,7 +14,7 @@ LICENSE=	BSD3CLAUSE
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}grpcio>1:devel/py-grpcio@${PY_FLAVOR}
 LIB_DEPENDS=	libcares.so:dns/c-ares
 
-USES=		compiler:c++11-lang localbase:ldflags python
+USES=		compiler:c++17-lang localbase:ldflags python
 USE_PYTHON=	autoplist distutils
 CFLAGS+=	-DHAVE_PTHREAD=1
 LDFLAGS+=	-lcares

@@ -1,5 +1,5 @@
 PORTNAME=	ompl
-DISTVERSION=	2.0.0
+DISTVERSION=	2.0.1
 CATEGORIES=	misc comms
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -21,7 +21,7 @@ SHEBANG_FILES=	scripts/ompl_benchmark_statistics.py
 CMAKE_OFF=	OMPL_BUILD_TESTS OMPL_BUILD_VAMP OMPL_VERSIONED_INSTALL
 CMAKE_TESTING_ON=	OMPL_BUILD_TESTS
 
-OPTIONS_DEFINE=		DEMOS FLANN PLANNERARENA SPOT TRIANGLE
+OPTIONS_DEFINE=		DEMOS FLANN SPOT TRIANGLE
 OPTIONS_DEFAULT=	FLANN TRIANGLE
 OPTIONS_SUB=		yes
 
@@ -31,10 +31,6 @@ DEMOS_CMAKE_ON=		OMPL_BUILD_DEMOS
 FLANN_DESC=		Use FLANN for nearest neighbor queries
 FLANN_LIB_DEPENDS=	libflann.so:math/flann
 
-PLANNERARENA_DESC=	Install plannerarena (depends on R)
-PLANNERARENA_BUILD_DEPENDS=	Rscript:math/R
-PLANNERARENA_RUN_DEPENDS=	Rscript:math/R
-
 SPOT_DESC=		Use 'Spot' for creating finite automata from LTL formulae
 SPOT_USES=		compiler:c++14-lang
 SPOT_LIB_DEPENDS=	libspot.so:math/spot
@@ -42,7 +38,7 @@ SPOT_LIB_DEPENDS=	libspot.so:math/spot
 TRIANGLE_DESC=		Create triangular decompositions of 2D polygons
 TRIANGLE_LIB_DEPENDS=	libtriangle.so:math/triangle
 
-.for o in ${OPTIONS_DEFINE:NDEMOS:NPLANNERARENA}
+.for o in ${OPTIONS_DEFINE:NDEMOS}
 post-patch-${o}-off:
 	@${REINPLACE_CMD} 's|find_package(${o}|#&|i' ${WRKSRC}/CMakeModules/OMPLDependencies.cmake
 .endfor
@@ -50,7 +46,6 @@ post-patch-${o}-off:
 post-patch-DEMOS-on:
 	@${REINPLACE_CMD} 's|#add_subdirectory(demos)|add_subdirectory(demos)|' ${WRKSRC}/CMakeLists.txt
 
-post-patch-PLANNERARENA-off:
-	@${REINPLACE_CMD} 's|find_program(R_EXEC|#&|' ${WRKSRC}/CMakeModules/OMPLDependencies.cmake
+# tests as of 2.0.1: 100% tests passed, 0 tests failed out of 23
 
 .include <bsd.port.mk>

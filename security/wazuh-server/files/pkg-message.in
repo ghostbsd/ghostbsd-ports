@@ -51,12 +51,17 @@ Wazuh server components were installed
    # sysrc filebeat_enable="YES"
    # sysrc logstash_enable="YES"
 
-10) Start Filebeat and Logstash services
+10) Current version of logstash8 uses openjdk24 by default, but it doesn't work with logstash-output-opensearch.
+    Change it to openjdk21 adding the following:
+
+   # sysrc logstash_java_home="%%PREFIX%%/openjdk21"
+
+11) Start Filebeat and Logstash services
    
    # service filebeat start
    # service logstash start
 
-11) You can look more useful information at the following link:
+12) You can look more useful information at the following link:
 
     https://documentation.wazuh.com/current/installation-guide/wazuh-server/step-by-step.html
 
@@ -64,7 +69,7 @@ Wazuh server components were installed
     you can read at wazuh guide. Some times you could decided configure logstash
     on another host. If it is your case you must adapt some points in this guide.
 
-12) Enjoy it
+13) Enjoy it
 EOM
 }
 ]

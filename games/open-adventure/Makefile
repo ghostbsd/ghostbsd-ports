@@ -1,5 +1,5 @@
 PORTNAME=	open-adventure
-PORTVERSION=	1.21
+PORTVERSION=	1.22
 CATEGORIES=	games
 
 MAINTAINER=	se@FreeBSD.org

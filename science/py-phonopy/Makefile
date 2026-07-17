@@ -32,6 +32,7 @@ TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 TEST_WRKSRC=	${WRKSRC}/test
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/phonopy/_phonopy${PYTHON_TAG}.so
+	@${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR}/phonopy -maxdepth 1 -name '_phonopy*.so' -exec ${STRIP_CMD} {} +
+	@${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR}/phonopy -maxdepth 1 -name '_recgrid*.so' -exec ${STRIP_CMD} {} +
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	cryptopp-modern
-DISTVERSION=	2026.6.0
+DISTVERSION=	2026.7.1
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/cryptopp-modern/${PORTNAME}/releases/download/${DISTVERSION}/
 
@@ -10,7 +10,7 @@ WWW=		https://github.com/cryptopp-modern/cryptopp-modern
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake:testing dos2unix pathfix zip
+USES=		cmake:testing dos2unix pathfix
 
 CMAKE_OFF=	CRYPTOPP_BUILD_TESTING
 

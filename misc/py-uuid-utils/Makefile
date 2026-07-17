@@ -1,5 +1,5 @@
 PORTNAME=	uuid-utils
-DISTVERSION=	0.16.2
+DISTVERSION=	0.17.0
 CATEGORIES=	misc python
 #MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -82,7 +82,7 @@ CARGO_CRATES=	anyhow-1.0.102 \
 		typenum-1.20.1 \
 		unicode-ident-1.0.24 \
 		unicode-xid-0.2.6 \
-		uuid-1.23.3 \
+		uuid-1.23.4 \
 		version_check-0.9.5 \
 		wasip2-1.0.4+wasi-0.2.12 \
 		wasip3-0.4.0+wasi-0.3.0-rc-2026-01-06 \

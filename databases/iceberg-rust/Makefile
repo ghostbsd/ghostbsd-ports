@@ -6,7 +6,8 @@ PKGNAMEPREFIX=	apache-
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Apache Iceberg
-WWW=		https://rust.iceberg.apache.org/
+WWW=		https://rust.iceberg.apache.org/ \
+		https://github.com/apache/iceberg-rust
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -702,6 +703,12 @@ CARGO_CRATES=	adler2-2.0.1 \
 		zstd-sys-2.0.16+zstd.1.5.7
 
 PLIST_FILES=	bin/iceberg-playground
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
+BROKEN_i386=	could not find `x86_64` in `arch` # see https://github.com/cloudwego/sonic-rs/issues/231
+.endif
 
 do-install:
 	# workaround for error: found a virtual manifest at `xx` instead of a package manifest

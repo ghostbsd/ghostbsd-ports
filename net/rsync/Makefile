@@ -44,15 +44,15 @@ SUB_LIST=	NAME=rsyncd
 PORTDOCS=	NEWS.md README.md csprotocol.txt tech_report.tex
 
 # define options
-OPTIONS_DEFINE=		DOCS ICONV POPT_PORT SSH ZLIB_BASE
-OPTIONS_DEFAULT=	ICONV SSH ZLIB_BASE
-OPTIONS_RADIO=		PTS
+OPTIONS_DEFINE=		DOCS FLAGS ICONV POPT_PORT SSH ZLIB_BASE
+OPTIONS_DEFAULT=	FLAGS ICONV SSH ZLIB_BASE
 
 # options provided upstream
 POPT_PORT_DESC=	Use popt from devel/popt instead of bundled one
-PTS_DESC=	Functionality provided by third party patches
 SSH_DESC=	Use SSH instead of RSH
 
+FLAGS_DESC=	File system flags support patch, adds --file-flags
+FLAGS_EXTRA_PATCHES=	${FILESDIR}/extra-patch-file-flags.diff
 ZLIB_BASE_DESC=	Use zlib from base instead of bundled one
 
 ICONV_USES=		iconv:translit

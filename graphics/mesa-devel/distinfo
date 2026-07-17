@@ -1,5 +1,5 @@
-TIMESTAMP = 1782330806
-SHA256 (mesa-26.1-branchpoint-3676-g68468b6d1b9.tar.bz2) = 36cdbb8c4026d2e6f32f0d81ff13f2329d94615e76b9104930d45f39d24f123b
-SIZE (mesa-26.1-branchpoint-3676-g68468b6d1b9.tar.bz2) = 111482856
+TIMESTAMP = 1783547036
+SHA256 (mesa-26.1-branchpoint-4644-g712ebaa4b1a.tar.bz2) = 500b3d904fa9c356e03c302e0fc6f14461fa4cde0a617f49d74408ebb96d97aa
+SIZE (mesa-26.1-branchpoint-4644-g712ebaa4b1a.tar.bz2) = 100797422
 SHA256 (de5cf0a44b50.patch) = c9e02e5eb1fb4e3aa2bc7a7e0a70f28f3ee609835ff0b59e827893a821983851
 SIZE (de5cf0a44b50.patch) = 1108

@@ -9,6 +9,7 @@ lib/libfprint-2.so
 lib/libfprint-2.so.2
 lib/libfprint-2.so.2.0.0
 libdata/pkgconfig/libfprint-2.pc
+share/metainfo/org.freedesktop.libfprint.metainfo.xml
 %%GIR%%lib/girepository-1.0/FPrint-2.0.typelib
 %%GIR%%share/gir-1.0/FPrint-2.0.gir
 %%GTK_EXAMPLES%%bin/gtk-libfprint-test

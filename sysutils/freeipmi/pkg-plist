@@ -255,7 +255,7 @@ include/ipmidetect.h
 lib/libfreeipmi.a
 lib/libfreeipmi.so
 lib/libfreeipmi.so.17
-lib/libfreeipmi.so.17.2.15
+lib/libfreeipmi.so.17.2.16
 lib/libipmiconsole.a
 lib/libipmiconsole.so
 lib/libipmiconsole.so.2
@@ -267,7 +267,7 @@ lib/libipmidetect.so.0.0.1
 lib/libipmimonitoring.a
 lib/libipmimonitoring.so
 lib/libipmimonitoring.so.6
-lib/libipmimonitoring.so.6.0.9
+lib/libipmimonitoring.so.6.0.10
 libdata/pkgconfig/libfreeipmi.pc
 libdata/pkgconfig/libipmiconsole.pc
 libdata/pkgconfig/libipmidetect.pc

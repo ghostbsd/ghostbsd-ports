@@ -1,7 +1,7 @@
 PORTNAME=	kitty
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.47.4
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	nivit@FreeBSD.org
@@ -29,6 +29,7 @@ LIB_DEPENDS=	libcairo.so:graphics/cairo \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libharfbuzz.so:print/harfbuzz \
 		liblcms2.so:graphics/lcms2 \
+		libpng16.so:graphics/png \
 		libwayland-client.so:graphics/wayland \
 		libwayland-cursor.so:graphics/wayland \
 		libxkbcommon.so:x11/libxkbcommon \
@@ -36,8 +37,8 @@ LIB_DEPENDS=	libcairo.so:graphics/cairo \
 
 # ncursesw and tinfo >= 6.1 seem to be needed
 USES=		compiler:c11 cpe desktop-file-utils gettext-runtime gl gmake \
-		go:modules,1.26 ncurses pkgconfig python shebangfix ssl \
-		tar:xz terminfo xorg
+		go:modules,1.26 ncurses pkgconfig python shebangfix ssl tar:xz \
+		terminfo xorg
 CPE_VENDOR=	kovidgoyal
 
 USE_GL=		gl
@@ -48,7 +49,10 @@ SHEBANG_GLOB=	*.py
 
 GO_MODULE=	github.com/kovidgoyal/kitty
 
-MAKE_ENV=	PYTHONDONTWRITEBYTECODE=1
+MAKE_ENV=	BUILD_MANPAGES=yes
+# see: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291485#c13
+MAKE_ENV+=	TZ=UTC
+
 TEST_ENV=	PATH="${STAGEDIR}${PREFIX}/bin:${PATH}"
 TEST_TARGET=	test
 
@@ -81,22 +85,6 @@ CFLAGS+=	-Wno-error=invalid-utf8 -Winvalid-utf8
 MAKE_ENV+=	KITTY_NO_LTO=1
 .endif
 
-# PR291485
-# Temporarily disable build/installation of docs and man pages on FreeBSD >= 15.0
-# See:
-# https://pkg-status.freebsd.org/beefy23/data/150amd64-default/e05e2042985b/logs/kitty-0.44.0_1.log
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291485
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
-MAKE_ENV+=	BUILD_MANPAGES=yes
-PLIST_SUB+=	PORTMANPAGES=""
-.else
-DOCS_MAKE_ENV=	BUILD_DOCS=no
-MAKE_ENV+=	BUILD_MANPAGES=no
-PLIST_SUB:=	${PLIST_SUB:S/PORTDOCS=""//1}
-PLIST_SUB+=	PORTDOCS="@comment " \
-		PORTMANPAGES="@comment "
-.endif
-
 post-patch:
 	${REINPLACE_CMD} -E \
 		-e "s:'go':'${GO_CMD}':1" \
@@ -127,20 +115,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/terminfo/kitty.terminfo \
 		${STAGEDIR}${PREFIX}/share/misc/
 	${STRIP_CMD} ${_STRIP_TARGETS:S|^|${STAGEDIR}${DATADIR}/|}
-# PR291485: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291485
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
 	${INSTALL_MAN} ${BUILD_DIR}/share/man/man1/kitty.1 ${STAGEDIR}${PREFIX}/share/man/man1
 	${INSTALL_MAN} ${BUILD_DIR}/share/man/man5/kitty.conf.5 ${STAGEDIR}${PREFIX}/share/man/man5
-.endif
 
 do-install-DOCS-on:
-# PR291485: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291485
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
 	cd ${BUILD_DIR}/share/doc/kitty/html && \
 		${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR} \
 			"-not ( -name .buildinfo -or -name .nojekyll )"
-.else
-	@${DO_NADA}
-.endif
 
 .include <bsd.port.mk>

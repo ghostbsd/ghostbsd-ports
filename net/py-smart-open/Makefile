@@ -1,6 +1,5 @@
 PORTNAME=	smart-open
-PORTVERSION=	7.1.0
-PORTREVISION=	2
+PORTVERSION=	8.0.0
 CATEGORIES=	net python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +12,8 @@ WWW=		https://github.com/piskvorky/smart_open
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=61:devel/py-setuptools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}setuptools-scm>=8:devel/py-setuptools-scm@${PY_FLAVOR}  \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}wrapt>=0:devel/py-wrapt@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}awscli>=0:devel/py-awscli@${PY_FLAVOR} \
@@ -47,12 +47,12 @@ ZST_DESC=	Zstandard support
 
 AZURE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}azure-common>=0:www/py-azure-common@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}azure-core>=0:devel/py-azure-core@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}azure-storage-blob>=0:devel/py-azure-storage-blob@${PY_FLAVOR}
+			${PYTHON_PKGNAMEPREFIX}azure-storage-blob>=12.7.0:devel/py-azure-storage-blob@${PY_FLAVOR}
 HTTP_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
 GCS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}google-cloud-storage>=2.6.0:www/py-google-cloud-storage@${PY_FLAVOR}
-S3_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}boto3>=0:www/py-boto3@${PY_FLAVOR}
+S3_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}boto3>=1.9.17:www/py-boto3@${PY_FLAVOR}
 SSH_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}paramiko>=0:security/py-paramiko@${PY_FLAVOR}
 WEBHDFS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
-ZST_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zstandard>=0:archivers/py-zstandard@${PY_FLAVOR}
+ZST_RUN_DEPENDS=	${PY_BACKPORTS.ZSTD}
 
 .include <bsd.port.mk>

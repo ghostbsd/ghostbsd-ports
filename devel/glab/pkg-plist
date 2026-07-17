@@ -226,6 +226,11 @@
 %%MANPAGES%%share/man/man1/glab-securefile-list.1.gz
 %%MANPAGES%%share/man/man1/glab-securefile-remove.1.gz
 %%MANPAGES%%share/man/man1/glab-securefile.1.gz
+%%MANPAGES%%share/man/man1/glab-security-config-disable.1.gz
+%%MANPAGES%%share/man/man1/glab-security-config-enable.1.gz
+%%MANPAGES%%share/man/man1/glab-security-config-status.1.gz
+%%MANPAGES%%share/man/man1/glab-security-config.1.gz
+%%MANPAGES%%share/man/man1/glab-security.1.gz
 %%MANPAGES%%share/man/man1/glab-skills-install.1.gz
 %%MANPAGES%%share/man/man1/glab-skills-list.1.gz
 %%MANPAGES%%share/man/man1/glab-skills-update.1.gz

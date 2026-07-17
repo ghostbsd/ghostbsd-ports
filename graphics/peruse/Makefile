@@ -10,6 +10,9 @@ WWW=		https://peruse.kde.org/
 
 LICENSE=	LGPL21
 
+DEPRECATED=	Abandoned, does not work with Qt6
+EXPIRATION_DATE=2026-09-30
+
 USES=		cmake compiler:c++11-lang gl kde:5 pkgconfig qt:5 tar:xz xorg
 USE_GL=		gl
 USE_KDE=	archive attica baloo completion config coreaddons crash \

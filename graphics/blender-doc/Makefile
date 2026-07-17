@@ -1,7 +1,7 @@
 PORTNAME=	blender
-DISTVERSION=	5.0
+DISTVERSION=	5.1
 CATEGORIES=	graphics
-MASTER_SITES=	https://docs.blender.org/manual/en/${PORTVERSION}/
+MASTER_SITES=	https://docs.blender.org/manual/en/${DISTVERSION}/
 PKGNAMESUFFIX=	-doc
 DISTFILES=	blender_manual_html.zip blender_manual_epub.zip
 DIST_SUBDIR=	${PORTNAME}${PKGNAMESUFFIX}-${DISTVERSION}

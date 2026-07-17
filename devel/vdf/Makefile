@@ -4,7 +4,7 @@ DISTVERSION=	3.4
 CATEGORIES=	devel
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Library for working with Valve's VDF text format
 WWW=		https://github.com/ValvePython/vdf
 

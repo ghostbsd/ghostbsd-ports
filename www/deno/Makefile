@@ -1,6 +1,6 @@
 PORTNAME=	deno
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.7.14
+DISTVERSION=	2.9.1
 PORTREVISION=	1
 CATEGORIES=	www
 
@@ -17,22 +17,19 @@ BUILD_DEPENDS=	bindgen:devel/rust-bindgen-cli \
 		gn:devel/gn \
 		protoc:devel/protobuf
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
-		libffi.so:devel/libffi \
 		liblcms2.so:graphics/lcms2 \
-		libonig.so:devel/oniguruma \
 		libzstd.so:archivers/zstd
 
-USES=		cargo cpe gmake gnome llvm:min=21,build ninja:build pkgconfig:build python:build
-
+USES=		cargo cpe gmake llvm:min=21,build ninja:build pkgconfig python:build
 USE_GITHUB=	yes
 GH_ACCOUNT=	denoland
-GH_TUPLE=	denoland:deno_lsp_benchdata:a787434:denolsp/cli/bench/testdata/lsp_benchdata \
-		denoland:node_test:8846b53:nodetest/tests/node_compat/runner/suite \
-		denoland:std:1f032bb7:denostd/tests/util/std \
-		web-platform-tests:wpt:e78446e:webp/tests/wpt/suite
+GH_TUPLE=	denoland:deno_lsp_benchdata:a787434:denolsp/tests/bench/testdata/lsp_benchdata \
+		denoland:node_test:195065d:nodetest/tests/node_compat/runner/suite \
+		denoland:std:9c5b710:denostd/tests/util/std \
+		web-platform-tests:wpt:d85e753e65ee8e9654e76a2b4d62b9b5a0ac51e7:webp/tests/wpt/suite
+USE_LDCONFIG=	yes
 
-USE_GNOME=	glib20
-
+CARGO_INSTALL=	no
 CARGO_ENV+=	V8_FROM_SOURCE=1 \
 		GN=${PREFIX}/bin/gn \
 		NINJA=${NINJA_CMD} \
@@ -41,8 +38,8 @@ CARGO_ENV+=	V8_FROM_SOURCE=1 \
 		LCMS2_LIB_DIR="${LOCALBASE}/lib" \
 		CARGO_PROFILE_RELEASE_LTO="false" \
 		GN_ARGS="clang_use_chrome_plugins=false \
-		extra_cppflags=\"-idirafter ${LOCALBASE}/include -idirafter ${X11BASE}/include\" \
-		extra_ldflags=\"-L${LOCALBASE}/lib -L${X11BASE}/lib\" \
+		extra_cppflags=\"-idirafter ${LOCALBASE}/include\" \
+		extra_ldflags=\"-L${LOCALBASE}/lib\" \
 		fatal_linker_warnings=false \
 		is_clang=true \
 		use_custom_libcxx=true \
@@ -53,28 +50,27 @@ CARGO_ENV+=	V8_FROM_SOURCE=1 \
 		use_glib=false \
 		v8_enable_cet_ibt=true"
 
-PLIST_FILES=	bin/${PORTNAME} \
-		bin/denort
+WITHOUT_LTO=	yes
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
+PLIST_FILES=	bin/${PORTNAME} \
+		bin/denort \
+		lib/libdenort.so
+
 DENO_CORE_ICUDATA_V=	0.77.0
-V8_CARGO_V=		147.4.0
+V8_CARGO_V=		149.4.0
 
 V8_DISTDIR=	${CARGO_VENDOR_DIR}/v8-${V8_CARGO_V}
 V8_BPGO_DIR=	${V8_DISTDIR}/v8/tools/builtins-pgo
 
-CARGO_INSTALL=	no
-
-WITHOUT_LTO=	yes
-
 post-patch:
-	${REINPLACE_CMD} "s|${PREFIX}|${PREFIX}|" \
+	${REINPLACE_CMD} "s|%%PREFIX%%|${PREFIX}|g" \
 		${WRKSRC}/cli/task_runner.rs \
-		${WRKSRC}/cli/tools/jupyter/install.rs \
-		${WRKSRC}/ext/os/lib.rs \
+		${WRKSRC}/ext/os/lib.rs
+	${REINPLACE_CMD} "s|%%LOCALBASE%%|${LOCALBASE}|g" \
 		${WRKSRC}/tests/unit_node/process_test.ts
-	${REINPLACE_CMD} -e "s|%%CC%%|${CC}|" -e "s|%%CXX%%|${CXX}|" \
+	${REINPLACE_CMD} "s|%%LLVM_PREFIX%%|${LLVM_PREFIX}|g" \
 		${WRKSRC}/cargo-crates/v8-${V8_CARGO_V}/build/toolchain/gcc_toolchain.gni
 	${REINPLACE_CMD} "s|linux|freebsd|g" \
 		${WRKSRC}/tests/ffi/testdata/ffi_callback_errors.ts \
@@ -98,13 +94,16 @@ post-patch:
 	${CP} ${CARGO_VENDOR_DIR}/deno_core_icudata-${DENO_CORE_ICUDATA_V}/src/icudtl.dat \
 		${V8_DISTDIR}/third_party/icu/common/
 
+do-install:
+	${INSTALL_PROGRAM} \
+		${CARGO_TARGET_DIR}/*/deno \
+		${CARGO_TARGET_DIR}/*/denort ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_LIB} ${CARGO_TARGET_DIR}/*/libdenort.so ${STAGEDIR}${PREFIX}/lib
+
 # do not pass RUST_BACKTRACE=1 to cargo test as some tests fails if it's there
 do-test:
-	cd ${WRKSRC} ; \
-		${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${CARGO_ENV:S/RUST_BACKTRACE=1//g} ${CARGO} test -vv ${CARGO_BUILD_ARGS}
-
-do-install:
-	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/*/deno ${STAGEDIR}${LOCALBASE}/bin
-	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/*/denort ${STAGEDIR}${LOCALBASE}/bin
+	(cd ${WRKSRC} && \
+		${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${CARGO_ENV:S/RUST_BACKTRACE=1//g} \
+			${CARGO} test -vv ${CARGO_BUILD_ARGS})
 
 .include <bsd.port.mk>

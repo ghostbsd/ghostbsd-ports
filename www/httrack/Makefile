@@ -1,6 +1,7 @@
 PORTNAME=	httrack
-PORTVERSION=	3.49.6
+PORTVERSION=	3.49.11
 CATEGORIES=	www
+MASTER_SITES=	https://github.com/xroche/httrack/releases/download/${PORTVERSION}/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Easy-to-use offline browser utility and website copier
@@ -16,11 +17,6 @@ CONFIGURE_ARGS=	--docdir=${DOCSDIR} --with-zlib=/usr
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	${PREFIX}/lib/httrack
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	xroche
-GH_TAGNAME=	748c35d
-GH_TUPLE=	xroche:coucal:73ada07:xroche_coucal/src/coucal
 
 SHEBANG_FILES=	src/webhttrack
 

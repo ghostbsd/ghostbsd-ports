@@ -1444,7 +1444,6 @@
     SUBDIR += pear-UDDI
     SUBDIR += pear-XML_GRDDL
     SUBDIR += pear-twig
-    SUBDIR += pecl-http
     SUBDIR += pecl-solr
     SUBDIR += pecl-yaf
     SUBDIR += pecl-yar
@@ -1454,6 +1453,7 @@
     SUBDIR += pglogd
     SUBDIR += phalcon
     SUBDIR += php-google-api-php-client
+    SUBDIR += php-http
     SUBDIR += php82-opcache
     SUBDIR += php82-session
     SUBDIR += php82-tidy
@@ -1507,6 +1507,7 @@
     SUBDIR += py-aiohttp-jinja2
     SUBDIR += py-aiohttp-middlewares
     SUBDIR += py-aiohttp-oauthlib
+    SUBDIR += py-aiohttp-retry
     SUBDIR += py-aiohttp-session
     SUBDIR += py-aiohttp-wsgi
     SUBDIR += py-aiolimiter
@@ -1792,8 +1793,11 @@
     SUBDIR += py-google-cloud-container
     SUBDIR += py-google-cloud-core
     SUBDIR += py-google-cloud-datastore
+    SUBDIR += py-google-cloud-discoveryengine
     SUBDIR += py-google-cloud-dlp
+    SUBDIR += py-google-cloud-documentai
     SUBDIR += py-google-cloud-logging
+    SUBDIR += py-google-cloud-modelarmor
     SUBDIR += py-google-cloud-monitoring
     SUBDIR += py-google-cloud-resource-manager
     SUBDIR += py-google-cloud-speech
@@ -1862,6 +1866,7 @@
     SUBDIR += py-litestar
     SUBDIR += py-livereload
     SUBDIR += py-ll-xist
+    SUBDIR += py-lomond
     SUBDIR += py-mailman-hyperkitty
     SUBDIR += py-mechanicalsoup
     SUBDIR += py-mechanize
@@ -1949,6 +1954,7 @@
     SUBDIR += py-rolo
     SUBDIR += py-routes
     SUBDIR += py-rules
+    SUBDIR += py-scalar-fastapi
     SUBDIR += py-scgi
     SUBDIR += py-scrapy
     SUBDIR += py-seafdav
@@ -2257,6 +2263,7 @@
     SUBDIR += rubygem-jquery-ui-rails-rails4
     SUBDIR += rubygem-jruby-rack
     SUBDIR += rubygem-js-routes
+    SUBDIR += rubygem-js-routes-gitlab
     SUBDIR += rubygem-jsbundling-rails
     SUBDIR += rubygem-jsbundling-rails-rails70
     SUBDIR += rubygem-jsbundling-rails-rails71

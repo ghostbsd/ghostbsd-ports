@@ -30,6 +30,7 @@
     SUBDIR += calibre
     SUBDIR += calindori
     SUBDIR += cartotheque
+    SUBDIR += cfait
     SUBDIR += cfiles
     SUBDIR += chart
     SUBDIR += cherrytree

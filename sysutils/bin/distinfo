@@ -1,5 +1,5 @@
-TIMESTAMP = 1779217274
-SHA256 (go/sysutils_bin/marcosnils-bin-v0.26.0_GH0/go.mod) = 12d6741a92493599395e40faf98ef37b00d34e9d262f6aa697310a534a948031
-SIZE (go/sysutils_bin/marcosnils-bin-v0.26.0_GH0/go.mod) = 3653
-SHA256 (go/sysutils_bin/marcosnils-bin-v0.26.0_GH0/marcosnils-bin-v0.26.0_GH0.tar.gz) = 7c10787ff64c82d63d051d5a44efb65bd113799a42e1e83ac161274e6037b1fc
-SIZE (go/sysutils_bin/marcosnils-bin-v0.26.0_GH0/marcosnils-bin-v0.26.0_GH0.tar.gz) = 46509
+TIMESTAMP = 1784051379
+SHA256 (go/sysutils_bin/marcosnils-bin-v0.28.0_GH0/go.mod) = 9aaf82012a68c6bc8fbcbdb221994f66106f330646d3ec1e4a26155dcf963288
+SIZE (go/sysutils_bin/marcosnils-bin-v0.28.0_GH0/go.mod) = 3797
+SHA256 (go/sysutils_bin/marcosnils-bin-v0.28.0_GH0/marcosnils-bin-v0.28.0_GH0.tar.gz) = df0cf423bcd91d32845017f219248585bfdc31993aa8e9b122e5ee36f053a9ba
+SIZE (go/sysutils_bin/marcosnils-bin-v0.28.0_GH0/marcosnils-bin-v0.28.0_GH0.tar.gz) = 52472

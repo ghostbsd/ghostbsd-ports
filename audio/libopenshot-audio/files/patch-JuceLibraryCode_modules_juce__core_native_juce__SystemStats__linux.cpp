@@ -1,6 +1,17 @@
---- JuceLibraryCode/modules/juce_core/native/juce_SystemStats_linux.cpp.orig	2024-12-21 22:21:33 UTC
+--- JuceLibraryCode/modules/juce_core/native/juce_SystemStats_linux.cpp.orig	2026-03-16 17:51:52 UTC
 +++ JuceLibraryCode/modules/juce_core/native/juce_SystemStats_linux.cpp
-@@ -56,7 +56,11 @@ SystemStats::OperatingSystemType SystemStats::getOpera
+@@ -20,6 +20,10 @@
+   ==============================================================================
+ */
+ 
++#if JUCE_BSD
++#include <sys/user.h>
++#endif
++
+ #if JUCE_BELA
+ extern "C" int cobalt_thread_mode();
+ #endif
+@@ -56,7 +60,11 @@ String SystemStats::getOperatingSystemName()
  
  String SystemStats::getOperatingSystemName()
  {
@@ -12,7 +23,7 @@
  }
  
  bool SystemStats::isOperatingSystem64Bit()
-@@ -318,18 +322,17 @@ String SystemStats::getUniqueDeviceID()
+@@ -318,18 +326,17 @@ String SystemStats::getUniqueDeviceID()
              return {};
          };
  

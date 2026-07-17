@@ -1,8 +1,9 @@
 PORTNAME=	lazy_imports
-PORTVERSION=	1.0.1
+PORTVERSION=	1.2.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	lazy_imports-${PORTVERSION}
 
 MAINTAINER=	otis@FreeBSD.org
 COMMENT=	Python package helps to create lazy modules

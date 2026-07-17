@@ -1,5 +1,5 @@
 PORTNAME=	nori
-DISTVERSION=	2.7.1
+PORTVERSION=	2.9.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -10,7 +10,8 @@ WWW=		https://github.com/savonrb/nori
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	rubygem-bigdecimal>=0:math/rubygem-bigdecimal
+RUN_DEPENDS=	rubygem-bigdecimal>=0:math/rubygem-bigdecimal \
+		rubygem-stringio>=0:devel/rubygem-stringio
 
 USES=		gem
 

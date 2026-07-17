@@ -1,5 +1,6 @@
 PORTNAME=	neko
 DISTVERSION=	1.0.3
+PORTREVISION=	1
 CATEGORIES=	science
 MASTER_SITES=	https://github.com/ExtremeFLOW/neko/releases/download/v${DISTVERSION}/
 
@@ -18,7 +19,7 @@ TEST_DEPENDS=	bash:shells/bash \
 		${PYTHON_PKGNAMEPREFIX}numpy>=0:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}json5>=0:devel/py-json5@${PY_FLAVOR}
 
-USES=		fortran gmake libtool mpi:mpich pkgconfig python:test shebangfix
+USES=		fortran gmake libtool mpi:mpich pkgconfig python:build,test shebangfix
 
 SHEBANG_GLOB=	*.sh
 

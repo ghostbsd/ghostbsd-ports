@@ -16,10 +16,14 @@ bin/git-pkgs
 %%MANPAGES%%share/man/man1/git-pkgs-browse.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-changelog.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-completion.1.gz
+%%MANPAGES%%share/man/man1/git-pkgs-deprecated.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-diff-driver.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-diff-file.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-diff.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-ecosystems.1.gz
+%%MANPAGES%%share/man/man1/git-pkgs-freshness.1.gz
+%%MANPAGES%%share/man/man1/git-pkgs-funding.1.gz
+%%MANPAGES%%share/man/man1/git-pkgs-health.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-history.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-hooks.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-info.1.gz
@@ -29,8 +33,10 @@ bin/git-pkgs
 %%MANPAGES%%share/man/man1/git-pkgs-licenses.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-list.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-log.1.gz
+%%MANPAGES%%share/man/man1/git-pkgs-maintainers.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-notes-add.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-notes-append.1.gz
+%%MANPAGES%%share/man/man1/git-pkgs-notes-import.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-notes-list.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-notes-namespaces.1.gz
 %%MANPAGES%%share/man/man1/git-pkgs-notes-remove.1.gz

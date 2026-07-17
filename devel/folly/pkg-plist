@@ -773,6 +773,7 @@ include/folly/logging/StandardLogHandlerFactory.h
 include/folly/logging/StreamHandlerFactory.h
 include/folly/logging/xlog.h
 include/folly/math/AccurateSummation.h
+include/folly/math/FloatControl.h
 include/folly/math/KahanSummation.h
 include/folly/math/ReproducibleAccumulator.h
 include/folly/memory/Allocator.h
@@ -876,6 +877,7 @@ include/folly/python/iobuf_ext.h
 include/folly/python/request_context.h
 include/folly/random/hash.h
 include/folly/random/seed_seq.h
+include/folly/random/splitmix64.h
 include/folly/random/xoshiro256pp.h
 include/folly/result/coded_rich_error.h
 include/folly/result/coro.h

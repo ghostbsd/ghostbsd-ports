@@ -1,6 +1,7 @@
 PORTNAME=	wasmtime
 DISTVERSIONPREFIX=	v
 DISTVERSION=	46.0.1
+PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,6 +10,8 @@ WWW=		https://wasmtime.dev/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+LIB_DEPENDS=	libzstd.so:archivers/zstd
 
 USES=		cargo
 

@@ -5,7 +5,8 @@ CATEGORIES=	audio
 
 MAINTAINER=	jhixson@FreeBSD.org
 COMMENT=	Command-line Pandora online radio player
-WWW=		https://6xq.net/pianobar/
+WWW=            codeberg.org/purplesym/pianobar/
+
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

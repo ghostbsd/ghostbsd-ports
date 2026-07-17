@@ -1,5 +1,5 @@
 PORTNAME=	girara
-DISTVERSION=	2026.02.04
+DISTVERSION=	2026.07.07
 CATEGORIES=	x11-toolkits graphics
 MASTER_SITES=	https://pwmt.org/projects/girara/download/
 
@@ -13,7 +13,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		compiler:c17 gnome meson pkgconfig tar:xz
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
-MESON_ARGS=	-Ddocs=disabled \
-		-Dtests=disabled
+MESON_ARGS=	-Ddocs=disabled
 
 .include <bsd.port.mk>

@@ -2,7 +2,7 @@ PORTNAME=	yaru-icon-theme
 DISTVERSION=	25.10.3
 CATEGORIES=	x11-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Default icon theme for Ubuntu
 WWW=		https://github.com/ubuntu/yaru
 

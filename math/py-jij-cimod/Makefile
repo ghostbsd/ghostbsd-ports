@@ -1,5 +1,5 @@
 PORTNAME=	jij-cimod
-DISTVERSION=	1.7.4
+DISTVERSION=	1.7.5
 CATEGORIES=	math
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -32,6 +32,6 @@ USE_PYTHON=	pep517 cython autoplist pytest
 TEST_WRKSRC=	${WRKSRC}/tests
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 
-# tests as of 1.7.4: 49 passed
+# tests as of 1.7.5: 49 passed, 6 warnings in 3.89s
 
 .include <bsd.port.mk>

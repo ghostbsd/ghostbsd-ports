@@ -1,5 +1,7 @@
-TIMESTAMP = 1766154981
-SHA256 (go/net-im_gomuks/gomuks-25.12/v0.2512.0.mod) = c4c4852d4c244fceb4f8ae37da2dac73e06b398c7deef44929f8cefae2934f4e
-SIZE (go/net-im_gomuks/gomuks-25.12/v0.2512.0.mod) = 2159
-SHA256 (go/net-im_gomuks/gomuks-25.12/v0.2512.0.zip) = 6c54448a524344ccd31541a801dd37e76c4892c740d46944556fbf6bf4e6b953
-SIZE (go/net-im_gomuks/gomuks-25.12/v0.2512.0.zip) = 1901569
+TIMESTAMP = 1782599389
+SHA256 (go/net-im_gomuks/gomuks-26.06/v0.2606.0.mod) = 76d7b623567f0d4c1ce6003cf6c835e6038e0e9e105145057bcc61144ffa7181
+SIZE (go/net-im_gomuks/gomuks-26.06/v0.2606.0.mod) = 2172
+SHA256 (go/net-im_gomuks/gomuks-26.06/v0.2606.0.zip) = ab75a989d6a4dcd856ba8181b28eef2e72a9f5db2d6fd18f3c590d3bcaa4b52b
+SIZE (go/net-im_gomuks/gomuks-26.06/v0.2606.0.zip) = 2221119
+SHA256 (go/net-im_gomuks/gomuks-26.06/gomuks-26.06-node-modules.tar.gz) = d41a592edafe0058b3922ca3a50478fa2db89dbd7dec43274e23ed87d8b884a1
+SIZE (go/net-im_gomuks/gomuks-26.06/gomuks-26.06-node-modules.tar.gz) = 62311688

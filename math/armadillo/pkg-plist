@@ -399,6 +399,8 @@ include/armadillo_bits/op_expmat_bones.hpp
 include/armadillo_bits/op_expmat_meat.hpp
 include/armadillo_bits/op_fft_bones.hpp
 include/armadillo_bits/op_fft_meat.hpp
+include/armadillo_bits/op_find_aux_bones.hpp
+include/armadillo_bits/op_find_aux_meat.hpp
 include/armadillo_bits/op_find_bones.hpp
 include/armadillo_bits/op_find_meat.hpp
 include/armadillo_bits/op_find_unique_bones.hpp

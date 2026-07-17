@@ -1,6 +1,6 @@
---- configure.orig	2024-11-20 08:00:58 UTC
+--- configure.orig	2026-06-23 16:23:30 UTC
 +++ configure
-@@ -474,7 +474,7 @@ else
+@@ -494,7 +494,7 @@ else
  else
  case "$undefined_variable" in 0|"") echo ; echo "ERROR: Missing qmake6" >&2 ; echo ; exit 1 ;; esac; fi
  else

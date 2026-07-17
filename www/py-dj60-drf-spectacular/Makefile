@@ -1,5 +1,5 @@
 PORTNAME=	drf-spectacular
-DISTVERSION=	0.29.0
+DISTVERSION=	0.30.0
 CATEGORIES=	www python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}dj60-
@@ -12,7 +12,7 @@ WWW=		https://github.com/tfranzel/drf-spectacular
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=61.0:devel/py-setuptools@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django60>=2.2:www/py-django60@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dj60-djangorestframework>=3.10.3:www/py-dj60-djangorestframework@${PY_FLAVOR} \

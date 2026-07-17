@@ -191,6 +191,7 @@
     SUBDIR += ppmd
     SUBDIR += ppunpack
     SUBDIR += py-acefile
+    SUBDIR += py-arpy
     SUBDIR += py-bitshuffle
     SUBDIR += py-blosc
     SUBDIR += py-blosc2

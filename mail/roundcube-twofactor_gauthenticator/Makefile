@@ -1,5 +1,5 @@
 PORTNAME=	twofactor_gauthenticator
-PORTVERSION=	g20231119
+PORTVERSION=	g20260408
 CATEGORIES=	mail security
 PKGNAMEPREFIX=	roundcube-
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
@@ -17,7 +17,7 @@ USES=		php:flavors
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	alexandregz
-GH_TAGNAME=	23d8f4c
+GH_TAGNAME=	b143061
 
 NO_BUILD=	yes
 NO_ARCH=	yes

@@ -1,9 +1,8 @@
 PORTNAME=	wazuh
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.14.5
-PORTREVISION=	2
+DISTVERSION=	4.14.6
 CATEGORIES=	security
-MASTER_SITES=	https://packages.wazuh.com/deps/51/libraries/sources/:wazuh_sources \
+MASTER_SITES=	https://packages.wazuh.com/deps/53/libraries/sources/:wazuh_sources \
 		LOCAL/acm/${PORTNAME}/:wazuh_cache
 PKGNAMESUFFIX=	-manager
 DISTFILES=	${EXTERNAL_DISTFILES} \
@@ -38,7 +37,7 @@ USES=		cpe dos2unix gmake perl5 python:3.11 readline shebangfix sqlite:3 uidfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	alonsobsd
 GH_PROJECT=	wazuh-freebsd
-GH_TAGNAME=	22e254c6366d51a38792163162dd019a45a00c55
+GH_TAGNAME=	62e1b663bbec762efd9d71bf5bdd33134e028d0a
 
 USE_RC_SUBR=	${PORTNAME}${PKGNAMESUFFIX}
 
@@ -144,18 +143,17 @@ WAZUHMOD770=	/etc/decoders /etc/lists /etc/lists/amazon /etc/lists/malicious-ioc
 WAZUHPREFIX=	/var/ossec
 
 WZPYTHONWHEELS=	cffi-2.0.0-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
-		cryptography-46.0.6-cp311-abi3-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
-		greenlet-2.0.2-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
-		grpcio-1.69.0-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
+		cryptography-46.0.7-cp311-abi3-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
+		greenlet-3.0.3-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
+		grpcio-1.76.0-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
 		lazy_object_proxy-1.10.0-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
-		markupsafe-2.1.2-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
-		multidict-5.2.0-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
+		markupsafe-2.1.5-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
 		numpy-1.26.4-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
-		psutil-5.9.0-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
+		psutil-6.1.1-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
 		pyarrow-24.0.0-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
-		pyyaml-6.0.1-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
+		pyyaml-6.0.3-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
 		rpds_py-0.15.2-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl \
-		uvloop-0.17.0-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl
+		uvloop-0.19.0-cp311-cp311-${FBSD_VERSION_BASE}_${ARCH_BASE}.whl
 
 ARCH_BASE=	${ARCH:S/aarch64/arm64/g}
 UNAME_r=	${_OSRELEASE:tl}
@@ -164,13 +162,13 @@ FBSD_RELEASE=	freebsd_${UNAME_r:S/./_/g:S/-/_/g}
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "aarch64"
-FBSD14_PATCH_LEVEL=	_p5
-FBSD15_PATCH_LEVEL=	_p9
+FBSD14_PATCH_LEVEL=	_p7
+FBSD15_PATCH_LEVEL=	_p1
 .endif
 
 .if ${ARCH} != "aarch64"
-FBSD14_PATCH_LEVEL=	_p5
-FBSD15_PATCH_LEVEL=	_p9
+FBSD14_PATCH_LEVEL=	_p7
+FBSD15_PATCH_LEVEL=	_p1
 .endif
 
 .if ${OSVERSION} >= 1400000 && ${OSVERSION} < 1500000
@@ -179,7 +177,7 @@ FBSD_MAJOR_VERSION=14
 WAZUH_CACHENAME=${PORTNAME}-cache-fbsd14-${ARCH}-${DISTVERSION}
 DISTFILES+=	${WAZUH_CACHENAME}${EXTRACT_SUFX}:wazuh_cache
 .elif ${OSVERSION} >= 1500000 && ${OSVERSION} < 1600000
-FBSD_VERSION_BASE=freebsd_15_0_release${FBSD15_PATCH_LEVEL}
+FBSD_VERSION_BASE=freebsd_15_1_release${FBSD15_PATCH_LEVEL}
 FBSD_MAJOR_VERSION=15
 WAZUH_CACHENAME=${PORTNAME}-cache-fbsd15-${ARCH}-${DISTVERSION}
 DISTFILES+=     ${WAZUH_CACHENAME}${EXTRACT_SUFX}:wazuh_cache

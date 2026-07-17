@@ -1,6 +1,5 @@
 PORTNAME=	beets
-DISTVERSION=	2.5.1
-PORTREVISION=	4
+DISTVERSION=	2.12.0
 CATEGORIES=	audio python
 MASTER_SITES=	PYPI
 
@@ -12,23 +11,23 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}poetry-core>0:devel/py-poetry-core@${PY_FLAVOR}
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}confuse>=1.0.0:devel/py-confuse@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}confuse>=2.2.0:devel/py-confuse@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jellyfish>=0:devel/py-jellyfish@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}lap>=0:devel/py-lap@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}mediafile>=0.2.0:devel/py-mediafile@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}lap>=0.5.12:devel/py-lap@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}mediafile>=0.17.0:devel/py-mediafile@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}munkres>=1.0.0:math/py-munkres@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}musicbrainzngs>=0.4:audio/py-musicbrainzngs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mutagen>=1.45:audio/py-mutagen@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}numpy>=0:math/py-numpy@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}platformdirs>=0:devel/py-platformdirs@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pyacoustid>=0:audio/py-pyacoustid@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}platformdirs>=3.5.0:devel/py-platformdirs@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyacoustid>=1.3.1:audio/py-pyacoustid@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyyaml>=0:devel/py-pyyaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}six>=1.9:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}typing-extensions>=0:devel/py-typing-extensions@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}unidecode>=0:converters/py-unidecode@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}unidecode>=1.3.6:converters/py-unidecode@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.10-3.14
 USE_PYTHON=	autoplist optsuffix pep517
 
 NO_ARCH=	yes
@@ -40,7 +39,7 @@ OPTIONS_DEFINE=		ACOUSTICBRAINZ BADFILES BEATPORT DISCOGS EMBYUPDATE \
 			FETCHART FFMPEG IMAGEMAGICK IPFS KODIUPDATE LASTFM \
 			LASTIMPORT LYRICS LYRICS_GOOGLE METASYNC_DBUS MPDSTATS \
 			PLEXUPDATE REPLAYGAIN SONOS_UPDATE SPOTIFY THUMBNAILS \
-			WEB WEB_CORS
+			TIDAL WEB WEB_CORS
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
 ACOUSTICBRAINZ_DESC=	AcousticBrainz Plugin
@@ -63,6 +62,7 @@ REPLAYGAIN_DESC=	Normalize Audio Loudness
 SONOS_UPDATE_DESC=	Sonos Update Plugin
 SPOTIFY_DESC=		Spotify Plugin
 THUMBNAILS_DESC=	Thumbnails for freedesktop.org-compliant file managers
+TIDAL_DESC=		Tidal Plugin
 WEB_CORS_DESC=		Cross-origin resource sharing for the Web plugin
 WEB_DESC=		Web plugin for querying, browsing and playing music
 
@@ -90,6 +90,8 @@ REPLAYGAIN_RUN_DEPENDS=		mp3gain>=0:audio/mp3gain
 SONOS_UPDATE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}soco>=0:multimedia/py-soco@${PY_FLAVOR}
 SPOTIFY_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
 THUMBNAILS_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}pyxdg>=0:devel/py-pyxdg@${PY_FLAVOR}
+TIDAL_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}requests-oauthlib>=0.6.1:www/py-requests-oauthlib@${PY_FLAVOR} \
+				${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
 WEB_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}flask>=0:www/py-flask@${PY_FLAVOR}
 WEB_CORS_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}flask-cors>=0:www/py-flask-cors@${PY_FLAVOR}
 

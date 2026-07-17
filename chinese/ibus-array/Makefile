@@ -1,5 +1,6 @@
 PORTNAME=	ibus-array
 PORTVERSION=	0.2.2.${SNAPDATE}
+PORTREVISION=	1
 CATEGORIES=	chinese
 
 MAINTAINER=	jiashiun@gmail.com

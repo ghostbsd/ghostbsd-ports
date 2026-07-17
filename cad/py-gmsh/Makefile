@@ -36,7 +36,8 @@ USE_LDCONFIG=	${PYTHON_SITELIBDIR}
 PATCHDIR=	${PORTSDIR}/cad/gmsh/files
 
 CMAKE_ON=	ENABLE_WRAP_PYTHON ENABLE_PRIVATE_API ENABLE_OCC
-CMAKE_ARGS=	-DOCC_INC=${LOCALBASE}/include/OpenCASCADE
+CMAKE_ARGS=	-DOCC_INC=${LOCALBASE}/include/OpenCASCADE \
+		-DGMSHPY_INSTALL_DIRECTORY=${PYTHON_SITELIBDIR}/gmshpy
 
 CXXFLAGS_powerpc64=	-mvsx
 
@@ -49,6 +50,7 @@ post-install: # remove all except for the python binding
 			share/doc/gmsh \
 			share/man/man1/gmsh.1
 	# move "private API" libs to the python folder
+	${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}
 	@cd ${STAGEDIR} && \
 		${MV} \
 			${STAGEDIR}${PREFIX}/lib/gmsh* \

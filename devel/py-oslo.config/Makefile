@@ -1,5 +1,5 @@
 PORTNAME=	oslo.config
-PORTVERSION=	10.4.0
+PORTVERSION=	10.5.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,7 +23,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}netaddr>=0.7.18:net/py-netaddr@${PY_FLAVOR} 
 		${PYTHON_PKGNAMEPREFIX}rfc3986>=1.2.0:www/py-rfc3986@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}stevedore>=5.6.0:devel/py-stevedore@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.11+
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes

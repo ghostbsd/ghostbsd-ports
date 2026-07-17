@@ -9,6 +9,8 @@ MAINTAINER=	ahicks@p-o.co.uk
 COMMENT=	Homebrew PVR project
 WWW=		https://www.mythtv.org/
 
+BROKEN=		WARNING: disabling Python bindings; missing pip, wheel
+
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/../LICENSE
 

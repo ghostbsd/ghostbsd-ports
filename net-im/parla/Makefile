@@ -1,5 +1,5 @@
 PORTNAME=	parla
-DISTVERSION=	0.5.2
+DISTVERSION=	0.6.6
 PORTREVISION=	0
 CATEGORIES=	net-im
 
@@ -15,11 +15,7 @@ LIB_DEPENDS=	libjson-glib-1.0.so:devel/json-glib
 RUN_DEPENDS=	deltachat-rpc-server>0:net/deltachat-rpc-server
 USES=		desktop-file-utils gnome meson pkgconfig shebangfix vala:build
 
-USE_GNOME=	gtk40 libadwaita
-
-SHEBANG_FILES=	build.sh
-SHEBANG_LANG=	bash
-bash_CMD=	/bin/sh
+USE_GNOME=	gdkpixbuf gtk40 libadwaita
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	trufae

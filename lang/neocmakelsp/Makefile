@@ -1,6 +1,6 @@
 PORTNAME=	neocmakelsp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.10.3
+DISTVERSION=	0.10.4
 CATEGORIES=	lang
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -67,7 +67,7 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		futures-sink-0.3.32 \
 		futures-task-0.3.32 \
 		futures-util-0.3.32 \
-		gen-lsp-types-0.6.0 \
+		gen-lsp-types-0.9.0 \
 		getrandom-0.2.17 \
 		getrandom-0.4.2 \
 		glob-0.3.3 \
@@ -135,7 +135,7 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		serde-1.0.228 \
 		serde_core-1.0.228 \
 		serde_derive-1.0.228 \
-		serde_json-1.0.149 \
+		serde_json-1.0.150 \
 		serde_spanned-1.1.1 \
 		sharded-slab-0.1.7 \
 		shlex-1.3.0 \
@@ -164,7 +164,7 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		toml_writer-1.1.1+spec-1.1.0 \
 		tower-0.5.3 \
 		tower-layer-0.3.3 \
-		tower-lsp-f-0.25.0-rc3 \
+		tower-lsp-f-0.26.0 \
 		tower-service-0.3.3 \
 		tracing-0.1.44 \
 		tracing-attributes-0.1.31 \

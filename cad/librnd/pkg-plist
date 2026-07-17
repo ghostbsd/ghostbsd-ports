@@ -73,6 +73,8 @@ include/librnd4/librnd/plugins/lib_exp_pixmap/draw_pixmap.h
 include/librnd4/librnd/plugins/lib_exp_text/draw_eps.h
 include/librnd4/librnd/plugins/lib_exp_text/draw_ps.h
 include/librnd4/librnd/plugins/lib_exp_text/draw_svg.h
+include/librnd4/librnd/plugins/lib_exp_text/draw_web2.h
+include/librnd4/librnd/plugins/lib_exp_text/lht_template.h
 include/librnd4/librnd/plugins/lib_exp_text/lpr_hid.h
 include/librnd4/librnd/plugins/lib_exp_text/media.h
 include/librnd4/librnd/plugins/lib_hid_common/dialogs_conf.h
@@ -268,6 +270,8 @@ lib/librnd4/plugins/lib_portynet.so
 lib/librnd4/plugins/loghid.pup
 lib/librnd4/plugins/loghid.so
 lib/librnd4/plugins/map_plugins.sh
+lib/librnd4/plugins/remctrl_tcp.pup
+lib/librnd4/plugins/remctrl_tcp.so
 lib/librnd4/plugins/script.pup
 lib/librnd4/plugins/script.so
 %%STROKE%%lib/librnd4/plugins/stroke.pup

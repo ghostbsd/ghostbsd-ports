@@ -1,6 +1,6 @@
 PORTNAME=	imageformats
 PORTVERSION=	1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics linux
 PKGNAMESUFFIX=	-libs
 DISTNAME=
@@ -28,8 +28,8 @@ LIB_DISTNAMES=	jasper${PKGNAMESUFFIX}-2.0.28-4.el9 \
 		jbigkit${PKGNAMESUFFIX}-2.1-23.el9 \
 		libjpeg-turbo-2.0.90-7.el9 \
 		libmng-2.0.3-17.el9 \
-		libpng-1.6.37-12.el9 \
-		libtiff-4.4.0-15.el9_7.2.0.1 \
+		libpng-1.6.37-15.el9 \
+		libtiff-4.4.0-18.el9_8 \
 		libwebp-1.2.0-8.el9 \
 		openjpeg2-2.4.0-8.el9
 
@@ -37,8 +37,8 @@ SRC_DISTFILES=	jasper-2.0.28-4.el9${SRC_SUFX}:SOURCE \
 		jbigkit-2.1-23.el9${SRC_SUFX}:SOURCE \
 		libjpeg-turbo-2.0.90-7.el9${SRC_SUFX}:SOURCE \
 		libmng-2.0.3-17.el9${SRC_SUFX}:SOURCE \
-		libpng-1.6.37-12.el9${SRC_SUFX}:SOURCE \
-		libtiff-4.4.0-15.el9_7.2.0.1${SRC_SUFX}:SOURCE \
+		libpng-1.6.37-15.el9${SRC_SUFX}:SOURCE \
+		libtiff-4.4.0-18.el9_8${SRC_SUFX}:SOURCE \
 		libwebp-1.2.0-8.el9${SRC_SUFX}:SOURCE \
 		openjpeg2-2.4.0-8.el9${SRC_SUFX}:SOURCE
 

@@ -186,7 +186,7 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		critical-section-1.2.0 \
 		crossbeam-channel-0.5.15 \
 		crossbeam-deque-0.8.6 \
-		crossbeam-epoch-0.9.18 \
+		crossbeam-epoch-0.9.20 \
 		crossbeam-queue-0.3.12 \
 		crossbeam-utils-0.8.21 \
 		crossterm_winapi-0.9.1 \
@@ -678,7 +678,7 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		piper-0.2.4 \
 		pkcs8-0.10.2 \
 		pkg-config-0.3.32 \
-		plist-1.8.0 \
+		plist-1.9.0 \
 		png-0.18.0 \
 		polling-3.11.0 \
 		poly1305-0.8.0 \
@@ -718,7 +718,8 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		pulldown-cmark-escape-0.10.1 \
 		pxfm-0.1.27 \
 		quick-error-2.0.1 \
-		quick-xml-0.38.4 \
+		quick-xml-0.39.4 \
+		quick-xml-0.41.0 \
 		quickcheck-1.1.0 \
 		quinn-0.11.9 \
 		quinn-proto-0.11.14 \
@@ -773,8 +774,8 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		resolv-conf-0.7.6 \
 		rfc6979-0.4.0 \
 		ring-0.17.14 \
-		rmcp-1.7.0 \
-		rmcp-macros-1.7.0 \
+		rmcp-1.8.0 \
+		rmcp-macros-1.8.0 \
 		rtrb-0.3.3 \
 		rust-embed-8.11.0 \
 		rust-embed-impl-8.11.0 \
@@ -1056,7 +1057,7 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		wayland-client-0.31.12 \
 		wayland-protocols-0.32.10 \
 		wayland-protocols-wlr-0.3.10 \
-		wayland-scanner-0.31.8 \
+		wayland-scanner-0.31.10 \
 		wayland-sys-0.31.8 \
 		web-sys-0.3.85 \
 		web-time-1.1.0 \

@@ -1,4 +1,4 @@
---- pyproject.toml.orig	2026-05-18 19:20:44 UTC
+--- pyproject.toml.orig	2026-07-15 17:05:42 UTC
 +++ pyproject.toml
 @@ -1,6 +1,6 @@
  [build-system]
@@ -43,7 +43,7 @@
 -changelog-contributors = false  # We exclude contributors from the CHANGELOG file
 -major-labels = []  # We do not use the major version number yet
 -minor-labels = ["breaking"]
--ignore-labels = ["internal", "ci", "testing"]
+-ignore-labels = ["internal", "ci", "testing", "automations"]
 -version_files = [
 -  "README.md",
 -  "pyproject.toml",
@@ -78,7 +78,7 @@
  [dependency-groups]
  docs = [
    "black>=23.10.0",
-@@ -119,6 +64,13 @@ cache-keys = [
+@@ -122,6 +67,13 @@ cache-keys = [
      { file = "crates/**/*.rs" },
      { file = "crates/**/Cargo.toml" },
  ]

@@ -25,6 +25,7 @@
     SUBDIR += gajim
     SUBDIR += gloox
     SUBDIR += gomuks
+    SUBDIR += gomuks-legacy
     SUBDIR += gotktrix
     SUBDIR += gotosocial
     SUBDIR += gurk-rs

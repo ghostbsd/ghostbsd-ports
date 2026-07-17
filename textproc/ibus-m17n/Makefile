@@ -1,5 +1,5 @@
 PORTNAME=	ibus-m17n
-DISTVERSION=	1.4.39
+DISTVERSION=	1.4.40
 CATEGORIES=	textproc
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -27,7 +27,7 @@ GH_ACCOUNT=	ibus
 
 GNU_CONFIGURE=	yes
 
-GLIB_SCHEMAS=	org.freedesktop.ibus.engine.m17n.gschema.xml
+#GLIB_SCHEMAS=	org.freedesktop.ibus.engine.m17n.gschema.xml
 
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes

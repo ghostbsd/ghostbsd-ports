@@ -1,5 +1,5 @@
 PORTNAME=	distributed
-PORTVERSION=	2026.3.0
+PORTVERSION=	2026.7.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -28,7 +28,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}click>=8.0:devel/py-click@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tblib>=1.6.0:devel/py-tblib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}toolz>=0.12.0:devel/py-toolz@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tornado>=6.2.0:www/py-tornado@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}urllib3>=1.26.5,1:net/py-urllib3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}zict>=3.0.0:devel/py-zict@${PY_FLAVOR}
 
 USES=		python

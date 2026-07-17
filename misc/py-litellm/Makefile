@@ -1,8 +1,9 @@
 PORTNAME=	litellm
-DISTVERSION=	1.90.1
+DISTVERSION=	1.92.0
 CATEGORIES=	misc python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Call all LLM APIs using the OpenAI format
@@ -11,7 +12,7 @@ WWW=		https://github.com/BerriAI/litellm
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}uv-build>=0.11.8:devel/py-uv-build@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}maturin>=1.9.4:devel/py-maturin@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fastuuid>=0.14.0<1.0:devel/py-fastuuid@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}httpx>=0.28.0<1.0:www/py-httpx@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}openai>=2.20.0<3.0.0:misc/py-openai@${PY_FLAVOR} \
@@ -25,14 +26,21 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fastuuid>=0.14.0<1.0:devel/py-fastuuid@${PY_
 		${PYTHON_PKGNAMEPREFIX}pydantic2>=2.10.0<3.0.0:devel/py-pydantic2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jsonschema>=4.0.0<5.0:devel/py-jsonschema@${PY_FLAVOR}
 
-USES=		python shebangfix
+USES=		cargo python shebangfix
 USE_PYTHON=	autoplist concurrent pep517
 
 SHEBANG_FILES=	litellm/proxy/start.sh
 bash_CMD=	${SH}
 
+CARGO_CARGOTOML=${WRKSRC}/litellm-rust/Cargo.toml
+CARGO_CARGOLOCK=${WRKSRC}/litellm-rust/Cargo.lock
+CARGO_BUILD=	no
+CARGO_INSTALL=	no
+
+MAKE_ENV=	${CARGO_ENV}
+
+BINARY_ALIAS=	python3=${PYTHON_CMD}
 REINPLACE_ARGS=	-i ''
-NO_ARCH=	yes
 
 PORTDOCS=	README.md
 

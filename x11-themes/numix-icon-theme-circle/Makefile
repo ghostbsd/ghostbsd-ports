@@ -2,7 +2,7 @@ PORTNAME=	numix-icon-theme-circle
 DISTVERSION=	25.01.31
 CATEGORIES=	x11-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Icon theme from the Numix project
 WWW=		https://numixproject.github.io
 

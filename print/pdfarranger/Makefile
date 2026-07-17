@@ -4,7 +4,7 @@ PORTREVISION=	2
 CATEGORIES=	print
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Split, Merge, Rotate and Reorder PDF Files
 WWW=		https://github.com/pdfarranger/pdfarranger
 

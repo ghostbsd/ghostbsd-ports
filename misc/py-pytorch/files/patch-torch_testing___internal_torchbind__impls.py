@@ -1,6 +1,6 @@
---- torch/testing/_internal/torchbind_impls.py.orig	2026-05-13 17:40:45 UTC
+--- torch/testing/_internal/torchbind_impls.py.orig	2026-07-08 17:44:38 UTC
 +++ torch/testing/_internal/torchbind_impls.py
-@@ -180,6 +180,8 @@ def load_torchbind_test_lib():
+@@ -179,6 +179,8 @@ def load_torchbind_test_lib():
          lib_file_path = find_library_location("torchbind_test.dll")
      else:
          lib_file_path = find_library_location("libtorchbind_test.so")

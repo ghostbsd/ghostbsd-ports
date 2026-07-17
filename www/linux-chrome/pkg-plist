@@ -10,6 +10,7 @@ share/applications/google-chrome.desktop
 %%DATADIR%%/WidevineCdm/LICENSE
 %%DATADIR%%/WidevineCdm/_platform_specific/linux_x64/libwidevinecdm.so
 %%DATADIR%%/WidevineCdm/manifest.json
+%%DATADIR%%/apparmor.d/google-chrome-stable
 %%DATADIR%%/chrome
 %%DATADIR%%/chrome-management-service
 %%DATADIR%%/chrome-sandbox
@@ -257,8 +258,6 @@ share/applications/google-chrome.desktop
 %%DATADIR%%/resources.pak
 %%DATADIR%%/v8_context_snapshot.bin
 %%DATADIR%%/vk_swiftshader_icd.json
-%%DATADIR%%/xdg-mime
-%%DATADIR%%/xdg-settings
 share/gnome-control-center/default-apps/google-chrome.xml
 share/icons/hicolor/128x128/apps/google-chrome.png
 share/icons/hicolor/16x16/apps/google-chrome.png

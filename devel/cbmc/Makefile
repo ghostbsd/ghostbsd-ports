@@ -1,7 +1,6 @@
 PORTNAME=	cbmc
 DISTVERSIONPREFIX=	cbmc-
-DISTVERSION=	6.9.0
-PORTREVISION=	1
+DISTVERSION=	6.10.0
 CATEGORIES=	devel
 MASTER_SITES=	DEBIAN/pool/main/m/minisat2:minisat
 DISTFILES=	minisat2_2.2.1.orig.tar.gz:minisat

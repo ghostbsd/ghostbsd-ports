@@ -1,7 +1,6 @@
 PORTNAME=	backrest
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.13.0
-PORTREVISION=	2
+DISTVERSION=	1.14.1
 CATEGORIES=	sysutils
 MASTER_SITES=	LOCAL/dtxdf/${PORTNAME}/:assets
 # For instructions on how to create assets:
@@ -43,7 +42,7 @@ RCLONE_RUN_DEPENDS=	rclone>=0:net/rclone
 
 # Run 'git checkout ${DISTVERSIONPREFIX}${DISTVERSION} && git rev-parse HEAD'
 # in the Backrest repository to get the value of GITID.
-GITID=		a389bbc7e2bd344b9cace3a1bb88f73cb224128f
+GITID=		875c9cb51e626a75276a64da42c6a9ec0695010a
 
 BUILD_DATE=	$$(date -u '+%Y-%m-%dT%H:%M:%SZ')
 

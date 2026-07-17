@@ -1,5 +1,5 @@
 PORTNAME=	doorkeeper-i18n
-PORTVERSION=	5.2.8
+PORTVERSION=	5.2.9
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX?=	# empty for base port

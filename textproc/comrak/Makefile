@@ -1,6 +1,6 @@
 PORTNAME=	comrak
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.53.0
+DISTVERSION=	0.54.0
 CATEGORIES=	textproc
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -147,7 +147,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		time-macros-0.2.25 \
 		tinyvec-1.10.0 \
 		tinyvec_macros-0.1.1 \
-		toml-1.1.0+spec-1.1.0 \
+		toml-1.1.2+spec-1.1.0 \
 		toml_datetime-0.7.5+spec-1.1.0 \
 		toml_datetime-1.1.1+spec-1.1.0 \
 		toml_edit-0.23.10+spec-1.0.0 \

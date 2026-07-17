@@ -1,6 +1,6 @@
 PORTNAME=	pipewire-spa-oss-ng
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.3
+DISTVERSION=	0.9.6
 CATEGORIES=	audio
 
 MAINTAINER=	kbowling@FreeBSD.org
@@ -25,7 +25,7 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		anstyle-1.0.14 \
 		bindgen-0.72.1 \
 		bitflags-2.13.0 \
-		cc-1.2.65 \
+		cc-1.2.67 \
 		cexpr-0.6.0 \
 		cfg-expr-0.20.8 \
 		cfg-if-1.0.4 \
@@ -46,7 +46,7 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		libspa-0.10.0 \
 		libspa-sys-0.10.0 \
 		linux-raw-sys-0.12.1 \
-		memchr-2.8.2 \
+		memchr-2.8.3 \
 		minimal-lexical-0.2.1 \
 		nix-0.31.3 \
 		nom-7.1.3 \
@@ -54,10 +54,10 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		pkg-config-0.3.33 \
 		proc-macro2-1.0.106 \
 		quote-1.0.46 \
-		regex-1.12.4 \
-		regex-automata-0.4.14 \
+		regex-1.13.0 \
+		regex-automata-0.4.15 \
 		regex-syntax-0.8.11 \
-		rustc-hash-2.1.2 \
+		rustc-hash-2.1.3 \
 		rustix-1.1.4 \
 		serde_core-1.0.228 \
 		serde_derive-1.0.228 \

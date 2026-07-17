@@ -1,4 +1,4 @@
-TIMESTAMP = 1781744247
+TIMESTAMP = 1783345491
 SHA256 (rust/crates/addr2line-0.24.2.crate) = dfbe277e56a376000877090da837660b4427aad530e3028d44e0bffe4f89a1c1
 SIZE (rust/crates/addr2line-0.24.2.crate) = 39015
 SHA256 (rust/crates/adler2-2.0.1.crate) = 320119579fcad9c21884f5c4861d16174d0e06250625266f50fe6898340abefa
@@ -2497,5 +2497,5 @@ SHA256 (GreptimeTeam-opensrv-6c5a451544194b7bb60a8318d155d4f892b49f2c_GH0.tar.gz
 SIZE (GreptimeTeam-opensrv-6c5a451544194b7bb60a8318d155d4f892b49f2c_GH0.tar.gz) = 173715
 SHA256 (GreptimeTeam-greptime-meter-5618e779cf2bb4755b499c630fba4c35e91898cb_GH0.tar.gz) = 332b50ed5963d9cf0783a098eec1c6d9a50f28c0ce5044cc947782020ec1c1f1
 SIZE (GreptimeTeam-greptime-meter-5618e779cf2bb4755b499c630fba4c35e91898cb_GH0.tar.gz) = 10757
-SHA256 (GreptimeTeam-greptimedb-v1.1.0_GH0.tar.gz) = 288930d07fafbdde7a3345ea66385991d298c394149ea5c159816a8c713827df
-SIZE (GreptimeTeam-greptimedb-v1.1.0_GH0.tar.gz) = 6394073
+SHA256 (GreptimeTeam-greptimedb-v1.1.2_GH0.tar.gz) = 0cb190cc9bdac073ea3415ce876684c296261dacbbbc70a61ef6c73408f5f992
+SIZE (GreptimeTeam-greptimedb-v1.1.2_GH0.tar.gz) = 6475513

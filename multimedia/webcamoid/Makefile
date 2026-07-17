@@ -1,6 +1,5 @@
 PORTNAME=	webcamoid
-DISTVERSION=	9.3.0
-PORTREVISION=	1
+DISTVERSION=	9.4.0
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -16,7 +15,6 @@ LIB_DEPENDS=	libSvtAv1Enc.so:multimedia/svt-av1 \
 		libaom.so:multimedia/aom \
 		libasound.so:audio/alsa-lib \
 		libavcodec.so:multimedia/ffmpeg \
-		libjack.so:audio/jack \
 		libopus.so:audio/opus \
 		libpipewire-0.3.so:multimedia/pipewire \
 		libportaudio.so:audio/portaudio \
@@ -26,6 +24,7 @@ LIB_DEPENDS=	libSvtAv1Enc.so:multimedia/svt-av1 \
 		libvlc.so:multimedia/vlc \
 		libvorbisenc.so:audio/libvorbis \
 		libvpx.so:multimedia/libvpx \
+		libwayland-client.so:graphics/wayland \
 		libx264.so:multimedia/libx264
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gl gnome gstreamer pkgconfig qt:6 sdl xorg
@@ -34,7 +33,7 @@ USE_GNOME=	glib20
 USE_GL=		gl
 USE_QT=		base declarative multimedia svg
 USE_SDL=	sdl2
-USE_X11=	x11 xext xfixes xrandr
+USE_XORG=	x11 xext xfixes xrandr
 USE_LDCONFIG=	yes
 
 QMAKE_ARGS=	INSTALLQMLDIR=${QT_QMLDIR} \
@@ -50,13 +49,13 @@ CXXFLAGS+=	-mmmx
 .endif
 
 # Intel SIMD instructions are only supported on amd64 and i386
-.if ${ARCH} == amd64 || ${ARCH} == i386
-PLIST_FILES+=	lib/qt/plugins/avkys/libSimdCore_avx.so \
-		lib/qt/plugins/avkys/libSimdCore_avx2.so \
-		lib/qt/plugins/avkys/libSimdCore_mmx.so \
-		lib/qt/plugins/avkys/libSimdCore_sse.so \
-		lib/qt/plugins/avkys/libSimdCore_sse2.so \
-		lib/qt/plugins/avkys/libSimdCore_sse4_1.so
-.endif
+#.if ${ARCH} == amd64 || ${ARCH} == i386
+#PLIST_FILES+=	lib/qt/plugins/avkys/libSimdCore_avx.so \
+#		lib/qt/plugins/avkys/libSimdCore_avx2.so \
+#		lib/qt/plugins/avkys/libSimdCore_mmx.so \
+#		lib/qt/plugins/avkys/libSimdCore_sse.so \
+#		lib/qt/plugins/avkys/libSimdCore_sse2.so \
+#		lib/qt/plugins/avkys/libSimdCore_sse4_1.so
+#.endif
 
 .include <bsd.port.post.mk>

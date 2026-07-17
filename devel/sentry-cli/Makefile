@@ -1,5 +1,5 @@
 PORTNAME=	sentry-cli
-DISTVERSION=	3.5.0
+DISTVERSION=	3.6.0
 CATEGORIES=	devel
 
 MAINTAINER=	lcook@FreeBSD.org

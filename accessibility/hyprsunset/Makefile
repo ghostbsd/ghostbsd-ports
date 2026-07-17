@@ -1,7 +1,6 @@
 PORTNAME=	hyprsunset
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.3
-PORTREVISION=	3
+DISTVERSION=	0.4.0
 CATEGORIES=	accessibility wayland
 
 MAINTAINER=	tagattie@FreeBSD.org
@@ -29,7 +28,6 @@ PLIST_FILES=	bin/${PORTNAME} \
 # https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=282377
 .if exists(/usr/lib/libc++.so)
 LIB_DEPENDS+=	libdate-tz.so:devel/date
-USES+=		localbase:ldflags
 .endif
 
 .include <bsd.port.mk>

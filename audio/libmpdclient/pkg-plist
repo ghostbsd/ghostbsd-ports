@@ -40,6 +40,7 @@ include/mpd/song.h
 include/mpd/stats.h
 include/mpd/status.h
 include/mpd/sticker.h
+include/mpd/stringnormalization.h
 include/mpd/tag.h
 include/mpd/version.h
 lib/libmpdclient.a

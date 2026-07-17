@@ -1,5 +1,5 @@
 PORTNAME=	aide
-PORTVERSION=	0.19.2
+PORTVERSION=	0.19.3
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/aide/aide/releases/download/v${PORTVERSION}/
 

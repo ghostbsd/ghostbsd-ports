@@ -42,9 +42,10 @@ load_rc_config $name
 piddir=/var/run/${name}
 pidfile=${piddir}/${name}.pid
 command=/usr/sbin/daemon
-command_args="-S -T ${name} -P ${pidfile} \
+command_args="-S -T ${name} -R 10 -P ${pidfile} \
 	/usr/bin/env JAVA_VERSION=${languagetool_java_version} \
-	%%LOCALBASE%%/bin/java ${languagetool_java_opts} \
+	%%LOCALBASE%%/bin/java -XX:+ExitOnOutOfMemoryError \
+	${languagetool_java_opts} \
 	-cp %%DATADIR%%/languagetool-server.jar \
 	org.languagetool.server.HTTPServer \
 	--config ${languagetool_config} \

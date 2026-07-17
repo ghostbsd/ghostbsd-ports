@@ -1,6 +1,6 @@
 PORTNAME=	fs2open
 DISTVERSIONPREFIX=	release_
-DISTVERSION=	25_0_1
+DISTVERSION=	26_0_0
 CATEGORIES=	games
 
 MAINTAINER=	pkubaj@FreeBSD.org
@@ -22,7 +22,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	scp-fs2open
 GH_PROJECT=	fs2open.github.com
 GH_TUPLE=	asarium:cmake-modules:7cef957:cmakemodules/cmake/external/rpavlik-cmake-modules \
-		asarium:libRocket:ae8a8d9:libRocket/lib/libRocket
+		asarium:libRocket:b0c18e1:libRocket/lib/libRocket
 USE_SDL=	sdl2
 
 CMAKE_OFF=	FSO_BUILD_WITH_OPENXR

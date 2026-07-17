@@ -1,12 +1,14 @@
 PORTNAME=	json-c
-PORTVERSION=	0.18
+PORTVERSION=	0.19
 CATEGORIES=	devel
 MASTER_SITES=	https://s3.amazonaws.com/json-c_releases/releases/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	JSON (JavaScript Object Notation) implementation in C
-WWW=		https://github.com/json-c/json-c/wiki
+WWW=		https://github.com/json-c/json-c/wiki \
+		https://json-c.github.io/json-c/ \
+		https://github.com/json-c/json-c
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -21,8 +23,10 @@ CMAKE_OFF=	BUILD_TESTING \
 		DISABLE_THREAD_LOCAL_STORAGE \
 		ENABLE_RDRAND \
 		ENABLE_THREADING \
+		NEWLOCALE_NEEDS_FREELOCALE \
 		OVERRIDE_GET_RANDOM_SEED
-CMAKE_ON=	BUILD_SHARED_LIBS \
+CMAKE_ON=	BUILD_APPS \
+		BUILD_SHARED_LIBS \
 		BUILD_STATIC_LIBS \
 		DISABLE_EXTRA_LIBS \
 		DISABLE_WERROR

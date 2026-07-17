@@ -1275,7 +1275,6 @@ lib/usermin/authentic-theme/unauthenticated/LICENSES/bootstrap-contextmenu
 lib/usermin/authentic-theme/unauthenticated/LICENSES/bootstrap-datepicker
 lib/usermin/authentic-theme/unauthenticated/LICENSES/bootstrap-file-input
 lib/usermin/authentic-theme/unauthenticated/LICENSES/bootstrap-tagsinput
-lib/usermin/authentic-theme/unauthenticated/LICENSES/chartist
 lib/usermin/authentic-theme/unauthenticated/LICENSES/ckeditor
 lib/usermin/authentic-theme/unauthenticated/LICENSES/clipboard-js
 lib/usermin/authentic-theme/unauthenticated/LICENSES/codemirror
@@ -1304,6 +1303,7 @@ lib/usermin/authentic-theme/unauthenticated/LICENSES/normalize-css
 lib/usermin/authentic-theme/unauthenticated/LICENSES/photoswipe
 lib/usermin/authentic-theme/unauthenticated/LICENSES/purl
 lib/usermin/authentic-theme/unauthenticated/LICENSES/select2
+lib/usermin/authentic-theme/unauthenticated/LICENSES/uplot
 lib/usermin/authentic-theme/unauthenticated/LICENSES/uri-js
 lib/usermin/authentic-theme/unauthenticated/css/_iframe/quote-dark.min.css
 lib/usermin/authentic-theme/unauthenticated/css/bundle.min.css
@@ -3379,8 +3379,6 @@ lib/usermin/defaultacl
 lib/usermin/defaulttheme
 lib/usermin/entities_map.txt
 lib/usermin/favicon.ico
-lib/usermin/feedback.cgi
-lib/usermin/feedback_form.cgi
 lib/usermin/fetchmail/CHANGELOG
 lib/usermin/fetchmail/check.cgi
 lib/usermin/fetchmail/check.pl
@@ -3582,6 +3580,7 @@ lib/usermin/filemin/images/icons/mime/application-atom+xml.png
 lib/usermin/filemin/images/icons/mime/application-gzip.png
 lib/usermin/filemin/images/icons/mime/application-illustrator.png
 lib/usermin/filemin/images/icons/mime/application-javascript.png
+lib/usermin/filemin/images/icons/mime/application-mathml+xml.png
 lib/usermin/filemin/images/icons/mime/application-mbox.png
 lib/usermin/filemin/images/icons/mime/application-msword.png
 lib/usermin/filemin/images/icons/mime/application-octet-stream.png
@@ -3775,6 +3774,7 @@ lib/usermin/filemin/images/icons/mime/text-css.png
 lib/usermin/filemin/images/icons/mime/text-enriched.png
 lib/usermin/filemin/images/icons/mime/text-html.png
 lib/usermin/filemin/images/icons/mime/text-htmlh.png
+lib/usermin/filemin/images/icons/mime/text-mathml+xml.png
 lib/usermin/filemin/images/icons/mime/text-mht.png
 lib/usermin/filemin/images/icons/mime/text-plain.png
 lib/usermin/filemin/images/icons/mime/text-richtext.png
@@ -6547,7 +6547,6 @@ lib/usermin/mysql/config-Redhat-Enterprise-Linux-7.0-ALL
 lib/usermin/mysql/config-Rocky-Linux-7.0-ALL
 lib/usermin/mysql/config-Scientific-Linux-7.0-ALL
 lib/usermin/mysql/config-Ubuntu-Linux-16.04-17.99
-lib/usermin/mysql/config-Ubuntu-Linux-18.04-ALL
 lib/usermin/mysql/config-aix
 lib/usermin/mysql/config-cobalt-linux
 lib/usermin/mysql/config-coherent-linux
@@ -11633,6 +11632,7 @@ lib/usermin/usermount/ulang/uk.auto
 lib/usermin/usermount/ulang/zh.auto
 lib/usermin/usermount/ulang/zh_TW.auto
 lib/usermin/usermount/usermount-lib.pl
+lib/usermin/vendor_perl/Convert/TNEF.pm
 lib/usermin/vendor_perl/Digest/HMAC.pm
 lib/usermin/vendor_perl/Digest/HMAC_MD5.pm
 lib/usermin/vendor_perl/Digest/HMAC_SHA1.pm
@@ -11655,6 +11655,9 @@ lib/usermin/vendor_perl/File/Spec/VMS.pm
 lib/usermin/vendor_perl/File/Spec/Win32.pm
 lib/usermin/vendor_perl/JSON/PP.pm
 lib/usermin/vendor_perl/JSON/PP/Boolean.pm
+lib/usermin/vendor_perl/MIME/Body.pm
+lib/usermin/vendor_perl/MIME/Tools.pm
+lib/usermin/vendor_perl/Math/ReedSolomon/Encoder.pm
 lib/usermin/vendor_perl/Net/WebSocket/Server.pm
 lib/usermin/vendor_perl/Net/WebSocket/Server/Connection.pm
 lib/usermin/vendor_perl/Protocol/WebSocket.pm
@@ -11671,6 +11674,9 @@ lib/usermin/vendor_perl/Protocol/WebSocket/Request.pm
 lib/usermin/vendor_perl/Protocol/WebSocket/Response.pm
 lib/usermin/vendor_perl/Protocol/WebSocket/Stateful.pm
 lib/usermin/vendor_perl/Protocol/WebSocket/URL.pm
+lib/usermin/vendor_perl/QRCode/Encoder.pm
+lib/usermin/vendor_perl/QRCode/Encoder/Matrix.pm
+lib/usermin/vendor_perl/QRCode/Encoder/QRSpec.pm
 lib/usermin/version
 lib/usermin/web-lib-funcs.pl
 lib/usermin/web-lib.pl
@@ -11717,7 +11723,6 @@ lib/usermin/xterm/rc/.zshrc
 lib/usermin/xterm/shellserver.pl
 lib/usermin/xterm/webmin_menu_link.pl
 lib/usermin/xterm/xterm-addon-attach.js
-lib/usermin/xterm/xterm-addon-canvas.js
 lib/usermin/xterm/xterm-addon-fit.js
 lib/usermin/xterm/xterm-addon-webgl.js
 lib/usermin/xterm/xterm-lib.pl

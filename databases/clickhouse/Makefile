@@ -1,6 +1,6 @@
 PORTNAME=	clickhouse
 DISTVERSIONPREFIX=	v
-DISTVERSION=	26.3.7.8
+DISTVERSION=	26.3.12.3
 DISTVERSIONSUFFIX=-lts
 CATEGORIES=	databases
 DIST_SUBDIR=	${PORTNAME}
@@ -102,6 +102,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|^ROOT_PATH.*|ROOT_PATH=${WRKSRC}|' ${WRKSRC}/utils/list-licenses/list-licenses.sh
 	${CP} -R ${WRKSRC}/contrib/rapidjson/contrib/natvis ${WRKSRC}/contrib/natvis
 	cd ${WRKSRC}/contrib/openldap-cmake && ${LN} -s freebsd_x86_64 freebsd_aarch64
+	@${REINPLACE_CMD} -e '/clickhouse-docker-init/d; /add_subdirectory \(docker-init\)/d' ${WRKSRC}/programs/CMakeLists.txt
+	@${REINPLACE_CMD} -e '/mainEntryClickHouseDockerInit/d' ${WRKSRC}/programs/main.cpp
 
 post-install:
 	@${RM} ${STAGEDIR}${PREFIX}/bin/config-processor

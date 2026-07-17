@@ -33,6 +33,7 @@ SHEBANG_FILES=	ipsec/ovs-monitor-ipsec.in \
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
+CONFIGURE_ENV=	PYTHON3=${PYTHON_CMD}
 CONFIGURE_ARGS=	--enable-shared --disable-static --localstatedir=/var \
 		--with-dbdir=/var/db/${PORTNAME} \
 		--with-openssl=${OPENSSLBASE}

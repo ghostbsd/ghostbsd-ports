@@ -1,39 +1,29 @@
---- setup.py.orig	2026-05-13 17:40:38 UTC
+-- Avoid dependency on the setuptools.command.bdist_wheel module if wheel is not installed.
+-- This ensures setup.py runs correctly during build when wheel is not present.
+--- setup.py.orig	2026-07-08 17:44:27 UTC
 +++ setup.py
-@@ -285,7 +285,7 @@ from typing import Any, ClassVar, IO
+@@ -282,7 +282,7 @@ from typing import Any, ClassVar, IO
  from pathlib import Path
  from typing import Any, ClassVar, IO
  
 -import setuptools.command.bdist_wheel
 +# import setuptools.command.bdist_wheel
  import setuptools.command.build_ext
- import setuptools.command.sdist
  import setuptools.errors
-@@ -1425,30 +1425,37 @@ class concat_license_files:
-         self.f1.write_text(self.bsd_text, encoding="utf-8")
+ from setuptools import Command, Extension, find_packages, setup
+@@ -980,25 +980,30 @@ class build_ext(setuptools.command.build_ext.build_ext
+         return outputs
  
  
--# Need to create the proper LICENSE.txt for the wheel
 -class bdist_wheel(setuptools.command.bdist_wheel.bdist_wheel):
--    def run(self) -> None:
--        with concat_license_files(include_files=True):
--            super().run()
+-    def write_wheelfile(self, *args: Any, **kwargs: Any) -> None:
+-        super().write_wheelfile(*args, **kwargs)
 +try:
 +    from wheel.bdist_wheel import bdist_wheel as _bdist_wheel
 +except ImportError:
-+    # This is useful when wheel is not installed and bdist_wheel is not
-+    # specified on the command line. If it _is_ specified, parsing the command
-+    # line will fail before bdist_wheel is needed
 +    bdist_wheel = None
 +else:
-+    # Need to create the proper LICENSE.txt for the wheel
 +    class bdist_wheel(_bdist_wheel):
-+        def run(self) -> None:
-+            with concat_license_files(include_files=True):
-+                super().run()
- 
--    def write_wheelfile(self, *args: Any, **kwargs: Any) -> None:
--        super().write_wheelfile(*args, **kwargs)
 +        def write_wheelfile(self, *args: Any, **kwargs: Any) -> None:
 +            super().write_wheelfile(*args, **kwargs)
  
@@ -48,7 +38,8 @@
 -            ):
 -                if (bdist_dir / file.name).is_file():
 +            if BUILD_LIBTORCH_WHL:
-+                assert self.bdist_dir is not None
++                if self.bdist_dir is None:
++                    raise AssertionError("self.bdist_dir must not be None")
 +                bdist_dir = Path(self.bdist_dir)
 +                # Remove extraneneous files in the libtorch wheel
 +                for file in itertools.chain(
@@ -68,17 +59,25 @@
  
  
  class clean(Command):
-@@ -1623,11 +1630,12 @@ def configure_extension_build() -> tuple[
-     ext_modules.append(C)
+@@ -1082,10 +1087,11 @@ def configure_extension_build() -> tuple[
+     packages = find_packages(include=includes, exclude=excludes)
  
      cmdclass = {
 -        "bdist_wheel": bdist_wheel,
          "build_ext": build_ext,
          "clean": clean,
-         "sdist": sdist,
      }
 +    if bdist_wheel is not None:
 +        cmdclass["bdist_wheel"] = bdist_wheel
  
      entry_points = {
          "console_scripts": [
+@@ -1137,7 +1143,7 @@ def main() -> None:
+     install_requires = [
+         "filelock",
+         "typing-extensions>=4.10.0",
+-        "setuptools>=77.0.3",
++        "setuptools",
+         "sympy>=1.13.3",
+         "networkx>=2.5.1",
+         "jinja2",

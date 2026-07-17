@@ -6,7 +6,7 @@
 -  "sphinx-theme-builder>=0.3.2"
 -]
 -build-backend = "sphinx_theme_builder"
-+requires = ["flit-core >= 3.9.0"]
++requires = ["flit-core >= 3.12"]
 +build-backend = "flit_core.buildapi"
  
  [tool.sphinx-theme-builder]

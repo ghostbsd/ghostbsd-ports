@@ -1,5 +1,5 @@
 PORTNAME=	netcdf-fortran
-PORTVERSION=	4.6.2
+PORTVERSION=	4.6.3
 CATEGORIES=	science
 MASTER_SITES=	https://downloads.unidata.ucar.edu/netcdf-fortran/${PORTVERSION}/ \
 		LOCAL/sunpoet

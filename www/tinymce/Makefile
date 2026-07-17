@@ -1,8 +1,7 @@
 PORTNAME=	tinymce
-PORTVERSION=	8.5.1
+PORTVERSION=	8.7.0
 CATEGORIES=	www
-MASTER_SITES=	http://download.tiny.cloud/tinymce/community/ \
-		LOCAL/sunpoet
+MASTER_SITES=	https://download.tiny.cloud/tinymce/community/
 DISTNAME=	tinymce_${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org

@@ -1,6 +1,5 @@
 PORTNAME=	cacti
-DISTVERSION=	1.2.30
-PORTREVISION=	1
+DISTVERSION=	1.2.31
 CATEGORIES=	net-mgmt www
 MASTER_SITES=	http://www.cacti.net/downloads/ \
 		ftp://ftpmirror.uk/freebsd-ports/cacti/
@@ -20,15 +19,15 @@ USES=		cpe gettext mysql php:flavors,web shebangfix
 
 USE_PHP=	ctype filter gd gettext gmp intl ldap mbstring pcntl pdo \
 		pdo_mysql posix session simplexml sockets xml zlib
-NO_ARCH=	yes
-NO_BUILD=	yes
-SUB_FILES=	pkg-message
 SHEBANG_FILES=	scripts/3com_cable_modem.pl scripts/diskfree.pl \
 		scripts/linux_memory.pl scripts/loadavg.pl \
 		scripts/loadavg_multi.pl scripts/ping.pl \
 		scripts/query_unix_partitions.pl scripts/unix_processes.pl \
 		scripts/unix_tcp_connections.pl scripts/unix_users.pl \
 		scripts/weatherbug.pl scripts/webhits.pl
+NO_ARCH=	yes
+NO_BUILD=	yes
+SUB_FILES=	pkg-message
 
 CACTIDIR?=	share/cacti
 CACTIUSER?=	cacti

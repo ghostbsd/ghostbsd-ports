@@ -1,6 +1,7 @@
 PORTNAME=	opendkim
 DISTVERSIONPREFIX=	rel-opendkim-
 DISTVERSION=	2.11.0-Beta2-49
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-g1c7a9f47c
 CATEGORIES=	mail security
 PKGNAMESUFFIX=	-devel
@@ -127,7 +128,7 @@ JANSSON_CONFIGURE_WITH=	libjansson
 LDAP_CACHING_USES=		ldap
 LDAP_CACHING_CONFIGURE_ENABLE=	ldap_caching
 
-LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb
+LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb0
 LMDB_CONFIGURE_WITH=	lmdb
 
 LUA_USES=		lua:flavors

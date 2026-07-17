@@ -1,6 +1,5 @@
 PORTNAME=	bash-completion
-PORTVERSION=	2.17.0
-PORTREVISION=	3
+PORTVERSION=	2.18.0
 PORTEPOCH=	2
 CATEGORIES=	shells
 MASTER_SITES=	https://github.com/scop/bash-completion/releases/download/${PORTVERSION}/

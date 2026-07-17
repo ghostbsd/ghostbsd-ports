@@ -1,3 +1,651 @@
+  <vuln vid="e26b9011-80ef-11f1-b72c-8447094a420f">
+    <topic>liboqs -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>liboqs</name>
+	<range><lt>0.16.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenQuantumSafe project reports:</p>
+	<blockquote cite="https://github.com/open-quantum-safe/liboqs/releases/tag/0.16.0">
+	  <ul>
+	    <li>uninitialized encaps_derand pointer dereference</li>
+	    <li>out-of-bounds read in XMSS/XMSS^MT signature verification</li>
+	    <li>Integer underflow in CROSS crypto_sign_open()</li>
+	    <li>incorrect array size when calling secure_clean</li>
+	    <li>Implemented optimization barrier OQS_MEM_BLACK_BOX and applied to ct_select in FrodoKEM</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/open-quantum-safe/liboqs/releases/tag/0.16.0</url>
+    </references>
+    <dates>
+      <discovery>2026-07-09</discovery>
+      <entry>2026-07-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="74d0291e-7f81-11f1-83e9-901b0e13f1a0">
+    <topic>Poppler: integer overflow in tilingPatternFill</topic>
+    <affects>
+    <package>
+	<name>poppler</name>
+	<name>poppler-glib</name>
+	<name>poppler-qt5</name>
+	<name>poppler-qt6</name>
+	<name>poppler-utils</name>
+	<range><lt>26.04.0_1</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://access.redhat.com/errata/RHSA-2026:24984 reports:</p>
+	<blockquote cite="https://access.redhat.com/errata/RHSA-2026:24984">
+	  <p>A flaw was found in Poppler's Splash backend.  A remote attacker
+	could exploit this vulnerability by crafting a malicious PDF file
+	that, when rendered, triggers an integer overflow in the
+	`tilingPatternFill` function.  This overflow leads to an undersized
+	heap memory allocation, allowing a subsequent out-of-bounds write.
+	Successful exploitation could result in arbitrary code execution,
+	information disclosure, or denial of service within the context of
+	the application processing the PDF.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-10118</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-10118</url>
+    </references>
+    <dates>
+      <discovery>2026-06-01</discovery>
+      <entry>2026-07-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b478ff13-7f6e-11f1-b594-3c7c3fba4204">
+    <topic>ocaml-opam -- opam install sandbox escape using symlinks</topic>
+    <affects>
+    <package>
+	<name>ocaml-opam</name>
+	<range><lt>2.5.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OCaml Team reports:</p>
+	<blockquote cite="https://github.com/ocaml/security-advisories/blob/main/advisories/2026/OSEC-2026-10.md">
+	  <p>Installing files through .install files do not check symlinks resolution of the target path, and so can bypass sandboxing.</p>
+	  <p>Credits:<br/>
+	    Reporter: "Kate Deplaix"<br/>
+	    Remediation Developer: "Nathan Rebours"<br/>
+	    Remediation Reviewer: "Raja Boujbel"<br/>
+	    Coordinator: "Hannes Mehnert"<br/>
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-57825</cvename>
+      <url>https://github.com/ocaml/security-advisories/blob/main/advisories/2026/OSEC-2026-10.md</url>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-57825</url>
+    </references>
+    <dates>
+      <discovery>2026-07-12</discovery>
+      <entry>2026-07-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fa0c03dd-7c3a-11f1-8dc2-dca632daf43b">
+    <topic>Apache HttpClient -- misinterpret malformed authority component</topic>
+    <affects>
+      <package>
+       <name>apache-commons-httpclient</name>
+       <name>jakarta-commons-httpclient</name>
+       <range><ge>3.1</ge></range>
+      </package>
+      <package>
+       <name>httpclient</name>
+       <range><lt>4.5.13</lt></range>
+       <range><ge>5.0.0</ge><lt>5.0.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Apache Software Foundation reports:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2020-13956">
+	  <p>Apache HttpClient versions prior to version 4.5.13 and 5.0.3 can misinterpret malformed authority component in request URIs passed to the library as java.net.URI object and pick the wrong target host for request execution.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2020-13956</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2020-13956</url>
+    </references>
+    <dates>
+      <discovery>2020-02-12</discovery>
+      <entry>2026-07-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="de3f0385-7c37-11f1-8dc2-dca632daf43b">
+    <topic>httpclient -- Improper Certificate Validation</topic>
+    <affects>
+      <package>
+       <name>apache-commons-httpclient</name>
+       <name>jakarta-commons-httpclient</name>
+       <range><ge>3.1</ge></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MITRE reports:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2012-5783">
+	  <p>Apache Commons HttpClient 3.x, as used in ..., does not verify that the server hostname matches a domain name in the subject's Common Name (CN) or subjectAltName field of the X.509 certificate, which allows man-in-the-middle attackers to spoof SSL servers via an arbitrary valid certificate.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2012-5783</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2012-5783</url>
+    </references>
+    <dates>
+      <discovery>2012-04-11</discovery>
+      <entry>2026-07-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7a56b0f7-7b62-11f1-8a70-10ffe07f9334">
+    <topic>mailpit -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mailpit</name>
+	<range><lt>1.30.4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mailpit author reports:</p>
+	<blockquote cite="https://github.com/axllent/mailpit/releases/tag/v1.30.4">
+	  <p>Mailpit's SMTP server reads each command line with an
+	  unbounded bufio.Reader.ReadString('\n') before parsing
+	  the command or enforcing any protocol length limit. A
+	  remote SMTP client can send an oversized single command
+	  line and force Mailpit to allocate attacker-controlled
+	  memory before the server returns a syntax error or times
+	  out, even though RFC 5321 limits SMTP command lines to
+	  512 octets including CRLF.</p>
+	  <p>Mailpit's thumbnail endpoint decodes attacker-supplied
+	  image attachments into a full raster before checking any
+	  decoded-pixel, dimension, or memory budget. A remote
+	  client that can store an email and reach the default web
+	  API can supply a compact high-dimension image, then request
+	  <code>/api/v1/message/{id}/part/{partID}/thumb</code> to
+	  force server-side memory and CPU work far larger than the
+	  encoded attachment size before Mailpit returns a 180x120
+	  thumbnail.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/axllent/mailpit/security/advisories/GHSA-w878-pj84-3j5v</url>
+      <url>https://github.com/axllent/mailpit/security/advisories/GHSA-75mr-qw9x-3r39</url>
+    </references>
+    <dates>
+      <discovery>2026-07-09</discovery>
+      <entry>2026-07-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="84ce0c0c-7b4e-11f1-9c40-2cf05da270f3">
+    <topic>Gitlab -- Vulnerabilities</topic>
+    <affects>
+<package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>19.1.0</ge><lt>19.1.2</lt></range>
+	<range><ge>19.0.0</ge><lt>19.0.4</lt></range>
+	<range><ge>9.1.0</ge><lt>18.11.7</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-1-2-released/">
+	  <p>Cross-site Scripting issue in vulnerability evidence table renderer impacts GitLab EE</p>
+	  <p>HTML Injection in wiki markup rendering impacts GitLab CE/EE</p>
+	  <p>Insufficiently Protected Credentials issue in repository mirroring impacts GitLab EE</p>
+	  <p>Improper Access Control issue in work items impacts GitLab EE</p>
+	  <p>Missing Authorization issue in commit discussion display impacts GitLab CE/EE</p>
+	  <p>Ambiguity Reference issue in a tag or branch impacts GitLab CE/EE</p>
+	  <p>Incorrect Authorization issue in group-level settings impacts GitLab EE</p>
+	  <p>Incorrect Authorization issue in compliance violation management impacts GitLab EE</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-6896</cvename>
+      <cvename>CVE-2026-13320</cvename>
+      <cvename>CVE-2026-11827</cvename>
+      <cvename>CVE-2026-8472</cvename>
+      <cvename>CVE-2026-7492</cvename>
+      <cvename>CVE-2025-12506</cvename>
+      <cvename>CVE-2026-13151</cvename>
+      <cvename>CVE-2026-6352</cvename>
+      <url>https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-1-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2026-07-08</discovery>
+      <entry>2026-07-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9a1fdf39-7b10-11f1-a315-589cfc10a551">
+    <topic>libXfont2 -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>libXfont2</name>
+	<range><lt>2.0.8</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>X.Org project reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2026-July/003714.html">
+	  <p>Multiple issues have been found in the libXfont2 library published
+	     by X.Org for which we are releasing security fixes in libXfont2-2.0.8.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-56001</cvename>
+      <cvename>CVE-2026-56002</cvename>
+      <cvename>CVE-2026-56003</cvename>
+      <url>https://lists.x.org/archives/xorg-announce/2026-July/003714.html</url>
+    </references>
+    <dates>
+      <discovery>2026-07-08</discovery>
+      <entry>2026-07-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7ac0f35a-7aeb-11f1-a315-589cfc10a551">
+    <topic>xwayland -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>xwayland</name>
+	<range><lt>24.1.13,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>X.Org project reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2026-July/003716.html">
+	  <p>Multiple issues have been found in the X server and Xwayland
+	     implementations published by X.Org for which we are releasing
+	     security fixes for in xorg-server-21.1.24 and xwayland-24.1.13.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-55999</cvename>
+      <cvename>CVE-2026-56000</cvename>
+      <url>https://lists.x.org/archives/xorg-announce/2026-July/003716.html</url>
+    </references>
+    <dates>
+      <discovery>2026-07-07</discovery>
+      <entry>2026-07-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d6354a08-7ad4-11f1-a315-589cfc10a551">
+    <topic>xorg-server -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>xorg-server</name>
+	<range><lt>21.1.24,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>X.Org project reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2026-July/003716.html">
+	  <p>Multiple issues have been found in the X server and Xwayland
+	     implementations published by X.Org for which we are releasing
+	     security fixes for in xorg-server-21.1.24 and xwayland-24.1.13.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-55999</cvename>
+      <cvename>CVE-2026-56000</cvename>
+      <url>https://lists.x.org/archives/xorg-announce/2026-July/003716.html</url>
+    </references>
+    <dates>
+      <discovery>2026-07-07</discovery>
+      <entry>2026-07-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9647af6d-7a05-11f1-99fc-40b034429ecf">
+    <topic>cacti -- multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>cacti</name>
+<range><lt>1.2.31</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Cacti project reports:</p>
+	<blockquote cite="https://github.com/Cacti/cacti/releases/tag/release%2F1.2.31">
+	  <p>This release includes fixes for a number of vulnerabilities that were responsibly disclosed by external researchers</p>
+	  <ul>
+	  <li>CVE-2026-39894 RRDtool metric shift via LC_NUMERIC locale comma decimal formatting</li>
+	  <li>CVE-2026-40082 Session Fixation via missing session_regenerate_id() after login</li>
+	  <li>CVE-2026-40941 Package Import Signature Validation Bypass allows self-signed packages</li>
+	  <li>CVE-2026-39897 Reflected XSS in html_auth_footer error message output</li>
+	  <li>CVE-2026-39900 Reflected XSS via tab parameter in auth_profile.php JavaScript context</li>
+	  <li>CVE-2026-46531 SQL Injection in automation_tree_rules.php</li>
+	  <li>CVE-2026-44481 Pre-auth Open Redirect via link.php Referer header</li>
+	  <li>CVE-2026-39952 Stored XSS in Report Tree expansion titles</li>
+	  <li>CVE-2026-39893 Pre-authentication SQL injection via rfilter RLIKE clause in graph_view.php</li>
+	  <li>CVE-2026-22802 Authentication Bypass leads to information disclosure</li>
+	  <li>CVE-2026-40080 Open Redirect via HTTP_REFERER substring check in auth_login_redirect</li>
+	  <li>CVE-2026-40078 Backend ORDER BY SQL Injection</li>
+	  <li>CVE-2026-39949 Authenticated Remote Code Execution via Host Variable Injection</li>
+	  <li>CVE-2026-40081 Reports IDOR allows any authenticated user to modify other users' reports (CWE-639)</li>
+	  <li>CVE-2026-39948 SQL Injection via rfilter parameter in RLIKE clauses</li>
+	  <li>CVE-2026-39902 Authenticated RCE on Data Input</li>
+	  <li>CVE-2026-39898 Reflected XSS via rfilter parameter in aggregate_graphs.php input value</li>
+	  <li>CVE-2026-41884 Arbitrary File Read via Reports format_file path traversal</li>
+	  <li>CVE-2026-39955 Pre-Authentication SQL Injection via unanchored FILTER_VALIDATE_REGEXP in graph_view.php</li>
+	  <li>CVE-2026-39896 TOCTOU race in auth_process_lockout allows brute-force lockout bypass</li>
+	  <li>CVE-2026-39950 Arbitrary PHP file write via Plugin Archive extraction leading to RCE</li>
+	  <li>CVE-2026-40083 SQL Injection in managers.php via uncast array values in IN clauses</li>
+	  <li>CVE-2026-40084 Arbitrary File Read via path traversal in Report format_file parameter</li>
+	  <li>CVE-2026-39951 Stored SQL Injection via graph_name_regexp in Reports feature</li>
+	  <li>CVE-2026-39899 Path traversal via filename parameter in package_import.php</li>
+	  <li>CVE-2026-39938 Unauthenticated LFI via graph_theme and rrdtool IPC serialization hardening</li>
+	  <li>CVE-2026-39939 Path traversal in Package Import file write allows arbitrary file creation in webroot</li>
+	  <li>CVE-2026-39947 RRDtool IPC pipe poisoning via is_numeric newline bypass in rrdtool_function_update</li>
+	  <li>CVE-2026-39895 Second-order RCE via unescaped log path in exec_background shell redirection</li>
+	  <li>CVE-2026-40079 Command Injection via escape_command() no-op in RRDtool execution</li>
+	  <li>CVE-2026-40194, CVE-2026-32935 in phpseclib - This is breaking change for RRDProxy</li>
+	  <li>CVE-2026-1513 billboard.js before 3.18.0 Improper Input Sanitization Allows Remote JavaScript Execution</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-39894</cvename>
+      <cvename>CVE-2026-40082</cvename>
+      <cvename>CVE-2026-40941</cvename>
+      <cvename>CVE-2026-39897</cvename>
+      <cvename>CVE-2026-39900</cvename>
+      <cvename>CVE-2026-46531</cvename>
+      <cvename>CVE-2026-44481</cvename>
+      <cvename>CVE-2026-39952</cvename>
+      <cvename>CVE-2026-39893</cvename>
+      <cvename>CVE-2026-22802</cvename>
+      <cvename>CVE-2026-40080</cvename>
+      <cvename>CVE-2026-40078</cvename>
+      <cvename>CVE-2026-39949</cvename>
+      <cvename>CVE-2026-40081</cvename>
+      <cvename>CVE-2026-39948</cvename>
+      <cvename>CVE-2026-39902</cvename>
+      <cvename>CVE-2026-39898</cvename>
+      <cvename>CVE-2026-41884</cvename>
+      <cvename>CVE-2026-39955</cvename>
+      <cvename>CVE-2026-39896</cvename>
+      <cvename>CVE-2026-39950</cvename>
+      <cvename>CVE-2026-40083</cvename>
+      <cvename>CVE-2026-40084</cvename>
+      <cvename>CVE-2026-39951</cvename>
+      <cvename>CVE-2026-39899</cvename>
+      <cvename>CVE-2026-39938</cvename>
+      <cvename>CVE-2026-39939</cvename>
+      <cvename>CVE-2026-39947</cvename>
+      <cvename>CVE-2026-39895</cvename>
+      <cvename>CVE-2026-40079</cvename>
+      <cvename>CVE-2026-40194</cvename>
+      <cvename>CVE-2026-32935</cvename>
+      <cvename>CVE-2026-1513</cvename>
+      <url>https://github.com/Cacti/cacti/releases/tag/release%2F1.2.31</url>
+    </references>
+    <dates>
+      <discovery>2026-06-16</discovery>
+      <entry>2026-07-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a3a34818-79a0-11f1-b295-98b78501ef2a">
+    <topic>xrdp -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>xrdp</name>
+	<range><lt>0.10.6.1.r.1,1</lt></range>
+      </package>
+      <package>
+	<name>xrdp-devel</name>
+	<range><lt>0.10.80.b20260706,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>xrdp projects reports:</p>
+	<blockquote cite="https://github.com/neutrinolabs/xrdp/releases/tag/v0.10.6.1">
+	<p>xrdp v0.10.6.1 fixes 10 vulnerabilities and 1 regression introduced
+	by a vulnerability fix in the previous release.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-41252</cvename>
+      <cvename>CVE-2026-41521</cvename>
+      <cvename>CVE-2026-44178</cvename>
+      <cvename>CVE-2026-42218</cvename>
+      <cvename>CVE-2026-44978</cvename>
+      <cvename>CVE-2026-54538</cvename>
+      <cvename>CVE-2026-55238</cvename>
+      <cvename>CVE-2026-55626</cvename>
+      <cvename>CVE-2026-55639</cvename>
+      <cvename>CVE-2026-55645</cvename>
+      <url>https://github.com/neutrinolabs/xrdp/releases/tag/v0.10.6.1</url>
+    </references>
+    <dates>
+      <discovery>2026-07-06</discovery>
+      <entry>2026-07-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d47e608f-2e2a-4366-ad17-ce2480bf912d">
+    <topic>zeek -- potential DoS vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>zeek</name>
+	<range><lt>8.0.9</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Tim Wojtulewicz of Corelight reports:</p>
+	<blockquote cite="INSERT URL HERE">
+	  <p> The NVT, Rlogin, and RSH analyzers have received fixes
+	  to avoid unbounded state growth. Due to the fact that
+	  these packets can be received from remote hosts, these
+	  are considered DoS risks. </p>
+	  <p> A specially crafted WebSocket payload can cause the
+	  Spicy WebSocket analyzer to use excessive memory when
+	  processing close, ping, and pong frames. Due to the fact
+	  that these packets can be received from remote hosts,
+	  these are considered a DoS risk. </p>
+	  <p> A specially crafted series of Finger packets can cause
+	  the Spicy Finger analyzer to use excessive amounts of
+	  memory and potentially crash Zeek. Due to the fact that
+	  these packets can be received from remote hosts, this is
+	  considered a DoS risk. </p>
+	  <p> A specially crafted Kerberos packet can cause the
+	  Kerberos analyzer to enter an invalid state and potentially
+	  crash Zeek.  Due to the fact that these packets can be
+	  received from remote hosts, this is considered a DoS risk.
+	  </p>
+	  <p> A specially crafted series of RDP packets can cause
+	  the RDP analyzer to use excessive amounts of memory and
+	  potentially crash Zeek. Due to the fact that these packets
+	  can be received from remote hosts, this is considered a
+	  DoS risk. </p>
+	  <p> A specially crafted IP packet can cause the IP analyzer
+	  to read past the end of the contents of the packet when
+	  emitting the packet_contents event and possibly crash.
+	  Due to the fact that these packets can be received from
+	  remote hosts, this is considered a DoS risk. </p>
+	  <p> A specially crafted IP packet can cause the packet
+	  discarding code to read off the end of the packet when
+	  looking for follow-on header data. This may potentially
+	  lead to a crash of Zeek. Due to the fact that these packets
+	  can be received from remote hosts, this is considered a
+	  DoS risk. </p>
+	  <p> A specially crafted series of Gnutella packets may
+	  cause Zeek to continue accumulating memory and eventually
+	  crash. Due to the fact that these packets can be received
+	  from remote hosts, this is considered a DoS risk. </p>
+	  <p> A specially crafted ICMPv6 packet can cause the ICMP
+	  analyzer to skip part of the packet and not report
+	  corresponding events and logs. Due to the fact that these
+	  packets can be received from remote hosts, this is
+	  considered an evasion risk. </p>
+	  <p> A specially crafted SSH packet can cause the SSH
+	  analyzer to throw BinPAC exceptions for extremely large
+	  packets and skip logging them otherwise. Due to the fact
+	  that these packets can be received from remote hosts,
+	  this is considered an evasion risk. </p>
+	  <p> A number of issues with the HTTP analyzer were found
+	  involving unusual Content-Length, Transfer-Encoding and
+	  Expect header usage. Due to the fact that these packets
+	  can be received from remote hosts, this is considered an
+	  evasion risk. </p>
+	  <p> A series of fixes were applied to the serialization
+	  code in Zeek to avoid buffer overreads with both Broker
+	  and ZeroMQ traffic.  On debug builds, these hit various
+	  abort() conditions and cause Zeek to exit. Due to the
+	  fact that all of these states require direct access to
+	  the Broker/ZeroMQ ports (meaning access to the local
+	  network to some degree), this isn’t considered a DoS risk.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/zeek/zeek/releases/tag/v8.0.9</url>
+    </references>
+    <dates>
+      <discovery>2026-07-06</discovery>
+      <entry>2026-07-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c7be43b0-78f0-11f1-8898-1c697a616631">
+    <topic>Emacs -- Heap out-of-bounds write when rendering SVG images</topic>
+    <affects>
+      <package>
+	<name>emacs</name>
+	<name>emacs-canna</name>
+	<name>emacs-nox</name>
+	<name>emacs-wayland</name>
+	<range><ge>28.1,3</ge><lt>30.2_4,3</lt></range>
+      </package>
+      <package>
+	<name>emacs-devel</name>
+	<name>emacs-devel-nox</name>
+	<range><lt>31.0.50.20250201,3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	  <h1>Problem Description</h1>
+	  <p>When GNU Emacs renders an SVG image whose image spec includes a
+	  :css property, an off-by-one error in svg_load_image() writes a NUL
+	  byte one position past the end of a heap allocation.  The copied
+	  string is also left without NUL termination within its allocation,
+	  causing a subsequent out-of-bounds read.</p>
+	  <h1>Impact</h1>
+	  <p>A single NUL byte heap overflow is a well-understood exploitation
+	  primitive ("poison NUL byte") that can corrupt heap metadata and
+	  potentially be escalated to arbitrary code execution.  The overflow
+	  can be triggered by Lisp code that displays an SVG image with a
+	  crafted :css property.</p>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-6861</cvename>
+      <url>https://debbugs.gnu.org/cgi/bugreport.cgi?bug=80851</url>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-6861</url>
+    </references>
+    <dates>
+      <discovery>2026-04-17</discovery>
+      <entry>2026-07-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d7939352-788b-11f1-b72c-8447094a420f">
+    <topic>Weechat -- Memory leak in relay-API</topic>
+    <affects>
+      <package>
+	<name>weechat</name>
+	<range><lt>4.7.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Weechat project reports:</p>
+	<blockquote cite="https://github.com/weechat/weechat/security/advisories/GHSA-wmpc-m6g9-fwj8">
+	  <p>Pre-auth memory leak in relay-api POST /api/handshake (unfreed JSON body) → unauthenticated remote memory-exhaustion DoS.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/weechat/weechat/security/advisories/GHSA-wmpc-m6g9-fwj8</url>
+    </references>
+    <dates>
+      <discovery>2026-07-05</discovery>
+      <entry>2026-07-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d5578ba4-7889-11f1-b72c-8447094a420f">
+    <topic>Roundcube -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>roundcube-php82</name>
+	<name>roundcube-php83</name>
+	<name>roundcube-php84</name>
+	<name>roundcube-php85</name>
+	<range><lt>1.7.2,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Rouncube project reports:</p>
+	<blockquote cite="https://github.com/roundcube/roundcubemail/releases/tag/1.7.2">
+	  <p>See links for more detail</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-54432</cvename>
+      <cvename>CVE-2026-54433</cvename>
+      <url>https://github.com/roundcube/roundcubemail/releases/tag/1.7.2</url>
+    </references>
+    <dates>
+      <discovery>2026-07-05</discovery>
+      <entry>2026-07-05</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="803b9816-77af-11f1-ba71-5404a68ad561">
     <topic>traefik -- Multiple vulnerabilities</topic>
     <affects>
@@ -1926,7 +2574,7 @@ rclone process user.</p>
     <affects>
     <package>
 	<name>ffmpeg</name>
-	<range><lt>8.1.2</lt></range>
+	<range><lt>8.1.2,1</lt></range>
     </package>
     <package>
 	<name>ffmpeg4</name>

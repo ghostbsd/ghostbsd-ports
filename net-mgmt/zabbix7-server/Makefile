@@ -1,5 +1,5 @@
 PORTNAME=	zabbix7
-DISTVERSION=	7.0.27
+DISTVERSION=	7.0.28
 PORTREVISION?=	0
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${DISTVERSION:R}/
@@ -140,7 +140,6 @@ SSH_LIB_DEPENDS=	libssh2.so:security/libssh2
 UNIXODBC_CONFIGURE_WITH=	unixodbc
 UNIXODBC_LIB_DEPENDS=		libodbc.so:databases/unixODBC
 .elif ${ZABBIX_BUILD} == "agent"
-OPTOINS_DEFINE+=		PCRE
 OPTIONS_SINGLE+=		SSL
 OPTIONS_SINGLE_SSL=		GNUTLS OPENSSL
 .endif # if ${ZABBIX_BUILD} != "agent"

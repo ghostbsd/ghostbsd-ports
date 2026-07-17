@@ -202,3 +202,4 @@ lib/cmake/cryptopp-modern/cryptopp-modernConfig.cmake
 lib/cmake/cryptopp-modern/cryptopp-modernConfigVersion.cmake
 lib/libcryptopp.a
 libdata/pkgconfig/cryptopp-modern.pc
+libdata/pkgconfig/libcryptopp.pc

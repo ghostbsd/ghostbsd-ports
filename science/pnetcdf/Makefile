@@ -1,9 +1,7 @@
 PORTNAME=	pnetcdf
-PORTVERSION=	1.14.1
-PORTREVISION=	1
+PORTVERSION=	1.15.0
 CATEGORIES=	science parallel
-MASTER_SITES=	https://parallel-netcdf.github.io/Release/ \
-		LOCAL/sunpoet
+MASTER_SITES=	https://parallel-netcdf.github.io/Release/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library providing high-performance I/O
@@ -19,7 +17,9 @@ USES=		fortran gmake libtool mpi:${FLAVOR} perl5
 USE_PERL5=	build
 
 CFLAGS+=	-fPIC
-CONFIGURE_ARGS=	--with-mpi=${MPI_HOME} ac_cv_fc_compiler_nag=no
+CONFIGURE_ARGS=	--enable-gio \
+		--with-mpi=${MPI_HOME} \
+		ac_cv_fc_compiler_nag=no
 # Workaround for GCC 10+ for Type mismatch between actual argument at (1) and actual argument at (2) (INTEGER(8)/CHARACTER(*)).
 FCFLAGS+=	-fallow-argument-mismatch
 GNU_CONFIGURE=	yes

@@ -73,6 +73,7 @@
     SUBDIR += fence-agents
     SUBDIR += fetchconfig
     SUBDIR += fli
+    SUBDIR += flow
     SUBDIR += flow-tools
     SUBDIR += flowd
     SUBDIR += flowviewer
@@ -413,6 +414,7 @@
     SUBDIR += unbound_exporter
     SUBDIR += unifi10
     SUBDIR += unifi9
+    SUBDIR += uptime-kuma
     SUBDIR += victoria-logs
     SUBDIR += victoria-metrics
     SUBDIR += virt-viewer

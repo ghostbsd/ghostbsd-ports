@@ -85,7 +85,7 @@ _INCLUDE_USES_ELECTRON_MK=	yes
 # Electron depends on Node.js package manager
 .include "${USESDIR}/npm.mk"
 
-_VALID_ELECTRON_VERSIONS=	37 38 39 40 41 42
+_VALID_ELECTRON_VERSIONS=	37 38 39 40 41 42 43
 _VALID_ELECTRON_FEATURES=	appbuilder rebuild build
 _VALID_ELECTRON_FEATURES_APPBUILDER=release devel
 _VALID_ELECTRON_FEATURES_REBUILD=nodejs electron
@@ -121,7 +121,11 @@ _ELECTRON_TEST_DEP=	yes
 .  if ${_VALID_ELECTRON_VERSIONS:M${_ELECTRON_ARGS}}
 _ELECTRON_VERSION=	${_ELECTRON_ARGS}
 _ELECTRON_PORTDIR=	${_ELECTRON_PORT_BASE}${_ELECTRON_VERSION}
+.    if exists(${PORTSDIR}/${_ELECTRON_PORTDIR}/Makefile.version)
 .	include "${PORTSDIR}/${_ELECTRON_PORTDIR}/Makefile.version"
+.    else
+IGNORE=	${_ELECTRON_PORTDIR}/Makefile.version is missing
+.    endif
 .  elif empty(_ELECTRON_ARGS)
 IGNORE=	does not specify a major version of electron with USES=electron
 .  else

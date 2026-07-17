@@ -1,9 +1,9 @@
 PORTNAME=	openrct2
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.2
+DISTVERSION=	0.5.3
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/OpenRCT2/title-sequences/releases/download/v0.4.26/:sequence \
-		https://github.com/OpenRCT2/objects/releases/download/v1.7.9/:object \
+		https://github.com/OpenRCT2/objects/releases/download/v1.7.10/:object \
 		https://github.com/OpenRCT2/OpenMusic/releases/download/v1.6.1/:openmsx \
 		https://github.com/OpenRCT2/OpenSoundEffects/releases/download/v1.0.6/:opensfx
 DISTFILES=	title-sequences.zip:sequence \

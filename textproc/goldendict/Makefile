@@ -1,6 +1,6 @@
 PORTNAME=	goldendict
 PORTVERSION=	1.5.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	textproc
 
 PATCH_SITES=	https://github.com/goldendict/goldendict/commit/

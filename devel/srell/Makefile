@@ -1,5 +1,5 @@
 PORTNAME=	srell
-DISTVERSION=	2026.02
+DISTVERSION=	2026.05
 CATEGORIES=	devel
 MASTER_SITES=	https://www.akenotsuki.com/misc/${PORTNAME}/releases/
 DISTNAME=	${PORTNAME}${DISTVERSION:S/./_/}

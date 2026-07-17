@@ -81,6 +81,7 @@ include/filament/Engine.h
 include/filament/Exposure.h
 include/filament/Fence.h
 include/filament/FilamentAPI.h
+include/filament/FrameHistoryStream.h
 include/filament/Frustum.h
 include/filament/IndexBuffer.h
 include/filament/IndirectLight.h
@@ -182,6 +183,7 @@ include/utils/MonotonicRingMap.h
 include/utils/Mutex.h
 include/utils/NameComponentManager.h
 include/utils/PagedArenaBitset.h
+include/utils/PagedArenaBitsetPool.h
 include/utils/Panic.h
 include/utils/Path.h
 include/utils/PrivateImplementation-impl.h

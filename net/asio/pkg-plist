@@ -139,6 +139,7 @@ include/asio/detail/impl/posix_tss_ptr.ipp
 include/asio/detail/impl/reactive_descriptor_service.ipp
 include/asio/detail/impl/reactive_socket_service_base.ipp
 include/asio/detail/impl/resolver_service_base.ipp
+include/asio/detail/impl/resolver_thread_pool.ipp
 include/asio/detail/impl/scheduler.ipp
 include/asio/detail/impl/select_reactor.hpp
 include/asio/detail/impl/select_reactor.ipp
@@ -153,7 +154,6 @@ include/asio/detail/impl/strand_service.hpp
 include/asio/detail/impl/strand_service.ipp
 include/asio/detail/impl/thread_context.ipp
 include/asio/detail/impl/throw_error.ipp
-include/asio/detail/impl/timer_queue_ptime.ipp
 include/asio/detail/impl/timer_queue_set.ipp
 include/asio/detail/impl/win_event.ipp
 include/asio/detail/impl/win_iocp_file_service.ipp
@@ -254,6 +254,7 @@ include/asio/detail/resolve_op.hpp
 include/asio/detail/resolve_query_op.hpp
 include/asio/detail/resolver_service.hpp
 include/asio/detail/resolver_service_base.hpp
+include/asio/detail/resolver_thread_pool.hpp
 include/asio/detail/scheduler.hpp
 include/asio/detail/scheduler_operation.hpp
 include/asio/detail/scheduler_task.hpp
@@ -293,7 +294,6 @@ include/asio/detail/throw_exception.hpp
 include/asio/detail/timed_cancel_op.hpp
 include/asio/detail/timer_queue.hpp
 include/asio/detail/timer_queue_base.hpp
-include/asio/detail/timer_queue_ptime.hpp
 include/asio/detail/timer_queue_set.hpp
 include/asio/detail/timer_scheduler.hpp
 include/asio/detail/timer_scheduler_fwd.hpp
@@ -419,6 +419,7 @@ include/asio/impl/any_io_executor.ipp
 include/asio/impl/append.hpp
 include/asio/impl/as_tuple.hpp
 include/asio/impl/awaitable.hpp
+include/asio/impl/awaitable.ipp
 include/asio/impl/buffered_read_stream.hpp
 include/asio/impl/buffered_write_stream.hpp
 include/asio/impl/cancel_after.hpp
@@ -624,4 +625,4 @@ include/asio/writable_pipe.hpp
 include/asio/write.hpp
 include/asio/write_at.hpp
 include/asio/yield.hpp
-libdata/pkgconfig/asio.pc
+share/pkgconfig/asio.pc

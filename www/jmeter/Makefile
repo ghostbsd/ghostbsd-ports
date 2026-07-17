@@ -1,6 +1,6 @@
 PORTNAME=	apache-jmeter
 DISTVERSION=	5.6.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www benchmarks java
 MASTER_SITES=	https://archive.apache.org/dist/jmeter/binaries/
 
@@ -16,24 +16,24 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 # the 3rd-party ones:
 _JAVADIR=	${LOCALBASE}/share/java
 RUN_DEPENDS=	\
-		${_JAVADIR}/batik/lib/batik-anim-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-awt-util-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-bridge-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-codec-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-constants-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-css-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-dom-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-ext-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-gvt-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-i18n-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-parser-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-script-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-shared-resources-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-svg-dom-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-svggen-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-transcoder-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-util-1.18.jar:graphics/batik \
-		${_JAVADIR}/batik/lib/batik-xml-1.18.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-anim-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-awt-util-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-bridge-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-codec-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-constants-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-css-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-dom-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-ext-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-gvt-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-i18n-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-parser-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-script-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-shared-resources-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-svg-dom-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-svggen-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-transcoder-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-util-1.19.jar:graphics/batik \
+		${_JAVADIR}/batik/lib/batik-xml-1.19.jar:graphics/batik \
 		${JAVALIBDIR}/commons-codec.jar:java/apache-commons-codec \
 		${JAVALIBDIR}/commons-collections.jar:java/apache-commons-collections \
 		${JAVALIBDIR}/commons-collections4.jar:java/apache-commons-collections4	\
@@ -76,10 +76,10 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 # Do not even extract the MS-DOS files nor the JARs,
 # that are already provided by other ports:
 EXTRACT_AFTER_ARGS=	--exclude '*.bat' --exclude '*.cmd' \
-			${RUN_DEPENDS:M*.jar*:C|.*/(.+).jar:.*|--exclude '\1-*.jar'|} \
-			--exclude 'Saxon-HE-*.jar' --exclude 'batik-*.jar' \
-			--exclude 'commons-dbcp2*.jar' --exclude 'commons-math3-*.jar' \
-			--exclude 'commons-pool2*.jar' --exclude 'oro-*.jar'
+			${RUN_DEPENDS:M*.jar*:C|.*/(.+).jar:.*|--exclude '\1-*'|} \
+			--exclude 'Saxon-HE-*.jar' --exclude 'batik-*' \
+			--exclude 'commons-dbcp2*' --exclude 'commons-math3-*' \
+			--exclude 'commons-pool2*' --exclude 'oro-*'
 
 NO_ARCH=	yes
 NO_BUILD=	yes

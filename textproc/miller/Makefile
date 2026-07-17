@@ -1,6 +1,7 @@
 PORTNAME=	miller
 DISTVERSIONPREFIX=	v
-DISTVERSION=	6.19.0
+DISTVERSION=	6.20.2
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	https://raw.githubusercontent.com/johnkerl/${PORTNAME}/${DISTVERSIONFULL}/:gomod
 DISTFILES=	go.mod:gomod
@@ -21,5 +22,8 @@ GO_MODULE=	github.com/johnkerl/miller
 GO_TARGET=	./cmd/mlr
 
 PLIST_FILES=	bin/mlr
+
+do-test:
+	cd ${WRKSRC} && ${DO_MAKE_BUILD} check
 
 .include <bsd.port.mk>

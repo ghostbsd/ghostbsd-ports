@@ -1,5 +1,5 @@
 PORTNAME=	geoserver
-DISTVERSION=	2.28.3
+DISTVERSION=	3.0.0
 CATEGORIES=	databases geography java
 MASTER_SITES=	SF/${PORTNAME}/GeoServer/${PORTVERSION}/extensions
 PKGNAMESUFFIX=	-mysql-plugin
@@ -22,7 +22,7 @@ NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
 GSLIBDIR=	geoserver/webapps/geoserver/WEB-INF/lib
-PLIST_FILES=	${GSLIBDIR}/gt-jdbc-mysql-34.3.jar \
+PLIST_FILES=	${GSLIBDIR}/gt-jdbc-mysql-35.0.jar \
 		${GSLIBDIR}/mysql-connector-j-9.6.0.jar
 
 do-install:

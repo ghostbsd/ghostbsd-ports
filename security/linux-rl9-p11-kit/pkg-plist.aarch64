@@ -2,7 +2,7 @@ usr/bin/p11-kit
 usr/bin/trust
 usr/lib64/libnssckbi.so
 usr/lib64/libp11-kit.so.0
-usr/lib64/libp11-kit.so.0.3.1
+usr/lib64/libp11-kit.so.0.4.8
 usr/lib64/p11-kit-proxy.so
 @rmtry usr/lib64/p11-kit-trust.so
 usr/lib64/pkcs11/p11-kit-trust.so
@@ -90,4 +90,6 @@ usr/share/man/man1/trust.1.gz
 usr/share/man/man5/pkcs11.conf.5.gz
 usr/share/man/man8/p11-kit.8.gz
 %%DATADIR%%/modules/p11-kit-trust.module
+usr/share/zsh/site-functions/_p11-kit
+usr/share/zsh/site-functions/_trust
 @dir etc/pkcs11/modules

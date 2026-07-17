@@ -16,6 +16,7 @@ bin/sam2vcf.pl
 bin/samtools
 bin/samtools.pl
 bin/seq_cache_populate.pl
+bin/seq_cache_populate.py
 bin/soap2sam.pl
 bin/wgsim
 bin/wgsim_eval.pl

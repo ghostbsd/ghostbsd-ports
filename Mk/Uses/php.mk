@@ -88,6 +88,9 @@ DEV_WARNING+=	"USES=php:ext is included in USES=php:zend, so it is not needed"
 .  if ${php_ARGS:Mext} && ${php_ARGS:Mpecl}
 DEV_WARNING+=	"USES=php:ext is included in USES=php:pecl, so it is not needed"
 .  endif
+.  if ${php_ARGS:Mpecl}
+DEV_WARNING+=	"USES=php:pecl is deprecated and necessary support will be removed in the future, consider converting pecl packages to standard extensions"
+.  endif
 
 .  if ( ${php_ARGS:Mphpize} || ${php_ARGS:Mext} || ${php_ARGS:Mzend} || ${php_ARGS:Mpecl} ) && !${php_ARGS:Mnoflavors}
 php_ARGS+=	flavors
@@ -442,7 +445,7 @@ posix_DEPENDS=	sysutils/php${PHP_VER}-posix
 .    if ${PHP_VER} <= 83
 pspell_DEPENDS=	textproc/php${PHP_VER}-pspell
 .    else
-pspell_DEPENDS=	textproc/pecl-pspell@${PHP_FLAVOR}
+pspell_DEPENDS=	textproc/php-pspell@${PHP_FLAVOR}
 .    endif
 radius_DEPENDS=	net/pecl-radius@${PHP_FLAVOR}
 readline_DEPENDS=	devel/php${PHP_VER}-readline
@@ -462,7 +465,7 @@ tidy_DEPENDS=	www/php${PHP_VER}-tidy
 tokenizer_DEPENDS=	devel/php${PHP_VER}-tokenizer
 xml_DEPENDS=	textproc/php${PHP_VER}-xml
 xmlreader_DEPENDS=	textproc/php${PHP_VER}-xmlreader
-xmlrpc_DEPENDS=	net/pecl-xmlrpc@${PHP_FLAVOR}
+xmlrpc_DEPENDS=	net/php-xmlrpc@${PHP_FLAVOR}
 xmlwriter_DEPENDS=	textproc/php${PHP_VER}-xmlwriter
 xsl_DEPENDS=	textproc/php${PHP_VER}-xsl
 zephir_parser_DEPENDS=	textproc/pecl-zephir_parser@${PHP_FLAVOR}

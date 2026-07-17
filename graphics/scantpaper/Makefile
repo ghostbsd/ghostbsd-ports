@@ -1,6 +1,6 @@
 PORTNAME=	scantpaper
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.0.10
+DISTVERSION=	3.0.11
 CATEGORIES=	graphics python
 
 MAINTAINER=	cmt@FreeBSD.org
@@ -36,6 +36,8 @@ post-build:
 	(cd ${WRKSRC} ; python3.12 dev/compile_mo.py --src po --out locale --domain scantpaper)
 
 post-install:
-	(cd ${WRKSRC} ; for mo in locale/*/LC_MESSAGES/scantpaper.mo ; do ${MKDIR} "${STAGEDIR}/${PREFIX}/share/$$(dirname $${mo})" ; ${INSTALL_DATA} "$${mo}" "${STAGEDIR}/${PREFIX}/share/$$(dirname $${mo})/" ; done)
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/hicolor/16x16/apps ${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps
+	(cd ${WRKSRC} ; for mo in locale/*/LC_MESSAGES/scantpaper.mo ; do ${MKDIR} "${STAGEDIR}${PREFIX}/share/$$(dirname $${mo})" ; ${INSTALL_DATA} "$${mo}" "${STAGEDIR}${PREFIX}/share/$$(dirname $${mo})/" ; done)
+	(cd ${WRKSRC} ; for ico in icons/hicolor/*/apps/* ; do ${INSTALL_DATA} "$${ico}" "${STAGEDIR}${PREFIX}/share/$${ico}" ; done)
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	google-cloud-storage
-PORTVERSION=	3.10.1
+PORTVERSION=	3.12.1
 CATEGORIES=	www python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLA
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}google-api-core>=2.27.0<3.0.0:www/py-google-api-core@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}google-auth>=2.26.1<3.0.0:security/py-google-auth@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}google-cloud-core>=2.4.2<3.0.0:www/py-google-cloud-core@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}google-crc32c>=1.1.3<2.0.0:devel/py-google-crc32c@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}google-crc32c>=1.6.0<2.0.0:devel/py-google-crc32c@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}google-resumable-media>=2.7.2<3.0.0:www/py-google-resumable-media@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>=2.22.0<3.0.0:www/py-requests@${PY_FLAVOR}
 
@@ -35,9 +35,9 @@ TRACING_DESC=	Generate traces using OpenTelemetry
 GRPC_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}google-api-core>=2.27.0<3.0.0:www/py-google-api-core@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}grpc-google-iam-v1>=0.14.0<1.0.0:devel/py-grpc-google-iam-v1@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}grpcio>=1.75.1<2.0.0:devel/py-grpcio@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}grpcio-status>=1.76.0<2.0.0:devel/py-grpcio-status@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}grpcio-status>=1.75.1<2.0.0:devel/py-grpcio-status@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}proto-plus>=1.25.0<2.0.0:devel/py-proto-plus@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}protobuf>=4.21.6,1<7.0.0,1:devel/py-protobuf@${PY_FLAVOR}
+			${PYTHON_PKGNAMEPREFIX}protobuf>=4.25.8,1<8.0.0,1:devel/py-protobuf@${PY_FLAVOR}
 PROTOBUF_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}protobuf>=3.20.2,1<7.0.0,1:devel/py-protobuf@${PY_FLAVOR}
 TRACING_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}opentelemetry-api>=1.1.0<2.0.0:devel/py-opentelemetry-api@${PY_FLAVOR}
 

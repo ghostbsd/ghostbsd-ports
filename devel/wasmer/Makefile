@@ -1,10 +1,9 @@
 PORTNAME=	wasmer
 DISTVERSIONPREFIX=	v
-DISTVERSION=	7.1.0
-PORTREVISION=	1
+DISTVERSION=	7.2.0
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/wasmerio/wasmer/releases/download/${DISTVERSIONFULL}/
-DISTFILES=	wasmer-full-source.tar.xz
+DISTFILES=	wasmer-full-source.tar.gz
 
 MAINTAINER=	kjozic@gmail.com
 COMMENT=	WebAssembly Runtime supporting WASIX, WASI and Emscripten
@@ -20,7 +19,7 @@ BUILD_DEPENDS=	bash>0:shells/bash \
 LIB_DEPENDS=	libffi.so:devel/libffi \
 		libzstd.so:archivers/zstd
 
-USES=		cargo gmake llvm:21 nodejs:build pkgconfig
+USES=		cargo gmake llvm:22 nodejs:build pkgconfig
 
 CARGO_BUILD=	no
 CARGO_INSTALL=	no
@@ -29,9 +28,7 @@ MAKE_ENV+=	ENABLE_CRANELIFT=1 \
 		ENABLE_LLVM=1 \
 		ENABLE_SINGLEPASS=1 \
 		ENABLE_V8=0 \
-		ENABLE_WAMR=0 \
-		ENABLE_WASMI=0 \
-		LLVM_SYS_210_PREFIX=${LLVM_PREFIX} \
+		LLVM_SYS_221_PREFIX=${LLVM_PREFIX} \
 		RUSTFLAGS="-L ${LOCALBASE}/lib -C linker=clang"
 
 ALL_TARGET=	build-wasmer
@@ -40,11 +37,11 @@ CC=		clang${_LLVM_VERSION}
 CPP=		clang-cpp${_LLVM_VERSION}
 CXX=		clang++${_LLVM_VERSION}
 
-WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
+WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	bin/wasmer
 
-_LLVM_VERSION=	21
+_LLVM_VERSION=	22
 
 pre-configure:
 	${REINPLACE_CMD} -e 's,%%LOCALBASE%%,${LOCALBASE},' ${WRKSRC}/Makefile

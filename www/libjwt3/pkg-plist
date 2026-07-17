@@ -1,3 +1,5 @@
+bin/jwe-decrypt
+bin/jwe-encrypt
 bin/jwk2key
 bin/jwt-generate
 bin/jwt-verify
@@ -9,10 +11,12 @@ lib/cmake/LibJWT/LibJWTConfig.cmake
 lib/libjwt.a
 lib/libjwt.so
 lib/libjwt.so.14
-lib/libjwt.so.14.2.7
+lib/libjwt.so.14.4.1
 libdata/pkgconfig/libjwt.pc
 %%PORTDOCS%%%%DOCSDIR%%/LICENSE
 %%PORTDOCS%%%%DOCSDIR%%/README.md
+share/man/man1/jwe-decrypt.1.gz
+share/man/man1/jwe-encrypt.1.gz
 share/man/man1/jwk2key.1.gz
 share/man/man1/jwt-generate.1.gz
 share/man/man1/jwt-verify.1.gz

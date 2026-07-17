@@ -3,7 +3,7 @@ DISTVERSIONPREFIX=	v
 DISTVERSION=	0.4.3
 CATEGORIES=	misc
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	LED controller for Logitech G-series keyboards
 WWW=		https://github.com/MatMoul/g810-led
 

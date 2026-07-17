@@ -120,6 +120,7 @@
 %%DATADIR%%/core/management/commands/nbshell.py
 %%DATADIR%%/core/management/commands/rqworker.py
 %%DATADIR%%/core/management/commands/syncdatasource.py
+%%DATADIR%%/core/management/commands/upgrade.py
 %%DATADIR%%/core/migrations/0001_squashed_0005.py
 %%DATADIR%%/core/migrations/0006_datasource_type_remove_choices.py
 %%DATADIR%%/core/migrations/0007_job_add_error_field.py
@@ -387,6 +388,7 @@
 %%DATADIR%%/docs/customization/reports.md
 %%DATADIR%%/docs/development/adding-models.md
 %%DATADIR%%/docs/development/application-registry.md
+%%DATADIR%%/docs/development/building-the-package.md
 %%DATADIR%%/docs/development/extending-models.md
 %%DATADIR%%/docs/development/getting-started.md
 %%DATADIR%%/docs/development/git-cheat-sheet.md
@@ -924,6 +926,7 @@
 %%DATADIR%%/media/.gitkeep
 %%DATADIR%%/mkdocs.yml
 %%DATADIR%%/netbox/__init__.py
+%%DATADIR%%/netbox/__main__.py
 %%DATADIR%%/netbox/api/__init__.py
 %%DATADIR%%/netbox/api/authentication.py
 %%DATADIR%%/netbox/api/exceptions.py
@@ -948,6 +951,7 @@
 %%DATADIR%%/netbox/authentication/__init__.py
 %%DATADIR%%/netbox/authentication/misc.py
 %%DATADIR%%/netbox/choices.py
+%%DATADIR%%/netbox/cli.py
 %%DATADIR%%/netbox/config/__init__.py
 %%DATADIR%%/netbox/config/parameters.py
 %%DATADIR%%/netbox/configuration_example.py
@@ -998,10 +1002,12 @@
 %%DATADIR%%/netbox/plugins/views.py
 %%DATADIR%%/netbox/preferences.py
 %%DATADIR%%/netbox/registry.py
+%%DATADIR%%/netbox/scaffold.py
 %%DATADIR%%/netbox/search/__init__.py
 %%DATADIR%%/netbox/search/backends.py
 %%DATADIR%%/netbox/search/utils.py
 %%DATADIR%%/netbox/settings.py
+%%DATADIR%%/netbox/settings_utils.py
 %%DATADIR%%/netbox/signals.py
 %%DATADIR%%/netbox/tables/__init__.py
 %%DATADIR%%/netbox/tables/columns.py
@@ -1035,6 +1041,7 @@
 %%DATADIR%%/netbox/tests/test_api.py
 %%DATADIR%%/netbox/tests/test_authentication.py
 %%DATADIR%%/netbox/tests/test_base_classes.py
+%%DATADIR%%/netbox/tests/test_cli.py
 %%DATADIR%%/netbox/tests/test_config.py
 %%DATADIR%%/netbox/tests/test_forms.py
 %%DATADIR%%/netbox/tests/test_graphql.py
@@ -1048,7 +1055,9 @@
 %%DATADIR%%/netbox/tests/test_object_actions.py
 %%DATADIR%%/netbox/tests/test_plugins.py
 %%DATADIR%%/netbox/tests/test_registry.py
+%%DATADIR%%/netbox/tests/test_scaffold.py
 %%DATADIR%%/netbox/tests/test_search.py
+%%DATADIR%%/netbox/tests/test_settings_utils.py
 %%DATADIR%%/netbox/tests/test_tables.py
 %%DATADIR%%/netbox/tests/test_ui.py
 %%DATADIR%%/netbox/tests/test_views.py
@@ -1642,6 +1651,7 @@
 %%DATADIR%%/templates/virtualization/virtualmachine/attrs/ipaddress.html
 %%DATADIR%%/templates/virtualization/virtualmachine/base.html
 %%DATADIR%%/templates/virtualization/virtualmachinetype.html
+%%DATADIR%%/templates/virtualization/virtualmachinetype/attrs/default_memory.html
 %%DATADIR%%/templates/virtualization/vminterface.html
 %%DATADIR%%/templates/vpn/attrs/preshared_key.html
 %%DATADIR%%/templates/vpn/tunnel.html
@@ -1726,6 +1736,8 @@
 %%DATADIR%%/translations/it/LC_MESSAGES/django.po
 %%DATADIR%%/translations/ja/LC_MESSAGES/django.mo
 %%DATADIR%%/translations/ja/LC_MESSAGES/django.po
+%%DATADIR%%/translations/ko/LC_MESSAGES/django.mo
+%%DATADIR%%/translations/ko/LC_MESSAGES/django.po
 %%DATADIR%%/translations/lv/LC_MESSAGES/django.mo
 %%DATADIR%%/translations/lv/LC_MESSAGES/django.po
 %%DATADIR%%/translations/nl/LC_MESSAGES/django.mo
@@ -1870,6 +1882,7 @@
 %%DATADIR%%/utilities/release.py
 %%DATADIR%%/utilities/request.py
 %%DATADIR%%/utilities/rqworker.py
+%%DATADIR%%/utilities/secret_key.py
 %%DATADIR%%/utilities/security.py
 %%DATADIR%%/utilities/serialization.py
 %%DATADIR%%/utilities/serializers/json.py
@@ -1942,6 +1955,7 @@
 %%DATADIR%%/utilities/tests/test_conversions.py
 %%DATADIR%%/utilities/tests/test_counters.py
 %%DATADIR%%/utilities/tests/test_data.py
+%%DATADIR%%/utilities/tests/test_error_handlers.py
 %%DATADIR%%/utilities/tests/test_filter_modifiers.py
 %%DATADIR%%/utilities/tests/test_filters.py
 %%DATADIR%%/utilities/tests/test_forms.py
@@ -1952,8 +1966,10 @@
 %%DATADIR%%/utilities/tests/test_permissions.py
 %%DATADIR%%/utilities/tests/test_prefetch.py
 %%DATADIR%%/utilities/tests/test_query_counts.py
+%%DATADIR%%/utilities/tests/test_release.py
 %%DATADIR%%/utilities/tests/test_request.py
 %%DATADIR%%/utilities/tests/test_rqworker.py
+%%DATADIR%%/utilities/tests/test_secret_key.py
 %%DATADIR%%/utilities/tests/test_serialization.py
 %%DATADIR%%/utilities/tests/test_templatetags.py
 %%DATADIR%%/utilities/tests/test_utils.py

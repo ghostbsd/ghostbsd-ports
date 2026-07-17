@@ -1,5 +1,6 @@
 PORTNAME=	mcp-inspector
 DISTVERSION=	0.22.0
+PORTREVISION=	1
 CATEGORIES=	misc # machine-learning
 DIST_SUBDIR=	${PORTNAME}
 
@@ -48,7 +49,7 @@ do-install:
 		-e "s|#!/usr/bin/env node|#!${PREFIX}/bin/node|" \
 		${STAGEDIR}${PREFIX}/lib/node_modules/${PACKAGE_NAME}/cli/build/cli.js
 	@${CHMOD} +x ${STAGEDIR}${PREFIX}/lib/node_modules/${PACKAGE_NAME}/cli/build/cli.js
-	@${RLN} -s ${STAGEDIR}${PREFIX}/lib/node_modules/.bin/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	@${LN} -s ${PREFIX}/lib/node_modules/.bin/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	# remove stray file
 	@${RM} \
 		${STAGEDIR}${LOCALBASE}/lib/package.json \

@@ -11,10 +11,6 @@ lib/cmake/Kealib/KealibConfig.cmake
 lib/cmake/Kealib/KealibConfigVersion.cmake
 lib/cmake/Kealib/libkeaTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Kealib/libkeaTargets.cmake
-lib/cmake/libkea/libkeaConfig.cmake
-lib/cmake/libkea/libkeaConfigVersion.cmake
-lib/cmake/libkea/libkeaTargets-%%CMAKE_BUILD_TYPE%%.cmake
-lib/cmake/libkea/libkeaTargets.cmake
 lib/libkea.so
-lib/libkea.so.1.6
+lib/libkea.so.2.0
 lib/libkea.so.%%PORTVERSION%%
