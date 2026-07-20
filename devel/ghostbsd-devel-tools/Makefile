@@ -1,5 +1,5 @@
 PORTNAME=	ghostbsd-devel-tools
-PORTVERSION=	20250118
+PORTVERSION=	20260720
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,10 +16,10 @@ RUN_DEPENDS=	git>0:devel/git \
 		gnupg>0:security/gnupg \
 		hs-ShellCheck>0:devel/hs-ShellCheck \
 		portlint>0:ports-mgmt/portlint \
-		py311-setuptools>0:devel/py-setuptools \
+		py312-setuptools>0:devel/py-setuptools \
 		poudriere>0:ports-mgmt/poudriere \
-		py311-python-distutils-extra>0:devel/py-python-distutils-extra \
-		pylint-py311>0:devel/pylint \
+		py312-python-distutils-extra>0:devel/py-python-distutils-extra \
+		pylint-py312>0:devel/pylint \
 		transmission-utils>0:net-p2p/transmission-components@utils
 
 USES=		metaport
