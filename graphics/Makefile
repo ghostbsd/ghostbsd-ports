@@ -500,7 +500,6 @@
     SUBDIR += libjxl
     SUBDIR += libjxr
     SUBDIR += libkdcraw
-    SUBDIR += libkdcraw-qt5
     SUBDIR += libkexiv2
     SUBDIR += libksane
     SUBDIR += libliftoff
@@ -1274,6 +1273,7 @@
     SUBDIR += viewnior
     SUBDIR += vigra
     SUBDIR += vips
+    SUBDIR += virtio-gpu-qemu-kmod
     SUBDIR += visprint
     SUBDIR += viu
     SUBDIR += vkrunner

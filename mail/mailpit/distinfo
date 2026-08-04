@@ -1,7 +1,7 @@
-TIMESTAMP = 1783579768
-SHA256 (go/mail_mailpit/mailpit-v1.30.4/mailpit-npm-cache-1.30.4.tar.zst) = 0aeac31c285dee9ea34eff59280f115e659accea21c247beed9fb0b2425bddba
-SIZE (go/mail_mailpit/mailpit-v1.30.4/mailpit-npm-cache-1.30.4.tar.zst) = 40252522
-SHA256 (go/mail_mailpit/mailpit-v1.30.4/v1.30.4.mod) = f3a3d1ff967b3367f4aed426fe777b1426f1859f3fe4ce314d5c58d7da641399
-SIZE (go/mail_mailpit/mailpit-v1.30.4/v1.30.4.mod) = 2745
-SHA256 (go/mail_mailpit/mailpit-v1.30.4/v1.30.4.zip) = 606628aa0aeb5892cab2f5e87149da60e3a5f98bfc7039fac8eb90f09039ce63
-SIZE (go/mail_mailpit/mailpit-v1.30.4/v1.30.4.zip) = 628680
+TIMESTAMP = 1785221859
+SHA256 (go/mail_mailpit/mailpit-v1.30.6/mailpit-npm-cache-1.30.6.tar.zst) = 8d37f55eb064743da1ca5fea111ad6a57a00b2db0aa576bad74b415661ff8fc4
+SIZE (go/mail_mailpit/mailpit-v1.30.6/mailpit-npm-cache-1.30.6.tar.zst) = 40341305
+SHA256 (go/mail_mailpit/mailpit-v1.30.6/v1.30.6.mod) = 6becb596821d86cf48b7e26abab8be897d18c23f19f76701e1b408a6c1314542
+SIZE (go/mail_mailpit/mailpit-v1.30.6/v1.30.6.mod) = 2745
+SHA256 (go/mail_mailpit/mailpit-v1.30.6/v1.30.6.zip) = 50889410393021314f5a75b85ce36604362f752894f9db2f2082a8a853db1400
+SIZE (go/mail_mailpit/mailpit-v1.30.6/v1.30.6.zip) = 649747

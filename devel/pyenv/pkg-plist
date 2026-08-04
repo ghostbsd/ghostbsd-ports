@@ -20,7 +20,11 @@ libexec/pyenv-latest
 libexec/pyenv-local
 libexec/pyenv-plugins/pyenv-binary/README.md
 libexec/pyenv-plugins/pyenv-binary/bin/pyenv-binary
+libexec/pyenv-plugins/pyenv-binary/libexec/pyenv-binary-generate-installer
+libexec/pyenv-plugins/pyenv-binary/libexec/pyenv-binary-relocate
 libexec/pyenv-plugins/pyenv-binary/libexec/pyenv-binary-save
+libexec/pyenv-plugins/pyenv-binary/test/generate-installer.bats
+libexec/pyenv-plugins/pyenv-binary/test/relocate.bats
 libexec/pyenv-plugins/pyenv-binary/test/save.bats
 libexec/pyenv-plugins/pyenv-binary/test/test_helper.bash
 libexec/pyenv-plugins/python-build/LICENSE
@@ -314,8 +318,8 @@ libexec/pyenv-plugins/python-build/share/python-build/3.14.6
 libexec/pyenv-plugins/python-build/share/python-build/3.14.6t
 libexec/pyenv-plugins/python-build/share/python-build/3.15t-dev
 libexec/pyenv-plugins/python-build/share/python-build/3.15-dev
-libexec/pyenv-plugins/python-build/share/python-build/3.15.0b3
-libexec/pyenv-plugins/python-build/share/python-build/3.15.0b3t
+libexec/pyenv-plugins/python-build/share/python-build/3.15.0b4
+libexec/pyenv-plugins/python-build/share/python-build/3.15.0b4t
 libexec/pyenv-plugins/python-build/share/python-build/3.16t-dev
 libexec/pyenv-plugins/python-build/share/python-build/3.16-dev
 libexec/pyenv-plugins/python-build/share/python-build/activepython-2.7.14

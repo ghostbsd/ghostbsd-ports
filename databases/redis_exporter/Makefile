@@ -1,7 +1,6 @@
 PORTNAME=	redis_exporter
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.83.0
-PORTREVISION=	2
+DISTVERSION=	1.87.0
 CATEGORIES=	databases
 
 MAINTAINER=	arcade@b1t.name
@@ -19,7 +18,7 @@ GO_MODULE=	github.com/oliver006/redis_exporter
 GO_BUILDFLAGS=	-v -ldflags "${GO_LD_FLAGS:S|^|-X main.Build|}"
 GO_LD_FLAGS=	Version=${DISTVERSION} \
 		Date=${:!date -Iseconds -zUTC!} \
-		CommitSha=1c261b8
+		CommitSha=5119c25
 
 PLIST_FILES=	bin/redis_exporter
 

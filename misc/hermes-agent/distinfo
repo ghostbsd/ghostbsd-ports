@@ -1,5 +1,5 @@
-TIMESTAMP = 1779181415
-SHA256 (hermes-agent-web-dist-0.14.0.tar.gz) = 661b2f4065b54f81be6c399b3c518d70859db8ba5f8780e276726ecdf4101b76
-SIZE (hermes-agent-web-dist-0.14.0.tar.gz) = 5324961
-SHA256 (NousResearch-hermes-agent-0.14.0-v2026.5.16_GH0.tar.gz) = c0a554050a50ee9a62f3fa5cd288a167ba5640c42d647d100cdea084b7294143
-SIZE (NousResearch-hermes-agent-0.14.0-v2026.5.16_GH0.tar.gz) = 28019973
+TIMESTAMP = 1784325231
+SHA256 (hermes-agent-web-dist-0.15.0.tar.gz) = 4a74b4d3a3d4c2e4eaa5f8750627ed6a5ddfa3c7e403b16f5b84e360302235da
+SIZE (hermes-agent-web-dist-0.15.0.tar.gz) = 1453377
+SHA256 (NousResearch-hermes-agent-0.15.0-v2026.7.7.2_GH0.tar.gz) = f5d1022eed3763a768cf7b0f0844831f0170a35f54eb8d18223f2e93f503025e
+SIZE (NousResearch-hermes-agent-0.15.0-v2026.7.7.2_GH0.tar.gz) = 64174593

@@ -145,6 +145,7 @@
     SUBDIR += distcache
     SUBDIR += diswall
     SUBDIR += doas
+    SUBDIR += dogtag-jss
     SUBDIR += dogtag-pki
     SUBDIR += dotdotpwn
     SUBDIR += dropbear
@@ -214,6 +215,7 @@
     SUBDIR += gsa
     SUBDIR += gsad
     SUBDIR += gsasl
+    SUBDIR += gssproxy
     SUBDIR += gstreamer1-plugins-dtls
     SUBDIR += gtkpasman
     SUBDIR += gvm
@@ -271,6 +273,7 @@
     SUBDIR += keychain
     SUBDIR += keyprint
     SUBDIR += keysmith
+    SUBDIR += keyward
     SUBDIR += kf5-kdesu
     SUBDIR += kf6-kdesu
     SUBDIR += kgpg
@@ -323,8 +326,6 @@
     SUBDIR += libotr3
     SUBDIR += libp11
     SUBDIR += libpki
-    SUBDIR += libprelude
-    SUBDIR += libpreludedb
     SUBDIR += libpwquality
     SUBDIR += libressl
     SUBDIR += libressl-devel
@@ -874,7 +875,6 @@
     SUBDIR += please
     SUBDIR += portacl-rc
     SUBDIR += proftpd-mod_clamav
-    SUBDIR += proxycheck
     SUBDIR += proxytunnel
     SUBDIR += pssh
     SUBDIR += pulledpork
@@ -1079,6 +1079,7 @@
     SUBDIR += py-python3-saml
     SUBDIR += py-pyvex
     SUBDIR += py-pywinrm
+    SUBDIR += py-pyxmpp2_scram
     SUBDIR += py-requests-credssp
     SUBDIR += py-requests-kerberos
     SUBDIR += py-ropgadget
@@ -1099,6 +1100,7 @@
     SUBDIR += py-siphash24
     SUBDIR += py-slip10
     SUBDIR += py-social-auth-core
+    SUBDIR += py-social-auth-core4
     SUBDIR += py-spake2
     SUBDIR += py-ssh-audit
     SUBDIR += py-sshpubkeys

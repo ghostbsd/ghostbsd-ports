@@ -193,7 +193,6 @@
     SUBDIR += antlr3
     SUBDIR += antlr4
     SUBDIR += apache-ant
-    SUBDIR += apache-commons-configuration
     SUBDIR += apache-commons-daemon
     SUBDIR += apache-commons-io
     SUBDIR += apache-commons-jxpath
@@ -483,6 +482,7 @@
     SUBDIR += cmph
     SUBDIR += coccinelle
     SUBDIR += cocogitto
+    SUBDIR += codebase-memory-mcp
     SUBDIR += codeblocks
     SUBDIR += codequery
     SUBDIR += codesearch-py
@@ -671,7 +671,6 @@
     SUBDIR += eiffelstudio
     SUBDIR += electron37
     SUBDIR += electron38
-    SUBDIR += electron39
     SUBDIR += electron40
     SUBDIR += electron41
     SUBDIR += electron42
@@ -924,6 +923,16 @@
     SUBDIR += glog
     SUBDIR += gmake
     SUBDIR += gn
+    SUBDIR += gnatcoll-bindings
+    SUBDIR += gnatcoll-bindings-cpp
+    SUBDIR += gnatcoll-bindings-gmp
+    SUBDIR += gnatcoll-bindings-iconv
+    SUBDIR += gnatcoll-bindings-lzma
+    SUBDIR += gnatcoll-bindings-omp
+    SUBDIR += gnatcoll-bindings-python
+    SUBDIR += gnatcoll-bindings-readline
+    SUBDIR += gnatcoll-bindings-syslog
+    SUBDIR += gnatcoll-bindings-zlib
     SUBDIR += gnatcoll-core
     SUBDIR += gnatcoll-minimal
     SUBDIR += gnome-builder
@@ -1097,10 +1106,22 @@
     SUBDIR += ispc
     SUBDIR += ittapi
     SUBDIR += ivykis
+    SUBDIR += jackson-annotations
+    SUBDIR += jackson-core
+    SUBDIR += jackson-databind
+    SUBDIR += jackson-jaxrs-providers
+    SUBDIR += jackson-module-jaxb-annotations
+    SUBDIR += jakarta-activation-api
+    SUBDIR += jakarta-annotation-api
+    SUBDIR += jakarta-xml-bind-api
     SUBDIR += jam
     SUBDIR += janet-lsp
     SUBDIR += jansson
     SUBDIR += java-findbugs
+    SUBDIR += javax-activation-api
+    SUBDIR += javax-ws-rs-api
+    SUBDIR += jaxb-api
+    SUBDIR += jboss-logging
     SUBDIR += jclassinfo
     SUBDIR += jcmdline
     SUBDIR += jech-dht
@@ -1626,6 +1647,7 @@
     SUBDIR += llvm20
     SUBDIR += llvm21
     SUBDIR += llvm22
+    SUBDIR += llvm23
     SUBDIR += lm4tools
     SUBDIR += lmdbg
     SUBDIR += lndir
@@ -1636,7 +1658,6 @@
     SUBDIR += log4cplus
     SUBDIR += log4cpp
     SUBDIR += log4cxx
-    SUBDIR += log4j
     SUBDIR += log4net
     SUBDIR += log4sh
     SUBDIR += log4shib
@@ -2408,13 +2429,11 @@
     SUBDIR += p5-Data-Stag
     SUBDIR += p5-Data-Stream-Bulk
     SUBDIR += p5-Data-Structure-Util
-    SUBDIR += p5-Data-Swap
     SUBDIR += p5-Data-Table
     SUBDIR += p5-Data-Taxonomy-Tags
     SUBDIR += p5-Data-TemporaryBag
     SUBDIR += p5-Data-Throttler
     SUBDIR += p5-Data-Throttler-Memcached
-    SUBDIR += p5-Data-Thunk
     SUBDIR += p5-Data-TreeDumper
     SUBDIR += p5-Data-TreeDumper-Renderer-GTK
     SUBDIR += p5-Data-Types
@@ -2516,7 +2535,6 @@
     SUBDIR += p5-Devel-ArgNames
     SUBDIR += p5-Devel-Autoflush
     SUBDIR += p5-Devel-Backtrace
-    SUBDIR += p5-Devel-BeginLift
     SUBDIR += p5-Devel-CallChecker
     SUBDIR += p5-Devel-Caller
     SUBDIR += p5-Devel-Caller-IgnoreNamespaces
@@ -4399,7 +4417,6 @@
     SUBDIR += pkg-info.el
     SUBDIR += pkgconf
     SUBDIR += plan9port
-    SUBDIR += plasma
     SUBDIR += plasma6-kwrited
     SUBDIR += plasma6-plasma-sdk
     SUBDIR += plasma6-plasma5support
@@ -4471,14 +4488,18 @@
     SUBDIR += py-aiofile
     SUBDIR += py-aiofiles
     SUBDIR += py-aiohttp-apispec
+    SUBDIR += py-aiohttp-asgi
     SUBDIR += py-aioice
     SUBDIR += py-aioitertools
     SUBDIR += py-aiologger
+    SUBDIR += py-aiomisc
+    SUBDIR += py-aiomisc-pytest
     SUBDIR += py-aiorpcX
     SUBDIR += py-aiorpcX-legacy
     SUBDIR += py-aiortc
     SUBDIR += py-aiorwlock
     SUBDIR += py-aiosignal
+    SUBDIR += py-aiothreads
     SUBDIR += py-airspeed
     SUBDIR += py-airspeed-ext
     SUBDIR += py-airtable-python-wrapper
@@ -4520,6 +4541,7 @@
     SUBDIR += py-arpeggio
     SUBDIR += py-array-api-compat
     SUBDIR += py-array-api-strict
+    SUBDIR += py-arro3-core
     SUBDIR += py-arrow
     SUBDIR += py-asciimatics
     SUBDIR += py-asgi-lifespan
@@ -5516,6 +5538,7 @@
     SUBDIR += py-notify2
     SUBDIR += py-num2words
     SUBDIR += py-numba
+    SUBDIR += py-numkong
     SUBDIR += py-nvidia-ml-py
     SUBDIR += py-objgraph
     SUBDIR += py-objprint
@@ -5627,7 +5650,6 @@
     SUBDIR += py-parsy
     SUBDIR += py-parver
     SUBDIR += py-pastel
-    SUBDIR += py-patch
     SUBDIR += py-patch-ng
     SUBDIR += py-path
     SUBDIR += py-path.py
@@ -6009,7 +6031,6 @@
     SUBDIR += py-python-gitlab
     SUBDIR += py-python-jenkins
     SUBDIR += py-python-json-logger
-    SUBDIR += py-python-jsonrpc-server
     SUBDIR += py-python-magic
     SUBDIR += py-python-mimeparse
     SUBDIR += py-python-ptrace
@@ -6151,6 +6172,7 @@
     SUBDIR += py-scikit-base
     SUBDIR += py-scikit-build
     SUBDIR += py-scikit-build-core
+    SUBDIR += py-scikit-hep-testdata
     SUBDIR += py-scooby
     SUBDIR += py-scripttest
     SUBDIR += py-scverse-misc
@@ -6354,6 +6376,7 @@
     SUBDIR += py-types-Flask-Cors
     SUBDIR += py-types-Pygments
     SUBDIR += py-types-aws-xray-sdk
+    SUBDIR += py-types-awscrt
     SUBDIR += py-types-boto
     SUBDIR += py-types-decorator
     SUBDIR += py-types-docutils
@@ -6672,6 +6695,7 @@
     SUBDIR += reposilite
     SUBDIR += reproc
     SUBDIR += resolv_wrapper
+    SUBDIR += resteasy
     SUBDIR += revive
     SUBDIR += rgbds
     SUBDIR += rgx
@@ -8605,6 +8629,8 @@
     SUBDIR += sentry-cli
     SUBDIR += serd
     SUBDIR += serdisplib
+    SUBDIR += serialize
+    SUBDIR += sfl-library
     SUBDIR += sfml
     SUBDIR += sfsexp
     SUBDIR += sgb
@@ -8728,6 +8754,7 @@
     SUBDIR += taskctl
     SUBDIR += taskflow
     SUBDIR += tass64
+    SUBDIR += tauri-cli
     SUBDIR += tbox
     SUBDIR += tcl-memchan
     SUBDIR += tcl-mmap

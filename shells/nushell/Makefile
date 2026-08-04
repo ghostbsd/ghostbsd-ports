@@ -1,5 +1,6 @@
 PORTNAME=	nushell
 DISTVERSION=	0.114.1
+PORTREVISION=	1
 CATEGORIES=	shells
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,6 +10,8 @@ WWW=		https://www.nushell.sh/ \
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	compilation fails, see error[E0432]: unresolved import `std::arch::x86_64`
 
 USES=		cargo localbase ssl
 USE_GITHUB=	yes

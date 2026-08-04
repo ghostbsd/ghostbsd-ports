@@ -42,6 +42,8 @@ bin/scantpaper
 %%PYTHON_SITELIBDIR%%/scantpaper/__pycache__/imageview%%PYTHON_TAG%%.pyc
 %%PYTHON_SITELIBDIR%%/scantpaper/__pycache__/importthread%%PYTHON_TAG%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/scantpaper/__pycache__/importthread%%PYTHON_TAG%%.pyc
+%%PYTHON_SITELIBDIR%%/scantpaper/__pycache__/loop_helpers%%PYTHON_TAG%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/scantpaper/__pycache__/loop_helpers%%PYTHON_TAG%%.pyc
 %%PYTHON_SITELIBDIR%%/scantpaper/__pycache__/page%%PYTHON_TAG%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/scantpaper/__pycache__/page%%PYTHON_TAG%%.pyc
 %%PYTHON_SITELIBDIR%%/scantpaper/__pycache__/pagerange%%PYTHON_TAG%%.opt-1.pyc
@@ -121,6 +123,7 @@ bin/scantpaper
 %%PYTHON_SITELIBDIR%%/scantpaper/i18n.py
 %%PYTHON_SITELIBDIR%%/scantpaper/imageview.py
 %%PYTHON_SITELIBDIR%%/scantpaper/importthread.py
+%%PYTHON_SITELIBDIR%%/scantpaper/loop_helpers.py
 %%PYTHON_SITELIBDIR%%/scantpaper/page.py
 %%PYTHON_SITELIBDIR%%/scantpaper/pagerange.py
 %%PYTHON_SITELIBDIR%%/scantpaper/postprocess_controls.py

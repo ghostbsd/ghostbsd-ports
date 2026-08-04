@@ -211,6 +211,7 @@ NPM_REBUILD_CMD?=	${NPM_CMDNAME} rebuild
 .    endif
 .  elif ${_NPM_NAME} == pnpm
 NPM_LOCKFILE?=		pnpm-lock.yaml
+NPM_WORKSPACEFILE?=	pnpm-workspace.yaml
 NPM_MODULE_CACHE?=	pnpm-store
 NPM_CMDNAME?=		pnpm
 NPM_CACHE_SETUP_CMD?=	${DO_NADA}
@@ -299,7 +300,7 @@ npm-archive-node-modules:
 		${TAR} -cz --options 'gzip:!timestamp' \
 			-f ${DISTDIR}/${DIST_SUBDIR}/${_DISTFILE_prefetch} \
 			-C ${WRKDIR} @node-modules-cache.mtree; \
-		if [ ${TMPDIR} != ${WRKDIR} ]; then \
+		if [ "${TMPDIR}" != "${WRKDIR}" ]; then \
 			${RM} -r ${WRKDIR}; \
 		fi; \
 	fi
@@ -309,9 +310,10 @@ npm-archive-node-modules:
 	@if [ ! -f ${DISTDIR}/${DIST_SUBDIR}/${_DISTFILE_prefetch} ] && [ -d ${WRKDIR}/node-modules-cache ]; then \
 		${ECHO_MSG} "===>  Normalizing timestamps and permissions of prefetched node modules"; \
 		tmpdir=${WRKDIR}/pnpm_tmp; \
-		input_db=${WRKDIR}/node-modules-cache/${NPM_MODULE_CACHE}/v11/index.db; \
+		storedir=${WRKDIR}/node-modules-cache/${NPM_MODULE_CACHE}/v11; \
+		input_db=$${storedir}/index.db; \
 		output_db=$${tmpdir}/index.db; \
-		output_db_dump=${WRKDIR}/node-modules-cache/${NPM_MODULE_CACHE}/v11/index_dump.sql; \
+		output_db_dump=$${storedir}/index_dump.sql; \
 		${MKDIR} $${tmpdir}; \
 		cd $${tmpdir} && ${SETENV} ${MAKE_ENV} ${NPM_CMDNAME} add --ignore-scripts --silent msgpackr; \
 		sqlite3 $${input_db} \
@@ -389,7 +391,7 @@ npm-archive-node-modules:
 		done; \
 		sqlite3 $${output_db} "REINDEX; VACUUM;"; \
 		sqlite3 $${output_db} ".dump" > $${output_db_dump}; \
-		${RM} $${input_db}; \
+		${RM} -r $${input_db} $${storedir}/tmp; \
 	fi
 .        else
 	@if [ ! -f ${DISTDIR}/${DIST_SUBDIR}/${_DISTFILE_prefetch} ] && [ -d ${WRKDIR}/node-modules-cache ]; then \
@@ -414,7 +416,7 @@ npm-archive-node-modules:
 			node-modules-cache.mtree && \
 		${TAR} -cz --options 'gzip:!timestamp' \
 			-f ${DISTDIR}/${DIST_SUBDIR}/${_DISTFILE_prefetch} @node-modules-cache.mtree; \
-		if [ ${TMPDIR} != ${WRKDIR} ]; then \
+		if [ "${TMPDIR}" != "${WRKDIR}" ]; then \
 			${RM} -r ${WRKDIR}; \
 		fi; \
 	fi
@@ -459,6 +461,15 @@ npm-copy-package-file:
 		fi; \
 		${CP} ${PKGJSONSDIR}/$${f} ${NPM_EXTRACT_WRKSRC}/$${f}; \
 	done
+.      if defined(NPM_WORKSPACEFILE) && !empty(NPM_WORKSPACEFILE)
+	@for f in `${FIND} ${PKGJSONSDIR} -type f -name ${NPM_WORKSPACEFILE} -print | ${SED} -e 's|${PKGJSONSDIR}/||'`; do \
+		${MKDIR} -p `${DIRNAME} ${NPM_EXTRACT_WRKSRC}/$${f}`; \
+		if [ -f ${NPM_EXTRACT_WRKSRC}/$${f} ]; then \
+			${MV} -f ${NPM_EXTRACT_WRKSRC}/$${f} ${NPM_EXTRACT_WRKSRC}/$${f}.bak; \
+		fi; \
+		${CP} ${PKGJSONSDIR}/$${f} ${NPM_EXTRACT_WRKSRC}/$${f}; \
+	done
+.      endif
 .    endif
 
 npm-install-node-modules:

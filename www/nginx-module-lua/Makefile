@@ -1,5 +1,6 @@
 PORTNAME=	nginx-module-lua
 DISTVERSION=	0.10.29
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/:nginx
 DISTFILES=	nginx-${NGINX_VERSION}.tar.gz:nginx
@@ -19,7 +20,7 @@ USE_GITHUB=	nodefault
 GH_TUPLE=	openresty:lua-nginx-module:v${DISTVERSION}:lua \
 		vision5:ngx_devel_kit:v0.3.4:ndk
 
-NGINX_VERSION=	1.30.2
+NGINX_VERSION=	1.30.4
 WRKSRC=		${WRKDIR}/nginx-${NGINX_VERSION}
 
 CONFIGURE_ENV=	LUAJIT_INC=${LOCALBASE}/include/luajit-2.1 \

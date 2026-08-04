@@ -507,7 +507,6 @@
     SUBDIR += procmail
     SUBDIR += procmail-bgrb
     SUBDIR += proxsmtp
-    SUBDIR += py-afew
     SUBDIR += py-aiosmtpd
     SUBDIR += py-alot
     SUBDIR += py-authheaders
@@ -743,6 +742,7 @@
     SUBDIR += sqwebmail
     SUBDIR += ssmtp
     SUBDIR += stalwart
+    SUBDIR += stalwart-cli
     SUBDIR += surblhost
     SUBDIR += swaks
     SUBDIR += sylpheed
