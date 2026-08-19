@@ -1,6 +1,6 @@
---- krep.c.orig	2026-05-19 07:06:16 UTC
+--- krep.c.orig	2026-07-01 08:23:35 UTC
 +++ krep.c
-@@ -4925,6 +4925,27 @@ uint64_t memchr_short_search(const search_params_t *pa
+@@ -5721,6 +5721,27 @@ uint64_t memchr_short_search(const search_params_t *pa
  // Handles case-sensitive patterns of any length.
  // Uses 2x 16-byte loads per iteration with fast mask extraction via
  // vshrn/vmovn instead of store-to-memory.

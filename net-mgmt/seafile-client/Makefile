@@ -1,7 +1,6 @@
 PORTNAME=	seafile-client
 DISTVERSIONPREFIX=	v
-DISTVERSION=	9.0.18
-PORTREVISION=	1
+DISTVERSION=	9.0.19
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	d.stoye@cms.hu-berlin.de

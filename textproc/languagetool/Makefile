@@ -1,5 +1,6 @@
 PORTNAME=	languagetool
 DISTVERSION=	6.6
+PORTREVISION=	1
 CATEGORIES=	textproc java
 MASTER_SITES=	https://languagetool.org/download/
 DISTNAME=	LanguageTool-${DISTVERSION}

@@ -50,6 +50,7 @@ usr/include/lldb/API/SBMemoryRegionInfo.h
 usr/include/lldb/API/SBMemoryRegionInfoList.h
 usr/include/lldb/API/SBModule.h
 usr/include/lldb/API/SBModuleSpec.h
+usr/include/lldb/API/SBMutex.h
 usr/include/lldb/API/SBPlatform.h
 usr/include/lldb/API/SBProcess.h
 usr/include/lldb/API/SBProcessInfo.h
@@ -106,6 +107,7 @@ usr/include/lldb/Breakpoint/BreakpointResolverFileRegex.h
 usr/include/lldb/Breakpoint/BreakpointResolverName.h
 usr/include/lldb/Breakpoint/BreakpointResolverScripted.h
 usr/include/lldb/Breakpoint/BreakpointSite.h
+usr/include/lldb/Breakpoint/StopCondition.h
 usr/include/lldb/Breakpoint/StopPointSiteList.h
 usr/include/lldb/Breakpoint/Stoppoint.h
 usr/include/lldb/Breakpoint/StoppointCallbackContext.h
@@ -127,6 +129,7 @@ usr/include/lldb/Core/DataFileCache.h
 usr/include/lldb/Core/Debugger.h
 usr/include/lldb/Core/DebuggerEvents.h
 usr/include/lldb/Core/Declaration.h
+usr/include/lldb/Core/DemangledNameInfo.h
 usr/include/lldb/Core/Disassembler.h
 usr/include/lldb/Core/DumpDataExtractor.h
 usr/include/lldb/Core/DumpRegisterInfo.h
@@ -147,13 +150,16 @@ usr/include/lldb/Core/Opcode.h
 usr/include/lldb/Core/PluginInterface.h
 usr/include/lldb/Core/PluginManager.h
 usr/include/lldb/Core/Progress.h
+usr/include/lldb/Core/ProtocolServer.h
 usr/include/lldb/Core/RichManglingContext.h
 usr/include/lldb/Core/SearchFilter.h
 usr/include/lldb/Core/Section.h
 usr/include/lldb/Core/SourceLocationSpec.h
 usr/include/lldb/Core/SourceManager.h
+usr/include/lldb/Core/Statusline.h
 usr/include/lldb/Core/StreamAsynchronousIO.h
 usr/include/lldb/Core/StructuredDataImpl.h
+usr/include/lldb/Core/Telemetry.h
 usr/include/lldb/Core/ThreadSafeDenseSet.h
 usr/include/lldb/Core/ThreadSafeValue.h
 usr/include/lldb/Core/ThreadedCommunication.h
@@ -199,7 +205,6 @@ usr/include/lldb/Expression/ObjectFileJIT.h
 usr/include/lldb/Expression/REPL.h
 usr/include/lldb/Expression/UserExpression.h
 usr/include/lldb/Expression/UtilityFunction.h
-usr/include/lldb/Host/Alarm.h
 usr/include/lldb/Host/Config.h
 usr/include/lldb/Host/ConnectionFileDescriptor.h
 usr/include/lldb/Host/Debug.h
@@ -219,11 +224,13 @@ usr/include/lldb/Host/HostNativeThreadBase.h
 usr/include/lldb/Host/HostNativeThreadForward.h
 usr/include/lldb/Host/HostProcess.h
 usr/include/lldb/Host/HostThread.h
+usr/include/lldb/Host/JSONTransport.h
 usr/include/lldb/Host/LZMA.h
 usr/include/lldb/Host/LockFile.h
 usr/include/lldb/Host/LockFileBase.h
 usr/include/lldb/Host/MainLoop.h
 usr/include/lldb/Host/MainLoopBase.h
+usr/include/lldb/Host/MemoryMonitor.h
 usr/include/lldb/Host/MonitoringProcessLauncher.h
 usr/include/lldb/Host/OptionParser.h
 usr/include/lldb/Host/Pipe.h
@@ -242,6 +249,7 @@ usr/include/lldb/Host/ThreadLauncher.h
 usr/include/lldb/Host/Time.h
 usr/include/lldb/Host/XML.h
 usr/include/lldb/Host/aix/HostInfoAIX.h
+usr/include/lldb/Host/aix/Support.h
 usr/include/lldb/Host/android/HostInfoAndroid.h
 usr/include/lldb/Host/common/GetOptInc.h
 usr/include/lldb/Host/common/NativeBreakpointList.h
@@ -272,6 +280,7 @@ usr/include/lldb/Host/posix/LockFilePosix.h
 usr/include/lldb/Host/posix/MainLoopPosix.h
 usr/include/lldb/Host/posix/PipePosix.h
 usr/include/lldb/Host/posix/ProcessLauncherPosixFork.h
+usr/include/lldb/Host/posix/Support.h
 usr/include/lldb/Host/windows/AutoHandle.h
 usr/include/lldb/Host/windows/ConnectionGenericFileWindows.h
 usr/include/lldb/Host/windows/HostInfoWindows.h
@@ -540,6 +549,10 @@ usr/include/lldb/Utility/VASPrintf.h
 usr/include/lldb/Utility/VMRange.h
 usr/include/lldb/Utility/XcodeSDK.h
 usr/include/lldb/Utility/ZipFile.h
+usr/include/lldb/ValueObject/DILAST.h
+usr/include/lldb/ValueObject/DILEval.h
+usr/include/lldb/ValueObject/DILLexer.h
+usr/include/lldb/ValueObject/DILParser.h
 usr/include/lldb/ValueObject/ValueObject.h
 usr/include/lldb/ValueObject/ValueObjectCast.h
 usr/include/lldb/ValueObject/ValueObjectChild.h
@@ -551,7 +564,7 @@ usr/include/lldb/ValueObject/ValueObjectDynamicValue.h
 usr/include/lldb/ValueObject/ValueObjectList.h
 usr/include/lldb/ValueObject/ValueObjectMemory.h
 usr/include/lldb/ValueObject/ValueObjectRegister.h
-usr/include/lldb/ValueObject/ValueObjectSyntheticFilter.h
+usr/include/lldb/ValueObject/ValueObjectSynthetic.h
 usr/include/lldb/ValueObject/ValueObjectUpdater.h
 usr/include/lldb/ValueObject/ValueObjectVTable.h
 usr/include/lldb/ValueObject/ValueObjectVariable.h
@@ -619,6 +632,7 @@ usr/lib64/llvm%%BINVERSION%%/include/lldb/API/SBMemoryRegionInfo.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/API/SBMemoryRegionInfoList.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/API/SBModule.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/API/SBModuleSpec.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/API/SBMutex.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/API/SBPlatform.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/API/SBProcess.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/API/SBProcessInfo.h
@@ -675,6 +689,7 @@ usr/lib64/llvm%%BINVERSION%%/include/lldb/Breakpoint/BreakpointResolverFileRegex
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Breakpoint/BreakpointResolverName.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Breakpoint/BreakpointResolverScripted.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Breakpoint/BreakpointSite.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/Breakpoint/StopCondition.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Breakpoint/StopPointSiteList.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Breakpoint/Stoppoint.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Breakpoint/StoppointCallbackContext.h
@@ -696,6 +711,7 @@ usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/DataFileCache.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/Debugger.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/DebuggerEvents.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/Declaration.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/DemangledNameInfo.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/Disassembler.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/DumpDataExtractor.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/DumpRegisterInfo.h
@@ -716,13 +732,16 @@ usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/Opcode.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/PluginInterface.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/PluginManager.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/Progress.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/ProtocolServer.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/RichManglingContext.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/SearchFilter.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/Section.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/SourceLocationSpec.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/SourceManager.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/Statusline.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/StreamAsynchronousIO.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/StructuredDataImpl.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/Telemetry.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/ThreadSafeDenseSet.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/ThreadSafeValue.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Core/ThreadedCommunication.h
@@ -768,7 +787,6 @@ usr/lib64/llvm%%BINVERSION%%/include/lldb/Expression/ObjectFileJIT.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Expression/REPL.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Expression/UserExpression.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Expression/UtilityFunction.h
-usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/Alarm.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/Config.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/ConnectionFileDescriptor.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/Debug.h
@@ -788,11 +806,13 @@ usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/HostNativeThreadBase.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/HostNativeThreadForward.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/HostProcess.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/HostThread.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/JSONTransport.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/LZMA.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/LockFile.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/LockFileBase.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/MainLoop.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/MainLoopBase.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/MemoryMonitor.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/MonitoringProcessLauncher.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/OptionParser.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/Pipe.h
@@ -811,6 +831,7 @@ usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/ThreadLauncher.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/Time.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/XML.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/aix/HostInfoAIX.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/aix/Support.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/android/HostInfoAndroid.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/common/GetOptInc.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/common/NativeBreakpointList.h
@@ -841,6 +862,7 @@ usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/posix/LockFilePosix.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/posix/MainLoopPosix.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/posix/PipePosix.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/posix/ProcessLauncherPosixFork.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/posix/Support.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/windows/AutoHandle.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/windows/ConnectionGenericFileWindows.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Host/windows/HostInfoWindows.h
@@ -1109,6 +1131,10 @@ usr/lib64/llvm%%BINVERSION%%/include/lldb/Utility/VASPrintf.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Utility/VMRange.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Utility/XcodeSDK.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/Utility/ZipFile.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/DILAST.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/DILEval.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/DILLexer.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/DILParser.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/ValueObject.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/ValueObjectCast.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/ValueObjectChild.h
@@ -1120,7 +1146,7 @@ usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/ValueObjectDynamicValue.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/ValueObjectList.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/ValueObjectMemory.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/ValueObjectRegister.h
-usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/ValueObjectSyntheticFilter.h
+usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/ValueObjectSynthetic.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/ValueObjectUpdater.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/ValueObjectVTable.h
 usr/lib64/llvm%%BINVERSION%%/include/lldb/ValueObject/ValueObjectVariable.h

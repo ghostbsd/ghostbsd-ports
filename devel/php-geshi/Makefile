@@ -1,6 +1,7 @@
 PORTNAME=	geshi
 DISTVERSION=	1.0.9.1
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	devel
 PKGNAMEPREFIX=	php-
 
@@ -9,6 +10,9 @@ COMMENT=	Native PHP syntax highlighting engine
 WWW=		http://qbnz.com/highlighter/
 
 LICENSE=	GPLv2
+
+DEPRECATED=	Unmaintained upstream
+EXPIRATION_DATE=	2026-09-30
 
 USES=		cpe php
 CPE_VENDOR=	qbnz

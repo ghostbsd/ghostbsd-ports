@@ -12,8 +12,7 @@ WWW=		https://github.com/glotzerlab/libgetar
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy1>=1.16:math/py-numpy1@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}breathe>0:devel/py-breathe@${PY_FLAVOR}
+PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>0:math/py-numpy@${PY_FLAVOR}
 BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
@@ -30,5 +29,7 @@ post-install:
 
 do-test:
 	@cd ${WRKSRC}/test && ${SETENV} ${TEST_ENV} ${PYTHON_CMD} -m unittest discover
+
+# tests as of 1.1.7: Ran 28 tests in 0.065s, OK (skipped=1)
 
 .include <bsd.port.mk>

@@ -48,6 +48,6 @@ lib/libtest-drive.so.0
 lib/libtest-drive.so.0.6.0
 lib/libtoml-f.so
 lib/libtoml-f.so.0
-lib/libtoml-f.so.0.5.1
+lib/libtoml-f.so.0.5.2
 libdata/pkgconfig/test-drive.pc
 libdata/pkgconfig/toml-f.pc

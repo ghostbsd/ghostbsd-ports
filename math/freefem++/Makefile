@@ -1,7 +1,6 @@
 PORTNAME=	freefem++
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.016
-PORTREVISION=	1
+DISTVERSION=	4.17
 CATEGORIES=	math science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -75,5 +74,17 @@ pre-configure:
 
 post-install:
 	@${MV} ${STAGEDIR}${DATADIR}/examples ${STAGEDIR}${EXAMPLESDIR}
+
+# ============================================================================
+# Testsuite summary for FreeFEM 4.17
+# ============================================================================
+# TOTAL: 6
+# PASS:  0
+# SKIP:  6
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+# ============================================================================
 
 .include <bsd.port.mk>

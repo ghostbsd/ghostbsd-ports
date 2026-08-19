@@ -1,5 +1,5 @@
 PORTNAME=	pyhanko
-PORTVERSION=	0.35.1
+PORTVERSION=	0.35.2
 CATEGORIES=	security python
 MASTER_SITES=	PYPI \
 		https://github.com/MatthiasValvekens/pyHanko/releases/download/v${PORTVERSION}/
@@ -35,7 +35,7 @@ OPENTYPE_DESC=	OpenType/TrueType support
 PKCS11_DESC=	PKCS\#11 support
 QR_DESC=	QR code support
 
-ASYNC_HTTP_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiohttp>=3.9<3.14:www/py-aiohttp@${PY_FLAVOR}
+ASYNC_HTTP_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiohttp>=3.9<3.15:www/py-aiohttp@${PY_FLAVOR}
 ETSI_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}signxml>=4.2.0:security/py-signxml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}xsdata>=24.4<27.0:devel/py-xsdata@${PY_FLAVOR} \
 IMAGE_SUPPORT_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pillow>=7.2.0:graphics/py-pillow@${PY_FLAVOR} \

@@ -191,10 +191,12 @@
     SUBDIR += cfengine-masterfiles325
     SUBDIR += cfengine-masterfiles326
     SUBDIR += cfengine-masterfiles327
+    SUBDIR += cfengine-masterfiles328
     SUBDIR += cfengine324
     SUBDIR += cfengine325
     SUBDIR += cfengine326
     SUBDIR += cfengine327
+    SUBDIR += cfengine328
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -359,6 +361,7 @@
     SUBDIR += eksctl
     SUBDIR += elephant
     SUBDIR += elfx86exts
+    SUBDIR += elio
     SUBDIR += endian
     SUBDIR += enteruser
     SUBDIR += entr
@@ -491,6 +494,8 @@
     SUBDIR += gomplate
     SUBDIR += gonzo
     SUBDIR += google-compute-engine-oslogin
+    SUBDIR += google-guest-agent
+    SUBDIR += goreman
     SUBDIR += gotop
     SUBDIR += govmomi
     SUBDIR += gpart
@@ -1126,6 +1131,7 @@
     SUBDIR += py-psutil
     SUBDIR += py-ptyprocess
     SUBDIR += py-puremagic
+    SUBDIR += py-py-consul
     SUBDIR += py-py-cpuinfo
     SUBDIR += py-pyinfra
     SUBDIR += py-python-bareos
@@ -1291,6 +1297,7 @@
     SUBDIR += rubygem-sys-admin
     SUBDIR += rubygem-sys-cpu
     SUBDIR += rubygem-sys-filesystem
+    SUBDIR += rubygem-sys-filesystem-gitlab
     SUBDIR += rubygem-sys-filesystem14
     SUBDIR += rubygem-sys-host
     SUBDIR += rubygem-sys-proctable

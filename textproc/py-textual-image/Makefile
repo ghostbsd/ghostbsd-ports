@@ -1,5 +1,5 @@
 PORTNAME=	textual-image
-PORTVERSION=	0.12.0
+PORTVERSION=	0.13.2
 CATEGORIES=	textproc python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,15 +12,17 @@ WWW=		https://github.com/lnqs/textual-image
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}hatchling>=0:devel/py-hatchling@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pillow>=10.3.0:graphics/py-pillow@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}rich>=13.4.0:textproc/py-rich@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.12+ shebangfix
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
+
+SHEBANG_FILES=	textual_image/__main__.py \
+		textual_image/demo/*.py
 
 OPTIONS_DEFINE=	NUMPY TEXTUAL
 TEXTUAL_DESC=	Textual support

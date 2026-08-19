@@ -1,8 +1,8 @@
 PORTNAME=	headsetcontrol
-DISTVERSION=	3.1.0
+DISTVERSION=	4.0.0
 CATEGORIES=	audio
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Tool to control certain aspects of USB-connected headsets
 WWW=		https://github.com/Sapd/HeadsetControl
 
@@ -18,6 +18,11 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	Sapd
 GH_PROJECT=	HeadsetControl
 
-PLIST_FILES=	bin/headsetcontrol
+PLIST_FILES=	bin/headsetcontrol \
+		include/headsetcontrol/device.hpp \
+		include/headsetcontrol/headsetcontrol.hpp \
+		include/headsetcontrol/headsetcontrol_c.h \
+		include/headsetcontrol/result_types.hpp \
+		lib/libheadsetcontrol.a
 
 .include <bsd.port.mk>

@@ -1,3 +1,3 @@
-TIMESTAMP = 1765287239
-SHA256 (azure_mgmt_kusto-3.4.0.tar.gz) = 2bc91e02979f629feeedc4d9b96358865b559457ad86e9c6f9c709a408320e63
-SIZE (azure_mgmt_kusto-3.4.0.tar.gz) = 142282
+TIMESTAMP = 1782966284
+SHA256 (azure_mgmt_kusto-4.0.0.tar.gz) = a2c37a379cec650ba473ff35835873275e6562702fd157b31231a1ddad852e7d
+SIZE (azure_mgmt_kusto-4.0.0.tar.gz) = 161076

@@ -1,15 +1,11 @@
---- requirements-build.txt.orig	2026-03-23 18:40:42 UTC
+--- requirements-build.txt.orig	2026-07-08 17:44:27 UTC
 +++ requirements-build.txt
-@@ -1,7 +1,9 @@
+@@ -1,7 +1,5 @@
  # Build System requirements
--setuptools>=70.1.0,<82
+-setuptools>=77.0.0,<82  # 77.0 is the first release with PEP 639 license-files support
 -cmake>=3.27
 -ninja
-+# FreeBSD: patched to work with setuptools-63.1.0
-+setuptools>=63.1.0
-+# FreeBSD: cmake and ninja are provided as BUILD_DEPENDS
-+#cmake>=3.27
-+#ninja
++setuptools  # 77.0 is the first release with PEP 639 license-files support
  numpy
- packaging
+ packaging>=24.2  # required by setuptools>=77 to validate PEP 639 license expressions
  pyyaml

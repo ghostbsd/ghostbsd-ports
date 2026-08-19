@@ -2,9 +2,9 @@
 -- Disable BUILD_CUSTOM_PROTOBUF to use system protobuf.
 -- Enable USE_SYSTEM_SLEEF, USE_SYSTEM_PYBIND11, USE_SYSTEM_ONNX to use system libraries.
 -- Disable -Werror=* flags that cause build failures on FreeBSD.
---- CMakeLists.txt.orig	2026-05-16 05:49:26 UTC
+--- CMakeLists.txt.orig	2026-07-08 17:44:27 UTC
 +++ CMakeLists.txt
-@@ -184,7 +184,7 @@ set(CPU_RISCV OFF)
+@@ -185,7 +185,7 @@ set(CPU_RISCV OFF)
  set(CPU_POWER OFF)
  set(CPU_RISCV OFF)
  
@@ -13,7 +13,7 @@
    set(CPU_INTEL ON)
  elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "^(aarch64|arm64)")
    set(CPU_AARCH64 ON)
-@@ -216,7 +216,7 @@ option(BUILD_CUSTOM_PROTOBUF
+@@ -217,7 +217,7 @@ option(BUILD_CUSTOM_PROTOBUF
  option(ATEN_NO_TEST "Do not build ATen test binaries" OFF)
  option(BUILD_BINARY "Build C++ binaries" OFF)
  option(BUILD_CUSTOM_PROTOBUF
@@ -22,7 +22,7 @@
  option(BUILD_PYTHON "Build Python binaries" ON)
  option(BUILD_LITE_INTERPRETER "Master flag to build Lite Interpreter" OFF)
  option(BUILD_SHARED_LIBS "Build libcaffe2.so" ON)
-@@ -496,15 +496,15 @@ option(USE_SYSTEM_CPUINFO "Use system-provided cpuinfo
+@@ -498,15 +498,15 @@ option(USE_SYSTEM_CPUINFO "Use system-provided cpuinfo
  # USE_SYSTEM_LIBS being "OFF".
  option(USE_SYSTEM_LIBS "Use all available system-provided libraries." OFF)
  option(USE_SYSTEM_CPUINFO "Use system-provided cpuinfo." OFF)
@@ -41,7 +41,7 @@
  option(USE_SYSTEM_XNNPACK "Use system-provided xnnpack." OFF)
  option(USE_SYSTEM_NVTX "Use system-provided nvtx." OFF)
  option(USE_GOLD_LINKER "Use ld.gold to link" OFF)
-@@ -1110,11 +1110,11 @@ if(NOT MSVC)
+@@ -1104,11 +1104,11 @@ if(NOT MSVC)
    # Details at http://eigen.tuxfamily.org/bz/show_bug.cgi?id=1459
    string(APPEND CMAKE_CXX_FLAGS " -Wall")
    string(APPEND CMAKE_CXX_FLAGS " -Wextra")

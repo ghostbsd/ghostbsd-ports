@@ -1,12 +1,12 @@
 PORTNAME=	swift
 DISTVERSIONPREFIX=	swift-
-DISTVERSION=	6.3.2
+DISTVERSION=	6.3.3
 DISTVERSIONSUFFIX=	-RELEASE
 CATEGORIES=	lang
 PKGNAMESUFFIX=	6
 DIST_SUBDIR=	${PORTNAME}
 
-BOOTSTRAP_SWIFT_VERSION=	6.3.1
+BOOTSTRAP_SWIFT_VERSION=	6.3.2
 .if !defined(BOOTSTRAP_MODE)
 MASTER_SITES=	LOCAL/tagattie/${PORTNAME}:bootstrap
 DISTFILES=	${PORTNAME}${PKGNAMESUFFIX}-bootstrap-${BOOTSTRAP_SWIFT_VERSION}-${SWIFT_ARCH}-unknown-${OPSYS:tl}${EXTRACT_SUFX}:bootstrap
@@ -37,6 +37,7 @@ USES=		cmake:indirect gnome libedit ninja:build perl5 pkgconfig \
 
 USE_GITHUB=	nodefault
 GH_TUPLE=	\
+		google:boringssl:0.20250818.0-64-g0226f3046:boringssl/boringssl \
 		swiftlang:swift-cmark:${DISTVERSIONFULL}:swift_cmark/cmark \
 		swiftlang:indexstore-db:${DISTVERSIONFULL}:indexstore_db/indexstore-db \
 		swiftlang:swift-llbuild:${DISTVERSIONFULL}:swift_llbuild/llbuild \
@@ -46,7 +47,7 @@ GH_TUPLE=	\
 		apple:swift-argument-parser:1.6.1:swift_argument_parser/swift-argument-parser \
 		apple:swift-asn1:1.3.2:swift_asn1/swift-asn1 \
 		apple:swift-async-algorithms:1.0.1:swift_async_algorithms/swift-async-algorithms \
-		apple:swift-atomics:1.2.0:swift_atomics/swift-atomics \
+		apple:swift-atomics:1.3.1:swift_atomics/swift-atomics \
 		swiftlang:swift-build:${DISTVERSIONFULL}:swift_build/swift-build \
 		apple:swift-certificates:1.10.1:swift_certificates/swift-certificates \
 		apple:swift-collections:1.1.6:swift_collections/swift-collections \
@@ -69,20 +70,20 @@ GH_TUPLE=	\
 		swiftlang:swift-lmdb:${DISTVERSIONFULL}:swift_lmdb/swift-lmdb \
 		apple:swift-log:1.5.4:swift_log/swift-log \
 		swiftlang:swift-markdown:${DISTVERSIONFULL}:swift_markdown/swift-markdown \
-		apple:swift-nio:2.65.0:swift_nio/swift-nio \
+		apple:swift-nio:2.92.2:swift_nio/swift-nio \
 		apple:swift-numerics:1.0.2:swift_numerics/swift-numerics \
 		swiftlang:swift-sdk-generator:${DISTVERSIONFULL}:swift_sdk_generator/swift-sdk-generator \
 		swiftlang:swift-stress-tester:${DISTVERSIONFULL}:swift_stress_tester/swift-stress-tester \
-		swiftlang:swift-subprocess:0.2.1:swift_subprocess/swift-subprocess \
+		swiftlang:swift-subprocess:0.5:swift_subprocess/swift-subprocess \
 		swiftlang:swift-syntax:${DISTVERSIONFULL}:swift_syntax/swift-syntax \
 		apple:swift-system:1.5.0:swift_system/swift-system \
 		swiftlang:swift-testing:${DISTVERSIONFULL}:swift_testing/swift-testing \
-		swiftlang:swift-toolchain-sqlite:1.0.7:swift_toolchain_sqlite/swift-toolchain-sqlite \
+		swiftlang:swift-toolchain-sqlite:1.0.9:swift_toolchain_sqlite/swift-toolchain-sqlite \
 		swiftlang:swift-tools-protocols:0.0.9:swift_tools_protocols/swift-tools-protocols \
 		swiftlang:swift-tools-support-core:${DISTVERSIONFULL}:swift_tools_support_core/swift-tools-support-core \
 		swiftlang:swift-package-manager:${DISTVERSIONFULL}:swift_package_manager/swiftpm \
-		WebAssembly:wasi-libc:wasi-sdk-27:wasi_libc/wasi-libc \
-		swiftwasm:WasmKit:0.1.6:WasmKit/wasmkit
+		WebAssembly:wasi-libc:wasi-sdk-32:wasi_libc/wasi-libc \
+		swiftwasm:WasmKit:0.2.1:WasmKit/wasmkit
 
 USE_PERL5=	build
 USE_GNOME=	libxml2
@@ -134,8 +135,10 @@ COMMON_BUILDFLAGS=	\
 		--install-prefix ${SWIFT_PREFIX} \
 		--install-all true \
 		--jobs ${MAKE_JOBS_NUMBER} \
-		--extra-cmake-options="-DCMAKE_C_FLAGS_RELEASE='${CFLAGS} -DNDEBUG'" \
-		--extra-cmake-options="-DCMAKE_CXX_FLAGS_RELEASE='${CXXFLAGS} -DNDEBUG'" \
+		--extra-cmake-options="-DCMAKE_C_FLAGS='${CFLAGS}'" \
+		--extra-cmake-options="-DCMAKE_CXX_FLAGS='${CXXFLAGS}'" \
+		--extra-cmake-options="-DCMAKE_C_FLAGS_RELEASE=-DNDEBUG" \
+		--extra-cmake-options="-DCMAKE_CXX_FLAGS_RELEASE=-DNDEBUG" \
 		--extra-cmake-options="-DCLANG_DEFAULT_LINKER=lld" \
 		--extra-cmake-options="-DLLVM_ENABLE_LLD=ON" \
 		--extra-cmake-options="-DSWIFT_USE_LINKER=lld" \
@@ -158,6 +161,8 @@ STAGE0_BUILDFLAGS=	${COMMON_BUILDFLAGS} \
 STAGE${n}_BUILDFLAGS=	${COMMON_BUILDFLAGS} \
 		--install-destdir ${OUT${n}_DIR} \
 		--native-swift-tools-path ${OUT${p}_DIR}${SWIFT_PREFIX}/bin \
+		--native-clang-tools-path ${OUT${p}_DIR}${SWIFT_PREFIX}/bin \
+		--native-llvm-tools-path ${OUT${p}_DIR}${SWIFT_PREFIX}/bin \
 		--extra-cmake-options="-DCMAKE_Swift_COMPILER=${OUT${p}_DIR}${SWIFT_PREFIX}/bin/swiftc" \
 		--bootstrapping hosttools \
 		${STAGE${n}_MODULES:C/^/--/:C/$/ true/}
@@ -166,6 +171,8 @@ BOOTSTRAP_DIR=	${WRKDIR}/${PORTNAME}${PKGNAMESUFFIX}-bootstrap${SWIFT_PREFIX}
 SWIFT_BUILDFLAGS=	${COMMON_BUILDFLAGS} \
 		--install-destdir ${OUT5_DIR} \
 		--native-swift-tools-path ${BOOTSTRAP_DIR}/bin \
+		--native-clang-tools-path ${BOOTSTRAP_DIR}/bin \
+		--native-llvm-tools-path ${BOOTSTRAP_DIR}/bin \
 		--extra-cmake-options="-DCMAKE_Swift_COMPILER=${BOOTSTRAP_DIR}/bin/swiftc" \
 		--bootstrapping hosttools \
 		${STAGE5_MODULES:C/^/--/:C/$/ true/}
@@ -202,6 +209,15 @@ BUILD_DEPENDS+=	${LOCALBASE}/lib/compat/libutil.so.9:misc/compat14x
 post-extract:
 	@${CP} ${WRKSRC}/swift-corelibs-libdispatch/dispatch/generic/module.modulemap \
 		${WRKSRC}/swift-corelibs-libdispatch/dispatch
+# Work around a clang 21 header modules/libc++ wchar.h regression on FreeBSD
+.if (${OSVERSION} >= 1404501 && ${OSVERSION} < 1500000) || \
+    (${OSVERSION} >= 1501501 && ${OSVERSION} < 1600000) || \
+     ${OSVERSION} >= 1600017
+	@${CP} ${FILESDIR}/extra-swift-wchar.h \
+		${WRKSRC}/llvm-project/llvm/include/wchar.h
+	@${CP} ${FILESDIR}/extra-swift-wchar.h \
+		${WRKSRC}/swift/stdlib/public/SwiftShims/swift/shims/wchar.h
+.endif
 
 do-build:
 .if defined(BOOTSTRAP_MODE)
@@ -216,6 +232,14 @@ do-build:
 	@${ECHO_MSG} "===>  Building stage ${n}"
 	@${ECHO_MSG} "======================"
 	@${RM} -r ${WRKSRC}/build
+.	if (${OSVERSION} >= 1404501 && ${OSVERSION} < 1500000) || \
+	   (${OSVERSION} >= 1501501 && ${OSVERSION} < 1600000) || \
+	    ${OSVERSION} >= 1600017
+	# Work around a clang 21 header modules/libc++ wchar.h regression on FreeBSD
+	@${MKDIR} ${WRKSRC}/build/Ninja-Release/swift-${OPSYS:tl}-${SWIFT_ARCH}/lib/swift
+	@${CP} ${FILESDIR}/extra-swift-wchar.h \
+		${WRKSRC}/build/Ninja-Release/swift-${OPSYS:tl}-${SWIFT_ARCH}/lib/swift/wchar.h
+.	endif
 .	if ${n} == 1
 	# Rename module.modulemap to avoid the error:
 	# error: redefinition of module 'Dispatch'
@@ -234,6 +258,14 @@ do-build:
 	${SETENV} ${MAKE_ENV} ./utils/build-script ${STAGE${n}_BUILDFLAGS}
 .   endfor
 .else
+.   if (${OSVERSION} >= 1404501 && ${OSVERSION} < 1500000) || \
+       (${OSVERSION} >= 1501501 && ${OSVERSION} < 1600000) || \
+        ${OSVERSION} >= 1600017
+	# Work around a clang 21 header modules/libc++ wchar.h regression on FreeBSD
+	@${MKDIR} ${WRKSRC}/build/Ninja-Release/swift-${OPSYS:tl}-${SWIFT_ARCH}/lib/swift
+	@${CP} ${FILESDIR}/extra-swift-wchar.h \
+		${WRKSRC}/build/Ninja-Release/swift-${OPSYS:tl}-${SWIFT_ARCH}/lib/swift/wchar.h
+.   endif
 	@${MV} ${WRKSRC}/swift-corelibs-libdispatch/dispatch/module.modulemap \
 		${WRKSRC}/swift-corelibs-libdispatch/dispatch/module.modulemap.bak
 	@${TOUCH} ${WRKSRC}/swift-corelibs-libdispatch/dispatch/module.modulemap

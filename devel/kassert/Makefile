@@ -10,6 +10,9 @@ WWW=		https://kamping-site.github.io/kassert/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+DEPRECATED=	no longer required
+EXPIRATION_DATE=	2026-09-30
+
 TEST_DEPENDS=	googletest>0:devel/googletest
 
 USES=		cmake:testing

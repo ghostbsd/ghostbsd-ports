@@ -8,6 +8,7 @@
     SUBDIR += aravis
     SUBDIR += arcan
     SUBDIR += aribb24
+    SUBDIR += asdcplib
     SUBDIR += assimp
     SUBDIR += atomicparsley
     SUBDIR += audacious
@@ -116,6 +117,7 @@
     SUBDIR += handbrake
     SUBDIR += haruna
     SUBDIR += harvid
+    SUBDIR += hdrprobe
     SUBDIR += helvum
     SUBDIR += hyprpwcenter
     SUBDIR += intel-media-sdk
@@ -231,6 +233,7 @@
     SUBDIR += mlt7
     SUBDIR += mlt7-glaxnimate
     SUBDIR += mlt7-qt
+    SUBDIR += moonshine
     SUBDIR += motion
     SUBDIR += mp3cd
     SUBDIR += mp4v2
@@ -339,10 +342,12 @@
     SUBDIR += rubygem-gstreamer
     SUBDIR += rubygem-streamio-ffmpeg
     SUBDIR += scte35dump
+    SUBDIR += shaka-packager
     SUBDIR += shotcut
     SUBDIR += shotcut-qt6
     SUBDIR += showtime
     SUBDIR += simplescreenrecorder
+    SUBDIR += smelter
     SUBDIR += smpeg
     SUBDIR += smpeg2
     SUBDIR += smplayer

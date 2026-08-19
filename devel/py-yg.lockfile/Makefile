@@ -11,6 +11,9 @@ WWW=		https://github.com/yougov/yg.lockfile
 
 LICENSE=	MIT
 
+DEPRECATED=	Upstream inactive since 8+ years, please use devel/py-fasteners instead
+EXPIRATION_DATE=2026-08-15
+
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools-scm>=1.15.0:devel/py-setuptools-scm@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zc.lockfile>=0:devel/py-zc.lockfile@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}contextlib2>=0.5:devel/py-contextlib2@${PY_FLAVOR} \

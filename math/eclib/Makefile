@@ -1,6 +1,5 @@
 PORTNAME=	eclib
-PORTVERSION=	20250627
-PORTREVISION=	2
+PORTVERSION=	20260707
 DISTVERSIONPREFIX=	v
 CATEGORIES=	math
 
@@ -12,13 +11,13 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libntl.so:math/ntl		\
 		libpari.so:math/pari		\
-		libflint.so:math/flint2		\
+		libflint.so.23:math/flint	\
 		libboost_thread.so:devel/boost-libs
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	JohnCremona
 
-USES=		autoreconf compiler:c++17-lang libtool localbase
+USES=		autoreconf compiler:c++17-lang gmake libtool localbase
 
 OPTIONS_DEFINE=	DOCS
 
@@ -28,6 +27,7 @@ GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 USE_CXXSTD=	c++17
 CONFIGURE_ARGS=	--with-flint=${LOCALBASE} --with-boost=${LOCALBASE}
 INSTALL_TARGET=	install-strip
+TEST_TARGET=	check
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>

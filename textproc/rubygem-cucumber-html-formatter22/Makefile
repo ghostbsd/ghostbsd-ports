@@ -1,5 +1,6 @@
 PORTNAME=	cucumber-html-formatter
 PORTVERSION=	22.3.0
+PORTREVISION=	1
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	22
@@ -10,14 +11,15 @@ WWW=		https://github.com/cucumber/html-formatter
 
 LICENSE=	MIT
 
-RUN_DEPENDS=	rubygem-cucumber-messages>=23<33:devel/rubygem-cucumber-messages
+RUN_DEPENDS=	rubygem-cucumber-messages32>=23<33:devel/rubygem-cucumber-messages32
 
 USES=		gem
 
 NO_ARCH=	yes
 
-PLIST_FILES=	bin/cucumber-html-formatter
-
 PORTSCOUT=	limit:^22\.
+
+post-install:
+	${RM} ${STAGEDIR}${PREFIX}/bin/cucumber-html-formatter
 
 .include <bsd.port.mk>

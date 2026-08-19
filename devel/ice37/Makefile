@@ -1,5 +1,6 @@
 PORTNAME=		Ice
 PORTVERSION=		3.7.11
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=		devel
 PKGNAMESUFFIX?=		37
@@ -15,7 +16,7 @@ CONFLICTS=		Ice py*-Ice php*-Ice
 
 .if ${SLAVE_PORT} == "no"
 LIB_DEPENDS=		libexpat.so:textproc/expat2 \
-			liblmdb.so:databases/lmdb \
+			liblmdb.so:databases/lmdb0 \
 			libmcpp.so:devel/mcpp
 .else
 LIB_VRS=		${PORTVERSION:R:S|.||g}

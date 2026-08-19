@@ -1,3 +1,3 @@
-TIMESTAMP = 1782568946
-SHA256 (pytest-rerunfailures-14.0.tar.gz) = 4a400bcbcd3c7a4ad151ab8afac123d90eca3abe27f98725dc4d9702887d2e92
-SIZE (pytest-rerunfailures-14.0.tar.gz) = 21350
+TIMESTAMP = 1785000081
+SHA256 (pytest_rerunfailures-15.1.tar.gz) = c6040368abd7b8138c5b67288be17d6e5611b7368755ce0465dda0362c8ece80
+SIZE (pytest_rerunfailures-15.1.tar.gz) = 26981

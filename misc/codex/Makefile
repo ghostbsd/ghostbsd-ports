@@ -1,6 +1,6 @@
 PORTNAME=	codex
 DISTVERSIONPREFIX=	rust-v
-DISTVERSION=	0.142.4
+DISTVERSION=	0.146.0
 CATEGORIES=	misc devel
 
 MAINTAINER=	tagattie@FreeBSD.org
@@ -121,6 +121,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|python3|${PYTHON_VERSION}|' \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/command_exec.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/hooks_list.rs \
+		${BUILD_WRKSRC}/app-server/tests/suite/v2/session_end.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/thread_resume.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/thread_shell_command.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/turn_interrupt.rs \
@@ -128,6 +129,8 @@ post-patch:
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/turn_start_zsh_fork.rs \
 		${BUILD_WRKSRC}/config/src/config_requirements.rs \
 		${BUILD_WRKSRC}/config/src/hooks_tests.rs \
+		${BUILD_WRKSRC}/core-plugins/src/script_attribution.rs \
+		${BUILD_WRKSRC}/core-plugins/src/script_attribution_tests.rs \
 		${BUILD_WRKSRC}/core-skills/src/invocation_utils.rs \
 		${BUILD_WRKSRC}/core-skills/src/invocation_utils_tests.rs \
 		${BUILD_WRKSRC}/core/src/command_canonicalization_tests.rs \
@@ -146,12 +149,13 @@ post-patch:
 		${BUILD_WRKSRC}/core/tests/suite/network_approval.rs \
 		${BUILD_WRKSRC}/core/tests/suite/openai_file_mcp.rs \
 		${BUILD_WRKSRC}/core/tests/suite/subagent_notifications.rs \
+		${BUILD_WRKSRC}/core/tests/suite/token_budget.rs \
 		${BUILD_WRKSRC}/core/tests/suite/tools.rs \
 		${BUILD_WRKSRC}/core/tests/suite/unified_exec.rs \
 		${BUILD_WRKSRC}/exec-server/tests/exec_process.rs \
 		${BUILD_WRKSRC}/exec/tests/suite/sandbox.rs \
 		${BUILD_WRKSRC}/execpolicy/tests/basic.rs \
-		${BUILD_WRKSRC}/external-agent-migration/src/lib.rs \
+		${BUILD_WRKSRC}/external-agent-migration/src/lib_tests.rs \
 		${BUILD_WRKSRC}/hooks/src/engine/mod_tests.rs \
 		${BUILD_WRKSRC}/hooks/src/events/compact.rs \
 		${BUILD_WRKSRC}/hooks/src/events/post_tool_use.rs \

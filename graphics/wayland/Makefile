@@ -1,6 +1,5 @@
 PORTNAME=	wayland
-DISTVERSION=	1.24.0
-PORTREVISION=	2
+DISTVERSION=	1.25.0
 CATEGORIES=	graphics
 MASTER_SITES=	https://gitlab.freedesktop.org/${PORTNAME}/${PORTNAME}/-/releases/${DISTVERSION}/downloads/
 
@@ -19,7 +18,5 @@ USES=		cpe gnome meson pkgconfig tar:xz
 USE_GNOME=	libxslt:build
 USE_LDCONFIG=	yes
 MESON_ARGS=	-Ddocumentation=false
-
-TESTING_UNSAFE=	"Assertion failed: (wrapped_calls_fcntl > n), function do_os_wrappers_dupfd_cloexec, file ../tests/os-wrappers-test.c, line 222"
 
 .include <bsd.port.mk>

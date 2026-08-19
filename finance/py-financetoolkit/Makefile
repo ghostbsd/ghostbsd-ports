@@ -1,6 +1,6 @@
 PORTNAME=	financetoolkit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.1.3
+DISTVERSION=	2.1.4
 CATEGORIES=	finance python
 #MASTER_SITES=	PYPI # no tests
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -41,7 +41,6 @@ NO_ARCH=	yes
 
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 
-# tests as of 2.0.0: 3 failed, 277 passed, 25 errors in 190.04s (0:03:10)
-# tests as of 2.1.3: 522 passed, 58 skipped, 2 warnings in 27.56s
+# tests as of 2.1.4: 612 passed, 58 skipped, 7 warnings in 31.38s
 
 .include <bsd.port.mk>

@@ -1,15 +1,25 @@
--- workaround for https://github.com/leanprover/lean4/issues/14136
--- Compilation fails: error: 'free_sized' is missing exception specification 'throw()'
--- on FreeBSD 16
+-- fix breakage caused by strict matching of the throw() attribute in FreeBSD 16.0
 
---- stage0/src/runtime/object.cpp.orig	2026-06-22 01:22:24 UTC
+--- stage0/src/runtime/object.cpp.orig	2026-06-21 11:16:11 UTC
 +++ stage0/src/runtime/object.cpp
-@@ -61,7 +61,7 @@ __attribute__((nothrow))
+@@ -22,6 +22,8 @@ Author: Leonardo de Moura
+ #include "runtime/io.h"
+ #include "runtime/hash.h"
+ 
++#include <sys/param.h>
++
+ #if defined(__GLIBC__) || defined(__APPLE__)
+     #define LEAN_SUPPORTS_BACKTRACE 1
+ #else
+@@ -61,7 +63,11 @@ __attribute__((nothrow))
  // `__attribute__((nothrow))` to be present or `noexcept`.
  __attribute__((nothrow))
  #endif
--__attribute__((weak)) void free_sized(void *ptr, size_t) {
++#if !defined(__FreeBSD__) || __FreeBSD_version < 1500000
+ __attribute__((weak)) void free_sized(void *ptr, size_t) {
++#else
 +__attribute__((weak)) void free_sized(void *ptr, size_t) throw() {
++#endif
      free(ptr);
  }
  #endif

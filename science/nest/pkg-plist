@@ -615,7 +615,7 @@ include/nest/weight_recorder.h
 %%DATADIR%%/testsuite/pytests/regressions/test_issue_264.py
 %%DATADIR%%/testsuite/pytests/regressions/test_issue_3106.py
 %%DATADIR%%/testsuite/pytests/regressions/test_issue_3108.py
-%%DATADIR%%/testsuite/pytests/regressions/test_issue_%%PYTHON_SUFFIX%%.py
+%%DATADIR%%/testsuite/pytests/regressions/test_issue_311.py
 %%DATADIR%%/testsuite/pytests/regressions/test_issue_327.py
 %%DATADIR%%/testsuite/pytests/regressions/test_issue_3442.py
 %%DATADIR%%/testsuite/pytests/regressions/test_issue_351.py

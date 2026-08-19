@@ -7,7 +7,8 @@ PKGNAMESUFFIX=	1
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby wrapper for the OAuth 2.0 protocol
-WWW=		https://github.com/oauth-xx/oauth2
+WWW=		https://oauth2.galtzo.com/ \
+		https://github.com/ruby-oauth/oauth2
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

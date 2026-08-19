@@ -1,6 +1,6 @@
---- dlls/ntdll/unix/signal_x86_64.c.orig	2023-07-17 16:05:30.000000000 +0300
-+++ dlls/ntdll/unix/signal_x86_64.c	2023-09-03 00:25:39.179645000 +0300
-@@ -2832,7 +2832,11 @@ void signal_init_process(void)
+--- dlls/ntdll/unix/signal_x86_64.c.orig	2025-11-06 09:54:15 UTC
++++ dlls/ntdll/unix/signal_x86_64.c
+@@ -2933,7 +2933,11 @@ void set_thread_teb( TEB *teb )
  
  void set_thread_teb( TEB *teb )
  {

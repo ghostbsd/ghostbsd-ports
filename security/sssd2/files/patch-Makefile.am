@@ -1,4 +1,4 @@
---- Makefile.am.orig	2026-01-21 16:48:09 UTC
+--- Makefile.am.orig	2026-07-12 11:16:12 UTC
 +++ Makefile.am
 @@ -64,7 +64,7 @@ dbusservicedir = $(datadir)/dbus-1/system-services
  krb5snippetsdir = $(sssddatadir)/krb5-snippets
@@ -9,7 +9,7 @@
  runstatedir = @runstatedir@
  localedir = @localedir@
  nsslibdir = @nsslibdir@
-@@ -4067,6 +4067,7 @@ libnss_sss_la_SOURCES = \
+@@ -4159,6 +4159,7 @@ libnss_sss_la_SOURCES = \
  nsslib_LTLIBRARIES = libnss_sss.la
  libnss_sss_la_SOURCES = \
      src/sss_client/common.c \

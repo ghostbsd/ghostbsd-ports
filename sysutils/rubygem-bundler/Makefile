@@ -1,5 +1,5 @@
 PORTNAME=	bundler
-PORTVERSION=	4.0.15
+PORTVERSION=	4.0.16
 PORTEPOCH=	1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
@@ -7,7 +7,7 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Tool that manages gem dependencies for Ruby applications
 WWW=		https://bundler.io/ \
-		https://github.com/ruby/rubygems/tree/master/bundler
+		https://github.com/ruby/rubygems/tree/4.0/bundler
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

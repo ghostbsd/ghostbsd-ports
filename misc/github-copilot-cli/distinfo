@@ -1,5 +1,5 @@
-TIMESTAMP = 1782601817
-SHA256 (github-copilot-cli-1.0.65/copilot-linux-x64.tar.gz) = da36be29a5afc7c6cef63b25ac10ee1862216a0f5efabed502ed42c4e0f62af8
-SIZE (github-copilot-cli-1.0.65/copilot-linux-x64.tar.gz) = 76344302
-SHA256 (github-copilot-cli-1.0.65/copilot-linux-arm64.tar.gz) = e9f4e570cfe85e7be4a3be4b74eb6564c3f96e97cb1162bcc6282cd1f820c686
-SIZE (github-copilot-cli-1.0.65/copilot-linux-arm64.tar.gz) = 78514928
+TIMESTAMP = 1785561084
+SHA256 (github-copilot-cli-1.0.77/copilot-linux-x64.tar.gz) = c6414f99c5b29b049a3b0929ba824f0ff0ae88b85eb52559be45631b96b00f4c
+SIZE (github-copilot-cli-1.0.77/copilot-linux-x64.tar.gz) = 109590655
+SHA256 (github-copilot-cli-1.0.77/copilot-linux-arm64.tar.gz) = 5bcf01b30bd74ce415cc93acb404885e0bc396cde037ca68efe2b8ec84f91e5a
+SIZE (github-copilot-cli-1.0.77/copilot-linux-arm64.tar.gz) = 110314694

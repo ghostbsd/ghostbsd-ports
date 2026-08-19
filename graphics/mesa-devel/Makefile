@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	26.1-branchpoint-3676
-DISTVERSIONSUFFIX=	-g68468b6d1b9
+DISTVERSION=	26.2-branchpoint-805
+DISTVERSIONSUFFIX=	-g4e2e284654f
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -142,15 +142,13 @@ post-patch:
 	@${REINPLACE_CMD} '/MESA_GIT_SHA1/s/""/" (git-${DISTVERSIONSUFFIX:C/.*-g//})"/' \
 		${WRKSRC}/bin/git_sha1_gen.py
 
-post-patch-COINST-on:
-	@(cd ${WRKSRC}/src/util; for f in 00-*-defaults.conf; do \
+post-install-COINST-on:
+	@${INSTALL_DATA} ${WRKDIR}/libmap.conf \
+		${STAGEDIR}${PREFIX}/etc/libmap.d/${PKGBASE}.conf
+	@(cd ${STAGEDIR}${PREFIX}/share/drirc.d; for f in 00-*-defaults.conf; do \
 		suffix=$${f#00-}; infix=$${suffix%-defaults.conf}; \
 		${MV} 00-$$infix-defaults.conf \
 			 00-$$infix${PKGNAMESUFFIX}-defaults.conf; \
 	done)
-
-post-install-COINST-on:
-	@${INSTALL_DATA} ${WRKDIR}/libmap.conf \
-		${STAGEDIR}${PREFIX}/etc/libmap.d/${PKGBASE}.conf
 
 .include <bsd.port.mk>

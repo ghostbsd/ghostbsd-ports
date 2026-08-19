@@ -27,11 +27,23 @@ files = %%ETCDIR%%/documentserver/supervisor/*.conf
     # service supervisord start
 
 3. Set up nginx:
-  - For HTTP include the following in your %%PREFIX%%/etc/nginx/nginx.conf file:
-      include %%ETCDIR%%/documentserver/nginx/ds.conf;
+  - Include the configuration appropriate for your deployment within
+    your %%PREFIX%%/etc/nginx/nginx.conf file:
 
-NOTE: documentserver-update-securelink.sh will only update ./nginx/ds.conf and local.json under %%ETCDIR%%/documentserver/!
+     HTTP:
+       include %%ETCDIR%%/documentserver/nginx/ds.conf;
+
+     HTTPS:
+       include %%ETCDIR%%/documentserver/nginx/ds-ssl.conf;
+
+   Review and customize the supplied ds.conf or ds-ssl.conf nginx configuration
+   before use, including the listen directives, TLS configuration, and any site-
+   specific settings.
+
   - run documentserver-update-securelink.sh once for creating a verysecretstring
+Note: documentserver-update-securelink.sh updates only the packaged ds.conf, ds-ssl.conf,
+and local.json files in their default locations. If your nginx configuration uses custom
+copies or alternate paths, synchronize the secure_link_secret values manually.
 
   - start nginx:
     # service nginx start

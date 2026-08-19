@@ -1,6 +1,7 @@
 PORTNAME=	gstreamer1
 PORTVERSION=	1.22.12
 DISTVERSIONSUFFIX=	-3.el9
+PORTREVISION=	1
 CATEGORIES=	multimedia linux
 
 MAINTAINER=	emulation@FreeBSD.org
@@ -16,11 +17,11 @@ USE_LINUX_RPM=	yes
 WANT_LINUX32=	yes
 
 LIB_DISTNAMES=	${PORTNAME}-${DISTVERSIONFULL} \
-		${PORTNAME}-plugins-base-${DISTVERSION}-4.el9 \
-		${PORTNAME}-plugins-bad-free-${DISTVERSION}-4.el9_6 \
-		${PORTNAME}-plugins-good-${DISTVERSION}-4.el9 \
-		${PORTNAME}-plugins-good-gtk-${DISTVERSION}-4.el9 \
-		${PORTNAME}-plugins-ugly-free-${DISTVERSION}-3.el9
+		${PORTNAME}-plugins-base-${DISTVERSION}-8.el9_8 \
+		${PORTNAME}-plugins-bad-free-${DISTVERSION}-7.el9_8 \
+		${PORTNAME}-plugins-good-${DISTVERSION}-7.el9_8 \
+		${PORTNAME}-plugins-good-gtk-${DISTVERSION}-7.el9_8 \
+		${PORTNAME}-plugins-ugly-free-${DISTVERSION}-6.el9_8
 
 SRC_DISTFILES=	gstreamer1-${DISTVERSIONFULL}${SRC_SUFX}:SOURCE
 

@@ -161,7 +161,7 @@ lib/libmbedx509.so.%%DISTVERSION%%
 lib/libmbedx509.so.9
 lib/libtfpsacrypto.a
 lib/libtfpsacrypto.so
-lib/libtfpsacrypto.so.1.1.0
+lib/libtfpsacrypto.so.1.2.0
 lib/libtfpsacrypto.so.2
 libdata/pkgconfig/mbedcrypto.pc
 libdata/pkgconfig/mbedtls.pc

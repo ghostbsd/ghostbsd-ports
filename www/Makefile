@@ -25,6 +25,7 @@
     SUBDIR += R-cran-webshot
     SUBDIR += R-cran-webutils
     SUBDIR += SNIP
+    SUBDIR += SpectrumKNX
     SUBDIR += UniversalFeedCreator
     SUBDIR += access-log-exporter
     SUBDIR += adguardhome
@@ -105,7 +106,6 @@
     SUBDIR += castget
     SUBDIR += cgi-lib
     SUBDIR += cgi-lib.pl
-    SUBDIR += cgicc
     SUBDIR += cgiwrap
     SUBDIR += chawan
     SUBDIR += checkbot
@@ -153,9 +153,6 @@
     SUBDIR += dojo
     SUBDIR += dokuwiki
     SUBDIR += dolibarr
-    SUBDIR += dolibarr16
-    SUBDIR += dolibarr17
-    SUBDIR += dolibarr18
     SUBDIR += dolibarr19
     SUBDIR += dolibarr20
     SUBDIR += dolibarr21
@@ -214,12 +211,16 @@
     SUBDIR += forgejo
     SUBDIR += forgejo-lts
     SUBDIR += forgejo15
+    SUBDIR += forgejo16
     SUBDIR += formication
     SUBDIR += foswiki
     SUBDIR += free-sa-devel
     SUBDIR += freenginx
     SUBDIR += freenginx-acme
     SUBDIR += freenginx-devel
+    SUBDIR += freeunit
+    SUBDIR += freeunit-php
+    SUBDIR += freeunit-python
     SUBDIR += fswiki
     SUBDIR += fusionpbx
     SUBDIR += g-cows
@@ -316,6 +317,7 @@
     SUBDIR += jmeter
     SUBDIR += joomla4
     SUBDIR += joomla5
+    SUBDIR += joomla6
     SUBDIR += jwt-cli
     SUBDIR += kamal-proxy
     SUBDIR += kanboard
@@ -398,7 +400,6 @@
     SUBDIR += mattermost-webapp
     SUBDIR += mcp-server-browserbase
     SUBDIR += mediawiki143
-    SUBDIR += mediawiki144
     SUBDIR += mediawiki145
     SUBDIR += mediawiki146
     SUBDIR += mergelog
@@ -505,9 +506,11 @@
     SUBDIR += nextcloud-deck
     SUBDIR += nextcloud-forms
     SUBDIR += nextcloud-groupfolders
+    SUBDIR += nextcloud-impersonate
     SUBDIR += nextcloud-memories
     SUBDIR += nextcloud-news
     SUBDIR += nextcloud-notes
+    SUBDIR += nextcloud-previewgenerator
     SUBDIR += nextcloud-tasks
     SUBDIR += nghttp2
     SUBDIR += nginx
@@ -576,7 +579,6 @@
     SUBDIR += p5-Apache-Config-Preproc
     SUBDIR += p5-Apache-ConfigFile
     SUBDIR += p5-Apache-ConfigParser
-    SUBDIR += p5-Apache-DB
     SUBDIR += p5-Apache-DBI
     SUBDIR += p5-Apache-Defaults
     SUBDIR += p5-Apache-Htgroup
@@ -1444,7 +1446,6 @@
     SUBDIR += pear-UDDI
     SUBDIR += pear-XML_GRDDL
     SUBDIR += pear-twig
-    SUBDIR += pecl-http
     SUBDIR += pecl-solr
     SUBDIR += pecl-yaf
     SUBDIR += pecl-yar
@@ -1454,6 +1455,7 @@
     SUBDIR += pglogd
     SUBDIR += phalcon
     SUBDIR += php-google-api-php-client
+    SUBDIR += php-http
     SUBDIR += php82-opcache
     SUBDIR += php82-session
     SUBDIR += php82-tidy
@@ -1483,6 +1485,7 @@
     SUBDIR += pmwiki
     SUBDIR += pnews
     SUBDIR += pocket-id
+    SUBDIR += pocketbase
     SUBDIR += podcastamatic
     SUBDIR += pomerium
     SUBDIR += pomerium-envoy-custom
@@ -1507,6 +1510,7 @@
     SUBDIR += py-aiohttp-jinja2
     SUBDIR += py-aiohttp-middlewares
     SUBDIR += py-aiohttp-oauthlib
+    SUBDIR += py-aiohttp-retry
     SUBDIR += py-aiohttp-session
     SUBDIR += py-aiohttp-wsgi
     SUBDIR += py-aiolimiter
@@ -1609,7 +1613,6 @@
     SUBDIR += py-django-classy-tags
     SUBDIR += py-django-cms
     SUBDIR += py-django-compression-middleware
-    SUBDIR += py-django-configurations
     SUBDIR += py-django-configurator
     SUBDIR += py-django-constance
     SUBDIR += py-django-contact-form
@@ -1699,6 +1702,7 @@
     SUBDIR += py-django42
     SUBDIR += py-django52
     SUBDIR += py-django60
+    SUBDIR += py-django61
     SUBDIR += py-django_compressor
     SUBDIR += py-django_statici18n
     SUBDIR += py-djangocms-admin-style
@@ -1792,8 +1796,11 @@
     SUBDIR += py-google-cloud-container
     SUBDIR += py-google-cloud-core
     SUBDIR += py-google-cloud-datastore
+    SUBDIR += py-google-cloud-discoveryengine
     SUBDIR += py-google-cloud-dlp
+    SUBDIR += py-google-cloud-documentai
     SUBDIR += py-google-cloud-logging
+    SUBDIR += py-google-cloud-modelarmor
     SUBDIR += py-google-cloud-monitoring
     SUBDIR += py-google-cloud-resource-manager
     SUBDIR += py-google-cloud-speech
@@ -1814,6 +1821,7 @@
     SUBDIR += py-h2
     SUBDIR += py-habanero
     SUBDIR += py-hdfs
+    SUBDIR += py-hf-transfer
     SUBDIR += py-horizon
     SUBDIR += py-hpack
     SUBDIR += py-hstspreload
@@ -1862,6 +1870,7 @@
     SUBDIR += py-litestar
     SUBDIR += py-livereload
     SUBDIR += py-ll-xist
+    SUBDIR += py-lomond
     SUBDIR += py-mailman-hyperkitty
     SUBDIR += py-mechanicalsoup
     SUBDIR += py-mechanize
@@ -1949,6 +1958,7 @@
     SUBDIR += py-rolo
     SUBDIR += py-routes
     SUBDIR += py-rules
+    SUBDIR += py-scalar-fastapi
     SUBDIR += py-scgi
     SUBDIR += py-scrapy
     SUBDIR += py-seafdav
@@ -2257,6 +2267,7 @@
     SUBDIR += rubygem-jquery-ui-rails-rails4
     SUBDIR += rubygem-jruby-rack
     SUBDIR += rubygem-js-routes
+    SUBDIR += rubygem-js-routes-gitlab
     SUBDIR += rubygem-jsbundling-rails
     SUBDIR += rubygem-jsbundling-rails-rails70
     SUBDIR += rubygem-jsbundling-rails-rails71

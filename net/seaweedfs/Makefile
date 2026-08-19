@@ -1,6 +1,6 @@
 PORTNAME=	seaweedfs
 DISTVERSION=	4.12
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	net sysutils
 
 MAINTAINER=	drtr0jan@yandex.ru

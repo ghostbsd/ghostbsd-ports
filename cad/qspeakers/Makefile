@@ -1,6 +1,5 @@
 PORTNAME=	qspeakers
-DISTVERSION=	1.8.5
-PORTREVISION=	1
+DISTVERSION=	1.8.6
 CATEGORIES=	cad
 
 MAINTAINER=	riggs@FreeBSD.org
@@ -16,5 +15,7 @@ USE_QT=		base charts tools
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	be1
+
+BINARY_ALIAS=	lrelease=${LRELEASE}
 
 .include <bsd.port.mk>

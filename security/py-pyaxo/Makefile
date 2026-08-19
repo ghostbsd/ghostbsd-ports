@@ -1,6 +1,6 @@
 PORTNAME=	pyaxo
 DISTVERSION=	0.8.2
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	security net python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -24,6 +24,8 @@ NO_ARCH=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e "/'pytest-runner',/d" ${WRKSRC}/setup.py
+	@${REINPLACE_CMD} -e 's|configparser.SafeConfigParser()|configparser.ConfigParser()|g' \
+		-e 's|parser.readfp(f)|parser.read_file(f)|g' ${WRKSRC}/versioneer.py
 
 do-test:
 	@(cd ${WRKSRC} && ${PYTHON_CMD} -m pytest -v -rs)

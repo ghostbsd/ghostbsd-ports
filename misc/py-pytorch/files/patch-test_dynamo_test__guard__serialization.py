@@ -1,6 +1,6 @@
---- test/dynamo/test_guard_serialization.py.orig	2026-05-13 17:40:38 UTC
+--- test/dynamo/test_guard_serialization.py.orig	2026-07-08 17:44:27 UTC
 +++ test/dynamo/test_guard_serialization.py
-@@ -1521,6 +1521,7 @@ class TestGuardSerialization(TestGuardSerializationBas
+@@ -1526,6 +1526,7 @@ class TestGuardSerialization(TestGuardSerializationBas
          )
  
      @torch._dynamo.config.patch(nested_graph_breaks=False)
@@ -8,7 +8,7 @@
      def test_ddp_module(self):
          import torch.distributed as dist
  
-@@ -1573,6 +1574,7 @@ class TestGuardSerialization(TestGuardSerializationBas
+@@ -1578,6 +1579,7 @@ class TestGuardSerialization(TestGuardSerializationBas
              True,
          )
  
@@ -16,7 +16,7 @@
      def test_unserializable_sharded_tensor(self):
          import torch.distributed as dist
  
-@@ -1688,6 +1690,7 @@ class TestGuardSerialization(TestGuardSerializationBas
+@@ -1693,6 +1695,7 @@ class TestGuardSerialization(TestGuardSerializationBas
          )
          self._test_check_fn(ref, loaded, {"inputs": Inputs(x, torch.Stream())}, True)
  

@@ -1,6 +1,6 @@
 PORTNAME=	opencc
 DISTVERSIONPREFIX=	ver.
-DISTVERSION=	1.3.1
+DISTVERSION=	1.4.1
 CATEGORIES=	chinese converters
 
 MAINTAINER=	lichray@gmail.com
@@ -9,16 +9,22 @@ WWW=		https://github.com/BYVoid/OpenCC
 
 LICENSE=	APACHE20
 
-USES=		cmake:testing compiler:c++11-lib python:build
+USES=		cmake:testing compiler:c++17-lang python:build
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	BYVoid
 GH_PROJECT=	OpenCC
 
+CMAKE_ARGS=	-DPython3_EXECUTABLE=${PYTHON_CMD}
 CMAKE_TESTING_ON=	ENABLE_GTEST
 
 TEST_TARGET=	test
 
-# tests as of 1.3.1: 100% tests passed, 0 tests failed out of 18
+OPTIONS_DEFINE=	JIEBA
+OPTIONS_DEFAULT=	JIEBA
+OPTIONS_SUB=	yes
+
+JIEBA_DESC=	Jieba segmentation plugin
+JIEBA_CMAKE_BOOL=	BUILD_OPENCC_JIEBA_PLUGIN
 
 .include <bsd.port.mk>

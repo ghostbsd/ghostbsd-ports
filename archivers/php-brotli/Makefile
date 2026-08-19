@@ -1,5 +1,5 @@
 PORTNAME=	brotli
-DISTVERSION=	0.19.0
+DISTVERSION=	0.20.0
 CATEGORIES=	archivers
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 
@@ -13,7 +13,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libbrotlienc.so:archivers/brotli
 
 USES=		php:ext pkgconfig
-IGNORE_WITH_PHP=	86
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	kjdev

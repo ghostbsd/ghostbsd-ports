@@ -57,8 +57,8 @@
 %%FFMPEG%%%%V4L%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/%%FULLVER%%/QtFFmpegMediaPluginImpl/private/qv4l2cameradevices_p.h
 %%FFMPEG%%%%V4L%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/%%FULLVER%%/QtFFmpegMediaPluginImpl/private/qv4l2filedescriptor_p.h
 %%FFMPEG%%%%V4L%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/%%FULLVER%%/QtFFmpegMediaPluginImpl/private/qv4l2memorytransfer_p.h
-%%FFMPEG%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/%%FULLVER%%/QtFFmpegMediaPluginImpl/private/qx11capturablewindows_p.h
-%%FFMPEG%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/%%FULLVER%%/QtFFmpegMediaPluginImpl/private/qx11surfacecapture_p.h
+%%FFMPEG%%%%X11%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/%%FULLVER%%/QtFFmpegMediaPluginImpl/private/qx11capturablewindows_p.h
+%%FFMPEG%%%%X11%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/%%FULLVER%%/QtFFmpegMediaPluginImpl/private/qx11surfacecapture_p.h
 %%FFMPEG%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/QtFFmpegMediaPluginImpl
 %%FFMPEG%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/QtFFmpegMediaPluginImplDepends
 %%FFMPEG%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/QtFFmpegMediaPluginImplVersion

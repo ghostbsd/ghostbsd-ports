@@ -1,5 +1,5 @@
 PORTNAME=	magic
-DISTVERSION=	8.3.632
+DISTVERSION=	8.3.664
 CATEGORIES=	cad
 MASTER_SITES=	http://opencircuitdesign.com/magic/archive/
 
@@ -23,8 +23,7 @@ USE_XORG=	ice sm x11 xext xi xmu
 SHEBANG_FILES=	scripts/preproc.py tcltk/ext2sim.sh.in tcltk/ext2spice.sh.in \
 		tcltk/magic.sh.in
 
-CONFIGURE_ARGS=	--enable-modular \
-		--with-opengl # --enable-modular should fix build on 15, when failures were due to missing symbols defined in *.sym but not in code
+CONFIGURE_ARGS=	--with-opengl
 
 ALL_TARGET=	tcllibrary
 

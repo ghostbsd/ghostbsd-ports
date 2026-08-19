@@ -8,7 +8,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Facebook's LLaMA model in C/C++ # '
-WWW=		https://github.com/ggerganov/llama.cpp
+WWW=		https://github.com/ggml-org/llama.cpp
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -22,12 +22,12 @@ FETCH_DEPENDS=	npm:www/npm \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 
 BROKEN_armv7=	clang crashes, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=278810
-BROKEN_i386=	compilation fails, see https://github.com/ggerganov/llama.cpp/issues/9545
+BROKEN_i386=	compilation fails, see https://github.com/ggml-org/llama.cpp/issues/9545
 
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	ggerganov
+GH_ACCOUNT=	ggml-org
 GH_PROJECT=	llama.cpp
 
 DISTFILES+=	llama-ui-npm-${DISTVERSION}${EXTRACT_SUFX}
@@ -86,7 +86,7 @@ post-patch: # set version in the code
 		-e "s|set(BUILD_NUMBER 0)|set(BUILD_NUMBER ${DISTVERSION})|" \
 		${WRKSRC}/cmake/build-info.cmake
 
-do-test-ci: # build of tests fails, see https://github.com/ggerganov/llama.cpp/issues/10955
+do-test-ci: # build of tests fails, see https://github.com/ggml-org/llama.cpp/issues/10955
 	@cd ${WRKSRC} && \
 		${SETENV} ${MAKE_ENV} bash ci/run.sh ./tmp/results ./tmp/mnt
 
@@ -96,12 +96,12 @@ do-test-ci: # build of tests fails, see https://github.com/ggerganov/llama.cpp/i
 USE_RC_SUBR=	llama-server
 .endif
 
-# tests as of 4458: 97% tests passed, 1 tests failed out of 31, see https://github.com/ggerganov/llama.cpp/issues/11036
+# tests as of 4458: 97% tests passed, 1 tests failed out of 31, see https://github.com/ggml-org/llama.cpp/issues/11036
 
 # tests as of 4649:
 # 88% tests passed, 4 tests failed out of 32
 # The following tests FAILED:
-#         18 - test-chat (Subprocess aborted)                    main   # see https://github.com/ggerganov/llama.cpp/issues/11705
+#         18 - test-chat (Subprocess aborted)                    main   # see https://github.com/ggml-org/llama.cpp/issues/11705
 #         24 - test-gguf (SEGFAULT)                              main
 #         25 - test-backend-ops (SEGFAULT)                       main
 #         32 - test-eval-callback (SEGFAULT)                     curl eval-callback

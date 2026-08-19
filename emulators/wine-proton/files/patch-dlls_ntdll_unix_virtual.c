@@ -1,8 +1,8 @@
---- dlls/ntdll/unix/virtual.c.orig	2024-04-26 15:24:41 UTC
+--- dlls/ntdll/unix/virtual.c.orig	2025-11-06 09:54:15 UTC
 +++ dlls/ntdll/unix/virtual.c
-@@ -64,9 +64,11 @@
- # include <mach/mach_vm.h>
- #endif
+@@ -72,9 +72,11 @@
+ 
+ #include <sys/uio.h>
  
 +#ifdef __linux__
  #include <linux/userfaultfd.h>
@@ -10,9 +10,9 @@
  #include "uffd_tmp_defs.h"
 +#endif
  
- #include <sys/uio.h>
- 
-@@ -258,6 +260,7 @@ void *anon_mmap_alloc( size_t size, int prot )
+ #include "ntstatus.h"
+ #define WIN32_NO_STATUS
+@@ -385,6 +387,7 @@ void *anon_mmap_alloc( size_t size, int prot )
      return mmap( NULL, size, prot, MAP_PRIVATE | MAP_ANON, -1, 0 );
  }
  
@@ -20,7 +20,7 @@
  static void kernel_writewatch_softdirty_init(void)
  {
      if ((pagemap_reset_fd = open( "/proc/self/pagemap_reset", O_RDONLY | O_CLOEXEC )) == -1) return;
-@@ -494,7 +497,27 @@ static NTSTATUS kernel_get_write_watches( void *base, 
+@@ -621,7 +624,27 @@ static NTSTATUS kernel_get_write_watches( void *base, 
      }
      return STATUS_SUCCESS;
  }

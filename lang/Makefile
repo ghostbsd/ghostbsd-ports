@@ -18,9 +18,12 @@
     SUBDIR += bend
     SUBDIR += bsh
     SUBDIR += bun
+    SUBDIR += bun-linux
     SUBDIR += bwbasic
     SUBDIR += c
+    SUBDIR += c3c
     SUBDIR += cairo
+    SUBDIR += cairo-language-server
     SUBDIR += cbmbasic
     SUBDIR += cbqn
     SUBDIR += ccl
@@ -37,6 +40,7 @@
     SUBDIR += clisp
     SUBDIR += clojure
     SUBDIR += clojure-mode.el
+    SUBDIR += clx
     SUBDIR += cocor
     SUBDIR += coffeescript
     SUBDIR += colm
@@ -102,6 +106,7 @@
     SUBDIR += gershwin-libobjc2
     SUBDIR += gforth
     SUBDIR += ghc
+    SUBDIR += ghc910
     SUBDIR += ghc96
     SUBDIR += ghc98
     SUBDIR += gir-to-d
@@ -262,6 +267,7 @@
     SUBDIR += p5-v6
     SUBDIR += pbasic
     SUBDIR += pcc
+    SUBDIR += perl-lsp
     SUBDIR += perl5-devel
     SUBDIR += perl5.40
     SUBDIR += perl5.42
@@ -366,6 +372,7 @@
     SUBDIR += solidity
     SUBDIR += spidermonkey128
     SUBDIR += spidermonkey140
+    SUBDIR += spidermonkey153
     SUBDIR += squeak
     SUBDIR += squirrel
     SUBDIR += starlark-rust

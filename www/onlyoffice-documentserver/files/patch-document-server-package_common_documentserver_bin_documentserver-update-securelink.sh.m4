@@ -1,4 +1,4 @@
---- document-server-package/common/documentserver/bin/documentserver-update-securelink.sh.m4.orig	2023-06-20 13:50:40 UTC
+--- document-server-package/common/documentserver/bin/documentserver-update-securelink.sh.m4.orig	2026-05-14 16:29:43 UTC
 +++ document-server-package/common/documentserver/bin/documentserver-update-securelink.sh.m4
 @@ -1,24 +1,24 @@
  #!/bin/sh
@@ -30,7 +30,7 @@
  			echo "  Usage $0 [PARAMETER] [[PARAMETER], ...]"
  			echo "    Parameters:"
  			echo "      -s, --secure_link_secret               setting for secret string "
-@@ -26,26 +26,21 @@ while [ "$1" != "" ]; do
+@@ -26,26 +26,26 @@
  			echo
  			exit 0
  		;;
@@ -42,7 +42,8 @@
 -NGINX_CONF=/etc/M4_DS_PREFIX/nginx/ds.conf
 -LOCAL_CONF=/etc/M4_DS_PREFIX/local.json
 -JSON="/var/www/M4_DS_PREFIX/npm/json -q -f ${LOCAL_CONF}"
-+NGINX_CONF=%%LOCALBASE%%/etc/M4_DS_PREFIX/nginx/ds.conf
++NGINX_HTTP_CONF=%%LOCALBASE%%/etc/M4_DS_PREFIX/nginx/ds.conf
++NGINX_SSL_CONF=%%LOCALBASE%%/etc/M4_DS_PREFIX/nginx/ds-ssl.conf
 +LOCAL_CONF=%%LOCALBASE%%/etc/M4_DS_PREFIX/local.json
 +JSON="%%LOCALBASE%%/www/M4_DS_PREFIX/npm/json -q -f ${LOCAL_CONF}"
  
@@ -51,7 +52,11 @@
  
 -sed "s,\(set \+\$secure_link_secret\).*,\1 "${SECURE_LINK_SECRET}";," -i ${NGINX_CONF}
 -${JSON} -I -e 'this.storage={fs: {secretString: "'${SECURE_LINK_SECRET}'" }}' && chown ds:ds $LOCAL_CONF
-+gsed "s,\(set \+\$secure_link_secret\).*,\1 ""${SECURE_LINK_SECRET}"";," -i ${NGINX_CONF}
++for conf in "${NGINX_HTTP_CONF}" "${NGINX_SSL_CONF}"; do
++  if [ -f "${conf}" ]; then
++    gsed "s,\(set \+\$secure_link_secret\).*,\1 ""${SECURE_LINK_SECRET}"";," -i "${conf}"
++  fi
++done
 +${JSON} -I -e 'this.storage={fs: {secretString: "'${SECURE_LINK_SECRET}'" }}' && chown onlyoffice:onlyoffice $LOCAL_CONF
  
  if [ "$RESTART_CONDITION" != "false" ]; then
@@ -62,5 +67,4 @@
 -  elif pgrep -x ""supervisord"" >/dev/null; then
 +  if pgrep -f "supervisord" >/dev/null; then
      supervisorctl restart ds:docservice
-     supervisorctl restart ds:converter
      service nginx reload

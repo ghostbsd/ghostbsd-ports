@@ -86,6 +86,7 @@
     SUBDIR += citrix_ica
     SUBDIR += cjdns
     SUBDIR += claws
+    SUBDIR += cliproxyapi
     SUBDIR += cloud-init
     SUBDIR += cloudflare-speed-cli
     SUBDIR += cloudflared
@@ -131,6 +132,7 @@
     SUBDIR += dhcprelya
     SUBDIR += dico
     SUBDIR += dictd
+    SUBDIR += dogtag-ldap-sdk
     SUBDIR += dpdk
     SUBDIR += dpdk-20.11
     SUBDIR += dpinger
@@ -203,6 +205,7 @@
     SUBDIR += gnome-nettool
     SUBDIR += gnome-online-accounts
     SUBDIR += gnu-radius
+    SUBDIR += gnunet
     SUBDIR += go-bapu
     SUBDIR += go-cs
     SUBDIR += go-pkgsite
@@ -243,7 +246,6 @@
     SUBDIR += hanstunnel
     SUBDIR += haproxy
     SUBDIR += haproxy-devel
-    SUBDIR += haproxy24
     SUBDIR += haproxy26
     SUBDIR += haproxy28
     SUBDIR += haproxy30
@@ -304,8 +306,6 @@
     SUBDIR += java-beepcore
     SUBDIR += jcifs
     SUBDIR += jgroups
-    SUBDIR += jicmp
-    SUBDIR += jicmp6
     SUBDIR += jose
     SUBDIR += jotta-cli
     SUBDIR += jrdesktop
@@ -332,6 +332,7 @@
     SUBDIR += kf6-kcontacts
     SUBDIR += kf6-kdav
     SUBDIR += kf6-kholidays
+    SUBDIR += kf6-kmime
     SUBDIR += kf6-syndication
     SUBDIR += kget
     SUBDIR += kidentitymanagement
@@ -364,6 +365,7 @@
     SUBDIR += lambdamoo
     SUBDIR += latd
     SUBDIR += lavinmq
+    SUBDIR += lazyrsync
     SUBDIR += ldap-stats
     SUBDIR += ldapbrowser
     SUBDIR += ldapdiff
@@ -530,6 +532,7 @@
     SUBDIR += nemesis
     SUBDIR += netatalk4
     SUBDIR += netcat
+    SUBDIR += netcode
     SUBDIR += netdiscover
     SUBDIR += netembryo
     SUBDIR += nethogs
@@ -546,7 +549,6 @@
     SUBDIR += ng_mikrotik_eoip
     SUBDIR += ngrep
     SUBDIR += nifmon
-    SUBDIR += nitroshare
     SUBDIR += nload
     SUBDIR += nmsg
     SUBDIR += nncp
@@ -998,9 +1000,9 @@
     SUBDIR += pecl-radius
     SUBDIR += pecl-rdkafka
     SUBDIR += pecl-smbclient
-    SUBDIR += pecl-xmlrpc
     SUBDIR += pen
     SUBDIR += php-oauth
+    SUBDIR += php-xmlrpc
     SUBDIR += php82-ldap
     SUBDIR += php82-soap
     SUBDIR += php82-sockets
@@ -1033,7 +1035,6 @@
     SUBDIR += proftpd-mod_ldap
     SUBDIR += prosearch
     SUBDIR += proxy-suite
-    SUBDIR += proxychains
     SUBDIR += proxychains-ng
     SUBDIR += prrte
     SUBDIR += prtunnel
@@ -1252,6 +1253,7 @@
     SUBDIR += redir
     SUBDIR += redpanda-connect
     SUBDIR += relayd
+    SUBDIR += reliable
     SUBDIR += remarkable-devd
     SUBDIR += remmina
     SUBDIR += remotebox
@@ -1414,8 +1416,10 @@
     SUBDIR += rubygem-netrc
     SUBDIR += rubygem-network_interface
     SUBDIR += rubygem-nkf
+    SUBDIR += rubygem-nkf-gitlab
     SUBDIR += rubygem-no_proxy_fix
     SUBDIR += rubygem-oauth
+    SUBDIR += rubygem-oauth-gitlab
     SUBDIR += rubygem-oauth-tty
     SUBDIR += rubygem-oauth0
     SUBDIR += rubygem-oauth2
@@ -1743,6 +1747,7 @@
     SUBDIR += yazproxy
     SUBDIR += yconalyzer
     SUBDIR += yggdrasil
+    SUBDIR += yojimbo
     SUBDIR += yptransitd
     SUBDIR += zapret
     SUBDIR += zapret2

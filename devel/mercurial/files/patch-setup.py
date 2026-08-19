@@ -1,6 +1,6 @@
---- setup.py.orig	2025-11-13 20:57:16 UTC
+--- setup.py.orig	2026-06-29 15:03:22 UTC
 +++ setup.py
-@@ -421,7 +421,7 @@ class hgbuildext(build_ext):
+@@ -401,7 +401,7 @@ class hgbuildext(build_ext):
                  )
  
              for rustext in ruststandalones:
@@ -9,7 +9,7 @@
  
          return build_ext.build_extensions(self)
  
-@@ -515,12 +515,8 @@ class hgbuildpy(build_py):
+@@ -495,12 +495,8 @@ class hgbuildpy(build_py):
              ]
          )
  

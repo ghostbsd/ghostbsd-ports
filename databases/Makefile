@@ -27,7 +27,6 @@
     SUBDIR += c3p0
     SUBDIR += cargo-pgrx
     SUBDIR += cassandra-cpp-driver
-    SUBDIR += cassandra3
     SUBDIR += cassandra4
     SUBDIR += cassandra5
     SUBDIR += casstcl
@@ -50,6 +49,7 @@
     SUBDIR += cutelyst-asql
     SUBDIR += dalmp
     SUBDIR += datafusion-cli
+    SUBDIR += datui
     SUBDIR += db
     SUBDIR += db18
     SUBDIR += db5
@@ -117,10 +117,12 @@
     SUBDIR += kyotocabinet
     SUBDIR += kyototycoon
     SUBDIR += ladybug
+    SUBDIR += lancedb-c
     SUBDIR += ldb25
     SUBDIR += ldb28
     SUBDIR += ldb29
     SUBDIR += leo_center
+    SUBDIR += letos
     SUBDIR += leveldb
     SUBDIR += libcouchbase
     SUBDIR += libdbi
@@ -155,6 +157,7 @@
     SUBDIR += liquibase
     SUBDIR += litestream
     SUBDIR += lmdb
+    SUBDIR += lmdb0
     SUBDIR += lua-lsqlite3
     SUBDIR += lua-pgsql
     SUBDIR += lua-resty-redis
@@ -193,7 +196,6 @@
     SUBDIR += mysql++
     SUBDIR += mysql-connector-c++
     SUBDIR += mysql-connector-j
-    SUBDIR += mysql-connector-java51
     SUBDIR += mysql-connector-odbc
     SUBDIR += mysql2pgsql
     SUBDIR += mysql80-client
@@ -595,6 +597,7 @@
     SUBDIR += pgtop
     SUBDIR += pguri
     SUBDIR += pgvector
+    SUBDIR += php-memvector
     SUBDIR += php-tarantool
     SUBDIR += php-xapian
     SUBDIR += php82-dba
@@ -749,6 +752,7 @@
     SUBDIR += py-Elixir
     SUBDIR += py-PyGreSQL
     SUBDIR += py-PyHive
+    SUBDIR += py-PyPika
     SUBDIR += py-Pyrseas
     SUBDIR += py-aesqlapius
     SUBDIR += py-agate-sql
@@ -767,6 +771,8 @@
     SUBDIR += py-asyncpg
     SUBDIR += py-berkeleydb
     SUBDIR += py-cassandra-driver
+    SUBDIR += py-chroma-hnswlib
+    SUBDIR += py-chromadb
     SUBDIR += py-couchdb
     SUBDIR += py-cymysql
     SUBDIR += py-databases
@@ -778,6 +784,7 @@
     SUBDIR += py-dbt-semantic-interfaces
     SUBDIR += py-dbt-snowflake
     SUBDIR += py-dbutils
+    SUBDIR += py-deltalake
     SUBDIR += py-duckdb
     SUBDIR += py-duckdb_engine
     SUBDIR += py-fakeredis
@@ -794,6 +801,9 @@
     SUBDIR += py-hiredis
     SUBDIR += py-influxdb
     SUBDIR += py-kyotocabinet
+    SUBDIR += py-lance-namespace
+    SUBDIR += py-lance-namespace-urllib3-client
+    SUBDIR += py-lancedb
     SUBDIR += py-leveldb
     SUBDIR += py-litecli
     SUBDIR += py-lmdb
@@ -921,6 +931,7 @@
     SUBDIR += redis82
     SUBDIR += redis84
     SUBDIR += redis86
+    SUBDIR += redis88
     SUBDIR += redis_exporter
     SUBDIR += redisbloom
     SUBDIR += redisjson
@@ -1137,7 +1148,6 @@
     SUBDIR += sqlitecpp
     SUBDIR += sqlitemanager
     SUBDIR += sqliteodbc
-    SUBDIR += sqlitestudio
     SUBDIR += sqlrelay
     SUBDIR += sqlx-cli
     SUBDIR += sqsh

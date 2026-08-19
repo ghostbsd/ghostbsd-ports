@@ -1,5 +1,5 @@
 PORTNAME=	zstd
-PORTVERSION=	0.15.2
+PORTVERSION=	0.17.0
 CATEGORIES=	archivers
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -13,9 +13,16 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libzstd.so:archivers/zstd
 
 USES=		php:pecl pkgconfig
-IGNORE_WITH_PHP=	86
 
 CONFIGURE_ARGS=	--with-libzstd
+
+OPTIONS_DEFINE=	APCU
+OPTIONS_DEFAULT=APCU
+APCU_DESC=	APCu serializer
+
+APCU_CONFIGURE_ENABLE=	apcu
+APCU_BUILD_DEPENDS=	${PECL_PKGNAMEPREFIX}APCu>=0:devel/pecl-APCu@${PHP_FLAVOR}
+APCU_RUN_DEPENDS=	${PECL_PKGNAMEPREFIX}APCu>=0:devel/pecl-APCu@${PHP_FLAVOR}
 
 post-patch:
 # Clean up bundled libraries

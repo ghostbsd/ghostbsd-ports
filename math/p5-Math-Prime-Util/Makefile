@@ -20,6 +20,8 @@ RUN_DEPENDS=	p5-Math-Prime-Util-GMP>=0.50:math/p5-Math-Prime-Util-GMP
 USES=		perl5
 USE_PERL5=	configure
 
+PORTSCOUT=	limit:^[0-9\.]*$$
+
 OPTIONS_DEFINE=	RECOMMENDED
 OPTIONS_DEFAULT=RECOMMENDED
 RECOMMENDED_DESC=	Recommended dependencies by upstream

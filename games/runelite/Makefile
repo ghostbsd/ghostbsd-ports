@@ -11,7 +11,7 @@ DISTFILES=	RuneLite.jar:game \
 DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
 EXTRACT_ONLY=
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Open source Old School RuneScape client
 WWW=		https://runelite.net
 

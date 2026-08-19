@@ -12,7 +12,7 @@ LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 RUN_DEPENDS=	rubygem-nokogiri>=1.8.2<2.0:textproc/rubygem-nokogiri \
-		rubygem-rubyzip>=1.1.1<2.5:archivers/rubygem-rubyzip
+		rubygem-rubyzip2>=1.1.1<2.5:archivers/rubygem-rubyzip2
 
 USES=		gem
 

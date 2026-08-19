@@ -1,6 +1,6 @@
 PORTNAME=	periscope
-PORTVERSION=	0.2.4
-PORTREVISION=	5
+DISTVERSION=	0.2.4
+PORTREVISION=	6
 CATEGORIES=	multimedia python
 MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/periscope/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,19 +15,25 @@ WWW=		https://code.google.com/archive/p/periscope/
 
 LICENSE=	LGPL3
 
+DEPRECATED=	Unmaintained upstream, last release 2011
+EXPIRATION_DATE=2026-09-30
+
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4:www/py-beautifulsoup@${PY_FLAVOR}
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		desktop-file-utils python
 USE_PYTHON=	autoplist distutils
 
-OPTIONS_DEFINE=	UNRAR
-OPTIONS_DEFAULT=	UNRAR
-UNRAR_RUN_DEPENDS=	unrar:archivers/unrar
+NO_ARCH=	yes
 
 NO_WRKSUBDIR=	yes
+
 PLIST_FILES=	share/applications/periscope.desktop
-NO_ARCH=	yes
+
+OPTIONS_DEFINE=	UNRAR
+OPTIONS_DEFAULT=	UNRAR
+
+UNRAR_RUN_DEPENDS=	unrar:archivers/unrar
 
 post-patch:
 	${REINPLACE_CMD} -e 's|from BeautifulSoup import|from bs4 import|' \

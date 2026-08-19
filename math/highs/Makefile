@@ -1,6 +1,6 @@
 PORTNAME=	highs
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.14.0
+DISTVERSION=	1.15.1
 CATEGORIES=	math
 PKGNAMEPREFIX=	coin-or-
 
@@ -30,6 +30,6 @@ post-install:
 		-e 's|INTERFACE_INCLUDE_DIRECTORIES "/include;|INTERFACE_INCLUDE_DIRECTORIES "|' \
 		${STAGEDIR}${PREFIX}/lib/cmake/highs/highs-targets.cmake
 
-# tests as of 1.14.0: 100% tests passed, 0 tests failed out of 2
+# tests as of 1.15.1: 100% tests passed, 0 tests failed out of 2
 
 .include <bsd.port.mk>

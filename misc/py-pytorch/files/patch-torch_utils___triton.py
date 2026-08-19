@@ -1,6 +1,6 @@
---- torch/utils/_triton.py.orig	2026-05-13 17:40:45 UTC
+--- torch/utils/_triton.py.orig	2026-07-08 17:44:38 UTC
 +++ torch/utils/_triton.py
-@@ -8,9 +8,10 @@ def has_triton_package() -> bool:
+@@ -37,9 +37,10 @@ def has_triton_package() -> bool:
  def has_triton_package() -> bool:
      try:
          import triton  # noqa: F401

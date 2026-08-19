@@ -1,6 +1,7 @@
 PORTNAME=	h3
 PORTVERSION=	4.5.0
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -33,5 +34,8 @@ CMAKE_ON=	BUILD_BENCHMARKS \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	uber
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/src/h3lib/include/*.h ${STAGEDIR}${PREFIX}/include/h3/
 
 .include <bsd.port.mk>

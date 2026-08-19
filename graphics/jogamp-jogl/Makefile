@@ -1,6 +1,6 @@
 PORTNAME=	jogamp-jogl
 PORTVERSION=	2.3.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	graphics devel java
 MASTER_SITES=	http://jogamp.org/deployment/jogamp-current/archive/Sources/ \
 		http://jogamp.org/deployment/v${PORTVERSION}/archive/Sources/
@@ -11,6 +11,9 @@ DISTFILES=	jogl-v${PORTVERSION}.tar.xz \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java bindings for OpenGL
 WWW=		https://jogamp.org/jogl
+
+DEPRECATED=	No maintainer, does not compile with Java 11+, did not keep up with upstream. The only usage in ports (math/scilab) has been deprecated. Mail the maintainer if you use this.
+EXPIRATION_DATE=	2026-11-09
 
 BUILD_DEPENDS=	${JAVALIBDIR}/swt.jar:x11-toolkits/swt
 RUN_DEPENDS=	${JAVALIBDIR}/swt.jar:x11-toolkits/swt

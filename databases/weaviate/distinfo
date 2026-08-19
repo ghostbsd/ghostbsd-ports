@@ -1,5 +1,5 @@
-TIMESTAMP = 1782506846
-SHA256 (go/databases_weaviate/weaviate-v1.38.2/v1.38.2.mod) = f5b17c5a632410a8b7e586a9f9ae1972294cd0faf5fbb22ea949e1ce8730de82
-SIZE (go/databases_weaviate/weaviate-v1.38.2/v1.38.2.mod) = 13723
-SHA256 (go/databases_weaviate/weaviate-v1.38.2/v1.38.2.zip) = ce583950b3985c6e5d843818a5744e2549d31a9bd6209259e08d6984518ee3e0
-SIZE (go/databases_weaviate/weaviate-v1.38.2/v1.38.2.zip) = 12353661
+TIMESTAMP = 1785389707
+SHA256 (go/databases_weaviate/weaviate-v1.38.8/v1.38.8.mod) = f0c85faa8ce08bd0ee054a95469d3bf2c08c37d75070e6213407a2f5f81f4902
+SIZE (go/databases_weaviate/weaviate-v1.38.8/v1.38.8.mod) = 13832
+SHA256 (go/databases_weaviate/weaviate-v1.38.8/v1.38.8.zip) = 3a30feeac3cf82b7e5dc604a15746925b1d9cfece648d79004b85d810a75f21e
+SIZE (go/databases_weaviate/weaviate-v1.38.8/v1.38.8.zip) = 13531395

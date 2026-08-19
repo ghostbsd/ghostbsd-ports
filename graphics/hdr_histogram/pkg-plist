@@ -11,6 +11,6 @@ lib/cmake/hdr_histogram/hdr_histogram-targets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/hdr_histogram/hdr_histogram-targets.cmake
 lib/libhdr_histogram.so
 lib/libhdr_histogram.so.6
-lib/libhdr_histogram.so.6.2.3
+lib/libhdr_histogram.so.6.3.3
 lib/libhdr_histogram_static.a
 libdata/pkgconfig/hdr_histogram.pc

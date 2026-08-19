@@ -1,5 +1,5 @@
 PORTNAME=	fog-json
-PORTVERSION=	1.3.0
+PORTVERSION=	1.4.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -11,7 +11,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 RUN_DEPENDS=	rubygem-fog-core>=0:devel/rubygem-fog-core \
-		rubygem-multi_json>=1.10<2:devel/rubygem-multi_json
+		rubygem-json>=2.19<3:devel/rubygem-json
 
 USES=		gem
 

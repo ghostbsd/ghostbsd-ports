@@ -1,5 +1,5 @@
 PORTNAME=	pefs
-DISTVERSION=	g20251102
+DISTVERSION=	g20260707
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-kmod
@@ -16,7 +16,7 @@ ONLY_FOR_ARCHS_REASON=	untested on any other arch
 USES=		kmod uidfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd-pefs
-GH_TAGNAME=	d70a43a
+GH_TAGNAME=	2a2c7046
 
 MAKE_ENV=	BINDIR="${PREFIX}/sbin" MANDIR="${PREFIX}/share/man/man"
 MAKE_JOBS_UNSAFE=yes

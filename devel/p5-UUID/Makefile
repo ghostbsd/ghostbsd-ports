@@ -22,6 +22,8 @@ USE_PERL5=	configure
 
 TEST_ENV=	TEST_VERBOSE=1
 
+PORTSCOUT=	limit:^[0-9\.]*$$
+
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/UUID/UUID.so
 

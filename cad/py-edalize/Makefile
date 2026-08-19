@@ -1,5 +1,5 @@
 PORTNAME=	edalize
-DISTVERSION=	0.6.5
+DISTVERSION=	0.6.8
 CATEGORIES=	cad python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -20,9 +20,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Jinja2>=3:devel/py-Jinja2@${PY_FLAVOR} \
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}vunit-hdl>0:cad/py-vunit-hdl@${PY_FLAVOR}
 
 USES=		python shebangfix
-USE_PYTHON=	pep517 autoplist pytest
+USE_PYTHON=	autoplist pep517 pytest
 
-SHEBANG_FILES=	tests/mock_commands/* scripts/el_docker
+SHEBANG_FILES=	scripts/el_docker tests/mock_commands/*
 
 NO_ARCH=	yes
 

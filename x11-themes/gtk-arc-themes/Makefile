@@ -5,7 +5,7 @@ CATEGORIES=	x11-themes
 MASTER_SITES=	https://github.com/jnsh/arc-theme/releases/download/${DISTVERSION}/
 DISTNAME=	arc-theme-${DISTVERSION}
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Arc-themes for GTK-2.0,3.0 & 4.0 based desktop environments
 WWW=		https://github.com/jnsh/arc-theme
 

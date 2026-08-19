@@ -2,7 +2,7 @@ PORTNAME=	zorin-gtk-themes
 DISTVERSION=	4.2.2
 CATEGORIES=	x11-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Zorin OS GTK theme
 WWW=		https://github.com/ZorinOS/zorin-desktop-themes
 

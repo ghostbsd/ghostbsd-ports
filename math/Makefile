@@ -165,6 +165,7 @@
     SUBDIR += abella
     SUBDIR += abs
     SUBDIR += acalc
+    SUBDIR += adasat
     SUBDIR += add
     SUBDIR += adept
     SUBDIR += adol-c
@@ -863,7 +864,6 @@
     SUBDIR += p5-Roman
     SUBDIR += p5-Set-IntSpan
     SUBDIR += p5-Set-IntSpan-Fast
-    SUBDIR += p5-Set-IntSpan-Fast-XS
     SUBDIR += p5-Set-Partition
     SUBDIR += p5-Set-Window
     SUBDIR += p5-Statistics-Basic
@@ -955,6 +955,7 @@
     SUBDIR += py-animatplot-ng
     SUBDIR += py-annoy
     SUBDIR += py-apgl
+    SUBDIR += py-apted
     SUBDIR += py-arviz
     SUBDIR += py-arviz-base
     SUBDIR += py-arviz-plots
@@ -993,11 +994,14 @@
     SUBDIR += py-diffcp
     SUBDIR += py-dionysus
     SUBDIR += py-disjoint-set
+    SUBDIR += py-distance
     SUBDIR += py-docplex
     SUBDIR += py-ducc0
     SUBDIR += py-ecos
+    SUBDIR += py-edit-distance
     SUBDIR += py-emcee
     SUBDIR += py-evalidate
+    SUBDIR += py-fairlearn
     SUBDIR += py-faiss
     SUBDIR += py-fastcluster
     SUBDIR += py-fenics-basix
@@ -1040,6 +1044,7 @@
     SUBDIR += py-keras-applications
     SUBDIR += py-keras-preprocessing
     SUBDIR += py-kiwisolver
+    SUBDIR += py-latex2sympy2-extended
     SUBDIR += py-levmar
     SUBDIR += py-libceed
     SUBDIR += py-libpoly
@@ -1047,8 +1052,8 @@
     SUBDIR += py-lmfit
     SUBDIR += py-logical-unification
     SUBDIR += py-lrcalc
-    SUBDIR += py-luminol
     SUBDIR += py-mapbox-earcut
+    SUBDIR += py-math-verify
     SUBDIR += py-mathics
     SUBDIR += py-mathics-scanner
     SUBDIR += py-matplotlib

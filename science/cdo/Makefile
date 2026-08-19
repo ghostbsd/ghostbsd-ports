@@ -1,7 +1,7 @@
 PORTNAME=	cdo
-PORTVERSION=	2.6.1
+PORTVERSION=	2.6.3
 CATEGORIES=	science
-MASTER_SITES=	https://code.mpimet.mpg.de/attachments/download/30210/ \
+MASTER_SITES=	https://code.mpimet.mpg.de/attachments/download/30224/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -19,6 +19,7 @@ CONFIGURE_ARGS=	--disable-data \
 		--disable-ieg \
 		--disable-openmp \
 		--disable-service \
+		--enable-cdi-app \
 		--enable-cdi-lib \
 		--program-transform-name="" \
 		--with-zlib=/usr
@@ -65,7 +66,6 @@ UUID_LIB_DEPENDS=	libuuid.so:misc/libuuid
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS = / s| contrib||' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e 's|$$(libdir)/\($$$$pkgconfigfile\)|${PREFIX}/libdata/\1|' ${WRKSRC}/libcdi/src/Makefile.in
-	@${REINPLACE_CMD} -e 's|unsigned32 |uint32_t |' ${WRKSRC}/libcdi/src/cdilib.c ${WRKSRC}/libcdi/src/util.c
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/libcdi/src/cdi.inc ${STAGEDIR}${PREFIX}/include/cdi.inc

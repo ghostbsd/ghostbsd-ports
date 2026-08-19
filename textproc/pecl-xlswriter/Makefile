@@ -1,5 +1,5 @@
 PORTNAME=	xlswriter
-PORTVERSION=	2.0.1
+PORTVERSION=	3.0.0
 CATEGORIES=	textproc
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -12,13 +12,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libxlsxwriter.so:math/libxlsxwriter
 
-#USES=		localbase php:pecl ssl
 USES=		php:pecl ssl
-IGNORE_WITH_PHP=	86
 
 CFLAGS+=	-I${LOCALBASE}/include/minizip
 CONFIGURE_ARGS=	 --with-libxlsxwriter=${LOCALBASE} \
 		 --with-openssl=${OPENSSLBASE}
+#IGNORE_WITH_PHP=86
 
 post-patch:
 # Clean up bundled libraries

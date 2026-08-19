@@ -18,6 +18,8 @@ LIB_DEPENDS=	libgmp.so:math/gmp
 USES=		localbase perl5
 USE_PERL5=	configure
 
+PORTSCOUT=	limit:^[0-9\.]*$$
+
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Math/Prime/Util/GMP/GMP.so
 

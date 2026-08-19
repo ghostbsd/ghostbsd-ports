@@ -1,6 +1,6 @@
---- torch/_inductor/kernel/mm.py.orig	2026-04-19 02:49:11 UTC
+--- torch/_inductor/kernel/mm.py.orig	2026-07-08 17:44:38 UTC
 +++ torch/_inductor/kernel/mm.py
-@@ -70,7 +70,7 @@ try:
+@@ -71,7 +71,7 @@ try:
  
      triton_version = TorchVersion(triton.__version__)
      has_triton = True

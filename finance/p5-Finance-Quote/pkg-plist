@@ -1,5 +1,4 @@
 %%SITE_PERL%%/Finance/Quote.pm
-%%SITE_PERL%%/Finance/Quote/AEX.pm
 %%SITE_PERL%%/Finance/Quote/ASEGR.pm
 %%SITE_PERL%%/Finance/Quote/ASX.pm
 %%SITE_PERL%%/Finance/Quote/AlphaVantage.pm
@@ -16,13 +15,16 @@
 %%SITE_PERL%%/Finance/Quote/CurrencyRates/ECB.pm
 %%SITE_PERL%%/Finance/Quote/CurrencyRates/FinanceAPI.pm
 %%SITE_PERL%%/Finance/Quote/CurrencyRates/Fixer.pm
+%%SITE_PERL%%/Finance/Quote/CurrencyRates/Frankfurter.pm
 %%SITE_PERL%%/Finance/Quote/CurrencyRates/OpenExchange.pm
 %%SITE_PERL%%/Finance/Quote/CurrencyRates/TwelveData.pm
+%%SITE_PERL%%/Finance/Quote/CurrencyRates/UniRate.pm
 %%SITE_PERL%%/Finance/Quote/CurrencyRates/YahooJSON.pm
 %%SITE_PERL%%/Finance/Quote/Deka.pm
 %%SITE_PERL%%/Finance/Quote/FTfunds.pm
 %%SITE_PERL%%/Finance/Quote/FinanceAPI.pm
 %%SITE_PERL%%/Finance/Quote/Finanzpartner.pm
+%%SITE_PERL%%/Finance/Quote/Finnhub.pm
 %%SITE_PERL%%/Finance/Quote/Fondsweb.pm
 %%SITE_PERL%%/Finance/Quote/Fool.pm
 %%SITE_PERL%%/Finance/Quote/GoldMoney.pm
@@ -54,7 +56,6 @@
 %%SITE_PERL%%/Finance/Quote/YahooWeb.pm
 %%SITE_PERL%%/Finance/Quote/ZA.pm
 %%PERL5_MAN3%%/Finance::Quote.3.gz
-%%PERL5_MAN3%%/Finance::Quote::AEX.3.gz
 %%PERL5_MAN3%%/Finance::Quote::ASEGR.3.gz
 %%PERL5_MAN3%%/Finance::Quote::ASX.3.gz
 %%PERL5_MAN3%%/Finance::Quote::AlphaVantage.3.gz
@@ -71,13 +72,16 @@
 %%PERL5_MAN3%%/Finance::Quote::CurrencyRates::ECB.3.gz
 %%PERL5_MAN3%%/Finance::Quote::CurrencyRates::FinanceAPI.3.gz
 %%PERL5_MAN3%%/Finance::Quote::CurrencyRates::Fixer.3.gz
+%%PERL5_MAN3%%/Finance::Quote::CurrencyRates::Frankfurter.3.gz
 %%PERL5_MAN3%%/Finance::Quote::CurrencyRates::OpenExchange.3.gz
 %%PERL5_MAN3%%/Finance::Quote::CurrencyRates::TwelveData.3.gz
+%%PERL5_MAN3%%/Finance::Quote::CurrencyRates::UniRate.3.gz
 %%PERL5_MAN3%%/Finance::Quote::CurrencyRates::YahooJSON.3.gz
 %%PERL5_MAN3%%/Finance::Quote::Deka.3.gz
 %%PERL5_MAN3%%/Finance::Quote::FTfunds.3.gz
 %%PERL5_MAN3%%/Finance::Quote::FinanceAPI.3.gz
 %%PERL5_MAN3%%/Finance::Quote::Finanzpartner.3.gz
+%%PERL5_MAN3%%/Finance::Quote::Finnhub.3.gz
 %%PERL5_MAN3%%/Finance::Quote::Fondsweb.3.gz
 %%PERL5_MAN3%%/Finance::Quote::Fool.3.gz
 %%PERL5_MAN3%%/Finance::Quote::GoldMoney.3.gz

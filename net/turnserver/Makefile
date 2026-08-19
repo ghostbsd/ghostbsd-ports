@@ -1,8 +1,7 @@
 PORTNAME=	turnserver
-DISTVERSION=	4.10.0
+DISTVERSION=	4.14.0
 CATEGORIES=	net
-MASTER_SITES=	http://turnserver.open-sys.org/downloads/extradocs/:xdocs \
-		http://coturn.net/turnserver/extradocs/:xdocs
+MASTER_SITES=	https://coturn.net/turnserver/extradocs/:xdocs
 DISTFILES=	turn.extra.docs-2.0.0.1.tar.gz:xdocs
 
 MAINTAINER=	portmaster@BSDforge.com
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libevent.so:devel/libevent
 
-USES=		gettext-runtime perl5 pkgconfig shebangfix ssl
+USES=		perl5 pkgconfig shebangfix ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	coturn
 GH_PROJECT=	coturn

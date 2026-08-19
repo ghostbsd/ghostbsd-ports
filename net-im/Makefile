@@ -25,6 +25,7 @@
     SUBDIR += gajim
     SUBDIR += gloox
     SUBDIR += gomuks
+    SUBDIR += gomuks-legacy
     SUBDIR += gotktrix
     SUBDIR += gotosocial
     SUBDIR += gurk-rs
@@ -92,7 +93,6 @@
     SUBDIR += pecl-stomp2
     SUBDIR += pidgin
     SUBDIR += pidgin-bot-sentry
-    SUBDIR += pidgin-fetion
     SUBDIR += pidgin-hotkeys
     SUBDIR += pidgin-latex
     SUBDIR += pidgin-libnotify

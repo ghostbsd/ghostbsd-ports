@@ -1,5 +1,6 @@
 PORTNAME=	libresidfp
-DISTVERSION=	1.0.2
+DISTVERSION=	1.1.2
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/libsidplayfp/${PORTNAME}/releases/download/v${DISTVERSION}/
 

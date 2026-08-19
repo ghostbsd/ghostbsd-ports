@@ -1,8 +1,8 @@
 * Skip the detection of root rights requirement, the assumption that presence
 * of KMS drivers removes the root requirement is only valid for Linux
 *
---- hw/xfree86/xorg-wrapper.c.orig	2022-01-02 23:41:56.000000000 +0100
-+++ hw/xfree86/xorg-wrapper.c	2022-06-29 16:28:24.797008000 +0200
+--- hw/xfree86/xorg-wrapper.c.orig	2026-07-08 01:35:09 UTC
++++ hw/xfree86/xorg-wrapper.c
 @@ -191,7 +191,7 @@ int main(int argc, char *argv[])
  
  int main(int argc, char *argv[])

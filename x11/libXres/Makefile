@@ -1,13 +1,13 @@
 PORTNAME=	libXres
-PORTVERSION=	1.2.2
-PORTREVISION=	1
+DISTVERSION=	1.2.3
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X Resource usage library
-WWW=		https://www.freedesktop.org/Software/xlibs
+WWW=		https://gitlab.freedesktop.org/xorg/lib/libxres
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 EXTRACT_SUFX=	.tar.xz
 USES=		cpe xorg xorg-cat:lib
@@ -15,7 +15,5 @@ USE_XORG=	x11 xext xorgproto
 INSTALL_TARGET=	install-strip
 CPE_PRODUCT=	libxres
 CPE_VENDOR=	x
-
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 .include <bsd.port.mk>

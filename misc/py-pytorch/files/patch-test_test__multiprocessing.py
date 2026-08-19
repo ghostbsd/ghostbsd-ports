@@ -1,6 +1,6 @@
---- test/test_multiprocessing.py.orig	2026-04-19 00:27:38 UTC
+--- test/test_multiprocessing.py.orig	2026-07-08 17:44:28 UTC
 +++ test/test_multiprocessing.py
-@@ -33,7 +33,7 @@ TEST_REPEATS = 30
+@@ -39,7 +39,7 @@ TEST_REPEATS = 30
  load_tests = load_tests  # noqa: PLW0127
  
  TEST_REPEATS = 30
@@ -9,7 +9,7 @@
  MAX_WAITING_TIME_IN_SECONDS = 30
  
  TEST_CUDA_IPC = (
-@@ -497,7 +497,8 @@ class TestMultiprocessing(TestCase):
+@@ -679,7 +679,8 @@ class TestMultiprocessing(_MultiprocessingTestMixin, T
          simple_autograd_function()
          # Autograd only uses thread when GPUs are involved
          if (

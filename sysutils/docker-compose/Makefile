@@ -1,6 +1,7 @@
 PORTNAME=	docker-compose
 DISTVERSIONPREFIX=	v
 DISTVERSION=	5.1.3
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	leafoliage@FreeBSD.org

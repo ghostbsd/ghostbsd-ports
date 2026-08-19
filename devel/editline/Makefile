@@ -1,5 +1,5 @@
 PORTNAME=	editline
-PORTVERSION=	1.17.1
+PORTVERSION=	2.1.0
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/troglobit/editline/releases/download/${PORTVERSION}/
 

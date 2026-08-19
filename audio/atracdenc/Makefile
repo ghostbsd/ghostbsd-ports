@@ -1,5 +1,5 @@
 PORTNAME=	atracdenc
-DISTVERSION=	0.2.2
+DISTVERSION=	0.2.3
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/dcherednik/${PORTNAME}/releases/download/${DISTVERSION}/ \
 		https://code.mastervirt.ru/st/${PORTNAME}/

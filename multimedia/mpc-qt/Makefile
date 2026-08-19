@@ -1,6 +1,6 @@
 PORTNAME=	mpc-qt
 DISTVERSIONPREFIX=	v
-DISTVERSION=	26.01
+DISTVERSION=	26.07
 CATEGORIES=	multimedia audio
 
 MAINTAINER=	eduardo@FreeBSD.org
@@ -18,10 +18,10 @@ USE_GITHUB=	yes
 USE_GL=		opengl
 USE_QT=		base svg tools:build
 CMAKE_ARGS=	-DMPCQT_VERSION="${DISTVERSION}"
-CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_Boost
 
 PLIST_FILES=	bin/${PORTNAME} \
 		share/applications/io.github.mpc_qt.mpc-qt.desktop \
+		share/applications/io.github.mpc_qt.mpc-qt_enqueue.desktop \
 		share/icons/hicolor/scalable/apps/mpc-qt.svg \
 		share/metainfo/io.github.mpc_qt.mpc-qt.metainfo.xml
 PORTDOCS=	ipc.md

@@ -1,6 +1,6 @@
---- torch/csrc/jit/ir/ir.h.orig	2026-05-13 17:40:44 UTC
+--- torch/csrc/jit/ir/ir.h.orig	2026-07-08 17:44:38 UTC
 +++ torch/csrc/jit/ir/ir.h
-@@ -935,11 +935,22 @@ struct TORCH_API Node {
+@@ -959,11 +959,22 @@ struct TORCH_API Node {
    typename T::ValueType& getAttr(Symbol name) const {
      AT_ASSERT(name.is_attr());
      auto it = findAttr(name, true);

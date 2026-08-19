@@ -34,7 +34,7 @@ TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 TEST_WRKSRC=	${WRKSRC}/tests
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/_icet.cpython-311.so
+	@${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -maxdepth 1 -name '_icet*.so' -exec ${STRIP_CMD} {} +
 
 pre-test: # this test causes the whole testsuite to hard-fail in the beginning for some reason
 	@${RM} -rf ${TEST_WRKSRC}/unittest/test_mchammer/test_site_occupancy_observer.py

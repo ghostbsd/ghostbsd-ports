@@ -1,5 +1,5 @@
 PORTNAME=	whatlanguage
-PORTVERSION=	1.0.6
+PORTVERSION=	2.0.0
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 

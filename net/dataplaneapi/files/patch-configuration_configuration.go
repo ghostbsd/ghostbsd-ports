@@ -1,4 +1,4 @@
---- configuration/configuration.go.orig	2026-07-03 20:15:15 UTC
+--- configuration/configuration.go.orig	2026-07-16 22:33:01 UTC
 +++ configuration/configuration.go
 @@ -36,7 +36,7 @@ type HAProxyConfiguration struct {
  var cfg *Configuration
@@ -18,7 +18,7 @@
  	SpoeTransactionDir   string        `long:"spoe-transaction-dir" description:"Path to the SPOE transaction directory" default:"/tmp/spoe-haproxy" group:"resources"`
 -	DataplaneConfig      string        `short:"f" description:"Path to the dataplane configuration file" default:"/etc/haproxy/dataplaneapi.yaml" yaml:"-"`
 -	ConfigFile           string        `short:"c" long:"config-file" description:"Path to the haproxy configuration file" default:"/etc/haproxy/haproxy.cfg" group:"haproxy"`
-+	DataplaneConfig      string        `short:"f" description:"Path to the dataplane configuration file" default:"%%PREFIX%%/etc/haproxy/dataplaneapi.yaml" yaml:"-"`
++	DataplaneConfig      string        `short:"f" description:"Path to the dataplane configuration file" default:"%%PREFIX%%/etc/dataplaneapi.yaml" yaml:"-"`
 +	ConfigFile           string        `short:"c" long:"config-file" description:"Path to the haproxy configuration file" default:"%%PREFIX%%/etc/haproxy/haproxy.cfg" group:"haproxy"`
  	Userlist             string        `short:"u" long:"userlist" description:"Userlist in HAProxy configuration to use for API Basic Authentication" default:"controller" group:"userlist"`
  	MasterRuntime        string        `short:"m" long:"master-runtime" description:"Path to the master Runtime API socket" group:"haproxy"`

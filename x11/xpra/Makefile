@@ -1,5 +1,5 @@
 PORTNAME=	xpra
-PORTVERSION=	6.4.4
+PORTVERSION=	6.5.1
 CATEGORIES=	x11
 MASTER_SITES=	https://xpra.org/src/
 
@@ -9,7 +9,9 @@ WWW=		https://xpra.org/
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS=	pandoc:textproc/hs-pandoc
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=61.0:devel/py-setuptools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR} \
+		pandoc:textproc/hs-pandoc
 LIB_DEPENDS=	libaom.so:multimedia/aom \
 		libavcodec.so:multimedia/ffmpeg \
 		libavif.so:graphics/libavif \
@@ -18,6 +20,7 @@ LIB_DEPENDS=	libaom.so:multimedia/aom \
 		libharfbuzz.so:print/harfbuzz \
 		liblz4.so:archivers/liblz4 \
 		libopenh264.so:multimedia/openh264 \
+		libvpx.so:multimedia/libvpx \
 		libwebp.so:graphics/webp \
 		libx264.so:multimedia/libx264 \
 		libxxhash.so:devel/xxhash \
@@ -39,15 +42,18 @@ RUN_DEPENDS=	${PY_PILLOW} \
 		ssh-askpass:security/openssh-askpass \
 		xauth:x11/xauth \
 		xkbcomp:x11/xkbcomp \
+		xrandr:x11/xrandr \
 		Xvfb:x11-servers/xorg-server@xvfb
 TEST_DEPENDS=	bash:shells/bash \
-		coverage:devel/py-coverage@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}setproctitle>0:devel/py-setproctitle@${PY_FLAVOR} \
+		coverage:devel/py-coverage@${PY_FLAVOR} \
+		xterm:x11/xterm
 
-USES=		desktop-file-utils gettext-runtime gnome localbase pkgconfig \
-		python shared-mime-info shebangfix tar:xz xorg
+USES=		dbus-testing desktop-file-utils gettext-runtime gnome localbase \
+		pkgconfig python shared-mime-info shebangfix tar:xz xorg
 
 USE_GNOME=	cairo gdkpixbuf gtk30 pygobject3
-USE_PYTHON=	cryptography cython distutils noflavors
+USE_PYTHON=	cryptography cython noflavors pep517
 USE_XORG=	x11 xcomposite xcursor xdamage xext xfixes xi xkbfile xrandr \
 		xres xtst
 PLIST_SUB+=	PORTVERSION=${PORTVERSION} \
@@ -122,7 +128,6 @@ post-patch:
 
 post-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR}
-	${CP} -r ${STAGEDIR}/etc ${STAGEDIR}${PREFIX} && ${RM} -r ${STAGEDIR}/etc
 	${MV} ${STAGEDIR}${ETCDIR}/xorg.conf \
 	    ${STAGEDIR}${ETCDIR}/xorg.conf.sample
 	${MV} ${STAGEDIR}${ETCDIR}/xpra.conf \
@@ -130,6 +135,7 @@ post-install:
 	${CP} -r ${STAGEDIR}${PREFIX}/etc/dbus-1 ${STAGEDIR}${PREFIX}/share && ${RM} -r ${STAGEDIR}${PREFIX}/dbus-1
 	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR}/${PORTNAME} -name '*.so' \
 	    -exec ${STRIP_CMD} {} +
+	${RM} ${STAGEDIR}${PREFIX}/xpra_dissector.lua
 
 do-test:
 	@${MKDIR} ${BINARY_LINKDIR}

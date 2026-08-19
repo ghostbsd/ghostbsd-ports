@@ -1,5 +1,5 @@
 PORTNAME=	boost-libs
-PORTREVISION?=	2
+PORTREVISION?=	3
 
 COMMENT=	Free portable C++ libraries (without Boost.Python)
 WWW=		https://www.boost.org/

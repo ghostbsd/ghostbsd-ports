@@ -1,7 +1,7 @@
 PORTNAME=	barnyard2
-PORTVERSION=	1.13
+DISTVERSION=	1.13
 DISTVERSIONPREFIX=	v2-
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	security
 
 MAINTAINER=	bofh@FreeBSD.org
@@ -9,6 +9,9 @@ COMMENT=	Interpreter for Snort unified2 binary output files
 WWW=		https://github.com/firnsy/barnyard2
 
 LICENSE=	GPLv2
+
+DEPRECATED=	Upstream has been abandoned, and the project is no longer maintained
+EXPIRATION_DATE=	2026-09-30
 
 USES=		autoreconf libtool
 

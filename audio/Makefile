@@ -670,6 +670,7 @@
     SUBDIR += py-speechrecognition
     SUBDIR += py-spotipy
     SUBDIR += py-supysonic
+    SUBDIR += py-tinytag
     SUBDIR += py-torchaudio
     SUBDIR += py-vosk
     SUBDIR += py-wavio

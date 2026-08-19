@@ -1,7 +1,7 @@
 # pkg-help formatted with fmt 59 63
 
 PORTNAME=	bind
-DISTVERSION=	9.21.23
+DISTVERSION=	9.21.24
 .if defined(BIND_TOOLS_SLAVE)
 # dns/bind-tools here
 PORTREVISION=	0
@@ -38,7 +38,7 @@ LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 LIB_DEPENDS=	libnghttp2.so:www/libnghttp2 \
 		liburcu.so:sysutils/liburcu \
 		libuv.so:devel/libuv \
-		liblmdb.so:databases/lmdb
+		liblmdb.so:databases/lmdb0
 
 .if !defined(BIND_TOOLS_SLAVE)
 RUN_DEPENDS=	bind-tools>0:dns/bind-tools

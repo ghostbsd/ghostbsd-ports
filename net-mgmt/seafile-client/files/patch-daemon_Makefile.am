@@ -1,6 +1,6 @@
---- daemon/Makefile.am.orig	2023-12-06 20:22:32 UTC
+--- daemon/Makefile.am.orig	2026-06-18 08:15:42 UTC
 +++ daemon/Makefile.am
-@@ -46,6 +46,10 @@ if LINUX
+@@ -46,6 +46,10 @@ endif
  wt_monitor_src = wt-monitor.c wt-monitor-linux.c wt-monitor-structs.c
  endif
  
@@ -11,7 +11,7 @@
  if WIN32
  wt_monitor_src = wt-monitor.c wt-monitor-win32.c wt-monitor-structs.c
  endif
-@@ -102,7 +102,7 @@
+@@ -98,7 +102,7 @@ seaf_daemon_LDADD = $(top_builddir)/lib/libseafile_com
  	@LIB_RT@ @LIB_UUID@ -lsqlite3 @LIBEVENT_LIBS@ @LIBEVENT_PTHREADS_LIBS@\
  	$(top_builddir)/common/cdc/libcdc.la \
  	$(top_builddir)/common/index/libindex.la @LIB_WS32@ @LIB_CRYPT32@ \

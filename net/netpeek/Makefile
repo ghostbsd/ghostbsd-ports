@@ -1,6 +1,6 @@
 PORTNAME=	netpeek
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.7
+DISTVERSION=	0.3.1
 CATEGORIES=	net gnome python
 
 MAINTAINER=	nxjoseph@FreeBSD.org
@@ -18,6 +18,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	ZingyTomato
 GH_PROJECT=	NetPeek
 USE_GNOME=	glib20 gtk40
+GLIB_SCHEMAS=	io.github.zingytomato.netpeek.gschema.xml
 
 NO_ARCH=	yes
 

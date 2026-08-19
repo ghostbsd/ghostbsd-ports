@@ -1,5 +1,5 @@
 PORTNAME=	databricks-sql-connector
-PORTVERSION=	4.2.6
+PORTVERSION=	4.3.0
 CATEGORIES=	databases python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}poetry-core>=1.0.0:devel/py-poetry-core@${
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lz4>=4.4.5<5:archivers/py-lz4@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oauthlib>=3.1.0<4:security/py-oauthlib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}openpyxl>=3.0.10<4:textproc/py-openpyxl@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pandas>=2.2.3,1<2.4.0,1:math/py-pandas@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pandas>=2.2.3,1<4.0.0,1:math/py-pandas@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pybreaker>=1.0.0<2:devel/py-pybreaker@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyjwt>=2.0.0<3:www/py-pyjwt@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}python-dateutil>=2.8.0<3:devel/py-python-dateutil@${PY_FLAVOR} \
@@ -36,6 +36,6 @@ OPTIONS_DEFINE=	PYARROW
 OPTIONS_DEFAULT=PYARROW
 PYARROW_DESC=	Apache Arrow support
 
-PYARROW_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyarrow>=18.0.0:databases/py-pyarrow@${PY_FLAVOR}
+PYARROW_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyarrow>=22.0.0:databases/py-pyarrow@${PY_FLAVOR}
 
 .include <bsd.port.mk>

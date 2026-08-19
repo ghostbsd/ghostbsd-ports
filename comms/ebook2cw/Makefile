@@ -1,5 +1,6 @@
 PORTNAME=	ebook2cw
 DISTVERSION=	0.8.5
+PORTREVISION=	1
 CATEGORIES=	comms hamradio
 MASTER_SITES=	https://fkurz.net/ham/ebook2cw/
 
@@ -11,6 +12,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libmp3lame.so:audio/lame \
+		libmpg123.so:audio/mpg123 \
 		libogg.so:audio/libogg \
 		libvorbis.so:audio/libvorbis
 

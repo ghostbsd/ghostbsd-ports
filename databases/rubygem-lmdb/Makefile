@@ -1,5 +1,5 @@
 PORTNAME=	lmdb
-PORTVERSION=	0.7.0
+PORTVERSION=	0.8.1
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
@@ -10,7 +10,7 @@ WWW=		https://github.com/doriantaylor/rb-lmdb
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/README.md
 
-LIB_DEPENDS=	liblmdb.so:databases/lmdb
+LIB_DEPENDS=	liblmdb.so:databases/lmdb0
 
 USES=		gem
 

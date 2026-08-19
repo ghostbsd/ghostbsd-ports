@@ -157,6 +157,7 @@ share/mime/packages/openrct2.xml
 %%DATADIR%%/object/official/terrain_surface/openrct2.terrain_surface.void.parkobj
 %%DATADIR%%/object/official/terrain_surface/rct1beta.terrain_surface.wildflowers.parkobj
 %%DATADIR%%/object/official/water/rct2dlc.water.wtrpink.json
+%%DATADIR%%/object/official/water/rct2dlc.water.wtrpink_fix.json
 %%DATADIR%%/object/rct1/audio/rct1.audio.title.json
 %%DATADIR%%/object/rct1/footpath_railings/rct1ll.footpath_railings.bamboo.parkobj
 %%DATADIR%%/object/rct1/footpath_railings/rct1ll.footpath_railings.space.parkobj
@@ -356,6 +357,7 @@ share/mime/packages/openrct2.xml
 %%DATADIR%%/object/rct1/terrain_surface/rct1ll.terrain_surface.roof_grey.parkobj
 %%DATADIR%%/object/rct1/terrain_surface/rct1ll.terrain_surface.rust.parkobj
 %%DATADIR%%/object/rct1/terrain_surface/rct1ll.terrain_surface.wood.parkobj
+%%DATADIR%%/object/rct1/water/rct1.water.natural_water.json
 %%DATADIR%%/object/rct2/audio/rct2.audio.base.rct2.json
 %%DATADIR%%/object/rct2/audio/rct2.audio.base.rctc.json
 %%DATADIR%%/object/rct2/audio/rct2.audio.circus.json
@@ -1210,8 +1212,10 @@ share/mime/packages/openrct2.xml
 %%DATADIR%%/object/rct2/terrain_surface/rct2.terrain_surface.sand_red.json
 %%DATADIR%%/object/rct2/water/rct2.water.wtrcyan.json
 %%DATADIR%%/object/rct2/water/rct2.water.wtrgreen.json
+%%DATADIR%%/object/rct2/water/rct2.water.wtrgreen_fix.json
 %%DATADIR%%/object/rct2/water/rct2.water.wtrgrn.json
 %%DATADIR%%/object/rct2/water/rct2.water.wtrorng.json
+%%DATADIR%%/object/rct2/water/rct2.water.wtrorng_fix.json
 %%DATADIR%%/object/rct2tt/footpath_item/rct2tt.footpath_item.firhydrt.json
 %%DATADIR%%/object/rct2tt/footpath_item/rct2tt.footpath_item.medbench.json
 %%DATADIR%%/object/rct2tt/footpath_railings/rct2tt.footpath_railings.balustrade.parkobj
@@ -2588,6 +2592,7 @@ share/mime/packages/openrct2.xml
 %%DATADIR%%/scenario_patches/1340eef.parkpatch
 %%DATADIR%%/scenario_patches/13e81f2.parkpatch
 %%DATADIR%%/scenario_patches/143e51a.parkpatch
+%%DATADIR%%/scenario_patches/14ad956.parkpatch
 %%DATADIR%%/scenario_patches/14b1d20.parkpatch
 %%DATADIR%%/scenario_patches/17f0c69.parkpatch
 %%DATADIR%%/scenario_patches/1be4b0b.parkpatch

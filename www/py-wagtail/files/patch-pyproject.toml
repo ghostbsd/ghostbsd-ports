@@ -17,19 +17,3 @@
  authors = [
    { name = "Wagtail core team + contributors", email = "hello@wagtail.org" },
  ]
-@@ -114,15 +113,6 @@ include = ["wagtail*"]
- 
- "wagtail" = ["**/*"]
- "*" = [".dockerignore"]
--
--[tool.setuptools.data-files]
--"." = [
--  "AGENTS.md",
--  "CHANGELOG.txt",
--  "CODE_OF_CONDUCT.md",
--  "CONTRIBUTORS.md",
--  "SPONSORS.md",
--]
- 
- [tool.setuptools.exclude-package-data]
- "wagtail" = [

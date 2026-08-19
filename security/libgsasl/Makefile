@@ -1,12 +1,13 @@
 PORTNAME=	gsasl
-PORTVERSION=	2.2.3
+PORTVERSION=	2.2.4
 CATEGORIES=	security
 MASTER_SITES=	GNU
 PKGNAMEPREFIX=	lib
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GNU SASL library
-WWW=		https://www.gnu.org/software/gsasl/
+WWW=		https://www.gnu.org/software/gsasl/ \
+		https://gitlab.com/gsasl/gsasl
 
 LICENSE=	LGPL21
 

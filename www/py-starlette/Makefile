@@ -1,5 +1,5 @@
 PORTNAME=	starlette
-PORTVERSION=	1.1.0
+PORTVERSION=	1.3.1
 CATEGORIES=	www python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -25,6 +25,7 @@ OPTIONS_DEFAULT=FULL
 FULL_DESC=	Full dependencies
 
 FULL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}httpx>=0.27.0<0.29.0:www/py-httpx@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}httpx2>=2.0.0:www/py-httpx2@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}itsdangerous>=0:security/py-itsdangerous@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}Jinja2>=0:devel/py-Jinja2@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}python-multipart>=0.0.18:www/py-python-multipart@${PY_FLAVOR} \

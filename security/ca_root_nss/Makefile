@@ -1,5 +1,5 @@
 PORTNAME=	ca_root_nss
-DISTVERSION=	3.124
+DISTVERSION=	3.125
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/nss/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 DISTNAME=	nss-${DISTVERSION}${NSS_SUFFIX}
@@ -40,8 +40,8 @@ ETCSYMLINK_DESC=	Add symlinks to default bundle locations
 do-build:
 	@${SETENV} PATH=${LOCALBASE}/bin:$${PATH} \
 	    ${PERL} ${WRKDIR}/${BUNDLE_PROCESSOR} \
-	    < ${WRKSRC}/${CERTDATA_TXT_PATH} > \
-	    ${WRKDIR}/ca-root-nss.crt
+	    < ${WRKSRC}/${CERTDATA_TXT_PATH} \
+	    > ${WRKDIR}/ca-root-nss.crt
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/${CERTDIR}

@@ -1,5 +1,28 @@
 bin/syncthingctl
 bin/syncthingtray
+%%PLASMA%%lib/libc++utilities.so
+%%PLASMA%%lib/libc++utilities.so.5
+%%PLASMA%%lib/libc++utilities.so.5.34.2
+%%PLASMA%%lib/libqtforkawesome.so
+%%PLASMA%%lib/libqtforkawesome.so.0.3.4
+%%PLASMA%%lib/libqtforkawesome.so.1
+%%PLASMA%%lib/libqtquickforkawesome.so
+%%PLASMA%%lib/libqtquickforkawesome.so.0.3.4
+%%PLASMA%%lib/libqtquickforkawesome.so.1
+%%PLASMA%%lib/libqtutilities.so
+%%PLASMA%%lib/libqtutilities.so.6
+%%PLASMA%%lib/libqtutilities.so.6.21.3
+%%PLASMA%%lib/libsyncthingconnector.so
+%%PLASMA%%lib/libsyncthingconnector.so.%%LIBVERSION%%
+%%PLASMA%%lib/libsyncthingconnector.so.38
+%%PLASMA%%lib/libsyncthingmodel.so
+%%PLASMA%%lib/libsyncthingmodel.so.%%LIBVERSION%%
+%%PLASMA%%lib/libsyncthingmodel.so.38
+%%PLASMA%%lib/libsyncthingwidgets.so
+%%PLASMA%%lib/libsyncthingwidgets.so.%%LIBVERSION%%
+%%PLASMA%%lib/libsyncthingwidgets.so.38
+%%PLASMA%%%%QT_PLUGINDIR%%/kf6/kfileitemaction/libsyncthingfileitemaction.so
+%%PLASMA%%%%QT_PLUGINDIR%%/plasma/applets/martchus.syncthingplasmoid.so
 share/applications/syncthingtray.desktop
 share/bash-completion/completions/syncthingctl
 share/bash-completion/completions/syncthingtray
@@ -62,3 +85,4 @@ share/syncthingwidgets/translations/syncthingwidgets_en_US.qm
 share/syncthingwidgets/translations/syncthingwidgets_fr_FR.qm
 share/syncthingwidgets/translations/syncthingwidgets_ru_RU.qm
 share/syncthingwidgets/translations/syncthingwidgets_zh_CN.qm
+@dir %%QT_PLUGINDIR%%

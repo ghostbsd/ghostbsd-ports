@@ -138,8 +138,8 @@ _NPM_EXISTS_PKGFILE?=	no
 .  if exists(${PKGJSONSDIR}/${NPM_PKGFILE})
 _NPM_EXISTS_PKGFILE=	yes
 .  endif
-.  if (${_NPM_NAME} == yarn2 || ${_NPM_NAME} == yarn4 || ${_NPM_NAME} == pnpm) && \
-	${_NPM_EXISTS_PKGFILE} == yes && empty(NPM_VER)
+.  if ${_NPM_NAME} == yarn2 || ${_NPM_NAME} == yarn4 || ${_NPM_NAME} == pnpm
+.    if ${_NPM_EXISTS_PKGFILE} == yes && empty(NPM_VER)
 NPM_VER!=	${CAT} ${PKGJSONSDIR}/${NPM_PKGFILE} | \
 		${TR} -d '\n\r\t' | ${SED} -e 's/ //g; s/"//g' | \
 		${SED} -E -e ' \
@@ -155,8 +155,13 @@ NPM_VER!=	${CAT} ${PKGJSONSDIR}/${NPM_PKGFILE} | \
 				s/.*packageManager:([^+,}]+).*/\1/p; d; \
 			}' | \
 		${CUT} -f 2 -d '@'
+.    endif
 .    if empty(NPM_VER)
 IGNORE=	does not specity version of ${NPM_CMDNAME} used for prefetching node modules
+.    else
+_NPM_VER_PARTS=	${NPM_VER:S/./ /g}
+NPM_VER_MAJOR=	${_NPM_VER_PARTS:[1]}
+NPM_VER_MINOR=	${_NPM_VER_PARTS:[2]}
 .    endif
 .  endif
 
@@ -206,6 +211,7 @@ NPM_REBUILD_CMD?=	${NPM_CMDNAME} rebuild
 .    endif
 .  elif ${_NPM_NAME} == pnpm
 NPM_LOCKFILE?=		pnpm-lock.yaml
+NPM_WORKSPACEFILE?=	pnpm-workspace.yaml
 NPM_MODULE_CACHE?=	pnpm-store
 NPM_CMDNAME?=		pnpm
 NPM_CACHE_SETUP_CMD?=	${DO_NADA}
@@ -261,7 +267,7 @@ DISTFILES+=		${_DISTFILE_prefetch}:prefetch
 FETCH_DEPENDS+= ${_NPM_PKGNAME}>0:${_NPM_PORTDIR}
 .    elif ${_NPM_NAME} == pnpm
 FETCH_DEPENDS+=	jq:textproc/jq
-.      if ${NPM_VER:R:R} >= 11
+.      if ${NPM_VER_MAJOR} >= 11
 FETCH_DEPENDS+=	sqlite3:databases/sqlite3
 .      endif
 .    endif
@@ -294,19 +300,20 @@ npm-archive-node-modules:
 		${TAR} -cz --options 'gzip:!timestamp' \
 			-f ${DISTDIR}/${DIST_SUBDIR}/${_DISTFILE_prefetch} \
 			-C ${WRKDIR} @node-modules-cache.mtree; \
-		if [ ${TMPDIR} != ${WRKDIR} ]; then \
+		if [ "${TMPDIR}" != "${WRKDIR}" ]; then \
 			${RM} -r ${WRKDIR}; \
 		fi; \
 	fi
 .    elif ${_NPM_NAME:Myarn*} || ${_NPM_NAME} == pnpm
 .      if ${_NPM_NAME} == pnpm
-.        if ${NPM_VER:R:R} >= 11
+.        if ${NPM_VER_MAJOR} >= 11
 	@if [ ! -f ${DISTDIR}/${DIST_SUBDIR}/${_DISTFILE_prefetch} ] && [ -d ${WRKDIR}/node-modules-cache ]; then \
 		${ECHO_MSG} "===>  Normalizing timestamps and permissions of prefetched node modules"; \
 		tmpdir=${WRKDIR}/pnpm_tmp; \
-		input_db=${WRKDIR}/node-modules-cache/${NPM_MODULE_CACHE}/v11/index.db; \
+		storedir=${WRKDIR}/node-modules-cache/${NPM_MODULE_CACHE}/v11; \
+		input_db=$${storedir}/index.db; \
 		output_db=$${tmpdir}/index.db; \
-		output_db_dump=${WRKDIR}/node-modules-cache/${NPM_MODULE_CACHE}/v11/index_dump.sql; \
+		output_db_dump=$${storedir}/index_dump.sql; \
 		${MKDIR} $${tmpdir}; \
 		cd $${tmpdir} && ${SETENV} ${MAKE_ENV} ${NPM_CMDNAME} add --ignore-scripts --silent msgpackr; \
 		sqlite3 $${input_db} \
@@ -384,7 +391,7 @@ npm-archive-node-modules:
 		done; \
 		sqlite3 $${output_db} "REINDEX; VACUUM;"; \
 		sqlite3 $${output_db} ".dump" > $${output_db_dump}; \
-		${RM} $${input_db}; \
+		${RM} -r $${input_db} $${storedir}/tmp; \
 	fi
 .        else
 	@if [ ! -f ${DISTDIR}/${DIST_SUBDIR}/${_DISTFILE_prefetch} ] && [ -d ${WRKDIR}/node-modules-cache ]; then \
@@ -409,7 +416,7 @@ npm-archive-node-modules:
 			node-modules-cache.mtree && \
 		${TAR} -cz --options 'gzip:!timestamp' \
 			-f ${DISTDIR}/${DIST_SUBDIR}/${_DISTFILE_prefetch} @node-modules-cache.mtree; \
-		if [ ${TMPDIR} != ${WRKDIR} ]; then \
+		if [ "${TMPDIR}" != "${WRKDIR}" ]; then \
 			${RM} -r ${WRKDIR}; \
 		fi; \
 	fi
@@ -425,9 +432,10 @@ _USES_extract+=	600:npm-extract-node-package-manager \
 EXTRACT_DEPENDS+= ${_NPM_PKGNAME}>0:${_NPM_PORTDIR}
 .    elif ${_NPM_NAME} == yarn2 || ${_NPM_NAME} == yarn4 || ${_NPM_NAME} == pnpm
 EXTRACT_DEPENDS+= ${_NODEJS_PKGNAME}>0:${_NODEJS_PORT}
-.      if ${_NPM_NAME} == pnpm && ${NPM_VER:R:R} >= 11
+.      if ${_NPM_NAME} == pnpm && ${NPM_VER_MAJOR} >= 11
 EXTRACT_DEPENDS+= sqlite3:databases/sqlite3
-.        if ${NPM_VER:R} >= 11.3
+.        if (${NPM_VER_MAJOR} == 11 && ${NPM_VER_MINOR} >= 3) || \
+	     ${NPM_VER_MAJOR} >= 12
 NPM_EXTRACT_FLAGS+=	--trust-lockfile
 .        endif
 .      endif
@@ -453,6 +461,15 @@ npm-copy-package-file:
 		fi; \
 		${CP} ${PKGJSONSDIR}/$${f} ${NPM_EXTRACT_WRKSRC}/$${f}; \
 	done
+.      if defined(NPM_WORKSPACEFILE) && !empty(NPM_WORKSPACEFILE)
+	@for f in `${FIND} ${PKGJSONSDIR} -type f -name ${NPM_WORKSPACEFILE} -print | ${SED} -e 's|${PKGJSONSDIR}/||'`; do \
+		${MKDIR} -p `${DIRNAME} ${NPM_EXTRACT_WRKSRC}/$${f}`; \
+		if [ -f ${NPM_EXTRACT_WRKSRC}/$${f} ]; then \
+			${MV} -f ${NPM_EXTRACT_WRKSRC}/$${f} ${NPM_EXTRACT_WRKSRC}/$${f}.bak; \
+		fi; \
+		${CP} ${PKGJSONSDIR}/$${f} ${NPM_EXTRACT_WRKSRC}/$${f}; \
+	done
+.      endif
 .    endif
 
 npm-install-node-modules:
@@ -486,7 +503,7 @@ npm-install-node-modules:
 	fi
 .    elif ${_NPM_NAME} == pnpm
 	@${ECHO_MSG} "===>  Installing node modules from prefetched cache"
-.      if ${NPM_VER:R:R} >= 11
+.      if ${NPM_VER_MAJOR} >= 11
 	@if [ -d ${EXTRACT_WRKDIR}/${NPM_MODULE_CACHE} ]; then \
 		normalized_db_dump=${EXTRACT_WRKDIR}/${NPM_MODULE_CACHE}/v11/index_dump.sql; \
 		index_db=${EXTRACT_WRKDIR}/${NPM_MODULE_CACHE}/v11/index.db; \

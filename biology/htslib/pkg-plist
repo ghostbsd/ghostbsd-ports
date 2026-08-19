@@ -8,6 +8,7 @@ include/htslib/cram.h
 include/htslib/faidx.h
 include/htslib/hfile.h
 include/htslib/hts.h
+include/htslib/hts_alloc.h
 include/htslib/hts_defs.h
 include/htslib/hts_endian.h
 include/htslib/hts_expr.h

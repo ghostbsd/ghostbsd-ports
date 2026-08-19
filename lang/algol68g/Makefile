@@ -1,5 +1,5 @@
 PORTNAME=	algol68g
-PORTVERSION=	3.12.2
+PORTVERSION=	3.12.3
 CATEGORIES=	lang
 MASTER_SITES=	https://algol68genie.nl/ LOCAL/danfe
 

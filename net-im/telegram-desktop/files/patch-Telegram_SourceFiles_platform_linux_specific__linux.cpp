@@ -1,6 +1,6 @@
---- Telegram/SourceFiles/platform/linux/specific_linux.cpp.orig	2026-06-09 19:32:50 UTC
+--- Telegram/SourceFiles/platform/linux/specific_linux.cpp.orig	2026-07-14 11:41:00 UTC
 +++ Telegram/SourceFiles/platform/linux/specific_linux.cpp
-@@ -68,7 +68,7 @@ void PortalAutostart(bool enabled, Fn<void(bool)> done
+@@ -66,7 +66,7 @@ void PortalAutostart(bool enabled, Fn<void(bool)> done
  		Gio::DBusProxyFlags::NONE_,
  		base::Platform::XDP::kService,
  		base::Platform::XDP::kObjectPath,
@@ -9,7 +9,7 @@
  			auto proxy = XdpBackground::BackgroundProxy::new_for_bus_finish(
  				res);
  
-@@ -121,7 +121,7 @@ void PortalAutostart(bool enabled, Fn<void(bool)> done
+@@ -119,7 +119,7 @@ void PortalAutostart(bool enabled, Fn<void(bool)> done
  					+ '/'
  					+ handleToken,
  				nullptr,
@@ -18,7 +18,7 @@
  					auto requestProxy = XdpRequest::RequestProxy::new_finish(
  						res);
  
-@@ -196,7 +196,7 @@ void PortalAutostart(bool enabled, Fn<void(bool)> done
+@@ -194,7 +194,7 @@ void PortalAutostart(bool enabled, Fn<void(bool)> done
  								GLib::Variant::new_variant(
  									GLib::Variant::new_boolean(false))),
  						}),
@@ -27,7 +27,7 @@
  							auto &sandbox = Core::Sandbox::Instance();
  							sandbox.customEnterFromEventLoop([&] {
  								const auto result =
-@@ -451,7 +451,7 @@ bool GenerateServiceFile(bool silent = false) {
+@@ -449,7 +449,7 @@ bool GenerateServiceFile(bool silent = false) {
  		Gio::DBusProxyFlags::NONE_,
  		base::Platform::DBus::kService,
  		base::Platform::DBus::kObjectPath,
@@ -36,7 +36,7 @@
  			auto interface = XdgDBus::DBus(
  				XdgDBus::DBusProxy::new_for_bus_finish(res, nullptr));
  
-@@ -552,7 +552,7 @@ void PortalCheckScheme(
+@@ -550,7 +550,7 @@ void PortalCheckScheme(
  		Gio::DBusProxyFlags::NONE_,
  		base::Platform::XDP::kService,
  		base::Platform::XDP::kObjectPath,
@@ -45,7 +45,7 @@
  			auto interface = XdpOpenURI::OpenURI(
  				XdpOpenURI::OpenURIProxy::new_for_bus_finish(res, nullptr));
  
-@@ -566,7 +566,7 @@ void PortalCheckScheme(
+@@ -564,7 +564,7 @@ void PortalCheckScheme(
  				GLib::Variant::new_array(
  					GLib::VariantType::new_("{sv}"),
  					{}),

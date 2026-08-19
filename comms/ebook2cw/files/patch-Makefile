@@ -1,6 +1,6 @@
 --- Makefile.orig	2023-08-16 18:54:49 UTC
 +++ Makefile
-@@ -1,30 +1,16 @@ VERSION=0.8.5
+@@ -1,37 +1,23 @@ VERSION=0.8.5
  # ebook2cw Makefile -- Fabian Kurz, DJ5CW -- http://fkurz.net/ham/ebook2cw.html
  
  VERSION=0.8.5
@@ -14,7 +14,7 @@
 -
  CFLAGS:=$(CFLAGS) -D DESTDIR=\"$(DESTDIR)\" -D VERSION=\"$(VERSION)\"
 +CFLAGS+= -I%%LOCALBASE%%/include -D LAME -D OGGV
-+LDFLAGS+= -L%%LOCALBASE%%/lib -lintl -lmp3lame -lvorbis -lvorbisenc -logg
++LDFLAGS+= -L%%LOCALBASE%%/lib -lintl -lmp3lame -lvorbis -lvorbisenc -logg -lmpg123
  
 -ifeq ($(USE_LAME), YES)
 -		CFLAGS:=$(CFLAGS) -D LAME
@@ -30,9 +30,17 @@
 -ifeq ($(UNAME), Darwin)
 -	LDFLAGS += -lintl
 -endif
--
--all: ebook2cw
 +all: ebook2cw cgi
  
+-all: ebook2cw
+-
  ebook2cw: ebook2cw.c codetables.h
  	$(CC) ebook2cw.c -pedantic -Wall -Wno-format-truncation -lm $(LDFLAGS) $(CFLAGS) -o ebook2cw
+ 	msgfmt -o po/de.mo po/de.po
+ 
+ cgi: ebook2cw.c codetables.h
+-	$(CC) -static ebook2cw.c $(LDFLAGS) -lm $(CFLAGS) -D CGI -o cw.cgi
++	$(CC) ebook2cw.c $(LDFLAGS) -lm $(CFLAGS) -D CGI -o cw.cgi
+ 
+ cgibuffered: ebook2cw.c codetables.h
+ 	$(CC) -static ebook2cw.c $(LDFLAGS) -lm $(CFLAGS) -D CGI -D CGIBUFFERED -o cw.cgi

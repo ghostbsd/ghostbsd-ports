@@ -7,6 +7,7 @@ share/filebot/jar/bcprov.jar
 share/filebot/jar/bcutil.jar
 share/filebot/jar/bencode.jar
 share/filebot/jar/caffeine.jar
+share/filebot/jar/commons-email.jar
 share/filebot/jar/commons-io.jar
 share/filebot/jar/commons-logging.jar
 share/filebot/jar/darcula.jar
@@ -29,6 +30,7 @@ share/filebot/jar/ivy.jar
 share/filebot/jar/jakarta.activation.jar
 share/filebot/jar/jakarta.mail.jar
 share/filebot/jar/jakarta.xml.bind-api.jar
+share/filebot/jar/java-diff-utils.jar
 share/filebot/jar/java-objc-bridge.jar
 share/filebot/jar/jaxb-core.jar
 share/filebot/jar/jaxb-runtime.jar
@@ -36,6 +38,7 @@ share/filebot/jar/jna-platform.jar
 share/filebot/jar/jna.jar
 share/filebot/jar/json-io.jar
 share/filebot/jar/jsoup.jar
+share/filebot/jar/jxlatte.jar
 share/filebot/jar/language-detector.jar
 share/filebot/jar/lanterna.jar
 share/filebot/jar/metadata-extractor.jar
@@ -49,3 +52,4 @@ share/filebot/jar/slf4j-jdk14.jar
 share/filebot/jar/xmlrpc.jar
 share/filebot/jar/xmpcore.jar
 share/filebot/jar/xz.jar
+share/filebot/lib/FreeBSD-amd64/libjnidispatch.so

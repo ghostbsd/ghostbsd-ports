@@ -3,7 +3,7 @@ DISTVERSION=	2025.06
 CATEGORIES=	games emulators
 MASTER_SITES=	https://codeberg.org/Alexander88207/Mizutamari/archive/${PORTVERSION}${EXTRACT_SUFX}?dummy=/
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	User-friendly Wine front-end
 WWW=		https://codeberg.org/Alexander88207/Mizutamari
 

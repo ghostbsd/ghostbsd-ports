@@ -1,6 +1,5 @@
 PORTNAME=	mqttwarn
-DISTVERSION=	0.35.0
-PORTREVISION=	1
+DISTVERSION=	0.36.1
 CATEGORIES=	sysutils python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,9 +13,9 @@ LICENSE=	EPL
 # based on setup.py : tests_require=extras['test'],
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}versioningit>=0:devel/py-versioningit@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}versioningit>=0:devel/py-versioningit@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}attrs>=19.3.0:devel/py-attrs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}docopt>=0.6.2:devel/py-docopt@${PY_FLAVOR} \
@@ -25,6 +24,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}attrs>=19.3.0:devel/py-attrs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>=2.10.1:devel/py-Jinja2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}paho-mqtt>=1.4.0:net/py-paho-mqtt@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>=2.22.0:www/py-requests@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}simplejson>0:devel/py-simplejson@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}six>=1.13.0:devel/py-six@${PY_FLAVOR}
 
 USES=		python shebangfix
@@ -38,8 +38,8 @@ NO_ARCH=	yes
 # The following were omitted because their dependencies are not found in the
 # FreeBSD port tree: AMQP APPRISE ASTERISK FBCHAT IOHUB NMA NSCA OSXNOTIFY PASTEBINPUB PROWL PUSHBULLET
 #                    SLACK TOOTPASTE XIVELY XMPP
-OPTIONS_DEFINE=	APNS CELERY DNSUPDATE DOCS EXAMPLES GSS2 MYSQL POSTGRES REDISPUB \
-		RRDTOOL SERIAL SSH TWILIO TWITTER WEBSOCKET
+OPTIONS_DEFINE=	APNS CELERY DNSUPDATE DOCS EXAMPLES GSS2 MYSQL POSTGRES \
+		REDISPUB RRDTOOL SERIAL SSH TWILIO TWITTER WEBSOCKET
 
 USERS=		mqttwarn
 GROUPS=		mqttwarn

@@ -13,6 +13,8 @@ LICENSE_NAME=	OpenLDAP Public License
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
+CONFLICTS_INSTALL=	lmdb0 # include/lmdb.h bin/mdb_stat
+
 WRKSRC_SUBDIR=		libraries/liblmdb
 MAKE_ARGS+=	CC="${CC}"
 MAKE_ARGS+=	prefix="${PREFIX}" INSTALL_PROGRAM="${INSTALL_PROGRAM}"

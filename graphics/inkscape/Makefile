@@ -1,6 +1,5 @@
 PORTNAME=	inkscape
-DISTVERSION=	1.4.3
-PORTREVISION=	5
+DISTVERSION=	1.4.4
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 
@@ -53,7 +52,7 @@ USE_PYTHON=	cython
 USE_XORG=	sm ice x11 xext
 USE_LDCONFIG=	yes
 
-DATETAG=	2025-12-25_0d15f75042
+DATETAG=	2026-05-05_dcaf3e7d9e
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}_${DATETAG}
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
@@ -111,6 +110,8 @@ NLS_USES=		gettext
 GSPELL_DESC=		Support for spell checking through gspell
 GSPELL_CMAKE_BOOL=	WITH_GSPELL
 GSPELL_LIB_DEPENDS=	libgspell-1.so:textproc/gspell
+
+PLIST_SUB=		DISTVERSION=${DISTVERSION}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|COMMAND python3|COMMAND ${PYTHON_VERSION}|g' \

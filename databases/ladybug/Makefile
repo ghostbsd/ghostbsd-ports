@@ -1,6 +1,6 @@
 PORTNAME=	ladybug
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.18.0
+DISTVERSION=	0.19.0
 CATEGORIES=	databases
 
 MAINTAINER=	mahlon@martini.nu
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libbrotlicommon.so:archivers/brotli \
 		libyyjson.so:devel/yyjson \
 		libzstd.so:archivers/zstd
 
-USES=		cmake ninja:build python:build
+USES=		cmake ninja:build python:build ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	ladybugdb
 USE_LDCONFIG=	yes
@@ -33,8 +33,5 @@ PLIST_SUB=	VERSION=${DISTVERSION}
 
 post-install:
 	${RM} -r ${STAGEDIR}${PREFIX}/include/cppjieba ${STAGEDIR}${PREFIX}/share/cppjieba
-	${MV}  ${STAGEDIR}${PREFIX}/lib/liblbug.so ${STAGEDIR}${PREFIX}/lib/liblbug.so.${DISTVERSION}
-	${RLN} liblbug.so.${DISTVERSION} ${STAGEDIR}${PREFIX}/lib/liblbug.so
-	${RLN} liblbug.so.${DISTVERSION} ${STAGEDIR}${PREFIX}/lib/liblbug.so.0
 
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
 PORTNAME=			${SAMBA4_BASENAME}416
 PORTVERSION=			${SAMBA4_VERSION}
-PORTREVISION=			11
+PORTREVISION=			12
 CATEGORIES?=			net
 MASTER_SITES=			SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=			${SAMBA4_DISTNAME}
@@ -539,7 +539,7 @@ CONFIGURE_ARGS+=		--accel-aes=none
 .if ${ARCH} != armv6 && ${ARCH} != armv7 && ${ARCH} != i386 && ${ARCH} != powerpc && ${ARCH} != powerpcspe
 .	if defined(SAMBA4_BUNDLED_LDB) && ${SAMBA4_BUNDLED_LDB} == yes && (${PORT_OPTIONS:MAD_DC} || ${PORT_OPTIONS:MDEVELOPER})
 # LMDB
-SAMBA4_LMDB_DEPENDS=		lmdb>=0.9.16:databases/lmdb
+SAMBA4_LMDB_DEPENDS=		lmdb0>=0.9.16:databases/lmdb0
 PLIST_FILES+=			${SAMBA4_LIBDIR}/private/libldb-mdb-int-samba4.so \
 				${SAMBA4_MODULEDIR}/ldb/mdb.so
 .	endif

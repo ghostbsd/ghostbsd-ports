@@ -1,7 +1,6 @@
 etc/profile.d/debuginfod.csh
 etc/profile.d/debuginfod.sh
 etc/debuginfod/elfutils.certpath
-etc/debuginfod/elfutils.urls
 usr/bin/debuginfod-find
 usr/lib/libasm-%%LIBVERSION%%.so
 usr/lib/libasm.so.1

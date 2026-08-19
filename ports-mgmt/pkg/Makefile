@@ -1,5 +1,6 @@
 PORTNAME=	pkg
-DISTVERSION=	2.7.5
+DISTVERSION=	2.8.1
+PORTREVISION=	1
 _PKG_VERSION=	${DISTVERSION}
 CATEGORIES=	ports-mgmt
 
@@ -16,13 +17,13 @@ USE_LDCONFIG=	${PREFIX}/lib/compat/pkg
 HAS_CONFIGURE=	yes
 PORTDOCS=	NEWS
 PORTSCOUT=	ignore:1
-CONFIGURE_ARGS=	--prefix="${PREFIX}"
+CONFIGURE_ARGS=	--prefix="${PREFIX}" \
+		--mandir="${PREFIX}/share/man"
 CONFIGURE_ENV=	CC_FOR_BUILD="${CC}"
 
 # Use a submake as 'deinstall install' needs to reevaluate PKG_REGISTER
 # so that pkg-static is used from the wrkdir
 USE_SUBMAKE=	yes
-CFLAGS+=	-Wno-error
 
 OPTIONS_DEFINE=	DOCS
 
@@ -53,8 +54,8 @@ PKG_BIN=	${WRKSRC}/src/pkg-static
 .endif
 
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/src/pkg.conf.sample ${STAGEDIR}${PREFIX}/etc/
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/compat/pkg
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libpkg.so ${STAGEDIR}${PREFIX}/sbin/pkg*
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

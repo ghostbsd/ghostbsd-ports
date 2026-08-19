@@ -1,6 +1,5 @@
 PORTNAME=	libcmis
-PORTVERSION=	0.6.2
-PORTREVISION=	7
+PORTVERSION=	0.6.3
 CATEGORIES=	net devel
 MASTER_SITES=	https://github.com/tdf/libcmis/releases/download/v${PORTVERSION}/ \
 		https://dev-www.libreoffice.org/src/

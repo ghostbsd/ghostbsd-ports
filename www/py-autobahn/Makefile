@@ -1,6 +1,7 @@
 PORTNAME=	autobahn
 DISTVERSIONPREFIX=	v
-DISTVERSION=	25.9.1
+DISTVERSION=	25.10.2
+PORTREVISION=	1
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -23,6 +24,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	crossbario
 GH_PROJECT=	autobahn-python
 USE_PYTHON=	autoplist cryptography pep517 pytest
+
+MAKE_ENV=	AUTOBAHN_ARCH_TARGET=safe
 
 OPTIONS_DEFINE=		COMPRESS ENCRYPTION SCRAM SERIALIZATION
 OPTIONS_DEFAULT=	ENCRYPTION SCRAM SERIALIZATION TWISTED
@@ -61,13 +64,12 @@ TWISTED_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}attrs>=20.3.0:devel/py-attrs@${PY_F
 .include <bsd.port.options.mk>
 
 post-patch:
-	@${REINPLACE_CMD} -e '/march=native/d' ${WRKSRC}/autobahn/nvx/_utf8validator.py
-	@${REINPLACE_CMD} -e 's|setuptools>=64|setuptools>=63|' ${WRKSRC}/pyproject.toml
+	@${REINPLACE_CMD} '/license-files/d; s|^license = "MIT"|license = { text = "MIT" }|; s|80.9.0|63|g' \
+		${WRKSRC}/pyproject.toml
 
 post-stage:
-.if ${ARCH} !=	armv7
-	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/_nvx_utf8validator.abi3.so
-.endif
+	@${FIND} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR} -name '_nvx_*.abi3.so' \
+		-exec ${STRIP_CMD} {} +
 
 do-test-TWISTED-on:
 	@cd ${WRKSRC} && USE_TWISTED=1 ${PYTHON_CMD} -m twisted.trial ${WRKSRC}/autobahn

@@ -1,17 +1,8 @@
---- test/test_jit.py.orig	2026-05-13 17:40:38 UTC
+-- Disable JIT dropout tests that hang on FreeBSD due to a deadlock
+-- in the legacy executor mode / JIT profiler interaction.
+--- test/test_jit.py.orig	2026-07-15 00:41:58 UTC
 +++ test/test_jit.py
-@@ -377,6 +377,10 @@ class TestJitProfiler(JitTestCase):
-             self.graph_executor_optimize_opt
-         )
- 
-+    @unittest.skipIf(
-+        sys.platform.startswith("freebsd"),
-+        "Hangs on FreeBSD due to profiler/JIT interaction deadlock",
-+    )
-     def test_profiler(self):
-         torch._C._set_graph_executor_optimize(False)
- 
-@@ -1838,6 +1842,10 @@ graph(%Ra, %Rb):
+@@ -1843,6 +1843,10 @@ graph(%Ra, %Rb):
  
      @slowTest
      @unittest.skipIf(GRAPH_EXECUTOR != ProfilingMode.LEGACY, 'Testing differentiable graph')
@@ -22,7 +13,7 @@
      def test_dropout_module_requires_grad(self):
          with enable_profiling_mode_for_profiling_tests():
              class MyModule(torch.nn.Module):
-@@ -1881,6 +1889,10 @@ graph(%Ra, %Rb):
+@@ -1886,6 +1890,10 @@ graph(%Ra, %Rb):
  
      @unittest.skipIf(GRAPH_EXECUTOR == ProfilingMode.SIMPLE, 'Testing differentiable graph')
      @skipIfTorchDynamo("Torchdynamo cannot correctly handle profiler.profile calls")

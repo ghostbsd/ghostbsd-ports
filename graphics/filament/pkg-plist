@@ -64,6 +64,8 @@ include/camutils/Bookmark.h
 include/camutils/Manipulator.h
 include/camutils/compiler.h
 include/filamat/Enums.h
+include/filament/FramePacer.h
+include/filament/FramePipelineEstimator.h
 include/filamat/MaterialBuilder.h
 include/filamat/Package.h
 include/filament-generatePrefilterMipmap/generatePrefilterMipmap.h
@@ -81,6 +83,7 @@ include/filament/Engine.h
 include/filament/Exposure.h
 include/filament/Fence.h
 include/filament/FilamentAPI.h
+include/filament/FrameHistoryStream.h
 include/filament/Frustum.h
 include/filament/IndexBuffer.h
 include/filament/IndirectLight.h
@@ -182,6 +185,7 @@ include/utils/MonotonicRingMap.h
 include/utils/Mutex.h
 include/utils/NameComponentManager.h
 include/utils/PagedArenaBitset.h
+include/utils/PagedArenaBitsetPool.h
 include/utils/Panic.h
 include/utils/Path.h
 include/utils/PrivateImplementation-impl.h
@@ -197,6 +201,7 @@ include/utils/algorithm.h
 include/utils/bitset.h
 include/utils/compiler.h
 include/utils/compressed_pair.h
+include/utils/debug/Mutex.h
 include/utils/debug.h
 include/utils/generic/Mutex.h
 include/utils/getopt.h

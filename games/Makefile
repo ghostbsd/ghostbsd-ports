@@ -21,6 +21,7 @@
     SUBDIR += NBlood
     SUBDIR += Nanosaur
     SUBDIR += OpenLara
+    SUBDIR += OpenLoco
     SUBDIR += OpenTomb
     SUBDIR += SRB2
     SUBDIR += SpaceCadetPinball
@@ -290,7 +291,6 @@
     SUBDIR += freedink-data
     SUBDIR += freedink-dfarc
     SUBDIR += freedink-engine
-    SUBDIR += freedoko
     SUBDIR += freedroid
     SUBDIR += freedroidrpg
     SUBDIR += freeorion
@@ -990,6 +990,7 @@
     SUBDIR += trimines
     SUBDIR += triplane
     SUBDIR += trojka
+    SUBDIR += trx
     SUBDIR += tsito
     SUBDIR += tt
     SUBDIR += ttt
@@ -1082,6 +1083,7 @@
     SUBDIR += xdesktopwaves
     SUBDIR += xdigger
     SUBDIR += xemeraldia
+    SUBDIR += xevil
     SUBDIR += xeyesplus
     SUBDIR += xfce4-eyes-plugin
     SUBDIR += xfireworks

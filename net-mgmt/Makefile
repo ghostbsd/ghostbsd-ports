@@ -73,6 +73,7 @@
     SUBDIR += fence-agents
     SUBDIR += fetchconfig
     SUBDIR += fli
+    SUBDIR += flow
     SUBDIR += flow-tools
     SUBDIR += flowd
     SUBDIR += flowviewer
@@ -336,18 +337,15 @@
     SUBDIR += py-napalm-logs
     SUBDIR += py-ncclient
     SUBDIR += py-netutils
-    SUBDIR += py-nxapi-plumbing
     SUBDIR += py-opn-cli
     SUBDIR += py-pdagent
     SUBDIR += py-pdagent-integrations
     SUBDIR += py-phonebox-plugin
     SUBDIR += py-prometheus-client
-    SUBDIR += py-pyIOSXR
     SUBDIR += py-pyang
     SUBDIR += py-pyeapi
     SUBDIR += py-pyixapi
     SUBDIR += py-pynetbox
-    SUBDIR += py-pynxos
     SUBDIR += py-pypowerwall
     SUBDIR += py-pysmi
     SUBDIR += py-pysnmp
@@ -413,6 +411,7 @@
     SUBDIR += unbound_exporter
     SUBDIR += unifi10
     SUBDIR += unifi9
+    SUBDIR += uptime-kuma
     SUBDIR += victoria-logs
     SUBDIR += victoria-metrics
     SUBDIR += virt-viewer

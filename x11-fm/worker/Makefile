@@ -1,5 +1,5 @@
 PORTNAME=	worker
-PORTVERSION=	5.2.2
+PORTVERSION=	5.3.1
 CATEGORIES=	x11-fm
 MASTER_SITES=	http://www.boomerangsworld.de/cms/worker/downloads/
 

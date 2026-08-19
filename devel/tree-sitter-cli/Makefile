@@ -1,7 +1,7 @@
 PORTNAME=	tree-sitter-cli
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.26.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	amadaluzia@disroot.org
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${LOCALBASE}/bin/node:www/node24
 
-USES=		cargo
+USES=		cargo llvm:lib
 USE_GITHUB=	yes
 GH_ACCOUNT=	tree-sitter
 GH_PROJECT=	tree-sitter

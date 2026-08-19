@@ -122,6 +122,8 @@ bin/writefreely
 %%WWWDIR%%/static/img/ic_info_dark@2x.png
 %%WWWDIR%%/static/img/ic_list@2x.png
 %%WWWDIR%%/static/img/ic_list_dark@2x.png
+%%WWWDIR%%/static/img/ic_preview@2x.png
+%%WWWDIR%%/static/img/ic_preview_dark@2x.png
 %%WWWDIR%%/static/img/ic_send@2x.png
 %%WWWDIR%%/static/img/ic_send_dark@2x.png
 %%WWWDIR%%/static/img/mark/gitea.png

@@ -1,5 +1,5 @@
 PORTNAME=	bastille
-DISTVERSION=	1.4.3.260429
+DISTVERSION=	1.4.4
 CATEGORIES=	sysutils
 MAINTAINER=	jdhurtado@orbiware.com
 # co-maintainer: snarfingcode666@gmail.com

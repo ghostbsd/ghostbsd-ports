@@ -1,6 +1,6 @@
 PORTNAME=	redisearch
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.10.5
+DISTVERSION=	2.10.9
 CATEGORIES=	textproc
 PKGNAMESUFFIX=	${DISTVERSION:R:R}
 
@@ -18,6 +18,9 @@ LICENSE_FILE_SSPLv1=	${WRKSRC}/licenses/SSPLv1.txt
 LICENSE_PERMS_RSALv2=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_PERMS_SSPLv1=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
+NOT_FOR_ARCHS=	i386
+NOT_FOR_ARCHS_REASON=	requires 64-bit architecture
+
 LIB_DEPENDS=	libcpu_features.so:devel/cpu_features
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/optional.hpp:devel/boost-libs
 
@@ -25,7 +28,7 @@ USES=		cmake compiler localbase:ldflags
 USE_GITHUB=	yes
 GH_ACCOUNT=	RediSearch
 GH_PROJECT=	RediSearch
-GH_TUPLE=	RedisAI:VectorSimilarity:fadfd5f:vectorsimilarity/deps/VectorSimilarity \
+GH_TUPLE=	RedisAI:VectorSimilarity:f45dd53:vectorsimilarity/deps/VectorSimilarity \
 		RedisLabsModules:readies:9f19bb2:readies/deps/readies \
 		RedisLabs:RedisModulesSDK:6a62be4:redismodulesdk/deps/RedisModulesSDK \
 
@@ -39,8 +42,6 @@ CXXFLAGS+=	-Wno-vla-cxx-extension -fPIC -I${LOCALBASE}/include/cpu_features
 LDFLAGS+=      -lcpu_features
 
 post-patch:
-	#@${REINPLACE_CMD} -e '/conan_toolchain.cmake/d' \
-	#	${WRKSRC}/src/geometry/CMakeLists.txt
 	${ECHO_CMD} "find_package(CpuFeatures REQUIRED)" > ${WRKSRC}/deps/VectorSimilarity/cmake/cpu_features.cmake
 
 do-install:

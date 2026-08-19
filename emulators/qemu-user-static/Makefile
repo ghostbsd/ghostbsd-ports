@@ -1,6 +1,6 @@
 PORTNAME=	qemu
 PORTVERSION=	3.1.0
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	emulators
 PKGNAMESUFFIX=	-user-static
 DIST_SUBDIR=	qemu/${PORTVERSION}
@@ -17,7 +17,7 @@ CONFLICTS_INSTALL=	qemu-user-static-devel
 
 USES=		bison compiler:c11 cpe elfctl gmake perl5 pkgconfig python:build
 USE_GITHUB=	yes
-GH_TUPLE=	qemu-bsd-user:qemu-bsd-user:527096e0c8	\
+GH_TUPLE=	qemu-bsd-user:qemu-bsd-user:f7eaacf0bd	\
 		qemu:keycodemapdb:10739aa:keycodemapdb/ui/keycodemapdb
 HAS_CONFIGURE=	yes
 USE_PERL5=	build

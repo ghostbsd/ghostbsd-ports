@@ -13,9 +13,9 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	gsed:textproc/gsed \
-		lmdb>=0.9.15:databases/lmdb
+		lmdb0>=0.9.15:databases/lmdb0
 LIB_DEPENDS=	libgnutls.so:security/gnutls \
-		liblmdb.so:databases/lmdb
+		liblmdb.so:databases/lmdb0
 
 USES=		compiler:c11 libtool localbase pkgconfig tar:xz
 USE_LDCONFIG=	yes

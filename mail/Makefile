@@ -29,6 +29,7 @@
     SUBDIR += bmf
     SUBDIR += bogofilter
     SUBDIR += bogofilter-kc
+    SUBDIR += bogofilter-lmdb1
     SUBDIR += bogofilter-sqlite
     SUBDIR += bsd-vacation
     SUBDIR += bsfilter
@@ -506,7 +507,6 @@
     SUBDIR += procmail
     SUBDIR += procmail-bgrb
     SUBDIR += proxsmtp
-    SUBDIR += py-afew
     SUBDIR += py-aiosmtpd
     SUBDIR += py-alot
     SUBDIR += py-authheaders
@@ -620,6 +620,7 @@
     SUBDIR += rubygem-actionmailer72
     SUBDIR += rubygem-actionmailer80
     SUBDIR += rubygem-actionmailer81
+    SUBDIR += rubygem-aws-actionmailer-ses-gitlab
     SUBDIR += rubygem-email_reply_parser
     SUBDIR += rubygem-email_reply_parser-discourse
     SUBDIR += rubygem-email_reply_trimmer
@@ -741,6 +742,7 @@
     SUBDIR += sqwebmail
     SUBDIR += ssmtp
     SUBDIR += stalwart
+    SUBDIR += stalwart-cli
     SUBDIR += surblhost
     SUBDIR += swaks
     SUBDIR += sylpheed

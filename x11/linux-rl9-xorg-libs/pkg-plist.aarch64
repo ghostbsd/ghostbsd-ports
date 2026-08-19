@@ -625,7 +625,6 @@ usr/share/X11/xkb/types/pc
 %%PORTDOCS%%usr/share/doc/libSM/ChangeLog
 %%PORTDOCS%%usr/share/doc/libX11-common/AUTHORS
 %%PORTDOCS%%usr/share/doc/libX11-common/COPYING
-%%PORTDOCS%%usr/share/doc/libX11-common/NEWS
 %%PORTDOCS%%usr/share/doc/libX11-common/README.md
 %%PORTDOCS%%usr/share/doc/libXScrnSaver/COPYING
 %%PORTDOCS%%usr/share/doc/libXScrnSaver/ChangeLog
@@ -1168,6 +1167,12 @@ usr/share/libwacom/serial-wacf004.tablet
 usr/share/libwacom/surface-go-2.tablet
 usr/share/libwacom/surface-go.tablet
 usr/share/libwacom/volito-4x5.tablet
+usr/share/libwacom/wacom-cintiq-16-3.tablet
+usr/share/libwacom/wacom-cintiq-24-p.tablet
+usr/share/libwacom/wacom-cintiq-24-pt.tablet
+usr/share/libwacom/wacom-dth-246e.tablet
+usr/share/libwacom/wacom-dtk-168e.tablet
+usr/share/libwacom/wacom-dtk-246e.tablet
 usr/share/libwacom/wacom-intuos-pro-3-l.tablet
 usr/share/libwacom/wacom-intuos-pro-3-m.tablet
 usr/share/libwacom/wacom-intuos-pro-3-s.tablet

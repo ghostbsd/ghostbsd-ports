@@ -2,7 +2,7 @@ PORTNAME=	matcha-gtk-themes
 DISTVERSION=	2025-04-11
 CATEGORIES=	x11-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Flat design theme for GTK based desktop environment
 WWW=		https://github.com/vinceliuice/Matcha-gtk-theme
 

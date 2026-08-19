@@ -1,6 +1,6 @@
 PORTNAME=	redisearch
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.8.5
+DISTVERSION=	2.8.9
 CATEGORIES=	textproc
 PKGNAMESUFFIX=	${DISTVERSION:R:S/.//}
 
@@ -18,6 +18,9 @@ LICENSE_FILE_SSPLv1=	${WRKSRC}/licenses/SSPLv1.txt
 LICENSE_PERMS_RSALv2=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_PERMS_SSPLv1=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
+NOT_FOR_ARCHS=	i386
+NOT_FOR_ARCHS_REASON=	requires 64-bit architecture
+
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/optional.hpp:devel/boost-libs
 LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libcpu_features.so:devel/cpu_features
@@ -27,7 +30,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	RediSearch
 GH_PROJECT=	RediSearch
 GH_TUPLE=	RedisAI:VectorSimilarity:94f2fcd:vectorsimilarity/deps/VectorSimilarity \
-		RedisLabsModules:readies:42a6c2c:readies/deps/readies \
+		RedisLabsModules:readies:54ecd52:readies/deps/readies \
 		RedisLabs:RedisModulesSDK:7ba899d:redismodulesdk/deps/RedisModulesSDK \
 		google:s2geometry:efb4eb8:s2geometry/deps/s2geometry
 

@@ -1,5 +1,6 @@
 PORTNAME=	UCD
-PORTVERSION=	17.0.0 # must sync with deskutils/gucharmap
+PORTVERSION=	18.0.0 # must sync with deskutils/gucharmap
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	textproc
 MASTER_SITES=	https://www.unicode.org/Public/${PORTVERSION}/${PORTNAME:tl}/:src	\

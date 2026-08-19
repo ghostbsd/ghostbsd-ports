@@ -1,6 +1,6 @@
 PORTNAME=	fcitx
 DISTVERSION=	4.2.9.9
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	chinese x11
 MASTER_SITES=	http://download.fcitx-im.org/fcitx/:fcitx \
 		http://download.fcitx-im.org/data/:data

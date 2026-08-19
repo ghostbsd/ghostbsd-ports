@@ -1,0 +1,10 @@
+-- Add setuptools packages.find config to exclude top-level utils package that conflicts with other ports.
+--- pyproject.toml.orig	2026-07-09 20:28:23 UTC
++++ pyproject.toml
+@@ -19,3 +19,6 @@ dependencies = [
+     "transformers>=4.57.3",
+     "twine>=6.2.0",
+ ]
++
++[tool.setuptools.packages.find]
++exclude = ["utils", "utils.*"]

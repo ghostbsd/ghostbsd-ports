@@ -1,6 +1,6 @@
---- dlls/winevulkan/vulkan.c.orig
+--- dlls/winevulkan/vulkan.c.orig	2025-11-06 09:54:15 UTC
 +++ dlls/winevulkan/vulkan.c
-@@ -30,6 +30,7 @@
+@@ -29,6 +29,7 @@
  #include <stdio.h>
  #include <assert.h>
  #include <limits.h>
@@ -8,7 +8,7 @@
  #ifdef HAVE_SYS_SYSCALL_H
  # include <sys/syscall.h>
  #endif
-@@ -4332,11 +4333,7 @@ signal_op_complete:
+@@ -3598,11 +3599,7 @@ void *signaller_worker(void *arg)
  
  void *signaller_worker(void *arg)
  {
@@ -18,6 +18,6 @@
 -    int unix_tid = -1;
 -#endif
 +    int unix_tid = pthread_getthreadid_np();
-     struct wine_device *device = arg;
+     struct vulkan_device *device = arg;
      struct wine_semaphore *sem;
      VkSemaphoreWaitInfo wait_info = { 0 };

@@ -1,5 +1,5 @@
 PORTNAME=	botan
-DISTVERSION=	3.11.1
+DISTVERSION=	3.12.0
 CATEGORIES=	security
 MASTER_SITES=	https://botan.randombit.net/releases/
 PKGNAMESUFFIX=	${_BOTANMAJOR}
@@ -70,7 +70,7 @@ SQLITE3_CONFIGURE_WITH=	sqlite3
 
 # llvm from ports fixes build failure, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=279136
 .if ${OPSYS} == FreeBSD && \
-	((${OSVERSION} >= 1500000) || \
+	((${OSVERSION} >= 1700000) || \
 	${PORT_OPTIONS:MLLVM_FROM_PORTS})
 USES+=	llvm
 USES:=	${USES:Ncompiler\:*} # XXX avoid warnings
@@ -78,7 +78,7 @@ CHOSEN_COMPILER_TYPE=	clang
 .endif
 
 .if ${ARCH} == aarch64
-CONFIGURE_ARGS+=	--cc-abi="-march=armv8-a+crypto"
+#CONFIGURE_ARGS+=	--cc-abi="-march=armv8-a+crypto"
 .elif ${ARCH:Mpowerpc64*}
 CONFIGURE_ARGS+=	--cpu="ppc64"
 .if !defined(MACHINE_CPU) || (defined(MACHINE_CPU) && !${MACHINE_CPU:Mvsx2})

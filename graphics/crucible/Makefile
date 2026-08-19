@@ -1,10 +1,9 @@
 PORTNAME=	crucible
-DISTVERSION=	g20260429
-PORTREVISION=	1
+DISTVERSION=	g20260610
 CATEGORIES=	graphics
 
 PATCH_SITES=	https://gitlab.freedesktop.org/ocochard/crucible/-/commit/
-PATCHFILES=	327659e852353954a8393c0137359dfec355f612.patch:-p1 \
+PATCHFILES=	fd1466c4489b8b312a134efd55def5c09a248193.patch:-p1 \
 		53d96b1f69a181e0aeb18b56b3a0842269ef20ce.patch:-p1
 
 MAINTAINER=	olivier@FreeBSD.org
@@ -29,7 +28,7 @@ BINARY_ALIAS=	python3=${PYTHON_CMD}
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.freedesktop.org
 GL_ACCOUNT=	mesa
-GL_TAGNAME=	1b6b04dfb0c4f94bf08b6b5cd0c3f4520da9bc6b
+GL_TAGNAME=	278ea08d9b653a8b7eafdae36e1f8d165ecfd58a
 
 CFLAGS+=	-DCRUCIBLE_DATA_DIR=${DATADIR}/data
 

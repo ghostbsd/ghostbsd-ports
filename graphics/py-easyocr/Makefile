@@ -1,7 +1,7 @@
 PORTNAME=	easyocr
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.7.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics python
 #MASTER_SITES=	PYPI # no tarball
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,7 +16,7 @@ USES=		python
 USE_PYTHON=	distutils autoplist pytest
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
-		opencv>0:graphics/opencv \
+		${PYTHON_PKGNAMEPREFIX}opencv-python-headless>0:graphics/py-opencv-python-headless@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pillow>0:graphics/py-pillow@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyclipper>0:math/py-pyclipper@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}python-bidi>0:textproc/py-python-bidi@${PY_FLAVOR} \

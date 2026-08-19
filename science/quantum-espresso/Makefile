@@ -25,6 +25,7 @@ LIB_DEPENDS=	libblas.so:math/blas \
 		libfftw3.so:math/fftw3 \
 		liblapack.so:math/lapack \
 		libopenblas.so:math/openblas
+TEST_DEPENDS=	curl:ftp/curl # downloads pseudo-potentials for tests
 
 USES=		cmake fortran localbase:ldflags python shebangfix
 GNU_CONFIGURE=	yes

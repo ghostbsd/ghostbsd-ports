@@ -1,9 +1,10 @@
 PORTNAME=	mediawiki
 PORTVERSION=	1.46.0
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://releases.wikimedia.org/mediawiki/${PORTVERSION:R}/ \
 		LOCAL/wen
-PKGNAMESUFFIX=	145${PHP_PKGNAMESUFFIX}
+PKGNAMESUFFIX=	146${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Wiki engine used by Wikipedia

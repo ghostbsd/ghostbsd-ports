@@ -168,6 +168,7 @@ include/freerdp%%MAJORVERSION%%/freerdp/transport_io.h
 include/freerdp%%MAJORVERSION%%/freerdp/types.h
 include/freerdp%%MAJORVERSION%%/freerdp/update.h
 include/freerdp%%MAJORVERSION%%/freerdp/utils/aad.h
+include/freerdp%%MAJORVERSION%%/freerdp/utils/channel_pdu_tracker.h
 include/freerdp%%MAJORVERSION%%/freerdp/utils/cliprdr_utils.h
 include/freerdp%%MAJORVERSION%%/freerdp/utils/drdynvc.h
 include/freerdp%%MAJORVERSION%%/freerdp/utils/encoded_types.h
@@ -188,6 +189,7 @@ include/freerdp%%MAJORVERSION%%/freerdp/utils/smartcard_pack.h
 include/freerdp%%MAJORVERSION%%/freerdp/utils/smartcardlogon.h
 include/freerdp%%MAJORVERSION%%/freerdp/utils/stopwatch.h
 include/freerdp%%MAJORVERSION%%/freerdp/utils/string.h
+include/freerdp%%MAJORVERSION%%/freerdp/utils/warnings.h
 include/freerdp%%MAJORVERSION%%/freerdp/version.h
 include/freerdp%%MAJORVERSION%%/freerdp/window.h
 include/winpr%%MAJORVERSION%%/winpr/asn1.h

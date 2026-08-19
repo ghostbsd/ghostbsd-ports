@@ -13,6 +13,9 @@ LICENSE_COMB=	multi
 LICENSE_FILE_GPLv3+ =	${WRKSRC}/COPYING3
 LICENSE_FILE_GPLv3RLE+ =	${WRKSRC}/COPYING.RUNTIME
 
+# See PR 296655
+IGNORE_i386=	It builds, but cannot be used to build other ports
+
 BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx@${PY_FLAVOR}
 
 USES=		ada:run python:build
@@ -98,7 +101,12 @@ _XMLADA_GPR_PROJECT_ARGS=		-XXMLADA_BUILD_MODE=${WITH_DEBUG:UProduction:DDebug}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
-BROKEN=		option DEBUG breaks with style violations in the GNAT tool-chain
+# Attenuate compiler warnings generated from conflicting styles between libgpr
+# and the compiler, and conflicting type sizes in an Unchecked_Conversion in
+# the compiler
+_LIBGPR_GPRBUILD_CARGS=	-cargs:Ada -gnatwZ -gnaty-g
+.else
+_LIBGPR_GPRBUILD_CARGS=
 .endif
 
 post-patch:
@@ -188,7 +196,7 @@ do-build:
 	(cd ${WRKSRC}/gpr && \
 		${SETENV} ${MAKE_ENV:C|PATH=|PATH=${_BOOTSTRAP_PATH}:|} \
 		${MAKE_CMD} ${_FINAL_STAGE_LIBGPR_BUILD_ARGS} -XLIBRARY_TYPE=${_library_type} \
-		-P gpr)
+		-P gpr ${_LIBGPR_GPRBUILD_CARGS})
 . endfor
 	@${ECHO_MSG} "*** do-build target:"
 	@${ECHO_MSG} "*** Final build stage complete."

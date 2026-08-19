@@ -1,9 +1,9 @@
 PORTNAME=	azure-keyvault-keys
-PORTVERSION=	4.11.1
+DISTVERSION=	4.12.0b3
 CATEGORIES=	security python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	azure_keyvault_keys-${PORTVERSION}
+DISTNAME=	azure_keyvault_keys-${DISTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Microsoft Corporation Azure Key Vault Keys Client Library for Python

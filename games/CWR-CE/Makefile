@@ -1,11 +1,11 @@
 PORTNAME=	CWR-CE
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.01
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 
 PATCH_SITES=	https://github.com/ocochard/CWR-CE/compare/
-PATCHFILES=	9abbdf2769f3008d76c47ac0af219388ff0323dc..55e703228bf5649a6a847d724e94b97d94d7057f.patch:-p1
+PATCHFILES=	9abbdf2769f3008d76c47ac0af219388ff0323dc..8fc693b2c6f85929e43975ef04df28818e740dba.patch:-p1
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	Arma: Cold War Assault - Remastered Community Edition
@@ -52,6 +52,7 @@ CMAKE_ARGS=	-DVCPKG_MANIFEST_MODE=OFF \
 		-DCMAKE_DISABLE_FIND_PACKAGE_VCPKG=ON
 
 CMAKE_OFF=	POSEIDON_DISABLE_PCH POSEIDON_BUILD_FUZZERS
+CXXFLAGS_powerpc64le=	-DNO_WARN_X86_INTRINSICS
 
 PLIST_FILES=	bin/PoseidonGame \
 		bin/PoseidonGameDemo \
@@ -76,4 +77,10 @@ do-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/cwr-ce.sh \
 		${STAGEDIR}${PREFIX}/bin/cwr-ce
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == aarch64
+BUILD_DEPENDS+=	${LOCALBASE}/include/sse2neon.h:devel/sse2neon
+.endif
+
+.include <bsd.port.post.mk>

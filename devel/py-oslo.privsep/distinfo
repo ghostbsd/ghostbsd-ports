@@ -1,3 +1,3 @@
-TIMESTAMP = 1779455591
-SHA256 (oslo_privsep-3.11.0.tar.gz) = b33c0e1ec68392c4280119f9444cc930f502ae057cb9839bfdd1d54ebdc9d948
-SIZE (oslo_privsep-3.11.0.tar.gz) = 51967
+TIMESTAMP = 1783784426
+SHA256 (oslo_privsep-3.12.0.tar.gz) = 166edcd4a3e982f4ea851308df6408bc6ad5323fbdd83ad6b2a79faed50b9617
+SIZE (oslo_privsep-3.12.0.tar.gz) = 52332

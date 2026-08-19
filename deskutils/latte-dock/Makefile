@@ -11,6 +11,9 @@ WWW=		https://invent.kde.org/plasma/latte-dock
 LICENSE_COMB=	multi
 LICENSE=	GPLv2+ LGPL20+ LGPL21 LGPL3
 
+DEPRECATED=	Abandoned, not ported to Qt6
+EXPIRATION_DATE=2026-09-30
+
 LIB_DEPENDS=	libxcb-util.so:x11/xcb-util \
 		libksgrd.so:sysutils/plasma5-libksysguard
 

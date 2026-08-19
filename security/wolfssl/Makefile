@@ -58,10 +58,10 @@ DEBUG_CONFIGURE_ON=	--enable-debug
 
 .include <bsd.port.options.mk>
 
-.if "${ARCH}" == "i386"
-PLIST_SUB+=	NOTI386="@comment "
+.if "${ARCH}" == "i386" || ${ARCH:Marmv?} || ${ARCH:Mpowerpc*}
+PLIST_SUB+=	SP_H="@comment "
 .else
-PLIST_SUB+=	NOTI386=""
+PLIST_SUB+=	SP_H=""
 .endif
 
 post-configure:

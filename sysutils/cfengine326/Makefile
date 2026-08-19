@@ -1,6 +1,6 @@
 PORTNAME=	cfengine
 DISTVERSION=	3.26.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://s3.amazonaws.com/cfengine-package-repos/tarballs/
 DISTNAME=	${PORTNAME}-community-${DISTVERSION}
@@ -12,6 +12,9 @@ WWW=		https://cfengine.com/
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 
 LICENSE=	GPLv3
+
+DEPRECATED=	EOL in 2026
+EXPIRATION_DATE=2026-10-01
 
 CPE_VENDOR=	gnu
 
@@ -48,7 +51,7 @@ INSTALL_TARGET=	install-strip
 
 LIB_DEPENDS+=	libpcre.so:devel/pcre \
 		libpcre2-posix.so:devel/pcre2 \
-		liblmdb.so:databases/lmdb \
+		liblmdb.so:databases/lmdb0 \
 		libyaml.so:textproc/libyaml \
 		libcurl.so:ftp/curl \
 		librsync.so:net/librsync

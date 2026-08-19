@@ -2,7 +2,7 @@ PORTNAME=	legendary
 DISTVERSION=	1.12.0
 CATEGORIES=	games
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Free and open-source replacement for the Epic Games Launcher
 WWW=		https://github.com/RareDevs/legendary
 

@@ -1,5 +1,6 @@
 PORTNAME=	librime
 DISTVERSION=	1.16.1
+PORTREVISION=	1
 CATEGORIES=	chinese textproc
 
 MAINTAINER=	eric@camachat.org

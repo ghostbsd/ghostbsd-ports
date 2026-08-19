@@ -1,6 +1,7 @@
 PORTNAME=	86Box
 DISTVERSIONPREFIX=	v
 DISTVERSION=	6.0
+PORTREVISION=	1
 CATEGORIES=	emulators
 
 MAINTAINER=	tiga@FreeBSD.org
@@ -21,10 +22,11 @@ LIB_DEPENDS=	libevdev.so:devel/libevdev \
 		librtmidi.so:audio/rtmidi \
 		libslirp.so:net/libslirp \
 		libsndfile.so:audio/libsndfile \
+		libvdeplug.so:net/vde2 \
 		libxkbcommon.so:x11/libxkbcommon
 
-USES=		cmake compiler:c++11-lang gl gnome pkgconfig qmake qt:6 sdl \
-		xorg
+USES=		cmake compiler:c++11-lang desktop-file-utils gl gnome pkgconfig \
+		qmake qt:6 sdl xorg
 USE_GITHUB=	yes
 USE_GL=		opengl
 USE_GNOME=	glib20
@@ -40,6 +42,7 @@ CMAKE_ON_aarch64=	NEW_DYNAREC
 CMAKE_OFF=		${CMAKE_OFF_${ARCH}} DISCORD
 CMAKE_OFF_powerpc64le=	DYNAREC
 
+CFLAGS+=	-I${PREFIX}/include
 CXXFLAGS+=	-I${LOCALBASE}/include/qt6/QtGui/`pkg-config --modversion Qt6Gui`/QtGui
 
 SUB_FILES=	86Box-install-roms.sh
@@ -57,7 +60,8 @@ WAYLAND_USES=		kde:5
 WAYLAND_USE=		KDE=ecm:build
 WAYLAND_CMAKE_OFF=	-DCMAKE_DISABLE_FIND_PACKAGE_Wayland:BOOL=ON
 
-ICON_RESOLUTIONS=	128x128 16x16 20x20 24x24 256x256 32x32 40x40 48x48 64x64 72x72
+ICON_RESOLUTIONS=	128x128 16x16 20x20 24x24 256x256 32x32 40x40 48x48 \
+			64x64 72x72
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.build/src/86Box ${STAGEDIR}${PREFIX}/bin

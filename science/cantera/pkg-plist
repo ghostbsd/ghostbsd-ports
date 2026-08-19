@@ -624,7 +624,7 @@ include/cantera_clib/cttrans.h
 %%OCTAVE%%lib/cantera/matlab/toolbox/polynom.m
 %%OCTAVE%%lib/cantera/matlab/toolbox/useLegacyRateConstants.m
 lib/libcantera.a
-%%PYTHON%%lib/libcantera_python3_11.so
+%%PYTHON%%lib/libcantera_python3_%%PYTHON_ABIVER%%.so
 lib/libcantera_shared.so
 lib/libcantera_shared.so.3
 lib/libcantera_shared.so.3.2.0

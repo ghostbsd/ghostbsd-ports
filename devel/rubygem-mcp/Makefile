@@ -1,5 +1,5 @@
 PORTNAME=	mcp
-PORTVERSION=	0.17.0
+PORTVERSION=	0.23.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -10,7 +10,7 @@ WWW=		https://github.com/modelcontextprotocol/ruby-sdk
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	rubygem-json-schema>=4.1:devel/rubygem-json-schema
+RUN_DEPENDS=	rubygem-json_schemer>=2.4:devel/rubygem-json_schemer
 
 USES=		gem
 

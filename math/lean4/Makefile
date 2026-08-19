@@ -1,6 +1,6 @@
 PORTNAME=	lean4
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.31.0
+DISTVERSION=	4.32.1
 CATEGORIES=	math lang devel # lean4 is primarily a math theorem prover, but it is also a language and a development environment
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -16,12 +16,14 @@ BROKEN_i386=	linking fails: INTERNAL PANIC: out of memory (during: Linking runLi
 
 BUILD_DEPENDS=	bash:shells/bash \
 		cadical:math/cadical \
+		gsed:textproc/gsed \
 		leantar:math/leangz
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libuv.so:devel/libuv
 RUN_DEPENDS=	cadical:math/cadical \
 		leantar:math/leangz
-TEST_DEPENDS=	gtail:sysutils/coreutils
+TEST_DEPENDS=	gtail:sysutils/coreutils \
+		gsed:textproc/gsed
 
 USES=		cmake:noninja,testing compiler:c++14-lang gmake pkgconfig python:build # ninja fails + gmake scripts are included in the project
 
@@ -38,9 +40,8 @@ CMAKE_OFF=	USE_MIMALLOC \
 MAKE_ENV=	LD_LIBRARY_PATH=${BUILD_WRKSRC}/stage0/lib/lean
 
 BINARY_ALIAS=	make=${GMAKE} \
-		python=${PYTHON_CMD}
-
-.include <bsd.port.pre.mk>
+		python=${PYTHON_CMD} \
+		sed=${LOCALBASE}/bin/gsed
 
 CMAKE_ARGS+=	-DLEANTAR=${LOCALBASE}/bin/leantar
 
@@ -49,11 +50,6 @@ post-configure:
 	@${MKDIR} ${BUILD_WRKSRC}/stage0/bin ${BUILD_WRKSRC}/stage1/bin
 	@${CP} ${LOCALBASE}/bin/leantar ${BUILD_WRKSRC}/stage0/bin/
 	@${CP} ${LOCALBASE}/bin/leantar ${BUILD_WRKSRC}/stage1/bin/
-
-# fails to build on 14 w/out this:
-.if ${OSREL:R} <= 14
-BINARY_ALIAS+=	ar=llvm-ar
-.endif
 
 pre-everything::
 	@${ECHO_MSG} ""
@@ -109,4 +105,4 @@ post-install:
 # tests as of 4.31.0: 99% tests passed, 2 tests failed out of 3858
 # 2 failures are not port issues: cache/test.sh, ltar/test.sh: leantar panic (math/leangz bug, see reproducer-leangz/)
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

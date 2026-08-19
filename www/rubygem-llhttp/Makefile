@@ -1,12 +1,12 @@
 PORTNAME=	llhttp
-PORTVERSION=	0.6.1
+PORTVERSION=	0.6.2
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby bindings for llhttp
-WWW=		https://github.com/bryanp/llhttp \
-		https://github.com/bryanp/llhttp/tree/main/mri
+WWW=		https://github.com/bryanp/llhttp/tree/main/mri \
+		https://github.com/bryanp/llhttp
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE

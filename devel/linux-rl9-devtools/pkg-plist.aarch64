@@ -1162,6 +1162,7 @@ usr/include/dlfcn.h
 usr/include/drm/amdgpu_drm.h
 usr/include/drm/amdxdna_accel.h
 usr/include/drm/armada_drm.h
+usr/include/drm/asahi_drm.h
 usr/include/drm/drm.h
 usr/include/drm/drm_fourcc.h
 usr/include/drm/drm_mode.h
@@ -1174,6 +1175,7 @@ usr/include/drm/ivpu_accel.h
 usr/include/drm/lima_drm.h
 usr/include/drm/msm_drm.h
 usr/include/drm/nouveau_drm.h
+usr/include/drm/nova_drm.h
 usr/include/drm/omap_drm.h
 usr/include/drm/panfrost_drm.h
 usr/include/drm/panthor_drm.h
@@ -1181,6 +1183,7 @@ usr/include/drm/pvr_drm.h
 usr/include/drm/qaic_accel.h
 usr/include/drm/qxl_drm.h
 usr/include/drm/radeon_drm.h
+usr/include/drm/rocket_accel.h
 usr/include/drm/tegra_drm.h
 usr/include/drm/v3d_drm.h
 usr/include/drm/vc4_drm.h
@@ -1277,6 +1280,7 @@ usr/include/linux/bcm933xx_hcs.h
 usr/include/linux/bfs_fs.h
 usr/include/linux/binfmts.h
 usr/include/linux/bits.h
+usr/include/linux/blkdev.h
 usr/include/linux/blkpg.h
 usr/include/linux/blktrace_api.h
 usr/include/linux/blkzoned.h
@@ -2080,6 +2084,7 @@ usr/include/rdma/ib_user_ioctl_verbs.h
 usr/include/rdma/ib_user_mad.h
 usr/include/rdma/ib_user_sa.h
 usr/include/rdma/ib_user_verbs.h
+usr/include/rdma/ionic-abi.h
 usr/include/rdma/irdma-abi.h
 usr/include/rdma/mana-abi.h
 usr/include/rdma/mlx4-abi.h

@@ -1,6 +1,6 @@
 PORTNAME=	juce
 DISTVERSION=	8.0.6
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -13,7 +13,6 @@ LICENSE_NAME=	JUCE 6 End User License Agreement
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 LICENSE_PERMS=	auto-accept dist-mirror pkg-mirror
 
-BROKEN_armv7=	compilation fails due to the 'mb' variable conflict, pending https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=283492
 BROKEN_riscv64=	Hard-float 'd' ABI can't be used for a target that doesn't support the D instruction set extension (ignoring target-abi)
 
 BUILD_DEPENDS=	ladspa>0:audio/ladspa
@@ -92,6 +91,8 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/JUCE-${PORTVERSION}/juceaide
 	# workaround for https://github.com/juce-framework/JUCE/issues/1502
 	@${REINPLACE_CMD} -e 's|.*VST3_HELPER\.cmake.*||' ${STAGEDIR}${PREFIX}/lib/cmake/JUCE-8.0.6/JUCEConfig.cmake
+	# remove files with .orig suffix
+	@${FIND} ${STAGEDIR}${PREFIX} -name '*.orig' -delete
 
 do-install-DEMOS-on:
 .for e in ${DEMO_FILES}

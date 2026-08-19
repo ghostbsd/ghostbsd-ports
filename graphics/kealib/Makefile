@@ -1,5 +1,5 @@
 PORTNAME=	kealib
-PORTVERSION=	1.6.2
+PORTVERSION=	2.0.0
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/ubarsc/kealib/releases/download/kealib-${PORTVERSION}/
 
@@ -11,9 +11,10 @@ WWW=		https://kealib.org/ \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-LIB_DEPENDS=	libhdf5.so:science/hdf5
+BUILD_DEPENDS=	highfive>=0:science/highfive
+RUN_DEPENDS=	highfive>=0:science/highfive
 
-USES=		cmake
+USES=		cmake compiler:c++14-lang
 
 CMAKE_OFF=	HDF5_PREFER_PARALLEL \
 		HDF5_USE_STATIC_LIBRARIES \

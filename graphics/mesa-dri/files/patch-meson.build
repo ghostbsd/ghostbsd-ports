@@ -1,6 +1,6 @@
---- meson.build.orig	2026-05-01 17:13:34 UTC
+--- meson.build.orig	2026-07-01 14:16:13 UTC
 +++ meson.build
-@@ -734,7 +734,7 @@ if host_machine.cpu_family() == 'ppc64' and host_machi
+@@ -799,7 +799,7 @@ if host_machine.cpu_family() == 'ppc64' and host_machi
        int main() {
          vector unsigned char r;
          vector unsigned int v = vec_splat_u32 (1);

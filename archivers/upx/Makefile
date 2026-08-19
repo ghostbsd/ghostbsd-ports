@@ -1,5 +1,5 @@
 PORTNAME=	upx
-PORTVERSION=	5.1.1
+PORTVERSION=	5.2.0
 MASTER_SITES=	https://github.com/upx/upx/releases/download/v${PORTVERSION}/
 CATEGORIES=	archivers
 DISTVERSIONSUFFIX=	-src

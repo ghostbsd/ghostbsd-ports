@@ -1,5 +1,5 @@
 PORTNAME=	redis-client
-PORTVERSION=	0.29.0
+PORTVERSION=	0.30.0
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 

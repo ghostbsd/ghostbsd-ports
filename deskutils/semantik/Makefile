@@ -10,6 +10,9 @@ WWW=		https://waf.io/semantik.html
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+DEPRECATED=	Not ported to Qt6, depends on deprecated Qt5 WebEngine
+EXPIRATION_DATE=	2026-09-30
+
 USES=		desktop-file-utils gettext kde:5 pkgconfig python qt:5 \
 		shared-mime-info shebangfix tar:bzip2 waf
 USE_KDE=	auth config configwidgets coreaddons i18n iconthemes \

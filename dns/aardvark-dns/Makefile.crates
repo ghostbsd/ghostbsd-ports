@@ -68,8 +68,8 @@ CARGO_CRATES=	android_system_properties-0.1.5 \
 		idna-1.1.0 \
 		idna_adapter-1.2.2 \
 		indexmap-2.14.0 \
-		inotify-0.11.2 \
-		inotify-sys-0.1.5 \
+		inotify-0.11.4 \
+		inotify-sys-0.1.8 \
 		ipnet-2.12.0 \
 		is_terminal_polyfill-1.70.2 \
 		itoa-1.0.18 \
