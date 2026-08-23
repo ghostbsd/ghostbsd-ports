@@ -1,5 +1,5 @@
 PORTNAME=	ghostbsd-mate-settings
-PORTVERSION=	26.01.1
+PORTVERSION=	26.08.0
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
