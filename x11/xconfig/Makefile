@@ -1,5 +1,5 @@
 PORTNAME=	xconfig
-PORTVERSION=	3.4
+PORTVERSION=	3.5
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon@ghostbsd.org
