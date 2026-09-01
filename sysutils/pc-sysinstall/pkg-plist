@@ -1,5 +1,7 @@
 man/man8/pc-sysinstall.8.gz
 sbin/pc-sysinstall
+%%DATADIR%%/backend-partmanager/create-part.sh
+%%DATADIR%%/backend-partmanager/delete-part.sh
 %%DATADIR%%/backend-query/detect-country.sh
 %%DATADIR%%/backend-query/detect-emulation.sh
 %%DATADIR%%/backend-query/detect-laptop.sh
@@ -28,8 +30,6 @@ sbin/pc-sysinstall
 %%DATADIR%%/backend-query/xkeyboard-layouts.sh
 %%DATADIR%%/backend-query/xkeyboard-models.sh
 %%DATADIR%%/backend-query/xkeyboard-variants.sh
-%%DATADIR%%/backend-partmanager/create-part.sh
-%%DATADIR%%/backend-partmanager/delete-part.sh
 %%DATADIR%%/backend/functions-bsdlabel.sh
 %%DATADIR%%/backend/functions-cleanup.sh
 %%DATADIR%%/backend/functions-disk.sh
