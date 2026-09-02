@@ -1,6 +1,6 @@
 PORTNAME=	mate-utils
 DISTVERSION=	1.28.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils mate
 MASTER_SITES=	https://github.com/mate-desktop/${PORTNAME}/releases/download/v${DISTVERSION}/
 DIST_SUBDIR=	mate
