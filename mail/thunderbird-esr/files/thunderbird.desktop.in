@@ -9,3 +9,4 @@ StartupNotify=true
 Terminal=false
 Type=Application
 Categories=Network;Email;News;InstantMessaging;
+MimeType=message/rfc822;x-scheme-handler/mailto;text/calendar;text/x-vcard;
