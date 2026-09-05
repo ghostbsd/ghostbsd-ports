@@ -1,6 +1,7 @@
 PORTNAME=	tgpt
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.12.0
+DISTVERSION=	2.14.0
+PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	nxjoseph@FreeBSD.org
@@ -12,6 +13,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		go:modules
 GO_MODULE=	github.com/aandrew-me/tgpt/v2
+# Skip failing Windows tests
+GO_TESTFLAGS=	-skip="TestDetectPackageManager/Scoop_on_Windows|TestDetectPackageManager/Chocolatey_on_Windows"
 
 post-patch:
 	${CP} ${FILESDIR}/modules.txt ${WRKSRC}/vendor

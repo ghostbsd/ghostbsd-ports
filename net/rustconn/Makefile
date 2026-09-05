@@ -1,6 +1,6 @@
 PORTNAME=	rustconn
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.19.8
+DISTVERSION=	0.21.5
 PORTREVISION=	0
 CATEGORIES=	net
 
@@ -18,13 +18,16 @@ LICENSE_TEXT_UNICODE=	See https://www.unicode.org/copyright.html
 LICENSE_PERMS_CDLA20=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_PERMS_UNICODE=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
+BROKEN_i386=	does not compile
+
 BUILD_DEPENDS=	bash:shells/bash
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libgraphene-1.0.so:graphics/graphene \
-		libzstd.so:archivers/zstd \
-		libwebkitgtk-6.0.so:www/webkit2-gtk@60
+		libwebkitgtk-6.0.so:www/webkit2-gtk@60 \
+		libzstd.so:archivers/zstd
 
-USES=		cargo desktop-file-utils gettext-tools gnome pkgconfig shebangfix ssl
+USES=		cargo desktop-file-utils gettext-tools gnome pkgconfig \
+		shebangfix ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	totoshko88
 GH_PROJECT=	RustConn

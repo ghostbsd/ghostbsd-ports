@@ -1,15 +1,15 @@
---- chrome/browser/enterprise/reporting/cloud_profile_reporting_service.cc.orig	2026-07-01 06:24:19 UTC
+--- chrome/browser/enterprise/reporting/cloud_profile_reporting_service.cc.orig	2026-08-31 10:59:09 UTC
 +++ chrome/browser/enterprise/reporting/cloud_profile_reporting_service.cc
-@@ -41,7 +41,7 @@
+@@ -36,7 +36,7 @@
  #include "chrome/browser/enterprise/reporting/reporting_delegate_factory_desktop.h"
  #endif
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/enterprise/reporting/browser_launch/browser_launch_event_controller_factory_desktop.h"
  #include "chrome/browser/enterprise/reporting/saas_usage/saas_usage_reporting_delegate_factory_desktop.h"
  #include "components/enterprise/browser/reporting/reporting_features.h"
- #include "components/enterprise/browser/reporting/saas_usage/saas_usage_report_scheduler.h"
-@@ -123,7 +123,7 @@ void CloudProfileReportingService::CreateReportSchedul
+@@ -119,7 +119,7 @@ void CloudProfileReportingService::CreateReportSchedul
  #endif
    report_scheduler_ = std::make_unique<ReportScheduler>(std::move(params));
  

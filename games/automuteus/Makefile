@@ -1,6 +1,6 @@
 PORTNAME=	automuteus
 DISTVERSION=	8.3.7
-PORTREVISION=	13
+PORTREVISION=	16
 CATEGORIES=	games
 
 MAINTAINER=	seafork@disroot.org

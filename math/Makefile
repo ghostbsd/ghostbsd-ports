@@ -582,9 +582,11 @@
     SUBDIR += octave-forge-database
     SUBDIR += octave-forge-dataframe
     SUBDIR += octave-forge-datatypes
+    SUBDIR += octave-forge-devtools
     SUBDIR += octave-forge-dicom
     SUBDIR += octave-forge-divand
     SUBDIR += octave-forge-doctest
+    SUBDIR += octave-forge-drafting
     SUBDIR += octave-forge-dsppack
     SUBDIR += octave-forge-econometrics
     SUBDIR += octave-forge-fda
@@ -989,6 +991,7 @@
     SUBDIR += py-cyipopt
     SUBDIR += py-cypari2
     SUBDIR += py-daqp
+    SUBDIR += py-dcor
     SUBDIR += py-deap
     SUBDIR += py-dgl
     SUBDIR += py-diffcp
@@ -1004,9 +1007,11 @@
     SUBDIR += py-fairlearn
     SUBDIR += py-faiss
     SUBDIR += py-fastcluster
+    SUBDIR += py-fdasrsf
     SUBDIR += py-fenics-basix
     SUBDIR += py-fenics-ffcx
     SUBDIR += py-fenics-ufl
+    SUBDIR += py-findiff
     SUBDIR += py-flax
     SUBDIR += py-formulaic
     SUBDIR += py-formulaic-contrasts
@@ -1144,6 +1149,8 @@
     SUBDIR += py-rpy2
     SUBDIR += py-rustworkx
     SUBDIR += py-rvlib
+    SUBDIR += py-scikit-datasets
+    SUBDIR += py-scikit-fda
     SUBDIR += py-scikit-fem
     SUBDIR += py-scikit-umfpack
     SUBDIR += py-scs
@@ -1304,7 +1311,6 @@
     SUBDIR += tlfloat
     SUBDIR += tmv
     SUBDIR += tomsfastmath
-    SUBDIR += topaz
     SUBDIR += topcom
     SUBDIR += topologic
     SUBDIR += triangle

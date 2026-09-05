@@ -1,10 +1,8 @@
 PORTNAME?=	nginx
 PORTVERSION=	${NGINX_VERSION}
 .include "version.mk"
-PORTREVISION=	0
 CATEGORIES=	www
-MASTER_SITES=	https://nginx.org/download/ \
-		LOCAL/osa
+MASTER_SITES=	https://nginx.org/download/
 PKGNAMESUFFIX?=	-devel
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -17,7 +15,7 @@ LICENSE_FILE?=	${WRKSRC}/LICENSE
 
 CONFLICTS_INSTALL=	nginx
 
-PORTSCOUT=	limit:^1\.2[8-9]\.[0-9]*
+PORTSCOUT=	limit:^1\.31\.[0-9]*
 
 USES=		cpe compiler:env
 
@@ -48,7 +46,7 @@ SUB_LIST+=	WWWOWN=${WWWOWN} \
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--prefix=${ETCDIR} \
-		--with-cc-opt="-I ${LOCALBASE}/include" \
+		--with-cc-opt="-I ${LOCALBASE}/include ${_NJS_QJS_CFLAGS}" \
 		--with-ld-opt="-L ${LOCALBASE}/lib" \
 		--conf-path=${ETCDIR}/nginx.conf \
 		--sbin-path=${PREFIX}/sbin/nginx \
@@ -127,7 +125,7 @@ DEBUGLOG_CONFIGURE_ON=	--with-debug
 DSO_CONFIGURE_ON=	--modules-path=${MODULESDIR}
 DSO_VARS=		MODULESDIR=${PREFIX}/libexec/${PORTNAME}
 FILE_AIO_CONFIGURE_ON=	--with-file-aio
-IPV6_CONFIGURE_OFF=	--with-cc-opt="-DNGX_HAVE_INET6=0 -I ${LOCALBASE}/include"
+IPV6_CONFIGURE_OFF=	--with-cc-opt="-DNGX_HAVE_INET6=0 -I ${LOCALBASE}/include ${_NJS_QJS_CFLAGS}"
 THREADS_CONFIGURE_ON=	--with-threads
 
 # Bundled modules
@@ -256,6 +254,7 @@ LIB_DEPENDS+=		libpcre.so:devel/pcre
 .endif
 
 .if ${PORT_OPTIONS:MNJS}
+_NJS_QJS_CFLAGS=		-I ${LOCALBASE}/include/quickjs
 NJS_CONFIGURE_ARGS=	--cc-opt="${CFLAGS} -I${LOCALBASE}/include/quickjs" \
 			--ld-opt="-L${LOCALBASE}/lib" \
 			--with-quickjs
@@ -265,6 +264,11 @@ pre-everything::
 	@${ECHO_MSG}
 .if ${PORT_OPTIONS:MHTTP_UPSTREAM_FAIR}
 	@${ECHO_MSG} "Enable http_ssl module to build upstream_fair with SSL support"
+.endif
+.if ${PORT_OPTIONS:MNJS}
+	@${ECHO_MSG} "The built-in njs scripting engine is EOL, deprecated since njs 1.0.0."
+	@${ECHO_MSG} "This port builds the recommended QuickJS engine as well; select it"
+	@${ECHO_MSG} "in nginx.conf via the js_engine qjs directive."
 .endif
 .if ${PORT_OPTIONS:MPASSENGER}
 	@${ECHO_MSG} "This port install Passenger module only"
@@ -292,10 +296,6 @@ post-patch-FASTDFS-on:
 		's!%%PREFIX%%!${PREFIX}!g;s!%%LOCALBASE%%!${LOCALBASE}!g' \
 		${WRKSRC_fastdfs}/src/config
 
-post-patch-GRIDFS-on:
-	@${REINPLACE_CMD} 's!\/usr!${LOCALBASE}!g' \
-		${WRKSRC_gridfs}/nginx-gridfs/config
-
 post-patch-HTTP_AUTH_KRB5-on:
 	@${REINPLACE_CMD} 's!%%GSSAPILIBS%%!${GSSAPILIBS}!g; \
 		s!%%GSSAPIINCDIR%%!${GSSAPIINCDIR}!g; \
@@ -306,10 +306,6 @@ post-patch-HTTP_TARANTOOL-on:
 
 post-patch-ICONV-on:
 	@${REINPLACE_CMD} 's!%%PREFIX%%!${LOCALBASE}!g' ${WRKSRC_iconv}/config
-
-post-patch-NJS_QJS-on:
-	@${REINPLACE_CMD} 's!%%LOCALBASE%%!${LOCALBASE}!g' ${WRKSRC_njs}/auto/quickjs \
-		${WRKSRC_njs}/nginx/config
 
 post-patch-PASSENGER-on:
 	@${REINPLACE_CMD} \
@@ -335,10 +331,26 @@ post-patch-SFLOW-on:
 pre-configure-SMALL_LIGHT-on:
 	( cd ${WRKSRC_small_light} && ./setup )
 
+pre-configure-DEVEL_KIT-on:
+	@${RM} -rf ${WRKSRC_devel_kit}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-ndk ${WRKSRC_devel_kit}
+	@${CHMOD} -R u+w ${WRKSRC_devel_kit}
+
+pre-configure-LUA-on:
+	@${RM} -rf ${WRKSRC_lua}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-lua ${WRKSRC_lua}
+	@${CHMOD} -R u+w ${WRKSRC_lua}
+
 pre-configure-LUASTREAM-on:
 	@${RM} -rf ${WRKSRC_luastream}
-	@cd ${LOCALBASE}/share/nginx/modules/lua-stream-nginx-module && \
-		${COPYTREE_SHARE} . ${WRKSRC_luastream}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-lua-stream ${WRKSRC_luastream}
+	@${CHMOD} -R u+w ${WRKSRC_luastream}
+
+pre-configure-NJS-on:
+	@${RM} -rf ${WRKSRC_njs}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-njs ${WRKSRC_njs}
+	@${CHMOD} -R u+w ${WRKSRC_njs}
+	@${CHMOD} u+x ${WRKSRC_njs}/configure
 
 do-configure-NJS-on:
 	( cd ${WRKSRC_njs} && ${SETENV} ${CONFIGURE_ENV} ${CONFIGURE_CMD} ${NJS_CONFIGURE_ARGS} )

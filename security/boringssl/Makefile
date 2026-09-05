@@ -1,5 +1,6 @@
 PORTNAME=	boringssl
-DISTVERSION=	0.20260730.0
+DISTVERSION=	0.20260813.0
+PORTREVISION=	2
 CATEGORIES=	security
 EXTRACT_ONLY=	${GH_ACCOUNT}-${PORTNAME}-${DISTVERSION}_GH0.tar.gz
 
@@ -10,7 +11,7 @@ WWW=		https://boringssl.googlesource.com/boringssl/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake:insource cpe go:1.25,no_targets localbase perl5
+USES=		cmake:insource cpe go:no_targets localbase perl5
 
 CONFLICTS_INSTALL=	aws-lc libressl libressl-devel openssl openssl[34][0456]
 

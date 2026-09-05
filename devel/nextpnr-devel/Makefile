@@ -1,5 +1,5 @@
 PORTNAME=	nextpnr
-PORTVERSION=	g20260724
+PORTVERSION=	g20260901
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-devel
 
@@ -24,7 +24,7 @@ USE_QT=		base
 USE_GITHUB=	yes
 GH_ACCOUNT=	YosysHQ
 GH_TUPLE=	YosysHQ:nextpnr-tests:ce15412:tests/tests
-GH_TAGNAME=	fb95bb8ea1949deba5e9b0e79daa9bba92b634b8
+GH_TAGNAME=	8dbcee5c3c4415770b6fd06d5ccb2db89545b8ec
 
 CONFLICTS_INSTALL=	nextpnr
 

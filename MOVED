@@ -1643,7 +1643,6 @@ archivers/ppmd-7z|archivers/7-zip|2022-09-11|ppmd-7z was a mis-named p7zip proje
 science/R-cran-AMORE||2022-09-12|Has expired: Upstream no longer maintained
 www/moodle310|www/moodle311|2022-09-12|Has expired: Upstream no longer maintained, upgrade to next LTS
 security/s2n|security/s2n-tls|2022-09-13|Renamed to match upstream naming
-audio/kid3-kf5|audio/kid3@kf5|2022-09-13|Merged into flavorized version
 audio/kid3-qt5|audio/kid3@qt6|2022-09-13|Merged into flavorized version
 audio/phaserotate-lv2|audio/x42-plugins-lv2|2022-09-13|phaserotate-lv2 LV2 plugin is included in the x42-plugins-lv2 plugin collection
 graphics/darktable40|graphics/darktable|2022-09-22|Obsolete. Use graphics/darktable, which is the same version
@@ -2093,8 +2092,6 @@ www/rubygem-asana0|www/rubygem-asana|2023-05-27|Remove obsoleted port. Use www/r
 www/rubygem-jwt25|www/rubygem-jwt|2023-05-27|Remove obsoleted port. Use www/rubygem-jwt instead
 www/rubygem-webrick17|www/rubygem-webrick|2023-05-27|Remove obsoleted port. Use www/rubygem-webrick instead
 textproc/rtf2html||2023-05-28|Has expired: Abandonware, please use something modern like markdown
-databases/mariadb103-server|databases/mariadb106-server|2023-05-28|Has expired: Use databases/mariadb106-server
-databases/mariadb103-client|databases/mariadb106-client|2023-05-28|Has expired: Use databases/mariadb106-server
 net-mgmt/chronograf||2023-05-28|Has expired: Requires upstream EOL node14
 textproc/opensearch-dashboards13|textproc/opensearch-dashboards|2023-05-28|Has expired: Requires upstream EOL node14
 www/yarn-node14||2023-05-28|Has expired: Requires upstream EOL node14
@@ -4839,10 +4836,6 @@ lang/python39||2025-11-01|Has expired: Upgrade to a newer Python version. 3.9 is
 devel/py-pyjq|textproc/py-jq|2025-11-01|Removed: Depended on expired Python version 3.9 and does not build with newer Python
 devel/py-ctags||2025-11-01|Removed: Depended on expired Python version 3.9 and does not build with newer Python
 net-im/tdlib-purple||2025-11-01|Remove broken port
-databases/foundationdb71-client||2025-11-01|Remove broken port
-databases/foundationdb71-server||2025-11-01|Remove broken port
-databases/foundationdb73-client||2025-11-01|Remove broken port
-databases/foundationdb73-server||2025-11-01|Remove broken port
 databases/erlfdb||2025-11-01|Depends on removed port databases/foundationdb71-client
 www/mitmproxy||2025-11-02|Remove broken port
 net-im/signald|net-im/signal-cli|2025-11-02|Has expired: this project is no longer actively maintained. Use signal-cli instead
@@ -5546,3 +5539,59 @@ devel/p5-Data-Swap||2026-08-02|Has expired: uses hidden Perl functions that are 
 devel/p5-Devel-BeginLift||2026-08-02|Has expired: uses hidden Perl functions that are hidden after 5.37.0
 textproc/p5-Text-ClearSilver||2026-08-02|Has expired: uses hidden Perl functions that are hidden after 5.37.0
 x11-fonts/nerd-fonts-d2coding|x11-fonts/nerd-fonts-d2koding|2026-08-03|Renamed by upstream due to licensing reasons
+math/topaz||2026-08-04|Has expired: Last release was in 2011 and WWW is unavailable
+graphics/vv||2026-08-04|Has expired: depends on expired science/InsightToolkit501
+science/InsightToolkit501|science/InsightToolkit|2026-08-04|Has expired: Fails to build, error: no template named 'binary_function' in namespace 'std'
+science/py-pubchempy|science/py-PubChemPy|2026-08-05|Remove duplicate port
+textproc/lucene5|textproc/lucene9|2026-08-09|Recent Scilab uses this version
+www/py-flask-limiter3||2026-08-09|No need to keep v3 as www/py-calibreweb now supports v4
+biology/py-macs2||2026-08-11|Upstream end of life, depends on expired lang/cython0, switch to biology/py-macs3
+www/lua-stream-nginx-module|www/nginx-module-lua-stream|2026-08-14|Renamed to follow the nginx-module-* naming scheme
+devel/prjpeppercorn112||2026-08-15|No longer supported by devel/nextpnr
+devel/py-yg.lockfile|devel/py-fasteners|2026-08-16|Has expired: Upstream inactive since 8+ years, please use devel/py-fasteners instead
+www/pecl-solr|www/php-solr|2026-08-17|Converted to standard extension from pecl extension
+biology/gperiodic|science/gperiodic|2026-08-19|Move to a more appropriate category
+devel/rubygem-grape20|devel/rubygem-grape-gitlab|2026-08-20|Make clear it is used for Gitlab only
+sysutils/filevercmp||2026-08-23|Expired: Dependent ports now use git submodules
+devel/py-ptvsd|devel/py-debugpy|2026-08-25|Has expired: No longer maintained upstream, use py-debugpy instead
+security/please||2026-08-26|Has expired: Upstream project has been archived, use doas or sudo or sudo-rs instead
+multimedia/jmref||2026-08-26|Has expired: No longer maintained upstream
+security/py-biscuit-auth|security/py-biscuit-python|2026-08-26|Renamed to match upstream PyPI package name
+net/kmime|net/kf6-kmime|2026-08-27|KMime moved to KDE Frameworks
+devel/RStudio||2026-08-31|Has expired: Depends on expired devel/electron37
+devel/electron37||2026-08-31|Has expired: EOLed upstream, switch to newer version
+sysutils/k4dirstat|sysutils/qdirstat|2026-08-31|Has expired: Depends on EOL Qt5 and upstream recommends migrating to sysutils/qdirstat
+devel/ammonite||2026-08-31|Has expired: Upstream ceased development
+devel/py-pygpx||2026-08-31|Has expired: Not updated for years
+textproc/info2html||2026-08-31|Has expired: Not updated for years
+audio/liblastfm||2026-08-31|Has expired: Upstream repo archived on Aug 22, 2025
+www/joomla4||2026-08-31|Has expired: Upstream EOL
+security/globalprotect-openconnect||2026-08-31|Has expired: This version has a vulnerability (CVE-2021-45810)
+www/archiva||2026-08-31|Has expired: Not updated for years and moved to Apache Attic in 2024-05: https://issues.apache.org/jira/browse/ATTIC-221
+databases/py-Elixir||2026-08-31|Has expired: Depends on expired databases/py-sqlalchemy10
+databases/py-sqlalchemy10||2026-08-31|Has expired: Upstream makred EOL in Release Status
+net-im/zkgroup||2026-08-31|Has expired: Merged into libsignal by upstream
+textproc/ruby-rd-mode.el||2026-08-31|Has expired: Depends on expired textproc/ruby-rdtool
+textproc/ruby-rdtool|textproc/rubygem-rdtool|2026-08-31|Has expired: Broken for more than 2 years. Use textproc/rubygem-rdtool instead
+audio/denemo||2026-08-31|Has expired: Outdated, current release is a decade old
+textproc/logseq||2026-08-31|Has expired: Depends on expired devel/electron38
+science/py-mdp||2026-08-31|Has expired: No upstream activity since 2020
+devel/electron38||2026-08-31|Has expired: EOLed upstream, switch to newer version
+www/seahub||2026-08-31|Has expired: The update of net-mgmt/seafile-server to a newer version is more difficult than expected, and the current version of www/seahub only runs on Django 4.2
+net-mgmt/seafile-server||2026-08-31|Has expired: The update to a newer version is more difficult than expected, and the current version of the web backend, www/seahub, only runs on Django 4.2
+www/py-dj42-djangorestframework||2026-08-31|Has expired: Serves as a transition only for www/seahub and requires Django 4.2, which has been end-of-life since April
+www/py-dj42-django_statici18n||2026-08-31|Has expired: Serves as a transition only for www/seahub and requires Django 4.2, which has been end-of-life since April
+www/py-dj42-django-webpack-loader||2026-08-31|Has expired: Serves as a transition only for www/seahub and requires Django 4.2, which has been end-of-life since April
+www/py-dj42-django-simple-captcha||2026-08-31|Has expired: Serves as a transition only for www/seahub and requires Django 4.2, which has been end-of-life since April
+www/py-dj42-django-picklefield||2026-08-31|Has expired: Serves as a transition only for www/seahub and requires Django 4.2, which has been end-of-life since April
+www/py-dj42-djangosaml2||2026-08-31|Has expired: Serves as a transition only for www/seahub and requires Django 4.2, which has been end-of-life since April
+www/py-dj42-django-ranged-response||2026-08-31|Has expired: Serves as a transition only for www/seahub and requires Django 4.2, which has been end-of-life since April
+www/py-django42||2026-08-31|Has expired: Django 4.2 is now in Extended Support, receives security fixes only and will reach End-Of-Life in April 2026. Upgrade to a later Django version. See https://www.djangoproject.com/download/
+www/py-seafdav||2026-08-31|Removed, depended on net-mgmt/seafile-server
+mail/james||2026-08-31|Has expired: This is a version that is over 10 years old and has multiple vulnerabilities
+www/py-seafobj||2026-08-31|Removed, depended on net-mgmt/seafile-server
+devel/sfml|multimedia/sfml3|2026-09-02|SFML move to appropriate catagory and suffix name with major version number, 3
+sysutils/intel-nvmupdate-10g|sysutils/intel-nvmupdate-x550|2026-09-03|Rename to match supported hardware
+sysutils/intel-nvmupdate-100g|sysutils/intel-nvmupdate-e810|2026-09-03|Rename to match supported hardware
+sysutils/intel-nvmupdate-40g|sysutils/intel-nvmupdate-700series|2026-09-03|Rename to match supported hardware
+sysutils/intel-nvmupdate-e830|sysutils/intel-nvmupdate-e830-e835|2026-09-03|Rename to match supported hardware

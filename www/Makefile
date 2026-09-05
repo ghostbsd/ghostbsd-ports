@@ -69,7 +69,6 @@
     SUBDIR += apache-mode.el
     SUBDIR += apache24
     SUBDIR += aquatone
-    SUBDIR += archiva
     SUBDIR += aria2
     SUBDIR += asql
     SUBDIR += authelia
@@ -128,6 +127,7 @@
     SUBDIR += codeberg-pages-server
     SUBDIR += codeigniter
     SUBDIR += colly
+    SUBDIR += comentario
     SUBDIR += coppermine
     SUBDIR += corepack
     SUBDIR += cpp-httplib
@@ -215,8 +215,10 @@
     SUBDIR += formication
     SUBDIR += foswiki
     SUBDIR += free-sa-devel
+    SUBDIR += freeipa-auth-gssapi
     SUBDIR += freenginx
     SUBDIR += freenginx-acme
+    SUBDIR += freenginx-acme-module
     SUBDIR += freenginx-devel
     SUBDIR += freeunit
     SUBDIR += freeunit-php
@@ -247,6 +249,7 @@
     SUBDIR += glpi
     SUBDIR += gnome-user-share
     SUBDIR += go-anubis
+    SUBDIR += go-away
     SUBDIR += go-www
     SUBDIR += gobuffalo
     SUBDIR += gohugo
@@ -294,7 +297,9 @@
     SUBDIR += http_post
     SUBDIR += httpasyncclient
     SUBDIR += httpclient
+    SUBDIR += httpclient5
     SUBDIR += httpcore
+    SUBDIR += httpcore5
     SUBDIR += httptunnel
     SUBDIR += httpx
     SUBDIR += httrack
@@ -305,9 +310,12 @@
     SUBDIR += ikiwiki
     SUBDIR += ilias
     SUBDIR += imaginary
+    SUBDIR += immich
+    SUBDIR += immich-ml
     SUBDIR += iocaine
     SUBDIR += iridium
     SUBDIR += janus
+    SUBDIR += jcef
     SUBDIR += jericho-html
     SUBDIR += jesred
     SUBDIR += jetty10
@@ -315,7 +323,6 @@
     SUBDIR += jira-cli
     SUBDIR += jitsi-meet
     SUBDIR += jmeter
-    SUBDIR += joomla4
     SUBDIR += joomla5
     SUBDIR += joomla6
     SUBDIR += jwt-cli
@@ -379,7 +386,6 @@
     SUBDIR += lua-resty-lrucache
     SUBDIR += lua-resty-session
     SUBDIR += lua-resty-session3
-    SUBDIR += lua-stream-nginx-module
     SUBDIR += luakit
     SUBDIR += luakit-devel
     SUBDIR += lubelogger
@@ -447,6 +453,7 @@
     SUBDIR += mod_jk
     SUBDIR += mod_limitipconn2
     SUBDIR += mod_log_sql
+    SUBDIR += mod_lookup_identity
     SUBDIR += mod_maxminddb
     SUBDIR += mod_memcache
     SUBDIR += mod_memcache_block
@@ -507,6 +514,7 @@
     SUBDIR += nextcloud-forms
     SUBDIR += nextcloud-groupfolders
     SUBDIR += nextcloud-impersonate
+    SUBDIR += nextcloud-keeweb
     SUBDIR += nextcloud-memories
     SUBDIR += nextcloud-news
     SUBDIR += nextcloud-notes
@@ -519,6 +527,9 @@
     SUBDIR += nginx-full
     SUBDIR += nginx-lite
     SUBDIR += nginx-module-lua
+    SUBDIR += nginx-module-lua-stream
+    SUBDIR += nginx-module-ndk
+    SUBDIR += nginx-module-njs
     SUBDIR += nginx-naxsi
     SUBDIR += nginx-prometheus-exporter
     SUBDIR += nginx-ultimate-bad-bot-blocker
@@ -1446,7 +1457,6 @@
     SUBDIR += pear-UDDI
     SUBDIR += pear-XML_GRDDL
     SUBDIR += pear-twig
-    SUBDIR += pecl-solr
     SUBDIR += pecl-yaf
     SUBDIR += pecl-yar
     SUBDIR += peersuite
@@ -1456,6 +1466,7 @@
     SUBDIR += phalcon
     SUBDIR += php-google-api-php-client
     SUBDIR += php-http
+    SUBDIR += php-solr
     SUBDIR += php82-opcache
     SUBDIR += php82-session
     SUBDIR += php82-tidy
@@ -1533,6 +1544,7 @@
     SUBDIR += py-bokeh
     SUBDIR += py-bootstrap-flask
     SUBDIR += py-boto3
+    SUBDIR += py-boto3-stubs
     SUBDIR += py-botocore-stubs
     SUBDIR += py-bottle
     SUBDIR += py-bottle-cork
@@ -1563,13 +1575,6 @@
     SUBDIR += py-dash-bootstrap-components
     SUBDIR += py-ddgs
     SUBDIR += py-dj-database-url
-    SUBDIR += py-dj42-django-picklefield
-    SUBDIR += py-dj42-django-ranged-response
-    SUBDIR += py-dj42-django-simple-captcha
-    SUBDIR += py-dj42-django-webpack-loader
-    SUBDIR += py-dj42-django_statici18n
-    SUBDIR += py-dj42-djangorestframework
-    SUBDIR += py-dj42-djangosaml2
     SUBDIR += py-dj60-channels
     SUBDIR += py-dj60-django-auth-ldap
     SUBDIR += py-dj60-django-choices-field
@@ -1592,6 +1597,8 @@
     SUBDIR += py-dj60-drf-spectacular-sidecar
     SUBDIR += py-dj60-social-auth-app-django
     SUBDIR += py-dj60-strawberry-graphql-django
+    SUBDIR += py-dj61-django-stubs-ext
+    SUBDIR += py-dj61-djangorestframework
     SUBDIR += py-django-admin-rangefilter
     SUBDIR += py-django-advanced-filters
     SUBDIR += py-django-allauth
@@ -1699,7 +1706,6 @@
     SUBDIR += py-django-voting
     SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
-    SUBDIR += py-django42
     SUBDIR += py-django52
     SUBDIR += py-django60
     SUBDIR += py-django61
@@ -1749,7 +1755,6 @@
     SUBDIR += py-flask-jwt
     SUBDIR += py-flask-jwt-extended
     SUBDIR += py-flask-limiter
-    SUBDIR += py-flask-limiter3
     SUBDIR += py-flask-login
     SUBDIR += py-flask-marshmallow
     SUBDIR += py-flask-migrate
@@ -1961,8 +1966,6 @@
     SUBDIR += py-scalar-fastapi
     SUBDIR += py-scgi
     SUBDIR += py-scrapy
-    SUBDIR += py-seafdav
-    SUBDIR += py-seafobj
     SUBDIR += py-searxng-devel
     SUBDIR += py-secure-cookie
     SUBDIR += py-selector
@@ -2104,6 +2107,7 @@
     SUBDIR += rubygem-acts-as-taggable-on
     SUBDIR += rubygem-acts_as_taggable
     SUBDIR += rubygem-addressable
+    SUBDIR += rubygem-addressable28
     SUBDIR += rubygem-adsf
     SUBDIR += rubygem-akami
     SUBDIR += rubygem-amazon-ecs
@@ -2388,6 +2392,7 @@
     SUBDIR += rubygem-rack-protection3
     SUBDIR += rubygem-rack-proxy
     SUBDIR += rubygem-rack-proxy-gitlab
+    SUBDIR += rubygem-rack-proxy0
     SUBDIR += rubygem-rack-session
     SUBDIR += rubygem-rack-session-gitlab
     SUBDIR += rubygem-rack-session10
@@ -2556,7 +2561,6 @@
     SUBDIR += sarg
     SUBDIR += scloader
     SUBDIR += script4rss
-    SUBDIR += seahub
     SUBDIR += selenium
     SUBDIR += serendipity
     SUBDIR += serf

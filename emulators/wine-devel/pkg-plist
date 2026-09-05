@@ -676,6 +676,8 @@ include/wine/windows/fileapi.h
 include/wine/windows/filter.h
 include/wine/windows/filter.idl
 include/wine/windows/fltdefs.h
+include/wine/windows/fltuser.h
+include/wine/windows/fltuserstructures.h
 include/wine/windows/fontsub.h
 include/wine/windows/fusion.h
 include/wine/windows/fusion.idl
@@ -2572,7 +2574,7 @@ lib/wine/i386-windows/wineps16.drv16
 lib/wine/i386-windows/wineusb.sys
 lib/wine/i386-windows/winevdm.exe
 lib/wine/i386-windows/winevulkan.dll
-lib/wine/i386-windows/winewayland.drv
+%%WAYLAND%%lib/wine/i386-windows/winewayland.drv
 lib/wine/i386-windows/winex11.drv
 lib/wine/i386-windows/winexinput.sys
 lib/wine/i386-windows/wing.dll16
@@ -2951,6 +2953,7 @@ lib/wine/%%WINEARCH%%-unix/wine
 %%ALSA%%lib/wine/%%WINEARCH%%-unix/winealsa.so
 lib/wine/%%WINEARCH%%-unix/winebth.so
 lib/wine/%%WINEARCH%%-unix/winebus.so
+lib/wine/%%WINEARCH%%-unix/wined3d.so
 lib/wine/%%WINEARCH%%-unix/winedmo.so
 %%GSTREAMER%%lib/wine/%%WINEARCH%%-unix/winegstreamer.so
 %%OSS%%lib/wine/%%WINEARCH%%-unix/wineoss.so
@@ -2958,7 +2961,7 @@ lib/wine/%%WINEARCH%%-unix/wineps.so
 %%PULSEAUDIO%%lib/wine/%%WINEARCH%%-unix/winepulse.so
 lib/wine/%%WINEARCH%%-unix/wineusb.so
 lib/wine/%%WINEARCH%%-unix/winevulkan.so
-lib/wine/%%WINEARCH%%-unix/winewayland.so
+%%WAYLAND%%lib/wine/%%WINEARCH%%-unix/winewayland.so
 lib/wine/%%WINEARCH%%-unix/winex11.so
 lib/wine/%%WINEARCH%%-unix/winspool.so
 lib/wine/%%WINEARCH%%-unix/ws2_32.so

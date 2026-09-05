@@ -1,7 +1,7 @@
 PORTNAME=	reqlog
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.8.1
-PORTREVISION=	1
+DISTVERSION=	0.10.0
+PORTREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	olgeni@FreeBSD.org
@@ -14,6 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		go:modules
 GO_MODULE=	github.com/sagarmaheshwary/reqlog
 GO_TARGET=	./cmd/reqlog
+GO_LDFLAGS=	-X main.version=${DISTVERSION}
 
 PLIST_FILES=	bin/reqlog
 

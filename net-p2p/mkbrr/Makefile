@@ -1,6 +1,6 @@
 PORTNAME=	mkbrr
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.24.0
+DISTVERSION=	1.25.0
 PORTREVISION=	1
 CATEGORIES=	net-p2p
 
@@ -11,7 +11,7 @@ WWW=		https://github.com/autobrr/mkbrr
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.25+,modules
+USES=		go:modules
 
 CGO_ENABLED=	0
 GO_MODULE=	github.com/autobrr/${PORTNAME}

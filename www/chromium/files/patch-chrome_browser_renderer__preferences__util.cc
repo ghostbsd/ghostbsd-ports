@@ -1,4 +1,4 @@
---- chrome/browser/renderer_preferences_util.cc.orig	2026-07-01 06:24:19 UTC
+--- chrome/browser/renderer_preferences_util.cc.orig	2026-08-31 10:59:09 UTC
 +++ chrome/browser/renderer_preferences_util.cc
 @@ -37,12 +37,12 @@
  #include "ui/base/ui_base_features.h"

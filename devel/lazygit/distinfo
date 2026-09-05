@@ -1,5 +1,5 @@
-TIMESTAMP = 1783499559
-SHA256 (go/devel_lazygit/lazygit-v0.63.0/v0.63.0.mod) = e2f399addbd0f3c45810f75387a2feff0960c60efcea0e0e5098abf476d71922
-SIZE (go/devel_lazygit/lazygit-v0.63.0/v0.63.0.mod) = 3079
-SHA256 (go/devel_lazygit/lazygit-v0.63.0/v0.63.0.zip) = 29e91bc110b3412ab39369910052e88197379c2cec069c858822b0ffe83dfc60
-SIZE (go/devel_lazygit/lazygit-v0.63.0/v0.63.0.zip) = 1886889
+TIMESTAMP = 1786929413
+SHA256 (go/devel_lazygit/lazygit-v0.64.1/v0.64.1.mod) = a63c6fea39efb1f63d479c87e4c97e3e00092f4f23481fc572c6e06a6a7a8dc8
+SIZE (go/devel_lazygit/lazygit-v0.64.1/v0.64.1.mod) = 3029
+SHA256 (go/devel_lazygit/lazygit-v0.64.1/v0.64.1.zip) = 5ae13b5d91483f247682b93db7e38c770b3405056577c2bfac31f594bcd73103
+SIZE (go/devel_lazygit/lazygit-v0.64.1/v0.64.1.zip) = 2035640

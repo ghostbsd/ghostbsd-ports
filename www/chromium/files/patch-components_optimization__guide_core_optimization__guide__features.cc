@@ -1,4 +1,4 @@
---- components/optimization_guide/core/optimization_guide_features.cc.orig	2026-05-07 17:02:56 UTC
+--- components/optimization_guide/core/optimization_guide_features.cc.orig	2026-08-31 10:59:09 UTC
 +++ components/optimization_guide/core/optimization_guide_features.cc
 @@ -97,7 +97,7 @@ BASE_FEATURE(kOptimizationGuideModelExecution,
  // Whether to use the on device model service in optimization guide.

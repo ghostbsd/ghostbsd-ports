@@ -1,6 +1,6 @@
 PORTNAME=	miktex
 DISTVERSION=	25.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	https://miktex.org/download/ctan/systems/win32/miktex/source/ \
 		https://ctan.org/tex-archive/systems/win32/miktex/tm/packages/:bootstrap
@@ -15,7 +15,7 @@ DISTFILES=	miktex-zzdb1-2.9.tar.lzma:bootstrap \
 DIST_SUBDIR=	miktex
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	uzsolt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Implementation of TeX/LaTeX
 WWW=		https://miktex.org
 

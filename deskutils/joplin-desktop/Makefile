@@ -1,7 +1,7 @@
 PORTNAME=	joplin
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.6.15
-PORTREVISION=	3
+DISTVERSION=	3.6.16
+PORTREVISION=	1
 CATEGORIES=	deskutils
 PKGNAMESUFFIX=	-desktop
 DISTFILES=	${DEFAULT_PLUGINS_NODE_MODULES_FILE}:prefetch \
@@ -13,6 +13,9 @@ WWW=		https://joplinapp.org
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Depends on expired devel/electron40
+EXPIRATION_DATE=2026-09-30
 
 FETCH_DEPENDS=	npm${NODEJS_SUFFIX}>0:www/npm${NODEJS_SUFFIX}
 BUILD_DEPENDS=	7zz:archivers/7-zip \
@@ -74,7 +77,7 @@ pre-fetch:
 		done; \
 		cd ${WRKDIR} && \
 		${SETENV} SCRIPTSDIR=${SCRIPTSDIR} WRKDIR=${WRKDIR} \
-			${SH} ${SCRIPTSDIR}/electron-create-mtree.sh node-modules-cache > \
+			${SH} ${SCRIPTSDIR}/npm-create-mtree.sh node-modules-cache > \
 			node-modules-cache.mtree && \
 		${TAR} -cz --options 'gzip:!timestamp' \
 			-f ${DISTDIR}/${DEFAULT_PLUGINS_NODE_MODULES_FILE} @node-modules-cache.mtree; \
@@ -90,7 +93,7 @@ pre-fetch:
 		${RM} package.json package-lock.json; \
 		cd ${WRKDIR} && \
 		${SETENV} SCRIPTSDIR=${SCRIPTSDIR} WRKDIR=${WRKDIR} \
-			${SH} ${SCRIPTSDIR}/electron-create-mtree.sh node-modules-cache-app-clipper > \
+			${SH} ${SCRIPTSDIR}/npm-create-mtree.sh node-modules-cache-app-clipper > \
 			node-modules-cache-app-clipper.mtree && \
 		${TAR} -cz --options 'gzip:!timestamp' \
 			-f ${DISTDIR}/${APP_CLIPPER_NODE_MODULES_FILE} @node-modules-cache-app-clipper.mtree; \

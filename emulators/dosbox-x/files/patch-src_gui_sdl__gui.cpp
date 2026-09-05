@@ -1,4 +1,4 @@
---- src/gui/sdl_gui.cpp.orig	2026-06-02 15:52:54 UTC
+--- src/gui/sdl_gui.cpp.orig	2026-09-01 15:35:39 UTC
 +++ src/gui/sdl_gui.cpp
 @@ -4075,6 +4075,7 @@ void GUI_Shortcut(int select) {
      shortcutid=select;

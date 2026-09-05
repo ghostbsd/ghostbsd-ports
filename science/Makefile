@@ -4,7 +4,6 @@
     SUBDIR += ALPSCore
     SUBDIR += ChipmunkPhysics
     SUBDIR += InsightToolkit
-    SUBDIR += InsightToolkit501
     SUBDIR += PETSc
     SUBDIR += R-cran-DCluster
     SUBDIR += R-cran-Epi
@@ -26,6 +25,7 @@
     SUBDIR += agrum
     SUBDIR += aircraft-datcom
     SUBDIR += amrex
+    SUBDIR += anari
     SUBDIR += antioch
     SUBDIR += apbs
     SUBDIR += arbor
@@ -111,6 +111,7 @@
     SUBDIR += ghmm
     SUBDIR += gnudatalanguage
     SUBDIR += gpaw-setups
+    SUBDIR += gperiodic
     SUBDIR += gramps
     SUBDIR += gromacs
     SUBDIR += gsmc
@@ -346,6 +347,7 @@
     SUBDIR += py-earthpy
     SUBDIR += py-eccodes
     SUBDIR += py-emmet-core
+    SUBDIR += py-endf
     SUBDIR += py-esda
     SUBDIR += py-fresnel
     SUBDIR += py-gemmi
@@ -379,7 +381,6 @@
     SUBDIR += py-libpysal
     SUBDIR += py-libwignernj
     SUBDIR += py-lifelines
-    SUBDIR += py-mdp
     SUBDIR += py-mercantile
     SUBDIR += py-meshio
     SUBDIR += py-mmcif
@@ -415,7 +416,6 @@
     SUBDIR += py-plumed
     SUBDIR += py-pnetcdf
     SUBDIR += py-probeinterface
-    SUBDIR += py-pubchempy
     SUBDIR += py-pupynere
     SUBDIR += py-py3Dmol
     SUBDIR += py-pyaixi
@@ -451,6 +451,7 @@
     SUBDIR += py-rmf
     SUBDIR += py-rmsd
     SUBDIR += py-ruffus
+    SUBDIR += py-sarkit
     SUBDIR += py-sarpy
     SUBDIR += py-scikit-fuzzy
     SUBDIR += py-scikit-learn

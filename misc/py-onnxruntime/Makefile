@@ -1,6 +1,7 @@
 PORTNAME=	onnxruntime
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.27.0
+PORTREVISION=	3
 CATEGORIES=	misc # machine-learning
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DIST_SUBDIR=	${PORTNAME}
@@ -14,12 +15,23 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	cmake:devel/cmake-core \
-		${PYTHON_PKGNAMEPREFIX}packaging>=0:devel/py-packaging@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}packaging>=0:devel/py-packaging@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.21.6:math/py-numpy@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.21.6:math/py-numpy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}packaging>=0:devel/py-packaging@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}protobuf>=4.25.8:devel/py-protobuf@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}flatbuffers>=0:devel/py-flatbuffers@${PY_FLAVOR}
 
 USES=		compiler:c++17-lang python
-USE_PYTHON=	pep517
+USE_PYTHON=	pep517 autoplist concurrent
 
 # Build using the official build.py script
+PEP517_BUILD_DEPEND=
+
+MAKE_ENV+=	ORT_DIST_DIR=${WRKSRC}/dist
+
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHON_CMD} tools/ci_build/build.py \
@@ -29,12 +41,11 @@ do-build:
 		--skip_tests \
 		--skip_submodule_sync \
 		--allow_running_as_root \
+		--enable_pybind \
+		--build_wheel \
 		--cmake_extra_defines CMAKE_INSTALL_PREFIX=${PREFIX} \
-		--cmake_extra_defines onnxruntime_BUILD_UNIT_TESTS=OFF
-
-do-install:
-	cd ${WRKDIR}/build/Release && ${SETENV} ${MAKE_ENV} \
-		${MAKE_CMD} install DESTDIR=${STAGEDIR}
+		--cmake_extra_defines onnxruntime_BUILD_UNIT_TESTS=OFF \
+		--cmake_extra_defines ONNXRUNTIME_NUMPY_INCLUDE_DIR=${PYTHONPREFIX_SITELIBDIR}/numpy/_core/include
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft

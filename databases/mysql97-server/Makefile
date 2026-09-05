@@ -1,5 +1,5 @@
 PORTNAME?=		mysql
-PORTVERSION=		9.7.1
+PORTVERSION=		9.7.2
 PORTREVISION?=		2
 CATEGORIES=		databases
 MASTER_SITES=		MYSQL/MySQL-9.7
@@ -10,6 +10,10 @@ COMMENT?=		Multithreaded SQL database (server)
 WWW=		https://www.mysql.com/
 
 LICENSE=		GPLv2
+
+# Tracks one MySQL release series; the others are separate mysql*-server ports.
+# repology merges all series into one project and measures against the newest
+# train upstream ships, so its outdated report is an artifact, not an update.
 
 # MySQL8.2+ supports only 64-bit platforms
 # Review list after 13.x EoL
@@ -101,12 +105,12 @@ CONFLICTS_INSTALL=	mysql*-server \
 			mariadb*-server \
 			percona*-server
 
-USE_RC_SUBR=	mysql-server
+USE_RC_SUBR=	mysql-server mysqlrouter
 
-SUB_FILES=	my.cnf.sample pkg-message
+SUB_FILES=	my.cnf.sample mysqlrouter.conf.sample pkg-message
 
-USERS=		mysql
-GROUPS=		mysql
+USERS=		mysql mysqlrouter
+GROUPS=		mysql mysqlrouter
 
 USE_LDCONFIG+=	${PREFIX}/lib/mysql/plugin
 
@@ -161,9 +165,14 @@ post-extract:
 post-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${WRKDIR}/my.cnf.sample ${STAGEDIR}${ETCDIR}/my.cnf.sample
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/mysqlrouter
+	${INSTALL_DATA} ${WRKDIR}/mysqlrouter.conf.sample \
+		${STAGEDIR}${PREFIX}/etc/mysqlrouter/mysqlrouter.conf.sample
 	${MKDIR} ${STAGEDIR}${ETCDIR}/keyring
 	${MKDIR} ${STAGEDIR}${MY_SECDIR}
 	${MKDIR} ${STAGEDIR}${MY_TMPDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${MV} ${STAGEDIR}${PREFIX}/LICENSE.router ${STAGEDIR}${PREFIX}/README.router ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.post.mk>

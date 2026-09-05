@@ -52,6 +52,7 @@
     SUBDIR += clipcat
     SUBDIR += cliphist
     SUBDIR += clipman
+    SUBDIR += colormeter
     SUBDIR += compton-conf
     SUBDIR += conlecterm
     SUBDIR += contour
@@ -91,6 +92,7 @@
     SUBDIR += flruler
     SUBDIR += fnott
     SUBDIR += foot
+    SUBDIR += framework-autorotate
     SUBDIR += fstobdf
     SUBDIR += fuzzel
     SUBDIR += gbsddialog

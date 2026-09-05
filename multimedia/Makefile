@@ -124,7 +124,7 @@
     SUBDIR += iso2mkv
     SUBDIR += jellyfin
     SUBDIR += jellyfin-desktop
-    SUBDIR += jmref
+    SUBDIR += jellyfin-ffmpeg7
     SUBDIR += kaffeine
     SUBDIR += kamoso
     SUBDIR += kasts
@@ -193,6 +193,8 @@
     SUBDIR += libvdpau
     SUBDIR += libvdpau-va-gl
     SUBDIR += libvlcpp
+    SUBDIR += libvpl
+    SUBDIR += libvpl-tools
     SUBDIR += libvpx
     SUBDIR += libwebm
     SUBDIR += libx264
@@ -342,6 +344,8 @@
     SUBDIR += rubygem-gstreamer
     SUBDIR += rubygem-streamio-ffmpeg
     SUBDIR += scte35dump
+    SUBDIR += sfml2
+    SUBDIR += sfml3
     SUBDIR += shaka-packager
     SUBDIR += shotcut
     SUBDIR += shotcut-qt6

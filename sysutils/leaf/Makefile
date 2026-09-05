@@ -1,5 +1,5 @@
 PORTNAME=	leaf
-DISTVERSION=	1.26.2
+DISTVERSION=	1.28.1
 CATEGORIES=	sysutils
 
 MAINTAINER=	tagattie@FreeBSD.org

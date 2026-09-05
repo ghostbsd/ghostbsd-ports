@@ -1470,9 +1470,9 @@ DEV_ERROR+=		"FLAVORS contains flavors that are not all [a-z0-9_]: ${_BAD_FLAVOR
 
 .    if !empty(FLAVOR)
 .      if empty(FLAVORS)
-IGNORE=	FLAVOR is defined (to ${FLAVOR}) while this port does not have FLAVORS
+IGNORE=	has an unknown flavor '${FLAVOR}', this port does not have any flavors
 .      elif ! ${FLAVORS:M${FLAVOR}}
-IGNORE=	Unknown flavor '${FLAVOR}', possible flavors: ${FLAVORS}
+IGNORE=	has an unknown flavor '${FLAVOR}', possible flavors: ${FLAVORS}
 .      endif
 .    endif
 
@@ -4118,7 +4118,7 @@ DEPENDS-LIST= \
 ALL-DEPENDS-LIST=			${DEPENDS-LIST} -r ${_UNIFIED_DEPENDS:Q}
 ALL-DEPENDS-FLAVORS-LIST=	${DEPENDS-LIST} -f -r ${_UNIFIED_DEPENDS:Q}
 DEINSTALL-DEPENDS-FLAVORS-LIST=	${DEPENDS-LIST} -f -r ${_UNIFIED_DEPENDS:N${PKG_DEPENDS}:Q}
-MISSING-DEPENDS-LIST=		${DEPENDS-LIST} -m ${_UNIFIED_DEPENDS:Q}
+MISSING-DEPENDS-LIST=		${DEPENDS-LIST} -f -m ${_UNIFIED_DEPENDS:Q}
 BUILD-DEPENDS-LIST=			${DEPENDS-LIST} "${PKG_DEPENDS_ALL} ${EXTRACT_DEPENDS_ALL} ${PATCH_DEPENDS_ALL} ${FETCH_DEPENDS_ALL} ${BUILD_DEPENDS_ALL} ${LIB_DEPENDS_ALL}"
 RUN-DEPENDS-LIST=			${DEPENDS-LIST} "${LIB_DEPENDS_ALL} ${RUN_DEPENDS_ALL}"
 TEST-DEPENDS-LIST=			${DEPENDS-LIST} ${TEST_DEPENDS_ALL:Q}
@@ -4421,10 +4421,17 @@ missing-packages:
 	done
 
 # Install missing dependencies from package
+# Preserve the interactive pkg prompt unless running in BATCH mode, in
+# which case -o cannot reopen stdin from /dev/tty and is not wanted.
+.    if defined(BATCH)
+_INSTALL_MISSING_PKGS=	${XARGS} ${PKG_BIN} install -yA
+.    else
+_INSTALL_MISSING_PKGS=	${XARGS} -o ${PKG_BIN} install -A
+.    endif
 install-missing-packages:
 	@_dirs=$$(${MISSING-DEPENDS-LIST}); \
 	${ECHO_CMD} "$${_dirs}" | ${SED} "s%${PORTSDIR}/%%g" | \
-		${SU_CMD} "${XARGS} -o ${PKG_BIN} install -A"
+		${SU_CMD} "${_INSTALL_MISSING_PKGS}"
 
 ################################################################
 # Everything after here are internal targets and really

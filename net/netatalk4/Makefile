@@ -1,5 +1,5 @@
 PORTNAME=	netatalk
-PORTVERSION=	4.5.0
+PORTVERSION=	4.5.1
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/netatalk-${PORTVERSION:S/./-/g}/
 PKGNAMESUFFIX=	4
@@ -98,6 +98,7 @@ post-patch:
 #	@${REINPLACE_CMD} -e 's|%%PYTHONCMD%%|${PYTHONCMD}|' \
 #		${WRKSRC}/contrib/shell_utils/afpstats
 
+post-install:
 .if ${PORT_OPTIONS:MPAM}
 	${INSTALL_DATA} ${FILESDIR}/pam.conf ${STAGEDIR}${PREFIX}/etc/pam.d/netatalk.sample
 .endif

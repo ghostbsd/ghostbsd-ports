@@ -125,12 +125,14 @@
     SUBDIR += bhyve-firmware
     SUBDIR += bhyve-rc
     SUBDIR += bhyvemgr
+    SUBDIR += bhyvemgrd
     SUBDIR += bin
     SUBDIR += biosfont
     SUBDIR += bkpupsd
     SUBDIR += bksh
     SUBDIR += bkt
     SUBDIR += blisp
+    SUBDIR += blockio
     SUBDIR += bmd
     SUBDIR += bmd-plugin-avahi
     SUBDIR += bmd-plugin-hookcmd
@@ -317,6 +319,7 @@
     SUBDIR += docker-machine
     SUBDIR += docker-registry
     SUBDIR += dockerbox
+    SUBDIR += dockerbox-broker
     SUBDIR += doctl
     SUBDIR += doinkd
     SUBDIR += downtimed
@@ -383,6 +386,7 @@
     SUBDIR += f-upgrade
     SUBDIR += f2
     SUBDIR += f3
+    SUBDIR += facl
     SUBDIR += fakertc
     SUBDIR += faketty
     SUBDIR += fand
@@ -403,7 +407,6 @@
     SUBDIR += fileprune
     SUBDIR += fileschanged
     SUBDIR += filetype
-    SUBDIR += filevercmp
     SUBDIR += filewatcherd
     SUBDIR += finfo
     SUBDIR += firstboot-cloudsetup
@@ -520,6 +523,7 @@
     SUBDIR += healthd
     SUBDIR += heirloom
     SUBDIR += helm
+    SUBDIR += helm-docs
     SUBDIR += helmfile
     SUBDIR += herbe
     SUBDIR += hexpeek
@@ -556,9 +560,13 @@
     SUBDIR += install-station
     SUBDIR += installwatch
     SUBDIR += intel-epct
-    SUBDIR += intel-nvmupdate-100g
-    SUBDIR += intel-nvmupdate-10g
-    SUBDIR += intel-nvmupdate-40g
+    SUBDIR += intel-nvmupdate-700series
+    SUBDIR += intel-nvmupdate-e610
+    SUBDIR += intel-nvmupdate-e810
+    SUBDIR += intel-nvmupdate-e830-e835
+    SUBDIR += intel-nvmupdate-i210
+    SUBDIR += intel-nvmupdate-i225-i226
+    SUBDIR += intel-nvmupdate-x550
     SUBDIR += intel-pcm
     SUBDIR += intel-undervolt
     SUBDIR += inxi
@@ -602,7 +610,6 @@
     SUBDIR += jtopen
     SUBDIR += jvmtop
     SUBDIR += k3b
-    SUBDIR += k4dirstat
     SUBDIR += k8temp
     SUBDIR += k9s
     SUBDIR += kapp
@@ -646,6 +653,7 @@
     SUBDIR += ldap-account-manager
     SUBDIR += ldapvi
     SUBDIR += leaf
+    SUBDIR += leaves
     SUBDIR += ledit
     SUBDIR += less
     SUBDIR += lfm
@@ -722,6 +730,7 @@
     SUBDIR += mac_rtprio
     SUBDIR += mackerel-agent
     SUBDIR += magicrescue
+    SUBDIR += magika
     SUBDIR += manck
     SUBDIR += mapchan
     SUBDIR += mapdir
@@ -832,6 +841,7 @@
     SUBDIR += obliterate
     SUBDIR += oc
     SUBDIR += ocijail
+    SUBDIR += oddjob
     SUBDIR += odo
     SUBDIR += ohmu
     SUBDIR += omnibackup
@@ -1117,6 +1127,7 @@
     SUBDIR += py-kubernetes
     SUBDIR += py-leviathan
     SUBDIR += py-liquidctl
+    SUBDIR += py-magika
     SUBDIR += py-mitogen
     SUBDIR += py-mqttwarn
     SUBDIR += py-nagiosplugin
@@ -1717,6 +1728,8 @@
     SUBDIR += zeroer
     SUBDIR += zetaback
     SUBDIR += zetaback-devel
+    SUBDIR += zfs-allow
+    SUBDIR += zfs-set
     SUBDIR += zidrav
     SUBDIR += zli
     SUBDIR += znapzend
@@ -1724,6 +1737,7 @@
     SUBDIR += zot
     SUBDIR += zoxide
     SUBDIR += zpool-iostat-viz
+    SUBDIR += zpool-set
     SUBDIR += zrep
     SUBDIR += zsd
     SUBDIR += zsm

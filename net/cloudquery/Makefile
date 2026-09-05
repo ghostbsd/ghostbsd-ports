@@ -1,7 +1,7 @@
 PORTNAME=	cloudquery
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.32.0
-PORTREVISION=	29
+DISTVERSION=	6.41.2
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	se@FreeBSD.org
@@ -12,15 +12,9 @@ LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		go:modules
-USE_GITHUB=	nodefault
-GH_TUPLE=	golang:sys:v0.6.0:sys
 
-GO_MODULE=	github.com/cloudquery/cloudquery
+GO_MODULE=	github.com/cloudquery/cloudquery/v6
 
 PLIST_FILES=	bin/${PORTNAME}
-
-pre-patch:
-	${RM} -r ${WRKSRC}/vendor/golang.org/x/sys
-	${LN} -s ${WRKDIR}/sys-* ${WRKSRC}/vendor/golang.org/x/sys
 
 .include <bsd.port.mk>

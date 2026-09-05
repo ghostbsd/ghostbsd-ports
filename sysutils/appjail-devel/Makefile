@@ -1,5 +1,5 @@
 PORTNAME=	appjail
-DISTVERSION=	5.1.0.20260713
+DISTVERSION=	5.5.0.20260902
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
@@ -11,15 +11,15 @@ WWW=		https://github.com/DtxdF/AppJail
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-CONFLICTS=	appjail
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	DtxdF
 GH_PROJECT=	AppJail
-GH_TAGNAME=	1188c11233c1987141d17b1989a528b2da087d45
+GH_TAGNAME=	1e089d92329417050828be9c7c7aa965c720e113
 
 MAKE_ARGS=	APPJAIL_VERSION=${DISTVERSION}+${GH_TAGNAME}
 ALL_TARGET=	utils-strip
+
+CONFLICTS=	appjail
 
 SUB_FILES=	pkg-message
 
@@ -27,19 +27,25 @@ PORTDOCS=	README.md
 
 OPTIONS_DEFINE=		DEBOOTSTRAP DOAS DOCS GIT OCI PKGBASE X11
 OPTIONS_DEFAULT=	OCI PKGBASE
+OPTIONS_RADIO=		SECRETS
+OPTIONS_RADIO_SECRETS=	AGE RAGE
 
+AGE_DESC=		Use security/age as secrets backend
 DEBOOTSTRAP_DESC=	Support for Debian and Ubuntu jails
 DOAS_DESC=		Add support for unprivileged users
 OCI_DESC=		Add support for OCI
 PKGBASE_DESC=		Add support for pkgbase
+RAGE_DESC=		Use security/rage as secrets backend
 X11_DESC=		Add support for x11
 
+AGE_RUN_DEPENDS=		age:security/age
 DEBOOTSTRAP_RUN_DEPENDS=	debootstrap>0:sysutils/debootstrap
 DOAS_RUN_DEPENDS=		doas>0:security/doas
 GIT_RUN_DEPENDS=		git>0:devel/git
 OCI_RUN_DEPENDS=		buildah>0:sysutils/buildah \
 				jq>0:textproc/jq
 PKGBASE_RUN_DEPENDS=		${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
+RAGE_RUN_DEPENDS=		rage:security/rage-encryption
 X11_RUN_DEPENDS=		su-exec:security/su-exec \
 				xauth:x11/xauth \
 				xdotool:x11/xdotool \

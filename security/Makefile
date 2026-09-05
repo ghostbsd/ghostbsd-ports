@@ -189,7 +189,6 @@
     SUBDIR += git-secret
     SUBDIR += gitjacker
     SUBDIR += gitlab-analyzers-secrets
-    SUBDIR += globalprotect-openconnect
     SUBDIR += gnome-keyring
     SUBDIR += gnupg
     SUBDIR += gnupg-pkcs11-scd
@@ -399,6 +398,7 @@
     SUBDIR += mhash
     SUBDIR += mindterm-binary
     SUBDIR += minisign
+    SUBDIR += mkcert
     SUBDIR += mkp224o
     SUBDIR += modsecurity3
     SUBDIR += modsecurity3-nginx
@@ -439,6 +439,7 @@
     SUBDIR += olm
     SUBDIR += onionscan
     SUBDIR += op
+    SUBDIR += open-vulnerability-cli
     SUBDIR += openbao
     SUBDIR += openbsm
     SUBDIR += openca-ocspd
@@ -781,12 +782,14 @@
     SUBDIR += pam_rssh
     SUBDIR += pam_script
     SUBDIR += pam_search_list
+    SUBDIR += pam_ssh_agent
     SUBDIR += pam_ssh_agent_auth
     SUBDIR += pam_u2f
     SUBDIR += pam_worker
     SUBDIR += pam_yubico
     SUBDIR += pamtester
     SUBDIR += paperkey
+    SUBDIR += pass-cli
     SUBDIR += passh
     SUBDIR += passivedns
     SUBDIR += pcsc-tools
@@ -834,6 +837,7 @@
     SUBDIR += pecl-ssh2
     SUBDIR += pecl-xxtea
     SUBDIR += peda
+    SUBDIR += periodic-filter-vuxml
     SUBDIR += pev
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
@@ -872,7 +876,6 @@
     SUBDIR += plasma6-kscreenlocker
     SUBDIR += plasma6-ksshaskpass
     SUBDIR += plasma6-kwallet-pam
-    SUBDIR += please
     SUBDIR += portacl-rc
     SUBDIR += proftpd-mod_clamav
     SUBDIR += proxytunnel
@@ -905,7 +908,7 @@
     SUBDIR += py-badkeys
     SUBDIR += py-base58
     SUBDIR += py-bcrypt
-    SUBDIR += py-biscuit-auth
+    SUBDIR += py-biscuit-python
     SUBDIR += py-bitbox02
     SUBDIR += py-blake3
     SUBDIR += py-btchip-python
@@ -1165,6 +1168,7 @@
     SUBDIR += rubygem-attr_encrypted
     SUBDIR += rubygem-attr_encrypted3
     SUBDIR += rubygem-auth-sanitizer
+    SUBDIR += rubygem-auth-sanitizer-gitlab
     SUBDIR += rubygem-bcrypt
     SUBDIR += rubygem-bcrypt-ruby
     SUBDIR += rubygem-bcrypt_pbkdf
@@ -1471,6 +1475,7 @@
     SUBDIR += xmlsec1
     SUBDIR += xorsearch
     SUBDIR += xray-core
+    SUBDIR += y509
     SUBDIR += yafic
     SUBDIR += yapet
     SUBDIR += yara

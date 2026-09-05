@@ -29,6 +29,18 @@
     SUBDIR += bitstream-vera
     SUBDIR += bitter
     SUBDIR += blackout
+    SUBDIR += bpmf-genryu
+    SUBDIR += bpmf-genseki
+    SUBDIR += bpmf-gensen
+    SUBDIR += bpmf-genwan
+    SUBDIR += bpmf-genyo
+    SUBDIR += bpmf-genyog
+    SUBDIR += bpmf-huninn
+    SUBDIR += bpmf-iansui
+    SUBDIR += bpmf-special
+    SUBDIR += bpmf-zihikai
+    SUBDIR += bpmf-zihisans
+    SUBDIR += bpmf-zihiserif
     SUBDIR += c64bdf
     SUBDIR += cantarell-fonts
     SUBDIR += cascadia-code
@@ -51,6 +63,7 @@
     SUBDIR += cyr-rfx
     SUBDIR += datalegreya
     SUBDIR += dejavu
+    SUBDIR += departure-mono
     SUBDIR += dina
     SUBDIR += doulos
     SUBDIR += doulos-compact

@@ -5,6 +5,173 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20260905:
+  AFFECTS: users of www/pocketbase
+  AUTHOR: nxjoseph@FreeBSD.org
+
+  1) Please note that Go 1.27.0, which upstream has been switched to,
+  retrofitted `encoding/json` to use the v2 package under the hood but
+  unfortunately is not fully backward compatible. I recommend to not
+  push blindly an update on production and to test your PocketBase
+  application first locally to see if everything works correctly.
+
+  2) Note that there could be a slight breaking change in case you are
+  chaining PocketBase commands and relied on the previous `0` exit status
+  for `Command.RunE` returned errors. Or in other words, if you have
+  `./pocketbase invalid && someothercommand` and previously relied that
+  `someothercommand` will be always executed then this is no longer the
+  case and you'll have to adjust it or replace `&&` with `;`.
+
+20260902:
+  AFFECTS: users of mail/py-notmuch2
+  AUTHOR: jrm@FreeBSD.org
+
+  The package built from mail/py-notmuch2 has been renamed from
+  py312-notmuch0 to py312-notmuch2 to match the upstream name of the
+  CFFI-based Python bindings.  The 0 suffix was an editing error
+  introduced in 2021.  The port origin is unchanged, but installed
+  packages will not be upgraded automatically across the rename.  If
+  py312-notmuch0 is installed, run
+
+	pkg set -n py312-notmuch0:py312-notmuch2
+
+  before your next upgrade, or deinstall the old package and install
+  mail/py-notmuch2 again.  Substitute the py312 prefix if you use a
+  different Python version.
+
+20260830:
+  AFFECTS: users of www/nginx-module-lua
+  AUTHOR: joneum@FreeBSD.org
+
+  Since 20260819 www/nginx-module-lua no longer installs a prebuilt
+  libexec/nginx/ngx_http_lua_module.so.  The port now only provides the
+  module sources used by the nginx ports, because the prebuilt module
+  conflicted with the one built by www/nginx with the LUA option.
+
+  If nginx.conf contains
+
+	load_module "/usr/local/libexec/nginx/ngx_http_lua_module.so";
+
+  nginx will fail to start after the upgrade.  A running nginx keeps
+  serving until the next restart, so this may surface later.
+
+  Rebuild www/nginx (or www/nginx-devel, www/freenginx) with the DSO and
+  LUA options enabled.  The module is installed at the same path again,
+  so the load_module line keeps working.  LUA is not a default option,
+  therefore the official binary packages do not ship the module.
+
+20260826:
+  AFFECTS: users of x11/sddm
+  AUTHOR: arrowd@FreeBSD.org
+
+  The keyboard layouts used by SDDM are now derived from the sddm_lang rc
+  variable. Setting it for example to "fr_FR" will result in "fr,us" value
+  for the '-layout' argument of the setxkbmap call.
+
+  If a more complex layout configuration is required, it is possible to set
+  it directly with
+
+  sysrc sddm_xkb_layout="us,de,fr,it,ru"
+
+20260826:
+  AFFECTS: users of net-mgmt/semaphore
+  AUTHOR: joneum@FreeBSD.org
+
+  Semaphore has been updated to 2.19.7.  Upstream removed BoltDB support in
+  2.19; the supported dialects are now mysql, postgres and sqlite.  If your
+  configuration still contains "dialect": "bolt", semaphore will refuse to
+  start after the upgrade.
+
+  Migrate the database BEFORE upgrading the port.  The migration tool is
+  part of Semaphore 2.18 and no longer present in 2.19; see also
+  https://semaphoreui.com/docs/admin-guide/cli/migrations
+
+  1) Stop the service and back up the BoltDB file:
+
+	service semaphore stop
+	cp /var/db/semaphore/database.boltdb /var/db/semaphore/database.boltdb.bak
+
+  2) Fetch the official 2.18 binary, it is only needed for the migration:
+
+	fetch -o /tmp/sem218.tar.gz https://github.com/semaphoreui/semaphore/releases/download/v2.18.29/semaphore_community_2.18.29_freebsd_amd64.tar.gz
+	tar -xzf /tmp/sem218.tar.gz -C /tmp semaphore
+
+  3) Change "dialect" in semaphore_config.json to sqlite (or mysql/postgres)
+     and add the matching connection settings.  A minimal sqlite example is
+     installed as %%PREFIX%%/etc/semaphore/config.json.sample.
+
+  4) Import the data.  The BoltDB file is only read, not modified:
+
+	/tmp/semaphore migrate --from-boltdb /var/db/semaphore/database.boltdb --config /usr/local/etc/semaphore/semaphore_config.json
+
+  5) Upgrade the port, apply the remaining schema migrations and start the
+     service again:
+
+	semaphore migrate --config /usr/local/etc/semaphore/semaphore_config.json
+	service semaphore start
+	rm /tmp/semaphore
+
+  Note that this update also restores the bundled web interface.  Previous
+  versions of the port installed the API server only, so every UI route
+  returned 404.
+
+20260819:
+  AFFECTS: users of net/freeipa-server and security/dogtag-pki
+  AUTHOR: joneum@FreeBSD.org
+
+  net/freeipa-server has been updated to 4.13.2, which also brings
+  security/dogtag-pki 11.10.1.  Two of the changes concern the configuration
+  of an already deployed pki-tomcat instance, which no package may rewrite:
+  dogtag-pki now builds with Java 21 instead of Java 17, and FreeIPA
+  corrects the ACME paths, which used to point at the Linux location
+  /etc/pki.  A server installed from scratch needs none of this.  On an
+  existing one run the following as root, in this order:
+
+    # ipactl stop
+    # pkg upgrade
+    # sysrc -f /etc/rc.conf.d/pki_tomcatd_pki_tomcat \
+        pki_tomcatd_pki_tomcat_java_home=/usr/local/openjdk21
+    # sed -i '' -e 's|/usr/local/openjdk17|/usr/local/openjdk21|' \
+        /var/db/pki/pki-tomcat/conf/tomcat.conf
+    # sed -i '' -e 's|/etc/pki/pki-tomcat/|/var/db/pki/pki-tomcat/conf/|g' \
+        /var/db/pki/pki-tomcat/conf/acme/database.conf \
+        /var/db/pki/pki-tomcat/conf/acme/realm.conf \
+        /var/db/pki/pki-tomcat/conf/acme/configsources.conf
+    # ipa-server-upgrade
+    # ipactl status
+
+  The last command has to list all seven services as RUNNING, and neither of
+  these two checks may print anything:
+
+    # grep openjdk17 /etc/rc.conf.d/pki_tomcatd_pki_tomcat \
+        /var/db/pki/pki-tomcat/conf/tomcat.conf
+    # grep -r /etc/pki /var/db/pki/pki-tomcat/conf/acme
+
+  A missed JDK change makes pki-tomcatd fail with "UnsupportedClassVersion-
+  Error: class file version 65.0"; missed ACME paths keep the ACME web
+  application from starting, which in turn blocks the shutdown of
+  pki-tomcatd.
+
+20260814:
+  AFFECTS: users of sysutils/screen*
+  AUTHOR: cy@FreeBSD.org
+
+  sysutils/screen no longer sets the MULTUSER option by default anymore.
+  MUTIUSER installs a setuid root screen binary. This introduces an exploit
+  vector. Users who need multi-user functionality should either build
+  screen with the MULTIUSER option or binary package users should add the
+  setuid bit to the screen binary.
+
+20260813:
+  AFFECTS: users of security/openssh-portable
+  AUTHOR: bdrewery@FreeBSD.org
+
+  For FreeBSD 15+, the option BLACKLISTD has been renamed to BLOCKLISTD.
+  The option is enabled by default. If you had this option disabled you
+  will need to disable the new spelling as well.
+
+  The ssh config file supports both UseBlacklist and UseBlocklist.
+
 20260724:
   AFFECTS: users of news/inn, news/inn-current
   AUTHOR: kbowling@FreeBSD.org
@@ -1348,6 +1515,13 @@ you update your ports collection, before attempting any port upgrades.
   installed after each update. These can be removed with
 
   pkg remove glib-bootstrap gobject-introspection-bootstrap
+
+  When updating these ports outside of Poudriere, make sure to
+  * remove bootstrap packages
+  * clean working dirs of bootstrap flavors (make clean FLAVOR=bootstrap) of
+    both ports
+  * sometimes it is additionally required to run "pkg remove -f glib20" before
+    building a new version
 
 20250327:
   AFFECTS: users of thunderbird

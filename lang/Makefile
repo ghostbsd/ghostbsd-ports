@@ -129,6 +129,7 @@
     SUBDIR += go
     SUBDIR += go125
     SUBDIR += go126
+    SUBDIR += go127
     SUBDIR += gomacro
     SUBDIR += gprolog
     SUBDIR += gptscript
@@ -366,6 +367,7 @@
     SUBDIR += slib
     SUBDIR += slib-guile
     SUBDIR += slisp
+    SUBDIR += smallbasic
     SUBDIR += smalltalk
     SUBDIR += smlnj
     SUBDIR += snobol4

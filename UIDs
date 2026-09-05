@@ -338,10 +338,10 @@ autopulse:*:388:388::0:0:Autopulse Daemon:/nonexistent:/usr/sbin/nologin
 ldap:*:389:389::0:0:OpenLDAP Server:/nonexistent:/usr/sbin/nologin
 bunkerweb:*:390:390::0:0:Bunkerweb Service:/nonexistent:/usr/sbin/nologin
 dirsrv:*:391:391::0:0:389 Directory Server:/usr/local/share/dirsrv:/usr/sbin/nologin
-# free: 392
-# free: 393
-# free: 394
-# free: 395
+_turnserver:*:392:392::0:0:Coturn Turnserver Daemon:/nonexistent:/usr/sbin/nologin
+immich:*:393:393::0:0:Immich Daemon:/nonexistent:/usr/sbin/nologin
+mysqlrouter:*:394:394::0:0:MySQL Router Daemon:/nonexistent:/usr/sbin/nologin
+comentario:*:395:395::0:0:Comentario Daemon:/var/db/comentario:/usr/sbin/nologin
 # free: 396
 rtorrent:*:397:397::0:0:rtorrent Daemon User:/nonexistent:/usr/sbin/nologin
 tiarra:*:398:398::0:0:Tiarra IRC Proxy:/nonexistent:/usr/sbin/nologin
@@ -545,7 +545,7 @@ avahi-autoipd:*:588:588::0:0:Avahi Autoipd Daemon user:/nonexistent:/usr/sbin/no
 # free: 595
 # free: 596
 # free: 597
-# free: 598
+ipaapi:*:598:598::0:0:IPA Framework User:/nonexistent:/usr/sbin/nologin
 pkiuser:*:599:599::0:0:Dogtag PKI user:/nonexistent:/usr/sbin/nologin
 _xsi:*:600:600::0:0:XMLSysInfo User:/nonexistent:/usr/sbin/nologin
 _tss:*:601:601:daemon:0:0:TCG Software Stack user:/var/empty:/usr/sbin/nologin
@@ -553,7 +553,7 @@ _pkcs11:*:602:602:daemon:0:0:opencryptoki user:/var/empty:/usr/sbin/nologin
 _acme:*:603:603::0:0:ACME client user:/var/empty:/usr/sbin/nologin
 _lego:*:604:604::0:0:lego client user:/nonexistent:/usr/sbin/nologin
 _hockeypuck:*:605:605::0:0:hockeypuck pgp keyserver user:/var/empty:/usr/sbin/nologin
-# free: 606
+kdcproxy:*:606:606::0:0:IPA KDC Proxy User:/nonexistent:/usr/sbin/nologin
 # free: 607
 # free: 608
 # free: 609
@@ -778,9 +778,9 @@ _tuptime:*:827:827::0:0:Tuptime:/var/lib/tuptime:/usr/sbin/nologin
 cirrus:*:828:828::0:0:Cirrus CI:/usr/local/cirrus:/bin/sh
 # free: 829
 # free: 830
-# free: 831
+telemt:*:831:831::0:0:Telemt daemon:/var/db/telemt:/usr/sbin/nologin
 beehive:*:832:832::0:0:beehive user:/nonexistent:/usr/sbin/nologin
-# free: 833
+bhyvemgrd:*:833:833::0:0:bhyvemgrd daemon user:/nonexistent:/usr/sbin/nologin
 pocket-id:*:834:834::0:0:OIDC provider that allows users to authenticate with their passkeys:/var/db/pocket-id:/usr/sbin/nologin
 filebrowser:*:835:835::0:0:Web File Browser:/var/db/filebrowser:/usr/sbin/nologin
 tinyauth:*:836:836::0:0:Simplest way to protect your apps with a login screen:/var/db/tinyauth:/usr/sbin/nologin

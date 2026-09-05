@@ -1,6 +1,6 @@
 PORTNAME=	iris
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.21
+DISTVERSION=	0.7.0
 CATEGORIES=	shells
 
 MAINTAINER=	tagattie@FreeBSD.org
@@ -10,7 +10,7 @@ WWW=		https://github.com/versenilvis/IRIS
 LICENSE=	BSD0CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.25+,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/versenilvis/iris
 GO_TARGET=	./cmd/iris

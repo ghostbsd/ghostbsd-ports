@@ -1,6 +1,6 @@
---- chrome/app/chrome_command_ids.h.orig	2026-07-01 06:24:19 UTC
+--- chrome/app/chrome_command_ids.h.orig	2026-08-31 10:59:09 UTC
 +++ chrome/app/chrome_command_ids.h
-@@ -67,11 +67,11 @@
+@@ -81,11 +81,11 @@
  #define IDC_TOGGLE_MULTITASK_MENU       34050
  #endif
  

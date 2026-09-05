@@ -106,6 +106,7 @@
     SUBDIR += dovecot-fts-xapian
     SUBDIR += dovecot-pigeonhole
     SUBDIR += dovecot-xaps
+    SUBDIR += dovecot24
     SUBDIR += dspam
     SUBDIR += ecartis
     SUBDIR += elm
@@ -170,7 +171,6 @@
     SUBDIR += isbg
     SUBDIR += isoqlog
     SUBDIR += isync
-    SUBDIR += james
     SUBDIR += jamlib
     SUBDIR += jmba
     SUBDIR += junkfilter
@@ -292,6 +292,8 @@
     SUBDIR += opensmtpd-filter-dkimsign
     SUBDIR += opensmtpd-filter-rspamd
     SUBDIR += opensmtpd-filter-senderscore
+    SUBDIR += opensmtpd-table-passwd
+    SUBDIR += opensmtpd-table-postgres
     SUBDIR += opensmtpd-table-socketmap
     SUBDIR += opensmtpd-table-sqlite
     SUBDIR += osbf-lua
@@ -506,6 +508,7 @@
     SUBDIR += prepflog
     SUBDIR += procmail
     SUBDIR += procmail-bgrb
+    SUBDIR += protonmail-bridge
     SUBDIR += proxsmtp
     SUBDIR += py-aiosmtpd
     SUBDIR += py-alot
@@ -624,6 +627,7 @@
     SUBDIR += rubygem-email_reply_parser
     SUBDIR += rubygem-email_reply_parser-discourse
     SUBDIR += rubygem-email_reply_trimmer
+    SUBDIR += rubygem-email_reply_trimmer-gitlab
     SUBDIR += rubygem-email_validator
     SUBDIR += rubygem-exception_notification
     SUBDIR += rubygem-extended_email_reply_parser

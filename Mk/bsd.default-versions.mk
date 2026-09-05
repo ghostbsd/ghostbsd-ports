@@ -67,8 +67,8 @@ GCC_DEFAULT?=		14
 GHOSTSCRIPT_DEFAULT?=	10
 # Possible values: mesa-libs, mesa-devel
 GL_DEFAULT?=		mesa-libs
-# Possible values: 1.25, 1.26
-GO_DEFAULT?=		1.25
+# Possible values: 1.25, 1.26, 1.27
+GO_DEFAULT?=		1.26
 # Possible values: 1.8, 2.2, 3.0
 GUILE_DEFAULT?=		2.2
 # Possible versions: 6, 7
@@ -121,7 +121,7 @@ MYSQL_DEFAULT?=		8.4
 NINJA_DEFAULT?=		ninja
 # Possible value: 20, 22, 24, 26, current, lts (Note: current = 26 and lts = 24)
 NODEJS_DEFAULT?=	lts
-# Possible value: 25, 26
+# Possible value: 25, 26, 27
 OPENLDAP_DEFAULT?=	26
 # Possible values: 5.40, 5.42, 5.44, devel
 .  if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \

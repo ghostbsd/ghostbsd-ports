@@ -1,5 +1,5 @@
 PORTNAME=	firefox
-DISTVERSION=	153.0.3
+DISTVERSION=	155.0.1
 PORTEPOCH=	2
 CATEGORIES=	www wayland
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}${DISTVERSIONSUFFIX}/source \
@@ -10,8 +10,11 @@ MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 WWW=		https://www.firefox.com/
 
+NOT_FOR_ARCHS=		i386
+NOT_FOR_ARCHS_REASON=	fails to build: rust needs more address space than platform can provide
+
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.125:security/nss \
+		nss>=3.127:security/nss \
 		libevent>=2.1.8:devel/libevent \
 		harfbuzz>=10.1.0:print/harfbuzz \
 		graphite2>=1.3.14:graphics/graphite2 \

@@ -7,7 +7,7 @@ mail:*:6:postfix,clamav
 ftp:*:14:
 smmsp:*:25:
 audio:*:43:
-video:*:44:lightdm
+video:*:44:lightdm,sddm
 bind:*:53:
 rdfdb:*:55:
 spamd:*:58:
@@ -333,10 +333,10 @@ autopulse:*:388:
 ldap:*:389:
 bunkerweb:*:390:
 dirsrv:*:391:
-# free: 392
-# free: 393
-# free: 394
-# free: 395
+_turnserver:*:392:
+immich:*:393:
+mysqlrouter:*:394:
+comentario:*:395:
 # free: 396
 rtorrent:*:397:
 tiarra:*:398:
@@ -540,7 +540,7 @@ avahi-autoipd:*:588:
 # free: 595
 # free: 596
 # free: 597
-# free: 598
+ipaapi:*:598:www
 pkiuser:*:599:
 _xsi:*:600:
 _tss:*:601:
@@ -548,7 +548,7 @@ _pkcs11:*:602:
 _acme:*:603:
 _lego:*:604:
 _hockeypuck:*:605:
-# free: 606
+kdcproxy:*:606:
 # free: 607
 # free: 608
 # free: 609
@@ -773,9 +773,9 @@ _tuptime:*:827:
 cirrus:*:828:
 # free: 829
 # free: 830
-# free: 831
+telemt:*:831:
 beehive:*:832:
-# free: 833
+bhyvemgrd:*:833:
 pocket-id:*:834:
 filebrowser:*:835:
 tinyauth:*:836:
