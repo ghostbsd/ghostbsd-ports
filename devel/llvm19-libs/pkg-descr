@@ -1,0 +1,9 @@
+LLVM runtime shared libraries.
+
+This port provides only the shared libraries (libLLVM.so, libLTO.so,
+libRemarks.so) needed at runtime by consumers like mesa-dri that use
+LLVM for JIT compilation (llvmpipe) and GPU shader compilation (AMDGPU).
+
+This is a much smaller package than the full devel/llvm19 port, which
+also includes the compiler toolchain, headers, static libraries, and
+development tools.

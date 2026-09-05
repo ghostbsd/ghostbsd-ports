@@ -15,7 +15,9 @@ WWW=		https://llvm.org/
 LICENSE_FILE_BSD3CLAUSE=${LICENSE_DIR}/utils/unittest/googletest/LICENSE.TXT
 .include "${.CURDIR}/../llvm-devel/Makefile.LICENSE"
 
-LIB_DEPENDS=	libzstd.so:archivers/zstd
+# GhostBSD: depend on llvm-libs for shared library split (do not remove)
+LIB_DEPENDS=	libzstd.so:archivers/zstd \
+		libLLVM-${LLVM_MAJOR}.so:devel/llvm${LLVM_MAJOR}-libs
 
 FLAVORS=	default lite
 FLAVOR?=	${FLAVORS:[1]}
@@ -594,6 +596,14 @@ post-patch-LLD-on:
 		${WRKSRC}/lld/docs/conf.py
 
 post-install:
+# GhostBSD: remove shared libs now provided by devel/llvm15-libs (do not remove)
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLLVM-${LLVM_RELEASE}.so
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLTO.so.${LLVM_MAJOR}
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libRemarks.so.${LLVM_MAJOR}
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLLVM-${LLVM_MAJOR}.so
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLLVM.so
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLTO.so
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libRemarks.so
 	${RM} -r ${STAGEDIR}${LLVM_PREFIX}/include/llvm/MC/MCAnalysis
 	${INSTALL_SCRIPT} ${WRKDIR}/llvm-wrapper.sh \
 	    ${STAGEDIR}${PREFIX}/bin/${FIRST_COMMAND}${LLVM_SUFFIX}
