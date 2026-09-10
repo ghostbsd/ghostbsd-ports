@@ -1,8 +1,7 @@
 PORTNAME=	blender
 DISTVERSION=	5.0.1
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
-PORTREVISION=	1
 CATEGORIES=	graphics multimedia
 MASTER_SITES=	http://download.blender.org/source/ \
 		http://mirror.cs.umn.edu/blender.org/source/ \
@@ -37,7 +36,7 @@ SHEBANG_FILES=	scripts/modules/blend_render_info.py
 CMAKE_ARGS=	-DCMAKE_CXX_STANDARD:INTEGER=17 \
 		-DLLVM_CONFIG:STRING="${LOCALBASE}/bin/llvm-config${LLVM_VERSION}" \
 		-DCMAKE_POLICY_DEFAULT_CMP0167=NEW \
-		-DPYTHON_VERSION:STRING=${PYTHON_VER}
+		-DPYTHON_VERSION=${PYTHON_VER}
 .if defined(WITH_DEBUG)
 CMAKE_ARGS+=	-DWITH_GHOST_DEBUG:BOOL=ON
 .endif
