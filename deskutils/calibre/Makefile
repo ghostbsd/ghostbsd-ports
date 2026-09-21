@@ -1,6 +1,6 @@
 PORTNAME=	calibre
 PORTVERSION=	8.16.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	deskutils python
 MASTER_SITES=	https://download.calibre-ebook.com/${PORTVERSION}/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -21,7 +21,7 @@ BUILD_DEPENDS=		${LOCALBASE}/bin/cmake:devel/cmake-core \
 			${NONEXISTENT}:misc/iso-codes:extract \
 			${PY_SETUPTOOLS} \
 			${PYTHON_PKGNAMEPREFIX}apsw>=3.50.4.0:databases/py-apsw@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4.12.2:www/py-beautifulsoup@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}beautifulsoup4>=4.12.2:www/py-beautifulsoup4@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}css-parser>=1.0.10:www/py-css-parser@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}html5-parser>=0.4.12:www/py-html5-parser@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}lxml>=6.0.1:devel/py-lxml@${PY_FLAVOR} \
@@ -45,7 +45,7 @@ LIB_DEPENDS=		libavcodec.so:multimedia/ffmpeg \
 			libuchardet.so:textproc/uchardet \
 			libxkbcommon.so:x11/libxkbcommon
 RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}apsw>=3.50.4.0:databases/py-apsw@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4.12.2:www/py-beautifulsoup@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}beautifulsoup4>=4.12.2:www/py-beautifulsoup4@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}css-parser>=1.0.10:www/py-css-parser@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}dnspython>=2.6.1:dns/py-dnspython@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}feedparser>=6.0.10:textproc/py-feedparser@${PY_FLAVOR} \

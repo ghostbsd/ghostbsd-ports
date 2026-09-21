@@ -786,7 +786,7 @@ libexec/dovecot/dovecot-lda
 libexec/dovecot/gdbhelper
 libexec/dovecot/health-check.sh
 libexec/dovecot/imap
-%%IMAP_HIBERNATE%%libexec/dovecot/imap-hibernate
+libexec/dovecot/imap-hibernate
 libexec/dovecot/imap-login
 libexec/dovecot/imap-urlauth
 libexec/dovecot/imap-urlauth-login

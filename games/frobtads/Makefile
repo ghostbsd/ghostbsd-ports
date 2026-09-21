@@ -16,6 +16,9 @@ LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
 DEPRECATED=	No release in years, does not build with CMake 4
 EXPIRATION_DATE=2026-11-30
 
+BROKEN_armv7=	error: 'new' expression with placement arguments refers to non-placement 'operator delete'
+BROKEN_i386=	error: 'new' expression with placement arguments refers to non-placement 'operator delete'
+
 LIB_DEPENDS=	libcurl.so:ftp/curl
 
 USES=		cmake:noninja localbase ncurses

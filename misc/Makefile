@@ -500,6 +500,7 @@
     SUBDIR += py-csvw
     SUBDIR += py-cvat-sdk
     SUBDIR += py-datasets
+    SUBDIR += py-deepspeed
     SUBDIR += py-detecta
     SUBDIR += py-diffusers
     SUBDIR += py-eemeter
@@ -565,6 +566,7 @@
     SUBDIR += py-langchain-text-splitters
     SUBDIR += py-langgraph
     SUBDIR += py-langgraph-checkpoint
+    SUBDIR += py-langgraph-checkpoint-sqlite
     SUBDIR += py-langgraph-prebuilt
     SUBDIR += py-langgraph-sdk
     SUBDIR += py-langsmith
@@ -646,6 +648,7 @@
     SUBDIR += py-pyEDFlib
     SUBDIR += py-pyct
     SUBDIR += py-pyfiglet
+    SUBDIR += py-pygtrie
     SUBDIR += py-pykml
     SUBDIR += py-pymatreader
     SUBDIR += py-pyowm
@@ -654,7 +657,6 @@
     SUBDIR += py-pyqir
     SUBDIR += py-python-crc
     SUBDIR += py-python-geohash
-    SUBDIR += py-python-pygtrie
     SUBDIR += py-python-utils
     SUBDIR += py-pytorch
     SUBDIR += py-pytorch-lightning
@@ -700,7 +702,6 @@
     SUBDIR += py-timm
     SUBDIR += py-timm-vis
     SUBDIR += py-toil
-    SUBDIR += py-torch-geometric
     SUBDIR += py-torchao
     SUBDIR += py-torchdata
     SUBDIR += py-torchmetrics

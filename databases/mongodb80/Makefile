@@ -1,7 +1,7 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
 DISTVERSION=	8.0.12
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	databases net
 PKGNAMESUFFIX=	${DISTVERSION:R:S/.//}
 
@@ -157,6 +157,7 @@ MOZJS_ARCH=	${ARCH}
 post-extract:
 # Verify we downloaded the proper mozjs git tag.
 	${SH} -xc "test \"X`grep -E '^LIB_GIT_REVISION=' ${MOZJS_WRKSRC}/get-sources.sh`\" = \"XLIB_GIT_REVISION=${MOZJS_TAG}\""
+	${PATCH} -d ${WRKDIR}/spidermonkey-${MOZJS_TAG} -p1 < ${PATCHDIR}/d497aa4f770ca02f6083e93b94996a8fe32c2ff4.patch
 
 pre-configure:
 # Replacement of ${WRKSRC}/src/third_party/mozjs/get-sources.sh

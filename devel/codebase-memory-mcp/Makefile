@@ -1,6 +1,6 @@
 PORTNAME=	codebase-memory-mcp
 DISTVERSIONPREFIX=v
-DISTVERSION=	0.10.8
+DISTVERSION=	0.11.0
 CATEGORIES=	devel
 
 MAINTAINER=	olivier@FreeBSD.org
@@ -15,7 +15,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	DeusData
 
 # Assumes a 64-bit size_t; fails to build on 32-bit archs
-ONLY_FOR_ARCHS=	aarch64 amd64
+ONLY_FOR_ARCHS=	aarch64 amd64 powerpc64 powerpc64le
 
 PLIST_FILES=	bin/codebase-memory-mcp
 SUB_FILES=	pkg-message

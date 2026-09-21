@@ -1,11 +1,11 @@
 PORTNAME=	RSQLite
-PORTVERSION=	3.52.0
+DISTVERSION=	3.53.3
 CATEGORIES=	databases
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Database Interface R driver for SQLite
-WWW=		https://cran.r-project.org/web/packages/RSQLite/
+WWW=		https://cran.r-project.org/package=RSQLite
 
 LICENSE=	LGPL21 LGPL3
 LICENSE_COMB=	dual

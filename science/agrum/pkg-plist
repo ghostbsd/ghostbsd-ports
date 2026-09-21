@@ -23,6 +23,8 @@ include/agrum/BN/algorithms/divergence/BNdistance.h
 include/agrum/BN/algorithms/divergence/BNdistance_tpl.h
 include/agrum/BN/algorithms/divergence/GibbsBNdistance.h
 include/agrum/BN/algorithms/divergence/GibbsBNdistance_tpl.h
+include/agrum/BN/algorithms/divergence/MCBNDistance.h
+include/agrum/BN/algorithms/divergence/MCBNDistance_tpl.h
 include/agrum/BN/algorithms/divergence/exactBNdistance.h
 include/agrum/BN/algorithms/divergence/exactBNdistance_tpl.h
 include/agrum/BN/algorithms/essentialGraph.h
@@ -826,6 +828,8 @@ include/agrum/base/graphs/cliqueGraph.h
 include/agrum/base/graphs/cliqueGraph_inl.h
 include/agrum/base/graphs/diGraph.h
 include/agrum/base/graphs/diGraph_inl.h
+include/agrum/base/graphs/fastGraph.h
+include/agrum/base/graphs/fastGraph_tpl.h
 include/agrum/base/graphs/graphConcepts.h
 include/agrum/base/graphs/graphConcepts_inl.h
 include/agrum/base/graphs/graphElements.h
@@ -1047,6 +1051,8 @@ lib/cmake/aGrUM/agrumID-targets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/aGrUM/agrumID-targets.cmake
 lib/cmake/aGrUM/agrumMRF-targets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/aGrUM/agrumMRF-targets.cmake
+lib/cmake/aGrUM/agrumPRM-targets-%%CMAKE_BUILD_TYPE%%.cmake
+lib/cmake/aGrUM/agrumPRM-targets.cmake
 lib/libagrumBASE.so
 lib/libagrumBASE.so.3
 lib/libagrumBASE.so.%%VERSION%%
@@ -1068,6 +1074,9 @@ lib/libagrumID.so.%%VERSION%%
 lib/libagrumMRF.so
 lib/libagrumMRF.so.3
 lib/libagrumMRF.so.%%VERSION%%
+lib/libagrumPRM.so
+lib/libagrumPRM.so.3
+lib/libagrumPRM.so.%%VERSION%%
 %%PYTHON_SITELIBDIR%%/pyagrum-%%VERSION%%.dist-info/LICENSE.md
 %%PYTHON_SITELIBDIR%%/pyagrum-%%VERSION%%.dist-info/LICENSES/LGPL-3.0-or-later.txt
 %%PYTHON_SITELIBDIR%%/pyagrum-%%VERSION%%.dist-info/LICENSES/MIT.txt

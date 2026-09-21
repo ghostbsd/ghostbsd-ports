@@ -1,5 +1,7 @@
 bin/autcross
+bin/autdo
 bin/autfilt
+bin/autwords
 bin/dstar2tgba
 bin/genaut
 bin/genltl
@@ -101,6 +103,7 @@ include/spot/tl/simplify.hh
 include/spot/tl/snf.hh
 include/spot/tl/sonf.hh
 include/spot/tl/unabbrev.hh
+include/spot/tl/unitprop.hh
 include/spot/twa/acc.hh
 include/spot/twa/bdddict.hh
 include/spot/twa/bddprint.hh
@@ -122,12 +125,12 @@ include/spot/twaalgos/complement.hh
 include/spot/twaalgos/complete.hh
 include/spot/twaalgos/compsusp.hh
 include/spot/twaalgos/contains.hh
-include/spot/twaalgos/copy.hh
 include/spot/twaalgos/couvreurnew.hh
 include/spot/twaalgos/cycles.hh
 include/spot/twaalgos/dbranch.hh
 include/spot/twaalgos/deadends.hh
 include/spot/twaalgos/degen.hh
+include/spot/twaalgos/dependent.hh
 include/spot/twaalgos/determinize.hh
 include/spot/twaalgos/dot.hh
 include/spot/twaalgos/dtbasat.hh
@@ -151,6 +154,7 @@ include/spot/twaalgos/isdet.hh
 include/spot/twaalgos/isunamb.hh
 include/spot/twaalgos/isweakscc.hh
 include/spot/twaalgos/langmap.hh
+include/spot/twaalgos/lasso.hh
 include/spot/twaalgos/lbtt.hh
 include/spot/twaalgos/ltl2taa.hh
 include/spot/twaalgos/ltl2tgba_fm.hh
@@ -217,7 +221,9 @@ libdata/pkgconfig/libspot.pc
 libdata/pkgconfig/libspotgen.pc
 libdata/pkgconfig/libspotltsmin.pc
 share/man/man1/autcross.1.gz
+share/man/man1/autdo.1.gz
 share/man/man1/autfilt.1.gz
+share/man/man1/autwords.1.gz
 share/man/man1/dstar2tgba.1.gz
 share/man/man1/genaut.1.gz
 share/man/man1/genltl.1.gz

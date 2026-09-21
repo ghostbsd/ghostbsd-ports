@@ -24,7 +24,6 @@
     SUBDIR += cascade-compiler
     SUBDIR += chipvault
     SUBDIR += csxcad
-    SUBDIR += cura
     SUBDIR += cura-engine
     SUBDIR += digital
     SUBDIR += dinotrace
@@ -78,6 +77,7 @@
     SUBDIR += lepton-eda
     SUBDIR += lib3mf
     SUBDIR += libbgcode
+    SUBDIR += libfive
     SUBDIR += libgdsii
     SUBDIR += libopencad
     SUBDIR += librecad

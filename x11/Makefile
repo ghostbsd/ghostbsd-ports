@@ -31,6 +31,7 @@
     SUBDIR += bitmap
     SUBDIR += bmpanel2
     SUBDIR += boomer
+    SUBDIR += bosd
     SUBDIR += brisk-menu
     SUBDIR += budgie
     SUBDIR += budgie-desktop
@@ -293,6 +294,7 @@
     SUBDIR += lxrandr
     SUBDIR += ly
     SUBDIR += mako
+    SUBDIR += mangobar
     SUBDIR += mate
     SUBDIR += mate-applet-appmenu
     SUBDIR += mate-applets

@@ -270,6 +270,7 @@
     SUBDIR += icmpinfo
     SUBDIR += icpld
     SUBDIR += identme
+    SUBDIR += if_pair-kmod
     SUBDIR += ifdepd
     SUBDIR += iffinder
     SUBDIR += ifstat
@@ -1048,7 +1049,6 @@
     SUBDIR += pwnat
     SUBDIR += pxe
     SUBDIR += pxe-pdhcp
-    SUBDIR += py-DTLSSocket
     SUBDIR += py-GeoIP2
     SUBDIR += py-aiocoap
     SUBDIR += py-aiohappyeyeballs
@@ -1101,7 +1101,6 @@
     SUBDIR += py-ldappool
     SUBDIR += py-lib389
     SUBDIR += py-libcloud
-    SUBDIR += py-libdnet
     SUBDIR += py-macaddress
     SUBDIR += py-magic-wormhole
     SUBDIR += py-matrix-synapse-ldap3
@@ -1127,7 +1126,6 @@
     SUBDIR += py-port-for
     SUBDIR += py-portend
     SUBDIR += py-pychromecast
-    SUBDIR += py-pyenet
     SUBDIR += py-pyfixbuf
     SUBDIR += py-pygeoip
     SUBDIR += py-pyicap
@@ -1161,7 +1159,6 @@
     SUBDIR += py-python-openstackclient
     SUBDIR += py-python-socks
     SUBDIR += py-python-twitter
-    SUBDIR += py-pytradfri
     SUBDIR += py-pyu2f
     SUBDIR += py-pyvmomi
     SUBDIR += py-pyzmq
@@ -1422,6 +1419,7 @@
     SUBDIR += rubygem-net-ntp
     SUBDIR += rubygem-net-ping
     SUBDIR += rubygem-net-protocol
+    SUBDIR += rubygem-net-protocol-gitlab
     SUBDIR += rubygem-net-protocol01
     SUBDIR += rubygem-netrc
     SUBDIR += rubygem-network_interface
@@ -1508,6 +1506,7 @@
     SUBDIR += rubygem-uri
     SUBDIR += rubygem-uri-gitlab
     SUBDIR += rubygem-uri-redis
+    SUBDIR += rubygem-uri-valkey
     SUBDIR += rubygem-uri_template
     SUBDIR += rubygem-whois
     SUBDIR += rubygem-x
@@ -1737,6 +1736,7 @@
     SUBDIR += wmwave
     SUBDIR += wmwifi
     SUBDIR += wol
+    SUBDIR += wormhole-william
     SUBDIR += wpa_supplicant_gui
     SUBDIR += wping
     SUBDIR += wstunnel

@@ -146,6 +146,7 @@
     SUBDIR += libmemcached
     SUBDIR += libmongocrypt
     SUBDIR += libmswstr
+    SUBDIR += libnusqlite3
     SUBDIR += libnvpair
     SUBDIR += libodbc++
     SUBDIR += libpbl
@@ -198,6 +199,7 @@
     SUBDIR += mtop
     SUBDIR += mydumper
     SUBDIR += mysql++
+    SUBDIR += mysql-config-coder
     SUBDIR += mysql-connector-c++
     SUBDIR += mysql-connector-j
     SUBDIR += mysql-connector-odbc
@@ -679,10 +681,12 @@
     SUBDIR += plpgsql_check
     SUBDIR += pointcloud
     SUBDIR += postgis-jdbc
+    SUBDIR += postgis-tiger_geocoder
     SUBDIR += postgis33
     SUBDIR += postgis34
     SUBDIR += postgis35
     SUBDIR += postgis36
+    SUBDIR += postgis37
     SUBDIR += postgresql-idn
     SUBDIR += postgresql-jdbc
     SUBDIR += postgresql-libpgeasy
@@ -787,7 +791,6 @@
     SUBDIR += py-asyncmy
     SUBDIR += py-asyncpg
     SUBDIR += py-berkeleydb
-    SUBDIR += py-cassandra-driver
     SUBDIR += py-chroma-hnswlib
     SUBDIR += py-chromadb
     SUBDIR += py-couchdb
@@ -795,6 +798,7 @@
     SUBDIR += py-databases
     SUBDIR += py-databricks-sql-connector
     SUBDIR += py-datafusion
+    SUBDIR += py-db-dtypes
     SUBDIR += py-dbf
     SUBDIR += py-dbt-core
     SUBDIR += py-dbt-duckdb
@@ -867,7 +871,6 @@
     SUBDIR += py-pylibmc
     SUBDIR += py-pymemcache
     SUBDIR += py-pymongo
-    SUBDIR += py-pymssql
     SUBDIR += py-pymysql
     SUBDIR += py-pyodbc
     SUBDIR += py-pypuppetdb

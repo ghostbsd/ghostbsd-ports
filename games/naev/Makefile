@@ -1,6 +1,7 @@
 PORTNAME=	naev
 PORTVERSION=	0.13.5
 DISTVERSIONSUFFIX=	-source
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	https://codeberg.org/naev/naev/releases/download/v${PORTVERSION}/:naev_source \
 		LOCAL/acm/${PORTNAME}/:naev_cache
@@ -17,7 +18,8 @@ LICENSE_COMB=	multi
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mutagen>0:audio/py-mutagen@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyyaml>=0:devel/py-pyyaml@${PY_FLAVOR} \
 		${RUST_DEFAULT}>=1.89:lang/${RUST_DEFAULT} \
-		bindgen:devel/rust-bindgen-cli
+		bindgen:devel/rust-bindgen-cli \
+		bash>0:shells/bash
 LIB_DEPENDS=	libamd.so:math/suitesparse-amd \
 		libblas.so:math/blas \
 		libcholmod.so:math/suitesparse-cholmod \
@@ -46,7 +48,7 @@ USES=		cmake:indirect desktop-file-utils gettext gl gnome localbase:ldflags \
 USE_GL=		gl glu
 USE_GNOME=	intltool libxml2
 USE_LDCONFIG=	yes
-USE_SDL=	sdl2 image2
+USE_SDL=	sdl3 image3
 
 SHEBANG_GLOB=	*.py *.sh
 

@@ -1,6 +1,6 @@
 PORTNAME=	periscope
 DISTVERSION=	0.2.4
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	multimedia python
 MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/periscope/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,7 +18,7 @@ LICENSE=	LGPL3
 DEPRECATED=	Unmaintained upstream, last release 2011
 EXPIRATION_DATE=2026-09-30
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4:www/py-beautifulsoup@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup4>=4:www/py-beautifulsoup4@${PY_FLAVOR}
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		desktop-file-utils python

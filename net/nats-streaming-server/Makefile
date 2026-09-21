@@ -11,6 +11,9 @@ WWW=		https://nats.io/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+DEPRECATED=	Deprecated by upstream, use JetStream in net/nats-server instead
+EXPIRATION_DATE=2026-12-31
+
 USES=		go:modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	nats-io

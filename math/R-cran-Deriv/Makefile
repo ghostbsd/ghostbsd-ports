@@ -1,12 +1,11 @@
 PORTNAME=	Deriv
-PORTVERSION=	4.3.0
-PORTREVISION=	1
+PORTVERSION=	4.3.5
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Symbolic Differentiation
-WWW=		https://cran.r-project.org/web/packages/Deriv/
+WWW=		https://cran.r-project.org/package=Deriv
 
 LICENSE=	GPLv3
 

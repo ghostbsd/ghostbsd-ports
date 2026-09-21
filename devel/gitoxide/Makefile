@@ -1,7 +1,7 @@
 PORTNAME=	gitoxide
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.56.0
-PORTREVISION=	0
+DISTVERSION=	0.58.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -53,8 +53,6 @@ CARGO_CRATES=	adler2-2.0.1 \
 		aws-lc-rs-1.17.1 \
 		aws-lc-sys-0.42.0 \
 		base64-0.22.1 \
-		bisync-0.3.0 \
-		bisync_macros-0.2.3 \
 		bitflags-1.3.2 \
 		bitflags-2.13.0 \
 		block-buffer-0.10.4 \
@@ -133,9 +131,12 @@ CARGO_CRATES=	adler2-2.0.1 \
 		diff-0.1.13 \
 		digest-0.10.7 \
 		digest-0.11.3 \
+		directories-6.0.0 \
+		dirs-sys-0.5.0 \
 		displaydoc-0.2.6 \
 		dissimilar-1.0.11 \
 		document-features-0.2.12 \
+		dua-core-2.41.1 \
 		dunce-1.0.5 \
 		either-1.16.0 \
 		encode_unicode-1.0.0 \
@@ -164,6 +165,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		form_urlencoded-1.2.2 \
 		fs-err-3.3.0 \
 		fs_extra-1.3.0 \
+		fsevent-sys-4.1.0 \
 		futures-channel-0.3.32 \
 		futures-core-0.3.32 \
 		futures-executor-0.3.32 \
@@ -172,14 +174,16 @@ CARGO_CRATES=	adler2-2.0.1 \
 		futures-macro-0.3.32 \
 		futures-sink-0.3.32 \
 		futures-task-0.3.32 \
+		futures-timer-3.0.4 \
 		futures-util-0.3.32 \
 		generic-array-0.14.7 \
+		getopts-0.2.24 \
 		getrandom-0.2.17 \
 		getrandom-0.3.4 \
 		getrandom-0.4.3 \
 		glob-0.3.3 \
 		gloo-timers-0.3.0 \
-		h2-0.4.15 \
+		h2-0.4.16 \
 		half-2.7.1 \
 		hash32-0.3.1 \
 		hashbrown-0.14.5 \
@@ -214,6 +218,8 @@ CARGO_CRATES=	adler2-2.0.1 \
 		idna_adapter-1.2.2 \
 		indexmap-2.14.0 \
 		indoc-2.0.7 \
+		inotify-0.11.4 \
+		inotify-sys-0.1.8 \
 		insta-1.48.0 \
 		instability-0.3.12 \
 		io-close-0.3.7 \
@@ -226,6 +232,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		is_terminal_polyfill-1.70.2 \
 		itertools-0.13.0 \
 		itertools-0.14.0 \
+		itertools-0.15.0 \
 		itoa-1.0.18 \
 		jiff-0.2.31 \
 		jiff-static-0.2.31 \
@@ -239,13 +246,15 @@ CARGO_CRATES=	adler2-2.0.1 \
 		jni-sys-macros-0.4.1 \
 		jobserver-0.1.34 \
 		js-sys-0.3.103 \
-		jwalk-0.8.1 \
 		kasuari-0.4.12 \
+		kqueue-1.2.0 \
+		kqueue-sys-1.1.2 \
 		kv-log-macro-1.0.7 \
 		layout-rs-0.1.3 \
 		lazy_static-1.5.0 \
 		libc-0.2.186 \
 		libm-0.2.16 \
+		libredox-0.1.19 \
 		libsqlite3-sys-0.38.1 \
 		libz-sys-1.1.29 \
 		line-clipping-0.3.7 \
@@ -269,6 +278,8 @@ CARGO_CRATES=	adler2-2.0.1 \
 		ndk-context-0.1.1 \
 		nix-0.26.4 \
 		nonempty-0.12.0 \
+		notify-8.2.0 \
+		notify-types-2.1.0 \
 		ntapi-0.4.3 \
 		nu-ansi-term-0.50.3 \
 		num-conv-0.2.2 \
@@ -285,6 +296,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		openssl-probe-0.1.6 \
 		openssl-probe-0.2.1 \
 		openssl-sys-0.9.117 \
+		option-ext-0.2.0 \
 		page_size-0.6.0 \
 		palette-0.7.6 \
 		palette_derive-0.7.6 \
@@ -308,11 +320,14 @@ CARGO_CRATES=	adler2-2.0.1 \
 		ppv-lite86-0.2.21 \
 		prefix-trie-0.8.4 \
 		pretty_assertions-1.4.1 \
+		proc-macro-crate-3.5.0 \
 		proc-macro-error-attr2-2.0.0 \
 		proc-macro-error2-2.0.1 \
 		proc-macro2-1.0.106 \
 		prodash-31.0.0 \
 		ptyprocess-0.4.1 \
+		pulldown-cmark-0.13.4 \
+		pulldown-cmark-escape-0.11.0 \
 		quinn-0.11.11 \
 		quinn-proto-0.11.15 \
 		quinn-udp-0.5.14 \
@@ -332,13 +347,17 @@ CARGO_CRATES=	adler2-2.0.1 \
 		rayon-1.12.0 \
 		rayon-core-1.13.0 \
 		redox_syscall-0.5.18 \
+		redox_users-0.5.2 \
 		regex-1.12.4 \
 		regex-automata-0.4.14 \
 		regex-syntax-0.8.11 \
+		relative-path-1.9.3 \
 		reqwest-0.13.4 \
 		resolv-conf-0.7.6 \
 		ring-0.17.14 \
 		rsqlite-vfs-0.1.1 \
+		rstest-0.26.1 \
+		rstest_macros-0.26.1 \
 		rusqlite-0.40.1 \
 		rustc-hash-2.1.2 \
 		rustc_version-0.4.1 \
@@ -391,6 +410,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		strum-0.28.0 \
 		strum_macros-0.28.0 \
 		subtle-2.6.1 \
+		symlink-0.1.0 \
 		syn-1.0.109 \
 		syn-2.0.118 \
 		sync_wrapper-1.0.2 \
@@ -403,6 +423,8 @@ CARGO_CRATES=	adler2-2.0.1 \
 		target-triple-1.0.0 \
 		tempfile-3.27.0 \
 		termcolor-1.4.1 \
+		terminal-colorsaurus-1.0.3 \
+		terminal-trx-0.2.6 \
 		terminal_size-0.4.4 \
 		termtree-1.0.0 \
 		thiserror-1.0.69 \
@@ -412,6 +434,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		thread_local-1.1.9 \
 		time-0.3.53 \
 		time-core-0.1.9 \
+		time-macros-0.2.31 \
 		tinystr-0.8.3 \
 		tinytemplate-1.2.1 \
 		tinyvec-1.11.0 \
@@ -423,6 +446,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		tokio-util-0.7.18 \
 		toml-1.1.2+spec-1.1.0 \
 		toml_datetime-1.1.1+spec-1.1.0 \
+		toml_edit-0.25.13+spec-1.1.0 \
 		toml_parser-1.1.2+spec-1.1.0 \
 		toml_writer-1.1.1+spec-1.1.0 \
 		tower-0.5.3 \
@@ -430,6 +454,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		tower-layer-0.3.3 \
 		tower-service-0.3.3 \
 		tracing-0.1.44 \
+		tracing-appender-0.2.5 \
 		tracing-attributes-0.1.31 \
 		tracing-core-0.1.36 \
 		tracing-forest-0.1.6 \
@@ -438,9 +463,11 @@ CARGO_CRATES=	adler2-2.0.1 \
 		tracing-subscriber-0.3.23 \
 		try-lock-0.2.5 \
 		trybuild-1.0.117 \
+		tui-markdown-0.3.9 \
 		tui-react-0.24.0 \
 		typenum-1.20.1 \
 		uluru-3.1.0 \
+		unicase-2.9.0 \
 		unicode-bom-2.0.3 \
 		unicode-ident-1.0.24 \
 		unicode-normalization-0.1.25 \
@@ -524,6 +551,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		wit-bindgen-0.57.1 \
 		writeable-0.6.3 \
 		xattr-1.6.1 \
+		xterm-color-1.0.2 \
 		xz2-0.1.7 \
 		yansi-1.0.1 \
 		yoke-0.8.3 \

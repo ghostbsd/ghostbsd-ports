@@ -1,6 +1,6 @@
 PORTNAME=	susshi
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.21.0
+DISTVERSION=	0.22.1
 PORTREVISION=	1
 CATEGORIES=	security
 
@@ -30,7 +30,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		arboard-3.6.1 \
 		arc-swap-1.9.1 \
 		autocfg-1.5.1 \
-		base64-0.22.1 \
+		base64-0.23.1 \
 		basic-toml-0.1.10 \
 		bitflags-2.13.0 \
 		block-buffer-0.12.1 \
@@ -41,11 +41,11 @@ CARGO_CRATES=	adler2-2.0.1 \
 		cc-1.2.56 \
 		cfg-if-1.0.4 \
 		cfg_aliases-0.2.1 \
-		clap-4.6.2 \
+		clap-4.6.3 \
 		clap_builder-4.6.2 \
-		clap_derive-4.6.1 \
+		clap_derive-4.6.3 \
 		clap_lex-1.0.0 \
-		clap_mangen-0.3.0 \
+		clap_mangen-0.3.1 \
 		clipboard-win-5.4.1 \
 		colorchoice-1.0.4 \
 		compact_str-0.9.0 \
@@ -96,7 +96,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		hybrid-array-0.4.13 \
 		i18n-config-0.4.8 \
 		i18n-embed-0.16.0 \
-		i18n-embed-fl-0.10.0 \
+		i18n-embed-fl-0.10.1 \
 		i18n-embed-impl-0.8.4 \
 		id-arena-2.3.0 \
 		ident_case-1.0.1 \
@@ -110,7 +110,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		itoa-1.0.17 \
 		kasuari-0.4.11 \
 		leb128fmt-0.1.0 \
-		libc-0.2.186 \
+		libc-0.2.189 \
 		libm-0.2.16 \
 		libredox-0.1.12 \
 		libssh2-sys-0.3.2 \
@@ -151,8 +151,8 @@ CARGO_CRATES=	adler2-2.0.1 \
 		portable-atomic-1.13.1 \
 		powerfmt-0.2.0 \
 		prettyplease-0.2.37 \
-		proc-macro-error-attr2-2.0.0 \
-		proc-macro-error2-2.0.1 \
+		proc-macro-error-attr3-3.1.0 \
+		proc-macro-error3-3.1.0 \
 		proc-macro-hack-0.5.20+deprecated \
 		proc-macro2-1.0.106 \
 		quote-1.0.45 \
@@ -183,7 +183,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		serde-1.0.229 \
 		serde_core-1.0.229 \
 		serde_derive-1.0.229 \
-		serde_json-1.0.150 \
+		serde_json-1.0.151 \
 		serde_yaml_ng-0.10.0 \
 		sha2-0.11.0 \
 		shellexpand-3.1.2 \
@@ -204,9 +204,9 @@ CARGO_CRATES=	adler2-2.0.1 \
 		sys-locale-0.3.2 \
 		tempfile-3.27.0 \
 		thiserror-1.0.69 \
-		thiserror-2.0.19 \
+		thiserror-2.0.20 \
 		thiserror-impl-1.0.69 \
-		thiserror-impl-2.0.19 \
+		thiserror-impl-2.0.20 \
 		thread_local-1.1.9 \
 		time-0.3.47 \
 		time-core-0.1.8 \
@@ -226,8 +226,8 @@ CARGO_CRATES=	adler2-2.0.1 \
 		unicode-xid-0.2.6 \
 		unsafe-libyaml-0.2.11 \
 		untrusted-0.9.0 \
-		ureq-3.3.0 \
-		ureq-proto-0.6.0 \
+		ureq-3.4.0 \
+		ureq-proto-0.6.1 \
 		utf8-zero-0.8.1 \
 		utf8parse-0.2.2 \
 		vcpkg-0.2.15 \

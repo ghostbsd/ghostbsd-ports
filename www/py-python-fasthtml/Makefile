@@ -1,5 +1,5 @@
 PORTNAME=	python-fasthtml
-DISTVERSION=	0.14.3
+DISTVERSION=	0.14.13
 CATEGORIES=	www python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>0:www/py-beautifulsoup@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup4>0:www/py-beautifulsoup4@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}fastcore>=1.12.45:devel/py-fastcore@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}fastlite>=0.1.1:devel/py-fastlite@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}httpx2>0:www/py-httpx2@${PY_FLAVOR} \

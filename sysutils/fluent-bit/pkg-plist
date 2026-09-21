@@ -135,6 +135,7 @@ include/fluent-bit/flb_s3_local_buffer.h
 include/fluent-bit/flb_scheduler.h
 include/fluent-bit/flb_sds.h
 include/fluent-bit/flb_sds_list.h
+include/fluent-bit/flb_search_bulk.h
 include/fluent-bit/flb_signv4.h
 include/fluent-bit/flb_signv4_ng.h
 include/fluent-bit/flb_simd.h

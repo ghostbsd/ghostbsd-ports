@@ -1,6 +1,5 @@
 PORTNAME=	mlflow-skinny
-PORTVERSION=	3.14.0
-PORTREVISION=	1
+PORTVERSION=	3.16.0
 CATEGORIES=	misc python # machine-learning
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,13 +18,14 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 		${PYTHON_PKGNAMEPREFIX}pip>0:devel/py-pip@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cachetools>=5.0.0:devel/py-cachetools@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}anyio>=3.6.2:devel/py-anyio@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}cachetools>=5.0.0:devel/py-cachetools@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}click>=7.0:devel/py-click@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}cloudpickle>0:devel/py-cloudpickle@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}databricks-sdk>=0.20.0:devel/py-databricks-sdk@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}fastapi>0:www/py-fastapi@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}gitpython>=3.1.9:devel/py-gitpython@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}importlib-metadata8>=3.7.0:devel/py-importlib-metadata8@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}importlib-metadata>=3.7.0:devel/py-importlib-metadata@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}opentelemetry-api>=1.9.0:devel/py-opentelemetry-api@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}opentelemetry-proto>=1.9.0:devel/py-opentelemetry-proto@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}opentelemetry-sdk>=1.9.0:devel/py-opentelemetry-sdk@${PY_FLAVOR} \

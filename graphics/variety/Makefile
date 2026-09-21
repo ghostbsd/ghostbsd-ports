@@ -1,6 +1,6 @@
 PORTNAME=	variety
 PORTVERSION=	0.9.1
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	nivit@FreeBSD.org
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}packaging>=26.2:devel/py-packaging@${PY_FL
 LIB_DEPENDS=	libgexiv2.so:graphics/gexiv2 \
 		libnotify.so:devel/libnotify
 RUN_DEPENDS=	${PY_PILLOW} \
-		${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4.3.2:www/py-beautifulsoup@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}beautifulsoup4>=4.3.2:www/py-beautifulsoup4@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}configobj>=5.0.6:devel/py-configobj@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dbus>=1.1.1_1:devel/py-dbus@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}httplib2>=0.9:www/py-httplib2@${PY_FLAVOR} \

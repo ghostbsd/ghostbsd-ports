@@ -1,5 +1,5 @@
 PORTNAME=	pinecone
-DISTVERSION=	9.1.0
+DISTVERSION=	10.0.0
 PORTREVISION=	1
 CATEGORIES=	misc python
 MASTER_SITES=	PYPI
@@ -28,7 +28,6 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		anyhow-1.0.102 \
 		async-trait-0.1.89 \
 		atomic-waker-1.1.2 \
-		autocfg-1.5.0 \
 		axum-0.8.8 \
 		axum-core-0.5.6 \
 		base64-0.22.1 \
@@ -55,7 +54,7 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		getrandom-0.2.17 \
 		getrandom-0.3.4 \
 		getrandom-0.4.2 \
-		h2-0.4.13 \
+		h2-0.4.19 \
 		hashbrown-0.15.5 \
 		hashbrown-0.16.1 \
 		heck-0.5.0 \
@@ -69,7 +68,6 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		hyper-util-0.1.20 \
 		id-arena-2.3.0 \
 		indexmap-2.13.1 \
-		indoc-2.0.7 \
 		itertools-0.14.0 \
 		itoa-1.0.18 \
 		js-sys-0.3.94 \
@@ -79,7 +77,6 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		log-0.4.29 \
 		matchit-0.8.4 \
 		memchr-2.8.0 \
-		memoffset-0.9.1 \
 		mime-0.3.17 \
 		mio-1.2.0 \
 		multimap-0.10.1 \
@@ -98,11 +95,11 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		prost-build-0.13.5 \
 		prost-derive-0.13.5 \
 		prost-types-0.13.5 \
-		pyo3-0.24.1 \
-		pyo3-build-config-0.24.1 \
-		pyo3-ffi-0.24.1 \
-		pyo3-macros-0.24.1 \
-		pyo3-macros-backend-0.24.1 \
+		pyo3-0.29.2 \
+		pyo3-build-config-0.29.2 \
+		pyo3-ffi-0.29.2 \
+		pyo3-macros-0.29.2 \
+		pyo3-macros-backend-0.29.2 \
 		quote-1.0.45 \
 		r-efi-5.3.0 \
 		r-efi-6.0.0 \
@@ -153,7 +150,6 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		try-lock-0.2.5 \
 		unicode-ident-1.0.24 \
 		unicode-xid-0.2.6 \
-		unindent-0.2.4 \
 		untrusted-0.9.0 \
 		uuid-1.23.0 \
 		want-0.3.1 \

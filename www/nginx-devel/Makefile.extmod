@@ -19,7 +19,8 @@ AJP_GH_TUPLE=		msva:nginx_ajp_module:fcbb2cc:ajp
 AJP_VARS=		DSO_EXTMODS+=ajp
 
 ARRAYVAR_IMPLIES=	DEVEL_KIT
-ARRAYVAR_GH_TUPLE=	openresty:array-var-nginx-module:v0.06:arrayvar
+ARRAYVAR_BUILD_DEPENDS=	nginx-module-array-var>0:www/nginx-module-array-var
+WRKSRC_arrayvar=	${WRKDIR}/array-var-nginx-module
 ARRAYVAR_VARS=		DSO_EXTMODS+=arrayvar
 
 AWS_AUTH_GH_TUPLE=	anomalizer:ngx_aws_auth:f3d9862:aws_auth
@@ -30,7 +31,8 @@ BROTLI_GH_TUPLE=	google:ngx_brotli:a71f931:brotli
 BROTLI_VARS=		DSO_EXTMODS+=brotli
 BROTLI_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-ngx_brotli_filter_config
 
-CACHE_PURGE_GH_TUPLE=	nginx-modules:ngx_cache_purge:3.0.2:cache_purge
+CACHE_PURGE_BUILD_DEPENDS=	nginx-module-cache-purge>0:www/nginx-module-cache-purge
+WRKSRC_cache_purge=	${WRKDIR}/ngx_cache_purge
 CACHE_PURGE_VARS=	DSO_EXTMODS+=cache_purge
 
 ECHO_GH_TUPLE=		openresty:echo-nginx-module:4eeda3c:echo
@@ -59,7 +61,8 @@ FIPS_CHECK_GH_TUPLE=	ogarrett:nginx-fips-check-module:6cb4270:fipscheck
 FIPS_CHECK_VARS=	DSO_EXTMODS+=fipscheck
 
 FORMINPUT_IMPLIES=	DEVEL_KIT
-FORMINPUT_GH_TUPLE=	calio:form-input-nginx-module:v0.12:forminput
+FORMINPUT_BUILD_DEPENDS=	nginx-module-form-input>0:www/nginx-module-form-input
+WRKSRC_forminput=	${WRKDIR}/form-input-nginx-module
 FORMINPUT_VARS=		DSO_EXTMODS+=forminput
 
 GRIDFS_GH_TUPLE=	nieoding:nginx-gridfs:059bdc3:gridfs
@@ -249,11 +252,18 @@ NAXSI_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-naxsi-libinjection__sqli_c \
 
 NJS_BUILD_DEPENDS=	nginx-module-njs>=1.0.1:www/nginx-module-njs
 WRKSRC_njs=		${WRKDIR}/njs
-NJS_LIB_DEPENDS=	libquickjs.so:lang/quickjs \
-			libxml2.so:textproc/libxml2 \
-			libxslt.so:textproc/libxslt
 NJS_VARS=		DSO_EXTMODS+=njs NJS_SUBDIR=/nginx
-NJS_IMPLIES=		HTTP STREAM
+NJS_IMPLIES=		STREAM
+
+NJS_QJS_IMPLIES=	NJS
+NJS_QJS_LIB_DEPENDS=	libquickjs.so:lang/quickjs
+# njs auto-enables QuickJS whenever it is found at configure time,
+# keep the build deterministic when the option is disabled
+NJS_QJS_CONFIGURE_ENV_OFF=	NJS_QUICKJS=NO
+
+NJS_XML_IMPLIES=	HTTP NJS
+NJS_XML_LIB_DEPENDS=	libxml2.so:textproc/libxml2 \
+			libxslt.so:textproc/libxslt
 
 OTEL_GH_TUPLE=		osokin:nginx-otel:3a655df:otel
 OTEL_VARS=		DSO_EXTMODS+=otel OTEL_SUBDIR=/
@@ -321,10 +331,11 @@ STS_IMPLIES=		STREAM
 STS_GH_TUPLE=		vozlt:nginx-module-sts:3c10d42:sts
 STS_VARS=		DSO_EXTMODS+=sts
 
-VOD_GH_TUPLE=		diogoazevedos:nginx-vod-module:b9b4b44:vod
 VOD_LIB_DEPENDS=	libxml2.so:textproc/libxml2 \
 			libavutil.so:multimedia/ffmpeg
 VOD_USES=		iconv
+VOD_BUILD_DEPENDS=	nginx-module-vod>0:www/nginx-module-vod
+WRKSRC_vod=		${WRKDIR}/nginx-vod-module
 VOD_VARS=		DSO_EXTMODS+=vod
 
 VTS_GH_TUPLE=		vozlt:nginx-module-vts:c382342:vts

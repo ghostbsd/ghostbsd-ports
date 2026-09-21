@@ -14,10 +14,8 @@ LICENSE=	GPLv3
 DEPRECATED=	Does not build with CMake 4
 EXPIRATION_DATE=2026-11-30
 
-BROKEN_aarch64=		invokes x86 assembler
-BROKEN_armv6=		invokes x86 assembler
-BROKEN_armv7=		invokes x86 assembler
-BROKEN_riscv64=		invokes x86 assembler
+ONLY_FOR_ARCHS=	amd64 i386
+ONLY_FOR_ARCHS_REASON=	invokes x86 assembler
 
 USES=		compiler:c11 cmake ncurses
 USE_CXXSTD=	gnu++98
@@ -40,13 +38,7 @@ DATA_FILES=	analyze.cfg avida.cfg default-gx.org \
 
 OPTIONS_DEFINE=	DOCS
 
-post-patch:
-	@${FIND} ${WRKSRC} -name "CMakeLists.txt" | ${XARGS} \
-		${REINPLACE_CMD} -e \
-		's|-O[0-9]|| ; \
-		 s| pthread| -pthread|'
-	@${REINPLACE_CMD} -e '/long long int/s|std::abs|llabs|' \
-		${WRKSRC}/avida-core/source/main/cPopulationInterface.cc
+pre-configure:
 	@${REINPLACE_CMD} -e '/__PPC__/s|linux|${OPSYS}|' \
 		${WRKSRC}/libs/tcmalloc-1.4/src/atomicops.h
 

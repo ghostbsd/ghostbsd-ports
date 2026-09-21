@@ -1,6 +1,6 @@
 PORTNAME=	afl
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.40c
+DISTVERSION=	5.03c
 CATEGORIES=	security
 PKGNAMESUFFIX=	++-${FLAVOR}
 
@@ -8,8 +8,10 @@ MAINTAINER=	fk@fabiankeil.de
 COMMENT=	Fast instrumented fuzzer
 WWW=		https://aflplus.plus/
 
-LICENSE=	APACHE20
-LICENSE_FILE=	${WRKSRC}/docs/COPYING
+LICENSE=		AGPLv3+ APACHE20
+LICENSE_COMB=		multi
+LICENSE_FILE_AGPLv3+ =	${WRKSRC}/LICENSE
+LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE.Apache-2.0
 
 ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc powerpc64 powerpc64le riscv64
 ONLY_FOR_ARCHS_REASON=	uses x86-only instrumentation or requires complete LLVM support
@@ -30,7 +32,7 @@ USE_GCC=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	AFLplusplus
 GH_PROJECT=	AFLplusplus
-SHEBANG_FILES=	afl-cmin.py afl-persistent-config
+SHEBANG_FILES=	afl-cmin.py afl-health afl-persistent-config
 
 MAKEFILE=	GNUmakefile
 MAKE_ARGS=	AFL_NO_X86=1 AFL_NO_TEST_BUILD=1 \

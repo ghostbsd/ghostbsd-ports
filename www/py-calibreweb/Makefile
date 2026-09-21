@@ -1,5 +1,6 @@
 PORTNAME=	calibreweb
 PORTVERSION=	0.6.27
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -94,7 +95,7 @@ KOBO_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jsonschema>=0:devel/py-jsonschema@${PY_
 LDAP_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flask-simpleldap>=0:www/py-flask-simpleldap@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}python-ldap>=0:net/py-python-ldap@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}sqlalchemy-utils>=0:databases/py-sqlalchemy-utils@${PY_FLAVOR}
-METADATA_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=0:www/py-beautifulsoup@${PY_FLAVOR} \
+METADATA_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup4>=0:www/py-beautifulsoup4@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}faust-cchardet>=0:textproc/py-faust-cchardet@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}html2text>=0:textproc/py-html2text@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}markdown2>=0:textproc/py-markdown2@${PY_FLAVOR} \

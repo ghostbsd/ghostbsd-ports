@@ -1,11 +1,13 @@
 PORTNAME=	qtractor
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.2
+DISTVERSION=	1.6.4
 CATEGORIES=	audio
-MASTER_SITES=	https://download.steinberg.net/sdk_downloads/:vst3sdk
-DISTFILES=	${VST3_SDK_ARCHIVE}:vst3sdk
 EXTRACT_ONLY=	${GH_ACCOUNT}-${GH_PROJECT}-${GH_TAGNAME}_GH0${EXTRACT_SUFX} \
-		breakfastquay-minibpm-43de991_GH0${EXTRACT_SUFX}
+		free-audio-clap-195b42a_GH0${EXTRACT_SUFX} \
+		breakfastquay-minibpm-43de991_GH0${EXTRACT_SUFX} \
+		steinbergmedia-vst3_base-fcf9da0_GH0${EXTRACT_SUFX} \
+		steinbergmedia-vst3_pluginterfaces-4f547e8_GH0${EXTRACT_SUFX} \
+		steinbergmedia-vst3_public_sdk-586dc5e_GH0${EXTRACT_SUFX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Audio/MIDI multi-track sequencer
@@ -42,7 +44,11 @@ USE_QT=		core gui network svg widgets x11extras xml buildtools:build linguisttoo
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	rncbc
-GH_TUPLE=	breakfastquay:minibpm:43de991:minibpm/src/minibpm
+GH_TUPLE=	free-audio:clap:195b42a:clap/src/clap \
+		breakfastquay:minibpm:43de991:minibpm/src/minibpm \
+		steinbergmedia:vst3_base:fcf9da0:vst3_base/src/vst3/base \
+		steinbergmedia:vst3_pluginterfaces:4f547e8:vst3_pluginterfaces/src/vst3/pluginterfaces \
+		steinbergmedia:vst3_public_sdk:586dc5e:vst3_public_sdk/src/vst3/public.sdk
 
 CMAKE_OFF=	CONFIG_CLAP # for audio/clap, but it doesn't install anything
 CMAKE_OFF+=	CONFIG_QT6 # breaks with Qt6: Gtk-ERROR **: 21:10:56.939: GTK 2.x symbols detected. Using GTK 2.x and GTK 3 in the same process is not supported
@@ -54,28 +60,11 @@ VST3_DESC=		Enable VST3 plug-in support
 VST3_USES=		xorg
 VST3_USE=		XORG=xcb
 VST3_CMAKE_BOOL=	CONFIG_VST3
-VST3_CMAKE_ON=		-DCONFIG_VST3SDK=${WRKDIR}/VST_SDK/vst3sdk
-#VST3_BUILD_DEPENDS=	vst3sdk>0:audio/vst3sdk # this is supposed to work instead of bundled archive, but it doesn't for some reason, see https://github.com/rncbc/qtractor/issues/331
-VST3_SDK_ARCHIVE=	vst-sdk_3.7.4_build-25_2021-12-16.zip
-
-post-extract-VST3-on:
-	@cd ${WRKDIR} && unzip -qq ${DISTDIR}/${VST3_SDK_ARCHIVE}
+VST3_CMAKE_ON=		-DCONFIG_VST3SDK=${WRKSRC}/src/vst3
 
 post-patch:
 	@${REINPLACE_CMD} \
 		's|the ALSA Sequencer kernel module (snd-seq-midi)|alsa-seq-server (installed by audio/alsa-seq-server)|' \
 		${WRKSRC}/src/qtractorMainForm.cpp
-
-post-patch-VST3-on:
-	@${REINPLACE_CMD} -e ' \
-		s,__linux__,__linux__ || __FreeBSD__,; \
-		s,endian.h,sys/endian.h, \
-		' \
-		${WRKDIR}/VST_SDK/vst3sdk/pluginterfaces/base/fplatform.h
-	@${REINPLACE_CMD} -e ' \
-		s,stdatomic.h,atomic,; \
-		s,atomic_int_least32_t,std::atomic_int_least32_t, \
-		' \
-		${WRKDIR}/VST_SDK/vst3sdk/pluginterfaces/base/funknown.cpp
 
 .include <bsd.port.mk>

@@ -106,6 +106,7 @@
     SUBDIR += cl-ppcre-sbcl
     SUBDIR += clucene
     SUBDIR += cmark
+    SUBDIR += cmark-gfm
     SUBDIR += coccigrep
     SUBDIR += code-minimap
     SUBDIR += code2html
@@ -254,6 +255,7 @@
     SUBDIR += goldendict
     SUBDIR += goldendict-ng
     SUBDIR += google-ctemplate
+    SUBDIR += google-translate
     SUBDIR += gpp
     SUBDIR += grap
     SUBDIR += grass
@@ -1344,6 +1346,7 @@
     SUBDIR += py-accessible-pygments
     SUBDIR += py-acora
     SUBDIR += py-aeidon
+    SUBDIR += py-affine-gaps
     SUBDIR += py-agate
     SUBDIR += py-agate-dbf
     SUBDIR += py-agate-excel
@@ -1571,6 +1574,7 @@
     SUBDIR += py-mkdocstrings-python
     SUBDIR += py-mkdocstrings-python-legacy
     SUBDIR += py-morse3
+    SUBDIR += py-multimark
     SUBDIR += py-mwparserfromhell
     SUBDIR += py-myst-parser
     SUBDIR += py-nbsphinx
@@ -1688,6 +1692,7 @@
     SUBDIR += py-rouge-score
     SUBDIR += py-rst2ansi
     SUBDIR += py-rst2html5
+    SUBDIR += py-sacrebleu
     SUBDIR += py-sacremoses
     SUBDIR += py-scour
     SUBDIR += py-segments
@@ -1797,6 +1802,7 @@
     SUBDIR += py-tomli-w
     SUBDIR += py-tomlkit
     SUBDIR += py-tomllint
+    SUBDIR += py-toon-format
     SUBDIR += py-toronado
     SUBDIR += py-towncrier
     SUBDIR += py-translationstring
@@ -1898,6 +1904,7 @@
     SUBDIR += rubygem-actionpack-xml_parser-rails52
     SUBDIR += rubygem-actionpack-xml_parser-rails61
     SUBDIR += rubygem-actionpack-xml_parser-rails72
+    SUBDIR += rubygem-actionpack-xml_parser-rails81
     SUBDIR += rubygem-actiontext-gitlab
     SUBDIR += rubygem-actiontext60
     SUBDIR += rubygem-actiontext61
@@ -2260,8 +2267,8 @@
     SUBDIR += ugrep
     SUBDIR += uim
     SUBDIR += uim-el
-    SUBDIR += uim-gtk2
     SUBDIR += uim-gtk3
+    SUBDIR += uim-gtk4
     SUBDIR += uim-m17nlib
     SUBDIR += uim-qt5
     SUBDIR += uim-qt6

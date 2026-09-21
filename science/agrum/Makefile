@@ -1,5 +1,6 @@
 PORTNAME=	agrum
-DISTVERSION=	3.0.0
+DISTVERSION=	3.1.1
+PORTREVISION=	1
 CATEGORIES=	science math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -12,20 +13,16 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 TEST_DEPENDS=	swig:devel/swig
 
-USES=		cmake compiler:c++20-lang llvm shebangfix # the 'act' executable uses 'python' and is broken, when act is broken CMakeLists.txt builds with default configuration which is fine; llvm is to fix: Cannot open "/usr/bin/../lib/LLVMgold.so"
+USES=		cmake compiler:c++20-lang shebangfix
 USE_LDCONFIG=	yes
-
-LLD_UNSAFE=	yes
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	agrumery
 GL_PROJECT=	aGrUM
-GL_TAGNAME=	9c28852d
 
 SHEBANG_FILES=	act
 
-CMAKE_ARGS=	-DPython_EXECUTABLE=${PYTHON_CMD} \
-		-DPYAGRUM_REQUIRED_PYTHON_VERSION=${PYTHON_VER}
+CMAKE_ARGS=	-DPYAGRUM_REQUIRED_PYTHON_VERSION=${PYTHON_VER}
 CMAKE_OFF=	USE_SWIG
 
 PLIST_SUB+=	VERSION=${PORTVERSION}
@@ -62,6 +59,6 @@ do-test:
 	@cd ${WRKSRC} && \
 		${SETENV} ${MAKE_ENV} ./act test release agrum -t all
 
-# tests as of 3.0.0: test cases:    1188 |    1187 passed | 1 failed | 702 skipped
+# tests as of 3.1.1: test cases:    2458 |    2458 passed | 0 failed | 0 skipped
 
 .include <bsd.port.mk>

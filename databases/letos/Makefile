@@ -1,5 +1,5 @@
 PORTNAME=	letos
-DISTVERSION=	4.0.1
+DISTVERSION=	4.0.3
 CATEGORIES=	databases
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -24,7 +24,7 @@ PLUGINS_DESC=		Install plugins:
 
 ALL_PLUGINS=	\
 	CellRendererImage CsvExport CsvImport DbAndroid DbSQLite3MC \
-	ErdEditor FusionDarkStyle HtmlExport JsonExport MultiEditorImage \
+	ErdEditor FusionDarkStyle FusionLightStyle HtmlExport JsonExport MultiEditorImage \
 	MultiEditorJson PdfExport Printing PythonSyntaxHighlighter RegExpImport \
 	ScriptingPython ScriptingTcl SqlEnterpriseFormatter SqlExport SqlFormatterSimple \
 	TclSyntaxHighlighter TipOfTheDay XmlExport

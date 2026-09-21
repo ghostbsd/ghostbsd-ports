@@ -1,6 +1,6 @@
 PORTNAME=	lean4
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.32.1
+DISTVERSION=	4.34.0
 CATEGORIES=	math lang devel # lean4 is primarily a math theorem prover, but it is also a language and a development environment
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,19 +11,18 @@ WWW=		https://lean-lang.org/ \
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BROKEN_FreeBSD_14=	compilation fails: .rsp files are not supprted by ar on 14: ar there is from Elftoolchain project which was later replaced by LLVM ar, which supports .rsp files
 BROKEN_armv7=	compilation fails: ../../.build/stage1/lib/temp/Init/Coe.depend: No such file or directory
 BROKEN_i386=	linking fails: INTERNAL PANIC: out of memory (during: Linking runLinter)
 
 BUILD_DEPENDS=	bash:shells/bash \
 		cadical:math/cadical \
-		gsed:textproc/gsed \
 		leantar:math/leangz
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libuv.so:devel/libuv
 RUN_DEPENDS=	cadical:math/cadical \
 		leantar:math/leangz
-TEST_DEPENDS=	gtail:sysutils/coreutils \
-		gsed:textproc/gsed
+TEST_DEPENDS=	gtail:sysutils/coreutils
 
 USES=		cmake:noninja,testing compiler:c++14-lang gmake pkgconfig python:build # ninja fails + gmake scripts are included in the project
 
@@ -41,15 +40,20 @@ MAKE_ENV=	LD_LIBRARY_PATH=${BUILD_WRKSRC}/stage0/lib/lean
 
 BINARY_ALIAS=	make=${GMAKE} \
 		python=${PYTHON_CMD} \
-		sed=${LOCALBASE}/bin/gsed
+		python3=${PYTHON_CMD}
 
 CMAKE_ARGS+=	-DLEANTAR=${LOCALBASE}/bin/leantar
+
+CONFLICTS_BUILD=	gsed # this should be CONFLICTS_TEST but it isn't defined; pesence of gsed for some reason makes several tests fail
 
 post-configure:
 	# Copy leantar to build bin directories for tests (INSTALL_LEANTAR=OFF disables the built-in copy)
 	@${MKDIR} ${BUILD_WRKSRC}/stage0/bin ${BUILD_WRKSRC}/stage1/bin
 	@${CP} ${LOCALBASE}/bin/leantar ${BUILD_WRKSRC}/stage0/bin/
 	@${CP} ${LOCALBASE}/bin/leantar ${BUILD_WRKSRC}/stage1/bin/
+	# Create a test-only bin dir with gmake as "make" for tests needing GNU make (e.g. reverse-ffi) (need to see why BINARY ALIAS doesn't work for this)
+	@${MKDIR} ${BUILD_WRKSRC}/test-bin
+	@${LN} -sf ${LOCALBASE}/bin/gmake ${BUILD_WRKSRC}/test-bin/make
 
 pre-everything::
 	@${ECHO_MSG} ""
@@ -97,12 +101,7 @@ post-install:
 		lib/lean/libleanshared_2.so \
 		lib/lean/libLake_shared.so
 
-# tests as of 4.25.2-20251201: 100% tests passed, 0 tests failed out of 3367
-# tests as of 4.29.0-rc2: 99% tests passed, 12 tests failed out of 3584, see https://github.com/leanprover/lean4/issues/12721
-# tests as of 4.29.0: 99% tests passed, 18 tests failed out of 3582, see https://github.com/leanprover/lean4/issues/13174
-# tests as of 4.29.1: 99% tests passed, 24 tests failed out of 3584
-# tests as of 4.30.0: 100% tests passed, 0 tests failed out of 3678
-# tests as of 4.31.0: 99% tests passed, 2 tests failed out of 3858
-# 2 failures are not port issues: cache/test.sh, ltar/test.sh: leantar panic (math/leangz bug, see reproducer-leangz/)
+# tests as of 4.33.1: 100% tests passed, 0 tests failed out of 3988
+# tests as of 4.34.0: 100% tests pass (individual testsuite runs have intermittent failures with different tests, but all individual tests pass when run separately)
 
 .include <bsd.port.mk>

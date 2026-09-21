@@ -1,7 +1,6 @@
 PORTNAME=	fbthrift
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2026.08.03.00
-PORTREVISION=	1
+DISTVERSION=	2026.08.31.00
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -48,6 +47,6 @@ CXXFLAGS+=	-DGLOG_USE_GLOG_EXPORT
 post-install: # https://github.com/facebook/fbthrift/issues/393
 	@${FIND} ${STAGEDIR}${PREFIX}/include -type d -empty -delete
 
-# tests as of 2026.08.03.00: 100% tests passed, 0 tests failed out of 313
+# tests as of 2026.08.31.00: 100% tests passed out of 315
 
 .include <bsd.port.mk>

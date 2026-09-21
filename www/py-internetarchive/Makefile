@@ -1,6 +1,6 @@
 PORTNAME=	internetarchive
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.10.1
+DISTVERSION=	5.11.1
 CATEGORIES=	www python
 #MASTER_SITES=	PYPI # no tests
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -29,10 +29,14 @@ USE_PYTHON=	pep517 concurrent autoplist pytest
 USE_GITHUB=	yes
 GH_ACCOUNT=	jjjake
 
-TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR} PATH=${STAGEDIR}${PREFIX}/bin:${PATH}
+TEST_ENV=	${MAKE_ENV} \
+		PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR} \
+		PATH=${STAGEDIR}${PREFIX}/bin:${PATH}
+TEST_ARGS=	--disable-plugin-autoload \
+		-p responses -p ruff
 
 NO_ARCH=	yes
 
-# tests as of 5.8.0: 14 failed, 237 passed, 37 skipped in 53.13s (known test environment issues)
+# tests as of 5.11.1: 349 passed, 37 skipped, 3 warnings in 34.38s
 
 .include <bsd.port.mk>

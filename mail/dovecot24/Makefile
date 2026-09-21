@@ -1,5 +1,6 @@
 PORTNAME=	dovecot
 DISTVERSION=	2.4.5
+PORTREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	https://dovecot.org/releases/2.4/
 PKGNAMESUFFIX=	24${DOVE_SUFFIX}
@@ -223,13 +224,6 @@ CONFIGURE_ARGS+=	--with-cdb=yes
 PLIST_SUB+=	LDAP=""
 .elif ${FLAVOR} != default
 PLIST_SUB+=	LDAP="@comment "
-.endif
-
-# imap-hibernate does not build on FreeBSD < 15.0 due to kqueue being used for notifications
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
-PLIST_SUB+=	IMAP_HIBERNATE="@comment "
-.else
-PLIST_SUB+=	IMAP_HIBERNATE=""
 .endif
 
 .if ${PORT_OPTIONS:MLUA}

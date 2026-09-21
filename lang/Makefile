@@ -1,5 +1,6 @@
     COMMENT = Programming languages
 
+    SUBDIR += R-cran-languageserver
     SUBDIR += abcl
     SUBDIR += alchemist.el
     SUBDIR += algol68g
@@ -75,6 +76,7 @@
     SUBDIR += erlang-wx
     SUBDIR += execline
     SUBDIR += expect
+    SUBDIR += ez80asm
     SUBDIR += f2c
     SUBDIR += fasm
     SUBDIR += fennel

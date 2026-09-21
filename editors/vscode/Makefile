@@ -1,6 +1,6 @@
 PORTNAME=	vscode
 DISTVERSION=	${VSCODE_VERSION}
-PORTREVISION=	3
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:node_modules \
 		https://registry.npmjs.org/@github/copilot-linux-${ELECTRON_ARCH}/-/:copilot_cli \
@@ -221,6 +221,10 @@ pre-build:
 		${CARGO_BUILD_ARGS}
 	${CP} ${CARGO_TARGET_DIR}/*/libos_proxy_resolver_node.so \
 		${WRKSRC}/node_modules/@vscode/os-proxy-resolver-freebsd-${ELECTRON_ARCH}/os_proxy_resolver.node
+# copy electron.d.ts from electron installation
+	@${MKDIR} ${WRKSRC}/.build/typings
+	${CP} ${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR}/gen/electron/tsc/typings/electron.d.ts \
+		${WRKSRC}/.build/typings
 # rebuild native node modules in top directory
 	@for subdir in `${FIND} ${WRKSRC}/node_modules -type f -name binding.gyp -exec ${DIRNAME} {} ';'`; do \
 		${ECHO_MSG} "===>   Rebuilding native modules in $${subdir}"; \
@@ -341,10 +345,14 @@ pre-test:
 	@cd ${WRKSRC}/.build/electron && ${MV} -f electron code-oss
 
 do-test:
-# unit tests
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ./scripts/test.sh || ${TRUE}
-# UI smoke tests
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} npm run smoketest
+	if [ -z $${DBUS_SESSION_BUS_ADDRESS} ]; then \
+		DBUS_SESSION_BUS_ADDRESS="autolaunch:"; \
+	fi; \
+	cd ${WRKSRC} && \
+	${SETENV} ${TEST_ENV} DBUS_SESSION_BUS_ADDRESS=$${DBUS_SESSION_BUS_ADDRESS} \
+		./scripts/test.sh || ${TRUE} && \
+	${SETENV} ${TEST_ENV} DBUS_SESSION_BUS_ADDRESS=$${DBUS_SESSION_BUS_ADDRESS} \
+		npm run smoketest
 
 ### targets for port maintainer(s)
 patch-package-json: extract

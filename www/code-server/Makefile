@@ -1,5 +1,5 @@
 PORTNAME=	code-server
-DISTVERSION=	4.135.0
+DISTVERSION=	4.137.0
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/joneum/FreeBSD-CodeServer/releases/download/code-server-${DISTVERSION}/:code_server \
 		https://github.com/github/copilot-cli/releases/download/v${COPILOT_CLI_VERSION}/:copilot_cli
@@ -34,7 +34,8 @@ RUN_DEPENDS=	node:www/node22
 ONLY_FOR_ARCHS=	amd64
 ONLY_FOR_ARCHS_REASON=	only the vscode-reh-web-linux-x64 distfile is provided
 
-USES=		nodejs:22 perl5 pkgconfig python:build ssl
+USES=		cpe nodejs:22 perl5 pkgconfig python:build ssl
+CPE_VENDOR=	coder
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	coder
@@ -47,11 +48,11 @@ USE_RC_SUBR=	code-server
 SUB_FILES=	code-server-wrapper
 
 OPTIONS_DEFINE=	DOCS
-PORTDOCS=	README.md
+PORTDOCS=	README.md EXTENSIONS.md
 
 NO_CCACHE=	yes
 
-VSCODE_VERSION=		1.135.0
+VSCODE_VERSION=		1.137.0
 # Copilot CLI SDK, only needed so the VS Code extension build passes.
 # GitHub Copilot is closed-source and not usable on FreeBSD.
 COPILOT_CLI_VERSION=	1.0.73

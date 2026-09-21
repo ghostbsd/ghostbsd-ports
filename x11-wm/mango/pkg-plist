@@ -1,6 +1,7 @@
 bin/mango
 bin/mmsg
 %%ETCDIR%%/config.conf.sample
+lib/systemd/user/mango-session.target
 %%PORTDOCS%%%%DOCSDIR%%/bindings/index.mdx
 %%PORTDOCS%%%%DOCSDIR%%/bindings/keys.md
 %%PORTDOCS%%%%DOCSDIR%%/bindings/meta.json
@@ -18,6 +19,7 @@ bin/mmsg
 %%PORTDOCS%%%%DOCSDIR%%/ipc.md
 %%PORTDOCS%%%%DOCSDIR%%/meta.json
 %%PORTDOCS%%%%DOCSDIR%%/nix-options.md
+%%PORTDOCS%%%%DOCSDIR%%/patches/v0.15.0/configuration/monitors.md
 %%PORTDOCS%%%%DOCSDIR%%/quick-start.md
 %%PORTDOCS%%%%DOCSDIR%%/screenshot.md
 %%PORTDOCS%%%%DOCSDIR%%/visuals/animations.md

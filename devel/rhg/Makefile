@@ -1,5 +1,5 @@
 PORTNAME=	rhg
-PORTVERSION=	7.2.3
+PORTVERSION=	7.2.4
 PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.mercurial-scm.org/release/

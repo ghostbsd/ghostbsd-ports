@@ -1,7 +1,7 @@
 PORTNAME=	pymatgen
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2026.5.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science python
 #MASTER_SITES=	PYPI # no tests
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -27,7 +27,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pymatgen-core>=2026.3.9:science/py-pymatgen-
 		${PYTHON_PKGNAMEPREFIX}tzdata>=2024.2:devel/py-tzdata@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}urllib3>=2.6.3:net/py-urllib3@${PY_FLAVOR}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}ase>=3.23.0:science/py-ase@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}beautifulsoup>0:www/py-beautifulsoup@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}beautifulsoup4>0:www/py-beautifulsoup4@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}h5py>=3.11.0:science/py-h5py@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}phonopy>=2.33.3:science/py-phonopy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}seekpath>=2.0.1:science/py-seekpath@${PY_FLAVOR} # optional dependencies

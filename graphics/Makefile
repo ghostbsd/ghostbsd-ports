@@ -7,6 +7,7 @@
     SUBDIR += ImageMagick6
     SUBDIR += ImageMagick7
     SUBDIR += O2-tools
+    SUBDIR += R-cran-Cairo
     SUBDIR += R-cran-DiagrammeR
     SUBDIR += R-cran-GDD
     SUBDIR += R-cran-R.devices
@@ -936,7 +937,6 @@
     SUBDIR += py-diplib
     SUBDIR += py-dj60-sorl-thumbnail
     SUBDIR += py-django-easy-thumbnails
-    SUBDIR += py-djvulibre
     SUBDIR += py-easyocr
     SUBDIR += py-exifread
     SUBDIR += py-exiv2
@@ -973,6 +973,7 @@
     SUBDIR += py-img2pdf
     SUBDIR += py-imutils
     SUBDIR += py-jbpy
+    SUBDIR += py-kaleido
     SUBDIR += py-kornia
     SUBDIR += py-kornia-rs
     SUBDIR += py-leather
@@ -990,6 +991,7 @@
     SUBDIR += py-napari-console
     SUBDIR += py-napari-plugin-engine
     SUBDIR += py-neatnet
+    SUBDIR += py-nokap
     SUBDIR += py-nwdiag
     SUBDIR += py-olmocr
     SUBDIR += py-opencolorio
@@ -1057,6 +1059,7 @@
     SUBDIR += py-qt6-3d
     SUBDIR += py-qudida
     SUBDIR += py-railroad-diagrams
+    SUBDIR += py-rapidocr
     SUBDIR += py-rasterio
     SUBDIR += py-rasterstats
     SUBDIR += py-rawkit
@@ -1231,6 +1234,7 @@
     SUBDIR += skanlite
     SUBDIR += skanpage
     SUBDIR += skia
+    SUBDIR += skia124
     SUBDIR += spirv-cross
     SUBDIR += spirv-headers
     SUBDIR += spirv-tools
@@ -1262,6 +1266,7 @@
     SUBDIR += tintfu
     SUBDIR += tinyows
     SUBDIR += tkpng
+    SUBDIR += tlottie
     SUBDIR += togl
     SUBDIR += tslib
     SUBDIR += ttygif

@@ -1,7 +1,6 @@
 PORTNAME=	headscale
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.27.1
-PORTREVISION=	10
+DISTVERSION=	0.29.3
 CATEGORIES=	security net-vpn
 
 MAINTAINER=	m.muenz@gmail.com
@@ -13,7 +12,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_armv6=	fails to compile: modernc.org/libc
 BROKEN_armv7=	fails to compile: modernc.org/libc
-
 NOT_FOR_ARCHS=	i386
 NOT_FOR_ARCHS_REASON=	version 0.27 removed i386 support
 

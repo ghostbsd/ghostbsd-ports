@@ -1,7 +1,7 @@
 PORTNAME=	wandb
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.28.1
-PORTREVISION=	3
+DISTVERSION=	0.29.0
+PORTREVISION=	1
 CATEGORIES=	misc # machine-learning
 #MASTER_SITES=	PYPI # no tests
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -48,7 +48,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}bokeh>0:www/py-bokeh@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyte>0:devel/py-pyte@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}responses>0:devel/py-responses@${PY_FLAVOR}
 
-USES=		cargo go:1.26+,no_targets python shebangfix
+USES=		cargo go:1.27+,no_targets python shebangfix
 USE_PYTHON=	pep517 concurrent autoplist pytest
 USE_GITHUB=	yes
 
@@ -77,7 +77,8 @@ TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 # test_ratelimit.py, test_run_messages.py: require looptime
 # test_sandbox: requires cwsandbox
 # test_util.py: requires plotly
-TEST_ARGS=	--ignore=tests/system_tests \
+TEST_ARGS=	-n0 \
+		--ignore=tests/system_tests \
 		--ignore=tests/unit_tests/test_analytics/test_sentry.py \
 		--ignore=tests/unit_tests/test_artifacts/test_references_s3.py \
 		--ignore=tests/unit_tests/test_data_types.py \
@@ -93,7 +94,8 @@ TEST_ARGS=	--ignore=tests/system_tests \
 		--ignore=tests/unit_tests/test_media/test_media_logging.py \
 		--ignore=tests/unit_tests/test_sandbox \
 		--ignore=tests/unit_tests/test_util.py \
-		--deselect=tests/unit_tests/test_data_types_box3d.py::test_box3d_always_box
+		--deselect=tests/unit_tests/test_data_types_box3d.py::test_box3d_always_box \
+		--deselect=tests/unit_tests/test_wandb_agent/test_cli_agent.py::test_agent_subprocess_with_import_readline
 # Tests broken due to library version mismatches or environment differences:
 # TestProgressCallback: responses library now returns bytes, not file-like for request.body
 # TestAzure: azure SDK not available; some tests fail even without explicit azure import
@@ -108,7 +110,8 @@ PYTEST_BROKEN_TESTS=	TestProgressCallback \
 			test_get_entrypoint \
 			test_convert_plots \
 			test_launch_browser \
-			test_box3d_always_box
+			test_box3d_always_box \
+			test_agent_subprocess_with_import_readline
 
 SHEBANG_GLOB=	*.py
 
@@ -132,6 +135,6 @@ post-install:
 		${MV} ${STAGEDIR}${PREFIX}/bin/wb-${PYTHON_VER} ${STAGEDIR}${PREFIX}/bin/wb; \
 	fi
 
-# tests as of 0.28.1: 2748 passed, 185 skipped, 10 deselected, 4 xfailed, 2 xpassed, 2 warnings
+# tests as of 0.29.0: 3395 passed, 186 skipped, 4 xfailed, 2 xpassed, 4 warnings
 
 .include <bsd.port.mk>

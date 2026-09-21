@@ -1,6 +1,7 @@
 PORTNAME=	git-repo-manager
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.11.0
+DISTVERSION=	0.12.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -28,15 +29,14 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		anstyle-query-1.1.5 \
 		anstyle-wincon-3.0.11 \
 		autocfg-1.5.0 \
-		base64-0.22.1 \
-		bitflags-2.11.1 \
+		base64-0.23.1 \
+		bitflags-2.13.0 \
 		bytes-1.11.1 \
 		camino-1.2.5 \
-		cc-1.2.62 \
-		cesu8-1.1.0 \
+		cc-1.2.63 \
 		cfg-if-1.0.4 \
-		clap-4.6.5 \
-		clap_builder-4.6.5 \
+		clap-4.6.6 \
+		clap_builder-4.6.6 \
 		clap_derive-4.6.4 \
 		clap_lex-1.1.0 \
 		colorchoice-1.0.5 \
@@ -44,12 +44,12 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		comfy-table-8.0.0 \
 		console-0.16.4 \
 		cookie-0.18.1 \
-		cookie_store-0.22.0 \
+		cookie_store-0.22.1 \
 		core-foundation-0.10.1 \
 		core-foundation-sys-0.8.7 \
-		deranged-0.5.5 \
-		displaydoc-0.2.5 \
-		document-features-0.2.11 \
+		deranged-0.5.8 \
+		displaydoc-0.2.6 \
+		document-features-0.2.12 \
 		encode_unicode-1.0.0 \
 		equivalent-1.0.2 \
 		errno-0.3.14 \
@@ -61,22 +61,22 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		git2-0.21.0 \
 		hashbrown-0.17.1 \
 		heck-0.5.0 \
-		http-1.4.0 \
+		http-1.4.2 \
 		httparse-1.10.1 \
-		icu_collections-2.1.1 \
-		icu_locale_core-2.1.1 \
-		icu_normalizer-2.1.1 \
-		icu_normalizer_data-2.1.1 \
-		icu_properties-2.1.2 \
-		icu_properties_data-2.1.2 \
-		icu_provider-2.1.1 \
+		icu_collections-2.2.0 \
+		icu_locale_core-2.2.0 \
+		icu_normalizer-2.2.0 \
+		icu_normalizer_data-2.2.0 \
+		icu_properties-2.2.0 \
+		icu_properties_data-2.2.0 \
+		icu_provider-2.2.0 \
 		idna-1.1.0 \
-		idna_adapter-1.2.1 \
+		idna_adapter-1.2.2 \
 		indexmap-2.14.0 \
 		is_terminal_polyfill-1.70.2 \
 		itoa-1.0.18 \
-		jni-0.21.1 \
-		jni-sys-0.3.1 \
+		jni-0.22.4 \
+		jni-macros-0.22.4 \
 		jni-sys-0.4.1 \
 		jni-sys-macros-0.4.1 \
 		jobserver-0.1.34 \
@@ -87,11 +87,11 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		libz-sys-1.1.28 \
 		linux-raw-sys-0.12.1 \
 		litemap-0.8.2 \
-		litrs-0.4.2 \
+		litrs-1.0.0 \
 		lock_api-0.4.13 \
-		log-0.4.29 \
+		log-0.4.32 \
 		memchr-2.8.1 \
-		num-conv-0.1.0 \
+		num-conv-0.2.2 \
 		once_cell-1.21.4 \
 		once_cell_polyfill-1.70.2 \
 		openssl-probe-0.1.6 \
@@ -113,11 +113,12 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		regex-automata-0.4.18 \
 		regex-syntax-0.8.11 \
 		ring-0.17.14 \
+		rustc_version-0.4.1 \
 		rustix-1.1.4 \
 		rustls-0.23.40 \
 		rustls-native-certs-0.8.4 \
 		rustls-pki-types-1.14.1 \
-		rustls-platform-verifier-0.6.2 \
+		rustls-platform-verifier-0.7.0 \
 		rustls-platform-verifier-android-0.1.1 \
 		rustls-webpki-0.103.13 \
 		ryu-1.0.20 \
@@ -126,6 +127,7 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		scopeguard-1.2.0 \
 		security-framework-3.7.0 \
 		security-framework-sys-2.17.0 \
+		semver-1.0.28 \
 		serde-1.0.229 \
 		serde_core-1.0.229 \
 		serde_derive-1.0.229 \
@@ -133,7 +135,9 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		serde_spanned-1.1.1 \
 		serde_yaml-0.9.34+deprecated \
 		shellexpand-3.1.2 \
-		shlex-1.3.0 \
+		shlex-2.0.1 \
+		simd_cesu8-1.2.0 \
+		simdutf8-0.1.5 \
 		smallvec-1.15.1 \
 		stable_deref_trait-1.2.1 \
 		subtle-2.6.1 \
@@ -142,13 +146,11 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		synstructure-0.13.2 \
 		temp-env-0.3.6 \
 		tempfile-3.27.0 \
-		thiserror-1.0.69 \
-		thiserror-2.0.12 \
-		thiserror-impl-1.0.69 \
-		thiserror-impl-2.0.12 \
-		time-0.3.45 \
-		time-core-0.1.7 \
-		time-macros-0.2.25 \
+		thiserror-2.0.18 \
+		thiserror-impl-2.0.18 \
+		time-0.3.47 \
+		time-core-0.1.8 \
+		time-macros-0.2.27 \
 		tinystr-0.8.3 \
 		toml-1.1.4+spec-1.1.0 \
 		toml_datetime-1.1.1+spec-1.1.0 \
@@ -159,8 +161,8 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		unicode-width-0.2.2 \
 		unsafe-libyaml-0.2.11 \
 		untrusted-0.9.0 \
-		ureq-3.3.0 \
-		ureq-proto-0.6.0 \
+		ureq-3.4.0 \
+		ureq-proto-0.6.1 \
 		url-2.5.8 \
 		url-escape-0.1.2 \
 		utf8-zero-0.8.1 \
@@ -170,33 +172,24 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		version_check-0.9.5 \
 		walkdir-2.5.0 \
 		wasi-0.11.1+wasi-snapshot-preview1 \
-		wasip2-1.0.2+wasi-0.2.9 \
+		wasip2-1.0.3+wasi-0.2.9 \
 		webpki-root-certs-1.0.8 \
 		webpki-roots-1.0.7 \
 		winapi-util-0.1.11 \
 		windows-link-0.2.1 \
-		windows-sys-0.45.0 \
 		windows-sys-0.52.0 \
 		windows-sys-0.61.2 \
-		windows-targets-0.42.2 \
 		windows-targets-0.52.6 \
-		windows_aarch64_gnullvm-0.42.2 \
 		windows_aarch64_gnullvm-0.52.6 \
-		windows_aarch64_msvc-0.42.2 \
 		windows_aarch64_msvc-0.52.6 \
-		windows_i686_gnu-0.42.2 \
 		windows_i686_gnu-0.52.6 \
 		windows_i686_gnullvm-0.52.6 \
-		windows_i686_msvc-0.42.2 \
 		windows_i686_msvc-0.52.6 \
-		windows_x86_64_gnu-0.42.2 \
 		windows_x86_64_gnu-0.52.6 \
-		windows_x86_64_gnullvm-0.42.2 \
 		windows_x86_64_gnullvm-0.52.6 \
-		windows_x86_64_msvc-0.42.2 \
 		windows_x86_64_msvc-0.52.6 \
 		winnow-1.0.3 \
-		wit-bindgen-0.51.0 \
+		wit-bindgen-0.57.1 \
 		writeable-0.6.3 \
 		yoke-0.8.2 \
 		yoke-derive-0.8.2 \

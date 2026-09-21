@@ -130,9 +130,11 @@
     SUBDIR += ebumeter
     SUBDIR += ebur128
     SUBDIR += ecasound
+    SUBDIR += elevenlabs-cli
     SUBDIR += elisa
     SUBDIR += emms
     SUBDIR += enscribe
+    SUBDIR += entropypianotuner
     SUBDIR += eq10q-lv2
     SUBDIR += espeak-ng
     SUBDIR += espressivo-lv2

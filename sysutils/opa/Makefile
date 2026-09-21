@@ -1,7 +1,6 @@
 PORTNAME=	opa
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.19.0
-PORTREVISION=	3
+DISTVERSION=	1.20.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -15,6 +14,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		go:1.26+,modules
 
 GO_MODULE=	github.com/open-policy-agent/opa
+# Test expects a Go runtime metric that is not present in this Go version/build
+GO_TESTFLAGS+=	-skip TestJSONSerialization
 
 PLIST_FILES=	bin/${PORTNAME}
 

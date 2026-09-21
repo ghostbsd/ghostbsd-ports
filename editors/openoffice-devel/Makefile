@@ -1,6 +1,6 @@
 PORTNAME=	apache-openoffice
 PORTVERSION=	${AOOVERSION1}.${AOOVERSION2}.${TIMESTAMP}
-PORTREVISION=	4
+PORTREVISION=	0
 PORTEPOCH=	4
 CATEGORIES=	editors java
 MASTER_SITES=	https://dist.apache.org/repos/dist/dev/openoffice/${AOOVERSION}-${AOORC}-${TIMESTAMP}/source/ \
@@ -15,7 +15,7 @@ PKGNAMESUFFIX=		-${LANG_SUFFIX}
 .endif
 PKGNAMESUFFIX=		-devel
 DISTFILES=	${AOOSRC}${AOODISTTAG} ${EXTSRC}:extsrc \
-		${GCC_EXTRA_DISTFILES:C/.*/&:sf/g}
+		${EXTRA_DISTFILES:C/.*/&:sf/g}
 DIST_SUBDIR=	openoffice
 EXTRACT_ONLY=	${AOOSRC}
 
@@ -48,9 +48,6 @@ LICENSE_PERMS_ADOBE=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_PERMS_ICU=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_PERMS_TWAIN=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_PERMS_W3C=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
-
-DEPRECATED=	Depends on expired textproc/libtextcat
-EXPIRATION_DATE=2026-10-31
 
 ONLY_FOR_ARCHS=	amd64 i386 powerpc64
 
@@ -97,7 +94,6 @@ LIB_DEPENDS=								\
 		libexpat.so:textproc/expat2				\
 		libhunspell-1.7.so:textproc/hunspell			\
 		libhyphen.so:textproc/hyphen				\
-		libtextcat.so:textproc/libtextcat			\
 		libmythes-1.2.so:textproc/mythes			\
 		librdf.so:textproc/redland				\
 		libfontconfig.so:x11-fonts/fontconfig
@@ -123,20 +119,18 @@ USE_PERL5=	build
 USE_XORG=	ice sm x11 xau xaw xcomposite xcursor xdamage xext xfixes xi \
 		xinerama xrandr xrender xt
 
-# ftp/curl uses OpenSSL by default. However, curl 8.18.0 drops OpenSSL 1.x support
-# which is used in FreeBSD 13 base system. Therefore, we change the curl defaults to
-# wolfSSL instead.
 CONFLICTS_INSTALL=	apache-openoffice-4*
 
-AOOVERSION1=	4
-AOOVERSION2=	2
+AOOVERSION1=	5
+AOOVERSION2=	1
 AOOVERSION3=	0
 # From solenv/inc/minor.mk SOURCEREVISION LAST_MINOR BUILD
-AOOTAG=		AOO420m6\(Build:9825\)
-GITREVISION=	a4e34e8bd2
-TIMESTAMP=	1768900765
+AOOTAG=		AOO510m1\(Build:99000\)
+GITREVISION=	b81185736b
+TIMESTAMP=	1788900724
 #AOORC=rc3
-EXTSRC=		ApacheOpenOffice.ext_sources.${AOOVERSION1}.x.x.20150707.tar.gz
+#EXTSRC=		ApacheOpenOffice.ext_sources.${AOOVERSION1}.x.x.20150707.tar.gz
+EXTSRC=		ApacheOpenOffice.ext_sources.4.x.x.20150707.tar.gz
 
 AOOVERSION=	${AOOVERSION1}.${AOOVERSION2}.${AOOVERSION3}
 AOOXXX=		${AOOVERSION1}${AOOVERSION2}${AOOVERSION3}
@@ -146,7 +140,7 @@ AOOSRC=		apache-openoffice-${AOOVERSION}-${GITREVISION}-src${EXTRACT_SUFX}
 AOODISTTAG=
 TARTYPE=	bzip2
 .else
-AOOSRC=		apache-openoffice-${TIMESTAMP}-${GITREVISION}-src${EXTRACT_SUFX}
+AOOSRC=		apache-openoffice-${AOOVERSION}-${TIMESTAMP}-${GITREVISION}-src${EXTRACT_SUFX}
 AOODISTTAG=	:snap
 TARTYPE=	xz
 .endif
@@ -165,7 +159,7 @@ CPE_VENDOR=	apache
 
 OPTIONS_DEFINE=		CRASHDUMP CUPS DBGUTIL DEBUG GNOME MMEDIA \
 			MYSQL PDFIMPORT REPORT_BUILDER SDK WIKI_PUBLISHER
-OPTIONS_DEFAULT=	CUPS GNOME MMEDIA WIKI_PUBLISHER
+OPTIONS_DEFAULT=	CUPS GNOME MMEDIA
 CRASHDUMP_DESC=		Enable crashdumps, you also need to set WITH_DEBUG_PORTS+=${PKGORIGIN}
 DBGUTIL_DESC=		Enable assertions, object counting. (non-production)
 DEBUG_DESC=		Compile with -O0, you also need to set WITH_DEBUG_PORTS+=${PKGORIGIN}
@@ -211,6 +205,8 @@ REPORT_BUILDER_JAR_DEPENDS=
 REPORT_BUILDER_BUILD_DEPENDS=	${REPORT_BUILDER_JAR_DEPENDS}
 REPORT_BUILDER_RUN_DEPENDS=	${REPORT_BUILDER_JAR_DEPENDS}
 
+# commons-httpclient replacement by Apache HttpComponents requires new java
+WIKI_PUBLISHER_BROKEN=		CVE-2012-6153 MITM
 WIKI_PUBLISHER_CONFIGURE_ENABLE=	wiki-publisher
 WIKI_PUBLISHER_CONFIGURE_WITH=						\
 	commons-codec-jar=${JAVALIBDIR}/commons-codec.jar		\
@@ -253,8 +249,9 @@ CONFIGURE_ARGS+=	--without-commons-logging
 
 .include <${FILESDIR}/Makefile.localized>
 
-GCC_EXTRA_DISTFILES=	d6eef4b4cacb2183f2bf265a5a03a354-boost_1_55_0.tar.bz2 \
+EXTRA_DISTFILES=	9dcd632441e4da04a461082ebbafd337-boost_1_84_0.tar.bz2 \
 			e3738abd0d3ce1870dc1fd1f22bba5b1-icu4c-4_2_1-src.tgz \
+			128cfc86ed5953e57fe0f5ae98b62c2e-libtextcat-2.2.tar.gz \
 			d62650a6f908e85643e557a236ea989c-vigra1.6.0.tar.gz
 
 .if ${CHOSEN_COMPILER_TYPE} == clang
@@ -314,7 +311,6 @@ CONFIGURE_ARGS+=							\
 			--with-jdk-home=${JAVA_HOME}			\
 			--with-system-jpeg				\
 			--with-junit=${JAVALIBDIR}/junit.jar		\
-			--with-system-libtextcat			\
 			--disable-kde					\
 			--disable-kde4					\
 			--with-system-libxml				\
@@ -365,7 +361,7 @@ do-extract-SDK-on:
 
 post-extract:
 	${TAR} -C ${WRKSUBDIR} -xzf ${DISTDIR}/${DIST_SUBDIR}/${EXTSRC}
-.for f in ${GCC_EXTRA_DISTFILES}
+.for f in ${EXTRA_DISTFILES}
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/${f} ${WRKSUBDIR}/ext_sources/${f}
 .endfor
 	${CP} ${FILESDIR}/freebsd-aoo-intro-developer.png \

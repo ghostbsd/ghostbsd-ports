@@ -1,5 +1,6 @@
 PORTNAME=	skrooge
 DISTVERSION=	26.8.0
+PORTREVISION=	1
 CATEGORIES=	finance kde
 MASTER_SITES=	KDE/stable/${PORTNAME}
 DIST_SUBDIR=	KDE/${PORTNAME}
@@ -15,7 +16,7 @@ BUILD_DEPENDS=	xsltproc:textproc/libxslt
 LIB_DEPENDS=	libofx.so:finance/libofx \
 		libsqlcipher.so:databases/sqlcipher
 RUN_DEPENDS=	${LOCALBASE}/bin/aqbanking-cli:finance/aqbanking \
-		${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4.12.2:www/py-beautifulsoup@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}beautifulsoup4>=4.12.2:www/py-beautifulsoup4@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>=2.31.0:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}woob>=3.6:www/py-woob@${PY_FLAVOR}
 

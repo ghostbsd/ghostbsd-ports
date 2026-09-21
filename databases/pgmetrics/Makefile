@@ -1,7 +1,6 @@
 PORTNAME=	pgmetrics
-PORTVERSION=	1.19.0
+PORTVERSION=	1.19.1
 DISTVERSIONPREFIX=v
-PORTREVISION=	9
 CATEGORIES=	databases
 
 MAINTAINER=	girgen@FreeBSD.org
@@ -10,7 +9,7 @@ WWW=		https://pgmetrics.io/
 
 LICENSE=	APACHE20
 
-USES=		go:modules,1.25+
+USES=		go:modules
 
 GO_MODULE=	github.com/rapidloop/pgmetrics
 
