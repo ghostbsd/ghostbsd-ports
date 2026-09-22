@@ -925,7 +925,6 @@
     SUBDIR += p5-Proc-ProcessTable-ncps
     SUBDIR += p5-Proclet
     SUBDIR += p5-Quota
-    SUBDIR += p5-reslog
     SUBDIR += p5-Rex
     SUBDIR += p5-RundeckAPI
     SUBDIR += p5-Samba-SIDhelper
