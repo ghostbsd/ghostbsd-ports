@@ -9,3 +9,12 @@ Exec=chrome %U
 Categories=Application;Network;WebBrowser;
 MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
 StartupNotify=true
+Actions=new-window;new-private-window;
+
+[Desktop Action new-window]
+Name=New Window
+Exec=chrome
+
+[Desktop Action new-private-window]
+Name=New Incognito Window
+Exec=chrome --incognito
