@@ -311,6 +311,7 @@
     SUBDIR += metalock
     SUBDIR += mkcomposecache
     SUBDIR += mlterm
+    SUBDIR += mocka-dock
     SUBDIR += mons
     SUBDIR += mxascii
     SUBDIR += mxico

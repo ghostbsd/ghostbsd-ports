@@ -1,0 +1,4 @@
+Mocka Dock is a MATE panel applet that shows pinned and running
+applications as a single row of buttons, with one button per
+application, window thumbnails on hover, and an application-focused
+right-click menu. It is part of the Mocka desktop for GhostBSD.
