@@ -1,6 +1,6 @@
 PORTNAME=	ghostbsd-mate
 PORTVERSION=	1.28.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11 mate
 
 MAINTAINER=	ericturgeon@GhostBSD.org
@@ -21,7 +21,7 @@ RUN_DEPENDS=	mate-terminal:x11/mate-terminal \
 		mate-applets>=1.22.0:x11/mate-applets \
 		${LOCALBASE}/share/fonts/dejavu/DejaVuSerif.ttf:x11-fonts/dejavu \
 		mate-user-guide>=1.22.0:misc/mate-user-guide \
-		mate-dock-applet>0:x11/mate-dock-applet \
+		mocka-dock>0:x11/mocka-dock \
 		ghostbsd-mate-settings>0:x11/ghostbsd-mate-settings \
 		ghostbsd-wallpapers26>0:x11-themes/ghostbsd-wallpapers26 \
 		ghostbsd-gtk-themes>0:x11-themes/ghostbsd-gtk-themes \
