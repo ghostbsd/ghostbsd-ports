@@ -20,7 +20,8 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libsignal_sqlcipher_extension.a:devel/signal-sql
 
 USES=		nodejs:24,build python:build
 
-MAKE_ENV=	PYTHON=${PYTHON_CMD} 
+MAKE_ENV=	PYTHON=${PYTHON_CMD} \
+		npm_config_nodedir=${PREFIX}
 
 PLIST_FILES=	lib/node_sqlcipher.node
 
@@ -32,7 +33,7 @@ post-patch:
 do-build:
 	${ECHO_CMD} offline=true > ${WRKSRC}/.npmrc
 	cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} npm install --nodedir=${PREFIX}
+		${SETENV} ${MAKE_ENV} npm install
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/build/Release/obj.target/node_sqlcipher.node ${STAGEDIR}${PREFIX}/lib/
