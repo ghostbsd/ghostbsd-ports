@@ -41,7 +41,8 @@ BORING_VER=	v5.0.2
 MAKE_ENV=	HOME=${WRKDIR} \
 		PYTHON=${PYTHON_CMD} \
 		RUSTFLAGS=-Clink-dead-code \
-		XDG_CACHE_HOME=${WRKDIR}/.cache
+		XDG_CACHE_HOME=${WRKDIR}/.cache \
+		npm_config_nodedir=${LOCALBASE}
 
 MAKE_ENV+=	RUSTC_BOOTSTRAP=aes,polyval
 
@@ -62,9 +63,9 @@ post-extract:
 do-build:
 	${ECHO_CMD} offline=true >> ${WRKSRC}/.npmrc
 	cd ${WRKSRC}/node && \
-		${SETENV} ${MAKE_ENV} npm install --ignore-optional --nodedir=${LOCALBASE}
+		${SETENV} ${MAKE_ENV} npm install
 	cd ${WRKSRC}/node && \
-		${SETENV} ${MAKE_ENV} npm run build --nodedir=${LOCALBASE}
+		${SETENV} ${MAKE_ENV} npm run build
 	cd ${WRKSRC}/node && \
 		${SETENV} ${MAKE_ENV} npm run tsc
 
