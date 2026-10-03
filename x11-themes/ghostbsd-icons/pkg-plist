@@ -9555,7 +9555,6 @@ share/icons/Qogir-Dark/cursors_scalable/zoom-in/metadata.json
 share/icons/Qogir-Dark/cursors_scalable/zoom-in/zoom-in.svg
 share/icons/Qogir-Dark/cursors_scalable/zoom-out/metadata.json
 share/icons/Qogir-Dark/cursors_scalable/zoom-out/zoom-out.svg
-share/icons/Qogir-Dark/icon-theme.cache
 share/icons/Qogir-Dark/index.theme
 share/icons/Qogir-Dark/scalable
 share/icons/Qogir-Dark/scalable@2x
@@ -10635,7 +10634,6 @@ share/icons/Qogir-Light/16/panel/smplayer-panel.svg
 share/icons/Qogir-Light/16/panel/solaar-attention.svg
 share/icons/Qogir-Light/16/panel/solaar-indicator.svg
 share/icons/Qogir-Light/16/panel/spotify-indicator.svg
-share/icons/Qogir-Light/16/panel/start-here-manjaro.svg
 share/icons/Qogir-Light/16/panel/start-here-symbolic.svg
 share/icons/Qogir-Light/16/panel/start-here.svg
 share/icons/Qogir-Light/16/panel/state-download.svg
@@ -13234,7 +13232,6 @@ share/icons/Qogir-Light/22/panel/start-here-kde-plasma-symbolic.svg
 share/icons/Qogir-Light/22/panel/start-here-kde-plasma.svg
 share/icons/Qogir-Light/22/panel/start-here-kde-symbolic.svg
 share/icons/Qogir-Light/22/panel/start-here-kde.svg
-share/icons/Qogir-Light/22/panel/start-here-manjaro.svg
 share/icons/Qogir-Light/22/panel/start-here-symbolic.svg
 share/icons/Qogir-Light/22/panel/start-here.svg
 share/icons/Qogir-Light/22/panel/state-download.svg
@@ -15643,7 +15640,6 @@ share/icons/Qogir-Light/24/panel/solaar-attention.svg
 share/icons/Qogir-Light/24/panel/solaar-indicator.svg
 share/icons/Qogir-Light/24/panel/spotify-indicator.svg
 share/icons/Qogir-Light/24/panel/spotify.svg
-share/icons/Qogir-Light/24/panel/start-here-manjaro.svg
 share/icons/Qogir-Light/24/panel/start-here-symbolic.svg
 share/icons/Qogir-Light/24/panel/start-here.svg
 share/icons/Qogir-Light/24/panel/state-download.svg
@@ -16089,7 +16085,6 @@ share/icons/Qogir-Light/COPYING
 share/icons/Qogir-Light/cursor.theme
 share/icons/Qogir-Light/cursors
 share/icons/Qogir-Light/cursors_scalable
-share/icons/Qogir-Light/icon-theme.cache
 share/icons/Qogir-Light/index.theme
 share/icons/Qogir-Light/scalable
 share/icons/Qogir-Light/scalable@2x
@@ -21055,7 +21050,6 @@ share/icons/Qogir/16/panel/smplayer-panel.svg
 share/icons/Qogir/16/panel/solaar-attention.svg
 share/icons/Qogir/16/panel/solaar-indicator.svg
 share/icons/Qogir/16/panel/spotify-indicator.svg
-share/icons/Qogir/16/panel/start-here-manjaro.svg
 share/icons/Qogir/16/panel/start-here-symbolic.svg
 share/icons/Qogir/16/panel/start-here.svg
 share/icons/Qogir/16/panel/state-download.svg
@@ -27175,7 +27169,6 @@ share/icons/Qogir/22/panel/start-here-kde-plasma-symbolic.svg
 share/icons/Qogir/22/panel/start-here-kde-plasma.svg
 share/icons/Qogir/22/panel/start-here-kde-symbolic.svg
 share/icons/Qogir/22/panel/start-here-kde.svg
-share/icons/Qogir/22/panel/start-here-manjaro.svg
 share/icons/Qogir/22/panel/start-here-symbolic.svg
 share/icons/Qogir/22/panel/start-here.svg
 share/icons/Qogir/22/panel/state-download.svg
@@ -32554,7 +32547,6 @@ share/icons/Qogir/24/panel/solaar-attention.svg
 share/icons/Qogir/24/panel/solaar-indicator.svg
 share/icons/Qogir/24/panel/spotify-indicator.svg
 share/icons/Qogir/24/panel/spotify.svg
-share/icons/Qogir/24/panel/start-here-manjaro.svg
 share/icons/Qogir/24/panel/start-here-symbolic.svg
 share/icons/Qogir/24/panel/start-here.svg
 share/icons/Qogir/24/panel/state-download.svg
@@ -35370,7 +35362,6 @@ share/icons/Qogir/cursors_scalable/zoom-in/metadata.json
 share/icons/Qogir/cursors_scalable/zoom-in/zoom-in.svg
 share/icons/Qogir/cursors_scalable/zoom-out/metadata.json
 share/icons/Qogir/cursors_scalable/zoom-out/zoom-out.svg
-share/icons/Qogir/icon-theme.cache
 share/icons/Qogir/index.theme
 share/icons/Qogir/scalable/apps/0ad.svg
 share/icons/Qogir/scalable/apps/10B4_steam.0.svg
@@ -35419,7 +35410,7 @@ share/icons/Qogir/scalable/apps/Anydesk.svg
 share/icons/Qogir/scalable/apps/AppImage.svg
 share/icons/Qogir/scalable/apps/AppImageLauncher.svg
 share/icons/Qogir/scalable/apps/Appstore.svg
-share/icons/Qogir/scalable/apps/Ardour-Ardour_4.0.0.svg
+share/icons/Qogir/scalable/apps/Ardour-Ardour_%%GTK4_VERSION%%.svg
 share/icons/Qogir/scalable/apps/Ardour-Ardour_5.12.0.svg
 share/icons/Qogir/scalable/apps/Ardour-Ardour_6.0.0.svg
 share/icons/Qogir/scalable/apps/Ardour-Ardour_6.5.0.svg
@@ -40830,19 +40821,8 @@ share/icons/Qogir/scalable/apps/starcal2.svg
 share/icons/Qogir/scalable/apps/stardew-valley.svg
 share/icons/Qogir/scalable/apps/stardict_16x16.svg
 share/icons/Qogir/scalable/apps/stardict_32x32.svg
-share/icons/Qogir/scalable/apps/start-here-archlinux.svg
-share/icons/Qogir/scalable/apps/start-here-arcolinux.svg
-share/icons/Qogir/scalable/apps/start-here-debian.svg
-share/icons/Qogir/scalable/apps/start-here-fedora.svg
 share/icons/Qogir/scalable/apps/start-here-kde-plasma.svg
 share/icons/Qogir/scalable/apps/start-here-kde.svg
-share/icons/Qogir/scalable/apps/start-here-korora.svg
-share/icons/Qogir/scalable/apps/start-here-linux-mint.svg
-share/icons/Qogir/scalable/apps/start-here-lubuntu.svg
-share/icons/Qogir/scalable/apps/start-here-manjaro.svg
-share/icons/Qogir/scalable/apps/start-here-opensuse.svg
-share/icons/Qogir/scalable/apps/start-here-pop-os.svg
-share/icons/Qogir/scalable/apps/start-here-ubuntu.svg
 share/icons/Qogir/scalable/apps/start-here-xfce.svg
 share/icons/Qogir/scalable/apps/startarmcord.svg
 share/icons/Qogir/scalable/apps/startupmanager.svg
@@ -43415,6 +43395,7 @@ share/icons/Qogir/scalable/places/repository.svg
 share/icons/Qogir/scalable/places/samba.svg
 share/icons/Qogir/scalable/places/server-database.svg
 share/icons/Qogir/scalable/places/server.svg
+share/icons/Qogir/scalable/places/start-here.svg
 share/icons/Qogir/scalable/places/stock_folder-copy.svg
 share/icons/Qogir/scalable/places/stock_folder-move.svg
 share/icons/Qogir/scalable/places/stock_folder.svg
@@ -46396,3 +46377,11 @@ share/icons/ghostbsd/22x22/places/ghostbsd.png
 share/icons/ghostbsd/24x24/places/ghostbsd.png
 share/icons/ghostbsd/32x32/places/ghostbsd.png
 share/icons/ghostbsd/48x48/places/ghostbsd.png
+share/icons/ghostbsd/index.theme
+share/icons/ghostbsd/scalable/places/start-here.svg
+share/icons/hicolor/16x16/places/ghostbsd.png
+share/icons/hicolor/22x22/places/ghostbsd.png
+share/icons/hicolor/24x24/places/ghostbsd.png
+share/icons/hicolor/32x32/places/ghostbsd.png
+share/icons/hicolor/48x48/places/ghostbsd.png
+share/icons/hicolor/scalable/places/start-here.svg
