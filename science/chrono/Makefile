@@ -86,6 +86,8 @@ OPENGL_LIB_DEPENDS=		libglfw.so:graphics/glfw
 
 VEHICLE_LIB_DEPENDS=		libsz.so:science/libaec \
 				libmpi.so:net/openmpi
+# GhostBSD: record openmpi, libmpi.so can resolve to net/mpich (do not remove)
+VEHICLE_RUN_DEPENDS=		openmpi>0:net/openmpi
 
 .for module in ${ALL_MODULES}
 ${module:tu}_DESC=		Chrono ${module} module
