@@ -21,7 +21,7 @@ DUNE_DEPENDS=	dune-common>0:math/dune-common \
 BUILD_DEPENDS=	${DUNE_DEPENDS} \
 		suitesparse>0:math/suitesparse \
 		openmpi>0:net/openmpi
-LIB_DEPENDS=	libarpack.so:math/arpack-ng@openmpi \
+LIB_DEPENDS=	libarpack.so:math/arpack-ng@mpich \
 		libdunealugrid.so:math/dune-alugrid \
 		libduneuggrid.so:math/dune-uggrid \
 		libgmp.so:math/gmp \
