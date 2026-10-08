@@ -17,7 +17,7 @@ BUILD_DEPENDS=	arpack++>0:math/arpack++ \
 		vc>0:devel/vc \
 		openmpi>0:net/openmpi
 LIB_DEPENDS=	libpsurface.so:math/psurface \
-		libarpack.so:math/arpack-ng@openmpi \
+		libarpack.so:math/arpack-ng@mpich \
 		libdunealugrid.so:math/dune-alugrid \
 		libdunecommon.so:math/dune-common \
 		libdunegeometry.so:math/dune-geometry \
