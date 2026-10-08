@@ -16,7 +16,7 @@ BUILD_DEPENDS=	${HPP_DEPENDS} \
 		dune-functions>0:math/dune-functions \
 		suitesparse>0:math/suitesparse \
 		openmpi>0:net/openmpi
-LIB_DEPENDS=	libarpack.so:math/arpack-ng@openmpi \
+LIB_DEPENDS=	libarpack.so:math/arpack-ng@mpich \
 		libdunealugrid.so:math/dune-alugrid \
 		libdunecommon.so:math/dune-common \
 		libdunegeometry.so:math/dune-geometry \
