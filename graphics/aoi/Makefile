@@ -17,6 +17,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libjogl.so:graphics/jogl
 
 USES=		java zip
+# GhostBSD: pin the JDK, jogl installs openjdk8 which java.mk would pick (do not remove)
+JAVA_VERSION=	${JAVA_DEFAULT}
 DOS2UNIX_FILES=	../AoI_Manual/*.html # USES=dos2unix is optional
 
 NO_BUILD=	yes
