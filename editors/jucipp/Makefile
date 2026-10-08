@@ -10,9 +10,10 @@ WWW=		https://gitlab.com/cppit/jucipp
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BUILD_DEPENDS=	llvm-config${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 LIB_DEPENDS=	libaspell.so:textproc/aspell \
 		libboost_filesystem.so:devel/boost-libs \
-		libclang.so:devel/llvm${LLVM_DEFAULT} \
+		libclang.so:devel/llvm${LLVM_DEFAULT}-libs \
 		libgit2.so:devel/libgit2 \
 		libharfbuzz.so:print/harfbuzz
 RUN_DEPENDS=	uctags:devel/universal-ctags

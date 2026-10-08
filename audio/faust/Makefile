@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING.txt
 
 BROKEN_armv7=	compilation broken: the faust executable SEGVs while compiling examples during build: faust -a lv2.cpp -cn amp -I examples examples/amp.dsp -o examples/amp.cpp
 
-LIB_DEPENDS=	libLLVM-${LLVM_VERSION}.so:devel/llvm${LLVM_VERSION} \
+LIB_DEPENDS=	libLLVM-${LLVM_VERSION}.so:devel/llvm${LLVM_VERSION}-libs \
 		libzstd.so:archivers/zstd
 RUN_DEPENDS=	bash:shells/bash
 

@@ -44,7 +44,8 @@ OPTIONS_SUB=		yes
 C_DESC=			C-family Semantic Completion Support
 
 C_CMAKE_ON=		-DPATH_TO_LLVM_ROOT=${LOCALBASE}/llvm${LLVM_DEFAULT}
-C_LIB_DEPENDS=		libclang.so:devel/llvm${LLVM_DEFAULT}
+C_BUILD_DEPENDS=	llvm-config${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
+C_LIB_DEPENDS=		libclang.so:devel/llvm${LLVM_DEFAULT}-libs
 
 VIMFILESDIR=		${PREFIX}/share/vim/vimfiles
 

@@ -19,7 +19,8 @@ PORTDOCS=	AUTHORS NEWS TODO
 OPTIONS_DEFINE=	DOCS LIBCLANG
 
 LIBCLANG_DESC=	Autocomplete and inline error reporting via libclang
-LIBCLANG_LIB_DEPENDS=	libclang.so:devel/llvm${LLVM_VERSION}
+LIBCLANG_BUILD_DEPENDS=	llvm-config${LLVM_VERSION}:devel/llvm${LLVM_VERSION}
+LIBCLANG_LIB_DEPENDS=	libclang.so:devel/llvm${LLVM_VERSION}-libs
 LIBCLANG_MESON_ON=	-Dlibclang-libdir=${LOCALBASE}/llvm${LLVM_VERSION}/lib \
 		-Dlibclang-headerdir=${LOCALBASE}/llvm${LLVM_VERSION}/include
 LIBCLANG_MESON_OFF=	-Dlibclang=false

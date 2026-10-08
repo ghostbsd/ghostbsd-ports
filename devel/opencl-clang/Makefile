@@ -25,8 +25,14 @@ WWW=		https://github.com/intel/opencl-clang
 LICENSE=	NCSA
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libLLVM-${FLAVOR:S/llvm//}.so:devel/${FLAVOR} \
-		libLLVMSPIRVLib.so.${FLAVOR:S/llvm//}:devel/spirv-llvm-translator@${FLAVOR}
+# GhostBSD: libLLVM is in the -libs split when one exists (do not remove)
+.if exists(${.CURDIR:H}/${FLAVOR:U}-libs)
+BUILD_DEPENDS=	llvm-config${FLAVOR:S/llvm//}:devel/${FLAVOR}
+LIB_DEPENDS=	libLLVM-${FLAVOR:S/llvm//}.so:devel/${FLAVOR}-libs
+.else
+LIB_DEPENDS=	libLLVM-${FLAVOR:S/llvm//}.so:devel/${FLAVOR}
+.endif
+LIB_DEPENDS+=	libLLVMSPIRVLib.so.${FLAVOR:S/llvm//}:devel/spirv-llvm-translator@${FLAVOR}
 
 FLAVORS=	${17 16 15 14 13 12:L:S/^/llvm/}
 

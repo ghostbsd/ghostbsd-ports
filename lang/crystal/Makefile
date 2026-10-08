@@ -17,10 +17,11 @@ ONLY_FOR_ARCHS=	aarch64 amd64
 ONLY_FOR_ARCHS_REASON=	requires prebuilt bootstrap compiler
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/llvm-config${_BOOTSTRAP_LLVM_VERSION}:devel/llvm${_BOOTSTRAP_LLVM_VERSION} \
+		llvm-config${_LLVM_VERSION}:devel/llvm${_LLVM_VERSION} \
 		asciidoctor:textproc/rubygem-asciidoctor \
 		git:devel/git
 LIB_DEPENDS=	libevent.so:devel/libevent \
-		libLLVM-${_LLVM_VERSION}.so:devel/llvm${_LLVM_VERSION} \
+		libLLVM-${_LLVM_VERSION}.so:devel/llvm${_LLVM_VERSION}-libs \
 		libffi.so:devel/libffi \
 		libgc-threaded.so:devel/boehm-gc-threaded \
 		libgmp.so:math/gmp \

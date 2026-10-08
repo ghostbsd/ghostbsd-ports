@@ -23,7 +23,13 @@ WWW=		https://github.com/KhronosGroup/SPIRV-LLVM-Translator
 LICENSE=	NCSA
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
 
+# GhostBSD: libLLVM is in the -libs split when one exists (do not remove)
+.if exists(${.CURDIR:H}/${FLAVOR:U}-libs)
+BUILD_DEPENDS=	llvm-config${FLAVOR:S/llvm//}:devel/${FLAVOR}
+LIB_DEPENDS=	libLLVM-${FLAVOR:S/llvm//}.so:devel/${FLAVOR}-libs
+.else
 LIB_DEPENDS=	libLLVM-${FLAVOR:S/llvm//}.so:devel/${FLAVOR}
+.endif
 
 FLAVORS=	${23 22 21 20 19 18 17 16 15 14 13 12:L:S/^/llvm/}
 CONFLICTS_BUILD=${FLAVOR}-lite

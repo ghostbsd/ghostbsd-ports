@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 LIB_DEPENDS=	libboost_graph.so:devel/boost-libs \
 		libcurl.so:ftp/curl \
-		libLLVM-16.so:devel/llvm16 \
+		libLLVM-16.so:devel/llvm16-libs \
 		libzstd.so:archivers/zstd
 RUN_DEPENDS=	bash:shells/bash
 TEST_DEPENDS=	googletest>0:devel/googletest
