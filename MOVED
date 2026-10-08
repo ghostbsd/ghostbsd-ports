@@ -5649,3 +5649,4 @@ www/node8||2026-10-08|Removed: obsolete, not in SUBDIR and not built
 www/npm5||2026-10-08|Removed: obsolete, not in SUBDIR and not built
 www/py-django110||2026-10-08|Removed: obsolete, not in SUBDIR and not built
 x11/gnome-installed-settings||2026-10-08|Removed: obsolete, not in SUBDIR and not built
+sysutils/backup-station|sysutils/be-station|2026-10-08|Renamed

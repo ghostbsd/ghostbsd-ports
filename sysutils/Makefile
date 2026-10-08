@@ -79,7 +79,6 @@
     SUBDIR += b2sum
     SUBDIR += b3sum
     SUBDIR += b43-fwcutter
-    SUBDIR += backup-station
     SUBDIR += backdown
     SUBDIR += backrest
     SUBDIR += backuppc
@@ -115,6 +114,7 @@
     SUBDIR += battmond
     SUBDIR += battray
     SUBDIR += bchunk
+    SUBDIR += be-station
     SUBDIR += beadm
     SUBDIR += beats8
     SUBDIR += beats91

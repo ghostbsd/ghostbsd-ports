@@ -1,5 +1,5 @@
 PORTNAME=	ghostbsd-utils
-PORTVERSION=	24.01.1
+PORTVERSION=	26.10.0
 PORTREVISION=	0
 CATEGORIES=	sysutils
 
@@ -9,7 +9,7 @@ COMMENT=	GhostBSD util tools
 USES=		metaport
 
 RUN_DEPENDS=	update-station:ports-mgmt/update-station \
-		backup-station:sysutils/backup-station \
+		be-station:sysutils/be-station \
 		sudo:security/sudo \
 		setxkbmap:x11/setxkbmap \
 		xmodmap:x11/xmodmap \

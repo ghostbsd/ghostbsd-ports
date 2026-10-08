@@ -1,0 +1,10 @@
+bin/be-station
+etc/sudoers.d/be-station
+%%PYTHON_SITELIBDIR%%/be_station-0.8-py%%PYTHON_VER%%.egg-info/PKG-INFO
+%%PYTHON_SITELIBDIR%%/be_station-0.8-py%%PYTHON_VER%%.egg-info/SOURCES.txt
+%%PYTHON_SITELIBDIR%%/be_station-0.8-py%%PYTHON_VER%%.egg-info/dependency_links.txt
+%%PYTHON_SITELIBDIR%%/be_station-0.8-py%%PYTHON_VER%%.egg-info/requires.txt
+%%PYTHON_SITELIBDIR%%/be_station-0.8-py%%PYTHON_VER%%.egg-info/top_level.txt
+share/applications/be-station.desktop
+share/locale/ru/LC_MESSAGES/be-station.mo
+share/locale/zh_CN/LC_MESSAGES/be-station.mo
