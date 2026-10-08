@@ -48,6 +48,9 @@ LIB_DEPENDS+=	libbgcode_convert.so:cad/libbgcode \
 		libhidapi.so:comms/hidapi \
 		libz3.so:math/z3
 
+# GhostBSD: record ffmpeg4, libavcodec.so can resolve to multimedia/ffmpeg (do not remove)
+RUN_DEPENDS+=	ffmpeg4>0:multimedia/ffmpeg4
+
 USES=		cmake cpe desktop-file-utils eigen:3 gettext gl gnome iconv \
 		jpeg pkgconfig xorg ssl tcl tk
 CFLAGS+=	-I${LOCALBASE}/include/hidapi
