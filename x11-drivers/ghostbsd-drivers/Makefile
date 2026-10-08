@@ -24,7 +24,7 @@ XLIBRE_RUN_DEPENDS=	Xorg:x11/xlibre-minimal \
 			xlibre-xf86-video-scfb>0:x11-drivers/xf86-video-scfb@xlibre \
 			xlibre-xf86-video-vesa>0:x11-drivers/xlibre-xf86-video-vesa
 
-XORG_RUN_DEPENDS=	Xorg:x11/xorg-minimal \
+XORG_RUN_DEPENDS=	xorg-minimal>0:x11/xorg-minimal \
 			xf86-input-joystick>0:x11-drivers/xf86-input-joystick \
 			xf86-input-keyboard>0:x11-drivers/xf86-input-keyboard \
 			xf86-input-mouse>0:x11-drivers/xf86-input-mouse \
