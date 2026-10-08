@@ -1411,7 +1411,6 @@
     SUBDIR += p5-webservice-validator-html-w3c
     SUBDIR += pacparser
     SUBDIR += payara
-    SUBDIR += pc-webkitviewer
     SUBDIR += pear-HTML_AJAX
     SUBDIR += pear-HTML_TagCloud
     SUBDIR += pear-HTTP

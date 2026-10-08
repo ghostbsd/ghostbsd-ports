@@ -594,7 +594,6 @@
     SUBDIR += ipsc
     SUBDIR += isc-cron
     SUBDIR += isomaster
-    SUBDIR += ix-bhyve
     SUBDIR += istio
     SUBDIR += jadm
     SUBDIR += jail-primer
@@ -977,12 +976,8 @@
     SUBDIR += patchelf
     SUBDIR += pax-utils
     SUBDIR += pbimaker
-    SUBDIR += pc-diskmanager
-    SUBDIR += pc-firewall
-    SUBDIR += pc-installdialog
     SUBDIR += pc-networkmanager
     SUBDIR += pc-sysinstall
-    SUBDIR += pc-updatemanager
     SUBDIR += pcapfix
     SUBDIR += pciutils
     SUBDIR += pcpustat
@@ -1001,7 +996,6 @@
     SUBDIR += pear-Translation2
     SUBDIR += pecl-proctitle
     SUBDIR += pefs-kmod
-    SUBDIR += personacrypt
     SUBDIR += perp
     SUBDIR += personality
     SUBDIR += pfetch
@@ -1465,7 +1459,6 @@
     SUBDIR += syslinux
     SUBDIR += syslog-ng
     SUBDIR += syslogger
-    SUBDIR += sysup
     SUBDIR += systeroid
     SUBDIR += sysvbanner
     SUBDIR += szyszka
@@ -1520,9 +1513,6 @@
     SUBDIR += treetop
     SUBDIR += triton
     SUBDIR += trueos-libqt5
-    SUBDIR += trueos-libsh
-    SUBDIR += trueos-utils
-    SUBDIR += trueos-utils-qt5
     SUBDIR += try-rs
     SUBDIR += ts
     SUBDIR += tty-clock
