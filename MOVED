@@ -5638,3 +5638,14 @@ sysutils/trueos-utils-qt5||2026-10-08|Removed: obsolete TrueOS/iXsystems port, u
 www/pc-webkitviewer||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
 x11/picoserver||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
 deskutils/lazylibrarian||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
+dns/inadyn-troglobit||2026-10-08|Removed: obsolete, not in SUBDIR and not built
+math/py-PySMT||2026-10-08|Removed: obsolete, not in SUBDIR and not built
+net-im/mu-conference||2026-10-08|Removed: obsolete, not in SUBDIR and not built
+net-mgmt/zabbix42-server||2026-10-08|Removed: obsolete, not in SUBDIR and not built
+sysutils/condor||2026-10-08|Removed: obsolete, not in SUBDIR and not built
+sysutils/openzfs-kmod-debug||2026-10-08|Removed: obsolete, not in SUBDIR and not built
+textproc/py-sphinx_numfig||2026-10-08|Removed: obsolete, not in SUBDIR and not built
+www/node8||2026-10-08|Removed: obsolete, not in SUBDIR and not built
+www/npm5||2026-10-08|Removed: obsolete, not in SUBDIR and not built
+www/py-django110||2026-10-08|Removed: obsolete, not in SUBDIR and not built
+x11/gnome-installed-settings||2026-10-08|Removed: obsolete, not in SUBDIR and not built
