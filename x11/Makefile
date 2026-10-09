@@ -107,6 +107,7 @@
     SUBDIR += ghostbsd-gnome-settings
     SUBDIR += ghostbsd-mate
     SUBDIR += ghostbsd-mate-settings
+    SUBDIR += ghostbsd-mocka
     SUBDIR += ghostbsd-slick-greeter-settings
     SUBDIR += ghostbsd-slim-theme
     SUBDIR += ghostbsd-xfce

@@ -1,0 +1,36 @@
+PORTNAME=	ghostbsd-mocka
+PORTVERSION=	0.0.1
+CATEGORIES=	x11 mate
+
+MAINTAINER=	ericturgeon@GhostBSD.org
+COMMENT=	Meta-port for the GhostBSD Mocka integrated X11 desktop
+WWW=		https://mocka-desktop.org
+
+RUN_DEPENDS=	mate-terminal:x11/mate-terminal \
+		mate-screensaver:x11/mate-screensaver \
+		mate-calc:math/mate-calc \
+		mate-screenshot:deskutils/mate-utils \
+		mate-system-monitor:sysutils/mate-system-monitor \
+		eom:graphics/eom \
+		engrampa:archivers/engrampa \
+		atril:graphics/atril \
+		mate-volume-control:audio/mate-media \
+		mate-power-manager:sysutils/mate-power-manager \
+		caja-sendto:deskutils/caja-extensions \
+		mozo:deskutils/mozo \
+		mate-applets>=1.22.0:x11/mate-applets \
+		${LOCALBASE}/share/fonts/dejavu/DejaVuSerif.ttf:x11-fonts/dejavu \
+		mate-user-guide>=1.22.0:misc/mate-user-guide \
+		mocka-dock>0:x11/mocka-dock \
+		ghostbsd-mate-settings>0:x11/ghostbsd-mate-settings \
+		ghostbsd-wallpapers26>0:x11-themes/ghostbsd-wallpapers26 \
+		ghostbsd-gtk-themes>0:x11-themes/ghostbsd-gtk-themes \
+		ghostbsd-fonts>0:x11-fonts/ghostbsd-fonts
+
+USES=		metaport mate
+USE_MATE=	caja:run controlcenter:run icontheme:run \
+		marco:run notificationdaemon:run panel:run \
+		polkit:run session:run \
+		pluma:run
+
+.include <bsd.port.mk>

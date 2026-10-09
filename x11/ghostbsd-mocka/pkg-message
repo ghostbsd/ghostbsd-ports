@@ -1,0 +1,12 @@
+[
+{ type: install
+  message: <<EOM
+Congratulations!  The GhostBSD Mocka desktop has been successfully
+installed on your system.
+
+For more information about Mocka, please see:
+
+                       https://mocka-desktop.org
+EOM
+}
+]

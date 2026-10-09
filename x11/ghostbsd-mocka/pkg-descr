@@ -1,0 +1,8 @@
+Mocka is a desktop built from scratch for GhostBSD. It replaces MATE
+one component at a time, staying compatible with MATE along the way,
+and is built for FreeBSD and GhostBSD with no Linux-specific
+assumptions.
+
+This metaport installs the Mocka components, such as Mocka Dock, on
+top of the MATE desktop they replace, along with extra applications
+and the GhostBSD settings, themes, fonts and wallpapers.
