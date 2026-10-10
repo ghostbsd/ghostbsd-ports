@@ -1,10 +1,10 @@
 PORTNAME=	setup-station
-PORTVERSION=	0.4
+PORTVERSION=	0.5
 CATEGORIES=	sysutils
 
 MAINTAINER=	ericturgeon@ghostbsd.org
 COMMENT=	First-boot configuration utility for GhostBSD systems
-WWW=		https://github.com/GhostBSD/install-station
+WWW=		https://github.com/GhostBSD/setup-station
 
 LICENSE=	BSD
 
