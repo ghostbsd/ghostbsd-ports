@@ -1,0 +1,3 @@
+bin/mocka-dock-collect-test-data
+lib/mate-panel/libmocka-dock-applet.so
+share/mate-panel/applets/org.mocka_desktop.DockApplet.mate-panel-applet

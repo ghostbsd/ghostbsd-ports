@@ -1,5 +1,5 @@
 PORTNAME=	mocka-dock
-DISTVERSION=	0.0.1
+DISTVERSION=	0.0.2
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon@ghostbsd.org
@@ -17,8 +17,5 @@ USE_MATE=	panel
 USE_XORG=	x11 xcomposite xdamage
 
 GLIB_SCHEMAS=	org.mocka_desktop.Dock.gschema.xml
-
-PLIST_FILES=	lib/mate-panel/libmocka-dock-applet.so \
-		share/mate-panel/applets/org.mocka_desktop.DockApplet.mate-panel-applet
 
 .include <bsd.port.mk>
