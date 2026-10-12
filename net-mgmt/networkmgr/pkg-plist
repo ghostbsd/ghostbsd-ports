@@ -14,12 +14,15 @@ etc/xdg/autostart/networkmgr.desktop
 %%PYTHON_SITELIBDIR%%/NetworkMgr/__pycache__/query%%PYTHON_TAG%%.pyc
 %%PYTHON_SITELIBDIR%%/NetworkMgr/__pycache__/trayicon%%PYTHON_TAG%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/NetworkMgr/__pycache__/trayicon%%PYTHON_TAG%%.pyc
+%%PYTHON_SITELIBDIR%%/NetworkMgr/__pycache__/validate%%PYTHON_TAG%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/NetworkMgr/__pycache__/validate%%PYTHON_TAG%%.pyc
 %%PYTHON_SITELIBDIR%%/NetworkMgr/__pycache__/wg_api%%PYTHON_TAG%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/NetworkMgr/__pycache__/wg_api%%PYTHON_TAG%%.pyc
 %%PYTHON_SITELIBDIR%%/NetworkMgr/configuration.py
 %%PYTHON_SITELIBDIR%%/NetworkMgr/net_api.py
 %%PYTHON_SITELIBDIR%%/NetworkMgr/query.py
 %%PYTHON_SITELIBDIR%%/NetworkMgr/trayicon.py
+%%PYTHON_SITELIBDIR%%/NetworkMgr/validate.py
 %%PYTHON_SITELIBDIR%%/NetworkMgr/wg_api.py
 share/icons/hicolor/128x128/apps/nm-adhoc.png
 share/icons/hicolor/128x128/apps/nm-device-wired-secure.png
@@ -226,3 +229,4 @@ share/locale/zh_CN/LC_MESSAGES/NetworkMgr.mo
 %%DATADIR%%/auto-switch.py
 %%DATADIR%%/link-up.py
 %%DATADIR%%/setup-nic.py
+%%DATADIR%%/wpa_supplicant.conf
