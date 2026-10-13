@@ -1,5 +1,5 @@
 PORTNAME=	oauth2-proxy
-PORTVERSION=	7.15.4
+PORTVERSION=	7.15.5
 DISTVERSIONPREFIX=	v
 PORTREVISION=	1
 CATEGORIES=	www
@@ -11,7 +11,7 @@ WWW=		https://github.com/oauth2-proxy/oauth2-proxy
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.26+,modules
+USES=		go:modules
 USE_GITHUB=	yes
 USE_RC_SUBR=	oauth2_proxy
 

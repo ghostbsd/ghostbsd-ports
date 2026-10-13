@@ -1,10 +1,9 @@
 PORTNAME=	rabbitmqadmin
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.29.0
-PORTREVISION=	13
+DISTVERSION=	2.35.0
 CATEGORIES=	net
 
-MAINTAINER=	dch@FreeBSD.org
+MAINTAINER=	erlang@FreeBSD.org
 COMMENT=	CLI for managing RabbitMQ via HTTP API
 WWW=		https://github.com/rabbitmq/rabbitmqadmin-ng
 

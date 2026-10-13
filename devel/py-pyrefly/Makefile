@@ -1,5 +1,5 @@
 PORTNAME=	pyrefly
-DISTVERSION=	1.3.0
+DISTVERSION=	1.3.2
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,6 +12,8 @@ WWW=		https://pyrefly.org \
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	compilation fails: rustc-LLVM ERROR: out of memory
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}maturin>=1.10.2<2.0:devel/py-maturin@${PY_FLAVOR}
 LIB_DEPENDS=	libzstd.so:archivers/zstd
@@ -469,7 +471,7 @@ CARGO_TEST=	no
 
 MAKE_ENV=	${CARGO_ENV} CARGO_PROFILE_RELEASE_LTO=false CARGO_PROFILE_RELEASE_CODEGEN_UNITS=4
 
-do-test:
+do-test: # unclear how to run tests, see https://github.com/facebook/pyrefly/issues/5203
 	@${WRKSRC}/target/release/pyrefly --version
 
 # tests as of 1.1.1: upstream cargo test requires Buck-specific env vars and test

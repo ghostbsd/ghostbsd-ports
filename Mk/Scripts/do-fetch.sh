@@ -19,10 +19,6 @@ validate_env dp_DEVELOPER dp_DISABLE_SIZE dp_DISTDIR dp_DISTINFO_FILE \
 set -u
 
 case ${dp_TARGET} in
-	makesum-fetch)
-		dp_NO_CHECKSUM=yes
-		dp_DISABLE_SIZE=yes
-		;&
 	do-fetch|makesum)
 		if [ ! -d "${dp_DISTDIR}" ]; then
 			mkdir -p "${dp_DISTDIR}"
@@ -77,7 +73,7 @@ while IFS= read -r _file; do
 		fi
 	fi
 	case ${dp_TARGET} in
-		do-fetch|makesum|makesum-fetch)
+		do-fetch|makesum)
 			${dp_ECHO_MSG} "=> $file doesn't seem to exist in ${dp_DISTDIR}."
 			if [ ! -w "${dp_DISTDIR}" ]; then
 				${dp_ECHO_MSG} "=> ${dp_DISTDIR} is not writable by you; cannot fetch."
@@ -96,7 +92,7 @@ while IFS= read -r _file; do
 			__MASTER_SITES_TMP="${__MASTER_SITES_TMP} ${___MASTER_SITES_TMP}"
 		else
 			case ${dp_TARGET} in
-				do-fetch|makesum|makesum-fetch)
+				do-fetch|makesum)
 					if [ -n "${dp_DEVELOPER}" ]; then
 						${dp_ECHO_MSG} "===> /!\\ Error /!\\"
 					else
@@ -130,34 +126,60 @@ while IFS= read -r _file; do
 		sites_remaining=$((sites_remaining + 1))
 	done
 	for site in ${sites}; do
+		# This target only echoes the full URL, handle it first to simplify the rest
+		# of the loop.
+		if [ "${dp_TARGET}" = fetch-url-list-int ]; then
+			echo "${site}${file}"
+			continue
+		fi
+
 		sites_remaining=$((sites_remaining - 1))
 		CKSIZE=$(distinfo_data SIZE "${full_file}")
-		early_args=""
 		case ${file} in
 			*/*)
 				case ${dp_TARGET} in
 					fetch-list)
-						echo "mkdir -p \"${file%/*}\" && "
-						early_args="-o ${file}"
-						;;
-					fetch-url-list-int)
+						echo -n "mkdir -p \"${file%/*}\" && "
 						;;
 					*)
 						mkdir -p "${file%/*}"
-						early_args="-o ${file}"
 						;;
 				esac
 			;;
 		esac
-		args="${early_args:+${early_args} }${site}${file}"
+
+		# When the distname is not the last part of the final url, we append a
+		# `?dummy=/` so that the url ends up looking something like this:
+		# http://foo.bar/baz/1.0?dummy=/baz-1.0.tar.gz
+		#
+		# This tricks fetch into save the file which path really is "baz/1.0" as
+		# "baz-1.0.tar.gz" which is what the framework wants.  This is only "used"
+		# for the fetch-url-list-int which is used by `make fetch-url-list` which
+		# generates a long list of urls.
+		#
+		# When we are actually fetching, we always set `-o $file`, so we can remove
+		# the `?dummy=/`, and we don't need to append the distname.
+		case "${site}" in
+			*\?dummy=/)
+				url="${site%?dummy=/}"
+			;;
+			*\&dummy=/)
+				url="${site%&dummy=/}"
+			;;
+			*)
+				url="${site}${file}"
+			;;
+		esac
+		args="-o ${file} $url"
+
 		_fetch_cmd="${dp_FETCH_CMD} ${dp_FETCH_BEFORE_ARGS}"
 		if [ -z "${dp_DISABLE_SIZE}" -a -n "${CKSIZE}" ]; then
 			_fetch_cmd="${_fetch_cmd} -S ${CKSIZE}"
 		fi
 		_fetch_cmd="${_fetch_cmd} ${args} ${dp_FETCH_AFTER_ARGS}"
 		case ${dp_TARGET} in
-			do-fetch|makesum|makesum-fetch)
-				${dp_ECHO_MSG} "=> Attempting to fetch ${site}${file}"
+			do-fetch|makesum)
+				${dp_ECHO_MSG} "=> Attempting to fetch ${url}"
 				if env -S "${dp_FETCH_ENV}" ${_fetch_cmd}; then
 					actual_size=$(stat -f %z "${file}")
 					if [ -n "${dp_DISABLE_SIZE}" ] || [ -z "${CKSIZE}" ] || [ "${actual_size}" -eq "${CKSIZE}" ]; then
@@ -174,13 +196,10 @@ while IFS= read -r _file; do
 			fetch-list)
 				echo -n "env $(escape "${_fetch_cmd}") || "
 				;;
-			fetch-url-list-int)
-				echo ${args}
-				;;
 		esac
 	done
 	case ${dp_TARGET} in
-		do-fetch|makesum|makesum-fetch)
+		do-fetch|makesum)
 			${dp_ECHO_MSG} "=> Couldn't fetch it - please try to retrieve this"
 			${dp_ECHO_MSG} "=> port manually into ${dp_DISTDIR} and try again."
 			exit 1

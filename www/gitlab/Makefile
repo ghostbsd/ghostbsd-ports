@@ -45,7 +45,7 @@ MY_DEPENDS=	gitaly>=${GITLAB_VERSION}:devel/gitaly \
 	rubygem-psych>=5.3.1:textproc/rubygem-psych \
 	rubygem-net-pop>=0:mail/rubygem-net-pop \
 	rubygem-rails-gitlab>=${RAILS_VERSION}<7.3:www/rubygem-rails-gitlab \
-	rubygem-zeitwerk>=2.6.18<2.6.19:devel/rubygem-zeitwerk \
+	rubygem-zeitwerk-gitlab>=2.6.18<2.6.19:devel/rubygem-zeitwerk-gitlab \
 	rubygem-drb-gitlab>=2.2.3<3:devel/rubygem-drb-gitlab \
 	rubygem-bootsnap-gitlab>=1.26.0<1.27:devel/rubygem-bootsnap-gitlab \
 	rubygem-ffi>=1.17.4<2:devel/rubygem-ffi \
@@ -122,7 +122,7 @@ MY_DEPENDS=	gitaly>=${GITLAB_VERSION}:devel/gitaly \
 	rubygem-fog-google-gitlab>=1.29.4<2:net/rubygem-fog-google-gitlab \
 	rubygem-fog-local-gitlab>=0.8<1.0:net/rubygem-fog-local-gitlab \
 	rubygem-fog-aliyun-gitlab>=0.4.1<1.0:net/rubygem-fog-aliyun-gitlab \
-	rubygem-gitlab-fog-azure-rm>=2.5.1<2.6:net/rubygem-gitlab-fog-azure-rm \
+	rubygem-gitlab-fog-azure-rm>=2.5.2<2.6:net/rubygem-gitlab-fog-azure-rm \
 	rubygem-google-apis-storage_v1-gitlab>=0.66<1:devel/rubygem-google-apis-storage_v1-gitlab \
 	rubygem-google-cloud-storage-gitlab>=1.62.0<1.63:net/rubygem-google-cloud-storage-gitlab \
 	rubygem-google-apis-core-gitlab>=0.18.0<0.19:devel/rubygem-google-apis-core-gitlab \
@@ -226,7 +226,7 @@ MY_DEPENDS=	gitaly>=${GITLAB_VERSION}:devel/gitaly \
 	rubygem-gitlab-labkit>=5.0.1<5.1:devel/rubygem-gitlab-labkit \
 	rubygem-thrift>=0.22.0,1<0.23,1:devel/rubygem-thrift \
 	rubygem-rails-i18n-rails-gitlab>=7.0.9<8:devel/rubygem-rails-i18n-rails-gitlab \
-	rubygem-gettext_i18n_rails>=1.13.0<1.14:devel/rubygem-gettext_i18n_rails \
+	rubygem-gettext_i18n_rails-gitlab>=1.13.0<1.14:devel/rubygem-gettext_i18n_rails-gitlab \
 	rubygem-gettext>=3.5.2<4:devel/rubygem-gettext \
 	rubygem-batch-loader>=2.0.5<2.1:devel/rubygem-batch-loader \
 	rubygem-tty-prompt>=0.23<1:devel/rubygem-tty-prompt \

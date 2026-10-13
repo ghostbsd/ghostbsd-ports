@@ -1,7 +1,7 @@
 PORTNAME=	opengist
 PORTVERSION=	1.15.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www textproc
 
 # prebuilt frontend assets published upstream (see upstream PR #768)
@@ -19,7 +19,7 @@ ONLY_FOR_ARCHS=	aarch64 amd64
 
 RUN_DEPENDS=	git:devel/git
 
-USES=		go:1.26+,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/thomiceli/opengist
 GO_ENV+=	GOTOOLCHAIN=local+path

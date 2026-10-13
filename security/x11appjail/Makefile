@@ -1,6 +1,6 @@
 PORTNAME=	x11appjail
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.0
+DISTVERSION=	1.3.1
 CATEGORIES=	security
 
 MAINTAINER=	dtxdf@FreeBSD.org
@@ -13,8 +13,8 @@ RUN_DEPENDS=	appjail:sysutils/appjail \
 		appscript:archivers/appscript \
 		doas:security/doas \
 		git:devel/git@lite \
+		jtransfer:sysutils/jtransfer \
 		notify-send:devel/libnotify \
-		su-exec:security/su-exec \
 		unixexec:sysutils/unixexec \
 		update-desktop-database:devel/desktop-file-utils \
 		xauth:x11/xauth \
@@ -33,21 +33,10 @@ GH_PROJECT=	x11appjail
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
-OPTIONS_DEFINE=	EXAMPLES
+OPTIONS_DEFINE=		BLAKE3
+OPTIONS_DEFAULT=	BLAKE3
 
-PORTEXAMPLES=	*
-
-post-install-EXAMPLES-on:
-	@${MKDIR} ${STAGEDIR}/${EXAMPLESDIR}
-	@cd ${WRKSRC}/share/examples/x11appjail && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}
-	@for app in ${STAGEDIR}${EXAMPLESDIR}/Apps/*; do \
-		${CHMOD} +x $${app}/build.sh; \
-		${CHMOD} +x $${app}/create; \
-		${CHMOD} +x $${app}/install; \
-		${CHMOD} +x $${app}/run; \
-		${CHMOD} +x $${app}/uninstall; \
-		if [ -f "$${app}/X" ]; then ${CHMOD} +x $${app}/X; fi; \
-		${CHMOD} +x $${app}/.reproduce/build.sh; \
-	done
+BLAKE3_DESC=		Enable support for Blake3
+BLAKE3_RUN_DEPENDS=	b3sum:sysutils/b3sum
 
 .include <bsd.port.mk>

@@ -1,7 +1,7 @@
 PORTNAME=	ghostunnel
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.11.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,7 +11,7 @@ WWW=		https://github.com/ghostunnel/ghostunnel
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.26+,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/ghostunnel/ghostunnel
 

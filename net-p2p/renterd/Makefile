@@ -1,7 +1,7 @@
 PORTNAME=	renterd
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.9.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	net-p2p
 
 MAINTAINER=	bruno@tinkerbox.org
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 NOT_FOR_ARCHS=	armv6 armv7 i386 powerpc powerpcspe
 NOT_FOR_ARCHS_REASON=	requires 64-bit architecture
 
-USES=		go:1.26+,modules
+USES=		go:modules
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	SiaFoundation

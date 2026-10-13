@@ -1,6 +1,6 @@
 PORTNAME=	stringzilla
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.1.2
+DISTVERSION=	5.3.0
 CATEGORIES=	devel python
 #MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +13,7 @@ WWW=		https://ashvardanian.com/posts/stringzilla/ \
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=	aarch64 amd64 i386
+BROKEN_i386=	fails to stage: non-constant-expression cannot be narrowed from type 'sz_u64_t', see https://github.com/ashvardanian/StringZilla/issues/341
 
 BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 		${PYTHON_PKGNAMEPREFIX}numpy>0:math/py-numpy@${PY_FLAVOR} \
@@ -60,6 +60,6 @@ post-install: # build the second (stringzillas_cpus) module and install it using
 	# remove test files from strngzillas_cpu module install
 	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/test
 
-# tests as of 5.1.2: 10595 passed, 73 skipped in 34.70s
+# tests as of 5.3.0: 10595 passed, 73 skipped in 38.16s
 
 .include <bsd.port.mk>

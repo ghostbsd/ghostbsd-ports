@@ -1,6 +1,7 @@
 PORTNAME=	treefmt
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.6.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,7 +12,7 @@ WWW=		https://treefmt.com/ \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.26,modules
+USES=		go:modules
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	numtide

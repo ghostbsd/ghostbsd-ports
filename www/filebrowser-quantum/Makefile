@@ -1,6 +1,6 @@
 PORTNAME=	filebrowser-quantum
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.5.3
+DISTVERSION=	1.5.8
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www
@@ -20,7 +20,7 @@ LICENSE=	APACHE20
 ONLY_FOR_ARCHS=	aarch64 amd64
 ONLY_FOR_ARCHS_REASON=	module modernc.org/sqlite only supported on aarch64 and amd64
 
-USES=		go:modules
+USES=		go:1.27+,modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	gtsteffaniak
 GH_PROJECT=	filebrowser
@@ -50,7 +50,7 @@ FFMPEG_RUN_DEPENDS=	ffmpeg>=0:multimedia/ffmpeg
 
 # Run 'git checkout ${DISTVERSIONPREFIX}${DISTVERSION}-${FILEBROWSER_QUANTUM_CHANNEL} && git rev-parse HEAD'
 # in the FileBrowser Quantum repository to get the value of GITID.
-GITID=		f7e51f1
+GITID=		84024e2
 
 FILEBROWSER_QUANTUM_USER=	www
 FILEBROWSER_QUANTUM_GROUP=	${FILEBROWSER_QUANTUM_USER}

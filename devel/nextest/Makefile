@@ -1,6 +1,6 @@
 PORTNAME=	nextest
 DISTVERSIONPREFIX=	cargo-nextest-
-DISTVERSION=	0.9.144
+DISTVERSION=	0.9.148
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -43,8 +43,8 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		atomic-waker-1.1.2 \
 		atomicwrites-0.4.4 \
 		autocfg-1.5.0 \
-		aws-lc-rs-1.16.2 \
-		aws-lc-sys-0.39.0 \
+		aws-lc-rs-1.18.1 \
+		aws-lc-sys-0.45.0 \
 		axum-0.8.6 \
 		axum-core-0.5.5 \
 		backtrace-0.3.75 \
@@ -57,40 +57,41 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		bit-vec-0.6.3 \
 		bit-vec-0.8.0 \
 		bitflags-1.3.2 \
-		bitflags-2.13.1 \
+		bitflags-2.13.2 \
 		block-buffer-0.10.4 \
 		borrow-or-share-0.2.4 \
 		borsh-1.5.7 \
-		bstr-1.13.0 \
+		bstr-1.13.1 \
 		bumpalo-3.19.0 \
 		bytecount-0.6.9 \
 		bytemuck-1.24.0 \
 		byteorder-1.5.0 \
 		bytes-1.12.1 \
-		bytesize-2.4.2 \
-		camino-1.2.5 \
+		bytesize-2.7.0 \
+		camino-1.2.6 \
+		camino-anchored-0.1.1 \
 		camino-tempfile-1.4.1 \
 		camino-tempfile-ext-0.3.3 \
 		cargo-platform-0.3.0 \
 		cargo_metadata-0.23.1 \
 		cc-1.2.30 \
-		cfg-expr-0.20.6 \
-		cfg-if-1.0.4 \
+		cfg-expr-0.20.9 \
+		cfg-if-1.0.5 \
 		cfg_aliases-0.2.1 \
-		chacha20-0.10.0 \
+		chacha20-0.10.2 \
 		char_index-0.1.5 \
 		chrono-0.4.45 \
-		clap-4.6.6 \
-		clap_builder-4.6.6 \
-		clap_derive-4.6.4 \
+		clap-4.6.7 \
+		clap_builder-4.6.7 \
+		clap_derive-4.6.7 \
 		clap_lex-1.0.0 \
 		cmake-0.1.54 \
 		color-eyre-0.6.5 \
 		color-spantrace-0.3.0 \
 		colorchoice-1.0.3 \
 		combine-4.6.7 \
-		config-0.15.25 \
-		console-0.16.4 \
+		config-0.15.27 \
+		console-0.16.6 \
 		console-api-0.9.0 \
 		console-subscriber-0.5.0 \
 		const-oid-0.9.6 \
@@ -120,7 +121,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		debug-ignore-1.0.5 \
 		deltae-0.3.2 \
 		der-0.7.10 \
-		der-0.8.0 \
+		der-0.8.2 \
 		deranged-0.5.8 \
 		derive-ex-0.1.8 \
 		derive-where-1.6.1 \
@@ -134,10 +135,10 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		document-features-0.2.11 \
 		dof-0.4.0 \
 		dtrace-parser-0.3.0 \
-		duct-1.1.1 \
+		duct-1.1.2 \
 		dunce-1.0.5 \
 		dyn-clone-1.0.20 \
-		eazip-0.2.5 \
+		eazip-0.2.6 \
 		ed25519-2.2.3 \
 		ed25519-dalek-2.1.1 \
 		either-1.15.0 \
@@ -174,15 +175,15 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		fs-err-3.3.1 \
 		fs_extra-1.3.0 \
 		future-queue-0.4.0 \
-		futures-0.3.33 \
-		futures-channel-0.3.33 \
-		futures-core-0.3.33 \
-		futures-executor-0.3.33 \
-		futures-io-0.3.33 \
-		futures-macro-0.3.33 \
-		futures-sink-0.3.33 \
-		futures-task-0.3.33 \
-		futures-util-0.3.33 \
+		futures-0.3.34 \
+		futures-channel-0.3.34 \
+		futures-core-0.3.34 \
+		futures-executor-0.3.34 \
+		futures-io-0.3.34 \
+		futures-macro-0.3.34 \
+		futures-sink-0.3.34 \
+		futures-task-0.3.34 \
+		futures-util-0.3.34 \
 		generic-array-0.14.7 \
 		getrandom-0.2.16 \
 		getrandom-0.3.4 \
@@ -191,7 +192,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		globset-0.4.20 \
 		globwalk-0.9.1 \
 		goblin-0.10.3 \
-		guppy-0.17.26 \
+		guppy-0.19.1 \
 		guppy-workspace-hack-0.1.0 \
 		h2-0.4.10 \
 		hashbrown-0.15.5 \
@@ -200,7 +201,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		heck-0.5.0 \
 		hex-0.4.3 \
 		home-0.5.12 \
-		http-1.4.2 \
+		http-1.5.0 \
 		http-body-1.0.1 \
 		http-body-util-0.1.3 \
 		httparse-1.10.1 \
@@ -222,7 +223,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		include_dir-0.7.4 \
 		include_dir_macros-0.7.4 \
 		indenter-0.3.4 \
-		indexmap-2.14.0 \
+		indexmap-2.14.2 \
 		indicatif-0.18.6 \
 		indoc-2.0.7 \
 		insta-1.48.0 \
@@ -245,7 +246,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		lazy_static-1.5.0 \
 		leb128fmt-0.1.0 \
 		libc-0.2.189 \
-		libredox-0.1.16 \
+		libredox-0.1.24 \
 		libtest-mimic-0.8.2 \
 		linux-raw-sys-0.4.15 \
 		linux-raw-sys-0.9.4 \
@@ -291,7 +292,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		objc2-core-foundation-0.3.2 \
 		objc2-system-configuration-0.3.2 \
 		object-0.36.7 \
-		once_cell-1.21.3 \
+		once_cell-1.21.4 \
 		once_cell_polyfill-1.70.1 \
 		openssl-0.10.80 \
 		openssl-macros-0.1.1 \
@@ -353,7 +354,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		rand_xorshift-0.4.0 \
 		recursion-0.5.4 \
 		redox_syscall-0.5.12 \
-		redox_syscall-0.7.0 \
+		redox_syscall-0.9.4 \
 		redox_users-0.5.2 \
 		ref-cast-1.0.25 \
 		ref-cast-impl-1.0.25 \
@@ -368,12 +369,12 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		rustc_version-0.4.1 \
 		rustix-0.38.44 \
 		rustix-1.0.7 \
-		rustls-0.23.43 \
+		rustls-0.23.45 \
 		rustls-native-certs-0.8.3 \
 		rustls-pki-types-1.12.0 \
 		rustls-platform-verifier-0.7.0 \
 		rustls-platform-verifier-android-0.1.1 \
-		rustls-webpki-0.103.13 \
+		rustls-webpki-0.103.15 \
 		rustversion-1.0.22 \
 		rusty-fork-0.3.0 \
 		same-file-1.0.6 \
@@ -415,7 +416,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		similar-2.7.0 \
 		siphasher-1.0.1 \
 		slab-0.4.11 \
-		smallvec-1.15.2 \
+		smallvec-1.16.2 \
 		smol_str-0.3.2 \
 		socket2-0.5.10 \
 		socket2-0.6.3 \
@@ -439,8 +440,8 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		sync_wrapper-1.0.2 \
 		synoptic-2.2.9 \
 		tar-0.4.46 \
-		target-lexicon-0.13.3 \
-		target-spec-3.6.0 \
+		target-lexicon-0.13.5 \
+		target-spec-3.7.0 \
 		target-spec-miette-0.4.8 \
 		tempfile-3.20.0 \
 		terminal_size-0.4.4 \
@@ -468,9 +469,9 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		tokio-rustls-0.26.4 \
 		tokio-stream-0.1.19 \
 		tokio-util-0.7.15 \
-		toml-1.1.4+spec-1.1.0 \
+		toml-1.1.6+spec-1.1.0 \
 		toml_datetime-1.1.1+spec-1.1.0 \
-		toml_edit-0.25.13+spec-1.1.0 \
+		toml_edit-0.25.15+spec-1.1.0 \
 		toml_parser-1.1.3+spec-1.1.0 \
 		toml_writer-1.1.2+spec-1.1.0 \
 		tonic-0.14.2 \
@@ -547,7 +548,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		wezterm-dynamic-0.2.1 \
 		wezterm-dynamic-derive-0.1.1 \
 		wezterm-input-types-0.1.0 \
-		whoami-2.1.2 \
+		whoami-2.1.3 \
 		win32job-2.0.3 \
 		winapi-0.3.9 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
@@ -603,9 +604,9 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		zeroize-1.8.1 \
 		zipsign-api-0.1.5 \
 		zmij-1.0.18 \
-		zstd-0.13.3 \
-		zstd-safe-7.2.4 \
-		zstd-sys-2.0.15+zstd.1.5.7
+		zstd-0.14.0 \
+		zstd-safe-8.0.0 \
+		zstd-sys-2.1.0+zstd.1.5.7
 
 OPENSSLINC=	/usr/include
 OPENSSLLIB=	/usr/lib

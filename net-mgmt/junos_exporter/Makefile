@@ -1,7 +1,7 @@
 PORTNAME=	junos_exporter
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.15.4
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	moggie@elasticmind.net
@@ -11,7 +11,7 @@ WWW=		https://github.com/czerwonk/junos_exporter/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.26+,modules
+USES=		go:1.26,modules
 USE_RC_SUBR=	junos_exporter
 GO_MODULE=	github.com/czerwonk/junos_exporter
 

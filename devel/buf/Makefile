@@ -1,6 +1,7 @@
 PORTNAME=	buf
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.73.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -13,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	jq:textproc/jq
 
-USES=		go:1.26,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/bufbuild/buf
 GO_TARGET=	./cmd/buf \

@@ -1,7 +1,7 @@
 PORTNAME=	zns
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.6.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	dns
 
 MAINTAINER=	nxjoseph@FreeBSD.org
@@ -11,7 +11,7 @@ WWW=		https://github.com/znscli/zns
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.26+,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/znscli/zns
 

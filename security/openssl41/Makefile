@@ -1,5 +1,5 @@
 PORTNAME=	openssl
-DISTVERSION=	4.1.0-alpha1
+DISTVERSION=	4.1.0-beta2
 CATEGORIES=	security devel
 PKGNAMESUFFIX=	41
 MASTER_SITES=	https://github.com/openssl/openssl/releases/download/${DISTNAME}/
@@ -11,7 +11,10 @@ WWW=		https://www.openssl.org/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl111 openssl3[1234] openssl*-quictls
+# DEPRECATED=		Please use security/openssl42 (LTS)
+# EXPIRATION_DATE=	
+
+CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl3? openssl40
 
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	config
@@ -133,13 +136,14 @@ FIPS-JITTER_LDFLAGS=	-L${PREFIX}/lib
 FIPS-JITTER_BUILD_DEPENDS=	${LOCALBASE}/lib/libjitterentropy.a:devel/libjitterentropy
 I386_CONFIGURE_ON=	386
 KTLS_BROKEN=		KTLS patch update for 4.0 pending
+MAN3_EXTRA_PATCHES_OFF=	${PATCHDIR}/extra-patch-MAN3_OFF
 LEGACY_VARS=		shlibs+=lib/ossl-modules/legacy.so
 MAN3_EXTRA_PATCHES_OFF=	${FILESDIR}/extra-patch-util_find-doc-nits
 SHARED_MAKE_ENV=	SHLIBVER=${OPENSSL_SHLIBVER}
 SHARED_PLIST_SUB=	SHLIBVER=${OPENSSL_SHLIBVER}
 SHARED_USE=		ldconfig=yes
 SHARED_VARS=		shlibs+="lib/libcrypto.so.${OPENSSL_SHLIBVER} \
-				lib/libssl.so.${OPENSSL_SHLIBVER}
+				lib/libssl.so.${OPENSSL_SHLIBVER}"
 THREADPOOL_CONFIGURE_OFF=	no-thread-pool
 ZLIB_CONFIGURE_ON=	zlib-dynamic
 ZSTD_CFLAGS=		-I${PREFIX}/include
@@ -177,12 +181,6 @@ post-patch:
 post-configure:
 	( cd ${WRKSRC} ; ${PERL} configdata.pm --dump )
 
-post-configure-MAN3-off:
-	${REINPLACE_CMD} \
-		-e 's|^build_man_docs:.*|build_man_docs: $$(MANDOCS1) $$(MANDOCS5)|' \
-		-e 's|dummy $$(MANDOCS[37]); do |dummy; do |' \
-		${WRKSRC}/Makefile
-
 post-install-SHARED-on:
 .for i in ${SHLIBS}
 	-@${STRIP_CMD} ${STAGEDIR}${PREFIX}/$i
@@ -196,6 +194,6 @@ post-install:
 
 post-install-MAN3-on:
 	( cd ${STAGEDIR}/${PREFIX} ; find share/man/man3 -not -type d ; \
-		find share/man/man7 -not -type d ) | sed 's/$$/.gz/' >> ${TMPPLIST}
+		find share/man/man7 -not -type d ) | ${SED} 's/$$/.gz/' >> ${TMPPLIST}
 
 .include <bsd.port.post.mk>

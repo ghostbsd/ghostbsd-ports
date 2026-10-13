@@ -1,10 +1,11 @@
 PORTNAME=	pandoc
-DISTVERSION=	3.11
+DISTVERSION=	3.12.1
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Conversion between markup formats
-WWW=		https://pandoc.org/
+WWW=		https://pandoc.org/ \
+		https://hackage.haskell.org/package/pandoc
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING.md
@@ -32,11 +33,9 @@ HACKAGE_DISTNAME=	pandoc-cli-${DISTVERSION}
 .include <bsd.port.pre.mk>
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/man/pandoc.1 ${STAGEDIR}${MANDIRS}/man1
-	${INSTALL_MAN} ${WRKSRC}/man/pandoc-lua.1 ${STAGEDIR}${MANDIRS}/man1
-	${INSTALL_MAN} ${WRKSRC}/man/pandoc-server.1 ${STAGEDIR}${MANDIRS}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/* ${STAGEDIR}${PREFIX}/share/man/man1
 
 post-install-EMBED_DATA-off:
-	cd ${CABAL_DEPSDIR}/${PORTNAME}-${PORTVERSION} && ${COPYTREE_SHARE} data ${STAGEDIR}${DATADIR}
+	cd ${CABAL_DEPSDIR}/${DISTNAME} && ${COPYTREE_SHARE} data ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.post.mk>

@@ -1,7 +1,15 @@
 PORTNAME=	ollama
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.34.0
+DISTVERSION=	0.40.3
 CATEGORIES=	misc # machine-learning
+
+## Q: Why does misc/ollama use the fork yurivict/ollama ?
+## A: Because Ollama's upstream refused to accept FreeBSD patches because Ollama doesn't have CI for FreeBSD and they believe that such patches would
+##    be deteriorating if not tested all the time.
+##    They refused to accept patches in their Discord channel.
+##    It is possible to patch exising Go sources using patches under files/ but not when whole Go modules with their own dependencies are added.
+##    Such dependenies would not be fetched from GoLang servers because they look only at the original ollama/ollama repo content.
+##    This makes it necessary to have a fork.
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Run text/image LLMs and programming APIs locally and in the cloud
@@ -22,20 +30,20 @@ BUILD_DEPENDS=	bash:shells/bash \
 		${LOCALBASE}/include/stb/stb_image.h:devel/stb \
 		patchelf:sysutils/patchelf
 
-USES=		cmake:indirect go:1.26+,modules localbase pkgconfig
+USES=		cmake:indirect go:modules localbase pkgconfig
 USE_LDCONFIG=	${PREFIX}/lib/ollama ${PREFIX}/lib/ollama/vulkan
 USE_RC_SUBR=	ollama
 
 USE_GITHUB=	nodefault
-GH_TUPLE=	mlc-ai:xgrammar:v0.2.5:xgrammar/xgrammar
+GH_TUPLE=	mlc-ai:xgrammar:v0.2.7:xgrammar/xgrammar
 
 GO_MODULE=	github.com/yurivict/${PORTNAME} # fork with FreeBSD patches
 GO_TARGET=	.
 GO_ENV+=	CGO_CXXFLAGS="${CXXFLAGS}"
 
-LLAMA_CPP_VERSION=	b10760	# from the LLAMA_CPP_VERSION file in the llama.cpp repo
-LLAMA_CPP_SO_VERSION=	0.3.0
-GGML_SO_VERSION=	0.22.0	# tied to LLAMA_CPP_VERSION; update when llama.cpp changes
+LLAMA_CPP_VERSION=	b11351	# from the LLAMA_CPP_VERSION file in the llama.cpp repo
+LLAMA_CPP_SO_VERSION=	0.5.0
+GGML_SO_VERSION=	0.25.3
 MLX_CORE_VERSION=	0.31.2
 MLX_C_VERSION=		fba4470b89073180056c9ea46c443051375f7399
 JSON_VERSION=		3.11.3
@@ -72,22 +80,6 @@ CPU_PLIST_FILES=	lib/ollama/llama-server \
 			lib/ollama/libmtmd.so \
 			lib/ollama/libmtmd.so.${LLAMA_CPP_SO_VERSION:R:R} \
 			lib/ollama/libmtmd.so.${LLAMA_CPP_SO_VERSION}
-.if ${MACHINE_ARCH} == "amd64" || ${MACHINE_ARCH} == "i386"
-CPU_PLIST_FILES+=	lib/ollama/libggml-cpu-alderlake.so \
-			lib/ollama/libggml-cpu-cannonlake.so \
-			lib/ollama/libggml-cpu-cascadelake.so \
-			lib/ollama/libggml-cpu-cooperlake.so \
-			lib/ollama/libggml-cpu-haswell.so \
-			lib/ollama/libggml-cpu-icelake.so \
-			lib/ollama/libggml-cpu-ivybridge.so \
-			lib/ollama/libggml-cpu-piledriver.so \
-			lib/ollama/libggml-cpu-sandybridge.so \
-			lib/ollama/libggml-cpu-sapphirerapids.so \
-			lib/ollama/libggml-cpu-skylakex.so \
-			lib/ollama/libggml-cpu-sse42.so \
-			lib/ollama/libggml-cpu-x64.so \
-			lib/ollama/libggml-cpu-zen4.so
-.endif
 
 VULKAN_DESC=		Build Vulkan GPU backend shared library
 VULKAN_BUILD_DEPENDS=	glslc:graphics/shaderc \
@@ -111,6 +103,23 @@ _CMAKE_FLAGS=	-DCMAKE_BUILD_TYPE=Release \
 		-DLLAMA_BUILD_NUMBER=${LLAMA_CPP_VERSION:S/b//}
 
 .include <bsd.port.options.mk>
+
+.if ${ARCH} == "amd64" || ${ARCH} == "i386"
+CPU_PLIST_FILES+=	lib/ollama/libggml-cpu-alderlake.so \
+			lib/ollama/libggml-cpu-cannonlake.so \
+			lib/ollama/libggml-cpu-cascadelake.so \
+			lib/ollama/libggml-cpu-cooperlake.so \
+			lib/ollama/libggml-cpu-haswell.so \
+			lib/ollama/libggml-cpu-icelake.so \
+			lib/ollama/libggml-cpu-ivybridge.so \
+			lib/ollama/libggml-cpu-piledriver.so \
+			lib/ollama/libggml-cpu-sandybridge.so \
+			lib/ollama/libggml-cpu-sapphirerapids.so \
+			lib/ollama/libggml-cpu-skylakex.so \
+			lib/ollama/libggml-cpu-sse42.so \
+			lib/ollama/libggml-cpu-x64.so \
+			lib/ollama/libggml-cpu-zen4.so
+.endif
 
 .if ${PORT_OPTIONS:MVULKAN}
 _CMAKE_FLAGS+=	-DOLLAMA_LLAMA_BACKENDS=vulkan
@@ -140,9 +149,6 @@ post-patch:
 	# Apply Ollama llama.cpp compat hooks patch (vision model support)
 	#@${PATCH} -d ${WRKDIR}/llama.cpp-${LLAMA_CPP_VERSION} -p1 \
 	#	< ${WRKSRC}/llama/compat/001-llama-cpp-hooks.patch
-	# Fix llama-ui-embed crash when called without asset_dir argument
-	@${REINPLACE_CMD} -e 's|const std::string asset_dir = argv\[3\];|const std::string asset_dir = (argc > 3) ? argv[3] : "";|g' \
-		${WRKDIR}/llama.cpp-${LLAMA_CPP_VERSION}/tools/ui/embed.cpp
 	# FreeBSD: copy llm/llm_freebsd.go for LlamaServerSysProcAttr
 	@${CP} ${FILESDIR}/llm_freebsd.go ${WRKSRC}/llm/
 	# update version in version.go

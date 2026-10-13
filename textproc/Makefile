@@ -54,7 +54,6 @@
     SUBDIR += ansifilter
     SUBDIR += antiword
     SUBDIR += apache-commons-csv
-    SUBDIR += apache-commons-digester
     SUBDIR += apache-poi
     SUBDIR += apache-solr
     SUBDIR += apache-xmlbeans
@@ -100,6 +99,7 @@
     SUBDIR += chkascii
     SUBDIR += choose
     SUBDIR += chpp
+    SUBDIR += ciigo
     SUBDIR += cl-ppcre
     SUBDIR += cl-ppcre-ccl
     SUBDIR += cl-ppcre-clisp
@@ -252,7 +252,6 @@
     SUBDIR += go-transifex-client
     SUBDIR += go-yq
     SUBDIR += gojq
-    SUBDIR += goldendict
     SUBDIR += goldendict-ng
     SUBDIR += google-ctemplate
     SUBDIR += google-translate
@@ -313,6 +312,7 @@
     SUBDIR += ibus-m17n
     SUBDIR += ibus-table
     SUBDIR += ibus-typing-booster
+    SUBDIR += ibus-uim
     SUBDIR += ibus-uniemoji
     SUBDIR += icdiff
     SUBDIR += id-aspell
@@ -368,6 +368,7 @@
     SUBDIR += kibana92
     SUBDIR += kibana93
     SUBDIR += kibana94
+    SUBDIR += kibana95
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
     SUBDIR += kmfl-khmer
@@ -425,7 +426,6 @@
     SUBDIR += libsphinxclient
     SUBDIR += libstaroffice
     SUBDIR += libstree
-    SUBDIR += libtextcat
     SUBDIR += libtranslate
     SUBDIR += libtre
     SUBDIR += libucl
@@ -455,7 +455,9 @@
     SUBDIR += linux-c7-libcroco
     SUBDIR += linux-c7-libxml2
     SUBDIR += linux-c7-libxslt
+    SUBDIR += linux-rl9-enchant2
     SUBDIR += linux-rl9-expat
+    SUBDIR += linux-rl9-hyphen
     SUBDIR += linux-rl9-libstemmer
     SUBDIR += linux-rl9-libxml2
     SUBDIR += linux-rl9-libxslt
@@ -488,6 +490,7 @@
     SUBDIR += markdownfmt
     SUBDIR += markdownpart
     SUBDIR += markless
+    SUBDIR += markterm
     SUBDIR += mathml-xsd
     SUBDIR += md2roff
     SUBDIR += md4c
@@ -1242,6 +1245,7 @@
     SUBDIR += pa-aspell
     SUBDIR += pageedit
     SUBDIR += par
+    SUBDIR += patdiff
     SUBDIR += pdf-form-filler-mcp
     SUBDIR += pdf-reader-mcp
     SUBDIR += pdfgrep
@@ -1351,6 +1355,7 @@
     SUBDIR += py-agate-dbf
     SUBDIR += py-agate-excel
     SUBDIR += py-alabaster
+    SUBDIR += py-anonip
     SUBDIR += py-ansi2html
     SUBDIR += py-ansicolors
     SUBDIR += py-ansiwrap
@@ -1374,6 +1379,7 @@
     SUBDIR += py-cjkwrap
     SUBDIR += py-cloud_sptheme
     SUBDIR += py-cmarkgfm
+    SUBDIR += py-codespell
     SUBDIR += py-collective.checkdocs
     SUBDIR += py-comrak
     SUBDIR += py-conllu
@@ -1481,7 +1487,6 @@
     SUBDIR += py-guess-language
     SUBDIR += py-hashids
     SUBDIR += py-hexdump
-    SUBDIR += py-hieroglyph
     SUBDIR += py-hjson
     SUBDIR += py-hotdoc
     SUBDIR += py-html-text
@@ -1610,6 +1615,7 @@
     SUBDIR += py-pdfrw
     SUBDIR += py-pdftotext
     SUBDIR += py-petl
+    SUBDIR += py-phonemizer
     SUBDIR += py-phonemizer-fork
     SUBDIR += py-pikepdf
     SUBDIR += py-precis_i18n
@@ -1870,7 +1876,6 @@
     SUBDIR += redet
     SUBDIR += redisearch
     SUBDIR += redisearch2
-    SUBDIR += redisearch22
     SUBDIR += redisearch24
     SUBDIR += redisearch26
     SUBDIR += redisearch28
@@ -2272,6 +2277,7 @@
     SUBDIR += uim-m17nlib
     SUBDIR += uim-qt5
     SUBDIR += uim-qt6
+    SUBDIR += uim-wayland
     SUBDIR += uml2svg
     SUBDIR += uncle
     SUBDIR += uncrustify

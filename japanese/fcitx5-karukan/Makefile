@@ -1,5 +1,5 @@
 PORTNAME=	fcitx5-karukan
-DISTVERSION=	g20260906
+DISTVERSION=	g20261003
 PORTREVISION=	1
 CATEGORIES=	japanese textproc
 
@@ -24,7 +24,7 @@ USES=		cargo cmake:noninja gmake kde llvm localbase:ldflags pkgconfig \
 USE_GITHUB=	yes
 GH_ACCOUNT=	togatoga
 GH_PROJECT=	karukan
-GH_TAGNAME=	0efa7dd6da155fb599298183e4173a56dac56754
+GH_TAGNAME=	6062ccfb25b392142610277584389a8efd30a3dd
 
 USE_KDE=	ecm:build
 

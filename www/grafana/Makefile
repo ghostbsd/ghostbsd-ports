@@ -1,7 +1,7 @@
 PORTNAME=	grafana
 DISTVERSIONPREFIX=	v
 DISTVERSION=	13.1.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	https://dl.grafana.com/oss/release/ \
 		https://raw.githubusercontent.com/${GH_ACCOUNT}/${GH_PROJECT}/${DISTVERSIONFULL}/:gomod
@@ -54,7 +54,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 riscv64
 
-USES=		cpe go:1.26+,modules
+USES=		cpe go:modules
 
 USE_GITHUB=	yes
 

@@ -1,7 +1,7 @@
 PORTNAME=	freenginx
 PORTVERSION=	${NGINX_VERSION}
 .include "version.mk"
-PORTREVISION?=	16
+PORTREVISION?=	20
 CATEGORIES=	www
 MASTER_SITES=	https://freenginx.org/download/ \
 		LOCAL/joneum
@@ -261,7 +261,17 @@ NJS_CONFIGURE_ARGS+=	--cc-opt="${CFLAGS} -I${LOCALBASE}/include/quickjs" \
 
 pre-everything::
 	@${ECHO_MSG}
+.if ${PORT_OPTIONS:MHTTP_NOTICE}
+	@${ECHO_MSG} "${PORTNAME} can return a fixed body itself.  HTTP_NOTICE will be"
+	@${ECHO_MSG} "removed after 2026-12-31: replace notice with return 200 and the"
+	@${ECHO_MSG} "text, and notice_type with default_type.  Unlike a static file,"
+	@${ECHO_MSG} "return answers every request method."
+.endif
 .if ${PORT_OPTIONS:MHTTP_UPSTREAM_FAIR}
+	@${ECHO_MSG} "${PORTNAME} can balance by least connections itself.  HTTP_UPSTREAM_FAIR"
+	@${ECHO_MSG} "will be removed after 2026-12-31: replace fair; with least_conn;, and"
+	@${ECHO_MSG} "fair weight_mode=peak; with least_conn; plus a max_conns= parameter on"
+	@${ECHO_MSG} "each server."
 	@${ECHO_MSG} "Enable http_ssl module to build upstream_fair with SSL support"
 .endif
 .if ${PORT_OPTIONS:MNJS}
@@ -333,6 +343,11 @@ post-patch-SFLOW-on:
 pre-configure-SMALL_LIGHT-on:
 	( cd ${WRKSRC_small_light} && ./setup )
 
+pre-configure-AJP-on:
+	@${RM} -rf ${WRKSRC_ajp}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-ajp ${WRKSRC_ajp}
+	@${CHMOD} -R u+w ${WRKSRC_ajp}
+
 pre-configure-ARRAYVAR-on:
 	@${RM} -rf ${WRKSRC_arrayvar}
 	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-array-var ${WRKSRC_arrayvar}
@@ -353,6 +368,11 @@ pre-configure-FORMINPUT-on:
 	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-form-input ${WRKSRC_forminput}
 	@${CHMOD} -R u+w ${WRKSRC_forminput}
 
+pre-configure-LET-on:
+	@${RM} -rf ${WRKSRC_let}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-let ${WRKSRC_let}
+	@${CHMOD} -R u+w ${WRKSRC_let}
+
 pre-configure-LUA-on:
 	@${RM} -rf ${WRKSRC_lua}
 	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-lua ${WRKSRC_lua}
@@ -369,10 +389,25 @@ pre-configure-NJS-on:
 	@${CHMOD} -R u+w ${WRKSRC_njs}
 	@${CHMOD} u+x ${WRKSRC_njs}/configure
 
+pre-configure-SLOWFS_CACHE-on:
+	@${RM} -rf ${WRKSRC_slowfs_cache}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-slowfs-cache ${WRKSRC_slowfs_cache}
+	@${CHMOD} -R u+w ${WRKSRC_slowfs_cache}
+
 pre-configure-VOD-on:
 	@${RM} -rf ${WRKSRC_vod}
 	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-vod ${WRKSRC_vod}
 	@${CHMOD} -R u+w ${WRKSRC_vod}
+
+pre-configure-WEBSOCKIFY-on:
+	@${RM} -rf ${WRKSRC_websockify}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-websockify ${WRKSRC_websockify}
+	@${CHMOD} -R u+w ${WRKSRC_websockify}
+
+pre-configure-ZSTD-on:
+	@${RM} -rf ${WRKSRC_zstd}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-zstd ${WRKSRC_zstd}
+	@${CHMOD} -R u+w ${WRKSRC_zstd}
 
 do-configure-NJS-on:
 	( cd ${WRKSRC_njs} && ${SETENV} ${CONFIGURE_ENV} ${CONFIGURE_CMD} ${NJS_CONFIGURE_ARGS} )

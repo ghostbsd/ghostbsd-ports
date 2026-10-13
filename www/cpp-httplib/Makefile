@@ -1,6 +1,6 @@
 PORTNAME=	cpp-httplib
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.56.0
+DISTVERSION=	0.60.1
 CATEGORIES=	www devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -12,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 TEST_DEPENDS=	gmake:devel/gmake
 
-USES=		cmake localbase:ldflags python:test # localbase only for tests
+USES=		cmake localbase:ldflags python:build,test # localbase only for tests, python:build only for BINARY_ALIAS
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yhirose
@@ -45,6 +45,8 @@ SSL_CMAKE_BOOL=		HTTPLIB_REQUIRE_OPENSSL HTTPLIB_USE_OPENSSL_IF_AVAILABLE
 do-test:
 	@cd ${WRKSRC}/test && ${SETENV} ${MAKE_ENV} ${GMAKE} CXXFLAGS="${CXXFLAGS} -I${WRKSRC}/test" LDFLAGS="${LDFLAGS}"
 
-# tests as of 0.56.0: PASSED 900 tests
+# tests as of 0.60.1:
+# [==========] 950 tests from 187 test suites ran. (167634 ms total)
+# [  PASSED  ] 950 tests.
 
 .include <bsd.port.mk>

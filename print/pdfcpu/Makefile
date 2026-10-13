@@ -1,6 +1,6 @@
 PORTNAME=	pdfcpu
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.15.0
+DISTVERSION=	0.16.1
 PORTREVISION=	1
 CATEGORIES=	print
 
@@ -17,8 +17,9 @@ GO_MODULE=	github.com/${PORTNAME}/${PORTNAME}
 
 PLIST_FILES=	bin/pdfcpu
 
+CGO_ENABLED=	0
 GO_LDFLAGS=	-X main.commit=Release \
-		-X main.date=tagged
+		-X main.date=Tagged
 GO_TARGET=	./cmd/${PORTNAME}
 
 .include <bsd.port.mk>

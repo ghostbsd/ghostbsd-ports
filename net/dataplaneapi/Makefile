@@ -1,6 +1,7 @@
 PORTNAME=	dataplaneapi
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.4.3
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	dtxdf@FreeBSD.org
@@ -10,7 +11,7 @@ WWW=		https://github.com/haproxytech/dataplaneapi
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.26+,modules
+USES=		go:modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	haproxytech
 

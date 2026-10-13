@@ -1,6 +1,6 @@
 PORTNAME=	stringzilla
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.1.2
+DISTVERSION=	5.3.0
 CATEGORIES=	devel python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -12,7 +12,7 @@ WWW=		https://ashvardanian.com/posts/stringzilla/ \
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=	aarch64 amd64
+BROKEN_i386=	fails to stage: non-constant-expression cannot be narrowed from type 'sz_u64_t', see https://github.com/ashvardanian/StringZilla/issues/341
 
 USES=		cmake:testing
 USE_LDCONFIG=	yes
@@ -28,9 +28,11 @@ CMAKE_OFF=	STRINGZILLA_BUILD_TEST \
 CMAKE_TESTING_ON=	STRINGZILLA_BUILD_TEST
 CMAKE_ARGS=	-DSTRINGZILLA_INCLUDE_INSTALL_DIR=include
 
+PLIST_SUB=	PORTVERSION=${PORTVERSION}
+
 CXXFLAGS+=	-g
 LDFLAGS+=	-lpthread
 
-# tests as of 5.1.2: 100% tests passed out of 6
+# tests as of 5.3.0: 100% tests passed out of 6
 
 .include <bsd.port.mk>
