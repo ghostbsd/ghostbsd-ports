@@ -1664,6 +1664,7 @@
     SUBDIR += llvm22
     SUBDIR += llvm22-libs
     SUBDIR += llvm23
+    SUBDIR += llvm23-libs
     SUBDIR += lm4tools
     SUBDIR += lmdbg
     SUBDIR += lndir
