@@ -1,5 +1,5 @@
 PORTNAME=	setup-station
-PORTVERSION=	0.7
+PORTVERSION=	0.8
 CATEGORIES=	sysutils
 
 MAINTAINER=	ericturgeon@ghostbsd.org
