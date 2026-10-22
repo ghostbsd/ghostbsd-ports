@@ -422,6 +422,7 @@
     SUBDIR += p5-Net-LMTP
     SUBDIR += p5-Net-ManageSieve
     SUBDIR += p5-Net-POP3-SSLWrapper
+    SUBDIR += p5-Net-POP3-XOAuth2
     SUBDIR += p5-Net-QMTP
     SUBDIR += p5-Net-SMTP-Server
     SUBDIR += p5-Net-SMTP-TLS
@@ -546,6 +547,7 @@
     SUBDIR += py-pymilter
     SUBDIR += py-pysasl
     SUBDIR += py-pyspf
+    SUBDIR += py-python-oxmsg
     SUBDIR += py-python-slimta
     SUBDIR += py-pyzmail
     SUBDIR += py-resend

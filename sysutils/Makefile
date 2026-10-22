@@ -199,6 +199,7 @@
     SUBDIR += checkrestart
     SUBDIR += chezmoi
     SUBDIR += chgrep
+    SUBDIR += chkcrontab
     SUBDIR += choria
     SUBDIR += chyves
     SUBDIR += cilium
@@ -529,6 +530,7 @@
     SUBDIR += helm-docs
     SUBDIR += helmfile
     SUBDIR += herbe
+    SUBDIR += herdr
     SUBDIR += hexpeek
     SUBDIR += hextools
     SUBDIR += hexyl
@@ -655,6 +657,7 @@
     SUBDIR += kubo-go
     SUBDIR += kustomize
     SUBDIR += kvmclock-kmod
+    SUBDIR += lazydocker
     SUBDIR += lazyssh
     SUBDIR += lbl-cf
     SUBDIR += lbl-hf
@@ -1523,6 +1526,7 @@
     SUBDIR += tw_cli
     SUBDIR += twa-kmod
     SUBDIR += tzdialog
+    SUBDIR += tzupdate
     SUBDIR += u-boot-a13-olinuxino
     SUBDIR += u-boot-a64-olinuxino
     SUBDIR += u-boot-bananapi
@@ -1566,6 +1570,7 @@
     SUBDIR += u-boot-pine64-lts
     SUBDIR += u-boot-pinebook
     SUBDIR += u-boot-pinebookpro
+    SUBDIR += u-boot-pinetab
     SUBDIR += u-boot-qemu-arm
     SUBDIR += u-boot-qemu-arm64
     SUBDIR += u-boot-qemu-riscv64
@@ -1599,6 +1604,7 @@
     SUBDIR += ucspi-tcp
     SUBDIR += ucspi-unix
     SUBDIR += udfclient
+    SUBDIR += udiskie
     SUBDIR += ufetch
     SUBDIR += ufs-utils
     SUBDIR += uhidd
@@ -1724,6 +1730,7 @@
     SUBDIR += yadm
     SUBDIR += yank
     SUBDIR += yazi
+    SUBDIR += ytop
     SUBDIR += z
     SUBDIR += zbackup
     SUBDIR += zeitgeist

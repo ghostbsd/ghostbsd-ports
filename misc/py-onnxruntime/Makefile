@@ -1,6 +1,6 @@
 PORTNAME=	onnxruntime
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.30.0
+DISTVERSION=	1.31.0
 CATEGORIES=	misc # machine-learning
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DIST_SUBDIR=	${PORTNAME}
@@ -12,6 +12,8 @@ WWW=		https://onnxruntime.ai/ \
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	compilation fails: error: always_inline function '_mm_setzero_si128' requires target feature 'sse2', but would be inlined into function 'MlasConvDepthwiseKernel' that is compiled without support for 'sse2'
 
 BUILD_DEPENDS=	cmake:devel/cmake-core \
 		${PYTHON_PKGNAMEPREFIX}packaging>=0:devel/py-packaging@${PY_FLAVOR} \

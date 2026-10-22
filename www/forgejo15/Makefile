@@ -1,6 +1,6 @@
 PORTNAME=	forgejo
 DISTVERSIONPREFIX=	v
-DISTVERSION=	15.0.9
+DISTVERSION=	15.0.10
 PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://codeberg.org/forgejo/forgejo/releases/download/${DISTVERSIONFULL}/

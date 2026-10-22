@@ -98,7 +98,6 @@
     SUBDIR += gnome-shell-extension-simple-weather
     SUBDIR += gnome-shell-extra-extensions
     SUBDIR += gnome-sound-recorder
-    SUBDIR += gnome-todo
     SUBDIR += gnome-tweaks
     SUBDIR += gnome-utils
     SUBDIR += gnome-weather

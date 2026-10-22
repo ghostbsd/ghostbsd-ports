@@ -1,6 +1,5 @@
 PORTNAME=	orthanc-postgresql
-DISTVERSION=	10.3
-PORTREVISION=	1
+DISTVERSION=	11.0
 CATEGORIES=	science
 MASTER_SITES=	https://orthanc.uclouvain.be/downloads/sources/orthanc-postgresql/:pgsql \
 		https://orthanc.uclouvain.be/downloads/sources/orthanc/:orthanc \
@@ -11,7 +10,7 @@ DISTFILES=	OrthancPostgreSQL-${PORTVERSION}.tar.gz:pgsql \
 DIST_SUBDIR=	orthanc
 EXTRACT_ONLY=	OrthancPostgreSQL-${PORTVERSION}.tar.gz
 
-MAINTAINER=	jwb@FreeBSD.org
+MAINTAINER=	longros@FreeBSD.org
 COMMENT=	Orthanc plugin to use PostgreSQL for indexing or storage
 WWW=		https://www.orthanc-server.com/static.php?page=postgresql
 

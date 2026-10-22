@@ -156,6 +156,7 @@
     SUBDIR += hack-font
     SUBDIR += hanazono-fonts-ttf
     SUBDIR += hermit
+    SUBDIR += ia-writer-fonts
     SUBDIR += iansui
     SUBDIR += ibmfonts
     SUBDIR += inconsolata-lgc-ttf

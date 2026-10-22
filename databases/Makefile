@@ -118,6 +118,7 @@
     SUBDIR += kdb
     SUBDIR += kexi
     SUBDIR += keydb
+    SUBDIR += kividb
     SUBDIR += kyotocabinet
     SUBDIR += kyototycoon
     SUBDIR += ladybug
@@ -558,7 +559,6 @@
     SUBDIR += pecl-memcache
     SUBDIR += pecl-memcached
     SUBDIR += pecl-mongodb
-    SUBDIR += pecl-redis
     SUBDIR += pecl-rrd
     SUBDIR += percona-orchestrator
     SUBDIR += percona-toolkit
@@ -573,6 +573,7 @@
     SUBDIR += pg_cron
     SUBDIR += pg_dirtyread
     SUBDIR += pg_ed25519
+    SUBDIR += pg_failover_slots
     SUBDIR += pg_filedump
     SUBDIR += pg_hashids
     SUBDIR += pg_incremental
@@ -596,6 +597,7 @@
     SUBDIR += pgbot
     SUBDIR += pgbouncer
     SUBDIR += pgdbf
+    SUBDIR += pgdog
     SUBDIR += pgjwt
     SUBDIR += pgloader3
     SUBDIR += pglogical
@@ -619,6 +621,7 @@
     SUBDIR += pguri
     SUBDIR += pgvector
     SUBDIR += php-memvector
+    SUBDIR += php-redis
     SUBDIR += php-tarantool
     SUBDIR += php-xapian
     SUBDIR += php82-dba

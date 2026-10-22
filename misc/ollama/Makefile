@@ -1,6 +1,6 @@
 PORTNAME=	ollama
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.40.3
+DISTVERSION=	0.40.7
 CATEGORIES=	misc # machine-learning
 
 ## Q: Why does misc/ollama use the fork yurivict/ollama ?
@@ -31,7 +31,6 @@ BUILD_DEPENDS=	bash:shells/bash \
 		patchelf:sysutils/patchelf
 
 USES=		cmake:indirect go:modules localbase pkgconfig
-USE_LDCONFIG=	${PREFIX}/lib/ollama ${PREFIX}/lib/ollama/vulkan
 USE_RC_SUBR=	ollama
 
 USE_GITHUB=	nodefault
@@ -41,9 +40,9 @@ GO_MODULE=	github.com/yurivict/${PORTNAME} # fork with FreeBSD patches
 GO_TARGET=	.
 GO_ENV+=	CGO_CXXFLAGS="${CXXFLAGS}"
 
-LLAMA_CPP_VERSION=	b11351	# from the LLAMA_CPP_VERSION file in the llama.cpp repo
-LLAMA_CPP_SO_VERSION=	0.5.0
-GGML_SO_VERSION=	0.25.3
+LLAMA_CPP_VERSION=	b11738	# from the LLAMA_CPP_VERSION file in the llama.cpp repo
+LLAMA_CPP_SO_VERSION=	0.7.0
+GGML_SO_VERSION=	0.27.0
 MLX_CORE_VERSION=	0.31.2
 MLX_C_VERSION=		fba4470b89073180056c9ea46c443051375f7399
 JSON_VERSION=		3.11.3

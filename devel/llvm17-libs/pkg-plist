@@ -10,12 +10,6 @@ llvm%%LLVM_SUFFIX%%/lib/libRemarks.so.%%LLVM_MAJOR%%
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so.%%LLVM_MAJOR%%
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so.%%LLVM_RELEASE%%
-%%GOLD%%llvm%%LLVM_SUFFIX%%/lib/LLVMgold.so
-%%LLDB%%llvm%%LLVM_SUFFIX%%/lib/liblldb.so
-%%LLDB%%llvm%%LLVM_SUFFIX%%/lib/liblldb.so.%%LLVM_MAJOR%%
-%%LLDB%%llvm%%LLVM_SUFFIX%%/lib/liblldb.so.%%LLVM_RELEASE%%
-%%LLDB%%llvm%%LLVM_SUFFIX%%/lib/lua/5.3/lldb.so
-%%LLDB%%llvm%%LLVM_SUFFIX%%/%%PYTHON_SITELIBDIR%%/lldb/_lldb%%PYTHON_TAG%%%%PYTHON_ABIVER%%.so
 %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIR.so
 %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIR.so.%%LLVM_MAJOR%%
 %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_async_runtime.so

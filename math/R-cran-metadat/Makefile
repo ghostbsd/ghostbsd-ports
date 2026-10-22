@@ -3,7 +3,7 @@ DISTVERSION=	1.6-0
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
-MAINTAINER=	chris.longros@gmail.com
+MAINTAINER=	longros@FreeBSD.org
 COMMENT=	Meta-analysis datasets
 WWW=		https://cran.r-project.org/package=metadat
 
@@ -16,7 +16,5 @@ TEST_DEPENDS=	R-cran-digest>0:security/R-cran-digest \
 		R-cran-testthat>0:devel/R-cran-testthat
 
 USES=		cran:auto-plist
-
-NO_ARCH=	yes
 
 .include <bsd.port.mk>

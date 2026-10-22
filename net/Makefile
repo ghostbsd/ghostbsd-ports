@@ -405,6 +405,7 @@
     SUBDIR += libmaxminddb
     SUBDIR += libmdf
     SUBDIR += libnatpmp
+    SUBDIR += libnbd
     SUBDIR += libndp
     SUBDIR += libnet
     SUBDIR += libnfs
@@ -468,6 +469,7 @@
     SUBDIR += mailcommon
     SUBDIR += mailimporter
     SUBDIR += malo-firmware-kmod
+    SUBDIR += mbtget
     SUBDIR += mcast-bridge
     SUBDIR += mcjoin
     SUBDIR += mdns-bridge
@@ -1656,6 +1658,7 @@
     SUBDIR += trafshow
     SUBDIR += trafshow3
     SUBDIR += trantor
+    SUBDIR += traverse
     SUBDIR += trickle
     SUBDIR += trippy
     SUBDIR += ts-warp

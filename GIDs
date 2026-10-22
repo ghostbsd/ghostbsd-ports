@@ -465,7 +465,7 @@ libvirtdbus:*:520:
 davmail:*:521:
 nullmail:*:522:
 freevo:*:523:
-# free: 524
+semaphore:*:524:
 dkimproxy:*:525:
 # free: 526
 # free: 527
@@ -662,7 +662,7 @@ _sndio:*:702:
 bopm:*:717:
 # free: 718
 # free: 719
-# free: 720
+pgdog:*:720:
 # free: 721
 # free: 722
 # free: 723

@@ -109,7 +109,7 @@ WRKSRC_crate_${_crate}=	${WRKDIR}/${_wrksrc}
 
 CARGO_BUILDDEP?=	yes
 .  if ${CARGO_BUILDDEP:tl} == "yes"
-BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.98.0:lang/${RUST_DEFAULT}
+BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.99.0:lang/${RUST_DEFAULT}
 .  elif ${CARGO_BUILDDEP:tl} == "any-version"
 BUILD_DEPENDS+=	${RUST_DEFAULT}>=0:lang/${RUST_DEFAULT}
 .  endif
@@ -142,8 +142,11 @@ CARGO_ENV+= \
 	RUSTDOC=${RUSTDOC} \
 	RUSTFLAGS="${RUSTFLAGS} -C linker=${CC} ${LDFLAGS:C/.+/-C link-args=&/}"
 
-.  if ${ARCH} != powerpc64le || (${ARCH} == powerpc64le && ${OSVERSION} >= 1600019)
 CARGO_ENV+=	RUST_BACKTRACE=1
+.  if ${ARCH} == powerpc64le && (${OSVERSION} < 1405000 || \
+	(${OSVERSION} >= 1500000 && ${OSVERSION} < 1501501) || \
+	(${OSVERSION} >= 1600000 && ${OSVERSION} < 1600019))
+CARGO_ENV+=	RUST_LIB_BACKTRACE=0
 .  endif
 
 .  if !defined(WITHOUT_LTO)

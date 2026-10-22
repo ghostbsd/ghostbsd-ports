@@ -5735,35 +5735,20 @@ math/mumps|math/mumps-edf|2026-10-07|Repomove to math/mumps-edf
 math/mumps4|math/mumps|2026-10-07|Repomove to math/mumps
 textproc/py-hieroglyph||2026-10-09|Has expired: Broken with textproc/py-sphinx 7 and newer, last upstream release in 2020
 graphics/kamerka||2026-10-11|Remove abandonware
-graphics/pc-pdfviewer||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-misc/trueos-handbook||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-misc/trueos-meta-hunspell||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-misc/trueos-server||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-misc/trueos-toolchain||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-net-im/qmlryver||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-sysutils/ix-bhyve||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-sysutils/pc-diskmanager||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-sysutils/pc-firewall||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-sysutils/pc-installdialog||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-sysutils/pc-updatemanager||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-sysutils/personacrypt||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-sysutils/py-ixautomation||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-sysutils/sysup||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-sysutils/trueos-libsh||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-sysutils/trueos-utils||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-sysutils/trueos-utils-qt5||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-www/pc-webkitviewer||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-x11/picoserver||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-deskutils/lazylibrarian||2026-10-08|Removed: obsolete TrueOS/iXsystems port, unmaintained
-dns/inadyn-troglobit||2026-10-08|Removed: obsolete, not in SUBDIR and not built
-math/py-PySMT||2026-10-08|Removed: obsolete, not in SUBDIR and not built
-net-im/mu-conference||2026-10-08|Removed: obsolete, not in SUBDIR and not built
-net-mgmt/zabbix42-server||2026-10-08|Removed: obsolete, not in SUBDIR and not built
-sysutils/condor||2026-10-08|Removed: obsolete, not in SUBDIR and not built
-sysutils/openzfs-kmod-debug||2026-10-08|Removed: obsolete, not in SUBDIR and not built
-textproc/py-sphinx_numfig||2026-10-08|Removed: obsolete, not in SUBDIR and not built
-www/node8||2026-10-08|Removed: obsolete, not in SUBDIR and not built
-www/npm5||2026-10-08|Removed: obsolete, not in SUBDIR and not built
-www/py-django110||2026-10-08|Removed: obsolete, not in SUBDIR and not built
-x11/gnome-installed-settings||2026-10-08|Removed: obsolete, not in SUBDIR and not built
-sysutils/backup-station|sysutils/be-station|2026-10-08|Renamed
+www/node20||2026-10-13|Has expired: Node.js 20.* has reached its EoL on 2026-04-30. Use Node.js 24.* (www/node24) instead
+www/yarn-node20||2026-10-13|Removed, part of expired www/node20
+www/npm-node20||2026-10-13|Removed, part of expired www/node20
+devel/compiler-rt||2026-10-15|Now ships with the base system
+textproc/py-pypa-docs-theme||2026-10-15|Has expired: Upstream archived the repo on Mar 16, 2024
+www/py-wikitools||2026-10-18|Has expired: Not compatible with Python 3
+japanese/fcitx-mozc|japanese/fcitx5-mozc|2026-10-18|Deprecated: Use fcitx5 instead
+cad/yosys-systemverilog||2026-10-19|Broken for years in tree
+deskutils/gnome-todo||2026-10-19|Broken for several months in tree
+devel/rubygem-mmap2||2026-10-19|Broken for over a year in tree
+filesystems/darling-dmg||2026-10-19|Broken for over a year in tree
+games/wyrmsun||2026-10-19|Depends on games/wyrmgus which has been broken for more than 5 months
+games/wyrmgus||2026-10-19|Broken for several months in tree
+multimedia/wl-screenrec||2026-10-19|Broken for more than 5 months
+net-im/debugtox||2026-10-19|Broken for almost a year in tree
+textproc/regex2dfa||2026-10-19|Broken for 6+ months in tree
+databases/pecl-redis|databases/php-redis|2026-10-21|PECL is deprecated. Migrated to databases/php-redis

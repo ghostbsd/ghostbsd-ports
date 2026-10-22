@@ -1,5 +1,5 @@
 PORTNAME=	littlefedi
-DISTVERSION=	26.10.01
+DISTVERSION=	26.10.13
 PORTREVISION=	1
 CATEGORIES=	www net-im
 MASTER_SITES=	https://littlefedi.org/downloads/

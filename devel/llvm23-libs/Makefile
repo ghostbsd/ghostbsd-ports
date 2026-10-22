@@ -3,7 +3,7 @@
 # Builds with identical options and patches so the resulting shared
 # libraries are ABI-compatible with the full port.
 PORTNAME=	llvm
-DISTVERSION=	23.1.3
+DISTVERSION=	23.1.4
 PORTREVISION=	0
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION}/

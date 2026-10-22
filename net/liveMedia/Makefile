@@ -1,9 +1,9 @@
 PORTNAME=	liveMedia
-DISTVERSION=	2026.08.14
+DISTVERSION=	2026.10.17
 PORTEPOCH=	2
 CATEGORIES=	net devel
 MASTER_SITES=	https://download.live555.com/ \
-		https://download.videolan.org/contrib/live555/
+		LOCAL/jhale/${PORTNAME}
 DISTNAME=	live.${DISTVERSION}
 
 MAINTAINER=	multimedia@FreeBSD.org
@@ -13,7 +13,9 @@ WWW=		http://www.live555.com/liveMedia/
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
 
-USES=		compiler:c++11-lang gmake ssl
+USES=		compiler:c++11-lang cpe gmake ssl
+CPE_VENDOR=	live555
+CPE_PRODUCT=	streaming_media
 USE_CXXSTD=	c++11
 USE_LDCONFIG=	yes
 
