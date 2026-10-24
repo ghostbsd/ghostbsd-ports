@@ -1,5 +1,5 @@
 PORTNAME=	ghostbsd-gtk-themes
-PORTVERSION=	26.01.0
+PORTVERSION=	26.10.0
 CATEGORIES=	x11-themes
 
 MAINTAINER=	ericturgeon@ghostbsd.org
