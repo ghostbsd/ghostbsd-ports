@@ -101,7 +101,6 @@
     SUBDIR += hiredis
     SUBDIR += hsqldb
     SUBDIR += iceberg-rust
-    SUBDIR += immudb
     SUBDIR += imposm3
     SUBDIR += influxdb
     SUBDIR += influxdb2-cli
@@ -883,6 +882,7 @@
     SUBDIR += py-pylibmc
     SUBDIR += py-pymemcache
     SUBDIR += py-pymongo
+    SUBDIR += py-pymssql
     SUBDIR += py-pymysql
     SUBDIR += py-pyodbc
     SUBDIR += py-pypuppetdb

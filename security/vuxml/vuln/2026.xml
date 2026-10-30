@@ -1,3 +1,2099 @@
+  <vuln vid="4d4c2b6e-d433-11f1-a215-a0369f7f7be0">
+    <topic>OpenResty -- multiple vulnerabilities in the bundled nginx core</topic>
+    <affects>
+      <package>
+	<name>openresty</name>
+	<range><lt>1.31.8.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenResty developers report:</p>
+	<blockquote cite="https://openresty.org/en/changelog-1031008.html">
+	  <p>The nginx core was upgraded from nginx 1.31.1 to 1.31.8, which
+	    incorporates 12 CVE fixes, grouped by the first fixed version:
+	    1.31.2: HTTP/3 use-after-free (CVE-2026-42530), HTTP/2 and gRPC
+	    upstream buffer overflow (CVE-2026-42055), and charset conversion
+	    buffer overread (CVE-2026-48142); 1.31.3: buffer overflow
+	    involving map and regex (CVE-2026-42533), memory disclosure
+	    involving slice or background cache updates (CVE-2026-60005),
+	    and SSI use-after-free (CVE-2026-56434); 1.31.6: HTTP/3 heap
+	    buffer overflow with certain OpenSSL versions and
+	    configurations (CVE-2026-90439); 1.31.7: buffer overflow
+	    involving alias and rewrite (CVE-2026-15176), buffer overflow
+	    during variable expression evaluation (CVE-2026-93479), HTTP/3
+	    request body injection (CVE-2026-95101), TLS session ticket
+	    forgery (CVE-2026-97629), and AIO and SSI use-after-free
+	    (CVE-2026-97205).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-42530</cvename>
+      <cvename>CVE-2026-42055</cvename>
+      <cvename>CVE-2026-48142</cvename>
+      <cvename>CVE-2026-42533</cvename>
+      <cvename>CVE-2026-60005</cvename>
+      <cvename>CVE-2026-56434</cvename>
+      <cvename>CVE-2026-90439</cvename>
+      <cvename>CVE-2026-15176</cvename>
+      <cvename>CVE-2026-93479</cvename>
+      <cvename>CVE-2026-95101</cvename>
+      <cvename>CVE-2026-97629</cvename>
+      <cvename>CVE-2026-97205</cvename>
+      <url>https://openresty.org/en/changelog-1031008.html</url>
+      <url>https://nginx.org/en/security_advisories.html</url>
+    </references>
+    <dates>
+      <discovery>2026-10-26</discovery>
+      <entry>2026-10-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bbad76d0-3b09-485d-bb13-28cbab009cbc">
+    <topic>jenkins -- multiple vulnerabilities</topic>
+    <affects>
+    <package>
+	<name>jenkins</name>
+	<range><lt>2.588</lt></range>
+    </package>
+    <package>
+	<name>jenkins-lts</name>
+	<range><lt>2.580.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory 2026-10-28:</p>
+	<blockquote cite="https://www.jenkins.io/security/advisory/2026-10-28/">
+	  <ul>
+	    <li>(High) SECURITY-4125 / CVE-2026-117612: RCE vulnerability in
+	    XStream deserialization due to improper resolves-to attribute
+	    handling</li>
+	    <li>(High) SECURITY-4225 / CVE-2026-117613: Collection element
+	    type check bypass vulnerability</li>
+	    <li>(High) SECURITY-4123 / CVE-2026-117614: Agent launch command
+	    approval bypass vulnerability</li>
+	    <li>(High) SECURITY-4187 / CVE-2026-117615: Link following
+	    vulnerability allows arbitrary file read</li>
+	    <li>(High) SECURITY-4188 / CVE-2026-117616: Path traversal
+	    vulnerability in agent names</li>
+	    <li>(High) SECURITY-4248 / CVE-2026-117617: Race condition in
+	    artifact extraction allows arbitrary file creation</li>
+	    <li>(High) SECURITY-4232 / CVE-2026-117621: XSS vulnerability in
+	    workspace browser</li>
+	    <li>(High) SECURITY-4249 / CVE-2026-117622: XSS vulnerability in
+	    handling of agent errors</li>
+	    <li>(High) SECURITY-4229 / CVE-2026-117623: Stored XSS
+	    vulnerability in breadcrumb bar overflow menu</li>
+	    <li>(High) SECURITY-4122 / CVE-2026-117618: Race condition in
+	    setup wizard allows creating an administrator account</li>
+	    <li>(High) SECURITY-4189 / CVE-2026-117619: Insufficient session
+	    expiration vulnerability</li>
+	    <li>(High) SECURITY-4226 / CVE-2026-117620: Old Data Monitor
+	    injection lets users take over administrator accounts</li>
+	    <li>(High) SECURITY-4243 / CVE-2026-117624: Root element
+	    restriction bypass in XStream deserialization</li>
+	    <li>(Medium) SECURITY-4206 / CVE-2026-117625: Missing permission
+	    check allows obtaining HTTP proxy configuration</li>
+	    <li>(Medium) SECURITY-4237 / CVE-2026-117626: Path traversal
+	    vulnerability in file browser</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-117612</cvename>
+      <cvename>CVE-2026-117613</cvename>
+      <cvename>CVE-2026-117614</cvename>
+      <cvename>CVE-2026-117615</cvename>
+      <cvename>CVE-2026-117616</cvename>
+      <cvename>CVE-2026-117617</cvename>
+      <cvename>CVE-2026-117618</cvename>
+      <cvename>CVE-2026-117619</cvename>
+      <cvename>CVE-2026-117620</cvename>
+      <cvename>CVE-2026-117621</cvename>
+      <cvename>CVE-2026-117622</cvename>
+      <cvename>CVE-2026-117623</cvename>
+      <cvename>CVE-2026-117624</cvename>
+      <cvename>CVE-2026-117625</cvename>
+      <cvename>CVE-2026-117626</cvename>
+      <url>https://www.jenkins.io/security/advisory/2026-10-28/</url>
+    </references>
+    <dates>
+      <discovery>2026-10-28</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="cacb4538-d2d0-11f1-8062-64bc58adb10f">
+    <topic>git-lfs -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>git-lfs</name>
+	<range><lt>3.8.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Git LFS project reports:</p>
+	<blockquote cite="https://github.com/git-lfs/git-lfs/releases/tag/v3.8.1">
+	  <p>This release introduces security fixes for four vulnerabilities that
+	    have been assigned the identifiers CVE-2026-69260, CVE-2026-69261,
+	    CVE-2026-105802, and CVE-2026-105803.  These vulnerabilities apply to
+	    all of the operating systems supported by Git LFS.</p>
+	  <p>CVE-2026-69260: When Git LFS sends a remote command via SSH, it does
+	    not properly format the argument it derives from the remote SSH URL.
+	    Servers which pass remote commands to a shell without sanitizing
+	    their arguments may be induced to execute malicious programs.</p>
+	  <p>CVE-2026-69261: After receiving an HTTP redirection, Git LFS may
+	    forward Cookie headers to a host other than the one for which they
+	    were intended.  If credentials or other secrets are stored in HTTP
+	    cookies, they may be leaked to a potentially malicious host.</p>
+	  <p>CVE-2026-105802: When operating in a malicious repository which
+	    contains a submodule, Git LFS may execute an arbitrary program after
+	    incorrectly parsing line feed (LF) characters in the submodule's URL.</p>
+	  <p>CVE-2026-105803: When operating in a malicious repository, Git LFS
+	    may execute an arbitrary program as a custom transfer adapter after
+	    incorrectly filtering the options defined in an .lfsconfig file.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-69260</cvename>
+      <cvename>CVE-2026-69261</cvename>
+      <cvename>CVE-2026-105802</cvename>
+      <cvename>CVE-2026-105803</cvename>
+      <url>https://github.com/git-lfs/git-lfs/releases/tag/v3.8.1</url>
+      <url>https://github.com/git-lfs/git-lfs/security/advisories/GHSA-w3f2-pr6x-wwjc</url>
+      <url>https://github.com/git-lfs/git-lfs/security/advisories/GHSA-x7xj-4j4f-88xr</url>
+      <url>https://github.com/git-lfs/git-lfs/security/advisories/GHSA-xrgv-7vx6-5vx6</url>
+      <url>https://github.com/git-lfs/git-lfs/security/advisories/GHSA-x72p-hmqp-46hw</url>
+    </references>
+    <dates>
+      <discovery>2026-10-22</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b9a3fd21-d2af-11f1-bae2-3497f65b111b">
+    <topic>Pillow -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py311-pillow</name>
+	<name>py312-pillow</name>
+	<name>py313-pillow</name>
+	<name>py313t-pillow</name>
+	<name>py314-pillow</name>
+	<name>py314t-pillow</name>
+	<name>py315-pillow</name>
+	<range><lt>13.0.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Pillow project published security advisories for issues fixed
+	  in release 13.0.0.  They include an argument injection in the
+	  Ghostscript call used for EPS images, heap buffer overflows in
+	  several image decoders that can lead to code execution, and
+	  infinite loops and unbounded memory use when opening crafted
+	  image files.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-96636</cvename>
+      <cvename>CVE-2026-96637</cvename>
+      <cvename>CVE-2026-96638</cvename>
+      <cvename>CVE-2026-96639</cvename>
+      <cvename>CVE-2026-96640</cvename>
+      <cvename>CVE-2026-96641</cvename>
+      <cvename>CVE-2026-96642</cvename>
+      <cvename>CVE-2026-96643</cvename>
+      <cvename>CVE-2026-96644</cvename>
+      <cvename>CVE-2026-96778</cvename>
+      <cvename>CVE-2026-112390</cvename>
+      <cvename>CVE-2026-112391</cvename>
+      <cvename>CVE-2026-112392</cvename>
+      <cvename>CVE-2026-112393</cvename>
+      <cvename>CVE-2026-112394</cvename>
+      <cvename>CVE-2026-112395</cvename>
+      <cvename>CVE-2026-112396</cvename>
+      <cvename>CVE-2026-112397</cvename>
+      <cvename>CVE-2026-112398</cvename>
+      <cvename>CVE-2026-112399</cvename>
+      <cvename>CVE-2026-112400</cvename>
+      <cvename>CVE-2026-112401</cvename>
+      <cvename>CVE-2026-112402</cvename>
+      <cvename>CVE-2026-112403</cvename>
+      <cvename>CVE-2026-112404</cvename>
+      <cvename>CVE-2026-112405</cvename>
+      <cvename>CVE-2026-112406</cvename>
+      <cvename>CVE-2026-112891</cvename>
+      <cvename>CVE-2026-112892</cvename>
+      <cvename>CVE-2026-112893</cvename>
+      <cvename>CVE-2026-112894</cvename>
+      <cvename>CVE-2026-112895</cvename>
+      <cvename>CVE-2026-112896</cvename>
+      <cvename>CVE-2026-112897</cvename>
+      <cvename>CVE-2026-112898</cvename>
+      <cvename>CVE-2026-112899</cvename>
+      <cvename>CVE-2026-112900</cvename>
+      <cvename>CVE-2026-112901</cvename>
+      <cvename>CVE-2026-112902</cvename>
+      <cvename>CVE-2026-114501</cvename>
+      <url>https://github.com/python-pillow/Pillow/security/advisories</url>
+    </references>
+    <dates>
+      <discovery>2026-10-17</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3caa3b4b-d2ab-11f1-bae2-3497f65b111b">
+    <topic>trafficserver -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>trafficserver</name>
+	<range><lt>10.1.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache Traffic Server project published security advisories
+	  for issues fixed in releases 10.1.1 through 10.1.5.  They include
+	  request smuggling and cache poisoning through malformed requests and
+	  responses, memory corruption, and unauthenticated access in the
+	  experimental plugins, which the port builds (tsmemcache, wasm, and
+	  magick with the IMAGEMAGICK option).</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-31699</cvename>
+      <cvename>CVE-2025-55702</cvename>
+      <cvename>CVE-2025-58136</cvename>
+      <cvename>CVE-2025-65114</cvename>
+      <cvename>CVE-2026-22068</cvename>
+      <cvename>CVE-2026-24033</cvename>
+      <cvename>CVE-2026-33267</cvename>
+      <cvename>CVE-2026-33930</cvename>
+      <cvename>CVE-2026-41920</cvename>
+      <cvename>CVE-2026-57834</cvename>
+      <cvename>CVE-2026-58150</cvename>
+      <cvename>CVE-2026-58151</cvename>
+      <cvename>CVE-2026-58152</cvename>
+      <cvename>CVE-2026-58153</cvename>
+      <cvename>CVE-2026-58154</cvename>
+      <cvename>CVE-2026-58155</cvename>
+      <cvename>CVE-2026-58156</cvename>
+      <cvename>CVE-2026-58157</cvename>
+      <cvename>CVE-2026-58158</cvename>
+      <cvename>CVE-2026-58159</cvename>
+      <cvename>CVE-2026-58160</cvename>
+      <cvename>CVE-2026-58161</cvename>
+      <cvename>CVE-2026-58162</cvename>
+      <cvename>CVE-2026-58163</cvename>
+      <cvename>CVE-2026-58164</cvename>
+      <cvename>CVE-2026-58175</cvename>
+      <cvename>CVE-2026-58177</cvename>
+      <cvename>CVE-2026-58178</cvename>
+      <cvename>CVE-2026-58179</cvename>
+      <cvename>CVE-2026-58180</cvename>
+      <cvename>CVE-2026-58181</cvename>
+      <cvename>CVE-2026-58182</cvename>
+      <cvename>CVE-2026-58183</cvename>
+      <cvename>CVE-2026-58184</cvename>
+      <cvename>CVE-2026-58185</cvename>
+      <cvename>CVE-2026-58186</cvename>
+      <cvename>CVE-2026-58187</cvename>
+      <cvename>CVE-2026-58188</cvename>
+      <cvename>CVE-2026-58189</cvename>
+      <cvename>CVE-2026-59173</cvename>
+      <cvename>CVE-2026-65100</cvename>
+      <cvename>CVE-2026-65324</cvename>
+      <cvename>CVE-2026-65325</cvename>
+      <cvename>CVE-2026-102795</cvename>
+      <cvename>CVE-2026-111804</cvename>
+      <cvename>CVE-2026-111805</cvename>
+      <cvename>CVE-2026-111808</cvename>
+      <cvename>CVE-2026-111809</cvename>
+      <cvename>CVE-2026-111811</cvename>
+      <cvename>CVE-2026-111812</cvename>
+      <cvename>CVE-2026-111813</cvename>
+      <cvename>CVE-2026-111814</cvename>
+      <cvename>CVE-2026-111815</cvename>
+      <cvename>CVE-2026-111816</cvename>
+      <cvename>CVE-2026-111817</cvename>
+      <url>https://lists.apache.org/list.html?announce@trafficserver.apache.org</url>
+    </references>
+    <dates>
+      <discovery>2026-04-02</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d8b29eb8-d2d8-11f1-97dc-40b034429ecf">
+    <topic>p5-Starman -- multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>p5-Starman</name>
+<range><lt>0.4019</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Starman project reports:</p>
+	<blockquote cite="https://metacpan.org/dist/Starman/changes">
+	  <p>[SECURITY]</p>
+	  <ul>
+	  <li>Stream chunked request bodies to the temporary buffer instead of
+	  holding whole chunks in memory (CVE-2026-115824)</li>
+	  <li>Parse chunk-size lines in linear time with a 4 KiB length limit and
+	  strict syntax; malformed lines get 400 (CVE-2026-115822)</li>
+	  <li>Do not send a response body for HEAD requests or 1xx, 204 and 304
+	  responses, on both the array and streaming paths (CVE-2026-115823)</li>
+	  <li>Limit how long a request body may take to arrive: --read-timeout
+	  (default 5 seconds) now also applies to each wait for more of the
+	  body, and the new --body-timeout option limits the total time
+	  (default 300 seconds; raise it or set it to 0 for slower uploads).
+	  Expiry gets 408 (CVE-2026-115817)</li>
+	  <li>Reject Transfer-Encoding other than "chunked" (400/501) and close
+	  the connection after a request with both Transfer-Encoding and
+	  Content-Length. Completes the fix for CVE-2026-40560</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-115824</cvename>
+      <cvename>CVE-2026-115822</cvename>
+      <cvename>CVE-2026-115823</cvename>
+      <cvename>CVE-2026-115817</cvename>
+      <cvename>CVE-2026-40560</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-115824</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-115822</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-115823</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-115817</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-40560</url>
+    </references>
+    <dates>
+      <discovery>2026-10-25</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3bd1edbf-d2d4-11f1-97dc-40b034429ecf">
+    <topic>p5-Plack -- memory allocation vulnerability</topic>
+    <affects>
+<package>
+<name>p5-Plack</name>
+<range><lt>1.0057</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Plack project reports:</p>
+	<blockquote cite="https://metacpan.org/dist/Plack/changes">
+	  <p>Fix HTTP::Server::PSGI allocating a buffer as large as the declared Content-Length,
+	  which let a single request crash the server with "Out of memory!" (CVE-2026-115825).</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-115825</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-115825</url>
+    </references>
+    <dates>
+      <discovery>2026-10-25</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="005c73c2-d2d1-11f1-97dc-40b034429ecf">
+    <topic>p5-HTTP-Body -- multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>p5-HTTP-Body</name>
+<range><lt>1.24</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>HTTP-Body oroject  reports:</p>
+	<blockquote cite="https://metacpan.org/dist/HTTP-Body/changes">
+	  <p>Multiple security issues:</p>
+	  <ul>
+	  <li>SECURITY, CVE-2026-116131: urlencoded bodies are limited to
+	  $HTTP::Body::UrlEncoded::max_params fields and multipart bodies to
+	  $HTTP::Body::MultiPart::max_parts parts (1000 each); reported and
+	  patched by CPANSec</li>
+	  <li>SECURITY, CVE-2026-116132: the temporary file of an upload that is
+	  still incomplete at DESTROY-time is now always deleted; reported and
+	  patched by CPANSec (also fixes RT#84004)</li>
+	  <li>SECURITY, CVE-2026-116133: a multipart body without a boundary or with
+	  a malformed delimiter line no longer takes quadratic time; a malformed
+	  delimiter line now croaks, and padding or an epilogue after the close
+	  delimiter is accepted; reported and patched by CPANSec</li>
+	  <li>SECURITY, CVE-2026-116134: a multipart part's header block is limited
+	  to $HTTP::Body::MultiPart::max_header_size bytes (32768) and
+	  $HTTP::Body::MultiPart::max_header_lines lines (100); reported and
+	  patched by CPANSec</li>
+	  <li>SECURITY, CVE-2026-116135: mixed-case percent escapes (e.g. %aB) in
+	  urlencoded bodies are decoded instead of being dropped; reported and
+	  patched by CPANSec</li>
+	  <li>SECURITY, CVE-2026-116285: the chunk size line of a chunked body is
+	  matched in linear instead of quadratic time</li>
+	  <li>SECURITY, CVE-2026-116531: a chunked body is now framed independently
+	  of where the reads feeding add() fall; a read that split a chunk could
+	  leave the parser never reaching 'done', hanging a server that reads
+	  until done</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-116131</cvename>
+      <cvename>CVE-2026-116132</cvename>
+      <cvename>CVE-2026-116133</cvename>
+      <cvename>CVE-2026-116134</cvename>
+      <cvename>CVE-2026-116135</cvename>
+      <cvename>CVE-2026-116285</cvename>
+      <cvename>CVE-2026-116531</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116131</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116132</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116133</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116134</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116135</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116285</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116531</url>
+    </references>
+    <dates>
+      <discovery>2026-10-26</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2b2d5d3e-d2c8-11f1-97dc-40b034429ecf">
+    <topic>p5-MIME-Tools -- multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>p5-MIME-Tools</name>
+<range><lt>5.522</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MIME-tools project reports:</p>
+	<blockquote cite="https://metacpan.org/dist/MIME-tools/changes">
+	  <p>Many security issues were addressed (see the following ten CVEs)
+	  Issues were brought to my attention, and patches supplied, by the
+	  CPANSec security group.</p>
+	  <ul>
+	  <li>CVE-2026-116264 invalid parameter hides boundary/filename</li>
+	  <li>CVE-2026-116265 RFC 2231 boundary skips ambiguity checks</li>
+	  <li>CVE-2026-116266 boundary changed by decoding not flagged</li>
+	  <li>CVE-2026-116267 indent stored per message per level</li>
+	  <li>CVE-2026-116268 unclosed "(" comments backtrack CPU exhaustion</li>
+	  <li>CVE-2026-116269 RFC 2231 language tag empties filename</li>
+	  <li>CVE-2026-116270 each bad "=?" copies the input into $@</li>
+	  <li>CVE-2026-116271 FileUnder reuses a pre-created directory</li>
+	  <li>CVE-2026-116272  comment hides a duplicate boundary</li>
+	  <li>CVE-2026-116273 max_parts and max_depth unlimited</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-116264</cvename>
+      <cvename>CVE-2026-116265</cvename>
+      <cvename>CVE-2026-116266</cvename>
+      <cvename>CVE-2026-116267</cvename>
+      <cvename>CVE-2026-116268</cvename>
+      <cvename>CVE-2026-116269</cvename>
+      <cvename>CVE-2026-116270</cvename>
+      <cvename>CVE-2026-116271</cvename>
+      <cvename>CVE-2026-116272</cvename>
+      <cvename>CVE-2026-116273</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116264</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116265</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116266</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116267</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116268</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116269</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116270</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116271</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116272</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116273</url>
+    </references>
+    <dates>
+      <discovery>2026-10-27</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2b47c440-d2c0-11f1-97dc-40b034429ecf">
+    <topic>p5-GD -- OS command injection</topic>
+    <affects>
+<package>
+<name>p5-GD</name>
+<range><lt>2.86</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>GD project reports:</p>
+	<blockquote cite="https://metacpan.org/release/RURBAN/GD-2.86/changes">
+	  <p>Fix CVE-2026-11526, command injection via 2-arg open() in _make_filehandle.
+	  CWE-78, CWE-73 (Reported and fixed by Paul Johnson)</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-11526</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-11526</url>
+    </references>
+    <dates>
+      <discovery>2026-09-17</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4538886a-d1d9-11f1-8135-8447094a420f">
+    <topic>rustls-ffi -- Read after free</topic>
+    <affects>
+      <package>
+	<name>rustls-ffi</name>
+	<range><lt>0.15.7</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The RusTLS project reports:</p>
+	<blockquote cite="https://github.com/rustls/rustls-ffi/releases/tag/v0.15.7">
+	  <p>functions retained a reference to the caller's server_name buffer after returning, rather than copying it. The API documentation did not require the buffer to outlive the call and as a result if the caller freed or reused the buffer, later TLS processing read freed memory. [GHSA-rc3f-4j82-cmrg]</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/rustls/rustls-ffi/releases/tag/v0.15.7</url>
+    </references>
+    <dates>
+      <discovery>2026-10-26</discovery>
+      <entry>2026-10-27</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bdac753c-d1d5-11f1-985e-901b0edee044">
+    <topic>py-svglib -- Multiple vulnerabilities</topic>
+    <affects>
+    <package>
+      <name>py311-svglib</name>
+      <name>py312-svglib</name>
+      <name>py313-svglib</name>
+      <name>py313t-svglib</name>
+      <name>py314-svglib</name>
+      <name>py314t-svglib</name>
+      <name>py315-svglib</name>
+      <range><lt>2.3.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Dinu Gherman reports:</p>
+	<blockquote cite="https://github.com/deeplook/svglib/security/advisories/GHSA-249c-7rgc-f52h">
+	<p>The SVG &lt;path&gt; elliptical-arc parser in
+	"svglib.utils.split_arc_values()" builds a regex with multiple empty-matchable
+	float groups and two mandatory flag groups, then runs it under "re.finditer()".
+	An arc argument that is a long run of digits (containing no 0/1 where a flag is
+	expected) triggers catastrophic backtracking whose cost grows exponentially
+	(~2x per ~4 extra digits). Reachable from any untrusted SVG via svg2rlg /
+	svg2pdf.</p>
+	</blockquote>
+	<blockquote cite="https://github.com/deeplook/svglib/security/advisories/GHSA-555j-qj3j-c8jv">
+	<p>"svg2rlg()" expands &lt;use&gt; references without any limit on the
+	total number of expansions. Only direct cycles are rejected (CircularRefError).
+	A group containing N &lt;use&gt; elements that point to another such group
+	multiplies the work by N per nesting level, so an SVG of about 1.4 KB makes
+	svglib clone and render over 100,000 nodes, taking tens of seconds of CPU time
+	and hundreds of MiB of memory. Each additional level adds about 245 bytes to
+	the document and multiplies time by ~10.
+
+	This is the SVG &lt;use&gt; variant of the XML "billion laughs" attack (the
+	same class as librsvg CVE-2019-20446).</p>
+	</blockquote>
+	<blockquote cite="https://github.com/deeplook/svglib/security/advisories/GHSA-2p5c-8vcc-4rcw">
+	<p>svglib converts SVG into ReportLab drawings / PDF / PNG (svg2rlg).
+	When it renders an or element, SvgRenderer.xlink_href_target() resolves the
+	element's xlink:href / href to a local file path and embeds that file into the
+	output. The resolution joins the attacker-controlled reference onto the SVG's
+	own directory with "os.path.join()" and performs no containment check.  Because
+	"os.path.join(base, iri)" discards base the moment iri is absolute, and ..
+	segments collapse above base, a crafted SVG can name any file the rendering
+	process can read. If that file decodes as a raster image (any extension) its
+	bytes are copied verbatim into the output; if it is an XML-parseable .svg its
+	rendered content, text included, is inlined. The result is arbitrary local file
+	read against a service that converts untrusted SVGs from a file path. This is a
+	different class and a different code path from the 2020 XXE (CVE-2020-10799,
+	fixed in 0.9.4).</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/deeplook/svglib/security/advisories/GHSA-249c-7rgc-f52h</url>
+      <url>https://github.com/deeplook/svglib/security/advisories/GHSA-555j-qj3j-c8jv</url>
+      <url>https://github.com/deeplook/svglib/security/advisories/GHSA-2p5c-8vcc-4rcw</url>
+    </references>
+    <dates>
+      <discovery>2026-10-22</discovery>
+      <entry>2026-10-27</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fc4d0a5b-d0c6-11f1-bae2-3497f65b111b">
+    <topic>ImageMagick7 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>ImageMagick7</name>
+	<range><lt>7.1.2.34</lt></range>
+      </package>
+      <package>
+	<name>ImageMagick7-nox11</name>
+	<range><lt>7.1.2.34</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The ImageMagick project published security advisories for
+	  issues fixed in releases 7.1.2-26 through 7.1.2-34.  They include
+	  heap buffer overflows, use-after-free, out-of-bounds reads,
+	  integer overflows, division by zero, memory leaks and security
+	  policy bypasses in various coders and in the command-line
+	  interface.  A crafted image file can crash the process, disclose
+	  memory contents or circumvent the configured security policy.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-55154</cvename>
+      <cvename>CVE-2026-34238</cvename>
+      <cvename>CVE-2026-49219</cvename>
+      <cvename>CVE-2026-53466</cvename>
+      <cvename>CVE-2026-53467</cvename>
+      <cvename>CVE-2026-55510</cvename>
+      <cvename>CVE-2026-55577</cvename>
+      <cvename>CVE-2026-55594</cvename>
+      <cvename>CVE-2026-55595</cvename>
+      <cvename>CVE-2026-55597</cvename>
+      <cvename>CVE-2026-55628</cvename>
+      <cvename>CVE-2026-61464</cvename>
+      <cvename>CVE-2026-61465</cvename>
+      <cvename>CVE-2026-61857</cvename>
+      <cvename>CVE-2026-61858</cvename>
+      <cvename>CVE-2026-61859</cvename>
+      <cvename>CVE-2026-61860</cvename>
+      <cvename>CVE-2026-61861</cvename>
+      <cvename>CVE-2026-61862</cvename>
+      <cvename>CVE-2026-61863</cvename>
+      <cvename>CVE-2026-61864</cvename>
+      <cvename>CVE-2026-61865</cvename>
+      <cvename>CVE-2026-61866</cvename>
+      <cvename>CVE-2026-61867</cvename>
+      <cvename>CVE-2026-61868</cvename>
+      <cvename>CVE-2026-61869</cvename>
+      <cvename>CVE-2026-61870</cvename>
+      <cvename>CVE-2026-61871</cvename>
+      <cvename>CVE-2026-61872</cvename>
+      <cvename>CVE-2026-62343</cvename>
+      <cvename>CVE-2026-62363</cvename>
+      <cvename>CVE-2026-62946</cvename>
+      <cvename>CVE-2026-64685</cvename>
+      <cvename>CVE-2026-66011</cvename>
+      <cvename>CVE-2026-86420</cvename>
+      <cvename>CVE-2026-86421</cvename>
+      <cvename>CVE-2026-86422</cvename>
+      <cvename>CVE-2026-86423</cvename>
+      <cvename>CVE-2026-86424</cvename>
+      <cvename>CVE-2026-86425</cvename>
+      <cvename>CVE-2026-93586</cvename>
+      <cvename>CVE-2026-93587</cvename>
+      <cvename>CVE-2026-93588</cvename>
+      <cvename>CVE-2026-93589</cvename>
+      <cvename>CVE-2026-93590</cvename>
+      <cvename>CVE-2026-102635</cvename>
+      <cvename>CVE-2026-105081</cvename>
+      <cvename>CVE-2026-105083</cvename>
+      <cvename>CVE-2026-106564</cvename>
+      <cvename>CVE-2026-106565</cvename>
+      <cvename>CVE-2026-106566</cvename>
+      <cvename>CVE-2026-106567</cvename>
+      <cvename>CVE-2026-106568</cvename>
+      <cvename>CVE-2026-106569</cvename>
+      <cvename>CVE-2026-106570</cvename>
+      <cvename>CVE-2026-106571</cvename>
+      <cvename>CVE-2026-106572</cvename>
+      <cvename>CVE-2026-106573</cvename>
+      <cvename>CVE-2026-106574</cvename>
+      <cvename>CVE-2026-106575</cvename>
+      <cvename>CVE-2026-106576</cvename>
+      <cvename>CVE-2026-106577</cvename>
+      <cvename>CVE-2026-106578</cvename>
+      <cvename>CVE-2026-106579</cvename>
+      <cvename>CVE-2026-106580</cvename>
+      <cvename>CVE-2026-107208</cvename>
+      <cvename>CVE-2026-107209</cvename>
+      <cvename>CVE-2026-107210</cvename>
+      <cvename>CVE-2026-109258</cvename>
+      <cvename>CVE-2026-109259</cvename>
+      <cvename>CVE-2026-109260</cvename>
+      <cvename>CVE-2026-109261</cvename>
+      <cvename>CVE-2026-109262</cvename>
+      <cvename>CVE-2026-109263</cvename>
+      <cvename>CVE-2026-109264</cvename>
+      <cvename>CVE-2026-109265</cvename>
+      <cvename>CVE-2026-109266</cvename>
+      <cvename>CVE-2026-109267</cvename>
+      <cvename>CVE-2026-109268</cvename>
+      <cvename>CVE-2026-109269</cvename>
+      <cvename>CVE-2026-109270</cvename>
+      <cvename>CVE-2026-109271</cvename>
+      <cvename>CVE-2026-109272</cvename>
+      <cvename>CVE-2026-109273</cvename>
+      <cvename>CVE-2026-109274</cvename>
+      <cvename>CVE-2026-109275</cvename>
+      <cvename>CVE-2026-109276</cvename>
+      <cvename>CVE-2026-109277</cvename>
+      <cvename>CVE-2026-109278</cvename>
+      <cvename>CVE-2026-109279</cvename>
+      <cvename>CVE-2026-109280</cvename>
+      <cvename>CVE-2026-109281</cvename>
+      <cvename>CVE-2026-109282</cvename>
+      <cvename>CVE-2026-109964</cvename>
+      <cvename>CVE-2026-116140</cvename>
+      <cvename>CVE-2026-116141</cvename>
+      <cvename>CVE-2026-116142</cvename>
+      <cvename>CVE-2026-116143</cvename>
+      <cvename>CVE-2026-116144</cvename>
+      <cvename>CVE-2026-116145</cvename>
+      <cvename>CVE-2026-116146</cvename>
+      <cvename>CVE-2026-116147</cvename>
+      <cvename>CVE-2026-116148</cvename>
+      <cvename>CVE-2026-116149</cvename>
+      <cvename>CVE-2026-116150</cvename>
+      <cvename>CVE-2026-116151</cvename>
+      <cvename>CVE-2026-116152</cvename>
+      <cvename>CVE-2026-116153</cvename>
+      <cvename>CVE-2026-116154</cvename>
+      <cvename>CVE-2026-116155</cvename>
+      <cvename>CVE-2026-116156</cvename>
+      <cvename>CVE-2026-116157</cvename>
+      <cvename>CVE-2026-116158</cvename>
+      <cvename>CVE-2026-116159</cvename>
+      <cvename>CVE-2026-116160</cvename>
+      <url>https://github.com/ImageMagick/ImageMagick/security/advisories</url>
+    </references>
+    <dates>
+      <discovery>2026-07-01</discovery>
+      <entry>2026-10-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fc4d429d-d0c6-11f1-bae2-3497f65b111b">
+    <topic>ImageMagick6 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>ImageMagick6</name>
+	<range><lt>6.9.13.59,1</lt></range>
+      </package>
+      <package>
+	<name>ImageMagick6-nox11</name>
+	<range><lt>6.9.13.59,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The ImageMagick project published security advisories for
+	  issues fixed in releases 6.9.13-51 through 6.9.13-59.  They include
+	  heap buffer overflows, use-after-free, out-of-bounds reads,
+	  integer overflows, division by zero, memory leaks and security
+	  policy bypasses in various coders.  A crafted image file can
+	  crash the process, disclose memory contents or circumvent the
+	  configured security policy.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-55154</cvename>
+      <cvename>CVE-2026-25797</cvename>
+      <cvename>CVE-2026-34238</cvename>
+      <cvename>CVE-2026-49219</cvename>
+      <cvename>CVE-2026-53466</cvename>
+      <cvename>CVE-2026-53467</cvename>
+      <cvename>CVE-2026-55510</cvename>
+      <cvename>CVE-2026-55577</cvename>
+      <cvename>CVE-2026-55594</cvename>
+      <cvename>CVE-2026-55595</cvename>
+      <cvename>CVE-2026-55628</cvename>
+      <cvename>CVE-2026-61464</cvename>
+      <cvename>CVE-2026-61465</cvename>
+      <cvename>CVE-2026-61857</cvename>
+      <cvename>CVE-2026-61858</cvename>
+      <cvename>CVE-2026-61859</cvename>
+      <cvename>CVE-2026-61860</cvename>
+      <cvename>CVE-2026-61861</cvename>
+      <cvename>CVE-2026-61862</cvename>
+      <cvename>CVE-2026-61863</cvename>
+      <cvename>CVE-2026-61864</cvename>
+      <cvename>CVE-2026-61865</cvename>
+      <cvename>CVE-2026-61866</cvename>
+      <cvename>CVE-2026-61868</cvename>
+      <cvename>CVE-2026-61869</cvename>
+      <cvename>CVE-2026-61870</cvename>
+      <cvename>CVE-2026-61871</cvename>
+      <cvename>CVE-2026-61872</cvename>
+      <cvename>CVE-2026-62343</cvename>
+      <cvename>CVE-2026-62946</cvename>
+      <cvename>CVE-2026-64685</cvename>
+      <cvename>CVE-2026-86420</cvename>
+      <cvename>CVE-2026-86421</cvename>
+      <cvename>CVE-2026-86422</cvename>
+      <cvename>CVE-2026-86423</cvename>
+      <cvename>CVE-2026-86424</cvename>
+      <cvename>CVE-2026-86425</cvename>
+      <cvename>CVE-2026-93586</cvename>
+      <cvename>CVE-2026-93587</cvename>
+      <cvename>CVE-2026-93588</cvename>
+      <cvename>CVE-2026-93589</cvename>
+      <cvename>CVE-2026-102635</cvename>
+      <cvename>CVE-2026-105081</cvename>
+      <cvename>CVE-2026-105083</cvename>
+      <cvename>CVE-2026-106565</cvename>
+      <cvename>CVE-2026-106567</cvename>
+      <cvename>CVE-2026-106568</cvename>
+      <cvename>CVE-2026-106571</cvename>
+      <cvename>CVE-2026-106572</cvename>
+      <cvename>CVE-2026-106573</cvename>
+      <cvename>CVE-2026-106577</cvename>
+      <cvename>CVE-2026-106578</cvename>
+      <cvename>CVE-2026-106579</cvename>
+      <cvename>CVE-2026-106580</cvename>
+      <cvename>CVE-2026-107208</cvename>
+      <cvename>CVE-2026-107209</cvename>
+      <cvename>CVE-2026-107210</cvename>
+      <cvename>CVE-2026-109259</cvename>
+      <cvename>CVE-2026-109260</cvename>
+      <cvename>CVE-2026-109261</cvename>
+      <cvename>CVE-2026-109262</cvename>
+      <cvename>CVE-2026-109263</cvename>
+      <cvename>CVE-2026-109264</cvename>
+      <cvename>CVE-2026-109266</cvename>
+      <cvename>CVE-2026-109267</cvename>
+      <cvename>CVE-2026-109268</cvename>
+      <cvename>CVE-2026-109269</cvename>
+      <cvename>CVE-2026-109271</cvename>
+      <cvename>CVE-2026-109272</cvename>
+      <cvename>CVE-2026-109273</cvename>
+      <cvename>CVE-2026-109275</cvename>
+      <cvename>CVE-2026-109276</cvename>
+      <cvename>CVE-2026-109278</cvename>
+      <cvename>CVE-2026-109279</cvename>
+      <cvename>CVE-2026-109282</cvename>
+      <cvename>CVE-2026-109964</cvename>
+      <cvename>CVE-2026-116140</cvename>
+      <cvename>CVE-2026-116143</cvename>
+      <cvename>CVE-2026-116144</cvename>
+      <cvename>CVE-2026-116145</cvename>
+      <cvename>CVE-2026-116146</cvename>
+      <cvename>CVE-2026-116147</cvename>
+      <cvename>CVE-2026-116148</cvename>
+      <cvename>CVE-2026-116149</cvename>
+      <cvename>CVE-2026-116151</cvename>
+      <cvename>CVE-2026-116154</cvename>
+      <cvename>CVE-2026-116155</cvename>
+      <cvename>CVE-2026-116156</cvename>
+      <cvename>CVE-2026-116159</cvename>
+      <cvename>CVE-2026-116160</cvename>
+      <url>https://github.com/ImageMagick/ImageMagick/security/advisories</url>
+    </references>
+    <dates>
+      <discovery>2026-07-01</discovery>
+      <entry>2026-10-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="67ba2e09-cff9-11f1-a264-5404a68ad561">
+    <topic>traefik -- ForwardAuth vulnerability</topic>
+    <affects>
+      <package>
+      <name>traefik</name>
+      <range><lt>3.7.16</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+      <p>The traefik project releases a new version addressing ForwardAuth vulnerabilities:</p>
+      <blockquote cite="https://github.com/traefik/traefik/releases/tag/v3.7.16">
+      <ul>
+      <li> GHSA-hrpp-p4fc-wwf8 (ForwardAuth leaking NTLM/Negotiate-bound identity across clients)</li>
+      </ul>
+      </blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/traefik/traefik/releases/tag/v3.7.16</url>
+    </references>
+    <dates>
+      <discovery>2026-10-20</discovery>
+      <entry>2026-10-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="33a752ba-4cbe-46d8-abda-587011d90575">
+    <topic>Node.js -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>node</name>
+	<range><lt>24.22.1</lt></range>
+      </package>
+      <package>
+	<name>node22</name>
+	<range><lt>22.23.4</lt></range>
+      </package>
+      <package>
+	<name>node24</name>
+	<range><lt>24.22.1</lt></range>
+      </package>
+      <package>
+	<name>node26</name>
+	<range><lt>26.12.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Node.js reports:</p>
+	<blockquote cite="https://nodejs.org/en/blog/vulnerability/october-2026-security-releases">
+	  <p>dns.resolve truncates names containing NUL char (CVE-2026-105482) - (high)</p>
+	  <p>TLS certificate hostname bypass when the IP is written fullwidth digits (CVE-2026-105483) - (high)</p>
+	  <p>TLS certificate hostname bypass when the host loosely resolves to an IP address (CVE-2026-106069) - (high)</p>
+	  <p>Node.js Brotli decoder out-of-bounds write permits remote code execution (CVE-2026-111497) - (high)</p>
+	  <p>Keep-alive socket process a response that was written before the request was sent (CVE-2026-105481) - (medium)</p>
+	  <p>Improper certificate validation for non-canonical IPv4 hostnames allows DNS SANs to authenticate IP endpoints (CVE-2026-106072) - (medium)</p>
+	  <p>crypto.randomUUID() and randomInt() entropy caches are saved into user-land startup snapshots and SEAs, so every process repeats the same values (CVE-2026-106074) - (medium)</p>
+	  <p>Node.js ZipFile returns attacker-controlled prefix bytes after failed ZIP header validation (CVE-2026-106070) - (low)</p>
+	  <p>Permission Model filesystem over-grant via wildcard radix lookup (CVE-2026-106071) - (low)</p>
+	  <p>Permission Model bypass with fs.realpathSync (CVE-2026-106073) - (low)</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-105481</cvename>
+      <cvename>CVE-2026-105482</cvename>
+      <cvename>CVE-2026-105483</cvename>
+      <cvename>CVE-2026-106069</cvename>
+      <cvename>CVE-2026-106070</cvename>
+      <cvename>CVE-2026-106071</cvename>
+      <cvename>CVE-2026-106072</cvename>
+      <cvename>CVE-2026-106073</cvename>
+      <cvename>CVE-2026-106074</cvename>
+      <cvename>CVE-2026-111497</cvename>
+      <url>https://nodejs.org/en/blog/vulnerability/october-2026-security-releases</url>
+    </references>
+    <dates>
+      <discovery>2026-10-21</discovery>
+      <entry>2026-10-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b755b277-cf12-11f1-bae2-3497f65b111b">
+    <topic>ca_root_nss -- trusted root certificate from compromised CA eMudhra</topic>
+    <affects>
+      <package>
+	<name>ca_root_nss</name>
+	<range><lt>3.131.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>eMudhra generated several of its TLS intermediate CA certificates
+	  with trivially small private keys, which have since been recovered
+	  and publicly disclosed.  Those intermediates are signed by the
+	  "emSign ECC Root CA - G3" root certificate, which this port installs
+	  as part of its trusted bundle up to and including version 3.131.
+	  NSS 3.131.1 removes the root certificate.</p>
+	  <p>The intermediates have been revoked, but OpenSSL does not check
+	  certificate revocation by default.</p>
+	  <p>FreeBSD-SA-26:73.caroot addresses the base system trust store by
+	  marking the root certificate as untrusted.  That only affects the
+	  store generated by certctl(8), never the bundle installed by this
+	  port.  On FreeBSD 14 the port owns /etc/ssl/cert.pem by default, and
+	  software reading the bundle directly, such as programs built with Go
+	  or Rust, uses /usr/local/etc/ssl/cert.pem or /usr/local/share/certs
+	  on every version of FreeBSD.  Such configurations keep trusting the
+	  root certificate until the package is updated.</p>
+	<h1>Impact:</h1>
+	  <p>An attacker able to intercept network traffic can use the
+	  compromised keys to issue a certificate that impersonates any TLS
+	  server, allowing the traffic to be read or modified without
+	  detection.</p>
+      </body>
+    </description>
+    <references>
+      <freebsdsa>SA-26:73.caroot</freebsdsa>
+      <url>https://bugzilla.mozilla.org/show_bug.cgi?id=2084101</url>
+    </references>
+    <dates>
+      <discovery>2026-10-21</discovery>
+      <entry>2026-10-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="158544f8-cf02-11f1-b0f1-d0f4051da3a3">
+    <topic>vifm -- Unverified Ownership</topic>
+    <affects>
+    <package>
+	<name>vifm</name>
+	<range><lt>0.14.5</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://hackmd.io/@1ExmmukzRMWN7B4gQ4W-4Q/SkX7Pmiofg reports:</p>
+	<blockquote cite="https://hackmd.io/@1ExmmukzRMWN7B4gQ4W-4Q/SkX7Pmiofg">
+	  <p>Vifm 0.8.1-beta through 0.14.4 reuses a pre-existing IPC FIFO in
+the shared temporary directory without checking ownership, allowing
+local users to execute commands as another user.  Attackers can
+pre-create a world-writable vifm-ipc-vifm FIFO and write IPC packets
+with -c and !  shell commands that execute with the victim's
+privileges.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-110237</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-110237</url>
+    </references>
+    <dates>
+      <discovery>2026-10-13</discovery>
+      <entry>2026-10-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7db37b57-ced8-11f1-ac90-2cf05da270f3">
+    <topic>Gitlab -- vulnerabilities</topic>
+    <affects>
+<package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>19.5.0</ge><lt>19.5.1</lt></range>
+	<range><ge>19.4.0</ge><lt>19.4.3</lt></range>
+	<range><ge>7.0.0</ge><lt>19.3.6</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/?nav=19.5.1">
+	  <p>Integer Overflow issue in Regular Expression Compiler impacts GitLab CE/EE</p>
+	  <p>Improper Authentication issue in OmniAuth-to-LDAP auto-linking email lookup impacts GitLab CE/EE</p>
+	  <p>Cache Poisoning issue in OAuth/OIDC discovery endpoints impacts GitLab CE/EE</p>
+	  <p>Improper Access Control issue in GraphQL work item email address field impacts GitLab CE/EE</p>
+	  <p>Incomplete enforcement of instance-wide SAML/LDAP membership lock allows unauthorized member additions in GitLab EE</p>
+	  <p>Internal Credential Exposure issue in internal response headers impacts GitLab CE/EE</p>
+	  <p>Authorization Bypass Through User-Controlled Key issue in group milestones API impacts GitLab CE/EE</p>
+	  <p>Use of Less Trusted Source issue in AI Gateway feature enablement header impacts GitLab EE</p>
+	  <p>Use of Cache Containing Sensitive Information issue in merge request title rendering impacts GitLab CE/EE</p>
+	  <p>Improper Access Control issue in merge request approval policy enforcement impacts GitLab EE</p>
+	  <p>Improper Cleanup on Thrown Exception issue in security findings impacts GitLab EE</p>
+	  <p>Improper Access Control issue in group Duo admin-lock enforcement for Amazon Q settings impacts GitLab EE</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-110264</cvename>
+      <cvename>CVE-2026-15723</cvename>
+      <cvename>CVE-2026-112212</cvename>
+      <cvename>CVE-2026-12664</cvename>
+      <cvename>CVE-2026-16255</cvename>
+      <cvename>CVE-2026-105777</cvename>
+      <cvename>CVE-2026-13319</cvename>
+      <cvename>CVE-2026-112378</cvename>
+      <cvename>CVE-2026-105711</cvename>
+      <cvename>CVE-2026-14288</cvename>
+      <cvename>CVE-2026-112326</cvename>
+      <cvename>CVE-2026-103515</cvename>
+      <url>https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/?nav=19.5.1</url>
+    </references>
+    <dates>
+      <discovery>2026-10-21</discovery>
+      <entry>2026-10-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="df4083bc-cea6-11f1-94b3-10ffe07f9334">
+    <topic>mailpit -- Unbounded CPU and memory consumption in thumbnail endpoint via cyclic EXIF IFD chain</topic>
+    <affects>
+      <package>
+	<name>mailpit</name>
+	<range><lt>1.32.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mailpit author reports:</p>
+	<blockquote cite="https://github.com/axllent/mailpit/security/advisories/GHSA-379p-g4f4-hq5h">
+	  <p>The thumbnail endpoint GET
+	  /api/v1/message/{ID}/part/{PartID}/thumb parses EXIF
+	  metadata of image attachments with github.com/rwcarlsen/goexif
+	  to apply orientation. goexif's TIFF IFD walker only detects
+	  a self-referencing IFD (next == prev). An attachment whose
+	  IFD chain forms a cycle of length 2 (IFD0 → IFD1 → IFD0)
+	  sends the request handler into an infinite loop that
+	  appends a new *tiff.Dir on every iteration. The goroutine
+	  never terminates, pins one CPU core permanently, and its
+	  live heap grows without bound. A 651-byte JPEG is
+	  sufficient.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/axllent/mailpit/security/advisories/GHSA-379p-g4f4-hq5h</url>
+    </references>
+    <dates>
+      <discovery>2026-10-23</discovery>
+      <entry>2026-10-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5101359e-ce3c-11f1-bf7a-3c7c3fba4204">
+    <topic>Keycloak -- multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>keycloak</name>
+	  <range><lt>26.8.1</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Keycloak Team reports:</p>
+	<blockquote cite="https://www.keycloak.org/2026/10/keycloak-2681-released">
+	  <ul>
+	    <li>[CVE-2026-15943]: OIDC identity provider update reuses masked client secret after token URL changes.</li>
+	    <li>[CVE-2026-18569]: OIDC broker backchannel logout accepts unsigned forged logout tokens when signature validation is disabled.</li>
+	    <li>[CVE-2026-82968]: Persistent wrong-account linking through null / GitHub identity provider.</li>
+	    <li>[CVE-2026-94001]: Admin credential DELETE bypasses denied reset-password permission.</li>
+	    <li>[CVE-2026-94000]: A delegated admin with only `manage-users` can become `realm-admin` by joining (or being created into) a group that maps an admin role.</li>
+	    <li>[CVE-2026-94218]: 2FA setup enforcement bypass via /realms/{realm}/login-actions/restart — #YWH-PGM40475-254</li>
+	    <li>[CVE-2026-94215]: Cross-realm realm resource read/write via per-request session-level cache in RealmCacheSession.</li>
+	    <li>[CVE-2026-94213]: Missing user view authorization in the Authorization Services policy evaluation endpoint, possible incomplete fix of CVE-2026-37978.</li>
+	    <li>[CVE-2026-94217]: UMA scope merge across resource owners via name collision in resolveResourcePermission.</li>
+	    <li>[CVE-2026-96446]: Security vulnerability in Keycloak 26.7.3 — PAR single-use bypass via prompt=none.</li>
+	    <li>[CVE-2026-96445]: Conditional OTP trusts skip headers on untrusted proxy paths.</li>
+	    <li>[CVE-2026-97177]: Generic user update bypasses denied reset-password permission.</li>
+	    <li>[CVE-2026-95503]: Potential KDC spoofing attack when Kerberos password authentication is enabled.</li>
+	    <li>[CVE-2026-97311]: Broken access control in Admin REST API: roles/{role-name}/groups discloses groups the caller cannot view (incomplete fix of the 26.7.2 hardening).</li>
+	    <li>[CVE-2026-97846]: Standard Token Exchange bypasses required mTLS certificate binding and issues an active bearer token when no client certificate is supplied.</li>
+	    <li>[CVE-2026-101333]: Unbounded metric series creation via idp tag on broker login endpoint.</li>
+	    <li>[CVE-2026-91777]: Third-party dependency fix, com.fasterxml.jackson.core:jackson-databind</li>
+	    <li>Multiple CVEs in third-party dependency tools.jackson.core:jackson-databind</li>
+	    <li>[CVE-2026-103884]: Path traversal via X.509 CRL Distribution Point - client-supplied CRL path escapes $KC_HOME/conf</li>
+	    <li>Multiple CVEs in third-party dependency simple-git.</li>
+	    <li>Flaky test: initial-access.spec.ts 'Initial access token' fails with TypeError on table data read.</li>
+	    <li>[CVE-2026-107121]: SMTP starttls=true permits plaintext credential and message downgrade.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-15943</cvename>
+      <cvename>CVE-2026-18569</cvename>
+      <cvename>CVE-2026-82968</cvename>
+      <cvename>CVE-2026-94001</cvename>
+      <cvename>CVE-2026-94000</cvename>
+      <cvename>CVE-2026-94218</cvename>
+      <cvename>CVE-2026-94215</cvename>
+      <cvename>CVE-2026-94213</cvename>
+      <cvename>CVE-2026-94217</cvename>
+      <cvename>CVE-2026-96446</cvename>
+      <cvename>CVE-2026-96445</cvename>
+      <cvename>CVE-2026-97177</cvename>
+      <cvename>CVE-2026-95503</cvename>
+      <cvename>CVE-2026-97311</cvename>
+      <cvename>CVE-2026-97846</cvename>
+      <cvename>CVE-2026-101333</cvename>
+      <cvename>CVE-2026-103884</cvename>
+      <cvename>CVE-2026-107121</cvename>
+      <url>https://www.keycloak.org/2026/10/keycloak-2681-released</url>
+    </references>
+    <dates>
+      <discovery>2026-10-13</discovery>
+      <entry>2026-10-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f4f0bb8d-ce20-11f1-9bfa-a8a1599412c6">
+    <topic>chromium -- security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>156.0.8078.47</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>156.0.8078.47</lt></range>
+      </package>
+      <package>
+       <name>linux-chrome</name>
+       <range><lt>156.0.8078.47</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_02018666648.html">
+	 <p>This update includes 353 security fixes:</p>
+	 <ul>
+	    <li>Critical CVE-2026-113341: Memory corruption in Skia.</li>
+	    <li>Critical CVE-2026-113279: Memory corruption in Accessibility.</li>
+	    <li>Critical CVE-2026-113072: Memory corruption in CSS.</li>
+	    <li>Critical CVE-2026-113280: Memory corruption in Paint.</li>
+	    <li>Critical CVE-2026-113271: Use after free in Accessibility.</li>
+	    <li>Critical CVE-2026-113303: Memory corruption in WebRTC.</li>
+	    <li>High CVE-2026-113101: Use after free in SiteIsolation.</li>
+	    <li>High CVE-2026-113097: Use after free in FileSystem.</li>
+	    <li>High CVE-2026-113098: Memory corruption in CacheStorage.</li>
+	    <li>High CVE-2026-113242: Memory corruption in ANGLE.</li>
+	    <li>High CVE-2026-113058: Use after free in WebUI.</li>
+	    <li>High CVE-2026-113082: Memory corruption in ANGLE.</li>
+	    <li>High CVE-2026-113119: Use after free in Network.</li>
+	    <li>High CVE-2026-113092: Use after free in Passwords.</li>
+	    <li>High CVE-2026-113134: Memory corruption in ANGLE.</li>
+	    <li>High CVE-2026-113339: Use after free in SVG.</li>
+	    <li>High CVE-2026-113317: Memory corruption in Accessibility.</li>
+	    <li>High CVE-2026-113193: Memory corruption in V8.</li>
+	    <li>High CVE-2026-113117: Improper input validation in ANGLE.</li>
+	    <li>High CVE-2026-113188: Memory corruption in GPU.</li>
+	    <li>High CVE-2026-113104: Memory corruption in Frames.</li>
+	    <li>High CVE-2026-113322: Memory corruption in Dawn.</li>
+	    <li>High CVE-2026-113163: Use after free in WebGL.</li>
+	    <li>High CVE-2026-113253: Use after free in Canvas.</li>
+	    <li>High CVE-2026-113298: Use after free in Transactions Platform.</li>
+	    <li>High CVE-2026-113315: Memory corruption in ANGLE.</li>
+	    <li>High CVE-2026-113236: Use after free in Navigation.</li>
+	    <li>High CVE-2026-113284: Memory corruption in XML.</li>
+	    <li>High CVE-2026-113141: Use after free in Transactions Platform.</li>
+	    <li>High CVE-2026-113316: Improper input validation in Views.</li>
+	    <li>High CVE-2026-113234: Memory corruption in ANGLE.</li>
+	    <li>High CVE-2026-113252: Improper input validation in ANGLE.</li>
+	    <li>High CVE-2026-113305: Use after free in Privacy.</li>
+	    <li>High CVE-2026-113044: Use after free in V8.</li>
+	    <li>High CVE-2026-113135: Memory corruption in PictureInPicture.</li>
+	    <li>High CVE-2026-113266: Memory corruption in ANGLE.</li>
+	    <li>High CVE-2026-113273: Memory corruption in ANGLE.</li>
+	    <li>High CVE-2026-113293: Use after free in ANGLE.</li>
+	    <li>High CVE-2026-113225: Memory corruption in Browser.</li>
+	    <li>High CVE-2026-113210: Use after free in ANGLE.</li>
+	    <li>High CVE-2026-113285: Memory corruption in ANGLE.</li>
+	    <li>High CVE-2026-113324: Use after free in GPU.</li>
+	    <li>High CVE-2026-113334: Improper input validation in ANGLE.</li>
+	    <li>High CVE-2026-113020: Improper input validation in Date.</li>
+	    <li>High CVE-2026-113222: Use after free in V8.</li>
+	    <li>High CVE-2026-113318: Memory corruption in ServiceWorker.</li>
+	    <li>High CVE-2026-113310: Out of bounds read in Bluetooth.</li>
+	    <li>High CVE-2026-113338: Use after free in Turbolev.</li>
+	    <li>High CVE-2026-113093: Memory corruption in DisplayLocking.</li>
+	    <li>High CVE-2026-113012: Improper input validation in GPU.</li>
+	    <li>High CVE-2026-113175: Improper input validation in FileSystem.</li>
+	    <li>High CVE-2026-113192: Memory corruption in V8.</li>
+	    <li>High CVE-2026-113309: Out of bounds read in Media.</li>
+	    <li>High CVE-2026-113295: Out of bounds read in ANGLE.</li>
+	    <li>High CVE-2026-113217: Use after free in WebAppInstalls.</li>
+	    <li>High CVE-2026-113040: Improper input validation in Proxy.</li>
+	    <li>High CVE-2026-113161: Use after free in WebRTC.</li>
+	    <li>High CVE-2026-113154: Memory corruption in Canvas.</li>
+	    <li>High CVE-2026-113336: Memory corruption in Compositing.</li>
+	    <li>High CVE-2026-113181: Use after free in Navigation.</li>
+	    <li>High CVE-2026-113019: Use after free in Turbolev.</li>
+	    <li>High CVE-2026-113095: Out of bounds read in Focus.</li>
+	    <li>High CVE-2026-113160: Use after free in Turbolev.</li>
+	    <li>High CVE-2026-113212: Memory corruption in PDF.</li>
+	    <li>High CVE-2026-113000: Memory corruption in Paint.</li>
+	    <li>High CVE-2026-113179: Use after free in Paint.</li>
+	    <li>High CVE-2026-112993: Use after free in Input.</li>
+	    <li>Medium CVE-2026-113055: Type confusion in FullScreen.</li>
+	    <li>Medium CVE-2026-113068: Use after free in Input.</li>
+	    <li>Medium CVE-2026-113320: Memory corruption in Navigation.</li>
+	    <li>Medium CVE-2026-113231: Improper input validation in Extensions.</li>
+	    <li>Medium CVE-2026-113174: Use after free in Extensions.</li>
+	    <li>Medium CVE-2026-113022: Memory corruption in PDFium.</li>
+	    <li>Medium CVE-2026-113079: Use after free in SiteIsolation.</li>
+	    <li>Medium CVE-2026-113191: Use after free in Internals.</li>
+	    <li>Medium CVE-2026-113250: Use after free in ANGLE.</li>
+	    <li>Medium CVE-2026-113109: Memory corruption in API.</li>
+	    <li>Medium CVE-2026-113113: Use after free in Extensions.</li>
+	    <li>Medium CVE-2026-113069: Memory corruption in Compositing.</li>
+	    <li>Medium CVE-2026-113006: Out of bounds read in Navigation.</li>
+	    <li>Medium CVE-2026-113263: Use after free in Core.</li>
+	    <li>Medium CVE-2026-113018: Memory corruption in IME.</li>
+	    <li>Medium CVE-2026-113301: Memory corruption in WebAppInstalls.</li>
+	    <li>Medium CVE-2026-113034: Memory corruption in FileSystem.</li>
+	    <li>Medium CVE-2026-113094: Memory corruption in API.</li>
+	    <li>Medium CVE-2026-113240: Use after free in Chromecast.</li>
+	    <li>Medium CVE-2026-113102: Out of bounds read in FileSystem.</li>
+	    <li>Medium CVE-2026-113142: Memory corruption in Extensions.</li>
+	    <li>Medium CVE-2026-113281: Memory corruption in SiteIsolation.</li>
+	    <li>Medium CVE-2026-113035: Out of bounds read in API.</li>
+	    <li>Medium CVE-2026-113211: Memory corruption in ServiceWorker.</li>
+	    <li>Medium CVE-2026-113011: Use after free in CredentialProvider.</li>
+	    <li>Medium CVE-2026-113198: Use after free in Extensions.</li>
+	    <li>Medium CVE-2026-113257: Memory corruption in Media.</li>
+	    <li>Medium CVE-2026-113070: Out of bounds read in GetUserMedia.</li>
+	    <li>Medium CVE-2026-113176: Memory corruption in Omnibox.</li>
+	    <li>Medium CVE-2026-113150: Memory corruption in Bindings.</li>
+	    <li>Medium CVE-2026-113311: Use after free in ServiceWorker.</li>
+	    <li>Medium CVE-2026-113078: Improper input validation in Compositing.</li>
+	    <li>Medium CVE-2026-113033: Use after free in Streaming.</li>
+	    <li>Medium CVE-2026-113026: Memory corruption in PDF.</li>
+	    <li>Medium CVE-2026-113302: Use after free in Extensions.</li>
+	    <li>Medium CVE-2026-113164: Memory corruption in Voice.</li>
+	    <li>Medium CVE-2026-113239: Range error in SiteIsolation.</li>
+	    <li>Medium CVE-2026-113131: Memory corruption in Bluetooth.</li>
+	    <li>Medium CVE-2026-113333: Memory corruption in Extensions.</li>
+	    <li>Medium CVE-2026-113147: Improper input validation in WebShare.</li>
+	    <li>Medium CVE-2026-113337: Memory corruption in Scroll.</li>
+	    <li>Medium CVE-2026-113127: Memory corruption in Browser.</li>
+	    <li>Medium CVE-2026-113129: Improper access control in Extensions.</li>
+	    <li>Medium CVE-2026-113264: Improper input validation in Extensions.</li>
+	    <li>Medium CVE-2026-113105: Use after free in Extensions.</li>
+	    <li>Medium CVE-2026-113220: Memory corruption in Extensions.</li>
+	    <li>Medium CVE-2026-113275: Use after free in API.</li>
+	    <li>Medium CVE-2026-113283: Memory corruption in CredentialProvider.</li>
+	    <li>Medium CVE-2026-113014: Use after free in PerformanceAPIs.</li>
+	    <li>Medium CVE-2026-113108: Use after free in Script.</li>
+	    <li>Medium CVE-2026-113343: Memory corruption in Sandbox.</li>
+	    <li>Medium CVE-2026-113319: Use after free in Accessibility.</li>
+	    <li>Medium CVE-2026-113057: Improper access control in ComputePressure.</li>
+	    <li>Medium CVE-2026-113219: Memory corruption in Contacts.</li>
+	    <li>Medium CVE-2026-113005: Memory corruption in Bluetooth.</li>
+	    <li>Medium CVE-2026-113209: Memory corruption in Navigation.</li>
+	    <li>Medium CVE-2026-113166: Memory corruption in History.</li>
+	    <li>Medium CVE-2026-113051: Memory corruption in CSS.</li>
+	    <li>Medium CVE-2026-113196: Improper access control in Mobile.</li>
+	    <li>Medium CVE-2026-113003: Memory corruption in HID.</li>
+	    <li>Medium CVE-2026-113155: Use after free in Glic.</li>
+	    <li>Medium CVE-2026-113290: Use after free in Input.</li>
+	    <li>Medium CVE-2026-113183: Memory corruption in FedCM.</li>
+	    <li>Medium CVE-2026-113289: Improper input validation in PerformanceAPIs.</li>
+	    <li>Medium CVE-2026-113146: Memory corruption in PerformanceAPIs.</li>
+	    <li>Medium CVE-2026-113207: Use after free in SiteIsolation.</li>
+	    <li>Medium CVE-2026-113205: Use after free in Variations.</li>
+	    <li>Medium CVE-2026-113162: Improper input validation in Actor.</li>
+	    <li>Medium CVE-2026-113118: Memory corruption in Extensions.</li>
+	    <li>Medium CVE-2026-113232: Memory corruption in Search.</li>
+	    <li>Medium CVE-2026-113327: Use after free in Chromecast.</li>
+	    <li>Medium CVE-2026-112999: Use after free in API.</li>
+	    <li>Medium CVE-2026-113249: Improper input validation in Mobile.</li>
+	    <li>Medium CVE-2026-113272: Memory corruption in Extensions.</li>
+	    <li>Medium CVE-2026-113112: Use after free in Extensions.</li>
+	    <li>Medium CVE-2026-113321: Use after free in Extensions.</li>
+	    <li>Medium CVE-2026-113059: Memory corruption in Sensor.</li>
+	    <li>Medium CVE-2026-113137: Memory corruption in Extensions.</li>
+	    <li>Medium CVE-2026-113208: Use after free in ContextualSearch.</li>
+	    <li>Medium CVE-2026-113238: Memory corruption in CustomTabs.</li>
+	    <li>Medium CVE-2026-113194: Memory corruption in Core.</li>
+	    <li>Medium CVE-2026-113189: Use after free in Core.</li>
+	    <li>Medium CVE-2026-113060: Improper input validation in Bluetooth.</li>
+	    <li>Medium CVE-2026-113115: Use after free in Transactions Platform.</li>
+	    <li>Medium CVE-2026-113045: Out of bounds read in Offline.</li>
+	    <li>Medium CVE-2026-113307: Memory corruption in Extensions.</li>
+	    <li>Medium CVE-2026-113009: Use after free in WindowControlsOverlay.</li>
+	    <li>Medium CVE-2026-113071: Use after free in Notifications.</li>
+	    <li>Medium CVE-2026-113278: Use after free in Extensions.</li>
+	    <li>Medium CVE-2026-113190: Use after free in ServiceWorker.</li>
+	    <li>Medium CVE-2026-112992: Memory corruption in Canvas.</li>
+	    <li>Medium CVE-2026-112995: Use after free in Animation.</li>
+	    <li>Medium CVE-2026-113261: Use after free in WebAppInstalls.</li>
+	    <li>Medium CVE-2026-113172: Memory corruption in ServiceWorker.</li>
+	    <li>Medium CVE-2026-113332: Memory corruption in GPU.</li>
+	    <li>Medium CVE-2026-113262: Use after free in Extensions.</li>
+	    <li>Medium CVE-2026-113149: Memory corruption in FullScreen.</li>
+	    <li>Medium CVE-2026-113206: Memory corruption in Omnibox.</li>
+	    <li>Medium CVE-2026-113185: Memory corruption in Extensions.</li>
+	    <li>Medium CVE-2026-113171: Memory corruption in Prompts.</li>
+	    <li>Medium CVE-2026-113042: Use after free in Extensions.</li>
+	    <li>Medium CVE-2026-113276: Memory corruption in Passwords.</li>
+	    <li>Medium CVE-2026-113218: Use after free in DataTransfer.</li>
+	    <li>Medium CVE-2026-113195: Improper input validation in Downloads.</li>
+	    <li>Medium CVE-2026-113328: Improper input validation in Privacy.</li>
+	    <li>Medium CVE-2026-113335: Memory corruption in Extensions.</li>
+	    <li>Medium CVE-2026-113255: Use after free in CustomTabs.</li>
+	    <li>Medium CVE-2026-113076: Use after free in Toolbar.</li>
+	    <li>Medium CVE-2026-113325: Memory corruption in SignIn.</li>
+	    <li>Medium CVE-2026-113084: Improper input validation in Permissions.</li>
+	    <li>Medium CVE-2026-113308: Use after free in Core.</li>
+	    <li>Medium CVE-2026-113224: Memory corruption in WebAppInstalls.</li>
+	    <li>Medium CVE-2026-113148: Memory corruption in WebUI.</li>
+	    <li>Medium CVE-2026-113010: Out of bounds read in Extensions.</li>
+	    <li>Medium CVE-2026-113073: Use after free in Browser.</li>
+	    <li>Medium CVE-2026-113265: Memory corruption in BFCache.</li>
+	    <li>Medium CVE-2026-113329: Out of bounds read in Installer.</li>
+	    <li>Medium CVE-2026-113043: Use after free in iOSWeb.</li>
+	    <li>Medium CVE-2026-113202: Use after free in BrowserTag.</li>
+	    <li>Medium CVE-2026-113016: Improper input validation in Extensions.</li>
+	    <li>Medium CVE-2026-113246: Memory corruption in iOSWebView.</li>
+	    <li>Medium CVE-2026-113041: Use after free in Actor.</li>
+	    <li>Medium CVE-2026-113126: Memory corruption in PolicyContainer.</li>
+	    <li>Medium CVE-2026-113031: Memory corruption in Media.</li>
+	    <li>Medium CVE-2026-113081: Use after free in Compositing.</li>
+	    <li>Medium CVE-2026-113139: Memory corruption in Autofill.</li>
+	    <li>Medium CVE-2026-113128: Missing authorization in Animation.</li>
+	    <li>Medium CVE-2026-113049: Memory corruption in Core.</li>
+	    <li>Medium CVE-2026-113032: Memory corruption in Omnibox.</li>
+	    <li>Medium CVE-2026-113204: Use after free in TrustedWebActivities.</li>
+	    <li>Medium CVE-2026-113144: Memory corruption in Speech.</li>
+	    <li>Medium CVE-2026-113054: Out of bounds read in SiteIsolation.</li>
+	    <li>Medium CVE-2026-113123: Use after free in GPU.</li>
+	    <li>Medium CVE-2026-113277: Out of bounds read in CustomTabs.</li>
+	    <li>Medium CVE-2026-113136: Memory corruption in DevTools.</li>
+	    <li>Medium CVE-2026-113106: Memory corruption in Skia.</li>
+	    <li>Medium CVE-2026-113001: Use after free in Workers.</li>
+	    <li>Medium CVE-2026-113064: Memory corruption in OptimizationGuide.</li>
+	    <li>Medium CVE-2026-113243: Memory corruption in DOM.</li>
+	    <li>Medium CVE-2026-113326: Memory corruption in Core.</li>
+	    <li>Medium CVE-2026-113124: Memory corruption in DataTransfer.</li>
+	    <li>Medium CVE-2026-113230: Improper input validation in Browser.</li>
+	    <li>Medium CVE-2026-113090: Memory corruption in Interstitials.</li>
+	    <li>Medium CVE-2026-113158: Use after free in Streaming.</li>
+	    <li>Medium CVE-2026-113077: Memory corruption in Core.</li>
+	    <li>Medium CVE-2026-113282: Use after free in Views.</li>
+	    <li>Medium CVE-2026-113165: Use after free in Core.</li>
+	    <li>Medium CVE-2026-113178: Memory corruption in Views.</li>
+	    <li>Medium CVE-2026-113110: Memory corruption in ShadowDOM.</li>
+	    <li>Medium CVE-2026-113007: Memory corruption in Permissions.</li>
+	    <li>Medium CVE-2026-113187: Use after free in DOM.</li>
+	    <li>Medium CVE-2026-113075: Use after free in DevTools.</li>
+	    <li>Medium CVE-2026-113259: Use after free in Frames.</li>
+	    <li>Medium CVE-2026-113228: Use after free in Network.</li>
+	    <li>Medium CVE-2026-113099: Improper input validation in Omnibox.</li>
+	    <li>Medium CVE-2026-113216: Use after free in Navigation.</li>
+	    <li>Medium CVE-2026-113270: Use after free in Internals.</li>
+	    <li>Medium CVE-2026-113087: Use after free in Actor.</li>
+	    <li>Medium CVE-2026-113267: Memory corruption in Video.</li>
+	    <li>Medium CVE-2026-113304: Memory corruption in GPU.</li>
+	    <li>Medium CVE-2026-113177: Use after free in FileSystem.</li>
+	    <li>Medium CVE-2026-113151: Out of bounds read in Actor.</li>
+	    <li>Medium CVE-2026-113028: Use after free in Media.</li>
+	    <li>Medium CVE-2026-113120: Improper input validation in Media.</li>
+	    <li>Medium CVE-2026-112997: Memory corruption in CSS.</li>
+	    <li>Medium CVE-2026-113037: Use after free in WebSockets.</li>
+	    <li>Medium CVE-2026-113153: Memory corruption in SiteIsolation.</li>
+	    <li>Medium CVE-2026-113138: Memory corruption in WebAppInstalls.</li>
+	    <li>Medium CVE-2026-113030: Improper access control in V8.</li>
+	    <li>Medium CVE-2026-113100: Memory corruption in Audio.</li>
+	    <li>Medium CVE-2026-113221: Use after free in Google Lens.</li>
+	    <li>Medium CVE-2026-113344: Use after free in Performance.</li>
+	    <li>Medium CVE-2026-113342: Memory corruption in Network.</li>
+	    <li>Medium CVE-2026-113159: Improper access control in DevTools.</li>
+	    <li>Medium CVE-2026-113233: Out of bounds read in Core.</li>
+	    <li>Medium CVE-2026-113065: Use after free in Media.</li>
+	    <li>Medium CVE-2026-113002: Memory corruption in Transactions Platform.</li>
+	    <li>Medium CVE-2026-113199: Out of bounds read in Payments.</li>
+	    <li>Medium CVE-2026-113197: Use after free in Forms.</li>
+	    <li>Medium CVE-2026-113203: Use after free in CSS.</li>
+	    <li>Medium CVE-2026-113170: Use after free in Autofill.</li>
+	    <li>Medium CVE-2026-113258: Memory corruption in Chromoting.</li>
+	    <li>Medium CVE-2026-113297: Improper access control in Ozone.</li>
+	    <li>Medium CVE-2026-113062: Improper input validation in API.</li>
+	    <li>Medium CVE-2026-113096: Memory corruption in Text.</li>
+	    <li>Medium CVE-2026-113050: Out of bounds read in HID.</li>
+	    <li>Medium CVE-2026-113008: Memory corruption in Transactions Platform.</li>
+	    <li>Medium CVE-2026-113111: Use after free in Compositing.</li>
+	    <li>Medium CVE-2026-113200: Use after free in ANGLE.</li>
+	    <li>Medium CVE-2026-113143: Memory corruption in ANGLE.</li>
+	    <li>Medium CVE-2026-113157: Information leak in ANGLE.</li>
+	    <li>Medium CVE-2026-113235: Improper input validation in Passwords.</li>
+	    <li>Medium CVE-2026-113089: Improper input validation in PrintPreview.</li>
+	    <li>Medium CVE-2026-113340: Memory corruption in ANGLE.</li>
+	    <li>Medium CVE-2026-113052: Memory corruption in V8.</li>
+	    <li>Medium CVE-2026-113133: Memory corruption in PlatformIntegration.</li>
+	    <li>Medium CVE-2026-113086: Improper input validation in Input.</li>
+	    <li>Low CVE-2026-113251: Use after free in PDF.</li>
+	    <li>Low CVE-2026-113215: Use after free in Extensions.</li>
+	    <li>Low CVE-2026-113053: Use after free in Cookies.</li>
+	    <li>Low CVE-2026-113312: Memory corruption in Autofill.</li>
+	    <li>Low CVE-2026-113323: Use after free in Chrome for iOS.</li>
+	    <li>Low CVE-2026-113114: Use after free in SignIn.</li>
+	    <li>Low CVE-2026-113015: Use after free in Workers.</li>
+	    <li>Low CVE-2026-113091: Use after free in PerformanceAPIs.</li>
+	    <li>Low CVE-2026-113168: Use after free in Permissions.</li>
+	    <li>Low CVE-2026-113229: Use after free in Loader.</li>
+	    <li>Low CVE-2026-113256: Use after free in Permissions.</li>
+	    <li>Low CVE-2026-113103: Use after free in WebProtect.</li>
+	    <li>Low CVE-2026-113056: Memory corruption in PerformanceAPIs.</li>
+	    <li>Low CVE-2026-113201: Memory corruption in Google Lens.</li>
+	    <li>Low CVE-2026-113027: Memory corruption in WebFonts.</li>
+	    <li>Low CVE-2026-113214: Improper input validation in FullScreen.</li>
+	    <li>Low CVE-2026-113004: Memory corruption in Sync.</li>
+	    <li>Low CVE-2026-113300: Out of bounds write in Forms.</li>
+	    <li>Low CVE-2026-113213: Memory corruption in DevTools.</li>
+	    <li>Low CVE-2026-113167: Memory corruption in Network.</li>
+	    <li>Low CVE-2026-113223: Memory corruption in DevTools.</li>
+	    <li>Low CVE-2026-113291: Memory corruption in FullScreen.</li>
+	    <li>Low CVE-2026-113241: Memory corruption in Toolbar.</li>
+	    <li>Low CVE-2026-113244: Improper input validation in UI.</li>
+	    <li>Low CVE-2026-113048: Memory corruption in DevTools.</li>
+	    <li>Low CVE-2026-113247: Memory corruption in DevTools.</li>
+	    <li>Low CVE-2026-113023: Improper input validation in Extensions.</li>
+	    <li>Low CVE-2026-113330: Memory corruption in CustomTabs.</li>
+	    <li>Low CVE-2026-113226: Memory corruption in Model.</li>
+	    <li>Low CVE-2026-113152: Memory corruption in SignIn.</li>
+	    <li>Low CVE-2026-113029: Improper access control in ANGLE.</li>
+	    <li>Low CVE-2026-113296: Memory corruption in Actor.</li>
+	    <li>Low CVE-2026-113306: Improper input validation in Network.</li>
+	    <li>Low CVE-2026-113245: Memory corruption in DevTools.</li>
+	    <li>Low CVE-2026-113299: Memory corruption in WebProtect.</li>
+	    <li>Low CVE-2026-113024: Use after free in WebAppInstalls.</li>
+	    <li>Low CVE-2026-113025: Use after free in Input.</li>
+	    <li>Low CVE-2026-113080: Use after free in WebAppInstalls.</li>
+	    <li>Low CVE-2026-113186: Memory corruption in DevTools.</li>
+	    <li>Low CVE-2026-113180: Memory corruption in ContentCapture.</li>
+	    <li>Low CVE-2026-113140: Use after free in ANGLE.</li>
+	    <li>Low CVE-2026-113184: Memory corruption in Scheduling.</li>
+	    <li>Low CVE-2026-113017: Use after free in Views.</li>
+	    <li>Low CVE-2026-112998: Memory corruption in Views.</li>
+	    <li>Low CVE-2026-113021: Use after free in WebAppInstalls.</li>
+	    <li>Low CVE-2026-113145: Memory corruption in Messages.</li>
+	    <li>Low CVE-2026-113292: Improper input validation in Omnibox.</li>
+	    <li>Low CVE-2026-113156: Use after free in Messages.</li>
+	    <li>Low CVE-2026-113116: Use after free in DevTools.</li>
+	    <li>Low CVE-2026-113047: Memory corruption in BrowserTag.</li>
+	    <li>Low CVE-2026-113173: Improper input validation in UI.</li>
+	    <li>Low CVE-2026-113260: Memory corruption in Core.</li>
+	    <li>Low CVE-2026-113269: Memory corruption in BrowserTag.</li>
+	    <li>Low CVE-2026-113036: Memory corruption in HTML.</li>
+	    <li>Low CVE-2026-113268: Memory corruption in Navigation.</li>
+	    <li>Low CVE-2026-113038: Memory corruption in DevTools.</li>
+	    <li>Low CVE-2026-113313: Memory corruption in DevTools.</li>
+	    <li>Low CVE-2026-113061: Memory corruption in Chromoting.</li>
+	    <li>Low CVE-2026-113248: Memory corruption in FileSystem.</li>
+	    <li>Low CVE-2026-113288: Memory corruption in Core.</li>
+	    <li>Low CVE-2026-113085: Use after free in Media.</li>
+	    <li>Low CVE-2026-113107: Use after free in Media.</li>
+	    <li>Low CVE-2026-113066: Memory corruption in Fonts.</li>
+	    <li>Low CVE-2026-113121: Memory corruption in ContextMenu.</li>
+	    <li>Low CVE-2026-113287: Use after free in Prompts.</li>
+	    <li>Low CVE-2026-113132: Memory corruption in DevTools.</li>
+	    <li>Low CVE-2026-113169: Memory corruption in WebAppInstalls.</li>
+	    <li>Low CVE-2026-113254: Memory corruption in DevTools.</li>
+	    <li>Low CVE-2026-113063: Improper input validation in Chromoting.</li>
+	    <li>Low CVE-2026-112994: Memory corruption in Browser.</li>
+	    <li>Low CVE-2026-113314: Use after free in Media.</li>
+	    <li>Low CVE-2026-113237: Memory corruption in Chromoting.</li>
+	    <li>Low CVE-2026-113331: Memory corruption in Controls.</li>
+	    <li>Low CVE-2026-113182: Memory corruption in Passwords.</li>
+	    <li>Low CVE-2026-113046: Improper input validation in Passwords.</li>
+	    <li>Low CVE-2026-113067: Use after free in Chromoting.</li>
+	    <li>Low CVE-2026-113074: Use after free in Media.</li>
+	    <li>Low CVE-2026-113130: Use after free in Actor.</li>
+	    <li>Low CVE-2026-113294: Improper input validation in Loader.</li>
+	    <li>Low CVE-2026-112996: Memory corruption in Loader.</li>
+	    <li>Low CVE-2026-113122: Memory corruption in Loader.</li>
+	    <li>Low CVE-2026-113227: Use after free in Editing.</li>
+	    <li>Low CVE-2026-113286: Memory corruption in Google Lens.</li>
+	    <li>Low CVE-2026-113083: Memory corruption in Actor.</li>
+	    <li>Low CVE-2026-113088: Memory corruption in Mobile.</li>
+	    <li>Low CVE-2026-113013: Memory corruption in DevTools.</li>
+	    <li>Low CVE-2026-113125: Memory corruption in DevTools.</li>
+	    <li>Low CVE-2026-113039: Use after free in Bookmarks.</li>
+	    <li>Low CVE-2026-113274: Use after free in ReadingMode.</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-113341</cvename>
+      <cvename>CVE-2026-113279</cvename>
+      <cvename>CVE-2026-113072</cvename>
+      <cvename>CVE-2026-113280</cvename>
+      <cvename>CVE-2026-113271</cvename>
+      <cvename>CVE-2026-113303</cvename>
+      <cvename>CVE-2026-113101</cvename>
+      <cvename>CVE-2026-113097</cvename>
+      <cvename>CVE-2026-113098</cvename>
+      <cvename>CVE-2026-113242</cvename>
+      <cvename>CVE-2026-113058</cvename>
+      <cvename>CVE-2026-113082</cvename>
+      <cvename>CVE-2026-113119</cvename>
+      <cvename>CVE-2026-113092</cvename>
+      <cvename>CVE-2026-113134</cvename>
+      <cvename>CVE-2026-113339</cvename>
+      <cvename>CVE-2026-113317</cvename>
+      <cvename>CVE-2026-113193</cvename>
+      <cvename>CVE-2026-113117</cvename>
+      <cvename>CVE-2026-113188</cvename>
+      <cvename>CVE-2026-113104</cvename>
+      <cvename>CVE-2026-113322</cvename>
+      <cvename>CVE-2026-113163</cvename>
+      <cvename>CVE-2026-113253</cvename>
+      <cvename>CVE-2026-113298</cvename>
+      <cvename>CVE-2026-113315</cvename>
+      <cvename>CVE-2026-113236</cvename>
+      <cvename>CVE-2026-113284</cvename>
+      <cvename>CVE-2026-113141</cvename>
+      <cvename>CVE-2026-113316</cvename>
+      <cvename>CVE-2026-113234</cvename>
+      <cvename>CVE-2026-113252</cvename>
+      <cvename>CVE-2026-113305</cvename>
+      <cvename>CVE-2026-113044</cvename>
+      <cvename>CVE-2026-113135</cvename>
+      <cvename>CVE-2026-113266</cvename>
+      <cvename>CVE-2026-113273</cvename>
+      <cvename>CVE-2026-113293</cvename>
+      <cvename>CVE-2026-113225</cvename>
+      <cvename>CVE-2026-113210</cvename>
+      <cvename>CVE-2026-113285</cvename>
+      <cvename>CVE-2026-113324</cvename>
+      <cvename>CVE-2026-113334</cvename>
+      <cvename>CVE-2026-113020</cvename>
+      <cvename>CVE-2026-113222</cvename>
+      <cvename>CVE-2026-113318</cvename>
+      <cvename>CVE-2026-113310</cvename>
+      <cvename>CVE-2026-113338</cvename>
+      <cvename>CVE-2026-113093</cvename>
+      <cvename>CVE-2026-113012</cvename>
+      <cvename>CVE-2026-113175</cvename>
+      <cvename>CVE-2026-113192</cvename>
+      <cvename>CVE-2026-113309</cvename>
+      <cvename>CVE-2026-113295</cvename>
+      <cvename>CVE-2026-113217</cvename>
+      <cvename>CVE-2026-113040</cvename>
+      <cvename>CVE-2026-113161</cvename>
+      <cvename>CVE-2026-113154</cvename>
+      <cvename>CVE-2026-113336</cvename>
+      <cvename>CVE-2026-113181</cvename>
+      <cvename>CVE-2026-113019</cvename>
+      <cvename>CVE-2026-113095</cvename>
+      <cvename>CVE-2026-113160</cvename>
+      <cvename>CVE-2026-113212</cvename>
+      <cvename>CVE-2026-113000</cvename>
+      <cvename>CVE-2026-113179</cvename>
+      <cvename>CVE-2026-112993</cvename>
+      <cvename>CVE-2026-113055</cvename>
+      <cvename>CVE-2026-113068</cvename>
+      <cvename>CVE-2026-113320</cvename>
+      <cvename>CVE-2026-113231</cvename>
+      <cvename>CVE-2026-113174</cvename>
+      <cvename>CVE-2026-113022</cvename>
+      <cvename>CVE-2026-113079</cvename>
+      <cvename>CVE-2026-113191</cvename>
+      <cvename>CVE-2026-113250</cvename>
+      <cvename>CVE-2026-113109</cvename>
+      <cvename>CVE-2026-113113</cvename>
+      <cvename>CVE-2026-113069</cvename>
+      <cvename>CVE-2026-113006</cvename>
+      <cvename>CVE-2026-113263</cvename>
+      <cvename>CVE-2026-113018</cvename>
+      <cvename>CVE-2026-113301</cvename>
+      <cvename>CVE-2026-113034</cvename>
+      <cvename>CVE-2026-113094</cvename>
+      <cvename>CVE-2026-113240</cvename>
+      <cvename>CVE-2026-113102</cvename>
+      <cvename>CVE-2026-113142</cvename>
+      <cvename>CVE-2026-113281</cvename>
+      <cvename>CVE-2026-113035</cvename>
+      <cvename>CVE-2026-113211</cvename>
+      <cvename>CVE-2026-113011</cvename>
+      <cvename>CVE-2026-113198</cvename>
+      <cvename>CVE-2026-113257</cvename>
+      <cvename>CVE-2026-113070</cvename>
+      <cvename>CVE-2026-113176</cvename>
+      <cvename>CVE-2026-113150</cvename>
+      <cvename>CVE-2026-113311</cvename>
+      <cvename>CVE-2026-113078</cvename>
+      <cvename>CVE-2026-113033</cvename>
+      <cvename>CVE-2026-113026</cvename>
+      <cvename>CVE-2026-113302</cvename>
+      <cvename>CVE-2026-113164</cvename>
+      <cvename>CVE-2026-113239</cvename>
+      <cvename>CVE-2026-113131</cvename>
+      <cvename>CVE-2026-113333</cvename>
+      <cvename>CVE-2026-113147</cvename>
+      <cvename>CVE-2026-113337</cvename>
+      <cvename>CVE-2026-113127</cvename>
+      <cvename>CVE-2026-113129</cvename>
+      <cvename>CVE-2026-113264</cvename>
+      <cvename>CVE-2026-113105</cvename>
+      <cvename>CVE-2026-113220</cvename>
+      <cvename>CVE-2026-113275</cvename>
+      <cvename>CVE-2026-113283</cvename>
+      <cvename>CVE-2026-113014</cvename>
+      <cvename>CVE-2026-113108</cvename>
+      <cvename>CVE-2026-113343</cvename>
+      <cvename>CVE-2026-113319</cvename>
+      <cvename>CVE-2026-113057</cvename>
+      <cvename>CVE-2026-113219</cvename>
+      <cvename>CVE-2026-113005</cvename>
+      <cvename>CVE-2026-113209</cvename>
+      <cvename>CVE-2026-113166</cvename>
+      <cvename>CVE-2026-113051</cvename>
+      <cvename>CVE-2026-113196</cvename>
+      <cvename>CVE-2026-113003</cvename>
+      <cvename>CVE-2026-113155</cvename>
+      <cvename>CVE-2026-113290</cvename>
+      <cvename>CVE-2026-113183</cvename>
+      <cvename>CVE-2026-113289</cvename>
+      <cvename>CVE-2026-113146</cvename>
+      <cvename>CVE-2026-113207</cvename>
+      <cvename>CVE-2026-113205</cvename>
+      <cvename>CVE-2026-113162</cvename>
+      <cvename>CVE-2026-113118</cvename>
+      <cvename>CVE-2026-113232</cvename>
+      <cvename>CVE-2026-113327</cvename>
+      <cvename>CVE-2026-112999</cvename>
+      <cvename>CVE-2026-113249</cvename>
+      <cvename>CVE-2026-113272</cvename>
+      <cvename>CVE-2026-113112</cvename>
+      <cvename>CVE-2026-113321</cvename>
+      <cvename>CVE-2026-113059</cvename>
+      <cvename>CVE-2026-113137</cvename>
+      <cvename>CVE-2026-113208</cvename>
+      <cvename>CVE-2026-113238</cvename>
+      <cvename>CVE-2026-113194</cvename>
+      <cvename>CVE-2026-113189</cvename>
+      <cvename>CVE-2026-113060</cvename>
+      <cvename>CVE-2026-113115</cvename>
+      <cvename>CVE-2026-113045</cvename>
+      <cvename>CVE-2026-113307</cvename>
+      <cvename>CVE-2026-113009</cvename>
+      <cvename>CVE-2026-113071</cvename>
+      <cvename>CVE-2026-113278</cvename>
+      <cvename>CVE-2026-113190</cvename>
+      <cvename>CVE-2026-112992</cvename>
+      <cvename>CVE-2026-112995</cvename>
+      <cvename>CVE-2026-113261</cvename>
+      <cvename>CVE-2026-113172</cvename>
+      <cvename>CVE-2026-113332</cvename>
+      <cvename>CVE-2026-113262</cvename>
+      <cvename>CVE-2026-113149</cvename>
+      <cvename>CVE-2026-113206</cvename>
+      <cvename>CVE-2026-113185</cvename>
+      <cvename>CVE-2026-113171</cvename>
+      <cvename>CVE-2026-113042</cvename>
+      <cvename>CVE-2026-113276</cvename>
+      <cvename>CVE-2026-113218</cvename>
+      <cvename>CVE-2026-113195</cvename>
+      <cvename>CVE-2026-113328</cvename>
+      <cvename>CVE-2026-113335</cvename>
+      <cvename>CVE-2026-113255</cvename>
+      <cvename>CVE-2026-113076</cvename>
+      <cvename>CVE-2026-113325</cvename>
+      <cvename>CVE-2026-113084</cvename>
+      <cvename>CVE-2026-113308</cvename>
+      <cvename>CVE-2026-113224</cvename>
+      <cvename>CVE-2026-113148</cvename>
+      <cvename>CVE-2026-113010</cvename>
+      <cvename>CVE-2026-113073</cvename>
+      <cvename>CVE-2026-113265</cvename>
+      <cvename>CVE-2026-113329</cvename>
+      <cvename>CVE-2026-113043</cvename>
+      <cvename>CVE-2026-113202</cvename>
+      <cvename>CVE-2026-113016</cvename>
+      <cvename>CVE-2026-113246</cvename>
+      <cvename>CVE-2026-113041</cvename>
+      <cvename>CVE-2026-113126</cvename>
+      <cvename>CVE-2026-113031</cvename>
+      <cvename>CVE-2026-113081</cvename>
+      <cvename>CVE-2026-113139</cvename>
+      <cvename>CVE-2026-113128</cvename>
+      <cvename>CVE-2026-113049</cvename>
+      <cvename>CVE-2026-113032</cvename>
+      <cvename>CVE-2026-113204</cvename>
+      <cvename>CVE-2026-113144</cvename>
+      <cvename>CVE-2026-113054</cvename>
+      <cvename>CVE-2026-113123</cvename>
+      <cvename>CVE-2026-113277</cvename>
+      <cvename>CVE-2026-113136</cvename>
+      <cvename>CVE-2026-113106</cvename>
+      <cvename>CVE-2026-113001</cvename>
+      <cvename>CVE-2026-113064</cvename>
+      <cvename>CVE-2026-113243</cvename>
+      <cvename>CVE-2026-113326</cvename>
+      <cvename>CVE-2026-113124</cvename>
+      <cvename>CVE-2026-113230</cvename>
+      <cvename>CVE-2026-113090</cvename>
+      <cvename>CVE-2026-113158</cvename>
+      <cvename>CVE-2026-113077</cvename>
+      <cvename>CVE-2026-113282</cvename>
+      <cvename>CVE-2026-113165</cvename>
+      <cvename>CVE-2026-113178</cvename>
+      <cvename>CVE-2026-113110</cvename>
+      <cvename>CVE-2026-113007</cvename>
+      <cvename>CVE-2026-113187</cvename>
+      <cvename>CVE-2026-113075</cvename>
+      <cvename>CVE-2026-113259</cvename>
+      <cvename>CVE-2026-113228</cvename>
+      <cvename>CVE-2026-113099</cvename>
+      <cvename>CVE-2026-113216</cvename>
+      <cvename>CVE-2026-113270</cvename>
+      <cvename>CVE-2026-113087</cvename>
+      <cvename>CVE-2026-113267</cvename>
+      <cvename>CVE-2026-113304</cvename>
+      <cvename>CVE-2026-113177</cvename>
+      <cvename>CVE-2026-113151</cvename>
+      <cvename>CVE-2026-113028</cvename>
+      <cvename>CVE-2026-113120</cvename>
+      <cvename>CVE-2026-112997</cvename>
+      <cvename>CVE-2026-113037</cvename>
+      <cvename>CVE-2026-113153</cvename>
+      <cvename>CVE-2026-113138</cvename>
+      <cvename>CVE-2026-113030</cvename>
+      <cvename>CVE-2026-113100</cvename>
+      <cvename>CVE-2026-113221</cvename>
+      <cvename>CVE-2026-113344</cvename>
+      <cvename>CVE-2026-113342</cvename>
+      <cvename>CVE-2026-113159</cvename>
+      <cvename>CVE-2026-113233</cvename>
+      <cvename>CVE-2026-113065</cvename>
+      <cvename>CVE-2026-113002</cvename>
+      <cvename>CVE-2026-113199</cvename>
+      <cvename>CVE-2026-113197</cvename>
+      <cvename>CVE-2026-113203</cvename>
+      <cvename>CVE-2026-113170</cvename>
+      <cvename>CVE-2026-113258</cvename>
+      <cvename>CVE-2026-113297</cvename>
+      <cvename>CVE-2026-113062</cvename>
+      <cvename>CVE-2026-113096</cvename>
+      <cvename>CVE-2026-113050</cvename>
+      <cvename>CVE-2026-113008</cvename>
+      <cvename>CVE-2026-113111</cvename>
+      <cvename>CVE-2026-113200</cvename>
+      <cvename>CVE-2026-113143</cvename>
+      <cvename>CVE-2026-113157</cvename>
+      <cvename>CVE-2026-113235</cvename>
+      <cvename>CVE-2026-113089</cvename>
+      <cvename>CVE-2026-113340</cvename>
+      <cvename>CVE-2026-113052</cvename>
+      <cvename>CVE-2026-113133</cvename>
+      <cvename>CVE-2026-113086</cvename>
+      <cvename>CVE-2026-113251</cvename>
+      <cvename>CVE-2026-113215</cvename>
+      <cvename>CVE-2026-113053</cvename>
+      <cvename>CVE-2026-113312</cvename>
+      <cvename>CVE-2026-113323</cvename>
+      <cvename>CVE-2026-113114</cvename>
+      <cvename>CVE-2026-113015</cvename>
+      <cvename>CVE-2026-113091</cvename>
+      <cvename>CVE-2026-113168</cvename>
+      <cvename>CVE-2026-113229</cvename>
+      <cvename>CVE-2026-113256</cvename>
+      <cvename>CVE-2026-113103</cvename>
+      <cvename>CVE-2026-113056</cvename>
+      <cvename>CVE-2026-113201</cvename>
+      <cvename>CVE-2026-113027</cvename>
+      <cvename>CVE-2026-113214</cvename>
+      <cvename>CVE-2026-113004</cvename>
+      <cvename>CVE-2026-113300</cvename>
+      <cvename>CVE-2026-113213</cvename>
+      <cvename>CVE-2026-113167</cvename>
+      <cvename>CVE-2026-113223</cvename>
+      <cvename>CVE-2026-113291</cvename>
+      <cvename>CVE-2026-113241</cvename>
+      <cvename>CVE-2026-113244</cvename>
+      <cvename>CVE-2026-113048</cvename>
+      <cvename>CVE-2026-113247</cvename>
+      <cvename>CVE-2026-113023</cvename>
+      <cvename>CVE-2026-113330</cvename>
+      <cvename>CVE-2026-113226</cvename>
+      <cvename>CVE-2026-113152</cvename>
+      <cvename>CVE-2026-113029</cvename>
+      <cvename>CVE-2026-113296</cvename>
+      <cvename>CVE-2026-113306</cvename>
+      <cvename>CVE-2026-113245</cvename>
+      <cvename>CVE-2026-113299</cvename>
+      <cvename>CVE-2026-113024</cvename>
+      <cvename>CVE-2026-113025</cvename>
+      <cvename>CVE-2026-113080</cvename>
+      <cvename>CVE-2026-113186</cvename>
+      <cvename>CVE-2026-113180</cvename>
+      <cvename>CVE-2026-113140</cvename>
+      <cvename>CVE-2026-113184</cvename>
+      <cvename>CVE-2026-113017</cvename>
+      <cvename>CVE-2026-112998</cvename>
+      <cvename>CVE-2026-113021</cvename>
+      <cvename>CVE-2026-113145</cvename>
+      <cvename>CVE-2026-113292</cvename>
+      <cvename>CVE-2026-113156</cvename>
+      <cvename>CVE-2026-113116</cvename>
+      <cvename>CVE-2026-113047</cvename>
+      <cvename>CVE-2026-113173</cvename>
+      <cvename>CVE-2026-113260</cvename>
+      <cvename>CVE-2026-113269</cvename>
+      <cvename>CVE-2026-113036</cvename>
+      <cvename>CVE-2026-113268</cvename>
+      <cvename>CVE-2026-113038</cvename>
+      <cvename>CVE-2026-113313</cvename>
+      <cvename>CVE-2026-113061</cvename>
+      <cvename>CVE-2026-113248</cvename>
+      <cvename>CVE-2026-113288</cvename>
+      <cvename>CVE-2026-113085</cvename>
+      <cvename>CVE-2026-113107</cvename>
+      <cvename>CVE-2026-113066</cvename>
+      <cvename>CVE-2026-113121</cvename>
+      <cvename>CVE-2026-113287</cvename>
+      <cvename>CVE-2026-113132</cvename>
+      <cvename>CVE-2026-113169</cvename>
+      <cvename>CVE-2026-113254</cvename>
+      <cvename>CVE-2026-113063</cvename>
+      <cvename>CVE-2026-112994</cvename>
+      <cvename>CVE-2026-113314</cvename>
+      <cvename>CVE-2026-113237</cvename>
+      <cvename>CVE-2026-113331</cvename>
+      <cvename>CVE-2026-113182</cvename>
+      <cvename>CVE-2026-113046</cvename>
+      <cvename>CVE-2026-113067</cvename>
+      <cvename>CVE-2026-113074</cvename>
+      <cvename>CVE-2026-113130</cvename>
+      <cvename>CVE-2026-113294</cvename>
+      <cvename>CVE-2026-112996</cvename>
+      <cvename>CVE-2026-113122</cvename>
+      <cvename>CVE-2026-113227</cvename>
+      <cvename>CVE-2026-113286</cvename>
+      <cvename>CVE-2026-113083</cvename>
+      <cvename>CVE-2026-113088</cvename>
+      <cvename>CVE-2026-113013</cvename>
+      <cvename>CVE-2026-113125</cvename>
+      <cvename>CVE-2026-113039</cvename>
+      <cvename>CVE-2026-113274</cvename>
+      <url>https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_02018666648.html</url>
+    </references>
+    <dates>
+      <discovery>2026-10-20</discovery>
+      <entry>2026-10-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8c1b47e2-cf3d-11f1-a655-3497f65b111b">
+    <topic>jackson-databind -- type parameters bypass the polymorphic type validator</topic>
+    <affects>
+    <package>
+	<name>jackson-databind</name>
+	<range><lt>2.22.4</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Jackson project reports:</p>
+	<blockquote cite="https://github.com/FasterXML/jackson-databind/blob/2.x/release-notes/VERSION-2.x">
+	  <p>Type parameters of generic type ids, and element types of array
+	    type ids, were not passed to the configured
+	    PolymorphicTypeValidator, so a deny-listed type could be reached
+	    through a type parameter.</p>
+	  <p>They are now validated like direct type ids. Approval by base
+	    type only covers subtypes of that base type, allowIfSubTypeIsArray()
+	    no longer accepts abstract or interface element types without
+	    allow-listing, and approval of an array type covers its element
+	    type only when given as exactly that class.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-110879</cvename>
+      <url>https://github.com/FasterXML/jackson-databind/blob/2.x/release-notes/VERSION-2.x</url>
+    </references>
+    <dates>
+      <discovery>2026-10-17</discovery>
+      <entry>2026-10-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7b3ea5d6-cf3d-11f1-a655-3497f65b111b">
+    <topic>jackson-databind -- denial of service</topic>
+    <affects>
+    <package>
+	<name>jackson-databind</name>
+	<range><lt>2.22.3</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Jackson project reports:</p>
+	<blockquote cite="https://github.com/FasterXML/jackson-databind/blob/2.x/release-notes/VERSION-2.x">
+	  <p>CVE-2026-91776: TypeDeserializerBase caches the resolved
+	    deserializer under the raw, attacker supplied type id. With name
+	    based polymorphism and a fallback, every unrecognized type id adds
+	    an entry and the cache grows without bound.</p>
+	  <p>CVE-2026-91777: forward reference completion for JsonIdentityInfo
+	    object ids scans the pending reference accumulator for every
+	    resolved id, which is quadratic in the number of references.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-91776</cvename>
+      <cvename>CVE-2026-91777</cvename>
+      <url>https://github.com/FasterXML/jackson-databind/blob/2.x/release-notes/VERSION-2.x</url>
+    </references>
+    <dates>
+      <discovery>2026-09-21</discovery>
+      <entry>2026-10-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6a9d0f14-cf3d-11f1-a655-3497f65b111b">
+    <topic>jackson-core -- denial of service</topic>
+    <affects>
+    <package>
+	<name>jackson-core</name>
+	<range><lt>2.22.3</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Jackson project reports:</p>
+	<blockquote cite="https://github.com/FasterXML/jackson-core/blob/2.x/release-notes/VERSION-2.x">
+	  <p>CVE-2026-89407: NumberInput.looksLikeValidNumber() pre-validates
+	    stringified numbers with PATTERN_FLOAT, whose adjacent quantifiers
+	    allow catastrophic backtracking on crafted input.</p>
+	  <p>CVE-2026-89425: UTF8DataInputJsonParser builds the offending token
+	    text for an error message in a loop without an upper bound, so it
+	    ignores maxErrorTokenLength. The other three parser implementations
+	    are not affected.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-89407</cvename>
+      <cvename>CVE-2026-89425</cvename>
+      <url>https://github.com/FasterXML/jackson-core/blob/2.x/release-notes/VERSION-2.x</url>
+    </references>
+    <dates>
+      <discovery>2026-09-21</discovery>
+      <entry>2026-10-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f1e61d76-cdb6-11f1-b15e-589cfc104230">
+    <topic>brotli -- out-of-bounds write permits remote code execution</topic>
+    <affects>
+<package>
+<name>brotli</name>
+<range><lt>1.2.1,1</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>-Brotli project reports:</p>
+	<blockquote cite="https://github.com/google/brotli/releases/tag/v1.2.1">
+	  <p>CVE-2026-111497: out-of-bounds write permits remote code execution.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-111497</cvename>
+      <url>https://github.com/google/brotli/releases/tag/v1.2.1</url>
+    </references>
+    <dates>
+      <discovery>2026-10-22</discovery>
+      <entry>2026-10-22</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="23eecf73-cd85-11f1-97dc-40b034429ecf">
     <topic>p5-DBI -- Prevent dbi_profile crash</topic>
     <affects>

@@ -484,11 +484,11 @@
     SUBDIR += mod_scgi
     SUBDIR += mod_security
     SUBDIR += mod_setenvifplus
-    SUBDIR += mod_tls
     SUBDIR += mod_umask
     SUBDIR += mod_webauth
     SUBDIR += mod_webkit
     SUBDIR += mod_wsgi
+    SUBDIR += mod_wsgi4
     SUBDIR += mod_xsendfile
     SUBDIR += mohawk
     SUBDIR += moin2
@@ -708,7 +708,6 @@
     SUBDIR += p5-CGI-PSGI
     SUBDIR += p5-CGI-Pager
     SUBDIR += p5-CGI-Prototype
-    SUBDIR += p5-CGI-Response
     SUBDIR += p5-CGI-SSI
     SUBDIR += p5-CGI-Session
     SUBDIR += p5-CGI-Session-ExpireSessions
@@ -1419,7 +1418,6 @@
     SUBDIR += p5-WebService-Google-Sets
     SUBDIR += p5-WebService-IMDB
     SUBDIR += p5-WebService-ISBNDB
-    SUBDIR += p5-WebService-Linode
     SUBDIR += p5-WebService-MoviePosterDB
     SUBDIR += p5-WebService-MusicBrainz
     SUBDIR += p5-WebService-NoPaste
@@ -1883,6 +1881,7 @@
     SUBDIR += py-httmock
     SUBDIR += py-http-parser
     SUBDIR += py-http-sf
+    SUBDIR += py-httpagentparser
     SUBDIR += py-httpbin
     SUBDIR += py-httpcore
     SUBDIR += py-httpcore2

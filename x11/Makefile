@@ -34,6 +34,7 @@
     SUBDIR += bhotkeys-audio
     SUBDIR += bhotkeys-brightness
     SUBDIR += bhotkeys-display-common
+    SUBDIR += bhotkeys-dwm
     SUBDIR += bhotkeys-extend
     SUBDIR += bhotkeys-gnome
     SUBDIR += bhotkeys-i3
@@ -76,6 +77,7 @@
     SUBDIR += controllermap
     SUBDIR += cool-retro-term
     SUBDIR += coreterminal
+    SUBDIR += cosmic-app-library
     SUBDIR += cosmic-bg
     SUBDIR += damask
     SUBDIR += darktile
@@ -604,6 +606,7 @@
     SUBDIR += xcur2png
     SUBDIR += xcursorgen
     SUBDIR += xcut
+    SUBDIR += xdg-desktop-portal-cosmic
     SUBDIR += xdg-desktop-portal-gnome
     SUBDIR += xdg-desktop-portal-gtk
     SUBDIR += xdg-desktop-portal-hyprland

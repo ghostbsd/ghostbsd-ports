@@ -1,5 +1,6 @@
 PORTNAME=	gap
 DISTVERSION=	4.16.1
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	https://github.com/gap-system/gap/releases/download/v${DISTVERSION}/
 
@@ -17,12 +18,9 @@ BUILD_DEPENDS=	autoconf:devel/autoconf \
 # attempt to fix the intermittent failure: WARNING: 'automake-1.16' is missing on your system.
 LIB_DEPENDS=	libgmp.so:math/gmp
 
-USES=		gmake libtool localbase perl5 readline shebangfix
+USES=		gmake libtool localbase perl5 pkgconfig readline shebangfix
 USE_PERL5=	run
 USE_LDCONFIG=	yes
-
-BROKEN_powerpc64=	compilation fails: error: static assertion failed due to requirement 'sizeof(struct GAPState) < 32768': GAPState is too big
-BROKEN_powerpc64le=	compilation fails: error: static assertion failed due to requirement 'sizeof(struct GAPState) < 32768': GAPState is too big
 
 SHEBANG_FILES=	. -not -name '*.ac' -not -name '*.am' -not -name '*.m4'
 
@@ -87,6 +85,10 @@ ZEROMQINTERFACE_CONFIGURE_ARGS=		--with-zmq=${LOCALBASE}
 XGAP_USES=				xorg
 XGAP_USE=				XORG=x11,xaw,xt
 XGAP_CONFIGURE_ARGS=			--x-includes=${LOCALBASE}/include --x-libraries=${LOCALBASE}/lib
+
+.include <bsd.port.options.mk>
+
+PLIST_SUB+=	BITS=${ARCH:S/amd64/64/:S/aarch64/64/:S/powerpc64/64/:S/powerpc64le/64/:S/riscv64/64/:S/i386/32/:S/armv6/32/:S/armv7/32/:S/powerpc/32/:S/powerpcspe/32/}
 
 pre-configure:
 # Avoid conflict with C++20 <version> by ignoring <...> under WRKSRC
@@ -156,6 +158,10 @@ post-install:
 		${STAGEDIR}${DATADIR}/pkg/xgap/xgap.sh
 	# remove empty directories
 	@${FIND} ${STAGEDIR}${PREFIX} -type d -empty -delete
+	# remove stray files
+	@${RM} \
+		${STAGEDIR}${DATADIR}/pkg/xgap/cnf/config.guess~ \
+		${STAGEDIR}${DATADIR}/pkg/xgap/cnf/config.sub~
 	# strip binaries
 
 do-test:

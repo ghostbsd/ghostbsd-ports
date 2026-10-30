@@ -1,7 +1,6 @@
 PORTNAME=	atuin
 DISTVERSIONPREFIX=	v
-DISTVERSION=	18.24.1
-PORTREVISION=	0
+DISTVERSION=	18.24.4
 CATEGORIES=	shells
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -15,8 +14,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BROKEN_i386=	compilation fails: evaluation of constant value failed, see https://github.com/briansmith/ring/issues/2006
 
 BUILD_DEPENDS=	protoc:devel/protobuf
+LIB_DEPENDS=	libzstd.so:archivers/zstd
 
-USES=		cargo
+USES=		cargo ssl
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	atuinsh
@@ -42,21 +42,24 @@ CARGO_CRATES=	adler2-2.0.1 \
 		arraydeque-0.5.1 \
 		arrayvec-0.7.8 \
 		assert-json-diff-2.0.2 \
-		async-compression-0.4.43 \
+		async-compression-0.4.51 \
 		async-stream-0.3.6 \
 		async-stream-impl-0.3.6 \
 		async-trait-0.1.92 \
 		atoi-2.0.0 \
 		atomic-0.6.1 \
 		atomic-waker-1.1.2 \
-		atuin-vt100-0.19.1 \
+		atuin-service-manager-0.12.0 \
+		atuin-vt100-0.19.2 \
+		atuin-vte-0.15.1 \
 		autocfg-1.5.1 \
 		axoprocess-0.2.1 \
 		axotag-0.3.0 \
-		axoupdater-0.10.0 \
+		axoupdater-0.10.3 \
 		axum-0.8.9 \
 		axum-core-0.5.6 \
 		base64-0.22.1 \
+		base64-0.23.1 \
 		base64ct-1.8.3 \
 		basic-toml-0.1.10 \
 		beef-0.5.2 \
@@ -89,21 +92,22 @@ CARGO_CRATES=	adler2-2.0.1 \
 		chrono-0.4.45 \
 		chrono-humanize-0.2.3 \
 		cipher-0.4.4 \
-		clap-4.6.1 \
-		clap_builder-4.6.0 \
-		clap_complete-4.6.9 \
-		clap_complete_nushell-4.6.0 \
-		clap_derive-4.6.1 \
+		clap-4.6.7 \
+		clap-couture-0.1.1 \
+		clap-couture-derive-0.1.1 \
+		clap_builder-4.6.7 \
+		clap_complete-4.6.11 \
+		clap_complete_nushell-4.6.1 \
+		clap_derive-4.6.7 \
 		clap_lex-1.1.0 \
-		clipboard-win-5.4.1 \
+		clipboard-win-5.4.3 \
 		cmov-0.5.4 \
 		colorchoice-1.0.5 \
 		colored-3.1.1 \
 		compact_str-0.9.0 \
 		compare-0.0.6 \
-		compression-codecs-0.4.38 \
-		compression-core-0.4.32 \
-		condtype-1.3.0 \
+		compression-codecs-0.4.46 \
+		compression-core-0.4.34 \
 		config-0.15.25 \
 		console-0.16.3 \
 		const-oid-0.9.6 \
@@ -128,16 +132,22 @@ CARGO_CRATES=	adler2-2.0.1 \
 		crypto-common-0.2.2 \
 		crypto_secretbox-0.1.1 \
 		csscolorparser-0.6.2 \
-		ctutils-0.4.2 \
+		ctutils-0.4.5 \
 		curve25519-dalek-4.1.3 \
 		curve25519-dalek-derive-0.1.1 \
 		daemonix-0.1.0 \
 		darling-0.23.0 \
+		darling-0.24.1 \
 		darling_core-0.23.0 \
+		darling_core-0.24.1 \
 		darling_macro-0.23.0 \
+		darling_macro-0.24.1 \
 		dashmap-6.2.1 \
 		deadpool-0.12.3 \
 		deadpool-runtime-0.1.4 \
+		defmt-1.2.0 \
+		defmt-macros-1.2.0 \
+		defmt-parser-1.1.0 \
 		deltae-0.3.2 \
 		der-0.7.10 \
 		deranged-0.5.8 \
@@ -146,12 +156,12 @@ CARGO_CRATES=	adler2-2.0.1 \
 		diff-0.1.13 \
 		digest-0.10.7 \
 		digest-0.11.3 \
+		dirs-4.0.0 \
 		dirs-6.0.0 \
+		dirs-sys-0.3.7 \
 		dirs-sys-0.5.0 \
 		dispatch2-0.3.1 \
 		displaydoc-0.2.6 \
-		divan-0.1.21 \
-		divan-macros-0.1.21 \
 		document-features-0.2.12 \
 		dotenvy-0.15.7 \
 		downcast-rs-1.2.1 \
@@ -203,16 +213,16 @@ CARGO_CRATES=	adler2-2.0.1 \
 		fs-err-3.3.1 \
 		fsevent-sys-4.1.0 \
 		futures-0.3.32 \
-		futures-channel-0.3.33 \
-		futures-core-0.3.33 \
+		futures-channel-0.3.34 \
+		futures-core-0.3.34 \
 		futures-executor-0.3.32 \
 		futures-intrusive-0.5.0 \
-		futures-io-0.3.33 \
-		futures-macro-0.3.33 \
-		futures-sink-0.3.33 \
-		futures-task-0.3.33 \
+		futures-io-0.3.34 \
+		futures-macro-0.3.34 \
+		futures-sink-0.3.34 \
+		futures-task-0.3.34 \
 		futures-timer-3.0.4 \
-		futures-util-0.3.33 \
+		futures-util-0.3.34 \
 		generic-array-0.14.7 \
 		gethostname-1.1.0 \
 		getopts-0.2.24 \
@@ -284,6 +294,11 @@ CARGO_CRATES=	adler2-2.0.1 \
 		itertools-0.14.0 \
 		itertools-0.15.0 \
 		itoa-1.0.18 \
+		jiff-0.2.38 \
+		jiff-core-0.1.1 \
+		jiff-static-0.2.38 \
+		jiff-tzdb-0.1.9 \
+		jiff-tzdb-platform-0.1.3 \
 		jobserver-0.1.35 \
 		js-sys-0.3.100 \
 		kasuari-0.4.12 \
@@ -292,7 +307,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		lab-0.11.0 \
 		lasso-0.7.3 \
 		lazy_static-1.5.0 \
-		libc-0.2.189 \
+		libc-0.2.190 \
 		libm-0.2.16 \
 		libredox-0.1.16 \
 		libsqlite3-sys-0.30.1 \
@@ -358,6 +373,8 @@ CARGO_CRATES=	adler2-2.0.1 \
 		objc2-io-kit-0.3.2 \
 		objc2-io-surface-0.3.2 \
 		objc2-open-directory-0.3.2 \
+		objc2-security-0.3.2 \
+		objc2-service-management-0.3.2 \
 		objc2-system-configuration-0.3.2 \
 		once_cell-1.21.4 \
 		once_cell_polyfill-1.70.2 \
@@ -400,8 +417,10 @@ CARGO_CRATES=	adler2-2.0.1 \
 		pin-project-lite-0.2.17 \
 		pkcs8-0.10.2 \
 		pkg-config-0.3.33 \
+		plist-1.10.3 \
 		poly1305-0.8.0 \
 		portable-atomic-1.14.0 \
+		portable-atomic-util-0.2.8 \
 		portable-pty-0.9.0 \
 		potential_utf-0.1.5 \
 		powerfmt-0.2.0 \
@@ -420,13 +439,14 @@ CARGO_CRATES=	adler2-2.0.1 \
 		prost-types-0.14.3 \
 		protox-0.9.1 \
 		protox-parse-0.9.0 \
-		pulldown-cmark-0.13.4 \
+		pulldown-cmark-0.13.5 \
 		pulldown-cmark-escape-0.11.0 \
 		pulldown-cmark-to-cmark-22.0.0 \
 		pxfm-0.1.30 \
 		quanta-0.12.6 \
 		quick-error-1.2.3 \
 		quick-xml-0.39.4 \
+		quick-xml-0.42.0 \
 		quick_cache-0.6.24 \
 		quote-1.0.47 \
 		r-efi-5.3.0 \
@@ -441,20 +461,21 @@ CARGO_CRATES=	adler2-2.0.1 \
 		rand_core-0.10.1 \
 		rand_xorshift-0.4.0 \
 		rand_xoshiro-0.7.0 \
-		ratatui-0.30.0 \
+		ratatui-0.30.2 \
 		ratatui-core-0.1.2 \
-		ratatui-crossterm-0.1.0 \
-		ratatui-macros-0.7.0 \
-		ratatui-termwiz-0.1.0 \
-		ratatui-widgets-0.3.0 \
+		ratatui-crossterm-0.1.2 \
+		ratatui-macros-0.7.2 \
+		ratatui-termina-0.1.0 \
+		ratatui-termwiz-0.1.2 \
+		ratatui-widgets-0.3.2 \
 		raw-cpuid-11.6.0 \
 		redox_syscall-0.5.18 \
+		redox_users-0.4.6 \
 		redox_users-0.5.2 \
 		ref-cast-1.0.25 \
 		ref-cast-impl-1.0.25 \
 		regex-1.12.4 \
 		regex-automata-0.4.14 \
-		regex-lite-0.1.9 \
 		regex-syntax-0.8.11 \
 		relative-path-1.9.3 \
 		reqwest-0.13.4 \
@@ -499,16 +520,17 @@ CARGO_CRATES=	adler2-2.0.1 \
 		serde_core-1.0.229 \
 		serde_derive-1.0.229 \
 		serde_derive_internals-0.29.1 \
-		serde_json-1.0.151 \
+		serde_json-1.0.154 \
 		serde_path_to_error-0.1.20 \
 		serde_regex-1.2.0 \
 		serde_spanned-1.1.1 \
 		serde_urlencoded-0.7.1 \
-		serde_with-3.21.0 \
-		serde_with_macros-3.21.0 \
+		serde_with-3.24.0 \
+		serde_with_macros-3.24.0 \
 		serial2-0.2.36 \
 		sfa-1.0.0 \
 		sha1-0.11.0 \
+		sha1_smol-1.0.1 \
 		sha2-0.10.9 \
 		sha2-0.11.0 \
 		sharded-slab-0.1.7 \
@@ -549,12 +571,12 @@ CARGO_CRATES=	adler2-2.0.1 \
 		symlink-0.1.0 \
 		syn-1.0.109 \
 		syn-2.0.119 \
-		syn-3.0.0 \
+		syn-3.0.9 \
 		sync_wrapper-1.0.2 \
 		synstructure-0.13.2 \
 		sysinfo-0.39.6 \
 		tempfile-3.27.0 \
-		terminal_size-0.4.4 \
+		termina-0.3.3 \
 		terminfo-0.9.0 \
 		termios-0.3.3 \
 		termwiz-0.23.3 \
@@ -570,11 +592,11 @@ CARGO_CRATES=	adler2-2.0.1 \
 		tinystr-0.8.3 \
 		tinyvec-1.11.0 \
 		tinyvec_macros-0.1.1 \
-		tokio-1.52.3 \
+		tokio-1.54.1 \
 		tokio-macros-2.7.0 \
 		tokio-native-tls-0.3.1 \
 		tokio-stream-0.1.18 \
-		tokio-util-0.7.19 \
+		tokio-util-0.7.20 \
 		toml-0.5.11 \
 		toml-1.1.2+spec-1.1.0 \
 		toml_datetime-1.1.1+spec-1.1.0 \
@@ -666,6 +688,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		wezterm-dynamic-0.2.1 \
 		wezterm-dynamic-derive-0.1.1 \
 		wezterm-input-types-0.1.0 \
+		which-8.0.6 \
 		whoami-2.1.1 \
 		widestring-1.2.1 \
 		winapi-0.3.9 \
@@ -721,6 +744,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		writeable-0.6.3 \
 		x11rb-0.13.2 \
 		x11rb-protocol-0.13.2 \
+		xml-rs-0.8.29 \
 		xxhash-rust-0.8.19 \
 		yaml-rust2-0.11.1 \
 		yansi-1.0.1 \
@@ -736,12 +760,9 @@ CARGO_CRATES=	adler2-2.0.1 \
 		zerovec-0.11.6 \
 		zerovec-derive-0.11.3 \
 		zmij-1.0.23 \
-		zstd-0.13.3 \
-		zstd-safe-7.2.4 \
-		zstd-sys-2.1.0+zstd.1.5.7
-
-OPENSSLINC=	/usr/include
-OPENSSLLIB=	/usr/lib
+		zstd-0.14.3 \
+		zstd-safe-8.2.0 \
+		zstd-sys-2.1.2+zstd.1.5.7
 
 PLIST_FILES=	bin/${PORTNAME} \
 		bin/${PORTNAME}-server

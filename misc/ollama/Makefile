@@ -1,6 +1,6 @@
 PORTNAME=	ollama
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.40.7
+DISTVERSION=	0.40.13
 CATEGORIES=	misc # machine-learning
 
 ## Q: Why does misc/ollama use the fork yurivict/ollama ?
@@ -40,17 +40,18 @@ GO_MODULE=	github.com/yurivict/${PORTNAME} # fork with FreeBSD patches
 GO_TARGET=	.
 GO_ENV+=	CGO_CXXFLAGS="${CXXFLAGS}"
 
-LLAMA_CPP_VERSION=	b11738	# from the LLAMA_CPP_VERSION file in the llama.cpp repo
-LLAMA_CPP_SO_VERSION=	0.7.0
-GGML_SO_VERSION=	0.27.0
+LLAMA_CPP_VERSION=	b11963	# from the LLAMA_CPP_VERSION file in the llama.cpp repo
+LLAMA_CPP_UI_VERSION=	b11738
+LLAMA_CPP_SO_VERSION=	0.8.0
+GGML_SO_VERSION=	0.28.0
 MLX_CORE_VERSION=	0.31.2
 MLX_C_VERSION=		fba4470b89073180056c9ea46c443051375f7399
 JSON_VERSION=		3.11.3
 
 DISTFILES+=	${LLAMA_CPP_VERSION}.tar.gz:llamasrc \
-		llama-${LLAMA_CPP_VERSION}-ui.tar.gz:llamasrc
+		llama-${LLAMA_CPP_UI_VERSION}-ui.tar.gz:llamasrc
 MASTER_SITES+=	https://github.com/ggml-org/llama.cpp/archive/refs/tags/:llamasrc \
-		https://github.com/ggml-org/llama.cpp/releases/download/${LLAMA_CPP_VERSION}/:llamasrc
+		https://github.com/ggml-org/llama.cpp/releases/download/${LLAMA_CPP_UI_VERSION}/:llamasrc
 
 PLIST_FILES=	bin/${PORTNAME} \
 		bin/ollama-limit-gpu-layers
@@ -138,7 +139,7 @@ post-extract:
 	# Copy pre-built UI assets into llama.cpp source tree so the build
 	# can embed them without running npm or downloading from Hugging Face.
 	@${MKDIR} ${WRKDIR}/llama.cpp-${LLAMA_CPP_VERSION}/tools/ui/dist && \
-		${CP} -r ${WRKDIR}/llama-${LLAMA_CPP_VERSION}/* \
+		${CP} -r ${WRKDIR}/llama-${LLAMA_CPP_UI_VERSION}/* \
 		${WRKDIR}/llama.cpp-${LLAMA_CPP_VERSION}/tools/ui/dist/
 
 post-patch:

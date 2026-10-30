@@ -542,11 +542,11 @@
     SUBDIR += py-ibm-cos-sdk-s3transfer
     SUBDIR += py-ibm-watsonx-ai
     SUBDIR += py-icoextract
+    SUBDIR += py-immich-model
     SUBDIR += py-insightface
     SUBDIR += py-instructor
     SUBDIR += py-ipyfastscape
     SUBDIR += py-jiwer
-    SUBDIR += py-kartograph
     SUBDIR += py-kenlm
     SUBDIR += py-kokoro
     SUBDIR += py-langchain
@@ -569,6 +569,7 @@
     SUBDIR += py-langchain-text-splitters
     SUBDIR += py-langgraph
     SUBDIR += py-langgraph-checkpoint
+    SUBDIR += py-langgraph-checkpoint-conformance
     SUBDIR += py-langgraph-checkpoint-sqlite
     SUBDIR += py-langgraph-prebuilt
     SUBDIR += py-langgraph-sdk
@@ -616,9 +617,11 @@
     SUBDIR += py-numcodecs
     SUBDIR += py-ollama
     SUBDIR += py-onnx
+    SUBDIR += py-onnx-ir
     SUBDIR += py-onnx-tf
     SUBDIR += py-onnxconverter-common
     SUBDIR += py-onnxruntime
+    SUBDIR += py-onnxscript
     SUBDIR += py-openai
     SUBDIR += py-openai-harmony
     SUBDIR += py-openai-whisper

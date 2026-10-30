@@ -1,6 +1,5 @@
 PORTNAME=	ytop
-DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.0
+DISTVERSION=	1.0.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	vim@vimer.org
@@ -10,12 +9,12 @@ WWW=		https://github.com/Yeatol/freebsd_ytop
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		compiler:c++23-lang
+USES=		compiler:c++23-lang ncurses
 USE_GITHUB=	yes
 GH_ACCOUNT=	Yeatol
 GH_PROJECT=	freebsd_ytop
 
-ALL_TARGET=	all
+NO_TEST=	yes
 PLIST_FILES=	bin/ytop
 
 do-install:

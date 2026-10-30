@@ -396,6 +396,7 @@
     SUBDIR += mhash
     SUBDIR += mindterm-binary
     SUBDIR += minisign
+    SUBDIR += mkcacerts
     SUBDIR += mkcert
     SUBDIR += mkp224o
     SUBDIR += modsecurity3
@@ -450,6 +451,7 @@
     SUBDIR += openfhe
     SUBDIR += openfortivpn
     SUBDIR += openiked
+    SUBDIR += openpgp-card-tools
     SUBDIR += opensaml
     SUBDIR += opensc
     SUBDIR += openssh-askpass

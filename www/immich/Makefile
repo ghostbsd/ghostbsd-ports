@@ -1,10 +1,10 @@
 PORTNAME=	immich
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.2.4
-PORTREVISION=	2
+DISTVERSION=	3.3.5
+PORTREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	https://github.com/joneum/FreeBSD-Immich/releases/download/v${DISTVERSION}/:buildkit
-DISTFILES=	immich-freebsd-buildkit-${DISTVERSION}${EXTRACT_SUFX}:buildkit
+MASTER_SITES=	https://github.com/joneum/FreeBSD-Immich/releases/download/v${BUILDKIT_VERSION}/:buildkit
+DISTFILES=	immich-freebsd-buildkit-${BUILDKIT_VERSION}${EXTRACT_SUFX}:buildkit
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	High performance self-hosted photo and video management solution
@@ -45,9 +45,10 @@ USE_RC_SUBR=	immich_server
 #   cd <kit> && npm pack pnpm@<version>
 # plus the geodata files from geonames.org and natural-earth-vector, and
 # the immich-plugin-core payload from the upstream container image.
-BUILDKIT=	${WRKDIR}/immich-freebsd-buildkit-${DISTVERSION}
+BUILDKIT=	${WRKDIR}/immich-freebsd-buildkit-${BUILDKIT_VERSION}
+BUILDKIT_VERSION=	${DISTVERSION}_1
 PNPM=		${WRKDIR}/pnpm-prefix/bin/pnpm
-PNPM_VERSION=	11.22.0
+PNPM_VERSION=	11.27.1
 PLUGIN_SDK=	@immich+plugin-sdk@file+packages+plugin-sdk
 
 MAKE_ENV=	CI=1 \
@@ -62,6 +63,7 @@ MAKE_ENV=	CI=1 \
 
 SUB_FILES=	immich-admin pkg-message
 SUB_LIST=	NODE=${LOCALBASE}/bin/node
+PLIST_SUB=	NODE_ARCH=${ARCH:S/aarch64/arm64/:S/amd64/x64/}
 
 USERS=		immich
 GROUPS=		immich
@@ -79,8 +81,10 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PNPM} install --offline --frozen-lockfile \
 		--store-dir ${BUILDKIT}/pnpm-store
-	cd $$(${ECHO_CMD} ${WRKSRC}/node_modules/.pnpm/sharp@*/node_modules/sharp) && \
-		${SETENV} ${MAKE_ENV} ${LOCALBASE}/bin/node install/build.js
+	@for d in ${WRKSRC}/node_modules/.pnpm/sharp@*/node_modules/sharp; do \
+		(cd $$d && ${SETENV} ${MAKE_ENV} ${LOCALBASE}/bin/node install/build.js) \
+		|| exit 1; \
+	done
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PNPM} --filter @immich/plugin-sdk --filter @immich/sdk \
 		--filter immich build
@@ -89,8 +93,10 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PNPM} --store-dir ${BUILDKIT}/pnpm-store --filter immich \
 		--prod --no-optional deploy ${WRKDIR}/server-pruned
-	cd $$(${ECHO_CMD} ${WRKDIR}/server-pruned/node_modules/.pnpm/sharp@*/node_modules/sharp) && \
-		${SETENV} ${MAKE_ENV} ${LOCALBASE}/bin/node install/build.js
+	@for d in ${WRKDIR}/server-pruned/node_modules/.pnpm/sharp@*/node_modules/sharp; do \
+		(cd $$d && ${SETENV} ${MAKE_ENV} ${LOCALBASE}/bin/node install/build.js) \
+		|| exit 1; \
+	done
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/immich-admin ${STAGEDIR}${PREFIX}/bin/
@@ -130,9 +136,12 @@ post-install:
 		${MV} .pnpm/$${old} .pnpm/${PLUGIN_SDK} && \
 		${LN} -shf ../.pnpm/${PLUGIN_SDK}/node_modules/@immich/plugin-sdk \
 			@immich/plugin-sdk && \
-		${SED} -i "" -e "s,$${old},${PLUGIN_SDK},g" \
-			-e "s,${WRKDIR}/server-pruned,${WWWDIR}/server,g" \
-			.bin/plugin-sdk .package-map.json
+		for f in .bin/plugin-sdk .package-map.json; do \
+			${TEST} -f $$f || continue; \
+			${SED} -i "" -e "s,$${old},${PLUGIN_SDK},g" \
+				-e "s,${WRKDIR}/server-pruned,${WWWDIR}/server,g" \
+				$$f; \
+		done
 	@cd ${STAGEDIR}${PREFIX} && ${FIND} ${WWWDIR_REL}/build-data/www/_app/immutable \
 		-type f | ${SORT} >> ${TMPPLIST}
 
