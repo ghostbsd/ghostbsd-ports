@@ -1,6 +1,5 @@
 PORTNAME=	paraview
-DISTVERSION=	${PARAVIEW_VER}.0
-PORTREVISION=	3
+DISTVERSION=	${PARAVIEW_VER}.1
 CATEGORIES=	science graphics
 MASTER_SITES=	http://www.paraview.org/files/v${PARAVIEW_VER}/
 DISTNAME=	ParaView-v${PORTVERSION}
@@ -71,7 +70,7 @@ USES=		cmake compiler:c++17-lang desktop-file-utils eigen:3 fortran gl gnome	\
 		jpeg localbase pkgconfig python qt:6 shebangfix sqlite tar:xz xorg
 USE_GL=		glew opengl
 USE_GNOME=	libxml2
-USE_QT=		5compat base svg tools webengine
+USE_QT=		5compat base svg tools
 #buildtools:build core gui help network opengl qmake:build sql svg	\
 #		webengine widgets x11extras glew xmlpatterns
 USE_XORG=	ice sm x11 xau xcb xcursor xdamage xdmcp xext xfixes xorgproto xrender	\
@@ -126,16 +125,14 @@ SHEBANG_FILES=	VTK/Examples/SearchScript.sh	\
 		VTK/Utilities/Maintenance/*.sh	\
 		Clients/CommandLineExecutables/paraview-config.in
 
-OPTIONS_DEFINE=	DOCS EXAMPLES OMPI
+OPTIONS_DEFINE=	DOCS EXAMPLES MPICH
 OPTIONS_SUB=	yes
-OMPI_DESC=	OpenMPI (Message Passing Interface) support
 
 # mpi4py and other programs must be compiled against the same MPI provider
-OMPI_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpi4py>=0:net/py-mpi4py@${PY_FLAVOR}
-OMPI_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpi4py>=0:net/py-mpi4py@${PY_FLAVOR}
-OMPI_USES=		mpi:openmpi
-OMPI_CMAKE_ON=		-DPARAVIEW_USE_MPI:BOOL=ON
-OMPI_CMAKE_OFF=		-DPARAVIEW_USE_MPI:BOOL=OFF
+MPICH_BUILD_RUN_DEPENDS=${MPI4PI}
+MPICH_USES=		mpi:mpich
+MPICH_CMAKE_ON=		-DPARAVIEW_USE_MPI:BOOL=ON
+MPICH_CMAKE_OFF=	-DPARAVIEW_USE_MPI:BOOL=OFF
 
 EXAMPLES_CMAKE_BOOL=	PARAVIEW_ENABLE_EXAMPLES
 PORTEXAMPLES=		*

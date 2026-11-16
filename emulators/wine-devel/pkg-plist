@@ -1635,6 +1635,7 @@ lib/wine/i386-windows/bthprops.cpl
 lib/wine/i386-windows/cabarc.exe
 lib/wine/i386-windows/cabinet.dll
 lib/wine/i386-windows/cacls.exe
+lib/wine/i386-windows/capabilityaccessmanagerclient.dll
 lib/wine/i386-windows/cards.dll
 lib/wine/i386-windows/cdosys.dll
 lib/wine/i386-windows/certutil.exe
@@ -2182,6 +2183,7 @@ lib/wine/i386-windows/mfplat.dll
 lib/wine/i386-windows/mfplay.dll
 lib/wine/i386-windows/mfreadwrite.dll
 lib/wine/i386-windows/mfsrcsnk.dll
+lib/wine/i386-windows/mfwmaaec.dll
 lib/wine/i386-windows/mgmtapi.dll
 lib/wine/i386-windows/midimap.dll
 lib/wine/i386-windows/mlang.dll
@@ -3013,6 +3015,7 @@ lib/wine/%%WINEARCH%%-windows/bthprops.cpl
 lib/wine/%%WINEARCH%%-windows/cabarc.exe
 lib/wine/%%WINEARCH%%-windows/cabinet.dll
 lib/wine/%%WINEARCH%%-windows/cacls.exe
+lib/wine/%%WINEARCH%%-windows/capabilityaccessmanagerclient.dll
 lib/wine/%%WINEARCH%%-windows/cards.dll
 lib/wine/%%WINEARCH%%-windows/cdosys.dll
 lib/wine/%%WINEARCH%%-windows/certutil.exe
@@ -3523,6 +3526,7 @@ lib/wine/%%WINEARCH%%-windows/mfplat.dll
 lib/wine/%%WINEARCH%%-windows/mfplay.dll
 lib/wine/%%WINEARCH%%-windows/mfreadwrite.dll
 lib/wine/%%WINEARCH%%-windows/mfsrcsnk.dll
+lib/wine/%%WINEARCH%%-windows/mfwmaaec.dll
 lib/wine/%%WINEARCH%%-windows/mgmtapi.dll
 lib/wine/%%WINEARCH%%-windows/midimap.dll
 lib/wine/%%WINEARCH%%-windows/mlang.dll

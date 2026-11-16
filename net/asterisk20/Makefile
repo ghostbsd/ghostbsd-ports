@@ -1,19 +1,17 @@
 PORTNAME=	asterisk
-DISTVERSION=	20.21.0
+DISTVERSION=	20.22.0
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729
 MASTER_SITE_SUBDIR=	asterisk/ \
 			asterisk/old-releases/ \
 			sounds/releases/:g729
-PKGNAMESUFFIX=	20
+PKGNAMESUFFIX=	${DISTVERSION:R:R}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		${ASTERISK_CORE_G729_SOUNDS}:g729 \
 		${ASTERISK_MOH_G729_SOUNDS}:g729
 DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-
-PATCH_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/commit/
-PATCHFILES=	78b7c4e8822e444f39ef73eea8e21ccc6293ae5d.patch:-p1
 
 MAINTAINER=	o.kryvulia@flex-it.com.ua
 COMMENT=	Open Source PBX and telephony toolkit
@@ -57,9 +55,8 @@ MAKE_ENV=	ASTCFLAGS="${CFLAGS}" \
 
 LDFLAGS+=	-L. -Wl,--undefined-version
 
-CONFLICTS=		ossp-uuid
+CONFLICTS=		asterisk22 asterisk24 ossp-uuid
 CONFLICTS_BUILD=	linuxthreads
-CONFLICTS_INSTALL=	asterisk18
 
 USERS=	${ASTERISK_USER}
 GROUPS=	${ASTERISK_GROUP} dahdi

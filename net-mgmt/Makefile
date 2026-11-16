@@ -9,6 +9,7 @@
     SUBDIR += alertmanager
     SUBDIR += andwatch
     SUBDIR += ap-utils
+    SUBDIR += apiary
     SUBDIR += argus
     SUBDIR += argus-clients
     SUBDIR += arpscan
@@ -441,5 +442,10 @@
     SUBDIR += zabbix74-java
     SUBDIR += zabbix74-proxy
     SUBDIR += zabbix74-server
+    SUBDIR += zabbix8-agent
+    SUBDIR += zabbix8-frontend
+    SUBDIR += zabbix8-java
+    SUBDIR += zabbix8-proxy
+    SUBDIR += zabbix8-server
 
 .include <bsd.port.subdir.mk>

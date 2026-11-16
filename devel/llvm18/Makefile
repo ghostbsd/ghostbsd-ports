@@ -13,9 +13,7 @@ WWW=		https://llvm.org/
 
 .include "${.CURDIR}/../llvm-devel/Makefile.LICENSE"
 
-# GhostBSD: depend on llvm-libs for shared library split (do not remove)
-LIB_DEPENDS=	libzstd.so:archivers/zstd \
-		libLLVM-${LLVM_MAJOR}.so:devel/llvm${LLVM_MAJOR}-libs
+LIB_DEPENDS=	libzstd.so:archivers/zstd
 
 FLAVORS=	default lite
 FLAVOR?=	${FLAVORS:[1]}
@@ -167,6 +165,7 @@ GOLD_DESC=		Build the LLVM Gold plugin for LTO
 GOLD_BUILD_DEPENDS=	${LOCALBASE}/bin/ld.gold:devel/binutils
 GOLD_CMAKE_ON=		-DLLVM_BINUTILS_INCDIR=${LOCALBASE}/include
 GOLD_EXTRA_PATCHES_OFF=	${PATCHDIR}/gold-off-llvm_tools_CMakeLists.txt
+GOLD_PLIST_FILES=	${LLVM_DIR}/lib/LLVMgold.so
 LIT_DESC=		Install lit and FileCheck test tools
 LIT_VARS=		_USES_PYTHON=python
 LLD_DESC=		Install lld, the LLVM linker
@@ -480,14 +479,6 @@ post-patch-LLD-on:
 	    ${WRKSRC}/lld/docs/conf.py
 
 post-install:
-# GhostBSD: remove shared libs now provided by devel/llvm18-libs (do not remove)
-	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLLVM.so.${LLVM_MAJOR_MINOR}
-	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLTO.so.${LLVM_MAJOR_MINOR}
-	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libRemarks.so.${LLVM_MAJOR_MINOR}
-	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLLVM-${LLVM_MAJOR}.so
-	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLLVM.so
-	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libLTO.so
-	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/libRemarks.so
 	${INSTALL_SCRIPT} ${WRKDIR}/llvm-wrapper.sh \
 	    ${STAGEDIR}${PREFIX}/bin/${FIRST_COMMAND}${LLVM_SUFFIX}
 .for command in ${COMMANDS:C/^/XXXX/1:NXXXX*}

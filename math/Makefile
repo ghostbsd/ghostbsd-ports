@@ -52,6 +52,7 @@
     SUBDIR += R-cran-combinat
     SUBDIR += R-cran-conf.design
     SUBDIR += R-cran-conquer
+    SUBDIR += R-cran-corpcor
     SUBDIR += R-cran-cvar
     SUBDIR += R-cran-date
     SUBDIR += R-cran-ddalpha
@@ -62,6 +63,7 @@
     SUBDIR += R-cran-dplyr
     SUBDIR += R-cran-eRm
     SUBDIR += R-cran-energy
+    SUBDIR += R-cran-epitools
     SUBDIR += R-cran-exactRankTests
     SUBDIR += R-cran-expm
     SUBDIR += R-cran-forcats
@@ -98,6 +100,7 @@
     SUBDIR += R-cran-maps
     SUBDIR += R-cran-mathjaxr
     SUBDIR += R-cran-matrixStats
+    SUBDIR += R-cran-matrixcalc
     SUBDIR += R-cran-maxLik
     SUBDIR += R-cran-mclust
     SUBDIR += R-cran-mcmc
@@ -138,6 +141,7 @@
     SUBDIR += R-cran-quadprog
     SUBDIR += R-cran-qualityTools
     SUBDIR += R-cran-quantreg
+    SUBDIR += R-cran-ranger
     SUBDIR += R-cran-raster
     SUBDIR += R-cran-recipes
     SUBDIR += R-cran-reformulas
@@ -971,6 +975,7 @@
     SUBDIR += py-arviz-stats
     SUBDIR += py-arybo
     SUBDIR += py-autograd
+    SUBDIR += py-autograd-gamma
     SUBDIR += py-awkward
     SUBDIR += py-awkward-cpp
     SUBDIR += py-baycomp
@@ -1126,6 +1131,7 @@
     SUBDIR += py-pygsl
     SUBDIR += py-pyhdfe
     SUBDIR += py-pyhull
+    SUBDIR += py-pylinalg
     SUBDIR += py-pymc3
     SUBDIR += py-pynauty
     SUBDIR += py-pyneqsys

@@ -30,6 +30,7 @@
     SUBDIR += R-cran-magick
     SUBDIR += R-cran-munsell
     SUBDIR += R-cran-pROC
+    SUBDIR += R-cran-patchwork
     SUBDIR += R-cran-pdftools
     SUBDIR += R-cran-pixmap
     SUBDIR += R-cran-plotrix
@@ -872,6 +873,7 @@
     SUBDIR += plantuml
     SUBDIR += plasma-kmod
     SUBDIR += plasma6-spectacle
+    SUBDIR += plasma6lts-spectacle
     SUBDIR += plotutils
     SUBDIR += plutosvg
     SUBDIR += plutovg
@@ -937,6 +939,7 @@
     SUBDIR += py-descartes
     SUBDIR += py-diplib
     SUBDIR += py-dj60-sorl-thumbnail
+    SUBDIR += py-dj61-sorl-thumbnail
     SUBDIR += py-django-easy-thumbnails
     SUBDIR += py-easyocr
     SUBDIR += py-exifread
@@ -1013,6 +1016,7 @@
     SUBDIR += py-piexif
     SUBDIR += py-pillow
     SUBDIR += py-pillow-heif
+    SUBDIR += py-pillow-jxl-plugin
     SUBDIR += py-pivy
     SUBDIR += py-plotly
     SUBDIR += py-png
@@ -1031,6 +1035,7 @@
     SUBDIR += py-pyganim
     SUBDIR += py-pygeoapi
     SUBDIR += py-pygeos
+    SUBDIR += py-pygfx
     SUBDIR += py-pyglet
     SUBDIR += py-pyglet1
     SUBDIR += py-pyglm

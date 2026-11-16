@@ -40,6 +40,7 @@
     SUBDIR += asterisk-g72x
     SUBDIR += asterisk20
     SUBDIR += asterisk22
+    SUBDIR += asterisk24
     SUBDIR += astron
     SUBDIR += avahi
     SUBDIR += avahi-app
@@ -305,7 +306,6 @@
     SUBDIR += isc-dhcp44-server
     SUBDIR += istgt
     SUBDIR += iwnet
-    SUBDIR += java-beepcore
     SUBDIR += jcifs
     SUBDIR += jgroups
     SUBDIR += jose
@@ -558,6 +558,7 @@
     SUBDIR += nmsg
     SUBDIR += nncp
     SUBDIR += nng
+    SUBDIR += nng1
     SUBDIR += norm
     SUBDIR += nqptp
     SUBDIR += nsc-tui
@@ -1149,6 +1150,7 @@
     SUBDIR += py-python-ipware
     SUBDIR += py-python-keystoneclient
     SUBDIR += py-python-ldap
+    SUBDIR += py-python-manilaclient
     SUBDIR += py-python-neutronclient
     SUBDIR += py-python-novaclient
     SUBDIR += py-python-openstackclient
@@ -1301,7 +1303,9 @@
     SUBDIR += rubygem-cloudflare
     SUBDIR += rubygem-connection_pool
     SUBDIR += rubygem-connection_pool-gitlab
+    SUBDIR += rubygem-connection_pool2
     SUBDIR += rubygem-devfile
+    SUBDIR += rubygem-dnsimple
     SUBDIR += rubygem-docker-api
     SUBDIR += rubygem-dogapi
     SUBDIR += rubygem-domain_name
@@ -1411,6 +1415,7 @@
     SUBDIR += rubygem-nats-pure-gitlab
     SUBDIR += rubygem-net-http2
     SUBDIR += rubygem-net-ldap
+    SUBDIR += rubygem-net-ldap-gitlab
     SUBDIR += rubygem-net-ldap017
     SUBDIR += rubygem-net-netrc
     SUBDIR += rubygem-net-ntp
@@ -1493,6 +1498,7 @@
     SUBDIR += rubygem-t
     SUBDIR += rubygem-train
     SUBDIR += rubygem-train-core
+    SUBDIR += rubygem-train-core-gitlab
     SUBDIR += rubygem-train-rest
     SUBDIR += rubygem-train-winrm
     SUBDIR += rubygem-tweetstream
@@ -1507,6 +1513,10 @@
     SUBDIR += rubygem-uri_template
     SUBDIR += rubygem-whois
     SUBDIR += rubygem-x
+    SUBDIR += rubygem-x-core
+    SUBDIR += rubygem-x-resources
+    SUBDIR += rubygem-x-streams
+    SUBDIR += rubygem-x-uploads
     SUBDIR += rubygem-xmlrpc
     SUBDIR += rude
     SUBDIR += rustconn
@@ -1589,6 +1599,7 @@
     SUBDIR += stc
     SUBDIR += stone
     SUBDIR += storj
+    SUBDIR += stu
     SUBDIR += stund
     SUBDIR += subnetcalc
     SUBDIR += suckblow

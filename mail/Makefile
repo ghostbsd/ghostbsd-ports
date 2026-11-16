@@ -167,6 +167,7 @@
     SUBDIR += imap-tools
     SUBDIR += imapdedup
     SUBDIR += imapfilter
+    SUBDIR += imapgoose
     SUBDIR += imapsync
     SUBDIR += imaptools
     SUBDIR += imaputils
@@ -209,9 +210,6 @@
     SUBDIR += mailgraph
     SUBDIR += mailhog
     SUBDIR += mailio
-    SUBDIR += mailman
-    SUBDIR += mailman-exim4
-    SUBDIR += mailman-postfix
     SUBDIR += mailman3
     SUBDIR += mailpit
     SUBDIR += mailscanner
@@ -219,7 +217,6 @@
     SUBDIR += mailutils
     SUBDIR += mailx
     SUBDIR += mairix
-    SUBDIR += masqmail
     SUBDIR += mb2md
     SUBDIR += mbar
     SUBDIR += mblaze
@@ -478,7 +475,6 @@
     SUBDIR += perdition
     SUBDIR += pflogsumm
     SUBDIR += pfqueue
-    SUBDIR += php80-mailparse
     SUBDIR += php82-imap
     SUBDIR += php83-imap
     SUBDIR += phplist
@@ -503,6 +499,7 @@
     SUBDIR += postfix-policyd-spf-perl
     SUBDIR += postfix-policyd-weight
     SUBDIR += postfix-postfwd
+    SUBDIR += postfix_exporter
     SUBDIR += postfixadmin
     SUBDIR += postfixadmin-lite
     SUBDIR += postfixadmin33
@@ -538,6 +535,7 @@
     SUBDIR += py-mailnag
     SUBDIR += py-mailsuite
     SUBDIR += py-managesieve3
+    SUBDIR += py-minismtpd
     SUBDIR += py-notmuch
     SUBDIR += py-notmuch2
     SUBDIR += py-offlineimap
@@ -650,6 +648,7 @@
     SUBDIR += rubygem-net-smtp
     SUBDIR += rubygem-pony
     SUBDIR += rubygem-premailer
+    SUBDIR += rubygem-premailer-gitlab
     SUBDIR += rubygem-premailer-rails
     SUBDIR += rubygem-premailer-rails-rails-gitlab
     SUBDIR += rubygem-premailer-rails-rails5
@@ -754,6 +753,9 @@
     SUBDIR += ssmtp
     SUBDIR += stalwart
     SUBDIR += stalwart-cli
+    SUBDIR += stalwart-migrate
+    SUBDIR += stalwart-proxy
+    SUBDIR += stalwart016
     SUBDIR += surblhost
     SUBDIR += swaks
     SUBDIR += sylpheed
@@ -764,6 +766,7 @@
     SUBDIR += thunderbird
     SUBDIR += thunderbird-dictionaries
     SUBDIR += thunderbird-esr
+    SUBDIR += tidemail
     SUBDIR += tlb
     SUBDIR += tmpmail
     SUBDIR += tpop3d
@@ -771,6 +774,7 @@
     SUBDIR += up-imapproxy
     SUBDIR += usendmail
     SUBDIR += vacation
+    SUBDIR += vandelay
     SUBDIR += vbsfilter
     SUBDIR += vexim
     SUBDIR += vpopmail

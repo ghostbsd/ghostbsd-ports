@@ -11,14 +11,14 @@ LICENSE=	LGPL21
 
 LIB_DEPENDS=	libxapian.so:databases/xapian-core
 
-USES=		cmake compiler:c++11-lib gettext kde:6 qt:6 tar:xz
-USE_KDE=	auth codecs completion config configwidgets coreaddons crash \
-		i18n itemmodels kcmutils ktextaddons libplasma package runner \
-		service widgetsaddons \
+USES=		cmake gettext-tools kde:6 qt:6 tar:xz
+# KDE Frameworks
+USE_KDE=	calendarcore config contacts crash dbusaddons i18n \
+		kcmutils kio ktextaddons mime runner \
 		ecm:build
-# pim components
-USE_KDE+=	akonadi akonadimime calendarcore contacts mime
-USE_QT=		base
+# KDE PIM
+USE_KDE+=	akonadi akonadimime
+USE_QT=		base declarative
 USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr

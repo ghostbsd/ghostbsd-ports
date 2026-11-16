@@ -1,6 +1,5 @@
 PORTNAME=	acme
-PORTVERSION=	0.4.1
-PORTREVISION=	7
+PORTVERSION=	0.4.2
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/nginx/nginx-${PORTNAME}/releases/download/v${PORTVERSION}/:acme \
 		https://nginx.org/download/:nginx
@@ -52,7 +51,7 @@ NGINX_VERSION=	${NGINX_VERSION_DEFAULT}
 .endif
 
 CPE_VENDOR=	f5
-CPE_PRODUCT=	nginx-acme
+CPE_PRODUCT=	nginx_acme
 
 CARGO_ENV+=		NGINX_BUILD_DIR=${WRKDIR}/nginx-${NGINX_VERSION}/objs
 NGX_CONFIGURE_ARGS=	--with-compat --with-cc-opt="-I ${LOCALBASE}/include" \

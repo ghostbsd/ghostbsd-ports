@@ -193,8 +193,10 @@
     SUBDIR += cfengine-masterfiles-lts
     SUBDIR += cfengine-masterfiles327
     SUBDIR += cfengine-masterfiles328
+    SUBDIR += cfengine-masterfiles329
     SUBDIR += cfengine327
     SUBDIR += cfengine328
+    SUBDIR += cfengine329
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -287,7 +289,6 @@
     SUBDIR += ddrescueview
     SUBDIR += debhelper
     SUBDIR += debootstrap
-    SUBDIR += dekit
     SUBDIR += deltarpm
     SUBDIR += deltup
     SUBDIR += deskflow
@@ -552,6 +553,7 @@
     SUBDIR += httplog
     SUBDIR += hw-probe
     SUBDIR += hwstat
+    SUBDIR += hyfetch
     SUBDIR += hyprpolkitagent
     SUBDIR += i2c-tools
     SUBDIR += i7z
@@ -681,6 +683,7 @@
     SUBDIR += libg15
     SUBDIR += libg15render
     SUBDIR += libieee1284
+    SUBDIR += libmbus
     SUBDIR += libptytty
     SUBDIR += libsunacl
     SUBDIR += libsysstat
@@ -741,13 +744,13 @@
     SUBDIR += lxsplit
     SUBDIR += lxtask
     SUBDIR += lxterminal
+    SUBDIR += mac_igmpproxy
     SUBDIR += mac_nonet
     SUBDIR += mac_rtprio
     SUBDIR += mackerel-agent
     SUBDIR += magicrescue
     SUBDIR += magika
     SUBDIR += manck
-    SUBDIR += mapchan
     SUBDIR += mapdir
     SUBDIR += massadmin
     SUBDIR += mate-control-center
@@ -1042,6 +1045,18 @@
     SUBDIR += plasma6-polkit-kde-agent-1
     SUBDIR += plasma6-powerdevil
     SUBDIR += plasma6-systemsettings
+    SUBDIR += plasma6lts-discover
+    SUBDIR += plasma6lts-kde-cli-tools
+    SUBDIR += plasma6lts-kinfocenter
+    SUBDIR += plasma6lts-kmenuedit
+    SUBDIR += plasma6lts-knighttime
+    SUBDIR += plasma6lts-ksystemstats
+    SUBDIR += plasma6lts-libksysguard
+    SUBDIR += plasma6lts-plasma-disks
+    SUBDIR += plasma6lts-plasma-systemmonitor
+    SUBDIR += plasma6lts-polkit-kde-agent-1
+    SUBDIR += plasma6lts-powerdevil
+    SUBDIR += plasma6lts-systemsettings
     SUBDIR += plconfig
     SUBDIR += plocate
     SUBDIR += pmt
@@ -1179,6 +1194,7 @@
     SUBDIR += py-tldr
     SUBDIR += py-tmuxp
     SUBDIR += py-uptime
+    SUBDIR += py-zfsstat
     SUBDIR += qchroot
     SUBDIR += qdirstat
     SUBDIR += qflipper
@@ -1299,6 +1315,7 @@
     SUBDIR += rubygem-mothra
     SUBDIR += rubygem-murder
     SUBDIR += rubygem-ohai
+    SUBDIR += rubygem-ohai-gitlab
     SUBDIR += rubygem-ohai18
     SUBDIR += rubygem-openbolt
     SUBDIR += rubygem-openfact
@@ -1539,6 +1556,7 @@
     SUBDIR += u-boot-bhyve-riscv
     SUBDIR += u-boot-chip
     SUBDIR += u-boot-clearfog
+    SUBDIR += u-boot-cm3588
     SUBDIR += u-boot-cubieboard
     SUBDIR += u-boot-cubieboard2
     SUBDIR += u-boot-cubox-hummingboard
@@ -1649,6 +1667,7 @@
     SUBDIR += virt-firmware
     SUBDIR += virt-what
     SUBDIR += virtualmin
+    SUBDIR += vitaly
     SUBDIR += vivid
     SUBDIR += vm-bhyve
     SUBDIR += vm-bhyve-devel

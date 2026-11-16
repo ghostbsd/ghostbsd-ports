@@ -7,8 +7,6 @@
     SUBDIR += apache-commons-collections
     SUBDIR += apache-commons-collections4
     SUBDIR += apache-commons-dbcp
-    SUBDIR += apache-commons-httpclient
-    SUBDIR += apache-commons-lang
     SUBDIR += apache-commons-lang3
     SUBDIR += apache-commons-logging
     SUBDIR += apache-commons-pool
@@ -41,7 +39,6 @@
     SUBDIR += jattach
     SUBDIR += java-cup
     SUBDIR += java-getopt
-    SUBDIR += java-subversion
     SUBDIR += java-zoneinfo
     SUBDIR += java3d
     SUBDIR += javacpp

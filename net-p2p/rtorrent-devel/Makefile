@@ -1,5 +1,5 @@
 PORTNAME=	rtorrent
-DISTVERSION=	0.16.27
+DISTVERSION=	0.16.28
 CATEGORIES=	net-p2p
 MASTER_SITES=	https://github.com/rakshasa/rtorrent/releases/download/v${DISTVERSION}/
 PKGNAMESUFFIX=	-devel
@@ -23,7 +23,6 @@ CONFIGURE_ARGS=	--disable-debug \
 
 TEST_ARGS=	CPPUNIT_LIBS="-L${LOCALBASE}/lib -lcppunit"
 TEST_TARGET=	check
-TESTING_UNSAFE=	https://github.com/rakshasa/rtorrent/issues/2082
 
 CONFLICTS_INSTALL=	rtorrent
 

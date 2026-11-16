@@ -1,17 +1,17 @@
 --- package.json.orig	2026-09-25 10:10:02 UTC
 +++ package.json
-@@ -346,17 +346,20 @@
-     "zod": "4.3.6"
+@@ -364,17 +364,21 @@
+     "zod": "4.6.6"
    },
    "engines": {
--    "node": "24.19.0"
+-    "node": "24.22.1"
 +    "node": ""
    },
    "devEngines": {
      "runtime": {
--      "name": "node",
--      "version": "24.19.0"
-+      "name": "node"
+       "name": "node",
+-      "version": "24.22.1"
++      "version": ""
      },
 -    "packageManager": {
 -      "name": "pnpm",
@@ -28,3 +28,11 @@
    },
    "build": {
      "appId": "org.whispersystems.signal-desktop",
+@@ -660,6 +664,6 @@
+     ]
+   },
+   "volta": {
+-    "node": "24.22.1"
++    "node": ""
+   }
+ }

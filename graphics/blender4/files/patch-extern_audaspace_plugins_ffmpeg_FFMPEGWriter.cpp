@@ -1,9 +1,11 @@
-From e3c92c22817dc0310a460c22f6b1e8e397517e3b Mon Sep 17 00:00:00 2001
-From: =?UTF-8?q?J=C3=B6rg=20M=C3=BCller?= <nexyon@gmail.com>
-Date: Wed, 19 Aug 2026 18:22:35 +0200
-Subject: [PATCH] Audaspace: port ffmpeg 9 support from upstream.
+Description: Fix build with FFmpeg 9 (AVCodec::sample_fmts and
+ supported_samplerates were removed): query them with
+ avcodec_get_supported_config(). Same patch as graphics/blender.
+Issue ID: none
+Changeset: https://projects.blender.org/blender/blender/commit/e3c92c22817dc0310a460c22f6b1e8e397517e3b
+TODO: none
 
---- extern/audaspace/plugins/ffmpeg/FFMPEGWriter.cpp.orig	2025-10-08 10:41:55 UTC
+--- extern/audaspace/plugins/ffmpeg/FFMPEGWriter.cpp.orig	2025-07-10 09:43:06 UTC
 +++ extern/audaspace/plugins/ffmpeg/FFMPEGWriter.cpp
 @@ -38,6 +38,10 @@ AUD_NAMESPACE_BEGIN
  #if LIBAVCODEC_VERSION_MAJOR < 59

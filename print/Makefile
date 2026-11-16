@@ -160,6 +160,7 @@
     SUBDIR += pkfonts400
     SUBDIR += pkfonts600
     SUBDIR += plasma6-print-manager
+    SUBDIR += plasma6lts-print-manager
     SUBDIR += plutobook
     SUBDIR += pnm2ppa
     SUBDIR += posterazor
@@ -177,6 +178,7 @@
     SUBDIR += py-dehinter
     SUBDIR += py-font-v
     SUBDIR += py-fontaine
+    SUBDIR += py-fontbakery
     SUBDIR += py-fontparts
     SUBDIR += py-fontpens
     SUBDIR += py-fonttools

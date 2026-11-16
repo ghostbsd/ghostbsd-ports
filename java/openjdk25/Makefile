@@ -1,6 +1,7 @@
 PORTNAME=	openjdk
 DISTVERSIONPREFIX=	jdk-
 DISTVERSION=	${JDK_FULL_VERSION:S/.0.0//}
+PORTREVISION=	2
 CATEGORIES=	java devel
 MASTER_SITES=	LOCAL/openjdk:boot
 PKGNAMESUFFIX?=	${JDK_MAJOR_VERSION}
@@ -187,6 +188,7 @@ pre-configure:
 		-e 's|%%ICONV_LDFLAGS%%|${ICONV_LDFLAGS}|' \
 		-e 's|%%ICONV_LIBS%%|${ICONV_LIBS}|' \
 		${WRKSRC}/make/autoconf/libraries.m4
+	@${ELFCTL} -i -e +wxneeded ${BOOTSTRAPJDKDIR}/bin/*
 
 post-build:
 .if defined(OPENJDK_SYMLINK_CACERTS)

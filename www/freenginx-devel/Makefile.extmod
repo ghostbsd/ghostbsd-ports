@@ -44,7 +44,7 @@ ECHO_GH_TUPLE=		openresty:echo-nginx-module:ebed47c:echo
 ECHO_VARS=		DSO_EXTMODS+=echo
 
 DRIZZLE_GH_TUPLE=	openresty:drizzle-nginx-module:3b4cb3d:drizzle
-DRIZZLE_CONFIGURE_ENV=	LIBDRIZZLE_INC=${LOCALBASE}/include \
+DRIZZLE_CONFIGURE_ENV=	LIBDRIZZLE_INC=${LOCALBASE}/include/libdrizzle-1.0 \
 			LIBDRIZZLE_LIB=${LOCALBASE}/lib
 DRIZZLE_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-openresty-drizzle-nginx-module-config
 DRIZZLE_LIB_DEPENDS=	libdrizzle.so:databases/libdrizzle
@@ -274,7 +274,7 @@ OTEL_LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 			libre2.so:devel/re2
 OTEL_VARS=		DSO_EXTMODS+=otel OTEL_SUBDIR=/
 
-PASSENGER_NGINX_VER=	6.2.0
+PASSENGER_NGINX_VER=	6.2.1
 PASSENGER_MASTER_SITES=	https://s3.amazonaws.com/phusion-passenger/releases/:passenger
 PASSENGER_DISTFILES=	passenger-${PASSENGER_NGINX_VER}.tar.gz:passenger
 PASSENGER_BUILD_DEPENDS=${LOCALBASE}/bin/rake:devel/rubygem-rake

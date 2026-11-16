@@ -1,12 +1,9 @@
 PORTNAME=	gtk
-PORTVERSION=	4.20.4
+PORTVERSION=	4.22.5
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	4
 DIST_SUBDIR=	gnome
-
-PATCH_SITES=	https://gitlab.gnome.org/GNOME/gtk/-/commit/
-PATCHFILES=	047c8e64d4156897776ec2bc3d0613a81cfe7ad1.patch:-p1
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Gimp Toolkit for X11 GUI (current stable version)
@@ -49,7 +46,7 @@ BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 PORTSCOUT=	limit:1,even
 
-LIBVERSION=	1.2000.4
+LIBVERSION=	1.2200.5
 PLIST_SUB+=	LIBVERSION=${LIBVERSION}
 
 OPTIONS_DEFINE=	ACCESSKIT BASH CUPS COLORD DEBUG BROADWAY GSTREAMER VULKAN \
@@ -68,7 +65,8 @@ X11_DESC=		GDK X11 backend
 ACCESSKIT_LIB_DEPENDS=	libaccesskit-c-0.17.so:accessibility/accesskit-c
 ACCESSKIT_MESON_ENABLED=	accesskit
 
-BASH_BUILD_DEPENDS=	bash-completion>0:shells/bash-completion
+BASH_BUILD_DEPENDS=	${LOCALBASE}/bin/bash:shells/bash \
+			bash-completion>0:shells/bash-completion
 
 BROADWAY_MESON_TRUE=	broadway-backend
 

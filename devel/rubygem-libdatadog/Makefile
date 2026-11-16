@@ -1,11 +1,11 @@
 PORTNAME=	libdatadog
-PORTVERSION=	40.0.0.2.0
+PORTVERSION=	48.0.0.1.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Rust-based utility library for Datadog ddtrace gem
-WWW=		https://github.com/DataDog/libdatadog/tree/main/ruby
+WWW=		https://github.com/datadog/libdatadog-rb
 
 LICENSE=	APACHE20
 

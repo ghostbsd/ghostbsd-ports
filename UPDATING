@@ -5,6 +5,135 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20261111:
+  AFFECTS: users of net-mgmt/netbox
+  AUTHOR: kai@FreeBSD.org
+
+  1. The NetBox 4.7 release contains some breaking changes, so the following
+     items should be checked before upgrading:
+
+     * NetBox now requires PostgreSQL 15 or later: The upgrade script will
+       abort when connected to an earlier release.  (NetBox v4.6 reported
+       this as a warning.)
+
+     * The PostgreSQL database must support the "ltree" extension. This is a
+       trusted module which ships with the PostgreSQL contrib utilities
+       (e.g. postgresql-contrib18 for PostgreSQL 18) and does not require
+       superuser permission to activate.
+
+       The following command can be used to check whether the "ltree"
+       extension is available:
+
+       => SELECT * FROM pg_available_extensions WHERE name = 'ltree';
+
+     * Redis 5.x is no longer supported. NetBox now requires Redis 6.0 or
+       later.
+
+     * The py-netbox-secrets plugin v3.1.2 is not yet compatible with
+       NetBox 4.7 and can no longer be used after upgrading.
+
+  2. Please also check the pkg-message and the changelogs for further info.
+
+20261109:
+  AFFECTS: users of chinese/gcin
+  AUTHOR: vanilla@FreeBSD.org
+
+  The ANTHY option of chinese/gcin has been removed. The Anthy input
+  method module is now built by a separate slave port,
+  chinese/gcin-anthy, which depends on chinese/gcin.
+
+  If you built chinese/gcin with the ANTHY option, the old package
+  contains the files now installed by gcin-anthy. Remove it first,
+  then install the new port:
+
+    # pkg delete gcin
+    # pkg install gcin-anthy
+
+  or, when building from ports:
+
+    # pkg delete gcin
+    # cd /usr/ports/chinese/gcin-anthy && make install clean
+
+  chinese/gcin is installed again as a dependency of gcin-anthy.
+  Then restart gcin.
+
+20261107:
+  AFFECTS: users of net/rustdesk-server
+  AUTHOR: madpilot@madpilot.net
+
+  Rustdesk-server requires the HOME environment variable to point to its
+  DB directory to store configuration.
+  In port versions lower than 1.1.16_4 the user created by the port was
+  missing such home directory setting.
+  If you install the port with no existing rustdesk user, now the user
+  will be created with the appropriate setting.
+  If you are updating or installing on a system where the rustdesk user
+  already exists, please modify your passwd file and add
+  "/var/db/rustdesk-server" as the home directory for the user.
+
+20261107:
+  AFFECTS: users of mail/stalwart
+  AUTHOR: samm@os2.kiev.ua
+
+  mail/stalwart has been updated to 1.0.3.  The 1.0 data store layout is
+  not compatible with 0.16 and cannot be upgraded in place.  Users of
+  0.16 must migrate their data to a new 1.x store with
+  mail/stalwart-migrate; the previous 0.16.27 version is available as
+  mail/stalwart016.  Keep mail/stalwart016 installed until the migration
+  is complete.  mail/stalwart016 is deprecated and scheduled for removal
+  on 2027-11-02.
+
+20261101:
+  AFFECTS: users of devel/subversion
+  AUTHOR: michaelo@apache.org
+
+  The port has been updated to 1.15.0 and received a full rework of
+  both the master and slave ports, not just a version bump. A lot of
+  content that used to ship has been thrown out: the TOOLS option now
+  only gates a handful of genuinely niche binaries (svnauthz,
+  svnauthz-validate, and svnbench moved into the core package); the
+  svnmover, fsfs-access-map, and x509-parser tools are no longer
+  built or installed at all; fsfs-stats is renamed to svnfsfs-stats;
+  and the example-scripts DATADIR no longer ships upstream's
+  contributor/CI/release tooling (dist/, buildbot/, po/, dev/,
+  examples/, client-side/, server-side/, backup/) -- only xslt/ is
+  still installed unconditionally, with hook-scripts/ moved behind a
+  new HOOKS option. Repository creation (the old WITH_REPOSITORY_CREATION
+  knob) has also been dropped entirely; that is now solely the admin's
+  job, not the port's.
+
+  Separately, the svnserve user and group are now managed through the
+  ports framework (USERS=/GROUPS=, registered in the tree's UIDs/GIDs
+  files) instead of the port's own pw useradd/groupadd logic. The
+  standard home directory for the svn account is now /var/db/svn,
+  matching svnserve's own rc.d default. If you already have a
+  manually-created svn user/group from a previous install with a
+  different home directory (e.g. /home/svn), either migrate your data
+  to /var/db/svn or edit the svn user's home directory accordingly;
+  the port will not do this for you.
+
+20261031:
+  AFFECTS: users of devel/subversion
+  AUTHOR: michaelo@apache.org
+
+  The BDB option has been removed. Berkeley DB support in Subversion has
+  been deprecated upstream for over a decade; the port now always builds
+  with --without-berkeley-db --disable-bdb6. If you were using the BDB
+  filesystem backend, you must migrate your repositories to FSFS before
+  upgrading:
+
+  # svnadmin dump /path/to/repo > repo.dump
+  # svnadmin create --fs-type fsfs /path/to/new-repo
+  # svnadmin load /path/to/new-repo < repo.dump
+
+20261030:
+  AFFECTS: users of devel/java-subversion
+  AUTHOR: michaelo@apache.org
+
+  The installed svn-javahl.jar has moved from lib/svn-javahl/svn-javahl.jar
+  to the standard JAVAJARDIR location. Update any classpath references
+  accordingly.
+
 20261024:
   AFFECTS: users of devel/phorgeit-phorge
   AUTHOR: grembo@FreeBSD.org
@@ -66,7 +195,7 @@ you update your ports collection, before attempting any port upgrades.
   The default is lmdb0 for now.
 
   If you want/need to use lmdb1, you will need to build the package
-  with apropriate lmdb version selected.
+  with appropriate lmdb version selected.
 
 20261002:
   AFFECTS: users of www/nginx-devel

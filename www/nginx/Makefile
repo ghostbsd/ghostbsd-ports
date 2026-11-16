@@ -1,7 +1,7 @@
 PORTNAME=	nginx
 PORTVERSION=	${NGINX_VERSION}
 .include "version.mk"
-PORTREVISION=	6
+PORTREVISION=	18
 PORTEPOCH=	3
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/ \
@@ -22,7 +22,7 @@ PORTSCOUT=	limit:^1\.30\.[0-9]*
 USES=		cpe
 
 CPE_VENDOR=	f5
-CPE_PRODUCT=	nginx
+CPE_PRODUCT=	nginx_open_source
 USE_GITHUB=	nodefault
 
 NGINX_VARDIR?=	/var
@@ -295,21 +295,24 @@ post-patch:
 		s!%%NGINX_ERRORLOG%%!${NGINX_ERRORLOG}!' \
 		${WRKSRC}/conf/nginx.conf
 
-post-patch-BROTLI-on:
-	@${REINPLACE_CMD} 's!%%PREFIX%%!${LOCALBASE}!g' ${WRKSRC_brotli}/filter/config
-
-post-patch-DRIZZLE-on:
-	@${REINPLACE_CMD} 's!%%PREFIX%%!${LOCALBASE}!g' ${WRKSRC_drizzle}/config
 
 post-patch-FASTDFS-on:
 	@${REINPLACE_CMD} \
 		's!%%PREFIX%%!${PREFIX}!g;s!%%LOCALBASE%%!${LOCALBASE}!g' \
 		${WRKSRC_fastdfs}/src/config
 
-post-patch-HTTP_AUTH_KRB5-on:
+pre-configure-HTTP_AUTH_KRB5-on:
+	@${RM} -rf ${WRKSRC_auth_krb5}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-auth-krb5 ${WRKSRC_auth_krb5}
+	@${CHMOD} -R u+w ${WRKSRC_auth_krb5}
 	@${REINPLACE_CMD} 's!%%GSSAPILIBS%%!${GSSAPILIBS}!g; \
 		s!%%GSSAPIINCDIR%%!${GSSAPIINCDIR}!g; \
 		s!%%GSSAPILIBDIR%%!${GSSAPILIBDIR}!g' ${WRKSRC_auth_krb5}/config
+
+pre-configure-HTTP_IP2LOCATION-on:
+	@${RM} -rf ${WRKSRC_ip2location}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-ip2location ${WRKSRC_ip2location}
+	@${CHMOD} -R u+w ${WRKSRC_ip2location}
 
 post-patch-HTTP_TARANTOOL-on:
 	@${REINPLACE_CMD} 's!%%PREFIX%%!${LOCALBASE}!g' ${WRKSRC_nginx_tarantool}/config
@@ -332,6 +335,11 @@ pre-configure-AWS_AUTH-on:
 	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-aws-auth ${WRKSRC_aws_auth}
 	@${CHMOD} -R u+w ${WRKSRC_aws_auth}
 
+pre-configure-BROTLI-on:
+	@${RM} -rf ${WRKSRC_brotli}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-brotli ${WRKSRC_brotli}
+	@${CHMOD} -R u+w ${WRKSRC_brotli}
+
 pre-configure-CACHE_PURGE-on:
 	@${RM} -rf ${WRKSRC_cache_purge}
 	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-cache-purge ${WRKSRC_cache_purge}
@@ -346,6 +354,21 @@ pre-configure-DEVEL_KIT-on:
 	@${RM} -rf ${WRKSRC_devel_kit}
 	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-ndk ${WRKSRC_devel_kit}
 	@${CHMOD} -R u+w ${WRKSRC_devel_kit}
+
+pre-configure-DRIZZLE-on:
+	@${RM} -rf ${WRKSRC_drizzle}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-drizzle ${WRKSRC_drizzle}
+	@${CHMOD} -R u+w ${WRKSRC_drizzle}
+
+pre-configure-DYNAMIC_UPSTREAM-on:
+	@${RM} -rf ${WRKSRC_dynamic_upstream}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-dynamic-upstream ${WRKSRC_dynamic_upstream}
+	@${CHMOD} -R u+w ${WRKSRC_dynamic_upstream}
+
+pre-configure-ECHO-on:
+	@${RM} -rf ${WRKSRC_echo}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-echo ${WRKSRC_echo}
+	@${CHMOD} -R u+w ${WRKSRC_echo}
 
 pre-configure-FIPS_CHECK-on:
 	@${RM} -rf ${WRKSRC_fipscheck}
@@ -362,10 +385,55 @@ pre-configure-GRIDFS-on:
 	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-gridfs ${WRKSRC_gridfs}
 	@${CHMOD} -R u+w ${WRKSRC_gridfs}
 
+pre-configure-HEADERS_MORE-on:
+	@${RM} -rf ${WRKSRC_headers_more}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-headers-more ${WRKSRC_headers_more}
+	@${CHMOD} -R u+w ${WRKSRC_headers_more}
+
 pre-configure-HTTP_ACCEPT_LANGUAGE-on:
 	@${RM} -rf ${WRKSRC_accept_language}
 	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-accept-language ${WRKSRC_accept_language}
 	@${CHMOD} -R u+w ${WRKSRC_accept_language}
+
+pre-configure-HTTP_EVAL-on:
+	@${RM} -rf ${WRKSRC_eval}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-eval ${WRKSRC_eval}
+	@${CHMOD} -R u+w ${WRKSRC_eval}
+
+pre-configure-HTTP_FOOTER-on:
+	@${RM} -rf ${WRKSRC_footer}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-footer ${WRKSRC_footer}
+	@${CHMOD} -R u+w ${WRKSRC_footer}
+
+pre-configure-HTTP_UPLOAD-on:
+	@${RM} -rf ${WRKSRC_upload}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-upload ${WRKSRC_upload}
+	@${CHMOD} -R u+w ${WRKSRC_upload}
+
+pre-configure-HTTP_DAV_EXT-on:
+	@${RM} -rf ${WRKSRC_dav_ext}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-dav-ext ${WRKSRC_dav_ext}
+	@${CHMOD} -R u+w ${WRKSRC_dav_ext}
+
+pre-configure-HTTP_AUTH_DIGEST-on:
+	@${RM} -rf ${WRKSRC_auth_digest}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-auth-digest ${WRKSRC_auth_digest}
+	@${CHMOD} -R u+w ${WRKSRC_auth_digest}
+
+pre-configure-HTTP_REDIS-on:
+	@${RM} -rf ${WRKSRC_redis}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-redis ${WRKSRC_redis}
+	@${CHMOD} -R u+w ${WRKSRC_redis}
+
+pre-configure-HTTP_SUBS_FILTER-on:
+	@${RM} -rf ${WRKSRC_subs_filter}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-subs-filter ${WRKSRC_subs_filter}
+	@${CHMOD} -R u+w ${WRKSRC_subs_filter}
+
+pre-configure-LINK-on:
+	@${RM} -rf ${WRKSRC_link}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-link ${WRKSRC_link}
+	@${CHMOD} -R u+w ${WRKSRC_link}
 
 pre-configure-ICONV-on:
 	@${RM} -rf ${WRKSRC_iconv}
@@ -444,15 +512,35 @@ pre-configure-NJS-on:
 	@${CHMOD} -R u+w ${WRKSRC_njs}
 	@${CHMOD} u+x ${WRKSRC_njs}/configure
 
+pre-configure-OTEL-on:
+	@${RM} -rf ${WRKSRC_otel}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-otel ${WRKSRC_otel}
+	@${CHMOD} -R u+w ${WRKSRC_otel}
+
 pre-configure-POSTGRES-on:
 	@${RM} -rf ${WRKSRC_postgres}
 	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-postgres ${WRKSRC_postgres}
 	@${CHMOD} -R u+w ${WRKSRC_postgres}
 
+pre-configure-RDS_CSV-on:
+	@${RM} -rf ${WRKSRC_rdscsv}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-rds-csv ${WRKSRC_rdscsv}
+	@${CHMOD} -R u+w ${WRKSRC_rdscsv}
+
+pre-configure-RDS_JSON-on:
+	@${RM} -rf ${WRKSRC_rdsjson}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-rds-json ${WRKSRC_rdsjson}
+	@${CHMOD} -R u+w ${WRKSRC_rdsjson}
+
 pre-configure-REDIS2-on:
 	@${RM} -rf ${WRKSRC_redis2}
 	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-redis2 ${WRKSRC_redis2}
 	@${CHMOD} -R u+w ${WRKSRC_redis2}
+
+pre-configure-SET_MISC-on:
+	@${RM} -rf ${WRKSRC_setmisc}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-set-misc ${WRKSRC_setmisc}
+	@${CHMOD} -R u+w ${WRKSRC_setmisc}
 
 pre-configure-SFLOW-on:
 	@${RM} -rf ${WRKSRC_sflow}
@@ -465,6 +553,11 @@ pre-configure-SLOWFS_CACHE-on:
 	@${RM} -rf ${WRKSRC_slowfs_cache}
 	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-slowfs-cache ${WRKSRC_slowfs_cache}
 	@${CHMOD} -R u+w ${WRKSRC_slowfs_cache}
+
+pre-configure-SRCACHE-on:
+	@${RM} -rf ${WRKSRC_srcache}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-srcache ${WRKSRC_srcache}
+	@${CHMOD} -R u+w ${WRKSRC_srcache}
 
 pre-configure-PASSENGER-on:
 	@${RM} -rf ${WRKSRC_passenger}
@@ -496,6 +589,11 @@ pre-configure-WEBSOCKIFY-on:
 	@${RM} -rf ${WRKSRC_websockify}
 	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-websockify ${WRKSRC_websockify}
 	@${CHMOD} -R u+w ${WRKSRC_websockify}
+
+pre-configure-XSS-on:
+	@${RM} -rf ${WRKSRC_xss}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-xss ${WRKSRC_xss}
+	@${CHMOD} -R u+w ${WRKSRC_xss}
 
 pre-configure-ZSTD-on:
 	@${RM} -rf ${WRKSRC_zstd}

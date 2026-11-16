@@ -1,5 +1,5 @@
 PORTNAME=	php86
-DISTVERSION=	8.6.0RC4
+DISTVERSION=	8.6.0RC7
 CATEGORIES?=	lang devel www
 #MASTER_SITES=	PHP/distributions
 MASTER_SITES=	https://downloads.php.net/~mbeccati/ \
@@ -329,17 +329,13 @@ CONFIGURE_ARGS+=	--enable-gd \
 EXTRACT_AFTER_ARGS=	--no-same-owner --no-same-permissions --exclude libgd \
 			php-${DISTVERSION}/ext/gd
 
-OPTIONS_DEFINE=	JIS WEBP X11
+OPTIONS_DEFINE=	JIS WEBP
 
 JIS_DESC=		Enable JIS-mapped Japanese font support
 WEBP_DESC=		Enable WebP image format support
-X11_DESC=		Enable XPM support
 JIS_CONFIGURE_ON=	--enable-gd-jis-conv
 WEBP_CONFIGURE_ON=	--with-webp
 WEBP_LIB_DEPENDS=	libwebp.so:graphics/webp
-X11_CONFIGURE_ON=	--with-xpm
-X11_USE=		XORG=xpm
-X11_USES=		xorg
 .  endif
 
 .  if ${PHP_MODNAME} == "gettext"
@@ -374,13 +370,7 @@ USES+=	ldap
 
 .  if ${PHP_MODNAME} == "mbstring"
 
-CONFIGURE_ARGS+=	--enable-mbstring
-
-OPTIONS_DEFINE=		REGEX
-
-REGEX_DESC=		Enable multibyte regex support
-REGEX_LIB_DEPENDS=	libonig.so:devel/oniguruma
-REGEX_CONFIGURE_OFF=	--disable-mbregex
+CONFIGURE_ARGS+=	--enable-mbstring --disable-mbregex
 
 PHP_HEADER_DIRS=	libmbfl libmbfl/filters libmbfl/mbfl libmbfl/nls
 .  endif

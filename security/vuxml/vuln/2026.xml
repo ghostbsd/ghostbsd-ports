@@ -1,3 +1,4369 @@
+  <vuln vid="36f77a27-e080-11f1-bbb3-901b0e9408dc">
+    <topic>conduit -- event redaction vulnerability</topic>
+    <affects>
+      <package>
+	<name>matrix-conduit</name>
+	<range><lt>0.10.17</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Conduit team reports:</p>
+	<blockquote cite="https://gitlab.com/famedly/conduit/-/tags/v0.10.17">
+	  <p>Fixes a vulnerability where the redaction process didn't
+	  check if the event being redacted was from the same room as
+	  the redaction event.  It is recommended you upgrade
+	  ASAP.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://gitlab.com/famedly/conduit/-/tags/v0.10.17</url>
+    </references>
+    <dates>
+      <discovery>2026-11-14</discovery>
+      <entry>2026-11-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d6484a4c-e01c-11f1-8e2f-5404a68ad561">
+    <topic>traefik -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+      <name>traefik</name>
+      <range><lt>3.7.18</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+      <p>The traefik project releases a new version addressing multiple vulnerabilities:</p>
+      <blockquote cite="https://github.com/traefik/traefik/releases/tag/v3.7.18">
+      <ul>
+      <li>GHSA-ccgh-9g52-6vwg (nginx client certificate authentication verification bypass)</li>
+      <li>GHSA-cp28-5662-543f (path-based authorization bypass)</li>
+      <li>GHSA-p956-6gvv-mxqp (ForwardAuth NTLM authentication bypass via Proxy-Authorization)</li>
+      <li>GHSA-x5pf-cqh3-2gv8 (Unauthenticated memory-exhaustion DoS)</li>
+      <li>GHSA-rr42-h8r2-f28g (Unbounded BasicAuth password length)</li>
+      </ul>
+      </blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/traefik/traefik/releases/tag/v3.7.18</url>
+    </references>
+    <dates>
+      <discovery>2026-11-10</discovery>
+      <entry>2026-11-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4d2a90c7-df51-11f1-a655-3497f65b111b">
+    <topic>FreeIPA -- multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>freeipa-server</name>
+	  <range><lt>4.13.5</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The FreeIPA project reports:</p>
+	<blockquote cite="https://www.freeipa.org/release-notes/4-13-5.html">
+	  <p>CVE-2026-53683: client-side open redirect in reset_password.html.
+	    The page takes the url query parameter as a redirection target
+	    without validating or allow-listing it, so an attacker can send a
+	    user to an arbitrary site once the password reset completes. No
+	    authentication is required, and the link appears to come from the
+	    IdM domain, which makes it useful for phishing.</p>
+	  <p>CVE-2026-86593: unauthenticated denial of service in the session
+	    endpoints login_password, change_password and sync_token. They do
+	    not limit the size of the request body, so an attacker can tie up
+	    the WSGI worker pool. That pool serves the whole /ipa application,
+	    so exhausting it also denies the Kerberos authenticated paths such
+	    as the web interface and the admin RPC. This is the same root cause
+	    already fixed for i18n_messages and migration.py, whose fix covered
+	    only a single caller.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-53683</cvename>
+      <cvename>CVE-2026-86593</cvename>
+      <url>https://www.freeipa.org/release-notes/4-13-5.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-09</discovery>
+      <entry>2026-11-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e8416dd1-df3e-11f1-8608-589cfc0f9aca">
+    <topic>MongoDB Server -- Pre-authentication use-after-free in replica set primary catch-up</topic>
+    <affects>
+      <package>
+	<name>mongodb70</name>
+	<range><lt>7.0.48</lt></range>
+      </package>
+      <package>
+	<name>mongodb80</name>
+	<range><lt>8.0.37</lt></range>
+      </package>
+      <package>
+	<name>mongodb90</name>
+	<range><lt>9.0.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MongoDB reports:</p>
+	<blockquote cite="https://www.mongodb.com/community/forums/t/important-mongodb-security-update-available-action-required-november-10-2026/344843">
+	  <p>MongoDB identified and fixed an important vulnerability
+	    (CVE-2026-118383, CVSS 9.5) that could allow unauthorized access
+	    to the MongoDB Server. We found it internally through our
+	    proactive security program, and we are not aware of any attempts
+	    to take advantage of this vulnerability.</p>
+	</blockquote>
+	<p>https://jira.mongodb.org/browse/SERVER-138119 reports:</p>
+	<blockquote cite="https://jira.mongodb.org/browse/SERVER-138119">
+	  <p>A use-after-free in the replication component of MongoDB Server
+	    can occur when a newly elected replica set primary completes
+	    catch-up. The condition can be caused by requests that do not
+	    require authentication, and may result in the server terminating
+	    unexpectedly or, under certain conditions, arbitrary code
+	    execution in the context of the server process. Replica set
+	    members are affected, including the shard and config server
+	    replica set members of sharded clusters; standalone mongod
+	    instances are not.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-118383</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-118383</url>
+      <url>https://www.mongodb.com/community/forums/t/important-mongodb-security-update-available-action-required-november-10-2026/344843</url>
+      <url>https://jira.mongodb.org/browse/SERVER-138119</url>
+      <url>https://jira.mongodb.org/browse/SERVER-138175</url>
+    </references>
+    <dates>
+      <discovery>2026-11-10</discovery>
+      <entry>2026-11-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="52ed373b-df37-11f1-8135-8447094a420f">
+    <topic>mod_http2 -- heap corruption and RCE in assign_headers</topic>
+    <affects>
+      <package>
+	<name>ap24-mod_http2</name>
+	<range><lt>2.0.43</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache httpd project reports:</p>
+	<blockquote cite="https://httpd.apache.org/security/vulnerabilities_24.html">
+	  <p>CVE-2026-119618 (critical): mod_http2: heap corruption and RCE in assign_headers</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-119618</cvename>
+      <url>https://httpd.apache.org/security/vulnerabilities_24.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-11</discovery>
+      <entry>2026-11-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a1ede43e-de8c-11f1-bae2-3497f65b111b">
+    <topic>angie -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>angie</name>
+	<range><lt>1.12.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Angie Software Team reports:</p>
+	<blockquote cite="https://en.angie.software/angie/docs/oss_changes/#angie-1-12-4">
+	  <p>When variables were used in the root or alias directives, or
+	    in the log file path of the access_log directive in the HTTP
+	    module or the access_log directive in the stream module, worker
+	    process memory corruption or a worker process crash could occur
+	    (CVE-2026-93479).</p>
+	  <p>When the ssl_session_cache directive was used with the shared
+	    parameter without the ssl_session_ticket_key directive, an
+	    attacker could forge a TLS session and bypass client certificate
+	    verification (CVE-2026-97629).</p>
+	  <p>When requests received over HTTP/3 were proxied, a part of an
+	    unknown frame might be treated as the request body, which might
+	    result in bypassing the client_max_body_size limit or injecting
+	    data into the proxied request (CVE-2026-95101).</p>
+	  <p>When the alias directive was used, if the request URI was
+	    changed by the rewrite directive and the $request_filename
+	    variable was evaluated afterwards, worker process memory
+	    corruption or a worker process crash could occur
+	    (CVE-2026-15176).</p>
+	  <p>When asynchronous file I/O (aio) was used in certain
+	    configurations, if an SSI page contained include virtual
+	    commands, worker process memory corruption or a worker process
+	    crash could occur (CVE-2026-97205).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-93479</cvename>
+      <cvename>CVE-2026-97629</cvename>
+      <cvename>CVE-2026-95101</cvename>
+      <cvename>CVE-2026-15176</cvename>
+      <cvename>CVE-2026-97205</cvename>
+      <url>https://en.angie.software/angie/docs/oss_changes/#angie-1-12-4</url>
+    </references>
+    <dates>
+      <discovery>2026-10-16</discovery>
+      <entry>2026-11-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a1ee2283-de8c-11f1-bae2-3497f65b111b">
+    <topic>angie-module-njs -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>angie-module-njs</name>
+	<range><lt>1.0.2,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The njs development team reports:</p>
+	<blockquote cite="https://nginx.org/en/docs/njs/changes.html#njs1.0.2">
+	  <p>Memory leak when parsing malformed XML in the njs engine
+	    (CVE-2026-101025).  Repeated malformed input could exhaust
+	    worker process memory.  Affects 0.7.10-1.0.1.</p>
+	  <p>Incomplete XML attribute values containing entity references
+	    (CVE-2026-101019).  JavaScript accessors could return values
+	    different from those used by XML canonicalization, affecting
+	    signed XML validation.  Affects 0.7.10-1.0.1.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101025</cvename>
+      <cvename>CVE-2026-101019</cvename>
+      <url>https://nginx.org/en/docs/njs/changes.html#njs1.0.2</url>
+      <url>https://nginx.org/en/docs/njs/security.html#advisories</url>
+    </references>
+    <dates>
+      <discovery>2026-10-14</discovery>
+      <entry>2026-11-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f8802557-dea7-11f1-bf46-901b0e13f1a0">
+    <topic>X.Org X server and Xwayland -- Multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>xorg-server</name>
+<name>xephyr</name>
+<name>xorg-vfbserver</name>
+<range><lt>21.1.26,1</lt></range>
+</package>
+<package>
+<name>xorg-nestserver</name>
+<range><lt>21.1.26,2</lt></range>
+</package>
+<package>
+<name>xwayland</name>
+<range><lt>24.1.15,1</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>X.Org reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2026-November/003759.html">
+	  <p>
+	    CVE-2026-109091: X.Org Server EDID DS_RANGES Out-Of-Bounds Write
+	    CVE-2026-109092: X.Org Server XvShmPutImage Shared-Memory Bounds Overflow
+	    CVE-2026-109093: X.Org Server XTestFakeInput Valuator Stack Out-Of-Bounds Write
+	    CVE-2026-109094: X.Org Server XRes QueryResourceBytes Swap Path Size Overflow
+	    CVE-2026-109095: X.Org Server glamor Xv Image Size Integer Overflow
+	    CVE-2026-109096: X.Org Server XvPutImage Negative Image Size Length Bypass
+	    CVE-2026-109903: X.Org Server XvQueryImageAttributes Negative Size Reply
+	    CVE-2026-109904: X.Org Server XRes QueryClientIds Request Size Overflow
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-109091</cvename>
+      <cvename>CVE-2026-109092</cvename>
+      <cvename>CVE-2026-109093</cvename>
+      <cvename>CVE-2026-109094</cvename>
+      <cvename>CVE-2026-109095</cvename>
+      <cvename>CVE-2026-109096</cvename>
+      <cvename>CVE-2026-109903</cvename>
+      <cvename>CVE-2026-109904</cvename>
+      <url>https://lists.x.org/archives/xorg-announce/2026-November/003759.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-10</discovery>
+      <entry>2026-11-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1a672925-de93-11f1-9824-6cc21735f730">
+    <topic>PostgreSQL -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>postgresql14-server</name>
+	<name>postgresql14-client</name>
+	<name>postgresql14-contrib</name>
+	<name>postgresql14-plperl</name>
+	<name>postgresql14-pltcl</name>
+	<range><lt>14.25</lt></range>
+      </package>
+      <package>
+	<name>postgresql15-server</name>
+	<name>postgresql15-client</name>
+	<name>postgresql15-contrib</name>
+	<name>postgresql15-plperl</name>
+	<name>postgresql15-pltcl</name>
+	<range><lt>15.20</lt></range>
+      </package>
+      <package>
+	<name>postgresql16-server</name>
+	<name>postgresql16-client</name>
+	<name>postgresql16-contrib</name>
+	<name>postgresql16-plperl</name>
+	<name>postgresql16-pltcl</name>
+	<range><lt>16.16</lt></range>
+      </package>
+      <package>
+	<name>postgresql17-server</name>
+	<name>postgresql17-client</name>
+	<name>postgresql17-contrib</name>
+	<name>postgresql17-plperl</name>
+	<name>postgresql17-pltcl</name>
+	<range><lt>17.12</lt></range>
+      </package>
+      <package>
+	<name>postgresql18-server</name>
+	<name>postgresql18-client</name>
+	<name>postgresql18-contrib</name>
+	<name>postgresql18-plperl</name>
+	<name>postgresql18-pltcl</name>
+	<range><lt>18.7</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The PostgreSQL project reports:</p>
+	<blockquote cite="https://www.postgresql.org/about/news/postgresql-187-1712-1616-1520-1425-and-19-rc-2-released-3442/">
+	  <ul>
+	    <li>CVE-2026-6460: Add defenses against problems caused by
+	      altering composite types concurrently with operations on data of
+	      those types</li>
+	    <li>CVE-2026-6464: Ensure that psql counts all the COPY FROM STDIN
+	      commands appearing in a multi-query command string</li>
+	    <li>CVE-2026-6467: Prevent corrupting a newly-installed extension
+	      by renaming its target schema during CREATE EXTENSION or by
+	      installing it into a temporary schema</li>
+	    <li>CVE-2026-14661: Validate all connection options in replication
+	      subscriptions and contrib/dblink</li>
+	    <li>CVE-2026-16237: Enforce view row visibility in INSERT ... ON
+	      CONFLICT</li>
+	    <li>CVE-2026-16240: Fix use of externally-controlled format string
+	      in pg_basebackup</li>
+	    <li>CVE-2026-18447: Disallow declaring SQL functions as returning
+	      type "any"</li>
+	    <li>CVE-2026-116303: Check EXECUTE privilege before calling cast
+	      functions within to_json() and other conversion-to-JSON code;
+	      Check EXECUTE privilege before calling cast functions within
+	      foreign key enforcement checks</li>
+	    <li>CVE-2026-116304: Fix race condition leading to use-after-free
+	      in shared tupledesc management</li>
+	    <li>CVE-2026-116306: Cope with concurrent rowtype changes in
+	      ExecEvalFieldStore[De]Form()</li>
+	    <li>CVE-2026-116307: In PL/Perl, fix use-after-free triggered by
+	      releasing a prepared query that is being executed</li>
+	    <li>CVE-2026-116308: In contrib/dict_int, return NULL for
+	      zero-length tokens</li>
+	    <li>CVE-2026-116309: Fix type confusion in PL/Perl's
+	      get_perl_array_ref()</li>
+	    <li>CVE-2026-116310: Fix use-after-free in COPY FROM ON_ERROR
+	      reporting (PostgreSQL 17, 18 only)</li>
+	    <li>CVE-2026-116311: Prevent DROP OWNED BY from changing row-level
+	      security policies on tables that the current user does not
+	      own</li>
+	    <li>CVE-2026-116312: Avoid inserting the wrong tuple into a
+	      trigger transition table in a MERGE that does an INSERT followed
+	      by an UPDATE (PostgreSQL 15, 16, 17, 18 only)</li>
+	    <li>CVE-2026-116313: Use fully-qualified operator names in
+	      vacuumdb (PostgreSQL 18 only)</li>
+	    <li>CVE-2026-116314: Harden pg_restore against corrupt archive
+	      files</li>
+	    <li>CVE-2026-116315: Fix buffer overrun in tsvector_delete()</li>
+	    <li>CVE-2026-116316: Disallow security-restricted operations from
+	      creating types in temporary schemas</li>
+	    <li>CVE-2026-116317: Fix buffer overrun in ts_rank_cd()</li>
+	    <li>CVE-2026-116318: Ensure that pg_dump quotes the names of NOT
+	      NULL constraints (PostgreSQL 18 only)</li>
+	    <li>CVE-2026-116319: Fix use-after-free in
+	      plperl_return_next_internal()</li>
+	    <li>CVE-2026-116320: Fix use-after-free in scans of Perl arrays
+	      and hashes</li>
+	    <li>CVE-2026-116321: Prevent construction of invalid name values
+	      via element assignment</li>
+	    <li>CVE-2026-116322: Delay processing of cancel request packets
+	      until it's safe to handle them (PostgreSQL 18 only)</li>
+	    <li>CVE-2026-116323: Fix use-after-free hazards in re-entrant use
+	      of PL/Tcl</li>
+	    <li>CVE-2026-116325: Ensure that reindexdb correctly quotes index
+	      names it is dealing with (PostgreSQL 17, 18 only)</li>
+	    <li>CVE-2026-116326: Support tied Perl objects in PL/Perl and
+	      associated contrib modules; Fix PL/Perl to cope with errors thrown
+	      from tied objects</li>
+	    <li>CVE-2026-116327: Treat application of a leaky function to a
+	      CaseTestExpr or internal Param node as leaky</li>
+	    <li>CVE-2026-116328: Prevent memory corruption after a large
+	      allocation in a generation memory context is freed (PostgreSQL 15,
+	      16, 17, 18 only)</li>
+	    <li>CVE-2026-116329: Guard against malicious alteration of a table
+	      while a statistics import function is running on it (PostgreSQL 18
+	      only)</li>
+	    <li>CVE-2026-116330: Make the \[un]restrict commands functional in
+	      pg_dump's tar-format output</li>
+	    <li>CVE-2026-116331: Don't generate an index-based plan for an
+	      aggregate whose input and output types don't match</li>
+	    <li>CVE-2026-116332: Disallow closing a portal that is still being
+	      set up</li>
+	    <li>CVE-2026-116333: Avoid out-of-bounds reads in parallel btree
+	      scans with array keys (PostgreSQL 17, 18 only)</li>
+	    <li>CVE-2026-116335: Check that commutator and negator operator
+	      pairs return the same data type</li>
+	    <li>CVE-2026-116336: Prevent functions in index predicates and
+	      expressions from breaking REINDEX CONCURRENTLY by manipulating the
+	      indexes</li>
+	    <li>CVE-2026-120139: Harden more memory-size calculations against
+	      integer overflow</li>
+	    <li>CVE-2026-120141: Fix type confusion in set-returning functions
+	      that return RECORD, when materialized in a query's target
+	      list</li>
+	    <li>CVE-2026-120142: Handle dropped columns safely while comparing
+	      row types (PostgreSQL 17, 18 only)</li>
+	    <li>CVE-2026-120143: Forcibly close portals associated with
+	      transition tables at the end of the trigger function</li>
+	    <li>CVE-2026-120144: Replace the type cache's in_progress_list
+	      mechanism with something simpler and safer (PostgreSQL 18
+	      only)</li>
+	    <li>CVE-2026-120145: Reject system catalogs as logical replication
+	      targets</li>
+	    <li>CVE-2026-120146: Align REASSIGN OWNED's caller-privilege
+	      checks with ALTER ... OWNER TO's checks</li>
+	    <li>CVE-2026-120147: Reject re-entrant use of contrib/dblink</li>
+	    <li>CVE-2026-120148: Refuse to create extended statistics on
+	      expressions of transient types</li>
+	    <li>CVE-2026-120149: Avoid out-of-bounds accesses in FDW batch
+	      inserts</li>
+	    <li>CVE-2026-120150: Fix use-after-free in expanded-record domain
+	      constraint checking</li>
+	    <li>CVE-2026-120151: Cope with concurrent rowtype changes in
+	      PL/pgSQL record field assignment</li>
+	    <li>CVE-2026-120152: Fix use-after-free in pg_show_all_settings()
+	      (PostgreSQL 16, 17, 18 only)</li>
+	    <li>CVE-2026-120153: Reject more unsafe names in extension script
+	      substitutions</li>
+	    <li>CVE-2026-120154: Check ON CONFLICT target row against RLS
+	      policies before applying user quals</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-6460</cvename>
+      <cvename>CVE-2026-6464</cvename>
+      <cvename>CVE-2026-6467</cvename>
+      <cvename>CVE-2026-14661</cvename>
+      <cvename>CVE-2026-16237</cvename>
+      <cvename>CVE-2026-16240</cvename>
+      <cvename>CVE-2026-18447</cvename>
+      <cvename>CVE-2026-116303</cvename>
+      <cvename>CVE-2026-116304</cvename>
+      <cvename>CVE-2026-116306</cvename>
+      <cvename>CVE-2026-116307</cvename>
+      <cvename>CVE-2026-116308</cvename>
+      <cvename>CVE-2026-116309</cvename>
+      <cvename>CVE-2026-116310</cvename>
+      <cvename>CVE-2026-116311</cvename>
+      <cvename>CVE-2026-116312</cvename>
+      <cvename>CVE-2026-116313</cvename>
+      <cvename>CVE-2026-116314</cvename>
+      <cvename>CVE-2026-116315</cvename>
+      <cvename>CVE-2026-116316</cvename>
+      <cvename>CVE-2026-116317</cvename>
+      <cvename>CVE-2026-116318</cvename>
+      <cvename>CVE-2026-116319</cvename>
+      <cvename>CVE-2026-116320</cvename>
+      <cvename>CVE-2026-116321</cvename>
+      <cvename>CVE-2026-116322</cvename>
+      <cvename>CVE-2026-116323</cvename>
+      <cvename>CVE-2026-116325</cvename>
+      <cvename>CVE-2026-116326</cvename>
+      <cvename>CVE-2026-116327</cvename>
+      <cvename>CVE-2026-116328</cvename>
+      <cvename>CVE-2026-116329</cvename>
+      <cvename>CVE-2026-116330</cvename>
+      <cvename>CVE-2026-116331</cvename>
+      <cvename>CVE-2026-116332</cvename>
+      <cvename>CVE-2026-116333</cvename>
+      <cvename>CVE-2026-116335</cvename>
+      <cvename>CVE-2026-116336</cvename>
+      <cvename>CVE-2026-120139</cvename>
+      <cvename>CVE-2026-120141</cvename>
+      <cvename>CVE-2026-120142</cvename>
+      <cvename>CVE-2026-120143</cvename>
+      <cvename>CVE-2026-120144</cvename>
+      <cvename>CVE-2026-120145</cvename>
+      <cvename>CVE-2026-120146</cvename>
+      <cvename>CVE-2026-120147</cvename>
+      <cvename>CVE-2026-120148</cvename>
+      <cvename>CVE-2026-120149</cvename>
+      <cvename>CVE-2026-120150</cvename>
+      <cvename>CVE-2026-120151</cvename>
+      <cvename>CVE-2026-120152</cvename>
+      <cvename>CVE-2026-120153</cvename>
+      <cvename>CVE-2026-120154</cvename>
+      <url>https://www.postgresql.org/docs/release/18.7/</url>
+      <url>https://www.postgresql.org/docs/release/17.12/</url>
+      <url>https://www.postgresql.org/docs/release/16.16/</url>
+      <url>https://www.postgresql.org/docs/release/15.20/</url>
+      <url>https://www.postgresql.org/docs/release/14.25/</url>
+    </references>
+    <dates>
+      <discovery>2026-11-12</discovery>
+      <entry>2026-11-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="05286f93-de01-11f1-bbb3-901b0e9408dc">
+    <topic>conduit -- e2ee signing keys vulnerability</topic>
+    <affects>
+      <package>
+	<name>matrix-conduit</name>
+	<range><lt>0.10.16</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Conduit team reports:</p>
+	<blockquote cite="https://gitlab.com/famedly/conduit/-/releases/v0.10.16">
+	  <p>Fixes a vulnerability where E2EE signing keys could be
+	  accepted from servers other than the one the user belongs
+	  to. It is recommended you upgrade ASAP.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://gitlab.com/famedly/conduit/-/releases/v0.10.16</url>
+    </references>
+    <dates>
+      <discovery>2026-11-10</discovery>
+      <entry>2026-11-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9e9c6e36-dd9f-11f1-bae2-3497f65b111b">
+    <topic>immich -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>immich</name>
+	<name>immich-cli</name>
+	<range><lt>3.4.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Immich project reports:</p>
+	<blockquote cite="https://github.com/immich-app/immich/security/advisories">
+	  <ul>
+	    <li>An attacker-chosen OAuth state cookie allows forced account
+	      linking and takeover of any account, bypassing the fix for
+	      CVE-2025-43856.</li>
+	    <li>A malicious or intercepted server can read, exfiltrate and
+	      delete arbitrary local files through the duplicate check of the
+	      command line client.</li>
+	    <li>An external library import follows symbolic links, which
+	      allows arbitrary files to be read.</li>
+	    <li>Unsanitized EXIF make, model and lens model allow path
+	      traversal in the storage template engine.</li>
+	    <li>An unanchored regular expression allows the allowedHosts
+	      protection of plugins to be bypassed completely.</li>
+	    <li>A shared link ignores the "Show metadata" setting on metadata
+	      searches, which leaks EXIF and GPS data.</li>
+	    <li>An upload through a shared link runs as the link owner, so the
+	      owner check of the live photo video can never fail.</li>
+	    <li>Metadata of other owners can be written through the duplicate
+	      resolve endpoint.</li>
+	    <li>Archive downloads through a shared link can include original
+	      files despite the edited asset enforcement.</li>
+	    <li>A partner can read the metadata of the sharer's locked folder
+	      when a search request omits the visibility, and the archived
+	      timeline metadata as well.</li>
+	    <li>Read-scoped API keys can reset cluster group people data.</li>
+	    <li>An unbounded motion photo offset causes memory and disk
+	      exhaustion.</li>
+	    <li>An uploaded SVG asset allows stored cross-site scripting.</li>
+	    <li>Email messages allow HTML injection.</li>
+	    <li>Before 3.2.4, an uploaded SVG file reaches the ImageMagick
+	      coders, which allows code execution on the server
+	      (CVE-2026-105764).</li>
+	    <li>A share link with uploads disabled can be used to test whether
+	      the owner has a given file.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-105764</cvename>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-q89f-h332-8q2h</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-7j23-rprg-3g5q</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-p632-vh57-j6x4</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-wp5v-5wj6-j2fh</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-wwfq-95jq-3m3c</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-8xfw-gq8x-8mrr</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-gjj9-fvfp-jw63</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-9g87-8gwq-4xqp</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-6jjx-fxr3-8vf2</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-rq4j-mp2m-85qp</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-v7v2-63g5-gwf7</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-j722-3hvf-c9vr</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-qcp2-7vph-gq64</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-c9h4-ccvj-j2h2</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-wjrq-m9hw-r4vq</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-v94m-9pp2-pm59</url>
+      <url>https://github.com/immich-app/immich/security/advisories/GHSA-xm8q-2hq2-gpxg</url>
+    </references>
+    <dates>
+      <discovery>2026-11-10</discovery>
+      <entry>2026-11-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3047b511-dde7-11f1-8135-8447094a420f">
+    <topic>LibreSSL -- Out of bounds read</topic>
+    <affects>
+      <package>
+	<name>libressl</name>
+	<name>libressl-libtls</name>
+	<name>libressl-devel</name>
+	<name>libressl-devel-libtls</name>
+	<range><lt>4.3.5</lt></range>
+	<range><ge>4.4.0</ge><lt>4.4.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenBSD project reports:</p>
+	<blockquote cite="https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.4.1-relnotes.txt.">
+	  <p>Out of bounds read that may happen during renegotiation in TLSv1.2.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.4.1-relnotes.txt</url>
+    </references>
+    <dates>
+      <discovery>2026-11-11</discovery>
+      <entry>2026-11-11</entry>
+      <modified>2026-11-12</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="f2904526-ddd3-11f1-8135-8447094a420f">
+    <topic>Apache httpd -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>apache24</name>
+	<range><lt>2.4.71</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache httpd project reports:</p>
+	<blockquote cite="https://httpd.apache.org/security/vulnerabilities_24.html">
+	  <p>CVE-2026-119618 (critical): mod_http2: heap corruption and RCE in assign_headers</p>
+	  <p>CVE-2026-106023 (important): mod_md NULL pointer dereference leads to child process crash</p>
+	  <p>CVE-2026-109163 (low): mod_vhost_alias 1 byte stack buffer overwrite (after CVE-2026-63292)</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-119618</cvename>
+      <cvename>CVE-2026-109163</cvename>
+      <cvename>CVE-2026-106023</cvename>
+      <url>https://httpd.apache.org/security/vulnerabilities_24.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-11</discovery>
+      <entry>2026-11-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9e2564aa-ddb8-11f1-adaa-3c7c3fba4204">
+    <topic>Mbed TLS -- multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>mbedtls4</name>
+	  <range><lt>4.2.0</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mbed TLS Team reports:</p>
+	<blockquote cite="https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.2.0">
+	  <ul>
+	    <li>CVE-2026-50581: Fix a bug where transcript-hash computation errors during TLS 1.2
+		extended master secret calculation could be ignored instead of causing the handshake
+		to fail. This could allow a handshake to continue with a master secret that was not
+		correctly bound to the handshake transcript, undermining the security guarantees of
+		the extended master secret extension.</li>
+	    <li>CVE-2026-50640: Fix a TLS 1.3 server-side error-handling bug affecting session ticket
+		generation. Under rare conditions, such as memory allocation failures while computing
+		the resumption master secret, the server could issue invalid session tickets instead
+		of failing the handshake. Clients presented with such tickets would fail session
+		resumption and fall back to a full handshake. In deployments relying on session
+		resumption, repeated occurrences could increase the frequency of full handshakes
+		and amplify resource consumption during periods of resource exhaustion or other
+		transient failures.</li>
+	    <li>CVE-2026-50580: Fix a remote buffer overflow in (D)TLS with ECDHE-PSK cipher suites
+		when CBC is disabled.</li>
+	    <li>CVE-2026-50586: Fix a potential information disclosure in TLS 1.2 servers using session
+		tickets. If the session ticket write callback failed without setting the lifetime output
+		parameter, Mbed TLS could send 4 bytes of uninitialized stack memory to the peer in the
+		NewSessionTicket message.</li>
+	    <li>CVE-2026-50588: Fix an out-of-bounds read when parsing TLS 1.2 ECJPAKE ServerKeyExchange
+		messages.</li>
+	    <li>CVE-2026-50579: Fix a use-after-free/double-free risk in mbedtls_pkcs7_free() when reusing
+		an mbedtls_pkcs7 context across parse -> free -> parse -> free cycles. The function now
+		resets the context after freeing it, ensuring stale signed_data.signers.next pointers cannot
+		be walked by a later free operation.</li>
+	    <li>CVE-2026-54441: Improved documentation of mbedtls_ssl_conf_sig_algs() to emphasize that this
+		function only sets signature algorithms that are enforced during TLS key exchange and not on
+		certificate verification.</li>
+	    <li>CVE-2026-50585 : Ensure 'badmac_seen' and 'dtls_srtp_info' fields from 'mbedtls_ssl_context'
+		are properly zeroized when mbedtls_ssl_session_reset() is called. This could cause premature
+		DTLS connection failure or incorrect DTLS-SRTP parameter inheritance for applications reusing
+		an SSL context.</li>
+	    <li>CVE-2026-25832: Fix TLS 1.3 clients to reject a HelloRetryRequest whose selected group was
+		not advertised in the original ClientHello.</li>
+	    <li>CVE-2026-49300: Fix two bugs in the X.509 certificate parser that caused some inputs with a
+		malformed basicConstraints extension to be accepted. This could have dangerous results, in
+		particular causing some certificates to be parsed as CA certificates when other X.509
+		implementations would parse them as end-entity certificates.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-50581</cvename>
+      <cvename>CVE-2026-50640</cvename>
+      <cvename>CVE-2026-50580</cvename>
+      <cvename>CVE-2026-50586</cvename>
+      <cvename>CVE-2026-50588</cvename>
+      <cvename>CVE-2026-50579</cvename>
+      <cvename>CVE-2026-54441</cvename>
+      <cvename>CVE-2026-50585</cvename>
+      <cvename>CVE-2026-25832</cvename>
+      <cvename>CVE-2026-49300</cvename>
+      <url>https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.2.0</url>
+      <url>https://mbed-tls.readthedocs.io/en/latest/security-advisories/</url>
+    </references>
+    <dates>
+      <discovery>2026-07-07</discovery>
+      <entry>2026-11-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="808dee2b-dd99-11f1-ac90-2cf05da270f3">
+    <topic>Gitlab -- vulnerability</topic>
+    <affects>
+<package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>19.5.0</ge><lt>19.5.4</lt></range>
+	<range><ge>19.4.0</ge><lt>19.4.6</lt></range>
+	<range><ge>7.0.0</ge><lt>19.3.8</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-4-released/?nav=19.5.4">
+	  <p>Vulnerability in git</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-105437</cvename>
+      <url>https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-4-released/?nav=19.5.4</url>
+    </references>
+    <dates>
+      <discovery>2026-11-10</discovery>
+      <entry>2026-11-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8dc02503-dd51-11f1-a654-f8b46a88f42c">
+    <topic>krb5 -- MIT krb5 Security Advisory 2026-001</topic>
+    <affects>
+      <package>
+	<name>krb5</name>
+	<range><lt>1.22.3</lt></range>
+      </package>
+      <package>
+	<name>krb5-122</name>
+	<range><lt>1.22.3</lt></range>
+      </package>
+      <package>
+	<name>krb5-devel</name>
+	<range><lt>2026-11-05</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The MIT KRB5 Project reports:</p>
+	<blockquote cite="https://web.mit.edu/kerberos/advisories/MITKRB5-SA-2026-001.txt">
+	  <p>An authenticated attacker can bypass authentication indicator
+	     enforcement by requesting a service ticket with fake CAMMAC
+	     authorization data.  Updating to the 1.22.3 release on the KDC
+	     is sufficient to prevent this attack.</p>
+	  <p>An authenticated attacker can bypass an application server's
+	     PAC authorization data checks by requesting a service ticket
+	     with a fake PAC.  Updating to the 1.22.3 release on either the
+	     KDC or the affected application server will prevent this
+	     attack.</p>
+	  <p>An authenticated attacker with administrative privileges can
+	     bypass the lockdown_keys attribute by using the password change
+	     protocol instead of the kadmin protocol to modify a principal's
+	     keys.</p>
+	  <p>The KDC, kadmind, and GSS-API application servers are all
+	     vulnerable to denial of service attacks by unauthenticated
+	     attackers.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-71199</cvename>
+      <cvename>CVE-2026-107884</cvename>
+      <cvename>CVE-2026-111423</cvename>
+      <cvename>CVE-2026-40355</cvename>
+      <cvename>CVE-2026-40356</cvename>
+      <cvename>CVE-2026-71200</cvename>
+      <cvename>CVE-2026-107364</cvename>
+      <cvename>CVE-2026-107708</cvename>
+      <cvename>CVE-2026-107778</cvename>
+      <cvename>CVE-2026-112314</cvename>
+      <cvename>CVE-2026-112315</cvename>
+      <cvename>CVE-2026-112316</cvename>
+      <cvename>CVE-2026-112317</cvename>
+      <cvename>CVE-2026-112318</cvename>
+      <cvename>CVE-2026-112319</cvename>
+      <cvename>CVE-2026-112320</cvename>
+      <cvename>CVE-2026-112321</cvename>
+      <cvename>CVE-2026-112322</cvename>
+      <cvename>CVE-2026-112323</cvename>
+      <cvename>CVE-2026-119079</cvename>
+      <url>https://web.mit.edu/kerberos/advisories/MITKRB5-SA-2026-001.txt</url>
+    </references>
+    <dates>
+      <discovery>2026-11-09</discovery>
+      <entry>2026-11-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a18ffa98-dd42-11f1-8816-a0369f7f7be0">
+    <topic>chromium -- security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>157.0.8103.50</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>157.0.8103.50</lt></range>
+      </package>
+      <package>
+       <name>linux-chrome</name>
+       <range><lt>157.0.8103.50</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html">
+	 <p>This update includes 9 security fixes:</p>
+	 <ul>
+	    <li>High CVE-2026-125345: Uninitialized resource in WebGL.</li>
+	    <li>High CVE-2026-125347: Incorrect authorization in FileSystem.</li>
+	    <li>High CVE-2026-125343: Buffer overflow in Compositing.</li>
+	    <li>High CVE-2026-125348: Out of bounds write in GPU.</li>
+	    <li>High CVE-2026-125344: Type confusion in V8.</li>
+	    <li>High CVE-2026-125346: Use after free in XML.</li>
+	    <li>High CVE-2026-125350: Use after free in XML.</li>
+	    <li>Medium CVE-2026-125349: Uninitialized resource in GPU.</li>
+	    <li>Medium CVE-2026-125342: Uninitialized resource in GPU.</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-125345</cvename>
+      <cvename>CVE-2026-125347</cvename>
+      <cvename>CVE-2026-125343</cvename>
+      <cvename>CVE-2026-125348</cvename>
+      <cvename>CVE-2026-125344</cvename>
+      <cvename>CVE-2026-125346</cvename>
+      <cvename>CVE-2026-125350</cvename>
+      <cvename>CVE-2026-125349</cvename>
+      <cvename>CVE-2026-125342</cvename>
+      <url>https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-09</discovery>
+      <entry>2026-11-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="24e1443d-dd3b-11f1-b094-bc2411e144f8">
+    <topic>git -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>git</name>
+	<name>git-cvs</name>
+	<name>git-gui</name>
+	<name>git-lite</name>
+	<name>git-p4</name>
+	<name>git-svn</name>
+	<name>git-tiny</name>
+	<range><lt>2.56.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Git development team reports:</p>
+	<blockquote cite="https://github.com/git/git/security/advisories/GHSA-vp2w-7xxj-jvxr">
+	  <p>CVE-2026-111760:
+	    Recursive clones are susceptible to Remote Code Execution: an
+	    attacker-controlled repository can be crafted in a way that
+	    exploits a bug in Git whereby Git can be fooled into overwriting
+	    a gitfile (used for submodules) with a symbolic link that then
+	    points to a directory with malicious config or hooks. The config
+	    or hooks may have attacker-specified code.
+	  </p>
+	  <p>CVE-2026-113408:
+	    It is possible for a server to advertise an unborn HEAD that
+	    contains path-traversal characters (e.g.,
+	    `refs/heads/../../../TARGET`). With the files ref backend that
+	    can lead to ref-updating actions to write to unwanted files.
+	  </p>
+	  <p>CVE-2026-114466:
+	    In response to CVE-2019-1348, `fast-import` disallows the
+	    `export-marks` feature by default. The features
+	    `rewrite-submodules-to` and `rewrite-submodules-from` as well as
+	    the option `export-pack-edges` that were introduced in the
+	    meantime also allow reading from arbitrary paths, and are
+	    therefore now also disallowed by default.
+	  </p>
+	  <p>CVE-2026-114467:
+	    When Git strips the GPG signatures from a commit message, it only
+	    accounts for two signatures. A commit message containing more
+	    than two signatures therefore causes a stack memory corruption.
+	    This can be triggered when using `git merge` with a tag which
+	    contains more than two signatures, making way for a DoS attack
+	    which can potentially also affect forges.
+	  </p>
+	  <p>CVE-2026-114469:
+	    Git rejects patches larger than ~1 GiB, but that check only
+	    considered the size of the patch as it appears in the input,
+	    which for binary patches is much smaller than the size of the
+	    file the patch describes. A binary patch that inflates to a very
+	    large size therefore slipped past the check and crashed Git with
+	    an out-of-bounds read.
+	  </p>
+	  <p>CVE-2026-105437:
+	    When merging, Git computes the size of the buffer holding the
+	    merge result in a way that can overflow for very large merges,
+	    which can be triggered by a large number of conflicts combined
+	    with a large `conflict-marker-size`. The resulting buffer can
+	    then be too small, and Git writes past its end (and, before and
+	    after that, before its start), corrupting the heap.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-111760</cvename>
+      <cvename>CVE-2026-113408</cvename>
+      <cvename>CVE-2026-114466</cvename>
+      <cvename>CVE-2026-114467</cvename>
+      <cvename>CVE-2026-114469</cvename>
+      <cvename>CVE-2026-105437</cvename>
+      <url>https://github.com/git/git/security/advisories/GHSA-vp2w-7xxj-jvxr</url>
+      <url>https://gitlab.com/gitlab-org/git/-/work_items/809</url>
+      <url>https://gitlab.com/gitlab-org/git/-/work_items/810</url>
+      <url>https://gitlab.com/gitlab-org/git/-/work_items/811</url>
+      <url>https://gitlab.com/gitlab-org/git/-/work_items/812</url>
+      <url>https://gitlab.com/gitlab-org/git/-/work_items/814</url>
+    </references>
+    <dates>
+      <discovery>2026-11-10</discovery>
+      <entry>2026-11-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9b39eca8-dd1a-11f1-867b-3c7c3fba4204">
+    <topic>Newsboat -- Remote code execution via manual OPML import</topic>
+    <affects>
+	<package>
+	  <name>newsboat</name>
+	  <range><lt>2.45.1</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Newsboat Team reports:</p>
+	<blockquote cite="https://github.com/newsboat/newsboat/releases/tag/r2.45.1">
+	  <p>GHSA-78q5-mpjq-5q34: This is a more specific version of GHSA-4m8m-vj3m-hfxx which was fixed
+	     in the previous release 2.45. The vulnerability is the same, but the attack vector is a bit
+	     more complex. When importing an OPML document, Newsboat doesn't sanitise newlines in the data
+	     it reads. This data is then written into a plain-text file (the urls file) which is then read
+	     back line-by-line. Specially crafted OPML documents could utilise this to add more lines to
+	     the urls file and inject 'exec:' and 'filter:' special URLs that contain shell commands to
+	     be executed when such URL is reloaded. In order to resolve this, URLs are sanitized by
+	     percent-encoding them, while newlines in tags are replaced by underscore character.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/newsboat/newsboat/releases/tag/r2.45.1</url>
+    </references>
+    <dates>
+      <discovery>2026-11-05</discovery>
+      <entry>2026-11-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7f156776-dd09-11f1-97dc-40b034429ecf">
+    <topic>p5-Furl -- memory exhaustion vulnerability</topic>
+    <affects>
+<package>
+<name>p5-Furl</name>
+<range><lt>3.16</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Furl project reports:</p>
+	<blockquote cite="https://metacpan.org/dist/Furl/changes">
+	  <p>Fix memory exhaustion via unbounded decompression of gzip/deflate
+      responses, a.k.a. "zip bomb" (CVE-2026-65059.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-65059</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-65059</url>
+    </references>
+    <dates>
+      <discovery>2026-11-02</discovery>
+      <entry>2026-11-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5e08ae9b-dcf1-11f1-97dc-40b034429ecf">
+    <topic>p5-HTTP-Body -- multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>p5-HTTP-Body</name>
+<range><lt>1.25</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>HTTP-Body project reports:</p>
+	<blockquote cite="https://metacpan.org/dist/HTTP-Body/changes">
+	  <p>Multiple vulnerabilities :</p>
+	  <ul>
+	    <li>SECURITY, CVE-2026-117500: the suffix of an upload's filename is
+	worked out from its last 255 bytes only, only when $file_temp_suffix
+	is unset, and for the default $basename_regexp by a string search
+	instead of the regexp; a filename of many dots ending in a backslash
+	made the default $basename_regexp take time quadratic in its length
+	(7 s per part at the 32 KiB header limit, once per part) in the
+	default configuration</li>
+	    <li>SECURITY, CVE-2026-117501: a chunked body is framed line by line with
+	a limit on the chunk-size line ($HTTP::Body::max_chunk_line_size,
+	1024 bytes), chunk data is passed on as it arrives instead of being
+	held until the chunk is complete, malformed framing (a line that is
+	no chunk-size line, a size that does not fit an integer, chunk data
+	not followed by CRLF) croaks instead of buffering forever, and
+	nothing after the trailer or after the body parser is done is kept</li>
+	    <li>SECURITY, CVE-2026-121006: the trailer of a chunked body is limited
+	to $HTTP::Body::max_trailer_size bytes (32768) and
+	$HTTP::Body::max_trailer_lines header lines (100); everything that
+	followed the last chunk in the same call to add() was parsed with
+	HTTP::Headers, which takes time quadratic in the number of fields of
+	one name (6 s for 16 KiB of "a:" lines)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-117500</cvename>
+      <cvename>CVE-2026-117501</cvename>
+      <cvename>CVE-2026-121006</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-117500</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-117501</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-121006</url>
+    </references>
+    <dates>
+      <discovery>2026-11-05</discovery>
+      <entry>2026-11-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e107a804-dc3c-11f1-8135-8447094a420f">
+    <topic>Weechat -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>weechat</name>
+	<range><lt>4.10.4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Weechat project reports:</p>
+	<blockquote cite="https://github.com/weechat/weechat/releases/tag/v4.10.3">
+	  <p>See details on the 9 fixed vulns in linked release notes.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/weechat/weechat/releases/tag/v4.10.4</url>
+      <url>https://github.com/weechat/weechat/releases/tag/v4.10.3</url>
+    </references>
+    <dates>
+      <discovery>2026-11-09</discovery>
+      <entry>2026-11-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="daaf4fec-dc3b-11f1-8135-8447094a420f">
+    <topic>Roundcube -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>roundcube-php82</name>
+	<name>roundcube-php83</name>
+	<name>roundcube-php84</name>
+	<name>roundcube-php85</name>
+	<name>roundcube-php85</name>
+	<range><lt>1.7.6,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Roundcube project reports:</p>
+	<blockquote cite="https://roundcube.net/news/2026/11/09/security-updates-1.6.21-and-1.7.6">
+	  <p>See linked page for details.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://roundcube.net/news/2026/11/09/security-updates-1.6.21-and-1.7.6</url>
+    </references>
+    <dates>
+      <discovery>2026-11-09</discovery>
+      <entry>2026-11-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bb6a3ddb-dc22-11f1-8e49-3c7c3fba4204">
+    <topic>OpenEXR -- 3.4.18 fixes two vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>openexr</name>
+	  <range><lt>3.4.18</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Cary Phillips reports:</p>
+	<blockquote cite="https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.4.18">
+	  <ul>
+	    <li>CVE Pending (GHSA-PP92-4RV3-WFQ6): A signed-int data-window-origin overflow in the OpenEXRUtil Image API turns
+		Imf::loadImage into an attacker-steered out-of-bounds write.</li>
+	    <li>CVE Pending (GHSA-2V77-PVHX-25C3): Integer overflow in legacy OpenEXR.OutputFile.writePixels() causes heap over-read.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-PP92-4RV3-WFQ6</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-2V77-PVHX-25C3</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.4.18</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/blob/v3.4.18/CHANGES.md#version-3418-november-7-2026</url>
+    </references>
+    <dates>
+      <discovery>2026-11-08</discovery>
+      <entry>2026-11-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="eb135656-db92-11f1-83b3-3c7c3fba4204">
+    <topic>PowerDNS Authoritative Server -- Denial of Service vulnerability</topic>
+    <affects>
+	<package>
+	  <name>powerdns</name>
+	  <range><lt>5.1.5</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PowerDNS Team reports:</p>
+	<blockquote cite="https://doc.powerdns.com/authoritative/security-advisories/powerdns-advisory-2026-13.html">
+	  <p>CVE ID: CVE-2026-73206<br/><br/>A malicious server can send a crafted reply that leads to high resource
+	     utilization decompression name pointers in DNS packets.<br/><br/>This is a multi-vendor issue. Multiple
+	     DNS vendors are releasing fixed version of their products.<br/><br/>The remedy is: upgrade to a patched
+	     version. The patched version imposes limits on the number of decompression done for a single name and for
+	     a DNS packet as a whole.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-73206</cvename>
+      <url>https://doc.powerdns.com/authoritative/security-advisories/powerdns-advisory-2026-13.html</url>
+    </references>
+    <dates>
+      <discovery>2026-07-10</discovery>
+      <entry>2026-11-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f96ffef6-db4c-11f1-985e-901b0edee044">
+    <topic>py-svglib -- 2.3.3 remediates a incomplete fix in 2.3.1</topic>
+    <affects>
+    <package>
+      <name>py311-svglib</name>
+      <name>py312-svglib</name>
+      <name>py313-svglib</name>
+      <name>py313t-svglib</name>
+      <name>py314-svglib</name>
+      <name>py314t-svglib</name>
+      <name>py315-svglib</name>
+      <range><lt>2.3.3</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Dinu Gherman reports:</p>
+	<blockquote cite="https://github.com/deeplook/svglib/security/advisories/GHSA-xpfm-fw4h-qxwv">
+	<p>The 2.3.1 fix for GHSA-555j-qj3j-c8jv stops "renderUse()" after
+	"MAX_USE_EXPANSIONS" (10,000) expansions. But each expansion deep-copies and
+	renders the whole referenced subtree, so the total work is 10,000 × (subtree
+	size), and the subtree size is unbounded. Nested &lt;use&gt; groups whose leaf
+	group holds N rects make about 9,000 of the allowed expansions clone that leaf.
+	In svglib 2.3.2, a 2,254-byte SVG takes 68 s, and a 6,454-byte one (200 rects)
+	takes 247 s and 2.6 GB RSS. The cost grows linearly with N. Only the SVG needs
+	to be attacker-controlled, as in GHSA-555j. main (6e79811) behaves the same (50
+	rects: 62 s / 727 MB).</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/deeplook/svglib/security/advisories/GHSA-xpfm-fw4h-qxwv</url>
+    </references>
+    <dates>
+      <discovery>2026-11-04</discovery>
+      <entry>2026-11-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="de74d92b-4f87-4334-973b-5d24a7c4528a">
+    <topic>gstreamer1 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gstreamer1-plugins-bad</name>
+	<name>gstreamer1-plugins-good</name>
+	<range><lt>1.28.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The GStreamer project reports:</p>
+	<blockquote cite="https://gstreamer.freedesktop.org/security/">
+	  <p>Multiple security issues were identified and fixed in the GStreamer framework.</p>
+	  <ul>
+	    <li>GStreamer-SA-2026-0093: Out-of-bounds read in MXF demuxer</li>
+	    <li>GStreamer-SA-2026-0094: Use of uninitialized memory in H.265 bitstream parser</li>
+	    <li>GStreamer-SA-2026-0095: Out-of-bounds read in H.264 RTP depayloader</li>
+	    <li>GStreamer-SA-2026-0096: Multiple out-of-bounds reads, null pointer write and denial of service in the VMnc video decoder</li>
+	    <li>GStreamer-SA-2026-0097: Local file disclosure via manifest references in adaptive streaming (HLS/DASH) demuxers</li>
+	    <li>GStreamer-SA-2026-0098: Out-of-bounds write and infinite loop when reading responses from a Festival speech synthesis server</li>
+	    <li>GStreamer-SA-2026-0099: Out-of-bounds read when parsing DVB short event descriptors</li>
+	    <li>GStreamer-SA-2026-0100: Out-of-bounds write in the RTP raw video depayloader with crafted stream dimensions</li>
+	    <li>GStreamer-SA-2026-0101: Out-of-bounds write in the ASF muxer when writing metadata with certain Unicode characters</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-116611</cvename>
+      <cvename>CVE-2026-119610</cvename>
+      <cvename>CVE-2026-121601</cvename>
+      <cvename>CVE-2026-121611</cvename>
+      <cvename>CVE-2026-121629</cvename>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0093.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0094.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0095.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0096.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0097.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0098.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0099.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0100.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0101.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-06</discovery>
+      <entry>2026-11-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="06eeb817-d93d-11f1-908f-3c7c3fba4204">
+    <topic>Keycloak -- multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>keycloak</name>
+	  <range><lt>26.8.2</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Keycloak Team reports:</p>
+	<blockquote cite="https://github.com/keycloak/keycloak/releases/tag/26.8.2">
+	  <ul>
+	    <li>CVE-2026-92358: Cross-browser fallback proof survives successful account linking and self-service unlink organizations</li>
+	    <li>CVE-2026-105305: Device Authorization Grant bypasses per-client minimum.acr.value enforcement authentication</li>
+	    <li>CVE-2026-107623: OIDC DCR read-modify-write silently disables offline token revocation on backchannel logout oidc</li>
+	    <li>CVE-2026-107889: Stored XSS on the login page via kcSanitize bypass authentication</li>
+	    <li>CVE-2026-112201: Login-failure upsert trusts MySQL/MariaDB affected-row count</li>
+	    <li>CVE-2026-112208: Account takeover via stale SSO_AUTH note in Organization identity-first login (reproduced on 26.8.1) </li>
+	    <li>CVE-2026-110932: Keycloak &lt;= 26.8.0 : Unauthenticated persistent disk exhaustion (theme gzip cache) </li>
+	    <li>CVE-2026-107123: Unauthenticated DoS in Keycloak SAML endpoint</li>
+	    <li>CVE-2026-107124: Session takeover by victim logout with injected id_token_hint</li>
+	    <li>CVE-2026-107602: Unauthenticated CPU and worker-pool exhaustion (restart required) via SAML 1.1 KeyInfo parser loop on a legal ds:KeyName</li>
+	    <li>CVE-2026-110931: Unauthenticated single-request JVM termination (OutOfMemoryError) via SAML 1.1 AuthorityBinding parser loop, incomplete fix of CVE-2026-7307</li>
+	    <li>CVE-2026-97367: DCR azp+sid claim substitution via User Property mappers allows Account REST victim session takeover — #YWH-PGM40475-313</li>
+	    <li>CVE-2026-97174: CIBA sub parameter injection causes attacker authentication to issue victim tokens — #YWH-PGM40475-289</li>
+	    <li>CVE-2026-114232: UMA user-managed permission resourceType field not validated — cross-owner resource access — #YWH-PGM40475-306</li>
+	    <li>CVE-2026-97847: Client manager can replace a sessionless token principal and take over the realm — #YWH-PGM40475-292</li>
+	    <li>CVE-2026-96547: DCR registration-time claim-path gap: attribute mappers forge realm_access.roles from user-editable fields</li>
+	    <li>CVE-2026-96457: Group-admin DENY bypass via top-level move (GroupsResource, CVE-2026-9099 regression)</li>
+	    <li>CVE-2026-96460: Token from token exchange can have unlimited expiration</li>
+	    <li>CVE-2026-97848: [SECURITY] Protocol mapper with jsonType=JSON bypasses CVE-2026-16102 fix — duplicate resource_access claim in access token;
+		forged resource_access in ID token, userinfo and introspection response</li>
+	    <li>CVE-2026-109081: Principal with only create-client can inject a role into the realm default-roles — #YWH-PGM40475-290</li>
+	    <li>CVE-2026-93998: SAML adapter accepts assertions from the wrong configured issuer</li>
+	    <li>CVE-2026-96453: kcadm custom truststores trust arbitrary self-signed certificates</li>
+	    <li>CVE-2026-92857: Identity spoofing: a default-allowed DCR protocol mapper writes the reserved sub and aud claims</li>
+	    <li>CVE-2026-103112: Account Takeover via Authentication Race</li>
+	    <li>CVE-2026-97175: Unverified IdP email auto-linking enables account takeover</li>
+	    <li>CVE-2026-96447: Stateless token preferred_username fallback enables identity rebinding after client recreation</li>
+	    <li>CVE-2026-82965: SAML SOAP endpoint DoS via unbounded XML parsing on /realms/{realm}/protocol/saml/resolve</li>
+	    <li>CVE-2026-96448: FGAP v2 composite-blind role mapping lets manage-users assign a wrapper containing realm-admin — #YWH-PGM40475-256</li>
+	    <li>CVE-2026-92855: Keycloak SAML Broker Accepts Holder-of-Key Assertions Without Proof of Key Possession</li>
+	    <li>CVE-2026-92856: Keycloak SAML Identity Broker Ignores `ProxyRestriction`, Allowing Forbidden Downstream Assertion Issuance</li>
+	    <li>CVE-2026-19688: Admin API missing audience check</li>
+	    <li>CVE-2026-117691: SAML redirect binding signature bypass via percent-encoded parameter name (%53AMLResponse) — broker login as any user</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-92358</cvename>
+      <cvename>CVE-2026-105305</cvename>
+      <cvename>CVE-2026-107623</cvename>
+      <cvename>CVE-2026-107889</cvename>
+      <cvename>CVE-2026-112201</cvename>
+      <cvename>CVE-2026-112208</cvename>
+      <cvename>CVE-2026-110932</cvename>
+      <cvename>CVE-2026-107123</cvename>
+      <cvename>CVE-2026-107124</cvename>
+      <cvename>CVE-2026-107602</cvename>
+      <cvename>CVE-2026-110931</cvename>
+      <cvename>CVE-2026-97367</cvename>
+      <cvename>CVE-2026-97174</cvename>
+      <cvename>CVE-2026-114232</cvename>
+      <cvename>CVE-2026-97847</cvename>
+      <cvename>CVE-2026-96547</cvename>
+      <cvename>CVE-2026-96457</cvename>
+      <cvename>CVE-2026-96460</cvename>
+      <cvename>CVE-2026-97848</cvename>
+      <cvename>CVE-2026-109081</cvename>
+      <cvename>CVE-2026-93998</cvename>
+      <cvename>CVE-2026-96453</cvename>
+      <cvename>CVE-2026-92857</cvename>
+      <cvename>CVE-2026-103112</cvename>
+      <cvename>CVE-2026-97175</cvename>
+      <cvename>CVE-2026-96447</cvename>
+      <cvename>CVE-2026-82965</cvename>
+      <cvename>CVE-2026-96448</cvename>
+      <cvename>CVE-2026-92855</cvename>
+      <cvename>CVE-2026-92856</cvename>
+      <cvename>CVE-2026-19688</cvename>
+      <cvename>CVE-2026-117691</cvename>
+      <url>https://github.com/keycloak/keycloak/releases/tag/26.8.2</url>
+    </references>
+    <dates>
+      <discovery>2026-11-05</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3ef78a27-f164-47ab-99b7-30c3e675d70c">
+    <topic>Elixir -- Mix deps.partition configuration not validated on multi-user systems</topic>
+    <affects>
+      <package>
+	<name>elixir-devel</name>
+	<range><lt>1.20.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Elixir reports:</p>
+	<blockquote cite="https://github.com/elixir-lang/elixir/releases/tag/v1.20.5">
+	  <ul>
+	    <li>[mix deps.partition] Validate deps.partition configuration
+	      with checksum on multi-user systems (CVE-2026-97209)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-97209</cvename>
+      <url>https://github.com/elixir-lang/elixir/releases/tag/v1.20.5</url>
+    </references>
+    <dates>
+      <discovery>2026-10-29</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c084ccd3-efb8-4fda-aeb9-04bf715d0b55">
+    <topic>Elixir -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>elixir</name>
+	<range><lt>1.18.6</lt></range>
+	<range><ge>1.19.0</ge><lt>1.19.7</lt></range>
+      </package>
+      <package>
+	<name>elixir-devel</name>
+	<range><lt>1.20.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Elixir reports:</p>
+	<blockquote cite="https://github.com/elixir-lang/elixir/releases/tag/v1.19.7">
+	  <ul>
+	    <li>[URI] Bind port limits during URI.parse (CVE-2026-109821)</li>
+	    <li>[JSON] Raise when decoding integers in JSON beyond float64
+	      ranges (CVE-2026-115274)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-109821</cvename>
+      <cvename>CVE-2026-115274</cvename>
+      <url>https://github.com/elixir-lang/elixir/releases/tag/v1.18.6</url>
+      <url>https://github.com/elixir-lang/elixir/releases/tag/v1.19.7</url>
+      <url>https://github.com/elixir-lang/elixir/releases/tag/v1.20.5</url>
+    </references>
+    <dates>
+      <discovery>2026-10-29</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1faea94f-d8fc-11f1-9968-3c7c3fba4204">
+    <topic>OpenEXR -- 3.4.17 fixes multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>openexr</name>
+	  <range><lt>3.4.17</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Cary Phillips reports:</p>
+	<blockquote cite="https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.4.17">
+	  <p>This version also addresses a regression introduced in v3.4.14 in reading deep images on
+	     big-endian hosts, due to a byte-order bug in the deep sample count table.
+	     Little-endian hosts are unaffected.</p>
+	  <ul>
+	    <li>CVE Pending (GHSA-WHF5-29MJ-GP53): Heap Out-of-Bounds Write via Signed Integer Overflow in DWAA/DWAB 'LossyDctDecoder.</li>
+	    <li>CVE Pending (GHSA-VP77-HHRC-M2C3): Subsampled chunk-height miscount: heap overflow in B44 encoder, NULL dereference in DWA decoder/encoder.</li>
+	    <li>CVE Pending (GHSA-RXWG-X3WX-PGFH): Heap out-of-bounds write via 32-bit tile-area integer overflow in 'DeepTiledOutputFile' (deep-image re-save path) — possible incomplete fix of PR #939.</li>
+	    <li>CVE Pending (GHSA-RJG8-982X-JHC2): Uninitialized Heap Memory Disclosure in DWA Decompression via Short zlib Stream Mapped to Success.</li>
+	    <li>CVE Pending (GHSA-J76P-H7GW-VMPF): Heap buffer overflow in the OpenEXR Python bindings when two RGB channel groups coalesce to the same key.</li>
+	    <li>CVE Pending (GHSA-G248-596F-9995): Unvalidated extra 'chlist' header attributes merged into 'Header::channels()' cause a heap overflow in 'run_fill'.</li>
+	    <li>CVE Pending (GHSA-FRX8-5P4H-J8M7): Heap OOB Write via Integer Overflow in B44 Chunk Unpacked-Size Computation — Remote Code Execution in OpenEXRCore.</li>
+	    <li>CVE Pending (GHSA-638X-X7MR-89XC): Out-of-bounds write at an attacker-chosen displacement in legacy Python 'InputFile.channel()'.</li>
+	    <li>CVE Pending (GHSA-3CP4-779M-H837): Use-after-free in OpenEXRCore 'exr_copy_unset_attributes()' when a channel name exceeds 31 bytes.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-WHF5-29MJ-GP53</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-VP77-HHRC-M2C3</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-RXWG-X3WX-PGFH</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-RJG8-982X-JHC2</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-J76P-H7GW-VMPF</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-G248-596F-9995</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-FRX8-5P4H-J8M7</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-638X-X7MR-89XC</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-3CP4-779M-H837</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.4.17</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/blob/v3.4.17/CHANGES.md#version-3417-october-30-2026</url>
+    </references>
+    <dates>
+      <discovery>2026-10-31</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2053672c-d8f6-11f1-9968-3c7c3fba4204">
+    <topic>Gitea -- multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>gitea</name>
+	  <range><lt>28.3.0</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitea reports:</p>
+	<blockquote cite="https://blog.gitea.com/release-of-28.3.0/">
+	  <ul>
+	    <li>CVE-2026-120263: With 'ACCOUNT_LINKING = auto' and open registration, the link-account
+		sign-up form let a user who signed in through an OAuth2 provider enter the user name
+		or email address of an existing account, which was then linked to the external identity
+		and signed in without a password.</li>
+	    <li>CVE-2026-118386: A user with read access could submit a pull request review whose commit_id
+		named their own commit, on a pull request whose head branch is in the same repository.</li>
+	    <li>CVE-2026-117635: The 'public-only' token restriction was not applied to the admin API,
+		so a 'public-only' token of a site administrator could list the email addresses of all users,
+		create private organizations and runner registration tokens, and create new administrators.</li>
+	    <li>CVE-2026-119441: 'DELETE /api/v1/orgs/{org}/repos' did not reject 'public-only' tokens, so
+		such a token of an organization owner could delete all repositories of the organization,
+		private ones included.</li>
+	    <li>CVE-2026-116296: The release, milestone and label API routes did not reject changes to
+		archived repositories, so a user with write access could replace release assets, delete
+		releases, and change milestones and labels of an archived repository.</li>
+	    <li>CVE-2026-117685: The OCI cross-repository blob mount checked access to the source blob
+		with the user’s full permissions instead of the token’s, so a 'public-only' package token
+		could mount a private blob into a public package and read it.</li>
+	    <li>CVE-2026-113429: The legacy Actions artifact upload stored the 'Content-Encoding' request
+		header without a check and served it back as the 'Content-Type' of the download, so a
+		workflow could upload an artifact that is rendered as HTML on the Gitea origin (stored XSS)
+		when a victim opens its download link. The header is no longer stored.</li>
+	    <li>CVE-2026-118394: The OIDC userinfo endpoint read the token scope only from the 'Authorization'
+		header, so a 'public-only' token sent as a query parameter received the user’s private
+		organizations and teams in the 'groups' claim.</li>
+	    <li>CVE-2026-119625: '/{username}' accepted a token sent as HTTP Basic without checking its scope,
+		so a token with an unrelated scope could read the owner’s private activity through the user feed
+		('.rss' / '.atom'), and a 'public-only' token could see private repositories and organizations on the
+		profile pages.</li>
+	    <li>CVE-2026-119627: The web profile pages and RSS/Atom feeds of users and organizations with
+		limited visibility were shown to 'public-only' tokens.</li>
+	    <li>CVE-2026-112887: Actions task tokens carry no token scope, and repository filters treated
+		the negative ID of the Actions system user as “no owner filter”, so a job’s 'GITEA_TOKEN'
+		could list every private repository of the instance through 'GET /api/v1/user/repos'.</li>
+	    <li>CVE-2026-116474: A job’s 'GITEA_TOKEN' could add an email address and a GPG key to the
+		'gitea-actions' system user, so commits signed with that key were shown as signed by
+		the instance. Only the displayed signature status was affected.</li>
+	    <li>CVE-2026-116289: A 'public-only' token with 'write:organization' of an organization owner
+		could create an organization runner registration token. A runner registered with it then
+		received jobs, including their secrets, from the organization’s private repositories.</li>
+	    <li>CVE-2026-117646: The repositories, stars and watching tabs of user profiles and the
+		organization home page showed private repositories to 'public-only' tokens.</li>
+	    <li>CVE-2026-118395: The deprecated 'POST /api/v1/org/{org}/repos' route did not reject
+		'public-only' tokens, so such a token could create private repositories in an organization.</li>
+	    <li>CVE-2026-114199: 'GET /api/v1/users/{username}/heatmap' counted contributions to private
+		repositories for 'public-only' tokens.</li>
+	    <li>CVE-2026-117649: The issue timeline showed private issues that were linked as dependencies
+		to users who could not read them: the web page showed their title, and the API returned the
+		full issue including its body.</li>
+	    <li>CVE-2026-119533: Project boards showed the title, number, state and repository of private
+		pull requests that referenced an issue on the board to visitors who could not read them.</li>
+	    <li>CVE-2026-118504: Several issue API routes did not reject changes to archived repositories,
+		so a user with write access could still change deadlines, tracked times, stopwatches,
+		reactions, pins and blocking issues in an archived repository.</li>
+	    <li>CVE-2026-117677: The Helm chart upload inflated the whole archive before the package size
+		quota was checked, without a size limit, so a user with package write access could tie up
+		the server with a small, highly compressed upload. The amount of data inflated is now bounded.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-120263</cvename>
+      <cvename>CVE-2026-118386</cvename>
+      <cvename>CVE-2026-117635</cvename>
+      <cvename>CVE-2026-119441</cvename>
+      <cvename>CVE-2026-116296</cvename>
+      <cvename>CVE-2026-117685</cvename>
+      <cvename>CVE-2026-113429</cvename>
+      <cvename>CVE-2026-118394</cvename>
+      <cvename>CVE-2026-119625</cvename>
+      <cvename>CVE-2026-119627</cvename>
+      <cvename>CVE-2026-112887</cvename>
+      <cvename>CVE-2026-116474</cvename>
+      <cvename>CVE-2026-116289</cvename>
+      <cvename>CVE-2026-117646</cvename>
+      <cvename>CVE-2026-118395</cvename>
+      <cvename>CVE-2026-114199</cvename>
+      <cvename>CVE-2026-117649</cvename>
+      <cvename>CVE-2026-119533</cvename>
+      <cvename>CVE-2026-118504</cvename>
+      <cvename>CVE-2026-117677</cvename>
+      <url>https://blog.gitea.com/release-of-28.3.0/</url>
+    </references>
+    <dates>
+      <discovery>2026-11-01</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="117b053d-d8e3-11f1-985e-901b0edee044">
+    <topic>anki -- Malicious APKG can lead to arbitrary code execution via iframes</topic>
+    <affects>
+    <package>
+      <name>anki</name>
+      <range><lt>26.09.4</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Anki developers reports:</p>
+	<blockquote cite="https://github.com/ankitects/anki/security/advisories/GHSA-j9v5-m549-cg6c">
+	<p>On Anki Desktop, a crafted APKG can execute an arbitrary executable
+	after either clicking Show in the import result, opening the imported deck or
+	viewing a note in the editor.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/ankitects/anki/security/advisories/GHSA-j9v5-m549-cg6c</url>
+    </references>
+    <dates>
+      <discovery>2026-11-04</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7830ba05-0215-40b0-9d9b-e4e4829d9b3c">
+    <topic>uptime-kuma -- unauthenticated administrator account creation</topic>
+    <affects>
+      <package>
+	<name>uptime-kuma</name>
+	<range><le>2.5.8</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>CVE-2026-119552: Uptime Kuma through 2.5.8 contains a race condition
+	  in the Socket.IO first-run setup handler that allows unauthenticated
+	  attackers to create an additional administrator account. Attackers can
+	  send concurrent setup requests during the bcrypt hashing window to
+	  bypass the empty user table check, then modify monitors, API keys, and
+	  enable disableAuth.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-119552</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-119552</url>
+    </references>
+    <dates>
+      <discovery>2026-10-30</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="923b5da5-d8db-11f1-8d43-18cf5efc6bb4">
+    <topic>openvox -- Authenticated RCE on OpenVox server via Event Deserialization</topic>
+    <affects>
+      <package>
+	<name>openvox-agent8</name>
+	<range><lt>8.32.0</lt></range>
+      </package>
+      <package>
+	<name>openvox-agent9</name>
+	<range><lt>9.3.0</lt></range>
+      </package>
+      <package>
+	<name>openvox-server8</name>
+	<range><lt>8.18.0</lt></range>
+      </package>
+      <package>
+	<name>openvox-server9</name>
+	<range><lt>9.2.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenVoxProject reports:</p>
+	<blockquote cite="https://voxpupuli.org/blog/2026/11/03/critical-cve-updates/">
+	  <p>The Puppet/OpenVox report is a JSON document the agent sends to the
+	    server after each enforcement run. It details what changes were
+	    made, any warnings or error messages, and any resources that failed
+	    to apply correctly. It also contains a full list of all events that
+	    happened, where an event might be “content &lt;foo&gt; changed to
+	    &lt;bar&gt;” or the like. In some circumstances involving custom
+	    resource types, an event might include a serialized Ruby object
+	    (programming code turned into text) instead of just plain JSON. When
+	    the report is processed, these objects are deserialized back into
+	    something the compiler can use. Unfortunately a malicious event
+	    object can be constructed in such a way that code executes on the
+	    server when this happens.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-115731</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-115731</url>
+      <url>https://github.com/OpenVoxProject/openvox/security/advisories/GHSA-ffr6-rwpm-p5wq</url>
+      <url>https://portal.perforce.com/s/cve/a91Qi000003IaHpIAK/report-deserialization-code-execution</url>
+    </references>
+    <dates>
+      <discovery>2026-11-03</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6cd47e21-d8db-11f1-8d43-18cf5efc6bb4">
+    <topic>openvox -- Flawed Hostname Check allows Puppet Client Impersonation</topic>
+    <affects>
+      <package>
+	<name>openvoxdb8</name>
+	<range><lt>8.18.0</lt></range>
+      </package>
+      <package>
+	<name>openvoxdb9</name>
+	<range><lt>9.2.0</lt></range>
+      </package>
+      <package>
+	<name>openvox-server8</name>
+	<range><lt>8.18.0</lt></range>
+      </package>
+      <package>
+	<name>openvox-server9</name>
+	<range><lt>9.2.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenVoxProject reports:</p>
+	<blockquote cite="https://voxpupuli.org/blog/2026/11/03/critical-cve-updates/">
+	  <p>Trapperkeeper is the framework we use for running our Clojure based
+	  applications and <code>trapperkeeper-authorization</code> is the shared
+	  authentication library that parses OpenVox’s <code>auth.conf</code> file and
+	  such. This file allows authentication rules to be specified in
+	  multiple ways, including plain strings (<code>foo.example.com</code>), wildcards
+	  (<code>*.example.com</code>), or regular expressions (<code>/lab-\d{3}.example.com/</code>).
+	  Plain strings and wildcard matches were handled by the same logic
+	  and this resulted in wildcard behavior incorrectly showing up in all
+	  non-regex rules. The end result of this meant that a certificate
+	  name of <code>evil.target.example.com</code> would be allowed to impersonate
+	  <code>target.example.com</code> and access information or perform actions as the
+	  target certname. In some non-default configurations, this could even
+	  inject exported resources into arbitrary agent catalogs across the
+	    infrastructure.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-115732</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-115732</url>
+      <url>https://github.com/OpenVoxProject/trapperkeeper-authorization/security/advisories/GHSA-q4hm-33rc-572g</url>
+      <url>https://portal.perforce.com/s/cve/a91Qi000003IaJRIA0/certificate-name-authorization-bypass</url>
+    </references>
+    <dates>
+      <discovery>2026-11-03</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="61a6b109-d852-11f1-bae2-3497f65b111b">
+    <topic>security/wolfssh -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>wolfssh</name>
+	<range><lt>1.6.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>wolfSSL reports:</p>
+	<blockquote cite="https://github.com/wolfSSL/wolfssh/releases/tag/v1.6.0-stable">
+	  <ul>
+	    <li>CVE-2026-16516 (Critical): wolfSSH did not check that the ECDSA
+	      curve in a server's host key blob matched the negotiated
+	      algorithm, so a man-in-the-middle could substitute a key on
+	      another curve and pass verification with a private key of its own.
+	      Also requires a lax public key check callback.</li>
+	    <li>CVE-2026-83540 (High): wolfSSHd on Windows shared one
+	      authentication context, and the logon token stored in it, across
+	      concurrent connections, so a user with a valid account could end
+	      up logged in as another, more privileged user.</li>
+	    <li>CVE-2026-84897 (Medium): A wolfSSH server accepted the DH group
+	      exchange messages only a server sends from an unauthenticated
+	      client, which made the server run the client-side handler and
+	      primality-test an attacker-chosen group of up to 8192 bits.</li>
+	    <li>CVE-2026-81535 (Medium): With --enable-fwd, forwarded-tcpip
+	      channel opens were admitted without consulting the forwarding
+	      policy callback, so a peer could make an endpoint allocate buffers
+	      for forwarding channels the application never authorized.</li>
+	    <li>CVE-2026-83742 (Medium): wolfSSH_RealPath() bounded each path
+	      component by the space left in the output buffer rather than by
+	      the buffer's size, so a crafted SFTP path could write a single
+	      terminating NUL one byte past the end of a stack buffer.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-16516</cvename>
+      <cvename>CVE-2026-81535</cvename>
+      <cvename>CVE-2026-83540</cvename>
+      <cvename>CVE-2026-83742</cvename>
+      <cvename>CVE-2026-84897</cvename>
+      <url>https://github.com/wolfSSL/wolfssh/releases/tag/v1.6.0-stable</url>
+    </references>
+    <dates>
+      <discovery>2026-10-07</discovery>
+      <entry>2026-11-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="380c9ad2-d81f-11f1-a214-a0369f7f7be0">
+    <topic>chromium -- security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>157.0.8103.38</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>157.0.8103.38</lt></range>
+      </package>
+      <package>
+       <name>linux-chrome</name>
+       <range><lt>157.0.8103.38</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop.html">
+	 <p>This update includes 213 security fixes:</p>
+	 <ul>
+	    <li>Critical CVE-2026-121156: Buffer overflow in Dawn.</li>
+	    <li>Critical CVE-2026-121229: Memory corruption in ANGLE.</li>
+	    <li>Critical CVE-2026-121246: Use after free in WebGL.</li>
+	    <li>Critical CVE-2026-121035: Use after free in Prerender.</li>
+	    <li>Critical CVE-2026-121247: Buffer overflow in Dawn.</li>
+	    <li>Critical CVE-2026-121203: Use after free in Geometry.</li>
+	    <li>Critical CVE-2026-121126: Use after free in Core.</li>
+	    <li>High CVE-2026-121107: Incorrect authorization in BackgroundFetch.</li>
+	    <li>High CVE-2026-121197: Out of bounds read in ANGLE.</li>
+	    <li>High CVE-2026-121112: Out of bounds read in Permissions.</li>
+	    <li>High CVE-2026-121174: Missing authorization in BackgroundFetch.</li>
+	    <li>High CVE-2026-121098: Improper state validation in GPU.</li>
+	    <li>High CVE-2026-121074: Memory corruption in GPU.</li>
+	    <li>High CVE-2026-121173: Uninitialized resource in WebGL.</li>
+	    <li>High CVE-2026-121233: Type confusion in CacheStorage.</li>
+	    <li>High CVE-2026-121140: Out of bounds read in Internals.</li>
+	    <li>High CVE-2026-121095: Uninitialized resource in WebGL.</li>
+	    <li>High CVE-2026-121071: Incorrect authorization in FileSystem.</li>
+	    <li>High CVE-2026-121207: Uninitialized resource in Dawn.</li>
+	    <li>High CVE-2026-121185: Use after free in PictureInPicture.</li>
+	    <li>High CVE-2026-121166: Type confusion in PDFium.</li>
+	    <li>High CVE-2026-121047: Buffer overflow in Media.</li>
+	    <li>High CVE-2026-121124: Improper adherence to coding standards in XML.</li>
+	    <li>High CVE-2026-121118: Use after free in SVG.</li>
+	    <li>High CVE-2026-121188: Use after free in PerformanceAPIs.</li>
+	    <li>High CVE-2026-121113: Buffer overflow in PDFium.</li>
+	    <li>High CVE-2026-121082: Type confusion in V8.</li>
+	    <li>High CVE-2026-121083: Use after free in Compositing.</li>
+	    <li>High CVE-2026-121179: Use after free in PDFium.</li>
+	    <li>High CVE-2026-121180: Buffer overflow in Media.</li>
+	    <li>High CVE-2026-121181: Use after free in Editing.</li>
+	    <li>High CVE-2026-121228: Type confusion in V8.</li>
+	    <li>High CVE-2026-121080: Use after free in Codecs.</li>
+	    <li>High CVE-2026-121044: Use after free in Layout.</li>
+	    <li>High CVE-2026-121051: UI misrepresentation in iOSWeb.</li>
+	    <li>High CVE-2026-121038: Information leak in Compositing.</li>
+	    <li>High CVE-2026-121090: Improper privilege management in Navigation.</li>
+	    <li>High CVE-2026-121052: Use after free in GPU.</li>
+	    <li>High CVE-2026-121037: Out of bounds write in ANGLE.</li>
+	    <li>High CVE-2026-121086: Buffer overflow in Skia.</li>
+	    <li>High CVE-2026-121131: Use after free in Mobile.</li>
+	    <li>High CVE-2026-121087: Improper input validation in Mobile.</li>
+	    <li>High CVE-2026-121178: Use after free in Aura.</li>
+	    <li>High CVE-2026-121100: Use after free in DOM.</li>
+	    <li>High CVE-2026-121148: Use after free in ANGLE.</li>
+	    <li>High CVE-2026-121089: Use after free in WebGPU.</li>
+	    <li>High CVE-2026-121250: Use after free in Extensions.</li>
+	    <li>High CVE-2026-121032: Out of bounds read in Skia.</li>
+	    <li>High CVE-2026-121114: Use after free in TabStrip.</li>
+	    <li>High CVE-2026-121127: Use after free in WebAudio.</li>
+	    <li>High CVE-2026-121210: Type confusion in V8.</li>
+	    <li>High CVE-2026-121057: Type confusion in V8.</li>
+	    <li>High CVE-2026-121201: Use after free in Animation.</li>
+	    <li>High CVE-2026-121084: Out of bounds read in Skia.</li>
+	    <li>High CVE-2026-121094: Type confusion in V8.</li>
+	    <li>High CVE-2026-121079: Race condition in V8.</li>
+	    <li>High CVE-2026-121143: Uninitialized resource in GPU.</li>
+	    <li>High CVE-2026-121097: Use after free in Printing.</li>
+	    <li>High CVE-2026-121214: Use after free in Passwords.</li>
+	    <li>High CVE-2026-121133: Incorrect reference resolution in Images.</li>
+	    <li>High CVE-2026-121249: Buffer overflow in ANGLE.</li>
+	    <li>High CVE-2026-121213: Uninitialized resource in Images.</li>
+	    <li>High CVE-2026-121241: Use after free in Navigation.</li>
+	    <li>High CVE-2026-121224: Security issue in Desktop.</li>
+	    <li>High CVE-2026-121117: Use after free in Paint.</li>
+	    <li>High CVE-2026-121123: Use after free in Canvas.</li>
+	    <li>High CVE-2026-121182: Use after free in DOM.</li>
+	    <li>High CVE-2026-121061: Use after free in Modularization.</li>
+	    <li>High CVE-2026-121227: Uninitialized resource in Skia.</li>
+	    <li>High CVE-2026-121226: Type confusion in V8.</li>
+	    <li>High CVE-2026-121068: Type confusion in V8.</li>
+	    <li>High CVE-2026-121137: Type confusion in DevTools.</li>
+	    <li>High CVE-2026-121160: Out of bounds read in Skia.</li>
+	    <li>High CVE-2026-121036: Use after free in CSS.</li>
+	    <li>High CVE-2026-121104: Incorrect authorization in FileSystem.</li>
+	    <li>High CVE-2026-121034: Use after free in Views.</li>
+	    <li>High CVE-2026-121208: Out of bounds read in Media.</li>
+	    <li>High CVE-2026-121129: Use after free in WebRTC.</li>
+	    <li>High CVE-2026-121211: Use after free in PowerBookmarks.</li>
+	    <li>High CVE-2026-121078: Type confusion in V8.</li>
+	    <li>High CVE-2026-121060: Incorrect authorization in FileSystem.</li>
+	    <li>High CVE-2026-121076: Use after free in WebXR.</li>
+	    <li>High CVE-2026-121221: Type confusion in V8.</li>
+	    <li>High CVE-2026-121119: Use after free in Controls.</li>
+	    <li>Medium CVE-2026-121244: UI misrepresentation in FileAPI.</li>
+	    <li>Medium CVE-2026-121242: Improper input validation in WebPackaging.</li>
+	    <li>Medium CVE-2026-121105: Information leak in Network.</li>
+	    <li>Medium CVE-2026-121237: Improper state validation in FileSystem.</li>
+	    <li>Medium CVE-2026-121102: Missing authorization in BackgroundFetch.</li>
+	    <li>Medium CVE-2026-121120: Improper input validation in Prerender.</li>
+	    <li>Medium CVE-2026-121161: Information leak in BackgroundFetch.</li>
+	    <li>Medium CVE-2026-121062: Incorrect authorization in API.</li>
+	    <li>Medium CVE-2026-121031: Missing authorization in PDF.</li>
+	    <li>Medium CVE-2026-121063: Incorrect authorization in CacheStorage.</li>
+	    <li>Medium CVE-2026-121108: Confused deputy in BackgroundFetch.</li>
+	    <li>Medium CVE-2026-121199: Missing authorization in Chromoting.</li>
+	    <li>Medium CVE-2026-121099: Information leak in PrivateTokens.</li>
+	    <li>Medium CVE-2026-121196: Privilege elevation in Mobile.</li>
+	    <li>Medium CVE-2026-121066: Incorrect authorization in Extensions.</li>
+	    <li>Medium CVE-2026-121256: Use of released resource in GPU.</li>
+	    <li>Medium CVE-2026-121115: Improper input validation in Shopping.</li>
+	    <li>Medium CVE-2026-121234: Privilege elevation in Contacts.</li>
+	    <li>Medium CVE-2026-121177: UI misrepresentation in PageInfo.</li>
+	    <li>Medium CVE-2026-121193: Incorrect authorization in Extensions.</li>
+	    <li>Medium CVE-2026-121248: Incorrect authorization in API.</li>
+	    <li>Medium CVE-2026-121106: Information leak in Omnibox.</li>
+	    <li>Medium CVE-2026-121200: Incorrect reference resolution in DevTools.</li>
+	    <li>Medium CVE-2026-121039: Incorrect authorization in Proxy Auth.</li>
+	    <li>Medium CVE-2026-121122: UI misrepresentation in Prompts.</li>
+	    <li>Medium CVE-2026-121219: Integer overflow in GPU.</li>
+	    <li>Medium CVE-2026-121255: Incorrect authorization in Autofill AI.</li>
+	    <li>Medium CVE-2026-121231: Incorrect authorization in DevTools.</li>
+	    <li>Medium CVE-2026-121183: Incorrect authorization in Extensions.</li>
+	    <li>Medium CVE-2026-121072: Uninitialized resource in Skia.</li>
+	    <li>Medium CVE-2026-121103: Incorrect authorization in Extensions.</li>
+	    <li>Medium CVE-2026-121136: Missing authorization in DevTools.</li>
+	    <li>Medium CVE-2026-121040: Incorrect authorization in Core.</li>
+	    <li>Medium CVE-2026-121030: Incorrect authorization in DevTools.</li>
+	    <li>Medium CVE-2026-121075: Missing authorization in DevTools.</li>
+	    <li>Medium CVE-2026-121220: Incorrect authorization in Core.</li>
+	    <li>Medium CVE-2026-121170: Improper resource control in WebCodecs.</li>
+	    <li>Medium CVE-2026-121059: Information leak in Core.</li>
+	    <li>Medium CVE-2026-121163: Improper input validation in Browser.</li>
+	    <li>Medium CVE-2026-121088: Missing authorization in PerformanceAPIs.</li>
+	    <li>Medium CVE-2026-121033: Uninitialized resource in GPU.</li>
+	    <li>Medium CVE-2026-121254: Information leak in Select.</li>
+	    <li>Medium CVE-2026-121065: Incorrect authorization in DevTools.</li>
+	    <li>Medium CVE-2026-121171: Confused deputy in DevTools.</li>
+	    <li>Medium CVE-2026-121116: Missing authorization in WebView.</li>
+	    <li>Medium CVE-2026-121239: Information leak in Core.</li>
+	    <li>Medium CVE-2026-121187: Observable discrepancy in Paint.</li>
+	    <li>Medium CVE-2026-121132: Information leak in V8.</li>
+	    <li>Medium CVE-2026-121067: UI misrepresentation in PermissionElement.</li>
+	    <li>Medium CVE-2026-121096: Incomplete cleanup in V8.</li>
+	    <li>Medium CVE-2026-121184: Out of bounds read in Media.</li>
+	    <li>Medium CVE-2026-121215: UI misrepresentation in Bluetooth.</li>
+	    <li>Medium CVE-2026-121212: Incorrect authorization in Core.</li>
+	    <li>Medium CVE-2026-121194: Missing authorization in SiteIsolation.</li>
+	    <li>Medium CVE-2026-121202: Use after free in Autofill.</li>
+	    <li>Medium CVE-2026-121048: Race condition in V8.</li>
+	    <li>Medium CVE-2026-121070: Use after free in WTF.</li>
+	    <li>Medium CVE-2026-121257: Use after free in TabStrip.</li>
+	    <li>Medium CVE-2026-121218: Type confusion in V8.</li>
+	    <li>Medium CVE-2026-121164: Incorrect authorization in Views.</li>
+	    <li>Medium CVE-2026-121223: Observable discrepancy in Media.</li>
+	    <li>Medium CVE-2026-121186: UI misrepresentation in Passwords.</li>
+	    <li>Medium CVE-2026-121176: Uninitialized resource in Media.</li>
+	    <li>Medium CVE-2026-121128: Use after free in Scheduling.</li>
+	    <li>Medium CVE-2026-121216: UI misrepresentation in UI.</li>
+	    <li>Medium CVE-2026-121158: Information leak in Paint.</li>
+	    <li>Medium CVE-2026-121110: UI misrepresentation in Shopping.</li>
+	    <li>Medium CVE-2026-121042: Incorrect authorization in Permissions.</li>
+	    <li>Medium CVE-2026-121238: Use after free in Source.</li>
+	    <li>Medium CVE-2026-121077: Use after free in Mobile.</li>
+	    <li>Medium CVE-2026-121245: Race condition in Autofill.</li>
+	    <li>Medium CVE-2026-121049: Out of bounds read in V8.</li>
+	    <li>Medium CVE-2026-121091: Incorrect authorization in Permissions.</li>
+	    <li>Medium CVE-2026-121167: Incorrect authorization in Permissions.</li>
+	    <li>Medium CVE-2026-121135: Security issue in Platform.</li>
+	    <li>Low CVE-2026-121209: UI misrepresentation in Input.</li>
+	    <li>Low CVE-2026-121134: Information loss in BackgroundFetch.</li>
+	    <li>Low CVE-2026-121217: Use after free in Streaming.</li>
+	    <li>Low CVE-2026-121109: Inadequate encryption strength in SSL.</li>
+	    <li>Low CVE-2026-121243: Information leak in Frames.</li>
+	    <li>Low CVE-2026-121053: UI misrepresentation in Transactions Platform.</li>
+	    <li>Low CVE-2026-121190: UI misrepresentation in Extensions.</li>
+	    <li>Low CVE-2026-121125: Information leak in ServiceWorker.</li>
+	    <li>Low CVE-2026-121046: Incorrect authorization in WebAppInstalls.</li>
+	    <li>Low CVE-2026-121222: Incorrect authorization in Forms.</li>
+	    <li>Low CVE-2026-121157: Incorrect authorization in Chromoting.</li>
+	    <li>Low CVE-2026-121235: Information leak in Paint.</li>
+	    <li>Low CVE-2026-121252: Incorrect authorization in Core.</li>
+	    <li>Low CVE-2026-121168: Improper resource exposure in DevTools.</li>
+	    <li>Low CVE-2026-121043: UI misrepresentation in Payments.</li>
+	    <li>Low CVE-2026-121111: Incorrect authorization in HID.</li>
+	    <li>Low CVE-2026-121138: Observable discrepancy in CORS.</li>
+	    <li>Low CVE-2026-121055: Incomplete cleanup in DevTools.</li>
+	    <li>Low CVE-2026-121101: Missing authorization in DevTools.</li>
+	    <li>Low CVE-2026-121236: Improper input validation in Network.</li>
+	    <li>Low CVE-2026-121165: UI misrepresentation in Mobile.</li>
+	    <li>Low CVE-2026-121253: Missing authorization in DevTools.</li>
+	    <li>Low CVE-2026-121172: Incorrect authorization in Isolated.</li>
+	    <li>Low CVE-2026-121206: UI misrepresentation in Isolated.</li>
+	    <li>Low CVE-2026-121189: Use after free in Browser.</li>
+	    <li>Low CVE-2026-121121: UI misrepresentation in PageInfo.</li>
+	    <li>Low CVE-2026-121130: Observable discrepancy in Forms.</li>
+	    <li>Low CVE-2026-121251: Missing authorization in V8.</li>
+	    <li>Low CVE-2026-121085: Incorrect authorization in WebUI.</li>
+	    <li>Low CVE-2026-121159: Incorrect authorization in History.</li>
+	    <li>Low CVE-2026-121204: Incomplete cleanup in DevTools.</li>
+	    <li>Low CVE-2026-121205: Incorrect authorization in CORS.</li>
+	    <li>Low CVE-2026-121050: Race condition in Mobile.</li>
+	    <li>Low CVE-2026-121081: UI misrepresentation in Passwords.</li>
+	    <li>Low CVE-2026-121240: Improper input validation in Variations.</li>
+	    <li>Low CVE-2026-121198: Confused deputy in WebUI.</li>
+	    <li>Low CVE-2026-121225: Incorrect authorization in Permissions.</li>
+	    <li>Low CVE-2026-121162: UI misrepresentation in Notifications.</li>
+	    <li>Low CVE-2026-121045: UI misrepresentation in Browser.</li>
+	    <li>Low CVE-2026-121029: Incorrect authorization in ORB.</li>
+	    <li>Low CVE-2026-121054: Improper state validation in XML.</li>
+	    <li>Low CVE-2026-121175: Improper resource exposure in ORB.</li>
+	    <li>Low CVE-2026-121092: Uncontrolled recursion in SVG.</li>
+	    <li>Low CVE-2026-121073: Use after free in Network.</li>
+	    <li>Low CVE-2026-121230: Race condition in ANGLE.</li>
+	    <li>Low CVE-2026-121093: Out of bounds read in Animation.</li>
+	    <li>Low CVE-2026-121041: Missing authorization in Input.</li>
+	    <li>Low CVE-2026-121232: Incorrect authorization in Core.</li>
+	    <li>Low CVE-2026-121142: Incorrect authorization in Network.</li>
+	    <li>Low CVE-2026-121069: Use after free in Track.</li>
+	    <li>Low CVE-2026-121169: Missing authorization in DevTools.</li>
+	    <li>Low CVE-2026-121064: Improper input validation in Performance.</li>
+	    <li>Low CVE-2026-121195: Incorrect authorization in TrustedTypes.</li>
+	    <li>Low CVE-2026-121141: Improper input validation in Editing.</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-121156</cvename>
+      <cvename>CVE-2026-121229</cvename>
+      <cvename>CVE-2026-121246</cvename>
+      <cvename>CVE-2026-121035</cvename>
+      <cvename>CVE-2026-121247</cvename>
+      <cvename>CVE-2026-121203</cvename>
+      <cvename>CVE-2026-121126</cvename>
+      <cvename>CVE-2026-121107</cvename>
+      <cvename>CVE-2026-121197</cvename>
+      <cvename>CVE-2026-121112</cvename>
+      <cvename>CVE-2026-121174</cvename>
+      <cvename>CVE-2026-121098</cvename>
+      <cvename>CVE-2026-121074</cvename>
+      <cvename>CVE-2026-121173</cvename>
+      <cvename>CVE-2026-121233</cvename>
+      <cvename>CVE-2026-121140</cvename>
+      <cvename>CVE-2026-121095</cvename>
+      <cvename>CVE-2026-121071</cvename>
+      <cvename>CVE-2026-121207</cvename>
+      <cvename>CVE-2026-121185</cvename>
+      <cvename>CVE-2026-121166</cvename>
+      <cvename>CVE-2026-121047</cvename>
+      <cvename>CVE-2026-121124</cvename>
+      <cvename>CVE-2026-121118</cvename>
+      <cvename>CVE-2026-121188</cvename>
+      <cvename>CVE-2026-121113</cvename>
+      <cvename>CVE-2026-121082</cvename>
+      <cvename>CVE-2026-121083</cvename>
+      <cvename>CVE-2026-121179</cvename>
+      <cvename>CVE-2026-121180</cvename>
+      <cvename>CVE-2026-121181</cvename>
+      <cvename>CVE-2026-121228</cvename>
+      <cvename>CVE-2026-121080</cvename>
+      <cvename>CVE-2026-121044</cvename>
+      <cvename>CVE-2026-121051</cvename>
+      <cvename>CVE-2026-121038</cvename>
+      <cvename>CVE-2026-121090</cvename>
+      <cvename>CVE-2026-121052</cvename>
+      <cvename>CVE-2026-121037</cvename>
+      <cvename>CVE-2026-121086</cvename>
+      <cvename>CVE-2026-121131</cvename>
+      <cvename>CVE-2026-121087</cvename>
+      <cvename>CVE-2026-121178</cvename>
+      <cvename>CVE-2026-121100</cvename>
+      <cvename>CVE-2026-121148</cvename>
+      <cvename>CVE-2026-121089</cvename>
+      <cvename>CVE-2026-121250</cvename>
+      <cvename>CVE-2026-121032</cvename>
+      <cvename>CVE-2026-121114</cvename>
+      <cvename>CVE-2026-121127</cvename>
+      <cvename>CVE-2026-121210</cvename>
+      <cvename>CVE-2026-121057</cvename>
+      <cvename>CVE-2026-121201</cvename>
+      <cvename>CVE-2026-121084</cvename>
+      <cvename>CVE-2026-121094</cvename>
+      <cvename>CVE-2026-121079</cvename>
+      <cvename>CVE-2026-121143</cvename>
+      <cvename>CVE-2026-121097</cvename>
+      <cvename>CVE-2026-121214</cvename>
+      <cvename>CVE-2026-121133</cvename>
+      <cvename>CVE-2026-121249</cvename>
+      <cvename>CVE-2026-121213</cvename>
+      <cvename>CVE-2026-121241</cvename>
+      <cvename>CVE-2026-121224</cvename>
+      <cvename>CVE-2026-121117</cvename>
+      <cvename>CVE-2026-121123</cvename>
+      <cvename>CVE-2026-121182</cvename>
+      <cvename>CVE-2026-121061</cvename>
+      <cvename>CVE-2026-121227</cvename>
+      <cvename>CVE-2026-121226</cvename>
+      <cvename>CVE-2026-121068</cvename>
+      <cvename>CVE-2026-121137</cvename>
+      <cvename>CVE-2026-121160</cvename>
+      <cvename>CVE-2026-121036</cvename>
+      <cvename>CVE-2026-121104</cvename>
+      <cvename>CVE-2026-121034</cvename>
+      <cvename>CVE-2026-121208</cvename>
+      <cvename>CVE-2026-121129</cvename>
+      <cvename>CVE-2026-121211</cvename>
+      <cvename>CVE-2026-121078</cvename>
+      <cvename>CVE-2026-121060</cvename>
+      <cvename>CVE-2026-121076</cvename>
+      <cvename>CVE-2026-121221</cvename>
+      <cvename>CVE-2026-121119</cvename>
+      <cvename>CVE-2026-121244</cvename>
+      <cvename>CVE-2026-121242</cvename>
+      <cvename>CVE-2026-121105</cvename>
+      <cvename>CVE-2026-121237</cvename>
+      <cvename>CVE-2026-121102</cvename>
+      <cvename>CVE-2026-121120</cvename>
+      <cvename>CVE-2026-121161</cvename>
+      <cvename>CVE-2026-121062</cvename>
+      <cvename>CVE-2026-121031</cvename>
+      <cvename>CVE-2026-121063</cvename>
+      <cvename>CVE-2026-121108</cvename>
+      <cvename>CVE-2026-121199</cvename>
+      <cvename>CVE-2026-121099</cvename>
+      <cvename>CVE-2026-121196</cvename>
+      <cvename>CVE-2026-121066</cvename>
+      <cvename>CVE-2026-121256</cvename>
+      <cvename>CVE-2026-121115</cvename>
+      <cvename>CVE-2026-121234</cvename>
+      <cvename>CVE-2026-121177</cvename>
+      <cvename>CVE-2026-121193</cvename>
+      <cvename>CVE-2026-121248</cvename>
+      <cvename>CVE-2026-121106</cvename>
+      <cvename>CVE-2026-121200</cvename>
+      <cvename>CVE-2026-121039</cvename>
+      <cvename>CVE-2026-121122</cvename>
+      <cvename>CVE-2026-121219</cvename>
+      <cvename>CVE-2026-121255</cvename>
+      <cvename>CVE-2026-121231</cvename>
+      <cvename>CVE-2026-121183</cvename>
+      <cvename>CVE-2026-121072</cvename>
+      <cvename>CVE-2026-121103</cvename>
+      <cvename>CVE-2026-121136</cvename>
+      <cvename>CVE-2026-121040</cvename>
+      <cvename>CVE-2026-121030</cvename>
+      <cvename>CVE-2026-121075</cvename>
+      <cvename>CVE-2026-121220</cvename>
+      <cvename>CVE-2026-121170</cvename>
+      <cvename>CVE-2026-121059</cvename>
+      <cvename>CVE-2026-121163</cvename>
+      <cvename>CVE-2026-121088</cvename>
+      <cvename>CVE-2026-121033</cvename>
+      <cvename>CVE-2026-121254</cvename>
+      <cvename>CVE-2026-121065</cvename>
+      <cvename>CVE-2026-121171</cvename>
+      <cvename>CVE-2026-121116</cvename>
+      <cvename>CVE-2026-121239</cvename>
+      <cvename>CVE-2026-121187</cvename>
+      <cvename>CVE-2026-121132</cvename>
+      <cvename>CVE-2026-121067</cvename>
+      <cvename>CVE-2026-121096</cvename>
+      <cvename>CVE-2026-121184</cvename>
+      <cvename>CVE-2026-121215</cvename>
+      <cvename>CVE-2026-121212</cvename>
+      <cvename>CVE-2026-121194</cvename>
+      <cvename>CVE-2026-121202</cvename>
+      <cvename>CVE-2026-121048</cvename>
+      <cvename>CVE-2026-121070</cvename>
+      <cvename>CVE-2026-121257</cvename>
+      <cvename>CVE-2026-121218</cvename>
+      <cvename>CVE-2026-121164</cvename>
+      <cvename>CVE-2026-121223</cvename>
+      <cvename>CVE-2026-121186</cvename>
+      <cvename>CVE-2026-121176</cvename>
+      <cvename>CVE-2026-121128</cvename>
+      <cvename>CVE-2026-121216</cvename>
+      <cvename>CVE-2026-121158</cvename>
+      <cvename>CVE-2026-121110</cvename>
+      <cvename>CVE-2026-121042</cvename>
+      <cvename>CVE-2026-121238</cvename>
+      <cvename>CVE-2026-121077</cvename>
+      <cvename>CVE-2026-121245</cvename>
+      <cvename>CVE-2026-121049</cvename>
+      <cvename>CVE-2026-121091</cvename>
+      <cvename>CVE-2026-121167</cvename>
+      <cvename>CVE-2026-121135</cvename>
+      <cvename>CVE-2026-121209</cvename>
+      <cvename>CVE-2026-121134</cvename>
+      <cvename>CVE-2026-121217</cvename>
+      <cvename>CVE-2026-121109</cvename>
+      <cvename>CVE-2026-121243</cvename>
+      <cvename>CVE-2026-121053</cvename>
+      <cvename>CVE-2026-121190</cvename>
+      <cvename>CVE-2026-121125</cvename>
+      <cvename>CVE-2026-121046</cvename>
+      <cvename>CVE-2026-121222</cvename>
+      <cvename>CVE-2026-121157</cvename>
+      <cvename>CVE-2026-121235</cvename>
+      <cvename>CVE-2026-121252</cvename>
+      <cvename>CVE-2026-121168</cvename>
+      <cvename>CVE-2026-121043</cvename>
+      <cvename>CVE-2026-121111</cvename>
+      <cvename>CVE-2026-121138</cvename>
+      <cvename>CVE-2026-121055</cvename>
+      <cvename>CVE-2026-121101</cvename>
+      <cvename>CVE-2026-121236</cvename>
+      <cvename>CVE-2026-121165</cvename>
+      <cvename>CVE-2026-121253</cvename>
+      <cvename>CVE-2026-121172</cvename>
+      <cvename>CVE-2026-121206</cvename>
+      <cvename>CVE-2026-121189</cvename>
+      <cvename>CVE-2026-121121</cvename>
+      <cvename>CVE-2026-121130</cvename>
+      <cvename>CVE-2026-121251</cvename>
+      <cvename>CVE-2026-121085</cvename>
+      <cvename>CVE-2026-121159</cvename>
+      <cvename>CVE-2026-121204</cvename>
+      <cvename>CVE-2026-121205</cvename>
+      <cvename>CVE-2026-121050</cvename>
+      <cvename>CVE-2026-121081</cvename>
+      <cvename>CVE-2026-121240</cvename>
+      <cvename>CVE-2026-121198</cvename>
+      <cvename>CVE-2026-121225</cvename>
+      <cvename>CVE-2026-121162</cvename>
+      <cvename>CVE-2026-121045</cvename>
+      <cvename>CVE-2026-121029</cvename>
+      <cvename>CVE-2026-121054</cvename>
+      <cvename>CVE-2026-121175</cvename>
+      <cvename>CVE-2026-121092</cvename>
+      <cvename>CVE-2026-121073</cvename>
+      <cvename>CVE-2026-121230</cvename>
+      <cvename>CVE-2026-121093</cvename>
+      <cvename>CVE-2026-121041</cvename>
+      <cvename>CVE-2026-121232</cvename>
+      <cvename>CVE-2026-121142</cvename>
+      <cvename>CVE-2026-121069</cvename>
+      <cvename>CVE-2026-121169</cvename>
+      <cvename>CVE-2026-121064</cvename>
+      <cvename>CVE-2026-121195</cvename>
+      <cvename>CVE-2026-121141</cvename>
+      <url>https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-03</discovery>
+      <entry>2026-11-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c70f21b6-d7b4-11f1-bae2-3497f65b111b">
+    <topic>net/rsync -- denial of service</topic>
+    <affects>
+      <package>
+	<name>rsync</name>
+	<range><lt>3.5.1_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>VulnCheck reports:</p>
+	<blockquote cite="https://www.vulncheck.com/advisories/rsync-through-3.5.1-denial-of-service-via-hash-search-checksum-collisions">
+	  <p>rsync through 3.5.1 contains a denial of service vulnerability
+	    in the delta-transfer sender's hash_search() in match.c that
+	    allows malicious receivers to trigger unbounded strong-checksum
+	    work at consecutive offsets.  Unauthenticated attackers pulling
+	    from a public daemon module can supply weak checksums colliding
+	    with consecutive rolling windows plus non-matching strong
+	    checksums, exhausting sender CPU across concurrent
+	    connections.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-119741</cvename>
+      <url>https://www.vulncheck.com/advisories/rsync-through-3.5.1-denial-of-service-via-hash-search-checksum-collisions</url>
+      <url>https://github.com/RsyncProject/rsync/commit/a7404a9a633cff28ee1602f328b9c3fa69cdbd04</url>
+    </references>
+    <dates>
+      <discovery>2026-11-03</discovery>
+      <entry>2026-11-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="07fc222f-d798-11f1-934c-3c7c3fba4204">
+    <topic>Krill -- multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>krill</name>
+	  <range><lt>0.16.1</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>NLnet Labs reports:</p>
+	<blockquote cite="https://github.com/NLnetLabs/krill/releases/tag/v0.16.1">
+	  <ul>
+	    <li>CVE-2026-109140: Krill login-session tokens reuse their encryption nonce across restarts,
+		so any user who can log in can forge an "admin" token.</li>
+	    <li>CVE-2026-109141: Krill users restricted to one CA can make any other CA delegate its prefixes
+		and publish ROAs for them via bulk import.</li>
+	    <li>CVE-2026-109142: Krill treats a "local parent" as already-authenticated, letting a CA
+		operator act as any child of any CA on the same server.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-109140</cvename>
+      <cvename>CVE-2026-109141</cvename>
+      <cvename>CVE-2026-109142</cvename>
+      <url>https://www.nlnetlabs.nl/downloads/krill/CVE-2026-109140.txt</url>
+      <url>https://www.nlnetlabs.nl/downloads/krill/CVE-2026-109141.txt</url>
+      <url>https://www.nlnetlabs.nl/downloads/krill/CVE-2026-109142.txt</url>
+    </references>
+    <dates>
+      <discovery>2026-11-02</discovery>
+      <entry>2026-11-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="339bd17a-d6fc-11f1-97dc-40b034429ecf">
+    <topic>hurl -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>hurl</name>
+	<range><lt>8.1.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Hurl project reports:</p>
+	<blockquote cite="https://github.com/Orange-OpenSource/hurl/blob/master/CHANGELOG.md#8.1.0">
+	  <p>Security Issues Fixed:</p>
+      <ul>
+	    <li>Fix CVE-2026-63481 stripping cookie from Cookies section when redirecting to a different host</li>
+	    <li>Fix escaping headers values in HTML report #5228</li>
+	    <li>Fix symlinks escaping file root #5289</li>
+	    <li>Fix credentials leaking using --header and following redirection #5310</li>
+	    <li>Add explicit nesting limit to JSON Body parsing #5317</li>
+	    <li>Fix escaping capture name in HTML report #5346</li>
+      </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-63481</cvename>
+      <url>https://github.com/advisories/GHSA-7w2g-9mf9-324m</url>
+    </references>
+    <dates>
+      <discovery>2026-08-20</discovery>
+      <entry>2026-11-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4784d4b8-d6a9-11f1-8a93-a0369f6e85b8">
+    <topic>phpBB -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>phpbb3</name>
+	<range><lt>3.3.19</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The phpBB Team reports:</p>
+	<blockquote cite="https://www.phpbb.com/community/docs/CHANGELOG.html">
+	  <ul>
+	    <li>Resend rate limiting incorrectly updating expiration time
+	      (SECURITY-298)</li>
+	    <li>Attachment comment hijacking by other users
+	      (SECURITY-300)</li>
+	    <li>Reflected XSS via data passed to registration page
+	      (SECURITY-301, CVE-2026-87901)</li>
+	    <li>Hide oauth provider secrets in ACP (SECURITY-302)</li>
+	    <li>Potential stored XSS for string profile fields when allowing
+	      any character (SECURITY-303)</li>
+	    <li>Missing permission type check when applying role based
+	      permissions (SECURITY-305)</li>
+	    <li>Disclosure of hidden or unapproved topic title when emailing
+	      topic (SECURITY-306)</li>
+	    <li>Banned users can email members despite ban status
+	      (SECURITY-307)</li>
+	    <li>Releasing of held private messages missing CSRF protection
+	      (SECURITY-308)</li>
+	    <li>Missing encoding of username in anti abuse header
+	      (SECURITY-309)</li>
+	    <li>MCP topic view mixing access checks for post and topic
+	      (SECURITY-310)</li>
+	    <li>Moderators with f_user_lock permission may close other user's
+	      topics (SECURITY-311)</li>
+	    <li>Unauthenticated SMTP command injection via contact form
+	      (SECURITY-312)</li>
+	    <li>Moderators can close/delete reports outside their forum
+	      permissions (SECURITY-313)</li>
+	    <li>MCP make normal action for topics missing check for
+	      forum-scoped moderators (SECURITY-314)</li>
+	  </ul>
+	</blockquote>
+	<p>The fixes were announced with phpBB 3.3.18, but the 3.3.18
+	  downloads did not contain them, so only 3.3.19 ships the fixed
+	  code.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-87901</cvename>
+      <url>https://www.phpbb.com/community/docs/CHANGELOG.html</url>
+      <url>https://www.phpbb.com/community/viewtopic.php?t=2675305</url>
+    </references>
+    <dates>
+      <discovery>2026-10-23</discovery>
+      <entry>2026-11-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4784aba5-d6a9-11f1-8a93-a0369f6e85b8">
+    <topic>freenginx -- TLS session ticket key left uninitialized</topic>
+    <affects>
+      <package>
+	<name>freenginx</name>
+	<range><lt>1.30.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The freenginx project reports:</p>
+	<blockquote cite="https://freenginx.org/en/CHANGES-1.30">
+	  <p>One of the keys was left uninitialized when using automatic
+	    rotation of TLS session ticket keys, making it possible to forge
+	    a session and bypass client certificate verification
+	    (CVE-2026-97629).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-97629</cvename>
+      <url>https://freenginx.org/en/CHANGES-1.30</url>
+      <url>https://freenginx.org/en/CHANGES</url>
+    </references>
+    <dates>
+      <discovery>2026-10-27</discovery>
+      <entry>2026-11-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e2cda057-d6a0-11f1-975e-e4434b819e80">
+    <topic>redmine -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>redmine70</name>
+	<range><lt>7.0.3</lt></range>
+      </package>
+      <package>
+	<name>redmine61</name>
+	<range><lt>6.1.6</lt></range>
+      </package>
+      <package>
+	<name>redmine60</name>
+	<range><lt>6.0.12</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Redmine reports:</p>
+	<blockquote cite="https://www.redmine.org/projects/redmine/wiki/Security_Advisories">
+	  <ul>
+	    <li>High: ReDoS in wiki macro argument parsing (#44657).
+	      Affects 6.0.0 and later; fixed in 7.0.3, 6.1.6 and 6.0.12.</li>
+	    <li>High: OAuth token scope is ignored in
+	      Project.allowed_to_condition (#44625).
+	      Affects 6.1.0 and later; fixed in 7.0.3 and 6.1.6.</li>
+	    <li>High: Private project names and role assignments leaked via
+	      GET /groups/&lt;id&gt;.json?include=memberships (#44468).
+	      Fixed in 7.0.2, 6.1.5 and 6.0.12.</li>
+	    <li>High: Private/invisible issue subjects leaked via REST API
+	      include=children (#44467).
+	      Fixed in 7.0.2, 6.1.5 and 6.0.12.</li>
+	    <li>Moderate: Reflected XSS in attachments#edit_all (unvalidated
+	      back_url) (#44682).
+	      Fixed in 7.0.3, 6.1.6 and 6.0.12.</li>
+	    <li>Moderate: OAuth token scopes are bypassed when creating
+	      projects (#44644).
+	      Affects 6.1.0 and later; fixed in 7.0.3 and 6.1.6.</li>
+	    <li>Low: validate_back_url accepts URLs that browsers resolve to
+	      another host (#44683).
+	      Fixed in 7.0.3, 6.1.6 and 6.0.12.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://www.redmine.org/projects/redmine/wiki/Security_Advisories</url>
+      <url>https://www.redmine.org/issues/44657</url>
+      <url>https://www.redmine.org/issues/44625</url>
+      <url>https://www.redmine.org/issues/44468</url>
+      <url>https://www.redmine.org/issues/44467</url>
+      <url>https://www.redmine.org/issues/44682</url>
+      <url>https://www.redmine.org/issues/44644</url>
+      <url>https://www.redmine.org/issues/44683</url>
+    </references>
+    <dates>
+      <discovery>2026-11-01</discovery>
+      <entry>2026-11-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7c872fa8-d4ee-11f1-b09c-33a9d17da5dc">
+    <topic>qt6-webengine -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>qt6-pdf</name>
+	<name>qt6-webengine</name>
+	<range><lt>6.11.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Qt qtwebengine-chromium repo reports:</p>
+	<blockquote cite="https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=140-based">
+	  <p>Backports for 80 security bugs in Chromium:</p>
+	  <ul>
+	    <li>CVE-2025-10201: Inappropriate implementation in Mojo</li>
+	    <li>CVE-2026-111497: Out-of-bounds write permits remote code execution in Brotli</li>
+	    <li>CVE-2026-112993: Use after free in Input</li>
+	    <li>CVE-2026-113012: Improper input validation in GPU</li>
+	    <li>CVE-2026-113040: Improper input validation in Proxy</li>
+	    <li>CVE-2026-113044: Use after free in V8</li>
+	    <li>CVE-2026-113072: Memory corruption in CSS</li>
+	    <li>CVE-2026-113093: Memory corruption in DisplayLocking</li>
+	    <li>CVE-2026-113095: Out of bounds read in Focus</li>
+	    <li>CVE-2026-113097: Use after free in FileSystem</li>
+	    <li>CVE-2026-113119: Use after free in Network</li>
+	    <li>CVE-2026-113154: Memory corruption in Canvas</li>
+	    <li>CVE-2026-113161: Use after free in WebRTC</li>
+	    <li>CVE-2026-113163: Use after free in WebGL</li>
+	    <li>CVE-2026-113175: Improper input validation in FileSystem</li>
+	    <li>CVE-2026-113181: Use after free in Navigation</li>
+	    <li>CVE-2026-113188: Memory corruption in GPU</li>
+	    <li>CVE-2026-113192: Memory corruption in V8</li>
+	    <li>CVE-2026-113212: Memory corruption in PDF</li>
+	    <li>CVE-2026-113222: Use after free in V8</li>
+	    <li>CVE-2026-113234: Memory corruption in ANGLE</li>
+	    <li>CVE-2026-113242: Memory corruption in ANGLE</li>
+	    <li>CVE-2026-113252: Improper input validation in ANGLE</li>
+	    <li>CVE-2026-113266: Memory corruption in ANGLE</li>
+	    <li>CVE-2026-113271: Use after free in Accessibility</li>
+	    <li>CVE-2026-113273: Memory corruption in ANGLE</li>
+	    <li>CVE-2026-113279: Memory corruption in Accessibility</li>
+	    <li>CVE-2026-113280: Memory corruption in Paint</li>
+	    <li>CVE-2026-113284: Memory corruption in XML</li>
+	    <li>CVE-2026-113285: Memory corruption in ANGLE</li>
+	    <li>CVE-2026-113293: Use after free in ANGLE</li>
+	    <li>CVE-2026-113295: Out of bounds read in ANGLE</li>
+	    <li>CVE-2026-113303: Memory corruption in WebRTC</li>
+	    <li>CVE-2026-113309: Out of bounds read in Media</li>
+	    <li>CVE-2026-113315: Memory corruption in ANGLE</li>
+	    <li>CVE-2026-113317: Memory corruption in Accessibility</li>
+	    <li>CVE-2026-113318: Memory corruption in ServiceWorker</li>
+	    <li>CVE-2026-113324: Use after free in GPU</li>
+	    <li>CVE-2026-113334: Improper input validation in ANGLE</li>
+	    <li>CVE-2026-113336: Memory corruption in Compositing</li>
+	    <li>CVE-2026-113339: Use after free in SVG</li>
+	    <li>CVE-2026-113341: Memory corruption in Skia</li>
+	    <li>CVE-2026-118304: Improper input validation in SVG</li>
+	    <li>CVE-2026-118306: Memory corruption in FileSystem</li>
+	    <li>CVE-2026-118307: Use after free in Paint</li>
+	    <li>CVE-2026-118308: Use after free in SVG</li>
+	    <li>CVE-2026-118311: Memory corruption in Media</li>
+	    <li>CVE-2026-118313: Use after free in Video</li>
+	    <li>CVE-2026-118315: Improper input validation in SVG</li>
+	    <li>CVE-2026-118316: Improper input validation in V8</li>
+	    <li>CVE-2026-118318: Improper access control in V8</li>
+	    <li>CVE-2026-118320: Memory corruption in V8</li>
+	    <li>CVE-2026-118322: Memory corruption in ANGLE</li>
+	    <li>CVE-2026-118327: Memory corruption in Media</li>
+	    <li>CVE-2026-118328: Improper input validation in WebRTC</li>
+	    <li>CVE-2026-118329: Improper input validation in ANGLE</li>
+	    <li>CVE-2026-118331: Improper input validation in FileAPI</li>
+	    <li>CVE-2026-118333: Missing authorization in Video</li>
+	    <li>CVE-2026-118334: Use after free in ImageCapture</li>
+	    <li>CVE-2026-118335: Improper input validation in Metrics</li>
+	    <li>CVE-2026-118337: Improper access control in Forms</li>
+	    <li>CVE-2026-118339: Use after free in Animation</li>
+	    <li>CVE-2026-118340: Memory corruption in Skia</li>
+	    <li>CVE-2026-118341: Use after free in Modularization</li>
+	    <li>CVE-2026-118342: Out of bounds write in Editing</li>
+	    <li>CVE-2026-118344: Use after free in Layout</li>
+	    <li>CVE-2026-118345: Use after free in PDFium</li>
+	    <li>CVE-2026-118346: Use after free in Compositing</li>
+	    <li>CVE-2026-118347: Use after free in FileSystem</li>
+	    <li>CVE-2026-118348: Improper input validation in Skia</li>
+	    <li>CVE-2026-118351: Memory corruption in Skia</li>
+	    <li>CVE-2026-118352: Memory corruption in Cache</li>
+	    <li>CVE-2026-118353: Use after free in Paint</li>
+	    <li>CVE-2026-118354: Improper input validation in Skia</li>
+	    <li>CVE-2026-118355: Improper input validation in Command</li>
+	    <li>CVE-2026-118356: Use after free in WTF</li>
+	    <li>CVE-2026-118357: Use after free in FileSystem</li>
+	    <li>CVE-2026-118358: Memory corruption in WebAudio</li>
+	    <li>CVE-2026-19142: Use after free in Views</li>
+	    <li>CVE-2026-76020: Race condition in V8</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-10201</cvename>
+      <cvename>CVE-2026-111497</cvename>
+      <cvename>CVE-2026-112993</cvename>
+      <cvename>CVE-2026-113012</cvename>
+      <cvename>CVE-2026-113040</cvename>
+      <cvename>CVE-2026-113044</cvename>
+      <cvename>CVE-2026-113072</cvename>
+      <cvename>CVE-2026-113093</cvename>
+      <cvename>CVE-2026-113095</cvename>
+      <cvename>CVE-2026-113097</cvename>
+      <cvename>CVE-2026-113119</cvename>
+      <cvename>CVE-2026-113154</cvename>
+      <cvename>CVE-2026-113161</cvename>
+      <cvename>CVE-2026-113163</cvename>
+      <cvename>CVE-2026-113175</cvename>
+      <cvename>CVE-2026-113181</cvename>
+      <cvename>CVE-2026-113188</cvename>
+      <cvename>CVE-2026-113192</cvename>
+      <cvename>CVE-2026-113212</cvename>
+      <cvename>CVE-2026-113222</cvename>
+      <cvename>CVE-2026-113234</cvename>
+      <cvename>CVE-2026-113242</cvename>
+      <cvename>CVE-2026-113252</cvename>
+      <cvename>CVE-2026-113266</cvename>
+      <cvename>CVE-2026-113271</cvename>
+      <cvename>CVE-2026-113273</cvename>
+      <cvename>CVE-2026-113279</cvename>
+      <cvename>CVE-2026-113280</cvename>
+      <cvename>CVE-2026-113284</cvename>
+      <cvename>CVE-2026-113285</cvename>
+      <cvename>CVE-2026-113293</cvename>
+      <cvename>CVE-2026-113295</cvename>
+      <cvename>CVE-2026-113303</cvename>
+      <cvename>CVE-2026-113309</cvename>
+      <cvename>CVE-2026-113315</cvename>
+      <cvename>CVE-2026-113317</cvename>
+      <cvename>CVE-2026-113318</cvename>
+      <cvename>CVE-2026-113324</cvename>
+      <cvename>CVE-2026-113334</cvename>
+      <cvename>CVE-2026-113336</cvename>
+      <cvename>CVE-2026-113339</cvename>
+      <cvename>CVE-2026-113341</cvename>
+      <cvename>CVE-2026-118304</cvename>
+      <cvename>CVE-2026-118306</cvename>
+      <cvename>CVE-2026-118307</cvename>
+      <cvename>CVE-2026-118308</cvename>
+      <cvename>CVE-2026-118311</cvename>
+      <cvename>CVE-2026-118313</cvename>
+      <cvename>CVE-2026-118315</cvename>
+      <cvename>CVE-2026-118316</cvename>
+      <cvename>CVE-2026-118318</cvename>
+      <cvename>CVE-2026-118320</cvename>
+      <cvename>CVE-2026-118322</cvename>
+      <cvename>CVE-2026-118327</cvename>
+      <cvename>CVE-2026-118328</cvename>
+      <cvename>CVE-2026-118329</cvename>
+      <cvename>CVE-2026-118331</cvename>
+      <cvename>CVE-2026-118333</cvename>
+      <cvename>CVE-2026-118334</cvename>
+      <cvename>CVE-2026-118335</cvename>
+      <cvename>CVE-2026-118337</cvename>
+      <cvename>CVE-2026-118339</cvename>
+      <cvename>CVE-2026-118340</cvename>
+      <cvename>CVE-2026-118341</cvename>
+      <cvename>CVE-2026-118342</cvename>
+      <cvename>CVE-2026-118344</cvename>
+      <cvename>CVE-2026-118345</cvename>
+      <cvename>CVE-2026-118346</cvename>
+      <cvename>CVE-2026-118347</cvename>
+      <cvename>CVE-2026-118348</cvename>
+      <cvename>CVE-2026-118351</cvename>
+      <cvename>CVE-2026-118352</cvename>
+      <cvename>CVE-2026-118353</cvename>
+      <cvename>CVE-2026-118354</cvename>
+      <cvename>CVE-2026-118355</cvename>
+      <cvename>CVE-2026-118356</cvename>
+      <cvename>CVE-2026-118357</cvename>
+      <cvename>CVE-2026-118358</cvename>
+      <cvename>CVE-2026-19142</cvename>
+      <cvename>CVE-2026-76020</cvename>
+      <url>https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=140-based</url>
+    </references>
+    <dates>
+      <discovery>2026-10-23</discovery>
+      <entry>2026-11-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3749ce48-d5ce-11f1-9bfa-a8a1599412c6">
+    <topic>chromium -- security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>156.0.8078.79</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>156.0.8078.79</lt></range>
+      </package>
+      <package>
+       <name>linux-chrome</name>
+       <range><lt>156.0.8078.79</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_02107719452.html">
+	 <p>This update includes 21 security fixes:</p>
+	 <ul>
+	    <li>[576215540] Critical CVE-2026-76024: Memory corruption in MediaStream.</li>
+	    <li>[559780982] High CVE-2026-76025: Use after free in FileSystem.</li>
+	    <li>[567673200] High CVE-2026-76026: Memory corruption in Autofill.</li>
+	    <li>[568894475] High CVE-2026-76027: Memory corruption in CacheStorage.</li>
+	    <li>[569012015] High CVE-2026-76028: Use after free in FileSystem.</li>
+	    <li>[572055997] High CVE-2026-76029: Memory corruption in Network.</li>
+	    <li>[572269631] High CVE-2026-76030: Memory corruption in FileSystem.</li>
+	    <li>[572556403] High CVE-2026-76031: Use after free in Input.</li>
+	    <li>[573264074] High CVE-2026-119260: Use after free in Frames.</li>
+	    <li>[574213633] High CVE-2026-119261: Improper input validation in Skia.</li>
+	    <li>[574660146] High CVE-2026-119262: Improper input validation in V8.</li>
+	    <li>[575143870] High CVE-2026-119263: Memory corruption in GarbageCollection.</li>
+	    <li>[575150692] High CVE-2026-119264: Memory corruption in Dawn.</li>
+	    <li>[575201795] High CVE-2026-119265: Memory corruption in Quota.</li>
+	    <li>[575202553] High CVE-2026-119266: Use after free in Quota.</li>
+	    <li>[576203565] High CVE-2026-119267: Memory corruption in DOM.</li>
+	    <li>[576984708] High CVE-2026-119268: Integer overflow in Editing.</li>
+	    <li>[577072000] High CVE-2026-119269: Use after free in Blink.</li>
+	    <li>[577333729] High CVE-2026-119270: Improper input validation in CacheStorage.</li>
+	    <li>[577403270] High CVE-2026-119271: Use after free in Skia.</li>
+	    <li>[569012543] Medium CVE-2026-119272: Out of bounds read in FileSystem.</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-76024</cvename>
+      <cvename>CVE-2026-76025</cvename>
+      <cvename>CVE-2026-76026</cvename>
+      <cvename>CVE-2026-76027</cvename>
+      <cvename>CVE-2026-76028</cvename>
+      <cvename>CVE-2026-76029</cvename>
+      <cvename>CVE-2026-76030</cvename>
+      <cvename>CVE-2026-76031</cvename>
+      <cvename>CVE-2026-119260</cvename>
+      <cvename>CVE-2026-119261</cvename>
+      <cvename>CVE-2026-119262</cvename>
+      <cvename>CVE-2026-119263</cvename>
+      <cvename>CVE-2026-119264</cvename>
+      <cvename>CVE-2026-119265</cvename>
+      <cvename>CVE-2026-119266</cvename>
+      <cvename>CVE-2026-119267</cvename>
+      <cvename>CVE-2026-119268</cvename>
+      <cvename>CVE-2026-119269</cvename>
+      <cvename>CVE-2026-119270</cvename>
+      <cvename>CVE-2026-119271</cvename>
+      <cvename>CVE-2026-119272</cvename>
+      <url>https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_02107719452.html</url>
+    </references>
+    <dates>
+      <discovery>2026-10-29</discovery>
+      <entry>2026-11-01</entry>
+      <modified>2026-11-04</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="60814125-d630-11f1-9bfa-a8a1599412c6">
+    <topic>chromium -- security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>156.0.8078.73</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>156.0.8078.73</lt></range>
+      </package>
+      <package>
+       <name>linux-chrome</name>
+       <range><lt>156.0.8078.73</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_0562499947.html">
+	 <p>This update includes 52 security fixes:</p>
+	 <ul>
+	    <li>[571156746] Critical CVE-2026-118306: Memory corruption in FileSystem.</li>
+	    <li>[572193211] Critical CVE-2026-118331: Improper input validation in FileAPI.</li>
+	    <li>[574776938] Critical CVE-2026-118348: Improper input validation in Skia.</li>
+	    <li>[574852698] Critical CVE-2026-118344: Use after free in Layout.</li>
+	    <li>[562191732] High CVE-2026-118357: Use after free in FileSystem.</li>
+	    <li>[565133743] High CVE-2026-118318: Improper access control in V8.</li>
+	    <li>[567129324] High CVE-2026-118350: Use after free in Turbolev.</li>
+	    <li>[567645136] High CVE-2026-118339: Use after free in Animation.</li>
+	    <li>[568348290] High CVE-2026-118305: Memory corruption in Turbolev.</li>
+	    <li>[568730797] High CVE-2026-118317: Memory corruption in HTML.</li>
+	    <li>[568894515] High CVE-2026-118320: Memory corruption in V8.</li>
+	    <li>[568895029] High CVE-2026-118322: Memory corruption in ANGLE.</li>
+	    <li>[568900535] High CVE-2026-118329: Improper input validation in ANGLE.</li>
+	    <li>[568936430] High CVE-2026-118354: Improper input validation in Skia.</li>
+	    <li>[568936530] High CVE-2026-118340: Memory corruption in Skia.</li>
+	    <li>[568937139] High CVE-2026-118321: Improper input validation in Core.</li>
+	    <li>[569286605] High CVE-2026-118337: Improper access control in Forms.</li>
+	    <li>[569674221] High CVE-2026-118352: Memory corruption in Cache.</li>
+	    <li>[570638833] High CVE-2026-118355: Improper input validation in Command.</li>
+	    <li>[570675085] High CVE-2026-118307: Use after free in Paint.</li>
+	    <li>[570825067] High CVE-2026-118351: Memory corruption in Skia.</li>
+	    <li>[570927027] High CVE-2026-118328: Improper input validation in WebRTC.</li>
+	    <li>[571147583] High CVE-2026-118333: Missing authorization in Video.</li>
+	    <li>[572111820] High CVE-2026-118336: Improper input validation in Headless.</li>
+	    <li>[572191610] High CVE-2026-118358: Memory corruption in WebAudio.</li>
+	    <li>[572312175] High CVE-2026-118353: Use after free in Paint.</li>
+	    <li>[572422506] High CVE-2026-118349: Memory corruption in Payments.</li>
+	    <li>[572878518] High CVE-2026-118327: Memory corruption in Media.</li>
+	    <li>[573378812] High CVE-2026-118359: Memory corruption in V8.</li>
+	    <li>[573389782] High CVE-2026-118343: Improper input validation in ReadingList.</li>
+	    <li>[573938968] High CVE-2026-118311: Memory corruption in Media.</li>
+	    <li>[574027204] High CVE-2026-118334: Use after free in ImageCapture.</li>
+	    <li>[574030524] High CVE-2026-118332: Improper input validation in Compositing.</li>
+	    <li>[574032795] High CVE-2026-118313: Use after free in Video.</li>
+	    <li>[574061024] High CVE-2026-118345: Use after free in PDFium.</li>
+	    <li>[574101376] High CVE-2026-118304: Improper input validation in SVG.</li>
+	    <li>[574223268] High CVE-2026-118316: Improper input validation in V8.</li>
+	    <li>[574382050] High CVE-2026-118346: Use after free in Compositing.</li>
+	    <li>[574412629] High CVE-2026-118342: Out of bounds write in Editing.</li>
+	    <li>[574516887] High CVE-2026-118310: Improper input validation in Views.</li>
+	    <li>[574606539] High CVE-2026-118335: Improper input validation in Metrics.</li>
+	    <li>[574791952] High CVE-2026-118308: Use after free in SVG.</li>
+	    <li>[574803484] High CVE-2026-118314: Improper input validation in UI.</li>
+	    <li>[574911589] High CVE-2026-118347: Use after free in FileSystem.</li>
+	    <li>[574911701] High CVE-2026-118341: Use after free in Modularization.</li>
+	    <li>[575090745] High CVE-2026-118330: Use after free in Browser.</li>
+	    <li>[575184164] High CVE-2026-118315: Improper input validation in SVG.</li>
+	    <li>[575851252] High CVE-2026-118356: Use after free in WTF.</li>
+	    <li>[576133777] High CVE-2026-118309: Improper input validation in UI.</li>
+	    <li>[576194994] High CVE-2026-118319: Memory corruption in Skia.</li>
+	    <li>[540025369] Medium CVE-2026-118312: Memory corruption in Paint.</li>
+	    <li>[575826638] Medium CVE-2026-118338: Use after free in Animation.</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-118306</cvename>
+      <cvename>CVE-2026-118331</cvename>
+      <cvename>CVE-2026-118348</cvename>
+      <cvename>CVE-2026-118344</cvename>
+      <cvename>CVE-2026-118357</cvename>
+      <cvename>CVE-2026-118318</cvename>
+      <cvename>CVE-2026-118350</cvename>
+      <cvename>CVE-2026-118339</cvename>
+      <cvename>CVE-2026-118305</cvename>
+      <cvename>CVE-2026-118317</cvename>
+      <cvename>CVE-2026-118320</cvename>
+      <cvename>CVE-2026-118322</cvename>
+      <cvename>CVE-2026-118329</cvename>
+      <cvename>CVE-2026-118354</cvename>
+      <cvename>CVE-2026-118340</cvename>
+      <cvename>CVE-2026-118321</cvename>
+      <cvename>CVE-2026-118337</cvename>
+      <cvename>CVE-2026-118352</cvename>
+      <cvename>CVE-2026-118355</cvename>
+      <cvename>CVE-2026-118307</cvename>
+      <cvename>CVE-2026-118351</cvename>
+      <cvename>CVE-2026-118328</cvename>
+      <cvename>CVE-2026-118333</cvename>
+      <cvename>CVE-2026-118336</cvename>
+      <cvename>CVE-2026-118358</cvename>
+      <cvename>CVE-2026-118353</cvename>
+      <cvename>CVE-2026-118349</cvename>
+      <cvename>CVE-2026-118327</cvename>
+      <cvename>CVE-2026-118359</cvename>
+      <cvename>CVE-2026-118343</cvename>
+      <cvename>CVE-2026-118311</cvename>
+      <cvename>CVE-2026-118334</cvename>
+      <cvename>CVE-2026-118332</cvename>
+      <cvename>CVE-2026-118313</cvename>
+      <cvename>CVE-2026-118345</cvename>
+      <cvename>CVE-2026-118304</cvename>
+      <cvename>CVE-2026-118316</cvename>
+      <cvename>CVE-2026-118346</cvename>
+      <cvename>CVE-2026-118342</cvename>
+      <cvename>CVE-2026-118310</cvename>
+      <cvename>CVE-2026-118335</cvename>
+      <cvename>CVE-2026-118308</cvename>
+      <cvename>CVE-2026-118314</cvename>
+      <cvename>CVE-2026-118347</cvename>
+      <cvename>CVE-2026-118341</cvename>
+      <cvename>CVE-2026-118330</cvename>
+      <cvename>CVE-2026-118315</cvename>
+      <cvename>CVE-2026-118356</cvename>
+      <cvename>CVE-2026-118309</cvename>
+      <cvename>CVE-2026-118319</cvename>
+      <cvename>CVE-2026-118312</cvename>
+      <cvename>CVE-2026-118338</cvename>
+      <url>https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_0562499947.html</url>
+    </references>
+    <dates>
+      <discovery>2026-10-27</discovery>
+      <entry>2026-11-01</entry>
+      <modified>2026-11-04</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="6f31f4ab-d5fd-11f1-b2f0-002b67dfc673">
+    <topic>unarr -- multiple vulnerabilities in the rar, zip and tar readers</topic>
+    <affects>
+    <package>
+	<name>unarr</name>
+	<range><lt>1.2.0</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The unarr project reports:</p>
+	<blockquote cite="https://github.com/selmf/unarr/blob/v1.2.0/CHANGELOG.md">
+	  <ul>
+	    <li>rar: Fix OOB read in rar_conv_unicode_to_utf8</li>
+	    <li>rar: Prevent heap overflow when copying filters into RAR VM</li>
+	    <li>zip: Fix off-by-3 heap out-of-bounds read in ZIP64 extra
+	      field parser</li>
+	    <li>tar: Fix off-by-1 heap overflow in tar_get_name when
+	      concatenating USTAR filename and prefix at full length</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-111273</cvename>
+      <cvename>CVE-2026-111274</cvename>
+      <url>https://github.com/selmf/unarr/security/advisories/GHSA-fj4h-mpx9-46qj</url>
+      <url>https://github.com/selmf/unarr/security/advisories/GHSA-qm4g-jf39-jwjj</url>
+      <url>https://github.com/selmf/unarr/security/advisories/GHSA-3pwm-h93f-p4qh</url>
+      <url>https://github.com/selmf/unarr/security/advisories/GHSA-r5fr-9636-6xpp</url>
+      <url>https://github.com/selmf/unarr/blob/v1.2.0/CHANGELOG.md</url>
+    </references>
+    <dates>
+      <discovery>2026-10-15</discovery>
+      <entry>2026-11-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5cd347f3-d573-11f1-a2bb-50ebf6bdf8e9">
+    <topic>phpmyfaq -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>phpmyfaq-php83</name>
+	<name>phpmyfaq-php84</name>
+	<name>phpmyfaq-php85</name>
+	<range><lt>4.1.11</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>phpMyFAQ team reports:</p>
+	<blockquote cite="https://www.phpmyfaq.de/security/advisory-2026-10-21/">
+	  <p>The WebAuthn prepare-login endpoint returns stable credential IDs for
+	    existing accounts with registered passkeys and rotating credential IDs
+	    for unknown accounts, so an unauthenticated attacker can enumerate user
+	    accounts and passkeys.</p>
+	  <p>Insufficient authorization checks allow a delegated group
+	    administrator to delete groups with higher privileges than their
+	    own.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://www.phpmyfaq.de/security/advisory-2026-10-21/</url>
+    </references>
+    <dates>
+      <discovery>2026-10-21</discovery>
+      <entry>2026-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d6aba3d5-d549-11f1-95a4-3c7c3fba4204">
+    <topic>uriparser -- Integer overflow vulnerability</topic>
+    <affects>
+	<package>
+	  <name>uriparser</name>
+	  <range><lt>1.0.3</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The URIparser project reports:</p>
+	<blockquote cite="https://github.com/uriparser/uriparser/pull/313">
+	  <ul><li>CVE-2026-48841: Protect 'ComposeQueryEngine' from integer overflow.</li></ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-48841</cvename>
+      <url>https://github.com/uriparser/uriparser/pull/313</url>
+      <url>https://github.com/uriparser/uriparser/blob/uriparser-1.0.3/ChangeLog</url>
+    </references>
+    <dates>
+      <discovery>2026-05-20</discovery>
+      <entry>2026-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c0892724-d4a0-11f1-8df4-74563cf85f9d">
+    <topic>libwasmtime -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>libwasmtime</name>
+	<name>wasmtime</name>
+	<range><lt>36.0.20</lt></range>
+	<range><ge>37.0.0</ge><lt>48.0.8</lt></range>
+	<range><ge>49.0.0</ge><lt>49.0.5</lt></range>
+	<range><ge>50.0.0</ge><lt>50.0.1</lt></range>
+      </package>
+      <package>
+	<name>codemark</name>
+	<range><le>0.7.30_2</le></range>
+      </package>
+      <package>
+	<name>gram-text-editor</name>
+	<range><le>3.3.0_1</le></range>
+      </package>
+      <package>
+	<name>lapce</name>
+	<range><le>0.4.6_8</le></range>
+      </package>
+      <package>
+	<name>mongodb90</name>
+	<name>mongodb90-armv80a</name>
+	<range><le>9.0.4</le></range>
+      </package>
+      <package>
+	<name>moon</name>
+	<range><le>2.6.3</le></range>
+      </package>
+      <package>
+	<name>surfer</name>
+	<range><le>0.7.0_4</le></range>
+      </package>
+      <package>
+	<name>surrealdb</name>
+	<range><le>3.3.5</le></range>
+      </package>
+      <package>
+	<name>tree-sitter-cli</name>
+	<range><le>0.26.13_2</le></range>
+      </package>
+      <package>
+	<name>veloren-weekly</name>
+	<range><le>s20261027</le></range>
+      </package>
+      <package>
+	<name>veryl</name>
+	<range><le>0.22.0_1</le></range>
+      </package>
+      <package>
+	<name>vscode</name>
+	<range><le>1.143.1_1</le></range>
+      </package>
+      <package>
+	<name>waveterm</name>
+	<range><le>0.14.5_32</le></range>
+      </package>
+      <package>
+	<name>wizer</name>
+	<range><le>11.0.3_5</le></range>
+      </package>
+      <package>
+	<name>zed-editor</name>
+	<range><le>1.25.3</le></range>
+      </package>
+      <package>
+	<name>zeroclaw</name>
+	<range><le>0.8.0.b.2_3</le></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Wasmtime development team reports:</p>
+	<blockquote cite="https://github.com/bytecodealliance/wasmtime/releases/tag/v50.0.1">
+	  <ul>
+	    <li>wasi-sockets: UDP connect only required the address to be
+	    permitted for sending or receiving, allowing guests to send
+	    datagrams to addresses denied for UdpSend.</li>
+	    <li>Cross-engine type confusion with host-created
+	    struct-types-with-supertypes has been fixed.</li>
+	    <li>Panic with typed functions with i31 or nullref arguments has
+	    been fixed.</li>
+	    <li>Unchecked memory usage in transferring borrowed resources
+	    between components has been fixed.</li>
+	    <li>Fixed a possibility of content-length being invalid or not
+	    matching body length in wasi-http p2.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-hmmr-87qq-258j</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-qw58-7h65-crq2</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-3982-jqvv-277m</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-6fr9-xmw9-5352</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-h4wp-g4x3-7398</url>
+    </references>
+    <dates>
+      <discovery>2026-10-29</discovery>
+      <entry>2026-10-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="57e6e702-cd69-11f1-b0e3-74563cf85f9d">
+    <topic>libwasmtime -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>libwasmtime</name>
+	<name>wasmtime</name>
+	<range><lt>36.0.19</lt></range>
+	<range><ge>37.0.0</ge><lt>48.0.7</lt></range>
+	<range><ge>49.0.0</ge><lt>49.0.4</lt></range>
+      </package>
+      <package>
+	<name>codemark</name>
+	<range><le>0.7.30_2</le></range>
+      </package>
+      <package>
+	<name>gram-text-editor</name>
+	<range><le>3.3.0_1</le></range>
+      </package>
+      <package>
+	<name>lapce</name>
+	<range><le>0.4.6_8</le></range>
+      </package>
+      <package>
+	<name>mongodb90</name>
+	<name>mongodb90-armv80a</name>
+	<range><le>9.0.4</le></range>
+      </package>
+      <package>
+	<name>moon</name>
+	<range><le>2.6.3</le></range>
+      </package>
+      <package>
+	<name>surfer</name>
+	<range><le>0.7.0_4</le></range>
+      </package>
+      <package>
+	<name>surrealdb</name>
+	<range><le>3.2.6</le></range>
+      </package>
+      <package>
+	<name>tree-sitter-cli</name>
+	<range><le>0.26.13_2</le></range>
+      </package>
+      <package>
+	<name>veloren-weekly</name>
+	<range><lt>s20261027</lt></range>
+      </package>
+      <package>
+	<name>veryl</name>
+	<range><le>0.22.0_1</le></range>
+      </package>
+      <package>
+	<name>vscode</name>
+	<range><le>1.143.1</le></range>
+      </package>
+      <package>
+	<name>waveterm</name>
+	<range><le>0.14.5_32</le></range>
+      </package>
+      <package>
+	<name>wizer</name>
+	<range><le>11.0.3_5</le></range>
+      </package>
+      <package>
+	<name>zed-editor</name>
+	<range><lt>1.25.3</lt></range>
+      </package>
+      <package>
+	<name>zeroclaw</name>
+	<range><le>0.8.0.b.2_3</le></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Wasmtime development team reports:</p>
+	<blockquote cite="https://github.com/bytecodealliance/wasmtime/releases/tag/v49.0.3">
+	  <ul>
+	    <li>Out-of-bounds zero-length stream writes can panic.</li>
+	    <li>Host panic when component call_async is cancelled under some
+	    conditions.</li>
+	    <li>Panic on erroneous call-to-host from guest realloc call.</li>
+	    <li>Yielding in a component start function can lead to a host panic.</li>
+	    <li>Panic when invoking an async-lifted function via call.</li>
+	    <li>Panic when pending calls are run after a trap.</li>
+	    <li>Stack overflow dropping a long chain of recursive types.</li>
+	    <li>Wasmtime may not properly enforce async-entrypoint requirement.</li>
+	    <li>Panic viewing component model stream or future as the wrong
+	    type.</li>
+	    <li>Component-model handle tables are capped only per instance and
+	    charged to no limit.</li>
+	    <li>Exception tags can cause host data structures to be unaligned.</li>
+	    <li>Filesystem sandbox escape when renaming symlinks with trailing
+	    slashes.</li>
+	    <li>Overlapping string transcode in a fused adapter can panic.</li>
+	    <li>Guests can send absolute-form HTTP requests to different hosts.</li>
+	    <li>wasi-http: Request with long url before query parameter crashes
+	    host.</li>
+	  </ul>
+	</blockquote>
+	<blockquote cite="https://github.com/bytecodealliance/wasmtime/releases/tag/v49.0.4">
+	  <ul>
+	    <li>wasi-http: Guests can add conflicting content lengths to
+	    messages</li>
+	    <li>wasi-http p3: forwarded trailers aren't checked against
+	    is_forbidden_header hook</li>
+	    <li>wasi-http p3: Guests can set incorrect content-length for
+	    spliced response bodies</li>
+	    <li>Cranelift backend on aarch64 can jump to incorrect target on
+	    large Wasm br_table instruction</li>
+	    <li>Panic lowering a host-created component model stream into a
+	    guest that expects a different payload type.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-93g3-36p8-x2gc</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-3r89-v5mq-j5xf</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-7v24-42x9-pxf7</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-5hhx-4wrr-3j9g</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m6w2-jwq2-cv2c</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-hmwq-g22x-qjw5</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-wjc8-633q-pwxr</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-vcg5-q8m5-8379</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-63h4-6cx9-pjfj</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-q554-3cjc-rx7p</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-p79w-pv2r-29qp</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m9f7-9w4p-gv38</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-54p9-vhhq-8f7q</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-5qpp-g3j2-8frx</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-w36r-2hch-9xp9</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-r8xh-cgf7-392j</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-jxcf-8qw5-5c33</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9prg-84vf-g5fc</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9pvw-hwfg-92h5</url>
+    </references>
+    <dates>
+      <discovery>2026-10-14</discovery>
+      <entry>2026-10-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="aafad06c-d519-11f1-8135-8447094a420f">
+    <topic>LibreSSL -- Multiple OCSP client vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>libressl</name>
+	<name>libressl-devel</name>
+	<range><lt>4.4.0_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>VulnCheck reports:</p>
+	<blockquote cite="https://www.vulncheck.com/advisories/libressl-through-4.4.0-crlf-injection-via-ocsp-sendreq-new-request-line">
+	<p>CVE-2026-118371: LibreSSL through 4.4.0 contains a CRLF injection
+	  vulnerability in the libcrypto OCSP_sendreq_new() and OCSP_parse_url()
+	  functions, which write unvalidated request paths into the OCSP POST
+	  request line. Attackers can embed carriage return and line feed
+	  characters in a certificate's Authority Information Access OCSP URI to
+	  inject HTTP headers or split requests sent to responders and proxies.</p>
+	<p>CVE-2026-118372: LibreSSL ocspcheck through 4.4.0 contains a CRLF
+	  injection vulnerability that allows attackers to inject HTTP headers
+	  by embedding CR/LF sequences in a certificate's AIA OCSP URI path.
+	  Because url2host() copies the path without rejecting control
+	  characters and http_open() places it in the POST request line,
+	  attackers can inject headers or split OCSP requests sent to the
+	  responder host.</p>
+	<p>CVE-2026-118373: LibreSSL ocspcheck through 4.4.0 contains a cleartext
+	  transmission vulnerability because url2host() discards the OCSP URL
+	  scheme and http_alloc() only selects TLS for port 443. On-path network
+	  attackers can read OCSP requests sent to https responder URLs on
+	  non-443 ports, exposing certificate serial numbers, issuer hashes, and
+	  nonces.</p>
+	<p>CVE-2026-118374: LibreSSL ocspcheck through 4.4.0 contains a memory
+	  exhaustion vulnerability that allows malicious OCSP responders to
+	  exhaust memory by sending unbounded HTTP responses. Attackers
+	  controlling the responder or intercepting plain HTTP AIA OCSP traffic
+	  can stream endless headers or body data to http_head_read() and
+	  http_body_read(), denying certificate status checks.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-118371</cvename>
+      <cvename>CVE-2026-118372</cvename>
+      <cvename>CVE-2026-118373</cvename>
+      <cvename>CVE-2026-118374</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-118371</url>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-118372</url>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-118373</url>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-118374</url>
+      <url>https://www.vulncheck.com/advisories/libressl-through-4.4.0-crlf-injection-via-ocsp-sendreq-new-request-line</url>
+    </references>
+    <dates>
+      <discovery>2026-10-28</discovery>
+      <entry>2026-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ac97113e-d514-11f1-b2f0-002b67dfc673">
+    <topic>amule -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>amule</name>
+	<range><lt>3.2.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>aMule developers report:</p>
+	<blockquote cite="https://github.com/amule-org/amule/releases/tag/3.2.0">
+	  <p>A security release first: it fixes 15 vulnerabilities reported
+	    through GitHub Security Advisories, and 11 of them are also
+	    present in aMule 2.3.3. If you still run 2.3.x or any 3.x
+	    release, please upgrade.</p>
+	  <ul>
+	    <li>GHSA-cp82-q55r-936c (High): heap off-by-one write and
+	      use-after-free in the UPnP control point, reachable from the
+	      local network when UPnP is enabled.</li>
+	    <li>GHSA-2crf-cv3v-53w5 (High): unbounded EC tag nesting crashes
+	      amuled before authentication.</li>
+	    <li>GHSA-52mv-r67q-c985 (High): a single Kad search request can
+	      block the main thread for tens of seconds.</li>
+	    <li>GHSA-q2jr-xf54-v364 (High): a remote-control user can move
+	      files anywhere on the host.</li>
+	    <li>GHSA-3j74-m5qw-75xg (High): EC-settable ffprobe path leads to
+	      execution of arbitrary binaries.</li>
+	    <li>GHSA-cvxg-rcqx-rp9p (Medium): heap memory disclosure to eD2k
+	      peers.</li>
+	    <li>GHSA-g22c-pmwf-qmwm (Medium): peer-supplied OS info used as a
+	      format string in the statistics tree.</li>
+	    <li>GHSA-6qxf-6fj4-q8fv (Medium): unchecked EC tag types leak heap
+	      bytes into the log before authentication.</li>
+	    <li>GHSA-hv8p-rp6f-rmf7 (Medium): memory exhaustion triggered by
+	      an upload source.</li>
+	    <li>GHSA-vh6g-8m3v-wfmf (Medium): amuleweb guests can add
+	      downloads and make the core fetch arbitrary URLs.</li>
+	    <li>GHSA-42j9-4vh7-jvw6 (Medium): malicious update files can fill
+	      the disk or crash aMule.</li>
+	    <li>GHSA-7rxg-6w2f-3w57 (Medium): multi-part downloads can complete
+	      without MD4 verification.</li>
+	    <li>GHSA-frfq-582f-4jww (Medium): server list URLs fetched without
+	      protocol restriction allow SSRF via gopher://.</li>
+	    <li>GHSA-gc7p-357m-xj2j (Low): synchronous EC clients accept
+	      cleartext replies on an encrypted session.</li>
+	    <li>GHSA-vj9g-4mg6-q9hw (Low): cross-port request forgery against
+	      amuleapi.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/amule-org/amule/releases/tag/3.2.0</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-cp82-q55r-936c</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-2crf-cv3v-53w5</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-52mv-r67q-c985</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-q2jr-xf54-v364</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-3j74-m5qw-75xg</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-cvxg-rcqx-rp9p</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-g22c-pmwf-qmwm</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-6qxf-6fj4-q8fv</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-hv8p-rp6f-rmf7</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-vh6g-8m3v-wfmf</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-42j9-4vh7-jvw6</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-7rxg-6w2f-3w57</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-frfq-582f-4jww</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-gc7p-357m-xj2j</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-vj9g-4mg6-q9hw</url>
+    </references>
+    <dates>
+      <discovery>2026-10-28</discovery>
+      <entry>2026-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="38d8dd83-285c-11f1-9f7b-001b217e4ee5">
+    <topic>ISC KEA -- Stack overflow in Kea daemons</topic>
+    <affects>
+      <package>
+	<name>kea</name>
+	<range><ge>2.6.0</ge><lt>2.6.5</lt></range>
+	<range><ge>3.0.0</ge><lt>3.0.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Internet Systems Consortium, Inc. reports:</p>
+	<blockquote cite="https://kb.isc.org/docs/cve-2026-3608">
+	    <p>Sending a maliciously crafted message to the kea-ctrl-agent, kea-dhcp-ddns, kea-dhcp4, or kea-dhcp6 daemons
+	    over any configured API socket or HA listener can cause the receiving daemon to exit with a stack overflow error.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-3608</cvename>
+      <url>https://kb.isc.org/docs/cve-2026-3608</url>
+    </references>
+    <dates>
+      <discovery>2026-03-18</discovery>
+      <entry>2026-03-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1a0c64ff-5f9f-11f1-8ea1-fb4f92e650aa">
+    <topic>py-django -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py311-django52</name>
+	<name>py312-django52</name>
+	<name>py313-django52</name>
+	<name>py313t-django52</name>
+	<name>py314-django52</name>
+	<name>py314t-django52</name>
+	<name>py315-django52</name>
+	<range><lt>5.2.15</lt></range>
+      </package>
+      <package>
+	<name>py311-django60</name>
+	<name>py312-django60</name>
+	<name>py313-django60</name>
+	<name>py313t-django60</name>
+	<name>py314-django60</name>
+	<name>py314t-django60</name>
+	<name>py315-django60</name>
+	<range><lt>6.0.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>django reports:</p>
+	<blockquote cite="https://www.djangoproject.com/weblog/2026/jun/03/security-releases/">
+	  <p>In accordance with our security release policy, the Django team is issuing releases for Django 6.0.6 and Django 5.2.15. These releases address the security issues detailed below. We encourage all users of Django to upgrade as soon as possible.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-6873</cvename>
+      <cvename>CVE-2026-7666</cvename>
+      <cvename>CVE-2026-8404</cvename>
+      <cvename>CVE-2026-35193</cvename>
+      <cvename>CVE-2026-48587</cvename>
+      <url>http://www.djangoproject.com/weblog/2026/jun/03/security-releases/</url>
+    </references>
+    <dates>
+      <discovery>2026-06-03</discovery>
+      <entry>2026-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="cc1f80fa-d50e-11f1-8135-8447094a420f">
+    <topic>libreswan -- Multiple vulnerabilities.</topic>
+    <affects>
+      <package>
+	<name>libreswan</name>
+	<range><lt>5.4.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The libreswan project reports:</p>
+	<blockquote cite="https://github.com/libreswan/libreswan/releases#release-v5.4.1">
+	  <ul>
+	    <li>CVE-2026-50721: Libreswan, via the function
+	      RSA_authenticate_hash_signature_raw_rsa(), did not correctly verify
+	      the length of the authentication hash when the SIG payload of an IKEv1
+	      packet was encoded using PKCS #1 RSA Encryption as per RFC 2313.</li>
+	    <li>CVE-2026-50722: Libreswan, via the function
+	      RSA_authenticate_hash_signature_pkcs1_1_5_rsa(), did not correctly
+	      verify the DER encoding of the ASN.1 digest when the IKEv2 AUTH
+	      payload was encoded using RSASSA-PKCS1-v1_5 (RFC 8017).</li>
+	   <li>CVE-2026-77206: Libreswan's IKEv2 state machine has a null pointer
+	      dereference bug in the EAP handling code for authentication. As a
+	      result of inconsistency within the IKEv2 state machine code, this bug
+	      can be triggered by any IKEv2 connection, even if EAP is not
+	      configured at all.</li>
+	    <li>CVE-2026-77207: Libreswan has a null pointer dereference bug in the
+	      PKCS#7 handling code for IKE certificate authentication.</li>
+	    <li>CVE-2026-94453: Libreswan's pluto daemon has a use-after-free
+	      vulnerability when a client connecting using IKE over TCP closes the
+	      connection and another packet (retransmit or malicious) is received
+	      for the same tuple.</li>
+	    <li>CVE-2026-12413: An invalidly formatted IKEv2 fragment causes the
+	      Libreswan pluto daemon to crash and restart. Continued exploitation
+	      would cause a denial of service.</li>
+	    <li>CVE-2024-3652: The Libreswan Project was notified of an issue causing
+	      libreswan to restart when using IKEv1 without specifying an esp= line.</li>
+	    <li>CVE-2026-77205: Denial of Service via sending bogus X.509 certificates</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-50721</cvename>
+      <cvename>CVE-2026-77205</cvename>
+      <cvename>CVE-2026-77206</cvename>
+      <cvename>CVE-2026-77207</cvename>
+      <cvename>CVE-2026-50722</cvename>
+      <cvename>CVE-2026-94453</cvename>
+      <cvename>CVE-2026-12413</cvename>
+      <url>https://github.com/libreswan/libreswan/releases#release-v5.4.1</url>
+    </references>
+    <dates>
+      <discovery>2026-10-05</discovery>
+      <entry>2026-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="65abbad5-da78-11f0-b6d5-843a4b343614">
+    <topic>uriparser -- Denial of Service through Unbound Recursion</topic>
+    <affects>
+      <package>
+	<name>uriparser</name>
+	<range><lt>1.0.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The URIparser project reports:</p>
+	<blockquote cite="https://github.com/uriparser/uriparser/issues/282">
+	<p>uriparser through 0.9.9 allows unbounded recursion and stack
+	  consumption, as demonstrated by ParseMustBeSegmentNzNc with large
+	  input containing many commas.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-67899</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2025-67899</url>
+    </references>
+    <dates>
+      <discovery>2025-12-14</discovery>
+      <entry>2026-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="91ea9062-d50a-11f1-8135-8447094a420f">
+    <topic>Weechat -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>weechat</name>
+	<range><lt>4.10.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Weechat project reports:</p>
+	<blockquote cite="https://github.com/weechat/weechat/releases/tag/v4.10.2">
+	  <ul>
+	    <li>core: integer overflow in dynamic strings when their size
+	      exceeds 4 GiB (GHSA-h394-85x4-68c7)</li>
+	    <li>core: heap buffer overflow in charset conversion when the
+	      converted string is more than 4 times longer than the input and
+	      contains invalid chars (GHSA-q32h-5qvq-3936)</li>
+	    <li>irc: limit number of prefix modes in PREFIX of message 005 to
+	      prevent memory exhaustion</li>
+	    <li>irc: escape ${ in values of variables $nick, $channel and
+	      $server in commands /allchan, /allpv and /allserv, to prevent
+	      evaluation of untrusted values</li>
+	    <li>irc: escape ${ in server options addresses, nicks, password and
+	      autojoin set from an IRC URL (irc://...), to prevent evaluation of
+	      untrusted values</li>
+	    <li>irc: escape ${ in channel names saved in server option
+	      autojoin, to prevent evaluation of channel names received from the
+	      server (for example on channel forward)</li>
+	    <li>irc: heap buffer overflow in nick prefixes when the server
+	      sends an empty PREFIX in message 005 and the connection is lost
+	      before message 001 (GHSA-xj8h-x2w9-m8m6)</li>
+	    <li>relay: limit size of HTTP headers received from a client to
+	      prevent memory exhaustion (GHSA-h394-85x4-68c7)</li>
+	    <li>relay: fix heap buffer overflow in path of hdata sent to
+	      clients with "weechat" protocol (GHSA-8wr2-x42m-7fxv)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/weechat/weechat/releases/tag/v4.10.2</url>
+    </references>
+    <dates>
+      <discovery>2026-10-31</discovery>
+      <entry>2026-10-31</entry>
+      <modified>2026-10-31</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="6dc20034-d4a7-11f1-9893-3c7c3fba4204">
+    <topic>Routinator -- multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>routinator</name>
+	  <range><lt>0.15.3</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Routinator Team reports:</p>
+	<blockquote cite="https://www.nlnetlabs.nl/projects/routinator/security-advisories/">
+	  <ul>
+	    <li>CVE-2026-72752: Routinator runs out of memory when the JSON
+	      output is requested many times concurrently. This condition can
+	      be triggered maliciously by an attacker by opening a large
+	      number of connections to the HTTP server. Additionally
+	      Routinator runs into a stack overflow and exits when a payload
+	      item with too much metadata is discarded at once.</li>
+	    <li>CVE-2026-72753: When Routinator encounters an RRDP
+	      notification file with gaps in the delta entries, it is still
+	      accepted and parsed, potentially leading to missing data. If it
+	      encounters too many delta entries it may run out of
+	      memory.</li>
+	    <li>CVE-2026-72754: When Routinator encounters a CRL with many
+	      entries, it may hang or run out of memory. If Routinator
+	      encounters a CRL file with the wrong encoding, it may
+	      exit.</li>
+	    <li>CVE-2026-72755: Routinator stores a newly-retrieved TA
+	      certificate via HTTPS in cache before validation, potentially
+	      overwriting a known good TA certificate even if validation
+	      fails.</li>
+	    <li>CVE-2026-72756: Routinator exits when an rsync URI for a
+	      file obtained over RRDP contains a path that cannot be stored
+	      on disk, such as too long file names, and folder names that
+	      overlap with existing file names.</li>
+	    <li>CVE-2026-72757: Routinator runs out of open connections on
+	      the HTTP server when many connections are opened but never
+	      closed, leaving the HTTP server unavailable. This condition can
+	      be triggered maliciously by an attacker by opening a large
+	      number of connections to the HTTP server.</li>
+	    <li>CVE-2026-72758: When parsing an AS range in Routinator, if
+	      the maximum value of the range is smaller than the minimum
+	      value of the range, Routinator will never reach the maximum
+	      value and run out of memory.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-72752</cvename>
+      <cvename>CVE-2026-72753</cvename>
+      <cvename>CVE-2026-72754</cvename>
+      <cvename>CVE-2026-72755</cvename>
+      <cvename>CVE-2026-72756</cvename>
+      <cvename>CVE-2026-72757</cvename>
+      <cvename>CVE-2026-72758</cvename>
+      <url>https://www.nlnetlabs.nl/downloads/routinator/CVE-2026-72752.txt</url>
+      <url>https://www.nlnetlabs.nl/downloads/routinator/CVE-2026-72753.txt</url>
+      <url>https://www.nlnetlabs.nl/downloads/routinator/CVE-2026-72754.txt</url>
+      <url>https://www.nlnetlabs.nl/downloads/routinator/CVE-2026-72755.txt</url>
+      <url>https://www.nlnetlabs.nl/downloads/routinator/CVE-2026-72756.txt</url>
+      <url>https://www.nlnetlabs.nl/downloads/routinator/CVE-2026-72757.txt</url>
+      <url>https://www.nlnetlabs.nl/downloads/routinator/CVE-2026-72758.txt</url>
+      <url>https://www.nlnetlabs.nl/projects/routinator/security-advisories/</url>
+    </references>
+    <dates>
+      <discovery>2026-10-26</discovery>
+      <entry>2026-10-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="84cd82e1-d49f-11f1-bae2-3497f65b111b">
+    <topic>sqlite3 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>sqlite3</name>
+	<range><lt>3.54.0,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>VulnCheck reports:</p>
+	<blockquote cite="https://www.vulncheck.com/advisories/sqlite-before-3.54.0-fts5-heap-buffer-overflow-via-fts5mergerowidlists">
+	  <p>Ten vulnerabilities fixed in SQLite 3.54.0 were published on
+	    2026-10-30. Four of them corrupt the heap: buffer overflows in
+	    the FTS5 functions fts5MergeRowidLists() and
+	    fts5DoSecureDelete() and in the session extension
+	    sessionUpdateFind(), and a use-after-free in the R-Tree function
+	    nodeWrite(). A fifth, a use-after-free in the FTS3 function
+	    fts3BestSnippet(), is reached through snippet().</p>
+	  <p>The remaining five crash the process or leak data: unbounded
+	    recursion through a chain of common table expressions, through a
+	    chain of COLLATE operators and through countOfViewOptimization()
+	    in a VALUES clause, an information leak on a page size mismatch
+	    in the write-ahead log, and an authorizer bypass with RIGHT or
+	    FULL JOIN USING.</p>
+	  <p>An attacker has to supply a database file or SQL text, so the
+	    FTS5 and FTS3 issues apply wherever those options are built in;
+	    both are on by default in databases/sqlite3.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-119371</cvename>
+      <cvename>CVE-2026-119372</cvename>
+      <cvename>CVE-2026-119373</cvename>
+      <cvename>CVE-2026-119374</cvename>
+      <cvename>CVE-2026-119375</cvename>
+      <cvename>CVE-2026-119376</cvename>
+      <cvename>CVE-2026-119377</cvename>
+      <cvename>CVE-2026-119378</cvename>
+      <cvename>CVE-2026-119379</cvename>
+      <cvename>CVE-2026-119591</cvename>
+      <url>https://www.vulncheck.com/advisories/sqlite-before-3.54.0-fts5-heap-buffer-overflow-via-fts5mergerowidlists</url>
+      <url>https://www.sqlite.org/releaselog/3_54_0.html</url>
+    </references>
+    <dates>
+      <discovery>2026-10-30</discovery>
+      <entry>2026-10-30</entry>
+      <modified>2026-11-11</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="e6b90d23-d49d-11f1-bae2-3497f65b111b">
+    <topic>phpMyAdmin -- Multiple vulnerabilities, no fix available</topic>
+    <affects>
+      <package>
+	<name>phpMyAdmin</name>
+	<name>phpMyAdmin-php82</name>
+	<name>phpMyAdmin-php83</name>
+	<name>phpMyAdmin-php84</name>
+	<name>phpMyAdmin-php85</name>
+	<name>phpMyAdmin-php86</name>
+	<name>phpMyAdmin5</name>
+	<name>phpMyAdmin5-php82</name>
+	<name>phpMyAdmin5-php83</name>
+	<name>phpMyAdmin5-php84</name>
+	<name>phpMyAdmin5-php85</name>
+	<name>phpMyAdmin5-php86</name>
+	<range><ge>0</ge></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>VulnCheck reports:</p>
+	<blockquote cite="https://www.vulncheck.com/advisories/phpmyadmin-through-5.2.3-webauthn-two-factor-authentication-bypass-via-customserver">
+	  <p>Seven vulnerabilities in phpMyAdmin up to and including 5.2.3
+	    were published on 2026-10-30. The most severe of them, an
+	    authentication bypass, is in the WebAuthn second factor:
+	    assertion signatures are never verified against the stored
+	    public keys, so an attacker who already has the MySQL
+	    credentials of a victim can skip the second factor.</p>
+	  <p>The others are a server-side request forgery in
+	    setup/validate.php, which needs no authentication at all and can
+	    be used to probe internal hosts and ports; the removal of two-
+	    factor authentication without re-authentication; SQL injection
+	    in Central Columns and in the Designer, both running with
+	    controluser privileges; stored cross-site scripting in the
+	    Designer history; and a missing cross-site request forgery
+	    token.</p>
+	  <p>There is no fixed release. The phpMyAdmin project has published
+	    neither a security announcement nor a new version, and only the
+	    request forgery has a fix in the development branch so far.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-119426</cvename>
+      <cvename>CVE-2026-119427</cvename>
+      <cvename>CVE-2026-119428</cvename>
+      <cvename>CVE-2026-119429</cvename>
+      <cvename>CVE-2026-119561</cvename>
+      <cvename>CVE-2026-119562</cvename>
+      <cvename>CVE-2026-119563</cvename>
+      <url>https://www.vulncheck.com/advisories/phpmyadmin-through-5.2.3-webauthn-two-factor-authentication-bypass-via-customserver</url>
+      <url>https://abraxaslabs.tech/research/phpmyadmin-webauthn</url>
+    </references>
+    <dates>
+      <discovery>2026-10-30</discovery>
+      <entry>2026-10-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b0395fb0-d45c-11f1-985e-901b0edee044">
+    <topic>py-djangorestframework -- Multiple vulnerabilities</topic>
+    <affects>
+    <package>
+      <name>py311-djangorestframework</name>
+      <name>py312-djangorestframework</name>
+      <name>py313-djangorestframework</name>
+      <name>py313t-djangorestframework</name>
+      <name>py314-djangorestframework</name>
+      <name>py314t-djangorestframework</name>
+      <name>py315-djangorestframework</name>
+      <range><lt>3.18.2,1</lt></range>
+    </package>
+    <package>
+      <name>py312-dj60-djangorestframework</name>
+      <name>py313-dj60-djangorestframework</name>
+      <name>py313t-dj60-djangorestframework</name>
+      <name>py314-dj60-djangorestframework</name>
+      <name>py314t-dj60-djangorestframework</name>
+      <name>py315-dj60-djangorestframework</name>
+      <range><lt>3.18.2</lt></range>
+    </package>
+    <package>
+      <name>py311-dj61-djangorestframework</name>
+      <name>py312-dj61-djangorestframework</name>
+      <name>py313-dj61-djangorestframework</name>
+      <name>py313t-dj61-djangorestframework</name>
+      <name>py314-dj61-djangorestframework</name>
+      <name>py314t-dj61-djangorestframework</name>
+      <name>py315-dj61-djangorestframework</name>
+      <range><lt>3.18.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Bruno Alla reports:</p>
+	<blockquote cite="https://github.com/encode/django-rest-framework/security/advisories/GHSA-3547-9m27-7rxg">
+	<p>An unauthenticated attacker can defeat Django's
+	"DATA_UPLOAD_MAX_MEMORY_SIZE" limit and force a worker process to allocate
+	arbitrary memory, by naming a compression codec in the Content-Type charset
+	parameter. A 108-byte request body produces a 50,331,648-character value inside
+	the view, an amplification factor of 466,033, and grows process peak RSS by
+	about 97 MiB. No application configuration is required beyond DRF's default
+	parser set; the endpoint only has to accept a JSON body.</p>
+	</blockquote>
+	<blockquote cite="https://github.com/encode/django-rest-framework/security/advisories/GHSA-xw6w-gcfp-cf8m">
+	<p>Deleting an authentication token through "TokenProxy" silently
+	deletes nothing. The call raises no exception and reports success, the database
+	row survives, and the token keeps authenticating. Any application, admin
+	integration or operational script that revokes credentials by calling
+	".delete()" on a "TokenProxy" instance believes it has revoked a token that is
+	still live.</p>
+	</blockquote>
+	<blockquote cite="https://github.com/encode/django-rest-framework/security/advisories/GHSA-33wh-fxxf-88vv">
+	<p>DRF's content negotiation parses each Accept token several times per
+	request and never limits the number of tokens or their total size. Each parse
+	ends up in Django's parse_header_parameters, which takes quadratic time when a
+	quoted parameter value is packed with semicolons. On my machine a single GET
+	with a 780KB Accept header made of 96 such tokens kept one gunicorn worker busy
+	for 18.87 seconds (Django 6.1, djangorestframework 3.18.0, gunicorn 26.0.0,
+	Python 3.13, Docker on macOS). The header is syntactically valid, fits inside
+	gunicorn's default header limits, and needs no authentication. Two concurrent
+	requests, which is one per sync worker, made a default two worker deployment
+	stop answering for my whole 40 second test window. It recovered half a second
+	after I stopped sending.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-114136</cvename>
+      <cvename>CVE-2026-114137</cvename>
+      <cvename>CVE-2026-114138</cvename>
+      <url>https://github.com/encode/django-rest-framework/security/advisories/GHSA-3547-9m27-7rxg</url>
+      <url>https://github.com/encode/django-rest-framework/security/advisories/GHSA-xw6w-gcfp-cf8m</url>
+      <url>https://github.com/encode/django-rest-framework/security/advisories/GHSA-33wh-fxxf-88vv</url>
+    </references>
+    <dates>
+      <discovery>2026-10-06</discovery>
+      <entry>2026-10-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4488c0db-d45b-11f1-bae2-3497f65b111b">
+    <topic>metasploit -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>metasploit</name>
+	<range><lt>6.5.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Rapid7 published security advisories for issues fixed in releases
+	  6.5.2 through 6.5.7.  The credential endpoint of the msf-ws REST
+	  API is reachable without authentication, authentication in the
+	  JSON-RPC service is skipped when the database health check fails,
+	  a post module writes files outside the loot directory through a
+	  crafted path, and requests follow HTTP redirects and FTP PASV
+	  responses to arbitrary hosts.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-16895</cvename>
+      <cvename>CVE-2026-87689</cvename>
+      <cvename>CVE-2026-87690</cvename>
+      <cvename>CVE-2026-109681</cvename>
+      <cvename>CVE-2026-109682</cvename>
+      <url>https://github.com/rapid7/metasploit-framework/releases/tag/6.5.7</url>
+    </references>
+    <dates>
+      <discovery>2026-08-27</discovery>
+      <entry>2026-10-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="24aa62d3-d452-11f1-bae2-3497f65b111b">
+    <topic>MySQL 8.4 -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mysql84-client</name>
+	<range><lt>8.4.13</lt></range>
+      </package>
+      <package>
+	<name>mysql84-server</name>
+	<range><lt>8.4.13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Oracle reports:</p>
+	<blockquote cite="https://www.oracle.com/security-alerts/cpuoct2026.html">
+	  <p>The October 2026 Critical Patch Update contains 98 new security
+	    patches for Oracle MySQL, 29 of which may be remotely
+	    exploitable without authentication.</p>
+	  <p>The patches for MySQL Server 8.4 are contained in release
+	    8.4.13. The most severe issue in the server itself can be
+	    exploited over a network without authentication and allows the
+	    server to be taken over.</p>
+	  <p>Two further issues listed by Oracle, in the bundled curl and
+	    OpenSSL copies, do not apply to these ports: they build against
+	    the curl and OpenSSL of the system.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101607</cvename>
+      <cvename>CVE-2026-101608</cvename>
+      <cvename>CVE-2026-101609</cvename>
+      <cvename>CVE-2026-101610</cvename>
+      <cvename>CVE-2026-101611</cvename>
+      <cvename>CVE-2026-101612</cvename>
+      <cvename>CVE-2026-101613</cvename>
+      <cvename>CVE-2026-101614</cvename>
+      <cvename>CVE-2026-101615</cvename>
+      <cvename>CVE-2026-101616</cvename>
+      <cvename>CVE-2026-101617</cvename>
+      <cvename>CVE-2026-101618</cvename>
+      <cvename>CVE-2026-101619</cvename>
+      <cvename>CVE-2026-101621</cvename>
+      <cvename>CVE-2026-101622</cvename>
+      <cvename>CVE-2026-101623</cvename>
+      <cvename>CVE-2026-101624</cvename>
+      <cvename>CVE-2026-101627</cvename>
+      <cvename>CVE-2026-101679</cvename>
+      <cvename>CVE-2026-101721</cvename>
+      <cvename>CVE-2026-101724</cvename>
+      <cvename>CVE-2026-101725</cvename>
+      <cvename>CVE-2026-101726</cvename>
+      <cvename>CVE-2026-101727</cvename>
+      <cvename>CVE-2026-101728</cvename>
+      <cvename>CVE-2026-101729</cvename>
+      <cvename>CVE-2026-101730</cvename>
+      <cvename>CVE-2026-101731</cvename>
+      <cvename>CVE-2026-101732</cvename>
+      <cvename>CVE-2026-101733</cvename>
+      <cvename>CVE-2026-101747</cvename>
+      <cvename>CVE-2026-101748</cvename>
+      <cvename>CVE-2026-101750</cvename>
+      <cvename>CVE-2026-101751</cvename>
+      <cvename>CVE-2026-101754</cvename>
+      <cvename>CVE-2026-101760</cvename>
+      <cvename>CVE-2026-101761</cvename>
+      <cvename>CVE-2026-101762</cvename>
+      <cvename>CVE-2026-101766</cvename>
+      <cvename>CVE-2026-101770</cvename>
+      <cvename>CVE-2026-101771</cvename>
+      <cvename>CVE-2026-101772</cvename>
+      <cvename>CVE-2026-101773</cvename>
+      <cvename>CVE-2026-101774</cvename>
+      <cvename>CVE-2026-101775</cvename>
+      <cvename>CVE-2026-101776</cvename>
+      <cvename>CVE-2026-101778</cvename>
+      <cvename>CVE-2026-101779</cvename>
+      <cvename>CVE-2026-101780</cvename>
+      <cvename>CVE-2026-101781</cvename>
+      <cvename>CVE-2026-101784</cvename>
+      <cvename>CVE-2026-101785</cvename>
+      <cvename>CVE-2026-101787</cvename>
+      <cvename>CVE-2026-101788</cvename>
+      <cvename>CVE-2026-101789</cvename>
+      <cvename>CVE-2026-101794</cvename>
+      <cvename>CVE-2026-101795</cvename>
+      <cvename>CVE-2026-101796</cvename>
+      <cvename>CVE-2026-101797</cvename>
+      <cvename>CVE-2026-101798</cvename>
+      <cvename>CVE-2026-101799</cvename>
+      <cvename>CVE-2026-101800</cvename>
+      <cvename>CVE-2026-101801</cvename>
+      <cvename>CVE-2026-101802</cvename>
+      <cvename>CVE-2026-101803</cvename>
+      <url>https://www.oracle.com/security-alerts/cpuoct2026.html</url>
+    </references>
+    <dates>
+      <discovery>2026-10-20</discovery>
+      <entry>2026-10-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="24aa87c0-d452-11f1-bae2-3497f65b111b">
+    <topic>MySQL 9.7 -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mysql-shell</name>
+	<range><lt>9.7.1_1</lt></range>
+      </package>
+      <package>
+	<name>mysql97-client</name>
+	<range><lt>9.7.4</lt></range>
+      </package>
+      <package>
+	<name>mysql97-server</name>
+	<range><lt>9.7.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Oracle reports:</p>
+	<blockquote cite="https://www.oracle.com/security-alerts/cpuoct2026.html">
+	  <p>The October 2026 Critical Patch Update contains 98 new security
+	    patches for Oracle MySQL, 29 of which may be remotely
+	    exploitable without authentication.</p>
+	  <p>The patches for MySQL Server 9.7 are contained in release 9.7.4.
+	    MySQL Shell is affected through the MySQL sources it bundles and
+	    links statically.</p>
+	  <p>Two further issues listed by Oracle, in the bundled curl and
+	    OpenSSL copies, do not apply to these ports: they build against
+	    the curl and OpenSSL of the system.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101607</cvename>
+      <cvename>CVE-2026-101608</cvename>
+      <cvename>CVE-2026-101609</cvename>
+      <cvename>CVE-2026-101610</cvename>
+      <cvename>CVE-2026-101611</cvename>
+      <cvename>CVE-2026-101612</cvename>
+      <cvename>CVE-2026-101613</cvename>
+      <cvename>CVE-2026-101614</cvename>
+      <cvename>CVE-2026-101615</cvename>
+      <cvename>CVE-2026-101616</cvename>
+      <cvename>CVE-2026-101617</cvename>
+      <cvename>CVE-2026-101618</cvename>
+      <cvename>CVE-2026-101619</cvename>
+      <cvename>CVE-2026-101620</cvename>
+      <cvename>CVE-2026-101621</cvename>
+      <cvename>CVE-2026-101622</cvename>
+      <cvename>CVE-2026-101623</cvename>
+      <cvename>CVE-2026-101624</cvename>
+      <cvename>CVE-2026-101627</cvename>
+      <cvename>CVE-2026-101629</cvename>
+      <cvename>CVE-2026-101637</cvename>
+      <cvename>CVE-2026-101679</cvename>
+      <cvename>CVE-2026-101721</cvename>
+      <cvename>CVE-2026-101722</cvename>
+      <cvename>CVE-2026-101724</cvename>
+      <cvename>CVE-2026-101725</cvename>
+      <cvename>CVE-2026-101726</cvename>
+      <cvename>CVE-2026-101727</cvename>
+      <cvename>CVE-2026-101728</cvename>
+      <cvename>CVE-2026-101729</cvename>
+      <cvename>CVE-2026-101730</cvename>
+      <cvename>CVE-2026-101731</cvename>
+      <cvename>CVE-2026-101732</cvename>
+      <cvename>CVE-2026-101733</cvename>
+      <cvename>CVE-2026-101747</cvename>
+      <cvename>CVE-2026-101748</cvename>
+      <cvename>CVE-2026-101750</cvename>
+      <cvename>CVE-2026-101751</cvename>
+      <cvename>CVE-2026-101752</cvename>
+      <cvename>CVE-2026-101753</cvename>
+      <cvename>CVE-2026-101754</cvename>
+      <cvename>CVE-2026-101756</cvename>
+      <cvename>CVE-2026-101760</cvename>
+      <cvename>CVE-2026-101761</cvename>
+      <cvename>CVE-2026-101762</cvename>
+      <cvename>CVE-2026-101766</cvename>
+      <cvename>CVE-2026-101770</cvename>
+      <cvename>CVE-2026-101771</cvename>
+      <cvename>CVE-2026-101772</cvename>
+      <cvename>CVE-2026-101773</cvename>
+      <cvename>CVE-2026-101774</cvename>
+      <cvename>CVE-2026-101775</cvename>
+      <cvename>CVE-2026-101776</cvename>
+      <cvename>CVE-2026-101777</cvename>
+      <cvename>CVE-2026-101778</cvename>
+      <cvename>CVE-2026-101779</cvename>
+      <cvename>CVE-2026-101780</cvename>
+      <cvename>CVE-2026-101781</cvename>
+      <cvename>CVE-2026-101784</cvename>
+      <cvename>CVE-2026-101785</cvename>
+      <cvename>CVE-2026-101787</cvename>
+      <cvename>CVE-2026-101788</cvename>
+      <cvename>CVE-2026-101789</cvename>
+      <cvename>CVE-2026-101794</cvename>
+      <cvename>CVE-2026-101795</cvename>
+      <cvename>CVE-2026-101796</cvename>
+      <cvename>CVE-2026-101797</cvename>
+      <cvename>CVE-2026-101798</cvename>
+      <cvename>CVE-2026-101799</cvename>
+      <cvename>CVE-2026-101800</cvename>
+      <cvename>CVE-2026-101801</cvename>
+      <cvename>CVE-2026-101802</cvename>
+      <cvename>CVE-2026-101803</cvename>
+      <url>https://www.oracle.com/security-alerts/cpuoct2026.html</url>
+    </references>
+    <dates>
+      <discovery>2026-10-20</discovery>
+      <entry>2026-10-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="24aaad94-d452-11f1-bae2-3497f65b111b">
+    <topic>MySQL 26.7 -- Multiple vulnerabilities, no fix available</topic>
+    <affects>
+      <package>
+	<name>mysql267-client</name>
+	<range><ge>26.7.0</ge></range>
+      </package>
+      <package>
+	<name>mysql267-server</name>
+	<range><ge>26.7.0</ge></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Oracle reports:</p>
+	<blockquote cite="https://www.oracle.com/security-alerts/cpuoct2026.html">
+	  <p>The October 2026 Critical Patch Update contains 98 new security
+	    patches for Oracle MySQL, 29 of which may be remotely
+	    exploitable without authentication.</p>
+	  <p>MySQL 26.7 is an Innovation release. It reached its end of life
+	    on 2026-10-20, when MySQL 26.10 was released, and Oracle ships
+	    no patched 26.7 release. Users have to move to MySQL 26.10 or to
+	    one of the LTS series, 8.4 or 9.7.</p>
+	  <p>The list below includes the MySQL Router issues, because the
+	    router binaries are shipped by mysql267-server.</p>
+	  <p>Two further issues listed by Oracle, in the bundled curl and
+	    OpenSSL copies, do not apply to these ports: they build against
+	    the curl and OpenSSL of the system.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101607</cvename>
+      <cvename>CVE-2026-101608</cvename>
+      <cvename>CVE-2026-101609</cvename>
+      <cvename>CVE-2026-101610</cvename>
+      <cvename>CVE-2026-101611</cvename>
+      <cvename>CVE-2026-101612</cvename>
+      <cvename>CVE-2026-101613</cvename>
+      <cvename>CVE-2026-101614</cvename>
+      <cvename>CVE-2026-101615</cvename>
+      <cvename>CVE-2026-101616</cvename>
+      <cvename>CVE-2026-101617</cvename>
+      <cvename>CVE-2026-101618</cvename>
+      <cvename>CVE-2026-101619</cvename>
+      <cvename>CVE-2026-101621</cvename>
+      <cvename>CVE-2026-101622</cvename>
+      <cvename>CVE-2026-101623</cvename>
+      <cvename>CVE-2026-101624</cvename>
+      <cvename>CVE-2026-101627</cvename>
+      <cvename>CVE-2026-101629</cvename>
+      <cvename>CVE-2026-101631</cvename>
+      <cvename>CVE-2026-101632</cvename>
+      <cvename>CVE-2026-101633</cvename>
+      <cvename>CVE-2026-101637</cvename>
+      <cvename>CVE-2026-101679</cvename>
+      <cvename>CVE-2026-101720</cvename>
+      <cvename>CVE-2026-101721</cvename>
+      <cvename>CVE-2026-101722</cvename>
+      <cvename>CVE-2026-101724</cvename>
+      <cvename>CVE-2026-101725</cvename>
+      <cvename>CVE-2026-101726</cvename>
+      <cvename>CVE-2026-101727</cvename>
+      <cvename>CVE-2026-101728</cvename>
+      <cvename>CVE-2026-101729</cvename>
+      <cvename>CVE-2026-101730</cvename>
+      <cvename>CVE-2026-101731</cvename>
+      <cvename>CVE-2026-101732</cvename>
+      <cvename>CVE-2026-101733</cvename>
+      <cvename>CVE-2026-101743</cvename>
+      <cvename>CVE-2026-101747</cvename>
+      <cvename>CVE-2026-101748</cvename>
+      <cvename>CVE-2026-101749</cvename>
+      <cvename>CVE-2026-101750</cvename>
+      <cvename>CVE-2026-101751</cvename>
+      <cvename>CVE-2026-101752</cvename>
+      <cvename>CVE-2026-101753</cvename>
+      <cvename>CVE-2026-101754</cvename>
+      <cvename>CVE-2026-101755</cvename>
+      <cvename>CVE-2026-101756</cvename>
+      <cvename>CVE-2026-101760</cvename>
+      <cvename>CVE-2026-101761</cvename>
+      <cvename>CVE-2026-101762</cvename>
+      <cvename>CVE-2026-101766</cvename>
+      <cvename>CVE-2026-101770</cvename>
+      <cvename>CVE-2026-101771</cvename>
+      <cvename>CVE-2026-101772</cvename>
+      <cvename>CVE-2026-101773</cvename>
+      <cvename>CVE-2026-101774</cvename>
+      <cvename>CVE-2026-101775</cvename>
+      <cvename>CVE-2026-101776</cvename>
+      <cvename>CVE-2026-101777</cvename>
+      <cvename>CVE-2026-101778</cvename>
+      <cvename>CVE-2026-101779</cvename>
+      <cvename>CVE-2026-101780</cvename>
+      <cvename>CVE-2026-101781</cvename>
+      <cvename>CVE-2026-101783</cvename>
+      <cvename>CVE-2026-101784</cvename>
+      <cvename>CVE-2026-101785</cvename>
+      <cvename>CVE-2026-101786</cvename>
+      <cvename>CVE-2026-101787</cvename>
+      <cvename>CVE-2026-101788</cvename>
+      <cvename>CVE-2026-101789</cvename>
+      <cvename>CVE-2026-101794</cvename>
+      <cvename>CVE-2026-101795</cvename>
+      <cvename>CVE-2026-101796</cvename>
+      <cvename>CVE-2026-101797</cvename>
+      <cvename>CVE-2026-101798</cvename>
+      <cvename>CVE-2026-101799</cvename>
+      <cvename>CVE-2026-101800</cvename>
+      <cvename>CVE-2026-101801</cvename>
+      <cvename>CVE-2026-101802</cvename>
+      <cvename>CVE-2026-101803</cvename>
+      <cvename>CVE-2026-101810</cvename>
+      <url>https://www.oracle.com/security-alerts/cpuoct2026.html</url>
+    </references>
+    <dates>
+      <discovery>2026-10-20</discovery>
+      <entry>2026-10-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="24aad1ab-d452-11f1-bae2-3497f65b111b">
+    <topic>MySQL Connectors -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mysql-connector-c++</name>
+	<range><lt>26.10.0</lt></range>
+      </package>
+      <package>
+	<name>mysql-connector-j</name>
+	<range><lt>26.10.0</lt></range>
+      </package>
+      <package>
+	<name>mysql-connector-odbc</name>
+	<range><lt>26.10.0</lt></range>
+      </package>
+      <package>
+	<name>py-mysql-connector-python</name>
+	<range><lt>26.10.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Oracle reports:</p>
+	<blockquote cite="https://www.oracle.com/security-alerts/cpuoct2026.html">
+	  <p>The October 2026 Critical Patch Update contains 98 new security
+	    patches for Oracle MySQL, 29 of which may be remotely
+	    exploitable without authentication.</p>
+	  <p>Eight of them affect the MySQL Connectors. The most severe, in
+	    Connector/J, can be exploited over a network without
+	    authentication. The fixes are contained in release 26.10.0 of
+	    each connector.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101625</cvename>
+      <cvename>CVE-2026-101626</cvename>
+      <cvename>CVE-2026-101677</cvename>
+      <cvename>CVE-2026-101678</cvename>
+      <cvename>CVE-2026-101768</cvename>
+      <cvename>CVE-2026-101804</cvename>
+      <cvename>CVE-2026-101806</cvename>
+      <cvename>CVE-2026-83404</cvename>
+      <url>https://www.oracle.com/security-alerts/cpuoct2026.html</url>
+    </references>
+    <dates>
+      <discovery>2026-10-20</discovery>
+      <entry>2026-10-30</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="4d4c2b6e-d433-11f1-a215-a0369f7f7be0">
     <topic>OpenResty -- multiple vulnerabilities in the bundled nginx core</topic>
     <affects>
@@ -477,7 +4843,7 @@
     <affects>
 <package>
 <name>p5-MIME-Tools</name>
-<range><lt>5.522</lt></range>
+<range><lt>5.522,2</lt></range>
 </package>
     </affects>
     <description>
@@ -2677,7 +7043,7 @@ record.</li>
     <affects>
 <package>
 <name>libXi</name>
-<range><lt>1.8.4</lt></range>
+<range><lt>1.8.4,1</lt></range>
 </package>
     </affects>
     <description>
@@ -2724,7 +7090,7 @@ record.</li>
     <affects>
 <package>
 <name>libX11</name>
-<range><lt>1.8.14</lt></range>
+<range><lt>1.8.14,1</lt></range>
 </package>
     </affects>
     <description>
@@ -3201,7 +7567,7 @@ record.</li>
     <description>
 	<body xmlns="http://www.w3.org/1999/xhtml">
 	<p>The Curl project reports:</p>
-	<blockquote cite="">
+	<blockquote cite="https://curl.se/docs/security.html">
 	  <ul>
 	    <li>local interface connection reuse mixup (CVE-2026-107929)</li>
 	    <li>info leak uploading over WebSockets with GnuTLS (CVE-2026-107928)</li>
@@ -11384,7 +15750,7 @@ record.</li>
 	<p>The Roundcube project reports:</p>
 	<blockquote cite="https://roundcube.net/news/2026/08/09/security-updates-1.6.18-and-1.7.3">
 	  <ul>
-	    <li>>Missing basic validation for content proxied by the css proxy</li>
+	    <li>Missing basic validation for content proxied by the css proxy</li>
 	    <li>SSRF bypass via specific local address URLs using 100.64.0.0/10 and fe80::/10 nets</li>
 	    <li>SSRF filter bypass via various forms of nip.io/sslip.io hostnames evading is_local_url() check</li>
 	    <li>remote content blocking bypass via unclosed url() in a FuncIRI attribute</li>
@@ -20258,7 +24624,7 @@ vulnerability is fixed in crate versions: 36.0.7, 42.0.2, and 43.0.1.</p>
     <affects>
       <package>
        <name>nginx</name>
-       <range><ge>0.1.17,3</ge><lt>1.30.2_2,3</lt></range>
+       <range><ge>0.1.17,3</ge><lt>1.30.2,3</lt></range>
        <range><ge>1.31.0,3</ge><lt>1.31.1,3</lt></range>
       </package>
     </affects>
@@ -22055,8 +26421,11 @@ vulnerability is fixed in crate versions: 36.0.7, 42.0.2, and 43.0.1.</p>
 <package>
 <name>expat</name>
 <name>linux-c7-expat</name>
-<name>linux-rl9-expat</name>
 <range><lt>2.8.1</lt></range>
+</package>
+<package>
+<name>linux-rl9-expat</name>
+<range><lt>2.5.0_9</lt></range>
 </package>
     </affects>
     <description>
@@ -22075,6 +26444,7 @@ vulnerability is fixed in crate versions: 36.0.7, 42.0.2, and 43.0.1.</p>
     <dates>
       <discovery>2025-10-01</discovery>
       <entry>2026-05-11</entry>
+      <modified>2026-11-05</modified>
     </dates>
   </vuln>
 

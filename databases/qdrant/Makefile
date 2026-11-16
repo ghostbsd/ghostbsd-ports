@@ -1,7 +1,6 @@
 PORTNAME=	qdrant
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.20.0
-PORTREVISION=	0
+DISTVERSION=	1.20.1
 PORTEPOCH=	1
 CATEGORIES=	databases
 
@@ -15,14 +14,17 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_armv7=	compiler crashes, see https://github.com/rust-lang/rust/issues/120637
 BROKEN_i386=	compilation breaks with fatal warning: implicit conversion from 'std::numeric_limits<unsigned long long>::type' (aka 'unsigned long long') to 'size_t' (aka 'unsigned int') changes value from 18446744073709551615 to 4294967295
-BROKEN_powerpc64le=	compilation failure: called `Option::unwrap()` on a `None` value in ring-0.16.20/build.rs: # see https://github.com/qdrant/qdrant/issues/3392
 
 BUILD_DEPENDS=	protoc:devel/protobuf
-LIB_DEPENDS=	librocksdb.so:databases/rocksdb \
-		libzstd.so:archivers/zstd
+LIB_DEPENDS=	libzstd.so:archivers/zstd
 
 USES=		cargo cpe gmake llvm:min=13 perl5 pkgconfig
 USE_GITHUB=	yes
+
+# aws-lc-sys's jitterentropy must be built with -O0, but ports CFLAGS adds -O2
+# which overrides it. Disable jitterentropy; the system RNG is still used.
+MAKE_ENV+=	AWS_LC_SYS_NO_JITTER_ENTROPY=1
+
 USE_PERL5=	build
 USE_RC_SUBR=	qdrant
 

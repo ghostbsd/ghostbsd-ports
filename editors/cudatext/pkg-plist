@@ -425,9 +425,6 @@ share/applications/cudatext.desktop
 %%DATADIR%%/py/cuda_new_file/install.inf
 %%DATADIR%%/py/cuda_palette/__init__.py
 %%DATADIR%%/py/cuda_palette/cd_plug_lib.py
-%%DATADIR%%/py/cuda_palette/lang/messages.pot
-%%DATADIR%%/py/cuda_palette/lang/ru_RU/LC_MESSAGES/cuda_palette.mo
-%%DATADIR%%/py/cuda_palette/lang/ru_RU/LC_MESSAGES/cuda_palette.po
 %%DATADIR%%/py/cuda_prefs/__init__.py
 %%DATADIR%%/py/cuda_prefs/cd_opts_dlg.py
 %%DATADIR%%/py/cuda_prefs/dlg.py
@@ -442,11 +439,14 @@ share/applications/cudatext.desktop
 %%DATADIR%%/py/cuda_prefs/tests/test_options_editor.py
 %%DATADIR%%/py/cuda_project_man/__init__.py
 %%DATADIR%%/py/cuda_project_man/install.inf
+%%DATADIR%%/py/cuda_project_man/projman_backup.py
 %%DATADIR%%/py/cuda_project_man/projman_dlg.py
 %%DATADIR%%/py/cuda_project_man/projman_glob.py
+%%DATADIR%%/py/cuda_project_man/readme/doc_for_dev.md
 %%DATADIR%%/py/cuda_project_man/readme/history.txt
 %%DATADIR%%/py/cuda_project_man/readme/license.txt
 %%DATADIR%%/py/cuda_project_man/readme/readme.txt
+%%DATADIR%%/py/cuda_project_man/readme/upgrade_v2.txt
 %%DATADIR%%/py/cuda_snippet_panel/__init__.py
 %%DATADIR%%/py/cuda_snippet_panel/clips/Arrows/List.txt
 %%DATADIR%%/py/cuda_snippet_panel/clips/Currency symbols/List.txt

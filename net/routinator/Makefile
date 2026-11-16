@@ -1,7 +1,6 @@
 PORTNAME=	routinator
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.15.2
-PORTREVISION=	3
+DISTVERSION=	0.16.0
 CATEGORIES=	net
 
 MAINTAINER=	jaap@NLnetLabs.nl
@@ -30,7 +29,7 @@ SUB_LIST+=	GROUPS=${GROUPS} \
 USERS=		${PORTNAME}
 GROUPS=		${PORTNAME}
 
-ROUTINATOR_UI_VERSION=	0.4.3
+ROUTINATOR_UI_VERSION=	0.5.2
 ROUTINATOR_UI_URL=	https://github.com/NLnetLabs/routinator-ui/releases/download/
 
 .include <bsd.port.options.mk>

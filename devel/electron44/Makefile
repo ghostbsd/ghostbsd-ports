@@ -78,7 +78,7 @@ TEST_DEPENDS=	git:devel/git \
 		sentry-cli:devel/sentry-cli
 
 USES=		bison cargo compiler:c++17-lang cpe display:test gettext-tools \
-		gl gmake gnome go:no_targets iconv:wchar_t jpeg \
+		gl gmake gnome go:no_targets iconv:wchar_t inotify jpeg \
 		localbase:ldflags ninja nodejs:24,build npm:yarn4 pkgconfig \
 		python:build,test qt:5 shebangfix tar:xz xorg
 
@@ -117,6 +117,8 @@ ALL_TARGET=	electron electron:node_headers
 POST_BUILD_TARGETS=	licenses version
 POST_BUILD_DIST_TARGETS=electron_dist_zip electron_chromedriver_zip \
 			electron_mksnapshot_zip
+
+LDFLAGS+=	${INOTIFY_LIB}
 
 DATADIR=	${PREFIX}/share/${PORTNAME}${PKGNAMESUFFIX}
 BINARY_ALIAS=	python3=${PYTHON_CMD}
@@ -240,7 +242,7 @@ SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 # See ${WRKSRC}/electron/DEPS for CHROMIUM_VER
 CHROMIUM_VER=			152.0.7977.169
 # See ${WRKSRC}/electron/DEPS for NODE_VER
-NODE_VER=			24.22.1
+NODE_VER=			24.22.2
 # See ${WRKSRC}/electron/DEPS for NAN_VER
 NAN_VER=			675cefebca42410733da8a454c8d9391fcebfbc2
 # See ${WRKSRC}/electron/DEPS for SQUIRREL_MAC_VER

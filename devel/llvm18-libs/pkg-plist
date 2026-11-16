@@ -10,7 +10,6 @@ llvm%%LLVM_SUFFIX%%/lib/libRemarks.so.%%LLVM_MAJOR_MINOR%%
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so.%%LLVM_MAJOR_MINOR%%
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so.%%LLVM_RELEASE%%
-%%GOLD%%llvm%%LLVM_SUFFIX%%/lib/LLVMgold.so
 %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIR.so
 %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libMLIR.so.%%LLVM_MAJOR_MINOR%%
 %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_arm_runner_utils.so

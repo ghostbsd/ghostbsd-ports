@@ -1,6 +1,7 @@
 PORTNAME=	gecode
 DISTVERSIONPREFIX=	release-
-DISTVERSION=	6.4.0
+DISTVERSION=	6.5.0
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -29,7 +30,7 @@ CMAKE_OFF=	BUILD_EXAMPLES
 OPTIONS_DEFINE=		AUDIT CBS FLATZINC GIST PROFILE SEARCH
 OPTIONS_MULTI=		LIBTYPE
 OPTIONS_MULTI_LIBTYPE=	SHARED STATIC
-OPTIONS_DEFAULT=	CBS FLATZINC SEARCH SHARED STATIC
+OPTIONS_DEFAULT=	CBS FLATZINC GIST SEARCH SHARED STATIC
 OPTIONS_SUB=		yes
 LIBTYPE_DESC=		Library type
 
@@ -43,6 +44,8 @@ FLATZINC_DESC=			Build FlatZinc module
 FLATZINC_CMAKE_BOOL=		GECODE_ENABLE_FLATZINC
 FLATZINC_USES=			qt:6
 FLATZINC_USE=			qt=base,tools:build
+FLATZINC_LIB_DEPENDS=		libgmp.so:math/gmp \
+				libmpfr.so:math/mpfr
 
 GIST_DESC=			Enable gist, graphical and interactive search tool
 GIST_CMAKE_BOOL=		GECODE_ENABLE_GIST
@@ -73,5 +76,9 @@ USE_GL=		gl
 
 post-patch-STATIC-on: # workaround for https://github.com/Gecode/gecode/issues/117
 	@${REINPLACE_CMD} -e 's| -fPIC | |; s|"-fPIC|"|' ${WRKSRC}/configure
+
+# tests as of 6.5.0:
+# Test summary: 537 selected, 537 ran, 537 passed, 0 failed, 0 not run.
+# Elapsed time: 11.423 s.
 
 .include <bsd.port.mk>
