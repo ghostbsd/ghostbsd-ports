@@ -4,7 +4,7 @@
 # shared libraries are ABI-compatible with the full port.
 PORTNAME=	llvm
 DISTVERSION=	19.1.7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION}/
 PKGNAMESUFFIX=	${LLVM_SUFFIX}-libs
