@@ -26,6 +26,8 @@ OPTIONS_DEFINE=		\
 	MOD_REMESH	\
 	NLS		\
 	OPENAL		\
+	OPENCOLORIO	\
+	OPENEXR		\
 	OPENIMAGEDN	\
 	OPENJPEG	\
 	OPENPGL		\
@@ -72,6 +74,8 @@ OPTIONS_DEFAULT=	\
 	MOD_OCEANSIM	\
 	MOD_REMESH	\
 	OPENAL		\
+	OPENCOLORIO	\
+	OPENEXR		\
 	OPENJPEG	\
 	OPENSUBDIV	\
 	OPENVDB		\
@@ -120,6 +124,7 @@ MENU_DESC=		Install desktop menu
 MOD_FLUID_DESC=		Fluid simulation support
 MOD_OCEANSIM_DESC=	Ocean simulation support
 MOD_REMESH_DESC=	Remesh modifier support
+OPENCOLORIO_DESC=	OpenColorIO-based color management support
 OPENIMAGEDN_DESC=	OpenImageDenoise support (amd64 only)
 OPENJPEG_DESC=		Enhanced JPEG (JPEG 2000) graphics support
 OPENPGL_DESC=		Open Path Guiding in Cycles (aarch64 and amd64 only)
