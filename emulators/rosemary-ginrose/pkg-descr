@@ -1,0 +1,6 @@
+Rosemary runs macOS applications on other operating systems. This is the
+build Ginrose ships: upstream Rosemary with fixes for Roblox on top that
+have not reached an upstream release yet (FreeBSD kqueue filters, Objective-C
+send cache, a Metal swapchain watchdog and floating dialogs on tiling
+compositors, among others). It installs the same rosemary command as
+emulators/rosemary, so only one of the two can be installed.
