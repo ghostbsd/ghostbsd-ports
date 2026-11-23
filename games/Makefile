@@ -316,6 +316,7 @@
     SUBDIR += genact
     SUBDIR += gigalomania
     SUBDIR += gillo
+    SUBDIR += ginrose
     SUBDIR += gl-117
     SUBDIR += glaxium
     SUBDIR += glbsp
