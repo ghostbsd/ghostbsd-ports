@@ -1,0 +1,5 @@
+Rosemary runs macOS applications on other operating systems. It loads
+Mach-O programs itself and reimplements the Darwin system calls and Apple
+frameworks they use (Foundation, AppKit, Core Audio, Metal on Vulkan and
+more), running x86-64 code natively on an x86-64 host. Games and launchers
+such as Roblox are its main targets.

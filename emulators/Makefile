@@ -131,6 +131,7 @@
     SUBDIR += reicast
     SUBDIR += ripes
     SUBDIR += riscv-isa-sim
+    SUBDIR += rosemary
     SUBDIR += rpcs3
     SUBDIR += rubygem-fission
     SUBDIR += rvvm
