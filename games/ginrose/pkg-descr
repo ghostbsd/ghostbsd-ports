@@ -1,0 +1,4 @@
+Ginrose runs the macOS Roblox player and Roblox Studio through Rosemary, a
+compatibility layer for macOS programs. It downloads and verifies Roblox's
+signed client, keeps it updated, opens roblox:// links from the browser, and
+offers per-game settings, a Discord status and a server region badge.
