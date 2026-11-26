@@ -1,0 +1,22 @@
+--- bin/steam.orig	2026-11-26 16:16:54 UTC
++++ bin/steam
+@@ -239,6 +239,19 @@
+ 
+ ENV['PRESSURE_VESSEL_BWRAP'] ||= File.expand_path('../lxbin/lsu-bwrap-stub', __dir__)
+ 
++def steam_running?
++  pid = File.read(File.join(ENV['HOME'], '.steam/steam.pid')).to_i
++  pid > 0 && Process.kill(0, pid) == 1
++rescue Errno::ENOENT, Errno::ESRCH, Errno::EPERM
++  false
++end
++
++# A second instance only hands its arguments (such as steam://rungameid/N) to
++# the running Steam. The cleanup below would kill it and unmount its runtime.
++if steam_running?
++  exec([File.join(__dir__, 'lsu-freebsd-to-linux-env')] * 2, File.join(STEAM_ROOT_PATH, 'ubuntu12_32/steam'), *ARGV)
++end
++
+ # clean up leftover LSU_TMPDIR_PATH mounts, if any
+ # (note that we deliberately keep them if there is no cookie)
+ safe_system(File.join(__dir__, 'lsu-umount')) if read_tmp_dir_cookie()
