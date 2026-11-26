@@ -14,7 +14,9 @@ ONLY_FOR_ARCHS=	amd64
 ONLY_FOR_ARCHS_REASON=	Roblox ships x86-64 macOS clients only
 
 RUN_DEPENDS=	rosemary:emulators/rosemary-ginrose \
-		dejavu>0:x11-fonts/dejavu
+		dejavu>0:x11-fonts/dejavu \
+		gtk-update-icon-cache:graphics/gtk-update-icon-cache \
+		xdg-mime:devel/xdg-utils
 
 USES=		cargo desktop-file-utils gnome
 USE_GITHUB=	yes
