@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# Turns off unprivileged chroot. The other settings are GhostBSD defaults.
+
+[ "$2" = "POST-DEINSTALL" ] || exit 0
+
+CONF="${PKG_ROOTDIR}/etc/sysctl.conf"
+
+[ -f "$CONF" ] && sed -i '' '/^security\.bsd\.unprivileged_chroot=/d' "$CONF"
+[ -n "$PKG_ROOTDIR" ] || sysctl -q security.bsd.unprivileged_chroot=0 >/dev/null 2>&1
+exit 0

@@ -1,6 +1,6 @@
 PORTNAME=	steam-utils
 DISTVERSION=	20260923
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games linux
 PKGNAMEPREFIX=	linux-
 
@@ -30,7 +30,7 @@ USE_LINUX=	alsa-plugins-oss dbuslibs devtools:build dri gtk2 nss
 MAKE_ARGS+=	PREFIX=${STAGEDIR}${PREFIX}
 ALL_TARGET=	build
 
-SUB_FILES=	pkg-message
+SUB_FILES=	pkg-message steam-launcher steam.desktop
 
 .include <bsd.port.options.mk>
 
@@ -39,5 +39,7 @@ post-install:
 	${LN} -s ../steam-utils/bin/lsu-bootstrap ${STAGEDIR}${PREFIX}/bin/steam-install # deprecated since 2024-03-23
 	${LN} -s ../steam-utils/bin/lsu-wine-env  ${STAGEDIR}${PREFIX}/bin/lsu-wine-env
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/steam-utils/bin/lsu-freebsd-to-linux-env
+	${INSTALL_SCRIPT} ${WRKDIR}/steam-launcher ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKDIR}/steam.desktop ${STAGEDIR}${DESKTOPDIR}
 
 .include <bsd.port.mk>

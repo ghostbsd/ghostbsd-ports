@@ -1,6 +1,8 @@
 bin/lsu-wine-env
 bin/steam
 bin/steam-install
+bin/steam-launcher
+share/applications/steam.desktop
 steam-utils/bin/.dpkgs.rb
 steam-utils/bin/.utils.rb
 steam-utils/bin/lsu-bootstrap

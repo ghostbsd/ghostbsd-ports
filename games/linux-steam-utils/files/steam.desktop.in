@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Steam
+Comment=Application for managing and playing games on Steam
+Exec=%%PREFIX%%/bin/steam-launcher %U
+Icon=steam
+Terminal=false
+Categories=Game;
+MimeType=x-scheme-handler/steam;x-scheme-handler/steamlink;
+StartupWMClass=steam

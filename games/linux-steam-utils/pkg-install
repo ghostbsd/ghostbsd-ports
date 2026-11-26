@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# Turns on the sysctls and the nullfs module Steam needs.
+
+[ "$2" = "POST-INSTALL" ] || exit 0
+
+CONF="${PKG_ROOTDIR}/etc/sysctl.conf"
+
+for line in vfs.usermount=1 security.bsd.unprivileged_chroot=1 \
+    compat.linux.use_real_ifnames=1; do
+	grep -qx "$line" "$CONF" 2>/dev/null || echo "$line" >>"$CONF"
+	[ -n "$PKG_ROOTDIR" ] || sysctl -q "$line" >/dev/null 2>&1
+done
+
+sysrc -R "${PKG_ROOTDIR:-/}" kld_list-=nullfs kld_list+=nullfs >/dev/null
+[ -n "$PKG_ROOTDIR" ] || kldload -n nullfs
+exit 0

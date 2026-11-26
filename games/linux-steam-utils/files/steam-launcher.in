@@ -1,0 +1,43 @@
+#!/bin/sh
+#
+# Desktop launcher for Steam: downloads the Steam bootstrap on first use,
+# then starts Steam. Errors are shown with zenity since there is no terminal.
+
+BIN=%%PREFIX%%/steam-utils/bin
+UNSAFE_FLAG='--allow-stealing-my-passwords,-browser-history-and-ssh-keys'
+LOG=$(mktemp -t steam-launcher) || exit 1
+trap 'rm -f "$LOG"' EXIT
+
+fail() {
+	zenity --error --title=Steam --no-wrap --no-markup --text="$1" 2>/dev/null
+	exit 1
+}
+
+if [ ! -e "$HOME/.steam/steam/ubuntu12_32" ]; then
+	flag=
+	if id -G | tr ' ' '\n' | grep -qx 0; then
+		zenity --question --title=Steam --icon-name=dialog-warning \
+		    --ok-label=Proceed --cancel-label=Cancel --text="\
+Your account is in the wheel group.
+
+Steam games will have unrestricted access to your files, \
+including passwords, browser history and SSH keys. \
+A dedicated user account for Steam is safer.
+
+Install Steam for this account anyway?" 2>/dev/null || exit 0
+		flag=$UNSAFE_FLAG
+	fi
+	"$BIN/lsu-bootstrap" $flag 2>"$LOG" ||
+	    fail "Steam could not be installed.
+
+$(tail -n 20 "$LOG")"
+fi
+
+# Requirement errors come first; awk drains the rest so Steam never blocks.
+set -o pipefail
+{ "$BIN/steam" "$@" 2>&1 >&3 3>&-; } 3>&1 | awk 'NR <= 50' >"$LOG"
+status=$?
+if [ $status -ne 0 ] && grep -q '^Please, make sure' "$LOG"; then
+	fail "$(sed -n '/^Please, make sure/,$p' "$LOG")"
+fi
+exit $status
