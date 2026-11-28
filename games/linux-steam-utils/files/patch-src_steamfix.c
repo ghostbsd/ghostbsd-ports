@@ -1,10 +1,9 @@
---- src/steamfix.c.orig	2026-11-26 17:02:14 UTC
+--- src/steamfix.c.orig	2026-09-23 21:58:08 UTC
 +++ src/steamfix.c
-@@ -438,4 +438,152 @@
-   }
+@@ -439,3 +439,178 @@ int pipe2(int pipefd[2], int flags) {
  
    return libc_pipe2(pipefd, flags & ~O_DIRECT);
-+}
+ }
 +
 +/*
 +  FreeBSD returns EAGAIN instead of 0 when reading an empty FIFO that no writer has opened yet.
@@ -90,7 +89,7 @@
 +    steam_pipe_fd = -1;
 +  }
 +  return libc_close(fd);
- }
++}
 +
 +/*
 +  Linux records the caller as a semaphore's sempid on SETVAL and SETALL, FreeBSD only on semop.
@@ -152,4 +151,31 @@
 +  }
 +
 +  return ret;
++}
++
++/*
++  With /home nullfs-mounted under compat.linux.emul_path, getcwd() returns that prefix,
++  which does not exist in the runtime chroot, so steamwebhelper can't find steamui.
++*/
++
++#include <sys/stat.h>
++
++static char* (*libc_getcwd)(char*, size_t) = NULL;
++
++char* getcwd(char* buf, size_t size) {
++
++  if (!libc_getcwd) {
++    libc_getcwd = dlsym(RTLD_NEXT, "getcwd");
++  }
++
++  char* cwd = libc_getcwd(buf, size);
++  if (cwd && strncmp(cwd, "/compat/", sizeof("/compat/") - 1) == 0) {
++    char* rest = strchr(cwd + sizeof("/compat/") - 1, '/');
++    struct stat64 a, b;
++    if (rest && stat64(cwd, &a) == 0 && stat64(rest, &b) == 0 && a.st_dev == b.st_dev && a.st_ino == b.st_ino) {
++      memmove(cwd, rest, strlen(rest) + 1);
++    }
++  }
++
++  return cwd;
 +}
